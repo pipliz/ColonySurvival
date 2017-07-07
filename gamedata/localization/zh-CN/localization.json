@@ -5,7 +5,9 @@
 		"apply" : "确定",
 		"none" : "完成",
 		"reset" : "重置",
-		"inputplaceholder" : "输入文本"
+		"inputplaceholder" : "输入文本...",
+		"previous" : "上一页",
+		"next" : "下一页"
 	},
 	"mainmenu" : {
 		"singleplayer" : "单人游戏",
@@ -41,6 +43,7 @@
 		"connect" : "加入选择的服务器",
 		"refresh" : "刷新服务器列表",
 		"refreshing" : "刷新中",
+		"hostserverdescription" : "建立一个主机来开启服务器",
 		"startserver" : "启动服务器"
 	},
 	"settingsmenu" : {
@@ -117,13 +120,14 @@
 		"language" : "语言",
 		"languagemenu" : {
 			"full" : "语言选择",
-			"wiptext" : "正在进行中的工作。这不包括游戏中的所有文本，有些翻译可能比其他版本覆盖得少.",
+			"wiptext" : "持续进行中的工作。简体中文由Steam中的'兰局嘉段机务'持续更新.",
 			"language" : "语言"
 		}
 	},
 	"infomenu" : {
 		"quickstart" : "快速入门",
-		"credits" : "制作组"
+		"credits" : "制作组",
+		"changelog" : "更新日志"
 	},
 	"escapemenu" : {
 		"back" : "返回游戏",
@@ -134,9 +138,13 @@
 	},
 	"popup" : {
 		"banner" : {
-			"header" : "殖民地管理",
-			"description" : "殖民者每天需要5个食物单位和一张床。招聘一个殖民者成本50食物.",
+			"header" : "屁民管理",
+			"description" : "屁民每天需要5个食物单位和一张床。招聘一个屁民成本50食物.",
 			"button" : "招募殖民者",
+			"resetbutton" : "重置殖民地",
+			"resettooltipa" : "",
+			"resettooltipb" : "这会杀死所有的屁民并移除你的殖民地.",
+			"resettooltipc" : "这也会给你一个新的仓库."
 		},
 		"bannerremoval" : {
 			"header" : "移除旗帜",
@@ -147,19 +155,19 @@
 			"header" : "命令工具",
 			"description" : "选择要创建的区域的类型.",
 			"wheatfarmer" : "农民",
-			"wheata" : "",
+			"wheata" : "使你的殖民地持续前行",
 			"wheatb" : "需要：小麦种子",
 			"wheatc" : "放在草地上或泥土上",
 			"miner" : "矿工",
-			"minera" : "",
+			"minera" : "矿山的矿石",
 			"minerb" : "需要：镐",
 			"minerc" : "请在世界底层寻找矿石",
 			"forester" : "伐木工",
-			"forestera" : "",
+			"forestera" : "植树和砍伐树木",
 			"foresterb" : "需要：树苗和斧头",
 			"foresterc" : "放在草地上或泥土上",
 			"flaxfarmer" : "纺织工",
-			"flaxa" : "",
+			"flaxa" : "使你的殖民地持续前行",
 			"flaxb" : "需要：亚麻籽",
 			"flaxc" : "放在草地上或泥土上",
 			"notflat" : "不平坦的",
@@ -173,7 +181,12 @@
 			"minertool" : "需要划定矿工的工作区域",
 			"forestertool" : "需要划定伐木工的工作区域",
 			"flaxfarmertool" : "需要划定纺织工的工作区域",
-			"notool" : "没有工具选择"
+			"notool" : "没有工具选择",
+			"berryfarmertool" : "浆果农民的工具",
+			"berryfarmer" : "浆果农民",
+			"berrya" : "快速方便的食物，殖民从这里开始！",
+			"berryb" : "放在草地上或泥土上",
+			"berryc" : ""
 		},
 		"toolconstruction" : {
 			"header" : "施工工具",
@@ -195,8 +208,8 @@
 		},
 		"inventory" : {
 			"crafting" : "手工制作",
-			"stockpile" : "库存",
-			"stockpiledescription" : "你只能用底部的装备库里的东西来做东西。殖民者只能使用你共享的物品.",
+			"stockpile" : "共享库存",
+			"stockpiledescription" : "你只能用底部的装备库里的东西来做东西。屁民只能使用你共享的物品.",
 			"foodvalue" : "食物:",
 			"tooltip" : {
 				"needs" : "需要: ",
@@ -209,26 +222,58 @@
 			"smelting" : "冶炼达到最大",
 			"minting" : "铸造达到最大",
 			"shopping" : "作坊达到最大",
-			"description" : "殖民者将一直工作到储备量达到为止."
+			"grinding" : "磨坊达到最大",
+			"description" : "屁民将一直工作到储备量达到为止."
 		},
 		"death" : {
-			"description" : "你挂了.",
-			"respawn" : "重生"
+			"description" : "你挂了233.",
+			"respawn" : "重生吧~"
 		},
 		"quickstart" : {
 			"previous" : "上一页",
 			"next" : "下一页",
-			"openmanual" : "指导手册（PDF）",
+			"openmanual" : "指导手册 (PDF)",
 			"closehelp" : "按F1关闭或重新打开此菜单",
 			"closetoggle" : "不再显示"
 		}
 	},
 	"firstpersonstats" : {
 		"bedcount": "床:",
-		"colonistcount" : "殖民者:",
+		"colonistcount" : "屁民:",
 		"laborercount" : "失业人数:",
 		"foodstorage" : "食物:",
 		"foodusage" : "食物/天:",
-		"arrowcount" : "箭:"
+		"arrowcount" : "箭矢:"
+	},
+	"quickstart" : {
+		"page1" : {
+			"header" : "基础教程",
+			"description" : "欢迎来到殖民地生存!",
+			"text1" : "旗帜是你殖民地的中心.选择'2'键来选择并用右键放置在任何地方即可雇佣属于你的屁民",
+			"text2" : "食物是你殖民地的基础.确保你有足够的食物维持生存并足够供应屁民生活,食物永远不嫌多不是吗!",
+			"text3" : "请按'I'键来打开储物箱,你需要将物品拿在手上才能制造左边手工制作的物品,将物品放到右边共享仓库你的屁民才会使用,当然箱子是异次元的.",
+			"text4" : "怪物晚上会攻击你的殖民地,记得雇佣守卫.任何物品按'R'即可旋转方向按'G'即可从自身发出'圣光'照亮周围."
+		},
+		"page2" : {
+			"header" : "食物供给",
+			"description" : "你会需要食物的,我保证!",
+			"text1" : "选择'1'键并按左键选择需要的工种,然后按住右键在地上拖动来划定区域. ",
+			"text2" : "然后你需要种植小麦,当小麦成熟后进行收割. ",
+			"text3" : "在那之后你会需要招聘屁民将将麦子磨成面粉然后再烤成面包,直接吃麦子貌似吃不饱哦."
+		},
+		"page3" : {
+			"header" : "殖民地防御",
+			"description" : "晚上怪物可是会攻击你的殖民地的!",
+			"text1" : "在晚上怪物会攻击你的殖民地,你需要雇佣守卫并建造防御工事.当然由于它们腿短所以它们跳不过两格高的砖块.",
+			"text2" : "不要忽视你的殖民地状态,每当太阳升起就会激活工作模式,换句话白天会更快的消耗你的食物.",
+			"text3" : "当你的殖民地扩张的时候不要忘记防御时刻保持充足的食物和箭矢的供给才能让你的王国长久发展."
+		},
+		"page4" : {
+			"header" : "箭矢供应",
+			"description" : "整军备战,怪物会在晚上进攻!",
+			"text1" : "在地下深处会有各种矿物,铁矿就是其中之一,开采铁矿然后加工,这是你的军事资源,记得在附近放置工作坊.",
+			"text2" : "炼炉可将各种矿物熔化.并打造金块等物品的地方,铁匠铺什么的你懂得~",
+			"text3" : "工作台,名字是不是很熟悉,但这可不是我的世界.虽然原理相同但是只有你的屁民能操作,炼制铁后可以制造箭矢和其他物品."
+		}
 	}
 }
