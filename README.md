@@ -1,6 +1,8 @@
 # Colony Survival
-Open Translation of Colony Survival
+Public translation files for Colony Survival
 
-Help this game for make a better
+Store page: http://store.steampowered.com/app/366090/Colony_Survival/
 
-Link : http://store.steampowered.com/app/366090/Colony_Survival/
+We'll accept pull requests for updating/adding any localizations. For information about localization/modding go here:
+
+http://steamcommunity.com/app/366090/discussions/5/2592234299541377726/
