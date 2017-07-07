@@ -1,0 +1,61 @@
+0.1.1 (2017-06-01)
+
+-Added gold ore
+-Added gold ingot
+-Added a minter, who makes gold coins from gold ingots
+-Added a merchant, who buys things with gold coins
+-Added flax
+-Added flax farmer
+-Added linseed oil
+-Added coated planks
+-Added aldobe
+
+-Improved area interactions:
+--Added a minimum size of 20
+--Added a minimum width of 3 for forestry (1 or 2 wide & he won't plant sapplings)
+--Allow wheat in a wheatfield
+--Added feedback for the following failure conditions:
+---Not flat, Too small, Too large, Existing area, Too narrow for trees, Not arable, Occupied by blocks
+--Removed wheat fields clearing itself upon removal
+--Allow removal of areas with left-clicking the command tool
+--Allow removal of areas by left-clicking on the block in the field (wheat) instead of the base of the field
+--Changed the area removal popup to come when an area-block is about to be destroyed, instead of when an area-block is touched
+
+-Added sprint using left-shift
+-Added delete button to world load menu
+-Added more item descriptions
+-Added indicator state to unemployed colonists when they're missing items to take a job
+-Added a highlight to indicate currently looked-at block for 2 seconds after the last destruction attempt
+-Added tooltip to the recipe limits for npc's, to show the recipes they can make.
+-Added option for seperate night & day per-biome ambient audio; added forest night audio
+-Fixed new world seed being the same for every world made in the same play session
+-Fixed monster spawning inside of other colonies in multiplayer
+-Made a lot more recipes craftable by npc's, but with a limit of 0 by default.
+-Changed bed recipe to require straw
+-Show amount produced by a crafting recipe in the tooltip
+-Allow 'transferring' destruction progress between blocks for 0.2 seconds, for more consistent destruction
+-Unbunched the unemployed colonists, they spread out near the banner now.
+-Updated the quickstart text; now contains images, multiple pages and more detailed explanations of the game.
+-Tweaked bread baking, now takes 8 wheat to make 3 bread vs 2 wheat for 1 bread.
+-Reversed inventory scrolling direction
+-Randomized the recipe crafters select to make, so they do not always make the same recipe when there's multiple available ones.
+-Updated main menu background image
+-Updated main menu logo image
+-Lowered gypsum ore chance from 10% to 3%
+-Added printable names to various blocks
+-Added placing/removal audio to beds
+-Tweaked initial stockpile contents
+-Fixed incorrect lighting on the quiver
+-Change the "no unemployed colonists left" message to include number of jobs left
+-Improved inventory tooltip somewhat, moves with mouse now
+-Tweaked npc indicator again, writes to depth now, affected by lights again but emits some light itself
+-Fixed selection/rotation not being affected by ambient lighting/reflections
+-Fixed clicking inbetween stockpile items not working to drop things
+-Colonists walk back to the banner / bed upon becoming unemployed, instead of teleporting
+-Fixed command tool keeping its state inbetween worlds
+-Remove unused tabs from stockpile (for now)
+-Fixed skybox jittering sometimes
+-Moved block destruction progress closer to the cursor (especially on larger screens)
+-World generation seed is shifted until you spawn in the temperate forest (not above a lake or on a mountain)
+-Fixed inputfield in crafting limits menu not working correctly
+-Fixed text just barely not fitting in the colony data interface (topleft/topright)

@@ -1,0 +1,45 @@
+0.1.0 (before 2017-06-01)
+
+-Reworked a lot of the jobs system:
+--Added an error indicator for the npc's when they try to dump things in a full stockpile.
+--Added an error indicator to the Farmer/Forester when they are missing essential items (seeds, sapplings).
+--Added an error indicator to the Smelter/Baker when there's no fuel to use in the stockpile.
+--Added an indicator to the Miner & Forester to show their progress.
+--Farmer & Forester will make a snake-like path through their field when doing their job, instead of a saw-like path. (new one is shorter)
+--Farmer & Forester will fall back to harvesting when they miss seeds/sapplings to plant.
+--Fixed a case where npc's would craft something and immidiately move away instead of wait for the crafting to finish.
+--Fixed a case where npc's would be waiting for a cooldown after taking items if they arrive at their jobs very quickly.
+--Reduced technical debt a lot to ease improvements.
+--Farmer will try to use seeds from his own inventory
+--Farmer will dump his current inventory before he starts idling
+
+-Fixed invisible field creation; field created isn't invisible and always the same as the selected area.
+-Fixed use-after-free ish error causing lots of chunks to render wrongly.
+-Fixed changing blocks not working near a dead npc
+-Fixed an issue where removing a job block did not update the colonists/unemployed counts properly
+
+-Inventory management changes:
+--Taking an item with right click takes half of the available amount up to half a full stack
+--Dropping an item with right click drops 1 at a time.
+
+-Crafter now takes 5 seconds per craft instead of 2,5.
+-Arrows recipe makes 8 instead of 25 arrows.
+-Miner mining infinite stone takes 3 seconds instead of 10 seconds.
+-Miner mining other things takes 8 seconds instead of 10 seconds.
+-Added a large amounts of additional resolutions to the dropdown (on top of those unity reports as supported).
+-Set drop rate of wheat seeds to 1.1 per harvested wheat, down from 1.25
+-Set farmer cooldown to 1 second, down from 2 seconds
+-Set bread stack size to 50, down from 600
+
+-Added messages to show other people connecting/disconnecting
+-Added alpha version text to the bottomright of the screen
+-Added "/deus vult" command, to kill all monsters attacking a specific player.
+-Added "/debug teleport" command, teleports you around rapidly, stressing the server heavily. Not really useful.
+
+-Reworked the various crafting recipe types to share code, for ease of adding new ones.
+-Changed stockpile code to only send changes to the client once per tick max.
+-Fixed exit to desktop button on the server colliding with stats when they're enabled.
+-Fixed errors created by allowing some keys to be pressed in the main menu / connecting screen.
+-Moved some calculations to double precision to lower jitter.
+-Lowered npc indicator a bit.
+-Fixed npc indicators being affected by lights.

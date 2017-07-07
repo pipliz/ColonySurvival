@@ -1,0 +1,14 @@
+0.2.5 (2017-07-05)
+
+-Added russian localization
+-Moved types.json to the server; the client downloads it from there.
+--Includes drop types/amounts upon removing an item, destruction time per block
+-Moved parts of settings/client.json to the server; 
+--See settings/serverperclient.json for the list.
+--Includes building speed, jumping, gravity, drag, swim speeds, fall damage
+-Added version checking to the client and the server, to prevent incompatible combinations.
+
+Later fix:
+-Fixed singleplayer/localhost networking not being able to properly send larger files
+--Fixes the stuck on "waiting for world" (hopefully)
+--The types.json exceeded the tcp buffer size

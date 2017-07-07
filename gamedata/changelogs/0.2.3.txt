@@ -1,0 +1,44 @@
+0.2.3 (2017-06-30)
+
+-Added cherry tree & saplings (no job)
+-Added red planks
+-Added black planks
+-Monsters now start punching the banner upon reaching it, killing a colonist every so often while doing so.
+-Added Brazilian Portugese localization
+-Updated japanese localization to 0.2.0 (and minor fixes) (via github)
+-Small format fix to the french localization (via github)
+-Fixed allowing the server to run multiple times at once.
+--Now you can only run 1 server at the same time per game install.
+--To host a server and play singleplayer at the same time copy the server to another folder.
+-Made a seperate rendering system for custom meshed blocks using instancing
+--This fixed the massive lag caused by mass wheat growth/harvesting/planting
+--Disabled shadows on custom meshes beyond ~48 units
+--Framerate is much much more consistent, and slightly higher in most situations
+--Allows use of normal/height maps on meshed blocks
+-Fixed inaccurate player collision in 1 direction
+-Fixed inability to jump caused by low framerate ( < 15 or so, also fixes jumping during lag spikes)
+-Fixed a case where monsters would just walk back and forward; they only retarget if their new target is actually closer (path-wise instead of direct)
+-Fixed the inability of zombies to recalculate a path (they won't walk into a block and die one after another anymore)
+-Fixed an issue causing torch shadows to update excessively
+-Fixed issues caused by the game assuming another current directory than the one it is contained it.
+-Fixed the fully grown wheat stage using the banner's albedo color
+-Halved cpu use of rendering point lights
+-Removed ~2 kB of garbage generation per frame
+-Removed spear.png icon (really, the spear hasn't been touched for > 1 year)
+-Updated unity to 5.6.2f1, hopefully fixing the most common crash
+-Fixed a missing changelog, add dates to 0.2.1, 0.2.2
+-Added another check to ensure the server quits upon client quit
+-Nerfed glitched flight speed to 1/5th of base flight speed (with no boost)
+-Updated logTemperate & logTaiga textures
+-Added 1 achievement for getting a cherry sapling.
+-Fixed flashing lighting when changing worlds (again, now also fixed backwards in time)
+
+Hotfixed hours later:
+
+-Fixed crafting list not starting at the top
+-Disabled scrolling beyond visible range in stockpile & crafting list
+
+Next day fix (2017-07-01)
+
+-Fixed chatbox not working after a few lines
+-Updated fr-CA & jp-JP to 0.2.3 (via github)

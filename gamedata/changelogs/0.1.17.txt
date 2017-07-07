@@ -1,0 +1,14 @@
+0.1.17 (2017-06-17)
+
+-Fix large part of laggyness of npc's / players / arrows etc on servers; Now uses unreliable networking for non-critical data
+-Move crafting recipes over to the server, to prevent cheating (and better modability for servers)
+-Fix text in the tooltip of the command tool popup not being correctly localized (said popuptooljobwheata etc)
+-Added vietnamese translation (credits go to "Pinkp7996@gmail.com")
+-Added chinese translation (credits go to "兰局嘉段机务" via the steam forum.)
+-Fix floating arrows hanging around colonies if you came in from beyond their view range.
+-Fixed arrow data being sent to players beyond view range
+-Fixed monster death & npc death data being sent to players beyond view range
+-Fixed audio data being sent to players beyond view range
+-Fixed player position updates being sent to players beyond view range
+-Fixed block updates being sent to players beyond view range
+-Finally remove the spear prefab from the server, which has not been used for over a year.

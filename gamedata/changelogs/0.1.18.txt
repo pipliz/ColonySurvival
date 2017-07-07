@@ -1,0 +1,17 @@
+0.1.18 (2017-06-18)
+
+-Added Italian translation
+-Added Traditional Chinese translation
+-Optimized monsters on the server - server load from monsters reduced by a lot
+-Limit the amount of active ragdolls to the closest 25. Massively improves the 'morning lag' from masses of dead monsters.
+-Optimized rendering of npc's on the client. Sadly this means no more colonist shadows.
+-Lowered draw distance of monsters to about 100 blocks, down from 250.
+-Lowered draw distance of colonists to about 150 blocks, down from 250.
+-Lowered draw distance of arrows to about 50 blocks, down from 250.
+-Lowered draw distance of players to about 150 blocks, down from 280.
+-Lowered max distance of some audio effects to 100 blocks, down from 250.
+-Optimize ragdoll ground collider generation. (Reduces lag caused by ragdolls)
+-Tripled crafting speed of bricks for the smelter (smelts 3 clay to 3 bricks at once now)
+-Fixed nearly seizure inducing day/night cycling when changing worlds
+-Fix some dodgy time progression in the skybox (use unreliable networking for time data)
+-Added a seperate server thread for handling the sending of network packets

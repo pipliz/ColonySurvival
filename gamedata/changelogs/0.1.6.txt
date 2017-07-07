@@ -1,0 +1,18 @@
+0.1.6 (2017-06-11)
+
+-Added key remapping to the gameplay settings menu
+-Added a 'no-path' indicator for when:
+--The job is inaccessible due to being blocked (farm with blocks on/above it)
+--The job is inaccessible due to job placement (furnace not on the ground)
+--The job is unreachable from the current location
+-Added audio to placing/removing of plaster blocks
+-Removed edibility of straw
+-Added text to bread to indicate it heals you.
+-Improved mouse control options
+--Added invert x-axis toggle
+--Added invert y-axis toggle
+--Use sliders instead of inputfields.
+--Allow locking together x & y axis sliders
+--Fixed typo (said sensitivity twice instead of smoothing)
+-Limited audio volume to 100% (creates massive distortion above 100%)
+-Made audio volume sliders more linear instead of exponential (80% slider is like 80% volume instead of 20%)

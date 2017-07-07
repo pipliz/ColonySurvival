@@ -1,0 +1,8 @@
+0.1.8 (2017-06-12)
+
+-Fixed player width being a bit arbitrary; was 30x40 (with 30 when moving east/west, 40 when moving north/east) and now 60x60 cm.
+-Fixed dodgy collision physics with the ground during lower fps situations ( around 30 fps and lower)
+-Fixed the fixed limits now showing 2 billion as crafting limit instead of infinite.
+-Renamed 'sappling' to 'sapling', as that seems to be the correct spelling.
+-Limited field of view slider to 110 degrees instead of 130
+-Fixed looking through blocks at the corner of the screens (by limiting field of view and making the player wider)

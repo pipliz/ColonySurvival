@@ -1,0 +1,7 @@
+0.2.4 (2017-07-03)
+
+-Fixed an exception for trying to delete a non-existant file (part of savegame)
+-Fixed an exception for reading empty json files (consider them non-existant now)
+-Fixed an exception when writing savegames where part of the path would not exist
+-Fixed an issue where you could load world on a deleted world (created new world, 'Invalid launch')
+-Stopped showing world folders without settings.json files (basically, empty folders / failed deletions)

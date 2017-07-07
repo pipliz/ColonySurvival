@@ -1,0 +1,8 @@
+0.2.1 (2017-06-23)
+
+-Reverted unity version; new one seems to crash people more often
+-Improved server disconnecting, hopefully fixing the 'crash on quit' causing corrupted worlds, and more reliably closing it.
+-Fix null ref exception upon quitting the game.
+-Fix errors in version updater due to non-existent directories/files
+-Made loading more resilient, so one error doesn't break everything.
+-Fixed a variety of other smaller errors & catch some errors to prevent cascading of them.

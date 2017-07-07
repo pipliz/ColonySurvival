@@ -1,0 +1,80 @@
+{
+	"Wheat" : {
+		"GrowthTime1" : 7.0,
+		"GrowthTime2" : 7.0,
+		"GrowthRandomMinimal" : 1.0,
+		"GrowthRandomMaximal" : 1.0,
+		"UpdateTimeOnUnknownTypeMinimum" : 4000,
+		"UpdateTimeOnUnknownTypeMaximum" : 6000,
+		"UpdateTimeMaximum" : 5000
+	},
+	"Sappling" : {
+		"GrowthTime1" : 15.0,
+		"GrowthRandomMinimal" : 0.6,
+		"GrowthRandomMaximal" : 1.4,
+		"UpdateTimeOnUnknownTypeMinimum" : 4000,
+		"UpdateTimeOnUnknownTypeMaximum" : 6000,
+		"UpdateTimeMaximum" : 5000
+	},
+	"Terrain" : {
+		"TopLayerThickness" : 4,
+		"HeightOcean" : 19,
+		"HeightOceanFloor" : 8,
+		"HeightTerrain" : 21,
+		"IslandWidthHalf" : 4000,
+		"IslandHeightHalf" : 12444,
+		"CoastWeight" : 0.03,
+		"ShoreHeight" : 1.4,
+		"GeneratorChunkCacheSize" : 512,
+		"GeneratorTreeColumnCacheSize" : 256,
+		"StartingX" : 0,
+		"StartingZ" : 7500
+	},
+	"Water" : {
+		"TickTimeMilliSeconds" : 1000
+	},
+	"ChunkQueue" : {
+		"MaxQueueSize" : 100,
+		"RecalculatePriorityCooldownMS" : 750
+	},
+	"Saving" : {
+		"MillisecondsBeforeAutosaveChunk" : 10000,
+		"MillisecondsBeforeAutosaveRegion" : 10000,
+		"SecondsBetweenRegionAutosaveChecks" : 2,
+		"MillisecondsBeforeRegionExpired" : 60000
+	},
+	"Time" : {
+		"StartDate" : "2000-06-15T07:00:00",
+		"DayTimeStart" : 4.22,
+		"DayTimeEnd" : 19.83,
+		"RealSecondsPerIngameHour" : 30.0
+	},
+	"Zombies" : {
+		"ZombiesPerNPC" : 2,
+		"ZombiesBase" : 2,
+		"TargetingRange" : 31,
+		"ReconsiderDecisionTimeMinimum" : 4500,
+		"ReconsiderDecisionTimeMaximum" : 6500,
+		"WalkingSpeed" : 1.3,
+		"PlayerTargetingRangeSqr" : 256,
+		"PlayerHitDamage" : 25,
+		"PunchCooldownMS" : 2000,
+		"PunchForce" : 6,
+		"PunchHeight" : 0.25
+	},
+	"NPCs" : {
+		"MovementSpeed" : 2.3,
+		"ReconsiderDecisionTimeMinimum" : 3500,
+		"ReconsiderDecisionTimeMaximum" : 6000
+	},
+	"Player" : {
+		"StartingHealth" : 100,
+		"HealthAudioThreshold" : 10,
+		"HealthUpdateTimerMS" : 2000,
+		"HealthRegenerateMax" : 50,
+		"HealthRegenerationSpeed" : 4
+	},
+	"Leaves" : {
+		"MaxLogDistance" : 4
+	}
+}

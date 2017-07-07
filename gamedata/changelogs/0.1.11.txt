@@ -1,0 +1,16 @@
+0.1.11 (2017-06-14)
+
+-Added japanese localization (full credits go to KoutetsuSteel)
+-Fixed a pathfinding data corruption caused by: digging a path upwards, starting from the lowest block up, through a chunk boundary
+-Changed the 'idle/problem' location of npc's to their job location, to prevent colonists from bunching up & to make it more clear which colonist belongs to which job.
+-Improved indicators for crafting jobs; If they are missing items to craft, they'll select a random desired recipe and show the missing item instead of the checkmark.
+-Colonists will prefer to stand on the closer side of the block they're moving to, instead of going north-south-west-east in order of preference.
+-Added a description to the crafting limits popup to help new players (popup.inventory.stockpiledescription).
+-Added 3 missing translation entries (apply, reset in gameplay/audio menu's)
+-Allow opening of the command tool popup when not aiming at a block in range
+-'Fixed' dragging an area with the command tool - only clicking works
+-Increased crafting limit scrolling sensitivity.
+
+Sneaky hotfix on 2017-06-15:
+
+-Fixed instantly placing multiple banners instead of 1

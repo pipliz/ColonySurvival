@@ -1,0 +1,48 @@
+0.2.0 (2017-06-22)
+
+We’ve had an amazing launch last Friday. Major thanks to everybody who purchased the game! It was amazing to join random servers and see people enjoy the game, to read all the reviews and to watch all the videos you’ve put online.
+
+We’ve released version 0.1.14 Friday. By Tuesday we had already reached version 0.1.18. We’ve tried to fix or improve the most common bugs and problems.
+
+Version 0.2 is the first time since release that we add new jobs and significantly impact the production chain of existing colonies. We’ve added berry farmers, who are a source of quick and easy food in the first phase of your colony. No more two days of waiting, no more bakers, just instant food.
+
+Bread production has become more complicated, but is ultimately more efficient than berry farming. You’ll need to place a grindstone now to recruit a colonist who converts wheat into flour. Bakers can only use flour to bake bread.
+
+This update will hopefully help to make the first phase of the game better.
+
+-Added a grinder, to grind wheat to flour
+-Added a berry farmer, an easier way of food production
+-Added merchant recipes to buy wheat seeds, dirt and grass
+-Added Spanish translation (We received 2 seperate translations - sorry to the one that didn't make it!)
+-Added quickstart to translatable files (text instead of images)
+-Added changelog menu in info menu
+-Tweaked baker crafting speed / efficiency
+-Nerfed iron ingot crafting massively
+-Fixed guards having trouble with shooting monsters if there's multiple guards shooting
+-Halved guard rate of fire (to compensate for better shooting with multiple guards)
+-Updated part of the chinese zh-CN translation
+-Fixed a pathfinding precalculation bug - this fixed all the received test cases (no siege mode for 15+ minutes, where previously it triggered within minutes).
+-Enabled unity error reporting (anonymously)
+-Allow running the game without a properly initialized steam api. This fixes the 'shutdown after reaching main menu'.
+-Add active graphics API to version text, hide version text when ingame
+-Added support for DirectX12 and OpenGL (via override or automatic fallback)
+-Updated unity version
+-Ragdoll monsters instead of making them disappear when they unexpectedly lose ground / are underground
+-Added various changes to increase saving consistency
+-Added retrying of saving/loading files, in case the file is in use by another program (anti virus for example)
+-Set server processor priority to 'above normal' by default, as the OS does not seem to really care about the responsiveness of background tasks.
+-Fixed an issue where rightclicking with items on a full stack cleared the dragged items
+-Fixed forester planting sapplings that would grow outside of the forester area
+-Fixed banners in siege mode using lots of power from the server; only check once a second if siege mode can be resolved instead of 50+.
+-Fixed an issue where the tooltip would get messed up in the stockpile
+-Fixed an error cauesd by clicking on the first empty spot of the stockpile
+-Fixed a wrong translation key for "Too narrow field for trees", in the command tool
+-Fixed server stats glitching out of its position
+-Fixed client stats overlapping with colony data
+-Fixed selection area 'not flat' unclarity; show selection at 'top' level of selection, instead of lowest
+-Fixed an issue where recruiting a colonist would use significantly more than 50 food
+-Replaced the "host server button" with text describing how to manually open a server. The button messed up steam (couldnt launh games as server was active)
+-Tweaked sensitivity sliders to be more useful in the low end
+-Forced vsync on for main menu
+-Renamed "steam unlisted" to "steam non-public"
+-Reordered crafting recipes

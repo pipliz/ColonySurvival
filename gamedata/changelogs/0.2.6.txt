@@ -1,0 +1,6 @@
+0.2.6 (2017-07-05)
+
+-Substantially reduced 'resting' network use of the game
+--In ~300 colonists colony from 12:00->13:00 (30 secs) network use went down by 92.4% from 2.9 MB to 220 KB
+-Minor improvement to cpu usage due to not trying to play <all> torch loops at the same time.
+-Improvement to cpu usage for the colonist progress indicators

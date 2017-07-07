@@ -1,0 +1,12 @@
+0.1.10 (2017-06-14)
+
+-Fixed flax growth not working after restarting the game. To fix any flax in your savegame, manually delete the seeds & replace them.
+-Likely fixed an issue where a chunk would have invalid pathfinding data (causing npc's/zombies to fail to path through it)
+-Increased the part of the game that is localizable susbstantially (still missing some server text, quickstart, credits)
+-Added text above stockpile describing where things should be for what use.
+-Moved some starting items to the stockpile, to lessen the effect of potential death
+-Added food value (if it has any) to item tooltip in inventory
+-Renamed "starting difficulty" to "starting loadout" for better indication of what it does.
+-Remapped debug function keys from F2-F7 to F4-F9 to prevent accidental input from missing F1
+-Yet again improved JSON escaping
+-Changed description of straw to describe what it's needed for and where it comes from
