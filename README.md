@@ -1,5 +1,5 @@
 # Colony Survival
-Public translation files for Colony Survival
+Public gamedata files for Colony Survival
 
 Store page: http://store.steampowered.com/app/366090/Colony_Survival/
 
