@@ -6,9 +6,13 @@
 -Updated fr-CA translation
 -Updated zh-CN translation to 0.2.*
 -Updated jp-JP translation to 0.2.* (sorry, apparently 0.2.3 didn't actually apply it)
+-Substantially reduced server load of monsters
 -Substantially reduced 'resting' network use of the game
 --In ~300 colonists colony from 12:00->13:00 (30 secs) network use went down by 92.4% from 2.9 MB to 220 KB
 -Minor improvement to cpu usage due to not trying to play <all> torch loops at the same time.
 -Improvement to cpu usage for the colonist progress indicators
 -Improvement to cpu usage of server for active chunks
+-Optimized meshes for display
+--Make height & normal mapping for meshes optional
+--Together boosted fps from ~45 to ~60 in test scene that is wheat heavy
 -Possible fix to some crashes (disabled an experimental future I had no idea was enabled)
