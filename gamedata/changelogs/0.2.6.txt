@@ -7,13 +7,23 @@
 -Updated es-ES translation
 -Updated zh-CN translation to 0.2.*
 -Updated jp-JP translation to 0.2.* (sorry, apparently 0.2.3 didn't actually apply it)
--Substantially reduced server load of monsters
--Substantially reduced 'resting' network use of the game
---In ~300 colonists colony from 12:00->13:00 (30 secs) network use went down by 92.4% from 2.9 MB to 220 KB
--Minor improvement to cpu usage due to not trying to play <all> torch loops at the same time.
--Improvement to cpu usage for the colonist progress indicators
--Improvement to cpu usage of server for active chunks
--Optimized meshes for display
---Make height & normal mapping for meshes optional
---Together boosted fps from ~45 to ~60 in test scene that is wheat heavy
--Possible fix to some crashes (disabled an experimental future I had no idea was enabled)
+-Substantially increased server performance
+--Reduced load of monsters by multiple factors
+--Reduced network usage in a 300 people colony by 90%+
+--Reduced load from active chunks by ~tenfold
+--Various smaller optimizations
+-Substantially increased client performance
+--Improved network code, simpler npc movement code -> better performance
+--Improved npc indicator performance (only update ~30 times over the time, instead of every frame)
+--Halved cpu load of rendering instanced meshes
+--Optimized meshes (wheat etc) for display;
+---Opt-in height/normal mapping, add a customData node in types.json with "useNormalMap" : true, or "useHeightMap" : true to opt in.
+--Optimized terrain meshes for display
+--Various other, small optimizations
+-Monsters will now die after killing their 2nd colonist
+-Possible fix to some client crashes
+-Fixed being able to mine below the world and getting a glitchy "grass" block.
+-Fixed stockpile interface breaking if there are more items than default slot count
+-Fixed stockpile interface not being scrollable
+-Fixed issue with massive footstep spam when rendering at more than ~250 fps
+-Added a scrolling list to the world list on the server (so you can load more than the most recent ~10-20 worlds depending on window size)
