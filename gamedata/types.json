@@ -1,0 +1,697 @@
+{
+	"air" : {
+		"isSolid" : false,
+		"isPlaceable" : false
+	},
+	"grass" : {
+		"isFertile" : true,
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "dirtPlace"
+	},
+	"grasstemperate" : {
+		"parentType" : "grass",
+		"sideall" : "SELF",
+		"npcLimit" : 0,
+		"onRemove" : [
+			{
+				"type" : "grasstemperate",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			},
+			{
+				"type" : "sappling",
+				"amount" : 1,
+				"chance" : 0.03
+			}
+		]
+	},
+	"grasstundra" : {
+		"parentType" : "grass",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "grasstundra",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			}
+		]
+	},
+	"grasstaiga" : {
+		"parentType" : "grass",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "grasstaiga",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			},
+			{
+				"type" : "sappling",
+				"amount" : 1,
+				"chance" : 0.03
+			}
+		]
+	},
+	"grasssavanna" : {
+		"parentType" : "grass",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "grasssavanna",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			}
+		]
+	},
+	"grassrainforest" : {
+		"parentType" : "grass",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "grassrainforest",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			},
+			{
+				"type" : "sappling",
+				"amount" : 1,
+				"chance" : 0.03
+			}
+		]
+	},
+	"water" : {
+		"isSolid" : false
+	},
+	"sand" : {
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "dirtPlace",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "sand",
+				"amount" : 1,
+				"chance" : 1.0
+			}
+		]
+	},
+	"snow" : {
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "dirtPlace",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "snow",
+				"amount" : 1,
+				"chance" : 1.0
+			}
+		]
+	},
+	"banner" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAmount" : 0,
+		"isSolid" : false,
+		"needsBase" : true,
+		"sideall" : "SELF",
+		"customData" : {
+			"farShadows" : true
+		}
+	},
+	"dirt" : {
+		"npcLimit" : 0,
+		"isFertile" : true,
+		"sideall" : "SELF",
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "dirtPlace"
+	},
+	"stoneblock" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "SELF",
+		"onRemoveType" : "stonebricks",
+		"destructionTime" : 600
+	},
+	"planks" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"sideall" : "SELF",
+		"maxStackSize" : 200,
+		"npcLimit" : 30,
+		"fuelValue" : 0.12
+	},
+	"redplanks" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"sideall" : "SELF",
+		"maxStackSize" : 200,
+		"npcLimit" : 0,
+		"fuelValue" : 0.07
+	},
+	"blackplanks" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"sideall" : "SELF",
+		"maxStackSize" : 200,
+		"npcLimit" : 0,
+		"fuelValue" : 0.5
+	},
+	"bricks" : {
+		"sideall" : "SELF",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"npcLimit" : 20
+	},
+	"clay" : {
+		"sideall" : "SELF",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete"
+	},
+	"log" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteHeavy",
+		"fuelValue" : 0.6
+	},
+	"logtemperate" : {
+		"parentType" : "log",
+		"sideall" : "SELF",
+		"onRemoveAmount" : 1
+	},
+	"logtaiga" : {
+		"parentType" : "log",
+		"sideall" : "SELF",
+		"onRemoveAmount" : 1
+	},
+	"leaves" : {
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"destructionTime" : 200
+	},
+	"leavestemperate" : {
+		"parentType" : "leaves",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "leavestemperate",
+				"amount" : 1,
+				"chance" : 0.6
+			},
+			{
+				"type" : "sappling",
+				"amount" : 1,
+				"chance" : 0.1
+			}
+		]
+	},
+	"leavestaiga" : {
+		"parentType" : "leaves",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "leavestaiga",
+				"amount" : 1,
+				"chance" : 0.6
+			},
+			{
+				"type" : "sappling",
+				"amount" : 1,
+				"chance" : 0.1
+			}
+		]
+	},
+	"cherryblossom" : {
+		"parentType" : "leaves",
+		"sideall" : "SELF",
+		"onRemove" : [
+			{
+				"type" : "cherryblossom",
+				"amount" : 1,
+				"chance" : 0.6
+			},
+			{
+				"type" : "cherrysapling",
+				"amount" : 1,
+				"chance" : 0.1
+			}
+		]
+	},
+	"quiver" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"maxStackSize" : 400,
+		"isAutoRotatable" : true,
+		"needsBase" : true,
+		"isSolid" : false,
+		"sideall" : "quiverarrow",
+		"npcLimit" : 0
+	},
+	"torch" : {
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"maxStackSize" : 600,
+		"sideall" : "SELF",
+		"isSolid" : false,
+		"npcLimit" : 0,
+		"customData" : {
+			"volume" : 0.5,
+			"intensity" : 12.5,
+			"range" : 16.0,
+			"red" : 195.0,
+			"green" : 135.0,
+			"blue" : 46.0
+		}
+	},
+	"torchy+" : {
+		"needsBase" : true,
+		"parentType" : "torch"
+	},
+	"torchx-" : {
+		"parentType" : "torch"
+	},
+	"torchx+" : {
+		"parentType" : "torch"
+	},
+	"torchz+" : {
+		"parentType" : "torch"
+	},
+	"torchz-" : {
+		"parentType" : "torch"
+	},
+	"crate" : {
+		"sideall" : "SELF",
+		"onRemoveAudio" : "woodDeleteLight",
+		"onPlaceAudio" : "woodPlace",
+		"npcLimit" : 0
+	},
+	"stonebricks" : {
+		"sideall" : "SELF",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 600
+	},
+	"coatedplanks" : {
+		"sideall" : "SELF",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"maxStackSize" : 200,
+		"npcLimit" : 20
+	},
+	"adobe" : {
+		"sideall" : "SELF",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"maxStackSize" : 200,
+		"npcLimit" : 20
+	},
+	"workbench" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "workbenchtop",
+		"npcLimit" : 0
+	},
+	"mint" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "planks",
+		"sidey+" : "mint",
+		"npcLimit" : 0
+	},
+	"shop" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "shop",
+		"npcLimit" : 0
+	},
+	"grindstone" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "planks",
+		"sidey+" : "grindstone",
+		"npcLimit" : 0
+	},
+	"plasterblock" : {
+		"sideall" : "SELF",
+		"onRemoveAudio" : "dirtPlace",
+		"onPlaceAudio" :"dirtPlace",
+		"npcLimit" : 0
+	},
+	"furnace" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"isAutoRotatable" : true,
+		"sideall" : "furnaceside",
+		"sidey+" : "furnaceunlittop",
+		"sidex+" : "furnaceunlitfront",
+		"destructionTime" : 800,
+		"npcLimit" : 0,
+		"customData" : {
+			"up" : {
+				"volume" : 0.3,
+				"intensity" : 2.5,
+				"range" : 8.0,
+				"red" : 195.0,
+				"green" : 135.0,
+				"blue" : 46.0
+			},
+			"side" : {
+				"volume" : 0.2,
+				"intensity" : 1.0,
+				"range" : 8.0,
+				"red" : 195.0,
+				"green" : 135.0,
+				"blue" : 46.0
+			}
+		}
+	},
+	"oven" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"isAutoRotatable" : true,
+		"sideall" : "stonebricks",
+		"sidex+" : "ovenunlitfront",
+		"destructionTime" : 800,
+		"npcLimit" : 0,
+		"customData" : {
+			"volume" : 0.2,
+			"intensity" : 2.0,
+			"range" : 8.0,
+			"red" : 195.0,
+			"green" : 135.0,
+			"blue" : 46.0
+		}
+	},
+	"infinitegold" : {
+		"onRemoveType" : "goldore",
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 5000,
+		"sideall" : "SELF",
+		"isDestructible" : false
+	},
+	"infiniteclay" : {
+		"onRemoveType" : "clay",
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 1250,
+		"sideall" : "SELF",
+		"isDestructible" : false
+	},
+	"infiniteiron" : {
+		"onRemoveType" : "ironore",
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 1250,
+		"sideall" : "SELF",
+		"isDestructible" : false
+	},
+	"infinitegypsum" : {
+		"onRemoveType" : "gypsum",
+		"onRemoveAmount" : 5,
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 1250,
+		"sideall" : "SELF",
+		"isDestructible" : false
+	},
+	"infinitecoal" : {
+		"onRemoveType" : "coalore",
+		"isDestructible" : false,
+		"sideall" : "SELF",
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete"
+	},
+	"lumberarea" : {
+		"onRemoveType" : "grasstemperate",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF",
+		"isFertile" : true
+	},
+	"sappling" : {
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
+	"cherrysapling" : {
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "sappling",
+		"npcLimit" : 0
+	},
+	"flaxstage" : {
+		"isSolid" : false,
+		"needsBase" : true,
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "grassDelete",
+		"maxStackSize" : 1200,
+		"sideall" : "flax"
+	},
+	"flaxstage1" : {
+		"npcLimit" : 100,
+		"parentType" : "flaxstage",
+		"onRemove" : [
+			{
+				"type" : "flaxstage1",
+				"amount" : 1,
+				"chance" : 0.8
+			}
+		]
+	},
+	"flaxstage2" : {
+		"parentType" : "flaxstage",
+		"onRemove" : [
+			{
+				"type" : "flaxstage1",
+				"amount" : 1,
+				"chance" : 1.1
+			},
+			{
+				"type" : "flax",
+				"amount" : 3,
+				"chance" : 1
+			}
+		]
+	},
+	"berrybush" : {
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF",
+		"npcLimit" : 0
+	},
+	"wheatstage" : {
+		"isSolid" : false,
+		"needsBase" : true,
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "grassDelete",
+		"maxStackSize" : 1200
+	},
+	"wheatstage1" : {
+		"npcLimit" : 0,
+		"parentType" : "wheatstage",
+		"sideall" : "wheatwheat",
+		"onRemove" : [
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.8
+			}
+		]
+	},
+	"wheatstage2" : {
+		"parentType" : "wheatstage",
+		"sideall" : "wheatwheat",
+		"onRemove" : [
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.8
+			},
+			{
+				"type" : "straw",
+				"amount" : 1,
+				"chance" : 0.1
+			},
+			{
+				"type" : "wheat",
+				"amount" : 1,
+				"chance" : 0.3
+			}
+		]
+	},
+	"wheatstage3" : {
+		"parentType" : "wheatstage",
+		"sideall" : "wheatwheat",
+		"onRemove" : [
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "wheatstage1",
+				"amount" : 1,
+				"chance" : 0.1
+			},
+			{
+				"type" : "wheat",
+				"amount" : 1,
+				"chance" : 1.0
+			},
+			{
+				"type" : "straw",
+				"amount" : 1,
+				"chance" : 0.333333
+			}
+		]
+	},
+	"straw" : {
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" :"dirtPlace",
+		"sideall" : "SELF",
+		"maxStackSize" : 100
+	},
+	"infinitestone" : {
+		"onRemoveType" : "stonebricks",
+		"onRemoveAudio" : "stoneDelete",
+		"destructionTime" : 1250,
+		"sideall" : "SELF",
+		"isDestructible" : false
+	},
+	"linseedoil" : {
+		"npcLimit" : 100,
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"flax" : {
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"berry" : {
+		"isPlaceable" : false,
+		"nutritionalValue" : 0.6,
+		"maxStackSize" : 600
+	},
+	"wheat" : {
+		"isPlaceable" : false,
+		"nutritionalValue" : 0.4,
+		"maxStackSize" : 600
+	},
+	"flour" : {
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"bread" : {
+		"isPlaceable" : false,
+		"nutritionalValue" : 3.0
+	},
+	"arrow" : {
+		"isPlaceable" : false,
+		"npcLimit" : 200,
+		"maxStackSize" : 100
+	},
+	"coalore" : {
+		"isPlaceable" : false,
+		"fuelValue" : 1.0
+	},
+	"gypsum" : {
+		"maxStackSize" : 200,
+		"isPlaceable" : false
+	},
+	"ironore" : {
+		"maxStackSize" : 50,
+		"isPlaceable" : false
+	},
+	"goldore" : {
+		"maxStackSize" : 50,
+		"isPlaceable" : false
+	},
+	"ironingot" : {
+		"maxStackSize" : 200,
+		"isPlaceable" : false
+	},
+	"goldingot" : {
+		"maxStackSize" : 200,
+		"isPlaceable" : false
+	},
+	"goldcoin" : {
+		"maxStackSize" : 400,
+		"isPlaceable" : false
+	},
+	"bow" : {
+		"npcLimit" : 1,
+		"isPlaceable" : false
+	},
+	"pickaxe" : {
+		"npcLimit" : 1,
+		"isPlaceable" : false
+	},
+	"axe" : {
+		"npcLimit" : 1,
+		"isPlaceable" : false
+	},
+	"commandtool" : {
+		"isPlaceable" : false
+	},
+	"bannertool" : {
+		"isPlaceable" : false
+	},
+	"constructiontool" : {
+		"isPlaceable" : false
+	},
+	"bed" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"isAutoRotatable" : true,
+		"isSolid" : false,
+		"needsBase" : true,
+		"sideall" : "SELF",
+		"npcLimit" : 0
+	},
+	"bedend" : {
+		"parentType" : "bed",
+		"isAutoRotatable" : true
+	},
+	"savetool" : {
+	},
+	"furnacelit" : {
+		"parentType" : "furnace",
+		"isAutoRotatable" : true,
+		"sideall" : "furnaceside",
+		"sidex+" : "furnacelitfront",
+		"sidey+" : "furnacelittop",
+		"destructionTime" : 1250
+	},
+	"ovenlit" : {
+		"parentType" : "oven",
+		"isAutoRotatable" : true,
+		"sideall" : "stonebricks",
+		"sidex+" : "ovenlitfront",
+		"destructionTime" : 1250
+	}
+}
