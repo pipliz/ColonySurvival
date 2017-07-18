@@ -1,7 +1,21 @@
 0.2.7 (2017-**-**)
 
--Revamp npc texture pipeline (removed /cache/ folder, merged some textures)
+Things you'll probably notice:
+
 -Limit audio distance properly (i.e, don't hear farmers/miners from 100 meters away)
--Changed server to connect to 127.0.0.1 for singleplayer instead of "localhost"
+
+Things you may notice depending on use case:
+
 -Updated the fr-FR localization (covers more)
--Fix types.json & crafting.json to adhere to json spec (no ingame change)
+-Added a sort of basic mod api (for C# code) to the server
+
+Things you probably won't notice unless it affects your use case:
+
+-Changed server to connect to the loopback IP directly for singleplayer instead of "localhost"
+-Fix types.json & crafting.json to adhere to json spec
+-Fix json writer to adhere to spec for booleans.
+-Allow miners to be placed on blocks that aren't the lowest layer (can't obtain infinite blocks legit though)
+-Add setting in types.json to make a block mineable by the miner.
+-Revamp npc texture pipeline (removed /cache/ folder, merged some textures)
+-Added NPCCount & MonsterCount stats to the server
+-Fixed server log breaking with multiline messages

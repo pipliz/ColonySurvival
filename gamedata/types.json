@@ -411,21 +411,33 @@
 		"onRemoveAudio" : "stoneDelete",
 		"destructionTime" : 5000,
 		"sideall" : "SELF",
-		"isDestructible" : false
+		"isDestructible" : false,
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8.0
+		}
 	},
 	"infiniteclay" : {
 		"onRemoveType" : "clay",
 		"onRemoveAudio" : "stoneDelete",
 		"destructionTime" : 1250,
 		"sideall" : "SELF",
-		"isDestructible" : false
+		"isDestructible" : false,
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8.0
+		}
 	},
 	"infiniteiron" : {
 		"onRemoveType" : "ironore",
 		"onRemoveAudio" : "stoneDelete",
 		"destructionTime" : 1250,
 		"sideall" : "SELF",
-		"isDestructible" : false
+		"isDestructible" : false,
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8.0
+		}
 	},
 	"infinitegypsum" : {
 		"onRemoveType" : "gypsum",
@@ -433,14 +445,22 @@
 		"onRemoveAudio" : "stoneDelete",
 		"destructionTime" : 1250,
 		"sideall" : "SELF",
-		"isDestructible" : false
+		"isDestructible" : false,
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8.0
+		}
 	},
 	"infinitecoal" : {
 		"onRemoveType" : "coalore",
 		"isDestructible" : false,
 		"sideall" : "SELF",
 		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete"
+		"onRemoveAudio" : "stoneDelete",
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8.0
+		}
 	},
 	"lumberarea" : {
 		"onRemoveType" : "grasstemperate",
@@ -581,7 +601,11 @@
 		"onRemoveAudio" : "stoneDelete",
 		"destructionTime" : 1250,
 		"sideall" : "SELF",
-		"isDestructible" : false
+		"isDestructible" : false,
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 3.0
+		}
 	},
 	"linseedoil" : {
 		"npcLimit" : 100,
