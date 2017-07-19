@@ -23,7 +23,8 @@ This list is used later on at various moments to trigger these methods at certai
 AfterAssemblyLoad 		- void () 		- Directly after all mod dll's are loaded. This is before most amount of the startup code has ran.
 AfterStartup			- void () 		- At the end of the startup code, first after AfterAssembyLoad. Some thread loops are started, command line args are parsed but not used yet.
 AfterSelectedWorld		- void () 		- At the start(-ish) of the loading world method, first after AfterStartup. ServerManager.WorldName is set, savegames/serverLock is created.
-AfterItemTypesDefined	- void () 		- Slightly later in the loading world method, first after AfterSelectedWorld. The ItemTypes class is loaded.
+AfterItemTypesDefined	- void () 		- Slightly later in the loading world method, first after AfterSelectedWorld. The ItemTypes class is loaded. Too late for adding types.
+AfterItemTypesServer	- void ()		- After ItemTypesServer.Initialize is called, after AfterItemTypesDefined. Too late for adding textureMapping.
 AfterWorldLoad			- void () 		- After the world is fully loaded, first after AfterWorldLoad. All misc data is loaded (recipes, structures, npc's, player data, all that)
 AfterNetworkSetup		- void () 		- After the NetworkWrapper class is loaded, first after AfterWorldLoad. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
 OnUpdateStart			- void () 		- Start of Unity's Update loop, before anything is called (except for quitting mechanisms).

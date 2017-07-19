@@ -19,3 +19,5 @@ Things you probably won't notice unless it affects your use case:
 -Revamp npc texture pipeline (removed /cache/ folder, merged some textures)
 -Added NPCCount & MonsterCount stats to the server
 -Fixed server log breaking with multiline messages
+-Fixed the game sort of breaking if there are blocks in the world that do not exist in types.json anymore.
+-Moved texture mapping types.json to the server (gamedata/texturemapping.json now)
