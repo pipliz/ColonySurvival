@@ -6,7 +6,7 @@ To build the Example dll;
 -Create a new project in visual studio or some other
 -Change .NET framework to 3.5
 -Move ExampleClass.cs into it (or create it over it, whichever works)
--Add references to "colonyclient_Data\managed\Assembly-CSharp.dll", and probably UnityEngine.dll (.ui) from the same folder.
+-Add references to "colonyserver_Data\managed\Assembly-CSharp.dll", and probably UnityEngine.dll (.ui) from the same folder.
 -Build it
 -Move the built dll to the desired locations (\mods\Pipliz\Example\Example.dll)
 -Set "enabled" : true in the modInfo.json
@@ -36,6 +36,7 @@ OnApplicationPause		- void (bool b)	- Unity's OnApplicationPause method (probabl
 
 Most interesting mods will probably be based on using these game classes:
 
+-ItemTypes.AddRawType				- Before "AfterItemTypesDefined", register a new type as if it's in types.json
 -ChatCommands.CommandManager.RegisterCommand - To register chat commands for callbacks.
 -ServerManager.TrySetBlock			- Change the blocktype at a certain position (includes sending to players, triggering OnChange callbacks on top of World.TrySetTypeAt + ServerManager.SendBlockChange)
 -World.TryGetTypeAt					- Get the type at a certain position
