@@ -11,14 +11,14 @@ namespace ExampleMod
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterAddingBaseTypes)]
 		public static void AfterAddingBaseTypes ()
 		{
-			ItemTypesServer.AddTextureMapping("ExampleBlock1", new JSONNode(NodeType.Object)
+			ItemTypesServer.AddTextureMapping("ExampleBlock1", new JSONNode()
 				.SetAs("albedo", "grassTemperate")
 				.SetAs("normal", "stoneblock")
 				.SetAs("emissive", "ovenLitFront")
 				.SetAs("height", "oreCoal")
 			);
 
-			ItemTypesServer.AddTextureMapping("ExampleBlock2", new JSONNode(NodeType.Object)
+			ItemTypesServer.AddTextureMapping("ExampleBlock2", new JSONNode()
 				.SetAs("albedo", "grindstone")
 				.SetAs("normal", "berrybush")
 				.SetAs("emissive", "torch")
