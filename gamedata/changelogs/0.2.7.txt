@@ -1,6 +1,31 @@
-0.2.7 (2017-**-**)
+0.2.7 (2017-07-21)
 
--Revamp npc texture pipeline (removed /cache/ folder, merged some textures)
+Things you'll probably notice:
+
 -Limit audio distance properly (i.e, don't hear farmers/miners from 100 meters away)
--Changed server to connect to 127.0.0.1 for singleplayer instead of "localhost"
+
+Things you may notice depending on use case:
+
+-Added pl-PL localization (credits to Makalik)
 -Updated the fr-FR localization (covers more)
+-Added a basic mod api (for C# code) to the server (includes some examples)
+
+Things you probably won't notice unless it affects your use case:
+
+-Changed server to connect to the loopback IP directly for singleplayer instead of "localhost"
+-Fixed server log breaking with multiline messages
+-Added NPCCount & MonsterCount stats to the server
+
+Things internally (for modders / ourselves):
+
+-Fix types.json & crafting.json to adhere to json spec
+-Fix json writer to adhere to spec for booleans.
+-Allow miners to be placed on blocks that aren't the lowest layer (can't obtain infinite blocks legit though)
+-Add setting in types.json to make a block mineable by the miner.
+-Revamp npc texture pipeline (removed /cache/ folder, merged some textures)
+-Fixed the game sort of breaking if there are blocks in the world that do not exist in types.json anymore.
+-Moved the texture mapping types.json to the server (gamedata/texturemapping.json now)
+-Redid passing arguments from the client to launching a server, now goes through a -uselaunchfile arg + a file in the savegames folder.
+-Types.json now defines which icons types use
+-Types.json now defines which mesh types use
+-Removed "isAutoRotatable" magic tag, use manual isRotatable tag, see existing types for how to.
