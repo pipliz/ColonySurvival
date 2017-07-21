@@ -20,41 +20,48 @@ If it is defined, it checks all methods for one that has the ModCallback attribu
 Methods which define that attribute (with a value other than none) are added to a list internally.
 This list is used later on at various moments to trigger these methods at certain points.
 
-AfterAssemblyLoad 		- void () 		- Directly after all mod dll's are loaded. This is before most amount of the startup code has ran.
-AfterStartup			- void () 		- At the end of the startup code, first after AfterAssembyLoad. Some thread loops are started, command line args are parsed but not used yet.
-AfterSelectedWorld		- void () 		- At the start(-ish) of the loading world method, first after AfterStartup. ServerManager.WorldName is set, savegames/serverLock is created.
-AfterItemTypesDefined	- void () 		- Slightly later in the loading world method, first after AfterSelectedWorld. The ItemTypes class is loaded. Too late for adding types.
-AfterItemTypesServer	- void ()		- After ItemTypesServer.Initialize is called, after AfterItemTypesDefined. Too late for adding textureMapping.
-AfterWorldLoad			- void () 		- After the world is fully loaded, first after AfterWorldLoad. All misc data is loaded (recipes, structures, npc's, player data, all that)
-AfterNetworkSetup		- void () 		- After the NetworkWrapper class is loaded, first after AfterWorldLoad. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
-OnUpdateStart			- void () 		- Start of Unity's Update loop, before anything is called (except for quitting mechanisms).
-OnUpdate				- void () 		- Just after OnUpdateStart, after the ThreadManager did main thread delegates.
-OnUpdateEnd				- void () 		- Just before the end of the update loop (after all relevant gamecode)
-OnFixedUpdate			- void () 		- Unity's FixedUpdate loop
-OnLateUpdate			- void () 		- Unity's LateUpdate loop (comes after Update and some unity internal things)
-OnApplicationFocus		- void (bool a)	- Unity's OnApplicationFocus method.
-OnApplicationPause		- void (bool b)	- Unity's OnApplicationPause method (probably unused, as the game does not have proper support for this, but hey here is an entry)
+The first 'paragraph' will be called in order:
+AfterStartup			- void () 			- At the end of the startup code, first callback to happen. Use this for basic initialization
+AfterSelectedWorld		- void () 			- At the start of the loading world method. ServerManager.WorldName is set, savegames/serverLock is created. The place to add actions to ItemTypes.On* lists.
+AfterAddingBaseTypes	- void ()			- Loaded the worlds' index lookup table, called ItemTypes.OnBeforeLoadingTypes. The place to call ItemTypes.AddRawType() to add types.json nodes.
+AfterItemTypesDefined	- void () 			- Do things that require all itemtypes to be defined here.
+AfterItemTypesServer	- void ()			- Place to override itemtypesserver actions.
+AfterWorldLoad			- void () 			- All misc data is loaded (recipes, structures, npc's, player data, all that)
+AfterNetworkSetup		- void () 			- After the NetworkWrapper class is loaded. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
+			
+OnUpdateStart			- void () 			- Start of Unity's Update loop, before anything is called (except for quitting mechanisms).
+OnUpdate				- void () 			- Just after OnUpdateStart, after the ThreadManager did main thread delegates. Probably the place to put the bulk of per-frame-updates.
+OnUpdateEnd				- void () 			- Just before the end of the update loop (after all relevant gamecode)
+OnGUI					- void ()			- Unity's legacy GUI loop - use UnityEngine.GUI calls here.
+OnFixedUpdate			- void () 			- Unity's FixedUpdate loop
+OnLateUpdate			- void () 			- Unity's LateUpdate loop (comes after Update and some unity internal things)
+OnApplicationFocus		- void (bool a)		- Unity's OnApplicationFocus method.
+OnApplicationPause		- void (bool b)		- Unity's OnApplicationPause method (probably unused, as the game does not have proper support for this, but hey here is an entry)
+OnPlayerConnected		- void (Player p)	- A player connected to the server
+OnPlayerDisconnected	- void (Player p)	- A player disconnected from the server
+OnSavingPlayer			- void (JSONNode n, Player p) - A player is being saved
+OnLoadingPlayer			- void (JSONNode n, NewtorkID i) - A player is being loaded
 
 Most interesting mods will probably be based on using these game classes:
 
--ItemTypes.AddRawType				- Before "AfterItemTypesDefined", register a new type as if it's in types.json
--ChatCommands.CommandManager.RegisterCommand - To register chat commands for callbacks.
--ServerManager.TrySetBlock			- Change the blocktype at a certain position (includes sending to players, triggering OnChange callbacks on top of World.TrySetTypeAt + ServerManager.SendBlockChange)
--World.TryGetTypeAt					- Get the type at a certain position
--ItemTypesServer.RegisterType 		- For receiving callbacks for where certain blocks and placed/removed/changed/updated near and by who
+-ItemTypes.AddRawType				- @ AfterAddingBaseTypes, register a new type as if it's in types.json
+-ChatCommands.CommandManager.RegisterCommand - To register chat commands for callbacks (anywhere).
+-ServerManager.TrySetBlock			- Change the blocktype at a certain position (includes sending to players, triggering OnChange callbacks on top of World.TrySetTypeAt + ServerManager.SendBlockChange). Use post world load.
+-World.TryGetTypeAt					- Get the type at a certain position - use post world load
+-ItemTypesServer.RegisterType 		- For receiving callbacks for where certain blocks are placed/removed/changed/updated near and by who - @ AfterItemTypesServer
 -Pipliz.Chatting.Chat.Send			- To send chat messages to players
 -Players.Send*						- Primary function to send data to all / some close by players.
 -NetworkWrapper.Send*				- Primary function to send data to a specific players.
 -Stockpile.GetStockPile				- Get the stockpile for fiddling
 -UpdatableBlocks.BlockTracker		- Possible used for custom updatable/growable plants, check the other implementations
 -PermissionsManager					- Check if someone has some permission
--Recipe*							- Classes with all crafting recipes & some helper functions to fiddle with them.
+-Recipe*							- Classes with all crafting recipes & some helper functions to fiddle with them. - @ AfterWorldLoad
 -General.Physics.Physics.CanSee 	- A method to see if source can see goal.
--BlockTypes.Builtin.BuiltinBlocks 	- Some builtin blocks (probably not exhaustive at the moment of writing, only usable after "AfterItemTypesDefined")
+-BlockTypes.Builtin.BuiltinBlocks 	- Some builtin blocks, probably not exhaustive at the moment of writing, @ AfterItemTypesDefined
 -AI.PathFinder(.TryFindPath)		- Class to try and find a path between A & B. Requires quite some care to work properly.
 -TimeCycle							- Class that manages the ingame time (mostly just day & night, rest is Pipliz.Time)
 -Pipliz.*							- Mostly helper classes that are not strictly tied to the game
--Pipliz.Time						- Tracks some times for cooldowns etc
+-Pipliz.Time						- Tracks some times for cooldowns etc (cooldowns themselves are all over, but they're based on this)
 -Pipliz.Log							- Multithreaded log writing, writes to both the UI log & the unity file log.
 -Pipliz.Random						- Wrapper around System.Random to make it work with multiple threads (probably sort of slow)
 -Pipliz.Math						- Who doesn't want their own math library (with the bugs that come with it)
@@ -64,9 +71,6 @@ Most interesting mods will probably be based on using these game classes:
 -Pipliz.Vector3Int					- Vector3 class using ints. Used for chunk positions, block position, other positions generally.
 -Pipliz.Vector3Byte					- Vector3 class using sbytes. Mostly used for local chunk positions
 -Pipliz.Threading.ThreadManager 	- Helper to queue delegates onto the main thread (possibly at a later interval) because 80%+ of the game isn't threadsafe.
--Pipliz.Threading.SpinLock			- A spinlock, with blackjack and hookers
--Pipliz.Collections.BinaryHeap  	- A binaryHeap. Not entirely sure why there is none in system.collections.generic
--Pipliz.Collections.ThreadSafe.*	- Mostly mediocre spinlock wrappers around other collections but does the job
 -Pipliz.Noise						- Some noise functions (un)used (only OpenSimplexNoise is used)
 
 Things that are probably too hard coded to be very useful at this moment:
