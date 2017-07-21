@@ -6,7 +6,7 @@ using Pipliz.Threading;
 namespace ExampleMod
 {
 	[ModLoader.ModManager]
-	public class ExampleClassModManager
+	public class ExampleBlockModEntries
 	{
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterAddingBaseTypes)]
 		public static void AfterAddingBaseTypes ()
@@ -52,9 +52,9 @@ namespace ExampleMod
 		{
 			ItemTypesServer.RegisterType("ExampleBlock1",
 				new ItemTypesServer.ItemActionBuilder()
-				.SetOnAdd(ExampleClassCodeManager.OnAdd)
-				.SetOnRemove(ExampleClassCodeManager.OnRemove)
-				.SetOnChange(ExampleClassCodeManager.OnChange)
+				.SetOnAdd(ExampleBlockCode.OnAdd)
+				.SetOnRemove(ExampleBlockCode.OnRemove)
+				.SetOnChange(ExampleBlockCode.OnChange)
 				.SetChangeTypes("ExampleBlock1", "ExampleBlock2")
 			);
 
@@ -62,7 +62,7 @@ namespace ExampleMod
 		}
 	}
 
-	static class ExampleClassCodeManager
+	static class ExampleBlockCode
 	{
 		public static void OnAdd (Vector3Int position, ushort newType, NetworkID causedBy)
 		{

@@ -8,7 +8,7 @@ Things you may notice depending on use case:
 
 -Added pl-PL localization (credits to Makalik)
 -Updated the fr-FR localization (covers more)
--Added a basic mod api (for C# code) to the server - includes example mod block
+-Added a basic mod api (for C# code) to the server (includes some examples)
 
 Things you probably won't notice unless it affects your use case:
 
@@ -16,7 +16,7 @@ Things you probably won't notice unless it affects your use case:
 -Fixed server log breaking with multiline messages
 -Added NPCCount & MonsterCount stats to the server
 
-Things for modders:
+Things internally (for modders / ourselves):
 
 -Fix types.json & crafting.json to adhere to json spec
 -Fix json writer to adhere to spec for booleans.

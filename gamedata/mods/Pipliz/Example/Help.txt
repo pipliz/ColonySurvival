@@ -1,3 +1,8 @@
+The example mod contains two parts:
+
+1) A block (ExampleBlock1) you can place, which turns into another block after 5 seconds (ExampleBlock2)
+2) A chatcommand, /played, which sends you the length of your current session and total time played in this world.
+
 How to enable the Example dll;
 -Set "enabled" : true in the modInfo.json
 -Launch the server
@@ -40,7 +45,7 @@ OnApplicationPause		- void (bool b)		- Unity's OnApplicationPause method (probab
 OnPlayerConnected		- void (Player p)	- A player connected to the server
 OnPlayerDisconnected	- void (Player p)	- A player disconnected from the server
 OnSavingPlayer			- void (JSONNode n, Player p) - A player is being saved
-OnLoadingPlayer			- void (JSONNode n, NewtorkID i) - A player is being loaded
+OnLoadingPlayer			- void (JSONNode n, NetworkID i) - A player is being loaded
 
 Most interesting mods will probably be based on using these game classes:
 
