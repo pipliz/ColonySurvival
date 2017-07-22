@@ -8,8 +8,8 @@
 		"inputplaceholder" : "Type tekst..."
 	},
 	"mainmenu" : {
-		"singleplayer" : "Singleplayer",
-		"multiplayer" : "Multiplayer",
+		"singleplayer" : "Lokaal spelen",
+		"multiplayer" : "Online spelen",
 		"settings" : "Opties",
 		"info" : "Info",
 		"quit" : "Afsluiten",
@@ -81,9 +81,9 @@
 			"skyboxfrequent" : "Skybox frequent",
 			"skyboxveryfrequent" : "Skybox zeer frequent",
 			"skyboxconstant" : "Skybox constant",
-			"terrainfrequent" : "Terrain frequent",
-			"terrainveryfrequent" : "Terrain zeer frequent",
-			"terrainconstant" : "Terrain constant"
+			"terrainfrequent" : "Terrein frequent",
+			"terrainveryfrequent" : "Terrein zeer frequent",
+			"terrainconstant" : "Terrein constant"
 		},
 		"audio" : "Geluid",
 		"audiomenu" : {
@@ -134,8 +134,8 @@
 	},
 	"popup" : {
 		"banner" : {
-			"header" : "Kolonie management",
-			"description" : "Kolonisten hebben 5 voedsel nodig per dag en een bed. Het rekruteren van een kolonist kost 50 voedsel.",
+			"header" : "Kolonie beheer",
+			"description" : "Kolonisten hebben een bed en 5 voedsel per dag nodig. Het rekruteren van een kolonist kost 50 voedsel.",
 			"button" : "Rekruteer een kolonist",
 			"resetbutton" : "Start opnieuw",
 			"resettooltipa" : "",
@@ -154,11 +154,11 @@
 			"wheata" : "",
 			"wheatb" : "Benodigd: Graan zaden",
 			"wheatc" : "Plaats op gras of aarde",
-			"miner" : "Mijner",
+			"miner" : "Mijnwerker",
 			"minera" : "",
 			"minerb" : "Benodigd: Pijkhouweel",
 			"minerc" : "Plaats op de onderste laag van de wereld",
-			"forester" : "Bosbouwer",
+			"forester" : "Houthakker",
 			"forestera" : "",
 			"foresterb" : "Benodigd: takstekken en een bijl",
 			"foresterc" : "Plaats op gras of aarde",
@@ -174,9 +174,9 @@
 			"notarable" : "Niet bebouwbare grond",
 			"occupiedblocks" : "Al bezet met blokken",
 			"wheatfarmertool" : "Graan Boer Staf",
-			"minertool" : "Mijner Staf",
-			"forestertool" : "Bosbouwer Staf",
-			"flaxfarmertool" : "Vlas Boer Staf",
+			"minertool" : "Mijnwerkers Staf",
+			"forestertool" : "Houthakkers Staf",
+			"flaxfarmertool" : "Vlas Boeren Staf",
 			"notool" : "Geen staf geselecteerd"
 		},
 		"toolconstruction" : {
@@ -198,9 +198,9 @@
 			"remove" : "Verwijder gebied"
 		},
 		"inventory" : {
-			"crafting" : "Crafting",
+			"crafting" : "Bouwen",
 			"stockpile" : "Voorraad",
-			"stockpiledescription" : "Je kan alleen dingen craften met de spullen in de onderste plekken. Kolonisten kunnen alleen spullen gebruiken uit de voorraad.",
+			"stockpiledescription" : "Je kan alleen dingen bouwen met de spullen in de onderste plekken. Kolonisten kunnen alleen spullen gebruiken uit de voorraad.",
 			"foodvalue" : "Voedselwaarde:",
 			"tooltip" : {
 				"needs" : "Benodigd: ",
@@ -208,7 +208,7 @@
 			}
 		},
 		"limits" : {
-			"crafting" : "Crafting limieten",
+			"crafting" : "Bouw limieten",
 			"baking" : "Bakker limieten",
 			"smelting" : "Smelterij limieten",
 			"minting" : "Muntpers limieten",
@@ -217,7 +217,7 @@
 		},
 		"death" : {
 			"description" : "Je bent gestorven.",
-			"respawn" : "Respawn"
+			"respawn" : "Herleven"
 		},
 		"quickstart" : {
 			"previous" : "Vorige",
