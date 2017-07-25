@@ -7,6 +7,7 @@ Things you'll probably notice:
 Things you may notice depending on use case:
 
 -Added pl-PL localization (credits to Makalik)
+-Updated the de-DE localization
 -Updated the fr-FR localization (covers more)
 -Added a basic mod api (for C# code) to the server (includes some examples)
 
@@ -29,3 +30,8 @@ Things internally (for modders / ourselves):
 -Types.json now defines which icons types use
 -Types.json now defines which mesh types use
 -Removed "isAutoRotatable" magic tag, use manual isRotatable tag, see existing types for how to.
+
+Hotfix later (2017-07-22)
+
+-Fix icon missing for cherrysapling
+-Fix the server log performance (it was terrible, truly, could freeze servers)
