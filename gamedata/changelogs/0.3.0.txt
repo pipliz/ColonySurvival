@@ -7,3 +7,28 @@ Localization changes:
 -Fixes/additions to fr-FR locale
 -Fixes to nl-NL locale
 -Fixes to ru-RU locale
+
+Fixes:
+
+-Fixed npc's not using specularity/smoothness maps (oops...)
+-Fixed npc's not using trilinear/anisotropic filtering (oops...)
+
+Modding changes:
+
+-Fixed OnPlayerConnected callback being called before a connection was ready on steam hosted servers
+-Added OnQuitEarly callback
+-Added OnQuit callback
+-Added OnQuitLate callback
+-Added OnSaveChunkToRegion callback
+-Added OnSavedRegionToDisk callback
+-Added OnPlayerMoved callback
+-Added AfterDefiningNPCTypes callback
+
+Internal(/modding) changes:
+
+-Added jsonnode.ClearChildren() method.
+-Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
+-Changed npc inventory saving format
+-Revamped a large part of the NPC code in order to add more future npc types.
+--Allows player defined npc types. (No jobs yet as of writing, making it mostly useless).
+--NPC colors etc are in gamedata/npctypes.json now, instead of gamedata/textures/materials/npc/material*.json

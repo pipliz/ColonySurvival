@@ -28,6 +28,7 @@ This list is used later on at various moments to trigger these methods at certai
 The first 'paragraph' will be called in order:
 AfterStartup			- void () 			- At the end of the startup code, first callback to happen. Use this for basic initialization
 AfterSelectedWorld		- void () 			- At the start of the loading world method. ServerManager.WorldName is set, savegames/serverLock is created. The place to add actions to ItemTypes.On* lists.
+AfterDefiningNPCTypes	- void ()			- After default npc types are defined, use the NPC.NPCType static functions here to register other npc types
 AfterAddingBaseTypes	- void ()			- Loaded the worlds' index lookup table, called ItemTypes.OnBeforeLoadingTypes. The place to call ItemTypes.AddRawType() to add types.json nodes.
 AfterItemTypesDefined	- void () 			- Do things that require all itemtypes to be defined here.
 AfterItemTypesServer	- void ()			- Place to override itemtypesserver actions.
@@ -46,6 +47,12 @@ OnPlayerConnected		- void (Player p)	- A player connected to the server
 OnPlayerDisconnected	- void (Player p)	- A player disconnected from the server
 OnSavingPlayer			- void (JSONNode n, Player p) - A player is being saved
 OnLoadingPlayer			- void (JSONNode n, NetworkID i) - A player is being loaded
+OnQuitEarly				- void ()			- General.Application.OnQuit @ -200, called before all other on quit actions
+OnQuit					- void ()			- General.Application.OnQuit @ 0, after players are disconnected
+OnQuitLate				- void ()			- General.Application.OnQuit @ 100, after most quit actions happened
+OnSaveChunkToRegion		- void (Chunk c)	- Triggered by filesaving thread upon saving a chunk to a region (not to disk yet). Chunk is locked for reading data. Take care with multithreading!
+OnSavedRegionToDisk		- void (FileSaver.FileRegion r) - Triggered by filesaving thread upon saving a region to disk. Take care with multithreading!
+OnPlayerMoved			- void (Player p)	- A player sent an updated position. New position / y angle can be gotten via the parameter
 
 Most interesting mods will probably be based on using these game classes:
 
