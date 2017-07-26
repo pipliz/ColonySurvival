@@ -50,9 +50,14 @@ OnLoadingPlayer			- void (JSONNode n, NetworkID i) - A player is being loaded
 OnQuitEarly				- void ()			- General.Application.OnQuit @ -200, called before all other on quit actions
 OnQuit					- void ()			- General.Application.OnQuit @ 0, after players are disconnected
 OnQuitLate				- void ()			- General.Application.OnQuit @ 100, after most quit actions happened
-OnSaveChunkToRegion		- void (Chunk c)	- Triggered by filesaving thread upon saving a chunk to a region (not to disk yet). Chunk is locked for reading data. Take care with multithreading!
-OnSavedRegionToDisk		- void (FileSaver.FileRegion r) - Triggered by filesaving thread upon saving a region to disk. Take care with multithreading!
 OnPlayerMoved			- void (Player p)	- A player sent an updated position. New position / y angle can be gotten via the parameter
+
+The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
+
+OnSavedRegionToDisk		- void (FileSaver.FileRegion r)				- A region is saved to the disk
+OnLoadedRegionFromDisk	- void (FileSaver.FileRegion r)				- A region is loaded from the disk.
+OnSavedChunkToRegion	- void (FileSaver.FileRegion r, Chunk c)	- A chunk is saved to the region. The chunk is locked for reading data.
+OnLoadedChunkFromRegion - void (FileSaver.FileRegion r, Chunk c)	- A chunk is filled from a region in memory. The chunk is locked for writing data.
 
 Most interesting mods will probably be based on using these game classes:
 
