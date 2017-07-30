@@ -3,6 +3,7 @@
 Localization changes:
 
 -Added cs-CZ locale
+-Added el-GR locale
 -Fixes/additions to de-DE locale
 -Fixes/additions to fr-FR locale
 -Fixes to nl-NL locale
@@ -12,6 +13,7 @@ Fixes:
 
 -Fixed npc's not using specularity/smoothness maps (oops...)
 -Fixed npc's not using trilinear/anisotropic filtering (oops...)
+-Fixed lit oven sometimes having 2 lit sides
 
 Modding changes:
 
@@ -25,12 +27,27 @@ Modding changes:
 -Added OnLoadedChunkFromRegion callback
 -Added OnPlayerMoved callback
 -Added AfterDefiningNPCTypes callback
+-Added OnTryChangeBlockUser callback
 
 Internal(/modding) changes:
 
+-Moved NPC type definition to a mod (for the 'block' jobs)
 -Added jsonnode.ClearChildren() method.
+-Added npcInventory.IsEmpty property.
 -Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
 -Changed npc inventory saving format
 -Revamped a large part of the NPC code in order to add more future npc types.
 --Allows player defined npc types. (No jobs yet as of writing, making it mostly useless).
 --NPC colors etc are in gamedata/npctypes.json now, instead of gamedata/textures/materials/npc/material*.json
+-Removed majority of Pipliz.Extensions.IList<T> methods & their uses.
+-Removed /setlimit, /getlimit and /resetlimit commands
+-Changed a large amount of methods / callbacks to use Players.Player instead of NetworkID.
+-Changed itemTypesServer class to allow registering / changing individual callbacks, and to get/set entire type-callbacks for modifying existing ones.
+-Changed RecipeCraftingStatic.AllRecipes to a List<Recipe>, but it still expects RecipeCrafting types.
+-Moved mods' Help.txt file to the mods root folder
+-Included project files for the included mod sources
+-Changed ServerManager.TrySetBlock to take a flag enum arg for options
+-Removed ServerManager.TrySetBlockUser bool option (that usage is now in TrySetBlock)
+-Removed ServerManager.SetBlock
+-Renamed ServerManager.TrySetBlock(User) to ServerManager.TryChangeBlock(User)
+-Changed frametime graph to be based on 10 fps = full graph.

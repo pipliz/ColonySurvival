@@ -7,17 +7,6 @@ How to enable the Example dll;
 -Set "enabled" : true in the modInfo.json
 -Launch the server
 
-To build the Example dll;
--Create a new project in visual studio or some other
--Change .NET framework to 3.5
--Move ExampleClass.cs into it (or create it over it, whichever works)
--Add references to "colonyserver_Data\managed\Assembly-CSharp.dll", and probably UnityEngine.dll (.ui) from the same folder.
--Build it
--Move the built dll to the desired locations (\mods\Pipliz\Example\Example.dll)
--Set "enabled" : true in the modInfo.json
--Launch the server
--It hopefully works
-
 The game searches for all "modInfo.json" files in gamedata\mods\.
 It then loops over all objects in the "assemblies" array inside of it, loading all dll paths (relative to the modInfo.json's location) if "enabled" is true.
 Every type of the loaded assembly is checked if it has the attribute "ModLoader.ModManager" defined, which can be found in the Assembly-CSharp.dll library.
@@ -35,6 +24,7 @@ AfterItemTypesServer	- void ()			- Place to override itemtypesserver actions.
 AfterWorldLoad			- void () 			- All misc data is loaded (recipes, structures, npc's, player data, all that)
 AfterNetworkSetup		- void () 			- After the NetworkWrapper class is loaded. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
 			
+These callbacks are done at various times:
 OnUpdateStart			- void () 			- Start of Unity's Update loop, before anything is called (except for quitting mechanisms).
 OnUpdate				- void () 			- Just after OnUpdateStart, after the ThreadManager did main thread delegates. Probably the place to put the bulk of per-frame-updates.
 OnUpdateEnd				- void () 			- Just before the end of the update loop (after all relevant gamecode)
@@ -46,20 +36,22 @@ OnApplicationPause		- void (bool b)		- Unity's OnApplicationPause method (probab
 OnPlayerConnected		- void (Player p)	- A player connected to the server
 OnPlayerDisconnected	- void (Player p)	- A player disconnected from the server
 OnSavingPlayer			- void (JSONNode n, Player p) - A player is being saved
-OnLoadingPlayer			- void (JSONNode n, NetworkID i) - A player is being loaded
+OnLoadingPlayer			- void (JSONNode n, Player p) - A player is being loaded
 OnQuitEarly				- void ()			- General.Application.OnQuit @ -200, called before all other on quit actions
 OnQuit					- void ()			- General.Application.OnQuit @ 0, after players are disconnected
 OnQuitLate				- void ()			- General.Application.OnQuit @ 100, after most quit actions happened
 OnPlayerMoved			- void (Player p)	- A player sent an updated position. New position / y angle can be gotten via the parameter
+OnTrySetBlockUserData	- bool (ModLoader.OnTrySetBlockUserData d) - A player tried to chance a block. Return true to accept this change, return false to deny it.
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
-
 OnSavedRegionToDisk		- void (FileSaver.FileRegion r)				- A region is saved to the disk
 OnLoadedRegionFromDisk	- void (FileSaver.FileRegion r)				- A region is loaded from the disk.
 OnSavedChunkToRegion	- void (FileSaver.FileRegion r, Chunk c)	- A chunk is saved to the region. The chunk is locked for reading data.
 OnLoadedChunkFromRegion - void (FileSaver.FileRegion r, Chunk c)	- A chunk is filled from a region in memory. The chunk is locked for writing data.
 
 Most interesting mods will probably be based on using these game classes:
+
+THIS IS SLIGHTLY OUTDATED, BE AWARE:
 
 -ItemTypes.AddRawType				- @ AfterAddingBaseTypes, register a new type as if it's in types.json
 -ChatCommands.CommandManager.RegisterCommand - To register chat commands for callbacks (anywhere).
