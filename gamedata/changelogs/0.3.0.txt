@@ -17,7 +17,6 @@ Fixes:
 
 Modding changes:
 
--Fixed OnPlayerConnected callback being called before a connection was ready on steam hosted servers
 -Added OnQuitEarly callback
 -Added OnQuit callback
 -Added OnQuitLate callback
@@ -28,6 +27,8 @@ Modding changes:
 -Added OnPlayerMoved callback
 -Added AfterDefiningNPCTypes callback
 -Added OnTryChangeBlockUser callback
+-Fixed OnPlayerConnected callback being called before a connection was ready on steam hosted servers
+-Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
 
 Internal(/modding) changes:
 
@@ -51,3 +52,4 @@ Internal(/modding) changes:
 -Removed ServerManager.SetBlock
 -Renamed ServerManager.TrySetBlock(User) to ServerManager.TryChangeBlock(User)
 -Changed frametime graph to be based on 10 fps = full graph.
+-Deleted example mod (see BlockNPCs etc)
