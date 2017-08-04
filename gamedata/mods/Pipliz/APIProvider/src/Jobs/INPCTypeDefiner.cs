@@ -1,4 +1,4 @@
-﻿namespace Pipliz.BlockNPCs
+﻿namespace Pipliz.APIProvider.Jobs
 {
 	public interface INPCTypeDefiner
 	{

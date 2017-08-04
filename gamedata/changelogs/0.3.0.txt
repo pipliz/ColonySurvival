@@ -1,5 +1,18 @@
 0.3.0 (2017-**-**)
 
+Changes:
+
+-Added tailor job
+--Added tailorshop block
+--Added carpetblue block
+--Added carpetyellow block
+--Added carpetred block
+--Added clothing item
+--Added linen item
+
+-Changed stack size of dirt, grass to 200
+-Changed stack size of stone bricks, bricks to 100
+
 Localization changes:
 
 -Added da-DK locale
@@ -12,12 +25,18 @@ Localization changes:
 
 Fixes:
 
+-Fixed the 'missing item' indicator for npc's being incorrect if the missing item is not the first of a recipe.
 -Fixed npc's not using specularity/smoothness maps (oops...)
 -Fixed npc's not using trilinear/anisotropic filtering (oops...)
 -Fixed lit oven sometimes having 2 lit sides
 
 Modding changes:
 
+-Added [ModCallbackProvidesFor("")] and [ModCallbackDependsOn("")] attributes
+--ProvidesFor makes sure this callback is called before the passed callback (assuming same callback type)
+--DependsOn makes sure this callback is called after the passed callback (assuming same callback type)
+--Naturally does not handle circular dependencies
+-Made [ModCallback()] require an identifier string, for use with the ProvidesFor / DependsOn attributes.
 -Added OnQuitEarly callback
 -Added OnQuit callback
 -Added OnQuitLate callback
@@ -28,29 +47,30 @@ Modding changes:
 -Added OnPlayerMoved callback
 -Added AfterDefiningNPCTypes callback
 -Added OnTryChangeBlockUser callback
--Fixed OnPlayerConnected callback being called before a connection was ready on steam hosted servers
+--Allows blocking block placement/removal, essential for anti-griefing mods
+
 -Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
+--Use OnPlayerConnectedLate for sending chat messages
+-Moved all the non-player crafting recipes to the APIProvider mod.
 
-Internal(/modding) changes:
+Internal(/Modding) changes:
 
--Moved NPC type definition to a mod (for the 'block' jobs)
+-Added 2 mods:
+--Pipliz/APIProvider
+---Contains base classes to deal with defining npc's, recipes
+--Pipliz/BlockNPCs
+---Implements the existing block/crafting jobs as a mod.
+---This took a lot of work.
+-Deleted Pipliz/Example mod now that there is a real base mod.
 -Added jsonnode.ClearChildren() method.
 -Added npcInventory.IsEmpty property.
--Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
 -Changed npc inventory saving format
--Revamped a large part of the NPC code in order to add more future npc types.
---Allows player defined npc types. (No jobs yet as of writing, making it mostly useless).
---NPC colors etc are in gamedata/npctypes.json now, instead of gamedata/textures/materials/npc/material*.json
+-Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
 -Removed majority of Pipliz.Extensions.IList<T> methods & their uses.
 -Removed /setlimit, /getlimit and /resetlimit commands
 -Changed a large amount of methods / callbacks to use Players.Player instead of NetworkID.
 -Changed itemTypesServer class to allow registering / changing individual callbacks, and to get/set entire type-callbacks for modifying existing ones.
--Changed RecipeCraftingStatic.AllRecipes to a List<Recipe>, but it still expects RecipeCrafting types.
 -Moved mods' Help.txt file to the mods root folder
--Included project files for the included mod sources
--Changed ServerManager.TrySetBlock to take a flag enum arg for options
--Removed ServerManager.TrySetBlockUser bool option (that usage is now in TrySetBlock)
--Removed ServerManager.SetBlock
--Renamed ServerManager.TrySetBlock(User) to ServerManager.TryChangeBlock(User)
+-Renamed/changed ServerManager.(Try)SetBlock(User) to be more clear in its usage / parameters
 -Changed frametime graph to be based on 10 fps = full graph.
--Deleted example mod (see BlockNPCs etc)
+-Fixed stats graph on the server not showing the initial AI buildup.

@@ -1,5 +1,6 @@
 ﻿using BlockTypes.Builtin;
 using NPC;
+using Pipliz.APIProvider.Jobs;
 using System.Collections.Generic;
 
 namespace Pipliz.BlockNPCs.Implementations
@@ -9,8 +10,6 @@ namespace Pipliz.BlockNPCs.Implementations
 		public override string NPCTypeKey { get { return "pipliz.baker"; } }
 
 		public override float TimeBetweenJobs { get { return 8.3f; } }
-
-		public override List<RecipeFueled> GetPossibleRecipes { get { return RecipeBaking.AllRecipes; } }
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
@@ -54,6 +53,21 @@ namespace Pipliz.BlockNPCs.Implementations
 			def.maskColor1 = new UnityEngine.Color32(192, 160, 117, 255);
 			def.type = NPCTypeID.GetNextID();
 			return def;
+		}
+
+		public override List<string> GetCraftingLimitsTriggers ()
+		{
+			return new List<string>()
+			{
+				"ovenx+",
+				"ovenx-",
+				"ovenz+",
+				"ovenz-",
+				"ovenlitx+",
+				"ovenlitx-",
+				"ovenlitz+",
+				"ovenlitz-"
+			};
 		}
 	}
 }

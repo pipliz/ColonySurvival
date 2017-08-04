@@ -1,5 +1,6 @@
 ﻿using BlockTypes.Builtin;
 using NPC;
+using Pipliz.APIProvider.Jobs;
 using Pipliz.JSON;
 using UnityEngine;
 

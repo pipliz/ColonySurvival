@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using NPC;
+﻿using NPC;
+using Pipliz.APIProvider.Jobs;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
@@ -8,8 +8,6 @@ namespace Pipliz.BlockNPCs.Implementations
 		public override string NPCTypeKey { get { return "pipliz.merchant"; } }
 
 		public override float TimeBetweenJobs { get { return 10f; } }
-
-		public override List<Recipe> GetPossibleRecipes { get { return RecipeShopping.AllRecipes; } }
 
 		public override int MaxRecipeCraftsPerHaul { get { return 1; } }
 

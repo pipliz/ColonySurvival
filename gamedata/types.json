@@ -6,7 +6,8 @@
 	"grass" : {
 		"isFertile" : true,
 		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace"
+		"onPlaceAudio" : "dirtPlace",
+		"maxStackSize" : 200
 	},
 	"grasstemperate" : {
 		"parentType" : "grass",
@@ -144,7 +145,8 @@
 		"icon" : "dirt.png",
 		"sideall" : "SELF",
 		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace"
+		"onPlaceAudio" : "dirtPlace",
+		"maxStackSize" : 200
 	},
 	"stoneblock" : {
 		"onPlaceAudio" : "stonePlace",
@@ -185,7 +187,8 @@
 		"icon" : "bricks.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"npcLimit" : 20
+		"npcLimit" : 20,
+		"maxStackSize" : 100
 	},
 	"clay" : {
 		"sideall" : "SELF",
@@ -347,7 +350,8 @@
 		"icon" : "stonebricks.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 600
+		"destructionTime" : 600,
+		"maxStackSize" : 100
 	},
 	"coatedplanks" : {
 		"sideall" : "SELF",
@@ -372,6 +376,14 @@
 		"sideall" : "planks",
 		"sidey+" : "workbenchtop",
 		"npcLimit" : 0
+	},
+	"tailorshop" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "tailorshop",
+		"npcLimit" : 0,
+		"icon" : "tailorshop.png"
 	},
 	"mint" : {
 		"icon" : "mint.png",
@@ -692,6 +704,27 @@
 		"sideall" : "SELF",
 		"maxStackSize" : 100
 	},
+	"carpet" : {
+		"onRemoveAudio" : "grassDelete",
+		"onPlaceAudio" : "dirtPlace",
+		"npcLimit" : 10,
+		"maxStackSize" : 200
+	},
+	"carpetyellow" : {
+		"parentType" : "carpet",
+		"icon" : "carpetyellow.png",
+		"sideall" : "SELF"
+	},
+	"carpetblue" : {
+		"parentType" : "carpet",
+		"icon" : "carpetblue.png",
+		"sideall" : "SELF"
+	},
+	"carpetred" : {
+		"parentType" : "carpet",
+		"icon" : "carpetred.png",
+		"sideall" : "SELF"
+	},
 	"infinitestone" : {
 		"onRemoveType" : "stonebricks",
 		"onRemoveAudio" : "stoneDelete",
@@ -751,6 +784,18 @@
 		"maxStackSize" : 200,
 		"icon" : "gypsum.png",
 		"isPlaceable" : false
+	},
+	"linen" : {
+		"maxStackSize" : 100,
+		"icon" : "linen.png",
+		"isPlaceable" : false,
+		"npcLimit" : 4
+	},
+	"clothing" : {
+		"maxStackSize" : 25,
+		"icon" : "clothing.png",
+		"isPlaceable" : false,
+		"npcLimit" : 4
 	},
 	"ironore" : {
 		"maxStackSize" : 50,

@@ -1,10 +1,11 @@
 ﻿using NPC;
+using Pipliz.APIProvider.Recipes;
 using Pipliz.JSON;
 using System.Collections.Generic;
 
-namespace Pipliz.BlockNPCs
+namespace Pipliz.APIProvider.Jobs
 {
-	public class FueledCraftingJobBase : BlockJobBase
+	public class FueledCraftingJobBase : BlockJobBase, IRecipeLimitsProvider
 	{
 		protected ushort blockType;
 
@@ -41,7 +42,7 @@ namespace Pipliz.BlockNPCs
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public virtual List<RecipeFueled> GetPossibleRecipes { get { throw new System.NotImplementedException(); } }
+		public virtual RecipeFueled[] GetPossibleRecipes { get { return RecipeManager.RecipeFueledStorage[NPCTypeKey]; } }
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 
@@ -102,7 +103,7 @@ namespace Pipliz.BlockNPCs
 							if (recipeMatch.MatchType == Recipe.RecipeMatchType.AllDone) {
 								state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
 							} else {
-								state.SetIndicator(NPCIndicatorType.MissingItem, 6f, recipeMatch.FoundRecipe.Requirements[0].Type);
+								state.SetIndicator(NPCIndicatorType.MissingItem, 6f, recipeMatch.FoundRecipe.FindMissingType(owner));
 							}
 							OverrideCooldown(6.0);
 						}
@@ -121,33 +122,58 @@ namespace Pipliz.BlockNPCs
 		public override void OnNPCDoStockpile (ref NPCBase.NPCState state)
 		{
 			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
-			shouldTakeItems = false;
 			state.JobIsDone = true;
-			var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
-			switch (recipeMatch.MatchType) {
-				case Recipe.RecipeMatchType.FoundMissingRequirements:
-				case Recipe.RecipeMatchType.AllDone:
-					OverrideCooldown(0.5);
-					break;
-				case Recipe.RecipeMatchType.FoundCraftable:
-					selectedRecipe = recipeMatch.FoundRecipe;
-					int count = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
-					float fuelNeeded = (count * selectedRecipe.FuelPerCraft) - storedFuel;
-					if (fuelNeeded > 0f) {
-						if (!usedNPC.Colony.UsedStockpile.TryTransferFuel(fuelNeeded, state.Inventory)) {
-							state.SetIndicator(NPCIndicatorType.NoFuel, 5.0f);
-							shouldTakeItems = true;
-							OverrideCooldown(5.0);
-							return;
+			if (shouldTakeItems) {
+				shouldTakeItems = false;
+				var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				switch (recipeMatch.MatchType) {
+					case Recipe.RecipeMatchType.FoundMissingRequirements:
+					case Recipe.RecipeMatchType.AllDone:
+						OverrideCooldown(0.5);
+						break;
+					case Recipe.RecipeMatchType.FoundCraftable:
+						selectedRecipe = recipeMatch.FoundRecipe;
+						int count = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
+						float fuelNeeded = (count * selectedRecipe.FuelPerCraft) - storedFuel;
+						if (fuelNeeded > 0f) {
+							if (!usedNPC.Colony.UsedStockpile.TryTransferFuel(fuelNeeded, state.Inventory)) {
+								state.SetIndicator(NPCIndicatorType.NoFuel, 5.0f);
+								shouldTakeItems = true;
+								OverrideCooldown(5.0);
+								return;
+							}
 						}
-					}
-					for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
-						state.Inventory.Add(selectedRecipe.Requirements[i] * count);
-						usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * count);
-					}
-					OverrideCooldown(0.5);
-					break;
+						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
+							state.Inventory.Add(selectedRecipe.Requirements[i] * count);
+							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * count);
+						}
+						OverrideCooldown(0.5);
+						break;
+				}
 			}
+		}
+
+		// IRecipeLimitsProvider
+		public virtual Recipe[] GetCraftingLimitsRecipes ()
+		{
+			RecipeFueled[] list;
+			if (RecipeManager.RecipeFueledStorage.TryGetValue(NPCTypeKey, out list)) {
+				return list;
+			} else {
+				return null;
+			}
+		}
+
+		// IRecipeLimitsProvider
+		public virtual List<string> GetCraftingLimitsTriggers ()
+		{
+			return null;
+		}
+
+		// IRecipeLimitsProvider
+		public virtual string GetCraftingLimitsIdentifier ()
+		{
+			return NPCTypeKey;
 		}
 	}
 }
