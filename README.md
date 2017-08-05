@@ -3,7 +3,7 @@ Public gamedata files for Colony Survival
 
 Mostly used as a repository to send pull requests for translation updates.
 Check the highest versioned branch for the most recent version.
-Check gamedata/localization/localecoverage.md for data on how complete the various translations are.
+Check [localecoverage](gamedata/localization/localecoverage.md) for data on how complete the various translations are.
 Files will have keys starting with "\_MISSING\_" followed by the english version for missing/untranslated text.
 Localecoverage will be updated after pull request merges.
 
@@ -12,7 +12,7 @@ To add a new locale:
 2) Make a new folder under gamedata/localization/ and copy-paste the .json files over from the en-US locale.
 3) Replace all the strings on the right side with the language you're translating it to.
 
-For modding help, check gamedata/mods/Help.txt
+For modding help, check [mods help.txt](gamedata/mods/Help.txt)
 
 Store page: http://store.steampowered.com/app/366090/Colony_Survival/
 
