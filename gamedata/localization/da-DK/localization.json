@@ -5,9 +5,9 @@
 		"apply" : "Anvend",
 		"none" : "Ingen",
 		"reset" : "Nulstil",
-		"inputplaceholder" : "Enter text...",
-		"previous" : "Previous",
-		"next" : "Næste"
+		"next" : "Næste",
+		"inputplaceholder" : "_MISSING_Enter text...",
+		"previous" : "_MISSING_Previous"
 	},
 	"mainmenu" : {
 		"singleplayer" : "Spil alene",
@@ -15,7 +15,7 @@
 		"settings" : "Indstillinger",
 		"info" : "Info",
 		"quit" : "Forlad spillet",
-		"back"  : "Tilbage"
+		"back" : "Tilbage"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Ny verden",
@@ -44,12 +44,12 @@
 		"refresh" : "Genindlæs serverliste",
 		"refreshing" : "Genindlæser...",
 		"hostserverdescription" : "Du kan hoste en server ved at åbne den følgende fil gennem en fil søgemaskine.\nGå ind i spillets egenskaber på steam og klik på 'Gennemse Lokale filer'.\n Åben 'colonyserver.exe' for at hoste en server.",
-		"startserver" : "Start server"
+		"startserver" : "_MISSING_Start server"
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximalt",
-		"qualityveryhigh" :"Meget høj",
-		"qualityhigh": "Høj",
+		"qualityveryhigh" : "Meget høj",
+		"qualityhigh" : "Høj",
 		"qualitymedium" : "Mellem",
 		"qualitylow" : "Lav",
 		"qualityverylow" : "Meget lav",
@@ -223,7 +223,8 @@
 				"smelter" : "Smeltnings bregrænsning",
 				"minter" : "Mønt produktions begrænsning",
 				"merchant" : "Købe begrænsning",
-				"grinder" : "Male begrænsning"
+				"grinder" : "Male begrænsning",
+				"tailor" : "_MISSING_Tailoring limits"
 			},
 			"description" : "Kolonister vil arbejde indtil at den valgte mængde er nået i lageret."
 		},
@@ -240,7 +241,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Senge:",
+		"bedcount" : "Senge:",
 		"colonistcount" : "Kolonister:",
 		"laborercount" : "Arbejdsløse:",
 		"foodstorage" : "Mad:",
@@ -277,5 +278,6 @@
 			"text2" : "Placer en smelteovn. Hvis der er en arbejdsløs kolonist vil han automatisk gå hend til smelteovnen og starte på at smelte jernmalm om til jernbarre.",
 			"text3" : "Placer et arbejdsbord for at skabe en håndværker. Han vil automatisk lave pile og andre ting for dig."
 		}
-	}
+	},
+	"localecoverage" : 0.981651376146789
 }

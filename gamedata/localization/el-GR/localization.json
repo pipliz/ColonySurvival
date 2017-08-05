@@ -5,7 +5,9 @@
 		"apply" : "Εφάρμοσε",
 		"none" : "Κανένα",
 		"reset" : "Επαναφορά",
-		"inputplaceholder" : "Τόπος Εισαγωγής"
+		"inputplaceholder" : "Τόπος Εισαγωγής",
+		"previous" : "_MISSING_Previous",
+		"next" : "_MISSING_Next"
 	},
 	"mainmenu" : {
 		"singleplayer" : "Παιχνίδι Ενός Παίκτη",
@@ -13,7 +15,7 @@
 		"settings" : "Ρυθμίσεις",
 		"info" : "Πληροφορίες",
 		"quit" : "Εγκατέλειψε",
-		"back"  : "Πίσω"
+		"back" : "Πίσω"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Νέος Κόσμος",
@@ -25,7 +27,9 @@
 		"worldname" : "Όνομα Κόσμου",
 		"worlddate" : "Ημερομηνία Κόσμου",
 		"play" : "Παίξε",
-		"delete" : "Διέγραψε"
+		"delete" : "Διέγραψε",
+		"doubledmonsters" : "_MISSING_Double monster amount",
+		"daymonsters" : "_MISSING_Monsters during daytime"
 	},
 	"multiplayermenu" : {
 		"joininternet" : "Σύνδεση στο διαδίκτυο",
@@ -40,12 +44,13 @@
 		"connect" : "Σύνδεση",
 		"refresh" : "Ανανέωση",
 		"refreshing" : "Γίνεται Ανανέωση...",
-		"startserver" : "Έναρξη διακομιστή"
+		"startserver" : "Έναρξη διακομιστή",
+		"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server."
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Μέγιστα",
-		"qualityveryhigh" :"Πολύ υψηλά",
-		"qualityhigh": "Υψηλά",
+		"qualityveryhigh" : "Πολύ υψηλά",
+		"qualityhigh" : "Υψηλά",
 		"qualitymedium" : "Μέτρια",
 		"qualitylow" : "Χαμηλά",
 		"qualityverylow" : "Πολύ Χαμηλά",
@@ -122,7 +127,8 @@
 	},
 	"infomenu" : {
 		"quickstart" : "Γρήγορη Εκίνηση",
-		"credits" : "Πιστώσεις"
+		"credits" : "Πιστώσεις",
+		"changelog" : "_MISSING_Changelog"
 	},
 	"escapemenu" : {
 		"back" : "Πήγαινε πίσω",
@@ -135,7 +141,11 @@
 		"banner" : {
 			"header" : "Διαχείριση αποικίας",
 			"description" : "Οι αποικιστές χρειάζονται 5 μονάδες φαγητού την ημέρα και ένα κρεβάτι. Η πρόσληψη ενός άποικου κοστίζει 50 μονάδες τροφίμων.",
-			"button" : "Πρόσληψη ενός άποικου"
+			"button" : "Πρόσληψη ενός άποικου",
+			"resetbutton" : "_MISSING_Reset colony",
+			"resettooltipa" : "_MISSING_",
+			"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
+			"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 		},
 		"bannerremoval" : {
 			"header" : "Αφαίρεση Πανού",
@@ -173,7 +183,7 @@
 			"forestertool" : "Εργαλέιο για τους ξυλοκόπους",
 			"flaxfarmertool" : "Εργαλείο για τους γεωργούς λινού",
 			"notool" : "Κανένα Εργαλείο",
-                        "berryfarmertool" : "Εργαλείο για τους αγρότες μούρων",
+			"berryfarmertool" : "Εργαλείο για τους αγρότες μούρων",
 			"berryfarmer" : "Αγρότης μούρων",
 			"berrya" : "Γρήγορο και εύκολο φαγητό, ξεκίνα με αυτό!",
 			"berryb" : "Τοποθετήστε το σε γρασίδι ή σε χώμα",
@@ -201,11 +211,12 @@
 			"crafting" : "Κατασκέυασε",
 			"stockpile" : "Παρακαταθήκη",
 			"stockpiledescription" : "Μπορείτε να φτιάξετε μόνο πράγματα με τα αντικείμενα στις υποδοχές στο κάτω μέρος. Οι αποικιστές μπορούν να χρησιμοποιήσουν μόνο αντικείμενα στο απόθεμά σας. ",
-                        "Foodvalue": "Τιμή διατροφής:",
+			"Foodvalue" : "Τιμή διατροφής:",
 			"tooltip" : {
 				"needs" : "Ανάγκες: ",
 				"and" : "και"
-			}
+			},
+			"foodvalue" : "_MISSING_Food value:"
 		},
 		"limits" : {
 			"pipliz" : {
@@ -214,7 +225,8 @@
 				"smelter" : "Όρια τήξης",
 				"minter" : "Όρια κοπής νομισμάτων",
 				"merchant" : "Όρια αγορών",
-				"grinder" : "Όρια άλεσης"
+				"grinder" : "Όρια άλεσης",
+				"tailor" : "_MISSING_Tailoring limits"
 			},
 			"description" : "Οι αποικιστές θα δουλέψουν έως ότου επιτευχθεί το καθορισμένο ποσό στο απόθεμα."
 		},
@@ -231,13 +243,13 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Κρεβάτια:",
+		"bedcount" : "Κρεβάτια:",
 		"colonistcount" : "Αποικιστές:",
 		"laborercount" : "Άνεργοι:",
 		"foodstorage" : "Τρόφιμα:",
 		"foodusage" : "Χρήση τροφήμων / ημέρα:",
 		"arrowcount" : "Βέλη:"
-		},
+	},
 	"quickstart" : {
 		"page1" : {
 			"header" : "Βασικά",
@@ -268,5 +280,6 @@
 			"text2" : "Τοποθέτησε ένα φούρνο. Αν υπάρχει ένας άνεργος άποικος, θα πάει αυτόματα στον φούρνο και θα ξεκινήσει να κατασκευάζει σιδηρομεταλλεύματα σε σιδερένιες ράβδους.",
 			"text3" : "Τοποθέτησε έναν πάγκο εργασίας για να μετατρέψεις έναν αποίκιο σε έναν καταστευαστή. Θα κάνει αυτόματα βέλη και άλλα αντικείμενα για εσένα."
 		}
-	}
+	},
+	"localecoverage" : 0.944954128440367
 }

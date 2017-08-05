@@ -15,7 +15,7 @@
 		"settings" : "Ustawienia",
 		"info" : "Info",
 		"quit" : "Zamknij",
-		"back"  : "Cofnij"
+		"back" : "Cofnij"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Nowy Świat",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximum",
-		"qualityveryhigh" :"Bardzo wysokie",
-		"qualityhigh": "Wysokie",
+		"qualityveryhigh" : "Bardzo wysokie",
+		"qualityhigh" : "Wysokie",
 		"qualitymedium" : "Średnie",
 		"qualitylow" : "Niskie",
 		"qualityverylow" : "Bardzo niskie",
@@ -209,21 +209,22 @@
 		"inventory" : {
 			"crafting" : "Crafting",
 			"stockpile" : "Zapasy",
-			"stockpiledescription" : "You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile.",
 			"foodvalue" : "Jedzenie:",
 			"tooltip" : {
 				"needs" : "Wymaga: ",
 				"and" : "and"
-			}
+			},
+			"stockpiledescription" : "_MISSING_You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile."
 		},
 		"limits" : {
 			"pipliz" : {
-				"crafter" : "Crafting limits",
 				"baker" : "Limit pieczenia",
 				"smelter" : "Limit wytapiania",
 				"minter" : "Limit wydobywania",
 				"merchant" : "Limit kupowania",
-				"grinder" : "Limit mielenia"
+				"grinder" : "Limit mielenia",
+				"tailor" : "_MISSING_Tailoring limits",
+				"crafter" : "_MISSING_Crafting limits"
 			},
 			"description" : "Koloniści bedą pracować, dopóki ustawiony limit nie zostanie osiągnięty."
 		},
@@ -240,7 +241,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Łóżka:",
+		"bedcount" : "Łóżka:",
 		"colonistcount" : "Koloniści:",
 		"laborercount" : "Bezrobotni:",
 		"foodstorage" : "Jedzenie:",
@@ -277,5 +278,6 @@
 			"text2" : "Stwórz piec. Jeśli jest jakiś bezrobotny kolonista, automatycznie zacznie tworzyć żelazne sztabki z rudy żelaza.",
 			"text3" : "Ustaw workbench aby zmienić kolonistę w craftera. Samoistnie zacznie tworzyć strzały oraz inne przedmioty."
 		}
-	}
+	},
+	"localecoverage" : 0.986238532110092
 }
