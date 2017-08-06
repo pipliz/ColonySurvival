@@ -75,3 +75,4 @@ Internal(/Modding) changes:
 -Changed frametime graph to be based on 10 fps = full graph.
 -Fixed stats graph on the server not showing the initial AI buildup.
 -Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
+-Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
