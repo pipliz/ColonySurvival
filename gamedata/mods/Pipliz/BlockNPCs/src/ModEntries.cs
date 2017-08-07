@@ -30,6 +30,7 @@ namespace Pipliz.BlockNPCs
 			BlockJobManagerTracker.Register<ShopJob>("shop");
 			BlockJobManagerTracker.Register<WorkBenchJob>("workbench");
 			BlockJobManagerTracker.Register<TailorJob>("tailorshop");
+			BlockJobManagerTracker.Register<TechnologistJob>("technologisttable");
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.loadrecipes")]
@@ -41,6 +42,7 @@ namespace Pipliz.BlockNPCs
 			RecipeManager.LoadRecipes("pipliz.grinder", Path.Combine(ModGamedataDirectory, "grinding.json"));
 			RecipeManager.LoadRecipes("pipliz.minter", Path.Combine(ModGamedataDirectory, "minting.json"));
 			RecipeManager.LoadRecipes("pipliz.merchant", Path.Combine(ModGamedataDirectory, "shopping.json"));
+			RecipeManager.LoadRecipes("pipliz.technologist", Path.Combine(ModGamedataDirectory, "technologist.json"));
 			RecipeManager.LoadRecipesFueled("pipliz.smelter", Path.Combine(ModGamedataDirectory, "smelting.json"));
 			RecipeManager.LoadRecipesFueled("pipliz.baker", Path.Combine(ModGamedataDirectory, "baking.json"));
 		}
