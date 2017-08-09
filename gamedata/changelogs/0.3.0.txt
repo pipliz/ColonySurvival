@@ -94,3 +94,6 @@ Regression fixes/changes to 0.3.0 changes:
 - Change APIProvider.Jobs.Register to be split into a Resolve function and the original Register.
 -- Use 'ClearType', 'Register' and 'RegisteredTypesEnumerable' inbetween Register and Resolve to change npc types before resolving them.
 - Made several base job functions from the APIProvider virtual
+- Allow multiple onAdd/onRemove/onChange/OnUpdateAdjacent calls to be registered to the same block
+- Half cost of linen again (lol) 2 flax -> 1 flax
+- Decreased flax production by 3 per plant to 1
