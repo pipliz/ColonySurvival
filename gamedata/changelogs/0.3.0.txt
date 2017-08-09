@@ -85,7 +85,7 @@ Internal(/Modding) changes:
 -Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
 -Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
 
-Regression fixes/changes to 0.3.0 changes:
+Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
 2017-08-08:
 - Fixed an issue with indirectly removing banners by destroying the block below it
@@ -97,3 +97,7 @@ Regression fixes/changes to 0.3.0 changes:
 - Allow multiple onAdd/onRemove/onChange/OnUpdateAdjacent calls to be registered to the same block
 - Half cost of linen again (lol) 2 flax -> 1 flax
 - Decreased flax production by 3 per plant to 1
+
+Regression fixes/changes to 0.3.0 build of 2017-08-09 (1):
+2017-08-09:
+- Fixed jobs registering 9 times for removal/placing
