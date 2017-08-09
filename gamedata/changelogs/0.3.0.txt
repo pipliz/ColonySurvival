@@ -33,7 +33,9 @@ Fixes:
 -Fixed the 'missing item' indicator for npc's being incorrect if the missing item is not the first of a recipe.
 -Fixed npc's not using specularity/smoothness maps (oops...)
 -Fixed npc's not using trilinear/anisotropic filtering (oops...)
--Fixed lit oven sometimes having 2 lit sides
+-Fixed lit oven sometimes having 2 lit 'front' sides
+-Fixed an error that occured when clicking outside of the chatbox when it is opened
+-Fixed laborers missing tools for jobs not going to sleep
 
 Modding changes:
 
@@ -68,6 +70,7 @@ Internal(/Modding) changes:
 ---This took a lot of work.
 -Deleted Pipliz/Example mod now that there is a real base mod.
 -Added jsonnode.ClearChildren() method.
+-Added jsonnode.RemoveChild(int) method.
 -Added npcInventory.IsEmpty property.
 -Changed npc inventory saving format
 -Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
@@ -81,3 +84,7 @@ Internal(/Modding) changes:
 -Fixed stats graph on the server not showing the initial AI buildup.
 -Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
 -Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
+
+Regression fixes/changes to 0.3.0 changes:
+
+2017-08-08: Fixed an issue with indirectly removing banners by destroying the block below it
