@@ -20,6 +20,7 @@ namespace Pipliz.BlockNPCs
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.blocknpcs.registerjobs")]
+		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
 		public static void AfterDefiningNPCTypes ()
 		{
 			BlockJobManagerTracker.Register<FurnaceJob>("furnace");

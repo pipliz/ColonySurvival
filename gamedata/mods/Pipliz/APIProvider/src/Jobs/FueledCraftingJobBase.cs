@@ -15,7 +15,7 @@ namespace Pipliz.APIProvider.Jobs
 		RecipeFueled selectedRecipe;
 		Vector3Int positionNPC;
 
-		public ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
+		public virtual ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
 			blockType = type;
 			blockInventory = new NPCInventory(10000000f);

@@ -18,7 +18,7 @@ namespace Pipliz.APIProvider.Jobs
 				.SetAs("inventory", blockInventory.GetJSON());
 		}
 
-		public ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
+		public virtual ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
 			blockInventory = new NPCInventory(10000000f);
 			InitializeJob(player, position, 0);

@@ -13,16 +13,16 @@ namespace Pipliz.APIProvider.Jobs
 		bool isValid = true;
 		NPCType cached_NPCType;
 
-		public Vector3Int KeyLocation { get { return position; } }
+		public virtual Vector3Int KeyLocation { get { return position; } }
 
-		public bool IsValid { get { return isValid; } }
+		public virtual bool IsValid { get { return isValid; } }
 
-		public Players.Player Owner { get { return owner; } }
+		public virtual Players.Player Owner { get { return owner; } }
 
 		// excuse me for this, it's a stub needed for the area jobs atm
 		public void CopyData (ByteBuilder b) { }
 
-		public NPCType NPCType
+		public virtual NPCType NPCType
 		{
 			get
 			{
@@ -33,7 +33,7 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		public bool NeedsNPC { get { return usedNPC == null || !usedNPC.IsValid; } }
+		public virtual bool NeedsNPC { get { return usedNPC == null || !usedNPC.IsValid; } }
 
 		public virtual bool NeedsItems { get { return false; } }
 
@@ -45,7 +45,7 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual InventoryItem RecruitementItem { get { return InventoryItem.Empty; } }
 
-		public void InitializeJob (Players.Player owner, Vector3Int position, int desiredNPCID)
+		public virtual void InitializeJob (Players.Player owner, Vector3Int position, int desiredNPCID)
 		{
 			this.position = position;
 			this.owner = owner;
@@ -60,32 +60,32 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		public void OnNPCAtJob (ref NPCBase.NPCState state)
+		public virtual void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			if (CheckTime()) {
 				OnNPCDoJob(ref state);
 			}
 		}
 
-		public void OnNPCAtStockpile (ref NPCBase.NPCState state)
+		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
 			if (CheckTime()) {
 				OnNPCDoStockpile(ref state);
 			}
 		}
 
-		public void OnAssignedNPC (NPCBase npc)
+		public virtual void OnAssignedNPC (NPCBase npc)
 		{
 			usedNPC = npc;
 		}
 
-		public void OnRemovedNPC ()
+		public virtual void OnRemovedNPC ()
 		{
 			usedNPC = null;
 			JobTracker.Add(this);
 		}
 		
-		public void OnRemove ()
+		public virtual void OnRemove ()
 		{
 			isValid = false;
 			if (usedNPC != null) {
@@ -95,7 +95,7 @@ namespace Pipliz.APIProvider.Jobs
 			JobTracker.Remove(owner, KeyLocation);
 		}
 
-		public NPCBase.NPCGoal CalculateGoal (ref NPCBase.NPCState state)
+		public virtual NPCBase.NPCGoal CalculateGoal (ref NPCBase.NPCState state)
 		{
 			if (ToSleep) {
 				if (!state.Inventory.IsEmpty) {
@@ -141,7 +141,7 @@ namespace Pipliz.APIProvider.Jobs
 			timeJob = Time.SecondsSinceStartDouble + cooldownLeft;
 		}
 
-		bool CheckTime ()
+		protected virtual bool CheckTime ()
 		{
 			double timeNow = Time.SecondsSinceStartDouble;
 			if (timeNow < timeJob) {
