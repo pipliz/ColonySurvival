@@ -25,8 +25,8 @@ Localization changes:
 -Added el-GR locale
 -Fixes/additions to de-DE locale
 -Fixes/additions to fr-FR locale
+-Fixes/additions to ru-RU locale
 -Fixes to nl-NL locale
--Fixes to ru-RU locale
 
 Fixes:
 
@@ -36,6 +36,8 @@ Fixes:
 -Fixed lit oven sometimes having 2 lit 'front' sides
 -Fixed an error that occured when clicking outside of the chatbox when it is opened
 -Fixed laborers missing tools for jobs not going to sleep
+-Fixed some threading conflicts on the client
+-Fixed some callbacks not triggering in some block change situations; for example placing job blocks in water.
 
 Modding changes:
 
@@ -84,6 +86,7 @@ Internal(/Modding) changes:
 -Fixed stats graph on the server not showing the initial AI buildup.
 -Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
 -Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
+-Removed World.SetTypeAtSilently
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
@@ -103,3 +106,10 @@ Regression fixes/changes to 0.3.0 build of 2017-08-09 (1):
 
 Regression fixes/changes to 0.3.0 build of 2017-08-09 (2):
 - Fixed workbench recipe for tailorshop requiring 'sciencebag' instead of 'linenbag'
+
+Regression fixes/changes to 0.3.0 build of 2017-08-09 (3):
+- Fixed chatbox issue, where pressing space while it is active (but not typing) would start typing.
+- Fixed tooltip of inventory hanging around after closing
+
+Regression fixes/changes to 0.3.0 build of 2017-09-10 (1):
+- Fixed an out of bounds access caused by the threading fix
