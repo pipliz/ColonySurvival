@@ -38,6 +38,8 @@ Fixes:
 -Fixed laborers missing tools for jobs not going to sleep
 -Fixed some threading conflicts on the client
 -Fixed some callbacks not triggering in some block change situations; for example placing job blocks in water.
+-Possibly fixed an issue with file saving
+-Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
 
 Modding changes:
 
@@ -61,6 +63,8 @@ Modding changes:
 -Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
 --Use OnPlayerConnectedLate for sending chat messages
 -Moved all the non-player crafting recipes to the APIProvider mod.
+-Added ItemTypes.RemoveRawType
+-Added ItemTypes.GetAllRawTypes
 
 Internal(/Modding) changes:
 
@@ -87,6 +91,10 @@ Internal(/Modding) changes:
 -Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
 -Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
 -Removed World.SetTypeAtSilently
+-Reduced logging from NPC's that can't find a path
+-Removed blockTracker.Count
+-Added vector3Int.ToRegion, vector3Int.ToRegionLocal
+-Improved Threaded collection performance
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
