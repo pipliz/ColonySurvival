@@ -65,6 +65,10 @@ Modding changes:
 -Moved all the non-player crafting recipes to the APIProvider mod.
 -Added ItemTypes.RemoveRawType
 -Added ItemTypes.GetAllRawTypes
+-Added ItemTypesServer.TryGetTextureMapping
+-Added ItemTypesServer.ContainsTextureMapping
+-Added ItemTypesServer.RemoveTextureMapping
+-Added ItemTypesServer.GetRegisteredTextureMapping
 
 Internal(/Modding) changes:
 
@@ -95,6 +99,9 @@ Internal(/Modding) changes:
 -Removed blockTracker.Count
 -Added vector3Int.ToRegion, vector3Int.ToRegionLocal
 -Improved Threaded collection performance
+-Better handle missing texture files
+-Added some error handling for trying to save invalid chunks (to prevent the entire region from failing)
+-Added code to the client to backup server logs before launching a new one.
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
