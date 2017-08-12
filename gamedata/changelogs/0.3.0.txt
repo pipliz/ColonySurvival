@@ -38,8 +38,9 @@ Fixes:
 -Fixed laborers missing tools for jobs not going to sleep
 -Fixed some threading conflicts on the client
 -Fixed some callbacks not triggering in some block change situations; for example placing job blocks in water.
--Possibly fixed an issue with file saving
+-Fixed an issue in saving that meant regions could never shrink (but it didn't seem to affect the game for the rest)
 -Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
+-Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
 
 Modding changes:
 
@@ -102,6 +103,7 @@ Internal(/Modding) changes:
 -Better handle missing texture files
 -Added some error handling for trying to save invalid chunks (to prevent the entire region from failing)
 -Added code to the client to backup server logs before launching a new one.
+-Added threadWrapper.IsActive
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
