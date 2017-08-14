@@ -3,6 +3,8 @@ Public gamedata files for Colony Survival
 
 Store page: http://store.steampowered.com/app/366090/Colony_Survival/
 
+Discord channel: https://discord.gg/esSYRme
+
 Mods showcase subforum: http://steamcommunity.com/app/366090/discussions/8/
 
 Steam discussions: http://steamcommunity.com/app/366090/discussions/
