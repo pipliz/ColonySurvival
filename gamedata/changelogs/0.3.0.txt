@@ -60,6 +60,7 @@ Modding changes:
 -Added AfterDefiningNPCTypes callback
 -Added OnTryChangeBlockUser callback
 --Allows blocking block placement/removal, essential for anti-griefing mods
+-Added OnResearchableCompleted callback
 
 -Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
 --Use OnPlayerConnectedLate for sending chat messages
@@ -104,6 +105,8 @@ Internal(/Modding) changes:
 -Added some error handling for trying to save invalid chunks (to prevent the entire region from failing)
 -Added code to the client to backup server logs before launching a new one.
 -Added threadWrapper.IsActive
+-Renamed Pipliz.Math.EuclideanDistance to Pipliz.Math.ManhattanDistance
+-Allow infinitely repeating crafting recipes
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
@@ -128,5 +131,10 @@ Regression fixes/changes to 0.3.0 build of 2017-08-09 (3):
 - Fixed chatbox issue, where pressing space while it is active (but not typing) would start typing.
 - Fixed tooltip of inventory hanging around after closing
 
-Regression fixes/changes to 0.3.0 build of 2017-09-10 (1):
+Regression fixes/changes to 0.3.0 build of 2017-08-10 (1):
 - Fixed an out of bounds access caused by the threading fix
+
+Regression fixes/changes to 0.3.0 build of 2017-08-12 (1):
+-Changed TryChangeBlockUserData class, used for the OnTryChangeBlockUser callback
+--Old behaviour maps like this: position -> VoxelToChange, typeNow -> typeTillNow, typeNew -> typeToBuild
+--Added voxelHit, voxelHitSide, typeSelected, isPrimaryAction

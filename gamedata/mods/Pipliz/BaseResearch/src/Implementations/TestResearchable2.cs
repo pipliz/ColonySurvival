@@ -6,12 +6,15 @@ namespace Pipliz.BaseResearch.Implementations
 	{
 		public TestResearchable2 ()
 		{
-			AddDependency("pipliz.baseresearch.testresearchable");
+			key = "pipliz.baseresearch.testresearchable2";
+			iterationCount = 3;
+			AddIterationRequirement("sciencebagbasic");
+			AddDependency("pipliz.baseresearch.testreachable");
 		}
 
-		public override string GetKey ()
+		public override void OnResearchComplete ()
 		{
-			return "pipliz.baseresearch.testresearchable2";
+			Log.Write("{0} completed", key);
 		}
 	}
 }

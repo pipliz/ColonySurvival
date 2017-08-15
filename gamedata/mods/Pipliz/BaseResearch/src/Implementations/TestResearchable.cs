@@ -4,9 +4,16 @@ namespace Pipliz.BaseResearch.Implementations
 {
 	public class TestResearchable : BaseResearchable
 	{
-		public override string GetKey ()
+		public TestResearchable ()
 		{
-			return "pipliz.baseresearch.testresearchable";
+			key = "pipliz.baseresearch.testresearchable";
+			iterationCount = 5;
+			AddIterationRequirement("sciencebagbasic");
+		}
+
+		public override void OnResearchComplete ()
+		{
+			Log.Write("{0} completed", key);
 		}
 	}
 }

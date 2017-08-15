@@ -14,6 +14,7 @@ namespace Pipliz.APIProvider.Jobs
 		NPCInventory blockInventory;
 		RecipeFueled selectedRecipe;
 		Vector3Int positionNPC;
+		int recipesToCraft;
 
 		public virtual ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
@@ -74,15 +75,17 @@ namespace Pipliz.APIProvider.Jobs
 				state.Inventory.Dump(blockInventory);
 			}
 			if (selectedRecipe != null) {
-				if (selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory, storedFuel)) {
+				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory, storedFuel)) {
 					storedFuel -= selectedRecipe.FuelPerCraft;
 					blockInventory.Take(selectedRecipe.Requirements);
 					blockInventory.Add(selectedRecipe.Results);
+					recipesToCraft--;
 					OnLit();
 					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;
 					return;
 				} else {
+					recipesToCraft = 0;
 					selectedRecipe = null;
 					blockInventory.Dump(usedNPC.Inventory);
 					if (!state.Inventory.IsEmpty) {
@@ -129,12 +132,13 @@ namespace Pipliz.APIProvider.Jobs
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
+						recipesToCraft = 0;
 						OverrideCooldown(0.5);
 						break;
 					case Recipe.RecipeMatchType.FoundCraftable:
 						selectedRecipe = recipeMatch.FoundRecipe;
-						int count = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
-						float fuelNeeded = (count * selectedRecipe.FuelPerCraft) - storedFuel;
+						recipesToCraft = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
+						float fuelNeeded = (recipesToCraft * selectedRecipe.FuelPerCraft) - storedFuel;
 						if (fuelNeeded > 0f) {
 							if (!usedNPC.Colony.UsedStockpile.TryTransferFuel(fuelNeeded, state.Inventory)) {
 								state.SetIndicator(NPCIndicatorType.NoFuel, 5.0f);
@@ -144,8 +148,8 @@ namespace Pipliz.APIProvider.Jobs
 							}
 						}
 						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
-							state.Inventory.Add(selectedRecipe.Requirements[i] * count);
-							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * count);
+							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
+							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
 						OverrideCooldown(0.5);
 						break;

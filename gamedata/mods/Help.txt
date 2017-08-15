@@ -101,6 +101,8 @@ void OnQuit ()
 void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened
 
+void OnResearchableCompleted (Server.Science.IResearchable res)
+-Called upon completion of a researchable
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 

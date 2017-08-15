@@ -10,6 +10,7 @@ namespace Pipliz.APIProvider.Jobs
 		NPCInventory blockInventory;
 		bool shouldTakeItems;
 		Recipe selectedRecipe;
+		int recipesToCraft;
 
 		public override JSONNode GetJSON ()
 		{
@@ -46,13 +47,15 @@ namespace Pipliz.APIProvider.Jobs
 				usedNPC.Inventory.Dump(blockInventory);
 			}
 			if (selectedRecipe != null) {
-				if (selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
+				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
 					blockInventory.Take(selectedRecipe.Requirements);
 					blockInventory.Add(selectedRecipe.Results);
 					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;
+					recipesToCraft--;
 				} else {
 					selectedRecipe = null;
+					recipesToCraft = 0;
 					blockInventory.Dump(usedNPC.Inventory);
 					if (!state.Inventory.IsEmpty) {
 						shouldTakeItems = true;
@@ -98,13 +101,14 @@ namespace Pipliz.APIProvider.Jobs
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
 						OverrideCooldown(0.5);
+						recipesToCraft = 0;
 						break;
 					case Recipe.RecipeMatchType.FoundCraftable:
 						selectedRecipe = recipeMatch.FoundRecipe;
-						int count = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
+						recipesToCraft = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
 						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
-							state.Inventory.Add(selectedRecipe.Requirements[i] * count);
-							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * count);
+							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
+							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
 						OverrideCooldown(0.5);
 						break;
