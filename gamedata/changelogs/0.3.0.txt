@@ -41,6 +41,7 @@ Fixes:
 -Fixed an issue in saving that meant regions could never shrink (but it didn't seem to affect the game for the rest)
 -Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
 -Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
+-Fixed incorrect area selection color after triggering the 'onremove' popup
 
 Modding changes:
 
@@ -59,9 +60,10 @@ Modding changes:
 -Added OnPlayerMoved callback
 -Added AfterDefiningNPCTypes callback
 -Added OnTryChangeBlockUser callback
---Allows blocking block placement/removal, essential for anti-griefing mods
 -Added OnResearchableCompleted callback
-
+-Added AfterModsLoaded callback
+-Added OnTerrainGeneratorBase callback
+-Added OnTerrainGeneratorStructures callback
 -Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
 --Use OnPlayerConnectedLate for sending chat messages
 -Moved all the non-player crafting recipes to the APIProvider mod.
@@ -107,6 +109,8 @@ Internal(/Modding) changes:
 -Added threadWrapper.IsActive
 -Renamed Pipliz.Math.EuclideanDistance to Pipliz.Math.ManhattanDistance
 -Allow infinitely repeating crafting recipes
+-Added an error when attempting to override a mod callback (instead of a vague exception)
+-Added exception handling to isolate OnAdd/OnRemove/OnChange/OnUpdateAdjacent callbacks
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 

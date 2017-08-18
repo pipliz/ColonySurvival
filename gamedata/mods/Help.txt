@@ -16,8 +16,11 @@ These callbacks are called in order of placement here:
 void OnAssemblyLoaded (string p)
 -Called directly upon discovering a method with this attribute; passes the assemblies path as a parameter.
 
+void AfterModsLoaded (List<ModLoader.ModAssembly> list)
+-Called after all mods are loaded, list is the list of loaded assemblies. Useful for using reflection to link up things
+
 void AfterStartup ()
--Called at the end of the startup code, first real callback. Use for basic initialization.
+-Called at the end of the startup code.
 
 void AfterSelectedWorld ()
 -First callback after the world to load has been determined.
@@ -104,6 +107,7 @@ void OnQuitLate ()
 void OnResearchableCompleted (Server.Science.IResearchable res)
 -Called upon completion of a researchable
 
+
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 
 void OnSavedRegionToDisk ()
@@ -118,6 +122,23 @@ void OnSavedChunkToRegion ()
 void OnLoadedChunkFromRegion ()
 -A chunk is filled from a region in memory. The chunk is locked for writing data.
 
+
+Misc:
+
+bool OnTerrainGeneratorBase(Chunk chunk)
+-Called from the base terrain generation thread (be careful).
+-Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
+-Passed chunk is already locked for writing data.
+-Use chunk.SetTypeAtSilently to set data
+-There are no guarantees about neighbouring chunks existing / being filled
+
+bool OnTerrainGeneratorStructures(Chunk chunk)
+-Called from the structures terrain generation thread (be careful).
+-Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
+-Passed chunk is already locked for writing data.
+-Use chunk.SetTypeAtSilently to set data
+-There are no guarantees about neighbouring chunks existing / being filled
+-A chunk will always have generated the base terrain first
 
 I apologize for the very inconsistent namespacing and general code quality. Part of the project is up to 2-3 years old, where I was even more of a beginner programmer.
 I've gone through some phases & every phase thought "oh but this is the way it should be done", and suddenly every part of the game is written in a different style. But such is life at the beginning.
