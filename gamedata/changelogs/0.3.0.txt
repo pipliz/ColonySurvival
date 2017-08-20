@@ -42,6 +42,7 @@ Fixes:
 -Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
 -Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
 -Fixed incorrect area selection color after triggering the 'onremove' popup
+-Fixed non-public steam servers showing up in the server browser
 
 Modding changes:
 
@@ -64,15 +65,17 @@ Modding changes:
 -Added AfterModsLoaded callback
 -Added OnTerrainGeneratorBase callback
 -Added OnTerrainGeneratorStructures callback
+-Added OnPlayerDeath callback
+-Added OnPlayerRespawn callback
 -Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
 --Use OnPlayerConnectedLate for sending chat messages
 -Moved all the non-player crafting recipes to the APIProvider mod.
--Added ItemTypes.RemoveRawType
--Added ItemTypes.GetAllRawTypes
--Added ItemTypesServer.TryGetTextureMapping
--Added ItemTypesServer.ContainsTextureMapping
--Added ItemTypesServer.RemoveTextureMapping
--Added ItemTypesServer.GetRegisteredTextureMapping
+-Added ItemTypes.RemoveRawType method
+-Added ItemTypes.GetAllRawTypes method
+-Added ItemTypesServer.TryGetTextureMapping method
+-Added ItemTypesServer.ContainsTextureMapping method
+-Added ItemTypesServer.RemoveTextureMapping method
+-Added ItemTypesServer.GetRegisteredTextureMapping method
 
 Internal(/Modding) changes:
 

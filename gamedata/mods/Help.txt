@@ -107,6 +107,11 @@ void OnQuitLate ()
 void OnResearchableCompleted (Server.Science.IResearchable res)
 -Called upon completion of a researchable
 
+void OnPlayerDeath (Players.Player p)
+-Called upon the death of player p.
+
+void OnPlayerRespawn (Players.Player p)
+-Called upon the respawning of player p (player clicked the button).
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 
