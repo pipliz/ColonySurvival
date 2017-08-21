@@ -51,29 +51,19 @@ namespace Pipliz.APIProvider
 		public static void AfterModsLoaded (List<ModLoader.ModAssembly> assemblies)
 		{
 			foreach (var modAssembly in assemblies) {
-				try {
-					foreach (var type in modAssembly.Assembly.GetTypes()) {
-						try {
-							object[] attributes = type.GetCustomAttributes(typeof(Science.AutoLoadedResearchableAttribute), true);
-							if (attributes != null && attributes.Length > 0) {
-								for (int i = 0; i < attributes.Length; i++) {
-									Science.AutoLoadedResearchableAttribute attri = attributes[i] as Science.AutoLoadedResearchableAttribute;
-									if (attri != null) {
-										Science.ResearchableManager.Add(type);
-									}
-								}
-							}
-						} catch (System.Exception e) {
-							Log.WriteException("APIProvider threw exception parsing dll {0}, type {1}", e, System.IO.Path.GetFileName(modAssembly.DllPath), type.FullName);
+				foreach (System.Type type in modAssembly.Types) {
+					try {
+						if (type.IsDefined (typeof(Science.AutoLoadedResearchableAttribute), true)) {
+							Science.ResearchableManager.Add(type);
 						}
+					} catch (System.Exception e) {
+						Log.WriteException("APIProvider threw exception parsing dll {0}, type {1}", e, System.IO.Path.GetFileName(modAssembly.Assembly.Location), type.FullName);
 					}
-				} catch (System.Exception e) {
-					Log.WriteException("APIProvider threw exception parsing dll {0}", e, System.IO.Path.GetFileName(modAssembly.DllPath));
 				}
 			}
 		}
 
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAddResearchables, "pipliz.apiprovider.registerautoresearchables")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAddResearchables, "pipliz.apiprovider.registerresearchables")]
 		public static void RegisterAutoResearchables ()
 		{
 			Science.ResearchableManager.Register();

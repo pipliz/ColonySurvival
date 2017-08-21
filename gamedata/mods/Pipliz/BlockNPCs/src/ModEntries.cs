@@ -9,14 +9,12 @@ namespace Pipliz.BlockNPCs
 	[ModLoader.ModManager]
 	public static class ModEntries
 	{
-		public static string ModDirectory;
 		public static string ModGamedataDirectory;
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAssemblyLoaded, "pipliz.blocknpcs.assemblyload")]
 		public static void OnAssemblyLoaded (string path)
 		{
-			ModDirectory = Path.GetDirectoryName(path);
-			ModGamedataDirectory = Path.Combine(ModDirectory, "gamedata/");
+			ModGamedataDirectory = Path.Combine(Path.GetDirectoryName(path), "gamedata/");
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.blocknpcs.registerjobs")]

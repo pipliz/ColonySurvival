@@ -42,7 +42,6 @@ Fixes:
 -Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
 -Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
 -Fixed incorrect area selection color after triggering the 'onremove' popup
--Fixed non-public steam servers showing up in the server browser
 
 Modding changes:
 
@@ -145,3 +144,6 @@ Regression fixes/changes to 0.3.0 build of 2017-08-12 (1):
 -Changed TryChangeBlockUserData class, used for the OnTryChangeBlockUser callback
 --Old behaviour maps like this: position -> VoxelToChange, typeNow -> typeTillNow, typeNew -> typeToBuild
 --Added voxelHit, voxelHitSide, typeSelected, isPrimaryAction
+
+Regression fixes/changes to 0.3.0 build of 2017-08-20 (1):
+-Undid the 'non public server browser' fix, as it also made those games unconnectable. :(

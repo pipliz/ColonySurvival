@@ -15,9 +15,15 @@ These callbacks are called in order of placement here:
 
 void OnAssemblyLoaded (string p)
 -Called directly upon discovering a method with this attribute; passes the assemblies path as a parameter.
+-Builtin callback uses:
++pipliz.blocknpcs.assemblyload
+--Calculates the mods' gamedata directory path
 
 void AfterModsLoaded (List<ModLoader.ModAssembly> list)
 -Called after all mods are loaded, list is the list of loaded assemblies. Useful for using reflection to link up things
+-Builtin callback uses:
++pipliz.apiprovider.parsemods
+--Parses loaded assemblies looking for [AutoLoadedResearchable] classes, adds these to the Pipliz.APIProvider.Science.ResearchableManager.
 
 void AfterStartup ()
 -Called at the end of the startup code.
@@ -29,18 +35,43 @@ void AfterSelectedWorld ()
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
 -Use NPC.NPCType settings methods here to register/change npc types.
+-Builtin callback uses:
++pipliz.blocknpcs.registerjobs
+--ProvidesFor pipliz.apiprovider.jobs.resolvetypes
+--Registers jobs to the APIProvider
++pipliz.apiprovider.jobs.resolvetypes
+--Registers NPCTypes to the base game, call BlockJobManagerTracker.Register before this
 
 void AfterAddingBaseTypes ()
 -ItemTypes.IndexLookup loaded, The place to call ItemTypes.AddRawType() to add types.json nodes.
 
 void AfterItemTypesDefined ()
 -Do things that require all itemtypes to be defined here. Loading recipes etc.
+-Builtin callback uses:
++pipliz.blocknpcs.loadrecipes
+--ProvidesFor pipliz.apiprovider.registerrecipes
+--Registers npc recipes to the APIPRovider RecipeManager
++pipliz.apiprovider.registerrecipes
+--Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
++pipliz.blocknpcs.registertypes
+--Registers furnace/oven change types
 
 void AfterItemTypesServer ()
 -Place to override ItemTypesServer.Register* things from the base game.
 
+void OnAddResearchables ()
+-Place to add researchables to Server.Science.ScienceManager
+-Builtin callback uses:
++pipliz.apiprovider.registerresearchables
+--Registers the researchables from Pipliz.APIProvider.Science.ResearchableManager to the Server.Science.ScienceManager.
+
 void AfterWorldLoad ()
 -After all misc data is loaded (structures, npc's, player data, lots)
+-Builtin callback uses:
++pipliz.apiprovider.jobs.registercallbacks
+--Registers the OnAdd/OnRemove callbacks from the blockjobs added through BlockJobManagerTracker.Register
++pipliz.apiprovider.jobs.load
+--Loads the registered blockjobs from the savegame, if any exist
 
 void AfterNetworkSetup ()
 -After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
@@ -74,6 +105,9 @@ void OnApplicationPause (bool b)
 
 void OnPlayerConnectedEarly (Player p)
 -Player {p} connected to the server. Very early call, player will probably ignore most messages here.
+-Builtin callback uses:
++pipliz.server.resetsciencedeltaupdates
+--Resets ScienceManagerPlayer to send initial progress again
 
 void OnPlayerConnectedLate (Player p)
 -Player {p} connected to the server. Messages sent here will be received after the client is done loading. Allows for chat messages.
@@ -99,7 +133,7 @@ void OnQuitEarly ()
 -General.Application.OnQuit @ -200, called before most other on quit actions
 
 void OnQuit ()
--General.Application.OnQuit @ 0, after connected players are disconnected, various things saving at the same time
+-General.Application.OnQuit @ 0, after connected players are disconnected, various things saving at the same timepipliz.apiprovider.registerrecipes
 
 void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened
@@ -109,9 +143,15 @@ void OnResearchableCompleted (Server.Science.IResearchable res)
 
 void OnPlayerDeath (Players.Player p)
 -Called upon the death of player p.
+-Builtin callback uses:
++pipliz.server.onplayerdeath
+--Sets health to 0, sends audio, clears inventory, prints death to log
 
 void OnPlayerRespawn (Players.Player p)
 -Called upon the respawning of player p (player clicked the button).
+-Builtin callback uses:
++pipliz.server.onplayerrespawn
+--Teleports player to their base, sets health to starting health, prints respawn to log
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 
