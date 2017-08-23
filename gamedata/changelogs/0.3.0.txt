@@ -113,6 +113,8 @@ Internal(/Modding) changes:
 -Allow infinitely repeating crafting recipes
 -Added an error when attempting to override a mod callback (instead of a vague exception)
 -Added exception handling to isolate OnAdd/OnRemove/OnChange/OnUpdateAdjacent callbacks
+-Fixed error caused by texturemappings refering to a non-existent png, fallback to error/neutral now.
+-Fixed missing argument to logging when attempting to override a callback
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 

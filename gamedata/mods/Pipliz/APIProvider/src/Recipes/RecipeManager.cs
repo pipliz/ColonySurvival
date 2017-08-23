@@ -11,7 +11,6 @@ namespace Pipliz.APIProvider.Recipes
 
 		public static List<Recipe> LoadRecipes (string path)
 		{
-			Log.Write("Loading recipes: {0}", path);
 			List<Recipe> recipes = new List<Recipe>();
 			JSONNode node = JSON.JSON.Deserialize(path);
 			foreach (var obj in node.LoopArray()) {
@@ -40,7 +39,6 @@ namespace Pipliz.APIProvider.Recipes
 
 		public static List<RecipeFueled> LoadRecipesFueled (string path)
 		{
-			Log.Write("Loading recipes: {0}", path);
 			List<RecipeFueled> recipes = new List<RecipeFueled>();
 			JSONNode node = JSON.JSON.Deserialize(path);
 			foreach (var obj in node.LoopArray()) {

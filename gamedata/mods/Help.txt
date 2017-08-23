@@ -125,9 +125,15 @@ bool OnTryChangeBlockUser (ModLoader.OnTryChangeBlockUserData d)
 
 void OnLoadingPlayer (JSONNode n, Player p)
 -Player {p} was loaded with json file {n}.
+-Builtin callback uses:
++pipliz.server.loadplayerscience
+--Loads any science progress from the jsonnode
 
 void OnSavingPlayer (JSONNode n, Player p)
 -Player {p} is being saved into json file {n}.
+-Builtin callback uses:
++pipliz.server.saveplayerscience
+--Saves any science progress from the player to it's file
 
 void OnQuitEarly ()
 -General.Application.OnQuit @ -200, called before most other on quit actions
