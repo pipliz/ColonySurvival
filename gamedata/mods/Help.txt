@@ -4,6 +4,11 @@ The current builtin mods:
 -Pipliz/APIProvider
 --Provides base classes/interfaces/managers for handling jobs definition
 --Provides a basic recipe manager
+--Provides a researchable manager/loader
+-Pipliz/BaseResearch
+--Provides the base game researchables
+-Pipliz/WorldConverter
+--When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
 
 To get an idea of how to receive callbacks etc, take a look at the included mod sources.
 For mod development I'd recommend the debug and/or development branches of the game, as those are build as unity development builds.

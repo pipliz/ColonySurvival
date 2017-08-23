@@ -18,6 +18,9 @@ Changes:
 -Changed stack size of stone bricks, bricks to 100
 -Changed gold cost of buying 100 flax seeds from 200 to 30
 
+-Added option for custom port numbers for the server
+-Improved ability to join through friends menu
+
 Localization changes:
 
 -Added da-DK locale
@@ -42,6 +45,7 @@ Fixes:
 -Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
 -Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
 -Fixed incorrect area selection color after triggering the 'onremove' popup
+-Fixed VAC checks not working (probably) (and made it opt-in instead of forced on for server)
 
 Modding changes:
 
@@ -78,12 +82,16 @@ Modding changes:
 
 Internal(/Modding) changes:
 
--Added 2 mods:
+-Added 4 base game mods:
 --Pipliz/APIProvider
----Contains base classes to deal with defining npc's, recipes
+---Contains base classes to deal with defining npc's, recipes, researchables
 --Pipliz/BlockNPCs
 ---Implements the existing block/crafting jobs as a mod.
 ---This took a lot of work.
+--Pipliz/BaseResearch
+---Provides the base game researchables
+--Pipliz/WorldConverter
+---When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
 -Deleted Pipliz/Example mod now that there is a real base mod.
 -Added jsonnode.ClearChildren() method.
 -Added jsonnode.RemoveChild(int) method.
@@ -107,7 +115,6 @@ Internal(/Modding) changes:
 -Improved Threaded collection performance
 -Better handle missing texture files
 -Added some error handling for trying to save invalid chunks (to prevent the entire region from failing)
--Added code to the client to backup server logs before launching a new one.
 -Added threadWrapper.IsActive
 -Renamed Pipliz.Math.EuclideanDistance to Pipliz.Math.ManhattanDistance
 -Allow infinitely repeating crafting recipes
@@ -115,6 +122,15 @@ Internal(/Modding) changes:
 -Added exception handling to isolate OnAdd/OnRemove/OnChange/OnUpdateAdjacent callbacks
 -Fixed error caused by texturemappings refering to a non-existent png, fallback to error/neutral now.
 -Fixed missing argument to logging when attempting to override a callback
+-Automatically backup log files from the client and the server to {gamefolder}/logs/{client,server}/
+-Added more info the the version text on the client (buildID and platform)
+-Added type Air to BuiltinBlocks
+-Added InventoryItem(string, int) constructor
+-Added Recipe (InventoryItem, List<InventoryItem>) constructor
+-Added Recipe (List<InventoryItem>, InventoryItem) constructor
+-Added RecipeFueled (float, InventoryItem, List<InventoryItem>) constructor
+-Added RecipeFueled (float, List<InventoryItem>, InventoryItem) constructor
+-Updated authentication code used from steam api (years old api to current)
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 
