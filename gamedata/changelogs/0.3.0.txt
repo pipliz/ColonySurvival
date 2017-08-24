@@ -11,8 +11,16 @@ Changes:
 --Added linen item
 --Added science bag item
 -Added technologist job
+--Added technologist table block
 --Added life science bag item
 --Added basic science bag item
+-Added scientist job
+--Added science lab block
+
+-Tweaked standards limits for a variety of blocks
+-Decreased flax farmer yield by 50%
+-Decreased iron mining speed by 40%
+-Decreased gold mining speed by 40%
 
 -Changed stack size of dirt, grass to 200
 -Changed stack size of stone bricks, bricks to 100
@@ -23,6 +31,7 @@ Changes:
 
 Localization changes:
 
+-Added some witty type tooltips
 -Added da-DK locale
 -Added cs-CZ locale
 -Added el-GR locale
@@ -131,6 +140,11 @@ Internal(/Modding) changes:
 -Added RecipeFueled (float, InventoryItem, List<InventoryItem>) constructor
 -Added RecipeFueled (float, List<InventoryItem>, InventoryItem) constructor
 -Updated authentication code used from steam api (years old api to current)
+-Improved stockpile & NPCInventory methods
+--Added proper Add / Contains / Remove / TryRemove methods
+--Added overloads for (type, amount), (item), and (IList<item>) to Add, Contains, Remove, TryRemove
+--Add returns void now instead of bool, as it can't fail anymore (since 0.1.something)
+--Remove now returns void, old behaviour is similar to TryRemove now
 
 Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
 

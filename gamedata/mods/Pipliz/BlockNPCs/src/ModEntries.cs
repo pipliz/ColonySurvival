@@ -30,6 +30,7 @@ namespace Pipliz.BlockNPCs
 			BlockJobManagerTracker.Register<WorkBenchJob>("workbench");
 			BlockJobManagerTracker.Register<TailorJob>("tailorshop");
 			BlockJobManagerTracker.Register<TechnologistJob>("technologisttable");
+			BlockJobManagerTracker.Register<ScientistJob>("sciencelab");
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.loadrecipes")]

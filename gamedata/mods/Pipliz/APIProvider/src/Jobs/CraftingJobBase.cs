@@ -48,7 +48,7 @@ namespace Pipliz.APIProvider.Jobs
 			}
 			if (selectedRecipe != null) {
 				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
-					blockInventory.Take(selectedRecipe.Requirements);
+					blockInventory.Remove(selectedRecipe.Requirements);
 					blockInventory.Add(selectedRecipe.Results);
 					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;

@@ -89,6 +89,9 @@ void OnUpdateStart ()
 
 void OnUpdate ()
 -Just after OnUpdateStart, after the ThreadManager did main thread delegates. Probably the place to put the bulk of per-frame-updates.
+-Builtin callback uses:
++pipliz.server.senddirtyscience
+--Sends updates from changed science managers to their owners on an interval
 
 void OnUpdateEnd ()
 -Just before the end of the update loop, after OnUpdate (after all relevant gamecode)
@@ -116,6 +119,9 @@ void OnPlayerConnectedEarly (Player p)
 
 void OnPlayerConnectedLate (Player p)
 -Player {p} connected to the server. Messages sent here will be received after the client is done loading. Allows for chat messages.
+-Builtin callback uses:
++pipliz.server.queueinitialsend
+--Queues a send to the player, to set initial science state
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.

@@ -46,7 +46,7 @@ namespace Pipliz.BlockNPCs.Implementations
 				Vector3 targetPos = target.Position + Vector3.up;
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
-					if (Stockpile.GetStockPile(owner).Remove(BuiltinBlocks.Arrow, 1)) {
+					if (Stockpile.GetStockPile(owner).TryRemove(BuiltinBlocks.Arrow)) {
 						Arrow.New(npcPos, targetPos, target.Direction);
 						OverrideCooldown(5.0);
 					} else {

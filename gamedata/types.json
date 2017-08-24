@@ -278,7 +278,7 @@
 		"needsBase" : true,
 		"isSolid" : false,
 		"sideall" : "quiverarrow",
-		"npcLimit" : 0,
+		"npcLimit" : 3,
 		"rotatablex+" : "quiverx+",
 		"rotatablex-" : "quiverx-",
 		"rotatablez+" : "quiverz+",
@@ -307,7 +307,7 @@
 		"maxStackSize" : 600,
 		"sideall" : "SELF",
 		"isSolid" : false,
-		"npcLimit" : 0,
+		"npcLimit" : 10,
 		"customData" : {
 			"volume" : 0.5,
 			"intensity" : 12.5,
@@ -343,7 +343,7 @@
 		"icon" : "crate.png",
 		"onRemoveAudio" : "woodDeleteLight",
 		"onPlaceAudio" : "woodPlace",
-		"npcLimit" : 0
+		"npcLimit" : 5
 	},
 	"stonebricks" : {
 		"sideall" : "SELF",
@@ -359,7 +359,7 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"maxStackSize" : 200,
 		"icon" : "coatedplanks.png",
-		"npcLimit" : 20
+		"npcLimit" : 10
 	},
 	"adobe" : {
 		"sideall" : "SELF",
@@ -367,7 +367,7 @@
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"maxStackSize" : 200,
-		"npcLimit" : 20
+		"npcLimit" : 5
 	},
 	"workbench" : {
 		"icon" : "workbench.png",
@@ -382,7 +382,7 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
 		"sidey+" : "tailorshop",
-		"npcLimit" : 0,
+		"npcLimit" : 1,
 		"icon" : "tailorshop.png"
 	},
 	"technologisttable" : {
@@ -390,8 +390,16 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "coatedplanks",
 		"sidey+" : "technologisttable",
-		"npcLimit" : 0,
+		"npcLimit" : 1,
 		"icon" : "technologisttable.png"
+	},
+	"sciencelab" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "coatedplanks",
+		"sidey+" : "sciencelab",
+		"npcLimit" : 1,
+		"icon" : "sciencelab.png"
 	},
 	"mint" : {
 		"icon" : "mint.png",
@@ -399,7 +407,7 @@
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "planks",
 		"sidey+" : "mint",
-		"npcLimit" : 0
+		"npcLimit" : 1
 	},
 	"shop" : {
 		"icon" : "shop.png",
@@ -407,7 +415,7 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
 		"sidey+" : "shop",
-		"npcLimit" : 0
+		"npcLimit" : 1
 	},
 	"grindstone" : {
 		"onPlaceAudio" : "stonePlace",
@@ -415,14 +423,14 @@
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "planks",
 		"sidey+" : "grindstone",
-		"npcLimit" : 0
+		"npcLimit" : 2
 	},
 	"plasterblock" : {
 		"sideall" : "SELF",
 		"icon" : "plasterblock.png",
 		"onRemoveAudio" : "dirtPlace",
 		"onPlaceAudio" :"dirtPlace",
-		"npcLimit" : 0
+		"npcLimit" : 10
 	},
 	"furnace" : {
 		"icon" : "furnace.png",
@@ -436,7 +444,7 @@
 		"sideall" : "furnaceside",
 		"sidey+" : "furnaceunlittop",
 		"destructionTime" : 800,
-		"npcLimit" : 0,
+		"npcLimit" : 2,
 		"customData" : {
 			"up" : {
 				"volume" : 0.3,
@@ -483,7 +491,7 @@
 		"rotatablez-" : "ovenz-",
 		"sideall" : "stonebricks",
 		"destructionTime" : 800,
-		"npcLimit" : 0,
+		"npcLimit" : 2,
 		"customData" : {
 			"volume" : 0.2,
 			"intensity" : 2.0,
@@ -517,7 +525,7 @@
 		"isDestructible" : false,
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 13.3
 		}
 	},
 	"infiniteclay" : {
@@ -539,7 +547,7 @@
 		"isDestructible" : false,
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 13.3
 		}
 	},
 	"infinitegypsum" : {
@@ -624,7 +632,7 @@
 			{
 				"type" : "flax",
 				"amount" : 1,
-				"chance" : 1
+				"chance" : 0.5
 			}
 		]
 	},
@@ -748,7 +756,7 @@
 		}
 	},
 	"linseedoil" : {
-		"npcLimit" : 100,
+		"npcLimit" : 10,
 		"isPlaceable" : false,
 		"icon" : "linseedoil.png",
 		"maxStackSize" : 600
@@ -852,17 +860,17 @@
 		"isPlaceable" : false
 	},
 	"bow" : {
-		"npcLimit" : 1,
+		"npcLimit" : 5,
 		"icon" : "bow.png",
 		"isPlaceable" : false
 	},
 	"pickaxe" : {
-		"npcLimit" : 1,
+		"npcLimit" : 2,
 		"icon" : "pickaxe.png",
 		"isPlaceable" : false
 	},
 	"axe" : {
-		"npcLimit" : 1,
+		"npcLimit" : 2,
 		"icon" : "axe.png",
 		"isPlaceable" : false
 	},
@@ -885,7 +893,7 @@
 		"isSolid" : false,
 		"needsBase" : true,
 		"sideall" : "SELF",
-		"npcLimit" : 0,
+		"npcLimit" : 5,
 		"rotatablex+" : "bedx+",
 		"rotatablex-" : "bedx-",
 		"rotatablez+" : "bedz+",
