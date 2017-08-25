@@ -1,17 +1,21 @@
 0.3.0 (2017-08-25)
 
 Welcome to Colony Survival 0.3.0!
-In 0.3.0, we’ve made a start in adding mid to late game content. There is a new goal beyond survival: scientific research. There are three new jobs in 0.3.0: the tailor, the technologist and the scientist. The technologists crafts Science Bags, and they’re used by the scientist to unlock new technologies. The Science Bags have been designed to give purpose to items that otherwise only have cosmetic value. 
+
+In 0.3.0, we’ve made a start in adding mid to late game content. There is a new goal beyond survival: scientific research.
+There are three new jobs in 0.3.0: the tailor, the technologist and the scientist. The technologist crafts Science Bags, and they’re used by the scientist to unlock new technologies.
+The Science Bags have been designed to give purpose to items that otherwise only have cosmetic value. 
 The technologies currently in the game don’t unlock awesome new content, only basic HP upgrades. We’re now working on new jobs and new weapons that can be unlocked with the scientist. 
+
 Other changes in 0.3.0:
 - production of certain items has been slowed down
 - flax seeds are a lot cheaper now
 - the main problem with saving has been fixed
 - significantly increased mod support
 - a good list of fixes
-- 5 new achivements
+- 5 new achievements
 
-More information can be found in the full changelog. We hope you’ll have a lot of fun with the new science system, and we’d love to hear your feedback!
+More information can be found in the blog and the full changelog below. We hope you’ll have a lot of fun with the new science system, and we’d love to hear your feedback!
 
 Changes:
 
@@ -160,8 +164,10 @@ Internal(/Modding) changes:
 -Added InventoryItem(string, int) constructor
 -Added Recipe (InventoryItem, List<InventoryItem>) constructor
 -Added Recipe (List<InventoryItem>, InventoryItem) constructor
+-Added Recipe (InventoryItem, InventoryItem) constructor
 -Added RecipeFueled (float, InventoryItem, List<InventoryItem>) constructor
 -Added RecipeFueled (float, List<InventoryItem>, InventoryItem) constructor
+-Added RecipeFueled (float, InventoryItem, InventoryItem) constructor
 -Updated authentication code used from steam api (years old api to current)
 -Improved stockpile & NPCInventory methods
 --Added proper Add / Contains / Remove / TryRemove methods
