@@ -1,4 +1,4 @@
-0.3.0 (2017-**-**)
+0.3.0 (2017-08-25)
 
 Changes:
 
@@ -20,6 +20,8 @@ Changes:
 --Increased health regen speed I -> IV
 --Increased health regen max I -> IV
 --Increased health max I -> IV
+-Added 5 new achievements
+-Added audio to arrows hitting blocks
 
 -Tweaked standards limits for a variety of blocks
 -Decreased flax farmer yield by 50%
@@ -60,6 +62,7 @@ Fixes:
 -Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
 -Fixed incorrect area selection color after triggering the 'onremove' popup
 -Fixed VAC checks not working (probably) (and made it opt-in instead of forced on for server)
+-Fixed an issue with the game returning to the main menu due to timeout while actually loading correctly. (reset timeout everytime a packet is processed)
 
 Modding changes:
 
@@ -93,6 +96,7 @@ Modding changes:
 -Added ItemTypesServer.ContainsTextureMapping method
 -Added ItemTypesServer.RemoveTextureMapping method
 -Added ItemTypesServer.GetRegisteredTextureMapping method
+-Added Player.SetTemporaryValue / Player.(Try)GetTemporaryValue, to store arbitrary data per player by a string key (doesn't load/save)
 
 Internal(/Modding) changes:
 
