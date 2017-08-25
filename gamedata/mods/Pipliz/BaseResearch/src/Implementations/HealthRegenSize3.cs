@@ -1,4 +1,5 @@
 ﻿using Pipliz.APIProvider.Science;
+using Server.Science;
 
 namespace Pipliz.BaseResearch.Implementations
 {
@@ -13,6 +14,11 @@ namespace Pipliz.BaseResearch.Implementations
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("sciencebaglife", 3);
 			AddDependency("pipliz.baseresearch.healthregensize2");
+		}
+
+		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		{
+			manager.Player.SetTemporaryValue("pipliz.healthregenmax", 85f);
 		}
 	}
 }
