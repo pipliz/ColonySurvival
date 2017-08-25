@@ -15,7 +15,7 @@
 		"settings" : "Configurações",
 		"info" : "Informações",
 		"quit" : "Sair",
-		"back"  : "Voltar"
+		"back" : "Voltar"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Novo Mundo",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Máximo",
-		"qualityveryhigh" :"Muito Alto",
-		"qualityhigh": "Alto",
+		"qualityveryhigh" : "Muito Alto",
+		"qualityhigh" : "Alto",
 		"qualitymedium" : "Médio",
 		"qualitylow" : "Baixo",
 		"qualityverylow" : "Muito Baixo",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "Configurações de Idioma",
 			"wiptext" : "Trabalho em progresso. Não abrange todos os textos do jogo e algumas traduções são menos traduzidas que outras.",
-			"language" : "Idioma"
+			"language" : "Idioma",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -214,15 +215,28 @@
 			"tooltip" : {
 				"needs" : "Requer: ",
 				"and" : "e"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Limite para fabricação",
-			"baking" : "Limite para cozinhar",
-			"smelting" : "Limite para fundir",
-			"minting" : "Limite para amoedar",
-			"shopping" : "Limite do shopping",
-			"grinding" : "Limite para moer",
+			"pipliz" : {
+				"crafter" : "Limite para fabricação",
+				"baker" : "Limite para cozinhar",
+				"smelter" : "Limite para fundir",
+				"minter" : "Limite para amoedar",
+				"merchant" : "Limite do shopping",
+				"grinder" : "Limite para moer",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "Colonistas irão trabalhar até a quantia indicada ser atingida na estocagem."
 		},
 		"death" : {
@@ -238,7 +252,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Camas:",
+		"bedcount" : "Camas:",
 		"colonistcount" : "Colonos:",
 		"laborercount" : "Desempregados:",
 		"foodstorage" : "Comida:",
@@ -274,6 +288,59 @@
 			"text1" : "A camada mais funda do mundo contém infinitos minérios. Clique com o botão direito no minério com a Ferramenta de Comando para definir onde o mineiro trabalhará. Não esqueça de colocar um caixote por perto.",
 			"text2" : "Coloque uma fornalha. Se houver um colono desempregado, ele automaticamente irá para a fornalha e começará a tornar alguns minérios em barras. ",
 			"text3" : "Coloque uma bancada de trabalho para tornar um colono em fabricador. Ele irá fabricar flechas e outros itens para você automaticamente."
+		}
+	},
+	"localecoverage" : "0.863453815261044",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
 		}
 	}
 }

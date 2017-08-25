@@ -5,7 +5,9 @@
 		"apply" : "Applica",
 		"none" : "Annulla",
 		"reset" : "Predefinito",
-		"inputplaceholder" : "Inserisci Testo..."
+		"inputplaceholder" : "Inserisci Testo...",
+		"previous" : "_MISSING_Previous",
+		"next" : "_MISSING_Next"
 	},
 	"mainmenu" : {
 		"singleplayer" : "Giocatore Singolo",
@@ -13,7 +15,7 @@
 		"settings" : "Impostazioni",
 		"info" : "Info",
 		"quit" : "Chiudi",
-		"back"  : "Indietro"
+		"back" : "Indietro"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Nuovo Mondo",
@@ -41,12 +43,13 @@
 		"connect" : "Connetti al Server Selezionato",
 		"refresh" : "Ricarica Lista dei Server",
 		"refreshing" : "Ricarica...",
-		"startserver" : "Avvia Server"
+		"startserver" : "Avvia Server",
+		"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server."
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Massimo",
-		"qualityveryhigh" :"Molto Alto",
-		"qualityhigh": "Alto",
+		"qualityveryhigh" : "Molto Alto",
+		"qualityhigh" : "Alto",
 		"qualitymedium" : "Medio",
 		"qualitylow" : "Basso",
 		"qualityverylow" : "Molto Basso",
@@ -118,12 +121,14 @@
 		"languagemenu" : {
 			"full" : "Impostazioni Lingua",
 			"wiptext" : "Lavori in corso. Questa traduzione potrebbe non essere totalmente tradotta e alcune traduzioni possono risultare meno complete o più complete di questa.",
-			"language" : "Lingua"
+			"language" : "Lingua",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
 		"quickstart" : "Avvio Rapido",
-		"credits" : "Crediti"
+		"credits" : "Crediti",
+		"changelog" : "_MISSING_Changelog"
 	},
 	"escapemenu" : {
 		"back" : "Ritorna al Gioco",
@@ -136,7 +141,11 @@
 		"banner" : {
 			"header" : "Gestione della colonia",
 			"description" : "I colonizzatori richiedono 5 unità alimentari al giorno e un letto. Il reclutamento di un colone costa 50 unità alimentari.",
-			"button" : "Reclutare un colone"
+			"button" : "Reclutare un colone",
+			"resetbutton" : "_MISSING_Reset colony",
+			"resettooltipa" : "_MISSING_",
+			"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
+			"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 		},
 		"bannerremoval" : {
 			"header" : "Rimuovi Banner",
@@ -173,7 +182,12 @@
 			"minertool" : "Strumento per Minatore",
 			"forestertool" : "Strumento per Boscaiolo",
 			"flaxfarmertool" : "Strumento per Mugnaio",
-			"notool" : "Nessun Strumento Selezionato"
+			"notool" : "Nessun Strumento Selezionato",
+			"berryfarmertool" : "_MISSING_Berry Farmer Tool",
+			"berryfarmer" : "_MISSING_Berry Farmer",
+			"berrya" : "_MISSING_Quick and easy food, start with this!",
+			"berryb" : "_MISSING_Place on grass or dirt",
+			"berryc" : "_MISSING_"
 		},
 		"toolconstruction" : {
 			"header" : "Attrezzo Costruttivo",
@@ -201,14 +215,28 @@
 			"tooltip" : {
 				"needs" : "Necessita: ",
 				"and" : "e"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Limiti di elaborazione",
-			"baking" : "Limiti di cottura",
-			"smelting" : "Limiti di fusione",
-			"minting" : "Limiti di taglio",
-			"shopping" : "Limiti commerciali",
+			"pipliz" : {
+				"crafter" : "Limiti di elaborazione",
+				"baker" : "Limiti di cottura",
+				"smelter" : "Limiti di fusione",
+				"minter" : "Limiti di taglio",
+				"merchant" : "Limiti commerciali",
+				"grinder" : "_MISSING_Grinding limits",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "I colonizzatori lavoreranno fino a raggiungere l'importo fissato nel magazzino."
 		},
 		"death" : {
@@ -224,11 +252,95 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Letti:",
+		"bedcount" : "Letti:",
 		"colonistcount" : "Coloni:",
 		"laborercount" : "Disoccupato:",
 		"foodstorage" : "Cibo:",
 		"foodusage" : "Cibo/Giorno:",
 		"arrowcount" : "Frecce:"
+	},
+	"quickstart" : {
+		"page1" : {
+			"header" : "_MISSING_Basics",
+			"description" : "_MISSING_Welcome to Colony Survival!",
+			"text1" : "_MISSING_The banner is the center of your colony. Press \"2\" to plant it. Right-click the banner to recruit colonists.",
+			"text2" : "_MISSING_You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
+			"text3" : "_MISSING_Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
+			"text4" : "_MISSING_Monsters will attack your colony at night! Use quivers to place archers. Press 'R' to rotate them. Press 'G' to activate a lamp."
+		},
+		"page2" : {
+			"header" : "_MISSING_Food Production",
+			"description" : "_MISSING_You'll need food to recruit and sustain your colonists!",
+			"text1" : "_MISSING_Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
+			"text2" : "_MISSING_Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
+			"text3" : "_MISSING_After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
+		},
+		"page3" : {
+			"header" : "_MISSING_Colony Defense",
+			"description" : "_MISSING_Defend your colony against the monsters of the night!",
+			"text1" : "_MISSING_At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
+			"text2" : "_MISSING_Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
+			"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough arrows."
+		},
+		"page4" : {
+			"header" : "_MISSING_Arrow Production",
+			"description" : "_MISSING_Without arrows, monsters will slaughter your colonists!",
+			"text1" : "_MISSING_The deepest layer of the world contains infinite ores. Right-click those ores with the Commandtool to set miners to work. Don't forget to place a crate nearby.",
+			"text2" : "_MISSING_Place a furnace. If there is an unemployed colonist, he will automatically go to the furnace and start crafting iron ore into iron bars.",
+			"text3" : "_MISSING_Place a workbench to turn a colonist into a crafter. He will automatically make arrows and other items for you."
+		}
+	},
+	"localecoverage" : "0.72289156626506",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
+		}
 	}
 }

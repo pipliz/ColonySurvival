@@ -12,10 +12,10 @@
 	"mainmenu" : {
 		"singleplayer" : "Einzelspieler",
 		"multiplayer" : "Mehrspieler",
-		"settings" : "Einstelungen",
+		"settings" : "Einstellungen",
 		"info" : "Infos",
 		"quit" : "Beenden",
-		"back"  : "Zurück"
+		"back" : "Zurück"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Neue Welt",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximum",
-		"qualityveryhigh" :"Sehr hoch",
-		"qualityhigh": "Hoch",
+		"qualityveryhigh" : "Sehr hoch",
+		"qualityhigh" : "Hoch",
 		"qualitymedium" : "Mittemäßig",
 		"qualitylow" : "Niedrig",
 		"qualityverylow" : "Erniedrigend",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "Spracheinstellungen",
 			"wiptext" : "In Bearbeitung. Betrifft nicht alles im Spiel, und manche Sprachen sind ausführlicher übersetzt als andere.",
-			"language" : "Sprache"
+			"language" : "Sprache",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -214,15 +215,28 @@
 			"tooltip" : {
 				"needs" : "Benötigt: ",
 				"and" : "und"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Herstellungslimitierungen",
-			"baking" : "Backlimitierungen",
-			"smelting" : "Schmelzlimitierungen",
-			"minting" : "Münzpresslimitierungen",
-			"shopping" : "Einkaufslimitierungen",
-			"grinding" : "Mühlenlimitierungen",
+			"pipliz" : {
+				"crafter" : "Herstellungslimitierungen",
+				"baker" : "Backlimitierungen",
+				"smelter" : "Schmelzlimitierungen",
+				"minter" : "Münzpresslimitierungen",
+				"merchant" : "Einkaufslimitierungen",
+				"grinder" : "Mühlenlimitierungen",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind."
 		},
 		"death" : {
@@ -238,7 +252,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Betten:",
+		"bedcount" : "Betten:",
 		"colonistcount" : "Kolonisten:",
 		"laborercount" : "Arbeitslos:",
 		"foodstorage" : "Nahrung:",
@@ -274,6 +288,59 @@
 			"text1" : "Die tiefsten Schichten dieser Welt enthalten unendlich viele Erze. Rechtsklicke diese Erze mit dem Befehlswerkzeug um einen Mienenarbeiter arbeiten zu lassen. Vergiss nicht eine Truhe in der Nähe zu platzieren.",
 			"text2" : "Platziere eine Schmelze. Wenn es einen arbeitslosen Kolonisten gibt, wird er automatisch zu der Schmelze gehen und anfangen Eisen Erz in Eisen Barren zu craften.",
 			"text3" : "Platziere eine Werkbank um einen Kolonisten als Crafter auszubilden. Er wird automatisch Pfeile und andere Items für dich craften."
+		}
+	},
+	"localecoverage" : "0.863453815261044",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
 		}
 	}
 }

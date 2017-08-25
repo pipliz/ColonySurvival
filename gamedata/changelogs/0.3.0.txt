@@ -1,0 +1,213 @@
+0.3.0 (2017-08-25)
+
+Welcome to Colony Survival 0.3.0!
+
+In 0.3.0, we’ve made a start in adding mid to late game content. There is a new goal beyond survival: scientific research.
+There are three new jobs in 0.3.0: the tailor, the technologist and the scientist. The technologist crafts Science Bags, and they’re used by the scientist to unlock new technologies.
+The Science Bags have been designed to give purpose to items that otherwise only have cosmetic value. 
+The technologies currently in the game don’t unlock awesome new content, only basic HP upgrades. We’re now working on new jobs and new weapons that can be unlocked with the scientist. 
+
+Other changes in 0.3.0:
+- production of certain items has been slowed down
+- flax seeds are a lot cheaper now
+- the main problem with saving has been fixed
+- significantly increased mod support
+- a good list of fixes
+- 5 new achievements
+
+More information can be found in the blog and the full changelog below. We hope you’ll have a lot of fun with the new science system, and we’d love to hear your feedback!
+
+Changes:
+
+-Added tailor job
+--Added tailor shop block
+--Added blue carpet block
+--Added yellow carpet block
+--Added red carpet block
+--Added clothing item
+--Added linen item
+--Added science bag item
+-Added technologist job
+--Added technologist table block
+--Added life science bag item
+--Added basic science bag item
+-Added scientist job
+--Added science lab block
+-Added 12 researchables:
+--Increased health regen speed I -> IV
+--Increased health regen max I -> IV
+--Increased health max I -> IV
+-Added 5 new achievements
+-Added audio to arrows hitting blocks
+
+-Tweaked standards limits for a variety of blocks
+-Decreased flax farmer yield by 50%
+-Decreased iron mining speed by 40%
+-Decreased gold mining speed by 40%
+
+-Changed stack size of dirt, grass to 200
+-Changed stack size of stone bricks, bricks to 100
+-Changed gold cost of buying 100 flax seeds from 200 to 30
+-Changed gold cost of buying wheat seeds from 2 gold per seed to 1 gold per 2 seeds
+
+-Added an indicator to the language menu of how complete a translation is.
+-Added option for custom port numbers for the server
+-Improved ability to join through friends menu
+
+Localization changes:
+
+-Added some witty type tooltips
+-Added da-DK locale
+-Added cs-CZ locale
+-Added el-GR locale
+-Fixes/additions to de-DE locale
+-Fixes/additions to fr-FR locale
+-Fixes/additions to ru-RU locale
+-Fixes to nl-NL locale
+
+Fixes:
+
+-Fixed the 'missing item' indicator for npc's being incorrect if the missing item is not the first of a recipe.
+-Fixed npc's not using specularity/smoothness maps (oops...)
+-Fixed npc's not using trilinear/anisotropic filtering (oops...)
+-Fixed lit oven sometimes having 2 lit 'front' sides
+-Fixed an error that occured when clicking outside of the chatbox when it is opened
+-Fixed laborers missing tools for jobs not going to sleep
+-Fixed some threading conflicts on the client
+-Fixed some callbacks not triggering in some block change situations; for example placing job blocks in water.
+-Fixed an issue in saving that meant regions could never shrink (but it didn't seem to affect the game for the rest)
+-Fixed an issue where the ChunkQueue thread would slow down slowly with increased load
+-Fixed an issue where regions would not be saved or get corrupted because the game quits before the saving is done.
+-Fixed incorrect area selection color after triggering the 'onremove' popup
+-Fixed VAC checks not working (probably) (and made it opt-in instead of forced on for server)
+-Fixed an issue with the game returning to the main menu due to timeout while actually loading correctly. (reset timeout everytime a packet is processed)
+
+Modding changes:
+
+-Added [ModCallbackProvidesFor("")] and [ModCallbackDependsOn("")] attributes
+--ProvidesFor makes sure this callback is called before the passed callback (assuming same callback type)
+--DependsOn makes sure this callback is called after the passed callback (assuming same callback type)
+--Naturally does not handle circular dependencies
+-Made [ModCallback()] require an identifier string, for use with the ProvidesFor / DependsOn attributes.
+-Added OnQuitEarly callback
+-Added OnQuit callback
+-Added OnQuitLate callback
+-Added OnSavedChunkToRegion callback
+-Added OnSavedRegionToDisk callback
+-Added OnLoadedRegionFromDisk callback
+-Added OnLoadedChunkFromRegion callback
+-Added OnPlayerMoved callback
+-Added AfterDefiningNPCTypes callback
+-Added OnTryChangeBlockUser callback
+-Added OnResearchableCompleted callback
+-Added AfterModsLoaded callback
+-Added OnTerrainGeneratorBase callback
+-Added OnTerrainGeneratorStructures callback
+-Added OnPlayerDeath callback
+-Added OnPlayerRespawn callback
+-Split OnPlayerConnected into OnPlayerConnectedEarly and OnPlayerConnectedLate
+--Use OnPlayerConnectedLate for sending chat messages
+-Moved all the non-player crafting recipes to the APIProvider mod.
+-Added ItemTypes.RemoveRawType method
+-Added ItemTypes.GetAllRawTypes method
+-Added ItemTypesServer.TryGetTextureMapping method
+-Added ItemTypesServer.ContainsTextureMapping method
+-Added ItemTypesServer.RemoveTextureMapping method
+-Added ItemTypesServer.GetRegisteredTextureMapping method
+-Added Player.SetTemporaryValue / Player.(Try)GetTemporaryValue, to store arbitrary data per player by a string key (doesn't load/save)
+
+Internal(/Modding) changes:
+
+-Added 4 base game mods:
+--Pipliz/APIProvider
+---Contains base classes to deal with defining npc's, recipes, researchables
+--Pipliz/BlockNPCs
+---Implements the existing block/crafting jobs as a mod.
+---This took a lot of work.
+--Pipliz/BaseResearch
+---Provides the base game researchables
+--Pipliz/WorldConverter
+---When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
+-Deleted Pipliz/Example mod now that there is a real base mod.
+-Added jsonnode.ClearChildren() method.
+-Added jsonnode.RemoveChild(int) method.
+-Added npcInventory.IsEmpty property.
+-Changed npc inventory saving format
+-Disabled pretty printing of JSON for anything 2 nodes or deeper. Nearly halved some json save file sizes.
+-Removed majority of Pipliz.Extensions.IList<T> methods & their uses.
+-Removed /setlimit, /getlimit and /resetlimit commands
+-Changed a large amount of methods / callbacks to use Players.Player instead of NetworkID.
+-Changed itemTypesServer class to allow registering / changing individual callbacks, and to get/set entire type-callbacks for modifying existing ones.
+-Moved mods' Help.txt file to the mods root folder
+-Renamed/changed ServerManager.(Try)SetBlock(User) to be more clear in its usage / parameters
+-Changed frametime graph to be based on 10 fps = full graph.
+-Fixed stats graph on the server not showing the initial AI buildup.
+-Changed localization files to include 'missing' keys and a coverage tracker for easier ideas of what needs to be done.
+-Fixed an issue with assemblies loading order; now all assemblies are loaded before they're parsed.
+-Removed World.SetTypeAtSilently
+-Reduced logging from NPC's that can't find a path
+-Removed blockTracker.Count
+-Added vector3Int.ToRegion, vector3Int.ToRegionLocal
+-Improved Threaded collection performance
+-Better handle missing texture files
+-Added some error handling for trying to save invalid chunks (to prevent the entire region from failing)
+-Added threadWrapper.IsActive
+-Renamed Pipliz.Math.EuclideanDistance to Pipliz.Math.ManhattanDistance
+-Allow infinitely repeating crafting recipes
+-Added an error when attempting to override a mod callback (instead of a vague exception)
+-Added exception handling to isolate OnAdd/OnRemove/OnChange/OnUpdateAdjacent callbacks
+-Fixed error caused by texturemappings refering to a non-existent png, fallback to error/neutral now.
+-Fixed missing argument to logging when attempting to override a callback
+-Automatically backup log files from the client and the server to {gamefolder}/logs/{client,server}/
+-Added more info the the version text on the client (buildID and platform)
+-Added type Air to BuiltinBlocks
+-Added InventoryItem(string, int) constructor
+-Added Recipe (InventoryItem, List<InventoryItem>) constructor
+-Added Recipe (List<InventoryItem>, InventoryItem) constructor
+-Added Recipe (InventoryItem, InventoryItem) constructor
+-Added RecipeFueled (float, InventoryItem, List<InventoryItem>) constructor
+-Added RecipeFueled (float, List<InventoryItem>, InventoryItem) constructor
+-Added RecipeFueled (float, InventoryItem, InventoryItem) constructor
+-Updated authentication code used from steam api (years old api to current)
+-Improved stockpile & NPCInventory methods
+--Added proper Add / Contains / Remove / TryRemove methods
+--Added overloads for (type, amount), (item), and (IList<item>) to Add, Contains, Remove, TryRemove
+--Add returns void now instead of bool, as it can't fail anymore (since 0.1.something)
+--Remove now returns void, old behaviour is similar to TryRemove now
+
+Regression fixes/changes to 0.3.0 changes after build of 2017-08-05:
+
+2017-08-08:
+- Fixed an issue with indirectly removing banners by destroying the block below it
+2017-08-09: 
+- Doubled cost of linen (1 flax to 2 flax)
+- Change APIProvider.Jobs.Register to be split into a Resolve function and the original Register.
+-- Use 'ClearType', 'Register' and 'RegisteredTypesEnumerable' inbetween Register and Resolve to change npc types before resolving them.
+- Made several base job functions from the APIProvider virtual
+- Allow multiple onAdd/onRemove/onChange/OnUpdateAdjacent calls to be registered to the same block
+- Half cost of linen again (lol) 2 flax -> 1 flax
+- Decreased flax production by 3 per plant to 1
+
+Regression fixes/changes to 0.3.0 build of 2017-08-09 (1):
+- Fixed jobs registering 9 times for removal/placing
+
+Regression fixes/changes to 0.3.0 build of 2017-08-09 (2):
+- Fixed workbench recipe for tailorshop requiring 'sciencebag' instead of 'linenbag'
+
+Regression fixes/changes to 0.3.0 build of 2017-08-09 (3):
+- Fixed chatbox issue, where pressing space while it is active (but not typing) would start typing.
+- Fixed tooltip of inventory hanging around after closing
+
+Regression fixes/changes to 0.3.0 build of 2017-08-10 (1):
+- Fixed an out of bounds access caused by the threading fix
+
+Regression fixes/changes to 0.3.0 build of 2017-08-12 (1):
+-Changed TryChangeBlockUserData class, used for the OnTryChangeBlockUser callback
+--Old behaviour maps like this: position -> VoxelToChange, typeNow -> typeTillNow, typeNew -> typeToBuild
+--Added voxelHit, voxelHitSide, typeSelected, isPrimaryAction
+
+Regression fixes/changes to 0.3.0 build of 2017-08-20 (1):
+-Undid the 'non public server browser' fix, as it also made those games unconnectable. :(
+
+Regression fixes/changes to 0.3.0 build of 2017-08-25 (1):
+-Fixed a bug causing the npc's to craft freely

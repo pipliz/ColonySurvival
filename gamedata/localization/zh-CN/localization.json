@@ -15,7 +15,7 @@
 		"settings" : "设置",
 		"info" : "信息",
 		"quit" : "退出",
-		"back"  : "返回"
+		"back" : "返回"
 	},
 	"singleplayermenu" : {
 		"newworld" : "新世界",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "最高",
-		"qualityveryhigh" :"非常高",
-		"qualityhigh": "高",
+		"qualityveryhigh" : "非常高",
+		"qualityhigh" : "高",
 		"qualitymedium" : "中",
 		"qualitylow" : "低",
 		"qualityverylow" : "非常低",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "语言选择",
 			"wiptext" : "持续进行中的工作。简体中文由Steam中的'兰局嘉段机务'持续更新.",
-			"language" : "语言"
+			"language" : "语言",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -214,15 +215,28 @@
 			"tooltip" : {
 				"needs" : "需要: ",
 				"and" : "和"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "手工制作达到最大",
-			"baking" : "烘焙达到最大",
-			"smelting" : "冶炼达到最大",
-			"minting" : "铸造达到最大",
-			"shopping" : "作坊达到最大",
-			"grinding" : "磨坊达到最大",
+			"pipliz" : {
+				"crafter" : "手工制作达到最大",
+				"baker" : "烘焙达到最大",
+				"smelter" : "冶炼达到最大",
+				"minter" : "铸造达到最大",
+				"merchant" : "作坊达到最大",
+				"grinder" : "磨坊达到最大",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "屁民将一直工作到储备量达到为止."
 		},
 		"death" : {
@@ -238,7 +252,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "床:",
+		"bedcount" : "床:",
 		"colonistcount" : "屁民:",
 		"laborercount" : "失业人数:",
 		"foodstorage" : "食物:",
@@ -274,6 +288,59 @@
 			"text1" : "在地下深处会有各种矿物,铁矿就是其中之一,开采铁矿然后加工,这是你的军事资源,记得在附近放置工作坊.",
 			"text2" : "炼炉可将各种矿物熔化.并打造金块等物品的地方,铁匠铺什么的你懂得~",
 			"text3" : "工作台,名字是不是很熟悉,但这可不是我的世界.虽然原理相同但是只有你的屁民能操作,炼制铁后可以制造箭矢和其他物品."
+		}
+	},
+	"localecoverage" : "0.863453815261044",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
 		}
 	}
 }

@@ -1,0 +1,219 @@
+The current builtin mods:
+-Pipliz/BlockNPCs
+--Uses API's provided by Pipliz/APIProvider to define the furnace, grinder, mint, oven, quiver, shop and workbench.
+-Pipliz/APIProvider
+--Provides base classes/interfaces/managers for handling jobs definition
+--Provides a basic recipe manager
+--Provides a researchable manager/loader
+-Pipliz/BaseResearch
+--Provides the base game researchables
+-Pipliz/WorldConverter
+--When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
+
+To get an idea of how to receive callbacks etc, take a look at the included mod sources.
+For mod development I'd recommend the debug and/or development branches of the game, as those are build as unity development builds.
+This should also allow connecting the unity profiler after installing unity, to log/check performance much more accurately than the included graphs. 
+Rest of this document is mostly a description of the various callbacks
+
+
+These callbacks are called in order of placement here:
+
+void OnAssemblyLoaded (string p)
+-Called directly upon discovering a method with this attribute; passes the assemblies path as a parameter.
+-Builtin callback uses:
++pipliz.blocknpcs.assemblyload
+--Calculates the mods' gamedata directory path
+
+void AfterModsLoaded (List<ModLoader.ModAssembly> list)
+-Called after all mods are loaded, list is the list of loaded assemblies. Useful for using reflection to link up things
+-Builtin callback uses:
++pipliz.apiprovider.parsemods
+--Parses loaded assemblies looking for [AutoLoadedResearchable] classes, adds these to the Pipliz.APIProvider.Science.ResearchableManager.
+
+void AfterStartup ()
+-Called at the end of the startup code.
+
+void AfterSelectedWorld ()
+-First callback after the world to load has been determined.
+-The place to call ItemTypesServer.Register* methods
+
+void AfterDefiningNPCTypes ()
+-After the game has defined its default npc types.
+-Use NPC.NPCType settings methods here to register/change npc types.
+-Builtin callback uses:
++pipliz.blocknpcs.registerjobs
+--ProvidesFor pipliz.apiprovider.jobs.resolvetypes
+--Registers jobs to the APIProvider
++pipliz.apiprovider.jobs.resolvetypes
+--Registers NPCTypes to the base game, call BlockJobManagerTracker.Register before this
+
+void AfterAddingBaseTypes ()
+-ItemTypes.IndexLookup loaded, The place to call ItemTypes.AddRawType() to add types.json nodes.
+
+void AfterItemTypesDefined ()
+-Do things that require all itemtypes to be defined here. Loading recipes etc.
+-Builtin callback uses:
++pipliz.blocknpcs.loadrecipes
+--ProvidesFor pipliz.apiprovider.registerrecipes
+--Registers npc recipes to the APIPRovider RecipeManager
++pipliz.apiprovider.registerrecipes
+--Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
++pipliz.blocknpcs.registertypes
+--Registers furnace/oven change types
+
+void AfterItemTypesServer ()
+-Place to override ItemTypesServer.Register* things from the base game.
+
+void OnAddResearchables ()
+-Place to add researchables to Server.Science.ScienceManager
+-Builtin callback uses:
++pipliz.apiprovider.registerresearchables
+--Registers the researchables from Pipliz.APIProvider.Science.ResearchableManager to the Server.Science.ScienceManager.
+
+void AfterWorldLoad ()
+-After all misc data is loaded (structures, npc's, player data, lots)
+-Builtin callback uses:
++pipliz.apiprovider.jobs.registercallbacks
+--Registers the OnAdd/OnRemove callbacks from the blockjobs added through BlockJobManagerTracker.Register
++pipliz.apiprovider.jobs.load
+--Loads the registered blockjobs from the savegame, if any exist
+
+void AfterNetworkSetup ()
+-After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
+
+
+These callbacks are done at various times:
+
+void OnUpdateStart ()
+-Start of Unity's Update loop, before anything is called (except for quitting mechanisms).
+
+void OnUpdate ()
+-Just after OnUpdateStart, after the ThreadManager did main thread delegates. Probably the place to put the bulk of per-frame-updates.
+-Builtin callback uses:
++pipliz.server.senddirtyscience
+--Sends updates from changed science managers to their owners on an interval
+
+void OnUpdateEnd ()
+-Just before the end of the update loop, after OnUpdate (after all relevant gamecode)
+
+void OnGUI ()
+-Unity's legacy GUI loop - use UnityEngine.GUI calls here to implement some basic interface things (on the server)
+
+void FixedUpdate ()
+-Unity's FixedUpdate loop
+
+void LateUpdate ()
+-Unity's LateUpdate loop (comes after Update and some unity internal things)
+
+void OnApplicationFocus (bool b)
+-Unity's OnApplicationFocus method.
+
+void OnApplicationPause (bool b)
+-Unity's OnApplicationPause method (probably unused, as the game does not have proper support for pausing, but hey here is an entry)
+
+void OnPlayerConnectedEarly (Player p)
+-Player {p} connected to the server. Very early call, player will probably ignore most messages here.
+-Builtin callback uses:
++pipliz.server.resetsciencedeltaupdates
+--Resets ScienceManagerPlayer to send initial progress again
+
+void OnPlayerConnectedLate (Player p)
+-Player {p} connected to the server. Messages sent here will be received after the client is done loading. Allows for chat messages.
+-Builtin callback uses:
++pipliz.server.queueinitialsend
+--Queues a send to the player, to set initial science state
+
+void OnPlayerDisconnected (Player p)
+-Player {p} was disconnected.
+
+void OnPlayerMoved (Player p)
+-Player {p} sent an updated position. Called approx 6 times per second per player. New position/rotation is set in {p}.
+
+bool OnTryChangeBlockUser (ModLoader.OnTryChangeBlockUserData d)
+-Player {d.requestedBy} requested a block change from {d.typeTillNow} to {d.typeToBuild} at {d.VoxelToChange}.
+-Return true if you allow this change
+-Return false if you disallow this change
+
+void OnLoadingPlayer (JSONNode n, Player p)
+-Player {p} was loaded with json file {n}.
+-Builtin callback uses:
++pipliz.server.loadplayerscience
+--Loads any science progress from the jsonnode
+
+void OnSavingPlayer (JSONNode n, Player p)
+-Player {p} is being saved into json file {n}.
+-Builtin callback uses:
++pipliz.server.saveplayerscience
+--Saves any science progress from the player to it's file
+
+void OnQuitEarly ()
+-General.Application.OnQuit @ -200, called before most other on quit actions
+
+void OnQuit ()
+-General.Application.OnQuit @ 0, after connected players are disconnected, various things saving at the same timepipliz.apiprovider.registerrecipes
+
+void OnQuitLate ()
+-General.Application.OnQuit @ 100, after most quit actions happened
+
+void OnResearchableCompleted (Server.Science.IResearchable res)
+-Called upon completion of a researchable
+
+void OnPlayerDeath (Players.Player p)
+-Called upon the death of player p.
+-Builtin callback uses:
++pipliz.server.onplayerdeath
+--Sets health to 0, sends audio, clears inventory, prints death to log
+
+void OnPlayerRespawn (Players.Player p)
+-Called upon the respawning of player p (player clicked the button).
+-Builtin callback uses:
++pipliz.server.onplayerrespawn
+--Teleports player to their base, sets health to starting health, prints respawn to log
+
+The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
+
+void OnSavedRegionToDisk ()
+-A region is saved to the disk
+
+void OnLoadedRegionFromDisk ()
+-A region is loaded from the disk.
+
+void OnSavedChunkToRegion ()
+-A chunk is saved to the region. The chunk is locked for reading data.
+
+void OnLoadedChunkFromRegion ()
+-A chunk is filled from a region in memory. The chunk is locked for writing data.
+
+
+Misc:
+
+bool OnTerrainGeneratorBase(Chunk chunk)
+-Called from the base terrain generation thread (be careful).
+-Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
+-Passed chunk is already locked for writing data.
+-Use chunk.SetTypeAtSilently to set data
+-There are no guarantees about neighbouring chunks existing / being filled
+
+bool OnTerrainGeneratorStructures(Chunk chunk)
+-Called from the structures terrain generation thread (be careful).
+-Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
+-Passed chunk is already locked for writing data.
+-Use chunk.SetTypeAtSilently to set data
+-There are no guarantees about neighbouring chunks existing / being filled
+-A chunk will always have generated the base terrain first
+
+
+Player Temporary values:
+
+float pipliz.healthregenmax
+|Limit to which health regenerates, set by health regen size research
+
+float pipliz.healthregenspeed
+|Speed at which health regenerates, set by health regen speed research 
+
+float pipliz.healthmax
+|Max health, set by health size research
+
+I apologize for the very inconsistent namespacing and general code quality. Part of the project is up to 2-3 years old, where I was even more of a beginner programmer.
+I've gone through some phases & every phase thought "oh but this is the way it should be done", and suddenly every part of the game is written in a different style. But such is life at the beginning.
+There's also random dead code / unused-semi-build features, because of shifting priorities.

@@ -15,7 +15,7 @@
 		"settings" : "Nastavení",
 		"info" : "Info",
 		"quit" : "Odejít",
-		"back"  : "Zpátky"
+		"back" : "Zpátky"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Nový svět",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximum",
-		"qualityveryhigh" :"Velmi vysoká",
-		"qualityhigh": "Vysoká",
+		"qualityveryhigh" : "Velmi vysoká",
+		"qualityhigh" : "Vysoká",
 		"qualitymedium" : "Střední",
 		"qualitylow" : "Nízká",
 		"qualityverylow" : "Velmi nízká",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "Jazykové nastavení",
 			"wiptext" : "Práce probíhají. Nejedná se o překlad kompletní hry, a některé překlady mohou obsahovat více nedodělků než jiné.",
-			"language" : "Jazyk"
+			"language" : "Jazyk",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -214,15 +215,28 @@
 			"tooltip" : {
 				"needs" : "Potřebuje: ",
 				"and" : "a"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Limity výroby",
-			"baking" : "Limity pečení",
-			"smelting" : "Limity tavení rudy",
-			"minting" : "Limity řezání",
-			"shopping" : "Limity nákupu",
-			"grinding" : "Limity mletí mouky",
+			"pipliz" : {
+				"crafter" : "Limity výroby",
+				"baker" : "Limity pečení",
+				"smelter" : "Limity tavení rudy",
+				"minter" : "Limity řezání",
+				"merchant" : "Limity nákupu",
+				"grinder" : "Limity mletí mouky",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách."
 		},
 		"death" : {
@@ -238,7 +252,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Postele:",
+		"bedcount" : "Postele:",
 		"colonistcount" : "Kolonisti:",
 		"laborercount" : "Nezaměstnaní:",
 		"foodstorage" : "Jídlo:",
@@ -274,6 +288,59 @@
 			"text1" : "Nejhlubší vrstva světa obsahuje nekonečné rudy. Klikněte pravým na tyto rudy pomocí Nástroje pro správu a nastavte tak horníkům práci. Nezapomeňte umístit bednu poblíž.",
 			"text2" : "Položte pec pro tavení rudy. Pokud máte nezaměstnaného kolonistu, tak začne automaticky pracovat v peci a tavit železnou rudu na železné ingoty.",
 			"text3" : "Položte pracovní stůl aby jste z kolonisty udělali řemeslníka. Bude pro vás automaticky dělat šípy a další věci."
+		}
+	},
+	"localecoverage" : "0.863453815261044",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
 		}
 	}
 }

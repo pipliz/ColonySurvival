@@ -15,7 +15,7 @@
 		"settings" : "Settings",
 		"info" : "Info",
 		"quit" : "Quit",
-		"back"  : "Back"
+		"back" : "Back"
 	},
 	"singleplayermenu" : {
 		"newworld" : "New World",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximum",
-		"qualityveryhigh" :"Very high",
-		"qualityhigh": "High",
+		"qualityveryhigh" : "Very high",
+		"qualityhigh" : "High",
 		"qualitymedium" : "Medium",
 		"qualitylow" : "Low",
 		"qualityverylow" : "Very low",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "Language Settings",
 			"wiptext" : "Work in progress. This does not cover all text in the game, and some translations may cover less than others.",
-			"language" : "Language"
+			"language" : "Language",
+			"coverage" : "This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -207,22 +208,33 @@
 			"remove" : "Remove area"
 		},
 		"inventory" : {
-			"crafting" : "Crafting",
-			"stockpile" : "Stockpile",
+			"craftingstockpile" : "Crafting & Stockpile",
 			"stockpiledescription" : "You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile.",
 			"foodvalue" : "Food value:",
 			"tooltip" : {
 				"needs" : "Needs: ",
 				"and" : "and"
+			},
+			"science" : {
+				"header" : "Science",
+				"dependencies" : "Required technologies:",
+				"requirements" : "Requirements for one research cycle:",
+				"iterations" : "Research cycles: {0} out of {1}",
+				"researchselected" : "Select to research",
+				"researchactive" : "Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Crafting limits",
-			"baking" : "Baking limits",
-			"smelting" : "Smelting limits",
-			"minting" : "Minting limits",
-			"shopping" : "Shopping limits",
-			"grinding" : "Grinding limits",
+			"pipliz" : {
+				"crafter" : "Crafting limits",
+				"baker" : "Baking limits",
+				"smelter" : "Smelting limits",
+				"minter" : "Minting limits",
+				"merchant" : "Shopping limits",
+				"grinder" : "Grinding limits",
+				"tailor" : "Tailoring limits",
+				"technologist" : "Technologist limits"
+			},
 			"description" : "Colonists will work until the set amount is reached in the stockpile."
 		},
 		"death" : {
@@ -238,7 +250,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Beds:",
+		"bedcount" : "Beds:",
 		"colonistcount" : "Colonists:",
 		"laborercount" : "Unemployed:",
 		"foodstorage" : "Food:",
@@ -275,5 +287,58 @@
 			"text2" : "Place a furnace. If there is an unemployed colonist, he will automatically go to the furnace and start crafting iron ore into iron bars.",
 			"text3" : "Place a workbench to turn a colonist into a crafter. He will automatically make arrows and other items for you."
 		}
-	}
+	},
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "Health Increase I",
+				"description" : "Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "Health Increase II",
+				"description" : "Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "Health Increase III",
+				"description" : "Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "Health Increase IV",
+				"description" : "Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "Regeneration Increase I",
+				"description" : "Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "Regeneration Increase II",
+				"description" : "Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "Regeneration Increase III",
+				"description" : "Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "Regeneration Increase IV",
+				"description" : "Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "Regeneration Speed I",
+				"description" : "Increases regeneration speed from 0.5 HP/s to 1 HP/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "Regeneration Speed II",
+				"description" : "Increases regeneration speed from 1 HP/s to 2 HP/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "Regeneration Speed III",
+				"description" : "Increases regeneration speed from 2 HP/s to 3 HP/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "Regeneration Speed IV",
+				"description" : "Increases regeneration speed from 3 HP/s to 4 HP/s"
+			}
+		}
+	},
+	"localecoverage" : "1"
 }

@@ -15,7 +15,7 @@
 		"settings" : "Paramètres",
 		"info" : "Information",
 		"quit" : "Quitter",
-		"back"  : "Retour"
+		"back" : "Retour"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Nouveau monde",
@@ -48,8 +48,8 @@
 	},
 	"settingsmenu" : {
 		"qualitymaximum" : "Maximum",
-		"qualityveryhigh" :"Très élevé",
-		"qualityhigh": "Élevé",
+		"qualityveryhigh" : "Très élevé",
+		"qualityhigh" : "Élevé",
 		"qualitymedium" : "Moyen",
 		"qualitylow" : "Bas",
 		"qualityverylow" : "Très bas",
@@ -121,13 +121,14 @@
 		"languagemenu" : {
 			"full" : "Paramètres de langue",
 			"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent couvrir moins que d'autres.",
-			"language" : "Langue"
+			"language" : "Langue",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
 		"quickstart" : "Démarrage rapide",
 		"credits" : "Crédits",
-		"changelog" : "Nouveautés de la version"		
+		"changelog" : "Nouveautés de la version"
 	},
 	"escapemenu" : {
 		"back" : "Reprendre la partie",
@@ -186,7 +187,8 @@
 			"berryfarmer" : "Cultivateur de baies",
 			"berrya" : "De la nourriture rapide et facile, commencez par cela !",
 			"berryb" : "À placer sur l'herbe ou la terre",
-			"berryc" : ""			
+			"berryc" : "",
+			"toonarrow" : "_MISSING_Too narrow for trees"
 		},
 		"toolconstruction" : {
 			"header" : "Outil de construction",
@@ -214,15 +216,28 @@
 			"tooltip" : {
 				"needs" : "Requiert :",
 				"and" : "et"
+			},
+			"craftingstockpile" : "Artisanat et stockage",
+			"science" : {
+				"header" : "Science",
+				"dependencies" : "Technologies requises:",
+				"requirements" : "Requis pour un cycle de recherche:",
+				"iterations" : "Cycles de recherche: {0} de {1}",
+				"researchselected" : "Recherche sélectionnée:",
+				"researchactive" : "Recherche en cours: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Limites de fabrication",
-			"baking" : "Limites de cuisson",
-			"smelting" : "Limites de fonte",
-			"minting" : "Limites de frappe",
-			"shopping" : "Limites d'achat",
-			"grinding" : "Limites de broyage",
+			"pipliz" : {
+				"crafter" : "Limites de fabrication",
+				"baker" : "Limites de cuisson",
+				"smelter" : "Limites de fonte",
+				"minter" : "Limites de frappe",
+				"merchant" : "Limites d'achat",
+				"grinder" : "Limites de broyage",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock."
 		},
 		"death" : {
@@ -238,7 +253,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Lits :",
+		"bedcount" : "Lits :",
 		"colonistcount" : "Colons :",
 		"laborercount" : "Sans emploi :",
 		"foodstorage" : "Nouriture :",
@@ -274,6 +289,59 @@
 			"text1" : "La couche la plus profonde du monde contient des minerais infinis. Cliquez avec le bouton droit sur ces minerais avec l'outil de commande pour que les mineurs travaillent. N'oubliez pas de placer une caisse à proximité.",
 			"text2" : "Placez un four. S'il y a un colon sans emploi, il va automatiquement au four et commence à fabriquer des barres de fer avec des minerais de fer.",
 			"text3" : "Placez un établi pour transformer un colon en artisan. Il fabriquera automatiquement des flèches et d'autres objets pour vous."
+		}
+	},
+	"localecoverage" : "0.983935742971888",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "Augmentation des points de vie I",
+				"description" : "Augmentation Max des HP à 125"
+			},
+			"healthsize2" : {
+				"name" : "Augmentation des points de vie II",
+				"description" : "Augmentation Max des HP à 150"
+			},
+			"healthsize3" : {
+				"name" : "Augmentation des points de vie III",
+				"description" : "Augmentation Max des HP à 175"
+			},
+			"healthsize4" : {
+				"name" : "Augmentation des points de vie IV",
+				"description" : "Augmentation Max des HP à 200"
+			},
+			"healthregensize1" : {
+				"name" : "Augmentation des points de régénération  I",
+				"description" : "Augmente la quantité de HP régénérés de 30 à 50"
+			},
+			"healthregensize2" : {
+				"name" : "Augmentation des points de régénération II",
+				"description" : "Augmente la quantité de HP régénérés de 50 à 65"
+			},
+			"healthregensize3" : {
+				"name" : "Augmentation des points de régénération III",
+				"description" : "Augmente la quantité de HP régénérés de 65 à 85"
+			},
+			"healthregensize4" : {
+				"name" : "Augmentation des points de régénération IV",
+				"description" : "Augmente la quantité de HP régénérés de 85 à 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "Vitesse de régénération des HP I",
+				"description" : "Augmente la vitesse de rénération de 0.5 HP\/s à 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "Vitesse de régénération des HP II",
+				"description" : "Augmente la vitesse de rénération de 1 HP\/s à 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "Vitesse de régénération des HP III",
+				"description" : "Augmente la vitesse de rénération de 2 HP\/s à 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "Vitesse de régénération des HP IV",
+				"description" : "Augmente la vitesse de rénération de 3 HP\/s à 4 HP\/s"
+			}
 		}
 	}
 }

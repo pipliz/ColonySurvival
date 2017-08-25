@@ -15,7 +15,7 @@
 		"settings" : "Asetukset",
 		"info" : "Info",
 		"quit" : "Lopeta",
-		"back"  : "Palaa"
+		"back" : "Palaa"
 	},
 	"singleplayermenu" : {
 		"newworld" : "Uusi maailma",
@@ -49,7 +49,7 @@
 	"settingsmenu" : {
 		"qualitymaximum" : "Paras",
 		"qualityveryhigh" : "Hyvin korkea",
-		"qualityhigh": "Korkea",
+		"qualityhigh" : "Korkea",
 		"qualitymedium" : "Keskiverto",
 		"qualitylow" : "Heikko",
 		"qualityverylow" : "Hyvin heikko",
@@ -121,7 +121,8 @@
 		"languagemenu" : {
 			"full" : "Kieliasetukset",
 			"wiptext" : "Työn alla. Kieliasetus ei kata kaikkia pelin tekstejä, ja osa käännöksistä on puutteellisempia kuin toiset.",
-			"language" : "Kieli"
+			"language" : "Kieli",
+			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 		}
 	},
 	"infomenu" : {
@@ -214,15 +215,28 @@
 			"tooltip" : {
 				"needs" : "Vaatii: ",
 				"and" : "ja"
+			},
+			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+			"science" : {
+				"header" : "_MISSING_Science",
+				"dependencies" : "_MISSING_Required technologies:",
+				"requirements" : "_MISSING_Requirements for one research cycle:",
+				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+				"researchselected" : "_MISSING_Select to research",
+				"researchactive" : "_MISSING_Current research: {0}"
 			}
 		},
 		"limits" : {
-			"crafting" : "Kokoamisrajoitus",
-			"baking" : "Leivontarajoitus",
-			"smelting" : "Sulatusrajoitus",
-			"minting" : "Rahanlyöntirajoitus",
-			"shopping" : "Ostorajoitus",
-			"grinding" : "Jauhamisrajoitus",
+			"pipliz" : {
+				"crafter" : "Kokoamisrajoitus",
+				"baker" : "Leivontarajoitus",
+				"smelter" : "Sulatusrajoitus",
+				"minter" : "Rahanlyöntirajoitus",
+				"merchant" : "Ostorajoitus",
+				"grinder" : "Jauhamisrajoitus",
+				"tailor" : "_MISSING_Tailoring limits",
+				"technologist" : "_MISSING_Technologist limits"
+			},
 			"description" : "Asukit työskentelevät niin kauan, kunnes varastoon on kertynyt asetetun arvon verran kyseistä tavaraa."
 		},
 		"death" : {
@@ -238,7 +252,7 @@
 		}
 	},
 	"firstpersonstats" : {
-		"bedcount": "Sänkyjä:",
+		"bedcount" : "Sänkyjä:",
 		"colonistcount" : "Asukkeja:",
 		"laborercount" : "Työttömiä:",
 		"foodstorage" : "Ruokaa:",
@@ -274,6 +288,59 @@
 			"text1" : "Maailman pohjimmaisessa kerroksessa on ehtymättömiä malmisuonia. Klikkaa näitä suonia oikealla hiirennäppäimellä käyttäen komentotyökalua nimittääksesi kaivosmiehiä. Muista sijoittaa suonen lähelle laatikko!",
 			"text2" : "Aseta maahan sulatusuuni. Mikäli asutuksessasi on työtön asukki, siirtyy hän sulattajaksi ja ryhtyy sulattamaan rautaa sulatusuunissa malmista harkoiksi.",
 			"text3" : "Aseta maahan työstöpöytä nimittääksesi asukki kokoojaksi. Hän ryhtyy automaattisesti kokoamaan nuolia ja muita esineitä asutuksellesi."
+		}
+	},
+	"localecoverage" : "0.863453815261044",
+	"pipliz" : {
+		"baseresearch" : {
+			"healthsize1" : {
+				"name" : "_MISSING_Health Increase I",
+				"description" : "_MISSING_Increases Max HP to 125"
+			},
+			"healthsize2" : {
+				"name" : "_MISSING_Health Increase II",
+				"description" : "_MISSING_Increases Max HP to 150"
+			},
+			"healthsize3" : {
+				"name" : "_MISSING_Health Increase III",
+				"description" : "_MISSING_Increases Max HP to 175"
+			},
+			"healthsize4" : {
+				"name" : "_MISSING_Health Increase IV",
+				"description" : "_MISSING_Increases Max HP to 200"
+			},
+			"healthregensize1" : {
+				"name" : "_MISSING_Regeneration Increase I",
+				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+			},
+			"healthregensize2" : {
+				"name" : "_MISSING_Regeneration Increase II",
+				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+			},
+			"healthregensize3" : {
+				"name" : "_MISSING_Regeneration Increase III",
+				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+			},
+			"healthregensize4" : {
+				"name" : "_MISSING_Regeneration Increase IV",
+				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+			},
+			"healthregenspeed1" : {
+				"name" : "_MISSING_Regeneration Speed I",
+				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+			},
+			"healthregenspeed2" : {
+				"name" : "_MISSING_Regeneration Speed II",
+				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+			},
+			"healthregenspeed3" : {
+				"name" : "_MISSING_Regeneration Speed III",
+				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+			},
+			"healthregenspeed4" : {
+				"name" : "_MISSING_Regeneration Speed IV",
+				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+			}
 		}
 	}
 }

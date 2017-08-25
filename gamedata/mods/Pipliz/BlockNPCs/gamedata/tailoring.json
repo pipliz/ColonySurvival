@@ -1,0 +1,26 @@
+[
+	{
+		"results" : [{"type":"linen"}],
+		"requires" : [{"type":"flax","amount":1}]
+	},
+	{
+		"results" : [{"type":"clothing"}],
+		"requires" : [{"type":"linen","amount":3}]
+	},
+	{
+		"results" : [{"type":"linenbag"}],
+		"requires" : [{"type":"linen","amount":3}]
+	},
+	{
+		"results" : [{"type":"carpetblue"}],
+		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"flax"}]
+	},
+	{
+		"results" : [{"type":"carpetyellow"}],
+		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"linseedoil"}]
+	},
+	{
+		"results" : [{"type":"carpetred"}],
+		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"berry"}]
+	}
+]
