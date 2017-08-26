@@ -103,12 +103,13 @@ namespace Pipliz.APIProvider.Jobs
 							shouldTakeItems = true;
 						} else {
 							state.JobIsDone = false;
+							float cooldown = Random.NextFloat(8f, 16f);
 							if (recipeMatch.MatchType == Recipe.RecipeMatchType.AllDone) {
-								state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
+								state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
 							} else {
-								state.SetIndicator(NPCIndicatorType.MissingItem, 6f, recipeMatch.FoundRecipe.FindMissingType(owner));
+								state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, recipeMatch.FoundRecipe.FindMissingType(owner));
 							}
-							OverrideCooldown(6.0);
+							OverrideCooldown(cooldown);
 						}
 						break;
 					case Recipe.RecipeMatchType.FoundCraftable:

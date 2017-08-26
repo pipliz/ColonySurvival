@@ -59,14 +59,16 @@ namespace Pipliz.BlockNPCs.Implementations
 								break;
 							}
 						}
-						state.SetIndicator(NPCIndicatorType.MissingItem, 6f, missing);
-						OverrideCooldown(6.0);
+						float cooldown = Random.NextFloat(8f, 16f);
+						state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, missing);
+						OverrideCooldown(cooldown);
 						state.JobIsDone = false;
 					}
 				} else {
+					float cooldown = Random.NextFloat(8f, 16f);
 					// no items, no research -> wait for research
-					state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
-					OverrideCooldown(6.0);
+					state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
+					OverrideCooldown(cooldown);
 					state.JobIsDone = false;
 				}
 			} else {
