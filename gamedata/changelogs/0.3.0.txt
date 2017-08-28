@@ -220,3 +220,5 @@ Patch of 2017-**-** (1):
 -Some updates to the es-ES locale (0.3.0 mostly)
 -Some fixes/updates to the de-DE locale
 -Added virtual OnRecipeDone to override in block jobs
+-Added a warning when trying to access a JSONNode via GetAs<T> while it isn't a value.
+-Send a health update upon researching a new max health, so the client knows about it.
