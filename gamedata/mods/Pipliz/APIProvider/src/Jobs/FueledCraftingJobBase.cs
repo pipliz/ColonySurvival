@@ -161,7 +161,13 @@ namespace Pipliz.APIProvider.Jobs
 
 		protected virtual void OnRecipeDone ()
 		{
+		}
 
+		protected override void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
+		{
+			if (oldGoal == NPCBase.NPCGoal.Job) {
+				OnUnlit();
+			}
 		}
 
 		// IRecipeLimitsProvider

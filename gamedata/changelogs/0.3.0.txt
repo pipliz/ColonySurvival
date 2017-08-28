@@ -219,6 +219,11 @@ Patch of 2017-08-26 (1):
 Patch of 2017-**-** (1):
 -Some updates to the es-ES locale (0.3.0 mostly)
 -Some fixes/updates to the de-DE locale
--Added virtual OnRecipeDone to override in block jobs
+-Fixed max health not updating after completing the research for it.
+-Possibly fixed an issue where a server would become unconnectable for a player until it restarts
+-Fixed oven/furnace staying on when the colonist moved away
+
+-Added virtual OnChangedGoal in base blockjob
+-Added virtual OnRecipeDone in base crafting job
 -Added a warning when trying to access a JSONNode via GetAs<T> while it isn't a value.
--Send a health update upon researching a new max health, so the client knows about it.
+-Added a check to the Recipe constructor for type != 0 && amount > 0 for every item

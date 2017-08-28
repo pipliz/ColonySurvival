@@ -12,6 +12,7 @@ namespace Pipliz.APIProvider.Jobs
 		double timeJob;
 		bool isValid = true;
 		NPCType cached_NPCType;
+		protected NPCBase.NPCGoal lastGoal;
 
 		public virtual Vector3Int KeyLocation { get { return position; } }
 
@@ -97,16 +98,25 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual NPCBase.NPCGoal CalculateGoal (ref NPCBase.NPCState state)
 		{
+			NPCBase.NPCGoal newGoal;
 			if (ToSleep) {
 				if (!state.Inventory.IsEmpty) {
-					return NPCBase.NPCGoal.Stockpile;
+					newGoal = NPCBase.NPCGoal.Stockpile;
+				} else {
+					newGoal = NPCBase.NPCGoal.Bed;
 				}
-				return NPCBase.NPCGoal.Bed;
+			} else {
+				if (state.Inventory.Full || NeedsItems) {
+					newGoal = NPCBase.NPCGoal.Stockpile;
+				} else {
+					newGoal = NPCBase.NPCGoal.Job;
+				}
 			}
-			if (state.Inventory.Full || NeedsItems) {
-				return NPCBase.NPCGoal.Stockpile;
+			if (lastGoal != newGoal) {
+				OnChangedGoal(lastGoal, newGoal);
+				lastGoal = newGoal;
 			}
-			return NPCBase.NPCGoal.Job;
+			return newGoal;
 		}
 
 		public virtual JSONNode GetJSON ()
@@ -139,6 +149,11 @@ namespace Pipliz.APIProvider.Jobs
 		protected void OverrideCooldown (double cooldownLeft)
 		{
 			timeJob = Time.SecondsSinceStartDouble + cooldownLeft;
+		}
+
+		protected virtual void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
+		{
+
 		}
 
 		protected virtual bool CheckTime ()
