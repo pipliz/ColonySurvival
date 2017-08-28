@@ -52,7 +52,6 @@ namespace Pipliz.APIProvider.Jobs
 		public override JSONNode GetJSON ()
 		{
 			return base.GetJSON()
-				.SetAs("position", (JSONNode)position)
 				.SetAs("type", ItemTypes.IndexLookup.GetName(blockType))
 				.SetAs("inventory", blockInventory.GetJSON())
 				.SetAs("storedFuel", storedFuel);

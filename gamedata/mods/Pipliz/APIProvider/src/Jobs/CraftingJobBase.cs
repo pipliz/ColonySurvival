@@ -15,7 +15,6 @@ namespace Pipliz.APIProvider.Jobs
 		public override JSONNode GetJSON ()
 		{
 			return base.GetJSON()
-				.SetAs("position", (JSONNode)position)
 				.SetAs("inventory", blockInventory.GetJSON());
 		}
 
