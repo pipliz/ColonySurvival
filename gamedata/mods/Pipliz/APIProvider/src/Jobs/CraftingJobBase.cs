@@ -7,10 +7,10 @@ namespace Pipliz.APIProvider.Jobs
 {
 	public class CraftingJobBase : BlockJobBase, IRecipeLimitsProvider
 	{
-		NPCInventory blockInventory;
-		bool shouldTakeItems;
-		Recipe selectedRecipe;
-		int recipesToCraft;
+		protected NPCInventory blockInventory;
+		protected bool shouldTakeItems;
+		protected Recipe selectedRecipe;
+		protected int recipesToCraft;
 
 		public override JSONNode GetJSON ()
 		{

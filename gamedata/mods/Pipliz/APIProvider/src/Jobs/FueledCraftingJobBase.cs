@@ -8,13 +8,14 @@ namespace Pipliz.APIProvider.Jobs
 	public class FueledCraftingJobBase : BlockJobBase, IRecipeLimitsProvider
 	{
 		protected ushort blockType;
+		protected bool shouldTakeItems;
+		protected float storedFuel;
+		protected NPCInventory blockInventory;
+		protected RecipeFueled selectedRecipe;
+		protected int recipesToCraft;
 
-		bool shouldTakeItems;
-		float storedFuel;
-		NPCInventory blockInventory;
-		RecipeFueled selectedRecipe;
-		Vector3Int positionNPC;
-		int recipesToCraft;
+		/// <summary> The position where the npc should stand (the preferential side of the used block) </summary>
+		protected Vector3Int positionNPC;
 
 		public virtual ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
