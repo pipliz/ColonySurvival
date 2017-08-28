@@ -5,7 +5,7 @@
 		"apply" : "Aplicar",
 		"none" : "Nada",
 		"reset" : "Restaurar",
-		"inputplaceholder" : "Escribir nombre",
+		"inputplaceholder" : "Escribir nombre...",
 		"previous" : "Anterior",
 		"next" : "Siguiente"
 	},
@@ -208,22 +208,20 @@
 			"remove" : "Remover área"
 		},
 		"inventory" : {
-			"crafting" : "Artesanía",
-			"stockpile" : "Reservas",
+			"craftingstockpile" : "Artesanía y Reservas",
 			"stockpiledescription" : "Sólo puedes crear cosas con los elementos de las ranuras en la parte inferios. Sólo los colonos usan objetos de las reservas.",
 			"foodvalue" : "Valor de la comida: ",
 			"tooltip" : {
 				"needs" : "Necesitas: ",
 				"and" : "y"
 			},
-			"craftingstockpile" : "_MISSING_Crafting & Stockpile",
 			"science" : {
-				"header" : "_MISSING_Science",
-				"dependencies" : "_MISSING_Required technologies:",
-				"requirements" : "_MISSING_Requirements for one research cycle:",
-				"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-				"researchselected" : "_MISSING_Select to research",
-				"researchactive" : "_MISSING_Current research: {0}"
+				"header" : "Ciencia",
+				"dependencies" : "Tecnologías requeridas:",
+				"requirements" : "Requisitos para un ciclo de investigación::",
+				"iterations" : "Ciclo de investigación: {0} de {1}",
+				"researchselected" : "Selecciona la investigación",
+				"researchactive" : "Investigación actual: {0}"
 			}
 		},
 		"limits" : {
@@ -234,8 +232,8 @@
 				"minter" : "Límite de creación",
 				"merchant" : "Límite de compra",
 				"grinder" : "Límite de molición",
-				"tailor" : "_MISSING_Tailoring limits",
-				"technologist" : "_MISSING_Technologist limits"
+				"tailor" : "Límite de sastre",
+				"technologist" : "Límite de Tecnología"
 			},
 			"description" : "Los colonos trabajarán hasta llegar al limite del alcance de la reserva."
 		},
@@ -290,56 +288,56 @@
 			"text3" : "Coloca un banco de trabajo para que un colono comience a crear. El creara automáticamente flechas y otros objetos para ti."
 		}
 	},
-	"localecoverage" : "0.863453815261044",
+	"localecoverage" : "0.984444",
 	"pipliz" : {
 		"baseresearch" : {
 			"healthsize1" : {
-				"name" : "_MISSING_Health Increase I",
-				"description" : "_MISSING_Increases Max HP to 125"
+				"name" : "Incrementar salud I",
+				"description" : "Incrementa los HP máximos a 125"
 			},
 			"healthsize2" : {
-				"name" : "_MISSING_Health Increase II",
-				"description" : "_MISSING_Increases Max HP to 150"
+				"name" : "Incrementar salud II",
+				"description" : "Incrementa los HP máximos a 150"
 			},
 			"healthsize3" : {
-				"name" : "_MISSING_Health Increase III",
-				"description" : "_MISSING_Increases Max HP to 175"
+				"name" : "Incrementar salud III",
+				"description" : "Incrementa los HP máximos a 175"
 			},
 			"healthsize4" : {
-				"name" : "_MISSING_Health Increase IV",
-				"description" : "_MISSING_Increases Max HP to 200"
+				"name" : "Incrementar salud IV",
+				"description" : "Incrementa los HP máximos a 200"
 			},
 			"healthregensize1" : {
-				"name" : "_MISSING_Regeneration Increase I",
-				"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+				"name" : "Incrementar regeneración de salud I",
+				"description" : "Incrementar la cantidad de regeneración de salud de 30 a 50"
 			},
 			"healthregensize2" : {
-				"name" : "_MISSING_Regeneration Increase II",
-				"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+				"name" : "Incrementar regeneración de salud  II",
+				"description" : "Incrementar la cantidad de regeneración de salud de 50 a 65"
 			},
 			"healthregensize3" : {
-				"name" : "_MISSING_Regeneration Increase III",
-				"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+				"name" : "Incrementar regeneración de salud  III",
+				"description" : "Incrementar la cantidad de regeneración de salud de 65 a 85"
 			},
 			"healthregensize4" : {
-				"name" : "_MISSING_Regeneration Increase IV",
-				"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+				"name" : "Incrementar regeneración de salud  IV",
+				"description" : "Incrementar la cantidad de regeneración de salud de 85 a 100"
 			},
 			"healthregenspeed1" : {
-				"name" : "_MISSING_Regeneration Speed I",
-				"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+				"name" : "Incrementar la velocidad de la regeneración de salud I",
+				"description" : "Incrementar la velocidad de la regeneración de salud desde 0.5 HP\/s a 1 HP\/s"
 			},
 			"healthregenspeed2" : {
-				"name" : "_MISSING_Regeneration Speed II",
-				"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+				"name" : "Incrementar la velocidad de la regeneración de salud II",
+				"description" : "Incrementar la velocidad de la regeneración de salud desde 1 HP\/s a 2 HP\/s"
 			},
 			"healthregenspeed3" : {
-				"name" : "_MISSING_Regeneration Speed III",
-				"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+				"name" : "Incrementar la velocidad de la regeneración de salud III",
+				"description" : "Incrementar la velocidad de la regeneración de salud desde 2 HP\/s a 3 HP\/s"
 			},
 			"healthregenspeed4" : {
-				"name" : "_MISSING_Regeneration Speed IV",
-				"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+				"name" : "Incrementar la velocidad de la regeneración de salud IV",
+				"description" : "Incrementar la velocidad de la regeneración de salud desde 3 HP\/s a 4 HP\/s"
 			}
 		}
 	}
