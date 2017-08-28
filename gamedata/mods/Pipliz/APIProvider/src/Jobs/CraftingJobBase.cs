@@ -52,6 +52,7 @@ namespace Pipliz.APIProvider.Jobs
 					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;
 					recipesToCraft--;
+					OnRecipeDone();
 				} else {
 					selectedRecipe = null;
 					recipesToCraft = 0;
@@ -114,6 +115,11 @@ namespace Pipliz.APIProvider.Jobs
 						break;
 				}
 			}
+		}
+
+		protected virtual void OnRecipeDone ()
+		{
+
 		}
 
 		// IRecipeLimitsProvider
