@@ -224,6 +224,6 @@ Patch of 2017-**-** (1):
 -Fixed oven/furnace staying on when the colonist moved away
 
 -Added virtual OnChangedGoal in base blockjob
--Added virtual OnRecipeDone in base crafting job
+-Added virtual OnRecipeCrafted in base crafting job
 -Added a warning when trying to access a JSONNode via GetAs<T> while it isn't a value.
 -Added a check to the Recipe constructor for type != 0 && amount > 0 for every item

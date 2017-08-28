@@ -83,7 +83,7 @@ namespace Pipliz.APIProvider.Jobs
 					OnLit();
 					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;
-					OnRecipeDone();
+					OnRecipeCrafted();
 					return;
 				} else {
 					recipesToCraft = 0;
@@ -159,7 +159,7 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		protected virtual void OnRecipeDone ()
+		protected virtual void OnRecipeCrafted ()
 		{
 		}
 
