@@ -307,36 +307,93 @@
 		"maxStackSize" : 600,
 		"sideall" : "SELF",
 		"isSolid" : false,
-		"npcLimit" : 10,
-		"customData" : {
-			"volume" : 0.5,
-			"intensity" : 12.5,
-			"range" : 16.0,
-			"red" : 195.0,
-			"green" : 135.0,
-			"blue" : 46.0
-		}
+		"npcLimit" : 10
 	},
 	"torchy+" : {
 		"needsBase" : true,
 		"parentType" : "torch",
-		"mesh" : "torchy+.obj"
+		"mesh" : "torchy+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.16
+				}
+			}
+		}
 	},
 	"torchx-" : {
 		"parentType" : "torch",
-		"mesh" : "torchx-.obj"
+		"mesh" : "torchx-.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchx+" : {
 		"parentType" : "torch",
-		"mesh" : "torchx+.obj"
+		"mesh" : "torchx+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchz+" : {
 		"parentType" : "torch",
-		"mesh" : "torchz+.obj"
+		"mesh" : "torchz+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchz-" : {
 		"parentType" : "torch",
-		"mesh" : "torchz-.obj"
+		"mesh" : "torchz-.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"crate" : {
 		"sideall" : "SELF",
@@ -444,25 +501,7 @@
 		"sideall" : "furnaceside",
 		"sidey+" : "furnaceunlittop",
 		"destructionTime" : 800,
-		"npcLimit" : 2,
-		"customData" : {
-			"up" : {
-				"volume" : 0.3,
-				"intensity" : 2.5,
-				"range" : 8.0,
-				"red" : 195.0,
-				"green" : 135.0,
-				"blue" : 46.0
-			},
-			"side" : {
-				"volume" : 0.2,
-				"intensity" : 1.0,
-				"range" : 8.0,
-				"red" : 195.0,
-				"green" : 135.0,
-				"blue" : 46.0
-			}
-		}
+		"npcLimit" : 2
 	},
 	"furnacex+" : {
 		"parentType" : "furnace",
@@ -491,15 +530,7 @@
 		"rotatablez-" : "ovenz-",
 		"sideall" : "stonebricks",
 		"destructionTime" : 800,
-		"npcLimit" : 2,
-		"customData" : {
-			"volume" : 0.2,
-			"intensity" : 2.0,
-			"range" : 8.0,
-			"red" : 195.0,
-			"green" : 135.0,
-			"blue" : 46.0
-		}
+		"npcLimit" : 2
 	},
 	"ovenx+" : {
 		"parentType" : "oven",
@@ -954,19 +985,111 @@
 	},
 	"furnacelitx+" : {
 		"parentType" : "furnacelit",
-		"sidex+" : "furnacelitfront"
+		"sidex+" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitx-" : {
 		"parentType" : "furnacelit",
-		"sidex-" : "furnacelitfront"
+		"sidex-" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitz+" : {
 		"parentType" : "furnacelit",
-		"sidez+" : "furnacelitfront"
+		"sidez+" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitz-" : {
 		"parentType" : "furnacelit",
-		"sidez-" : "furnacelitfront"
+		"sidez-" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlit" : {
 		"parentType" : "oven",
@@ -980,19 +1103,75 @@
 	},
 	"ovenlitx+" : {
 		"parentType" : "ovenlit",
-		"sidex+" : "ovenlitfront"
+		"sidex+" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitx-" : {
 		"parentType" : "ovenlit",
-		"sidex-" : "ovenlitfront"
+		"sidex-" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitz+" : {
 		"parentType" : "ovenlit",
-		"sidez+" : "ovenlitfront"
+		"sidez+" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitz-" : {
 		"parentType" : "ovenlit",
-		"sidez-" : "ovenlitfront"
+		"sidez-" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"missingerror" : {
 		"sideall" : "error",
