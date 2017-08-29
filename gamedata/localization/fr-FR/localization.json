@@ -122,7 +122,7 @@
 			"full" : "Paramètres de langue",
 			"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent couvrir moins que d'autres.",
 			"language" : "Langue",
-			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
+			"coverage" : "Ce paramètre est {0: F1}% complet. Pour aider à traduire le jeu, consultez les forums ou notre page sur github"
 		}
 	},
 	"infomenu" : {
@@ -143,13 +143,13 @@
 			"description" : "Les colons ont besoin de 5 unités de nourriture par jour et d'un lit. Le recrutement d'un colon coûte 50 unités de nourriture.",
 			"button" : "Recruter un colon",
 			"resetbutton" : "Réinitialiser la colonie",
-			"resettooltipa" : "",
-			"resettooltipb" : "Cela tue tous vos colons et supprime vos champs de travail.",
-			"resettooltipc" : "Cela donne également un nouvel inventaire et un nouveau stock."
+			"resettooltipa" : "Réinitialiser les conseils",
+			"resettooltipb" : "Cela tue tous vos colons et supprime vos champs.",
+			"resettooltipc" : "Cela donne un nouvel inventaire et un nouveau stock."
 		},
 		"bannerremoval" : {
 			"header" : "Suppression de la bannière",
-			"description" : "La suppression de la bannière entraînera des problèmes pour votre colonie. Que souhaitez-vous faire ?",
+			"description" : "La suppression de la bannière entraînera des problèmes pour votre colonie tant que vous ne l'aurez pas remise. Que souhaitez-vous faire ?",
 			"button" : "Supprimer"
 		},
 		"tooljob" : {
@@ -158,24 +158,24 @@
 			"wheatfarmer" : "Cultivateur de blé",
 			"wheata" : "Pour les colonies avancées seulement",
 			"wheatb" : "Nécessite des graines de blé",
-			"wheatc" : "À placer sur l'herbe ou la terre",
+			"wheatc" : "À placer sur l'herbe ou sur de la terre",
 			"miner" : "Mineur",
-			"minera" : "Mine des minerais",
+			"minera" : "Mine de minerais",
 			"minerb" : "Nécessite une pioche",
-			"minerc" : "À placer sur la couche inférieure du monde",
+			"minerc" : "À placer sur la couche inférieure du monde (la plus basse)",
 			"forester" : "Bûcheron",
 			"forestera" : "Plante et coupe des arbres",
-			"foresterb" : "Nécessite des pousses et une hache",
-			"foresterc" : "À placer sur l'herbe ou la terre",
+			"foresterb" : "Nécessite des pousses d'arbres et une hache",
+			"foresterc" : "À placer sur l'herbe ou sur de la terre",
 			"flaxfarmer" : "Cultivateur de lin",
 			"flaxa" : "Pour les colonies avancées seulement",
 			"flaxb" : "Nécessite des graines de lin",
-			"flaxc" : "À placer sur l'herbe ou la terre",
-			"notflat" : "Pas plat",
-			"toosmall" : "Trop petit",
-			"toolarge" : "Trop grand",
-			"coversarea" : "Recouvre une zone existante",
-			"toonarrowtrees" : "Trop étroit pour des arbres",
+			"flaxc" : "À placer sur l'herbe ou sur de la terre",
+			"notflat" : "Le terrain n'est pas plat",
+			"toosmall" : "La surface est trop petit",
+			"toolarge" : "La surface est trop grande",
+			"coversarea" : "Recouvre une zone de culture existante",
+			"toonarrowtrees" : "Trop étroit pour y planter des arbres",
 			"notarable" : "Non cultivable",
 			"occupiedblocks" : "Occupé par des blocs",
 			"wheatfarmertool" : "Outil de cultivateur de blé",
@@ -188,7 +188,7 @@
 			"berrya" : "De la nourriture rapide et facile, commencez par cela !",
 			"berryb" : "À placer sur l'herbe ou la terre",
 			"berryc" : "",
-			"toonarrow" : "_MISSING_Too narrow for trees"
+			"toonarrow" : "Pas assez large pour y planter des arbres"
 		},
 		"toolconstruction" : {
 			"header" : "Outil de construction",
@@ -199,20 +199,20 @@
 			"builderc" : "Crée des choses",
 			"destroyer" : "Destructeur",
 			"destroyera" : "",
-			"destroyerb" : "Besoin d'une zone a destructeur",
-			"destroyerc" : "Détruit les choses"
+			"destroyerb" : "Besoin d'une zone a détruire",
+			"destroyerc" : "Détruit des choses"
 		},
 		"areaselection" : {
 			"header" : "Menu de zone",
-			"description" : "Choisissez si vous souhaitez ou non supprimer la zone ici.",
+			"description" : "Choisissez si vous souhaitez ou non supprimer cette zone.",
 			"close" : "Fermer",
 			"remove" : "Supprimer la zone"
 		},
 		"inventory" : {
 			"crafting" : "Artisanat",
 			"stockpile" : "Stock",
-			"stockpiledescription" : "Vous pouvez seulement créer des objets avec les objets dans la barre du bas. Les colons peuvent seulement utiliser les objets dans votre stock.",
-			"foodvalue" : "Valeur de nourriture:",
+			"stockpiledescription" : "Vous pouvez seulement fabriquer des objets avec d'autres objets placés dans l'inventaire personnel. Les colons peuvent seulement utiliser les objets du stock principal.",
+			"foodvalue" : "Valeur de la nourriture:",
 			"tooltip" : {
 				"needs" : "Requiert :",
 				"and" : "et"
@@ -229,14 +229,14 @@
 		},
 		"limits" : {
 			"pipliz" : {
-				"crafter" : "Limites de fabrication",
-				"baker" : "Limites de cuisson",
-				"smelter" : "Limites de fonte",
-				"minter" : "Limites de frappe",
+				"crafter" : "Limites d'artisanat",
+				"baker" : "Limites de la boulangerie",
+				"smelter" : "Limites de la fonderie",
+				"minter" : "Limites de la mine",
 				"merchant" : "Limites d'achat",
-				"grinder" : "Limites de broyage",
-				"tailor" : "_MISSING_Tailoring limits",
-				"technologist" : "_MISSING_Technologist limits"
+				"grinder" : "Limites de la meule",
+				"tailor" : "Limites du tailleur",
+				"technologist" : "Limites du technologue"
 			},
 			"description" : "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock."
 		},
@@ -263,31 +263,31 @@
 	"quickstart" : {
 		"page1" : {
 			"header" : "Bases",
-			"description" : "Bienvenue à Colony Survival !",
-			"text1" : "La bannière est le centre de votre colonie. Appuyez sur \"2\" pour la planter. Cliquez avec le bouton droit sur la bannière pour recruter des colons.",
-			"text2" : "Vous avez besoin de nourriture et de lits pour recruter des colons. Les colons doivent manger pour survivre. Assurez-vous qu'il y ait suffisamment de nourriture disponible ou ils auront faim !",
-			"text3" : "Appuyez sur \"I\" pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets dans la barre du bas. Les colons peuvent seulement utiliser les objets dans votre stock. Ils ont accès au stock en utilisant des caisses.",
-			"text4" : "Les monstres vont attaquer votre colonie la nuit ! Utilisez des carquois pour placer les archers. Appuyez sur \"R\" pour les faire pivoter. Appuyez sur \"G\" pour activer la lampe de poche."
+			"description" : "Bienvenue sur Colony Survival !",
+			"text1" : "La bannière est le centre de votre colonie. Appuyez sur \"2\" pour la planter. Cliquez avec le bouton droit de la souris pour recruter des colons.",
+			"text2" : "Vous avez besoin de nourriture et de lits pour recruter des colons. Les colons doivent manger pour survivre. Assurez-vous qu'il y ait suffisamment de nourriture disponible dans le stock ou ils auront faim !",
+			"text3" : "Appuyez sur \"I\" pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets présents dans votre stock personnel. Les colons peuvent seulement utiliser les objets du stock principal. Ils ont accès au stock en utilisant des caisses.",
+			"text4" : "Les monstres attaqueront votre colonie la nuit ! Utilisez des carquois pour placer les archers. Appuyez sur \"R\" pour les faire pivoter. Appuyez sur \"G\" pour activer la lampe de poche."
 		},
 		"page2" : {
 			"header" : "Production de nourriture",
 			"description" : "Vous aurez besoin de nourriture pour recruter et nourrir vos colons !",
-			"text1" : "Utilisez l'outil de commande (appuyez sur \"1\") pour recruter un cultivateur de baies. Faites un clic-droit sur un bloc d'herbe, choisissez le bon travail et créez une zone pour le cultivateur. Cliquez avec le bouton gauche pour changer le type de travail.",
-			"text2" : "Produire du pain est une méthode compliquée mais efficace pour production de la nourriture. Commencez par faire un champ de blé. Après deux nuits, votre blé sera arrivé à maturité et vos agriculteurs le récolteront.",
-			"text3" : "Après cela, vous devrez recruter deux nouvelles personnes en plaçant une meule et un four. La meule est utilisée pour convertir le blé en farine. Un boulanger utilisera le four pour cuire du pain."
+			"text1" : "Utilisez l'outil de commande (appuyez sur \"1\") pour recruter un cultivateur de baies. Faites un clic-droit sur un bloc d'herbe, choisissez le travail désiré et créez une zone pour le cultivateur. Cliquez avec le bouton gauche pour changer le type de travail.",
+			"text2" : "Produire du pain est une méthode compliquée mais efficace pour produire de la nourriture. Commencez par faire un champ de blé. Après deux nuits, votre blé sera arrivé à maturité et vos agriculteurs le récolteront.",
+			"text3" : "Après cela, vous devrez recruter un meunier et un boulanger en plaçant une meule et un four. La meule est utilisée pour broyer le blé et en faire de la farine. Le boulanger utilisera le four pour cuire du pain."
 		},
 		"page3" : {
-			"header" : "Defendre la colonie",
+			"header" : "Défendre la colonie",
 			"description" : "Défendez votre colonie contre les monstres de la nuit !",
-			"text1" : "La nuit, les monstres tenteront d'attaquer votre colonie. Placez les gardes, construisez des murs et creusez des fossés pour défendre votre colonie. Les monstres ne peuvent pas monter deux blocs.",
-			"text2" : "Ne pas isoler complètement votre colonie ! S'il n'y a pas de chemin vers votre bannière, le « Mode Siège » s'active. Pendant le Mode Siège, votre stockée est consommée rapidement.",
-			"text3" : "Le nombre de monstres augmente lorsque le nombre de colons augmente ! Assurez-vous que vos gardes ont suffisamment de flèches."
+			"text1" : "La nuit, les monstres tenteront d'attaquer votre colonie. Placez des gardes, construisez des murs et creusez des fossés pour défendre votre colonie. Les monstres ne peuvent pas passer si vous faite un mur de deux blocs de hauteur.",
+			"text2" : "N'isolez complètement votre colonie ! S'il n'y a pas de chemin entre votre bannière et le monde, le « Mode Siège » s'activera et votre stock de nourriture diminuera rapidement.",
+			"text3" : "Le nombre de monstres augmente en même temps que le nombre de colons ! Assurez-vous que vos gardes aient suffisamment de flèches."
 		},
 		"page4" : {
 			"header" : "Production de flèches",
-			"description" : "Sans flèche, les monstres vont abattre vos colons !",
-			"text1" : "La couche la plus profonde du monde contient des minerais infinis. Cliquez avec le bouton droit sur ces minerais avec l'outil de commande pour que les mineurs travaillent. N'oubliez pas de placer une caisse à proximité.",
-			"text2" : "Placez un four. S'il y a un colon sans emploi, il va automatiquement au four et commence à fabriquer des barres de fer avec des minerais de fer.",
+			"description" : "Sans flèche, les archers ne pourront pas défendre votre colonie et les monstres tueront vos colons !",
+			"text1" : "La couche de roche la plus profonde (du monde) contient des minerais infinis. Cliquez avec le bouton droit sur ces minerais avec l'outil de commande pour que les mineurs les récoltent. N'oubliez pas de placer une caisse à proximité.",
+			"text2" : "Placez une fonderie (four). S'il y a un colon sans emploi, il va automatiquement au four et commence à fabriquer des lingots de fer avec du minerai de fer.",
 			"text3" : "Placez un établi pour transformer un colon en artisan. Il fabriquera automatiquement des flèches et d'autres objets pour vous."
 		}
 	},
