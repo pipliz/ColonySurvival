@@ -1,5 +1,4 @@
 ﻿using NPC;
-using Pipliz.APIProvider.Recipes;
 using Pipliz.JSON;
 using System.Collections.Generic;
 
@@ -34,7 +33,7 @@ namespace Pipliz.APIProvider.Jobs
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public virtual Recipe[] GetPossibleRecipes { get { return RecipeManager.RecipeStorage[NPCTypeKey]; } }
+		public virtual IList<Recipe> GetPossibleRecipes { get { return RecipeStorage.GetPlayerStorage(owner).GetAllAvailableRecipes<Recipe>(NPCTypeKey); } }
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 
@@ -63,7 +62,7 @@ namespace Pipliz.APIProvider.Jobs
 					OverrideCooldown(0.1);
 				}
 			} else {
-				var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.AllDone:
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
@@ -97,7 +96,7 @@ namespace Pipliz.APIProvider.Jobs
 			state.JobIsDone = true;
 			if (shouldTakeItems) {
 				shouldTakeItems = false;
-				var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
@@ -122,15 +121,15 @@ namespace Pipliz.APIProvider.Jobs
 
 		}
 
-		// IRecipeLimitsProvider
-		public virtual Recipe[] GetCraftingLimitsRecipes ()
+		protected virtual string GetRecipeLocation ()
 		{
-			Recipe[] arr;
-			if (RecipeManager.RecipeStorage.TryGetValue(NPCTypeKey, out arr)) {
-				return arr;
-			} else {
-				return null;
-			}
+			throw new System.NotImplementedException();
+		}
+
+		// IRecipeLimitsProvider
+		public virtual IList<Recipe> GetCraftingLimitsRecipes ()
+		{
+			return Recipe.LoadRecipes(GetRecipeLocation());
 		}
 
 		// IRecipeLimitsProvider
@@ -140,7 +139,7 @@ namespace Pipliz.APIProvider.Jobs
 		}
 
 		// IRecipeLimitsProvider
-		public virtual string GetCraftingLimitsIdentifier ()
+		public virtual string GetCraftingLimitsType ()
 		{
 			return NPCTypeKey;
 		}

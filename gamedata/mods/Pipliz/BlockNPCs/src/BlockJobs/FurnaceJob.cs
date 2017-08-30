@@ -69,5 +69,10 @@ namespace Pipliz.BlockNPCs.Implementations
 				"furnacelitz-"
 			};
 		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "smelting.json");
+		}
 	}
 }

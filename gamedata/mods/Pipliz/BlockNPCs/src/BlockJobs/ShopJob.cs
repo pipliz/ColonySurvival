@@ -21,5 +21,10 @@ namespace Pipliz.BlockNPCs.Implementations
 			def.inventoryCapacity = 1500f;
 			return def;
 		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "shopping.json");
+		}
 	}
 }

@@ -104,13 +104,13 @@ namespace Pipliz.APIProvider.Jobs
 				var recipeLimitsProvider = LimitsProviders[i].Value;
 				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
 				if (list != null) {
-					RecipeLimits.SetRecipes(recipeLimitsProvider.GetCraftingLimitsIdentifier(), list.ToList());
+					RecipeStorage.AddDefaultLimitTypeRecipes(recipeLimitsProvider.GetCraftingLimitsType(), list);
 					var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
 					if (triggers == null) {
-						RecipeLimits.SetInterface(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsIdentifier());
+						RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
 					} else {
 						for (int i2 = 0; i2 < triggers.Count; i2++) {
-							RecipeLimits.SetInterface(triggers[i2], recipeLimitsProvider.GetCraftingLimitsIdentifier());
+							RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
 						}
 					}
 				}

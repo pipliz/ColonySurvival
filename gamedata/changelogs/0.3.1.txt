@@ -1,6 +1,14 @@
 0.3.1 (2017-**-**)
+-Added 3 new researches, to unlock the tailor, technologist and life science bags.
+
+-Fixed errors upon loading .obj without a uv channel (use default vertex / uv when out of range)
+-Fixed an issue where the savegames server.json file is made before the working directory is fixed
+-Fixed an issue where players would connect longer/deeper than desired when they are refused for any reason
 
 -Allow torches to be added to any block
 -Added jsonnode.TryGetAsOrDefault - returns found value if it exists, default if it doesn't.
--Fixed errors upon loading .obj without a uv channel (use default vertex / uv when out of range)
--Fixed an issue where the savegames server.json file is made before the working directory is fixed
+-Added InventoryItem(string) constructor
+-Changed various name, methods and classes related to Recipes to support adding recipes through researchables
+--RecipeManager from APIProvider is gone, use RecipeStorage from the base game
+--'LoadRecipes' moved from RecipeManager to Recipe itself
+--See changes to the builtin mods on github to get a better idea

@@ -20,5 +20,10 @@ namespace Pipliz.BlockNPCs.Implementations
 			def.type = NPCTypeID.GetNextID();
 			return def;
 		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "crafting.json");
+		}
 	}
 }
