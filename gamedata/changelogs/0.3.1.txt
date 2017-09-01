@@ -4,7 +4,14 @@
 -Fixed errors upon loading .obj without a uv channel (use default vertex / uv when out of range)
 -Fixed an issue where the savegames server.json file is made before the working directory is fixed
 -Fixed an issue where players would connect longer/deeper than desired when they are refused for any reason
+-Fixed a bug in the pathfinding precalculation where it may fail to mark some positions as traversable
 
+-Optimized the chunk updater, significantly reducing the performance cost of active chunks
+--Active chunks are checked a lot less when they're active due to a banner
+--Autosaving checks are now seperate from unloading checks
+-Added compression to the servers' voxel data per chunk
+-Added "name" keys to modInfo.json
+-Added "compatibleversions" key to modInfo.json, to indicate supported versions of the mod
 -Allow torches to be added to any block
 -Added jsonnode.TryGetAsOrDefault - returns found value if it exists, default if it doesn't.
 -Added InventoryItem(string) constructor
