@@ -1,6 +1,7 @@
 0.3.1 (2017-**-**)
 -Added 3 new researches, to unlock the tailor, technologist and life science bags.
 
+-Fixed an issue with recipe limits being shared for all recipes with the same outcome (i.e, taiga logs -> planks & temperate logs -> planks)
 -Updated Unity version from 5.6.2f1 to 5.6.3p2
 --Fixes various issues
 --Reduced client RAM use by 40 MB
@@ -20,7 +21,6 @@
 -Added jsonnode.TryGetAsOrDefault - returns found value if it exists, default if it doesn't.
 -Added InventoryItem(string) constructor
 -Changed various name, methods and classes related to Recipes to support adding recipes through researchables
---RecipeManager from APIProvider is gone, use RecipeStorage from the base game
---'LoadRecipes' moved from RecipeManager to Recipe itself
---See changes to the builtin mods on github to get a better idea
+--Recipes now have a unique name and default limit per recipe
+--Recipes can now be 'optional', which have to be unlocked through code ingame.
 -Serialize the WorldSettings after the default inventory / stockpile contents are added upon first launch (instead of before those are added)

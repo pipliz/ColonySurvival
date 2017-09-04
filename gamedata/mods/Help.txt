@@ -63,6 +63,9 @@ void AfterItemTypesDefined ()
 
 void AfterItemTypesServer ()
 -Place to override ItemTypesServer.Register* things from the base game.
+-Builtin callback uses:
++pipliz.server.recipeplayerload
+--Loads recipes from "gamedata/crafting.json"
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -139,12 +142,16 @@ void OnLoadingPlayer (JSONNode n, Player p)
 -Builtin callback uses:
 +pipliz.server.loadplayerscience
 --Loads any science progress from the jsonnode
++pipliz.server.loadplayerlimits
+--Loads any player limits from the jsonnode
 
 void OnSavingPlayer (JSONNode n, Player p)
 -Player {p} is being saved into json file {n}.
 -Builtin callback uses:
 +pipliz.server.saveplayerscience
 --Saves any science progress from the player to it's file
++pipliz.server.saveplayerlimits
+--Saves any player limits to it's file
 
 void OnQuitEarly ()
 -General.Application.OnQuit @ -200, called before most other on quit actions

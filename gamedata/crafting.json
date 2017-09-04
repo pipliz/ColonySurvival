@@ -1,70 +1,99 @@
 [
 	{
+		"name" : "pipliz.player.bed",
 		"results":[{"type":"bed"}],
 		"requires":[{"type":"planks","amount":3},{"type":"straw","amount":3}]
 	},
 	{
+		"name" : "pipliz.player.crate",
 		"results":[{"type":"crate"}],
 		"requires":[{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.quiver",
 		"results":[{"type":"quiver","amount":2}],
 		"requires":[{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.bow",
 		"results":[{"type":"bow"}],
 		"requires":[{"type":"planks","amount":2}]
 	},
 	{
+		"name" : "pipliz.player.furnace",
 		"results":[{"type":"furnace"}],
 		"requires":[{"type":"stonebricks"}]
 	},
 	{
+		"name" : "pipliz.player.oven",
 		"results":[{"type":"oven"}],
 		"requires":[{"type":"stonebricks"}]
 	},
 	{
+		"name" : "pipliz.player.grindstone",
 		"results":[{"type":"grindstone"}],
 		"requires":[{"type":"planks"},{"type":"stonebricks"}]
 	},
 	{
-		"results": [{"amount":4,"type":"planks"}],
+		"name" : "pipliz.player.plankstemperate",
+		"results":[{"amount":4,"type":"planks"}],
 		"requires":[{"type":"logtemperate"}]
 	},
 	{
+		"name" : "pipliz.player.plankstaiga",
 		"results":[{"amount":4,"type":"planks"}],
 		"requires":[{"type":"logtaiga"}]
 	},
 	{
+		"name" : "pipliz.player.torch",
 		"results":[{"amount":3,"type":"torch"}],
 		"requires":[{"type":"planks"},{"type":"coalore"}]
 	},
 	{
+		"name" : "pipliz.player.workbench",
 		"results":[{"type":"workbench"}],
 		"requires":[{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.arrows",
 		"results":[{"type":"arrow","amount":8}],
 		"requires":[{"type":"ironingot"},{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.pickaxe",
 		"results":[{"type":"pickaxe"}],
 		"requires":[{"type":"ironingot"},{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.axe",
 		"results":[{"type":"axe"}],
 		"requires":[{"type":"ironingot"},{"type":"planks"}]
 	},
 	{
+		"name" : "pipliz.player.mint",
 		"results":[{"type":"mint"}],
 		"requires":[{"type":"ironingot"},{"type":"planks"},{"type":"goldingot"}]
 	},
 	{
+		"name" : "pipliz.player.shop",
 		"results":[{"type":"shop"}],
 		"requires":[{"type":"goldcoin","amount":5},{"type":"planks"},{"type":"stonebricks"}]
 	},
 	{
+		"name" : "pipliz.player.sciencelab",
 		"results":[{"type":"sciencelab"}],
 		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}]
+	},
+	{
+		"name" : "pipliz.player.tailorshop",
+		"results":[{"type":"tailorshop"}],
+		"requires":[{"type":"planks"},{"type":"ironingot"},{"type":"flax"}],
+		"optional" : true
+	},
+	{
+		"name" : "pipliz.player.technologisttable",
+		"results":[{"type":"technologisttable"}],
+		"requires":[{"type":"coatedplanks"},{"type":"ironingot"},{"type":"linenbag"}],
+		"optional" : true
 	}
 ]

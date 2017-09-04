@@ -43,7 +43,7 @@ namespace Pipliz.APIProvider.Jobs
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public virtual IList<RecipeFueled> GetPossibleRecipes { get { return RecipeStorage.GetPlayerStorage(owner).GetAllAvailableRecipes<RecipeFueled>(NPCTypeKey); } }
+		public virtual IList<RecipeFueled> GetPossibleRecipes { get { return RecipeStorage.GetPlayerStorage(owner).GetAvailableRecipes<RecipeFueled>(NPCTypeKey); } }
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 

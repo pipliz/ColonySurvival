@@ -1,11 +1,25 @@
 [
 	{
+		"name" : "pipliz.technologist.sciencebagbasic",
 		"results":[{"type":"sciencebagbasic"}],
 		"requires":[
 			{"type":"ironingot"},
 			{"type":"goldcoin"},
 			{"type":"bricks","amount":3},
 			{"type":"linenbag"}
-		]
+		],
+		"defaultLimit" : 5
+	},
+	{
+		"name" : "pipliz.technologist.sciencebaglife",
+		"results":[{"type":"sciencebaglife"}],
+		"requires":[
+			{"type":"flour"},
+			{"type":"berry","amount":5},
+			{"type":"clothing"},
+			{"type":"linenbag"}
+		],
+		"defaultLimit" : 5,
+		"optional" : true
 	}
 ]

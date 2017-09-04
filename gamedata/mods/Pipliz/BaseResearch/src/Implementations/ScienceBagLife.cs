@@ -1,6 +1,5 @@
 ﻿using Pipliz.APIProvider.Science;
 using Server.Science;
-using System.Collections.Generic;
 
 namespace Pipliz.BaseResearch.Implementations
 {
@@ -20,16 +19,7 @@ namespace Pipliz.BaseResearch.Implementations
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)
 		{
-			Recipe recipe = new Recipe(new List<InventoryItem>()
-			{
-				new InventoryItem ("flour"),
-				new InventoryItem ("berry", 5),
-				new InventoryItem ("clothing"),
-				new InventoryItem ("linenbag")
-			},
-				new InventoryItem ("sciencebaglife")
-			);
-			RecipeStorage.GetPlayerStorage(manager.Player).AddAvailableRecipe("pipliz.technologist", recipe);
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.technologist.sciencebaglife", true, "pipliz.technologist");
 		}
 	}
 }

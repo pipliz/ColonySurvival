@@ -1,94 +1,154 @@
 [
 	{
+		"name" : "pipliz.crafter.bed",
 		"results":[{"type":"bed"}],
-		"requires":[{"type":"planks","amount":3},{"type":"straw","amount":3}]
+		"requires":[{"type":"planks","amount":3},{"type":"straw","amount":3}],
+		"defaultLimit" : 5
 	},
 	{
+		"name" : "pipliz.crafter.crate",
 		"results":[{"type":"crate"}],
-		"requires":[{"type":"planks"}]
+		"requires":[{"type":"planks"}],
+		"defaultLimit" : 5
 	},
 	{
+		"name" : "pipliz.crafter.quiver",
 		"results":[{"amount":2,"type":"quiver"}],
-		"requires":[{"type":"planks"}]
+		"requires":[{"type":"planks"}],
+		"defaultLimit" : 3
 	},
 	{
+		"name" : "pipliz.crafter.bow",
 		"results":[{"type":"bow"}],
-		"requires":[{"type":"planks","amount":2}]
+		"requires":[{"type":"planks","amount":2}],
+		"defaultLimit" : 3
 	},
 	{
+		"name" : "pipliz.crafter.furnace",
 		"results":[{"type":"furnace"}],
-		"requires":[{"type":"stonebricks"}]
+		"requires":[{"type":"stonebricks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.oven",
 		"results":[{"type":"oven"}],
-		"requires":[{"type":"stonebricks"}]
+		"requires":[{"type":"stonebricks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.grindstone",
 		"results":[{"type":"grindstone"}],
-		"requires":[{"type":"planks"},{"type":"stonebricks"}]
+		"requires":[{"type":"planks"},{"type":"stonebricks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.plankstemperate",
 		"results": [{"amount":4, "type":"planks"}],
-		"requires":[{"type":"logtemperate"}]
+		"requires":[{"type":"logtemperate"}],
+		"defaultLimit" : 30
 	},
 	{
+		"name" : "pipliz.crafter.plankstaiga",
 		"results":[{"amount":4,"type":"planks"}],
-		"requires":[{"type":"logtaiga"}]
+		"requires":[{"type":"logtaiga"}],
+		"defaultLimit" : 30
 	},
 	{
+		"name" : "pipliz.crafter.torch",
 		"results":[{"amount":3,"type":"torch"}],
-		"requires":[{"type":"planks"},{"type":"coalore"}]
+		"requires":[{"type":"planks"},{"type":"coalore"}],
+		"defaultLimit" : 10
 	},
 	{
+		"name" : "pipliz.crafter.workbench",
 		"results":[{"type":"workbench"}],
-		"requires":[{"type":"planks"}]
+		"requires":[{"type":"planks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.arrows",
 		"results":[{"type":"arrow","amount":8}],
-		"requires":[{"type":"ironingot"},{"type":"planks"}]
+		"requires":[{"type":"ironingot"},{"type":"planks"}],
+		"defaultLimit" : 200
 	},
 	{
+		"name" : "pipliz.crafter.pickaxe",
 		"results":[{"type":"pickaxe"}],
-		"requires":[{"type":"ironingot"},{"type":"planks"}]
+		"requires":[{"type":"ironingot"},{"type":"planks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.axe",
 		"results":[{"type":"axe"}],
-		"requires":[{"type":"ironingot"},{"type":"planks"}]
+		"requires":[{"type":"ironingot"},{"type":"planks"}],
+		"defaultLimit" : 2
 	},
 	{
+		"name" : "pipliz.crafter.mint",
 		"results":[{"type":"mint"}],
-		"requires":[{"type":"ironingot"},{"type":"planks"},{"type":"goldingot"}]
+		"requires":[{"type":"ironingot"},{"type":"planks"},{"type":"goldingot"}],
+		"defaultLimit" : 1
 	},
 	{
+		"name" : "pipliz.crafter.shop",
 		"results":[{"type":"shop"}],
-		"requires":[{"type":"goldcoin","amount":5},{"type":"planks"},{"type":"stonebricks"}]
+		"requires":[{"type":"goldcoin","amount":5},{"type":"planks"},{"type":"stonebricks"}],
+		"defaultLimit" : 1
 	},
 	{
+		"name" : "pipliz.crafter.sciencelab",
 		"results":[{"type":"sciencelab"}],
-		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}]
+		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}],
+		"defaultLimit" : 1
 	},
 	{
+		"name" : "pipliz.crafter.linseedoil",
 		"results":[{"type":"linseedoil"}],
-		"requires":[{"type":"flax"}]
+		"requires":[{"type":"flax"}],
+		"defaultLimit" : 10
 	},
 	{
+		"name" : "pipliz.crafter.coatedplanks",
 		"results":[{"type":"coatedplanks"}],
-		"requires":[{"type":"linseedoil"},{"type":"planks"}]
+		"requires":[{"type":"linseedoil"},{"type":"planks"}],
+		"defaultLimit" : 10
 	},
 	{
+		"name" : "pipliz.crafter.adobe",
 		"results":[{"type":"adobe"}],
-		"requires":[{"type":"linseedoil"},{"type":"dirt"}]
+		"requires":[{"type":"linseedoil"},{"type":"dirt"}],
+		"defaultLimit" : 5
 	},
 	{
+		"name" : "pipliz.crafter.plasterblock",
 		"results":[{"type":"plasterblock"}],
-		"requires":[{"type":"stonebricks"},{"type":"gypsum"}]
+		"requires":[{"type":"stonebricks"},{"type":"gypsum"}],
+		"defaultLimit" : 10
 	},
 	{
+		"name" : "pipliz.crafter.redplanks",
 		"results":[{"type":"redplanks"}],
-		"requires":[{"type":"planks"},{"type":"berry"}]
+		"requires":[{"type":"planks"},{"type":"berry"}],
+		"defaultLimit" : 0
 	},
 	{
+		"name" : "pipliz.crafter.blackplanks",
 		"results":[{"type":"blackplanks"}],
-		"requires":[{"type":"planks"},{"type":"coalore"}]
+		"requires":[{"type":"planks"},{"type":"coalore"}],
+		"defaultLimit" : 0
+	},
+	{
+		"name" : "pipliz.crafter.tailorshop",
+		"results":[{"type":"tailorshop"}],
+		"requires":[{"type":"planks"},{"type":"ironingot"},{"type":"flax"}],
+		"defaultLimit" : 1,
+		"optional" : true
+	},
+	{
+		"name" : "pipliz.crafter.technologisttable",
+		"results":[{"type":"technologisttable"}],
+		"requires":[{"type":"coatedplanks"},{"type":"ironingot"},{"type":"linenbag"}],
+		"defaultLimit" : 1,
+		"optional" : true
 	}
 ]

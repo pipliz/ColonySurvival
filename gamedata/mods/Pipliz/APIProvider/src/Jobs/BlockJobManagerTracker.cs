@@ -104,7 +104,7 @@ namespace Pipliz.APIProvider.Jobs
 				var recipeLimitsProvider = LimitsProviders[i].Value;
 				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
 				if (list != null) {
-					RecipeStorage.AddDefaultLimitTypeRecipes(recipeLimitsProvider.GetCraftingLimitsType(), list);
+					RecipeStorage.AddDefaultLimitTypeRecipe(recipeLimitsProvider.GetCraftingLimitsType(), list);
 					var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
 					if (triggers == null) {
 						RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());

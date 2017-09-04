@@ -17,16 +17,8 @@ namespace Pipliz.BaseResearch.Implementations
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)
 		{
-			Recipe recipe = new Recipe(new List<InventoryItem>()
-			{
-				new InventoryItem ("planks"),
-				new InventoryItem ("ironingot"),
-				new InventoryItem ("flax")
-			},
-				new InventoryItem ("tailorshop")
-			);
-			RecipeStorage.GetPlayerStorage(manager.Player).AddAvailableRecipe("pipliz.crafter", recipe);
-			RecipePlayer.AddUnlockedRecipe(manager.Player, recipe);
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.tailorshop", true, "pipliz.crafter");
+			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.tailorshop");
 		}
 	}
 }
