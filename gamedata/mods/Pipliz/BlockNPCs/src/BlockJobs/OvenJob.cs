@@ -69,5 +69,10 @@ namespace Pipliz.BlockNPCs.Implementations
 				"ovenlitz-"
 			};
 		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "baking.json");
+		}
 	}
 }

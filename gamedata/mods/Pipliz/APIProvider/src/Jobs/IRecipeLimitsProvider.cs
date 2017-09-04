@@ -4,10 +4,10 @@ namespace Pipliz.APIProvider.Jobs
 {
 	public interface IRecipeLimitsProvider
 	{
-		Recipe[] GetCraftingLimitsRecipes ();
+		IList<Recipe> GetCraftingLimitsRecipes ();
 
 		List<string> GetCraftingLimitsTriggers ();
 
-		string GetCraftingLimitsIdentifier ();
+		string GetCraftingLimitsType ();
 	}
 }

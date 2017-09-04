@@ -13,7 +13,6 @@
 		"parentType" : "grass",
 		"sideall" : "SELF",
 		"icon" : "grasstemperate.png",
-		"npcLimit" : 0,
 		"onRemove" : [
 			{
 				"type" : "grasstemperate",
@@ -140,7 +139,6 @@
 		}
 	},
 	"dirt" : {
-		"npcLimit" : 0,
 		"isFertile" : true,
 		"icon" : "dirt.png",
 		"sideall" : "SELF",
@@ -161,7 +159,6 @@
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
 		"maxStackSize" : 200,
-		"npcLimit" : 30,
 		"fuelValue" : 0.12
 	},
 	"redplanks" : {
@@ -170,7 +167,6 @@
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
 		"maxStackSize" : 200,
-		"npcLimit" : 0,
 		"fuelValue" : 0.07
 	},
 	"blackplanks" : {
@@ -179,7 +175,6 @@
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
 		"maxStackSize" : 200,
-		"npcLimit" : 0,
 		"fuelValue" : 0.5
 	},
 	"bricks" : {
@@ -187,7 +182,6 @@
 		"icon" : "bricks.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"npcLimit" : 20,
 		"maxStackSize" : 100
 	},
 	"clay" : {
@@ -278,7 +272,6 @@
 		"needsBase" : true,
 		"isSolid" : false,
 		"sideall" : "quiverarrow",
-		"npcLimit" : 3,
 		"rotatablex+" : "quiverx+",
 		"rotatablex-" : "quiverx-",
 		"rotatablez+" : "quiverz+",
@@ -306,44 +299,99 @@
 		"onPlaceAudio" : "woodPlace",
 		"maxStackSize" : 600,
 		"sideall" : "SELF",
-		"isSolid" : false,
-		"npcLimit" : 10,
-		"customData" : {
-			"volume" : 0.5,
-			"intensity" : 12.5,
-			"range" : 16.0,
-			"red" : 195.0,
-			"green" : 135.0,
-			"blue" : 46.0
-		}
+		"isSolid" : false
 	},
 	"torchy+" : {
 		"needsBase" : true,
 		"parentType" : "torch",
-		"mesh" : "torchy+.obj"
+		"mesh" : "torchy+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.16
+				}
+			}
+		}
 	},
 	"torchx-" : {
 		"parentType" : "torch",
-		"mesh" : "torchx-.obj"
+		"mesh" : "torchx-.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchx+" : {
 		"parentType" : "torch",
-		"mesh" : "torchx+.obj"
+		"mesh" : "torchx+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchz+" : {
 		"parentType" : "torch",
-		"mesh" : "torchz+.obj"
+		"mesh" : "torchz+.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"torchz-" : {
 		"parentType" : "torch",
-		"mesh" : "torchz-.obj"
+		"mesh" : "torchz-.obj",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.5,
+					"intensity" : 12.5,
+					"range" : 16.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.3
+				}
+			}
+		}
 	},
 	"crate" : {
 		"sideall" : "SELF",
 		"icon" : "crate.png",
 		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"npcLimit" : 5
+		"onPlaceAudio" : "woodPlace"
 	},
 	"stonebricks" : {
 		"sideall" : "SELF",
@@ -358,31 +406,27 @@
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"maxStackSize" : 200,
-		"icon" : "coatedplanks.png",
-		"npcLimit" : 10
+		"icon" : "coatedplanks.png"
 	},
 	"adobe" : {
 		"sideall" : "SELF",
 		"icon" : "adobe.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
-		"maxStackSize" : 200,
-		"npcLimit" : 5
+		"maxStackSize" : 200
 	},
 	"workbench" : {
 		"icon" : "workbench.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
-		"sidey+" : "workbenchtop",
-		"npcLimit" : 0
+		"sidey+" : "workbenchtop"
 	},
 	"tailorshop" : {
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
 		"sidey+" : "tailorshop",
-		"npcLimit" : 1,
 		"icon" : "tailorshop.png"
 	},
 	"technologisttable" : {
@@ -390,7 +434,6 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "coatedplanks",
 		"sidey+" : "technologisttable",
-		"npcLimit" : 1,
 		"icon" : "technologisttable.png"
 	},
 	"sciencelab" : {
@@ -398,7 +441,6 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "coatedplanks",
 		"sidey+" : "sciencelab",
-		"npcLimit" : 1,
 		"icon" : "sciencelab.png"
 	},
 	"mint" : {
@@ -406,31 +448,27 @@
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "planks",
-		"sidey+" : "mint",
-		"npcLimit" : 1
+		"sidey+" : "mint"
 	},
 	"shop" : {
 		"icon" : "shop.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
-		"sidey+" : "shop",
-		"npcLimit" : 1
+		"sidey+" : "shop"
 	},
 	"grindstone" : {
 		"onPlaceAudio" : "stonePlace",
 		"icon" : "grindstone.png",
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "planks",
-		"sidey+" : "grindstone",
-		"npcLimit" : 2
+		"sidey+" : "grindstone"
 	},
 	"plasterblock" : {
 		"sideall" : "SELF",
 		"icon" : "plasterblock.png",
 		"onRemoveAudio" : "dirtPlace",
-		"onPlaceAudio" :"dirtPlace",
-		"npcLimit" : 10
+		"onPlaceAudio" :"dirtPlace"
 	},
 	"furnace" : {
 		"icon" : "furnace.png",
@@ -443,26 +481,7 @@
 		"rotatablez-" : "furnacez-",
 		"sideall" : "furnaceside",
 		"sidey+" : "furnaceunlittop",
-		"destructionTime" : 800,
-		"npcLimit" : 2,
-		"customData" : {
-			"up" : {
-				"volume" : 0.3,
-				"intensity" : 2.5,
-				"range" : 8.0,
-				"red" : 195.0,
-				"green" : 135.0,
-				"blue" : 46.0
-			},
-			"side" : {
-				"volume" : 0.2,
-				"intensity" : 1.0,
-				"range" : 8.0,
-				"red" : 195.0,
-				"green" : 135.0,
-				"blue" : 46.0
-			}
-		}
+		"destructionTime" : 800
 	},
 	"furnacex+" : {
 		"parentType" : "furnace",
@@ -490,16 +509,7 @@
 		"rotatablez+" : "ovenz+",
 		"rotatablez-" : "ovenz-",
 		"sideall" : "stonebricks",
-		"destructionTime" : 800,
-		"npcLimit" : 2,
-		"customData" : {
-			"volume" : 0.2,
-			"intensity" : 2.0,
-			"range" : 8.0,
-			"red" : 195.0,
-			"green" : 135.0,
-			"blue" : 46.0
-		}
+		"destructionTime" : 800
 	},
 	"ovenx+" : {
 		"parentType" : "oven",
@@ -595,7 +605,6 @@
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "sappling",
-		"npcLimit" : 0,
 		"icon" : "cherrysapling.png",
 		"mesh" : "cherrysapling.obj"
 	},
@@ -608,7 +617,6 @@
 		"sideall" : "flax"
 	},
 	"flaxstage1" : {
-		"npcLimit" : 100,
 		"icon" : "flaxstage1.png",
 		"parentType" : "flaxstage",
 		"mesh" : "flaxstage1.obj",
@@ -640,8 +648,7 @@
 		"icon" : "berrybush.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
-		"sideall" : "SELF",
-		"npcLimit" : 0
+		"sideall" : "SELF"
 	},
 	"wheatstage" : {
 		"isSolid" : false,
@@ -651,7 +658,6 @@
 		"maxStackSize" : 1200
 	},
 	"wheatstage1" : {
-		"npcLimit" : 0,
 		"icon" : "wheatstage1.png",
 		"parentType" : "wheatstage",
 		"sideall" : "wheatwheat",
@@ -723,7 +729,6 @@
 	"carpet" : {
 		"onRemoveAudio" : "grassDelete",
 		"onPlaceAudio" : "dirtPlace",
-		"npcLimit" : 10,
 		"maxStackSize" : 200
 	},
 	"carpetyellow" : {
@@ -756,7 +761,6 @@
 		}
 	},
 	"linseedoil" : {
-		"npcLimit" : 10,
 		"isPlaceable" : false,
 		"icon" : "linseedoil.png",
 		"maxStackSize" : 600
@@ -791,7 +795,6 @@
 	"arrow" : {
 		"isPlaceable" : false,
 		"icon" : "arrow.png",
-		"npcLimit" : 200,
 		"maxStackSize" : 100
 	},
 	"coalore" : {
@@ -807,32 +810,27 @@
 	"linen" : {
 		"maxStackSize" : 100,
 		"icon" : "linen.png",
-		"isPlaceable" : false,
-		"npcLimit" : 4
+		"isPlaceable" : false
 	},
 	"linenbag" : {
 		"maxStackSize" : 50,
 		"icon" : "linenbag.png",
-		"isPlaceable" : false,
-		"npcLimit" : 5
+		"isPlaceable" : false
 	},
 	"sciencebagbasic" : {
 		"maxStackSize" : 50,
 		"icon" : "sciencebagbasic.png",
-		"isPlaceable" : false,
-		"npcLimit" : 5
+		"isPlaceable" : false
 	},
 	"sciencebaglife" : {
 		"maxStackSize" : 50,
 		"icon" : "sciencebaglife.png",
-		"isPlaceable" : false,
-		"npcLimit" : 5
+		"isPlaceable" : false
 	},
 	"clothing" : {
 		"maxStackSize" : 25,
 		"icon" : "clothing.png",
-		"isPlaceable" : false,
-		"npcLimit" : 4
+		"isPlaceable" : false
 	},
 	"ironore" : {
 		"maxStackSize" : 50,
@@ -860,17 +858,14 @@
 		"isPlaceable" : false
 	},
 	"bow" : {
-		"npcLimit" : 5,
 		"icon" : "bow.png",
 		"isPlaceable" : false
 	},
 	"pickaxe" : {
-		"npcLimit" : 2,
 		"icon" : "pickaxe.png",
 		"isPlaceable" : false
 	},
 	"axe" : {
-		"npcLimit" : 2,
 		"icon" : "axe.png",
 		"isPlaceable" : false
 	},
@@ -893,7 +888,6 @@
 		"isSolid" : false,
 		"needsBase" : true,
 		"sideall" : "SELF",
-		"npcLimit" : 5,
 		"rotatablex+" : "bedx+",
 		"rotatablex-" : "bedx-",
 		"rotatablez+" : "bedz+",
@@ -954,19 +948,111 @@
 	},
 	"furnacelitx+" : {
 		"parentType" : "furnacelit",
-		"sidex+" : "furnacelitfront"
+		"sidex+" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitx-" : {
 		"parentType" : "furnacelit",
-		"sidex-" : "furnacelitfront"
+		"sidex-" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitz+" : {
 		"parentType" : "furnacelit",
-		"sidez+" : "furnacelitfront"
+		"sidez+" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"furnacelitz-" : {
 		"parentType" : "furnacelit",
-		"sidez-" : "furnacelitfront"
+		"sidez-" : "furnacelitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.3,
+					"intensity" : 2.5,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsety" : 0.55
+				},
+				"b" : {
+					"volume" : 0.2,
+					"intensity" : 1.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlit" : {
 		"parentType" : "oven",
@@ -980,19 +1066,75 @@
 	},
 	"ovenlitx+" : {
 		"parentType" : "ovenlit",
-		"sidex+" : "ovenlitfront"
+		"sidex+" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitx-" : {
 		"parentType" : "ovenlit",
-		"sidex-" : "ovenlitfront"
+		"sidex-" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetx" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitz+" : {
 		"parentType" : "ovenlit",
-		"sidez+" : "ovenlitfront"
+		"sidez+" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : 0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"ovenlitz-" : {
 		"parentType" : "ovenlit",
-		"sidez-" : "ovenlitfront"
+		"sidez-" : "ovenlitfront",
+		"customData" : {
+			"torches" : {
+				"a" : {
+					"volume" : 0.2,
+					"intensity" : 2.0,
+					"range" : 8.0,
+					"red" : 195.0,
+					"green" : 135.0,
+					"blue" : 46.0,
+					"offsetz" : -0.55,
+					"offsety" : -0.25
+				}
+			}
+		}
 	},
 	"missingerror" : {
 		"sideall" : "error",
