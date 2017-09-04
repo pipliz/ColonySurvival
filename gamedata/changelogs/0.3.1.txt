@@ -1,6 +1,9 @@
 0.3.1 (2017-**-**)
 -Added 3 new researches, to unlock the tailor, technologist and life science bags.
 
+-Updated Unity version from 5.6.2f1 to 5.6.3p2
+--Fixes various issues
+--Reduced client RAM use by 40 MB
 -Fixed errors upon loading .obj without a uv channel (use default vertex / uv when out of range)
 -Fixed an issue where the savegames server.json file is made before the working directory is fixed
 -Fixed an issue where players would connect longer/deeper than desired when they are refused for any reason
@@ -9,7 +12,8 @@
 -Optimized the chunk updater, significantly reducing the performance cost of active chunks
 --Active chunks are checked a lot less when they're active due to a banner
 --Autosaving checks are now seperate from unloading checks
--Added compression to the servers' voxel data per chunk
+-Optimized the AI path precalculation - it takes about 40% of the time it used to (lowered cpu load of server upon moving / loading)
+-Added compression to the servers' voxel data per chunk (saves up to 50%-ish of RAM)
 -Added "name" keys to modInfo.json
 -Added "compatibleversions" key to modInfo.json, to indicate supported versions of the mod
 -Allow torches to be added to any block
@@ -19,5 +23,4 @@
 --RecipeManager from APIProvider is gone, use RecipeStorage from the base game
 --'LoadRecipes' moved from RecipeManager to Recipe itself
 --See changes to the builtin mods on github to get a better idea
-
--Serialize the WorldSettings after the default inventory / stockpile contents are added upon first launch
+-Serialize the WorldSettings after the default inventory / stockpile contents are added upon first launch (instead of before those are added)
