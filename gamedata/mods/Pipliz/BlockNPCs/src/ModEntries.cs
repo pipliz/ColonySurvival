@@ -16,7 +16,7 @@ namespace Pipliz.BlockNPCs
 			ModGamedataDirectory = Path.Combine(Path.GetDirectoryName(path), "gamedata/");
 		}
 
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.blocknpcs.registerjobs")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesServer, "pipliz.blocknpcs.registerjobs")]
 		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
 		public static void AfterDefiningNPCTypes ()
 		{

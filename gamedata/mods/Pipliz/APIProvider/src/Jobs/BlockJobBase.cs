@@ -1,5 +1,6 @@
 ﻿using NPC;
 using Pipliz.JSON;
+using Server.NPCs;
 
 namespace Pipliz.APIProvider.Jobs
 {

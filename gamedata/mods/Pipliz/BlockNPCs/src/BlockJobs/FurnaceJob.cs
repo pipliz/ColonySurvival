@@ -1,7 +1,7 @@
 ﻿using BlockTypes.Builtin;
-using System.Collections.Generic;
-using NPC;
 using Pipliz.APIProvider.Jobs;
+using Server.NPCs;
+using System.Collections.Generic;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
@@ -45,14 +45,15 @@ namespace Pipliz.BlockNPCs.Implementations
 			return positionNPC;
 		}
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Smelter";
-			def.maskColor1 = new UnityEngine.Color32(155, 100, 91, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Smelter",
+				maskColor1 = new UnityEngine.Color32(155, 100, 91, 255),
+				type = NPCTypeID.GetNextID()
+			};
 		}
 
 		public override List<string> GetCraftingLimitsTriggers ()

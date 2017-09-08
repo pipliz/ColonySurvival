@@ -2,6 +2,6 @@
 {
 	public interface INPCTypeDefiner
 	{
-		NPC.NPCTypeSettings GetNPCTypeDefinition ();
+		Server.NPCs.NPCTypeStandardSettings GetNPCTypeDefinition ();
 	}
 }

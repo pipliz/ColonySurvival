@@ -2,6 +2,7 @@
 using NPC;
 using Pipliz.APIProvider.Jobs;
 using Pipliz.JSON;
+using Server.NPCs;
 using Server.Science;
 using System.Collections.Generic;
 using UnityEngine;
@@ -130,14 +131,15 @@ namespace Pipliz.BlockNPCs.Implementations
 			}
 		}
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Scientist";
-			def.maskColor1 = new Color32(208, 208, 208, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Scientist",
+				maskColor1 = new UnityEngine.Color32(208, 208, 208, 255),
+				type = NPCTypeID.GetNextID()
+			};
 		}
 	}
 }

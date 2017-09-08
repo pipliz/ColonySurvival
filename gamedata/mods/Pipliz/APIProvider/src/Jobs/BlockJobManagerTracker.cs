@@ -58,7 +58,7 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Resolve<T> (string blockName) where T : ITrackableBlock, IBlockJobBase, INPCTypeDefiner, new()
 		{
 			var instance = new T();
-			NPC.NPCType.AddSettings(instance.GetNPCTypeDefinition());
+			Server.NPCs.NPCType.AddSettings(instance.GetNPCTypeDefinition());
 			if (typeof(IRecipeLimitsProvider).IsAssignableFrom(typeof(T))) {
 				LimitsProviders.Add(new KeyValuePair<string, IRecipeLimitsProvider>(blockName, (IRecipeLimitsProvider)instance));
 			}

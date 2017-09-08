@@ -1,5 +1,5 @@
-﻿using NPC;
-using Pipliz.APIProvider.Jobs;
+﻿using Pipliz.APIProvider.Jobs;
+using Server.NPCs;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
@@ -11,14 +11,15 @@ namespace Pipliz.BlockNPCs.Implementations
 
 		public override int MaxRecipeCraftsPerHaul { get { return 2; } }
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Tailor";
-			def.maskColor1 = new UnityEngine.Color32(50, 96, 117, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Tailor",
+				maskColor1 = new UnityEngine.Color32(50, 96, 117, 255),
+				type = NPCTypeID.GetNextID()
+			};
 		}
 
 		protected override string GetRecipeLocation ()

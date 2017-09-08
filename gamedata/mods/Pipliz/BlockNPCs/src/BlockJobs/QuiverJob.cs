@@ -2,6 +2,8 @@
 using NPC;
 using Pipliz.APIProvider.Jobs;
 using Pipliz.JSON;
+using Server.Monsters;
+using Server.NPCs;
 using UnityEngine;
 
 namespace Pipliz.BlockNPCs.Implementations
@@ -9,7 +11,7 @@ namespace Pipliz.BlockNPCs.Implementations
 	public class QuiverJob : BlockJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		ushort quiverType;
-		Zombie target;
+		IMonster target;
 
 		public override string NPCTypeKey { get { return "pipliz.guardbow"; } }
 
@@ -47,7 +49,7 @@ namespace Pipliz.BlockNPCs.Implementations
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
 					if (Stockpile.GetStockPile(owner).TryRemove(BuiltinBlocks.Arrow)) {
-						Arrow.New(npcPos, targetPos, target.Direction);
+						Arrow.New(npcPos, targetPos, Vector3.zero);
 						OverrideCooldown(5.0);
 					} else {
 						state.SetIndicator(NPCIndicatorType.MissingItem, 1.5f, BuiltinBlocks.Arrow);
@@ -58,7 +60,7 @@ namespace Pipliz.BlockNPCs.Implementations
 				}
 			}
 			if (target == null || !target.IsValid) {
-				target = ZombieTracker.Find(position.Add(0, 1, 0), 20);
+				target = MonsterTracker.Find(position.Add(0, 1, 0), 20);
 				if (target == null) {
 					Vector3 desiredPosition = usedNPC.Position;
 					if (quiverType == BuiltinBlocks.QuiverXN) {
@@ -77,14 +79,15 @@ namespace Pipliz.BlockNPCs.Implementations
 			}
 		}
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Bow guard";
-			def.maskColor1 = new Color32(159, 155, 152, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Bow guard",
+				maskColor1 = new UnityEngine.Color32(159, 155, 152, 255),
+				type = NPCTypeID.GetNextID()
+			};
 		}
 	}
 }
