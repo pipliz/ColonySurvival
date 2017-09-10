@@ -9,10 +9,8 @@ namespace Pipliz.APIProvider
 	[ModLoader.ModManager]
 	public static class ModEntries
 	{
-		/// <summary>
-		/// Register npc's in a callback of AfterDefiningNPCTypes that provides for this one.
-		/// </summary>
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesServer, "pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")]
 		public static void AfterDefiningNPCTypes ()
 		{
 			Jobs.BlockJobManagerTracker.ResolveRegisteredTypes();

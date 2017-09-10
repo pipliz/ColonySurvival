@@ -13,6 +13,7 @@ namespace Pipliz.BaseResearch.Implementations
 			iterationCount = 15;
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("sciencebaglife", 2);
+			AddDependency("pipliz.baseresearch.sciencebaglife");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)

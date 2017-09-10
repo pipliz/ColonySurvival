@@ -122,7 +122,7 @@
 			"full" : "Настройки языка",
 			"wiptext" : "Перевод может содержать ошибки.\nПеревёл: Oleg720",
 			"language" : "Язык:",
-			"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
+			"coverage" : "Перевод выполнен на {0:F1}%. Для помощь в переводе посетите форум или репозиторий на github."
 		}
 	},
 	"infomenu" : {
@@ -216,14 +216,14 @@
 				"needs" : "Требуется: ",
 				"and" : "и"
 			},
-			"craftingstockpile" : "Крафтинг и запасы",
+			"craftingstockpile" : "Крафт и запасы",
 			"science" : {
 				"header" : "Наука",
-				"dependencies" : "Требуются технологии:",
+				"dependencies" : "Требуемые технологии:",
 				"requirements" : "Требования для одного исследовательского цикла:",
 				"iterations" : "Циклы исследования: {0} из {1}",
-				"researchselected" : "_MISSING_Select to research",
-				"researchactive" : "_MISSING_Current research: {0}"
+				"researchselected" : "Выберите исследование",
+				"researchactive" : "Текущее исследование: {0}"
 			}
 		},
 		"limits" : {
@@ -290,7 +290,7 @@
 			"text3" : "Поместите верстак, чтобы превратить колониста в Крафтера. Он автоматически сделает стрелы и другие предметы для вас."
 		}
 	},
-	"localecoverage" : "0.987951807228916",
+	"localecoverage" : "1",
 	"pipliz" : {
 		"baseresearch" : {
 			"healthsize1" : {
@@ -340,6 +340,18 @@
 			"healthregenspeed4" : {
 				"name" : "Увеличение скорости регенерации IV",
 				"description" : "Увеличивает скорость регенерации с 3 ХП\/сек до 4 ХП\/сек"
+			},
+			"tailorbase" : {
+				"name" : "Портной",
+				"description" : "Разблокируйте портного, который превратит Лен в Белье"
+			},
+			"technologistbase" : {
+				"name" : "Технолог",
+				"description" : "Разблокируйте технолога, который занимается крафтингом Научных сумок"
+			},
+			"sciencebaglife" : {
+				"name" : "Сумка о здоровье",
+				"description" : "Рзблокируйте Научную сумку о здоровье, которая необходима для исследований связанных со здоровьем"
 			}
 		}
 	}

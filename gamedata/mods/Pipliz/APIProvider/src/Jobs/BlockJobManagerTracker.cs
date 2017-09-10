@@ -58,7 +58,7 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Resolve<T> (string blockName) where T : ITrackableBlock, IBlockJobBase, INPCTypeDefiner, new()
 		{
 			var instance = new T();
-			NPC.NPCType.AddSettings(instance.GetNPCTypeDefinition());
+			Server.NPCs.NPCType.AddSettings(instance.GetNPCTypeDefinition());
 			if (typeof(IRecipeLimitsProvider).IsAssignableFrom(typeof(T))) {
 				LimitsProviders.Add(new KeyValuePair<string, IRecipeLimitsProvider>(blockName, (IRecipeLimitsProvider)instance));
 			}
@@ -104,13 +104,13 @@ namespace Pipliz.APIProvider.Jobs
 				var recipeLimitsProvider = LimitsProviders[i].Value;
 				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
 				if (list != null) {
-					RecipeLimits.SetRecipes(recipeLimitsProvider.GetCraftingLimitsIdentifier(), list.ToList());
+					RecipeStorage.AddDefaultLimitTypeRecipe(recipeLimitsProvider.GetCraftingLimitsType(), list);
 					var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
 					if (triggers == null) {
-						RecipeLimits.SetInterface(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsIdentifier());
+						RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
 					} else {
 						for (int i2 = 0; i2 < triggers.Count; i2++) {
-							RecipeLimits.SetInterface(triggers[i2], recipeLimitsProvider.GetCraftingLimitsIdentifier());
+							RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
 						}
 					}
 				}
