@@ -63,6 +63,11 @@ void AfterItemTypesDefined ()
 
 void AfterItemTypesServer ()
 -Place to override ItemTypesServer.Register* things from the base game.
+-Builtin callback uses:
++pipliz.server.recipeplayerload
+--Loads recipes from "gamedata/crafting.json"
++pipliz.server.loadnpctypes
+--Loads NPCTypes from "gamedata/npctypes.json"
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -77,6 +82,8 @@ void AfterWorldLoad ()
 --Registers the OnAdd/OnRemove callbacks from the blockjobs added through BlockJobManagerTracker.Register
 +pipliz.apiprovider.jobs.load
 --Loads the registered blockjobs from the savegame, if any exist
++pipliz.server.monsterspawnregister
+--Registers the default monster spawner to MonsterTracker.MonsterSpawner
 
 void AfterNetworkSetup ()
 -After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
@@ -122,6 +129,8 @@ void OnPlayerConnectedLate (Player p)
 -Builtin callback uses:
 +pipliz.server.queueinitialsend
 --Queues a send to the player, to set initial science state
++pipliz.server.sendnpctypes
+--Sends the npctypes packet
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.
@@ -139,12 +148,16 @@ void OnLoadingPlayer (JSONNode n, Player p)
 -Builtin callback uses:
 +pipliz.server.loadplayerscience
 --Loads any science progress from the jsonnode
++pipliz.server.loadplayerlimits
+--Loads any player limits from the jsonnode
 
 void OnSavingPlayer (JSONNode n, Player p)
 -Player {p} is being saved into json file {n}.
 -Builtin callback uses:
 +pipliz.server.saveplayerscience
 --Saves any science progress from the player to it's file
++pipliz.server.saveplayerlimits
+--Saves any player limits to it's file
 
 void OnQuitEarly ()
 -General.Application.OnQuit @ -200, called before most other on quit actions
