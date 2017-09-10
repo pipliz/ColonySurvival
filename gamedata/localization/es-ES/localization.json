@@ -43,7 +43,7 @@
 		"connect" : "Conectar al servidor seleccionado",
 		"refresh" : "Actualizar lista de servidores",
 		"refreshing" : "Actualizando...",
-		"hostserverdescription" : "Puedes ser anfitrión de un servidor abriendo:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
+		"hostserverdescription" : "Puedes ser anfitrión de un servidor abriendo:\n Ve a las propiedades del juego en Steam, has clic en 'ARCHIVOS LOCALES' y despues 'VER ARCHIVOS LOCALES...' . Abre 'colonyserver.exe' para alojar un servidor.",
 		"startserver" : "Iniciar servidor"
 	},
 	"settingsmenu" : {
@@ -169,7 +169,7 @@
 			"foresterc" : "Colocar sobre césped o tierra",
 			"flaxfarmer" : "Agricultor de lino",
 			"flaxa" : "Solo para colonias avanzadas",
-			"flaxb" : "Necesitas: Semillas de lino",
+			"flaxb" : "Necesitas: semillas de lino",
 			"flaxc" : "Colocar sobre césped o tierra",
 			"notflat" : "No es plano",
 			"toosmall" : "Muy pequeño",
@@ -218,7 +218,7 @@
 			"science" : {
 				"header" : "Ciencia",
 				"dependencies" : "Tecnologías requeridas:",
-				"requirements" : "Requiere:",
+				"requirements" : "Para un ciclo de investigación requiere:",
 				"iterations" : "Ciclo de investigación: {0} de {1}",
 				"researchselected" : "Seleccionar",
 				"researchactive" : "Investigando: {0}"
@@ -277,7 +277,7 @@
 			"header" : "Defensa de la colonia",
 			"description" : "¡Defiende a tu colonia de los monstruos que acechan en la noche!",
 			"text1" : "Por la noche, los monstruos atacaran a tu colonia. Coloca guardias, construye murallas y cava fosos defender tu colonia. Los monstruos no pueden escalar dos bloques.",
-			"text2" : "¡No aísles tu colonia! Si no hay camino hacia tu Estandarte, 'Modo asedio' se activará. Durante el modo asedio la comida se consumen más rápido.",
+			"text2" : "¡No aísles tu colonia! Si no hay camino hacia tu Estandarte, se activará el 'Modo asedio'. Durante el modo asedio la comida se consume más rápido.",
 			"text3" : "La cantidad de monstruos crecen cuando hay más colonos. Asegúrate de tener suficientes flechas para tus guardias."
 		},
 		"page4" : {
@@ -285,10 +285,10 @@
 			"description" : "¡Sin flechas, los monstruos aniquilarán a tus colonos!",
 			"text1" : "En la capa final del mundo hay minerales infinitos. Haz clic derecho y con la tabla de comandos fija mineros en ellas para trabajar. No olvides colocar cajas cerca.",
 			"text2" : "Coloca una fundidora. Si hay colonos sin empleo, ellos automáticamente irán a la fundidora y comenzarán a convertir las menas en barras de lingotes.",
-			"text3" : "Coloca un banco de trabajo para que un colono comience a crear. El creara automáticamente flechas y otros objetos para ti."
+			"text3" : "Coloca un banco de trabajo y un colono se convertirá en un artesano. El creará automáticamente flechas y otros objetos para ti."
 		}
 	},
-	"localecoverage" : "0.976470588235294",
+	"localecoverage" : "1",
 	"pipliz" : {
 		"baseresearch" : {
 			"healthsize1" : {
@@ -340,16 +340,16 @@
 				"description" : "Incrementa la velocidad de la regeneración de salud de 3 HP/s a 4 HP/s"
 			},
 			"tailorbase" : {
-				"name" : "_MISSING_Tailor",
-				"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
+				"name" : "Sastre",
+				"description" : "Desbloquealo y es quien transforma las plantas de lino en lino."
 			},
 			"technologistbase" : {
-				"name" : "_MISSING_Technologist",
-				"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				"name" : "Tecnólogo",
+				"description" : "Desbloquealo y es quien crea bolsas de ciencia."
 			},
 			"sciencebaglife" : {
-				"name" : "_MISSING_Life Science Bag",
-				"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
+				"name" : "Bolsa de ciencia de la vida",
+				"description" : "Desbloquealas y son necesarias para investigar mejoras relacionas con la salud."
 			}
 		}
 	}
