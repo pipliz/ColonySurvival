@@ -1,6 +1,5 @@
 ﻿using Pipliz.APIProvider.Science;
 using Server.Science;
-using System.Collections.Generic;
 
 namespace Pipliz.BaseResearch.Implementations
 {
@@ -10,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public TechnologistBase ()
 		{
 			key = "pipliz.baseresearch.technologistbase";
-			icon = "baseresearch_technologistbase.png";
+			icon = "gamedata/textures/icons/baseresearch_technologistbase.png";
 			iterationCount = 15;
 			AddIterationRequirement("linenbag");
 			AddDependency("pipliz.baseresearch.tailorbase");

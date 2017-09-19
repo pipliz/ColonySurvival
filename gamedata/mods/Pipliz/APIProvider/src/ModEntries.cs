@@ -9,7 +9,7 @@ namespace Pipliz.APIProvider
 	[ModLoader.ModManager]
 	public static class ModEntries
 	{
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesServer, "pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.apiprovider.jobs.resolvetypes")]
 		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")]
 		public static void AfterDefiningNPCTypes ()
 		{

@@ -36,6 +36,23 @@ void AfterStartup ()
 void AfterSelectedWorld ()
 -First callback after the world to load has been determined.
 -The place to call ItemTypesServer.Register* methods
++pipliz.server.loadtexturemappingfile
+--Parses texture mapping file
++pipliz.server.registertexturemappingtextures
+--DependsOn pipliz.server.loadtexturemappingfile
+--Actually starts loading the texture files into the filetable
+--So removing/changing texture mappings (ItemTypesServer.TextureMappings) should be done inbetween this and the DependsOn
++pipliz.server.registernpctextures
+--Registers the hardcoded npc texture paths to load into the FileTable cache
++pipliz.server.registerwatertextures
+--Registers the hardcoded water texture paths to load into the FileTable cache
++pipliz.server.registeraudiofiles
+--Loads the gamedata/audio/audioFiles.json file.
+--To add custom audio description json's:
+---Make a callback inbetween registeraudiofiles and loadaudiofiles, where you add the jsonnode to the array jsonnode to ItemTypesServer.AudioFilesJSON
++pipliz.server.loadaudiofiles
+--DependsOn pipliz.server.registeraudiofiles
+--Registers the .ogg's from ItemTypesServer.AudioFilesJSON and creates the byte[] package to send to users
 
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
@@ -47,8 +64,8 @@ void AfterDefiningNPCTypes ()
 +pipliz.apiprovider.jobs.resolvetypes
 --Registers NPCTypes to the base game, call BlockJobManagerTracker.Register before this
 
-void AfterAddingBaseTypes ()
--ItemTypes.IndexLookup loaded, The place to call ItemTypes.AddRawType() to add types.json nodes.
+void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
+-Allows altering dict, to remove existing types (or add new JSONNode-based itemtypes)
 
 void AfterItemTypesDefined ()
 -Do things that require all itemtypes to be defined here. Loading recipes etc.
@@ -60,10 +77,8 @@ void AfterItemTypesDefined ()
 --Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
 +pipliz.blocknpcs.registertypes
 --Registers furnace/oven change types
-
-void AfterItemTypesServer ()
--Place to override ItemTypesServer.Register* things from the base game.
--Builtin callback uses:
++pipliz.server.registercallbacks
+--Registers base game ItemTypesServer callbacks
 +pipliz.server.recipeplayerload
 --Loads recipes from "gamedata/crafting.json"
 +pipliz.server.loadnpctypes
@@ -131,6 +146,8 @@ void OnPlayerConnectedLate (Player p)
 --Queues a send to the player, to set initial science state
 +pipliz.server.sendnpctypes
 --Sends the npctypes packet
++pipliz.server.sendaudiomapping
+--Sends the audio description json (ItemTypes.AudioFilesJSON)
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.
@@ -182,6 +199,14 @@ void OnPlayerRespawn (Players.Player p)
 -Builtin callback uses:
 +pipliz.server.onplayerrespawn
 --Teleports player to their base, sets health to starting health, prints respawn to log
+
+void OnItemTypeRegistered (ItemTypes.ItemType type)
+-Called when a resolved type is registered to ItemTypes
++pipliz.server.itemtypesserver
+--Parses server specific things of itemtypes:
+---Registers the parents of types for use with itemtype actions
+---Adds icons from types to the FileTable cache
+---Adds meshes from types to the FileTable cache
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 

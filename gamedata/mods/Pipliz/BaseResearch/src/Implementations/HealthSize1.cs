@@ -9,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public HealthSize1 ()
 		{
 			key = "pipliz.baseresearch.healthsize1";
-			icon = "baseresearch_healthsize1.png";
+			icon = "gamedata/textures/icons/baseresearch_healthsize1.png";
 			iterationCount = 25;
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("sciencebaglife");
