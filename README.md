@@ -1,8 +1,8 @@
 # Colony Survival
 Public gamedata files for Colony Survival
 
-Mostly used as a repository to send pull requests for translation updates.
-Check the highest versioned branch for the most recent version.
+Mostly used as a repository to send pull requests for translation updates. Preferably these pull requests should be set to the highest versioned branch, and not to any 'live' branches (those are supposed to be fixed to a build).
+
 Check [localecoverage](gamedata/localization/localecoverage.md) for data on how complete the various translations are.
 Files will have keys starting with "\_MISSING\_" followed by the english version for missing/untranslated text.
 Localecoverage will be updated after pull request merges.
