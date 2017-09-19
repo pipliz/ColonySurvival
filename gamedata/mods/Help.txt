@@ -53,6 +53,8 @@ void AfterSelectedWorld ()
 +pipliz.server.loadaudiofiles
 --DependsOn pipliz.server.registeraudiofiles
 --Registers the .ogg's from ItemTypesServer.AudioFilesJSON and creates the byte[] package to send to users
++pipliz.server.localization.startload
+--Starts loading the json files from disk
 
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
@@ -99,6 +101,13 @@ void AfterWorldLoad ()
 --Loads the registered blockjobs from the savegame, if any exist
 +pipliz.server.monsterspawnregister
 --Registers the default monster spawner to MonsterTracker.MonsterSpawner
++pipliz.server.localization.waitforloading
+--Waits to ensure the files in Server.Localization.LoadedTranslation are fully loaded
++pipliz.server.localization.convert
+--DependsOn pipliz.server.localization.waitforloading
+--Converts the json nodes into byte[] packages for networking.
+--To add/change/remove localization:
+--Edit the JSONNode in Server.Localization.Localization.LoadedTranslation in a callback inbetween the DependsOn and this
 
 void AfterNetworkSetup ()
 -After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
