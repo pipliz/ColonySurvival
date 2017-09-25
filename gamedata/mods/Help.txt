@@ -55,6 +55,8 @@ void AfterSelectedWorld ()
 --Registers the .ogg's from ItemTypesServer.AudioFilesJSON and creates the byte[] package to send to users
 +pipliz.server.localization.startload
 --Starts loading the json files from disk
++pipliz.server.terraingenerator.setdefault
+--Sets the default terrain generator
 
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
@@ -157,6 +159,11 @@ void OnPlayerConnectedLate (Player p)
 --Sends the npctypes packet
 +pipliz.server.sendaudiomapping
 --Sends the audio description json (ItemTypes.AudioFilesJSON)
++pipliz.server.meshedobjects.sendtable
+--Sends the meshed objects table
++pipliz.server.terraingenerator.startsendingbiomedata
+--Starts sending biome data to the player (for ambient audio mainly)
+--Calls ITerrainGenerator.StartSendingBiomeData on the active terrain generator.
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.
@@ -230,24 +237,6 @@ void OnSavedChunkToRegion ()
 
 void OnLoadedChunkFromRegion ()
 -A chunk is filled from a region in memory. The chunk is locked for writing data.
-
-
-Misc:
-
-bool OnTerrainGeneratorBase(Chunk chunk)
--Called from the base terrain generation thread (be careful).
--Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
--Passed chunk is already locked for writing data.
--Use chunk.SetTypeAtSilently to set data
--There are no guarantees about neighbouring chunks existing / being filled
-
-bool OnTerrainGeneratorStructures(Chunk chunk)
--Called from the structures terrain generation thread (be careful).
--Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
--Passed chunk is already locked for writing data.
--Use chunk.SetTypeAtSilently to set data
--There are no guarantees about neighbouring chunks existing / being filled
--A chunk will always have generated the base terrain first
 
 
 Player Temporary values:
