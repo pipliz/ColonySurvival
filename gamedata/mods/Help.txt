@@ -55,8 +55,6 @@ void AfterSelectedWorld ()
 --Registers the .ogg's from ItemTypesServer.AudioFilesJSON and creates the byte[] package to send to users
 +pipliz.server.localization.startload
 --Starts loading the json files from disk
-+pipliz.server.terraingenerator.setdefault
---Sets the default terrain generator
 
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
@@ -87,6 +85,8 @@ void AfterItemTypesDefined ()
 --Loads recipes from "gamedata/crafting.json"
 +pipliz.server.loadnpctypes
 --Loads NPCTypes from "gamedata/npctypes.json"
++pipliz.server.terraingenerator.setdefault
+--Sets the default terrain generator
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager

@@ -1,7 +1,5 @@
 0.3.1 (2017-**-**)
 -Added 3 new researches, to unlock the tailor, technologist and life science bags.
--Moved nearly all gamedata files to the server, to allow for a better modded server experience. (no need for clients to install files)
---This includes audio, localization, meshes, textures, icons, npc textures, water textures
 
 -Fixed colonists only eating from bread if there's enough of it. Now it'll balance between food types (trying to keep total food value equal between stacks)
 -Fixed an issue with recipe limits being shared for all recipes with the same outcome (i.e, taiga logs -> planks & temperate logs -> planks)
@@ -12,7 +10,8 @@
 -Fixed an issue with the client not properly receiving the disconnect packet when kicked
 -Fixed some of the issues with timeouts in the connection screen, by vastly improving the connecting scene logic
 
--Tweaked scroll sensitivity for the stockpile, crafting menu, science menu and crafting limits menu
+-Moved nearly all gamedata files to the server, to allow for a better modded server experience. (no need for clients to install files)
+--This includes audio, localization, meshes, textures, icons, npc textures, water textures
 -Optimized the chunk updater, significantly reducing the performance cost of active chunks
 --Active chunks are checked a lot less when they're active due to a banner
 --Autosaving checks are now seperate from unloading checks
@@ -20,16 +19,6 @@
 -Added compression to the servers' voxel data per chunk (saves up to 50%-ish of RAM)
 -Optimized torch rendering; reduced time to render for torches by 33-90% depending on scenario. Improves fps in tests by between 0 & ~20%
 
--Added "name" keys to modInfo.json
--Added "compatibleversions" key to modInfo.json, to indicate supported versions of the mod
--Allow torches to be added to any block
--Added jsonnode.TryGetAsOrDefault - returns found value if it exists, default if it doesn't.
--Added InventoryItem(string) constructor
--Changed various name, methods and classes related to Recipes to support adding recipes through researchables
---Recipes now have a unique name and default limit per recipe
---Recipes can now be 'optional', which have to be unlocked through code ingame.
--Serialize the WorldSettings after the default inventory / stockpile contents are added upon first launch (instead of before those are added)
--Removed AfterDefiningNPCTypes callback - use AfterItemTypesServer with providesfor/dependson with pipliz.server.loadnpctypes / pipliz.server.loadmonstertypes callbacks
--Fixed errors upon loading .obj without a uv channel (use default vertex / uv when out of range)
--Automatically send a correction to the user from TryChangeBlockUser if the TypeToBuild is changed
--Add server access to all itemtype properties
+-Tweaked scroll sensitivity for the stockpile, crafting menu, science menu and crafting limits menu
+
+-Very large list of internal / mod related changes. Haven't kept it up to date.
