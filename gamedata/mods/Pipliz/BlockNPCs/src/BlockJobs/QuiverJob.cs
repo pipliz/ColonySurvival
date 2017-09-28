@@ -48,11 +48,11 @@ namespace Pipliz.BlockNPCs.Implementations
 				Vector3 targetPos = target.Position + Vector3.up;
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
-					if (Stockpile.GetStockPile(owner).TryRemove(BuiltinBlocks.Arrow)) {
+					if (Stockpile.GetStockPile(owner).TryRemove(BuiltinBlocks.BronzeArrow)) {
 						Arrow.New(npcPos, targetPos, Vector3.zero);
 						OverrideCooldown(5.0);
 					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, 1.5f, BuiltinBlocks.Arrow);
+						state.SetIndicator(NPCIndicatorType.MissingItem, 1.5f, BuiltinBlocks.BronzeArrow);
 						OverrideCooldown(1.5);
 					}
 				} else {

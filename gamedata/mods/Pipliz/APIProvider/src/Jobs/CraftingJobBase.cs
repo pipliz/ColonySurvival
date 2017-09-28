@@ -10,6 +10,7 @@ namespace Pipliz.APIProvider.Jobs
 		protected bool shouldTakeItems;
 		protected Recipe selectedRecipe;
 		protected int recipesToCraft;
+		protected bool wasCrafting;
 
 		public override JSONNode GetJSON ()
 		{
@@ -30,6 +31,10 @@ namespace Pipliz.APIProvider.Jobs
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			return this;
 		}
+
+		public virtual void OnStartCrafting () { wasCrafting = true; }
+
+		public virtual void OnStopCrafting () { wasCrafting = false; }
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
@@ -88,6 +93,9 @@ namespace Pipliz.APIProvider.Jobs
 						break;
 				}
 			}
+			if (wasCrafting) {
+				OnStopCrafting();
+			}
 		}
 
 		public override void OnNPCDoStockpile (ref NPCBase.NPCState state)
@@ -118,7 +126,16 @@ namespace Pipliz.APIProvider.Jobs
 
 		protected virtual void OnRecipeCrafted ()
 		{
+			if (!wasCrafting) {
+				OnStartCrafting();
+			}
+		}
 
+		protected override void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
+		{
+			if (oldGoal == NPCBase.NPCGoal.Job && wasCrafting) {
+				OnStopCrafting();
+			}
 		}
 
 		protected virtual string GetRecipeLocation ()

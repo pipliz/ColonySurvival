@@ -68,6 +68,9 @@ void AfterDefiningNPCTypes ()
 
 void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
 -Allows altering dict, to remove existing types (or add new JSONNode-based itemtypes)
++pipliz.blocknpcs.addlittypes
+--Adds the lit rotatable types like furnace/oven/bloomery/fineryforge/kiln through code.
+--They're not in types.json due to the length and repetitiveness of the child types (2x4 + 2, 2 parent types + 2 for lit/unlit * 4 for rotations)
 
 void AfterItemTypesDefined ()
 -Do things that require all itemtypes to be defined here. Loading recipes etc.
@@ -77,8 +80,6 @@ void AfterItemTypesDefined ()
 --Registers npc recipes to the APIPRovider RecipeManager
 +pipliz.apiprovider.registerrecipes
 --Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
-+pipliz.blocknpcs.registertypes
---Registers furnace/oven change types
 +pipliz.server.registercallbacks
 --Registers base game ItemTypesServer callbacks
 +pipliz.server.recipeplayerload
@@ -108,8 +109,9 @@ void AfterWorldLoad ()
 +pipliz.server.localization.convert
 --DependsOn pipliz.server.localization.waitforloading
 --Converts the json nodes into byte[] packages for networking.
---To add/change/remove localization:
---Edit the JSONNode in Server.Localization.Localization.LoadedTranslation in a callback inbetween the DependsOn and this
+--To add/change/remove localization, edit the desired JSONNode in Server.Localization.Localization.LoadedTranslation in a callback that has the following attributes:
+---[ModLoader.ModCallbackDependsOn("pipliz.server.localization.waitforloading")]
+---[ModLoader.ModCallbackProvidesFor("pipliz.server.localization.convert")]
 
 void AfterNetworkSetup ()
 -After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.

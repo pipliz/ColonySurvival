@@ -1,21 +1,19 @@
 [
 	{
-		"name" : "pipliz.smelter.ironingot",
-		"results" : [{"type":"ironingot"}],
-		"requires" : [{"type":"ironore","amount":3}],
-		"fuelPerCraft" : 0.2
+		"name" : "pipliz.smelter.bronzeingot",
+		"results" : [{"type":"bronzeingot"}],
+		"requires" : [{"type":"copper","amount":2},{"type":"tin"},{"type":"charcoal"}],
+		"defaultLimit" : 50
 	},
 	{
 		"name" : "pipliz.smelter.goldingot",
 		"results" : [{"type":"goldingot"}],
-		"requires" : [{"type":"goldore"}],
-		"fuelPerCraft" : 0.2
+		"requires" : [{"type":"goldore"},{"type":"charcoal"}]
 	},
 	{
 		"name" : "pipliz.smelter.bricks",
 		"results" : [{"type":"bricks","amount":3}],
-		"requires" : [{"type":"clay","amount":3}],
-		"defaultLimit" : 20,
-		"fuelPerCraft" : 0.2
+		"requires" : [{"type":"clay","amount":3},{"type":"charcoal"}],
+		"defaultLimit" : 20
 	}
 ]
