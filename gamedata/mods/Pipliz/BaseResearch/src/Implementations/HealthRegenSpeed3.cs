@@ -9,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public HealthRegenSpeed3 ()
 		{
 			key = "pipliz.baseresearch.healthregenspeed3";
-			icon = "baseresearch_healthregenspeed3.png";
+			icon = "gamedata/textures/icons/baseresearch_healthregenspeed3.png";
 			iterationCount = 50;
 			AddIterationRequirement("sciencebagbasic", 3);
 			AddIterationRequirement("sciencebaglife");

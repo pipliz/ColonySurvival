@@ -9,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public ScienceBagLife ()
 		{
 			key = "pipliz.baseresearch.sciencebaglife";
-			icon = "baseresearch_sciencebaglife.png";
+			icon = "gamedata/textures/icons/baseresearch_sciencebaglife.png";
 			iterationCount = 15;
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("bread");

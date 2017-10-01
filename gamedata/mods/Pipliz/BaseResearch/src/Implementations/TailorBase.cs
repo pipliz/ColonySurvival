@@ -1,6 +1,5 @@
 ﻿using Pipliz.APIProvider.Science;
 using Server.Science;
-using System.Collections.Generic;
 
 namespace Pipliz.BaseResearch.Implementations
 {
@@ -10,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public TailorBase ()
 		{
 			key = "pipliz.baseresearch.tailorbase";
-			icon = "baseresearch_tailorbase.png";
+			icon = "gamedata/textures/icons/baseresearch_tailorbase.png";
 			iterationCount = 15;
 			AddIterationRequirement("flax");
 		}

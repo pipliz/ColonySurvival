@@ -36,6 +36,25 @@ void AfterStartup ()
 void AfterSelectedWorld ()
 -First callback after the world to load has been determined.
 -The place to call ItemTypesServer.Register* methods
++pipliz.server.loadtexturemappingfile
+--Parses texture mapping file
++pipliz.server.registertexturemappingtextures
+--DependsOn pipliz.server.loadtexturemappingfile
+--Actually starts loading the texture files into the filetable
+--So removing/changing texture mappings (ItemTypesServer.TextureMappings) should be done inbetween this and the DependsOn
++pipliz.server.registernpctextures
+--Registers the hardcoded npc texture paths to load into the FileTable cache
++pipliz.server.registerwatertextures
+--Registers the hardcoded water texture paths to load into the FileTable cache
++pipliz.server.registeraudiofiles
+--Loads the gamedata/audio/audioFiles.json file.
+--To add custom audio description json's:
+---Make a callback inbetween registeraudiofiles and loadaudiofiles, where you add the jsonnode to the array jsonnode to ItemTypesServer.AudioFilesJSON
++pipliz.server.loadaudiofiles
+--DependsOn pipliz.server.registeraudiofiles
+--Registers the .ogg's from ItemTypesServer.AudioFilesJSON and creates the byte[] package to send to users
++pipliz.server.localization.startload
+--Starts loading the json files from disk
 
 void AfterDefiningNPCTypes ()
 -After the game has defined its default npc types.
@@ -47,8 +66,11 @@ void AfterDefiningNPCTypes ()
 +pipliz.apiprovider.jobs.resolvetypes
 --Registers NPCTypes to the base game, call BlockJobManagerTracker.Register before this
 
-void AfterAddingBaseTypes ()
--ItemTypes.IndexLookup loaded, The place to call ItemTypes.AddRawType() to add types.json nodes.
+void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
+-Allows altering dict, to remove existing types (or add new JSONNode-based itemtypes)
++pipliz.blocknpcs.addlittypes
+--Adds the lit rotatable types like furnace/oven/bloomery/fineryforge/kiln through code.
+--They're not in types.json due to the length and repetitiveness of the child types (2x4 + 2, 2 parent types + 2 for lit/unlit * 4 for rotations)
 
 void AfterItemTypesDefined ()
 -Do things that require all itemtypes to be defined here. Loading recipes etc.
@@ -58,16 +80,14 @@ void AfterItemTypesDefined ()
 --Registers npc recipes to the APIPRovider RecipeManager
 +pipliz.apiprovider.registerrecipes
 --Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
-+pipliz.blocknpcs.registertypes
---Registers furnace/oven change types
-
-void AfterItemTypesServer ()
--Place to override ItemTypesServer.Register* things from the base game.
--Builtin callback uses:
++pipliz.server.registercallbacks
+--Registers base game ItemTypesServer callbacks
 +pipliz.server.recipeplayerload
 --Loads recipes from "gamedata/crafting.json"
 +pipliz.server.loadnpctypes
 --Loads NPCTypes from "gamedata/npctypes.json"
++pipliz.server.terraingenerator.setdefault
+--Sets the default terrain generator
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -84,6 +104,14 @@ void AfterWorldLoad ()
 --Loads the registered blockjobs from the savegame, if any exist
 +pipliz.server.monsterspawnregister
 --Registers the default monster spawner to MonsterTracker.MonsterSpawner
++pipliz.server.localization.waitforloading
+--Waits to ensure the files in Server.Localization.LoadedTranslation are fully loaded
++pipliz.server.localization.convert
+--DependsOn pipliz.server.localization.waitforloading
+--Converts the json nodes into byte[] packages for networking.
+--To add/change/remove localization, edit the desired JSONNode in Server.Localization.Localization.LoadedTranslation in a callback that has the following attributes:
+---[ModLoader.ModCallbackDependsOn("pipliz.server.localization.waitforloading")]
+---[ModLoader.ModCallbackProvidesFor("pipliz.server.localization.convert")]
 
 void AfterNetworkSetup ()
 -After the NetworkWrapper class is loaded, ready to send data. Can take a few seconds for steam servers - it's after port forwarding etc is done on another thread.
@@ -131,6 +159,13 @@ void OnPlayerConnectedLate (Player p)
 --Queues a send to the player, to set initial science state
 +pipliz.server.sendnpctypes
 --Sends the npctypes packet
++pipliz.server.sendaudiomapping
+--Sends the audio description json (ItemTypes.AudioFilesJSON)
++pipliz.server.meshedobjects.sendtable
+--Sends the meshed objects table
++pipliz.server.terraingenerator.startsendingbiomedata
+--Starts sending biome data to the player (for ambient audio mainly)
+--Calls ITerrainGenerator.StartSendingBiomeData on the active terrain generator.
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.
@@ -183,6 +218,14 @@ void OnPlayerRespawn (Players.Player p)
 +pipliz.server.onplayerrespawn
 --Teleports player to their base, sets health to starting health, prints respawn to log
 
+void OnItemTypeRegistered (ItemTypes.ItemType type)
+-Called when a resolved type is registered to ItemTypes
++pipliz.server.itemtypesserver
+--Parses server specific things of itemtypes:
+---Registers the parents of types for use with itemtype actions
+---Adds icons from types to the FileTable cache
+---Adds meshes from types to the FileTable cache
+
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 
 void OnSavedRegionToDisk ()
@@ -196,24 +239,6 @@ void OnSavedChunkToRegion ()
 
 void OnLoadedChunkFromRegion ()
 -A chunk is filled from a region in memory. The chunk is locked for writing data.
-
-
-Misc:
-
-bool OnTerrainGeneratorBase(Chunk chunk)
--Called from the base terrain generation thread (be careful).
--Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
--Passed chunk is already locked for writing data.
--Use chunk.SetTypeAtSilently to set data
--There are no guarantees about neighbouring chunks existing / being filled
-
-bool OnTerrainGeneratorStructures(Chunk chunk)
--Called from the structures terrain generation thread (be careful).
--Return true to continue with the normal terrain generation after this. Return false if this replaces the normal terrain generation.
--Passed chunk is already locked for writing data.
--Use chunk.SetTypeAtSilently to set data
--There are no guarantees about neighbouring chunks existing / being filled
--A chunk will always have generated the base terrain first
 
 
 Player Temporary values:
