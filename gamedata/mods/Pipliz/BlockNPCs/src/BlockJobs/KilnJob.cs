@@ -24,7 +24,7 @@ namespace Pipliz.BlockNPCs.Implementations
 			} else if (blockType == BuiltinBlocks.KilnZN) {
 				return position.Add(0, 0, -1);
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
+				World.TryGetTypeAt(position, out blockType);
 				return position;
 			}
 		}

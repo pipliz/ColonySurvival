@@ -27,10 +27,32 @@ namespace Pipliz.BlockNPCs.Implementations
 			} else if (blockType == BuiltinBlocks.BloomeryZN) {
 				litType = BuiltinBlocks.BloomeryLitZN;
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
+				World.TryGetTypeAt(position, out blockType);
 				return;
 			}
+			blockType = litType;
 			ServerManager.TryChangeBlock(position, litType);
+		}
+
+		public override void OnStopCrafting ()
+		{
+			base.OnStopCrafting();
+
+			ushort unLitType;
+			if (blockType == BuiltinBlocks.BloomeryLitXP) {
+				unLitType = BuiltinBlocks.BloomeryXP;
+			} else if (blockType == BuiltinBlocks.BloomeryLitXN) {
+				unLitType = BuiltinBlocks.BloomeryXN;
+			} else if (blockType == BuiltinBlocks.BloomeryLitZP) {
+				unLitType = BuiltinBlocks.BloomeryZP;
+			} else if (blockType == BuiltinBlocks.BloomeryLitZN) {
+				unLitType = BuiltinBlocks.BloomeryZN;
+			} else {
+				World.TryGetTypeAt(position, out blockType);
+				return;
+			}
+			blockType = unLitType;
+			ServerManager.TryChangeBlock(position, unLitType);
 		}
 
 		public override Vector3Int GetPositionNPC (Vector3Int position)

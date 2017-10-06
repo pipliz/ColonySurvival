@@ -65,6 +65,9 @@ namespace Pipliz.APIProvider.Jobs
 						shouldTakeItems = true;
 					}
 					OverrideCooldown(0.1);
+					if (wasCrafting) {
+						OnStopCrafting();
+					}
 				}
 			} else {
 				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
@@ -92,9 +95,9 @@ namespace Pipliz.APIProvider.Jobs
 						OverrideCooldown(0.5);
 						break;
 				}
-			}
-			if (wasCrafting) {
-				OnStopCrafting();
+				if (wasCrafting) {
+					OnStopCrafting();
+				}
 			}
 		}
 
