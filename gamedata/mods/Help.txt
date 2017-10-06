@@ -32,6 +32,8 @@ void AfterModsLoaded (List<ModLoader.ModAssembly> list)
 
 void AfterStartup ()
 -Called at the end of the startup code.
++pipliz.server.ai.aimanager.startthread
+--Starts AI precalculation thread
 
 void AfterSelectedWorld ()
 -First callback after the world to load has been determined.
@@ -88,6 +90,18 @@ void AfterItemTypesDefined ()
 --Loads NPCTypes from "gamedata/npctypes.json"
 +pipliz.server.terraingenerator.setdefault
 --Sets the default terrain generator
++pipliz.server.loadberryareajobs
++pipliz.server.loadwheatfarmerareajobs
++pipliz.server.loadflaxfarmerareajobs
++pipliz.server.loadforesterareajobs
++pipliz.server.loadminerareajobs
++pipliz.server.loadbanners
++pipliz.server.loadbedblocks
++pipliz.server.loadstockpileblocks
+--All of the above have [DependsOn("pipliz.server.loadplayers")], as they store things by player keys
+--Load various tracked blocks
++pipliz.server.loadplayers
+--Loads the player save files (stockpile, inventory, position)
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -104,6 +118,8 @@ void AfterWorldLoad ()
 --Loads the registered blockjobs from the savegame, if any exist
 +pipliz.server.monsterspawnregister
 --Registers the default monster spawner to MonsterTracker.MonsterSpawner
++pipliz.server.ai.aimanager.defaultpathfinder
+--Sets the Server.AI.AIManager.PathFinder instances to the DefaultPathFinder.
 +pipliz.server.localization.waitforloading
 --Waits to ensure the files in Server.Localization.LoadedTranslation are fully loaded
 +pipliz.server.localization.convert
@@ -199,6 +215,17 @@ void OnQuitEarly ()
 
 void OnQuit ()
 -General.Application.OnQuit @ 0, after connected players are disconnected, various things saving at the same timepipliz.apiprovider.registerrecipes
++pipliz.server.ai.aimanager.quitthread
+--Pokes the AI precalculation thread from sleeping so it can quit
++pipliz.server.saveberryareajobs
++pipliz.server.savewheatfarmerareajobs
++pipliz.server.saveflaxfarmerareajobs
++pipliz.server.saveforesterareajobs
++pipliz.server.saveminerareajobs
++pipliz.server.savebanners
++pipliz.server.savebedblocks
++pipliz.server.savestockpileblocks
+--Save various tracked blocks
 
 void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened
