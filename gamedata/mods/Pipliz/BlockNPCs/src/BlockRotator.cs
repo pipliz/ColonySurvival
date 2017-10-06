@@ -238,11 +238,11 @@ namespace Pipliz.BlockNPCs
 						.SetAs("icon", "gamedata/textures/icons/bloomery.png")
 						.SetAs("onPlaceAudio", "stonePlace")
 						.SetAs("onRemoveAudio", "stoneDelete")
-						.SetAs("sideall", "stonebricks")
+						.SetAs("sideall", "bricks")
 						.SetAs("destructionTime", 800)
 					),
-					"stonebricks",
-					"stonebricks",
+					"bricks",
+					"bricks",
 					"bloomerylit",
 					"bloomery"
 				),
