@@ -48,7 +48,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void ResolveRegisteredTypes ()
 		{
 			foreach (var pair in RegisteredTypes) {
-				pair.Value.Invoke(pair.Key);
+				try {
+					pair.Value.Invoke(pair.Key);
+				} catch (Exception e) {
+					Log.WriteException("Error resolving blockjob {0}:", e, pair.Key);
+				}
 			}
 		}
 
@@ -71,7 +75,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void RegisterCallback ()
 		{
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].RegisterCallback();
+				try {
+					InstanceList[i].RegisterCallback();
+				} catch (Exception e) {
+					Log.WriteException("Error registering APIProvider callbacks of blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -81,7 +89,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Load ()
 		{
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].Load();
+				try {
+					InstanceList[i].Load();
+				} catch (Exception e) {
+					Log.WriteException("Error loading APIProvider blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -91,7 +103,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Save ()
 		{
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].OnSave();
+				try {
+					InstanceList[i].OnSave();
+				} catch (Exception e) {
+					Log.WriteException("Error saving APIProvider blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -101,6 +117,7 @@ namespace Pipliz.APIProvider.Jobs
 		public static void RegisterRecipes ()
 		{
 			for (int i = 0; i < LimitsProviders.Count; i++) {
+				try {
 				var recipeLimitsProvider = LimitsProviders[i].Value;
 				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
 				if (list != null) {
@@ -113,6 +130,9 @@ namespace Pipliz.APIProvider.Jobs
 							RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
 						}
 					}
+					}
+				} catch (Exception e) {
+					Log.WriteException("Error registering recipes for blockjob {0}:", e, LimitsProviders[i].ToString());
 				}
 			}
 		}
