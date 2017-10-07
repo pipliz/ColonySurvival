@@ -2,13 +2,12 @@
 {
 	public class BlockJobManager<T> : IBlockJobManager where T : IBlockJobBase, ITrackableBlock, new()
 	{
-		BlockTracker tracker;
+		BlockTracker<T> tracker;
 		string blockName;
 
 		public BlockJobManager (string blockName)
 		{
 			this.blockName = blockName;
-			tracker = new BlockTracker(blockName);
 		}
 
 		public void RegisterCallback ()
@@ -19,7 +18,7 @@
 
 		public void Load ()
 		{
-			tracker.Load<T>();
+			tracker = new BlockTracker<T>(blockName);
 		}
 
 		public void OnSave ()
@@ -34,7 +33,7 @@
 
 		void OnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
-			tracker.Add(new T().InitializeOnAdd(position, type, player));
+			tracker.Add((T)new T().InitializeOnAdd(position, type, player));
 		}
 	}
 }

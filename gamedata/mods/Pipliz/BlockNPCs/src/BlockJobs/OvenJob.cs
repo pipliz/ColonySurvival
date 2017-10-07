@@ -26,9 +26,32 @@ namespace Pipliz.BlockNPCs.Implementations
 			} else if (blockType == BuiltinBlocks.OvenZN) {
 				litType = BuiltinBlocks.OvenLitZN;
 			} else {
+				World.TryGetTypeAt(position, out blockType);
 				return;
 			}
+			blockType = litType;
 			ServerManager.TryChangeBlock(position, litType);
+		}
+
+		public override void OnStopCrafting ()
+		{
+			base.OnStopCrafting();
+
+			ushort unLitType;
+			if (blockType == BuiltinBlocks.OvenLitXP) {
+				unLitType = BuiltinBlocks.OvenXP;
+			} else if (blockType == BuiltinBlocks.OvenLitXN) {
+				unLitType = BuiltinBlocks.OvenXN;
+			} else if (blockType == BuiltinBlocks.OvenLitZP) {
+				unLitType = BuiltinBlocks.OvenZP;
+			} else if (blockType == BuiltinBlocks.OvenLitZN) {
+				unLitType = BuiltinBlocks.OvenZN;
+			} else {
+				World.TryGetTypeAt(position, out blockType);
+				return;
+			}
+			blockType = unLitType;
+			ServerManager.TryChangeBlock(position, unLitType);
 		}
 
 		public override Vector3Int GetPositionNPC (Vector3Int position)

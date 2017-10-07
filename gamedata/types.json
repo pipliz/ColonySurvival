@@ -80,7 +80,8 @@
 		"icon" : "gamedata/textures/icons/bronzeanvil.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "SELF"
+		"sideall" : "stonebricks",
+		"sidey+" : "bronzeanvil"
 	},
 	"carpetblue" : {
 		"parentType" : "carpet",
@@ -464,11 +465,11 @@
 				"a" : {
 					"volume" : 0.5,
 					"intensity" : 12.5,
-					"range" : 16.0,
+					"range" : 16,
 					"red" : 195.0,
 					"green" : 135.0,
 					"blue" : 46.0,
-					"offsety" : 0.16
+					"offsety" : -0.08
 				}
 			}
 		}
@@ -481,11 +482,12 @@
 				"a" : {
 					"volume" : 0.5,
 					"intensity" : 12.5,
-					"range" : 16.0,
+					"range" : 16,
 					"red" : 195.0,
 					"green" : 135.0,
 					"blue" : 46.0,
-					"offsety" : 0.3
+					"offsety" : 0.18,
+					"offsetx" : -0.25
 				}
 			}
 		}
@@ -498,11 +500,12 @@
 				"a" : {
 					"volume" : 0.5,
 					"intensity" : 12.5,
-					"range" : 16.0,
+					"range" : 16,
 					"red" : 195.0,
 					"green" : 135.0,
 					"blue" : 46.0,
-					"offsety" : 0.3
+					"offsety" : 0.18,
+					"offsetx" : 0.25
 				}
 			}
 		}
@@ -515,11 +518,12 @@
 				"a" : {
 					"volume" : 0.5,
 					"intensity" : 12.5,
-					"range" : 16.0,
+					"range" : 16,
 					"red" : 195.0,
 					"green" : 135.0,
 					"blue" : 46.0,
-					"offsety" : 0.3
+					"offsety" : 0.18,
+					"offsetz" : 0.25
 				}
 			}
 		}
@@ -532,11 +536,12 @@
 				"a" : {
 					"volume" : 0.5,
 					"intensity" : 12.5,
-					"range" : 16.0,
+					"range" : 16,
 					"red" : 195.0,
 					"green" : 135.0,
 					"blue" : 46.0,
-					"offsety" : 0.3
+					"offsety" : 0.18,
+					"offsetz" : -0.25
 				}
 			}
 		}
@@ -1038,6 +1043,14 @@
 		"icon" : "gamedata/textures/icons/sciencebagmilitary.png",
 		"isPlaceable" : false
 	},
+	"sciencebagadvanced" : {
+		"icon" : "gamedata/textures/icons/sciencebagadvanced.png",
+		"isPlaceable" : false
+	},
+	"sciencebagcolony" : {
+		"icon" : "gamedata/textures/icons/sciencebagcolony.png",
+		"isPlaceable" : false
+	},
 	"silveringot" : {
 		"icon" : "gamedata/textures/icons/silveringot.png",
 		"isPlaceable" : false
@@ -1048,7 +1061,7 @@
 	},
 	"slingbullet" : {
 		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/sling.png"
+		"icon" : "gamedata/textures/icons/slingbullet.png"
 	},
 	"steelingot" : {
 		"icon" : "gamedata/textures/icons/steelingot.png",

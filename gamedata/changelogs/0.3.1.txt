@@ -50,6 +50,9 @@
 --Made technologist unlockable
 --Made life science bags unlockable
 
+-Fixed an issue with non-ASCII paths ("Program Dosyaları" specifically) breaking the game.
+-Fixed multiple issues related to pathfinding making inefficient routing
+-Fixed torches and other non-solid blocks 2 blocks above the base layer blocking field creation
 -Fixed colonists only eating from bread if there's enough of it. Now it'll balance between food types (trying to keep total food value equal between stacks)
 -Fixed an issue with recipe limits being shared for all recipes with the same outcome (i.e, taiga logs -> planks & temperate logs -> planks)
 -Fixed an issue where the game would not properly use it's gamedata directory if launched from with a non-standard working directory
@@ -61,6 +64,7 @@
 
 -Moved nearly all gamedata files to the server, to allow for a better modded server experience. (no need for clients to install files)
 --This includes audio, localization, meshes, textures, icons, npc textures, water textures
+-Optimized pathfinding, it now runs about 3-4 times as fast (while being better).
 -Optimized the chunk updater, significantly reducing the performance cost of active chunks
 --Active chunks are checked a lot less when they're active due to a banner
 --Autosaving checks are now seperate from unloading checks

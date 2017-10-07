@@ -27,10 +27,32 @@ namespace Pipliz.BlockNPCs.Implementations
 			} else if (blockType == BuiltinBlocks.FurnaceZN) {
 				litType = BuiltinBlocks.FurnaceLitZN;
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
+				World.TryGetTypeAt(position, out blockType);
 				return;
 			}
+			blockType = litType;
 			ServerManager.TryChangeBlock(position, litType);
+		}
+
+		public override void OnStopCrafting ()
+		{
+			base.OnStopCrafting();
+
+			ushort unLitType;
+			if (blockType == BuiltinBlocks.FurnaceLitXP) {
+				unLitType = BuiltinBlocks.FurnaceXP;
+			} else if (blockType == BuiltinBlocks.FurnaceLitXN) {
+				unLitType = BuiltinBlocks.FurnaceXN;
+			} else if (blockType == BuiltinBlocks.FurnaceLitZP) {
+				unLitType = BuiltinBlocks.FurnaceZP;
+			} else if (blockType == BuiltinBlocks.FurnaceLitZN) {
+				unLitType = BuiltinBlocks.FurnaceZN;
+			} else {
+				World.TryGetTypeAt(position, out blockType);
+				return;
+			}
+			blockType = unLitType;
+			ServerManager.TryChangeBlock(position, unLitType);
 		}
 
 		public override Vector3Int GetPositionNPC (Vector3Int position)

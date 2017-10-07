@@ -178,7 +178,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("a", new JSONNode()
 							.SetAs("volume", 0.3f)
 							.SetAs("intensity", 2.5f)
-							.SetAs("range", 8f)
+							.SetAs("range", 8)
 							.SetAs("red", 195f)
 							.SetAs("green", 135f)
 							.SetAs("blue", 46f)
@@ -189,7 +189,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("b", new JSONNode()
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 1f)
-							.SetAs("range", 8f)
+							.SetAs("range", 8)
 							.SetAs("red", 195f)
 							.SetAs("green", 135f)
 							.SetAs("blue", 46f)
@@ -220,7 +220,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("a", new JSONNode()
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
-							.SetAs("range", 8f)
+							.SetAs("range", 8)
 							.SetAs("red", 195f)
 							.SetAs("green", 135f)
 							.SetAs("blue", 46f)
@@ -238,11 +238,11 @@ namespace Pipliz.BlockNPCs
 						.SetAs("icon", "gamedata/textures/icons/bloomery.png")
 						.SetAs("onPlaceAudio", "stonePlace")
 						.SetAs("onRemoveAudio", "stoneDelete")
-						.SetAs("sideall", "stonebricks")
+						.SetAs("sideall", "bricks")
 						.SetAs("destructionTime", 800)
 					),
-					"stonebricks",
-					"stonebricks",
+					"bricks",
+					"bricks",
 					"bloomerylit",
 					"bloomery"
 				),
@@ -251,7 +251,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("a", new JSONNode()
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
-							.SetAs("range", 8f)
+							.SetAs("range", 8)
 							.SetAs("red", 195f)
 							.SetAs("green", 135f)
 							.SetAs("blue", 46f)
@@ -282,7 +282,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("a", new JSONNode()
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
-							.SetAs("range", 8f)
+							.SetAs("range", 8)
 							.SetAs("red", 195f)
 							.SetAs("green", 135f)
 							.SetAs("blue", 46f)
