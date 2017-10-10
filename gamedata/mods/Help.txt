@@ -90,18 +90,23 @@ void AfterItemTypesDefined ()
 --Loads NPCTypes from "gamedata/npctypes.json"
 +pipliz.server.terraingenerator.setdefault
 --Sets the default terrain generator
++pipliz.server.loadplayers
+--Loads the player save files (stockpile, inventory, position)
++pipliz.server.loadbanners
+--[DependsOn("pipliz.server.loadplayers")]
+--Loads banners
++pipliz.server.loadnpcs
+--[DependsOn("pipliz.server.loadbanners")]
+--Loads the saved npc's
 +pipliz.server.loadberryareajobs
 +pipliz.server.loadwheatfarmerareajobs
 +pipliz.server.loadflaxfarmerareajobs
 +pipliz.server.loadforesterareajobs
 +pipliz.server.loadminerareajobs
-+pipliz.server.loadbanners
 +pipliz.server.loadbedblocks
 +pipliz.server.loadstockpileblocks
---All of the above have [DependsOn("pipliz.server.loadplayers")], as they store things by player keys
+--All of the above have [DependsOn("pipliz.server.loadnpcs")] (they deal with npc's or need banners/players loaded)
 --Load various tracked blocks
-+pipliz.server.loadplayers
---Loads the player save files (stockpile, inventory, position)
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -226,6 +231,8 @@ void OnQuit ()
 +pipliz.server.savebedblocks
 +pipliz.server.savestockpileblocks
 --Save various tracked blocks
++pipliz.server.savenpc
+--Saves npc's
 
 void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened

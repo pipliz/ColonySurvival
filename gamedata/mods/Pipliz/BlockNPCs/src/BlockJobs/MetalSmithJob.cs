@@ -17,9 +17,15 @@ namespace Pipliz.BlockNPCs.Implementations
 			{
 				keyName = NPCTypeKey,
 				printName = "Metal smith",
-				maskColor1 = new UnityEngine.Color32(255, 0, 255, 255),
+				maskColor1 = new UnityEngine.Color32(170, 77, 13, 255),
 				type = NPCTypeID.GetNextID()
 			};
+		}
+
+		protected override void OnRecipeCrafted ()
+		{
+			base.OnRecipeCrafted();
+			ServerManager.SendAudio(position.Vector, "anvil");
 		}
 
 		protected override string GetRecipeLocation ()

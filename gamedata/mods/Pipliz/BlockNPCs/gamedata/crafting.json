@@ -12,16 +12,22 @@
 		"defaultLimit" : 5
 	},
 	{
+		"name" : "pipliz.crafter.firewood",
+		"results" : [{"type":"firewood","amount":6}],
+		"requires" : [{"type":"planks"}],
+		"defaultLimit" : 20
+	},
+	{
 		"name" : "pipliz.crafter.slingbullet",
 		"results":[{"type":"slingbullet","amount":10}],
 		"requires":[{"type":"stonebricks"}],
-		"defaultLimit" : 150
+		"defaultLimit" : 20
 	},
 	{
 		"name" : "pipliz.crafter.coppernails",
 		"results":[{"type":"coppernails","amount":3}],
 		"requires":[{"type":"copper"}],
-		"defaultLimit" : 25
+		"defaultLimit" : 15
 	},
 	{
 		"name" : "pipliz.crafter.copperparts",
@@ -51,6 +57,12 @@
 		"name" : "pipliz.crafter.quiver",
 		"results":[{"amount":2,"type":"quiver"}],
 		"requires":[{"type":"planks"}],
+		"defaultLimit" : 3
+	},
+	{
+		"name" : "pipliz.crafter.splittingstump",
+		"results":[{"type":"splittingstump"}],
+		"requires":[{"type":"planks"},{"type":"bronzeaxe"}],
 		"defaultLimit" : 3
 	},
 	{
@@ -87,19 +99,19 @@
 		"name" : "pipliz.crafter.plankstemperate",
 		"results": [{"amount":4, "type":"planks"}],
 		"requires":[{"type":"logtemperate"}],
-		"defaultLimit" : 30
+		"defaultLimit" : 10
 	},
 	{
 		"name" : "pipliz.crafter.plankstaiga",
 		"results":[{"amount":4,"type":"planks"}],
 		"requires":[{"type":"logtaiga"}],
-		"defaultLimit" : 30
+		"defaultLimit" : 10
 	},
 	{
 		"name" : "pipliz.crafter.torch",
 		"results":[{"amount":3,"type":"torch"}],
-		"requires":[{"type":"planks"},{"type":"coalore"}],
-		"defaultLimit" : 10
+		"requires":[{"type":"planks"},{"type":"charcoal"},{"type":"copperparts"},{"type":"coppernails","amount":2}],
+		"defaultLimit" : 4
 	},
 	{
 		"name" : "pipliz.crafter.workbench",
