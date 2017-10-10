@@ -52,10 +52,12 @@ namespace Pipliz.APIProvider.Jobs
 			this.position = position;
 			this.owner = owner;
 
-			if (desiredNPCID != 0 && NPCTracker.TryGetNPC(desiredNPCID, out usedNPC)) {
-				usedNPC.TakeJob(this);
-			} else {
-				desiredNPCID = 0;
+			if (desiredNPCID != 0) {
+				if (NPCTracker.TryGetNPC(desiredNPCID, out usedNPC)) {
+					usedNPC.TakeJob(this);
+				} else {
+					Log.WriteWarning("Failed to find npc ID {0}", desiredNPCID);
+				}
 			}
 			if (usedNPC == null) {
 				JobTracker.Add(this);

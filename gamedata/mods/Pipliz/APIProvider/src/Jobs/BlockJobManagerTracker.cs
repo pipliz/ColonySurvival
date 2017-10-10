@@ -102,6 +102,9 @@ namespace Pipliz.APIProvider.Jobs
 		/// </summary>
 		public static void Save ()
 		{
+			if (ServerManager.WorldName == null) {
+				return;
+			}
 			for (int i = 0; i < InstanceList.Count; i++) {
 				try {
 					InstanceList[i].OnSave();
