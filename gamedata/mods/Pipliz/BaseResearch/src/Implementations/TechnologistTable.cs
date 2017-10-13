@@ -4,15 +4,17 @@ using Server.Science;
 namespace Pipliz.BaseResearch.Implementations
 {
 	[AutoLoadedResearchable]
-	public class TechnologistBase : BaseResearchable
+	public class TechnologistTable : BaseResearchable
 	{
-		public TechnologistBase ()
+		public TechnologistTable ()
 		{
-			key = "pipliz.baseresearch.technologistbase";
-			icon = "gamedata/textures/icons/baseresearch_technologistbase.png";
-			iterationCount = 15;
-			AddIterationRequirement("linenbag");
-			AddDependency("pipliz.baseresearch.tailorbase");
+			key = "pipliz.baseresearch.technologisttable";
+			icon = "gamedata/textures/icons/technologisttable.png";
+			iterationCount = 3;
+			AddIterationRequirement("coatedplanks");
+			AddIterationRequirement("bronzeplate", 2);
+			AddIterationRequirement("coppernails");
+			AddDependency("pipliz.baseresearch.tailorshop");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)

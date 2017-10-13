@@ -4,14 +4,17 @@ using Server.Science;
 namespace Pipliz.BaseResearch.Implementations
 {
 	[AutoLoadedResearchable]
-	public class TailorBase : BaseResearchable
+	public class TailorShop : BaseResearchable
 	{
-		public TailorBase ()
+		public TailorShop ()
 		{
-			key = "pipliz.baseresearch.tailorbase";
-			icon = "gamedata/textures/icons/baseresearch_tailorbase.png";
-			iterationCount = 15;
+			key = "pipliz.baseresearch.tailorshop";
+			icon = "gamedata/textures/icons/tailorshop.png";
+			iterationCount = 3;
+			AddIterationRequirement("coatedplanks");
 			AddIterationRequirement("flax");
+			AddIterationRequirement("coppertools");
+			AddDependency("pipliz.baseresearch.bronzeanvil");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)

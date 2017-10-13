@@ -173,7 +173,12 @@
 			{
 				"type" : "flaxstage1",
 				"amount" : 1,
-				"chance" : 1.1
+				"chance" : 1
+			},
+			{
+				"type" : "flaxstage1",
+				"amount" : 1,
+				"chance" : 0.1
 			},
 			{
 				"type" : "flax",
@@ -293,7 +298,8 @@
 		"icon" : "gamedata/textures/icons/gunsmithshop.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "SELF"
+		"sideall" : "ironblock",
+		"sidey+" : "gunsmithshop"
 	},
 	"ironblock" : {
 		"sideall" : "SELF",

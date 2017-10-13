@@ -17,7 +17,7 @@ namespace Pipliz.BlockNPCs.Implementations
 			{
 				keyName = NPCTypeKey,
 				printName = "Gun smith",
-				maskColor1 = new UnityEngine.Color32(255, 0, 255, 255),
+				maskColor1 = new UnityEngine.Color32(89, 64, 46, 255),
 				type = NPCTypeID.GetNextID()
 			};
 		}
