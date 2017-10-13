@@ -9,12 +9,13 @@ namespace Pipliz.BaseResearch.Implementations
 		public ScienceBagLife ()
 		{
 			key = "pipliz.baseresearch.sciencebaglife";
-			icon = "gamedata/textures/icons/baseresearch_sciencebaglife.png";
-			iterationCount = 15;
-			AddIterationRequirement("sciencebagbasic");
-			AddIterationRequirement("bread");
-			AddIterationRequirement("berry");
-			AddDependency("pipliz.baseresearch.technologistbase");
+			icon = "gamedata/textures/icons/sciencebaglife.png";
+			iterationCount = 3;
+			AddIterationRequirement("flour");
+			AddIterationRequirement("berry", 5);
+			AddIterationRequirement("clothing");
+			AddIterationRequirement("linenbag");
+			AddDependency("pipliz.baseresearch.technologisttable");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)

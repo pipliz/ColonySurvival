@@ -86,7 +86,8 @@ namespace Pipliz.BlockNPCs.Implementations
 						for (int i = 0; i < requirements.Count; i++) {
 							ushort type = requirements[i].Type;
 							if (type == BuiltinBlocks.ScienceBagLife
-								|| type == BuiltinBlocks.ScienceBagBasic) {
+								|| type == BuiltinBlocks.ScienceBagBasic
+								|| type == BuiltinBlocks.ScienceBagMilitary) {
 								recycled += requirements[i].Amount;
 							}
 						}

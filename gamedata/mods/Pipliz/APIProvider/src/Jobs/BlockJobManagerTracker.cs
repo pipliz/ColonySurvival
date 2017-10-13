@@ -121,18 +121,18 @@ namespace Pipliz.APIProvider.Jobs
 		{
 			for (int i = 0; i < LimitsProviders.Count; i++) {
 				try {
-				var recipeLimitsProvider = LimitsProviders[i].Value;
-				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
-				if (list != null) {
-					RecipeStorage.AddDefaultLimitTypeRecipe(recipeLimitsProvider.GetCraftingLimitsType(), list);
-					var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
-					if (triggers == null) {
-						RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
-					} else {
-						for (int i2 = 0; i2 < triggers.Count; i2++) {
-							RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
+					var recipeLimitsProvider = LimitsProviders[i].Value;
+					var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
+					if (list != null) {
+						RecipeStorage.AddLimitTypeRecipes(recipeLimitsProvider.GetCraftingLimitsType(), list);
+						var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
+						if (triggers == null) {
+							RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
+						} else {
+							for (int i2 = 0; i2 < triggers.Count; i2++) {
+								RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
+							}
 						}
-					}
 					}
 				} catch (Exception e) {
 					Log.WriteException("Error registering recipes for blockjob {0}:", e, LimitsProviders[i].ToString());

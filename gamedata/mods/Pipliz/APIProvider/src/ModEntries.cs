@@ -29,13 +29,14 @@ namespace Pipliz.APIProvider
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.apiprovider.jobs.resolvetypes")]
 		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")]
+		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.registerrecipes")]
 		public static void AfterDefiningNPCTypes ()
 		{
 			Jobs.BlockJobManagerTracker.ResolveRegisteredTypes();
 		}
 
 		[ModLoader.ModCallback (ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.apiprovider.registerrecipes")]
-		[ModLoader.ModCallbackDependsOn("pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModCallbackProvidesFor("pipliz.server.loadresearchables")]
 		public static void AfterItemTypesDefined ()
 		{
 			Jobs.BlockJobManagerTracker.RegisterRecipes();

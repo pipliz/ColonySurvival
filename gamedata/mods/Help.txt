@@ -75,38 +75,61 @@ void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict
 --They're not in types.json due to the length and repetitiveness of the child types (2x4 + 2, 2 parent types + 2 for lit/unlit * 4 for rotations)
 
 void AfterItemTypesDefined ()
--Do things that require all itemtypes to be defined here. Loading recipes etc.
--Builtin callback uses:
-+pipliz.blocknpcs.loadrecipes
---ProvidesFor pipliz.apiprovider.registerrecipes
---Registers npc recipes to the APIPRovider RecipeManager
-+pipliz.apiprovider.registerrecipes
---Registers recipe limits (i.e, non-player client side crafting interface) from registered block jobs.
-+pipliz.server.registercallbacks
---Registers base game ItemTypesServer callbacks
-+pipliz.server.recipeplayerload
---Loads recipes from "gamedata/crafting.json"
-+pipliz.server.loadnpctypes
---Loads NPCTypes from "gamedata/npctypes.json"
-+pipliz.server.terraingenerator.setdefault
---Sets the default terrain generator
-+pipliz.server.loadplayers
---Loads the player save files (stockpile, inventory, position)
-+pipliz.server.loadbanners
---[DependsOn("pipliz.server.loadplayers")]
---Loads banners
-+pipliz.server.loadnpcs
---[DependsOn("pipliz.server.loadbanners")]
---Loads the saved npc's
-+pipliz.server.loadberryareajobs
-+pipliz.server.loadwheatfarmerareajobs
-+pipliz.server.loadflaxfarmerareajobs
-+pipliz.server.loadforesterareajobs
-+pipliz.server.loadminerareajobs
-+pipliz.server.loadbedblocks
-+pipliz.server.loadstockpileblocks
---All of the above have [DependsOn("pipliz.server.loadnpcs")] (they deal with npc's or need banners/players loaded)
---Load various tracked blocks
+Do things that require all itemtypes to be defined here. Loading recipes etc.
+Builtin callback uses:
+  pipliz.server.registercallbacks
+    Registers base game ItemTypesServer callbacks
+  pipliz.server.terraingenerator.setdefault
+    Sets the default terrain generator
+  pipliz.server.blackandwhitelistingreload
+    Loads the whitelist & blacklist files
+  pipliz.server.loadpermissions
+    Loads the permissions files
+  pipliz.server.loadtimecycle
+    Loads the time into the timecycle class
+  pipliz.server.loadupdatableblocks
+    Loads the various updatable blocks (wheat, saplings, flax)
+  pipliz.server.loadwater
+    Loads the tracked water blocks (for updates)
+
+
+  pipliz.blocknpcs.registerjobs
+    [ProvidesFor("pipliz.apiprovider.jobs.resolvetypes")] -> registers jobs to the apiprovider to resolve
+    Registers npc recipes to the APIPRovider RecipeManager
+  pipliz.server.loadnpctypes
+	[ProvidesFor("pipliz.server.loadnpcs")] -> npc's need the npc types
+    Loads NPCTypes from "gamedata/npctypes.json"
+  pipliz.apiprovider.jobs.resolvetypes
+    [DependsOn("pipliz.server.loadnpctypes")] -> Wait for base game to add npc types first, to allow overriding
+	[ProvidesFor("pipliz.apiprovider.registerrecipes")] -> Checks the job types for recipes, adds those to a list for registerrecipes
+	Inserts the registered jobs' npctypes into the game
+  pipliz.apiprovider.registerrecipes
+    [ProvidesFor("pipliz.server.loadresearchables")]
+    Inserts the registered jobs' crafting recipes into the game
+  pipliz.server.recipeplayerload
+    [ProvidesFor("pipliz.server.loadresearchables")] -> researchables may try unlocking these recipes
+    Loads recipes from "gamedata/crafting.json"
+  pipliz.server.loadresearchables
+    [ProvidesFor("pipliz.server.loadplayers")] -> as player savegames contain research progress (which references researchables)
+    Loads the researchables
+  pipliz.server.loadplayers
+    Loads the player save files (stockpile, inventory, position)
+  pipliz.server.loadbanners
+    [DependsOn("pipliz.server.loadplayers")] -> banners store per player
+    Loads banners
+  pipliz.server.loadnpcs
+    [DependsOn("pipliz.server.loadbanners")] -> laborers are stored per banner
+    Loads the saved npc's
+  pipliz.server.loadberryareajobs
+  pipliz.server.loadwheatfarmerareajobs
+  pipliz.server.loadflaxfarmerareajobs
+  pipliz.server.loadforesterareajobs
+  pipliz.server.loadminerareajobs
+  pipliz.server.loadbedblocks
+  pipliz.server.loadstockpileblocks
+    For all of these:
+    [DependsOn("pipliz.server.loadnpcs")] -> they deal with npc's or need banners/players loaded
+    Load various tracked blocks
 
 void OnAddResearchables ()
 -Place to add researchables to Server.Science.ScienceManager
@@ -233,9 +256,17 @@ void OnQuit ()
 --Save various tracked blocks
 +pipliz.server.savenpc
 --Saves npc's
++pipliz.server.savetimecycle
+--Saves time to WorldSettings
++pipliz.server.saveupdatableblocks
+--Saves the updatable blocks (wheat, flax, saplings)
++pipliz.server.savewater
+--Saves the updatable water blocks
 
 void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened
++pipliz.server.saveworldsettings
+--Saves the servermanager.worldsettings
 
 void OnResearchableCompleted (Server.Science.IResearchable res)
 -Called upon completion of a researchable

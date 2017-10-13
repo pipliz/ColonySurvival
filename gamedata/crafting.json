@@ -42,17 +42,12 @@
 	{
 		"name" : "pipliz.player.bow",
 		"results":[{"type":"bow"}],
-		"requires":[{"type":"planks","amount":2}]
+		"requires":[{"type":"planks","amount":2},{"type":"bowstring"}]
 	},
 	{
 		"name" : "pipliz.player.splittingstump",
 		"results":[{"type":"splittingstump"}],
 		"requires":[{"type":"planks"},{"type":"bronzeaxe"}]
-	},
-	{
-		"name" : "pipliz.player.firewood",
-		"results" : [{"type":"firewood","amount":6}],
-		"requires" : [{"type":"planks"}]
 	},
 	{
 		"name" : "pipliz.player.furnace",
@@ -95,24 +90,9 @@
 		"requires":[{"type":"dirt"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}]
 	},
 	{
-		"name" : "pipliz.player.bloomery",
-		"results":[{"type":"bloomery"}],
-		"requires":[{"type":"bricks"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}]
-	},
-	{
 		"name" : "pipliz.player.mint",
 		"results":[{"type":"mint"}],
 		"requires":[{"type":"ironingot"},{"type":"planks"},{"type":"goldingot"}]
-	},
-	{
-		"name" : "pipliz.player.bronzeanvil",
-		"results":[{"type":"bronzeanvil"}],
-		"requires":[{"type":"bronzeingot","amount":5},{"type":"coppernails","amount":8},{"type":"coppertools"}]
-	},
-	{
-		"name" : "pipliz.player.gunsmithshop",
-		"results":[{"type":"gunsmithshop"}],
-		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate"},{"type":"steelparts"}]
 	},
 	{
 		"name" : "pipliz.player.shop",
@@ -125,15 +105,33 @@
 		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}]
 	},
 	{
+		"name" : "pipliz.player.bronzeanvil",
+		"results":[{"type":"bronzeanvil"}],
+		"requires":[{"type":"bronzeingot","amount":5},{"type":"coppernails","amount":8},{"type":"coppertools"}],
+		"isOptional" : true
+	},
+	{
 		"name" : "pipliz.player.tailorshop",
 		"results":[{"type":"tailorshop"}],
-		"requires":[{"type":"planks"},{"type":"ironingot"},{"type":"flax"}],
-		"optional" : true
+		"requires":[{"type":"coatedplanks"},{"type":"flax"},{"type":"coppertools"}],
+		"isOptional" : true
 	},
 	{
 		"name" : "pipliz.player.technologisttable",
 		"results":[{"type":"technologisttable"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate","amount":2},{"type":"coppernails"}],
-		"optional" : true
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.bloomery",
+		"results":[{"type":"bloomery"}],
+		"requires":[{"type":"bricks"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.gunsmithshop",
+		"results":[{"type":"gunsmithshop"}],
+		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate"},{"type":"steelparts"}],
+		"isOptional" : true
 	}
 ]
