@@ -9,13 +9,13 @@
 		"name" : "pipliz.tailor.linenpouch",
 		"results" : [{"type":"linenpouch"}],
 		"requires" : [{"type":"linen"}],
-		"defaultLimit" : 5
+		"defaultLimit" : 0
 	},
 	{
 		"name" : "pipliz.tailor.clothing",
 		"results" : [{"type":"clothing"}],
 		"requires" : [{"type":"linen","amount":3}],
-		"defaultLimit" : 5
+		"defaultLimit" : 3
 	},
 	{
 		"name" : "pipliz.tailor.linenbag",
@@ -27,18 +27,18 @@
 		"name" : "pipliz.tailor.carpetblue",
 		"results" : [{"type":"carpetblue"}],
 		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"flax"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 0
 	},
 	{
 		"name" : "pipliz.tailor.carpetyellow",
 		"results" : [{"type":"carpetyellow"}],
 		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"linseedoil"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 0
 	},
 	{
 		"name" : "pipliz.tailor.carpetred",
 		"results" : [{"type":"carpetred"}],
 		"requires" : [{"type":"planks"}, {"type":"linen"}, {"type":"berry"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 0
 	}
 ]

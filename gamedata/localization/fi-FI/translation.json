@@ -148,11 +148,6 @@
 				"resettooltipb" : "Tämä teurastaa kaikki asukkisi ja poistaa asettamasi työalueet.",
 				"resettooltipc" : "Lisäksi se korvaa olemassaolevat tarvikkeesi tuoreella erällä aloitustarvikkeita."
 			},
-			"bannerremoval" : {
-				"header" : "Lipun poisto",
-				"description" : "Lipun poistaminen luo ongelmia asutuksellesi. Mitä haluaisit tehdä?",
-				"button" : "Poista"
-			},
 			"tooljob" : {
 				"header" : "Komentotyökalu",
 				"description" : "Valitse, minkätyyppisen työalueen haluat luoda.",
@@ -256,6 +251,11 @@
 				"openmanual" : "Avaa ohjekirja (PDF)",
 				"closehelp" : "Paina F1 sulkeaksi tai avataksesi uudelleen tämän valikon",
 				"closetoggle" : "Älä näytä tätä enää"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -530,7 +530,8 @@
 		"firewood" : "_MISSING_Firewood",
 		"splittingstump" : "_MISSING_Splitting Stump",
 		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag"
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job"
 	},
 	"typeuses" : {
 		"planks" : "Nyt jopa neljä kertaa puunrunkoja riittoisampaa!",
@@ -636,5 +637,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 62.7254509018036
+	"coverage" : 62
 }

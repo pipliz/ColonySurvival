@@ -149,11 +149,6 @@
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 			},
-			"bannerremoval" : {
-				"header" : "Αφαίρεση Πανού",
-				"description" : "Η κατάργηση του πανού θα προκαλέσει προβλήματα στην αποικία σας. Τι θέλετε να κάνετε;",
-				"button" : "Διαγραφή"
-			},
 			"tooljob" : {
 				"header" : "Εργαλείο εντολών",
 				"description" : "Επιλέξτε τον τύπο της περιοχής που θέλετε να δημιουργήσετε.",
@@ -258,6 +253,11 @@
 				"openmanual" : "Άνοιγμα εγχειριδίου (PDF)",
 				"closehelp" : "Πατήστε F1 για να κλείσετε ή να ανοίξετε ξανά αυτό το μενού",
 				"closetoggle" : "Μην το ξαναδείξεις"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -532,7 +532,8 @@
 		"firewood" : "_MISSING_Firewood",
 		"splittingstump" : "_MISSING_Splitting Stump",
 		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag"
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job"
 	},
 	"typeuses" : {
 		"planks" : "Τώρα 4 φορές μεγαλύτερο απο τον όγκο των κορμών!",
@@ -638,5 +639,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 59.1182364729459
+	"coverage" : 58.4
 }

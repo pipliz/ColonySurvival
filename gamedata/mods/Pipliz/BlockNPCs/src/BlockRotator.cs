@@ -37,12 +37,13 @@ namespace Pipliz.BlockNPCs
 
 		static ItemTypesServer.ItemTypeRaw RotatedTypeUnlit (string name, string suffix, string sideType)
 		{
-			return new ItemTypesServer.ItemTypeRaw(
-				name + suffix,
-				new JSONNode()
-					.SetAs("parentType", name)
-					.SetAs("side" + suffix, sideType)
-			);
+			JSONNode node = new JSONNode()
+				.SetAs("parentType", name);
+			if (sideType != null) {
+				node.SetAs("side" + suffix, sideType);
+			}
+
+			return new ItemTypesServer.ItemTypeRaw(name + suffix, node);
 		}
 
 		static ItemTypesServer.ItemTypeRaw RotatedTypeLit (string name, string suffix, string sideType, JSONNode copy)
@@ -102,8 +103,10 @@ namespace Pipliz.BlockNPCs
 				.SetAs("rotatablex+", unlitXP.name)
 				.SetAs("rotatablex-", unlitXN.name)
 				.SetAs("rotatablez+", unlitZP.name)
-				.SetAs("rotatablez-", unlitZN.name)
-				.SetAs("sidey+", settings.sideTopUnlit);
+				.SetAs("rotatablez-", unlitZN.name);
+			if (settings.sideTopUnlit != null) {
+				settings.BaseType.description.SetAs("sidey+", settings.sideTopUnlit);
+			}
 
 			items[unlitXP.name] = unlitXP;
 			items[unlitXN.name] = unlitXN;
@@ -307,6 +310,28 @@ namespace Pipliz.BlockNPCs
 					"dirt",
 					null,
 					"kiln"
+				),
+				null
+			);
+
+			ItemRotator(
+				items,
+				new RotatorSettings(
+					new ItemTypesServer.ItemTypeRaw("minerjob", new JSONNode()
+						.SetAs("needsBase", true)
+						.SetAs("isSolid", false)
+						.SetAs("onRemove", new JSONNode(NodeType.Array))
+						.SetAs("mesh", "gamedata/meshes/outline_darkblue.obj")
+						.SetAs("sideall", "outlinedblock")
+						.SetAs("customData", new JSONNode()
+							.SetAs("renderOnlyIfSelected", "commandtool")
+							.SetAs("warnRemoval", true)
+						)
+					),
+					null,
+					null,
+					null,
+					null
 				),
 				null
 			);

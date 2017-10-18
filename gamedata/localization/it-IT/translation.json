@@ -148,11 +148,6 @@
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 			},
-			"bannerremoval" : {
-				"header" : "Rimuovi Banner",
-				"description" : "Rimuovendo il banner causerà problemi per la tua colonia. Che cosa vuoi fare?",
-				"button" : "Rimuovi"
-			},
 			"tooljob" : {
 				"header" : "Strumento di Comando",
 				"description" : "Seleziona il tipo di area che si desidera creare.",
@@ -256,6 +251,11 @@
 				"openmanual" : "Apri Manuale (PDF)",
 				"closehelp" : "Premi F1 per aprire o chiude questo menù",
 				"closetoggle" : "Non mostrare di nuovo."
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -530,7 +530,8 @@
 		"firewood" : "_MISSING_Firewood",
 		"splittingstump" : "_MISSING_Splitting Stump",
 		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag"
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job"
 	},
 	"typeuses" : {
 		"planks" : "Si necessita di 4 pezzi di Terra",
@@ -636,5 +637,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 52.1042084168337
+	"coverage" : 51.4
 }
