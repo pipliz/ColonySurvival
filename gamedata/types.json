@@ -375,22 +375,6 @@
 		"onRemoveAudio" : "dirtPlace",
 		"onPlaceAudio" :"dirtPlace"
 	},
-	"quiverx+" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverx+.obj"
-	},
-	"quiverx-" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverx-.obj"
-	},
-	"quiverz+" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverz+.obj"
-	},
-	"quiverz-" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverz-.obj"
-	},
 	"redplanks" : {
 		"icon" : "gamedata/textures/icons/redplanks.png",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -789,20 +773,6 @@
 		"rotatablez+" : "bedz+",
 		"rotatablez-" : "bedz-"
 	},
-	"quiver" : {
-		"icon" : "gamedata/textures/icons/quiver.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"maxStackSize" : 400,
-		"isRotatable" : true,
-		"needsBase" : true,
-		"isSolid" : false,
-		"sideall" : "quiverarrow",
-		"rotatablex+" : "quiverx+",
-		"rotatablex-" : "quiverx-",
-		"rotatablez+" : "quiverz+",
-		"rotatablez-" : "quiverz-"
-	},
 	"torch" : {
 		"icon" : "gamedata/textures/icons/torch.png",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -811,7 +781,6 @@
 		"sideall" : "SELF",
 		"isSolid" : false
 	},
-
 
 
 	"bedend" : {
