@@ -321,7 +321,7 @@ namespace Pipliz.BlockNPCs
 						.SetAs("needsBase", true)
 						.SetAs("isSolid", false)
 						.SetAs("onRemove", new JSONNode(NodeType.Array))
-						.SetAs("mesh", "gamedata/meshes/outline_darkblue.obj")
+						.SetAs("mesh", "gamedata/meshes/outline_miner.obj")
 						.SetAs("sideall", "outlinedblock")
 						.SetAs("customData", new JSONNode()
 							.SetAs("renderOnlyIfSelected", "commandtool")
@@ -336,14 +336,14 @@ namespace Pipliz.BlockNPCs
 				null
 			);
 
-			RegisterGuardBlock(items, "guardslingerdayjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardslingernightjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardbowdayjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardbownightjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardcrossbowdayjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardcrossbownightjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardmatchlockdayjob", "gamedata/meshes/outline_darkblue.obj");
-			RegisterGuardBlock(items, "guardmatchlocknightjob", "gamedata/meshes/outline_darkblue.obj");
+			RegisterGuardBlock(items, "guardslingerdayjob", "gamedata/meshes/outline_sling.obj");
+			RegisterGuardBlock(items, "guardslingernightjob", "gamedata/meshes/outline_sling.obj");
+			RegisterGuardBlock(items, "guardbowdayjob", "gamedata/meshes/outline_bow.obj");
+			RegisterGuardBlock(items, "guardbownightjob", "gamedata/meshes/outline_bow.obj");
+			RegisterGuardBlock(items, "guardcrossbowdayjob", "gamedata/meshes/outline_crossbow.obj");
+			RegisterGuardBlock(items, "guardcrossbownightjob", "gamedata/meshes/outline_crossbow.obj");
+			RegisterGuardBlock(items, "guardmatchlockdayjob", "gamedata/meshes/outline_matchlock.obj");
+			RegisterGuardBlock(items, "guardmatchlocknightjob", "gamedata/meshes/outline_matchlock.obj");
 		}
 
 		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string mesh)

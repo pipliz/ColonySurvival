@@ -34,7 +34,7 @@ namespace Pipliz.BlockNPCs.Implementations
 			{
 				keyName = NPCTypeKey,
 				printName = "Night Slinger Guard",
-				maskColor1 = new Color32(255, 0, 255, 255),
+				maskColor1 = new Color32(136, 136, 136, 255),
 				type = NPCTypeID.GetNextID()
 			};
 		}

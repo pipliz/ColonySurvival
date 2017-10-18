@@ -10,6 +10,11 @@
 		"requires":[{"type":"leavestaiga"}]
 	},
 	{
+		"name" : "pipliz.player.slingbullet",
+		"results":[{"type":"slingbullet","amount":10}],
+		"requires":[{"type":"stonebricks"}]
+	},
+	{
 		"name" : "pipliz.player.coppernails",
 		"results":[{"type":"coppernails","amount":3}],
 		"requires":[{"type":"copper"}]
@@ -33,16 +38,6 @@
 		"name" : "pipliz.player.crate",
 		"results":[{"type":"crate"}],
 		"requires":[{"type":"planks"},{"type":"coppernails","amount":4}]
-	},
-	{
-		"name" : "pipliz.player.quiver",
-		"results":[{"type":"quiver","amount":2}],
-		"requires":[{"type":"planks"}]
-	},
-	{
-		"name" : "pipliz.player.bow",
-		"results":[{"type":"bow"}],
-		"requires":[{"type":"planks","amount":2},{"type":"bowstring"}]
 	},
 	{
 		"name" : "pipliz.player.splittingstumptaiga",
@@ -107,7 +102,7 @@
 	{
 		"name" : "pipliz.player.sciencelab",
 		"results":[{"type":"sciencelab"}],
-		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}]
+		"requires":[{"type":"coatedplanks"},{"type":"copperparts","amount":5},{"type":"coppertools"}]
 	},
 	{
 		"name" : "pipliz.player.bronzeanvil",
