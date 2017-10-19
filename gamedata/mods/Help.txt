@@ -219,8 +219,14 @@ void OnPlayerMoved (Player p)
 
 bool OnTryChangeBlockUser (ModLoader.OnTryChangeBlockUserData d)
 -Player {d.requestedBy} requested a block change from {d.typeTillNow} to {d.typeToBuild} at {d.VoxelToChange}.
--Return true if you allow this change
--Return false if you disallow this change
+-Used for building/digging by the player. The client assumes the change is okay, and renders the change immediately to reduce ping.
+-Returning false will send a revert-the-change message to the client.
+-Return whether or not to allow this change
+
+bool OnTryChangeBlockUserRequest (ModLoader.OnTryChangeBlockUserRequestData d)
+-Similar to OnTryChangeBlockUser, but the client does not pre-emptively do the change, and does not expect a response.
+-Used for the remove special block menu (banner, miner jobs, guard jobs)
+-Return whether or not to allow this change
 
 void OnLoadingPlayer (JSONNode n, Player p)
 -Player {p} was loaded with json file {n}.
