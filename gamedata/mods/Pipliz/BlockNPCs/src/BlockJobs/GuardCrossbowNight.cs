@@ -14,11 +14,12 @@ namespace Pipliz.BlockNPCs.Implementations
 		{
 			GuardSettings set = new GuardSettings();
 			set.cooldownMissingItem = 1.5f;
-			set.cooldownSearchingTarget = 0.3f;
+			set.cooldownSearchingTarget = 0.5f;
 			set.cooldownShot = 5f;
-			set.range = 20;
+			set.range = 25;
 			set.recruitmentItem = new InventoryItem(BuiltinBlocks.Crossbow);
 			set.shootItem = new List<InventoryItem>() { new InventoryItem(BuiltinBlocks.CrossbowBolt) };
+			set.shootDamage = 40f;
 			set.sleepSafetyPeriod = 1f;
 			set.sleepType = EGuardSleepType.Day;
 			set.typeXN = BuiltinBlocks.GuardCrossbowJobNightXN;

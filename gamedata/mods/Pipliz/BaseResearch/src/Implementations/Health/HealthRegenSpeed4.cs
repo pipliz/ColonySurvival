@@ -18,7 +18,7 @@ namespace Pipliz.BaseResearch.Implementations
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)
 		{
-			manager.Player.SetTemporaryValue("pipliz.healthregenspeed", 8f);
+			manager.Player.GetTempValues(true).Set("pipliz.healthregenspeed", 8f);
 		}
 	}
 }

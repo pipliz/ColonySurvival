@@ -14,6 +14,13 @@ namespace Pipliz.APIProvider.Jobs
 
 		protected virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
 
+		protected virtual void OnShoot ()
+		{
+			ServerManager.SendAudio(position.Vector, "bowShoot");
+			ServerManager.SendAudio(target.PositionToAimFor, "fleshHit");
+			target.OnHit(guardSettings.shootDamage);
+		}
+
 		public override float TimeBetweenJobs { get { return 2.5f; } }
 
 		public override bool ToSleep
@@ -66,7 +73,8 @@ namespace Pipliz.APIProvider.Jobs
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
 					if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
-						Arrow.New(npcPos, targetPos, Vector3.zero);
+						OnShoot();
+						state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
 						OverrideCooldown(guardSettings.cooldownShot);
 					} else {
 						state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
@@ -105,6 +113,7 @@ namespace Pipliz.APIProvider.Jobs
 			public float sleepSafetyPeriod;
 			public InventoryItem recruitmentItem;
 			public IList<InventoryItem> shootItem;
+			public float shootDamage;
 			public EGuardSleepType sleepType;
 			public ushort typeXP;
 			public ushort typeXN;

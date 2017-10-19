@@ -18,7 +18,7 @@ namespace Pipliz.BaseResearch.Implementations
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)
 		{
-			manager.Player.SetTemporaryValue("pipliz.healthmax", 200f);
+			manager.Player.GetTempValues(true).Set("pipliz.healthmax", 200f);
 			manager.Player.SendHealthPacket();
 		}
 	}

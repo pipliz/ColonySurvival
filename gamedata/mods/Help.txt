@@ -297,6 +297,27 @@ void OnItemTypeRegistered (ItemTypes.ItemType type)
 ---Adds icons from types to the FileTable cache
 ---Adds meshes from types to the FileTable cache
 
+void OnMonsterDied (IMonster monster)
+-Called when a monster died
+
+void OnMonsterHit (IMonster monster, float damage)
+-Called when a monster was hit
+
+void OnMonsterSpawned (IMonster monster)
+-Called when a monster was spawned
+
+void OnNPCLoaded (NPC.NPCBase npc, JSONNode node)
+-Loaded {npc} from {node}
+
+void OnNPCSaved (NPC.NPCBase npc, JSONNode node)
+-Saved {npc} into {node} - can add custom values to the node
+
+void OnNPCRecruited (NPC.NPCBase npc)
+-Recruited NPC {npc} - see npc.Colony for ownership
+
+void OnNPCDied (NPC.NPCBase npc)
+-{npc} died - see npc.Colony for ownership
+
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 
 void OnSavedRegionToDisk ()
@@ -311,8 +332,9 @@ void OnSavedChunkToRegion ()
 void OnLoadedChunkFromRegion ()
 -A chunk is filled from a region in memory. The chunk is locked for writing data.
 
-
-Player Temporary values:
+NPC temporary values - unused by server code
+Monster temporary values - unused by server code
+Player Temporary values: Variables stored in player.GetTempValues() dict (if set - defaults may not be in there)
 
 float pipliz.healthregenmax
 |Limit to which health regenerates, set by health regen size research
