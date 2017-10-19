@@ -11,7 +11,7 @@ namespace Pipliz.BaseResearch.Implementations
 			key = "pipliz.baseresearch.healthregenspeed3";
 			icon = "gamedata/textures/icons/baseresearch_healthregenspeed3.png";
 			iterationCount = 50;
-			AddIterationRequirement("sciencebagbasic", 3);
+			AddIterationRequirement("sciencebagadvanced", 3);
 			AddIterationRequirement("sciencebaglife");
 			AddDependency("pipliz.baseresearch.healthregenspeed2");
 		}

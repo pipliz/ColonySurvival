@@ -33,7 +33,7 @@
 		"name" : "pipliz.metalsmith.ironwrought",
 		"results":[{"type":"ironwrought"}],
 		"requires":[{"type":"ironingot"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 15
 	},
 	{
 		"name" : "pipliz.metalsmith.ironsword",
@@ -45,7 +45,7 @@
 		"name" : "pipliz.metalsmith.ironblock",
 		"results":[{"type":"ironblock"}],
 		"requires":[{"type":"ironwrought","amount":12}],
-		"defaultLimit" : 0
+		"defaultLimit" : 1
 	},
 	{
 		"name" : "pipliz.metalsmith.steelparts",
@@ -71,7 +71,7 @@
 		"name" : "pipliz.metalsmith.fineryforge",
 		"results":[{"type":"fineryforge"}],
 		"requires":[{"type":"ironblock"},{"type":"bronzeplate"},{"type":"tin","amount":4}],
-		"defaultLimit" : 2,
+		"defaultLimit" : 1,
 		"isOptional" : true
 	}
 ]

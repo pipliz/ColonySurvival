@@ -3,20 +3,20 @@
 		"name" : "pipliz.gunsmith.leadbullet",
 		"results" : [{"type":"leadbullet","amount":3}],
 		"requires" : [{"type":"lead"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 100
 	},
 	{
 		"name" : "pipliz.gunsmith.gunpowder",
 		"results" : [{"type":"gunpowder"}],
 		"requires" : [{"type":"salpeter"},{"type":"charcoal"}],
-		"defaultLimit" : 10,
+		"defaultLimit" : 25,
 		"isOptional" : true
 	},
 	{
 		"name" : "pipliz.gunsmith.gunpowderpouch",
-		"results" : [{"type":"gunpowderpouch"}],
+		"results" : [{"type":"gunpowderpouch","amount":3}],
 		"requires" : [{"type":"gunpowder"},{"type":"linenpouch","amount":3}],
-		"defaultLimit" : 10,
+		"defaultLimit" : 20,
 		"isOptional" : true
 	},
 	{
