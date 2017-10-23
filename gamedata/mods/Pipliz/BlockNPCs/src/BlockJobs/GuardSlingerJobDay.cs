@@ -10,23 +10,35 @@ namespace Pipliz.BlockNPCs.Implementations
 	{
 		public override string NPCTypeKey { get { return "pipliz.guardslingerday"; } }
 
+		public static GuardSettings CachedSettings;
+
+		public static GuardSettings GetGuardSettings ()
+		{
+			if (CachedSettings == null) {
+				GuardSettings set = new GuardSettings();
+				set.cooldownMissingItem = 1.5f;
+				set.cooldownSearchingTarget = 0.5f;
+				set.cooldownShot = 3f;
+				set.range = 12;
+				set.recruitmentItem = new InventoryItem(BuiltinBlocks.Sling);
+				set.shootItem = new List<InventoryItem>() { new InventoryItem(BuiltinBlocks.SlingBullet) };
+				set.shootDamage = 50f;
+				set.sleepSafetyPeriod = 1f;
+				set.sleepType = EGuardSleepType.Night;
+				set.typeXN = BuiltinBlocks.GuardSlingerJobDayXN;
+				set.typeXP = BuiltinBlocks.GuardSlingerJobDayXP;
+				set.typeZN = BuiltinBlocks.GuardSlingerJobDayZN;
+				set.typeZP = BuiltinBlocks.GuardSlingerJobDayZP;
+				set.OnShootAudio = "sling";
+				set.OnHitAudio = "fleshHit";
+				CachedSettings = set;
+			}
+			return CachedSettings;
+		}
+
 		protected override GuardSettings SetupSettings ()
 		{
-			GuardSettings set = new GuardSettings();
-			set.cooldownMissingItem = 1.5f;
-			set.cooldownSearchingTarget = 0.5f;
-			set.cooldownShot = 1.5f;
-			set.range = 15;
-			set.recruitmentItem = new InventoryItem(BuiltinBlocks.Sling);
-			set.shootItem = new List<InventoryItem>() { new InventoryItem(BuiltinBlocks.SlingBullet) };
-			set.shootDamage = 10f;
-			set.sleepSafetyPeriod = 1f;
-			set.sleepType = EGuardSleepType.Night;
-			set.typeXN = BuiltinBlocks.GuardSlingerJobDayXN;
-			set.typeXP = BuiltinBlocks.GuardSlingerJobDayXP;
-			set.typeZN = BuiltinBlocks.GuardSlingerJobDayZN;
-			set.typeZP = BuiltinBlocks.GuardSlingerJobDayZP;
-			return set;
+			return GetGuardSettings();
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

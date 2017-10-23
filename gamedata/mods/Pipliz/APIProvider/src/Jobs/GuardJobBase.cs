@@ -9,15 +9,19 @@ namespace Pipliz.APIProvider.Jobs
 	public class GuardBaseJob : BlockJobBase, IBlockJobBase
 	{
 		protected ushort blockType;
-		protected IMonster target;
-		protected GuardSettings guardSettings;
+		public IMonster target;
+		public GuardSettings guardSettings;
 
 		protected virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
 
 		protected virtual void OnShoot ()
 		{
-			ServerManager.SendAudio(position.Vector, "bowShoot");
-			ServerManager.SendAudio(target.PositionToAimFor, "fleshHit");
+			if (guardSettings.OnShootAudio != null) {
+				ServerManager.SendAudio(position.Vector, guardSettings.OnShootAudio);
+			}
+			if (guardSettings.OnHitAudio != null) {
+				ServerManager.SendAudio(target.PositionToAimFor, guardSettings.OnHitAudio);
+			}
 			target.OnHit(guardSettings.shootDamage);
 		}
 
@@ -92,7 +96,7 @@ namespace Pipliz.APIProvider.Jobs
 						pos += Vector3.right;
 					} else if (blockType == guardSettings.typeXN) {
 						pos += Vector3.left;
-					} else if (blockType == guardSettings.typeZN) {
+					} else if (blockType == guardSettings.typeZP) {
 						pos += Vector3.forward;
 					} else if (blockType == guardSettings.typeZN) {
 						pos += Vector3.back;
@@ -104,7 +108,7 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		protected class GuardSettings
+		public class GuardSettings
 		{
 			public int range;
 			public float cooldownShot;
@@ -119,9 +123,11 @@ namespace Pipliz.APIProvider.Jobs
 			public ushort typeXN;
 			public ushort typeZP;
 			public ushort typeZN;
+			public string OnShootAudio;
+			public string OnHitAudio;
 		}
 
-		protected enum EGuardSleepType : byte
+		public enum EGuardSleepType : byte
 		{
 			Day,
 			Night

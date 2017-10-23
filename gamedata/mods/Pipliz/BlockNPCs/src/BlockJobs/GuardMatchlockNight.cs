@@ -10,23 +10,35 @@ namespace Pipliz.BlockNPCs.Implementations
 	{
 		public override string NPCTypeKey { get { return "pipliz.guardmatchlocknight"; } }
 
+		public static GuardSettings CachedSettings;
+
+		public static GuardSettings GetGuardSettings ()
+		{
+			if (CachedSettings == null) {
+				GuardSettings set = new GuardSettings();
+				set.cooldownMissingItem = 1.5f;
+				set.cooldownSearchingTarget = 0.5f;
+				set.cooldownShot = 12f;
+				set.range = 30;
+				set.recruitmentItem = new InventoryItem(BuiltinBlocks.MatchlockGun);
+				set.shootItem = new List<InventoryItem>() { new InventoryItem(BuiltinBlocks.LeadBullet), new InventoryItem(BuiltinBlocks.GunpowderPouch) };
+				set.shootDamage = 500f;
+				set.sleepSafetyPeriod = 1f;
+				set.sleepType = EGuardSleepType.Day;
+				set.typeXN = BuiltinBlocks.GuardMatchlockJobNightXN;
+				set.typeXP = BuiltinBlocks.GuardMatchlockJobNightXP;
+				set.typeZN = BuiltinBlocks.GuardMatchlockJobNightZN;
+				set.typeZP = BuiltinBlocks.GuardMatchlockJobNightZP;
+				set.OnShootAudio = "matchlock";
+				set.OnHitAudio = "fleshHit";
+				CachedSettings = set;
+			}
+			return CachedSettings;
+		}
+
 		protected override GuardSettings SetupSettings ()
 		{
-			GuardSettings set = new GuardSettings();
-			set.cooldownMissingItem = 1.5f;
-			set.cooldownSearchingTarget = 0.5f;
-			set.cooldownShot = 10f;
-			set.range = 30;
-			set.recruitmentItem = new InventoryItem(BuiltinBlocks.MatchlockGun);
-			set.shootItem = new List<InventoryItem>() { new InventoryItem(BuiltinBlocks.LeadBullet), new InventoryItem(BuiltinBlocks.GunpowderPouch) };
-			set.shootDamage = 100f;
-			set.sleepSafetyPeriod = 1f;
-			set.sleepType = EGuardSleepType.Day;
-			set.typeXN = BuiltinBlocks.GuardMatchlockJobNightXN;
-			set.typeXP = BuiltinBlocks.GuardMatchlockJobNightXP;
-			set.typeZN = BuiltinBlocks.GuardMatchlockJobNightZN;
-			set.typeZP = BuiltinBlocks.GuardMatchlockJobNightZP;
-			return set;
+			return GetGuardSettings();
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
