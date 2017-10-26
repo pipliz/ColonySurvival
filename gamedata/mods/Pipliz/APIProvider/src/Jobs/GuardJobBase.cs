@@ -34,7 +34,7 @@ namespace Pipliz.APIProvider.Jobs
 				switch (guardSettings.sleepType) {
 					case EGuardSleepType.Day:
 					default:
-						return TimeCycle.TimeOfDay >= 11f && TimeCycle.IsDay;
+						return TimeCycle.TimeOfDay >= 10f && TimeCycle.TimeOfDay < TimeCycle.SunSet - guardSettings.sleepSafetyPeriod;
 					case EGuardSleepType.Night:
 						return !TimeCycle.IsDay && TimeCycle.HoursSinceSunSet > guardSettings.sleepSafetyPeriod;
 				}
