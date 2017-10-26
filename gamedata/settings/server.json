@@ -1,7 +1,7 @@
 {
 	"Wheat" : {
-		"GrowthTime1" : 7.0,
-		"GrowthTime2" : 7.0,
+		"GrowthTime1" : 6.0,
+		"GrowthTime2" : 6.0,
 		"GrowthRandomMinimal" : 1.0,
 		"GrowthRandomMaximal" : 1.0,
 		"UpdateTimeOnUnknownTypeMinimum" : 4000,
@@ -25,11 +25,12 @@
 		"IslandHeightHalf" : 12444,
 		"CoastWeight" : 0.03,
 		"ShoreHeight" : 1.4,
-		"StartingX" : 0,
+		"StartingX" : 3990,
 		"StartingZ" : 7500
 	},
 	"Water" : {
-		"TickTimeMilliSeconds" : 1000
+		"TickTimeMilliSeconds" : 1000,
+		"MaxUpdatesPerTick" : 1000
 	},
 	"ChunkQueue" : {
 		"MaxQueueSize" : 5000,
@@ -48,15 +49,13 @@
 		"RealSecondsPerIngameHour" : 30.0
 	},
 	"Zombies" : {
-		"ZombiesPerNPC" : 1,
-		"ZombiesBase" : 2,
+		"ZombiesPerNPC" : 1.8,
+		"ZombiesPerNPCSecondary" : 1.0,
+		"ZombiesPerNPCSecondaryAtCount" : 1000,
 		"TargetingRange" : 31,
 		"ReconsiderDecisionTimeMinimum" : 4500,
 		"ReconsiderDecisionTimeMaximum" : 6500,
-		"WalkingSpeed" : 1.3,
 		"PlayerTargetingRangeSqr" : 256,
-		"PlayerHitDamage" : 25,
-		"PunchCooldownMS" : 2000,
 		"PunchForce" : 6,
 		"PunchHeight" : 0.25
 	},

@@ -58,16 +58,6 @@ void AfterSelectedWorld ()
 +pipliz.server.localization.startload
 --Starts loading the json files from disk
 
-void AfterDefiningNPCTypes ()
--After the game has defined its default npc types.
--Use NPC.NPCType settings methods here to register/change npc types.
--Builtin callback uses:
-+pipliz.blocknpcs.registerjobs
---ProvidesFor pipliz.apiprovider.jobs.resolvetypes
---Registers jobs to the APIProvider
-+pipliz.apiprovider.jobs.resolvetypes
---Registers NPCTypes to the base game, call BlockJobManagerTracker.Register before this
-
 void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
 -Allows altering dict, to remove existing types (or add new JSONNode-based itemtypes)
 +pipliz.blocknpcs.addlittypes
@@ -99,6 +89,9 @@ Builtin callback uses:
   pipliz.server.loadnpctypes
 	[ProvidesFor("pipliz.server.loadnpcs")] -> npc's need the npc types
     Loads NPCTypes from "gamedata/npctypes.json"
+  pipliz.server.registermonstertextures
+    [DependsOn("pipliz.server.loadnpctypes")]
+	Queues up the monster textures from npc settings to load in the filetable
   pipliz.apiprovider.jobs.resolvetypes
     [DependsOn("pipliz.server.loadnpctypes")] -> Wait for base game to add npc types first, to allow overriding
 	[ProvidesFor("pipliz.apiprovider.registerrecipes")] -> Checks the job types for recipes, adds those to a list for registerrecipes
@@ -112,6 +105,9 @@ Builtin callback uses:
   pipliz.server.loadresearchables
     [ProvidesFor("pipliz.server.loadplayers")] -> as player savegames contain research progress (which references researchables)
     Loads the researchables
+  pipliz.server.loadsortorder
+    [ProvidesFor("pipliz.server.loadplayers")] -> load players loads the stockpile, which needs this sorting
+	Loads the itemtypes sort order (into ItemTypesServer.ItemSortOrder)
   pipliz.server.loadplayers
     Loads the player save files (stockpile, inventory, position)
   pipliz.server.loadbanners
@@ -144,10 +140,13 @@ void AfterWorldLoad ()
 --Registers the OnAdd/OnRemove callbacks from the blockjobs added through BlockJobManagerTracker.Register
 +pipliz.apiprovider.jobs.load
 --Loads the registered blockjobs from the savegame, if any exist
-+pipliz.server.monsterspawnregister
++pipliz.server.monsterspawner.register
 --Registers the default monster spawner to MonsterTracker.MonsterSpawner
++pipliz.server.monsterspawner.fetchnpctypes
+--Fetches the zombie types (aa -> cc)
 +pipliz.server.ai.aimanager.defaultpathfinder
 --Sets the Server.AI.AIManager.PathFinder instances to the DefaultPathFinder.
+
 +pipliz.server.localization.waitforloading
 --Waits to ensure the files in Server.Localization.LoadedTranslation are fully loaded
 +pipliz.server.localization.convert
@@ -300,8 +299,9 @@ void OnItemTypeRegistered (ItemTypes.ItemType type)
 void OnMonsterDied (IMonster monster)
 -Called when a monster died
 
-void OnMonsterHit (IMonster monster, float damage)
--Called when a monster was hit
+void OnMonsterHit (IMonster monster, Pipliz.Box<float> box)
+-box.item1 -> damage
+-{monster} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
 
 void OnMonsterSpawned (IMonster monster)
 -Called when a monster was spawned
@@ -317,6 +317,25 @@ void OnNPCRecruited (NPC.NPCBase npc)
 
 void OnNPCDied (NPC.NPCBase npc)
 -{npc} died - see npc.Colony for ownership
+
+void OnNPCJobChanged (NPC.NPCBase npc)
+-{npc} had its job changed, new job is assigned.
+
+void OnNPCHit (NPC.NPCBase npc, Pipliz.Box<float> box)
+-box.item1 -> damage
+-{npc} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+
+void OnPlayerClicked (Players.Player player, Pipliz.Box<Shared.PlayerClickedData> boxedData)
+-boxedData.item1 -> clickedData
+-{player} clicked, resulting in {clickedData}. Don't store the Box<>.
+-Check {clickedData.consumedType} if the click was already consumed by something
+-Check {clickedData.clickType} whether it's a left or right click
+-Check {clickedData.rayCastHit.rayHitType} for which data is valid.
+-| If it's Block, distanceToHit, voxelHit, voxelSideHit and typeHit become valid
+ | If it's NPC, distanceToHit and hitNPCID become valid
+-Builtin callback uses:
++pipliz.server.hitzombie
+--Checks if the player hit a zombie, if that's the case, cause damage to it
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 

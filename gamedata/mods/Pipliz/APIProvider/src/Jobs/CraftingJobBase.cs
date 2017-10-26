@@ -119,7 +119,7 @@ namespace Pipliz.APIProvider.Jobs
 						recipesToCraft = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
 						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
 							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
-							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * recipesToCraft);
+							usedNPC.Colony.UsedStockpile.TryRemove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
 						OverrideCooldown(0.5);
 						break;
