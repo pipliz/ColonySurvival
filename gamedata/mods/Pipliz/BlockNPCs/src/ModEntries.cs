@@ -19,6 +19,7 @@ namespace Pipliz.BlockNPCs
 		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
 		public static void AfterDefiningNPCTypes ()
 		{
+			BlockJobManagerTracker.Register<MinerJob>("minerjob");
 			BlockJobManagerTracker.Register<WoodcutterJob>("splittingstump");
 			BlockJobManagerTracker.Register<BloomeryJob>("bloomery");
 			BlockJobManagerTracker.Register<FineryForgeJob>("fineryforge");
@@ -29,7 +30,14 @@ namespace Pipliz.BlockNPCs
 			BlockJobManagerTracker.Register<MetalSmithJob>("bronzeanvil");
 			BlockJobManagerTracker.Register<MintJob>("mint");
 			BlockJobManagerTracker.Register<OvenJob>("oven");
-			BlockJobManagerTracker.Register<QuiverJob>("quiver");
+			BlockJobManagerTracker.Register<GuardBowJobDay>("guardbowdayjob");
+			BlockJobManagerTracker.Register<GuardBowJobNight>("guardbownightjob");
+			BlockJobManagerTracker.Register<GuardCrossbowJobDay>("guardcrossbowdayjob");
+			BlockJobManagerTracker.Register<GuardCrossbowJobNight>("guardcrossbownightjob");
+			BlockJobManagerTracker.Register<GuardMatchlockJobDay>("guardmatchlockdayjob");
+			BlockJobManagerTracker.Register<GuardMatchlockJobNight>("guardmatchlocknightjob");
+			BlockJobManagerTracker.Register<GuardSlingerJobDay>("guardslingerdayjob");
+			BlockJobManagerTracker.Register<GuardSlingerJobNight>("guardslingernightjob");
 			BlockJobManagerTracker.Register<ScientistJob>("sciencelab");
 			BlockJobManagerTracker.Register<ShopJob>("shop");
 			BlockJobManagerTracker.Register<TailorJob>("tailorshop");

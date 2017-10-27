@@ -15,7 +15,7 @@
 		"name" : "pipliz.crafter.firewood",
 		"results" : [{"type":"firewood","amount":6}],
 		"requires" : [{"type":"planks"}],
-		"defaultLimit" : 20
+		"defaultLimit" : 10
 	},
 	{
 		"name" : "pipliz.crafter.slingbullet",
@@ -54,15 +54,15 @@
 		"defaultLimit" : 5
 	},
 	{
-		"name" : "pipliz.crafter.quiver",
-		"results":[{"amount":2,"type":"quiver"}],
-		"requires":[{"type":"planks"}],
-		"defaultLimit" : 3
+		"name" : "pipliz.crafter.splittingstumptaiga",
+		"results":[{"type":"splittingstump"}],
+		"requires":[{"type":"logtaiga"},{"type":"bronzeaxe"}],
+		"defaultLimit" : 1
 	},
 	{
-		"name" : "pipliz.crafter.splittingstump",
+		"name" : "pipliz.crafter.splittingstumptemperate",
 		"results":[{"type":"splittingstump"}],
-		"requires":[{"type":"planks"},{"type":"bronzeaxe"}],
+		"requires":[{"type":"logtemperate"},{"type":"bronzeaxe"}],
 		"defaultLimit" : 1
 	},
 	{
@@ -128,32 +128,32 @@
 	{
 		"name" : "pipliz.crafter.mint",
 		"results":[{"type":"mint"}],
-		"requires":[{"type":"ironingot"},{"type":"planks"},{"type":"goldingot"}],
+		"requires":[{"type":"planks"},{"type":"bronzeplate","amount":3},{"type":"coppertools","amount":3}],
 		"defaultLimit" : 1
 	},
 	{
 		"name" : "pipliz.crafter.shop",
 		"results":[{"type":"shop"}],
-		"requires":[{"type":"goldcoin","amount":5},{"type":"planks"},{"type":"stonebricks"}],
+		"requires":[{"type":"planks"},{"type":"linen","amount":4},{"type":"bronzecoin","amount":5}],
 		"defaultLimit" : 1
 	},
 	{
 		"name" : "pipliz.crafter.sciencelab",
 		"results":[{"type":"sciencelab"}],
-		"requires":[{"type":"coatedplanks"},{"type":"ironingot","amount":2},{"type":"goldcoin","amount":10}],
+		"requires":[{"type":"coatedplanks"},{"type":"copperparts","amount":5},{"type":"coppertools"}],
 		"defaultLimit" : 1
 	},
 	{
 		"name" : "pipliz.crafter.linseedoil",
-		"results":[{"type":"linseedoil"}],
-		"requires":[{"type":"flax"}],
-		"defaultLimit" : 10
+		"results":[{"type":"linseedoil","amount":3}],
+		"requires":[{"type":"flax","amount":3}],
+		"defaultLimit" : 3
 	},
 	{
 		"name" : "pipliz.crafter.coatedplanks",
-		"results":[{"type":"coatedplanks"}],
-		"requires":[{"type":"linseedoil"},{"type":"planks"}],
-		"defaultLimit" : 10
+		"results":[{"type":"coatedplanks","amount":3}],
+		"requires":[{"type":"linseedoil","amount":3},{"type":"planks","amount":3}],
+		"defaultLimit" : 3
 	},
 	{
 		"name" : "pipliz.crafter.adobe",

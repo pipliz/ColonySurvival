@@ -148,11 +148,6 @@
 				"resettooltipb" : "Isso mata todos seus colonos e remove todos campos de trabalho.",
 				"resettooltipc" : "Também oferece um inventário e estoque novo."
 			},
-			"bannerremoval" : {
-				"header" : "Remover bandeira",
-				"description" : "Remover a bandeira irá causar problemas à sua Colônia. O que você gostaria de fazer?",
-				"button" : "Remover"
-			},
 			"tooljob" : {
 				"header" : "Ferramenta de Comando",
 				"description" : "Selecione o tipo de área que você quer criar.",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "Fazenda de Fruta",
 				"berrya" : "Comida rápida e fácil, comece com isso!",
 				"berryb" : "Coloque na grama ou terra",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "Ferramenta de Construção",
@@ -256,6 +265,11 @@
 				"openmanual" : "Abrir Manual (PDF)",
 				"closehelp" : "Pressione F1 para fechar ou abrir este menu",
 				"closetoggle" : "Não mostrar mais isso"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -414,6 +428,26 @@
 				"technologisttable" : {
 					"name" : "_MISSING_Technologist",
 					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -438,7 +472,6 @@
 		"leaves" : "Folhas",
 		"leavestemperate" : "Folhas Temperadas",
 		"leavestaiga" : "Folhas de Taiga",
-		"quiver" : "Aljava",
 		"torch" : "Tocha",
 		"crate" : "Caixote",
 		"stonebricks" : "Tijolo de Pedra",
@@ -512,7 +545,7 @@
 		"ironblock" : "_MISSING_Iron Block",
 		"ironrivet" : "_MISSING_Iron Rivet",
 		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Iron Wrought",
+		"ironwrought" : "_MISSING_Wrought Iron",
 		"kiln" : "_MISSING_Kiln",
 		"lead" : "_MISSING_Lead",
 		"leadbullet" : "_MISSING_Lead Bullet",
@@ -528,7 +561,18 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"tin" : "_MISSING_Tin",
 		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump"
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "Agora com 4 vezes mais troncos!",
@@ -536,7 +580,6 @@
 		"crate" : "Para todas suas necessidades de armazenagem!",
 		"workbench" : "Recrute um artesão. Fabrica as coisas pra você!",
 		"plasterblock" : "Para aquele olhar moderno",
-		"quiver" : "Recrute um guarda. Mire nos monstros!",
 		"furnace" : "Recrute um fundidor. Consome seus minérios!",
 		"oven" : "Usado para assar pão",
 		"wheatstage1" : "Futuro pão",
@@ -609,7 +652,7 @@
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be uesd to fire a matchlock gun",
+		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
@@ -630,7 +673,9 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood"
+		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 61.8181818181818
+	"coverage" : 56.7924528301887
 }

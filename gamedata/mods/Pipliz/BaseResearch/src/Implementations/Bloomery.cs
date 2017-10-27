@@ -10,7 +10,7 @@ namespace Pipliz.BaseResearch.Implementations
 		{
 			key = "pipliz.baseresearch.bloomery";
 			icon = "gamedata/textures/icons/bloomery.png";
-			iterationCount = 20;
+			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
 			AddDependency("pipliz.baseresearch.sciencebagbasic");
 		}

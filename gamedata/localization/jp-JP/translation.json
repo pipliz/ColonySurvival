@@ -148,11 +148,6 @@
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 			},
-			"bannerremoval" : {
-				"header" : "バナーを外す",
-				"description" : "バナーを外すと、コロニーの皆に迷惑をかけるかもしれません。どうしますか？",
-				"button" : "外す"
-			},
 			"tooljob" : {
 				"header" : "コマンドツール",
 				"description" : "どんなエリアを作成したいですか？",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "ベリー農家",
 				"berrya" : "簡単に採れる食料。まずはこれ！",
 				"berryb" : "草か土の上に置く",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "建築ツール",
@@ -256,6 +265,11 @@
 				"openmanual" : "マニュアルを開く(PDF)",
 				"closehelp" : "F1キーを押すと、このメニューを開いたり閉じたりできます",
 				"closetoggle" : "二度と表示させない"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -414,6 +428,26 @@
 				"technologisttable" : {
 					"name" : "_MISSING_Technologist",
 					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -438,7 +472,6 @@
 		"leaves" : "葉っぱ",
 		"leavestemperate" : "葉っぱ（温帯）",
 		"leavestaiga" : "葉っぱ（タイガ",
-		"quiver" : "矢筒",
 		"torch" : "松明",
 		"crate" : "ストレージ箱",
 		"stonebricks" : "石のレンガ",
@@ -512,7 +545,7 @@
 		"ironblock" : "_MISSING_Iron Block",
 		"ironrivet" : "_MISSING_Iron Rivet",
 		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Iron Wrought",
+		"ironwrought" : "_MISSING_Wrought Iron",
 		"kiln" : "_MISSING_Kiln",
 		"lead" : "_MISSING_Lead",
 		"leadbullet" : "_MISSING_Lead Bullet",
@@ -528,7 +561,18 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"tin" : "_MISSING_Tin",
 		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump"
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "丸太の数より4倍！",
@@ -536,7 +580,6 @@
 		"crate" : "ストレージが必要？",
 		"workbench" : "職人を雇う。代わりにクラフティングをしてくれる。",
 		"plasterblock" : "近代的なデザイン！",
-		"quiver" : "傭兵を雇う。ちゃんとモンスター狙いなさい！",
 		"furnace" : "鍛冶屋を雇う。鉱石が利用されるから、ご注意！",
 		"oven" : "これでパンを焼こう。",
 		"wheatstage1" : "美味しい物になりますように。",
@@ -609,7 +652,7 @@
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be uesd to fire a matchlock gun",
+		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
@@ -630,7 +673,9 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood"
+		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 56.969696969697
+	"coverage" : 52.2641509433962
 }

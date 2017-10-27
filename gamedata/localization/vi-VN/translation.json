@@ -148,11 +148,6 @@
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
 			},
-			"bannerremoval" : {
-				"header" : "Gỡ bỏ lá cờ",
-				"description" : "Loại bỏ các lá cờ sẽ gây ra vấn đề cho các thuộc địa của bạn. Bạn muốn làm gì?",
-				"button" : "Xóa"
-			},
 			"tooljob" : {
 				"header" : "Công cụ lệnh",
 				"description" : "Chọn loại khu vực bạn muốn tạo.",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"berrya" : "_MISSING_Quick and easy food, start with this!",
 				"berryb" : "_MISSING_Place on grass or dirt",
-				"berryc" : "_MISSING_"
+				"berryc" : "_MISSING_",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "Công cụ xây dựng",
@@ -256,6 +265,11 @@
 				"openmanual" : "Mở bằng tay (PDF)",
 				"closehelp" : "Nhấn F1 để đóng hoặc mở lại menu này",
 				"closetoggle" : "Không hiển thị hiện lại lần nữa"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -414,6 +428,26 @@
 				"technologisttable" : {
 					"name" : "_MISSING_Technologist",
 					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -438,7 +472,6 @@
 		"leaves" : "Lá",
 		"leavestemperate" : "Lá Ôn đới",
 		"leavestaiga" : "Lá rừng rậm lá kim",
-		"quiver" : "Bao tên",
 		"torch" : "Đuốc",
 		"crate" : "Thùng",
 		"stonebricks" : "Gạch đá",
@@ -512,7 +545,7 @@
 		"ironblock" : "_MISSING_Iron Block",
 		"ironrivet" : "_MISSING_Iron Rivet",
 		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Iron Wrought",
+		"ironwrought" : "_MISSING_Wrought Iron",
 		"kiln" : "_MISSING_Kiln",
 		"lead" : "_MISSING_Lead",
 		"leadbullet" : "_MISSING_Lead Bullet",
@@ -528,7 +561,18 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"tin" : "_MISSING_Tin",
 		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump"
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "Bây giờ là 4 lần khối lượng gỗ thô!",
@@ -536,7 +580,6 @@
 		"crate" : "Cho tất cả các nhu cầu lưu trữ của bạn!",
 		"workbench" : "Chiêu mộ một thợ thủ công. Họ sẽ làm đồ thủ công dành cho bạn!",
 		"plasterblock" : "Chiêu mộ một lính gác. Họ sẽ nhắm vào những con quái vật và bảo vệ chúng ta!",
-		"quiver" : "Chiêu mộ một lính gác. Họ sẽ nhắm vào những con quái vật!",
 		"furnace" : "Nhà máy tinh luyện kim loại. Sẽ tiêu thụ tất cả các quặng của bạn!",
 		"wheatstage1" : "Bánh mì trong tương lai",
 		"straw" : "Cần thiết cho giường, sản phẩm phụ của nông nghiệp lúa mì",
@@ -609,7 +652,7 @@
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be uesd to fire a matchlock gun",
+		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
@@ -630,7 +673,9 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood"
+		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 52.5252525252525
+	"coverage" : 48.1132075471698
 }

@@ -148,9 +148,9 @@
 				"resettooltipb" : "This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "It also gives you a fresh new inventory and stockpile."
 			},
-			"bannerremoval" : {
-				"header" : "Banner removal",
-				"description" : "Removing the banner will cause problems for your colony. What do you want to do?",
+			"specialblockremoval" : {
+				"header" : "Special Block removal",
+				"description" : "Removing this block of type {0} may cause problems for a colony. What do you want to do?",
 				"button" : "Remove"
 			},
 			"tooljob" : {
@@ -188,7 +188,21 @@
 				"berryfarmer" : "Berry Farmer",
 				"berrya" : "Quick and easy food, start with this!",
 				"berryb" : "Place on grass or dirt",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "Guard",
+				"guarda" : "Protect your colony!",
+				"guardb" : "This will open another menu",
+				"guardc" : "Where you can select the guard types",
+				"guardsday" : "Daytime guards",
+				"guardsnight" : "Nighttime guards",
+				"slingertooltip" : "Slinger guard",
+				"slinger" : "Slinger",
+				"crossbowtooltip" : "Crossbow guard",
+				"crossbow" : "Crossbow",
+				"bowtooltip" : "Bow guard",
+				"bow" : "Bow",
+				"matchlocktooltip" : "Matchlock gun guard",
+				"matchlock" : "Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "Construction tool",
@@ -297,6 +311,26 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"bannerradius1" : {
+					"name" : "Banner Radius I",
+					"description" : "Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "Banner Radius II",
+					"description" : "Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "Banner Radius III",
+					"description" : "Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "Banner Radius IV",
+					"description" : "Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "Banner Radius V",
+					"description" : "Increases the safe radius created to 100 blocks"
+				},
 				"healthsize1" : {
 					"name" : "Health Increase I",
 					"description" : "Increases Max HP to 125"
@@ -463,6 +497,14 @@
 		"grasstemperate" : "Grass Temperate",
 		"grasstundra" : "Grass Tundra",
 		"grindstone" : "Grindstone",
+		"guardslingerdayjob" : "Day Slinger Guard",
+		"guardslingernightjob" : "Night Slinger Guard",
+		"guardbowdayjob" : "Day Bow Guard",
+		"guardbownightjob" : "Night Bow Guard",
+		"guardcrossbowdayjob" : "Day Crossbow Guard",
+		"guardcrossbownightjob" : "Night Crossbow Guard",
+		"guardmatchlockdayjob" : "Day Matchlock Guard",
+		"guardmatchlocknightjob" : "Night Matchlock Guard",
 		"gunpowder" : "Gunpowder",
 		"gunpowderpouch" : "Gunpowder Pouch",
 		"gunsmithshop" : "Gunsmith Shop",
@@ -472,7 +514,7 @@
 		"ironore" : "Iron Ore",
 		"ironrivet" : "Iron Rivet",
 		"ironsword" : "Iron Sword",
-		"ironwrought" : "Iron Wrought",
+		"ironwrought" : "Wrought Iron",
 		"kiln" : "Kiln",
 		"lead" : "Lead",
 		"leadbullet" : "Lead Bullet",
@@ -487,16 +529,18 @@
 		"logtaiga" : "Log Taiga",
 		"logtemperate" : "Log Temperate",
 		"matchlockgun" : "Matchlock Gun",
+		"minerjob" : "Miner Job",
 		"mint" : "Mint",
 		"oven" : "Oven",
 		"planks" : "Planks",
 		"plasterblock" : "Plaster Block",
-		"quiver" : "Quiver",
 		"redplanks" : "Red Planks",
 		"salpeter" : "Salpeter",
 		"sand" : "Sand",
 		"sappling" : "Sapling",
+		"sciencebagadvanced" : "Advanced Science Bag",
 		"sciencebagbasic" : "Basic Science Bag",
+		"sciencebagcolony" : "Colony Science Bag",
 		"sciencebaglife" : "Life Science Bag",
 		"sciencebagmilitary" : "Military Science Bag",
 		"sciencelab" : "Science Lab",
@@ -573,7 +617,7 @@
 		"grasstundra" : "Get off my lawn!",
 		"grindstone" : "Used to grind wheat into flour",
 		"gunpowder" : "Handle with care!",
-		"gunpowderpouch" : "Can be uesd to fire a matchlock gun",
+		"gunpowderpouch" : "Can be used to fire a matchlock gun",
 		"gunsmithshop" : "Crafts guns and ammo",
 		"ironblock" : "Don't drop it on your foot",
 		"ironore" : "Mined with an iron pickaxe that's made of iron ore",
@@ -594,12 +638,13 @@
 		"oven" : "Used to bake bread",
 		"planks" : "Now with 4 times the volume of logs!",
 		"plasterblock" : "For that modern look",
-		"quiver" : "Recruits a guard. Aim it at the monsters!",
 		"redplanks" : "Does not have any food value, but it tastes pretty good",
 		"salpeter" : "Don't spice up your food with this",
 		"sand" : "Does not mix well with snakes",
 		"sappling" : "Future tree",
+		"sciencebagadvanced" : "Required for advanced science",
 		"sciencebagbasic" : "Required to research basic science",
+		"sciencebagcolony" : "Required for colony-related science",
 		"sciencebaglife" : "Required to research science related to health and life",
 		"sciencebagmilitary" : "Required to research science related to combat",
 		"sciencelab" : "Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",

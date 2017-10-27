@@ -11,14 +11,14 @@ namespace Pipliz.BaseResearch.Implementations
 			key = "pipliz.baseresearch.healthregensize3";
 			icon = "gamedata/textures/icons/baseresearch_healthregensize3.png";
 			iterationCount = 50;
-			AddIterationRequirement("sciencebagbasic");
+			AddIterationRequirement("sciencebagadvanced");
 			AddIterationRequirement("sciencebaglife", 3);
 			AddDependency("pipliz.baseresearch.healthregensize2");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager)
 		{
-			manager.Player.SetTemporaryValue("pipliz.healthregenmax", 85f);
+			manager.Player.GetTempValues(true).Set("pipliz.healthregenmax", 85f);
 		}
 	}
 }

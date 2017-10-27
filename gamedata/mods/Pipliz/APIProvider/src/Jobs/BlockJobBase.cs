@@ -146,7 +146,8 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual void OnNPCDoStockpile (ref NPCBase.NPCState state)
 		{
-
+			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			state.SetCooldown(0.1);
 		}
 
 		protected void OverrideCooldown (double cooldownLeft)

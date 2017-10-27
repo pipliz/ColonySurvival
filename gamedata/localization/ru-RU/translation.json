@@ -148,11 +148,6 @@
 				"resettooltipb" : "Это убъет всех ваших колонистов!",
 				"resettooltipc" : "Также это сбросит ваш инвентарь до первоначального состояния."
 			},
-			"bannerremoval" : {
-				"header" : "Удаление баннера",
-				"description" : "Удаление баннера вызовет проблемы для вашей колонии. Вы хотите это сделать?",
-				"button" : "Удалить"
-			},
 			"tooljob" : {
 				"header" : "Инструмент командования",
 				"description" : "Выберите тип области, которую вы хотите создать.",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "Ягодное поле",
 				"berrya" : "Быстрая и легкая еда. Начните с этого!",
 				"berryb" : "Размещается на траве или грязи",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "Инструмент Строителя",
@@ -256,6 +265,11 @@
 				"openmanual" : "Открыть мануал (PDF)",
 				"closehelp" : "Нажмите F1, чтобы закрыть/открыть меню помощи",
 				"closetoggle" : "Не показывать снова"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -414,6 +428,26 @@
 				"technologisttable" : {
 					"name" : "_MISSING_Technologist",
 					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -438,7 +472,6 @@
 		"leaves" : "Листва",
 		"leavestemperate" : "Обычная листва",
 		"leavestaiga" : "Листва из тайги",
-		"quiver" : "Колчан",
 		"torch" : "Факел",
 		"crate" : "Ящик",
 		"stonebricks" : "Каменные кирпичи",
@@ -528,7 +561,18 @@
 		"steelparts" : "Стальные детали",
 		"tin" : "Банка",
 		"firewood" : "Дрова",
-		"splittingstump" : "Расколотый пень"
+		"splittingstump" : "Расколотый пень",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "Четырехкратный объем бревна",
@@ -536,7 +580,6 @@
 		"crate" : "С помощью этого, ваши колонисты получат доступ к складу!",
 		"workbench" : "Дайте это ремесленнику. И он скрафтит для вас, что угодно!",
 		"plasterblock" : "Для современного вида",
-		"quiver" : "Нанимает охранника. Направьте его на монстров!",
 		"furnace" : "Переплавит все ваши руды!",
 		"oven" : "Используется для выпечки хлеба",
 		"wheatstage1" : "Будущий хлеб",
@@ -630,7 +673,9 @@
 		"tin" : "Немного таксична",
 		"bronzepickaxe" : "Используйте Иструмент командования для того, чтобы назвачить шахтера. Он будет добывать руду из блока используя кирку!",
 		"firewood" : "Базовое топливо",
-		"splittingstump" : "Используется дровосеком ждя превращения древесины в дрова"
+		"splittingstump" : "Используется дровосеком ждя превращения древесины в дрова",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 93.1313131313131
+	"coverage" : 87.1698113207547
 }

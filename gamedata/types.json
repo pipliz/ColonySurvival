@@ -20,7 +20,8 @@
 		"sideall" : "SELF",
 		"mesh" : "gamedata/meshes/banner.obj",
 		"customData" : {
-			"farShadows" : true
+			"farShadows" : true,
+			"warnRemoval" : true
 		}
 	},
 	"bedx+" : {
@@ -66,8 +67,7 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
-		"maxStackSize" : 200,
-		"fuelValue" : 0.5
+		"maxStackSize" : 200
 	},
 	"bricks" : {
 		"sideall" : "SELF",
@@ -365,8 +365,7 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
-		"maxStackSize" : 200,
-		"fuelValue" : 0.12
+		"maxStackSize" : 200
 	},
 	"plasterblock" : {
 		"sideall" : "SELF",
@@ -374,29 +373,12 @@
 		"onRemoveAudio" : "dirtPlace",
 		"onPlaceAudio" :"dirtPlace"
 	},
-	"quiverx+" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverx+.obj"
-	},
-	"quiverx-" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverx-.obj"
-	},
-	"quiverz+" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverz+.obj"
-	},
-	"quiverz-" : {
-		"parentType" : "quiver",
-		"mesh" : "gamedata/meshes/quiverz-.obj"
-	},
 	"redplanks" : {
 		"icon" : "gamedata/textures/icons/redplanks.png",
 		"onRemoveAudio" : "woodDeleteLight",
 		"onPlaceAudio" : "woodPlace",
 		"sideall" : "SELF",
-		"maxStackSize" : 200,
-		"fuelValue" : 0.07
+		"maxStackSize" : 200
 	},
 	"sand" : {
 		"onRemoveAudio" : "grassDelete",
@@ -672,7 +654,7 @@
 		"onRemoveAudio" : "stoneDelete",
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 5.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"infinitegalena" : {
@@ -755,7 +737,7 @@
 		"onRemoveAudio" : "stoneDelete",
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 5.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"lumberarea" : {
@@ -788,20 +770,6 @@
 		"rotatablez+" : "bedz+",
 		"rotatablez-" : "bedz-"
 	},
-	"quiver" : {
-		"icon" : "gamedata/textures/icons/quiver.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"maxStackSize" : 400,
-		"isRotatable" : true,
-		"needsBase" : true,
-		"isSolid" : false,
-		"sideall" : "quiverarrow",
-		"rotatablex+" : "quiverx+",
-		"rotatablex-" : "quiverx-",
-		"rotatablez+" : "quiverz+",
-		"rotatablez-" : "quiverz-"
-	},
 	"torch" : {
 		"icon" : "gamedata/textures/icons/torch.png",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -810,7 +778,6 @@
 		"sideall" : "SELF",
 		"isSolid" : false
 	},
-
 
 
 	"bedend" : {
@@ -847,8 +814,7 @@
 	},
 	"log" : {
 		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteHeavy",
-		"fuelValue" : 0.6
+		"onRemoveAudio" : "woodDeleteHeavy"
 	},
 	"wheatstage" : {
 		"isSolid" : false,
@@ -914,8 +880,7 @@
 	},
 	"coalore" : {
 		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/coalore.png",
-		"fuelValue" : 1.0
+		"icon" : "gamedata/textures/icons/coalore.png"
 	},
 	"cokes" : {
 		"icon" : "gamedata/textures/icons/cokes.png",

@@ -148,11 +148,6 @@
 				"resettooltipb" : "这会杀死所有的屁民并移除你的殖民地.",
 				"resettooltipc" : "这也会给你一个新的仓库."
 			},
-			"bannerremoval" : {
-				"header" : "移除旗帜",
-				"description" : "删除横幅会给你的殖民地带来问题。你确定?",
-				"button" : "移除"
-			},
 			"tooljob" : {
 				"header" : "命令工具",
 				"description" : "选择要创建的区域的类型.",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "浆果农民",
 				"berrya" : "快速方便的食物，殖民从这里开始！",
 				"berryb" : "放在草地上或泥土上",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "施工工具",
@@ -256,6 +265,11 @@
 				"openmanual" : "指导手册 (PDF)",
 				"closehelp" : "按F1关闭或重新打开此菜单",
 				"closetoggle" : "不再显示"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -414,6 +428,26 @@
 				"technologisttable" : {
 					"name" : "_MISSING_Technologist",
 					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -438,7 +472,6 @@
 		"leaves" : "树",
 		"leavestemperate" : "温带树",
 		"leavestaiga" : "针叶林树",
-		"quiver" : "箭筒",
 		"torch" : "火把",
 		"crate" : "储物箱",
 		"stonebricks" : "石砖",
@@ -512,7 +545,7 @@
 		"ironblock" : "_MISSING_Iron Block",
 		"ironrivet" : "_MISSING_Iron Rivet",
 		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Iron Wrought",
+		"ironwrought" : "_MISSING_Wrought Iron",
 		"kiln" : "_MISSING_Kiln",
 		"lead" : "_MISSING_Lead",
 		"leadbullet" : "_MISSING_Lead Bullet",
@@ -528,7 +561,18 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"tin" : "_MISSING_Tin",
 		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump"
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "大体积的木材原料哦！",
@@ -536,7 +580,6 @@
 		"crate" : "这是个异次元箱子!",
 		"workbench" : "招募工匠。为你做工艺品!",
 		"plasterblock" : "为了那典雅华贵的装饰",
-		"quiver" : "招募卫兵。瞄准怪物！",
 		"furnace" : "招收工匠。消耗矿石来炼制！",
 		"oven" : "招收面包师。把小麦变成面包",
 		"wheatstage1" : "未来的面包",
@@ -609,7 +652,7 @@
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be uesd to fire a matchlock gun",
+		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
@@ -630,7 +673,9 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood"
+		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 63.2323232323232
+	"coverage" : 58.1132075471698
 }

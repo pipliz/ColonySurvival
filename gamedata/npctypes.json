@@ -35,15 +35,6 @@
 		}
 	},
 	{
-		"keyName" : "pipliz.miner",
-		"printName" : "Miner",
-		"npcType" : "worker",
-		"data" : {
-			"maskColor1" : "#3f3939",
-			"inventoryCapacity" : 0.1
-		}
-	},
-	{
 		"keyName" : "pipliz.networkplayer",
 		"printName" : "Player",
 		"npcType" : "worker",
@@ -61,11 +52,129 @@
 		}
 	},
 	{
-		"keyName" : "pipliz.monster",
+		"keyName" : "pipliz.monsteraa",
 		"printName" : "Monster",
 		"npcType" : "monster",
 		"data" : {
-			"movementSpeed" : 1.3
+			"movementSpeed" : 1.3,
+			"initialHealth" : 100,
+			"punchDamage" : 30.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/monster_a_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/monster_a_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterab",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 1.8,
+			"initialHealth" : 100,
+			"punchDamage" : 30.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/monster_a_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/monster_a_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterac",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 2.3,
+			"initialHealth" : 100,
+			"punchDamage" : 30.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/monster_a_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/monster_a_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterba",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 1.3,
+			"initialHealth" : 300,
+			"punchDamage" : 40.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterbb",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 1.8,
+			"initialHealth" : 300,
+			"punchDamage" : 40.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterbc",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 2.3,
+			"initialHealth" : 300,
+			"punchDamage" : 40.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monsterca",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 1.3,
+			"initialHealth" : 500,
+			"punchDamage" : 60.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monstercb",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 1.8,
+			"initialHealth" : 500,
+			"punchDamage" : 60.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
+		}
+	},
+	{
+		"keyName" : "pipliz.monstercc",
+		"printName" : "Monster",
+		"npcType" : "monster",
+		"data" : {
+			"movementSpeed" : 2.3,
+			"initialHealth" : 500,
+			"punchDamage" : 60.0,
+			"punchCooldownMS" : 2000,
+			"albedo" : "gamedata/textures/materials/npc/base_monster_albedo.png",
+			"normal" : "gamedata/textures/materials/npc/base_monster_normal.png",
+			"special" : "gamedata/textures/materials/npc/base_monster_specu_emiss_smooth_mask.png"
 		}
 	}
 ]

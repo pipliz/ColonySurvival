@@ -148,11 +148,6 @@
 				"resettooltipb" : "Esto eliminará a todos tus colonos y campos de trabajo.",
 				"resettooltipc" : "También te proporcionará un nuevo inventario y reservas."
 			},
-			"bannerremoval" : {
-				"header" : "Remover Estandarte",
-				"description" : "Remover el Estandarte causará problemas a tu colonia. ¿Qué quieres hacer?",
-				"button" : "Remover"
-			},
 			"tooljob" : {
 				"header" : "Lista de comandos",
 				"description" : "Selecciona el tipo de área que deseas crear.",
@@ -188,7 +183,21 @@
 				"berryfarmer" : "Agricultor de bayas",
 				"berrya" : "Comida rápida y fácil, ¡inicia con ella!",
 				"berryb" : "Colocar sobre césped o tierra",
-				"berryc" : ""
+				"berryc" : "",
+				"guard" : "_MISSING_Guard",
+				"guarda" : "_MISSING_Protect your colony!",
+				"guardb" : "_MISSING_This will open another menu",
+				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardsday" : "_MISSING_Daytime guards",
+				"guardsnight" : "_MISSING_Nighttime guards",
+				"slingertooltip" : "_MISSING_Slinger guard",
+				"slinger" : "_MISSING_Slinger",
+				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbow" : "_MISSING_Crossbow",
+				"bowtooltip" : "_MISSING_Bow guard",
+				"bow" : "_MISSING_Bow",
+				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
+				"matchlock" : "_MISSING_Matchlock"
 			},
 			"toolconstruction" : {
 				"header" : "Herramienta de construcción",
@@ -254,6 +263,11 @@
 				"openmanual" : "Abrir manual (PDF)",
 				"closehelp" : "Aprieta F1 para cerrar o re-abrir este menú",
 				"closetoggle" : "No mostrar esto de nuevo"
+			},
+			"specialblockremoval" : {
+				"header" : "_MISSING_Special Block removal",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"button" : "_MISSING_Remove"
 			}
 		},
 		"firstpersonstats" : {
@@ -404,6 +418,26 @@
 				"technologisttable" : {
 					"name" : "Tecnólogo",
 					"description" : "Desbloquéalo, es quien crea bolsas de ciencia."
+				},
+				"bannerradius1" : {
+					"name" : "_MISSING_Banner Radius I",
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+				},
+				"bannerradius2" : {
+					"name" : "_MISSING_Banner Radius II",
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+				},
+				"bannerradius3" : {
+					"name" : "_MISSING_Banner Radius III",
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+				},
+				"bannerradius4" : {
+					"name" : "_MISSING_Banner Radius IV",
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+				},
+				"bannerradius5" : {
+					"name" : "_MISSING_Banner Radius V",
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
 				}
 			}
 		}
@@ -428,7 +462,6 @@
 		"leaves" : "Hojas",
 		"leavestemperate" : "Hojas templadas",
 		"leavestaiga" : "Hojas de taiga",
-		"quiver" : "Carcaj",
 		"torch" : "Antorcha",
 		"crate" : "Caja",
 		"stonebricks" : "Ladrillo de piedra",
@@ -518,7 +551,18 @@
 		"steelparts" : "Partes de acero",
 		"tin" : "Estaño",
 		"firewood" : "Leña",
-		"splittingstump" : "Tronco para leña"
+		"splittingstump" : "Tronco para leña",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"minerjob" : "_MISSING_Miner Job",
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"guardbowdayjob" : "_MISSING_Day Bow Guard",
+		"guardbownightjob" : "_MISSING_Night Bow Guard",
+		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
+		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
+		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
 	},
 	"typeuses" : {
 		"planks" : "¡Ahora con 4 veces el volumen de un tronco!",
@@ -526,7 +570,6 @@
 		"crate" : "¡Para todas las necesidades de almacenamiento!",
 		"workbench" : "Recluta un artesano. ¡Él creara por ti!",
 		"plasterblock" : "Para un look más moderno.",
-		"quiver" : "Recluta un guardia. ¡Disparará a tus enemigos!",
 		"furnace" : "Recluta un fundidor. ¡Usará todas tus menas!",
 		"oven" : "Utilizado para hornear pan.",
 		"wheatstage1" : "El pan del mañana.",
@@ -620,7 +663,9 @@
 		"tin" : "Tan solo un poco toxico.",
 		"bronzepickaxe" : "Usa la tabla de comandos para asignar un minero. ¡El usará el pico para extraer menas o piedras infinitas de un bloque!",
 		"firewood" : "Combustible básico.",
-		"splittingstump" : "Utilizada por un leñador para convertir la madera en leña."
+		"splittingstump" : "Utilizada por un leñador para convertir la madera en leña.",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 100
+	"coverage" : 92.4528301886792
 }
