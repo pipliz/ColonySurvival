@@ -47,7 +47,7 @@ namespace Pipliz.BlockNPCs.Implementations
 			{
 				keyName = NPCTypeKey,
 				printName = "Day Crossbow Guard",
-				maskColor1 = new Color32(195, 98, 27, 255),
+				maskColor1 = new Color32(52, 52, 52, 255),
 				type = NPCTypeID.GetNextID()
 			};
 		}

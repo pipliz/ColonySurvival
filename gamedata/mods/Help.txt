@@ -325,6 +325,10 @@ void OnNPCHit (NPC.NPCBase npc, Pipliz.Box<float> box)
 -box.item1 -> damage
 -{npc} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
 
+void OnPlayerHit (Players.Player player, Pipliz.Box<float> box)
+-box.item1 -> damage
+-{player} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+
 void OnPlayerClicked (Players.Player player, Pipliz.Box<Shared.PlayerClickedData> boxedData)
 -boxedData.item1 -> clickedData
 -{player} clicked, resulting in {clickedData}. Don't store the Box<>.
@@ -334,8 +338,8 @@ void OnPlayerClicked (Players.Player player, Pipliz.Box<Shared.PlayerClickedData
 -| If it's Block, distanceToHit, voxelHit, voxelSideHit and typeHit become valid
  | If it's NPC, distanceToHit and hitNPCID become valid
 -Builtin callback uses:
-+pipliz.server.hitzombie
---Checks if the player hit a zombie, if that's the case, cause damage to it
++pipliz.server.players.hitnpc
+--Checks if the player hit an npc, if that's the case, cause damage to it
 
 The following 'paragraph' callbacks are all called from the filesaver thread. Be careful with multithreading, a significant portion of the game is not threadsafe.
 

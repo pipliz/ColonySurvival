@@ -43,6 +43,8 @@ namespace Pipliz.APIProvider.Jobs
 
 		public override InventoryItem RecruitementItem { get { return guardSettings.recruitmentItem; } }
 
+		public virtual bool HasTarget { get { return target != null && target.IsValid; } }
+
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
 			blockType = ItemTypes.IndexLookup.GetIndex(node.GetAs<string>("type"));
@@ -71,40 +73,46 @@ namespace Pipliz.APIProvider.Jobs
 
 		public override void OnNPCDoJob (ref NPCBase.NPCState state)
 		{
-			if (target != null && target.IsValid) {
-				Vector3 npcPos = usedNPC.Position + Vector3.up;
-				Vector3 targetPos = target.Position + Vector3.up;
+			if (HasTarget) {
+				Vector3 npcPos = position.Add(0, 1, 0).Vector;
+				Vector3 targetPos = target.PositionToAimFor;
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
-					if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
-						OnShoot();
-						state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
-						OverrideCooldown(guardSettings.cooldownShot);
-					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
-						OverrideCooldown(guardSettings.cooldownMissingItem);
-					}
+					ShootAtTarget(ref state);
+					return;
 				} else {
 					target = null;
 				}
 			}
-			if (target == null || !target.IsValid) {
-				target = MonsterTracker.Find(position.Add(0, 1, 0), guardSettings.range);
-				if (target == null) {
-					Vector3 pos = usedNPC.Position;
-					if (blockType == guardSettings.typeXP) {
-						pos += Vector3.right;
-					} else if (blockType == guardSettings.typeXN) {
-						pos += Vector3.left;
-					} else if (blockType == guardSettings.typeZP) {
-						pos += Vector3.forward;
-					} else if (blockType == guardSettings.typeZN) {
-						pos += Vector3.back;
-					}
-					usedNPC.LookAt(pos);
-				} else {
-					OverrideCooldown(guardSettings.cooldownSearchingTarget);
+			target = MonsterTracker.Find(position.Add(0, 1, 0), guardSettings.range);
+			if (HasTarget) {
+				usedNPC.LookAt(target.PositionToAimFor);
+				ShootAtTarget(ref state);
+			} else {
+				OverrideCooldown(guardSettings.cooldownSearchingTarget);
+				Vector3 pos = usedNPC.Position;
+				if (blockType == guardSettings.typeXP) {
+					pos += Vector3.right;
+				} else if (blockType == guardSettings.typeXN) {
+					pos += Vector3.left;
+				} else if (blockType == guardSettings.typeZP) {
+					pos += Vector3.forward;
+				} else if (blockType == guardSettings.typeZN) {
+					pos += Vector3.back;
 				}
+				usedNPC.LookAt(pos);
+			}
+		}
+
+		public virtual void ShootAtTarget (ref NPCBase.NPCState state)
+		{
+			if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
+				OnShoot();
+				state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
+				OverrideCooldown(guardSettings.cooldownShot);
+			} else {
+				state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
+				OverrideCooldown(guardSettings.cooldownMissingItem);
 			}
 		}
 
