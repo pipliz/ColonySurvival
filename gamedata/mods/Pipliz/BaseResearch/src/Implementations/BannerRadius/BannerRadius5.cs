@@ -9,7 +9,7 @@ namespace Pipliz.BaseResearch.Implementations
 		public BannerRadius5()
 		{
 			key = "pipliz.baseresearch.bannerradius5";
-			icon = "gamedata/textures/icons/banner.png";
+			icon = "gamedata/textures/icons/baseresearch_bannerrange5.png";
 			iterationCount = 100;
 			AddIterationRequirement("sciencebagadvanced");
 			AddIterationRequirement("sciencebagcolony");
