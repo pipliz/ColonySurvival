@@ -186,18 +186,26 @@
 				"berryc" : "_MISSING_",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu",
-				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
+				"guardc" : "_MISSING_",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Slinger guard",
+				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Bow guard",
+				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
 				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
-				"matchlock" : "_MISSING_Matchlock"
+				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlock" : "_MISSING_Matchlock",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"jobbowday" : "_MISSING_Daytime Bow Guard",
+				"jobbownight" : "_MISSING_Nighttime Bow Guard",
+				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
+				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
+				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
 			},
 			"toolconstruction" : {
 				"header" : "Attrezzo Costruttivo",
@@ -218,8 +226,6 @@
 				"remove" : "Rimuovi Area"
 			},
 			"inventory" : {
-				"crafting" : "Lavorazione",
-				"stockpile" : "Magazzino",
 				"stockpiledescription" : "È possibile eseguire le attività solo con le voci negli slot in basso. I colonizzatori possono utilizzare solo oggetti nel tuo magazzino.",
 				"foodvalue" : "Cibo:",
 				"tooltip" : {
@@ -278,16 +284,16 @@
 			"laborercount" : "Disoccupato:",
 			"foodstorage" : "Cibo:",
 			"foodusage" : "Cibo/Giorno:",
-			"arrowcount" : "Frecce:"
+			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "_MISSING_Basics",
 				"description" : "_MISSING_Welcome to Colony Survival!",
-				"text1" : "_MISSING_The banner is the center of your colony. Press \"2\" to plant it. Right-click the banner to recruit colonists.",
 				"text2" : "_MISSING_You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
 				"text3" : "_MISSING_Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
-				"text4" : "_MISSING_Monsters will attack your colony at night! Use quivers to place archers. Press 'R' to rotate them. Press 'G' to activate a lamp."
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
+				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
 				"header" : "_MISSING_Food Production",
@@ -301,14 +307,24 @@
 				"description" : "_MISSING_Defend your colony against the monsters of the night!",
 				"text1" : "_MISSING_At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
 				"text2" : "_MISSING_Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
-				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough arrows."
+				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
+				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Arrow Production",
-				"description" : "_MISSING_Without arrows, monsters will slaughter your colonists!",
-				"text1" : "_MISSING_The deepest layer of the world contains infinite ores. Right-click those ores with the Commandtool to set miners to work. Don't forget to place a crate nearby.",
-				"text2" : "_MISSING_Place a furnace. If there is an unemployed colonist, he will automatically go to the furnace and start crafting iron ore into iron bars.",
-				"text3" : "_MISSING_Place a workbench to turn a colonist into a crafter. He will automatically make arrows and other items for you."
+				"header" : "_MISSING_Mining",
+				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
+				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
+				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
+				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+			},
+			"page5" : {
+				"header" : "_MISSING_Scientific Research",
+				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
+				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
+				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
+				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
 		"pipliz" : {
@@ -360,14 +376,6 @@
 				"healthregenspeed4" : {
 					"name" : "_MISSING_Regeneration Speed IV",
 					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"tailorbase" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologistbase" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
 				},
 				"sciencebaglife" : {
 					"name" : "_MISSING_Life Science Bag",
@@ -677,5 +685,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 48.1132075471698
+	"coverage" : 46.5201465201465
 }

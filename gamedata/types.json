@@ -644,7 +644,7 @@
 		"onRemoveAudio" : "stoneDelete",
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"infinitecopper" : {
@@ -675,7 +675,7 @@
 		],
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"infinitegold" : {
@@ -696,7 +696,7 @@
 		"sideall" : "SELF",
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"infiniteiron" : {
@@ -716,7 +716,7 @@
 		"onRemoveAudio" : "stoneDelete",
 		"customData" : {
 			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
+			"minerMiningTime" : 10.0
 		}
 	},
 	"infinitestone" : {
@@ -1080,7 +1080,23 @@
 	"savetool" : {
 	},
 
-
+	
+	"projectile_arrow" : {
+		"mesh" : "gamedata/meshes/arrow.obj",
+		"sideall" : "projectile"
+	},
+	"projectile_crossbowbolt" : {
+		"mesh" : "gamedata/meshes/crossbowbolt.obj",
+		"sideall" : "projectile"
+	},
+	"projectile_slingbullet" : {
+		"mesh" : "gamedata/meshes/slingbullet.obj",
+		"sideall" : "projectile"
+	},
+	"projectile_leadbullet" : {
+		"mesh" : "gamedata/meshes/leadbullet.obj",
+		"sideall" : "projectile"
+	},
 
 	"erroridle" : {
 		"parentType" : "missingerror",

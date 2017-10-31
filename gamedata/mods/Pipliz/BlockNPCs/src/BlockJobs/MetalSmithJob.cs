@@ -7,7 +7,7 @@ namespace Pipliz.BlockNPCs.Implementations
 	{
 		public override string NPCTypeKey { get { return "pipliz.metalsmithjob"; } }
 
-		public override float TimeBetweenJobs { get { return 6f; } }
+		public override float TimeBetweenJobs { get { return 5f; } }
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
