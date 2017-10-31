@@ -186,18 +186,26 @@
 				"berryc" : "",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu",
-				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
+				"guardc" : "_MISSING_",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Slinger guard",
+				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Bow guard",
+				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
 				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
-				"matchlock" : "_MISSING_Matchlock"
+				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlock" : "_MISSING_Matchlock",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"jobbowday" : "_MISSING_Daytime Bow Guard",
+				"jobbownight" : "_MISSING_Nighttime Bow Guard",
+				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
+				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
+				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
 			},
 			"toolconstruction" : {
 				"header" : "Bauwerkzeug",
@@ -218,8 +226,6 @@
 				"remove" : "Gebiet entfernen"
 			},
 			"inventory" : {
-				"crafting" : "Herstellung",
-				"stockpile" : "Lager",
 				"stockpiledescription" : "Du kannst nur Sachen herstellen, wenn du die benötigten Materialien in den unteren Feldern hast. Kolonisten können nur das Lager nutzen.",
 				"foodvalue" : "Nährwert:",
 				"tooltip" : {
@@ -278,16 +284,16 @@
 			"laborercount" : "Arbeitslos:",
 			"foodstorage" : "Nahrung:",
 			"foodusage" : "Verbrauch:",
-			"arrowcount" : "Pfeile:"
+			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "Grundlagen",
 				"description" : "Willkommen bei Colony Survival!",
-				"text1" : "Das Banner ist das Zentrum deiner Kolonie. Drücke '2' um es zu platzieren. Rechtsklicke auf das Banner, um Kolonisten zu rekrutieren.",
 				"text2" : "Du brauchst Essen und Betten, um Kolonisten zu rekrutieren. Kolonisten brauchen Essen, um zu überleben. Stelle sicher,dass immer genug Essen verfügbar ist, oder sie verhungern!",
 				"text3" : "Drücke 'I' um ein Bett zu craften. Du kannst nur Dinge mit den Items in den Slots ganz unten craften. Kolonisten können nur Items im Lager benutzen. Sie greifen auf das Lager mit Hilfe von Kisten zu.",
-				"text4" : "Monster werden deine Kolonie bei Nacht angreifen! Benutze Köcher, um Bogenschützen zu platzieren. Drücke 'R' um sie zu rotieren. Drücke 'G' um deine Lampe zu aktivieren."
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
+				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
 				"header" : "Essens-Produktion",
@@ -301,14 +307,24 @@
 				"description" : "Verteidige deine Kolonie gegen die Monster der Nacht!",
 				"text1" : "Nachts werden Monster versuchen, deine Kolonie anzugreifen. Platziere Wachen, baue Mauern und schaufle Gräben um deine Kolonie zu verteidigen. Monster können nicht über zwei Blöcke klettern.",
 				"text2" : "Isoliere deine Kolonie nicht komplett! Wenn es keinen Weg zu deinem Banner gibt, wird der 'Belagerungs Modus' aktiviert. Während des Belagerungsmodus, wird dein gelagertes Essen rasch verbraucht.",
-				"text3" : "Die Menge an Monstern steigt, wenn die Anzahl deiner Kolonisten wächst! Stelle sicher, dass deine Wachen genug Pfeile haben."
+				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
+				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "Pfeile-Produktion",
-				"description" : "Ohne Pfeile werden Monster deine Kolonisten abschlachten!",
-				"text1" : "Die tiefsten Schichten dieser Welt enthalten unendlich viele Erze. Rechtsklicke diese Erze mit dem Befehlswerkzeug, um einen Mienenarbeiter arbeiten zu lassen. Vergiss nicht eine Truhe in der Nähe zu platzieren.",
-				"text2" : "Platziere eine Schmelze. Wenn es einen arbeitslosen Kolonisten gibt, wird er automatisch zu der Schmelze gehen und anfangen Eisen Erz in Eisen Barren zu craften.",
-				"text3" : "Platziere eine Werkbank, um einen Kolonisten als Crafter auszubilden. Er wird automatisch Pfeile und andere Items für dich craften."
+				"header" : "_MISSING_Mining",
+				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
+				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
+				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
+				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+			},
+			"page5" : {
+				"header" : "_MISSING_Scientific Research",
+				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
+				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
+				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
+				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
 		"pipliz" : {
@@ -360,14 +376,6 @@
 				"healthregenspeed4" : {
 					"name" : "Schnellere Regeneration IV",
 					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP\/s auf 4 HP\/s"
-				},
-				"tailorbase" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologistbase" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
 				},
 				"sciencebaglife" : {
 					"name" : "_MISSING_Life Science Bag",
@@ -677,5 +685,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 70.188679245283
+	"coverage" : 66.4835164835165
 }

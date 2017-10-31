@@ -191,18 +191,26 @@
 				"berryc" : "",
 				"guard" : "Guard",
 				"guarda" : "Protect your colony!",
-				"guardb" : "This will open another menu",
-				"guardc" : "Where you can select the guard types",
+				"guardb" : "This will open another menu where you can select the guard types",
+				"guardc" : "",
 				"guardsday" : "Daytime guards",
 				"guardsnight" : "Nighttime guards",
-				"slingertooltip" : "Slinger guard",
+				"slingertooltip" : "Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"slinger" : "Slinger",
-				"crossbowtooltip" : "Crossbow guard",
+				"crossbowtooltip" : "Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"crossbow" : "Crossbow",
-				"bowtooltip" : "Bow guard",
+				"bowtooltip" : "Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
 				"bow" : "Bow",
-				"matchlocktooltip" : "Matchlock gun guard",
-				"matchlock" : "Matchlock"
+				"matchlocktooltip" : "Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlock" : "Matchlock",
+				"jobslingerday" : "Daytime Slinger Guard",
+				"jobslingernight" : "Nighttime Slinger Guard",
+				"jobbowday" : "Daytime Bow Guard",
+				"jobbownight" : "Nighttime Bow Guard",
+				"jobcrossbowday" : "Daytime Crossbow Guard",
+				"jobcrossbownight" : "Nighttime Crossbow Guard",
+				"jobmatchlockday" : "Daytime Matchlock Gun Guard",
+				"jobmatchlocknight" : "Nighttime Matchlock Gun Guard"
 			},
 			"toolconstruction" : {
 				"header" : "Construction tool",
@@ -276,16 +284,16 @@
 			"laborercount" : "Unemployed:",
 			"foodstorage" : "Food:",
 			"foodusage" : "Food use/day:",
-			"arrowcount" : "Arrows:"
+			"ammocount" : "Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "Basics",
 				"description" : "Welcome to Colony Survival!",
-				"text1" : "The banner is the center of your colony. Press \"2\" to plant it. Right-click the banner to recruit colonists.",
+				"text1" : "The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
 				"text3" : "Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
-				"text4" : "Monsters will attack your colony at night! Use quivers to place archers. Press 'R' to rotate them. Press 'G' to activate a lamp."
+				"text4" : "Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
 				"header" : "Food Production",
@@ -299,14 +307,24 @@
 				"description" : "Defend your colony against the monsters of the night!",
 				"text1" : "At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
 				"text2" : "Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
-				"text3" : "The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough arrows."
+				"text3" : "The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
+				"text4" : "Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "Arrow Production",
-				"description" : "Without arrows, monsters will slaughter your colonists!",
-				"text1" : "The deepest layer of the world contains infinite ores. Right-click those ores with the Commandtool to set miners to work. Don't forget to place a crate nearby.",
-				"text2" : "Place a furnace. If there is an unemployed colonist, he will automatically go to the furnace and start crafting iron ore into iron bars.",
-				"text3" : "Place a workbench to turn a colonist into a crafter. He will automatically make arrows and other items for you."
+				"header" : "Mining",
+				"description" : "Ores are a fundamental requirement for your colony.",
+				"text1" : "Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
+				"text2" : "Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
+				"text3" : "Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
+				"text4" : "Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+			},
+			"page5" : {
+				"header" : "Scientific Research",
+				"description" : "Only the smallest colonies can do without science!",
+				"text1" : "Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
+				"text2" : "Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
+				"text3" : "Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
+				"text4" : "Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
 		"pipliz" : {

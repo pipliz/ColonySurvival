@@ -186,18 +186,26 @@
 				"berryc" : "",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu",
-				"guardc" : "_MISSING_Where you can select the guard types",
+				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
+				"guardc" : "_MISSING_",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Slinger guard",
+				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Crossbow guard",
+				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Bow guard",
+				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
 				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Matchlock gun guard",
-				"matchlock" : "_MISSING_Matchlock"
+				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlock" : "_MISSING_Matchlock",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"jobbowday" : "_MISSING_Daytime Bow Guard",
+				"jobbownight" : "_MISSING_Nighttime Bow Guard",
+				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
+				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
+				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
 			},
 			"toolconstruction" : {
 				"header" : "Nástroj pro konstrukce",
@@ -218,8 +226,6 @@
 				"remove" : "Odstranit oblast"
 			},
 			"inventory" : {
-				"crafting" : "Výroba",
-				"stockpile" : "Zásoby",
 				"stockpiledescription" : "Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisti mohou používat věci pouze z vašich zásob.",
 				"foodvalue" : "Hodnota jídla:",
 				"tooltip" : {
@@ -278,16 +284,16 @@
 			"laborercount" : "Nezaměstnaní:",
 			"foodstorage" : "Jídlo:",
 			"foodusage" : "Spotřeba jídla/den:",
-			"arrowcount" : "Šípy:"
+			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "Základy",
 				"description" : "Vítejte v Colony Survival!",
-				"text1" : "Prapor je základ vaší kolonie. Stiskněte \"2\" pro jeho umístění. Klikněte pravým na prapor pro rekrutování kolonistů.",
 				"text2" : "Potřebujete jídlo a postele pro rekrutování kolonistů. Kolonisté potřebují jíst aby přežili. Ujistěte se, že máte dostatek jídla nebo budou hladovět!",
 				"text3" : "Stiskněte \"I\" pro vyrobení postele. Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisté mohou používat předměty pouze ze zásob. K přístupu k zásobám používají bedny.",
-				"text4" : "Monstra útočí v noci na vaší kolonii! Použijte toulce pro umístění lučištníků. Stiskněte 'R' pro otočení. Stiskněte 'G' pro aktivování lampy."
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
+				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
 				"header" : "Produkce jídla",
@@ -301,14 +307,24 @@
 				"description" : "Braňte svou kolonii před nočními útoky monster!",
 				"text1" : "V noci se budou snažit monstra zaútočit na vaší kolonii. Položte strážce, postavte zdi a vykopejte příkopy aby jste ubránili svojí kolonii. Monstra nevyšplhají přes dva bloky.",
 				"text2" : "Do not completely isolate your colony! Pokud není k vašemu praporu žádná cesta, aktivuje se 'Režim Obležení'. Během Režimu Obležení je vaše jídlo velice rychle konzumováno.",
-				"text3" : "Počet monster se zvětšuje jak se zvyšuje počet vašich kolonistů! Ujistěte se, že vaši strážci mají dostatek šípů."
+				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
+				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "Výroba šípů",
-				"description" : "Bez šípů monstra pozabíjí vaše kolonisty!",
-				"text1" : "Nejhlubší vrstva světa obsahuje nekonečné rudy. Klikněte pravým na tyto rudy pomocí Nástroje pro správu a nastavte tak horníkům práci. Nezapomeňte umístit bednu poblíž.",
-				"text2" : "Položte pec pro tavení rudy. Pokud máte nezaměstnaného kolonistu, tak začne automaticky pracovat v peci a tavit železnou rudu na železné ingoty.",
-				"text3" : "Položte pracovní stůl aby jste z kolonisty udělali řemeslníka. Bude pro vás automaticky dělat šípy a další věci."
+				"header" : "_MISSING_Mining",
+				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
+				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
+				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
+				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+			},
+			"page5" : {
+				"header" : "_MISSING_Scientific Research",
+				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
+				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
+				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
+				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
 		"pipliz" : {
@@ -360,14 +376,6 @@
 				"healthregenspeed4" : {
 					"name" : "_MISSING_Regeneration Speed IV",
 					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"tailorbase" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologistbase" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
 				},
 				"sciencebaglife" : {
 					"name" : "_MISSING_Life Science Bag",
@@ -677,5 +685,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 58.1132075471698
+	"coverage" : 54.7619047619048
 }

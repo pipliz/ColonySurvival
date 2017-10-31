@@ -36,6 +36,14 @@ namespace Pipliz.BlockNPCs.Implementations
 			return CachedSettings;
 		}
 
+		protected override void OnShoot ()
+		{
+			if (Random.NextFloat(0f, 1f) < 0.9f) {
+				Stockpile.GetStockPile(owner).Add(BuiltinBlocks.LinenPouch);
+			}
+			base.OnShoot();
+		}
+
 		protected override GuardSettings SetupSettings ()
 		{
 			return GetGuardSettings();
