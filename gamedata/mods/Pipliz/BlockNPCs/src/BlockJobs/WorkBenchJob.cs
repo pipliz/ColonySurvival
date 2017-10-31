@@ -1,5 +1,5 @@
-﻿using NPC;
-using Pipliz.APIProvider.Jobs;
+﻿using Pipliz.APIProvider.Jobs;
+using Server.NPCs;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
@@ -7,18 +7,30 @@ namespace Pipliz.BlockNPCs.Implementations
 	{
 		public override string NPCTypeKey { get { return "pipliz.crafter"; } }
 
-		public override float TimeBetweenJobs { get { return 5f; } }
+		public override float TimeBetweenJobs { get { return 8f; } }
 
 		public override int MaxRecipeCraftsPerHaul { get { return 5; } }
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Crafter";
-			def.maskColor1 = new UnityEngine.Color32(81, 121, 123, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Crafter",
+				maskColor1 = new UnityEngine.Color32(81, 121, 123, 255),
+				type = NPCTypeID.GetNextID()
+			};
+		}
+
+		protected override void OnRecipeCrafted ()
+		{
+			base.OnRecipeCrafted();
+			ServerManager.SendAudio(position.Vector, "crafting");
+		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "crafting.json");
 		}
 	}
 }

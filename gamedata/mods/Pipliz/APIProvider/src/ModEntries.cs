@@ -9,15 +9,6 @@ namespace Pipliz.APIProvider
 	[ModLoader.ModManager]
 	public static class ModEntries
 	{
-		/// <summary>
-		/// Register npc's in a callback of AfterDefiningNPCTypes that provides for this one.
-		/// </summary>
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.apiprovider.jobs.resolvetypes")]
-		public static void AfterDefiningNPCTypes ()
-		{
-			Jobs.BlockJobManagerTracker.ResolveRegisteredTypes();
-		}
-
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterWorldLoad, "pipliz.apiprovider.jobs.registercallbacks")]
 		public static void AfterWorldLoad ()
 		{
@@ -36,7 +27,16 @@ namespace Pipliz.APIProvider
 			Jobs.BlockJobManagerTracker.Save();
 		}
 
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")]
+		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.registerrecipes")]
+		public static void AfterDefiningNPCTypes ()
+		{
+			Jobs.BlockJobManagerTracker.ResolveRegisteredTypes();
+		}
+
 		[ModLoader.ModCallback (ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.apiprovider.registerrecipes")]
+		[ModLoader.ModCallbackProvidesFor("pipliz.server.loadresearchables")]
 		public static void AfterItemTypesDefined ()
 		{
 			Jobs.BlockJobManagerTracker.RegisterRecipes();

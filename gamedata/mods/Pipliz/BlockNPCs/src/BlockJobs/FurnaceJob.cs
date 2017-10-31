@@ -1,11 +1,11 @@
 ﻿using BlockTypes.Builtin;
-using System.Collections.Generic;
-using NPC;
 using Pipliz.APIProvider.Jobs;
+using Server.NPCs;
+using System.Collections.Generic;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
-	public class FurnaceJob : FueledCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class FurnaceJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public override string NPCTypeKey { get { return "pipliz.smelter"; } }
 
@@ -13,46 +13,73 @@ namespace Pipliz.BlockNPCs.Implementations
 
 		public override int MaxRecipeCraftsPerHaul { get { return 2; } }
 
-		public override void OnLit ()
+		public override void OnStartCrafting ()
 		{
+			base.OnStartCrafting();
+
 			ushort litType;
-			if (blockType == BuiltinBlocks.FurnaceUnlitXP) {
+			if (blockType == BuiltinBlocks.FurnaceXP) {
 				litType = BuiltinBlocks.FurnaceLitXP;
-			} else if (blockType == BuiltinBlocks.FurnaceUnlitXN) {
+			} else if (blockType == BuiltinBlocks.FurnaceXN) {
 				litType = BuiltinBlocks.FurnaceLitXN;
-			} else if (blockType == BuiltinBlocks.FurnaceUnlitZP) {
+			} else if (blockType == BuiltinBlocks.FurnaceZP) {
 				litType = BuiltinBlocks.FurnaceLitZP;
-			} else {
+			} else if (blockType == BuiltinBlocks.FurnaceZN) {
 				litType = BuiltinBlocks.FurnaceLitZN;
+			} else {
+				World.TryGetTypeAt(position, out blockType);
+				return;
 			}
+			blockType = litType;
 			ServerManager.TryChangeBlock(position, litType);
+		}
+
+		public override void OnStopCrafting ()
+		{
+			base.OnStopCrafting();
+
+			ushort unLitType;
+			if (blockType == BuiltinBlocks.FurnaceLitXP) {
+				unLitType = BuiltinBlocks.FurnaceXP;
+			} else if (blockType == BuiltinBlocks.FurnaceLitXN) {
+				unLitType = BuiltinBlocks.FurnaceXN;
+			} else if (blockType == BuiltinBlocks.FurnaceLitZP) {
+				unLitType = BuiltinBlocks.FurnaceZP;
+			} else if (blockType == BuiltinBlocks.FurnaceLitZN) {
+				unLitType = BuiltinBlocks.FurnaceZN;
+			} else {
+				World.TryGetTypeAt(position, out blockType);
+				return;
+			}
+			blockType = unLitType;
+			ServerManager.TryChangeBlock(position, unLitType);
 		}
 
 		public override Vector3Int GetPositionNPC (Vector3Int position)
 		{
-			Vector3Int positionNPC;
-			if (blockType == BuiltinBlocks.FurnaceLitXP || blockType == BuiltinBlocks.FurnaceUnlitXP) {
-				positionNPC = position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FurnaceLitXN || blockType == BuiltinBlocks.FurnaceUnlitXN) {
-				positionNPC = position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FurnaceLitZP || blockType == BuiltinBlocks.FurnaceUnlitZP) {
-				positionNPC = position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.FurnaceLitZN || blockType == BuiltinBlocks.FurnaceUnlitZN) {
-				positionNPC = position.Add(0, 0, -1);
+			if (blockType == BuiltinBlocks.FurnaceLitXP || blockType == BuiltinBlocks.FurnaceXP) {
+				return position.Add(1, 0, 0);
+			} else if (blockType == BuiltinBlocks.FurnaceLitXN || blockType == BuiltinBlocks.FurnaceXN) {
+				return position.Add(-1, 0, 0);
+			} else if (blockType == BuiltinBlocks.FurnaceLitZP || blockType == BuiltinBlocks.FurnaceZP) {
+				return position.Add(0, 0, 1);
+			} else if (blockType == BuiltinBlocks.FurnaceLitZN || blockType == BuiltinBlocks.FurnaceZN) {
+				return position.Add(0, 0, -1);
 			} else {
-				positionNPC = position;
+				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
+				return position;
 			}
-			return positionNPC;
 		}
 
-		NPCTypeSettings INPCTypeDefiner.GetNPCTypeDefinition ()
+		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
-			NPCTypeSettings def = NPCTypeSettings.Default;
-			def.keyName = NPCTypeKey;
-			def.printName = "Smelter";
-			def.maskColor1 = new UnityEngine.Color32(155, 100, 91, 255);
-			def.type = NPCTypeID.GetNextID();
-			return def;
+			return new NPCTypeStandardSettings()
+			{
+				keyName = NPCTypeKey,
+				printName = "Smelter",
+				maskColor1 = new UnityEngine.Color32(155, 100, 91, 255),
+				type = NPCTypeID.GetNextID()
+			};
 		}
 
 		public override List<string> GetCraftingLimitsTriggers ()
@@ -68,6 +95,11 @@ namespace Pipliz.BlockNPCs.Implementations
 				"furnacelitz+",
 				"furnacelitz-"
 			};
+		}
+
+		protected override string GetRecipeLocation ()
+		{
+			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "smelting.json");
 		}
 	}
 }

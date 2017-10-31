@@ -48,7 +48,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void ResolveRegisteredTypes ()
 		{
 			foreach (var pair in RegisteredTypes) {
-				pair.Value.Invoke(pair.Key);
+				try {
+					pair.Value.Invoke(pair.Key);
+				} catch (Exception e) {
+					Log.WriteException("Error resolving blockjob {0}:", e, pair.Key);
+				}
 			}
 		}
 
@@ -58,7 +62,7 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Resolve<T> (string blockName) where T : ITrackableBlock, IBlockJobBase, INPCTypeDefiner, new()
 		{
 			var instance = new T();
-			NPC.NPCType.AddSettings(instance.GetNPCTypeDefinition());
+			Server.NPCs.NPCType.AddSettings(instance.GetNPCTypeDefinition());
 			if (typeof(IRecipeLimitsProvider).IsAssignableFrom(typeof(T))) {
 				LimitsProviders.Add(new KeyValuePair<string, IRecipeLimitsProvider>(blockName, (IRecipeLimitsProvider)instance));
 			}
@@ -71,7 +75,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void RegisterCallback ()
 		{
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].RegisterCallback();
+				try {
+					InstanceList[i].RegisterCallback();
+				} catch (Exception e) {
+					Log.WriteException("Error registering APIProvider callbacks of blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -81,7 +89,11 @@ namespace Pipliz.APIProvider.Jobs
 		public static void Load ()
 		{
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].Load();
+				try {
+					InstanceList[i].Load();
+				} catch (Exception e) {
+					Log.WriteException("Error loading APIProvider blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -90,8 +102,15 @@ namespace Pipliz.APIProvider.Jobs
 		/// </summary>
 		public static void Save ()
 		{
+			if (ServerManager.WorldName == null) {
+				return;
+			}
 			for (int i = 0; i < InstanceList.Count; i++) {
-				InstanceList[i].OnSave();
+				try {
+					InstanceList[i].OnSave();
+				} catch (Exception e) {
+					Log.WriteException("Error saving APIProvider blockjob {0}:", e, InstanceList[i].ToString());
+				}
 			}
 		}
 
@@ -101,18 +120,22 @@ namespace Pipliz.APIProvider.Jobs
 		public static void RegisterRecipes ()
 		{
 			for (int i = 0; i < LimitsProviders.Count; i++) {
-				var recipeLimitsProvider = LimitsProviders[i].Value;
-				var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
-				if (list != null) {
-					RecipeLimits.SetRecipes(recipeLimitsProvider.GetCraftingLimitsIdentifier(), list.ToList());
-					var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
-					if (triggers == null) {
-						RecipeLimits.SetInterface(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsIdentifier());
-					} else {
-						for (int i2 = 0; i2 < triggers.Count; i2++) {
-							RecipeLimits.SetInterface(triggers[i2], recipeLimitsProvider.GetCraftingLimitsIdentifier());
+				try {
+					var recipeLimitsProvider = LimitsProviders[i].Value;
+					var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
+					if (list != null) {
+						RecipeStorage.AddLimitTypeRecipes(recipeLimitsProvider.GetCraftingLimitsType(), list);
+						var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
+						if (triggers == null) {
+							RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
+						} else {
+							for (int i2 = 0; i2 < triggers.Count; i2++) {
+								RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
+							}
 						}
 					}
+				} catch (Exception e) {
+					Log.WriteException("Error registering recipes for blockjob {0}:", e, LimitsProviders[i].ToString());
 				}
 			}
 		}

@@ -1,0 +1,46 @@
+0.4.0 (2017-10-31)
+
+Welcome to update 0.4.0!
+
+We strongly recommend you to start a new world. The new ores are fundamental to your colony and do not spawn in old worlds. The new guard system is incompatible with the old quivers. Monsters might not spawn, permanently enabling siege mode. Because the new world is a lot higher, water might flood your old world. You can always restore the game to the 0.3.0 version and continue playing in your old worlds.
+
+The update adds a lot of new items, jobs, monsters and weapons. The gameplay is different from what you’re used to. Both flax and the science lab aren’t end-game content anymore, they’re important at the start of your colony. Place the science lab as soon as you have a spare colonist. You’ll need it to unlock the anvil, which you’ll need to craft arrows. Your first guards should be slingers. Ores and dark stone blocks can be removed by players now, and you’ll need to do that to dig deeper and find new ores. You can find ores by digging into the side of a mountain as well. For more information, read the updated help menu (press F1) or the blogs on Steam. If you encounter any bugs or badly balanced features, please share your feedback on Steam, Discord or Reddit!
+
+-Added 11 blocks
+-Added 36 new items
+-Added 15 researches to unlock the new items
+-Added 3 new guard types
+-Added 5 new crafting jobs
+-Added research to expand the banner safe radius
+-Added 3 different zombie strengths & 3 different speeds
+-Added NPC & Monster health
+-Added the ability to punch monsters & npc's
+-Added automatic stockpile sorting (so it's a bit easier to find items)
+
+-Fixed an issue with non-ASCII paths ("Program Dosyaları" specifically) breaking the game.
+-Fixed multiple issues related to pathfinding making inefficient routing
+-Fixed torches and other non-solid blocks 2 blocks above the base layer blocking field creation
+-Fixed colonists only eating from bread if there's enough of it. Now it'll balance between food types (trying to keep total food value equal between stacks)
+-Fixed an issue with recipe limits being shared for all recipes with the same outcome (i.e, taiga logs -> planks & temperate logs -> planks)
+-Fixed an issue where the game would not properly use it's gamedata directory if launched from with a non-standard working directory
+-Fixed an issue where players would connect longer/deeper than desired when they are refused for any reason
+-Fixed a bug in the pathfinding precalculation where it may fail to mark some positions as traversable
+-Updated Unity version from 5.6.2f1 to 5.6.3p2 fixing various issues (& a 40 MB memory leak)
+-Fixed an issue with the client not properly receiving the disconnect packet when kicked
+-Fixed some of the issues with timeouts in the connection screen, by vastly improving the connecting scene logic
+
+-Moved nearly all gamedata files to the server, to allow for a better modded server experience. (no need for clients to install files)
+--This includes audio, localization, meshes, textures, icons, npc textures, water textures
+-Optimized pathfinding, it now runs about 3-4 times as fast (while being better).
+-Optimized the chunk updater, significantly reducing the performance cost of active chunks
+--Active chunks are checked a lot less when they're active due to a banner
+--Autosaving checks are now seperate from unloading checks
+-Optimized the AI path precalculation - it takes about 40% of the time it used to (lowered cpu load of server upon moving / loading)
+-Added compression to the servers' voxel data per chunk (saves up to 50%-ish of RAM)
+-Optimized torch rendering; reduced time to render for torches by 33-90% depending on scenario. Improves fps in tests by between 0 & ~20%
+
+-Tweaked scroll sensitivity for the stockpile, crafting menu, science menu and crafting limits menu
+-Fixed crafting limit slider to use sensible numbers
+-Fixed being able to open the help menu while in the escape menu
+
+-Very large list of internal / mod related changes and minor changes. Haven't kept it up to date (grew too long, and was adding fixes to fixes).

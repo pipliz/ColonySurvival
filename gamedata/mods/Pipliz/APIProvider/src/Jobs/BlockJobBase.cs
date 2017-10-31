@@ -1,5 +1,6 @@
 ﻿using NPC;
 using Pipliz.JSON;
+using Server.NPCs;
 
 namespace Pipliz.APIProvider.Jobs
 {
@@ -51,10 +52,12 @@ namespace Pipliz.APIProvider.Jobs
 			this.position = position;
 			this.owner = owner;
 
-			if (desiredNPCID != 0 && NPCTracker.TryGetNPC(desiredNPCID, out usedNPC)) {
-				usedNPC.TakeJob(this);
-			} else {
-				desiredNPCID = 0;
+			if (desiredNPCID != 0) {
+				if (NPCTracker.TryGetNPC(desiredNPCID, out usedNPC)) {
+					usedNPC.TakeJob(this);
+				} else {
+					Log.WriteWarning("Failed to find npc ID {0}", desiredNPCID);
+				}
 			}
 			if (usedNPC == null) {
 				JobTracker.Add(this);
@@ -143,7 +146,8 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual void OnNPCDoStockpile (ref NPCBase.NPCState state)
 		{
-
+			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			state.SetCooldown(0.1);
 		}
 
 		protected void OverrideCooldown (double cooldownLeft)

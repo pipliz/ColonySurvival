@@ -1,7 +1,5 @@
 ﻿using Pipliz.APIProvider.Jobs;
-using Pipliz.APIProvider.Recipes;
 using Pipliz.BlockNPCs.Implementations;
-using System.Collections.Generic;
 using System.IO;
 
 namespace Pipliz.BlockNPCs
@@ -17,45 +15,34 @@ namespace Pipliz.BlockNPCs
 			ModGamedataDirectory = Path.Combine(Path.GetDirectoryName(path), "gamedata/");
 		}
 
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterDefiningNPCTypes, "pipliz.blocknpcs.registerjobs")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.registerjobs")]
 		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
 		public static void AfterDefiningNPCTypes ()
 		{
+			BlockJobManagerTracker.Register<MinerJob>("minerjob");
+			BlockJobManagerTracker.Register<WoodcutterJob>("splittingstump");
+			BlockJobManagerTracker.Register<BloomeryJob>("bloomery");
+			BlockJobManagerTracker.Register<FineryForgeJob>("fineryforge");
 			BlockJobManagerTracker.Register<FurnaceJob>("furnace");
 			BlockJobManagerTracker.Register<GrinderJob>("grindstone");
+			BlockJobManagerTracker.Register<GunSmithJob>("gunsmithshop");
+			BlockJobManagerTracker.Register<KilnJob>("kiln");
+			BlockJobManagerTracker.Register<MetalSmithJob>("bronzeanvil");
 			BlockJobManagerTracker.Register<MintJob>("mint");
 			BlockJobManagerTracker.Register<OvenJob>("oven");
-			BlockJobManagerTracker.Register<QuiverJob>("quiver");
+			BlockJobManagerTracker.Register<GuardBowJobDay>("guardbowdayjob");
+			BlockJobManagerTracker.Register<GuardBowJobNight>("guardbownightjob");
+			BlockJobManagerTracker.Register<GuardCrossbowJobDay>("guardcrossbowdayjob");
+			BlockJobManagerTracker.Register<GuardCrossbowJobNight>("guardcrossbownightjob");
+			BlockJobManagerTracker.Register<GuardMatchlockJobDay>("guardmatchlockdayjob");
+			BlockJobManagerTracker.Register<GuardMatchlockJobNight>("guardmatchlocknightjob");
+			BlockJobManagerTracker.Register<GuardSlingerJobDay>("guardslingerdayjob");
+			BlockJobManagerTracker.Register<GuardSlingerJobNight>("guardslingernightjob");
+			BlockJobManagerTracker.Register<ScientistJob>("sciencelab");
 			BlockJobManagerTracker.Register<ShopJob>("shop");
-			BlockJobManagerTracker.Register<WorkBenchJob>("workbench");
 			BlockJobManagerTracker.Register<TailorJob>("tailorshop");
 			BlockJobManagerTracker.Register<TechnologistJob>("technologisttable");
-			BlockJobManagerTracker.Register<ScientistJob>("sciencelab");
-		}
-
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.loadrecipes")]
-		[ModLoader.ModCallbackProvidesFor ("pipliz.apiprovider.registerrecipes")]
-		public static void AfterItemTypesDefined ()
-		{
-			RecipeManager.LoadRecipes("pipliz.tailor", Path.Combine(ModGamedataDirectory, "tailoring.json"));
-			RecipeManager.LoadRecipes("pipliz.crafter", Path.Combine(ModGamedataDirectory, "crafting.json"));
-			RecipeManager.LoadRecipes("pipliz.grinder", Path.Combine(ModGamedataDirectory, "grinding.json"));
-			RecipeManager.LoadRecipes("pipliz.minter", Path.Combine(ModGamedataDirectory, "minting.json"));
-			RecipeManager.LoadRecipes("pipliz.merchant", Path.Combine(ModGamedataDirectory, "shopping.json"));
-			RecipeManager.LoadRecipes("pipliz.technologist", Path.Combine(ModGamedataDirectory, "technologist.json"));
-			RecipeManager.LoadRecipesFueled("pipliz.smelter", Path.Combine(ModGamedataDirectory, "smelting.json"));
-			RecipeManager.LoadRecipesFueled("pipliz.baker", Path.Combine(ModGamedataDirectory, "baking.json"));
-		}
-
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.registertypes")]
-		public static void AfterItemTypesDefined2 ()
-		{
-			ItemTypesServer.RegisterChangeTypes("furnace", new List<string>()
-				{ "furnacex+", "furnacex-", "furnacez+", "furnacez-", "furnacelitx+", "furnacelitx-", "furnacelitz+", "furnacelitz-" }
-			);
-			ItemTypesServer.RegisterChangeTypes("oven", new List<string>()
-				{ "ovenx+", "ovenz+", "ovenx-", "ovenz-", "ovenlitx+", "ovenlitz+", "ovenlitx-", "ovenlitz-" }
-			);
+			BlockJobManagerTracker.Register<WorkBenchJob>("workbench");
 		}
 	}
 }

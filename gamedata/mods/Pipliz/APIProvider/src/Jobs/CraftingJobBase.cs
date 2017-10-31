@@ -1,5 +1,4 @@
 ﻿using NPC;
-using Pipliz.APIProvider.Recipes;
 using Pipliz.JSON;
 using System.Collections.Generic;
 
@@ -11,6 +10,7 @@ namespace Pipliz.APIProvider.Jobs
 		protected bool shouldTakeItems;
 		protected Recipe selectedRecipe;
 		protected int recipesToCraft;
+		protected bool wasCrafting;
 
 		public override JSONNode GetJSON ()
 		{
@@ -32,9 +32,13 @@ namespace Pipliz.APIProvider.Jobs
 			return this;
 		}
 
+		public virtual void OnStartCrafting () { wasCrafting = true; }
+
+		public virtual void OnStopCrafting () { wasCrafting = false; }
+
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public virtual Recipe[] GetPossibleRecipes { get { return RecipeManager.RecipeStorage[NPCTypeKey]; } }
+		public virtual IList<Recipe> GetPossibleRecipes { get { return RecipeStorage.GetPlayerStorage(owner).GetAvailableRecipes<Recipe>(NPCTypeKey); } }
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 
@@ -61,9 +65,12 @@ namespace Pipliz.APIProvider.Jobs
 						shouldTakeItems = true;
 					}
 					OverrideCooldown(0.1);
+					if (wasCrafting) {
+						OnStopCrafting();
+					}
 				}
 			} else {
-				var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.AllDone:
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
@@ -88,6 +95,9 @@ namespace Pipliz.APIProvider.Jobs
 						OverrideCooldown(0.5);
 						break;
 				}
+				if (wasCrafting) {
+					OnStopCrafting();
+				}
 			}
 		}
 
@@ -97,7 +107,7 @@ namespace Pipliz.APIProvider.Jobs
 			state.JobIsDone = true;
 			if (shouldTakeItems) {
 				shouldTakeItems = false;
-				var recipeMatch = Recipe.MatchRecipe(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
@@ -109,7 +119,7 @@ namespace Pipliz.APIProvider.Jobs
 						recipesToCraft = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
 						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
 							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
-							usedNPC.Colony.UsedStockpile.Remove(selectedRecipe.Requirements[i] * recipesToCraft);
+							usedNPC.Colony.UsedStockpile.TryRemove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
 						OverrideCooldown(0.5);
 						break;
@@ -119,18 +129,27 @@ namespace Pipliz.APIProvider.Jobs
 
 		protected virtual void OnRecipeCrafted ()
 		{
+			if (!wasCrafting) {
+				OnStartCrafting();
+			}
+		}
 
+		protected override void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
+		{
+			if (oldGoal == NPCBase.NPCGoal.Job && wasCrafting) {
+				OnStopCrafting();
+			}
+		}
+
+		protected virtual string GetRecipeLocation ()
+		{
+			throw new System.NotImplementedException();
 		}
 
 		// IRecipeLimitsProvider
-		public virtual Recipe[] GetCraftingLimitsRecipes ()
+		public virtual IList<Recipe> GetCraftingLimitsRecipes ()
 		{
-			Recipe[] arr;
-			if (RecipeManager.RecipeStorage.TryGetValue(NPCTypeKey, out arr)) {
-				return arr;
-			} else {
-				return null;
-			}
+			return Recipe.LoadRecipes(GetRecipeLocation());
 		}
 
 		// IRecipeLimitsProvider
@@ -140,7 +159,7 @@ namespace Pipliz.APIProvider.Jobs
 		}
 
 		// IRecipeLimitsProvider
-		public virtual string GetCraftingLimitsIdentifier ()
+		public virtual string GetCraftingLimitsType ()
 		{
 			return NPCTypeKey;
 		}
