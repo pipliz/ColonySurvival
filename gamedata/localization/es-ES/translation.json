@@ -58,7 +58,7 @@
 			"qualityoff" : "Desactivar",
 			"video" : "Video",
 			"videomenu" : {
-				"full" : "Ajustes de video",
+				"full" : "Calidad de gráficos",
 				"resolution" : "Resolución",
 				"fullscreen" : "Pantalla completa",
 				"vsync" : "VSync",
@@ -80,23 +80,23 @@
 				"fxaamedium" : "FXAA medio",
 				"fxaahigh" : "FXAA alto",
 				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox muy bajo",
-				"skyboxslow" : "Skybox bajo",
-				"skyboxfrequent" : "Skybox frecuente",
-				"skyboxveryfrequent" : "Skybox muy frecuente",
-				"skyboxconstant" : "Skybox constante",
-				"terrainfrequent" : "Terrain frecuente",
-				"terrainveryfrequent" : "Terrain muy frecuente",
-				"terrainconstant" : "Terrain constante"
+				"skyboxveryslow" : "Cielo muy baja",
+				"skyboxslow" : "Cielo baja",
+				"skyboxfrequent" : "Cielo frecuente",
+				"skyboxveryfrequent" : "Cielo muy frecuente",
+				"skyboxconstant" : "Cielo constante",
+				"terrainfrequent" : "Terreno frecuente",
+				"terrainveryfrequent" : "Terreno muy frecuente",
+				"terrainconstant" : "Terreno constante"
 			},
-			"audio" : "Audio",
+			"audio" : "Sonidos",
 			"audiomenu" : {
-				"full" : "Ajustes de audio",
-				"mastervolume" : "Volumen Principal",
+				"full" : "Volumen de los sonidos",
+				"mastervolume" : "Principal",
 				"effectsvolume" : "Efectos",
 				"ambientvolume" : "Ambiente",
 				"torchvolume" : "Antorchas",
-				"menuvolume" : "Volumen del menú"
+				"menuvolume" : "Menú"
 			},
 			"gameplay" : "Jugabilidad",
 			"gameplaymenu" : {
@@ -156,12 +156,12 @@
 				"wheatb" : "Necesitas: Semillas de trigo",
 				"wheatc" : "Colocar sobre césped o tierra",
 				"miner" : "Minero",
-				"minera" : "Miner menas",
+				"minera" : "Minar menas",
 				"minerb" : "Necesitas: Pico",
 				"minerc" : "Colocar en la piedra final del mundo.",
 				"forester" : "Forestal",
-				"forestera" : "Plantas y árboles.",
-				"foresterb" : "Necesitas: Pimpollos y Hacha ",
+				"forestera" : "Plantas y árboles",
+				"foresterb" : "Necesitas: Pimpollos y Hacha",
 				"foresterc" : "Colocar sobre césped o tierra",
 				"flaxfarmer" : "Agricultor de lino",
 				"flaxa" : "Solo para colonias avanzadas",
@@ -186,12 +186,12 @@
 				"berryc" : "",
 				"guard" : "Guardia",
 				"guarda" : "¡Protege tu colonia!",
-				"guardb" : "Esto abrirá otro menú.",
-				"guardc" : "Aquí tu puedes seleccionar los tipos de guardias.",
+				"guardb" : "Esto abrirá otro menú",
+				"guardc" : "Aquí tu puedes seleccionar los tipos de guardias",
 				"guardsday" : "Guardia diurno",
 				"guardsnight" : "Guardia nocturno",
 				"slingertooltip" : "Comienza aquí\nDaño: 50 HP\nRango: 12 bloques\nTiempo de recarga: 3 segundos",
-				"slinger" : "Hondero",
+				"slinger" : "Honda",
 				"crossbowtooltip" : "Desbloquea la ballesta primero\nDaño: 300 HP\nRango: 25 bloques\nTiempo de recarga: 8 segundos",
 				"crossbow" : "Ballesta",
 				"bowtooltip" : "Desbloquea el yunque primero\nDaño: 100 HP\nRango: 20 bloques\nTiempo de recarga: 5 segundos",
@@ -289,10 +289,10 @@
 		"quickstart" : {
 			"page1" : {
 				"header" : "Básico",
-				"description" : "¡Bienvenido a ColonySurvival!",
+				"description" : "¡Bienvenido a Colony Survival!",
+				"text1" : "El Estandarte es el centro de tu colonia. Aprieta '2' para plantarla. Clic derecho al Estandarte para reclutar colonos. La Herramienta del Estandarte ilumina el área donde aparecen los monstruos en rojo.",
 				"text2" : "Necesitas comida y camas para reclutar colonos. Ellos necesitan comer para sobrevivir. Asegúrate de tener comida suficiente o ¡se morirán de hambre!",
 				"text3" : "Aprieta \"I\" para crear una cama. Solo puedes crear cosas con los objetos de las ranuras del menú inferior. Los colonos solo pueden usar objetos de las reservas. Ellos acceden a las reservas con las cajas.",
-				"text1" : "El Estandarte es el centro de tu colonia. Aprieta ‘2’ para plantar esta. Clic derecho al Estandarte para reclutar colonos. La Herramienta del Estandarte ilumina el área roja donde aparecen los monstruos.",
 				"text4" : "¡Los monstruos atacaran tu colonia en la noche! Usa la Tabla de Comandos para colocar guardias. Aprieta ‘1’ y clic para seleccionarlo. Aprieta ‘R’ para rotarlo en cierto bloque."
 			},
 			"page2" : {
@@ -308,15 +308,15 @@
 				"text1" : "Por la noche, los monstruos atacaran a tu colonia. Coloca guardias, construye murallas y cava fosos defender tu colonia. Los monstruos no pueden escalar dos bloques.",
 				"text2" : "¡No aísles tu colonia! Si no hay camino hacia tu Estandarte, se activará el 'Modo asedio'. Durante el modo asedio la comida se consume más rápido.",
 				"text3" : "¡La cantidad de monstruos incrementa cuando la cantidad de colonos crece! 	¡Asegúrate de que tus guardias tengan suficiente munición!",
-				"text4" : "Derrotar monstruos fuertes te desbloqueara nuevas armas en el Laboratorio de ciencias. Estos infligen más daño y pueden golpear enemigos desde una larga distancia."
+				"text4" : "Derrotar monstruos fuertes te desbloqueará nuevas armas en el Laboratorio de ciencias. Estas infligen más daño y pueden golpear enemigos desde una larga distancia."
 			},
 			"page4" : {
-				"header" : "Mineria",
+				"header" : "Minería",
 				"description" : "Las menas son un requisito fundamental para tu colonia.",
 				"text1" : "En la profundidad de la corteza terrestre, puedes encontrar toda clase de menas. Excava hacia abajo o dentro de una montaña para encontrarlos.",
-				"text2" : "Clic derecho en las menas o bloques oscuros de pieda con la Tabla de comando para fijar un minero a trabajar. No olvides colocar una caja cerca.",
+				"text2" : "Clic derecho en las menas o bloques oscuros de piedra con la Tabla de comando para fijar un minero a trabajar. No olvides colocar una caja cerca.",
 				"text3" : "Coloca una fundidora para reclutar un colono desempleado como un fundidor. Él usará la leña para fundir el cobre con el estaño y convertirlos en lingotes de bronce.",
-				"text4" : "Los colonos usan bancos de trabajo y yunques para crear metales en productos útiles. Usa el laboratio de ciencias para desbloquear el yunque."
+				"text4" : "Los colonos usan bancos de trabajo y yunques para crear metales en productos útiles. Usa el laboratorio de ciencias para desbloquear el yunque."
 			},
 			"page5" : {
 				"header" : "Investigación científica",
@@ -431,7 +431,7 @@
 				},
 				"tailorshop" : {
 					"name" : "Sastre",
-					"description" : "Desbloquéalo y es quien transforma las plantas de lino en lino."
+					"description" : "Desbloquéalo, es quien transforma las plantas de lino en lino."
 				},
 				"technologisttable" : {
 					"name" : "Tecnólogo",
