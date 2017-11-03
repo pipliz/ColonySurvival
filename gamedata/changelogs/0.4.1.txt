@@ -1,0 +1,8 @@
+0.4.1 (2017-11-*)
+
+Improve usability of the crafting limits interface: Limit shown is now the actual limit of items made, not recipes made. Also shows missing ingredients in red, and the amount currently in the stockpile.
+Possibly fix an issue where colonists would randomly fail to find a path once (but succeed on repeated attempts)
+Increase path complexity limit because increased pathfinding performance allows it
+
+API/mod related stuff:
+- Refactored NPC.JobTracker a bit to make it more accessible
