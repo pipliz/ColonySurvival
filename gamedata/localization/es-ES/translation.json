@@ -58,7 +58,7 @@
 			"qualityoff" : "Desactivar",
 			"video" : "Video",
 			"videomenu" : {
-				"full" : "Ajustes de video",
+				"full" : "Calidad de gráficos",
 				"resolution" : "Resolución",
 				"fullscreen" : "Pantalla completa",
 				"vsync" : "VSync",
@@ -80,23 +80,23 @@
 				"fxaamedium" : "FXAA medio",
 				"fxaahigh" : "FXAA alto",
 				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox muy bajo",
-				"skyboxslow" : "Skybox bajo",
-				"skyboxfrequent" : "Skybox frecuente",
-				"skyboxveryfrequent" : "Skybox muy frecuente",
-				"skyboxconstant" : "Skybox constante",
-				"terrainfrequent" : "Terrain frecuente",
-				"terrainveryfrequent" : "Terrain muy frecuente",
-				"terrainconstant" : "Terrain constante"
+				"skyboxveryslow" : "Cielo muy bajo",
+				"skyboxslow" : "Cielo bajo",
+				"skyboxfrequent" : "Cielo frecuente",
+				"skyboxveryfrequent" : "Cielo muy frecuente",
+				"skyboxconstant" : "Cielo constante",
+				"terrainfrequent" : "Terreno frecuente",
+				"terrainveryfrequent" : "Terreno muy frecuente",
+				"terrainconstant" : "Terreno constante"
 			},
-			"audio" : "Audio",
+			"audio" : "Sonidos",
 			"audiomenu" : {
-				"full" : "Ajustes de audio",
-				"mastervolume" : "Volumen Principal",
+				"full" : "Volumen de los sonidos",
+				"mastervolume" : "Principal",
 				"effectsvolume" : "Efectos",
 				"ambientvolume" : "Ambiente",
 				"torchvolume" : "Antorchas",
-				"menuvolume" : "Volumen del menú"
+				"menuvolume" : "Menú"
 			},
 			"gameplay" : "Jugabilidad",
 			"gameplaymenu" : {
@@ -156,12 +156,12 @@
 				"wheatb" : "Necesitas: Semillas de trigo",
 				"wheatc" : "Colocar sobre césped o tierra",
 				"miner" : "Minero",
-				"minera" : "Miner menas",
+				"minera" : "Minar menas",
 				"minerb" : "Necesitas: Pico",
 				"minerc" : "Colocar en la piedra final del mundo.",
 				"forester" : "Forestal",
-				"forestera" : "Plantas y árboles.",
-				"foresterb" : "Necesitas: Pimpollos y Hacha ",
+				"forestera" : "Plantas y árboles",
+				"foresterb" : "Necesitas: Pimpollos y Hacha",
 				"foresterc" : "Colocar sobre césped o tierra",
 				"flaxfarmer" : "Agricultor de lino",
 				"flaxa" : "Solo para colonias avanzadas",
@@ -186,26 +186,26 @@
 				"berryc" : "",
 				"guard" : "Guardia",
 				"guarda" : "¡Protege tu colonia!",
-				"guardb" : "Esto abrirá otro menú.",
-				"guardc" : "Aquí tu puedes seleccionar los tipos de guardias.",
+				"guardb" : "Esto abrirá otro menú",
+				"guardc" : "Aquí tu puedes seleccionar los tipos de guardias",
 				"guardsday" : "Guardia diurno",
 				"guardsnight" : "Guardia nocturno",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"slinger" : "Hondero",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"slingertooltip" : "Comienza aquí\nDaño: 50 HP\nRango: 12 bloques\nTiempo de recarga: 3 segundos",
+				"slinger" : "Honda",
+				"crossbowtooltip" : "Desbloquea la ballesta primero\nDaño: 300 HP\nRango: 25 bloques\nTiempo de recarga: 8 segundos",
 				"crossbow" : "Ballesta",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"bowtooltip" : "Desbloquea el yunque primero\nDaño: 100 HP\nRango: 20 bloques\nTiempo de recarga: 5 segundos",
 				"bow" : "Arco",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlocktooltip" : "Desbloquea el arcabuz primero\nDaño: 500 HP\nRango: 30 bloques\nTiempo de recarga: 12 segundos",
 				"matchlock" : "Arcabuz",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
-				"jobbowday" : "_MISSING_Daytime Bow Guard",
-				"jobbownight" : "_MISSING_Nighttime Bow Guard",
-				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
-				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
-				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"jobslingerday" : "Guardia con honda diurno",
+				"jobslingernight" : "Guardia con honda nocturno",
+				"jobbowday" : "Guardia con arco diurno",
+				"jobbownight" : "Guardia con arco nocturno",
+				"jobcrossbowday" : "Guardia con ballesta diurno",
+				"jobcrossbownight" : "Guardia con ballesta nocturno",
+				"jobmatchlockday" : "Guardia con arcabuz diurno",
+				"jobmatchlocknight" : "Guardia con arcabuz nocturno"
 			},
 			"toolconstruction" : {
 				"header" : "Herramienta de construcción",
@@ -284,16 +284,16 @@
 			"laborercount" : "Desempleados:",
 			"foodstorage" : "Comida:",
 			"foodusage" : "Comida usada/día:",
-			"ammocount" : "_MISSING_Ammo:"
+			"ammocount" : "Munición:"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "Básico",
-				"description" : "¡Bienvenido a ColonySurvival!",
+				"description" : "¡Bienvenido a Colony Survival!",
+				"text1" : "El Estandarte es el centro de tu colonia. Aprieta '2' para plantarla. Clic derecho al Estandarte para reclutar colonos. La Herramienta del Estandarte ilumina el área donde aparecen los monstruos en rojo.",
 				"text2" : "Necesitas comida y camas para reclutar colonos. Ellos necesitan comer para sobrevivir. Asegúrate de tener comida suficiente o ¡se morirán de hambre!",
 				"text3" : "Aprieta \"I\" para crear una cama. Solo puedes crear cosas con los objetos de las ranuras del menú inferior. Los colonos solo pueden usar objetos de las reservas. Ellos acceden a las reservas con las cajas.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
-				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
+				"text4" : "¡Los monstruos atacaran tu colonia en la noche! Usa la Tabla de Comandos para colocar guardias. Aprieta ‘1’ y clic para seleccionarlo. Aprieta ‘R’ para rotarlo en cierto bloque."
 			},
 			"page2" : {
 				"header" : "Producción de comida",
@@ -307,24 +307,24 @@
 				"description" : "¡Defiende a tu colonia de los monstruos que acechan en la noche!",
 				"text1" : "Por la noche, los monstruos atacaran a tu colonia. Coloca guardias, construye murallas y cava fosos defender tu colonia. Los monstruos no pueden escalar dos bloques.",
 				"text2" : "¡No aísles tu colonia! Si no hay camino hacia tu Estandarte, se activará el 'Modo asedio'. Durante el modo asedio la comida se consume más rápido.",
-				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
-				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
+				"text3" : "¡La cantidad de monstruos incrementa cuando la cantidad de colonos crece! 	¡Asegúrate de que tus guardias tengan suficiente munición!",
+				"text4" : "Derrotar monstruos fuertes te desbloqueará nuevas armas en el Laboratorio de ciencias. Estas infligen más daño y pueden golpear enemigos desde una larga distancia."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
-				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
-				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
-				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
-				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
-				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+				"header" : "Minería",
+				"description" : "Las menas son un requisito fundamental para tu colonia.",
+				"text1" : "En la profundidad de la corteza terrestre, puedes encontrar toda clase de menas. Excava hacia abajo o dentro de una montaña para encontrarlos.",
+				"text2" : "Clic derecho en las menas o bloques oscuros de piedra con la Tabla de comando para fijar un minero a trabajar. No olvides colocar una caja cerca.",
+				"text3" : "Coloca una fundidora para reclutar un colono desempleado como un fundidor. Él usará la leña para fundir el cobre con el estaño y convertirlos en lingotes de bronce.",
+				"text4" : "Los colonos usan bancos de trabajo y yunques para crear metales en productos útiles. Usa el laboratorio de ciencias para desbloquear el yunque."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
-				"description" : "_MISSING_Only the smallest colonies can do without science!",
-				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
-				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
-				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
-				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
+				"header" : "Investigación científica",
+				"description" : "¡Solo las colonias más pequeñas pueden prescindir sin la ciencia!",
+				"text1" : "Coloca el laboratorio de ciencia para reclutar un científico. Clic derecho en el laboratorio o usa la pestaña del inventario para ver el menú de ciencia.",
+				"text2" : "Selecciona la investigación para dejar al científico desbloquearla. El trabajará una cierta cantidad de ciclos para completar la investigación. Cada ciclo consume ingredientes.",
+				"text3" : "Niveles altos requieren bolsas de ciencia. Recluta un tecnólogo para crearlas. Las bolsas pueden ser reutilizadas varias veces.",
+				"text4" : "Los científicos pueden trabajar juntos para aumentar la velocidad de la investigación. ¡Coloca más laboratorios de ciencia para reclutar científicos extras!"
 			}
 		},
 		"pipliz" : {
@@ -431,7 +431,7 @@
 				},
 				"tailorshop" : {
 					"name" : "Sastre",
-					"description" : "Desbloquéalo y es quien transforma las plantas de lino en lino."
+					"description" : "Desbloquéalo, es quien transforma las plantas de lino en lino."
 				},
 				"technologisttable" : {
 					"name" : "Tecnólogo",
@@ -685,5 +685,5 @@
 		"sciencebagadvanced" : "Necesarias para investigar ciencia avanzada.",
 		"sciencebagcolony" : "Necesarias para investigar ciencia relacionada con la colonia. "
 	},
-	"coverage" : 94.6886446886447
+	"coverage" : 1
 }
