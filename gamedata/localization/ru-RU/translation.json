@@ -230,7 +230,8 @@
 				"foodvalue" : "Еды:",
 				"tooltip" : {
 					"needs" : "Требуется: ",
-					"and" : "и"
+					"and" : "и",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"craftingstockpile" : "Крафт и запасы",
 				"science" : {
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "Лимит по кузнечному делу",
 					"woodcutter" : "Лимит по резке дерева"
 				},
-				"description" : "Колонисты будут работать, пока на Складе не будет указанное кол-во предметов"
+				"description" : "Колонисты будут работать, пока на Складе не будет указанное кол-во предметов",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Вы умерли.",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "Требуется для расширенного исследования",
 		"sciencebagcolony" : "Требуется для колония-ориентированного исследования"
 	},
-	"coverage" : 91.5750915750916
+	"coverage" : 91.0746812386157
 }

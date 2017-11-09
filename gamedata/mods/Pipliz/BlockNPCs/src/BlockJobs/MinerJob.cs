@@ -15,8 +15,6 @@ namespace Pipliz.BlockNPCs.Implementations
 
 		public override string NPCTypeKey { get { return "pipliz.minerjob"; } }
 
-		public override float TimeBetweenJobs { get { return 2f; } }
-
 		public override InventoryItem RecruitementItem { get { return new InventoryItem(BuiltinBlocks.BronzePickaxe, 1); } }
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
@@ -51,9 +49,9 @@ namespace Pipliz.BlockNPCs.Implementations
 				.SetAs("type", ItemTypes.IndexLookup.GetName(type));
 		}
 
-		public override void OnNPCDoJob (ref NPCBase.NPCState state)
+		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
-			Vector3 rotate = usedNPC.Position;
+			Vector3 rotate = usedNPC.Position.Vector;
 			if (type == BuiltinBlocks.MinerJobXN) {
 				rotate += Vector3.left;
 			} else if (type == BuiltinBlocks.MinerJobXP) {
@@ -70,7 +68,6 @@ namespace Pipliz.BlockNPCs.Implementations
 			state.Inventory.Add(itemList);
 			state.JobIsDone = true;
 			state.SetIndicator(NPCIndicatorType.Crafted, cooldown, itemList[0].item.Type);
-			OverrideCooldown(cooldown);
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

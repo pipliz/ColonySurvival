@@ -19,10 +19,12 @@ Rest of this document is mostly a description of the various callbacks
 These callbacks are called in order of placement here:
 
 void OnAssemblyLoaded (string p)
--Called directly upon discovering a method with this attribute; passes the assemblies path as a parameter.
+-Called directly upon discovering a method with this attribute; passes the assemblies path as a parameter. Can't use providesfor/dependson here.
 -Builtin callback uses:
 +pipliz.blocknpcs.assemblyload
 --Calculates the mods' gamedata directory path
++pipliz.colonyserverwrapper.load
+--Checks the commandline arguments for "+logto {port}", and if found, tries to connect to said port via tcp
 
 void AfterModsLoaded (List<ModLoader.ModAssembly> list)
 -Called after all mods are loaded, list is the list of loaded assemblies. Useful for using reflection to link up things
@@ -170,6 +172,8 @@ void OnUpdate ()
 -Builtin callback uses:
 +pipliz.server.senddirtyscience
 --Sends updates from changed science managers to their owners on an interval
++pipliz.colonyserverwrapper.process
+--If +logto was specified as launch argument, this will receive the input from said port
 
 void OnUpdateEnd ()
 -Just before the end of the update loop, after OnUpdate (after all relevant gamecode)
@@ -209,6 +213,8 @@ void OnPlayerConnectedLate (Player p)
 +pipliz.server.terraingenerator.startsendingbiomedata
 --Starts sending biome data to the player (for ambient audio mainly)
 --Calls ITerrainGenerator.StartSendingBiomeData on the active terrain generator.
++pipliz.server.sendsetflight
+--Sends whether or not /setflight true was active
 
 void OnPlayerDisconnected (Player p)
 -Player {p} was disconnected.
@@ -234,6 +240,8 @@ void OnLoadingPlayer (JSONNode n, Player p)
 --Loads any science progress from the jsonnode
 +pipliz.server.loadplayerlimits
 --Loads any player limits from the jsonnode
++pipliz.server.loadsetflight
+--Loads whether or not /setflight true is active
 
 void OnSavingPlayer (JSONNode n, Player p)
 -Player {p} is being saved into json file {n}.
@@ -242,6 +250,8 @@ void OnSavingPlayer (JSONNode n, Player p)
 --Saves any science progress from the player to it's file
 +pipliz.server.saveplayerlimits
 --Saves any player limits to it's file
++pipliz.server.savesetflight
+--Saves whether or not /setflight true is active
 
 void OnQuitEarly ()
 -General.Application.OnQuit @ -200, called before most other on quit actions
@@ -272,6 +282,12 @@ void OnQuitLate ()
 -General.Application.OnQuit @ 100, after most quit actions happened
 +pipliz.server.saveworldsettings
 --Saves the servermanager.worldsettings
++pipliz.shared.waitforasyncquits
+--Waits for the General.Application start async quits to complete.
++pipliz.colonyserverwrapper.dispose
+--[DependsOn("pipliz.server.saveworldsettings")] - so that logs from there are also sent
+--[DependsOn("pipliz.shared.waitforasyncquits")] - ^
+--Closes the log streams if they were open
 
 void OnResearchableCompleted (Server.Science.IResearchable res)
 -Called upon completion of a researchable
@@ -345,6 +361,7 @@ The following 'paragraph' callbacks are all called from the filesaver thread. Be
 
 void OnSavedRegionToDisk ()
 -A region is saved to the disk
+--Also possibly called when quitting the game, and then it's called from a random thread pool thread (!!!)
 
 void OnLoadedRegionFromDisk ()
 -A region is loaded from the disk.
@@ -370,6 +387,9 @@ float pipliz.healthmax
 
 int pipliz.bannersaferadius
 |Monster spawn safe radius
+
+bool pipliz.setflight
+|Whether or not /setflight true is active
 
 I apologize for the very inconsistent namespacing and general code quality. Part of the project is up to 2-3 years old, where I was even more of a beginner programmer.
 I've gone through some phases & every phase thought "oh but this is the way it should be done", and suddenly every part of the game is written in a different style. But such is life at the beginning.

@@ -230,7 +230,8 @@
 				"foodvalue" : "Maisto vertė:",
 				"tooltip" : {
 					"needs" : "Poreikiai: ",
-					"and" : "ir"
+					"and" : "ir",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
 				"science" : {
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "_MISSING_Finery forge limits",
 					"woodcutter" : "_MISSING_Wood cutting limits"
 				},
-				"description" : "Kolonistai dirbs iki tol kol bus pasiektas nustatytas kiekis atsargų."
+				"description" : "Kolonistai dirbs iki tol kol bus pasiektas nustatytas kiekis atsargų.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Tu numirei.",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 54.7619047619048
+	"coverage" : 54.4626593806922
 }

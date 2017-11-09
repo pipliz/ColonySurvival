@@ -3,25 +3,29 @@
 		"name" : "pipliz.crafter.slingtemperate",
 		"results":[{"type":"sling"}],
 		"requires":[{"type":"leavestemperate"}],
-		"defaultLimit" : 5
+		"defaultLimit" : 5,
+		"defaultPriority" : 100
 	},
 	{
 		"name" : "pipliz.crafter.slingtaiga",
 		"results":[{"type":"sling"}],
 		"requires":[{"type":"leavestaiga"}],
-		"defaultLimit" : 5
+		"defaultLimit" : 5,
+		"defaultPriority" : 100
 	},
 	{
 		"name" : "pipliz.crafter.firewood",
 		"results" : [{"type":"firewood","amount":6}],
 		"requires" : [{"type":"planks"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 10,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.slingbullet",
 		"results":[{"type":"slingbullet","amount":10}],
 		"requires":[{"type":"stonebricks"}],
-		"defaultLimit" : 20
+		"defaultLimit" : 20,
+		"defaultPriority" : 100
 	},
 	{
 		"name" : "pipliz.crafter.coppernails",
@@ -45,173 +49,201 @@
 		"name" : "pipliz.crafter.bed",
 		"results":[{"type":"bed"}],
 		"requires":[{"type":"planks","amount":3},{"type":"straw","amount":3},{"type":"coppernails","amount":8}],
-		"defaultLimit" : 5
+		"defaultLimit" : 5,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.crate",
 		"results":[{"type":"crate"}],
 		"requires":[{"type":"planks"},{"type":"coppernails","amount":4}],
-		"defaultLimit" : 5
+		"defaultLimit" : 5,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.splittingstumptaiga",
 		"results":[{"type":"splittingstump"}],
 		"requires":[{"type":"logtaiga"},{"type":"bronzeaxe"}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.splittingstumptemperate",
 		"results":[{"type":"splittingstump"}],
 		"requires":[{"type":"logtemperate"},{"type":"bronzeaxe"}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.bow",
 		"results":[{"type":"bow"}],
 		"requires":[{"type":"planks","amount":2},{"type":"bowstring"}],
-		"defaultLimit" : 3
+		"defaultLimit" : 3,
+		"defaultPriority" : 100
 	},
 	{
 		"name" : "pipliz.crafter.bowstring",
 		"results":[{"type":"bowstring"}],
 		"requires":[{"type":"flax","amount":2}],
-		"defaultLimit" : 3
+		"defaultLimit" : 3,
+		"defaultPriority" : 100
 	},
 	{
 		"name" : "pipliz.crafter.furnace",
 		"results":[{"type":"furnace"}],
 		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4},{"type":"coppernails","amount":4},{"type":"tin","amount":2}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.oven",
 		"results":[{"type":"oven"}],
 		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.grindstone",
 		"results":[{"type":"grindstone"}],
 		"requires":[{"type":"planks"},{"type":"stonebricks"}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.plankstemperate",
 		"results": [{"amount":4, "type":"planks"}],
 		"requires":[{"type":"logtemperate"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 10,
+		"defaultPriority" : 0
 	},
 	{
 		"name" : "pipliz.crafter.plankstaiga",
 		"results":[{"amount":4,"type":"planks"}],
 		"requires":[{"type":"logtaiga"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 10,
+		"defaultPriority" : 0
 	},
 	{
 		"name" : "pipliz.crafter.torch",
 		"results":[{"amount":3,"type":"torch"}],
 		"requires":[{"type":"planks"},{"type":"charcoal"},{"type":"copperparts"},{"type":"coppernails","amount":2}],
-		"defaultLimit" : 4
+		"defaultLimit" : 4,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.workbench",
 		"results":[{"type":"workbench"}],
 		"requires":[{"type":"planks"},{"type":"coppernails","amount":2},{"type":"copperparts"},{"type":"coppertools"}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.kiln",
 		"results":[{"type":"kiln"}],
 		"requires":[{"type":"dirt"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.mint",
 		"results":[{"type":"mint"}],
 		"requires":[{"type":"planks"},{"type":"bronzeplate","amount":3},{"type":"coppertools","amount":3}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.shop",
 		"results":[{"type":"shop"}],
 		"requires":[{"type":"planks"},{"type":"linen","amount":4},{"type":"bronzecoin","amount":5}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.sciencelab",
 		"results":[{"type":"sciencelab"}],
 		"requires":[{"type":"coatedplanks"},{"type":"copperparts","amount":5},{"type":"coppertools"}],
-		"defaultLimit" : 1
+		"defaultLimit" : 1,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.linseedoil",
 		"results":[{"type":"linseedoil","amount":3}],
 		"requires":[{"type":"flax","amount":3}],
-		"defaultLimit" : 3
+		"defaultLimit" : 3,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.coatedplanks",
 		"results":[{"type":"coatedplanks","amount":3}],
 		"requires":[{"type":"linseedoil","amount":3},{"type":"planks","amount":3}],
-		"defaultLimit" : 3
+		"defaultLimit" : 3,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.adobe",
 		"results":[{"type":"adobe"}],
 		"requires":[{"type":"linseedoil"},{"type":"dirt"}],
-		"defaultLimit" : 5
+		"defaultLimit" : 5,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.plasterblock",
 		"results":[{"type":"plasterblock"}],
 		"requires":[{"type":"stonebricks"},{"type":"gypsum"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 10,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.redplanks",
 		"results":[{"type":"redplanks"}],
 		"requires":[{"type":"planks"},{"type":"berry"}],
-		"defaultLimit" : 0
+		"defaultLimit" : 0,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.blackplanks",
 		"results":[{"type":"blackplanks"}],
 		"requires":[{"type":"planks"},{"type":"coalore"}],
-		"defaultLimit" : 0
+		"defaultLimit" : 0,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.bronzeanvil",
 		"results":[{"type":"bronzeanvil"}],
 		"requires":[{"type":"bronzeingot","amount":5},{"type":"coppernails","amount":8},{"type":"coppertools"}],
 		"defaultLimit" : 1,
-		"isOptional" : true
+		"isOptional" : true,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.tailorshop",
 		"results":[{"type":"tailorshop"}],
 		"requires":[{"type":"coatedplanks"},{"type":"flax"},{"type":"coppertools"}],
 		"defaultLimit" : 1,
-		"isOptional" : true
+		"isOptional" : true,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.technologisttable",
 		"results":[{"type":"technologisttable"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate","amount":2},{"type":"coppernails"}],
 		"defaultLimit" : 1,
-		"isOptional" : true
+		"isOptional" : true,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.bloomery",
 		"results":[{"type":"bloomery"}],
 		"requires":[{"type":"bricks"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}],
 		"defaultLimit" : 1,
-		"isOptional" : true
+		"isOptional" : true,
+		"defaultPriority" : -100
 	},
 	{
 		"name" : "pipliz.crafter.gunsmithshop",
 		"results":[{"type":"gunsmithshop"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate"},{"type":"steelparts"}],
 		"defaultLimit" : 1,
-		"isOptional" : true
+		"isOptional" : true,
+		"defaultPriority" : -100
 	}
 ]

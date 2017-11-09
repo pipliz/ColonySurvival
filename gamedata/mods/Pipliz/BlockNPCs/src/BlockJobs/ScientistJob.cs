@@ -5,17 +5,18 @@ using Pipliz.JSON;
 using Server.NPCs;
 using Server.Science;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 namespace Pipliz.BlockNPCs.Implementations
 {
 	public class ScientistJob : BlockJobBase, IBlockJobBase, INPCTypeDefiner
 	{
+		public static float StaticCraftingCooldown = 14f;
+
 		static double RECYCLE_CHANCE = 0.8;
 
 		bool shouldTakeItems;
 		public override string NPCTypeKey { get { return "pipliz.scientist"; } }
-
-		public override float TimeBetweenJobs { get { return 14.0f; } }
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
@@ -31,13 +32,12 @@ namespace Pipliz.BlockNPCs.Implementations
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public override void OnNPCDoJob (ref NPCBase.NPCState state)
+		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			usedNPC.LookAt(position.Vector);
 			ScienceManagerPlayer scienceManager;
 			if (!ScienceManager.TryGetPlayerManager(owner, out scienceManager)) {
 				state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
-				OverrideCooldown(6.0);
 				state.JobIsDone = false;
 				return;
 			}
@@ -49,7 +49,7 @@ namespace Pipliz.BlockNPCs.Implementations
 					Stockpile stockpile = Stockpile.GetStockPile(owner);
 					if (Stockpile.GetStockPile(owner).Contains (requirements)) {
 						shouldTakeItems = true;
-						OverrideCooldown(0.1);
+						state.SetCooldown(0.3);
 						state.JobIsDone = true;
 					} else {
 						ushort missing = 0;
@@ -61,21 +61,19 @@ namespace Pipliz.BlockNPCs.Implementations
 						}
 						float cooldown = Random.NextFloat(8f, 16f);
 						state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, missing);
-						OverrideCooldown(cooldown);
 						state.JobIsDone = false;
 					}
 				} else {
 					float cooldown = Random.NextFloat(8f, 16f);
 					// no items, no research -> wait for research
 					state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
-					OverrideCooldown(cooldown);
 					state.JobIsDone = false;
 				}
 			} else {
 				if (active.research == null || active.IsCompleted) {
 					// items, but no valid research -> go dump items
 					shouldTakeItems = true;
-					OverrideCooldown(0.1);
+					state.SetCooldown(0.3);
 					state.JobIsDone = true;
 				} else {
 					// items, valid research -> try progress
@@ -98,9 +96,9 @@ namespace Pipliz.BlockNPCs.Implementations
 						}
 						state.Inventory.Add(BuiltinBlocks.LinenBag, recycled);
 						scienceManager.AddActiveResearchProgress(1);
-						state.SetIndicator(NPCIndicatorType.ScienceProgress, TimeBetweenJobs);
+						state.SetIndicator(NPCIndicatorType.ScienceProgress, StaticCraftingCooldown);
 					} else {
-						OverrideCooldown(0.1);
+						state.SetCooldown(0.3);
 					}
 					shouldTakeItems = true;
 					state.JobIsDone = true;
@@ -108,10 +106,14 @@ namespace Pipliz.BlockNPCs.Implementations
 			}
 		}
 
-		public override void OnNPCDoStockpile (ref NPCBase.NPCState state)
+		public override void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
-			OverrideCooldown(0.5);
+			if (state.Inventory.IsEmpty) {
+				Assert.IsTrue(shouldTakeItems);
+			} else {
+				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			}
+			state.SetCooldown(0.5);
 			state.JobIsDone = true;
 			if (shouldTakeItems) {
 				shouldTakeItems = false;

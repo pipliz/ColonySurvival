@@ -7,9 +7,15 @@ namespace Pipliz.BlockNPCs.Implementations
 {
 	public class FineryForgeJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
+		public static float StaticCraftingCooldown = 6f;
+
 		public override string NPCTypeKey { get { return "pipliz.fineryforgejob"; } }
 
-		public override float TimeBetweenJobs { get { return 6f; } }
+		public override float CraftingCooldown
+		{
+			get { return StaticCraftingCooldown; }
+			set { StaticCraftingCooldown = value; }
+		}
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 

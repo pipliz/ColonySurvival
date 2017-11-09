@@ -25,8 +25,6 @@ namespace Pipliz.APIProvider.Jobs
 			target.OnHit(guardSettings.shootDamage);
 		}
 
-		public override float TimeBetweenJobs { get { return 2.5f; } }
-
 		public override bool ToSleep
 		{
 			get
@@ -71,26 +69,26 @@ namespace Pipliz.APIProvider.Jobs
 				.SetAs("type", ItemTypes.IndexLookup.GetName(blockType));
 		}
 
-		public override void OnNPCDoJob (ref NPCBase.NPCState state)
+		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			if (HasTarget) {
 				Vector3 npcPos = position.Add(0, 1, 0).Vector;
 				Vector3 targetPos = target.PositionToAimFor;
 				if (General.Physics.Physics.CanSee(npcPos, targetPos)) {
 					usedNPC.LookAt(targetPos);
-					ShootAtTarget(ref state);
+					ShootAtTarget(ref state); // <- sets cooldown
 					return;
 				} else {
 					target = null;
 				}
 			}
-			target = MonsterTracker.Find(position.Add(0, 1, 0), guardSettings.range);
+			target = MonsterTracker.Find(position.Add(0, 1, 0), guardSettings.range, guardSettings.shootDamage);
 			if (HasTarget) {
 				usedNPC.LookAt(target.PositionToAimFor);
-				ShootAtTarget(ref state);
+				ShootAtTarget(ref state); // <- sets cooldown
 			} else {
-				OverrideCooldown(guardSettings.cooldownSearchingTarget);
-				Vector3 pos = usedNPC.Position;
+				state.SetCooldown(guardSettings.cooldownSearchingTarget);
+				Vector3 pos = usedNPC.Position.Vector;
 				if (blockType == guardSettings.typeXP) {
 					pos += Vector3.right;
 				} else if (blockType == guardSettings.typeXN) {
@@ -109,10 +107,8 @@ namespace Pipliz.APIProvider.Jobs
 			if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
 				OnShoot();
 				state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
-				OverrideCooldown(guardSettings.cooldownShot);
 			} else {
 				state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
-				OverrideCooldown(guardSettings.cooldownMissingItem);
 			}
 		}
 

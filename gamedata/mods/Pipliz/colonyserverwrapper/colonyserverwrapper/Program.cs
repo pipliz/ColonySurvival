@@ -1,14 +1,21 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
+using System.Text;
 
 namespace ColonyServerWrapper
 {
 	static class MainClass
 	{
 		static Process ServerProcess = null;
+		static TcpListener ServerListener = null;
+		static Thread LoggingThread = null;
+		static List<KeyValuePair<string, string>> MessagesToSend = new List<KeyValuePair<string, string>>();
+		static List<char> InputChars = new List<char> ();
 
 		static bool IsServerRunning {
 			get {
@@ -25,14 +32,40 @@ namespace ColonyServerWrapper
 
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Launching Colony Survival Dedicated Server");
-			while (true) {
-				string read = Console.ReadLine ();
-				if (read == null) {
-					if (IsServerRunning) {
-						StopServer ();
+			Console.Title = "Colony Survival Dedicated Server";
+			WriteConsole ("Launching Colony Survival Dedicated Server");
+
+			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs e) => {
+				if (IsServerRunning) {
+					StopServer ();
+				}
+			};
+
+			if (args.Length > 0) {
+				StringBuilder argsBuilder = new StringBuilder ();
+				for (int i = 0; i < args.Length; i++) {
+					string arg = args [i];
+					if (arg.Contains (" ")) {
+						argsBuilder.AppendFormat ("\"{0}\" ", arg); 
+					} else {
+						argsBuilder.AppendFormat ("{0} ", arg);
 					}
-					return;
+				}
+				string fullArgs = argsBuilder.ToString ();
+				WriteConsole ("Launching server from commandline args: {0}", fullArgs);
+				StartServer (fullArgs);
+			} else {
+				ListHelp ();
+			}
+
+			while (true) {
+				string read = null;
+				while (read == null) {
+					if (Console.KeyAvailable) {
+						ReadConsoleKey (ref read);
+					} else {
+						Thread.Sleep (1);
+					}
 				}
 				read = read.TrimStart (' ', '\t', '\n', '\r');
 				if (string.IsNullOrEmpty (read)) {
@@ -45,62 +78,125 @@ namespace ColonyServerWrapper
 				}
 				switch (start) {
 				case "quit":
+					WriteConsole (string.Format ("> {0}", read));
+					if (IsServerRunning) {
+						StopServer ();
+					}
 					return;
 				case "help":
 				case "list":
 				case "?":
+					WriteConsole (string.Format ("> {0}", read));
 					ListHelp ();
 					break;
-				case "start_server_new":
-					if (WriteLaunchFileNew (read)) {
-						StartServer ();
-					} else {
-						Console.WriteLine ();
+				case "start_server":
+					if (read.Length < "start_server  ".Length) {
 						goto case "help";
 					}
-					break;
-				case "start_server_load":
-					if (WriteLaunchFileLoad (read)) {
-						StartServer ();
-					} else {
-						Console.WriteLine ();
-						goto case "help";
-					}
+					WriteConsole (string.Format ("> {0}", read));
+					StartServer (read.Remove (0, "start_server ".Length));
 					break;
 				case "stop_server":
+					WriteConsole (string.Format ("> {0}", read));
 					StopServer ();
 					break;
+				case "send":
+					if (read.Length < "send  ".Length) {
+						goto case "help";
+					}
+					WriteConsole (string.Format ("> {0}", read));
+					SendLog (read.Remove (0, "send ".Length));
+					break;
 				default:
-					Console.WriteLine("Unexpected command: {0}", read);
+					WriteConsole("Unexpected command: {0}", read);
 					break;
 				}
 			}
 		}
 
-		static void ListHelp () {
-			Console.WriteLine ("Available commands:");
-			Console.WriteLine ("quit                    - Exits this program");
-			Console.WriteLine ("list,help,?             - Lists available commands");
-			Console.WriteLine ("start_server_new        - Starts a server with a new world.Arguments required:");
-			Console.WriteLine ("| Full example: start_server_new \"fancy colony\" \"SteamLAN\" true false false 4343434");
-			Console.WriteLine ("| Arguments required below (in order, only values)");
-			Console.WriteLine ("| worldname             - example: \"fancy colony\"");
-			Console.WriteLine ("| network type          - possibles: [\"SteamOnline\", \"LAN\", \"SteamLAN\"]");
-			Console.WriteLine ("| monsters on?          - possibles: [true, false]");
-			Console.WriteLine ("| daytime monsters?     - possibles: [true, false]");
-			Console.WriteLine ("| double monsters?      - possibles: [true, false]");
-			Console.WriteLine ("| seed                  - example: 350295302");
-			Console.WriteLine ("start_server_load       - Starts a server to load a world");
-			Console.WriteLine ("| Full example: start_server_load \"fancy colony\" \"SteamLAN\"");
-			Console.WriteLine ("| Arguments required below (in order, only values)");
-			Console.WriteLine ("| worldname             - example: \"fancy colony\"");
-			Console.WriteLine ("| network type          - possibles: [\"SteamOnline\", \"LAN\", \"SteamLAN\"]");
-			Console.WriteLine ("stop_server             - Stops a server");
+		static void ReadConsoleKey (ref string read) {
+			ConsoleKeyInfo key = Console.ReadKey (true);
+
+			switch (key.Key) {
+			case ConsoleKey.Backspace:
+				if (InputChars.Count > 0) {
+					InputChars.RemoveAt (InputChars.Count - 1);
+				}
+				break;
+			case ConsoleKey.Enter:
+				read = new string (InputChars.ToArray ());
+				InputChars.Clear ();
+				break;
+			case ConsoleKey.Escape:
+				InputChars.Clear ();
+				break;
+			case ConsoleKey.Home:
+			case ConsoleKey.Tab:
+				break;
+			default:
+				if (key.KeyChar == '\u0000') {
+					break;
+				}
+				InputChars.Add (key.KeyChar);
+				break;
+			}
+			Console.CursorLeft = 0;
+			Console.Write (new string (' ', Console.BufferWidth - 1));
+			PrintCurrentTyping ();
 		}
 
-		static void StartServer () {
+		static void PrintCurrentTyping () {
+			Console.CursorLeft = 0;
+			string toPrint;
+			if (InputChars.Count < Console.BufferWidth) {
+				toPrint = new string (InputChars.ToArray ());
+			} else {
+				char[] chars = new char[Console.BufferWidth - 1];
+				int tooMany = InputChars.Count - Console.BufferWidth + 1;
+
+				for (int i = 0; i < chars.Length; i++) {
+					chars [i] = InputChars [i + tooMany];
+				}
+				toPrint = new string (chars);
+			}
+			Console.Write (toPrint);
+		}
+
+		static void ListHelp () {
+			WriteConsole ("Available commands:");
+			WriteConsole ("quit                      - Exits this program");
+			WriteConsole ("list,help,?               - Lists available commands");
+			WriteConsole ("start_server              - Starts a server. Arguments possible:");
+			WriteConsole ("| +server.world           - followed by worldname to load/create");
+			WriteConsole ("| +server.name            - server name to display in the server browser");
+			WriteConsole ("| +server.networktype     - Network type to host as, options are Singleplayer (connects to client), LAN (localhost client connects), SteamLAN, SteamOnline");
+			WriteConsole ("| +server.maxplayers      - max players to be active at the same time, default 10");
+			WriteConsole ("| +server.gameport        - port used by the game (for discovery mostly) default 27016");
+			WriteConsole ("| +server.ip              - which IP to use to select the network adapter. Not needed in most cases. 0.0.0.0 for auto");
+			WriteConsole ("| +server.steamport       - port used by steam, default 27017");
+			WriteConsole ("| +server.usevac          - whether to filter for VAC status, true or false. Untested, default false.");
+			WriteConsole ("| +server.seed            - if new world, seed used to generate terrain");
+			WriteConsole ("| +server.monsterson      - if new world, whether to spawn monsters. default true");
+			WriteConsole ("| +server.initialsettings - if new world, initialsettings file to use, default normal");
+			WriteConsole ("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
+			WriteConsole ("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
+			WriteConsole ("stop_server             - Stops a server");
+			WriteConsole ("send                    - Send text to the server (example: send Hey Everyone!)");
+		}
+
+		static void SendLog (string log) {
+			if (!IsServerRunning) {
+				WriteConsole ("No server running!");
+				return;
+			}
+			lock (MessagesToSend) {
+				MessagesToSend.Add (new KeyValuePair<string, string>("chat", log));
+			}
+		}
+
+		static void StartServer (string arg) {
 			if (IsServerRunning) {
-				Console.WriteLine ("A server is already running");
+				WriteConsole ("A server is already running");
 				return;
 			}
 
@@ -112,11 +208,84 @@ namespace ColonyServerWrapper
 			} else if (File.Exists ("colonyserver.x86_64")) {
 				path = "colonyserver.x86_64";
 			} else {
-				Console.WriteLine ("Failed to find colonyserver executable");
+				WriteConsole ("Failed to find colonyserver executable");
 				return;
 			}
-			Console.WriteLine ("Found colonyserver executable: {0}", path);
-			ServerProcess = System.Diagnostics.Process.Start (path, "-batchmode -nographics -uselaunchfile");
+			WriteConsole ("Found colonyserver executable: {0}", path);
+
+			ServerListener = new TcpListener (IPAddress.Loopback, 0);
+			ServerListener.Start ();
+			IPEndPoint endPoint = ServerListener.LocalEndpoint as IPEndPoint;
+			WriteConsole ("Started listening for logging at {0}...", endPoint);
+			LoggingThread = new Thread (Logger);
+			LoggingThread.Start ();
+			ServerProcess = System.Diagnostics.Process.Start (path, string.Format ("-batchmode -nographics +logto {0} {1}", endPoint.Port, arg));
+		}
+
+		static void StopServer () {
+			if (!IsServerRunning) {
+				WriteConsole ("No server was running");
+				return;
+			}
+
+			WriteConsole ("Sending quit message");
+			lock (MessagesToSend) {
+				MessagesToSend.Add (new KeyValuePair<string, string> ("quit", null));
+			}
+			while (ServerProcess != null && ServerProcess.WaitForExit (2500)) {
+				WriteConsole ("Waiting for server exit...");
+			}
+			WriteConsole ("Succesfully closed server");
+			ServerProcess = null;
+		}
+
+		static void Logger () {
+			WriteConsole ("Starting logging thread");
+			while (ServerProcess == null) {
+				Thread.Sleep (0);
+			}
+			WriteConsole ("ServerProcess set");
+			while (IsServerRunning) {
+				if (ServerListener.Pending ()) {
+					WriteConsole ("Server connection pending");
+					using (TcpClient client = ServerListener.AcceptTcpClient ())
+					using (NetworkStream clientStream = client.GetStream()) {
+						BinaryReader clientReader = new BinaryReader (clientStream);
+						BinaryWriter clientWriter = new BinaryWriter (clientStream);
+						client.NoDelay = true;
+						WriteConsole ("Server connection accepted");
+
+						lock (MessagesToSend) {
+							MessagesToSend.Clear ();
+						}
+
+						while (IsServerRunning) {
+							while (client.Available >= 1) {
+								switch (clientReader.ReadString ()) {
+								case "log":
+									WriteConsole (clientReader.ReadString ());
+									break;
+								}
+							}
+							if (MessagesToSend.Count > 0) {
+								lock (MessagesToSend) {
+									foreach (var send in MessagesToSend) {
+										clientWriter.Write (send.Key);
+										if (send.Value != null) {
+											clientWriter.Write (send.Value);
+										}
+									}
+									MessagesToSend.Clear ();
+								}
+							}
+							Thread.Sleep (50);
+						}
+					}
+				} else {
+					Thread.Sleep (50);
+				}
+			}
+			WriteConsole ("Logging thread stopped");
 		}
 
 		static List<string> SplitLaunchArgs (string read) {
@@ -151,117 +320,12 @@ namespace ColonyServerWrapper
 			return args;
 		}
 
-		static bool WriteLaunchFileNew (string read) {
-			Directory.CreateDirectory ("gamedata/savegames");
-			List<string> args = SplitLaunchArgs (read);
-			if (args.Count != 7) {
-				Console.WriteLine ("Invalid argument count");
-				return false;
-			}
-
-			if (!EnsureInQuotes (args [1], args [2])) {
-				return false;
-			}
-
-			if (!EnsureIsBool (args [3], args [4], args [5])) {
-				return false;
-			}
-
-			int i = 0;
-			if (!int.TryParse (args[6], out i)) {
-				Console.WriteLine ("Could not read {0} as number", args[6]);
-				return false;
-			}
-
-			Dictionary<string, string> keyValues = new Dictionary<string, string> ();
-			keyValues ["\"worldname\""] = args [1];
-			keyValues ["\"networkType\""] = args [2];
-			keyValues ["\"isNewWorld\""] = "true";
-			keyValues ["\"monsterson\""] = args [3];
-			keyValues ["\"monstersday\""] = args [4];
-			keyValues ["\"monstersdouble\""] = args [5];
-			keyValues ["\"seed\""] = args [6];
-
-			WriteLaunchFile (keyValues);
-			return true;
-		}
-
-		static bool WriteLaunchFileLoad (string read) {
-			Directory.CreateDirectory ("gamedata/savegames");
-			List<string> args = SplitLaunchArgs (read);
-			if (args.Count != 3) {
-				Console.WriteLine ("Invalid argument count");
-				return false;
-			}
-
-			if (!EnsureInQuotes (args [1], args [2])) {
-				return false;
-			}
-
-			Dictionary<string, string> keyValues = new Dictionary<string, string> ();
-			keyValues ["\"worldname\""] = args [1];
-			keyValues ["\"networkType\""] = args [2];
-			keyValues ["\"isNewWorld\""] = "false";
-
-			WriteLaunchFile (keyValues);
-			return true;
-		}
-
-		static bool EnsureInQuotes (params string[] s) {
-			for (int i = 0; i < s.Length; i++) {
-				if (!s [i].StartsWith ("\"") || !s [i].EndsWith ("\"")) {
-					Console.WriteLine ("Argument {0} must be in quotes", s [i]);
-					return false;
-				}
-			}
-			return true;
-		}
-
-		static bool EnsureIsBool (params string[] s) {
-			for (int i = 0; i < s.Length; i++) {
-				if (s[i] != "true" && s[i] != "false") {
-					Console.WriteLine ("Argument {0} must be either true or false", s [i]);
-					return false;
-				}
-			}
-			return true;
-		}
-
-		static void WriteLaunchFile (Dictionary<string, string> pairs) {
-			const string path = "gamedata/savegames/serverStartArgs.json";
-
-			using (FileStream fs = File.Open (path, FileMode.Create, FileAccess.Write, FileShare.Write)) 
-			using (StreamWriter writer = new StreamWriter(fs, System.Text.Encoding.UTF8, 512)) {
-				writer.WriteLine ('{');
-				int count = 0;
-				foreach (var pair in pairs) {
-					writer.WriteLine ("{0}:{1}{2}", pair.Key, pair.Value, ++count < pairs.Count ? "," : "");
-				}
-				writer.WriteLine ('}');
-			}
-		}
-
-		static void StopServer () {
-			if (!IsServerRunning) {
-				Console.WriteLine ("No server was running");
-				return;
-			}
-
-			bool result = ServerProcess.CloseMainWindow ();
-			Console.WriteLine ("Trying to close window: {0}", result);
-			if (result) {
-				while (true) {
-					if (ServerProcess.WaitForExit (2500)) {
-						Console.WriteLine ("Succesfully closed server");
-						ServerProcess.Close ();
-						ServerProcess = null;
-						return;
-					} else {
-						Console.WriteLine ("Waiting for server exit...");
-					}
-				}
-			}
-			ServerProcess = null;
+		static void WriteConsole (string s, params object[] args) {
+			Console.CursorLeft = 0;
+			Console.Write (new String (' ', Console.BufferWidth - 1));
+			Console.CursorLeft = 0;
+			Console.WriteLine (s, args);
+			PrintCurrentTyping ();
 		}
 	}
 }
