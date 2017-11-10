@@ -4,8 +4,11 @@ Public gamedata files for Colony Survival
 Mostly used as a repository to send pull requests for translation updates. Preferably these pull requests should be set to the highest versioned branch, and not to any 'live' branches (those are supposed to be fixed to a build).
 
 Hosting help [here](gamedata/help/hosting.txt)
+
 Modding help [here](gamedata/help/mod_general.txt)
+
 List of mod callbacks [here](gamedata/help/mod_callbacks.txt)
+
 
 Check [localecoverage](gamedata/localization/localecoverage.md) for data on how complete the various translations are.
 Files will have keys starting with "\_MISSING\_" followed by the english version for missing/untranslated text.
