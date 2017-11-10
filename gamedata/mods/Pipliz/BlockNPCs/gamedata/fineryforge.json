@@ -3,11 +3,14 @@
 		"name" : "pipliz.fineryforge.steelingot",
 		"results" : [{"type":"steelingot"}],
 		"requires" : [{"type":"ironwrought","amount":2},{"type":"cokes"}],
-		"defaultLimit" : 10
+		"defaultLimit" : 10,
+		"defaultPriority" : 0
 	},
 	{
 		"name" : "pipliz.fineryforge.goldingot",
 		"results" : [{"type":"goldingot"}],
-		"requires" : [{"type":"goldore"},{"type":"cokes"}]
+		"requires" : [{"type":"goldore"},{"type":"cokes"}],
+		"defaultLimit" : 10,
+		"defaultPriority" : -100
 	}
 ]

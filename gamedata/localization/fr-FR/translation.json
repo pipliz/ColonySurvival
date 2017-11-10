@@ -230,7 +230,8 @@
 				"foodvalue" : "Valeur de la nourriture:",
 				"tooltip" : {
 					"needs" : "Requiert :",
-					"and" : "et"
+					"and" : "et",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"craftingstockpile" : "Artisanat et stockage",
 				"science" : {
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "_MISSING_Finery forge limits",
 					"woodcutter" : "_MISSING_Wood cutting limits"
 				},
-				"description" : "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock."
+				"description" : "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Vous êtes mort(e).",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 66.8498168498168
+	"coverage" : 66.4845173041894
 }

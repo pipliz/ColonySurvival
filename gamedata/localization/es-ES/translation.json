@@ -231,7 +231,8 @@
 				"foodvalue" : "Valor de la comida: ",
 				"tooltip" : {
 					"needs" : "Necesitas: ",
-					"and" : "y"
+					"and" : "y",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"science" : {
 					"header" : "Ciencia",
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "Límite de forjado de lujo",
 					"woodcutter" : "Límite de leñado"
 				},
-				"description" : "Los colonos trabajarán hasta alcanzar el limite de la reserva."
+				"description" : "Los colonos trabajarán hasta alcanzar el limite de la reserva.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Has muerto.",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "Necesarias para investigar ciencia avanzada.",
 		"sciencebagcolony" : "Necesarias para investigar ciencia relacionada con la colonia. "
 	},
-	"coverage" : 1
+	"coverage" : 99.4535519125683
 }

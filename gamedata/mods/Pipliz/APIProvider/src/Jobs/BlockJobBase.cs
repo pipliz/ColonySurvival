@@ -10,7 +10,6 @@ namespace Pipliz.APIProvider.Jobs
 		protected Vector3Int position;
 		protected Players.Player owner;
 
-		double timeJob;
 		bool isValid = true;
 		NPCType cached_NPCType;
 		protected NPCBase.NPCGoal lastGoal;
@@ -43,8 +42,6 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual string NPCTypeKey { get { throw new System.NotImplementedException(); } }
 
-		public virtual float TimeBetweenJobs { get { throw new System.NotImplementedException(); } }
-
 		public virtual InventoryItem RecruitementItem { get { return InventoryItem.Empty; } }
 
 		public virtual void InitializeJob (Players.Player owner, Vector3Int position, int desiredNPCID)
@@ -66,16 +63,13 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
-			if (CheckTime()) {
-				OnNPCDoJob(ref state);
-			}
+
 		}
 
 		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			if (CheckTime()) {
-				OnNPCDoStockpile(ref state);
-			}
+			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			state.SetCooldown(0.1);
 		}
 
 		public virtual void OnAssignedNPC (NPCBase npc)
@@ -139,35 +133,9 @@ namespace Pipliz.APIProvider.Jobs
 			return this;
 		}
 
-		public virtual void OnNPCDoJob (ref NPCBase.NPCState state)
-		{
-
-		}
-
-		public virtual void OnNPCDoStockpile (ref NPCBase.NPCState state)
-		{
-			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
-			state.SetCooldown(0.1);
-		}
-
-		protected void OverrideCooldown (double cooldownLeft)
-		{
-			timeJob = Time.SecondsSinceStartDouble + cooldownLeft;
-		}
-
 		protected virtual void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
 		{
 
-		}
-
-		protected virtual bool CheckTime ()
-		{
-			double timeNow = Time.SecondsSinceStartDouble;
-			if (timeNow < timeJob) {
-				return false;
-			}
-			timeJob = timeNow + (Random.NextFloat() * 0.2f + 1.0f) * TimeBetweenJobs;
-			return true;
 		}
 	}
 }

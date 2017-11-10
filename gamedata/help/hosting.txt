@@ -1,0 +1,38 @@
+Hosting options depends a bit on what you want to do. There's multiple ways:
+
+1)	Host using colonyserver executable (GUI) from the game install
+	This is the choice to use when you're hosting for yourself (and some friends), but only while you're also playing the game.
+	Problems may occur if you're running the server in the background and steam decides to update it.
+	It also requires steam to be active and logged in (though the account does not require the game)
+	The GUI can cause problems if you do not have a display attached (vps) or resize the screen, or lock the screen for long periods
+	
+2)	Host using the colonyserverdedicated executable (commandline) from the game install
+	You probably don't want to use this choice. No GUI problems, but still need steam active & update trouble. See 4) for rest.
+	
+3)	Host using colonyserver executable from SteamCMD
+	You probably don't want to use this choice. GUI problems can still occur. See 1) for rest.
+	
+4)	Host using the colonyserverdedicated executable from SteamCMD
+	This is the best option for hosting 'long' term servers.
+	It allows more options than the GUI (some are in files, but accessible through this)
+	A general guide is here: https://developer.valvesoftware.com/wiki/SteamCMD
+	The app_id to use is 748090
+	The game won't update unless asked to check for updates.
+	The updating can be automated through scripts.
+	Works without a monitor active.
+	The executable is cross-platform (mono) despite being .exe.
+	
+General help on commands in the command line version is available by typing ? or help
+Passing launch arguments to the dedicated.exe will cause it to automatically run start_server with those arguments
+"Generating" a world that exists just loads it
+
+About the server.networktype options:
+  Singleplayer	I doubt this is useful to launch seperately, but it'll try to connect locally to the client, and autoquit.
+  LAN			Not really LAN. It listens on localhost, allowing 1 client to connect. Basically singleplayer hosting.
+  SteamLAN		Not really LAN either. Runs a standard steam server, but does not port forward. Will generate a random password in the future (hopefully). Does not verify authentication tickets.
+  SteamOnline	Same as SteamLAN, but port forwards. Both this and SteamLAN should be LAN discoverable, but require a steam connection to actually connect. Verifies authentication tickets.
+  
+Example launch string:
+start_server +server.world "SOME WORLD NAME" +server.networktype LAN
+
+For gameport and steamport: Keeping the range between 27000 and 27030 is needed for LAN discovery to work

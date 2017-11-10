@@ -235,6 +235,7 @@
 				"stockpiledescription" : "You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile.",
 				"foodvalue" : "Food value:",
 				"tooltip" : {
+					"instockpile" : "in stockpile",
 					"needs" : "Needs: ",
 					"and" : "and"
 				},
@@ -264,7 +265,11 @@
 					"fineryforgejob" : "Finery forge limits",
 					"woodcutter" : "Wood cutting limits"
 				},
-				"description" : "Colonists will work until the set amount is reached in the stockpile."
+				"description" : "Colonists will work until the set amount is reached in the stockpile.",
+				"hoverpriority" : {
+					"a" : "Crafting Priority",
+					"b" : "Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "You died.",

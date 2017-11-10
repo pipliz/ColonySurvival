@@ -1,0 +1,79 @@
+For a detailed list of callbacks and their builtin uses, see mod_callbacks.txt
+
+Adding types to the game
+
+	Use the following attribute:
+	[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterAddingBaseTypes, "INSERT_UNIQUE_KEY")]
+	See the callback description in mod_callbacks.txt
+	You can add your type to the dictionary passed in the argument. The key should be the item name.
+	The ushort index of the created type can later be found from ItemTypes.IndexLookup.GetIndex
+	The type itself can later be found in ItemTypes.GetType
+	
+Adding audio to the game
+
+	Use the following attributes:
+	[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterSelectedWorld, "INSERT_UNIQUE_KEY")]
+	[ModLoader.ModCallbackDependsOn("pipliz.server.registeraudiofiles")]
+	[ModLoader.ModCallbackProvidesFor("pipliz.server.loadaudiofiles")]
+	See the callback description in mod_callbacks.txt
+	
+	To add custom audio files, they have to be registered in the gamedata/audio/audioFiles.json file.
+	This json file is available through code in the above callback, at ItemTypesServer.AudioFilesJSON
+	See the json file on disk for the format to follow.
+	In later callbacks you can use ServerManager.SendAudio to play sounds on the client.
+	
+Adding localization to the game
+
+	Use the following attributes:
+	[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterWorldLoad, "INSERT_UNIQUE_KEY")]
+	[ModLoader.ModCallbackDependsOn("pipliz.server.localization.waitforloading")]
+	[ModLoader.ModCallbackProvidesFor("pipliz.server.localization.convert")]
+	See the callback description in mod_callbacks.txt
+	
+	Same story as with audio; JSON files available in a callback to edit.
+	They're available at Server.Localization.Localization.LoadedTranslation
+	the dictionary is keyed by the locale (like "en-US")
+	
+Adding meshes to the game
+
+	Simply place it in a folder somewhere, and reference it in the type descriptio; "mesh" : "path/to/file.obj"
+	File format should be .obj, with triangulated polygons and UV mapping. Normals/tangents are not used.
+	
+Adding textures to the game
+
+	Textures work similar to meshes, but with an intermediate step.
+	The textures used by a type are not in types.json, but in texturemapping.json.
+	A type will reference to the texturemapping type for its textures.
+	
+	Use the following attributes:
+	[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterSelectedWorld, "INSERT_UNIQUE_KEY")]
+	[ModLoader.ModCallbackProvidesFor("pipliz.server.registertexturemappingtextures")]
+	See the callback description in mod_callbacks.txt
+	
+	ItemTypesServer.TextureMappings is the dictionary to use. It's keyed by the unique material name.
+	The string constructor will use the paths provided and fallback to error/neutral colored textures if not used.
+	The fields from the TextureMapping struct should be the full paths to the textures relative to the game root directory.
+	
+Adding player crafting recipes to the game
+
+	Create a new Recipe in code.
+	If you want it to be unlockable, mark the recipe as isOptional in the constructor.
+	Use RecipePlayer.AddOptionalRecipe(recipe). To make it available later, call RecipePlayer.UnlockOptionalRecipe
+	If it's always usable, use RecipePlayer.AddDefaultRecipe(recipe)
+	
+	There's no specific callback to use for this, but item types should be registered (so AfterItemTypesDefined and later)
+	
+Adding job crafting recipes to the game
+
+	Create a new Recipe in code.
+	If you want it to be unlockable, mark the recipe as isOptional in the constructor.
+	defaultLimit is the default limit (amount of times to craft this, not amount of results to craft)
+	defaultPriority is the default priority; -100, 0 or 100 are the ones a player can set through the interface
+	
+	To be unlockable: Use RecipeStorage.AddOptionalLimitTypeRecipe
+	To unlock it later: Use RecipeStorage.GetPlayerStorage.SetRecipeAvailability
+	To be unlocked by default: Use RecipeStorage.AddDefaultLimitTypeRecipe
+	"identifier" / "limitType" in these methods is the npc type that'll craft the recipe - like pipliz.crafter for the workbench guy.
+	
+	There's no specific callback to use for this, but item types should be registered (so AfterItemTypesDefined and later)
+	

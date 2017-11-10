@@ -229,7 +229,8 @@
 				"stockpiledescription" : "Μπορείτε να φτιάξετε μόνο πράγματα με τα αντικείμενα στις υποδοχές στο κάτω μέρος. Οι αποικιστές μπορούν να χρησιμοποιήσουν μόνο αντικείμενα στο απόθεμά σας. ",
 				"tooltip" : {
 					"needs" : "Ανάγκες: ",
-					"and" : "και"
+					"and" : "και",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"foodvalue" : "_MISSING_Food value:",
 				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "_MISSING_Finery forge limits",
 					"woodcutter" : "_MISSING_Wood cutting limits"
 				},
-				"description" : "Οι αποικιστές θα δουλέψουν έως ότου επιτευχθεί το καθορισμένο ποσό στο απόθεμα."
+				"description" : "Οι αποικιστές θα δουλέψουν έως ότου επιτευχθεί το καθορισμένο ποσό στο απόθεμα.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Πέθανες.",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 51.4652014652015
+	"coverage" : 51.183970856102
 }

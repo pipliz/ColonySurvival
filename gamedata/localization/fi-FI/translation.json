@@ -230,7 +230,8 @@
 				"foodvalue" : "Ruoka-arvo:",
 				"tooltip" : {
 					"needs" : "Vaatii: ",
-					"and" : "ja"
+					"and" : "ja",
+					"instockpile" : "_MISSING_in stockpile"
 				},
 				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
 				"science" : {
@@ -259,7 +260,11 @@
 					"fineryforgejob" : "_MISSING_Finery forge limits",
 					"woodcutter" : "_MISSING_Wood cutting limits"
 				},
-				"description" : "Asukit työskentelevät niin kauan, kunnes varastoon on kertynyt asetetun arvon verran kyseistä tavaraa."
+				"description" : "Asukit työskentelevät niin kauan, kunnes varastoon on kertynyt asetetun arvon verran kyseistä tavaraa.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Kuolit. Hyvää työtä.",
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 54.7619047619048
+	"coverage" : 54.4626593806922
 }

@@ -1,0 +1,35 @@
+0.4.1 (2017-11-*)
+
+Added a command line wrapper so the game can run on a vps. Use colonyserverdedicated.exe (works on linux as well, it's mono)
+Added a dedicated server tool to steam / SteamCMD - app_id 748090
+Added configurable job crafting priorities; by default ammunition types are high priority, ingredients medium and the rest low priority.
+Added "/lootall [amount]" command, to loot most notable blocks.
+Guards now prioritize zombies with health closer to their max damage (slingers shoot weak ones, muskets strong ones), in addition to shooting the closest one.
+Improve usability of the crafting limits interface: Limit shown is now the actual limit of items made, not recipes made. Also shows missing ingredients in red, and the amount currently in the stockpile.
+Added a 3x damage modifier if punching with an iron sword
+Usage of "/setflight" is now stored (no need to type it every time)
+To eliminate some confusion, unused stockpile slots (the white ones) above 60 (the initial ones) will be removed when unused
+
+Possibly fix an issue where colonists would randomly fail to find a path once (but succeed on repeated attempts)
+Increase path complexity limit because increased pathfinding performance allows it
+Fixed an issue where others' banners would be less safe for you then for them (the half-half colored block from other banners was not safe)
+Changed npc code to update less often (more performant)
+Slightly improved performance from lots of npc progress indicators
+Fixed an issue causing the server to re-save all player data despite most of it being untouched
+Improved server quitting speed by multithreading a part of it
+Improved server loading speed by multithreading a part of it
+Fix siege mode being activated while loading a world
+
+API/mod related stuff:
+Refactored NPC.JobTracker a bit to make it more accessible
+Removed implicit InventoryItem <-> JSONNode casting operators
+Added TotalHealth, CurrentHealth and MovementSpeed to IMonster
+MonsterTracker.Find now takes a preferedHealth argument, for selecting monsters close to that health
+Opened up Inventory class for more mod use. Do note that client side changes overwrite the inventory (it's not intended for server side changes yet)
+Removed BlockJobBase.TimeBetweenJobs, use state.OverrideCooldown in the OnNPCDoJob / OnNPCAtStockpile methods
+Removed BlockJobBase.OnNPCDoJob / OnNPCDoStockpile, use OnNPCAtJob / OnNPCAtStockpile instead. The 'wrapper' method is no longer needed due to the TimeBetweenJobs change
+Added CraftingJobBase.CraftingCooldown (get/set), for per-job changes to crafting times. Implemented as a static field per existing job
+Changed MonsterSpawner.TryGetSpawnLocation to return an ESpawnResult (to check for 'not yet loaded' areas and not trigger siege mode for it)
+Added support for tooltip requirements for recipes with more than 4 recipes
+Added Server.MeshedObjects.ClientMeshedObject.SendMoveOnceInterpolatedPosition - to spawn a mesh and move it from {a} to {b} on the client
+Added defaultPriority optional argument to recipe constructors

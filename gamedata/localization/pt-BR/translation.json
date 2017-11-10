@@ -104,14 +104,14 @@
 				"mousesettings" : "Configurações do Mouse",
 				"keymapping" : "Mapeamento das Teclas",
 				"mousemenu" : {
-					"sensitivityx" : "Sensibilidade do Mouse X-axis",
-					"sensitivityy" : "Sensibilidade do Mouse Y-axis",
+					"sensitivityx" : "Sensibilidade do Mouse no Eixo X",
+					"sensitivityy" : "Sensibilidade do Mouse no Eixo Y",
 					"sensitivitylock" : "Travar ambos eixos de sensibilidade",
-					"invertx" : "Inverter x-axis",
-					"inverty" : "Inverter y-axis",
+					"invertx" : "Inverter Eixo X",
+					"inverty" : "Inverter Eixo Y",
 					"smooth" : "Suavização do Mouse",
-					"smoothx" : "Suavização do Mouse X-axis",
-					"smoothy" : "Suavização do Mouse Y-axis",
+					"smoothx" : "Suavização do Mouse no Eixo X",
+					"smoothy" : "Suavização do Mouse no Eixo Y",
 					"smoothlock" : "Travar ambos eixos de suavização"
 				},
 				"keymenu" : {
@@ -123,7 +123,7 @@
 				"full" : "Configurações de Idioma",
 				"wiptext" : "Trabalho em progresso. Não abrange todos os textos do jogo e algumas traduções são menos traduzidas que outras.",
 				"language" : "Idioma",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
+				"coverage" : "Esta tradução está {0:F1}% completa. Para ajudar a traduzir, veja os fóruns ou o repositório do github."
 			}
 		},
 		"infomenu" : {
@@ -184,28 +184,28 @@
 				"berrya" : "Comida rápida e fácil, comece com isso!",
 				"berryb" : "Coloque na grama ou terra",
 				"berryc" : "",
-				"guard" : "_MISSING_Guard",
-				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"guardc" : "_MISSING_",
-				"guardsday" : "_MISSING_Daytime guards",
-				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
-				"jobbowday" : "_MISSING_Daytime Bow Guard",
-				"jobbownight" : "_MISSING_Nighttime Bow Guard",
-				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
-				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
-				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"guard" : "Guarda",
+				"guarda" : "Protege a sua colonia",
+				"guardb" : "Isto ira abrir outro menu onde você pode selecionar os tipos de guardas",
+				"guardc" : "",
+				"guardsday" : "Guardas do dia",
+				"guardsnight" : "Guardas da noite",
+				"slingertooltip" : "Comece aqui\nDano: 50 HP\nRaio: 12 blocos\nTempo de recarga: 3 segundos",
+				"slinger" : "Atirador",
+				"crossbowtooltip" : "Desbloqueie a besta primeiro\nDano: 300 HP\nRaio: 25 blocos\nTempo de recarga: 8 segundos",
+				"crossbow" : "Besta",
+				"bowtooltip" : "Desbloqueie a bigorna antes\nDano: 100 HP\nRaio: 20 blocos\nTempo de recarga: 5 segundos",
+				"bow" : "Arco",
+				"matchlocktooltip" : "Desbloqueie as armas do contrabandista primeiro\nDano: 500 HP\nRaio: 30 blocos\nTempo de recarga: 12 segundos",
+				"matchlock" : "Contrabandista",
+				"jobslingerday" : "Guarda Atirador da manhã",
+				"jobslingernight" : "Guarda Atirador da noite",
+				"jobbowday" : "Arqueiro da manhã",
+				"jobbownight" : "Arqueiro da noite",
+				"jobcrossbowday" : "Besteiro da manhã",
+				"jobcrossbownight" : "Besteiro da noite",
+				"jobmatchlockday" : "Contrabandista da manhã",
+				"jobmatchlocknight" : "Contrabandista da noite"
 			},
 			"toolconstruction" : {
 				"header" : "Ferramenta de Construção",
@@ -230,36 +230,41 @@
 				"foodvalue" : "Valor da comida:",
 				"tooltip" : {
 					"needs" : "Requer: ",
-					"and" : "e"
+					"and" : "e",
+					"instockpile" : "_MISSING_in stockpile"
 				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"craftingstockpile" : "Montagem & Estocagem",
 				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}"
+					"header" : "Ciência",
+					"dependencies" : "Tecnologias requiridas:",
+					"requirements" : "Requisitos para um ciclo de pesquisa:",
+					"iterations" : "Ciclos de pesquisa: {0} de {1}",
+					"researchselected" : "Selecione para pesquisar",
+					"researchactive" : "Pesqueisa selecionada: {0}"
 				}
 			},
 			"limits" : {
 				"pipliz" : {
-					"crafter" : "Limite para fabricação",
-					"baker" : "Limite para cozinhar",
-					"smelter" : "Limite para fundir",
-					"minter" : "Limite para amoedar",
-					"merchant" : "Limite do shopping",
-					"grinder" : "Limite para moer",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"crafter" : "Limite de fabricantes",
+					"baker" : "Limite de cozinheiros",
+					"smelter" : "Limite de ferreiros",
+					"minter" : "Limite de cobradores",
+					"merchant" : "Limite de mercadores",
+					"grinder" : "Limite de moedores",
+					"tailor" : "Limite de adaptadores",
+					"technologist" : "Limite de pesquisadores",
+					"metalsmithjob" : "Limite de ferreiros",
+					"kilnjob" : "Limite de cozinheiros",
+					"gunsmithjob" : "Limite de ferreiros",
 					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
+					"fineryforgejob" : "Limite de forjadores",
+					"woodcutter" : "Limite de lenhadores"
 				},
-				"description" : "Colonistas irão trabalhar até a quantia indicada ser atingida na estocagem."
+				"description" : "Colonistas irão trabalhar até a quantia indicada ser atingida na estocagem.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+				}
 			},
 			"death" : {
 				"description" : "Você morreu.",
@@ -273,9 +278,9 @@
 				"closetoggle" : "Não mostrar mais isso"
 			},
 			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"header" : "Removedor de bloco especial",
+				"description" : "Removendo o bloco do tipo {0} ira causar problemas para a colônia. O que você deseja fazer?",
+				"button" : "Remover"
 			}
 		},
 		"firstpersonstats" : {
@@ -284,7 +289,7 @@
 			"laborercount" : "Desempregados:",
 			"foodstorage" : "Comida:",
 			"foodusage" : "Comida/Dia:",
-			"ammocount" : "_MISSING_Ammo:"
+			"ammocount" : "Munição:"
 		},
 		"quickstart" : {
 			"page1" : {
@@ -685,5 +690,5 @@
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science"
 	},
-	"coverage" : 53.4798534798535
+	"coverage" : 60.655737704918
 }

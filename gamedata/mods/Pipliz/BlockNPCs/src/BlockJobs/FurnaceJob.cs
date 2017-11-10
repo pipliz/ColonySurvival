@@ -7,9 +7,15 @@ namespace Pipliz.BlockNPCs.Implementations
 {
 	public class FurnaceJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
+		public static float StaticCraftingCooldown = 7.5f;
+
 		public override string NPCTypeKey { get { return "pipliz.smelter"; } }
 
-		public override float TimeBetweenJobs { get { return 7.5f; } }
+		public override float CraftingCooldown
+		{
+			get { return StaticCraftingCooldown; }
+			set { StaticCraftingCooldown = value; }
+		}
 
 		public override int MaxRecipeCraftsPerHaul { get { return 2; } }
 

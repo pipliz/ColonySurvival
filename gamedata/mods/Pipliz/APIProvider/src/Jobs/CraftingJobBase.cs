@@ -1,6 +1,7 @@
 ﻿using NPC;
 using Pipliz.JSON;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 namespace Pipliz.APIProvider.Jobs
 {
@@ -42,7 +43,13 @@ namespace Pipliz.APIProvider.Jobs
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 
-		public override void OnNPCDoJob (ref NPCBase.NPCState state)
+		public virtual float CraftingCooldown
+		{
+			get { throw new System.NotImplementedException(); }
+			set { throw new System.NotImplementedException(); }
+		}
+
+		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			state.JobIsDone = true;
 			usedNPC.LookAt(position.Vector);
@@ -53,7 +60,7 @@ namespace Pipliz.APIProvider.Jobs
 				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
 					blockInventory.Remove(selectedRecipe.Requirements);
 					blockInventory.Add(selectedRecipe.Results);
-					state.SetIndicator(NPCIndicatorType.Crafted, TimeBetweenJobs, selectedRecipe.Results[0].Type);
+					state.SetIndicator(NPCIndicatorType.Crafted, CraftingCooldown, selectedRecipe.Results[0].Type);
 					state.JobIsDone = false;
 					recipesToCraft--;
 					OnRecipeCrafted();
@@ -64,7 +71,7 @@ namespace Pipliz.APIProvider.Jobs
 					if (!state.Inventory.IsEmpty) {
 						shouldTakeItems = true;
 					}
-					OverrideCooldown(0.1);
+					state.SetCooldown(0.1);
 					if (wasCrafting) {
 						OnStopCrafting();
 					}
@@ -77,6 +84,7 @@ namespace Pipliz.APIProvider.Jobs
 						if (!state.Inventory.IsEmpty || !blockInventory.IsEmpty) {
 							blockInventory.Dump(usedNPC.Inventory);
 							shouldTakeItems = true;
+							state.SetCooldown(0.3);
 						} else {
 							state.JobIsDone = false;
 							float cooldown = Random.NextFloat(8f, 16f);
@@ -85,14 +93,16 @@ namespace Pipliz.APIProvider.Jobs
 							} else {
 								state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, recipeMatch.FoundRecipe.FindMissingType(owner));
 							}
-							OverrideCooldown(cooldown);
 						}
 						break;
 					case Recipe.RecipeMatchType.FoundCraftable:
 						blockInventory.Dump(usedNPC.Inventory);
 						selectedRecipe = recipeMatch.FoundRecipe;
 						shouldTakeItems = true;
-						OverrideCooldown(0.5);
+						state.SetCooldown(0.3);
+						break;
+					default:
+						Assert.IsTrue(false, "Unexpected RecipeMatchType: " + recipeMatch.MatchType);
 						break;
 				}
 				if (wasCrafting) {
@@ -101,9 +111,14 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		public override void OnNPCDoStockpile (ref NPCBase.NPCState state)
+		public override void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			if (state.Inventory.IsEmpty) {
+				Assert.IsTrue(shouldTakeItems);
+			} else {
+				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.SetCooldown(0.3);
+			}
 			state.JobIsDone = true;
 			if (shouldTakeItems) {
 				shouldTakeItems = false;
@@ -111,7 +126,7 @@ namespace Pipliz.APIProvider.Jobs
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
-						OverrideCooldown(0.5);
+						state.SetCooldown(0.5);
 						recipesToCraft = 0;
 						break;
 					case Recipe.RecipeMatchType.FoundCraftable:
@@ -121,7 +136,10 @@ namespace Pipliz.APIProvider.Jobs
 							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
 							usedNPC.Colony.UsedStockpile.TryRemove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
-						OverrideCooldown(0.5);
+						state.SetCooldown(0.5);
+						break;
+					default:
+						Assert.IsTrue(false, "Unexpected RecipeMatchType: " + recipeMatch.MatchType);
 						break;
 				}
 			}
