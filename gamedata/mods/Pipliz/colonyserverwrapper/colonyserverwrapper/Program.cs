@@ -175,7 +175,7 @@ namespace ColonyServerWrapper
 			WriteConsole ("| +server.ip              - which IP to use to select the network adapter. Not needed in most cases. 0.0.0.0 for auto");
 			WriteConsole ("| +server.steamport       - port used by steam, default 27017");
 			WriteConsole ("| +server.usevac          - whether to filter for VAC status, true or false. Untested, default false.");
-			WriteConsole ("| +server.seed            - if new world, seed used to generate terrain");
+			WriteConsole ("| +server.seed            - if new world, seed used to generate terrain. type integer");
 			WriteConsole ("| +server.monsterson      - if new world, whether to spawn monsters. default true");
 			WriteConsole ("| +server.initialsettings - if new world, initialsettings file to use, default normal");
 			WriteConsole ("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");

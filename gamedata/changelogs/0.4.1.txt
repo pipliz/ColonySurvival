@@ -1,5 +1,7 @@
 0.4.1 (2017-11-*)
 
+Added a command line wrapper so the game can run on a vps. Use colonyserverdedicated.exe (works on linux as well, it's mono)
+Added a dedicated server tool to steam / SteamCMD - app_id 748090
 Added configurable job crafting priorities; by default ammunition types are high priority, ingredients medium and the rest low priority.
 Added "/lootall [amount]" command, to loot most notable blocks.
 Guards now prioritize zombies with health closer to their max damage (slingers shoot weak ones, muskets strong ones), in addition to shooting the closest one.
@@ -28,3 +30,6 @@ Removed BlockJobBase.TimeBetweenJobs, use state.OverrideCooldown in the OnNPCDoJ
 Removed BlockJobBase.OnNPCDoJob / OnNPCDoStockpile, use OnNPCAtJob / OnNPCAtStockpile instead. The 'wrapper' method is no longer needed due to the TimeBetweenJobs change
 Added CraftingJobBase.CraftingCooldown (get/set), for per-job changes to crafting times. Implemented as a static field per existing job
 Changed MonsterSpawner.TryGetSpawnLocation to return an ESpawnResult (to check for 'not yet loaded' areas and not trigger siege mode for it)
+Added support for tooltip requirements for recipes with more than 4 recipes
+Added Server.MeshedObjects.ClientMeshedObject.SendMoveOnceInterpolatedPosition - to spawn a mesh and move it from {a} to {b} on the client
+Added defaultPriority optional argument to recipe constructors
