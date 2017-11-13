@@ -1,0 +1,10 @@
+0.4.2 (2017-11-**)
+
+Changed rendering of close torches a bit, hopefully fixing crash issues with lower end integrated graphics
+Changed zombie updating script:
+- Should not teleport anymore when the server lags.
+- Significantly better performance for zombies that are "just walking"
+- Significantly better performance for zombies that are looking for other targets to consider
+- Overall, servers should support 2-8x as much zombies as on 0.4.1, depending on how complex mazes are.
+
+-Significant update to zh-CN localization

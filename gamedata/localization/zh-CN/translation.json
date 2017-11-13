@@ -121,9 +121,9 @@
 			"language" : "语言",
 			"languagemenu" : {
 				"full" : "语言选择",
-				"wiptext" : "持续进行中的工作。简体中文由Steam中的'兰局嘉段机务'持续更新.",
+				"wiptext" : "持续进行中的工作,这不包括游戏中所有的文字,有些翻译可能少于其他翻译的量",
 				"language" : "语言",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
+				"coverage" : "汉化翻译完成度: {0:F1}% 已完成."
 			}
 		},
 		"infomenu" : {
@@ -184,28 +184,28 @@
 				"berrya" : "快速方便的食物，殖民从这里开始！",
 				"berryb" : "放在草地上或泥土上",
 				"berryc" : "",
-				"guard" : "_MISSING_Guard",
-				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"guardc" : "_MISSING_",
-				"guardsday" : "_MISSING_Daytime guards",
-				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
-				"jobbowday" : "_MISSING_Daytime Bow Guard",
-				"jobbownight" : "_MISSING_Nighttime Bow Guard",
-				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
-				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
-				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"guard" : "警卫",
+				"guarda" : "保护你的殖民地！",
+				"guardb" : "这将打开另一个菜单，您可以在其中选择警卫类型。",
+				"guardc" : "",
+				"guardsday" : "白天的警卫",
+				"guardsnight" : "夜间警卫",
+				"slingertooltip" : "初始\n伤害: 50 HP\n射程: 12 格\n装填速度: 3 秒",
+				"slinger" : "锻铁炉",
+				"crossbowtooltip" : "先解锁弩\n伤害: 300 HP\n射程: 25 格\n装填速度: 8 秒",
+				"crossbow" : "弩",
+				"bowtooltip" : "先解锁砧\n伤害: 100 HP\n射程: 20 格\n装填速度: 5 秒",
+				"bow" : "Bow",
+				"matchlocktooltip" : "先解锁火绳枪\n伤害: 500 HP\n射程: 30 格\n 装填速度: 12 秒",
+				"matchlock" : "火绳枪",
+				"jobslingerday" : "白天巡逻队",
+				"jobslingernight" : "夜间巡逻队",
+				"jobbowday" : "白天弓守卫",
+				"jobbownight" : "夜间弓守卫",
+				"jobcrossbowday" : "白天弩守卫",
+				"jobcrossbownight" : "夜间弩守卫",
+				"jobmatchlockday" : "白天的火绳枪警卫",
+				"jobmatchlocknight" : "夜间的火绳枪警卫"
 			},
 			"toolconstruction" : {
 				"header" : "施工工具",
@@ -231,16 +231,16 @@
 				"tooltip" : {
 					"needs" : "需要: ",
 					"and" : "和",
-					"instockpile" : "_MISSING_in stockpile"
+					"instockpile" : "在储备"
 				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"craftingstockpile" : "制作和贮存",
 				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}"
+					"header" : "科学类",
+					"dependencies" : "技术要求:",
+					"requirements" : "一个研究的周期:",
+					"iterations" : "研究周期: {0} 产出 {1}",
+					"researchselected" : "选择研究",
+					"researchactive" : "当前研究: {0}"
 				}
 			},
 			"limits" : {
@@ -251,19 +251,19 @@
 					"minter" : "铸造达到最大",
 					"merchant" : "作坊达到最大",
 					"grinder" : "磨坊达到最大",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
+					"tailor" : "裁缝限制",
+					"technologist" : "技术限制",
+					"metalsmithjob" : "采矿限制",
+					"kilnjob" : "熔炉限制",
+					"gunsmithjob" : "工坊限制",
+					"bloomeryjob" : "锻铁炉限制",
+					"fineryforgejob" : "服饰限制",
+					"woodcutter" : "木材限制"
 				},
 				"description" : "屁民将一直工作到储备量达到为止.",
 				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+					"a" : "制作优先",
+					"b" : "食谱 +++ 优先考虑.\n 食谱 + 优先权最低."
 				}
 			},
 			"death" : {
@@ -278,9 +278,9 @@
 				"closetoggle" : "不再显示"
 			},
 			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"header" : "特别砖块清除",
+				"description" : "删除此块类型 {0} 可能给殖民地带来麻烦。你确定？",
+				"button" : "清除"
 			}
 		},
 		"firstpersonstats" : {
@@ -289,7 +289,7 @@
 			"laborercount" : "失业人数:",
 			"foodstorage" : "食物:",
 			"foodusage" : "食物/天:",
-			"ammocount" : "_MISSING_Ammo:"
+			"ammocount" : "弹药:"
 		},
 		"quickstart" : {
 			"page1" : {
@@ -297,8 +297,8 @@
 				"description" : "欢迎来到殖民地生存!",
 				"text2" : "食物是你殖民地的基础.确保你有足够的食物维持生存并足够供应屁民生活,食物永远不嫌多不是吗!",
 				"text3" : "请按'I'键来打开储物箱,你需要将物品拿在手上才能制造左边手工制作的物品,将物品放到右边共享仓库你的屁民才会使用,当然箱子是异次元的.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
-				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
+				"text1" : "旗帜是你的殖民地的中心。按“2”种植。右击横幅以招募殖民者。横幅工具突出显示怪物在红色中产卵的区域。.",
+				"text4" : "怪物会在晚上攻击你的殖民地！使用命令工具放置警卫。按“1”并单击选择。按“r”旋转某些块."
 			},
 			"page2" : {
 				"header" : "食物供给",
@@ -312,155 +312,155 @@
 				"description" : "晚上怪物可是会攻击你的殖民地的!",
 				"text1" : "在晚上怪物会攻击你的殖民地,你需要雇佣守卫并建造防御工事.当然由于它们腿短所以它们跳不过两格高的砖块.",
 				"text2" : "不要忽视你的殖民地状态,每当太阳升起就会激活工作模式,换句话白天会更快的消耗你的食物.",
-				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
-				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
+				"text3" : "怪物数量随着殖民者数量的增加而增加！确保你的警卫有足够的弹药！",
+				"text4" : "用科学实验室解锁新武器来击败更强的怪物，他们会造成更多的伤害并能从更远的距离打击怪物。"
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
-				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
-				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
-				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
-				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
-				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
+				"header" : "采矿",
+				"description" : "矿石是你们殖民地的基本要求",
+				"text1" : "在地壳深处，可以找到各种矿石。挖到或挖到山的一边去找它们。",
+				"text2" : "右键单击矿石或黑暗石块，用命令工具让矿工工作。别忘了在附近放一个板条箱。",
+				"text3" : "熔炉招聘一个失业的殖民者为冶炼厂。他将用木柴把铜和锡冶炼成青铜锭。",
+				"text4" : "殖民者用工作台和砧工艺金属转化为有用的产品。使用科学实验室来打开铁砧."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
-				"description" : "_MISSING_Only the smallest colonies can do without science!",
-				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
-				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
-				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
-				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
+				"header" : "科学研究",
+				"description" : "只有弱小的殖民地才能没有科学！",
+				"text1" : "将科学实验室招聘一名科学家。右键单击实验室或使用在库存菜单选项卡以查看菜单中的科学。",
+				"text2" : "选择研究让科学家打开它。他将完成一定的周期来完成这项研究。每个周期消耗成分。",
+				"text3" : "更高层次的研究需要科学包。招聘技术人员制作科学包。这些袋子本身可以多次重复使用。",
+				"text4" : "科学家们可以一起工作，加快研究。更科学实验室招募额外的科学家！"
 			}
 		},
 		"pipliz" : {
 			"baseresearch" : {
 				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+					"name" : "增加健康 I",
+					"description" : "将最大生命增加到 125"
 				},
 				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+					"name" : "增加健康 II",
+					"description" : "将最大生命增加到 150"
 				},
 				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
+					"name" : "增加健康 III",
+					"description" : "将最大生命增加到 175"
 				},
 				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
+					"name" : "增加健康 IV",
+					"description" : "将最大生命增加到 200"
 				},
 				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
+					"name" : "自愈增强 I",
+					"description" : "将自愈能力由30增强到50"
 				},
 				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
+					"name" : "自愈增强 II",
+					"description" : "将自愈能力由50增强到65"
 				},
 				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
+					"name" : "自愈增强 III",
+					"description" : "将自愈能力由65增强到85"
 				},
 				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
+					"name" : "自愈增强 IV",
+					"description" : "将自愈能力由85增强到100"
 				},
 				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
+					"name" : "再生速度 I",
+					"description" : "增加再生速度 0.5 HP\/s 到 1 HP\/s"
 				},
 				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
+					"name" : "再生速度 II",
+					"description" : "增加再生速度 1 HP\/s 到 2 HP\/s"
 				},
 				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
+					"name" : "再生速度 III",
+					"description" : "增加再生速度 2 HP\/s 到 3 HP\/s"
 				},
 				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
+					"name" : "再生速度IV",
+					"description" : "增加再生速度 3 HP\/s 到 4 HP\/s"
 				},
 				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
+					"name" : "生命科学袋",
+					"description" : "打开生命科学袋，研究与健康有关的升级"
 				},
 				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
+					"name" : "锻铁炉",
+					"description" : "打开锻铁炉，可处理铁矿、方铅矿"
 				},
 				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
+					"name" : "青铜砧",
+					"description" : "解开青铜铁砧，它可以加工青铜。"
 				},
 				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
+					"name" : "弩",
+					"description" : "解开弩，比弓更有力的武器"
 				},
 				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
+					"name" : "弩箭",
+					"description" : "解锁弩弹药"
 				},
 				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which can create steel from iron"
+					"name" : "服饰",
+					"description" : "解锁华丽的锻造台，它能用铁制造钢铁。"
 				},
 				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
+					"name" : "火药",
+					"description" : "解锁火药，一种威力强大的炸药"
 				},
 				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
+					"name" : "工坊店",
+					"description" : "打开工坊店了解创造了火药枪和过程"
 				},
 				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
+					"name" : "火枪",
+					"description" : "解锁的火绳枪，枪的早期型"
 				},
 				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
+					"name" : "先进的科学袋",
+					"description" : "解锁高级科学袋，用于高级研究"
 				},
 				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
+					"name" : "基础科学袋",
+					"description" : "解锁基本科学袋，用于基础研究"
 				},
 				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
+					"name" : "殖民地科学袋",
+					"description" : "打开殖民地科学袋，用于集群的相关研究"
 				},
 				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
+					"name" : "军事科学袋",
+					"description" : "打开军事科学袋，用于军事研究"
 				},
 				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
+					"name" : "裁缝",
+					"description" : "解开裁缝，把亚麻变成亚麻"
 				},
 				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+					"name" : "技术专家",
+					"description" : "解锁技术师，制造科学包"
 				},
 				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+					"name" : "旗帜半径 I",
+					"description" : "旗帜安全距离增加到 40 格"
 				},
 				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+					"name" : "旗帜半径 II",
+					"description" : "旗帜安全距离增加到 55 格"
 				},
 				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+					"name" : "旗帜半径 III",
+					"description" : "旗帜安全距离增加到 70 格"
 				},
 				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+					"name" : "旗帜半径 IV",
+					"description" : "旗帜安全距离增加到 85 格"
 				},
 				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
+					"name" : "旗帜半径 V",
+					"description" : "旗帜安全距离增加到 100 格"
 				}
 			}
 		}
@@ -524,68 +524,68 @@
 		"cherryblossom" : "樱花",
 		"redplanks" : "红木板",
 		"blackplanks" : "黑木板",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
-		"bloomery" : "_MISSING_Bloomery",
-		"bowstring" : "_MISSING_Bowstring",
-		"bronzeanvil" : "_MISSING_Bronze Anvil",
-		"bronzearrow" : "_MISSING_Bronze Arrow",
-		"bronzeaxe" : "_MISSING_Bronze Axe",
-		"bronzecoin" : "_MISSING_Bronze Coin",
-		"bronzeingot" : "_MISSING_Bronze Ingot",
-		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
-		"bronzeplate" : "_MISSING_Bronze Plate",
-		"charcoal" : "_MISSING_Charcoal",
-		"cokes" : "_MISSING_Cokes",
-		"copperparts" : "_MISSING_Copper Parts",
-		"coppertools" : "_MISSING_Copper Tools",
-		"crossbow" : "_MISSING_Crossbow",
-		"crossbowbolt" : "_MISSING_Crossbow Bolt",
-		"fineryforge" : "_MISSING_Finery Forge",
-		"galenalead" : "_MISSING_Galena (Lead rich)",
-		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
-		"guardbowdayjob" : "_MISSING_Day Bow Guard",
-		"guardbownightjob" : "_MISSING_Night Bow Guard",
-		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
-		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
-		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
-		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
+		"linen" : "亚麻布",
+		"clothing" : "服装",
+		"carpetred" : "红地毯",
+		"carpetblue" : "蓝色的地毯",
+		"carpetyellow" : "黄色的地毯",
+		"tailorshop" : "裁缝店",
+		"technologisttable" : "技师桌",
+		"sciencebaglife" : "生命科学袋",
+		"sciencebagbasic" : "基础科学袋",
+		"linenbag" : "麻布袋",
+		"bloomery" : "锻铁炉",
+		"bowstring" : "弓弦",
+		"bronzeanvil" : "青铜砧",
+		"bronzearrow" : "青铜箭头",
+		"bronzeaxe" : "青铜斧",
+		"bronzecoin" : "青铜币",
+		"bronzeingot" : "青铜锭",
+		"bronzepickaxe" : "青铜鹤嘴锄",
+		"bronzeplate" : "青铜板",
+		"charcoal" : "木炭",
+		"cokes" : "焦炭",
+		"copperparts" : "铜配件",
+		"coppertools" : "铜工具",
+		"crossbow" : "弩",
+		"crossbowbolt" : "弩箭",
+		"fineryforge" : "优雅的服装",
+		"galenalead" : "方铅矿（富铅）",
+		"galenasilver" : "方铅矿（富银）",
+		"gunpowder" : "火药",
+		"gunpowderpouch" : "火药袋",
+		"gunsmithshop" : "工坊店",
+		"ironblock" : "铁滑车",
+		"ironrivet" : "铁铆钉",
+		"ironsword" : "铁刀",
+		"ironwrought" : "铁艺",
+		"kiln" : "窑",
+		"lead" : "铅",
+		"leadbullet" : "铅弹",
+		"linenpouch" : "麻布袋",
+		"matchlockgun" : "火枪",
+		"salpeter" : "索尔皮特",
+		"sciencebagmilitary" : "军事科学袋",
+		"sciencelab" : "科学实验室",
+		"silveringot" : "元宝",
+		"sling" : "投石器",
+		"slingbullet" : "子弹",
+		"steelingot" : "钢锭",
+		"steelparts" : "钢制零件",
+		"tin" : "锡",
+		"firewood" : "柴",
+		"splittingstump" : "劈树桩",
+		"sciencebagadvanced" : "先进的科学袋",
+		"sciencebagcolony" : "殖民地科学袋",
+		"minerjob" : "矿工的工作",
+		"guardslingerdayjob" : "白天环卫队",
+		"guardslingernightjob" : "夜间环卫队",
+		"guardbowdayjob" : "Day 白天弓守卫",
+		"guardbownightjob" : "Night 夜间弓守卫",
+		"guardcrossbowdayjob" : "白天弩守卫",
+		"guardcrossbownightjob" : "夜间弩守卫",
+		"guardmatchlockdayjob" : "Day 白天火绳枪警卫",
+		"guardmatchlocknightjob" : "Night 夜间火绳枪警卫"
 	},
 	"typeuses" : {
 		"planks" : "大体积的木材原料哦！",
@@ -626,69 +626,69 @@
 		"redplanks" : "没有任何实用价值,但是这是高贵的红木啊",
 		"blackplanks" : "高度易燃,小心火烛",
 		"cherryblossom" : "游戏里面最粉嫩的东西",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron",
-		"bowstring" : "_MISSING_Ploink",
-		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
-		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
-		"bronzeaxe" : "_MISSING_Foresters need one!",
-		"bronzeingot" : "_MISSING_Bronze stronk",
-		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
-		"charcoal" : "_MISSING_Absorbs cyanide",
-		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
-		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
-		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
-		"copperparts" : "_MISSING_Metal improves everything",
-		"coppertools" : "_MISSING_You can't even cut bread without tools",
-		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
-		"crossowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"fineryforge" : "_MISSING_Requires cokes to create steel from wrought iron",
-		"galenalead" : "_MISSING_Contains lots of lead",
-		"galenasilver" : "_MISSING_Contains lots of silver",
-		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
-		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
-		"ironblock" : "_MISSING_Don't drop it on your foot",
-		"ironrivet" : "_MISSING_More powerful than duct tape",
-		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
-		"ironwrought" : "_MISSING_Wrought just means 'worked'",
-		"kiln" : "_MISSING_Turns wooden planks into charcoal",
-		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
-		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
-		"linenpouch" : "_MISSING_Can be used to store gunpowder",
-		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
-		"salpeter" : "_MISSING_Don't spice up your food with this",
-		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
-		"silveringot" : "_MISSING_Slightly more valuable than lead",
-		"sling" : "_MISSING_Be careful, Goliath",
-		"slingbullet" : "_MISSING_Just a small stone, actually",
-		"steelingot" : "_MISSING_It's strong as steel",
-		"steelparts" : "_MISSING_Ingots are so unwieldy",
-		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science"
+		"tailorshop" : "可以使亚麻、地毯、衣服和包",
+		"clothing" : "它看起来像是你可以穿的。你不可以。",
+		"linen" : "内衣是指由亚麻制成的内衣。",
+		"carpetred" : "如果你把浆果果汁在地毯上没关系！",
+		"carpetyellow" : "太蓬松了！",
+		"carpetblue" : "屁民不该受到红地毯的待遇",
+		"technologisttable" : "工艺科学袋",
+		"sciencebaglife" : "需要研究与健康和生命有关的科学",
+		"sciencebagbasic" : "基础科学研究所需",
+		"linenbag" : "比塑料袋好",
+		"stonebricks" : "紧急情况下的打孔",
+		"coalore" : "警告：可能会引起气候问题",
+		"ironore" : "用铁镐使铁矿石开采",
+		"goldore" : "不要失去它",
+		"goldingot" : "曾经用来保证纸币的价值",
+		"goldcoin" : "有一面国王的画像",
+		"sappling" : "未来的树",
+		"leavestemperate" : "试着从高塔上跳进一堆这样的东西。",
+		"logtemperate" : "输出日志的类，但不同",
+		"sciencelab" : "科学家用来解开新技术的。多个科学家可以一起工作！",
+		"bloomery" : "用木炭作燃料来炼铁",
+		"bowstring" : "Ploink",
+		"bronzeanvil" : "一块独特的铁砧",
+		"bronzearrow" : "怪物继续留下负面评论。卫兵们喜欢它！",
+		"bronzeaxe" : "林农需要一！",
+		"bronzeingot" : "青铜石",
+		"bronzeplate" : "最喜欢的食物，在它变成绿色的使用它！",
+		"charcoal" : "吸收氰化物",
+		"cokes" : "创造和燃烧这东西可能是完全安全的为您的健康和环境",
+		"copper" : "不需要熔炼。所以方便！",
+		"coppernails" : "一种创新的组合木材的方法",
+		"copperparts" : "金属提高了一切",
+		"coppertools" : "没有工具你切不到面包。",
+		"crossbow" : "小兄弟的arcuballista",
+		"crossowbolt" : "更硬，更好，更快，更强",
+		"fineryforge" : "需要焦炭创造钢熟铁",
+		"galenalead" : "包含大量的铅",
+		"galenasilver" : "含有大量的银",
+		"gunpowder" : "小心轻放！",
+		"gunpowderpouch" : "可开火的火绳枪",
+		"gunsmithshop" : "枪炮和弹药",
+		"ironblock" : "不要把它放在你的脚下",
+		"ironrivet" : "比胶带更强大",
+		"ironsword" : "显然，只对科学家有用。",
+		"ironwrought" : "锻造意味着“工作”",
+		"kiln" : "把木板变成木炭",
+		"lead" : "使用它在您的管道和铅中毒毁灭你们的文明",
+		"leadbullet" : "可以用火绳枪",
+		"linenpouch" : "可以用来储存火药",
+		"matchlockgun" : "需要火药袋来射击铅弹",
+		"salpeter" : "不要用这东西把食物调味",
+		"sciencebagmilitary" : "需要研究与战斗有关的科学",
+		"silveringot" : "比铅更有价值",
+		"sling" : "小心，歌利亚",
+		"slingbullet" : "其实只是一块小石头",
+		"steelingot" : "它像钢铁一样坚固",
+		"steelparts" : "钢锭太笨重了。",
+		"tin" : "只是有点毒",
+		"bronzepickaxe" : "使用命令工具分配矿工。他会用镐从一块矿石或石头提取无限！",
+		"firewood" : "基本的燃料",
+		"splittingstump" : "伐木工用木头劈柴",
+		"sciencebagadvanced" : "高级科学要求",
+		"sciencebagcolony" : "殖民地相关科学所需"
 	},
 	"coverage" : 54.4626593806922
 }
