@@ -1,10 +1,26 @@
 0.4.2 (2017-11-**)
 
-Changed rendering of close torches a bit, hopefully fixing crash issues with lower end integrated graphics
 Changed zombie updating script:
-- Should not teleport anymore when the server lags.
+- Don't teleport anymore when the server lags. (they pause instead)
 - Significantly better performance for zombies that are "just walking"
 - Significantly better performance for zombies that are looking for other targets to consider
 - Overall, servers should support 2-8x as much zombies as on 0.4.1, depending on how complex mazes are.
+Changed player collision scripts substantially, fixing ground phasing issues (not the ones where you place blocks on a player though)
+Changed savegame region saving to be more resistant to crashing. This does <not> solve the problem of jobs being broken after a server crash, but does fix regions resetting
+The items required for a npc to take a job are now refunded upon them leaving that job
+Temporarily limit the "delete" button in the load world menu. It has to be clicked 3 times in a row to work, this should be improved in the future (a full confirmation box)
 
--Significant update to zh-CN localization
+Fixed a variety of crash issues (related to the new torch rendering from 0.4)
+Fixed an issue causing the wrapper to crash
+Fixed an issue leaving the colonyserver process open if the dedicated wrapper crashes
+Fixed the requirements text of crafting limits to work with > 4 requirements
+Shorten stockpile counts of > 100 000 to > 100K
+
+Added korean localization
+Significant update to simplified chinese localization
+Update to german localization
+Small update to spanish localization
+Fixed crossbowbolt tooltip missing (typo in locale)
+
+Modding changes: For the new situation see the callback documentation at gamedata/help/modding_callbacks.txt
+OnNPCJobChanged callback now has an argument of type TupleStruct<NPC.NPCBase, NPC.IJob, NPC.IJob> instead of only NPC.NPCBase. The 1st job (tuple.item2) is the old job, the 2nd is the new job.
