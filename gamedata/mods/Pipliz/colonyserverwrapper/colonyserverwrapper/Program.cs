@@ -33,83 +33,88 @@ namespace ColonyServerWrapper
 		public static void Main (string[] args)
 		{
 			Console.Title = "Colony Survival Dedicated Server";
-			WriteConsole ("Launching Colony Survival Dedicated Server");
+			WriteConsole("Launching Colony Survival Dedicated Server");
 
-			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs e) => {
+			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs e) =>
+			{
 				if (IsServerRunning) {
-					StopServer ();
+					StopServer();
 				}
 			};
 
 			if (args.Length > 0) {
-				StringBuilder argsBuilder = new StringBuilder ();
+				StringBuilder argsBuilder = new StringBuilder();
 				for (int i = 0; i < args.Length; i++) {
-					string arg = args [i];
-					if (arg.Contains (" ")) {
-						argsBuilder.AppendFormat ("\"{0}\" ", arg); 
+					string arg = args[i];
+					if (arg.Contains(" ")) {
+						argsBuilder.AppendFormat("\"{0}\" ", arg);
 					} else {
-						argsBuilder.AppendFormat ("{0} ", arg);
+						argsBuilder.AppendFormat("{0} ", arg);
 					}
 				}
-				string fullArgs = argsBuilder.ToString ();
-				WriteConsole ("Launching server from commandline args: {0}", fullArgs);
-				StartServer (fullArgs);
+				argsBuilder.AppendFormat(" +parentprocess {0} ", Process.GetCurrentProcess().Id);
+				string fullArgs = argsBuilder.ToString();
+				WriteConsole("Launching server from commandline args: {0}", fullArgs);
+				StartServer(fullArgs);
 			} else {
-				ListHelp ();
+				ListHelp();
 			}
 
 			while (true) {
 				string read = null;
 				while (read == null) {
 					if (Console.KeyAvailable) {
-						ReadConsoleKey (ref read);
+						ReadConsoleKey(ref read);
 					} else {
-						Thread.Sleep (1);
+						Thread.Sleep(1);
 					}
 				}
-				read = read.TrimStart (' ', '\t', '\n', '\r');
-				if (string.IsNullOrEmpty (read)) {
-					ListHelp ();
+				read = read.TrimStart(' ', '\t', '\n', '\r');
+				if (string.IsNullOrEmpty(read)) {
+					ListHelp();
 					continue;
 				}
 				string start = read;
-				if (read.Contains (" ")) {
-					start = read.Split (new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0];
+				if (read.Contains(" ")) {
+					start = read.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0];
 				}
 				switch (start) {
-				case "quit":
-					WriteConsole (string.Format ("> {0}", read));
-					if (IsServerRunning) {
-						StopServer ();
-					}
-					return;
-				case "help":
-				case "list":
-				case "?":
-					WriteConsole (string.Format ("> {0}", read));
-					ListHelp ();
-					break;
-				case "start_server":
-					if (read.Length < "start_server  ".Length) {
-						goto case "help";
-					}
-					WriteConsole (string.Format ("> {0}", read));
-					StartServer (read.Remove (0, "start_server ".Length));
-					break;
-				case "stop_server":
-					WriteConsole (string.Format ("> {0}", read));
-					StopServer ();
-					break;
-				case "send":
-					if (read.Length < "send  ".Length) {
-						goto case "help";
-					}
-					WriteConsole (string.Format ("> {0}", read));
-					SendLog (read.Remove (0, "send ".Length));
-					break;
-				default:
-					WriteConsole("Unexpected command: {0}", read);
-					break;
+					case "quit":
+						WriteConsole(string.Format("> {0}", read));
+						if (IsServerRunning) {
+							StopServer();
+						}
+						return;
+					case "help":
+					case "list":
+					case "?":
+						WriteConsole(string.Format("> {0}", read));
+						ListHelp();
+						break;
+					case "start_server":
+						if (read.Length < "start_server  ".Length) {
+							goto case "help";
+						}
+						WriteConsole(string.Format("> {0}", read));
+						StringBuilder str = new StringBuilder();
+						str.Append(read, "start_server ".Length, read.Length - "start_server ".Length);
+						str.AppendFormat(" +parentprocess {0} ", Process.GetCurrentProcess().Id);
+						StartServer(str.ToString());
+						break;
+					case "stop_server":
+						WriteConsole(string.Format("> {0}", read));
+						StopServer();
+						break;
+					case "send":
+						if (read.Length < "send  ".Length) {
+							goto case "help";
+						}
+						WriteConsole(string.Format("> {0}", read));
+						SendLog(read.Remove(0, "send ".Length));
+						break;
+					default:
+						WriteConsole("Unexpected command: {0}", read);
+						break;
 				}
 			}
 		}
@@ -324,7 +329,11 @@ namespace ColonyServerWrapper
 			Console.CursorLeft = 0;
 			Console.Write (new String (' ', Console.BufferWidth - 1));
 			Console.CursorLeft = 0;
-			Console.WriteLine (s, args);
+			if (args != null && args.Length > 0) {
+				Console.WriteLine(s, args);
+			} else {
+				Console.WriteLine(s);
+			}
 			PrintCurrentTyping ();
 		}
 	}

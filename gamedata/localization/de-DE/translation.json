@@ -184,28 +184,28 @@
 				"berrya" : "Schnelles und einfaches Essen, starte hiermit!",
 				"berryb" : "Platziere es auf Gras oder Dreck",
 				"berryc" : "",
-				"guard" : "_MISSING_Guard",
-				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"guardc" : "_MISSING_",
-				"guardsday" : "_MISSING_Daytime guards",
-				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"guard" : "Wächter",
+				"guarda" : "Schütze Deine Kolonie",
+				"guardb" : "Öffnet ein weiteres Menü, in welchem weitere Wächtertypen ausgewählt werden können",
+				"guardc" : "Wächter C?",
+				"guardsday" : "Wache tagsüber",
+				"guardsnight" : "Wache nachts",
+				"slingertooltip" : "Beginne hier:\nSchaden: 50 HP\nReichweite: 12 blocks\nLadegeschwindigkeit: 3 seconds",
+				"slinger" : "Steinschleuder",
+				"crossbowtooltip" : "Schalte zuerst Armbrust frei\nSchaden: 300 HP\nReichweite: 25 blocks\nLadegeschwindigkeit: 8 seconds",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
-				"jobbowday" : "_MISSING_Daytime Bow Guard",
-				"jobbownight" : "_MISSING_Nighttime Bow Guard",
-				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
-				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
-				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"bowtooltip" : "Schalte zuerst Amboss frei\nSchaden: 100 HP\nReichweite: 20 blocks\nLadegeschwindigkeit: 5 seconds",
+				"bow" : "Bogen",
+				"matchlocktooltip" : "Schalte zuerst Muskete frei\nSchaden: 500 HP\nReichweite: 30 blocks\nLadegeschwindigkeit: 12 seconds",
+				"matchlock" : "Muskete",
+				"jobslingerday" : "Steinschleuder-Wache tagsüber",
+				"jobslingernight" : "Steinschleuder-Wache nachts",
+				"jobbowday" : "Bogen-Wache tagsüber",
+				"jobbownight" : "Bogen-Wache nachts",
+				"jobcrossbowday" : "Armbrust-Wache tagsüber",
+				"jobcrossbownight" : "Armbrust-Wachte nachts",
+				"jobmatchlockday" : "Musketen-Wache tagsüber",
+				"jobmatchlocknight" : "Musketen-Wache nachts"
 			},
 			"toolconstruction" : {
 				"header" : "Bauwerkzeug",
@@ -231,7 +231,7 @@
 				"tooltip" : {
 					"needs" : "Benötigt: ",
 					"and" : "und",
-					"instockpile" : "_MISSING_in stockpile"
+					"instockpile" : "im Lager"
 				},
 				"craftingstockpile" : "Herstellung und Lager",
 				"science" : {
@@ -253,17 +253,17 @@
 					"grinder" : "Mühlenlimitierungen",
 					"tailor" : "Schneiderlimitierungen",
 					"technologist" : "Forschungslimitierungen",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"metalsmithjob" : "Schmiedlimitierungem",
+					"kilnjob" : "Brennofenlimitierungen",
+					"gunsmithjob" : "Waffenschmiedlimitierungen",
 					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
+					"fineryforgejob" : "Schmiedelimitierungen",
+					"woodcutter" : "Holzfällerlimitierungen"
 				},
 				"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
 				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\n Recipes with a + priority are crafted last."
+					"a" : "Herstellungs-Priorität",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
 				}
 			},
 			"death" : {
@@ -278,9 +278,9 @@
 				"closetoggle" : "Nie wieder anzeigen"
 			},
 			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
+				"header" : "Spezielle Blockentfernung",
 				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"button" : "Entfernen"
 			}
 		},
 		"firstpersonstats" : {
@@ -289,7 +289,7 @@
 			"laborercount" : "Arbeitslos:",
 			"foodstorage" : "Nahrung:",
 			"foodusage" : "Verbrauch:",
-			"ammocount" : "_MISSING_Ammo:"
+			"ammocount" : "Munition:"
 		},
 		"quickstart" : {
 			"page1" : {
@@ -535,21 +535,21 @@
 		"sciencebagbasic" : "Wissenschaftsbeutel (Basis)",
 		"linenbag" : "Leinensack",
 		"bloomery" : "_MISSING_Bloomery",
-		"bowstring" : "_MISSING_Bowstring",
-		"bronzeanvil" : "_MISSING_Bronze Anvil",
-		"bronzearrow" : "_MISSING_Bronze Arrow",
-		"bronzeaxe" : "_MISSING_Bronze Axe",
+		"bowstring" : "Bogensehne",
+		"bronzeanvil" : "Bronzeamboss",
+		"bronzearrow" : "Bronzepfeil",
+		"bronzeaxe" : "Bonzeaxt",
 		"bronzecoin" : "_MISSING_Bronze Coin",
-		"bronzeingot" : "_MISSING_Bronze Ingot",
-		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
+		"bronzeingot" : "Bronzebarren",
+		"bronzepickaxe" : "Bronzespitzhacke",
 		"bronzeplate" : "_MISSING_Bronze Plate",
 		"charcoal" : "_MISSING_Charcoal",
 		"cokes" : "_MISSING_Cokes",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
-		"crossbow" : "_MISSING_Crossbow",
-		"crossbowbolt" : "_MISSING_Crossbow Bolt",
-		"fineryforge" : "_MISSING_Finery Forge",
+		"crossbow" : "Armbrust",
+		"crossbowbolt" : "Armbrustbolzen",
+		"fineryforge" : "Schmiede",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
 		"gunpowder" : "_MISSING_Gunpowder",
@@ -660,7 +660,6 @@
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
-		"crossowbolt" : "_MISSING_Harder, better, faster, stronger",
 		"fineryforge" : "_MISSING_Requires cokes to create steel from wrought iron",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
@@ -688,7 +687,8 @@
 		"firewood" : "_MISSING_Basic fuel",
 		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science"
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger"
 	},
-	"coverage" : 66.120218579235
+	"coverage" : 73.4061930783242
 }
