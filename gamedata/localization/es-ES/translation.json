@@ -146,27 +146,20 @@
 				"resetbutton" : "Reiniciar colonia",
 				"resettooltipa" : "",
 				"resettooltipb" : "Esto eliminará a todos tus colonos y campos de trabajo.",
-				"resettooltipc" : "También te proporcionará un nuevo inventario y reservas."
+				"resettooltipc" : "También te proporcionará un nuevo inventario y reservas.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "Lista de comandos",
 				"description" : "Selecciona el tipo de área que deseas crear.",
 				"wheatfarmer" : "Agricultor de trigo",
 				"wheata" : "Solo para colonias avanzadas",
-				"wheatb" : "Necesitas: Semillas de trigo",
-				"wheatc" : "Colocar sobre césped o tierra",
 				"miner" : "Minero",
 				"minera" : "Minar menas",
-				"minerb" : "Necesitas: Pico",
-				"minerc" : "Colocar en la piedra final del mundo.",
 				"forester" : "Forestal",
 				"forestera" : "Plantas y árboles",
-				"foresterb" : "Necesitas: Pimpollos y Hacha",
-				"foresterc" : "Colocar sobre césped o tierra",
 				"flaxfarmer" : "Agricultor de lino",
 				"flaxa" : "Solo para colonias avanzadas",
-				"flaxb" : "Necesitas: semillas de plantas de lino",
-				"flaxc" : "Colocar sobre césped o tierra",
 				"notflat" : "No es plano",
 				"toosmall" : "Muy pequeño",
 				"toolarge" : "Muy grande",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "Herramienta para Agricultores de bayas",
 				"berryfarmer" : "Agricultor de bayas",
 				"berrya" : "Comida rápida y fácil, ¡inicia con ella!",
-				"berryb" : "Colocar sobre césped o tierra",
-				"berryc" : "",
 				"guard" : "Guardia",
 				"guarda" : "¡Protege tu colonia!",
 				"guardb" : "Esto abrirá otro menú",
-				"guardc" : "Aquí tu puedes seleccionar los tipos de guardias",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "Guardia diurno",
 				"guardsnight" : "Guardia nocturno",
-				"slingertooltip" : "Comienza aquí\nDaño: 50 HP\nRango: 12 bloques\nTiempo de recarga: 3 segundos",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "Honda",
-				"crossbowtooltip" : "Desbloquea la ballesta primero\nDaño: 300 HP\nRango: 25 bloques\nTiempo de recarga: 8 segundos",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "Ballesta",
-				"bowtooltip" : "Desbloquea el yunque primero\nDaño: 100 HP\nRango: 20 bloques\nTiempo de recarga: 5 segundos",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "Arco",
-				"matchlocktooltip" : "Desbloquea el arcabuz primero\nDaño: 500 HP\nRango: 30 bloques\nTiempo de recarga: 12 segundos",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "Arcabuz",
 				"jobslingerday" : "Guardia con honda diurno",
 				"jobslingernight" : "Guardia con honda nocturno",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "Guardia con ballesta diurno",
 				"jobcrossbownight" : "Guardia con ballesta nocturno",
 				"jobmatchlockday" : "Guardia con arcabuz diurno",
-				"jobmatchlocknight" : "Guardia con arcabuz nocturno"
+				"jobmatchlocknight" : "Guardia con arcabuz nocturno",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "Herramienta de construcción",
@@ -240,7 +236,11 @@
 					"requirements" : "Para un ciclo de investigación se requiere:",
 					"iterations" : "Ciclo de investigación: {0} de {1}",
 					"researchselected" : "Seleccionar",
-					"researchactive" : "Investigando: {0}"
+					"researchactive" : "Investigando: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "Ferrería",
-					"description" : "Desbloquea la ferraría, que puede crear acero a partir del hierro."
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "Pólvora",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "Radio del Estandarte V",
 					"description" : "Incrementa el radio seguro creado a 100 bloques."
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "Ballestero diurno",
 		"guardcrossbownightjob" : "Ballestero nocturno",
 		"guardmatchlockdayjob" : "Arcabucero diurno",
-		"guardmatchlocknightjob" : "Arcabucero nocturno"
+		"guardmatchlocknightjob" : "Arcabucero nocturno",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "¡Ahora con 4 veces el volumen de un tronco!",
@@ -593,8 +615,6 @@
 		"crate" : "¡Para todas las necesidades de almacenamiento!",
 		"workbench" : "Recluta un artesano. ¡Él creara por ti!",
 		"plasterblock" : "Para un look más moderno.",
-		"furnace" : "Recluta un fundidor. ¡Usará todas tus menas!",
-		"oven" : "Utilizado para hornear pan.",
 		"wheatstage1" : "El pan del mañana.",
 		"straw" : "Lo necesitas para crear camas y es subproducto de la extracción de trigo.",
 		"wheat" : "Un colono usara una moledora para convertirla en harina.",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "Intenta saltarlos en una pila desde una torre alta.",
 		"logtemperate" : "Como un registro de salida, pero diferente.",
 		"sciencelab" : "Usado por un científico para desbloquear nuevas tecnologías. ¡Múltiples científicos pueden trabajar juntos!",
-		"bloomery" : "Usa carbón como combustible para fundir hierro.",
 		"bowstring" : "Ploink.",
 		"bronzeanvil" : "El único yunque con forma de bloque.",
 		"bronzearrow" : "Los monstruos siguen dejando críticas negativas. ¡A los guardias aún les gusta!",
@@ -660,7 +679,6 @@
 		"copperparts" : "El metal mejora todo.",
 		"coppertools" : "Ni siquiera puedes cortar pan sin herramientas.",
 		"crossbow" : "Hermano menor del arcoballesta.",
-		"fineryforge" : "Requiere coque para crear acero del hierro forjado.",
 		"galenalead" : "Contiene un montón de plomo.",
 		"galenasilver" : "Contiene un montón de plata.",
 		"gunpowder" : "¡Manipular con cuidado!",
@@ -685,10 +703,14 @@
 		"tin" : "Tan solo un poco toxico.",
 		"bronzepickaxe" : "Usa la tabla de comandos para asignar un minero. ¡El usará el pico para extraer menas o piedras infinitas de un bloque!",
 		"firewood" : "Combustible básico.",
-		"splittingstump" : "Utilizada por un leñador para convertir la madera en leña.",
 		"sciencebagadvanced" : "Necesarias para investigar ciencia avanzada.",
 		"sciencebagcolony" : "Necesarias para investigar ciencia relacionada con la colonia. ",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger"
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 99.8178506375228
+	"coverage" : 93.9393939393939
 }

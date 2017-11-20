@@ -40,29 +40,9 @@
 		"requires":[{"type":"planks"},{"type":"coppernails","amount":4}]
 	},
 	{
-		"name" : "pipliz.player.splittingstumptaiga",
-		"results":[{"type":"splittingstump"}],
-		"requires":[{"type":"logtaiga"},{"type":"bronzeaxe"}]
-	},
-	{
-		"name" : "pipliz.player.splittingstumptemperate",
-		"results":[{"type":"splittingstump"}],
-		"requires":[{"type":"logtemperate"},{"type":"bronzeaxe"}]
-	},
-	{
 		"name" : "pipliz.player.furnace",
 		"results":[{"type":"furnace"}],
 		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4},{"type":"coppernails","amount":4},{"type":"tin","amount":2}]
-	},
-	{
-		"name" : "pipliz.player.oven",
-		"results":[{"type":"oven"}],
-		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4}]
-	},
-	{
-		"name" : "pipliz.player.grindstone",
-		"results":[{"type":"grindstone"}],
-		"requires":[{"type":"planks"},{"type":"stonebricks"}]
 	},
 	{
 		"name" : "pipliz.player.plankstemperate",
@@ -77,7 +57,7 @@
 	{
 		"name" : "pipliz.player.torch",
 		"results":[{"amount":3,"type":"torch"}],
-		"requires":[{"type":"planks"},{"type":"coalore"}]
+		"requires":[{"type":"planks"},{"type":"firewood","amount":3},{"type":"copperparts"},{"type":"coppernails","amount":2}],
 	},
 	{
 		"name" : "pipliz.player.workbench",
@@ -85,29 +65,54 @@
 		"requires":[{"type":"planks"},{"type":"coppernails","amount":2},{"type":"copperparts"},{"type":"coppertools"}]
 	},
 	{
-		"name" : "pipliz.player.kiln",
-		"results":[{"type":"kiln"}],
-		"requires":[{"type":"dirt"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}]
-	},
-	{
-		"name" : "pipliz.player.mint",
-		"results":[{"type":"mint"}],
-		"requires":[{"type":"planks"},{"type":"bronzeplate","amount":3},{"type":"coppertools","amount":3}]
-	},
-	{
-		"name" : "pipliz.player.shop",
-		"results":[{"type":"shop"}],
-		"requires":[{"type":"planks"},{"type":"linen","amount":4},{"type":"bronzecoin","amount":5}]
-	},
-	{
 		"name" : "pipliz.player.sciencelab",
 		"results":[{"type":"sciencelab"}],
-		"requires":[{"type":"coatedplanks"},{"type":"copperparts","amount":5},{"type":"coppertools"}]
+		"requires":[{"type":"planks"},{"type":"copperparts","amount":5},{"type":"coppertools"}]
+	},
+	{
+		"name" : "pipliz.player.bronzepickaxe",
+		"results":[{"type":"bronzepickaxe"}],
+		"requires":[{"type":"bronzeingot"},{"type":"planks"}]
+	},
+	{
+		"name" : "pipliz.player.bronzeaxe",
+		"results":[{"type":"bronzeaxe"}],
+		"requires":[{"type":"bronzeingot"},{"type":"planks"}]
+	},
+	{
+		"name" : "pipliz.player.oven",
+		"results":[{"type":"oven"}],
+		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.grindstone",
+		"results":[{"type":"grindstone"}],
+		"requires":[{"type":"planks"},{"type":"stonebricks"}],
+		"isOptional" : true
 	},
 	{
 		"name" : "pipliz.player.bronzeanvil",
 		"results":[{"type":"bronzeanvil"}],
 		"requires":[{"type":"bronzeingot","amount":5},{"type":"coppernails","amount":8},{"type":"coppertools"}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.kiln",
+		"results":[{"type":"kiln"}],
+		"requires":[{"type":"dirt"},{"type":"bronzeplate","amount":4},{"type":"copperparts","amount":2}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.splittingstumptaiga",
+		"results":[{"type":"splittingstump"}],
+		"requires":[{"type":"logtaiga"},{"type":"bronzeaxe"}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.splittingstumptemperate",
+		"results":[{"type":"splittingstump"}],
+		"requires":[{"type":"logtemperate"},{"type":"bronzeaxe"}],
 		"isOptional" : true
 	},
 	{
@@ -132,6 +137,18 @@
 		"name" : "pipliz.player.gunsmithshop",
 		"results":[{"type":"gunsmithshop"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate"},{"type":"steelparts"}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.mint",
+		"results":[{"type":"mint"}],
+		"requires":[{"type":"planks"},{"type":"bronzeplate","amount":3},{"type":"coppertools","amount":3}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.shop",
+		"results":[{"type":"shop"}],
+		"requires":[{"type":"planks"},{"type":"linen","amount":4},{"type":"bronzecoin","amount":5}],
 		"isOptional" : true
 	}
 ]

@@ -146,27 +146,20 @@
 				"resetbutton" : "Zresetuj kolonię",
 				"resettooltipa" : "",
 				"resettooltipb" : "To zabije Twoich wszystkich kolonistów, oraz zniszczy pola pracy.",
-				"resettooltipc" : "Daje również nowy ekwipunek i zapasy."
+				"resettooltipc" : "Daje również nowy ekwipunek i zapasy.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "Narzędzie dowodzenia",
 				"description" : "Wybierz rodzaj pola jakie chcesz zrobić.",
 				"wheatfarmer" : "Farmer pszenicy",
 				"wheata" : "Tylko dla zaawansowych kolonii",
-				"wheatb" : "Wymagania: Nasiona pszenicy",
-				"wheatc" : "Użyj na trawie bądź ziemi",
 				"miner" : "Górnik",
 				"minera" : "Kopie surowce",
-				"minerb" : "Wymagania: Kilof",
-				"minerc" : "Użyj na najniższym poziomie Świata.",
 				"forester" : "Leśniczy",
 				"forestera" : "Sadzi i ścina drzewa",
-				"foresterb" : "Wymagania: Sadzonki oraz siekiera",
-				"foresterc" : "Użyj na trawie bądź ziemi",
 				"flaxfarmer" : "Farmer lnu",
 				"flaxa" : "Tylko dla zaawansowych kolonii.",
-				"flaxb" : "Wymagania: Nasiona lnu",
-				"flaxc" : "Użyj na trawie bądź ziemi",
 				"notflat" : "Nie jest płasko",
 				"toosmall" : "Za małe",
 				"toolarge" : "Za duże",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "Narzędzie farmera jagód",
 				"berryfarmer" : "Farmer jagód",
 				"berrya" : "Szybko i prosty sposób, zacznij tym!",
-				"berryb" : "Użyj na trawie bądź ziemi",
-				"berryc" : "",
 				"guard" : "Strażnik",
 				"guarda" : "Ochrania kolonię!",
 				"guardb" : "Otwiera kolejne menu gdzie możesz wybrać typ strażnika.",
-				"guardc" : "",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "Dzienni strażnicy",
 				"guardsnight" : "Nocni strażnicy",
-				"slingertooltip" : "Zacznij od tego\nObrażenia: 50 PŻ\nZasięg: 12 bloków\nSzybkość przeładowania: 3 sekundy",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "Proca",
-				"crossbowtooltip" : "Najpierw odblokuj kuszę\nObrażenia: 300 PŻ\nZasięg: 25 bloków\nSzybkość przeładowania: 8 sekund",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "Kusza",
-				"bowtooltip" : "Najpierw odblokuj kowadło\nObrażenia: 100 PŻ\nZasięg: 20 bloków\nSzybkość przeładowania: 5 sekund",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "Łuk",
-				"matchlocktooltip" : "Najpierw odblokuj muszkiet\nObrażenia: 500 PŻ\nnZasięg: 30 bloków\nSzybkość przeładowania: 12 sekund",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "Muszkiet",
 				"jobslingerday" : "Dzienny strażnik z procą",
 				"jobslingernight" : "Nocny strażnik z procą",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "Dzienny strażnik z kuszą",
 				"jobcrossbownight" : "Nocny strażnik z kuszą",
 				"jobmatchlockday" : "Dzienny strażnik z muszkietem",
-				"jobmatchlocknight" : "Nocny strażnik z muszkietem"
+				"jobmatchlocknight" : "Nocny strażnik z muszkietem",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "Narzędzie budowania",
@@ -240,7 +236,11 @@
 					"requirements" : "Wymagania na cykl badania:",
 					"iterations" : "Cykle badania: {0} z {1}",
 					"researchselected" : "Wybierz do badania",
-					"researchactive" : "Bieżące badanie: {0}"
+					"researchactive" : "Bieżące badanie: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "Wytworna kuźnia",
-					"description" : "Odblokowuje wytworną kuźnię, która potrafi przerabiać żelazo na stal"
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "Proch strzelniczy",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "Zasięg sztandaru V",
 					"description" : "Zwiększa zapewniony bezpieczny zasięg do 100 bloków"
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "Dzienny strażnik z kuszą",
 		"guardcrossbownightjob" : "Nocny strażnik z kuszą",
 		"guardmatchlockdayjob" : "Dzienny strażnik z muszkietem",
-		"guardmatchlocknightjob" : "Nocny strażnik z muszkietem"
+		"guardmatchlocknightjob" : "Nocny strażnik z muszkietem",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "Teraz z czterokrotną zawartością kłód!",
@@ -593,8 +615,6 @@
 		"crate" : "Dla wszelnich potrzeb składowania!",
 		"workbench" : "Rekruci to rzemieślnicy, zrobią za Ciebie wiele rzeczy!",
 		"plasterblock" : "Powiew nowoczesności",
-		"furnace" : "Rekrutuje hutnika. Pochłonie wszystkie Twoje rudy!",
-		"oven" : "Używany do wypiekania chleba",
 		"wheatstage1" : "Przyszły chleb",
 		"straw" : "Potrzebny do łóżek, produkt uboczny uprawy pszenicy.",
 		"wheat" : "Kolonista z żarną stworzy z tego mąkę.",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "Zeskocz na stos tego z wysokiej wieży",
 		"logtemperate" : "Nie rzucać pod nogi",
 		"sciencelab" : "Używana przez naukowca do odblokowywania nowych technologi. Wielu naukowców może pracować jednocześnie!",
-		"bloomery" : "Używa węgla drzewnego aby przetopić żelazo",
 		"bowstring" : "Ploink",
 		"bronzeanvil" : "Dziwne kowadło o kształcie sześcianu.",
 		"bronzearrow" : "Potwory cały czas wysyłają o tym negatywne opinie. Strażnicy za to je uwielbiają!",
@@ -661,7 +680,6 @@
 		"coppertools" : "Bez narzędzi nie da się nawet pokroic chleba",
 		"crossbow" : "Mała siostra balisty",
 		"crossbowbolt" : "Ostrym końcem od siebie",
-		"fineryforge" : "Wymaga koksu do przetopienia obrobionego żelaza w stal",
 		"galenalead" : "Zawiera ołów",
 		"galenasilver" : "Zawiera srebro",
 		"gunpowder" : "Ostrożnie!",
@@ -686,9 +704,13 @@
 		"tin" : "Lekko toksyczne",
 		"bronzepickaxe" : "Użyj narzędzia dowodzenia aby przypisać górnika. Będzie potrzebował kilofa aby wydobywać rudy i kamień w nieskończoność!",
 		"firewood" : "Podstawowe paliwo",
-		"splittingstump" : "Używane przez drwala do zamiany drewna w opał",
 		"sciencebagadvanced" : "Wymagany do zaawansowanych badań",
-		"sciencebagcolony" : "Wymagany do badań nad ulepszeniami kolonii"
+		"sciencebagcolony" : "Wymagany do badań nad ulepszeniami kolonii",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 99.4535519125683
+	"coverage" : 93.5828877005348
 }

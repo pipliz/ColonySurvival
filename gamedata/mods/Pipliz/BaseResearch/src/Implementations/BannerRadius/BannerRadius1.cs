@@ -14,15 +14,17 @@ namespace Pipliz.BaseResearch.Implementations
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("sciencebaglife");
 			AddIterationRequirement("sciencebagmilitary");
-			AddDependency("pipliz.baseresearch.sciencebagmilitary");
-			AddDependency("pipliz.baseresearch.sciencebaglife");
 			AddDependency("pipliz.baseresearch.sciencebagbasic");
+			AddDependency("pipliz.baseresearch.sciencebaglife");
+			AddDependency("pipliz.baseresearch.sciencebagmilitary");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			manager.Player.GetTempValues(true).Set("pipliz.bannersaferadius", 40);
-			BannerTracker.SendPacket(manager.Player);
+			if (reason == EResearchCompletionReason.ProgressCompleted) {
+				BannerTracker.SendPacket(manager.Player);
+			}
 		}
 	}
 }

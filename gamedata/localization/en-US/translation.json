@@ -143,6 +143,7 @@
 				"header" : "Colony management",
 				"description" : "Colonists require 5 food units per day, and a bed. Recruiting a colonist costs 50 food units.",
 				"button" : "Recruit a colonist",
+				"gotoscience" : "Science menu",
 				"resetbutton" : "Reset colony",
 				"resettooltipa" : "",
 				"resettooltipb" : "This kills all your colonists and removes your job fields.",
@@ -156,22 +157,19 @@
 			"tooljob" : {
 				"header" : "Command tool",
 				"description" : "Select the type of area you want to create.",
+				"missingscience" : "<color=red>Requires '{0}' to be unlocked first.</color>",
 				"wheatfarmer" : "Wheat Farmer",
 				"wheata" : "For advanced colonies only",
-				"wheatb" : "Needs: Wheat Seeds",
-				"wheatc" : "Place on grass or dirt",
+				"wheatb" : "Needs: Wheat Seeds\nPlace on grass or dirt",
 				"miner" : "Miner",
 				"minera" : "Mines ores",
-				"minerb" : "Needs: Pickaxe",
-				"minerc" : "Place on bottom layer of the world",
+				"minerb" : "Needs: Pickaxe\nPlace on bottom layer of the world",
 				"forester" : "Forester",
 				"forestera" : "Plants & chops trees",
-				"foresterb" : "Needs: Saplings and an axe",
-				"foresterc" : "Place on grass or dirt",
+				"foresterb" : "Needs: Saplings and an axe\nPlace on grass or dirt",
 				"flaxfarmer" : "Flax Farmer",
 				"flaxa" : "For advanced colonies only",
-				"flaxb" : "Needs: Flax Seeds",
-				"flaxc" : "Place on grass or dirt",
+				"flaxb" : "Needs: Flax Seeds\nPlace on grass or dirt",
 				"notflat" : "Not flat",
 				"toosmall" : "Too small",
 				"toolarge" : "Too large",
@@ -187,21 +185,19 @@
 				"berryfarmertool" : "Berry Farmer Tool",
 				"berryfarmer" : "Berry Farmer",
 				"berrya" : "Quick and easy food, start with this!",
-				"berryb" : "Place on grass or dirt",
-				"berryc" : "",
+				"berryb" : "Needs: Berry seeds\nPlace on grass or dirt",
 				"guard" : "Guard",
 				"guarda" : "Protect your colony!",
 				"guardb" : "This will open another menu where you can select the guard types",
-				"guardc" : "",
 				"guardsday" : "Daytime guards",
 				"guardsnight" : "Nighttime guards",
-				"slingertooltip" : "Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"slingertooltip" : "Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"slinger" : "Slinger",
-				"crossbowtooltip" : "Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"crossbowtooltip" : "Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"crossbow" : "Crossbow",
-				"bowtooltip" : "Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"bowtooltip" : "Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
 				"bow" : "Bow",
-				"matchlocktooltip" : "Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"matchlocktooltip" : "Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
 				"matchlock" : "Matchlock",
 				"jobslingerday" : "Daytime Slinger Guard",
 				"jobslingernight" : "Nighttime Slinger Guard",
@@ -245,7 +241,11 @@
 					"requirements" : "Requirements for one research cycle:",
 					"iterations" : "Research cycles: {0} out of {1}",
 					"researchselected" : "Select to research",
-					"researchactive" : "Current research: {0}"
+					"researchactive" : "Current research: {0}",
+					"available" : "Available",
+					"unavailable" : "Unavailable",
+					"completed" : "Completed",
+					"placelab" : "Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -420,7 +420,7 @@
 				},
 				"fineryforge" : {
 					"name" : "Finery Forge",
-					"description" : "Unlocks the Finery Forge, which can create steel from iron"
+					"description" : "Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "Gunpowder",
@@ -461,6 +461,26 @@
 				"technologisttable" : {
 					"name" : "Technologist",
 					"description" : "Unlocks the technologist, who crafts Science Bags"
+				},
+				"wheatfarming" : {
+					"name" : "Bread Production",
+					"description" : "A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "Flax Farming",
+					"description" : "Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "Mints & Shops",
+					"description" : "Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "Kiln",
+					"description" : "Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "Splitting Stump",
+					"description" : "Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -496,6 +516,8 @@
 		"coatedplanks" : "Coated Planks",
 		"cokes" : "Cokes",
 		"commandtool" : "Command Tool",
+		"copper" : "Copper",
+		"coppernails" : "Copper Nails",
 		"copperparts" : "Copper Parts",
 		"coppertools" : "Copper Tools",
 		"crate" : "Crate",
@@ -593,7 +615,7 @@
 		"berry" : "Not poisonous",
 		"berrybush" : "Colonists can plant these for easy food",
 		"blackplanks" : "Highly flammable",
-		"bloomery" : "Uses charcoal as fuel to smelt iron",
+		"bloomery" : "Uses charcoal as fuel to smelt iron and galena",
 		"bow" : "Guards need one!",
 		"bowstring" : "Ploink",
 		"bread" : "Tastes good, heals your wounds",
@@ -622,12 +644,12 @@
 		"crossbow" : "Smaller brother of the arcuballista",
 		"crossbowbolt" : "Harder, better, faster, stronger",
 		"dirt" : "Dirty",
-		"fineryforge" : "Requires cokes to create steel from wrought iron",
+		"fineryforge" : "Requires cokes to create steel and gold ingots",
 		"firewood" : "Basic fuel",
 		"flax" : "The most beautiful flower in the game. And the only one",
 		"flaxstage1" : "Put it in the ground",
 		"flour" : "A colonist with an oven will bake this into bread",
-		"furnace" : "Recruits a smelter. Will consume all of your ores!",
+		"furnace" : "Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "Contains lots of lead",
 		"galenasilver" : "Contains lots of silver",
 		"goldcoin" : "With a portrait of the king on one side",
@@ -658,7 +680,7 @@
 		"logtemperate" : "Like an output log, but different",
 		"matchlockgun" : "Requires gunpowder pouches to fire lead bullets",
 		"mint" : "It's not counterfeiting if the king says it's okay",
-		"oven" : "Used to bake bread",
+		"oven" : "Uses firewood as fuel to bake flour into bread",
 		"planks" : "Now with 4 times the volume of logs!",
 		"plasterblock" : "For that modern look",
 		"redplanks" : "Does not have any food value, but it tastes pretty good",
@@ -676,7 +698,7 @@
 		"sling" : "Be careful, Goliath",
 		"slingbullet" : "Just a small stone, actually",
 		"snow" : "Knows nothing",
-		"splittingstump" : "Used by a woodcutter to split wood into firewood",
+		"splittingstump" : "A quicker way to split wood into firewood",
 		"steelingot" : "It's strong as steel",
 		"steelparts" : "Ingots are so unwieldy",
 		"stonebricks" : "Punch in case of emergency",

@@ -16,9 +16,10 @@ namespace Pipliz.BaseResearch.Implementations
 			AddIterationRequirement("clothing");
 			AddIterationRequirement("linenbag");
 			AddDependency("pipliz.baseresearch.technologisttable");
+			AddDependency("pipliz.baseresearch.wheatfarming");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.technologist.sciencebaglife", true, "pipliz.technologist");
 		}

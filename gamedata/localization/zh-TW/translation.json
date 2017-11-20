@@ -146,27 +146,20 @@
 				"resetbutton" : "重置殖民地",
 				"resettooltipa" : "",
 				"resettooltipb" : "這會殺死您所有的殖民者，並刪除您的工作領域。",
-				"resettooltipc" : "它也給您一個全新的庫存和儲備。"
+				"resettooltipc" : "它也給您一個全新的庫存和儲備。",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "命令工具",
 				"description" : "選擇您要建立的區域類型。",
 				"wheatfarmer" : "小麥農夫",
 				"wheata" : "",
-				"wheatb" : "需要：小麥種子",
-				"wheatc" : "放在草地或土上",
 				"miner" : "礦工",
 				"minera" : "",
-				"minerb" : "需要：鶴嘴鋤",
-				"minerc" : "放在世界地面下",
 				"forester" : "伐木工",
 				"forestera" : "",
-				"foresterb" : "需要：樹苗和斧頭",
-				"foresterc" : "放在草地或土上",
 				"flaxfarmer" : "亞麻農夫",
 				"flaxa" : "",
-				"flaxb" : "需要：亞麻種子",
-				"flaxc" : "放在草地或土上",
 				"notflat" : "不平整",
 				"toosmall" : "區域過小",
 				"toolarge" : "區域過大",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"berrya" : "_MISSING_Quick and easy food, start with this!",
-				"berryb" : "_MISSING_Place on grass or dirt",
-				"berryc" : "_MISSING_",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"guardc" : "_MISSING_",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "_MISSING_Matchlock",
 				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
 				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "施工工具",
@@ -240,7 +236,11 @@
 					"requirements" : "_MISSING_Requirements for one research cycle:",
 					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
 					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}"
+					"researchactive" : "_MISSING_Current research: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which can create steel from iron"
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "_MISSING_Gunpowder",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "_MISSING_Banner Radius V",
 					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
-		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "現在，4 倍體積的木塊！",
@@ -593,7 +615,6 @@
 		"crate" : "為您的所有存儲需求!",
 		"workbench" : "招募工匠。 將為你做工藝品!",
 		"plasterblock" : "為了那時尚的外表",
-		"furnace" : "招收工匠。 消耗礦石來煉製！",
 		"wheatstage1" : "未來的麵包",
 		"straw" : "農民需要床",
 		"bread" : "味道不錯，還能治好您的傷口。",
@@ -616,7 +637,6 @@
 		"coatedplanks" : "閃亮的!",
 		"clay" : "我希望您能碰它",
 		"bricks" : "畢竟這是一場荷蘭遊戲",
-		"oven" : "_MISSING_Used to bake bread",
 		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
 		"shop" : "_MISSING_Buying only, no selling",
 		"flour" : "_MISSING_A colonist with an oven will bake this into bread",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
 		"logtemperate" : "_MISSING_Like an output log, but different",
 		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron",
 		"bowstring" : "_MISSING_Ploink",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
@@ -660,7 +679,6 @@
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
-		"fineryforge" : "_MISSING_Requires cokes to create steel from wrought iron",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
@@ -685,10 +703,14 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger"
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 46.9945355191257
+	"coverage" : 44.3850267379679
 }
