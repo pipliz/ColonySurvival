@@ -146,7 +146,8 @@
 				"resetbutton" : "마을 초기화",
 				"resettooltipa" : "",
 				"resettooltipb" : "모든 주민을 죽이고 농사 구역, 광산 구역 등을 전부 제거합니다.",
-				"resettooltipc" : "인벤토리 또한 완전히 비게 됩니다."
+				"resettooltipc" : "인벤토리 또한 완전히 비게 됩니다.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"specialblockremoval" : {
 				"header" : "특정 블럭 제거",
@@ -158,20 +159,12 @@
 				"description" : "원하는 직업을 선택하세요.",
 				"wheatfarmer" : "밀 농사꾼",
 				"wheata" : "발전한 마을에 추천합니다.",
-				"wheatb" : "필요 아이템: 밀 씨앗",
-				"wheatc" : "잔디, 흙에만 농사를 지을 수 있습니다.",
 				"miner" : "광부",
 				"minera" : "광석을 캡니다.",
-				"minerb" : "필요 아이템: 곡괭이",
-				"minerc" : "진한 색 돌, 광석만 캘 수 있습니다.",
 				"forester" : "나무꾼",
 				"forestera" : "나무를 심고 베어냅니다.",
-				"foresterb" : "필요 아이템: 묘목, 도끼",
-				"foresterc" : "잔디, 흙에만 나무를 심을 수 있습니다.",
 				"flaxfarmer" : "꽃 농사꾼",
 				"flaxa" : "발전한 마을에 추천합니다.",
-				"flaxb" : "필요 아이템: 꽃 씨앗",
-				"flaxc" : "잔디, 흙에만 꽃을 심을 수 있습니다.",
 				"notflat" : "평지가 아닙니다.",
 				"toosmall" : "너무 작습니다.",
 				"toolarge" : "너무 큽니다.",
@@ -187,21 +180,19 @@
 				"berryfarmertool" : "딸기 농사 도구",
 				"berryfarmer" : "딸기 농사꾼",
 				"berrya" : "빠르게 자라기 때문에 초반에 유용합니다.",
-				"berryb" : "필요 아이템: 딸기 씨앗",
-				"berryc" : "잔디, 흙에만 딸기를 심을 수 있습니다.",
 				"guard" : "경비병",
 				"guarda" : "마을을 보호합니다.",
 				"guardb" : "경비병 병과를 선택할 수 있는 메뉴가 열립니다.",
-				"guardc" : "",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "주간 경비",
 				"guardsnight" : "야간 경비",
-				"slingertooltip" : "초반에 유용합니다.\n데미지: 50\n사정거리: 12블럭\n재장전 시간: 3초",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "새총병",
-				"crossbowtooltip" : "먼저 석궁 연구를 완료하세요.\n데미지: 300\n사정거리: 25블럭\n재장전 시간: 8초",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "석궁병",
-				"bowtooltip" : "먼저 모루 연구를 완료하세요.\n데미지: 100\n사정거리: 20블럭\n재장전 시간: 5초",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "궁병",
-				"matchlocktooltip" : "먼저 화승총 연구를 완료하세요.\n데미지: 500\n사정거리: 30블럭\n재장전 시간: 12초",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "화승총병",
 				"jobslingerday" : "주간 경비: 새총병",
 				"jobslingernight" : "야간 경비: 새총병",
@@ -210,7 +201,12 @@
 				"jobcrossbowday" : "주간 경비: 석궁병",
 				"jobcrossbownight" : "야간 경비: 석궁병",
 				"jobmatchlockday" : "주간 경비: 화승총병",
-				"jobmatchlocknight" : "야간 경비: 화승총병"
+				"jobmatchlocknight" : "야간 경비: 화승총병",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "건설 도구",
@@ -245,7 +241,11 @@
 					"requirements" : "1회 연구에 필요한 아이템:",
 					"iterations" : "연구 횟수: {0} out of {1}",
 					"researchselected" : "연구 시행",
-					"researchactive" : "현재 연구: {0}"
+					"researchactive" : "현재 연구: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -420,7 +420,7 @@
 				},
 				"fineryforge" : {
 					"name" : "금은 제련소",
-					"description" : "금괴와 은괴를 생산하는 대장간을 연구합니다."
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "화약",
@@ -461,6 +461,26 @@
 				"technologisttable" : {
 					"name" : "기술자",
 					"description" : "연구팩을 만드는 기술자를 연구합니다."
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"water" : "물",
 		"wheat" : "밀",
 		"wheatstage1" : "밀알",
-		"workbench" : "작업대"
+		"workbench" : "작업대",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"adobe" : "비싼 흙",
@@ -593,7 +615,6 @@
 		"berry" : "안심하세요. 독은 없습니다.",
 		"berrybush" : "쉽게 재배할 수 있는 작물입니다.",
 		"blackplanks" : "주의! 불을 피우지 마시오.",
-		"bloomery" : "숯을 이용해 철을 녹입니다.",
 		"bow" : "한조 대기중",
 		"bowstring" : "띠용",
 		"bread" : "맛이 엄청 좋아서 체력도 회복됩니다.",
@@ -622,12 +643,10 @@
 		"crossbow" : "느리지만 강력한 아이.",
 		"crossbowbolt" : "작은 고추가 맵다.",
 		"dirt" : "윽 더러워.",
-		"fineryforge" : "석탄을 태워 연철을 강철로 제련합니다.",
 		"firewood" : "기본적인 연료.",
 		"flax" : "이 게임에서 가장 아름다운 꽃이지만, 유일한 꽃이기도 합니다.",
 		"flaxstage1" : "땅에 뿌려주세요.",
 		"flour" : "오븐으로 빵을 구울 수 있습니다.",
-		"furnace" : "일단 구리 정도는 제련할 수 있겠네요.",
 		"galenalead" : "납이 많이 함유되어 있습니다.",
 		"galenasilver" : "은이 많이 함유되어 있습니다.",
 		"goldcoin" : "왕의 초상화가 새겨져있네요.",
@@ -658,7 +677,6 @@
 		"logtemperate" : "통나무와 비슷하지만 달라요.",
 		"matchlockgun" : "화약을 사용해 납탄을 발사합니다.",
 		"mint" : "왕이 괜찮다고 하면 위조화폐가 아닙니다.",
-		"oven" : "빵을 구울 때 사용합니다.",
 		"planks" : "통나무 하나를 네 배로 불렸군요!",
 		"plasterblock" : "현대적인 느낌이 나네요.",
 		"redplanks" : "딸기를 사용했지만 식량은 아닙니다. 맛은 있네요!",
@@ -676,7 +694,6 @@
 		"sling" : "사실 돌팔매지만 편의상 새총으로 합시다.",
 		"slingbullet" : "별건 없고, 그냥 돌입니다.",
 		"snow" : "어플 아닙니다.",
-		"splittingstump" : "나무를 장작으로 쪼갤 때 씁니다.",
 		"steelingot" : "강력한 철!",
 		"steelparts" : "쓸 곳이 많을 것 같네요.",
 		"stonebricks" : "공격용이 아닙니다.",
@@ -688,7 +705,12 @@
 		"water" : "어! 이거 인벤토리에 있으면 안되는데!",
 		"wheat" : "마음이 풍족해지네요.",
 		"wheatstage1" : "미래에 빵이 됩니다.",
-		"workbench" : "다양한 물건들을 만들 수 있습니다."
+		"workbench" : "다양한 물건들을 만들 수 있습니다.",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 91.9854280510018
+	"coverage" : 86.2745098039216
 }

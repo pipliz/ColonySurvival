@@ -63,9 +63,9 @@ namespace Pipliz.APIProvider.Science
 			return iterationCount;
 		}
 
-		public virtual void OnResearchComplete (ScienceManagerPlayer manager)
+		public virtual void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
-			Log.Write("{0} completed {1}", manager.Player, key);
+			Log.Write("{0} completed {1} ({2})", manager.Player, key, reason);
 		}
 
 		public virtual string GetIcon ()

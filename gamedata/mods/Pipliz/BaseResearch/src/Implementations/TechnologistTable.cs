@@ -17,7 +17,7 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.tailorshop");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.technologisttable", true, "pipliz.crafter");
 			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.technologisttable");

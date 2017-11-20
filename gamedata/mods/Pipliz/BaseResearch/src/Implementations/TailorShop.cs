@@ -14,10 +14,10 @@ namespace Pipliz.BaseResearch.Implementations
 			AddIterationRequirement("coatedplanks");
 			AddIterationRequirement("flax");
 			AddIterationRequirement("coppertools");
-			AddDependency("pipliz.baseresearch.bronzeanvil");
+			AddDependency("pipliz.baseresearch.flaxfarming");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.tailorshop", true, "pipliz.crafter");
 			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.tailorshop");

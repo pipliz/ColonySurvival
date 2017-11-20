@@ -146,27 +146,20 @@
 				"resetbutton" : "重置殖民地",
 				"resettooltipa" : "",
 				"resettooltipb" : "这会杀死所有的屁民并移除你的殖民地.",
-				"resettooltipc" : "这也会给你一个新的仓库."
+				"resettooltipc" : "这也会给你一个新的仓库.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "命令工具",
 				"description" : "选择要创建的区域的类型.",
 				"wheatfarmer" : "农民",
 				"wheata" : "使你的殖民地持续前行",
-				"wheatb" : "需要：小麦种子",
-				"wheatc" : "放在草地上或泥土上",
 				"miner" : "矿工",
 				"minera" : "矿山的矿石",
-				"minerb" : "需要：镐",
-				"minerc" : "请在世界底层寻找矿石",
 				"forester" : "伐木工",
 				"forestera" : "植树和砍伐树木",
-				"foresterb" : "需要：树苗和斧头",
-				"foresterc" : "放在草地上或泥土上",
 				"flaxfarmer" : "纺织工",
 				"flaxa" : "使你的殖民地持续前行",
-				"flaxb" : "需要：亚麻籽",
-				"flaxc" : "放在草地上或泥土上",
 				"notflat" : "不平坦的",
 				"toosmall" : "太小",
 				"toolarge" : "太大",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "浆果农民的工具",
 				"berryfarmer" : "浆果农民",
 				"berrya" : "快速方便的食物，殖民从这里开始！",
-				"berryb" : "放在草地上或泥土上",
-				"berryc" : "",
 				"guard" : "警卫",
 				"guarda" : "保护你的殖民地！",
 				"guardb" : "这将打开另一个菜单，您可以在其中选择警卫类型。",
-				"guardc" : "",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "白天的警卫",
 				"guardsnight" : "夜间警卫",
-				"slingertooltip" : "初始\n伤害: 50 HP\n射程: 12 格\n装填速度: 3 秒",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "锻铁炉",
-				"crossbowtooltip" : "先解锁弩\n伤害: 300 HP\n射程: 25 格\n装填速度: 8 秒",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "弩",
-				"bowtooltip" : "先解锁砧\n伤害: 100 HP\n射程: 20 格\n装填速度: 5 秒",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "Bow",
-				"matchlocktooltip" : "先解锁火绳枪\n伤害: 500 HP\n射程: 30 格\n 装填速度: 12 秒",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "火绳枪",
 				"jobslingerday" : "白天巡逻队",
 				"jobslingernight" : "夜间巡逻队",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "白天弩守卫",
 				"jobcrossbownight" : "夜间弩守卫",
 				"jobmatchlockday" : "白天的火绳枪警卫",
-				"jobmatchlocknight" : "夜间的火绳枪警卫"
+				"jobmatchlocknight" : "夜间的火绳枪警卫",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "施工工具",
@@ -240,7 +236,11 @@
 					"requirements" : "一个研究的周期:",
 					"iterations" : "研究周期: {0} 产出 {1}",
 					"researchselected" : "选择研究",
-					"researchactive" : "当前研究: {0}"
+					"researchactive" : "当前研究: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "服饰",
-					"description" : "解锁华丽的锻造台，它能用铁制造钢铁。"
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "火药",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "旗帜半径 V",
 					"description" : "旗帜安全距离增加到 100 格"
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "白天弩守卫",
 		"guardcrossbownightjob" : "夜间弩守卫",
 		"guardmatchlockdayjob" : "Day 白天火绳枪警卫",
-		"guardmatchlocknightjob" : "Night 夜间火绳枪警卫"
+		"guardmatchlocknightjob" : "Night 夜间火绳枪警卫",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "大体积的木材原料哦！",
@@ -593,8 +615,6 @@
 		"crate" : "这是个异次元箱子!",
 		"workbench" : "招募工匠。为你做工艺品!",
 		"plasterblock" : "为了那典雅华贵的装饰",
-		"furnace" : "招收工匠。消耗矿石来炼制！",
-		"oven" : "招收面包师。把小麦变成面包",
 		"wheatstage1" : "未来的面包",
 		"straw" : "农民需要床",
 		"wheat" : "用烤箱把它变成面包！",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "试着从高塔上跳进一堆这样的东西。",
 		"logtemperate" : "输出日志的类，但不同",
 		"sciencelab" : "科学家用来解开新技术的。多个科学家可以一起工作！",
-		"bloomery" : "用木炭作燃料来炼铁",
 		"bowstring" : "Ploink",
 		"bronzeanvil" : "一块独特的铁砧",
 		"bronzearrow" : "怪物继续留下负面评论。卫兵们喜欢它！",
@@ -661,7 +680,6 @@
 		"coppertools" : "没有工具你切不到面包。",
 		"crossbow" : "小兄弟的arcuballista",
 		"crossbowbolt" : "更硬，更好，更快，更强",
-		"fineryforge" : "需要焦炭创造钢熟铁",
 		"galenalead" : "包含大量的铅",
 		"galenasilver" : "含有大量的银",
 		"gunpowder" : "小心轻放！",
@@ -686,9 +704,13 @@
 		"tin" : "只是有点毒",
 		"bronzepickaxe" : "使用命令工具分配矿工。他会用镐从一块矿石或石头提取无限！",
 		"firewood" : "基本的燃料",
-		"splittingstump" : "伐木工用木头劈柴",
 		"sciencebagadvanced" : "高级科学要求",
-		"sciencebagcolony" : "殖民地相关科学所需"
+		"sciencebagcolony" : "殖民地相关科学所需",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 100
+	"coverage" : 94.1176470588235
 }

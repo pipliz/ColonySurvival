@@ -16,7 +16,7 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.gunsmithshop");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.gunsmith.gunpowder", true, "pipliz.gunsmith");
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.gunsmith.gunpowderpouch", true, "pipliz.gunsmith");

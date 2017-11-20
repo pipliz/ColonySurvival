@@ -146,27 +146,20 @@
 				"resetbutton" : "_MISSING_Reset colony",
 				"resettooltipa" : "_MISSING_",
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
-				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
+				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "Εργαλείο εντολών",
 				"description" : "Επιλέξτε τον τύπο της περιοχής που θέλετε να δημιουργήσετε.",
 				"wheatfarmer" : "Γεωργός σιταριού",
 				"wheata" : "Μόνο για προηγμένες αποικίες",
-				"wheatb" : "Απετέι : Σπόροι Σιταριών",
-				"wheatc" : "Τοποθετήστε το σε γρασίδι ή σε χώμα",
 				"miner" : "Μεταλλωρύχος",
 				"minera" : "Εκμετάλλευση Ορυκτών",
-				"minerb" : "Απετεί : Αξίνα",
-				"minerc" : "Τοποθετήστε το στο τελευταίο στρώμα του κόσμου",
 				"forester" : "Ξυλοκόπος",
 				"forestera" : "Φυτεύει και κόβει δέντρα",
-				"foresterb" : "Απετέι : Φυτά (για δέντρα) και ένα Τσεκούρι",
-				"foresterc" : "Τοποθετήστε το σε γρασίδι ή σε χώμα",
 				"flaxfarmer" : "Γεωργός λινού",
 				"flaxa" : "Για προηγμένες αποικίες μόνο",
-				"flaxb" : "Απετεί : Σπόρους λιναριού",
-				"flaxc" : "Τοποθετήστε το σε γρασίδι ή σε χώμα",
 				"notflat" : "Το σημείο δεν είναι λέιο",
 				"toosmall" : "Το σημείο που χαράξατε είναι πολύ μικρό",
 				"toolarge" : "Το σημείο που χαράξατε είναι πολύ μεγάλο",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "Εργαλείο για τους αγρότες μούρων",
 				"berryfarmer" : "Αγρότης μούρων",
 				"berrya" : "Γρήγορο και εύκολο φαγητό, ξεκίνα με αυτό!",
-				"berryb" : "Τοποθετήστε το σε γρασίδι ή σε χώμα",
-				"berryc" : "",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"guardc" : "_MISSING_",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "_MISSING_Slinger",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "_MISSING_Crossbow",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "_MISSING_Bow",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "_MISSING_Matchlock",
 				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
 				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "Εργαλείο Καταστευής",
@@ -240,7 +236,11 @@
 					"requirements" : "_MISSING_Requirements for one research cycle:",
 					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
 					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}"
+					"researchactive" : "_MISSING_Current research: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which can create steel from iron"
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "_MISSING_Gunpowder",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "_MISSING_Banner Radius V",
 					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
-		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "Τώρα 4 φορές μεγαλύτερο απο τον όγκο των κορμών!",
@@ -593,8 +615,6 @@
 		"crate" : "Για όλες τις ανάγκες αποθήκευσης!",
 		"workbench" : "Προσλαμβάνει έναν τεχνίτη. Θα κάνει τη χειροτεχνία για σας!",
 		"plasterblock" : "Για αυτή τη μοντέρνα εμφάνιση",
-		"furnace" : "Προσλαμβάνει ένα μεταλλά. Θα καταναλώσει όλα τα μεταλλεύματα σας!!",
-		"oven" : "Χρησιμοποιείται για ψήσιμο ψωμιού",
 		"wheatstage1" : "Μελλοντικό ψωμί",
 		"straw" : "Χρειάζεται κρεβάτια, υποπροϊόν της καλλιέργειας σιταριού",
 		"wheat" : "Ένας άποικος με ένα τριβείο θα το μετατρέψει σε αλεύρι",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
 		"logtemperate" : "_MISSING_Like an output log, but different",
 		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron",
 		"bowstring" : "_MISSING_Ploink",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
@@ -660,7 +679,6 @@
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
-		"fineryforge" : "_MISSING_Requires cokes to create steel from wrought iron",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
 		"gunpowder" : "_MISSING_Handle with care!",
@@ -685,10 +703,14 @@
 		"tin" : "_MISSING_Just a little toxic",
 		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"firewood" : "_MISSING_Basic fuel",
-		"splittingstump" : "_MISSING_Used by a woodcutter to split wood into firewood",
 		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger"
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 51.183970856102
+	"coverage" : 47.9500891265597
 }

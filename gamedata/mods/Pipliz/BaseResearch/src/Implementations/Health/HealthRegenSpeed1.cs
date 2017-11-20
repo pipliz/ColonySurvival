@@ -16,7 +16,7 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.sciencebaglife");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			manager.Player.GetTempValues(true).Set("pipliz.healthregenspeed", 2f);
 		}

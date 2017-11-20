@@ -34,6 +34,7 @@ namespace ColonyServerWrapper
 		{
 			Console.Title = "Colony Survival Dedicated Server";
 			WriteConsole("Launching Colony Survival Dedicated Server");
+			FixWorkingDirectory();
 
 			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs e) =>
 			{
@@ -117,6 +118,15 @@ namespace ColonyServerWrapper
 						break;
 				}
 			}
+		}
+
+		static void FixWorkingDirectory ()
+		{
+			string[] args = Environment.GetCommandLineArgs();
+			string newPath = Path.Combine(Environment.CurrentDirectory, args[0]);
+			newPath = Directory.GetParent(newPath).FullName;
+			Environment.CurrentDirectory = newPath;
+			WriteConsole("Setting working directory to {0}", newPath);
 		}
 
 		static void ReadConsoleKey (ref string read) {

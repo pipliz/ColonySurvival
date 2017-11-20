@@ -16,10 +16,12 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.healthsize2");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			manager.Player.GetTempValues(true).Set("pipliz.healthmax", 175f);
-			manager.Player.SendHealthPacket();
+			if (reason == EResearchCompletionReason.ProgressCompleted) {
+				manager.Player.SendHealthPacket();
+			}
 		}
 	}
 }

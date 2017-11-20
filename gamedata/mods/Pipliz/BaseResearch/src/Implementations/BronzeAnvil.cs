@@ -16,7 +16,7 @@ namespace Pipliz.BaseResearch.Implementations
 			AddIterationRequirement("coppernails");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bronzeanvil", true, "pipliz.crafter");
 			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.bronzeanvil");

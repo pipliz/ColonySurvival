@@ -146,27 +146,20 @@
 				"resetbutton" : "Сбросить колонию",
 				"resettooltipa" : "",
 				"resettooltipb" : "Это убъет всех ваших колонистов!",
-				"resettooltipc" : "Также это сбросит ваш инвентарь до первоначального состояния."
+				"resettooltipc" : "Также это сбросит ваш инвентарь до первоначального состояния.",
+				"gotoscience" : "_MISSING_Science menu"
 			},
 			"tooljob" : {
 				"header" : "Инструмент командования",
 				"description" : "Выберите тип области, которую вы хотите создать.",
 				"wheatfarmer" : "Пшеничное поле",
 				"wheata" : "Только для продвинутых колоний",
-				"wheatb" : "Требуются: Семена пшеницы",
-				"wheatc" : "Размещать на траве или грязи",
 				"miner" : "Шахта",
 				"minera" : "Шахта с рудами",
-				"minerb" : "Требуется: Кирка",
-				"minerc" : "Размещать на нижнем слое мира",
 				"forester" : "Лес",
 				"forestera" : "Рубит деревья и растения",
-				"foresterb" : "Требуются: Саженцы и топор",
-				"foresterc" : "Размещается на траве или грязи",
 				"flaxfarmer" : "Льное поле",
 				"flaxa" : "Только для продвинутых колонистов",
-				"flaxb" : "Требуются: Семена льна",
-				"flaxc" : "Размещается на траве или грязи",
 				"notflat" : "Не плоская область",
 				"toosmall" : "Слишком маленькая область",
 				"toolarge" : "Слишком большая область",
@@ -182,21 +175,19 @@
 				"berryfarmertool" : "Инструмент Ягодного фермера",
 				"berryfarmer" : "Ягодное поле",
 				"berrya" : "Быстрая и легкая еда. Начните с этого!",
-				"berryb" : "Размещается на траве или грязи",
-				"berryc" : "",
 				"guard" : "Охрана",
 				"guarda" : "Защитит вашу колонию",
 				"guardb" : "Это откроет другое меню",
-				"guardc" : "Где вы сможете выбрать тип охраны",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "Дневная охрана",
 				"guardsnight" : "Ночная охрана",
-				"slingertooltip" : "_MISSING_Start here\nDamage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"slinger" : "Стропальщик",
-				"crossbowtooltip" : "_MISSING_Unlock crossbow first\nDamage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
 				"crossbow" : "Арбалет",
-				"bowtooltip" : "_MISSING_Unlock anvil first\nDamage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"bow" : "Лук",
-				"matchlocktooltip" : "_MISSING_Unlock matchlock guns first\nDamage: 500 HP\nRange: 30 blocks\n Reload speed: 12 seconds",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
 				"matchlock" : "Самопал",
 				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
 				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
@@ -205,7 +196,12 @@
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard"
+				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
 			},
 			"toolconstruction" : {
 				"header" : "Инструмент Строителя",
@@ -240,7 +236,11 @@
 					"requirements" : "Требования для одного исследовательского цикла:",
 					"iterations" : "Циклы исследования: {0} из {1}",
 					"researchselected" : "Выберите исследование",
-					"researchactive" : "Текущее исследование: {0}"
+					"researchactive" : "Текущее исследование: {0}",
+					"available" : "_MISSING_Available",
+					"unavailable" : "_MISSING_Unavailable",
+					"completed" : "_MISSING_Completed",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
 				}
 			},
 			"limits" : {
@@ -404,7 +404,7 @@
 				},
 				"fineryforge" : {
 					"name" : "Кузнечная промышленность",
-					"description" : "_MISSING_Unlocks the Finery Forge, which can create steel from iron"
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
 				},
 				"gunpowder" : {
 					"name" : "Порох",
@@ -461,6 +461,26 @@
 				"bannerradius5" : {
 					"name" : "Радиус банера V",
 					"description" : "Увеличивает безопасный радиус вокруг баннера на 100 блоков"
+				},
+				"wheatfarming" : {
+					"name" : "_MISSING_Bread Production",
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+				},
+				"flaxfarming" : {
+					"name" : "_MISSING_Flax Farming",
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+				},
+				"bronzeminting" : {
+					"name" : "_MISSING_Mints & Shops",
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+				},
+				"kiln" : {
+					"name" : "_MISSING_Kiln",
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+				},
+				"splittingstump" : {
+					"name" : "_MISSING_Splitting Stump",
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
 				}
 			}
 		}
@@ -585,7 +605,9 @@
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
-		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard"
+		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails"
 	},
 	"typeuses" : {
 		"planks" : "Четырехкратный объем бревна",
@@ -593,8 +615,6 @@
 		"crate" : "С помощью этого, ваши колонисты получат доступ к складу!",
 		"workbench" : "Дайте это ремесленнику. И он скрафтит для вас, что угодно!",
 		"plasterblock" : "Для современного вида",
-		"furnace" : "Переплавит все ваши руды!",
-		"oven" : "Используется для выпечки хлеба",
 		"wheatstage1" : "Будущий хлеб",
 		"straw" : "Необходим для кровати, побочный продукт при выращивании пшеницы",
 		"wheat" : "Колонист с жерновом превратит это в муку",
@@ -646,7 +666,6 @@
 		"leavestemperate" : "Попробуйте прыгнуть в кучу из этого с высокой башни",
 		"logtemperate" : "Это просто бревно, окей?",
 		"sciencelab" : "Используется учеными для разблокировки новых технологий. Несколько ученых может работать вместе!",
-		"bloomery" : "Использует уголь в качестве топлива для плавки железа",
 		"bowstring" : "Ploink",
 		"bronzeanvil" : "Наковальня в форме блока",
 		"bronzearrow" : "Монстры продолжают оставлять негативные отзывы. Тем не менее, охранникам это нравится",
@@ -661,7 +680,6 @@
 		"coppertools" : "Вы даже не можете отрезать хлеб без инструментов",
 		"crossbow" : "Млажший брат аркабулисты",
 		"crossbowbolt" : "Сложнее, быстрее, лучше, сильнее",
-		"fineryforge" : "Требуется кокс, для создания стали из кованного железа.",
 		"galenalead" : "Содержит много свинца",
 		"galenasilver" : "Содержит много серебра",
 		"gunpowder" : "Обращайтесь с осторожностью!",
@@ -686,9 +704,13 @@
 		"tin" : "Немного таксична",
 		"bronzepickaxe" : "Используйте Иструмент командования для того, чтобы назвачить шахтера. Он будет добывать руду из блока используя кирку!",
 		"firewood" : "Базовое топливо",
-		"splittingstump" : "Используется дровосеком ждя превращения древесины в дрова",
 		"sciencebagadvanced" : "Требуется для расширенного исследования",
-		"sciencebagcolony" : "Требуется для колония-ориентированного исследования"
+		"sciencebagcolony" : "Требуется для колония-ориентированного исследования",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
 	},
-	"coverage" : 91.0746812386157
+	"coverage" : 86.2745098039216
 }

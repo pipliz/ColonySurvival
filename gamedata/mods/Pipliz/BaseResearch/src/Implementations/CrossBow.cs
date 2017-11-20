@@ -16,7 +16,7 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.crossbowbolt");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.metalsmith.crossbow", true, "pipliz.metalsmith");
 		}

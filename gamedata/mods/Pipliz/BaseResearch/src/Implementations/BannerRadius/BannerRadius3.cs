@@ -17,10 +17,12 @@ namespace Pipliz.BaseResearch.Implementations
 			AddDependency("pipliz.baseresearch.fineryforge");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			manager.Player.GetTempValues(true).Set("pipliz.bannersaferadius", 70);
-			BannerTracker.SendPacket(manager.Player);
+			if (reason == EResearchCompletionReason.ProgressCompleted) {
+				BannerTracker.SendPacket(manager.Player);
+			}
 		}
 	}
 }

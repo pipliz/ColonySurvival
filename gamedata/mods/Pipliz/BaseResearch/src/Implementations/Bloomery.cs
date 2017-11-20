@@ -12,10 +12,10 @@ namespace Pipliz.BaseResearch.Implementations
 			icon = "gamedata/textures/icons/bloomery.png";
 			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
-			AddDependency("pipliz.baseresearch.sciencebagbasic");
+			AddDependency("pipliz.baseresearch.kiln");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager)
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bloomery", true, "pipliz.crafter");
 			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.bloomery");
