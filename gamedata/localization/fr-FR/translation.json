@@ -6,7 +6,7 @@
 			"apply" : "Appliquer",
 			"none" : "Aucun",
 			"reset" : "Réinitialiser",
-			"inputplaceholder" : "Saisir un texte...",
+			"inputplaceholder" : "Saisir du texte...",
 			"previous" : "Précédent",
 			"next" : "Suivant"
 		},
@@ -14,7 +14,7 @@
 			"singleplayer" : "Partie Solo",
 			"multiplayer" : "Multijoueur",
 			"settings" : "Paramètres",
-			"info" : "Information",
+			"info" : "Informations",
 			"quit" : "Quitter",
 			"back" : "Retour"
 		},
@@ -33,18 +33,18 @@
 		},
 		"multiplayermenu" : {
 			"joininternet" : "Partie en ligne",
-			"joininternetmenu" : "Rejoignez un serveur",
+			"joininternetmenu" : "Rejoindre un serveur",
 			"joinserverlan" : "Partie LAN",
-			"joinserverlanfull" : "Rejoignez un serveur LAN",
+			"joinserverlanfull" : "Rejoindre un serveur LAN",
 			"servername" : "Nom",
 			"serverplayers" : "Joueurs",
 			"serverping" : "Ping",
 			"hostserver" : "Serveur hôte",
-			"connectlocal" : "Connectez-vous au serveur local",
-			"connect" : "Connectez-vous au serveur sélectionné",
+			"connectlocal" : "Se connecter au serveur local",
+			"connect" : "se connecter au serveur sélectionné",
 			"refresh" : "Actualiser la liste des serveurs",
 			"refreshing" : "Actualisation...",
-			"hostserverdescription" : "Cliquez sur le bouton pour lancer un serveur dans une nouvelle fenêtre",
+			"hostserverdescription" : "Vous pouvez héberger un serveur en ouvrant le fichier suivant dans l'explorateur de fichiers:\nAller dans les propriétés du jeu dans Steam et cliquer 'Parcourir les fichiers locaux'. Ouvrir 'colonyserver.exe' pour héberger le serveur.",
 			"startserver" : "Démarrer le serveur"
 		},
 		"settingsmenu" : {
@@ -87,7 +87,7 @@
 				"skyboxconstant" : "Skybox constante",
 				"terrainfrequent" : "Terrain fréquent",
 				"terrainveryfrequent" : "Terrain très fréquent",
-				"terrainconstant" : "Constante du terrain"
+				"terrainconstant" : "Terrain constant"
 			},
 			"audio" : "Audio",
 			"audiomenu" : {
@@ -121,9 +121,9 @@
 			"language" : "Langue",
 			"languagemenu" : {
 				"full" : "Paramètres de langue",
-				"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent couvrir moins que d'autres.",
+				"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent être moins complètes que d'autres.",
 				"language" : "Langue",
-				"coverage" : "Ce paramètre est {0:F1}% complet. Pour aider à traduire le jeu, consultez les forums ou notre page sur github"
+				"coverage" : "Ce paramètre est terminé à {0:F1} %. Pour aider à traduire le jeu, consultez les forums ou notre page sur Github."
 			}
 		},
 		"infomenu" : {
@@ -134,7 +134,7 @@
 		"escapemenu" : {
 			"back" : "Reprendre la partie",
 			"settings" : "Paramètres",
-			"info" : "Information",
+			"info" : "Informations",
 			"quitmain" : "Retour au menu principal",
 			"quitdesktop" : "Retour au bureau"
 		},
@@ -143,27 +143,37 @@
 				"header" : "Gestion de la colonie",
 				"description" : "Les colons ont besoin de 5 unités de nourriture par jour et d'un lit. Le recrutement d'un colon coûte 50 unités de nourriture.",
 				"button" : "Recruter un colon",
+				"gotoscience" : "Menu Science",
 				"resetbutton" : "Réinitialiser la colonie",
 				"resettooltipa" : "Réinitialiser les conseils",
 				"resettooltipb" : "Cela tue tous vos colons et supprime vos champs.",
-				"resettooltipc" : "Cela donne un nouvel inventaire et un nouveau stock.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "Cela donne un nouvel inventaire et un nouveau stock."
+			},
+			"specialblockremoval" : {
+				"header" : "Supression d'un bloc spécial",
+				"description" : "Supprimer ce bloc de type {0} peut causer des problèmes à votre colonie. Que souhaitez-vous faire ?",
+				"button" : "Supprimer"
 			},
 			"tooljob" : {
 				"header" : "Outil de commande",
 				"description" : "Sélectionnez le type de zone que vous souhaitez créer.",
 				"wheatfarmer" : "Cultivateur de blé",
 				"wheata" : "Pour les colonies avancées seulement",
+				"wheatb" : "Requiert : Graines de blé\nÀ placer sur de l'herbe ou de la terre",
 				"miner" : "Mineur",
-				"minera" : "Mine de minerais",
+				"minera" : "Mine des minerais",
+				"minerb" : "Requiert : Pioche\nÀ placer sur la couche la plus profonde du monde",
 				"forester" : "Bûcheron",
 				"forestera" : "Plante et coupe des arbres",
+				"foresterb" : "Requiert : des pousses et une hache\nÀ placer sur de l'herbe ou de la terre",
 				"flaxfarmer" : "Cultivateur de lin",
 				"flaxa" : "Pour les colonies avancées seulement",
+				"flaxb" : "Requiert : Graines de lin\nÀ placer sur de l'herbe ou de la terre",
 				"notflat" : "Le terrain n'est pas plat",
-				"toosmall" : "La surface est trop petit",
-				"toolarge" : "La surface est trop grande",
-				"coversarea" : "Recouvre une zone de culture existante",
+				"toosmall" : "Trop petit",
+				"toolarge" : "Trop grand",
+				"coversarea" : "La surface recouvre une zone de culture existante",
+				"toonarrow" : "Trop étroit",
 				"notarable" : "Non cultivable",
 				"occupiedblocks" : "Occupé par des blocs",
 				"wheatfarmertool" : "Outil de cultivateur de blé",
@@ -174,45 +184,40 @@
 				"berryfarmertool" : "Outil de cultivateur de baies",
 				"berryfarmer" : "Cultivateur de baies",
 				"berrya" : "De la nourriture rapide et facile, commencez par cela !",
-				"toonarrow" : "Pas assez large pour y planter des arbres",
-				"guard" : "_MISSING_Guard",
-				"guarda" : "_MISSING_Protect your colony!",
-				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
-				"guardsday" : "_MISSING_Daytime guards",
-				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
-				"jobbowday" : "_MISSING_Daytime Bow Guard",
-				"jobbownight" : "_MISSING_Nighttime Bow Guard",
-				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
-				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
-				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
+				"berryb" : "Requiert : Graines de baies\nÀ placer sur de l'herbe ou de la terre",
+				"guard" : "Gardes",
+				"guarda" : "Protégez votre colonie !",
+				"guardb" : "Cela ouvrira un autre menu où vous pourrez sélectionner le type de gardes.",
+				"guardsday" : "Gardes de jour",
+				"guardsnight" : "Gardes de nuit",
+				"slinger" : "Frondeur",
+				"crossbow" : "Arbalète",
+				"bow" : "Arc",
+				"missingscience" : "<color=red>'{0}' doit d'abord avoir été débloqué(e).<\/color>",
+				"matchlock" : "Platine",
+				"jobslingerday" : "Frondeur de jour",
+				"jobslingernight" : "Frondeur de nuit",
+				"jobbowday" : "Archer de jour",
+				"jobbownight" : "Archer de nuit",
+				"jobcrossbowday" : "Arbalétrier de jour",
+				"jobcrossbownight" : "Arbalétrier de nuit",
+				"jobmatchlockday" : "Garde à platine de jour",
+				"jobmatchlocknight" : "Garde à platine de nuit",
+				"slingertooltip" : "Dégâts : 50 PV\nPortée : 12 blocs\nRechargement : 3 secondes",
+				"crossbowtooltip" : "Dégâts : 300 PV\nPortée : 25 blocs\nRechargement : 8 secondes",
+				"bowtooltip" : "Dégâts : 100 PV\nPortée : 20 blocs\nRechargement : 5 secondes",
+				"matchlocktooltip" : "Dégâts : 500 PV\nPortée : 30 blocs\nRechargement : 12 secondes"
 			},
 			"toolconstruction" : {
 				"header" : "Outil de construction",
 				"description" : "Sélectionnez le type de zone que vous souhaitez créer.",
 				"builder" : "Constructeur",
 				"buildera" : "",
-				"builderb" : "Besoin d'un espace de construction",
-				"builderc" : "Crée des choses",
+				"builderb" : "Requiert un espace de construction",
+				"builderc" : "Construit des choses",
 				"destroyer" : "Destructeur",
 				"destroyera" : "",
-				"destroyerb" : "Besoin d'une zone a détruire",
+				"destroyerb" : "Requiert une zone à détruire",
 				"destroyerc" : "Détruit des choses"
 			},
 			"areaselection" : {
@@ -223,47 +228,47 @@
 			},
 			"inventory" : {
 				"stockpiledescription" : "Vous pouvez seulement fabriquer des objets avec d'autres objets placés dans l'inventaire personnel. Les colons peuvent seulement utiliser les objets du stock principal.",
-				"foodvalue" : "Valeur de la nourriture:",
+				"foodvalue" : "Valeur nutritive :",
 				"tooltip" : {
 					"needs" : "Requiert :",
 					"and" : "et",
-					"instockpile" : "_MISSING_in stockpile"
+					"instockpile" : "en stock"
 				},
-				"craftingstockpile" : "Artisanat et stockage",
+				"craftingstockpile" : "Fabrication et stockage",
 				"science" : {
 					"header" : "Science",
-					"dependencies" : "Technologies requises:",
-					"requirements" : "Requis pour un cycle de recherche:",
-					"iterations" : "Cycles de recherche: {0} de {1}",
-					"researchselected" : "Recherche sélectionnée:",
-					"researchactive" : "Recherche en cours: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
+					"dependencies" : "Requiert les technologies :",
+					"requirements" : "Besoins pour un cycle de recherche :",
+					"iterations" : "Cycles de recherche : {0} sur {1}",
+					"researchselected" : "Recherche sélectionnée",
+					"researchactive" : "Recherche en cours : {0}",
+					"available" : "Disponible",
+					"unavailable" : "Non disponible",
+					"completed" : "Terminée",
+					"placelab" : "Placer un laboratoire pour recruter un scientifique"
 				}
 			},
 			"limits" : {
 				"pipliz" : {
-					"crafter" : "Limites d'artisanat",
+					"crafter" : "Limites de fabrication",
 					"baker" : "Limites de la boulangerie",
 					"smelter" : "Limites de la fonderie",
-					"minter" : "Limites de la mine",
+					"minter" : "Limites de la frappe",
 					"merchant" : "Limites d'achat",
 					"grinder" : "Limites de la meule",
-					"tailor" : "Limites du tailleur",
-					"technologist" : "Limites du technologue",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
+					"tailor" : "Limites du couturier",
+					"technologist" : "Limites du technicien",
+					"metalsmithjob" : "Limites du forgeron",
+					"kilnjob" : "Limites de la touraille",
+					"gunsmithjob" : "Limites de l'armurier",
+					"bloomeryjob" : "Limites du bas fourneau",
+					"fineryforgejob" : "Limites de la raffinerie",
+					"woodcutter" : "Limites de coupe du bois"
 				},
 				"description" : "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock.",
 				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+					"a" : "Priorité de fabrication",
+					"b" : "Les recettes avec une priorité +++ dont fabriquées en premier.\nLes recettes avec une priorité + sont fabriquées en dernier."
 				}
 			},
 			"death" : {
@@ -277,11 +282,6 @@
 				"closehelp" : "Appuyez sur F1 pour fermer ou réouvrir ce menu",
 				"closetoggle" : "Ne plus afficher"
 			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
-			}
 		},
 		"firstpersonstats" : {
 			"bedcount" : "Lits :",
@@ -289,15 +289,15 @@
 			"laborercount" : "Sans emploi :",
 			"foodstorage" : "Nouriture :",
 			"foodusage" : "Nourriture/jour :",
-			"ammocount" : "_MISSING_Ammo:"
+			"ammocount" : "Munitions :"
 		},
 		"quickstart" : {
 			"page1" : {
 				"header" : "Bases",
 				"description" : "Bienvenue sur Colony Survival !",
+				"text1" : "La bannière est le centre de votre colonie. Appuyez sur '2' pour la planter. Faites un clic-droit pour recruter des colons. L'outil de bannière affiche en rouge la zone où les monstres peuvent apparaître.",
 				"text2" : "Vous avez besoin de nourriture et de lits pour recruter des colons. Les colons doivent manger pour survivre. Assurez-vous qu'il y ait suffisamment de nourriture disponible dans le stock ou ils auront faim !",
 				"text3" : "Appuyez sur \"I\" pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets présents dans votre stock personnel. Les colons peuvent seulement utiliser les objets du stock principal. Ils ont accès au stock en utilisant des caisses.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
@@ -336,151 +336,151 @@
 			"baseresearch" : {
 				"healthsize1" : {
 					"name" : "Augmentation des points de vie I",
-					"description" : "Augmentation Max des HP à 125"
+					"description" : "Augmentation des PV Max à 125"
 				},
 				"healthsize2" : {
 					"name" : "Augmentation des points de vie II",
-					"description" : "Augmentation Max des HP à 150"
+					"description" : "Augmentation des PV Max à 150"
 				},
 				"healthsize3" : {
 					"name" : "Augmentation des points de vie III",
-					"description" : "Augmentation Max des HP à 175"
+					"description" : "Augmentation des PV Max à 175"
 				},
 				"healthsize4" : {
 					"name" : "Augmentation des points de vie IV",
-					"description" : "Augmentation Max des HP à 200"
+					"description" : "Augmentation des PV Max à 200"
 				},
 				"healthregensize1" : {
 					"name" : "Augmentation des points de régénération  I",
-					"description" : "Augmente la quantité de HP régénérés de 30 à 50"
+					"description" : "Augmente la quantité de PV régénérés de 30 à 50"
 				},
 				"healthregensize2" : {
 					"name" : "Augmentation des points de régénération II",
-					"description" : "Augmente la quantité de HP régénérés de 50 à 65"
+					"description" : "Augmente la quantité de PV régénérés de 50 à 65"
 				},
 				"healthregensize3" : {
 					"name" : "Augmentation des points de régénération III",
-					"description" : "Augmente la quantité de HP régénérés de 65 à 85"
+					"description" : "Augmente la quantité de PV régénérés de 65 à 85"
 				},
 				"healthregensize4" : {
 					"name" : "Augmentation des points de régénération IV",
-					"description" : "Augmente la quantité de HP régénérés de 85 à 100"
+					"description" : "Augmente la quantité de PV régénérés de 85 à 100"
 				},
 				"healthregenspeed1" : {
 					"name" : "Vitesse de régénération des HP I",
-					"description" : "Augmente la vitesse de rénération de 0.5 HP\/s à 1 HP\/s"
+					"description" : "Augmente la vitesse de régénération de 0,5 PV\/s à 1 PV\/s"
 				},
 				"healthregenspeed2" : {
 					"name" : "Vitesse de régénération des HP II",
-					"description" : "Augmente la vitesse de rénération de 1 HP\/s à 2 HP\/s"
+					"description" : "Augmente la vitesse de réngéération de 1 PV\/s à 2 PV\/s"
 				},
 				"healthregenspeed3" : {
 					"name" : "Vitesse de régénération des HP III",
-					"description" : "Augmente la vitesse de rénération de 2 HP\/s à 3 HP\/s"
+					"description" : "Augmente la vitesse de réngéération de 2 PV\/s à 3 PV\/s"
 				},
 				"healthregenspeed4" : {
 					"name" : "Vitesse de régénération des HP IV",
-					"description" : "Augmente la vitesse de rénération de 3 HP\/s à 4 HP\/s"
+					"description" : "Augmente la vitesse de réngéération de 3 PV\/s à 4 PV\/s"
 				},
 				"sciencebaglife" : {
 					"name" : "Sac des sciences de la vie",
-					"description" : "Débloquez le sac des sciences de la vie, nécessaire pour rechercher des mises à jours liées à la santé"
+					"description" : "Débloque le sac des sciences de la vie, nécessaire pour rechercher des bonus liés à la santé"
 				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
+				"Bas fourneau" : {
+					"name" : "Bas fourneau",
+					"description" : "Débloque le bas fourneau, qui permet de traiter les minerais de fer et de galène"
 				},
 				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
+					"name" : "Enclume de bronze",
+					"description" : "Débloque l'enclume de bronze, qui permet de travailler le bronze"
 				},
 				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
+					"name" : "Arbalète",
+					"description" : "Débloque l'arbalète, une arme plus puissante que l'arc"
 				},
 				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
+					"name" : "Carreaux d'arbalète",
+					"description" : "Débloque les carreaux d'arbalètes, les munitions pour les arbalètes"
 				},
 				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
+					"name" : "Raffinerie",
+					"description" : "Débloque la raffinerie, qui utilise des cokes pour créer de l'acier et des lingots d'or"
 				},
 				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
+					"name" : "Poudre à canon",
+					"description" : "Débloque la poudre à canon, un explosif très puissant"
 				},
 				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
+					"name" : "Armurerie",
+					"description" : "Débloque l'armurier, qui crée la poudre à canon et fabrique des armes à feu"
 				},
 				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
+					"name" : "Platine à mèche",
+					"description" : "Débloque la platine à mèche, une première arme à feu"
 				},
 				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
+					"name" : "Sac de science avancée",
+					"description" : "Débloque le sac de science avancée, utilisé pour les recherches avancées"
 				},
 				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
+					"name" : "Sac de science élémentaire",
+					"description" : "Débloque le sac de science élémentaire, utilisé pour les recherches élémentaires"
 				},
 				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
+					"name" : "Sac de science pour colonie",
+					"description" : "Débloque le sac de science pour colonie, utilisé pour les recherches liées à la colonie"
 				},
 				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
+					"name" : "Sac de science militaire",
+					"description" : "Débloque le sac de science militaire, utilisé pour les recherches militaires"
 				},
 				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
+					"name" : "Couturier",
+					"description" : "Débloque le couturier, qui transforme le lin cultivé en toile de lin"
 				},
 				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
+					"name" : "Technicien",
+					"description" : "Débloque le technicien, qui fabrique des sacs de science"
 				},
 				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
+					"name" : "Zone de sécurité I",
+					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 40 blocs"
 				},
 				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
+					"name" : "Zone de sécurité II",
+					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 55 blocs"
 				},
 				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
+					"name" : "Zone de sécurité III",
+					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 70 blocs"
 				},
 				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
+					"name" : "Zone de sécurité IV",
+					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 85 blocs"
 				},
 				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
+					"name" : "Zone de sécurité V",
+					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 100 blocs"
 				},
 				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+					"name" : "Production de pain",
+					"description" : "Une méthode plus complexe pour produire de la nourrituer, réservée aux colonies avancées. Débloque le cultivateur de blé, la meule et le four. Accorde 400 graines de blé."
 				},
 				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+					"name" : "Culture du lin",
+					"description" : "Débloque les cultivateurs de lin, nécessaires pour produire du lin. Accorde 100 graines de lin."
 				},
 				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+					"name" : "Monnaie et boutiques",
+					"description" : "Débloque l'atelier monétaire et les échoppes. La monnaie peut être utilisée pour acheter des graines, de la terre ou d'autres objets divers et variés"
 				},
 				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+					"name" : "Touraille",
+					"description" : "Débloque les tourailles. Nécessaire pour créer des combustibles avancés comme le charbon de bois."
 				},
 				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
+					"name" : "Souche à couper le bois",
+					"description" : "Débloque les souches à couper le bois. Peuvent être utilisées pour créer du bois à brûler plus rapidement que l'établi."
 				}
 			}
 		}
@@ -512,7 +512,7 @@
 		"adobe" : "Torchis",
 		"workbench" : "Établi",
 		"mint" : "Atelier monétaire",
-		"shop" : "Boutique",
+		"shop" : "Échoppe",
 		"plasterblock" : "Bloc de plâtre",
 		"furnace" : "Fourneau",
 		"oven" : "Four",
@@ -521,7 +521,7 @@
 		"wheatstage1" : "Graines de blé",
 		"straw" : "Paille",
 		"linseedoil" : "Huile de lin",
-		"flax" : "Lin",
+		"flax" : "Lin cultivé",
 		"wheat" : "Blé",
 		"bread" : "Pain",
 		"coalore" : "Minerai de charbon",
@@ -544,70 +544,70 @@
 		"cherryblossom" : "Feuilles de cerisier en fleur",
 		"redplanks" : "Planches rouges",
 		"blackplanks" : "Planches noires",
-		"linen" : "lin",
-		"clothing" : "vêtements",
+		"linen" : "Toile de lin",
+		"clothing" : "Vêtements",
 		"carpetred" : "Tapis rouge",
 		"carpetblue" : "Tapis bleu",
 		"carpetyellow" : "Tapis jaune",
-		"tailorshop" : "Echoppe Tailleur",
+		"tailorshop" : "Atelier de couture",
 		"technologisttable" : "Table de technologie",
-		"sciencebaglife" : "Sac pour la recherche de HP",
-		"sciencebagbasic" : "Sac pour les recherches de base",
+		"sciencebaglife" : "Sac de science de la vie",
+		"sciencebagbasic" : "Sac de science élémentaire",
 		"linenbag" : "Sac en lin",
-		"bloomery" : "_MISSING_Bloomery",
-		"bowstring" : "_MISSING_Bowstring",
-		"bronzeanvil" : "_MISSING_Bronze Anvil",
-		"bronzearrow" : "_MISSING_Bronze Arrow",
-		"bronzeaxe" : "_MISSING_Bronze Axe",
-		"bronzecoin" : "_MISSING_Bronze Coin",
-		"bronzeingot" : "_MISSING_Bronze Ingot",
-		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
-		"bronzeplate" : "_MISSING_Bronze Plate",
-		"charcoal" : "_MISSING_Charcoal",
-		"cokes" : "_MISSING_Cokes",
-		"copperparts" : "_MISSING_Copper Parts",
-		"coppertools" : "_MISSING_Copper Tools",
-		"crossbow" : "_MISSING_Crossbow",
-		"crossbowbolt" : "_MISSING_Crossbow Bolt",
-		"fineryforge" : "_MISSING_Finery Forge",
-		"galenalead" : "_MISSING_Galena (Lead rich)",
-		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
-		"guardbowdayjob" : "_MISSING_Day Bow Guard",
-		"guardbownightjob" : "_MISSING_Night Bow Guard",
-		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
-		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
-		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
-		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"bloomery" : "Bas fourneau",
+		"bowstring" : "Corde",
+		"bronzeanvil" : "Enclume de bronze",
+		"bronzearrow" : "Flèche en bronze",
+		"bronzeaxe" : "Hache en bronze",
+		"bronzecoin" : "Pièce de bronze",
+		"bronzeingot" : "Lingot de bronze",
+		"bronzepickaxe" : "Pioche en bronze",
+		"bronzeplate" : "Plaque de bronze",
+		"charcoal" : "Charbon de bois",
+		"cokes" : "Cokes",
+		"copperparts" : "Éléments en bronze",
+		"coppertools" : "Outils en bronze",
+		"crossbow" : "Arbalète",
+		"crossbowbolt" : "Carreau d'arbalète",
+		"fineryforge" : "Raffinerie",
+		"galenalead" : "Galène plombifère",
+		"galenasilver" : "Galène argentifère",
+		"gunpowder" : "Poudre à canon",
+		"gunpowderpouch" : "Sac de poudre à canon",
+		"gunsmithshop" : "Échoppe du forgeron",
+		"ironblock" : "Bloc de fer",
+		"ironrivet" : "Rivet en fer",
+		"ironsword" : "Épée en fer",
+		"ironwrought" : "Fer forgé",
+		"kiln" : "Touraille",
+		"lead" : "Plomb",
+		"leadbullet" : "Balle de plomb",
+		"linenpouch" : "Sac en lin",
+		"matchlockgun" : "Platine à mèche",
+		"salpeter" : "Salpêtre",
+		"sciencebagmilitary" : "Sac de science militaire",
+		"sciencelab" : "Laboratoire",
+		"silveringot" : "Lingot d'argent",
+		"sling" : "Fronde",
+		"slingbullet" : "Balle de fronde",
+		"steelingot" : "Lingot d'acier",
+		"steelparts" : "Éléments en acier",
+		"tin" : "Étain",
+		"firewood" : "Bois à brûler",
+		"splittingstump" : "Souche à couper le bois",
+		"sciencebagadvanced" : "Sac de science avancée",
+		"sciencebagcolony" : "Sac de science pour colonie",
+		"minerjob" : "Mineur",
+		"guardslingerdayjob" : "Frondeur de jour",
+		"guardslingernightjob" : "Frondeur de nuit",
+		"guardbowdayjob" : "Archer de jour",
+		"guardbownightjob" : "Archer de nuit",
+		"guardcrossbowdayjob" : "Arbalétrier de jour",
+		"guardcrossbownightjob" : "Arbalétrier de nuit",
+		"guardmatchlockdayjob" : "Garde de jour à platine",
+		"guardmatchlocknightjob" : "Garde de nuit à platine",
+		"copper" : "Cuivre",
+		"coppernails" : "Clous en cuivre"
 	},
 	"typeuses" : {
 		"planks" : "Maintenant avec 4 fois le volume de bûches !",
@@ -619,7 +619,7 @@
 		"straw" : "Utile pour les lits, produit secondaire de la récolte du blé",
 		"bread" : "Bon goût, guérit vos blessures",
 		"bed" : "Rend le sommeil plus facile",
-		"bow" : "Les gardes en ont besoin !",
+		"bow" : "Les archers en ont besoin !",
 		"snow" : "Plus blanc que blanc",
 		"grasstemperate" : "Hors de ma pelouse !",
 		"grasstundra" : "Hors de ma pelouse !",
@@ -642,31 +642,31 @@
 		"grindstone" : "Utilisée pour broyer le blé en farine",
 		"berrybush" : "Les colons peuvent les planter pour de la nourriture rapide et facile.",
 		"berry" : "Comestible.",
-		"redplanks" : "N'a pas de valeur de nourriture, mais ça a bon goût !",
+		"redplanks" : "N'a pas de valeur nutritive, mais ça a bon goût !",
 		"blackplanks" : "Hautement inflammable",
 		"cherryblossom" : "Ce qu'il y a de plus rose dans le jeu",
 		"wheat" : "Un colon avec une meule transformera le blé en farine",
 		"tailorshop" : "Pour fabriquer du linge, des tapis, des vêtements et des sacs",
 		"clothing" : "Cela ressemble à quelque chose que vous pouvez porter.",
 		"linen" : "Lingerie signifie sous-vêtements en lin",
-		"carpetred" : "Peu importe si vous renversez du jus de baies sur ce tapis!",
-		"carpetyellow" : "C'est tellement moelleux!",
+		"carpetred" : "Peu importe si vous renversez du jus de baies sur ce tapis !",
+		"carpetyellow" : "C'est tellement moelleux !",
 		"carpetblue" : "Pour les gens qui ne méritent pas un tapis rouge",
 		"technologisttable" : "Pour fabriquer des sacs servant à la recherche.",
 		"sciencebaglife" : "Obligatoire pour la recherche scientifique liée à la santé et à la vie",
-		"sciencebagbasic" : "Obligatoire pour la recherche scientifique de base",
+		"sciencebagbasic" : "Obligatoire pour la recherche scientifique élémentaire",
 		"linenbag" : "Mieux qu'un sac en plastique",
 		"stonebricks" : "Pour se protèger.",
-		"coalore" : "Attention! Peut créer des problèmes climatiques.",
+		"coalore" : "Attention ! Peut créer des problèmes climatiques.",
 		"ironore" : "Miné avec une pioche en fer",
 		"goldore" : "Ne le perdez pas",
 		"goldingot" : "Utile pour garantir la valeur du papier-monnaie",
 		"goldcoin" : "Avec le portrait du roi sur une face",
-		"sappling" : "Futur arbres",
+		"sappling" : "Futur arbre",
 		"leavestemperate" : "Essayez de sauter dans un tas de feuilles depuis une haute tour",
-		"logtemperate" : "C'est comme un journal, mais différent !",
-		"sciencelab" : "Utilisé par un scientifique pour débloquer de nouvelles technologies. Plusieurs scientifiques peuvent travailler ensemble!",
-		"bowstring" : "_MISSING_Ploink",
+		"logtemperate" : "C'est comme une bûche, mais différente !",
+		"sciencelab" : "Utilisé par un scientifique pour débloquer de nouvelles technologies. Plusieurs scientifiques peuvent travailler ensemble !",
+		"bowstring" : "Utile pour fabriquer un arc",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
@@ -678,14 +678,14 @@
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
-		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
-		"galenalead" : "_MISSING_Contains lots of lead",
-		"galenasilver" : "_MISSING_Contains lots of silver",
-		"gunpowder" : "_MISSING_Handle with care!",
-		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
-		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
+		"crossbow" : "Petite sœur de la balise",
+		"galenalead" : "Riche en plomb",
+		"galenasilver" : "Riche en argent",
+		"gunpowder" : "À manipulier avec précaution !",
+		"gunpowderpouch" : "Peut être utilisé pour tirer à la platine à mèche",
+		"gunsmithshop" : "Fabrique des armes et des munitions",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
-		"ironrivet" : "_MISSING_More powerful than duct tape",
+		"ironrivet" : "Bien plus efficace que le ruban adhésif",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
@@ -697,7 +697,7 @@
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
-		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"slingbullet" : "C'est juste un petit caillou, en fait",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
 		"tin" : "_MISSING_Just a little toxic",
