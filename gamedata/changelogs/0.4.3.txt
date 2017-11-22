@@ -10,6 +10,7 @@
 -Changed the torch recipe to use firewood instead of charcoal (and made the player cost equivalent to the npc cost)
 -Changed science lab recipe to require planks instead of coated planks
 -Grayed out buttons in the command tool for jobs that are not researched yet
+-Boosted tailor throughput in making linen
 
 -Fixed changelogs not being included in the build (broken for 0.4.1, 0.4.2)
 -Updated unity from 5.6.3p2 to 5.6.4p2
@@ -21,12 +22,17 @@
 -Fixed an issue when running the dedicated server wrapper with another directory as working directory in the commandline
 -Added a button to go to the science menu in the banner menu
 -Disabled the hotbar in the science menu
--Changed a few tooltips to better describe what the block/item is useful for
 -Sorted banner radius 1 research requirements to match the iteration requirements
 -Added copper/copper nails to localized files
--Changed berry farmer tooltip to be consistent with the others
--Renamed japanese locale from jp-JP to ja-JP
 -Merged the default mods' modInfo.json files together
+
+-Changed miner tooltip to reflect the changes to the ore system
+-Changed berry farmer tooltip to be consistent with the others
+-Changed a few tooltips to better describe what the block/item is useful for
+-Renamed japanese locale from jp-JP to ja-JP
+-Updated de-DE locale
+-Updated fr-FR locale
+-Updated es-ES locale
 
 Modding changes:
 -IResearchable.OnResearchComplete now takes an additional Server.Science.EResearchCompletionReason parameter, to indicate if it's completed due to loading or due to researching
