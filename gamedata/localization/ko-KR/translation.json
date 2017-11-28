@@ -4,11 +4,11 @@
 			"close" : "닫기",
 			"back" : "뒤로",
 			"apply" : "적용",
-			"none" : "None",
-			"reset" : "리셋",
+			"none" : "없음",
+			"reset" : "초기화",
 			"previous" : "이전",
 			"next" : "다음",
-			"inputplaceholder" : "_MISSING_Enter text..."
+			"inputplaceholder" : "텍스트를 입력하세요..."
 		},
 		"mainmenu" : {
 			"singleplayer" : "싱글플레이",
@@ -62,24 +62,24 @@
 				"resolution" : "해상도",
 				"fullscreen" : "전체화면",
 				"shaderquality" : "쉐이더 퀄리티",
-				"vsync" : "_MISSING_VSync",
-				"vsyncdouble" : "_MISSING_Double",
-				"anisotropic" : "_MISSING_Anisotropic filtering x16",
-				"sunshadowquality" : "_MISSING_Sun shadow quality",
+				"vsync" : "VSync",
+				"vsyncdouble" : "VSync 2배",
+				"anisotropic" : "이방성 필터링 x16",
+				"sunshadowquality" : "그림자 퀄리티",
 				"sunshadowcascades" : "_MISSING_Sun shadow cascades",
-				"sunshadowdistance" : "_MISSING_Shadow distance",
-				"fieldofview" : "_MISSING_Field of view",
-				"lightscattering" : "_MISSING_Light scattering",
-				"ambientocclusion" : "_MISSING_Ambient occlusion",
-				"eyeadaptation" : "_MISSING_Eye adaptation",
-				"bloom" : "_MISSING_Bloom",
+				"sunshadowdistance" : "그림자 구현 거리",
+				"fieldofview" : "시야각",
+				"lightscattering" : "빛 분산",
+				"ambientocclusion" : "앰비언트 오클루전",
+				"eyeadaptation" : "눈 적응",
+				"bloom" : "반짝임",
 				"ambientreflections" : "_MISSING_Ambient reflections",
-				"depthoffield" : "_MISSING_Depth of field",
-				"antialiasing" : "_MISSING_Anti aliasing",
-				"fxaalow" : "_MISSING_FXAA Low",
-				"fxaamedium" : "_MISSING_FXAA Medium",
-				"fxaahigh" : "_MISSING_FXAA High",
-				"taa" : "_MISSING_TAA",
+				"depthoffield" : "피사계 심도",
+				"antialiasing" : "안티 엘리어싱",
+				"fxaalow" : "FXAA 낮음",
+				"fxaamedium" : "FXAA 중간",
+				"fxaahigh" : "FXAA 높음",
+				"taa" : "TAA",
 				"skyboxveryslow" : "_MISSING_Skybox very slow",
 				"skyboxslow" : "_MISSING_Skybox slow",
 				"skyboxfrequent" : "_MISSING_Skybox frequent",
@@ -104,12 +104,12 @@
 				"full" : "언어 설정",
 				"wiptext" : "아직 게임의 모든 부분이 번역되지 않았습니다. 몇몇 언어는 번역 진행률이 다른 언어보다 더 낮을 수 있습니다.",
 				"language" : "언어",
-				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역을 돕기 위해서는 포럼이나 github를 참고해주세요."
+				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역 제작은 유튜브 크리에이터 왕군이 진행했으며, 도움을 주시고 싶으신 분들은 pdkkoedol@gmail.com 으로 메일 부탁드립니다."
 			},
 			"gameplaymenu" : {
-				"full" : "_MISSING_Gameplay Settings",
-				"mousesettings" : "_MISSING_Mouse settings",
-				"keymapping" : "_MISSING_Key mapping",
+				"full" : "게임플레이 세팅",
+				"mousesettings" : "마우스 세팅",
+				"keymapping" : "키 매핑",
 				"mousemenu" : {
 					"sensitivityx" : "_MISSING_Mouse sensitivity X-axis",
 					"sensitivityy" : "_MISSING_Mouse sensitivity Y-axis",
@@ -122,7 +122,7 @@
 					"smoothlock" : "_MISSING_Lock together smoothing axes"
 				},
 				"keymenu" : {
-					"resetall" : "_MISSING_Reset All"
+					"resetall" : "전체 초기화"
 				}
 			}
 		},
@@ -132,22 +132,22 @@
 			"changelog" : "업데이트 내용"
 		},
 		"escapemenu" : {
-			"back" : "게임으로 돌아가기",
+			"back" : "게임으로",
 			"settings" : "설정",
 			"info" : "정보",
-			"quitmain" : "메인메뉴로 나가기",
-			"quitdesktop" : "게임 종료"
+			"quitmain" : "메인메뉴",
+			"quitdesktop" : "게임종료"
 		},
 		"popup" : {
 			"banner" : {
 				"header" : "마을 운영",
-				"description" : "주민 1명 당 침대 1개를 차지하며, 하루에 음식을 5씩 소비합니다. 새로운 주민을 모집하려면 음식 50이 필요합니다.",
+				"description" : "주민 1명 모집에는 빈 침대 1개, 식량 50이 필요하며, 하루에 식량을 5씩 소비합니다.",
 				"button" : "주민 모집",
 				"resetbutton" : "마을 초기화",
 				"resettooltipa" : "",
 				"resettooltipb" : "모든 주민을 죽이고 농사 구역, 광산 구역 등을 전부 제거합니다.",
 				"resettooltipc" : "인벤토리 또한 완전히 비게 됩니다.",
-				"gotoscience" : "_MISSING_Science menu"
+				"gotoscience" : "과학 연구"
 			},
 			"specialblockremoval" : {
 				"header" : "특정 블럭 제거",
@@ -170,7 +170,7 @@
 				"toolarge" : "너무 큽니다.",
 				"coversarea" : "다른 구역과 겹칩니다.",
 				"toonarrow" : "나무를 심기엔 너무 좁습니다.",
-				"notarable" : "Not arable",
+				"notarable" : "배치할 수 없습니다.",
 				"occupiedblocks" : "정리하지 않은 블럭이 있습니다.",
 				"wheatfarmertool" : "밀 농사 도구",
 				"minertool" : "광부 도구",
@@ -183,15 +183,15 @@
 				"guard" : "경비병",
 				"guarda" : "마을을 보호합니다.",
 				"guardb" : "경비병 병과를 선택할 수 있는 메뉴가 열립니다.",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxb" : "아마 꽃 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"guardsday" : "주간 경비",
 				"guardsnight" : "야간 경비",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
+				"foresterb" : "묘목, 도끼가 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"slinger" : "새총병",
 				"crossbow" : "석궁병",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatb" : "밀알이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"bow" : "궁병",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"missingscience" : "<color=red>연구 탭에서 '{0}' 기술을 먼저 연구하세요.<\/color>",
 				"matchlock" : "화승총병",
 				"jobslingerday" : "주간 경비: 새총병",
 				"jobslingernight" : "야간 경비: 새총병",
@@ -201,12 +201,12 @@
 				"jobcrossbownight" : "야간 경비: 석궁병",
 				"jobmatchlockday" : "주간 경비: 화승총병",
 				"jobmatchlocknight" : "야간 경비: 화승총병",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
+				"berryb" : "딸기 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
+				"slingertooltip" : "공격력: 50 HP\n사정거리: 12 블록\n재장전 시간: 3 초",
+				"crossbowtooltip" : "공격력: 300 HP\n사정거리: 25 블록\n재장전 시간: 8 초",
+				"bowtooltip" : "공격력: 100 HP\n사정거리: 20 블록\n재장전 시간: 5 초",
+				"matchlocktooltip" : "공격력: 500 HP\n사정거리: 30 블록\n재장전 시간: 12 초",
+				"minerb" : "곡괭이가 필요합니다.\n광석이나 짙은색 돌 위에 배치하세요."
 			},
 			"toolconstruction" : {
 				"header" : "건설 도구",
@@ -218,7 +218,7 @@
 				"destroyera" : "",
 				"destroyerb" : "철거 지역이 필요합니다.",
 				"destroyerc" : "건물을 철거합니다.",
-				"description" : "_MISSING_Select the type of area you want to create."
+				"description" : "만들고 싶은 것을 선택하세요."
 			},
 			"areaselection" : {
 				"header" : "지역 도구",
@@ -233,19 +233,19 @@
 				"tooltip" : {
 					"needs" : "필요 아이템: ",
 					"and" : ",",
-					"instockpile" : "_MISSING_in stockpile"
+					"instockpile" : "재고량"
 				},
 				"science" : {
-					"header" : "연구",
+					"header" : "과학 연구",
 					"dependencies" : "선행 연구:",
 					"requirements" : "1회 연구에 필요한 아이템:",
-					"iterations" : "연구 횟수: {0} out of {1}",
+					"iterations" : "연구 횟수: 총 {1}회 중 {0}회 완료",
 					"researchselected" : "연구 시행",
 					"researchactive" : "현재 연구: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
+					"available" : "연구 가능",
+					"unavailable" : "연구 불가능",
+					"completed" : "연구 완료",
+					"placelab" : "과학자를 모집하려면 연구소를 설치하세요."
 				}
 			},
 			"limits" : {
@@ -267,8 +267,8 @@
 				},
 				"description" : "주민들은 목표량에 닿을 때까지 일합니다.",
 				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+					"a" : "제작 우선순위",
+					"b" : " +++급 아이템을 가장 먼저 만듭니다.\n+급 아이템은 제일 마지막에 만듭니다."
 				}
 			},
 			"death" : {
@@ -278,7 +278,7 @@
 			"quickstart" : {
 				"previous" : "이전",
 				"next" : "다음",
-				"openmanual" : "매뉴얼 열기 (PDF)",
+				"openmanual" : "매뉴얼 열기 (영문, PDF)",
 				"closehelp" : "이 창을 닫거나 다시 열려면 F1을 누르세요.",
 				"closetoggle" : "다시 보지 않음"
 			}
@@ -419,8 +419,8 @@
 					"description" : "석궁으로 쏠 수 있는 볼트를 연구합니다."
 				},
 				"fineryforge" : {
-					"name" : "금은 제련소",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
+					"name" : "강철 제련소",
+					"description" : "석탄을 태워 강철과 금괴를 만들 수 있습니다."
 				},
 				"gunpowder" : {
 					"name" : "화약",
@@ -463,24 +463,24 @@
 					"description" : "연구팩을 만드는 기술자를 연구합니다."
 				},
 				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
+					"name" : "제빵",
+					"description" : "복잡한 식량 공급 방법이라 발전한 마을에 권장합니다. 밀 농사가 가능해지고 맷돌, 오븐을 사용할 수 있습니다. 연구를 완료하면 밀알 400개를 선물로 드립니다."
 				},
 				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
+					"name" : "아마 꽃 농법",
+					"description" : "옷감 재료인 아마 꽃 농사를 지을 수 있게 됩니다. 연구를 완료하면 아마 꽃 씨앗 100개를 선물해드립니다."
 				},
 				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
+					"name" : "화폐 경제",
+					"description" : "화폐 주조소와 시장을 배치할 수 있게 됩니다. 시장에선 씨앗, 흙 등 여러 아이템을 구매할 수 있습니다."
 				},
 				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
+					"name" : "숯 제조법",
+					"description" : "숯가마를 사용해 효율높은 연료를 제작할 수 있습니다."
 				},
 				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
+					"name" : "모탕",
+					"description" : "장작을 더 빨리 만들 수 있는 모탕을 연구합니다."
 				}
 			}
 		}
@@ -522,7 +522,7 @@
 		"crossbow" : "석궁",
 		"crossbowbolt" : "석궁 볼트",
 		"dirt" : "흙",
-		"fineryforge" : "금은 제철소",
+		"fineryforge" : "강철 제철소",
 		"firewood" : "땔감",
 		"flax" : "아마 꽃",
 		"flaxstage1" : "아마 꽃 씨앗",
@@ -606,8 +606,8 @@
 		"wheat" : "밀",
 		"wheatstage1" : "밀알",
 		"workbench" : "작업대",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"copper" : "구리",
+		"coppernails" : "구리 못"
 	},
 	"typeuses" : {
 		"adobe" : "비싼 흙",
@@ -706,11 +706,11 @@
 		"wheat" : "마음이 풍족해지네요.",
 		"wheatstage1" : "미래에 빵이 됩니다.",
 		"workbench" : "다양한 물건들을 만들 수 있습니다.",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
+		"furnace" : "장작을 태워 동괴와 벽돌을 만듭니다.",
+		"oven" : "장작을 태워 밀가루를 빵으로 구워냅니다.",
+		"bloomery" : "숯으로 철광석과 방연석을 제련합니다.",
+		"fineryforge" : "석탄으로 강철과 금괴를 만듭니다.",
+		"splittingstump" : "빠르게 장작을 만드는 방법"
 	},
-	"coverage" : 86.2745098039216
+	"coverage" : 96.6131907308378
 }

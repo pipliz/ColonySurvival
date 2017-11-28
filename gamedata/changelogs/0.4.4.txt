@@ -1,0 +1,7 @@
+0.4.4 (2017-11-28)
+
+-Minor changes to the torch rendering to hopefully fix an issue on certain hardware
+-Fix an error related to having npc's but no crates and no banner
+-Fix an error related to having laborer npc's but no banner to idle at
+-Add a workaround for an issue with the dedicated server via steamCMD on linux. Running the colonyserverdedicated.exe will now auto copy a file required for the colonyserver to work.
+-Changed dedicated server wrapper input/output for better cross platform support. Pauses output while reading input.
