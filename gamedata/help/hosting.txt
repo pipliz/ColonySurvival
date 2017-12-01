@@ -6,13 +6,7 @@ Hosting options depends a bit on what you want to do. There's multiple ways:
 	It also requires steam to be active and logged in (though the account does not require the game)
 	The GUI can cause problems if you do not have a display attached (vps) or resize the screen, or lock the screen for long periods
 	
-2)	Host using the colonyserverdedicated executable (commandline) from the game install
-	You probably don't want to use this choice. No GUI problems, but still need steam active & update trouble. See 4) for rest.
-	
-3)	Host using colonyserver executable from SteamCMD
-	You probably don't want to use this choice. GUI problems can still occur. See 1) for rest.
-	
-4)	Host using the colonyserverdedicated executable from SteamCMD
+2)	Host using the colonyserverdedicated executable from SteamCMD
 	This is the best option for hosting 'long' term servers.
 	It allows more options than the GUI (some are in files, but accessible through this)
 	A general guide is here: https://developer.valvesoftware.com/wiki/SteamCMD
@@ -21,6 +15,12 @@ Hosting options depends a bit on what you want to do. There's multiple ways:
 	The updating can be automated through scripts.
 	Works without a monitor active.
 	The executable is cross-platform (mono) despite being .exe.
+	
+3)	Host using the colonyserverdedicated executable (commandline) from the game install
+	You probably don't want to use this choice. No GUI problems, but still need steam active & update trouble. See 4) for rest.
+	
+4)	Host using colonyserver executable from SteamCMD
+	You probably don't want to use this choice. GUI problems can still occur. See 1) for rest.
 	
 General help on commands in the command line version is available by typing ? or help
 Passing launch arguments to the dedicated.exe will cause it to automatically run start_server with those arguments

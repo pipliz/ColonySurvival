@@ -1,561 +1,504 @@
 {
+	"coverage" : 50.2654867256637,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Vend tilbage til spillet",
+			"info" : "Info",
+			"quitdesktop" : "Forlad til skrivebord",
+			"quitmain" : "Forlad til hovedmenu",
+			"settings" : "Indstillinger"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "_MISSING_Ammo:",
+			"bedcount" : "Senge:",
+			"colonistcount" : "Kolonister:",
+			"foodstorage" : "Mad:",
+			"foodusage" : "Mad forbrug/dag:",
+			"laborercount" : "Arbejdsløse:"
+		},
 		"general" : {
-			"close" : "Luk",
-			"back" : "Tilbage",
 			"apply" : "Anvend",
-			"none" : "Ingen",
-			"reset" : "Nulstil",
-			"next" : "Næste",
+			"back" : "Tilbage",
+			"close" : "Luk",
 			"inputplaceholder" : "_MISSING_Enter text...",
-			"previous" : "_MISSING_Previous"
+			"next" : "Næste",
+			"none" : "Ingen",
+			"previous" : "_MISSING_Previous",
+			"reset" : "Nulstil"
+		},
+		"infomenu" : {
+			"changelog" : "Ændrings oversigt",
+			"credits" : "Credits",
+			"quickstart" : "Hurtig start"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Spil alene",
-			"multiplayer" : "Spil sammen",
-			"settings" : "Indstillinger",
+			"back" : "Tilbage",
 			"info" : "Info",
+			"multiplayer" : "Spil sammen",
 			"quit" : "Forlad spillet",
-			"back" : "Tilbage"
-		},
-		"singleplayermenu" : {
-			"newworld" : "Ny verden",
-			"colonyname" : "Koloniens navn",
-			"spawnmonsters" : "Skab monstre",
-			"doubledmonsters" : "Dobbelt antal monstre",
-			"daymonsters" : "Monstre om dagen",
-			"loadworld" : "Indlæs verden",
-			"load" : "Indlæs",
-			"worldname" : "Navn",
-			"worlddate" : "Dato",
-			"play" : "Spil",
-			"delete" : "Slet"
+			"settings" : "Indstillinger",
+			"singleplayer" : "Spil alene"
 		},
 		"multiplayermenu" : {
+			"connect" : "Tilslut til valgte server",
+			"connectlocal" : "Tilslut til lokal server",
+			"hostserver" : "Host Server",
+			"hostserverdescription" : "Du kan hoste en server ved at åbne den følgende fil gennem en fil søgemaskine.\nGå ind i spillets egenskaber på steam og klik på 'Gennemse Lokale filer'.\n Åben 'colonyserver.exe' for at hoste en server.",
 			"joininternet" : "Tilslut internet",
 			"joininternetmenu" : "Tilslut en internet server",
 			"joinserverlan" : "Tilslut Lan",
 			"joinserverlanfull" : "Tilslut en LAN server",
-			"servername" : "Navn",
-			"serverplayers" : "Spillere",
-			"serverping" : "Ping",
-			"hostserver" : "Host Server",
-			"connectlocal" : "Tilslut til lokal server",
-			"connect" : "Tilslut til valgte server",
 			"refresh" : "Genindlæs serverliste",
 			"refreshing" : "Genindlæser...",
-			"hostserverdescription" : "Du kan hoste en server ved at åbne den følgende fil gennem en fil søgemaskine.\nGå ind i spillets egenskaber på steam og klik på 'Gennemse Lokale filer'.\n Åben 'colonyserver.exe' for at hoste en server.",
+			"servername" : "Navn",
+			"serverping" : "Ping",
+			"serverplayers" : "Spillere",
 			"startserver" : "_MISSING_Start server"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Maximalt",
-			"qualityveryhigh" : "Meget høj",
-			"qualityhigh" : "Høj",
-			"qualitymedium" : "Mellem",
-			"qualitylow" : "Lav",
-			"qualityverylow" : "Meget lav",
-			"qualityon" : "På",
-			"qualityoff" : "Af",
-			"video" : "Video",
-			"videomenu" : {
-				"full" : "Video indstillinger",
-				"resolution" : "Opløsning",
-				"fullscreen" : "Fuld skærm",
-				"vsync" : "VSync",
-				"vsyncdouble" : "Dobelt",
-				"anisotropic" : "Anisotrop filtrering x16",
-				"shaderquality" : "Skygge kvalitet",
-				"sunshadowquality" : "Solens skygge kvalitet",
-				"sunshadowcascades" : "Sun shadow cascades",
-				"sunshadowdistance" : "Skygge længde",
-				"fieldofview" : "Synsfelt",
-				"lightscattering" : "Lys spredning",
-				"ambientocclusion" : "Omgivelses tillukning",
-				"eyeadaptation" : "Øjen tilpasning",
-				"bloom" : "Glød",
-				"ambientreflections" : "Ambient reflections",
-				"depthoffield" : "Dybdeskarphed",
-				"antialiasing" : "Anti aliasing",
-				"fxaalow" : "FXAA Lav",
-				"fxaamedium" : "FXAA Mellem",
-				"fxaahigh" : "FXAA Høj",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox meget langsom",
-				"skyboxslow" : "Skybox langsom",
-				"skyboxfrequent" : "Skybox ofte",
-				"skyboxveryfrequent" : "Skybox meget ofte",
-				"skyboxconstant" : "Skybox konstant",
-				"terrainfrequent" : "Terræn ofte",
-				"terrainveryfrequent" : "Terræn meget ofte",
-				"terrainconstant" : "Terræn constant"
-			},
-			"audio" : "Lyd",
-			"audiomenu" : {
-				"full" : "Lyd indstillinger",
-				"mastervolume" : "Hoved lydstyrke",
-				"effectsvolume" : "Effekt lydstyrke",
-				"ambientvolume" : "Baggrundslyde",
-				"torchvolume" : "Fakkel lydstyrke",
-				"menuvolume" : "Menu lydstyrke"
-			},
-			"gameplay" : "Styring",
-			"gameplaymenu" : {
-				"full" : "Styrings indstilllinger",
-				"mousesettings" : "Musse indstillinger",
-				"keymapping" : "Knap oversigt",
-				"mousemenu" : {
-					"sensitivityx" : "Musse følsomhed X-akse",
-					"sensitivityy" : "Musse følsomhed Y-akse",
-					"sensitivitylock" : "Lås følsomheds akserne sammen",
-					"invertx" : "Spejlvend x-aksen",
-					"inverty" : "Spejlvend y-aksen",
-					"smooth" : "Musse udglatning",
-					"smoothx" : "Musse udglatning X-akse",
-					"smoothy" : "Musse udglatning Y-akse",
-					"smoothlock" : "Lås udglatnings akserne sammen"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Nulstil Alt"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
+					"name" : "_MISSING_Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
+					"name" : "_MISSING_Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
+					"name" : "_MISSING_Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
+					"name" : "_MISSING_Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"name" : "_MISSING_Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"name" : "_MISSING_Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"name" : "_MISSING_Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"name" : "_MISSING_Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "_MISSING_Increases Max HP to 125",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "_MISSING_Increases Max HP to 150",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "_MISSING_Increases Max HP to 175",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "_MISSING_Increases Max HP to 200",
+					"name" : "_MISSING_Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "Sprog",
-			"languagemenu" : {
-				"full" : "Sprog indstillinger",
-				"wiptext" : "Igangværende arbejde. Dette dækker ikke alt text i spillet, og nogle oversættelser dækker måske mindre end andre.",
-				"language" : "Sprog",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Hurtig start",
-			"credits" : "Credits",
-			"changelog" : "Ændrings oversigt"
-		},
-		"escapemenu" : {
-			"back" : "Vend tilbage til spillet",
-			"settings" : "Indstillinger",
-			"info" : "Info",
-			"quitmain" : "Forlad til hovedmenu",
-			"quitdesktop" : "Forlad til skrivebord"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Luk",
+				"description" : "Vælg om du vil fjerne dette området eller ej.",
+				"header" : "Område menu",
+				"remove" : "Fjern område"
+			},
 			"banner" : {
-				"header" : "Koloni ledelse",
-				"description" : "Kolonister behøver 5 mad enheder per dag og en seng. Rekruttering af en kolonist koster 50 mad enheder.",
 				"button" : "Rekrutter en kolonist",
+				"description" : "Kolonister behøver 5 mad enheder per dag og en seng. Rekruttering af en kolonist koster 50 mad enheder.",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "Koloni ledelse",
 				"resetbutton" : "Nulstil koloni",
 				"resettooltipa" : "",
 				"resettooltipb" : "Dette dræber all dine kolonister og fjerner dine arbejds områder",
-				"resettooltipc" : "Det giver dig også en frisk ny inventar og lager.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "Det giver dig også en frisk ny inventar og lager."
+			},
+			"death" : {
+				"description" : "Du døde.",
+				"respawn" : "Genopstå"
+			},
+			"inventory" : {
+				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"foodvalue" : "Mad værdi:",
+				"science" : {
+					"available" : "_MISSING_Available",
+					"completed" : "_MISSING_Completed",
+					"dependencies" : "_MISSING_Required technologies:",
+					"header" : "_MISSING_Science",
+					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist",
+					"requirements" : "_MISSING_Requirements for one research cycle:",
+					"researchactive" : "_MISSING_Current research: {0}",
+					"researchselected" : "_MISSING_Select to research",
+					"unavailable" : "_MISSING_Unavailable"
+				},
+				"stockpiledescription" : "Du kan kun lave ting med de ting som du har i pladserne i bunden. Kolonister kan kun bruge ting i dit lager",
+				"tooltip" : {
+					"and" : "og",
+					"instockpile" : "_MISSING_in stockpile",
+					"needs" : "Behøver: "
+				}
+			},
+			"limits" : {
+				"description" : "Kolonister vil arbejde indtil at den valgte mængde er nået i lageret.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Bage begrænsning",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "Crafting begrænsning",
+					"fineryforgejob" : "_MISSING_Finery forge limits",
+					"grinder" : "Male begrænsning",
+					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"kilnjob" : "_MISSING_Kiln limits",
+					"merchant" : "Købe begrænsning",
+					"metalsmithjob" : "_MISSING_Metalsmith limits",
+					"minter" : "Mønt produktions begrænsning",
+					"smelter" : "Smeltnings bregrænsning",
+					"tailor" : "_MISSING_Tailoring limits",
+					"technologist" : "_MISSING_Technologist limits",
+					"woodcutter" : "_MISSING_Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Tryk F1 for at lukke eller genåbne denne menu",
+				"closetoggle" : "Vis ikke dette igen",
+				"next" : "Næste",
+				"openmanual" : "Åben Manual (PDF)",
+				"previous" : "Forrige"
+			},
+			"specialblockremoval" : {
+				"button" : "_MISSING_Remove",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"header" : "_MISSING_Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "Builder",
+				"buildera" : "",
+				"builderb" : "Needs a building area",
+				"builderc" : "Builds things",
+				"description" : "Vælg vilken type område du vil skabe.",
+				"destroyer" : "Destroyer",
+				"destroyera" : "",
+				"destroyerb" : "Needs a destroyer area",
+				"destroyerc" : "Destroys things",
+				"header" : "Bygnings Reskab"
 			},
 			"tooljob" : {
-				"header" : "Befalingsredskab",
+				"berrya" : "Hurtig og let mad, start med dette!",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "Bær Plukker",
+				"berryfarmertool" : "Bær Plukker Redskab",
+				"bow" : "_MISSING_Bow",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "Overtræder eksisterende område",
+				"crossbow" : "_MISSING_Crossbow",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Vælg vilken type område du vil skabe.",
-				"wheatfarmer" : "Hvede Bonde",
-				"wheata" : "Kun for advanceret kolonier",
-				"miner" : "Minearbejder",
-				"minera" : "Miner malm",
+				"flaxa" : "Kun for advanceret kolonier",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "Hør Bonde",
+				"flaxfarmertool" : "Hør Bonde Redskab",
 				"forester" : "Skovhugger",
 				"forestera" : "Planter & fælder træer",
-				"flaxfarmer" : "Hør Bonde",
-				"flaxa" : "Kun for advanceret kolonier",
-				"notflat" : "Ikke flat",
-				"toosmall" : "For lille",
-				"toolarge" : "For stor",
-				"coversarea" : "Overtræder eksisterende område",
-				"toonarrow" : "For smal til træer",
-				"notarable" : "Ikke dyrkbar",
-				"occupiedblocks" : "Optaget af blocks",
-				"wheatfarmertool" : "Hvede Bonde Redskab",
-				"minertool" : "Minearbejder Redskab",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"forestertool" : "Skovhugger Redskab",
-				"flaxfarmertool" : "Hør Bonde Redskab",
-				"notool" : "Intet Redskab Valgt",
-				"berryfarmertool" : "Bær Plukker Redskab",
-				"berryfarmer" : "Bær Plukker",
-				"berrya" : "Hurtig og let mad, start med dette!",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"header" : "Befalingsredskab",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
 				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"matchlock" : "_MISSING_Matchlock",
 				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
-			},
-			"toolconstruction" : {
-				"header" : "Bygnings Reskab",
-				"description" : "Vælg vilken type område du vil skabe.",
-				"builder" : "Builder",
-				"buildera" : "",
-				"builderb" : "Needs a building area",
-				"builderc" : "Builds things",
-				"destroyer" : "Destroyer",
-				"destroyera" : "",
-				"destroyerb" : "Needs a destroyer area",
-				"destroyerc" : "Destroys things"
-			},
-			"areaselection" : {
-				"header" : "Område menu",
-				"description" : "Vælg om du vil fjerne dette området eller ej.",
-				"close" : "Luk",
-				"remove" : "Fjern område"
-			},
-			"inventory" : {
-				"stockpiledescription" : "Du kan kun lave ting med de ting som du har i pladserne i bunden. Kolonister kan kun bruge ting i dit lager",
-				"foodvalue" : "Mad værdi:",
-				"tooltip" : {
-					"needs" : "Behøver: ",
-					"and" : "og",
-					"instockpile" : "_MISSING_in stockpile"
-				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
-				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Crafting begrænsning",
-					"baker" : "Bage begrænsning",
-					"smelter" : "Smeltnings bregrænsning",
-					"minter" : "Mønt produktions begrænsning",
-					"merchant" : "Købe begrænsning",
-					"grinder" : "Male begrænsning",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
-				},
-				"description" : "Kolonister vil arbejde indtil at den valgte mængde er nået i lageret.",
-				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "Du døde.",
-				"respawn" : "Genopstå"
-			},
-			"quickstart" : {
-				"previous" : "Forrige",
-				"next" : "Næste",
-				"openmanual" : "Åben Manual (PDF)",
-				"closehelp" : "Tryk F1 for at lukke eller genåbne denne menu",
-				"closetoggle" : "Vis ikke dette igen"
-			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"miner" : "Minearbejder",
+				"minera" : "Miner malm",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Minearbejder Redskab",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "Ikke dyrkbar",
+				"notflat" : "Ikke flat",
+				"notool" : "Intet Redskab Valgt",
+				"occupiedblocks" : "Optaget af blocks",
+				"slinger" : "_MISSING_Slinger",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"toolarge" : "For stor",
+				"toonarrow" : "For smal til træer",
+				"toosmall" : "For lille",
+				"wheata" : "Kun for advanceret kolonier",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "Hvede Bonde",
+				"wheatfarmertool" : "Hvede Bonde Redskab"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Senge:",
-			"colonistcount" : "Kolonister:",
-			"laborercount" : "Arbejdsløse:",
-			"foodstorage" : "Mad:",
-			"foodusage" : "Mad forbrug/dag:",
-			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "Det basiske",
 				"description" : "Velkommen til Colony Surival!",
+				"header" : "Det basiske",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "Du har brug for mad og senge for at rekrutere kolonister. Kolonister har brug for at spise for at overleve. Vær sikker på at der er nok mad tilgængelig, ellers vil de sulte!",
 				"text3" : "Tryk \"I\" for at lave en seng. Du kan kun lave ting med de ting som du har i pladserne i bunden. Kolonister kan kun bruge de ting, som er i dit lager. De har adgang til lageret ved hjælp af kasser.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "Mad produktion",
 				"description" : "Du får brug for mad for at rekruttere og holde dine kolonister gående!",
+				"header" : "Mad produktion",
 				"text1" : "Brug Befalingsredskabet (tryk 1) til at lave en bær plukker. Højre klik på en græsblok, vælg det rigtige arbejde og skab et område for bonden. Venstre klik for at skift jobs type. ",
 				"text2" : "Producering af brød er en kompliceret men effektiv metode at lave mad. Start med at lave en hvede mark. Efter to nætter vil dit hvede være fuldt vokset og dine bønder vil høste det. ",
 				"text3" : "Derefter har du brug for at rekruttere to nye mennesker ved at placere en slibesten og en ovn. Slibestenen bliver brugt til at male hveden til mel. En bager vil bruge ovnen til at bage brød."
 			},
 			"page3" : {
-				"header" : "Koloni forsvar",
 				"description" : "Beskyt din koloni mod nattens monstre!",
+				"header" : "Koloni forsvar",
 				"text1" : "Om natten vil monstre prøve på at angribe din koloni. Placer vagter, byg vægge og grab volgrave til at beskytte din koloni. Monstre kan ikke klatre to blocks.",
 				"text2" : "Lad være med at fuldstændig isoler din koloni! Hvis der ikke er en vej til dit banner vil \"Belejrings mode\" aktivere. under belejrings mode bliver dit lager af mad hurtigt opbrugt.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+		"settingsmenu" : {
+			"audio" : "Lyd",
+			"audiomenu" : {
+				"ambientvolume" : "Baggrundslyde",
+				"effectsvolume" : "Effekt lydstyrke",
+				"full" : "Lyd indstillinger",
+				"mastervolume" : "Hoved lydstyrke",
+				"menuvolume" : "Menu lydstyrke",
+				"torchvolume" : "Fakkel lydstyrke"
+			},
+			"gameplay" : "Styring",
+			"gameplaymenu" : {
+				"full" : "Styrings indstilllinger",
+				"keymapping" : "Knap oversigt",
+				"keymenu" : {
+					"resetall" : "Nulstil Alt"
 				},
-				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+				"mousemenu" : {
+					"invertx" : "Spejlvend x-aksen",
+					"inverty" : "Spejlvend y-aksen",
+					"sensitivitylock" : "Lås følsomheds akserne sammen",
+					"sensitivityx" : "Musse følsomhed X-akse",
+					"sensitivityy" : "Musse følsomhed Y-akse",
+					"smooth" : "Musse udglatning",
+					"smoothlock" : "Lås udglatnings akserne sammen",
+					"smoothx" : "Musse udglatning X-akse",
+					"smoothy" : "Musse udglatning Y-akse"
 				},
-				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Musse indstillinger"
+			},
+			"language" : "Sprog",
+			"languagemenu" : {
+				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "Sprog indstillinger",
+				"language" : "Sprog",
+				"wiptext" : "Igangværende arbejde. Dette dækker ikke alt text i spillet, og nogle oversættelser dækker måske mindre end andre."
+			},
+			"qualityhigh" : "Høj",
+			"qualitylow" : "Lav",
+			"qualitymaximum" : "Maximalt",
+			"qualitymedium" : "Mellem",
+			"qualityoff" : "Af",
+			"qualityon" : "På",
+			"qualityveryhigh" : "Meget høj",
+			"qualityverylow" : "Meget lav",
+			"video" : "Video",
+			"videomenu" : {
+				"ambientocclusion" : "Omgivelses tillukning",
+				"ambientreflections" : "Ambient reflections",
+				"anisotropic" : "Anisotrop filtrering x16",
+				"antialiasing" : "Anti aliasing",
+				"bloom" : "Glød",
+				"depthoffield" : "Dybdeskarphed",
+				"eyeadaptation" : "Øjen tilpasning",
+				"fieldofview" : "Synsfelt",
+				"full" : "Video indstillinger",
+				"fullscreen" : "Fuld skærm",
+				"fxaahigh" : "FXAA Høj",
+				"fxaalow" : "FXAA Lav",
+				"fxaamedium" : "FXAA Mellem",
+				"lightscattering" : "Lys spredning",
+				"resolution" : "Opløsning",
+				"shaderquality" : "Skygge kvalitet",
+				"skyboxconstant" : "Skybox konstant",
+				"skyboxfrequent" : "Skybox ofte",
+				"skyboxslow" : "Skybox langsom",
+				"skyboxveryfrequent" : "Skybox meget ofte",
+				"skyboxveryslow" : "Skybox meget langsom",
+				"sunshadowcascades" : "Sun shadow cascades",
+				"sunshadowdistance" : "Skygge længde",
+				"sunshadowquality" : "Solens skygge kvalitet",
+				"taa" : "TAA",
+				"terrainconstant" : "Terræn constant",
+				"terrainfrequent" : "Terræn ofte",
+				"terrainveryfrequent" : "Terræn meget ofte",
+				"vsync" : "VSync",
+				"vsyncdouble" : "Dobelt"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Koloniens navn",
+			"daymonsters" : "Monstre om dagen",
+			"delete" : "Slet",
+			"doubledmonsters" : "Dobbelt antal monstre",
+			"load" : "Indlæs",
+			"loadworld" : "Indlæs verden",
+			"newworld" : "Ny verden",
+			"play" : "Spil",
+			"spawnmonsters" : "Skab monstre",
+			"worlddate" : "Dato",
+			"worldname" : "Navn"
 		}
 	},
 	"types" : {
-		"grass" : "Græs",
-		"grasstemperate" : "Græs Tempereret",
-		"grasstundra" : "Græs Tundra",
-		"grasstaiga" : "Græs Taiga",
-		"grasssavanna" : "Græs Savanna",
-		"grassrainforest" : "Græs Regnskov",
-		"water" : "Vand",
-		"sand" : "Sand",
-		"snow" : "Sne",
-		"banner" : "Banner",
-		"dirt" : "Jord",
-		"stoneblock" : "Sten",
-		"planks" : "Planker",
-		"log" : "Træstamme",
-		"logtemperate" : "Træstamme Tempereret",
-		"logtaiga" : "Træstamme Taiga",
-		"leaves" : "Blade",
-		"leavestemperate" : "Blade Tempereret",
-		"leavestaiga" : "Blade Taiga",
-		"torch" : "Fakkel",
-		"crate" : "Kasse",
-		"stonebricks" : "Sten Mursten",
-		"coatedplanks" : "Belagte Planker",
 		"adobe" : "Lersten",
-		"workbench" : "Arbejdsbord",
-		"mint" : "Møntpresser",
-		"shop" : "Butik",
-		"plasterblock" : "Gips Blok",
-		"furnace" : "Smelteovn",
-		"oven" : "Ovn",
-		"sappling" : "Ungt Træ",
-		"flaxstage1" : "Hør frø",
-		"wheatstage1" : "Hvede frø",
-		"straw" : "Strå",
-		"linseedoil" : "Linolie",
-		"flax" : "Hør",
-		"wheat" : "Hvede",
-		"bread" : "Brød",
-		"coalore" : "Kulmalm",
-		"gypsum" : "Gips",
-		"ironore" : "Jernmalm",
-		"goldore" : "Guldmalm",
-		"ironingot" : "Jernbarre",
-		"goldingot" : "Guldbarre",
-		"goldcoin" : "Guldmønt",
-		"bow" : "Bue",
-		"commandtool" : "Befalingsredskab",
+		"banner" : "Banner",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Seng",
-		"clay" : "Ler",
-		"bricks" : "Mursten",
-		"berrybush" : "Bær frø",
 		"berry" : "Bær",
-		"grindstone" : "Slibesten",
-		"flour" : "Mel",
-		"cherrysapling" : "Ungt Kirsebærtræ",
-		"cherryblossom" : "Kirsebær blomster",
-		"redplanks" : "Røde Planker",
+		"berrybush" : "Bær frø",
 		"blackplanks" : "Sorte Planker",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "Bue",
 		"bowstring" : "_MISSING_Bowstring",
+		"bread" : "Brød",
+		"bricks" : "Mursten",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "_MISSING_Bronze Ingot",
 		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
 		"bronzeplate" : "_MISSING_Bronze Plate",
+		"carpetblue" : "_MISSING_Blue Carpet",
+		"carpetred" : "_MISSING_Red Carpet",
+		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
+		"cherryblossom" : "Kirsebær blomster",
+		"cherrysapling" : "Ungt Kirsebærtræ",
+		"clay" : "Ler",
+		"clothing" : "_MISSING_Clothing",
+		"coalore" : "Kulmalm",
+		"coatedplanks" : "Belagte Planker",
 		"cokes" : "_MISSING_Cokes",
+		"commandtool" : "Befalingsredskab",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
+		"crate" : "Kasse",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"dirt" : "Jord",
 		"fineryforge" : "_MISSING_Finery Forge",
+		"firewood" : "_MISSING_Firewood",
+		"flax" : "Hør",
+		"flaxstage1" : "Hør frø",
+		"flour" : "Mel",
+		"furnace" : "Smelteovn",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"goldcoin" : "Guldmønt",
+		"goldingot" : "Guldbarre",
+		"goldore" : "Guldmalm",
+		"grass" : "Græs",
+		"grassrainforest" : "Græs Regnskov",
+		"grasssavanna" : "Græs Savanna",
+		"grasstaiga" : "Græs Taiga",
+		"grasstemperate" : "Græs Tempereret",
+		"grasstundra" : "Græs Tundra",
+		"grindstone" : "Slibesten",
 		"guardbowdayjob" : "_MISSING_Day Bow Guard",
 		"guardbownightjob" : "_MISSING_Night Bow Guard",
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
 		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"gunpowder" : "_MISSING_Gunpowder",
+		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
+		"gunsmithshop" : "_MISSING_Gunsmith Shop",
+		"gypsum" : "Gips",
+		"ironblock" : "_MISSING_Iron Block",
+		"ironingot" : "Jernbarre",
+		"ironore" : "Jernmalm",
+		"ironrivet" : "_MISSING_Iron Rivet",
+		"ironsword" : "_MISSING_Iron Sword",
+		"ironwrought" : "_MISSING_Wrought Iron",
+		"kiln" : "_MISSING_Kiln",
+		"lead" : "_MISSING_Lead",
+		"leadbullet" : "_MISSING_Lead Bullet",
+		"leaves" : "Blade",
+		"leavestaiga" : "Blade Taiga",
+		"leavestemperate" : "Blade Tempereret",
+		"linen" : "_MISSING_Linen",
+		"linenbag" : "_MISSING_Linen Bag",
+		"linenpouch" : "_MISSING_Linen Pouch",
+		"linseedoil" : "Linolie",
+		"log" : "Træstamme",
+		"logtaiga" : "Træstamme Taiga",
+		"logtemperate" : "Træstamme Tempereret",
+		"matchlockgun" : "_MISSING_Matchlock Gun",
+		"minerjob" : "_MISSING_Miner Job",
+		"mint" : "Møntpresser",
+		"oven" : "Ovn",
+		"planks" : "Planker",
+		"plasterblock" : "Gips Blok",
+		"redplanks" : "Røde Planker",
+		"salpeter" : "_MISSING_Salpeter",
+		"sand" : "Sand",
+		"sappling" : "Ungt Træ",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagbasic" : "_MISSING_Basic Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"sciencebaglife" : "_MISSING_Life Science Bag",
+		"sciencebagmilitary" : "_MISSING_Military Science Bag",
+		"sciencelab" : "_MISSING_Science Lab",
+		"shop" : "Butik",
+		"silveringot" : "_MISSING_Silver Ingot",
+		"sling" : "_MISSING_Sling",
+		"slingbullet" : "_MISSING_Sling Bullet",
+		"snow" : "Sne",
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"steelingot" : "_MISSING_Steel Ingot",
+		"steelparts" : "_MISSING_Steel Parts",
+		"stoneblock" : "Sten",
+		"stonebricks" : "Sten Mursten",
+		"straw" : "Strå",
+		"tailorshop" : "_MISSING_Tailor Shop",
+		"technologisttable" : "_MISSING_Technologist's Table",
+		"tin" : "_MISSING_Tin",
+		"torch" : "Fakkel",
+		"water" : "Vand",
+		"wheat" : "Hvede",
+		"wheatstage1" : "Hvede frø",
+		"workbench" : "Arbejdsbord"
 	},
 	"typeuses" : {
-		"planks" : "Nu med 4 gange volumen af træstammer",
-		"torch" : "Og lad der være lys!",
-		"crate" : "Til alle dine opbevarings behov!",
-		"workbench" : "Rekruttere en håndværker. Som vil klare crafting for dig!",
-		"plasterblock" : "Til det moderne look",
-		"wheatstage1" : "Fremtidig brød",
-		"straw" : "Nødvendigt til senge, biprodukt af hvede landbrug",
-		"wheat" : "En kolonist med en slibesten vil male dette til mel",
-		"bread" : "Smager godt, heler dine sår",
-		"bed" : "Gør det lettere at sove",
-		"bow" : "Vagter har brug for en!",
-		"snow" : "Ved ingenting",
-		"grasstemperate" : "Forsvind fra min græsplæne!",
-		"grasstundra" : "Forsvind fra min græsplæne!",
-		"grasstaiga" : "Forsvind fra min græsplæne!",
-		"grasssavanna" : "græsset ser grønner ud på den anden side",
-		"grassrainforest" : "Dette græs ser rimelig grønt ud",
-		"water" : "Det er IKKE ment at du skal have dette i din inventar!",
-		"sand" : "Blandes ikke godt med slanger",
-		"dirt" : "Snavset",
 		"adobe" : "Jord for rige mennesker",
-		"mint" : "Det er ikke forfalskning hvis kongen siger det er okay.",
-		"shop" : "Kun indkøb, ingen salg",
-		"flaxstage1" : "Put det i jorden",
-		"flax" : "Den smukkeste blomst i spillet. Og den eneste",
-		"linseedoil" : "Gør ting skinnende",
-		"coatedplanks" : "Skinnende!",
-		"clay" : "Jeg ville ønske du kunne røre det",
-		"bricks" : "Det er trods alt et hollandsk spil",
-		"flour" : "En kolonist med en ovn vil bage brød af dette",
-		"grindstone" : "Bruges til at male dit korn til mel",
-		"berrybush" : "Kolonister kan plante disse for hurtig mad",
+		"bed" : "Gør det lettere at sove",
 		"berry" : "Ikke giftige",
-		"redplanks" : "Har ingen mad værdi, men de smager rimelig godt",
+		"berrybush" : "Kolonister kan plante disse for hurtig mad",
 		"blackplanks" : "Meget brandbar",
-		"cherryblossom" : "Den mest pinke ting i spillet",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "Vagter har brug for en!",
 		"bowstring" : "_MISSING_Ploink",
+		"bread" : "Smager godt, heler dine sår",
+		"bricks" : "Det er trods alt et hollandsk spil",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
+		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
+		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "Den mest pinke ting i spillet",
+		"clay" : "Jeg ville ønske du kunne røre det",
+		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
+		"coalore" : "_MISSING_Warning: might cause climate problems",
+		"coatedplanks" : "Skinnende!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "Til alle dine opbevarings behov!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"dirt" : "Snavset",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "Den smukkeste blomst i spillet. Og den eneste",
+		"flaxstage1" : "Put det i jorden",
+		"flour" : "En kolonist med en ovn vil bage brød af dette",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
+		"goldcoin" : "_MISSING_With a portrait of the king on one side",
+		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
+		"goldore" : "_MISSING_Don't lose it",
+		"grassrainforest" : "Dette græs ser rimelig grønt ud",
+		"grasssavanna" : "græsset ser grønner ud på den anden side",
+		"grasstaiga" : "Forsvind fra min græsplæne!",
+		"grasstemperate" : "Forsvind fra min græsplæne!",
+		"grasstundra" : "Forsvind fra min græsplæne!",
+		"grindstone" : "Bruges til at male dit korn til mel",
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
+		"linen" : "_MISSING_Lingerie means underwear made of linen",
+		"linenbag" : "_MISSING_Better than a plastic bag",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "Gør ting skinnende",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "_MISSING_Like an output log, but different",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "Det er ikke forfalskning hvis kongen siger det er okay.",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "Nu med 4 gange volumen af træstammer",
+		"plasterblock" : "Til det moderne look",
+		"redplanks" : "Har ingen mad værdi, men de smager rimelig godt",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "Blandes ikke godt med slanger",
+		"sappling" : "_MISSING_Future tree",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "_MISSING_Required to research basic science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"shop" : "Kun indkøb, ingen salg",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "Ved ingenting",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"straw" : "Nødvendigt til senge, biprodukt af hvede landbrug",
+		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
+		"technologisttable" : "_MISSING_Crafts Science Bags",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 50.6238859180036
+		"torch" : "Og lad der være lys!",
+		"water" : "Det er IKKE ment at du skal have dette i din inventar!",
+		"wheat" : "En kolonist med en slibesten vil male dette til mel",
+		"wheatstage1" : "Fremtidig brød",
+		"workbench" : "Rekruttere en håndværker. Som vil klare crafting for dig!"
+	}
 }

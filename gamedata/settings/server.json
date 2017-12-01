@@ -37,10 +37,13 @@
 		"RecalculatePriorityCooldownMS" : 750
 	},
 	"Saving" : {
-		"MillisecondsBeforeAutosaveChunk" : 10000,
-		"MillisecondsBeforeAutosaveRegion" : 10000,
-		"SecondsBetweenRegionAutosaveChecks" : 2,
-		"MillisecondsBeforeRegionExpired" : 60000
+		"MillisecondsBeforeAutosaveChunk" : 90000,
+		"MillisecondsBeforeAutosaveRegionMin" : 180000,
+		"MillisecondsBeforeAutosaveRegionMax" : 300000,
+		"MillisecondsBeforeRegionExpiredMin" : 360000,
+		"MillisecondsBeforeRegionExpiredMax" : 600000,
+		"SecondsBetweenRegionAutosaveChecks" : 1,
+		"SecondsBetweenMiscAutoSaving" : 300
 	},
 	"Time" : {
 		"StartDate" : "2000-06-15T04:00:00",

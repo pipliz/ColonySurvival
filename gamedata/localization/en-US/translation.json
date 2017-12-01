@@ -1,493 +1,495 @@
 {
+	"coverage" : 100,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Return to game",
+			"info" : "Info",
+			"quitdesktop" : "Quit to desktop",
+			"quitmain" : "Quit to main menu",
+			"settings" : "Settings"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "Ammo:",
+			"bedcount" : "Beds:",
+			"colonistcount" : "Colonists:",
+			"foodstorage" : "Food:",
+			"foodusage" : "Food use/day:",
+			"laborercount" : "Unemployed:"
+		},
 		"general" : {
-			"close" : "Close",
-			"back" : "Back",
 			"apply" : "Apply",
-			"none" : "None",
-			"reset" : "Reset",
+			"back" : "Back",
+			"close" : "Close",
 			"inputplaceholder" : "Enter text...",
+			"next" : "Next",
+			"none" : "None",
 			"previous" : "Previous",
-			"next" : "Next"
+			"reset" : "Reset"
+		},
+		"infomenu" : {
+			"changelog" : "Changelog",
+			"credits" : "Credits",
+			"quickstart" : "Quickstart"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Singleplayer",
-			"multiplayer" : "Multiplayer",
-			"settings" : "Settings",
+			"back" : "Back",
 			"info" : "Info",
+			"multiplayer" : "Multiplayer",
 			"quit" : "Quit",
-			"back" : "Back"
-		},
-		"singleplayermenu" : {
-			"newworld" : "New World",
-			"colonyname" : "Colony name",
-			"spawnmonsters" : "Spawn monsters",
-			"doubledmonsters" : "Double monster amount",
-			"daymonsters" : "Monsters during daytime",
-			"loadworld" : "Load World",
-			"load" : "Load",
-			"worldname" : "Name",
-			"worlddate" : "Date",
-			"play" : "Play",
-			"delete" : "Delete"
+			"settings" : "Settings",
+			"singleplayer" : "Singleplayer"
 		},
 		"multiplayermenu" : {
+			"connect" : "Connect to selected server",
+			"connectlocal" : "Connect to local server",
+			"hostserver" : "Host Server",
+			"hostserverdescription" : "You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
 			"joininternet" : "Join Internet",
 			"joininternetmenu" : "Join an internet server",
 			"joinserverlan" : "Join LAN",
 			"joinserverlanfull" : "Join a LAN server",
-			"servername" : "Name",
-			"serverplayers" : "Players",
-			"serverping" : "Ping",
-			"hostserver" : "Host Server",
-			"connectlocal" : "Connect to local server",
-			"connect" : "Connect to selected server",
 			"refresh" : "Refresh serverlist",
 			"refreshing" : "Refreshing...",
-			"hostserverdescription" : "You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
+			"servername" : "Name",
+			"serverping" : "Ping",
+			"serverplayers" : "Players",
 			"startserver" : "Start server"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Maximum",
-			"qualityveryhigh" : "Very high",
-			"qualityhigh" : "High",
-			"qualitymedium" : "Medium",
-			"qualitylow" : "Low",
-			"qualityverylow" : "Very low",
-			"qualityon" : "On",
-			"qualityoff" : "Off",
-			"video" : "Video",
-			"videomenu" : {
-				"full" : "Video Settings",
-				"resolution" : "Resolution",
-				"fullscreen" : "Fullscreen",
-				"vsync" : "VSync",
-				"vsyncdouble" : "Double",
-				"anisotropic" : "Anisotropic filtering x16",
-				"shaderquality" : "Shader quality",
-				"sunshadowquality" : "Sun shadow quality",
-				"sunshadowcascades" : "Sun shadow cascades",
-				"sunshadowdistance" : "Shadow distance",
-				"fieldofview" : "Field of view",
-				"lightscattering" : "Light scattering",
-				"ambientocclusion" : "Ambient occlusion",
-				"eyeadaptation" : "Eye adaptation",
-				"bloom" : "Bloom",
-				"ambientreflections" : "Ambient reflections",
-				"depthoffield" : "Depth of field",
-				"antialiasing" : "Anti aliasing",
-				"fxaalow" : "FXAA Low",
-				"fxaamedium" : "FXAA Medium",
-				"fxaahigh" : "FXAA High",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox very slow",
-				"skyboxslow" : "Skybox slow",
-				"skyboxfrequent" : "Skybox frequent",
-				"skyboxveryfrequent" : "Skybox very frequent",
-				"skyboxconstant" : "Skybox constant",
-				"terrainfrequent" : "Terrain frequent",
-				"terrainveryfrequent" : "Terrain very frequent",
-				"terrainconstant" : "Terrain constant"
-			},
-			"audio" : "Audio",
-			"audiomenu" : {
-				"full" : "Audio Settings",
-				"mastervolume" : "Master Volume",
-				"effectsvolume" : "Effects Volume",
-				"ambientvolume" : "Ambient Volume",
-				"torchvolume" : "Torch Volume",
-				"menuvolume" : "Menu Volume"
-			},
-			"gameplay" : "Gameplay",
-			"gameplaymenu" : {
-				"full" : "Gameplay Settings",
-				"mousesettings" : "Mouse settings",
-				"keymapping" : "Key mapping",
-				"mousemenu" : {
-					"sensitivityx" : "Mouse sensitivity X-axis",
-					"sensitivityy" : "Mouse sensitivity Y-axis",
-					"sensitivitylock" : "Lock together sensitivity axes",
-					"invertx" : "Invert x-axis",
-					"inverty" : "Invert y-axis",
-					"smooth" : "Mouse smoothing",
-					"smoothx" : "Mouse smoothing X-axis",
-					"smoothy" : "Mouse smoothing Y-axis",
-					"smoothlock" : "Lock together smoothing axes"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "Increases the safe radius created to 40 blocks",
+					"name" : "Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Reset All"
+				"bannerradius2" : {
+					"description" : "Increases the safe radius created to 55 blocks",
+					"name" : "Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "Increases the safe radius created to 70 blocks",
+					"name" : "Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "Increases the safe radius created to 85 blocks",
+					"name" : "Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "Increases the safe radius created to 100 blocks",
+					"name" : "Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "Unlock the Bronze Anvil, which can process bronze",
+					"name" : "Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "Unlocks Crossbow Bolts",
+					"name" : "Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "Unlock Gunpowder, a powerful explosive",
+					"name" : "Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "Increases regenerated amount of HP from 30 to 50",
+					"name" : "Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "Increases regenerated amount of HP from 50 to 65",
+					"name" : "Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "Increases regenerated amount of HP from 65 to 85",
+					"name" : "Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "Increases regenerated amount of HP from 85 to 100",
+					"name" : "Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "Increases regeneration speed from 0.5 HP/s to 1 HP/s",
+					"name" : "Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "Increases regeneration speed from 1 HP/s to 2 HP/s",
+					"name" : "Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "Increases regeneration speed from 2 HP/s to 3 HP/s",
+					"name" : "Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "Increases regeneration speed from 3 HP/s to 4 HP/s",
+					"name" : "Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "Increases Max HP to 125",
+					"name" : "Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "Increases Max HP to 150",
+					"name" : "Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "Increases Max HP to 175",
+					"name" : "Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "Increases Max HP to 200",
+					"name" : "Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "Unlocks the Basic Science Bag, used for basic research",
+					"name" : "Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "Unlocks the Military Science Bag, used for military research",
+					"name" : "Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "Unlock the tailor, who turns flax into linen",
+					"name" : "Tailor"
+				},
+				"technologisttable" : {
+					"description" : "Unlocks the technologist, who crafts Science Bags",
+					"name" : "Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "Bread Production"
 				}
-			},
-			"language" : "Language",
-			"languagemenu" : {
-				"full" : "Language Settings",
-				"wiptext" : "Work in progress. This does not cover all text in the game, and some translations may cover less than others.",
-				"language" : "Language",
-				"coverage" : "This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Quickstart",
-			"credits" : "Credits",
-			"changelog" : "Changelog"
-		},
-		"escapemenu" : {
-			"back" : "Return to game",
-			"settings" : "Settings",
-			"info" : "Info",
-			"quitmain" : "Quit to main menu",
-			"quitdesktop" : "Quit to desktop"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Close",
+				"description" : "Choose whether or not you want to remove the area here.",
+				"header" : "Area menu",
+				"remove" : "Remove area"
+			},
 			"banner" : {
-				"header" : "Colony management",
-				"description" : "Colonists require 5 food units per day, and a bed. Recruiting a colonist costs 50 food units.",
 				"button" : "Recruit a colonist",
+				"description" : "Colonists require 5 food units per day, and a bed. Recruiting a colonist costs 50 food units.",
 				"gotoscience" : "Science menu",
+				"header" : "Colony management",
 				"resetbutton" : "Reset colony",
 				"resettooltipa" : "",
 				"resettooltipb" : "This kills all your colonists and removes your job fields.",
 				"resettooltipc" : "It also gives you a fresh new inventory and stockpile."
 			},
+			"death" : {
+				"description" : "You died.",
+				"respawn" : "Respawn"
+			},
+			"inventory" : {
+				"craftingstockpile" : "Crafting & Stockpile",
+				"foodvalue" : "Food value:",
+				"science" : {
+					"available" : "Available",
+					"completed" : "Completed",
+					"dependencies" : "Required technologies:",
+					"header" : "Science",
+					"iterations" : "Research cycles: {0} out of {1}",
+					"placelab" : "Place a Science Lab to recruit a scientist",
+					"requirements" : "Requirements for one research cycle:",
+					"researchactive" : "Current research: {0}",
+					"researchselected" : "Select to research",
+					"unavailable" : "Unavailable"
+				},
+				"stockpiledescription" : "You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile.",
+				"tooltip" : {
+					"and" : "and",
+					"instockpile" : "in stockpile",
+					"needs" : "Needs: "
+				}
+			},
+			"limits" : {
+				"description" : "Colonists will work until the set amount is reached in the stockpile.",
+				"hoverpriority" : {
+					"a" : "Crafting Priority",
+					"b" : "Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Baking limits",
+					"bloomeryjob" : "Bloomery limits",
+					"crafter" : "Crafting limits",
+					"fineryforgejob" : "Finery forge limits",
+					"grinder" : "Grinding limits",
+					"gunsmithjob" : "Gunsmith limits",
+					"kilnjob" : "Kiln limits",
+					"merchant" : "Shopping limits",
+					"metalsmithjob" : "Metalsmith limits",
+					"minter" : "Minting limits",
+					"smelter" : "Smelting limits",
+					"tailor" : "Tailoring limits",
+					"technologist" : "Technologist limits",
+					"woodcutter" : "Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Press F1 to close or re-open this menu",
+				"closetoggle" : "Do not show this again",
+				"next" : "Next",
+				"openmanual" : "Open Manual (PDF)",
+				"previous" : "Previous"
+			},
 			"specialblockremoval" : {
-				"header" : "Special Block removal",
+				"button" : "Remove",
 				"description" : "Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "Remove"
+				"header" : "Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "Builder",
+				"buildera" : "",
+				"builderb" : "Needs a building area",
+				"builderc" : "Builds things",
+				"description" : "Select the type of area you want to create.",
+				"destroyer" : "Destroyer",
+				"destroyera" : "",
+				"destroyerb" : "Needs a destroyer area",
+				"destroyerc" : "Destroys things",
+				"header" : "Construction tool"
 			},
 			"tooljob" : {
-				"header" : "Command tool",
+				"berrya" : "Quick and easy food, start with this!",
+				"berryb" : "Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "Berry Farmer",
+				"berryfarmertool" : "Berry Farmer Tool",
+				"bow" : "Bow",
+				"bowtooltip" : "Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "Covers existing area",
+				"crossbow" : "Crossbow",
+				"crossbowtooltip" : "Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Select the type of area you want to create.",
-				"missingscience" : "<color=red>Requires '{0}' to be unlocked first.</color>",
-				"wheatfarmer" : "Wheat Farmer",
-				"wheata" : "For advanced colonies only",
-				"wheatb" : "Needs: Wheat Seeds\nPlace on grass or dirt",
-				"miner" : "Miner",
-				"minera" : "Mines ores",
-				"minerb" : "Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"flaxa" : "For advanced colonies only",
+				"flaxb" : "Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "Flax Farmer",
+				"flaxfarmertool" : "Flax Farmer Tool",
 				"forester" : "Forester",
 				"forestera" : "Plants & chops trees",
 				"foresterb" : "Needs: Saplings and an axe\nPlace on grass or dirt",
-				"flaxfarmer" : "Flax Farmer",
-				"flaxa" : "For advanced colonies only",
-				"flaxb" : "Needs: Flax Seeds\nPlace on grass or dirt",
-				"notflat" : "Not flat",
-				"toosmall" : "Too small",
-				"toolarge" : "Too large",
-				"coversarea" : "Covers existing area",
-				"toonarrow" : "Too narrow for trees",
-				"notarable" : "Not arable",
-				"occupiedblocks" : "Occupied by blocks",
-				"wheatfarmertool" : "Wheat Farmer Tool",
-				"minertool" : "Miner Tool",
 				"forestertool" : "Forester Tool",
-				"flaxfarmertool" : "Flax Farmer Tool",
-				"notool" : "No Tool Selected",
-				"berryfarmertool" : "Berry Farmer Tool",
-				"berryfarmer" : "Berry Farmer",
-				"berrya" : "Quick and easy food, start with this!",
-				"berryb" : "Needs: Berry seeds\nPlace on grass or dirt",
 				"guard" : "Guard",
 				"guarda" : "Protect your colony!",
 				"guardb" : "This will open another menu where you can select the guard types",
 				"guardsday" : "Daytime guards",
 				"guardsnight" : "Nighttime guards",
-				"slingertooltip" : "Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"slinger" : "Slinger",
-				"crossbowtooltip" : "Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"crossbow" : "Crossbow",
-				"bowtooltip" : "Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"bow" : "Bow",
-				"matchlocktooltip" : "Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"matchlock" : "Matchlock",
-				"jobslingerday" : "Daytime Slinger Guard",
-				"jobslingernight" : "Nighttime Slinger Guard",
+				"header" : "Command tool",
 				"jobbowday" : "Daytime Bow Guard",
 				"jobbownight" : "Nighttime Bow Guard",
 				"jobcrossbowday" : "Daytime Crossbow Guard",
 				"jobcrossbownight" : "Nighttime Crossbow Guard",
 				"jobmatchlockday" : "Daytime Matchlock Gun Guard",
-				"jobmatchlocknight" : "Nighttime Matchlock Gun Guard"
-			},
-			"toolconstruction" : {
-				"header" : "Construction tool",
-				"description" : "Select the type of area you want to create.",
-				"builder" : "Builder",
-				"buildera" : "",
-				"builderb" : "Needs a building area",
-				"builderc" : "Builds things",
-				"destroyer" : "Destroyer",
-				"destroyera" : "",
-				"destroyerb" : "Needs a destroyer area",
-				"destroyerc" : "Destroys things"
-			},
-			"areaselection" : {
-				"header" : "Area menu",
-				"description" : "Choose whether or not you want to remove the area here.",
-				"close" : "Close",
-				"remove" : "Remove area"
-			},
-			"inventory" : {
-				"craftingstockpile" : "Crafting & Stockpile",
-				"stockpiledescription" : "You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile.",
-				"foodvalue" : "Food value:",
-				"tooltip" : {
-					"instockpile" : "in stockpile",
-					"needs" : "Needs: ",
-					"and" : "and"
-				},
-				"science" : {
-					"header" : "Science",
-					"dependencies" : "Required technologies:",
-					"requirements" : "Requirements for one research cycle:",
-					"iterations" : "Research cycles: {0} out of {1}",
-					"researchselected" : "Select to research",
-					"researchactive" : "Current research: {0}",
-					"available" : "Available",
-					"unavailable" : "Unavailable",
-					"completed" : "Completed",
-					"placelab" : "Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Crafting limits",
-					"baker" : "Baking limits",
-					"smelter" : "Smelting limits",
-					"minter" : "Minting limits",
-					"merchant" : "Shopping limits",
-					"grinder" : "Grinding limits",
-					"tailor" : "Tailoring limits",
-					"technologist" : "Technologist limits",
-					"metalsmithjob" : "Metalsmith limits",
-					"kilnjob" : "Kiln limits",
-					"gunsmithjob" : "Gunsmith limits",
-					"bloomeryjob" : "Bloomery limits",
-					"fineryforgejob" : "Finery forge limits",
-					"woodcutter" : "Wood cutting limits"
-				},
-				"description" : "Colonists will work until the set amount is reached in the stockpile.",
-				"hoverpriority" : {
-					"a" : "Crafting Priority",
-					"b" : "Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "You died.",
-				"respawn" : "Respawn"
-			},
-			"quickstart" : {
-				"previous" : "Previous",
-				"next" : "Next",
-				"openmanual" : "Open Manual (PDF)",
-				"closehelp" : "Press F1 to close or re-open this menu",
-				"closetoggle" : "Do not show this again"
+				"jobmatchlocknight" : "Nighttime Matchlock Gun Guard",
+				"jobslingerday" : "Daytime Slinger Guard",
+				"jobslingernight" : "Nighttime Slinger Guard",
+				"matchlock" : "Matchlock",
+				"matchlocktooltip" : "Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
+				"miner" : "Miner",
+				"minera" : "Mines ores",
+				"minerb" : "Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Miner Tool",
+				"missingscience" : "<color=red>Requires '{0}' to be unlocked first.</color>",
+				"notarable" : "Not arable",
+				"notflat" : "Not flat",
+				"notool" : "No Tool Selected",
+				"occupiedblocks" : "Occupied by blocks",
+				"slinger" : "Slinger",
+				"slingertooltip" : "Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"toolarge" : "Too large",
+				"toonarrow" : "Too narrow for trees",
+				"toosmall" : "Too small",
+				"wheata" : "For advanced colonies only",
+				"wheatb" : "Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "Wheat Farmer",
+				"wheatfarmertool" : "Wheat Farmer Tool"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Beds:",
-			"colonistcount" : "Colonists:",
-			"laborercount" : "Unemployed:",
-			"foodstorage" : "Food:",
-			"foodusage" : "Food use/day:",
-			"ammocount" : "Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "Basics",
 				"description" : "Welcome to Colony Survival!",
+				"header" : "Basics",
 				"text1" : "The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
 				"text3" : "Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "Food Production",
 				"description" : "You'll need food to recruit and sustain your colonists!",
+				"header" : "Food Production",
 				"text1" : "Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
 				"text2" : "Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
 				"text3" : "After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
 			},
 			"page3" : {
-				"header" : "Colony Defense",
 				"description" : "Defend your colony against the monsters of the night!",
+				"header" : "Colony Defense",
 				"text1" : "At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
 				"text2" : "Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
 				"text3" : "The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "Mining",
 				"description" : "Ores are a fundamental requirement for your colony.",
+				"header" : "Mining",
 				"text1" : "Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "Scientific Research",
 				"description" : "Only the smallest colonies can do without science!",
+				"header" : "Scientific Research",
 				"text1" : "Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"bannerradius1" : {
-					"name" : "Banner Radius I",
-					"description" : "Increases the safe radius created to 40 blocks"
+		"settingsmenu" : {
+			"audio" : "Audio",
+			"audiomenu" : {
+				"ambientvolume" : "Ambient Volume",
+				"effectsvolume" : "Effects Volume",
+				"full" : "Audio Settings",
+				"mastervolume" : "Master Volume",
+				"menuvolume" : "Menu Volume",
+				"torchvolume" : "Torch Volume"
+			},
+			"gameplay" : "Gameplay",
+			"gameplaymenu" : {
+				"full" : "Gameplay Settings",
+				"keymapping" : "Key mapping",
+				"keymenu" : {
+					"resetall" : "Reset All"
 				},
-				"bannerradius2" : {
-					"name" : "Banner Radius II",
-					"description" : "Increases the safe radius created to 55 blocks"
+				"mousemenu" : {
+					"invertx" : "Invert x-axis",
+					"inverty" : "Invert y-axis",
+					"sensitivitylock" : "Lock together sensitivity axes",
+					"sensitivityx" : "Mouse sensitivity X-axis",
+					"sensitivityy" : "Mouse sensitivity Y-axis",
+					"smooth" : "Mouse smoothing",
+					"smoothlock" : "Lock together smoothing axes",
+					"smoothx" : "Mouse smoothing X-axis",
+					"smoothy" : "Mouse smoothing Y-axis"
 				},
-				"bannerradius3" : {
-					"name" : "Banner Radius III",
-					"description" : "Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "Banner Radius IV",
-					"description" : "Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "Banner Radius V",
-					"description" : "Increases the safe radius created to 100 blocks"
-				},
-				"healthsize1" : {
-					"name" : "Health Increase I",
-					"description" : "Increases Max HP to 125"
-				},
-				"healthsize2" : {
-					"name" : "Health Increase II",
-					"description" : "Increases Max HP to 150"
-				},
-				"healthsize3" : {
-					"name" : "Health Increase III",
-					"description" : "Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "Health Increase IV",
-					"description" : "Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "Regeneration Increase I",
-					"description" : "Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "Regeneration Increase II",
-					"description" : "Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "Regeneration Increase III",
-					"description" : "Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "Regeneration Increase IV",
-					"description" : "Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "Regeneration Speed I",
-					"description" : "Increases regeneration speed from 0.5 HP/s to 1 HP/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "Regeneration Speed II",
-					"description" : "Increases regeneration speed from 1 HP/s to 2 HP/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "Regeneration Speed III",
-					"description" : "Increases regeneration speed from 2 HP/s to 3 HP/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "Regeneration Speed IV",
-					"description" : "Increases regeneration speed from 3 HP/s to 4 HP/s"
-				},
-				"bloomery" : {
-					"name" : "Bloomery",
-					"description" : "Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "Bronze Anvil",
-					"description" : "Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "Crossbow",
-					"description" : "Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "Crossbow Bolts",
-					"description" : "Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "Finery Forge",
-					"description" : "Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "Gunpowder",
-					"description" : "Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "Gunsmith Shop",
-					"description" : "Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "Matchlock Gun",
-					"description" : "Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "Advanced Science Bag",
-					"description" : "Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "Basic Science Bag",
-					"description" : "Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "Colony Science Bag",
-					"description" : "Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebaglife" : {
-					"name" : "Life Science Bag",
-					"description" : "Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"sciencebagmilitary" : {
-					"name" : "Military science bag",
-					"description" : "Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "Tailor",
-					"description" : "Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "Technologist",
-					"description" : "Unlocks the technologist, who crafts Science Bags"
-				},
-				"wheatfarming" : {
-					"name" : "Bread Production",
-					"description" : "A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "Flax Farming",
-					"description" : "Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "Mints & Shops",
-					"description" : "Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "Kiln",
-					"description" : "Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "Splitting Stump",
-					"description" : "Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Mouse settings"
+			},
+			"language" : "Language",
+			"languagemenu" : {
+				"coverage" : "This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "Language Settings",
+				"language" : "Language",
+				"wiptext" : "Work in progress. This does not cover all text in the game, and some translations may cover less than others."
+			},
+			"qualityhigh" : "High",
+			"qualitylow" : "Low",
+			"qualitymaximum" : "Maximum",
+			"qualitymedium" : "Medium",
+			"qualityoff" : "Off",
+			"qualityon" : "On",
+			"qualityveryhigh" : "Very high",
+			"qualityverylow" : "Very low",
+			"video" : "Video",
+			"videomenu" : {
+				"ambientocclusion" : "Ambient occlusion",
+				"ambientreflections" : "Ambient reflections",
+				"anisotropic" : "Anisotropic filtering x16",
+				"antialiasing" : "Anti aliasing",
+				"bloom" : "Bloom",
+				"depthoffield" : "Depth of field",
+				"eyeadaptation" : "Eye adaptation",
+				"fieldofview" : "Field of view",
+				"full" : "Video Settings",
+				"fullscreen" : "Fullscreen",
+				"fxaahigh" : "FXAA High",
+				"fxaalow" : "FXAA Low",
+				"fxaamedium" : "FXAA Medium",
+				"lightscattering" : "Light scattering",
+				"resolution" : "Resolution",
+				"shaderquality" : "Shader quality",
+				"skyboxconstant" : "Skybox constant",
+				"skyboxfrequent" : "Skybox frequent",
+				"skyboxslow" : "Skybox slow",
+				"skyboxveryfrequent" : "Skybox very frequent",
+				"skyboxveryslow" : "Skybox very slow",
+				"sunshadowcascades" : "Sun shadow cascades",
+				"sunshadowdistance" : "Shadow distance",
+				"sunshadowquality" : "Sun shadow quality",
+				"taa" : "TAA",
+				"terrainconstant" : "Terrain constant",
+				"terrainfrequent" : "Terrain frequent",
+				"terrainveryfrequent" : "Terrain very frequent",
+				"vsync" : "VSync",
+				"vsyncdouble" : "Double"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Colony name",
+			"daymonsters" : "Monsters during daytime",
+			"delete" : "Delete",
+			"doubledmonsters" : "Double monster amount",
+			"load" : "Load",
+			"loadworld" : "Load World",
+			"newworld" : "New World",
+			"play" : "Play",
+			"spawnmonsters" : "Spawn monsters",
+			"worlddate" : "Date",
+			"worldname" : "Name"
 		}
 	},
 	"types" : {
 		"adobe" : "Adobe",
 		"banner" : "Banner",
+		"bannertool" : "Banner Tool",
 		"bed" : "Bed",
 		"berry" : "Berry",
 		"berrybush" : "Berry Seed",
@@ -542,14 +544,14 @@
 		"grasstemperate" : "Grass Temperate",
 		"grasstundra" : "Grass Tundra",
 		"grindstone" : "Grindstone",
-		"guardslingerdayjob" : "Day Slinger Guard",
-		"guardslingernightjob" : "Night Slinger Guard",
 		"guardbowdayjob" : "Day Bow Guard",
 		"guardbownightjob" : "Night Bow Guard",
 		"guardcrossbowdayjob" : "Day Crossbow Guard",
 		"guardcrossbownightjob" : "Night Crossbow Guard",
 		"guardmatchlockdayjob" : "Day Matchlock Guard",
 		"guardmatchlocknightjob" : "Night Matchlock Guard",
+		"guardslingerdayjob" : "Day Slinger Guard",
+		"guardslingernightjob" : "Night Slinger Guard",
 		"gunpowder" : "Gunpowder",
 		"gunpowderpouch" : "Gunpowder Pouch",
 		"gunsmithshop" : "Gunsmith Shop",
@@ -623,6 +625,7 @@
 		"bronzeanvil" : "A unique anvil in the shape of a block",
 		"bronzearrow" : "Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "Foresters need one!",
+		"bronzecoin" : "Not as valuable as the gold variant",
 		"bronzeingot" : "Bronze stronk",
 		"bronzepickaxe" : "Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "Like most foods, use it before it turns green!",
@@ -672,11 +675,13 @@
 		"kiln" : "Turns wooden planks into charcoal",
 		"lead" : "Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "Can be fired by a matchlock gun",
+		"leavestaiga" : "I've got a Christmas feeling now",
 		"leavestemperate" : "Try to jump into a pile of these from a high tower",
 		"linen" : "Lingerie means underwear made of linen",
 		"linenbag" : "Better than a plastic bag",
 		"linenpouch" : "Can be used to store gunpowder",
 		"linseedoil" : "Makes things shiny",
+		"logtaiga" : "Slightly colder",
 		"logtemperate" : "Like an output log, but different",
 		"matchlockgun" : "Requires gunpowder pouches to fire lead bullets",
 		"mint" : "It's not counterfeiting if the king says it's okay",
@@ -711,6 +716,5 @@
 		"wheat" : "A colonist with a grindstone will turn this into flour",
 		"wheatstage1" : "Future bread",
 		"workbench" : "Recruits an artisan. Will do the crafting for you!"
-	},
-	"coverage" : 100
+	}
 }

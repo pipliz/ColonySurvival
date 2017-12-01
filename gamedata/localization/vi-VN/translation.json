@@ -1,561 +1,504 @@
 {
+	"coverage" : 43.3628318584071,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Quay trở lại trò chơi",
+			"info" : "Thông tin",
+			"quitdesktop" : "Thoát tới Deskop",
+			"quitmain" : "Thoát tới Menu",
+			"settings" : "Cài đặt"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "_MISSING_Ammo:",
+			"bedcount" : "Giường:",
+			"colonistcount" : "Thuộc địa:",
+			"foodstorage" : "Thực phẩm:",
+			"foodusage" : "Foods/day:",
+			"laborercount" : "Thất nghiệp:"
+		},
 		"general" : {
-			"close" : "Đóng",
-			"back" : "Trở lại",
 			"apply" : "Áp dụng",
-			"none" : "Trống",
-			"reset" : "Đặt lại",
+			"back" : "Trở lại",
+			"close" : "Đóng",
 			"inputplaceholder" : "Nhập văn bản",
+			"next" : "_MISSING_Next",
+			"none" : "Trống",
 			"previous" : "_MISSING_Previous",
-			"next" : "_MISSING_Next"
+			"reset" : "Đặt lại"
+		},
+		"infomenu" : {
+			"changelog" : "_MISSING_Changelog",
+			"credits" : "Tín dụng",
+			"quickstart" : "Bắt đầu nhanh"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Chơi đơn",
-			"multiplayer" : "Chơi Online",
-			"settings" : "Cài đặt",
+			"back" : "Trở lại",
 			"info" : "Thông tin",
+			"multiplayer" : "Chơi Online",
 			"quit" : "Thoát",
-			"back" : "Trở lại"
-		},
-		"singleplayermenu" : {
-			"newworld" : "Thế giới mới",
-			"colonyname" : "Tên của khu thuộc địa",
-			"spawnmonsters" : "Quái vật tái sinh",
-			"doubledmonsters" : "Tăng gấp đôi số lượng quái vật",
-			"daymonsters" : "Có quái vật trong thời gian ban ngày",
-			"loadworld" : "Tải thế giới",
-			"load" : "Tải",
-			"worldname" : "Tên",
-			"worlddate" : "Ngày",
-			"play" : "Chơi",
-			"delete" : "Xóa"
+			"settings" : "Cài đặt",
+			"singleplayer" : "Chơi đơn"
 		},
 		"multiplayermenu" : {
+			"connect" : "Kết nối đến một server đã chọn",
+			"connectlocal" : "Kết nối đến máy chủ địa phương",
+			"hostserver" : "Host Server",
+			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
 			"joininternet" : "Kết nối mạng internet",
 			"joininternetmenu" : "Tham gia một máy chủ internet",
 			"joinserverlan" : "Kết nối mạng LAN",
 			"joinserverlanfull" : "Tham gia một máy chủ mạng LAN",
-			"servername" : "Tên Sever",
-			"serverplayers" : "Người chơi",
-			"serverping" : "Ping",
-			"hostserver" : "Host Server",
-			"connectlocal" : "Kết nối đến máy chủ địa phương",
-			"connect" : "Kết nối đến một server đã chọn",
 			"refresh" : "Làm mới danh sách máy chủ",
 			"refreshing" : "Đang làm mới...",
-			"startserver" : "Start Sever",
-			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server."
+			"servername" : "Tên Sever",
+			"serverping" : "Ping",
+			"serverplayers" : "Người chơi",
+			"startserver" : "Start Sever"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Maximum",
-			"qualityveryhigh" : "Very high",
-			"qualityhigh" : "High",
-			"qualitymedium" : "Medium",
-			"qualitylow" : "Low",
-			"qualityverylow" : "Very low",
-			"qualityon" : "On",
-			"qualityoff" : "Off",
-			"video" : "Video",
-			"videomenu" : {
-				"full" : "Cài đặt Video",
-				"resolution" : "Độ phân giải",
-				"fullscreen" : "Toàn màn hình",
-				"vsync" : "VSync",
-				"vsyncdouble" : "Double",
-				"anisotropic" : "Lọc bất đẳng hướng x16",
-				"shaderquality" : "Chất lượng đổ bóng",
-				"sunshadowquality" : "Chất lượng đổ bóng mặt trời",
-				"sunshadowcascades" : "Đổ bóng mặt trời",
-				"sunshadowdistance" : "Khoảng cách đổ bóng",
-				"fieldofview" : "Góc nhìn",
-				"lightscattering" : "Tán xạ ánh sáng",
-				"ambientocclusion" : "Môi trường xung quanh",
-				"eyeadaptation" : "Thích hợp cho mắt",
-				"bloom" : "Bloom",
-				"ambientreflections" : "Phản xạ môi trường xung quanh",
-				"depthoffield" : "Độ nét",
-				"antialiasing" : "Khử răng cưa",
-				"fxaalow" : "FXAA Low",
-				"fxaamedium" : "FXAA Medium",
-				"fxaahigh" : "FXAA High",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Bầu trời rất chậm",
-				"skyboxslow" : "Bầu trời chậm",
-				"skyboxfrequent" : "Bầu trời thường xuyên",
-				"skyboxveryfrequent" : "Bầu trời rất thường xuyên",
-				"skyboxconstant" : "Bầu trời không thay đổi",
-				"terrainfrequent" : "Địa hình thường xuyên",
-				"terrainveryfrequent" : "Địa hình rất thường xuyên",
-				"terrainconstant" : "Địa hình liên tục"
-			},
-			"audio" : "Âm thanh",
-			"audiomenu" : {
-				"full" : "Cài đặt âm thanh",
-				"mastervolume" : "Âm thanh tổng thể",
-				"effectsvolume" : "Âm thanh hiệu ứng",
-				"ambientvolume" : "Âm thanh môi trường",
-				"torchvolume" : "Âm thanh đuốc",
-				"menuvolume" : "Menu âm thanh"
-			},
-			"gameplay" : "Gameplay",
-			"gameplaymenu" : {
-				"full" : "Cài đặt Gameplay",
-				"mousesettings" : "Cài đặt chuột",
-				"keymapping" : "Key mapping",
-				"mousemenu" : {
-					"sensitivityx" : "Độ nhạy chuột X-axis",
-					"sensitivityy" : "Độ nhạy chuột Y-axis",
-					"sensitivitylock" : "Khóa nhạy chuột cả hai trục",
-					"invertx" : "Đảo ngược x-axis",
-					"inverty" : "Đảo ngược y-axis",
-					"smooth" : "Làm mịn chuột",
-					"smoothx" : "Làm mịn chuột X-axis",
-					"smoothy" : "Làm mịn chuột Y-axis",
-					"smoothlock" : "Khóa làm mịn chuột cả hai trục"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Đặt lại tất cả"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
+					"name" : "_MISSING_Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
+					"name" : "_MISSING_Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
+					"name" : "_MISSING_Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
+					"name" : "_MISSING_Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"name" : "_MISSING_Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"name" : "_MISSING_Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"name" : "_MISSING_Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"name" : "_MISSING_Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "_MISSING_Increases Max HP to 125",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "_MISSING_Increases Max HP to 150",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "_MISSING_Increases Max HP to 175",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "_MISSING_Increases Max HP to 200",
+					"name" : "_MISSING_Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "Ngôn ngữ",
-			"languagemenu" : {
-				"full" : "Cài đặt ngôn ngữ",
-				"wiptext" : "Điều này không bao gồm tất cả các văn bản trong trò chơi, và một số bản dịch có thể bao gồm ít hơn những người khác.",
-				"language" : "Ngôn ngữ",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Bắt đầu nhanh",
-			"credits" : "Tín dụng",
-			"changelog" : "_MISSING_Changelog"
-		},
-		"escapemenu" : {
-			"back" : "Quay trở lại trò chơi",
-			"settings" : "Cài đặt",
-			"info" : "Thông tin",
-			"quitmain" : "Thoát tới Menu",
-			"quitdesktop" : "Thoát tới Deskop"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Đóng",
+				"description" : "Chọn hay không, bạn muốn loại bỏ khu vực này ở đây.",
+				"header" : "Khu vực menu",
+				"remove" : "Xóa khu vực"
+			},
 			"banner" : {
-				"header" : "Quản lý thuộc địa",
-				"description" : "Thực dân đòi hỏi 5 các đơn vị thực phẩm mỗi ngày, và một chiếc giường. Chiêu mộ một thực dân chi phí 50 thực phẩm đơn vị.",
 				"button" : "Chiêu mộ một thực dân",
+				"description" : "Thực dân đòi hỏi 5 các đơn vị thực phẩm mỗi ngày, và một chiếc giường. Chiêu mộ một thực dân chi phí 50 thực phẩm đơn vị.",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "Quản lý thuộc địa",
 				"resetbutton" : "_MISSING_Reset colony",
 				"resettooltipa" : "_MISSING_",
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
-				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
+			},
+			"death" : {
+				"description" : "Bạn đã chết.",
+				"respawn" : "Tái sinh"
+			},
+			"inventory" : {
+				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"foodvalue" : "Giá trị thực phẩm:",
+				"science" : {
+					"available" : "_MISSING_Available",
+					"completed" : "_MISSING_Completed",
+					"dependencies" : "_MISSING_Required technologies:",
+					"header" : "_MISSING_Science",
+					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist",
+					"requirements" : "_MISSING_Requirements for one research cycle:",
+					"researchactive" : "_MISSING_Current research: {0}",
+					"researchselected" : "_MISSING_Select to research",
+					"unavailable" : "_MISSING_Unavailable"
+				},
+				"stockpiledescription" : "Bạn có thể chỉ chế tạo thứ gì đó với các vật phẩm bên trong chỗ trống ở phía dưới. Người dân thuộc địa chỉ có thể sử dụng trong kho hàng của bạn.",
+				"tooltip" : {
+					"and" : "và",
+					"instockpile" : "_MISSING_in stockpile",
+					"needs" : "Cần: "
+				}
+			},
+			"limits" : {
+				"description" : "Thực dân sẽ làm việc cho đến khi số tiền đã đặt đạt được trong kho dự trữ.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Giới hạn Nướng bánh",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "Giới hạn Chế tạo",
+					"fineryforgejob" : "_MISSING_Finery forge limits",
+					"grinder" : "_MISSING_Grinding limits",
+					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"kilnjob" : "_MISSING_Kiln limits",
+					"merchant" : "Giới hạn mua sắm",
+					"metalsmithjob" : "_MISSING_Metalsmith limits",
+					"minter" : "Giới hạn Đúc",
+					"smelter" : "Giới hạn Luyện kim",
+					"tailor" : "_MISSING_Tailoring limits",
+					"technologist" : "_MISSING_Technologist limits",
+					"woodcutter" : "_MISSING_Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Nhấn F1 để đóng hoặc mở lại menu này",
+				"closetoggle" : "Không hiển thị hiện lại lần nữa",
+				"next" : "Tiếp theo",
+				"openmanual" : "Mở bằng tay (PDF)",
+				"previous" : "Trước"
+			},
+			"specialblockremoval" : {
+				"button" : "_MISSING_Remove",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"header" : "_MISSING_Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "Xây dựng",
+				"buildera" : "",
+				"builderb" : "Cần một khu vực xây dựng",
+				"builderc" : "Xây dựng thứ gì đó",
+				"description" : "Chọn loại khu vực bạn muốn tạo.",
+				"destroyer" : "Phá hủy",
+				"destroyera" : "",
+				"destroyerb" : "Cần một khu vực để phá hủy",
+				"destroyerc" : "Phá hủy thứ gì đó",
+				"header" : "Công cụ xây dựng"
 			},
 			"tooljob" : {
-				"header" : "Công cụ lệnh",
+				"berrya" : "_MISSING_Quick and easy food, start with this!",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "_MISSING_Berry Farmer",
+				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
+				"bow" : "_MISSING_Bow",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "Bao gồm khu vực hiện có",
+				"crossbow" : "_MISSING_Crossbow",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Chọn loại khu vực bạn muốn tạo.",
-				"wheatfarmer" : "Nông dân trồng lúa mì",
-				"wheata" : "",
-				"miner" : "Thợ mỏ",
-				"minera" : "",
+				"flaxa" : "",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "Nông dân trồng cây lanh",
+				"flaxfarmertool" : "Công cụ Nông dân trồng cây lanh",
 				"forester" : "Người trồng rừng",
 				"forestera" : "",
-				"flaxfarmer" : "Nông dân trồng cây lanh",
-				"flaxa" : "",
-				"notflat" : "Không bằng phẳng",
-				"toosmall" : "Quá nhỏ",
-				"toolarge" : "Quá lớn",
-				"coversarea" : "Bao gồm khu vực hiện có",
-				"toonarrow" : "Quá hẹp đối với cây",
-				"notarable" : "Không thể trồng trọt",
-				"occupiedblocks" : "Bị chiếm bởi các khối",
-				"wheatfarmertool" : "Công cụ Nông dân trồng lúa mì",
-				"minertool" : "Công cụ Thợ mỏ",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"forestertool" : "Công cụ Người trồng rừng",
-				"flaxfarmertool" : "Công cụ Nông dân trồng cây lanh",
-				"notool" : "Không có công cụ lựa chọn",
-				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
-				"berryfarmer" : "_MISSING_Berry Farmer",
-				"berrya" : "_MISSING_Quick and easy food, start with this!",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"header" : "Công cụ lệnh",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
 				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"matchlock" : "_MISSING_Matchlock",
 				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
-			},
-			"toolconstruction" : {
-				"header" : "Công cụ xây dựng",
-				"description" : "Chọn loại khu vực bạn muốn tạo.",
-				"builder" : "Xây dựng",
-				"buildera" : "",
-				"builderb" : "Cần một khu vực xây dựng",
-				"builderc" : "Xây dựng thứ gì đó",
-				"destroyer" : "Phá hủy",
-				"destroyera" : "",
-				"destroyerb" : "Cần một khu vực để phá hủy",
-				"destroyerc" : "Phá hủy thứ gì đó"
-			},
-			"areaselection" : {
-				"header" : "Khu vực menu",
-				"description" : "Chọn hay không, bạn muốn loại bỏ khu vực này ở đây.",
-				"close" : "Đóng",
-				"remove" : "Xóa khu vực"
-			},
-			"inventory" : {
-				"stockpiledescription" : "Bạn có thể chỉ chế tạo thứ gì đó với các vật phẩm bên trong chỗ trống ở phía dưới. Người dân thuộc địa chỉ có thể sử dụng trong kho hàng của bạn.",
-				"foodvalue" : "Giá trị thực phẩm:",
-				"tooltip" : {
-					"needs" : "Cần: ",
-					"and" : "và",
-					"instockpile" : "_MISSING_in stockpile"
-				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
-				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Giới hạn Chế tạo",
-					"baker" : "Giới hạn Nướng bánh",
-					"smelter" : "Giới hạn Luyện kim",
-					"minter" : "Giới hạn Đúc",
-					"merchant" : "Giới hạn mua sắm",
-					"grinder" : "_MISSING_Grinding limits",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
-				},
-				"description" : "Thực dân sẽ làm việc cho đến khi số tiền đã đặt đạt được trong kho dự trữ.",
-				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "Bạn đã chết.",
-				"respawn" : "Tái sinh"
-			},
-			"quickstart" : {
-				"previous" : "Trước",
-				"next" : "Tiếp theo",
-				"openmanual" : "Mở bằng tay (PDF)",
-				"closehelp" : "Nhấn F1 để đóng hoặc mở lại menu này",
-				"closetoggle" : "Không hiển thị hiện lại lần nữa"
-			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"miner" : "Thợ mỏ",
+				"minera" : "",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Công cụ Thợ mỏ",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "Không thể trồng trọt",
+				"notflat" : "Không bằng phẳng",
+				"notool" : "Không có công cụ lựa chọn",
+				"occupiedblocks" : "Bị chiếm bởi các khối",
+				"slinger" : "_MISSING_Slinger",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"toolarge" : "Quá lớn",
+				"toonarrow" : "Quá hẹp đối với cây",
+				"toosmall" : "Quá nhỏ",
+				"wheata" : "",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "Nông dân trồng lúa mì",
+				"wheatfarmertool" : "Công cụ Nông dân trồng lúa mì"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Giường:",
-			"colonistcount" : "Thuộc địa:",
-			"laborercount" : "Thất nghiệp:",
-			"foodstorage" : "Thực phẩm:",
-			"foodusage" : "Foods/day:",
-			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "_MISSING_Basics",
 				"description" : "_MISSING_Welcome to Colony Survival!",
+				"header" : "_MISSING_Basics",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "_MISSING_You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
 				"text3" : "_MISSING_Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "_MISSING_Food Production",
 				"description" : "_MISSING_You'll need food to recruit and sustain your colonists!",
+				"header" : "_MISSING_Food Production",
 				"text1" : "_MISSING_Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
 				"text2" : "_MISSING_Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
 				"text3" : "_MISSING_After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
 			},
 			"page3" : {
-				"header" : "_MISSING_Colony Defense",
 				"description" : "_MISSING_Defend your colony against the monsters of the night!",
+				"header" : "_MISSING_Colony Defense",
 				"text1" : "_MISSING_At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
 				"text2" : "_MISSING_Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+		"settingsmenu" : {
+			"audio" : "Âm thanh",
+			"audiomenu" : {
+				"ambientvolume" : "Âm thanh môi trường",
+				"effectsvolume" : "Âm thanh hiệu ứng",
+				"full" : "Cài đặt âm thanh",
+				"mastervolume" : "Âm thanh tổng thể",
+				"menuvolume" : "Menu âm thanh",
+				"torchvolume" : "Âm thanh đuốc"
+			},
+			"gameplay" : "Gameplay",
+			"gameplaymenu" : {
+				"full" : "Cài đặt Gameplay",
+				"keymapping" : "Key mapping",
+				"keymenu" : {
+					"resetall" : "Đặt lại tất cả"
 				},
-				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+				"mousemenu" : {
+					"invertx" : "Đảo ngược x-axis",
+					"inverty" : "Đảo ngược y-axis",
+					"sensitivitylock" : "Khóa nhạy chuột cả hai trục",
+					"sensitivityx" : "Độ nhạy chuột X-axis",
+					"sensitivityy" : "Độ nhạy chuột Y-axis",
+					"smooth" : "Làm mịn chuột",
+					"smoothlock" : "Khóa làm mịn chuột cả hai trục",
+					"smoothx" : "Làm mịn chuột X-axis",
+					"smoothy" : "Làm mịn chuột Y-axis"
 				},
-				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Cài đặt chuột"
+			},
+			"language" : "Ngôn ngữ",
+			"languagemenu" : {
+				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "Cài đặt ngôn ngữ",
+				"language" : "Ngôn ngữ",
+				"wiptext" : "Điều này không bao gồm tất cả các văn bản trong trò chơi, và một số bản dịch có thể bao gồm ít hơn những người khác."
+			},
+			"qualityhigh" : "High",
+			"qualitylow" : "Low",
+			"qualitymaximum" : "Maximum",
+			"qualitymedium" : "Medium",
+			"qualityoff" : "Off",
+			"qualityon" : "On",
+			"qualityveryhigh" : "Very high",
+			"qualityverylow" : "Very low",
+			"video" : "Video",
+			"videomenu" : {
+				"ambientocclusion" : "Môi trường xung quanh",
+				"ambientreflections" : "Phản xạ môi trường xung quanh",
+				"anisotropic" : "Lọc bất đẳng hướng x16",
+				"antialiasing" : "Khử răng cưa",
+				"bloom" : "Bloom",
+				"depthoffield" : "Độ nét",
+				"eyeadaptation" : "Thích hợp cho mắt",
+				"fieldofview" : "Góc nhìn",
+				"full" : "Cài đặt Video",
+				"fullscreen" : "Toàn màn hình",
+				"fxaahigh" : "FXAA High",
+				"fxaalow" : "FXAA Low",
+				"fxaamedium" : "FXAA Medium",
+				"lightscattering" : "Tán xạ ánh sáng",
+				"resolution" : "Độ phân giải",
+				"shaderquality" : "Chất lượng đổ bóng",
+				"skyboxconstant" : "Bầu trời không thay đổi",
+				"skyboxfrequent" : "Bầu trời thường xuyên",
+				"skyboxslow" : "Bầu trời chậm",
+				"skyboxveryfrequent" : "Bầu trời rất thường xuyên",
+				"skyboxveryslow" : "Bầu trời rất chậm",
+				"sunshadowcascades" : "Đổ bóng mặt trời",
+				"sunshadowdistance" : "Khoảng cách đổ bóng",
+				"sunshadowquality" : "Chất lượng đổ bóng mặt trời",
+				"taa" : "TAA",
+				"terrainconstant" : "Địa hình liên tục",
+				"terrainfrequent" : "Địa hình thường xuyên",
+				"terrainveryfrequent" : "Địa hình rất thường xuyên",
+				"vsync" : "VSync",
+				"vsyncdouble" : "Double"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Tên của khu thuộc địa",
+			"daymonsters" : "Có quái vật trong thời gian ban ngày",
+			"delete" : "Xóa",
+			"doubledmonsters" : "Tăng gấp đôi số lượng quái vật",
+			"load" : "Tải",
+			"loadworld" : "Tải thế giới",
+			"newworld" : "Thế giới mới",
+			"play" : "Chơi",
+			"spawnmonsters" : "Quái vật tái sinh",
+			"worlddate" : "Ngày",
+			"worldname" : "Tên"
 		}
 	},
 	"types" : {
-		"grass" : "Cỏ",
-		"grasstemperate" : "Cỏ Ôn đới",
-		"grasstundra" : "Cỏ Lãnh nguyên",
-		"grasstaiga" : "Cỏ Rừng rậm cây lá kim",
-		"grasssavanna" : "Cỏ Thảo nguyên",
-		"grassrainforest" : "Cỏ Rừng mưa nhiệt đới",
-		"water" : "Nước",
-		"sand" : "Cát",
-		"snow" : "Tuyết",
-		"banner" : "Lá cờ",
-		"dirt" : "Đất",
-		"stoneblock" : "Khối đá",
-		"planks" : "Mảnh gỗ",
-		"log" : "Gỗ thô",
-		"logtemperate" : "Gỗ thô Ôn đới",
-		"logtaiga" : "Gỗ thô Rừng rậm cây lá kim",
-		"leaves" : "Lá",
-		"leavestemperate" : "Lá Ôn đới",
-		"leavestaiga" : "Lá rừng rậm lá kim",
-		"torch" : "Đuốc",
-		"crate" : "Thùng",
-		"stonebricks" : "Gạch đá",
-		"coatedplanks" : "Tấm phủ",
 		"adobe" : "Adobe",
-		"workbench" : "Bàn làm việc",
-		"mint" : "Bạc Hà",
-		"shop" : "Cửa hàng",
-		"plasterblock" : "Khối thạch cao",
-		"furnace" : "Lò nung",
-		"oven" : "Lò nướng",
-		"sappling" : "Cây non",
-		"flaxstage1" : "Hạt lanh",
-		"wheatstage1" : "Hạt giống lúa mì",
-		"straw" : "Rơm",
-		"linseedoil" : "Dầu hạt lanh",
-		"flax" : "Sợi lanh",
-		"wheat" : "Lúa mì",
-		"bread" : "Bánh mì",
-		"coalore" : "Quặng than đá",
-		"gypsum" : "hạch cao",
-		"ironore" : "Quặng sắt",
-		"goldore" : "Quặng vàng",
-		"ironingot" : "Thỏi sắt",
-		"goldingot" : "Thỏi vàng",
-		"goldcoin" : "Đồng vàng",
-		"bow" : "Cây cung",
-		"commandtool" : "Công cụ lệnh",
+		"banner" : "Lá cờ",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Giường",
-		"clay" : "Đất sét",
-		"bricks" : "Gạch",
-		"berrybush" : "_MISSING_Berry Seed",
 		"berry" : "_MISSING_Berry",
-		"grindstone" : "_MISSING_Grindstone",
-		"flour" : "_MISSING_Flour",
-		"cherrysapling" : "_MISSING_Cherry Sapling",
-		"cherryblossom" : "_MISSING_Cherry Blossom",
-		"redplanks" : "_MISSING_Red Planks",
+		"berrybush" : "_MISSING_Berry Seed",
 		"blackplanks" : "_MISSING_Black Planks",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "Cây cung",
 		"bowstring" : "_MISSING_Bowstring",
+		"bread" : "Bánh mì",
+		"bricks" : "Gạch",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "_MISSING_Bronze Ingot",
 		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
 		"bronzeplate" : "_MISSING_Bronze Plate",
+		"carpetblue" : "_MISSING_Blue Carpet",
+		"carpetred" : "_MISSING_Red Carpet",
+		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
+		"cherryblossom" : "_MISSING_Cherry Blossom",
+		"cherrysapling" : "_MISSING_Cherry Sapling",
+		"clay" : "Đất sét",
+		"clothing" : "_MISSING_Clothing",
+		"coalore" : "Quặng than đá",
+		"coatedplanks" : "Tấm phủ",
 		"cokes" : "_MISSING_Cokes",
+		"commandtool" : "Công cụ lệnh",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
+		"crate" : "Thùng",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"dirt" : "Đất",
 		"fineryforge" : "_MISSING_Finery Forge",
+		"firewood" : "_MISSING_Firewood",
+		"flax" : "Sợi lanh",
+		"flaxstage1" : "Hạt lanh",
+		"flour" : "_MISSING_Flour",
+		"furnace" : "Lò nung",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"goldcoin" : "Đồng vàng",
+		"goldingot" : "Thỏi vàng",
+		"goldore" : "Quặng vàng",
+		"grass" : "Cỏ",
+		"grassrainforest" : "Cỏ Rừng mưa nhiệt đới",
+		"grasssavanna" : "Cỏ Thảo nguyên",
+		"grasstaiga" : "Cỏ Rừng rậm cây lá kim",
+		"grasstemperate" : "Cỏ Ôn đới",
+		"grasstundra" : "Cỏ Lãnh nguyên",
+		"grindstone" : "_MISSING_Grindstone",
 		"guardbowdayjob" : "_MISSING_Day Bow Guard",
 		"guardbownightjob" : "_MISSING_Night Bow Guard",
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
 		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"gunpowder" : "_MISSING_Gunpowder",
+		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
+		"gunsmithshop" : "_MISSING_Gunsmith Shop",
+		"gypsum" : "hạch cao",
+		"ironblock" : "_MISSING_Iron Block",
+		"ironingot" : "Thỏi sắt",
+		"ironore" : "Quặng sắt",
+		"ironrivet" : "_MISSING_Iron Rivet",
+		"ironsword" : "_MISSING_Iron Sword",
+		"ironwrought" : "_MISSING_Wrought Iron",
+		"kiln" : "_MISSING_Kiln",
+		"lead" : "_MISSING_Lead",
+		"leadbullet" : "_MISSING_Lead Bullet",
+		"leaves" : "Lá",
+		"leavestaiga" : "Lá rừng rậm lá kim",
+		"leavestemperate" : "Lá Ôn đới",
+		"linen" : "_MISSING_Linen",
+		"linenbag" : "_MISSING_Linen Bag",
+		"linenpouch" : "_MISSING_Linen Pouch",
+		"linseedoil" : "Dầu hạt lanh",
+		"log" : "Gỗ thô",
+		"logtaiga" : "Gỗ thô Rừng rậm cây lá kim",
+		"logtemperate" : "Gỗ thô Ôn đới",
+		"matchlockgun" : "_MISSING_Matchlock Gun",
+		"minerjob" : "_MISSING_Miner Job",
+		"mint" : "Bạc Hà",
+		"oven" : "Lò nướng",
+		"planks" : "Mảnh gỗ",
+		"plasterblock" : "Khối thạch cao",
+		"redplanks" : "_MISSING_Red Planks",
+		"salpeter" : "_MISSING_Salpeter",
+		"sand" : "Cát",
+		"sappling" : "Cây non",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagbasic" : "_MISSING_Basic Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"sciencebaglife" : "_MISSING_Life Science Bag",
+		"sciencebagmilitary" : "_MISSING_Military Science Bag",
+		"sciencelab" : "_MISSING_Science Lab",
+		"shop" : "Cửa hàng",
+		"silveringot" : "_MISSING_Silver Ingot",
+		"sling" : "_MISSING_Sling",
+		"slingbullet" : "_MISSING_Sling Bullet",
+		"snow" : "Tuyết",
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"steelingot" : "_MISSING_Steel Ingot",
+		"steelparts" : "_MISSING_Steel Parts",
+		"stoneblock" : "Khối đá",
+		"stonebricks" : "Gạch đá",
+		"straw" : "Rơm",
+		"tailorshop" : "_MISSING_Tailor Shop",
+		"technologisttable" : "_MISSING_Technologist's Table",
+		"tin" : "_MISSING_Tin",
+		"torch" : "Đuốc",
+		"water" : "Nước",
+		"wheat" : "Lúa mì",
+		"wheatstage1" : "Hạt giống lúa mì",
+		"workbench" : "Bàn làm việc"
 	},
 	"typeuses" : {
-		"planks" : "Bây giờ là 4 lần khối lượng gỗ thô!",
-		"torch" : "Và để có được ánh sáng!",
-		"crate" : "Cho tất cả các nhu cầu lưu trữ của bạn!",
-		"workbench" : "Chiêu mộ một thợ thủ công. Họ sẽ làm đồ thủ công dành cho bạn!",
-		"plasterblock" : "Chiêu mộ một lính gác. Họ sẽ nhắm vào những con quái vật và bảo vệ chúng ta!",
-		"wheatstage1" : "Bánh mì trong tương lai",
-		"straw" : "Cần thiết cho giường, sản phẩm phụ của nông nghiệp lúa mì",
-		"bread" : "Ngon, chữa lành vết thương cho bạn.",
-		"bed" : "Làm cho ngủ dễ dàng hơn",
-		"bow" : "Cần một lính gác.!",
-		"snow" : "Không biết gì cả.",
-		"grasstemperate" : "Ra khỏi vườn cỏ của tôi!",
-		"grasstundra" : "Ra khỏi vườn cỏ của tôi!",
-		"grasstaiga" : "Ra khỏi vườn cỏ của tôi!",
-		"grasssavanna" : "Cỏ dường như xanh hơn ở phía bên kia!",
-		"grassrainforest" : "Cỏ này có vẻ rất xanh.",
-		"water" : "Trong kho của bạn không nên có cái này!",
-		"sand" : "Không kết hợp tốt với rắn",
-		"dirt" : "Đất",
 		"adobe" : "Đất cho người giàu",
-		"mint" : "Nó không phải hàng giả nếu nhà vua nói rằng nó là okay",
-		"flaxstage1" : "Đặt nó trong lòng đất",
-		"flax" : "Những bông hoa đẹp nhất trong các trò chơi. Và chỉ có một",
-		"linseedoil" : "Làm cho mọi thứ sáng bóng",
-		"coatedplanks" : "Sáng bóng!",
-		"clay" : "Tôi muốn bạn có thể chạm vào nó",
-		"bricks" : "Sau đó là một trận đấu kiểu Hà Lan.",
-		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
-		"shop" : "_MISSING_Buying only, no selling",
-		"flour" : "_MISSING_A colonist with an oven will bake this into bread",
-		"grindstone" : "_MISSING_Used to grind wheat into flour",
-		"berrybush" : "_MISSING_Colonists can plant these for easy food",
+		"bed" : "Làm cho ngủ dễ dàng hơn",
 		"berry" : "_MISSING_Not poisonous",
-		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
+		"berrybush" : "_MISSING_Colonists can plant these for easy food",
 		"blackplanks" : "_MISSING_Highly flammable",
-		"cherryblossom" : "_MISSING_The pinkest thing in the game",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "Cần một lính gác.!",
 		"bowstring" : "_MISSING_Ploink",
+		"bread" : "Ngon, chữa lành vết thương cho bạn.",
+		"bricks" : "Sau đó là một trận đấu kiểu Hà Lan.",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
+		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
+		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "_MISSING_The pinkest thing in the game",
+		"clay" : "Tôi muốn bạn có thể chạm vào nó",
+		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
+		"coalore" : "_MISSING_Warning: might cause climate problems",
+		"coatedplanks" : "Sáng bóng!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "Cho tất cả các nhu cầu lưu trữ của bạn!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"dirt" : "Đất",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "Những bông hoa đẹp nhất trong các trò chơi. Và chỉ có một",
+		"flaxstage1" : "Đặt nó trong lòng đất",
+		"flour" : "_MISSING_A colonist with an oven will bake this into bread",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
+		"goldcoin" : "_MISSING_With a portrait of the king on one side",
+		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
+		"goldore" : "_MISSING_Don't lose it",
+		"grassrainforest" : "Cỏ này có vẻ rất xanh.",
+		"grasssavanna" : "Cỏ dường như xanh hơn ở phía bên kia!",
+		"grasstaiga" : "Ra khỏi vườn cỏ của tôi!",
+		"grasstemperate" : "Ra khỏi vườn cỏ của tôi!",
+		"grasstundra" : "Ra khỏi vườn cỏ của tôi!",
+		"grindstone" : "_MISSING_Used to grind wheat into flour",
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
+		"linen" : "_MISSING_Lingerie means underwear made of linen",
+		"linenbag" : "_MISSING_Better than a plastic bag",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "Làm cho mọi thứ sáng bóng",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "_MISSING_Like an output log, but different",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "Nó không phải hàng giả nếu nhà vua nói rằng nó là okay",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "Bây giờ là 4 lần khối lượng gỗ thô!",
+		"plasterblock" : "Chiêu mộ một lính gác. Họ sẽ nhắm vào những con quái vật và bảo vệ chúng ta!",
+		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "Không kết hợp tốt với rắn",
+		"sappling" : "_MISSING_Future tree",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "_MISSING_Required to research basic science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"shop" : "_MISSING_Buying only, no selling",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "Không biết gì cả.",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"straw" : "Cần thiết cho giường, sản phẩm phụ của nông nghiệp lúa mì",
+		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
+		"technologisttable" : "_MISSING_Crafts Science Bags",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 43.6720142602496
+		"torch" : "Và để có được ánh sáng!",
+		"water" : "Trong kho của bạn không nên có cái này!",
+		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
+		"wheatstage1" : "Bánh mì trong tương lai",
+		"workbench" : "Chiêu mộ một thợ thủ công. Họ sẽ làm đồ thủ công dành cho bạn!"
+	}
 }

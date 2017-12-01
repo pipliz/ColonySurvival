@@ -260,10 +260,14 @@ Builtin callback uses:
 void OnQuitEarly ()
 Called upon quitting gracefully
 General.Application.OnQuit @ -200, called before most other on quit actions
+Builtin callback uses:
+  pipliz.shared.waitforasyncquitsearly
+    Waits for any async autosaving etc to complete before starting onquit events
 
 void OnQuit ()
 Called upon quitting gracefully
 General.Application.OnQuit @ 0, after connected players are disconnected, various things saving at the same timepipliz.apiprovider.registerrecipes
+Builtin callback uses:
   pipliz.server.ai.aimanager.quitthread
     Pokes the AI precalculation thread from sleeping so it can quit
   pipliz.server.saveberryareajobs
@@ -387,6 +391,11 @@ A chunk is saved to the region. The chunk is locked for reading data.
 
 void OnLoadedChunkFromRegion ()
 A chunk is filled from a region in memory. The chunk is locked for writing data.
+
+void OnAutoSaveWorld ()
+Triggered every x seconds, to autosave non-block data (jobs, npc's, players)
+Builtin callback uses:
+  A lot. Basically all callbacks from OnQuit to do with saving are in here as well (but then with auto in their identifier)
 
 NPC temporary values - unused by server code
 Monster temporary values - unused by server code

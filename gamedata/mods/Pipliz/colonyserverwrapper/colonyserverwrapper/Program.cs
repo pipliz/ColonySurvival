@@ -158,26 +158,35 @@ namespace ColonyServerWrapper
 			WriteConsole("Setting working directory to {0}", newPath);
 		}
 
-		static void ListHelp () {
-			WriteConsole ("Available commands:");
-			WriteConsole ("quit                      - Exits this program");
-			WriteConsole ("list,help,?               - Lists available commands");
-			WriteConsole ("start_server              - Starts a server. Arguments possible:");
-			WriteConsole ("| +server.world           - followed by worldname to load/create");
-			WriteConsole ("| +server.name            - server name to display in the server browser");
-			WriteConsole ("| +server.networktype     - Network type to host as, options are Singleplayer (connects to client), LAN (localhost client connects), SteamLAN, SteamOnline");
-			WriteConsole ("| +server.maxplayers      - max players to be active at the same time, default 10");
-			WriteConsole ("| +server.gameport        - port used by the game (for discovery mostly) default 27016");
-			WriteConsole ("| +server.ip              - which IP to use to select the network adapter. Not needed in most cases. 0.0.0.0 for auto");
-			WriteConsole ("| +server.steamport       - port used by steam, default 27017");
-			WriteConsole ("| +server.usevac          - whether to filter for VAC status, true or false. Untested, default false.");
-			WriteConsole ("| +server.seed            - if new world, seed used to generate terrain. type integer");
-			WriteConsole ("| +server.monsterson      - if new world, whether to spawn monsters. default true");
-			WriteConsole ("| +server.initialsettings - if new world, initialsettings file to use, default normal");
-			WriteConsole ("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
-			WriteConsole ("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
-			WriteConsole ("stop_server             - Stops a server");
-			WriteConsole ("send                    - Send text to the server (example: send Hey Everyone!)");
+		static void ListHelp ()
+		{
+			WriteConsole("Available commands:");
+			WriteConsole("quit                      - Exits this program");
+			WriteConsole("list,help,?               - Lists available commands");
+			WriteConsole("start_server              - Starts a server. Arguments possible:");
+			WriteConsole("- Example: start_server +server.world \"test world\" +server.networktype LAN");
+			WriteConsole("| All options and things below are case sensitive");
+			WriteConsole("| +server.world           - followed by worldname to load/create");
+			WriteConsole("| +server.name            - server name to display in the server browser");
+			WriteConsole("| +server.networktype     - Network type to host. Possible options below:");
+			WriteConsole("-| Singleplayer  - connects to a localhost client, not really usable manually");
+			WriteConsole(" | LAN           - allows connecting from localhost through the ingame button");
+			WriteConsole(" | SteamLAN      - steam networking, does not port forward or check authentication");
+			WriteConsole(" | SteamOnline   - steam networking, port forwards and checks authentication");
+			WriteConsole("| +server.maxplayers      - default 10; max players to be active at the same time");
+			WriteConsole("| +server.gameport        - default 27016; port queried for info to display in the server browser");
+			WriteConsole("| +server.ip              - default 0.0.0.0 (auto); IP to use when selecting local adapter");
+			WriteConsole("| +server.steamport       - default 27017; port passed for 'steam use', seems unused");
+			WriteConsole("| +server.usevac          - default false; whether to filter for VAC status, true or false");
+			WriteConsole("| +server.seed            - if new world, seed used to generate terrain. type integer");
+			WriteConsole("| +server.monsterson      - if new world, whether to spawn monsters. default true");
+			WriteConsole("| +server.initialsettings - if new world, initialsettings file to use, default normal");
+			WriteConsole("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
+			WriteConsole("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
+			WriteConsole("stop_server             - Stops a server");
+			WriteConsole("send                    - Send text to the server");
+			WriteConsole("- Example 1: send Hey Everyone!");
+			WriteConsole("| Example 2: send /time add 10");
 		}
 
 		static void SendLog (string log) {

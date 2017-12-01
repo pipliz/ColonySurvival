@@ -1,0 +1,22 @@
+0.4.5 (2017-12-01)
+
+-Added a basic autosave for non-block data (players, jobs etc), every 5 minutes by default.
+-Changed saving of JSON files to prevent file corruption if the game crashes during saving (similar to regions change a few patches back).
+-Fixed npc's sometimes deciding to stand at the side of a block that isn't the closest to them
+-Fixed an issue with water spreading (it would spread anyway even after you filled a water block)
+-Fix an issue where changing multiple blocks at the same time could cause issues for pathfinding
+-Possibly fix an issue with the forester being unable to find a path
+-Added a configuration option to turn off a torch optimization for compatibility reasons
+|  set 'TorchClosePassOptimizationCount' in gamedata/savegames/client.json to 1 to fix these issues. Default is 32
+|  the setting changes how many 'close' torches are rendered together
+|  you may have to launch the game once for the setting to appear
+-The game no longer keeps the area around a banner loaded if there's no colonists associated with the colony
+-Tweaked block autosaving to not save everything at once every 16 seconds but every few minutes instead
+-Sorted all translation keys in the locale files
+
+Modding changes:
+-Added OnAutoSaveWorld callback
+-Added player.IDString, which is just a cached version of player.ID.ToString()
+-Made Colony.collection public
+-Changed JSONNode internals to use a sorted list instead of a dictionary
+-Fixed a problem with using sortedList.AddOverride or setting through the indexer

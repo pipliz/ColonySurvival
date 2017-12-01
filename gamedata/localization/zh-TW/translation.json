@@ -1,561 +1,504 @@
 {
+	"coverage" : 44.070796460177,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "返回遊戲",
+			"info" : "資訊",
+			"quitdesktop" : "離開到桌面",
+			"quitmain" : "離開到主選單",
+			"settings" : "設定"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "_MISSING_Ammo:",
+			"bedcount" : "床數:",
+			"colonistcount" : "殖民者數量:",
+			"foodstorage" : "糧食儲藏量:",
+			"foodusage" : "糧食日用量:",
+			"laborercount" : "失業人口:"
+		},
 		"general" : {
-			"close" : "關閉",
-			"back" : "返回",
 			"apply" : "套用",
-			"none" : "無",
-			"reset" : "重置",
+			"back" : "返回",
+			"close" : "關閉",
 			"inputplaceholder" : "輸入",
+			"next" : "_MISSING_Next",
+			"none" : "無",
 			"previous" : "_MISSING_Previous",
-			"next" : "_MISSING_Next"
+			"reset" : "重置"
+		},
+		"infomenu" : {
+			"changelog" : "_MISSING_Changelog",
+			"credits" : "製作人員",
+			"quickstart" : "快速入門指南"
 		},
 		"mainmenu" : {
-			"singleplayer" : "單人遊戲",
-			"multiplayer" : "多人遊戲",
-			"settings" : "設定",
+			"back" : "返回",
 			"info" : "資訊",
+			"multiplayer" : "多人遊戲",
 			"quit" : "離開",
-			"back" : "返回"
-		},
-		"singleplayermenu" : {
-			"newworld" : "新的世界",
-			"colonyname" : "殖民地名稱",
-			"spawnmonsters" : "產生怪物",
-			"doubledmonsters" : "兩倍怪物產生",
-			"daymonsters" : "晝夜產生怪物",
-			"loadworld" : "讀取世界",
-			"load" : "讀取",
-			"worldname" : "世界名稱",
-			"worlddate" : "世界日期",
-			"play" : "遊玩",
-			"delete" : "刪除"
+			"settings" : "設定",
+			"singleplayer" : "單人遊戲"
 		},
 		"multiplayermenu" : {
+			"connect" : "選擇連線伺服器",
+			"connectlocal" : "連線 LAN 伺服器",
+			"hostserver" : "Host 伺服器",
+			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
 			"joininternet" : "加入網際網路",
 			"joininternetmenu" : "加入網際網路伺服器",
 			"joinserverlan" : "加入 LAN 伺服器",
 			"joinserverlanfull" : "玩家數過多。",
-			"servername" : "伺服器名稱",
-			"serverplayers" : "玩家",
-			"serverping" : "Ping",
-			"hostserver" : "Host 伺服器",
-			"connectlocal" : "連線 LAN 伺服器",
-			"connect" : "選擇連線伺服器",
 			"refresh" : "重整伺服器清單",
 			"refreshing" : "重整中",
-			"startserver" : "執行伺服器",
-			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server."
+			"servername" : "伺服器名稱",
+			"serverping" : "Ping",
+			"serverplayers" : "玩家",
+			"startserver" : "執行伺服器"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "最大",
-			"qualityveryhigh" : "非常高",
-			"qualityhigh" : "高",
-			"qualitymedium" : "中",
-			"qualitylow" : "低",
-			"qualityverylow" : "非常低",
-			"qualityon" : "開",
-			"qualityoff" : "關",
-			"video" : "視訊",
-			"videomenu" : {
-				"full" : "視訊設定",
-				"resolution" : "解析度",
-				"fullscreen" : "全螢幕",
-				"vsync" : "垂直同步",
-				"vsyncdouble" : "雙倍垂直同步",
-				"anisotropic" : "各向異性過濾 x16",
-				"shaderquality" : "渲染品質",
-				"sunshadowquality" : "太陽光影品質",
-				"sunshadowcascades" : "太陽光影等級",
-				"sunshadowdistance" : "陰影距離",
-				"fieldofview" : "視野角度",
-				"lightscattering" : "光線散射",
-				"ambientocclusion" : "環境光遮蔽",
-				"eyeadaptation" : "眼睛適應",
-				"bloom" : "Bloom 效果",
-				"ambientreflections" : "環境光遮蔽",
-				"depthoffield" : "景深",
-				"antialiasing" : "抗鋸齒",
-				"fxaalow" : "FXAA 低",
-				"fxaamedium" : "FXAA 中",
-				"fxaahigh" : "FXAA 高",
-				"taa" : "TAA",
-				"skyboxveryslow" : "天空品質非常低",
-				"skyboxslow" : "天空品質低",
-				"skyboxfrequent" : "天空品質高",
-				"skyboxveryfrequent" : "天空品質非常高",
-				"skyboxconstant" : "天空品質最高",
-				"terrainfrequent" : "地形品質高",
-				"terrainveryfrequent" : "地形品質非常高",
-				"terrainconstant" : "地形品質最高"
-			},
-			"audio" : "音訊",
-			"audiomenu" : {
-				"full" : "音訊設定",
-				"mastervolume" : "主音量",
-				"effectsvolume" : "效果音量",
-				"ambientvolume" : "環境音量",
-				"torchvolume" : "火把音量",
-				"menuvolume" : "選單音量"
-			},
-			"gameplay" : "遊戲",
-			"gameplaymenu" : {
-				"full" : "遊戲設定",
-				"mousesettings" : "滑鼠設定",
-				"keymapping" : "操作設定",
-				"mousemenu" : {
-					"sensitivityx" : "滑鼠 X 軸靈敏度",
-					"sensitivityy" : "滑鼠 Y 軸靈敏度",
-					"sensitivitylock" : "X 軸與 Y 軸鎖定",
-					"invertx" : "倒置 X 軸",
-					"inverty" : "倒置 Y 軸",
-					"smooth" : "滑鼠平滑化",
-					"smoothx" : "倒置 X 軸滑鼠平滑度",
-					"smoothy" : "倒置 Y 軸滑鼠平滑度",
-					"smoothlock" : "X 軸與 Y 軸鎖定"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "全部重置"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
+					"name" : "_MISSING_Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
+					"name" : "_MISSING_Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
+					"name" : "_MISSING_Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
+					"name" : "_MISSING_Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"name" : "_MISSING_Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"name" : "_MISSING_Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"name" : "_MISSING_Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"name" : "_MISSING_Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "_MISSING_Increases Max HP to 125",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "_MISSING_Increases Max HP to 150",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "_MISSING_Increases Max HP to 175",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "_MISSING_Increases Max HP to 200",
+					"name" : "_MISSING_Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "語言",
-			"languagemenu" : {
-				"full" : "語言設定",
-				"wiptext" : "未完工程。 這不包括遊戲中的所有文字，有些翻譯可能涵蓋少於其他翻譯。",
-				"language" : "語言",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "快速入門指南",
-			"credits" : "製作人員",
-			"changelog" : "_MISSING_Changelog"
-		},
-		"escapemenu" : {
-			"back" : "返回遊戲",
-			"settings" : "設定",
-			"info" : "資訊",
-			"quitmain" : "離開到主選單",
-			"quitdesktop" : "離開到桌面"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "關閉",
+				"description" : "選擇您是否要移除此處的區域。",
+				"header" : "區域選單",
+				"remove" : "移除區域"
+			},
 			"banner" : {
-				"header" : "殖民地管理",
-				"description" : "殖民者每天需要 5 個食物單位和一張床。 招募殖民者需花費 50 個食物單位。",
 				"button" : "招募殖民者",
+				"description" : "殖民者每天需要 5 個食物單位和一張床。 招募殖民者需花費 50 個食物單位。",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "殖民地管理",
 				"resetbutton" : "重置殖民地",
 				"resettooltipa" : "",
 				"resettooltipb" : "這會殺死您所有的殖民者，並刪除您的工作領域。",
-				"resettooltipc" : "它也給您一個全新的庫存和儲備。",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "它也給您一個全新的庫存和儲備。"
+			},
+			"death" : {
+				"description" : "您已經死了。",
+				"respawn" : "重生"
+			},
+			"inventory" : {
+				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"foodvalue" : "糧食價值:",
+				"science" : {
+					"available" : "_MISSING_Available",
+					"completed" : "_MISSING_Completed",
+					"dependencies" : "_MISSING_Required technologies:",
+					"header" : "_MISSING_Science",
+					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist",
+					"requirements" : "_MISSING_Requirements for one research cycle:",
+					"researchactive" : "_MISSING_Current research: {0}",
+					"researchselected" : "_MISSING_Select to research",
+					"unavailable" : "_MISSING_Unavailable"
+				},
+				"stockpiledescription" : "您只能使用底部的裝備列裡的東西來製作。 殖民者只能使用您的庫存物品。",
+				"tooltip" : {
+					"and" : "與",
+					"instockpile" : "_MISSING_in stockpile",
+					"needs" : "需要: "
+				}
+			},
+			"limits" : {
+				"description" : "殖民者將工作到庫存達到設定量。",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "烘烤限制",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "製作限制",
+					"fineryforgejob" : "_MISSING_Finery forge limits",
+					"grinder" : "_MISSING_Grinding limits",
+					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"kilnjob" : "_MISSING_Kiln limits",
+					"merchant" : "購物限制",
+					"metalsmithjob" : "_MISSING_Metalsmith limits",
+					"minter" : "鑄幣限制",
+					"smelter" : "冶煉限制",
+					"tailor" : "_MISSING_Tailoring limits",
+					"technologist" : "_MISSING_Technologist limits",
+					"woodcutter" : "_MISSING_Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "按下 F1 鍵關閉或重新開啟此選單",
+				"closetoggle" : "不要再顯示",
+				"next" : "下一頁",
+				"openmanual" : "開啟說明書(PDF)",
+				"previous" : "上一頁"
+			},
+			"specialblockremoval" : {
+				"button" : "_MISSING_Remove",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"header" : "_MISSING_Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "建築",
+				"buildera" : "",
+				"builderb" : "需要建築區域",
+				"builderc" : "建築物件",
+				"description" : "選擇您要建立的區域類型。",
+				"destroyer" : "破壞",
+				"destroyera" : "",
+				"destroyerb" : "需要破壞區域",
+				"destroyerc" : "破壞物件",
+				"header" : "施工工具"
 			},
 			"tooljob" : {
-				"header" : "命令工具",
+				"berrya" : "_MISSING_Quick and easy food, start with this!",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "_MISSING_Berry Farmer",
+				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
+				"bow" : "_MISSING_Bow",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "覆蓋現有區域",
+				"crossbow" : "_MISSING_Crossbow",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "選擇您要建立的區域類型。",
-				"wheatfarmer" : "小麥農夫",
-				"wheata" : "",
-				"miner" : "礦工",
-				"minera" : "",
+				"flaxa" : "",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "亞麻農夫",
+				"flaxfarmertool" : "亞麻農夫工具",
 				"forester" : "伐木工",
 				"forestera" : "",
-				"flaxfarmer" : "亞麻農夫",
-				"flaxa" : "",
-				"notflat" : "不平整",
-				"toosmall" : "區域過小",
-				"toolarge" : "區域過大",
-				"coversarea" : "覆蓋現有區域",
-				"toonarrow" : "太狹隘的樹木",
-				"notarable" : "不可耕作",
-				"occupiedblocks" : "區域被佔據",
-				"wheatfarmertool" : "小麥農夫工具",
-				"minertool" : "礦工工具",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"forestertool" : "林務員工具",
-				"flaxfarmertool" : "亞麻農夫工具",
-				"notool" : "沒有選擇工具",
-				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
-				"berryfarmer" : "_MISSING_Berry Farmer",
-				"berrya" : "_MISSING_Quick and easy food, start with this!",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"header" : "命令工具",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
 				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"matchlock" : "_MISSING_Matchlock",
 				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
-			},
-			"toolconstruction" : {
-				"header" : "施工工具",
-				"description" : "選擇您要建立的區域類型。",
-				"builder" : "建築",
-				"buildera" : "",
-				"builderb" : "需要建築區域",
-				"builderc" : "建築物件",
-				"destroyer" : "破壞",
-				"destroyera" : "",
-				"destroyerb" : "需要破壞區域",
-				"destroyerc" : "破壞物件"
-			},
-			"areaselection" : {
-				"header" : "區域選單",
-				"description" : "選擇您是否要移除此處的區域。",
-				"close" : "關閉",
-				"remove" : "移除區域"
-			},
-			"inventory" : {
-				"stockpiledescription" : "您只能使用底部的裝備列裡的東西來製作。 殖民者只能使用您的庫存物品。",
-				"foodvalue" : "糧食價值:",
-				"tooltip" : {
-					"needs" : "需要: ",
-					"and" : "與",
-					"instockpile" : "_MISSING_in stockpile"
-				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
-				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "製作限制",
-					"baker" : "烘烤限制",
-					"smelter" : "冶煉限制",
-					"minter" : "鑄幣限制",
-					"merchant" : "購物限制",
-					"grinder" : "_MISSING_Grinding limits",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
-				},
-				"description" : "殖民者將工作到庫存達到設定量。",
-				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "您已經死了。",
-				"respawn" : "重生"
-			},
-			"quickstart" : {
-				"previous" : "上一頁",
-				"next" : "下一頁",
-				"openmanual" : "開啟說明書(PDF)",
-				"closehelp" : "按下 F1 鍵關閉或重新開啟此選單",
-				"closetoggle" : "不要再顯示"
-			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"miner" : "礦工",
+				"minera" : "",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "礦工工具",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "不可耕作",
+				"notflat" : "不平整",
+				"notool" : "沒有選擇工具",
+				"occupiedblocks" : "區域被佔據",
+				"slinger" : "_MISSING_Slinger",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"toolarge" : "區域過大",
+				"toonarrow" : "太狹隘的樹木",
+				"toosmall" : "區域過小",
+				"wheata" : "",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "小麥農夫",
+				"wheatfarmertool" : "小麥農夫工具"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "床數:",
-			"colonistcount" : "殖民者數量:",
-			"laborercount" : "失業人口:",
-			"foodstorage" : "糧食儲藏量:",
-			"foodusage" : "糧食日用量:",
-			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "_MISSING_Basics",
 				"description" : "_MISSING_Welcome to Colony Survival!",
+				"header" : "_MISSING_Basics",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "_MISSING_You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
 				"text3" : "_MISSING_Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "_MISSING_Food Production",
 				"description" : "_MISSING_You'll need food to recruit and sustain your colonists!",
+				"header" : "_MISSING_Food Production",
 				"text1" : "_MISSING_Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
 				"text2" : "_MISSING_Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
 				"text3" : "_MISSING_After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
 			},
 			"page3" : {
-				"header" : "_MISSING_Colony Defense",
 				"description" : "_MISSING_Defend your colony against the monsters of the night!",
+				"header" : "_MISSING_Colony Defense",
 				"text1" : "_MISSING_At night, monsters will try to attack your colony. Place guards, build walls and dig moats to defend your colony. Monsters cannot climb two blocks.",
 				"text2" : "_MISSING_Do not completely isolate your colony! If there is no path towards your banner, 'Siege Mode' will activate. During Siege Mode, your stored food is quickly consumed.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+		"settingsmenu" : {
+			"audio" : "音訊",
+			"audiomenu" : {
+				"ambientvolume" : "環境音量",
+				"effectsvolume" : "效果音量",
+				"full" : "音訊設定",
+				"mastervolume" : "主音量",
+				"menuvolume" : "選單音量",
+				"torchvolume" : "火把音量"
+			},
+			"gameplay" : "遊戲",
+			"gameplaymenu" : {
+				"full" : "遊戲設定",
+				"keymapping" : "操作設定",
+				"keymenu" : {
+					"resetall" : "全部重置"
 				},
-				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+				"mousemenu" : {
+					"invertx" : "倒置 X 軸",
+					"inverty" : "倒置 Y 軸",
+					"sensitivitylock" : "X 軸與 Y 軸鎖定",
+					"sensitivityx" : "滑鼠 X 軸靈敏度",
+					"sensitivityy" : "滑鼠 Y 軸靈敏度",
+					"smooth" : "滑鼠平滑化",
+					"smoothlock" : "X 軸與 Y 軸鎖定",
+					"smoothx" : "倒置 X 軸滑鼠平滑度",
+					"smoothy" : "倒置 Y 軸滑鼠平滑度"
 				},
-				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "滑鼠設定"
+			},
+			"language" : "語言",
+			"languagemenu" : {
+				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "語言設定",
+				"language" : "語言",
+				"wiptext" : "未完工程。 這不包括遊戲中的所有文字，有些翻譯可能涵蓋少於其他翻譯。"
+			},
+			"qualityhigh" : "高",
+			"qualitylow" : "低",
+			"qualitymaximum" : "最大",
+			"qualitymedium" : "中",
+			"qualityoff" : "關",
+			"qualityon" : "開",
+			"qualityveryhigh" : "非常高",
+			"qualityverylow" : "非常低",
+			"video" : "視訊",
+			"videomenu" : {
+				"ambientocclusion" : "環境光遮蔽",
+				"ambientreflections" : "環境光遮蔽",
+				"anisotropic" : "各向異性過濾 x16",
+				"antialiasing" : "抗鋸齒",
+				"bloom" : "Bloom 效果",
+				"depthoffield" : "景深",
+				"eyeadaptation" : "眼睛適應",
+				"fieldofview" : "視野角度",
+				"full" : "視訊設定",
+				"fullscreen" : "全螢幕",
+				"fxaahigh" : "FXAA 高",
+				"fxaalow" : "FXAA 低",
+				"fxaamedium" : "FXAA 中",
+				"lightscattering" : "光線散射",
+				"resolution" : "解析度",
+				"shaderquality" : "渲染品質",
+				"skyboxconstant" : "天空品質最高",
+				"skyboxfrequent" : "天空品質高",
+				"skyboxslow" : "天空品質低",
+				"skyboxveryfrequent" : "天空品質非常高",
+				"skyboxveryslow" : "天空品質非常低",
+				"sunshadowcascades" : "太陽光影等級",
+				"sunshadowdistance" : "陰影距離",
+				"sunshadowquality" : "太陽光影品質",
+				"taa" : "TAA",
+				"terrainconstant" : "地形品質最高",
+				"terrainfrequent" : "地形品質高",
+				"terrainveryfrequent" : "地形品質非常高",
+				"vsync" : "垂直同步",
+				"vsyncdouble" : "雙倍垂直同步"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "殖民地名稱",
+			"daymonsters" : "晝夜產生怪物",
+			"delete" : "刪除",
+			"doubledmonsters" : "兩倍怪物產生",
+			"load" : "讀取",
+			"loadworld" : "讀取世界",
+			"newworld" : "新的世界",
+			"play" : "遊玩",
+			"spawnmonsters" : "產生怪物",
+			"worlddate" : "世界日期",
+			"worldname" : "世界名稱"
 		}
 	},
 	"types" : {
-		"grass" : "草",
-		"grasstemperate" : "草(溫帯)",
-		"grasstundra" : "草(苔原)",
-		"grasstaiga" : "草(針葉林)",
-		"grasssavanna" : "草(稀樹草原)",
-		"grassrainforest" : "草(雨林)",
-		"water" : "水",
-		"sand" : "砂",
-		"snow" : "雪",
-		"banner" : "旗幟",
-		"dirt" : "土",
-		"stoneblock" : "石塊",
-		"planks" : "木板",
-		"log" : "原木",
-		"logtemperate" : "原木(溫帯)",
-		"logtaiga" : "原木(針葉林)",
-		"leaves" : "樹葉",
-		"leavestemperate" : "樹葉(溫帯)",
-		"leavestaiga" : "樹葉(針葉林)",
-		"torch" : "火把",
-		"crate" : "儲物箱",
-		"stonebricks" : "石磚",
-		"coatedplanks" : "塗層木板",
 		"adobe" : "土磚",
-		"workbench" : "作業場",
-		"mint" : "鑄幣所",
-		"shop" : "商店",
-		"plasterblock" : "石膏塊",
-		"furnace" : "熔爐",
-		"oven" : "烤爐",
-		"sappling" : "樹苗",
-		"flaxstage1" : "亞麻種子",
-		"wheatstage1" : "小麥階段",
-		"straw" : "稻草",
-		"linseedoil" : "亞麻籽油",
-		"flax" : "亞麻",
-		"wheat" : "小麥",
-		"bread" : "麵包",
-		"coalore" : "炭",
-		"gypsum" : "石膏",
-		"ironore" : "鐵礦",
-		"goldore" : "金礦",
-		"ironingot" : "鐵錠",
-		"goldingot" : "金錠",
-		"goldcoin" : "金幣",
-		"bow" : "弓",
-		"commandtool" : "命令工具",
+		"banner" : "旗幟",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "床",
-		"clay" : "黏土",
-		"bricks" : "黏土塊",
-		"berrybush" : "_MISSING_Berry Seed",
 		"berry" : "_MISSING_Berry",
-		"grindstone" : "_MISSING_Grindstone",
-		"flour" : "_MISSING_Flour",
-		"cherrysapling" : "_MISSING_Cherry Sapling",
-		"cherryblossom" : "_MISSING_Cherry Blossom",
-		"redplanks" : "_MISSING_Red Planks",
+		"berrybush" : "_MISSING_Berry Seed",
 		"blackplanks" : "_MISSING_Black Planks",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "弓",
 		"bowstring" : "_MISSING_Bowstring",
+		"bread" : "麵包",
+		"bricks" : "黏土塊",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "_MISSING_Bronze Ingot",
 		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
 		"bronzeplate" : "_MISSING_Bronze Plate",
+		"carpetblue" : "_MISSING_Blue Carpet",
+		"carpetred" : "_MISSING_Red Carpet",
+		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
+		"cherryblossom" : "_MISSING_Cherry Blossom",
+		"cherrysapling" : "_MISSING_Cherry Sapling",
+		"clay" : "黏土",
+		"clothing" : "_MISSING_Clothing",
+		"coalore" : "炭",
+		"coatedplanks" : "塗層木板",
 		"cokes" : "_MISSING_Cokes",
+		"commandtool" : "命令工具",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
+		"crate" : "儲物箱",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"dirt" : "土",
 		"fineryforge" : "_MISSING_Finery Forge",
+		"firewood" : "_MISSING_Firewood",
+		"flax" : "亞麻",
+		"flaxstage1" : "亞麻種子",
+		"flour" : "_MISSING_Flour",
+		"furnace" : "熔爐",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"goldcoin" : "金幣",
+		"goldingot" : "金錠",
+		"goldore" : "金礦",
+		"grass" : "草",
+		"grassrainforest" : "草(雨林)",
+		"grasssavanna" : "草(稀樹草原)",
+		"grasstaiga" : "草(針葉林)",
+		"grasstemperate" : "草(溫帯)",
+		"grasstundra" : "草(苔原)",
+		"grindstone" : "_MISSING_Grindstone",
 		"guardbowdayjob" : "_MISSING_Day Bow Guard",
 		"guardbownightjob" : "_MISSING_Night Bow Guard",
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
 		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"gunpowder" : "_MISSING_Gunpowder",
+		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
+		"gunsmithshop" : "_MISSING_Gunsmith Shop",
+		"gypsum" : "石膏",
+		"ironblock" : "_MISSING_Iron Block",
+		"ironingot" : "鐵錠",
+		"ironore" : "鐵礦",
+		"ironrivet" : "_MISSING_Iron Rivet",
+		"ironsword" : "_MISSING_Iron Sword",
+		"ironwrought" : "_MISSING_Wrought Iron",
+		"kiln" : "_MISSING_Kiln",
+		"lead" : "_MISSING_Lead",
+		"leadbullet" : "_MISSING_Lead Bullet",
+		"leaves" : "樹葉",
+		"leavestaiga" : "樹葉(針葉林)",
+		"leavestemperate" : "樹葉(溫帯)",
+		"linen" : "_MISSING_Linen",
+		"linenbag" : "_MISSING_Linen Bag",
+		"linenpouch" : "_MISSING_Linen Pouch",
+		"linseedoil" : "亞麻籽油",
+		"log" : "原木",
+		"logtaiga" : "原木(針葉林)",
+		"logtemperate" : "原木(溫帯)",
+		"matchlockgun" : "_MISSING_Matchlock Gun",
+		"minerjob" : "_MISSING_Miner Job",
+		"mint" : "鑄幣所",
+		"oven" : "烤爐",
+		"planks" : "木板",
+		"plasterblock" : "石膏塊",
+		"redplanks" : "_MISSING_Red Planks",
+		"salpeter" : "_MISSING_Salpeter",
+		"sand" : "砂",
+		"sappling" : "樹苗",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagbasic" : "_MISSING_Basic Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"sciencebaglife" : "_MISSING_Life Science Bag",
+		"sciencebagmilitary" : "_MISSING_Military Science Bag",
+		"sciencelab" : "_MISSING_Science Lab",
+		"shop" : "商店",
+		"silveringot" : "_MISSING_Silver Ingot",
+		"sling" : "_MISSING_Sling",
+		"slingbullet" : "_MISSING_Sling Bullet",
+		"snow" : "雪",
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"steelingot" : "_MISSING_Steel Ingot",
+		"steelparts" : "_MISSING_Steel Parts",
+		"stoneblock" : "石塊",
+		"stonebricks" : "石磚",
+		"straw" : "稻草",
+		"tailorshop" : "_MISSING_Tailor Shop",
+		"technologisttable" : "_MISSING_Technologist's Table",
+		"tin" : "_MISSING_Tin",
+		"torch" : "火把",
+		"water" : "水",
+		"wheat" : "小麥",
+		"wheatstage1" : "小麥階段",
+		"workbench" : "作業場"
 	},
 	"typeuses" : {
-		"planks" : "現在，4 倍體積的木塊！",
-		"torch" : "充滿光明！",
-		"crate" : "為您的所有存儲需求!",
-		"workbench" : "招募工匠。 將為你做工藝品!",
-		"plasterblock" : "為了那時尚的外表",
-		"wheatstage1" : "未來的麵包",
-		"straw" : "農民需要床",
-		"bread" : "味道不錯，還能治好您的傷口。",
-		"bed" : "讓睡覺更容易",
-		"bow" : "需要一位警衛!",
-		"snow" : "一無所知",
-		"grasstemperate" : "離開我的草坪!",
-		"grasstundra" : "離開我的草坪!",
-		"grasstaiga" : "離開我的草坪!",
-		"grasssavanna" : "另一邊的草看起來更綠了",
-		"grassrainforest" : "這草看起來很綠",
-		"water" : "這玩意不應該在您的清單上",
-		"sand" : "小心蛇",
-		"dirt" : "髒亂的代表",
 		"adobe" : "有錢人的牆",
-		"mint" : "如果國王說沒事的話，那就是沒事",
-		"flaxstage1" : "把它放在地上",
-		"flax" : "比賽中最美麗的花。唯一的一個",
-		"linseedoil" : "做一些出彩的事",
-		"coatedplanks" : "閃亮的!",
-		"clay" : "我希望您能碰它",
-		"bricks" : "畢竟這是一場荷蘭遊戲",
-		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
-		"shop" : "_MISSING_Buying only, no selling",
-		"flour" : "_MISSING_A colonist with an oven will bake this into bread",
-		"grindstone" : "_MISSING_Used to grind wheat into flour",
-		"berrybush" : "_MISSING_Colonists can plant these for easy food",
+		"bed" : "讓睡覺更容易",
 		"berry" : "_MISSING_Not poisonous",
-		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
+		"berrybush" : "_MISSING_Colonists can plant these for easy food",
 		"blackplanks" : "_MISSING_Highly flammable",
-		"cherryblossom" : "_MISSING_The pinkest thing in the game",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "需要一位警衛!",
 		"bowstring" : "_MISSING_Ploink",
+		"bread" : "味道不錯，還能治好您的傷口。",
+		"bricks" : "畢竟這是一場荷蘭遊戲",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
+		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
+		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "_MISSING_The pinkest thing in the game",
+		"clay" : "我希望您能碰它",
+		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
+		"coalore" : "_MISSING_Warning: might cause climate problems",
+		"coatedplanks" : "閃亮的!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "為您的所有存儲需求!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"dirt" : "髒亂的代表",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "比賽中最美麗的花。唯一的一個",
+		"flaxstage1" : "把它放在地上",
+		"flour" : "_MISSING_A colonist with an oven will bake this into bread",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
+		"goldcoin" : "_MISSING_With a portrait of the king on one side",
+		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
+		"goldore" : "_MISSING_Don't lose it",
+		"grassrainforest" : "這草看起來很綠",
+		"grasssavanna" : "另一邊的草看起來更綠了",
+		"grasstaiga" : "離開我的草坪!",
+		"grasstemperate" : "離開我的草坪!",
+		"grasstundra" : "離開我的草坪!",
+		"grindstone" : "_MISSING_Used to grind wheat into flour",
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
+		"linen" : "_MISSING_Lingerie means underwear made of linen",
+		"linenbag" : "_MISSING_Better than a plastic bag",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "做一些出彩的事",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "_MISSING_Like an output log, but different",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "如果國王說沒事的話，那就是沒事",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "現在，4 倍體積的木塊！",
+		"plasterblock" : "為了那時尚的外表",
+		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "小心蛇",
+		"sappling" : "_MISSING_Future tree",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "_MISSING_Required to research basic science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"shop" : "_MISSING_Buying only, no selling",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "一無所知",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"straw" : "農民需要床",
+		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
+		"technologisttable" : "_MISSING_Crafts Science Bags",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 44.3850267379679
+		"torch" : "充滿光明！",
+		"water" : "這玩意不應該在您的清單上",
+		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
+		"wheatstage1" : "未來的麵包",
+		"workbench" : "招募工匠。 將為你做工藝品!"
+	}
 }

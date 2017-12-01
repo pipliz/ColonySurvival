@@ -1,561 +1,504 @@
 {
+	"coverage" : 80.1769911504425,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Spiel fortsetzen",
+			"info" : "Infos",
+			"quitdesktop" : "Verlassen (Zum Desktop)",
+			"quitmain" : "Verlassen (Zum Hauptmenü)",
+			"settings" : "Einstellungen"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "Munition:",
+			"bedcount" : "Betten:",
+			"colonistcount" : "Kolonisten:",
+			"foodstorage" : "Nahrung:",
+			"foodusage" : "Verbrauch:",
+			"laborercount" : "Arbeitslos:"
+		},
 		"general" : {
-			"close" : "Schließen",
-			"back" : "Zurück",
 			"apply" : "Anwenden",
-			"none" : "Nichts",
-			"reset" : "Zurücksetzen",
+			"back" : "Zurück",
+			"close" : "Schließen",
 			"inputplaceholder" : "Text eingeben...",
+			"next" : "Nächste",
+			"none" : "Nichts",
 			"previous" : "Vorherige",
-			"next" : "Nächste"
+			"reset" : "Zurücksetzen"
+		},
+		"infomenu" : {
+			"changelog" : "Changelog",
+			"credits" : "Mitwirkende",
+			"quickstart" : "Schnellstart"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Einzelspieler",
-			"multiplayer" : "Mehrspieler",
-			"settings" : "Einstellungen",
+			"back" : "Zurück",
 			"info" : "Infos",
+			"multiplayer" : "Mehrspieler",
 			"quit" : "Beenden",
-			"back" : "Zurück"
-		},
-		"singleplayermenu" : {
-			"newworld" : "Neue Welt",
-			"colonyname" : "Name der Kolonie:",
-			"spawnmonsters" : "Monster spawnen",
-			"doubledmonsters" : "Doppelte Anzahl der Monster",
-			"daymonsters" : "Monster am Tag",
-			"loadworld" : "Welt laden",
-			"load" : "Laden",
-			"worldname" : "Name",
-			"worlddate" : "Datum",
-			"play" : "Spielen",
-			"delete" : "Löschen"
+			"settings" : "Einstellungen",
+			"singleplayer" : "Einzelspieler"
 		},
 		"multiplayermenu" : {
+			"connect" : "Zu ausgewähltem Server verbinden",
+			"connectlocal" : "Zu lokalem Server verbinden",
+			"hostserver" : "Server hosten",
+			"hostserverdescription" : "Du kannst einen Server hosten, indem du die folgende Datei mit deinem Dateiexplorer öffnest:\nGehe in die Spiel Eigenschaften in Steam und klicke auf 'Lokale Dateien durchsuchen'. Starte 'colonyserver.exe' (Windows) bzw. 'colonyserver.x86_64' (Linux), um einen Server zu hosten.",
 			"joininternet" : "Internetspiel beitreten",
 			"joininternetmenu" : "Trete einem Server über das Internet bei",
 			"joinserverlan" : "Lanspiel beitreten",
 			"joinserverlanfull" : "Trete einem Server über das lokale Netzwerk bei",
-			"servername" : "Name",
-			"serverplayers" : "Spieler",
-			"serverping" : "Ping",
-			"hostserver" : "Server hosten",
-			"connectlocal" : "Zu lokalem Server verbinden",
-			"connect" : "Zu ausgewähltem Server verbinden",
 			"refresh" : "Serverliste aktualisieren",
 			"refreshing" : "Aktualisiert...",
-			"hostserverdescription" : "Du kannst einen Server hosten, indem du die folgende Datei mit deinem Dateiexplorer öffnest:\nGehe in die Spiel Eigenschaften in Steam und klicke auf 'Lokale Dateien durchsuchen'. Starte 'colonyserver.exe' (Windows) bzw. 'colonyserver.x86_64' (Linux), um einen Server zu hosten.",
+			"servername" : "Name",
+			"serverping" : "Ping",
+			"serverplayers" : "Spieler",
 			"startserver" : "Starte server"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Maximum",
-			"qualityveryhigh" : "Sehr hoch",
-			"qualityhigh" : "Hoch",
-			"qualitymedium" : "Mittemäßig",
-			"qualitylow" : "Niedrig",
-			"qualityverylow" : "Sehr niedrig",
-			"qualityon" : "An",
-			"qualityoff" : "Aus",
-			"video" : "Bild",
-			"videomenu" : {
-				"full" : "Bildeinstellungen",
-				"resolution" : "Auflösung",
-				"fullscreen" : "Vollbild",
-				"vsync" : "VSync",
-				"vsyncdouble" : "Doppel",
-				"anisotropic" : "Anisotropische Filterung x16",
-				"shaderquality" : "Shaderqualität",
-				"sunshadowquality" : "Sonnenschatten-Qualität",
-				"sunshadowcascades" : "Sonnenschatten-Kaskaden",
-				"sunshadowdistance" : "Schattenentfernung",
-				"fieldofview" : "Sichtfeld",
-				"lightscattering" : "Lichtbrechung",
-				"ambientocclusion" : "Umgebungsunschärfe",
-				"eyeadaptation" : "Augenanpassung",
-				"bloom" : "Bloom",
-				"ambientreflections" : "Reflektionen",
-				"depthoffield" : "Tiefenunschärfe",
-				"antialiasing" : "Antialiasing",
-				"fxaalow" : "FXAA Niedrig",
-				"fxaamedium" : "FXAA Mittel",
-				"fxaahigh" : "FXAA Hoch",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox Sehr langsam",
-				"skyboxslow" : "Skybox Langsam",
-				"skyboxfrequent" : "Skybox Regelmäßig",
-				"skyboxveryfrequent" : "Skybox Sehr regelmäßig",
-				"skyboxconstant" : "Skybox Konstant",
-				"terrainfrequent" : "Landschaft Regemläßig",
-				"terrainveryfrequent" : "Landschaft Sehr regelmäßig",
-				"terrainconstant" : "Landschaft Konstant"
-			},
-			"audio" : "Ton",
-			"audiomenu" : {
-				"full" : "Toneinstellungen",
-				"mastervolume" : "Hauptlautstärke",
-				"effectsvolume" : "Effektlautstärke",
-				"ambientvolume" : "Umgebungslautstärke",
-				"torchvolume" : "Fackellautstärke",
-				"menuvolume" : "Menülautstärke"
-			},
-			"gameplay" : "Spiel",
-			"gameplaymenu" : {
-				"full" : "Spieleinstellungen",
-				"mousesettings" : "Mauseinstellungen",
-				"keymapping" : "Tastaturbelegung",
-				"mousemenu" : {
-					"sensitivityx" : "Mausempfindlichkeit X-achse",
-					"sensitivityy" : "Mausempfindlichkeit Y-achse",
-					"sensitivitylock" : "Achsen synchronisieren",
-					"invertx" : "Spiegelund der x-achse",
-					"inverty" : "Spiegelung der y-achse",
-					"smooth" : "Mausglättung",
-					"smoothx" : "Mausglättung X-achse",
-					"smoothy" : "Mausglättung Y-achse",
-					"smoothlock" : "Mausglättung synchronisieren"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Alles zurücksetzen"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "Erhöht die regenerierte Gesundheit von 30 auf 50",
+					"name" : "Erhöhte Regeneration I"
+				},
+				"healthregensize2" : {
+					"description" : "Erhöht die regenerierte Gesundheit von 50 auf 65",
+					"name" : "Erhöhte Regeneration II"
+				},
+				"healthregensize3" : {
+					"description" : "Erhöht die regenerierte Gesundheit von 65 auf 85",
+					"name" : "Erhöhte Regeneration III"
+				},
+				"healthregensize4" : {
+					"description" : "Erhöht die regenerierte Gesundheit von 85 auf 100",
+					"name" : "Erhöhte Regeneration IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 0.5 HP\/s auf 1 HP\/s",
+					"name" : "Schnellere Regeneration I"
+				},
+				"healthregenspeed2" : {
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 1 HP\/s auf 2 HP\/s",
+					"name" : "Schnellere Regeneration II"
+				},
+				"healthregenspeed3" : {
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 2 HP\/s auf 3 HP\/s",
+					"name" : "Schnellere Regeneration III"
+				},
+				"healthregenspeed4" : {
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP\/s auf 4 HP\/s",
+					"name" : "Schnellere Regeneration IV"
+				},
+				"healthsize1" : {
+					"description" : "Erhöht die maximale Gesundheit auf 125",
+					"name" : "Erhöhte Gesundheit I"
+				},
+				"healthsize2" : {
+					"description" : "Erhöht die maximale Gesundheit auf 150",
+					"name" : "Erhöhte Gesundheit II"
+				},
+				"healthsize3" : {
+					"description" : "Erhöht die maximale Gesundheit auf 175",
+					"name" : "Erhöhte Gesundheit III"
+				},
+				"healthsize4" : {
+					"description" : "Erhöht die maximale Gesundheit auf 200",
+					"name" : "Erhöhte Gesundheit IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "Sprache",
-			"languagemenu" : {
-				"full" : "Spracheinstellungen",
-				"wiptext" : "In Bearbeitung. Betrifft nicht alles im Spiel, und manche Sprachen sind ausführlicher übersetzt als andere.",
-				"language" : "Sprache",
-				"coverage" : "Diese Übersetzung ist zu {0:F1}% komplett. Um zu helfen, besuche das Forum oder unser Repository auf GitHub!"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Schnellstart",
-			"credits" : "Mitwirkende",
-			"changelog" : "Changelog"
-		},
-		"escapemenu" : {
-			"back" : "Spiel fortsetzen",
-			"settings" : "Einstellungen",
-			"info" : "Infos",
-			"quitmain" : "Verlassen (Zum Hauptmenü)",
-			"quitdesktop" : "Verlassen (Zum Desktop)"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Schließen",
+				"description" : "Wähle aus, ob du das Gebiet entfernen willst oder nicht.",
+				"header" : "Gebietsmenü",
+				"remove" : "Gebiet entfernen"
+			},
 			"banner" : {
-				"header" : "Kolonieregelung",
-				"description" : "Kolonisten benötigen ein Bett und pro Tag 5 Nahrung. Ein Kolonist kostet 50 Nahrung.",
 				"button" : "Rekrutiere Kolonist",
+				"description" : "Kolonisten benötigen ein Bett und pro Tag 5 Nahrung. Ein Kolonist kostet 50 Nahrung.",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "Kolonieregelung",
 				"resetbutton" : "Kolonie zurücksetzen",
 				"resettooltipa" : "",
 				"resettooltipb" : "Tötet alle Kolonisten und entfernt alle Arbeitsbereiche.",
-				"resettooltipc" : "Setzt das Inventar und das Lager ebenfalls zurück.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "Setzt das Inventar und das Lager ebenfalls zurück."
+			},
+			"death" : {
+				"description" : "Du bist Gestorben.",
+				"respawn" : "Wiederbeleben"
+			},
+			"inventory" : {
+				"craftingstockpile" : "Herstellung und Lager",
+				"foodvalue" : "Nährwert:",
+				"science" : {
+					"available" : "Verfügbar",
+					"completed" : "Abgeschlossen",
+					"dependencies" : "Benötigte Technologien:",
+					"header" : "Wissenschaft",
+					"iterations" : "Forschungszyklen: {0} von {1}",
+					"placelab" : "Platziere ein Forschungslabor, um einen Wissenschaftler zu rekrutieren",
+					"requirements" : "Voraussetzung für einen Forschungszyklus:",
+					"researchactive" : "Aktuelle Forschung: {0}",
+					"researchselected" : "Wähle zum Erforschen",
+					"unavailable" : "Nicht verfügbar"
+				},
+				"stockpiledescription" : "Du kannst nur Sachen herstellen, wenn du die benötigten Materialien in den unteren Feldern hast. Kolonisten können nur das Lager nutzen.",
+				"tooltip" : {
+					"and" : "und",
+					"instockpile" : "im Lager",
+					"needs" : "Benötigt: "
+				}
+			},
+			"limits" : {
+				"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
+				"hoverpriority" : {
+					"a" : "Herstellungs-Priorität",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Backlimitierungen",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "Herstellungslimitierungen",
+					"fineryforgejob" : "Schmiedelimitierungen",
+					"grinder" : "Mühlenlimitierungen",
+					"gunsmithjob" : "Waffenschmiedlimitierungen",
+					"kilnjob" : "Brennofenlimitierungen",
+					"merchant" : "Einkaufslimitierungen",
+					"metalsmithjob" : "Schmiedlimitierungem",
+					"minter" : "Münzpresslimitierungen",
+					"smelter" : "Schmelzlimitierungen",
+					"tailor" : "Schneiderlimitierungen",
+					"technologist" : "Forschungslimitierungen",
+					"woodcutter" : "Holzfällerlimitierungen"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Drücke F1, um dieses Menü zu öffnen und zu schließen",
+				"closetoggle" : "Nie wieder anzeigen",
+				"next" : "Nächste",
+				"openmanual" : "Handbuch öffnen (PDF)",
+				"previous" : "Vorherige"
+			},
+			"specialblockremoval" : {
+				"button" : "Entfernen",
+				"description" : "Diesen Block des Typs {0} zu entfenen könnte Probleme für eine Kolonie bedeuten. Was möchtest Du tun?",
+				"header" : "Spezielle Blockentfernung"
+			},
+			"toolconstruction" : {
+				"builder" : "Bauarbeiter",
+				"buildera" : "",
+				"builderb" : "Benötigt: Baugebiet",
+				"builderc" : "Baut sachen",
+				"description" : "Wähle den Gebietstyp aus, den du zuweisen willst.",
+				"destroyer" : "Zerstörer",
+				"destroyera" : "",
+				"destroyerb" : "Benötigt Räumbereich",
+				"destroyerc" : "Räumt auf",
+				"header" : "Bauwerkzeug"
 			},
 			"tooljob" : {
-				"header" : "Befehlswerkzeug",
+				"berrya" : "Schnelles und einfaches Essen, starte hiermit!",
+				"berryb" : "Benötigt: Beerensamen\nPlatziere auf Gras oder Dreck",
+				"berryfarmer" : "Beeren Farmer",
+				"berryfarmertool" : "Beerenfarmerwerkzeug",
+				"bow" : "Bogen",
+				"bowtooltip" : "Schaden: 100 HP\nReichweite: 20 Blöcke\nLadesgeschwindigkeit: 5 Sekunden",
+				"coversarea" : "Bedeckt Gebiet",
+				"crossbow" : "Armbrust",
+				"crossbowtooltip" : "Schaden: 300 HP\nReichweite: 25 Blöcke\nLadegeschwindigkeit: 8 Sekunden",
 				"description" : "Wähle den Gebietstyp aus, den du zuweisen willst.",
-				"wheatfarmer" : "Getreidebauer",
-				"wheata" : "",
-				"miner" : "Bergarbeiter",
-				"minera" : "Baut Erze ab",
+				"flaxa" : "Nur für fortgeschrittene Kolonien",
+				"flaxb" : "Benötigt: Flachssamen\nPlatziere auf Gras oder Dreck",
+				"flaxfarmer" : "Flachsbauer",
+				"flaxfarmertool" : "Flachsbauerwerkzeug",
 				"forester" : "Baumgärtner",
 				"forestera" : "Pflanzt und fällt Bäume",
-				"flaxfarmer" : "Flachsbauer",
-				"flaxa" : "Nur für fortgeschrittene Kolonien",
-				"notflat" : "Nicht eben!",
-				"toosmall" : "Zu klein",
-				"toolarge" : "Zu groß",
-				"coversarea" : "Bedeckt Gebiet",
-				"toonarrow" : "Zu schmal für Bäume",
-				"notarable" : "Unfruchtbar",
-				"occupiedblocks" : "Blöcke sind im Weg",
-				"wheatfarmertool" : "Getreidebauerwerkzeug",
-				"minertool" : "Bergarbeiterwerkzeug",
+				"foresterb" : "Benötigt: Setzlinge und eine Axt\nPlatziere auf Gras oder Dreck",
 				"forestertool" : "Baumgärtnerwerkzeug",
-				"flaxfarmertool" : "Flachsbauerwerkzeug",
-				"notool" : "Kein Werkzeug ausgewählt",
-				"berryfarmertool" : "Beerenfarmerwerkzeug",
-				"berryfarmer" : "Beeren Farmer",
-				"berrya" : "Schnelles und einfaches Essen, starte hiermit!",
 				"guard" : "Wächter",
 				"guarda" : "Schütze Deine Kolonie",
 				"guardb" : "Öffnet ein weiteres Menü, in welchem weitere Wächtertypen ausgewählt werden können",
-				"flaxb" : "Benötigt: Flachssamen\nPlatziere auf Gras oder Dreck",
 				"guardsday" : "Wache tagsüber",
 				"guardsnight" : "Wache nachts",
-				"foresterb" : "Benötigt: Setzlinge und eine Axt\nPlatziere auf Gras oder Dreck",
-				"slinger" : "Steinschleuder",
-				"crossbow" : "Armbrust",
-				"wheatb" : "Benötigt: Getreidesamen\nPlatziere auf Gras oder Dreck",
-				"bow" : "Bogen",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "Muskete",
-				"jobslingerday" : "Steinschleuder-Wache tagsüber",
-				"jobslingernight" : "Steinschleuder-Wache nachts",
+				"header" : "Befehlswerkzeug",
 				"jobbowday" : "Bogen-Wache tagsüber",
 				"jobbownight" : "Bogen-Wache nachts",
 				"jobcrossbowday" : "Armbrust-Wache tagsüber",
 				"jobcrossbownight" : "Armbrust-Wachte nachts",
 				"jobmatchlockday" : "Musketen-Wache tagsüber",
 				"jobmatchlocknight" : "Musketen-Wache nachts",
-				"berryb" : "Benötigt: Beerensamen\nPlatziere auf Gras oder Dreck",
-				"slingertooltip" : "Schaden: 50 HP\nReichweite: 12 Blöcke\nLadegeschwindigkeit: 3 Sekunden",
-				"crossbowtooltip" : "Schaden: 300 HP\nReichweite: 25 Blöcke\nLadegeschwindigkeit: 8 Sekunden",
-				"bowtooltip" : "Schaden: 100 HP\nReichweite: 20 Blöcke\nLadesgeschwindigkeit: 5 Sekunden",
+				"jobslingerday" : "Steinschleuder-Wache tagsüber",
+				"jobslingernight" : "Steinschleuder-Wache nachts",
+				"matchlock" : "Muskete",
 				"matchlocktooltip" : "Schaden: 500 HP\nReichweite: 30 Blöcke\nLadegeschwindigkeit: 12 Sekunden",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
-			},
-			"toolconstruction" : {
-				"header" : "Bauwerkzeug",
-				"description" : "Wähle den Gebietstyp aus, den du zuweisen willst.",
-				"builder" : "Bauarbeiter",
-				"buildera" : "",
-				"builderb" : "Benötigt: Baugebiet",
-				"builderc" : "Baut sachen",
-				"destroyer" : "Zerstörer",
-				"destroyera" : "",
-				"destroyerb" : "Benötigt Räumbereich",
-				"destroyerc" : "Räumt auf"
-			},
-			"areaselection" : {
-				"header" : "Gebietsmenü",
-				"description" : "Wähle aus, ob du das Gebiet entfernen willst oder nicht.",
-				"close" : "Schließen",
-				"remove" : "Gebiet entfernen"
-			},
-			"inventory" : {
-				"stockpiledescription" : "Du kannst nur Sachen herstellen, wenn du die benötigten Materialien in den unteren Feldern hast. Kolonisten können nur das Lager nutzen.",
-				"foodvalue" : "Nährwert:",
-				"tooltip" : {
-					"needs" : "Benötigt: ",
-					"and" : "und",
-					"instockpile" : "im Lager"
-				},
-				"craftingstockpile" : "Herstellung und Lager",
-				"science" : {
-					"header" : "Wissenschaft",
-					"dependencies" : "Benötigte Technologien:",
-					"requirements" : "Voraussetzung für einen Forschungszyklus:",
-					"iterations" : "Forschungszyklen: {0} von {1}",
-					"researchselected" : "Wähle zum Erforschen",
-					"researchactive" : "Aktuelle Forschung: {0}",
-					"available" : "Verfügbar",
-					"unavailable" : "Nicht verfügbar",
-					"completed" : "Abgeschlossen",
-					"placelab" : "Platziere ein Forschungslabor, um einen Wissenschaftler zu rekrutieren"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Herstellungslimitierungen",
-					"baker" : "Backlimitierungen",
-					"smelter" : "Schmelzlimitierungen",
-					"minter" : "Münzpresslimitierungen",
-					"merchant" : "Einkaufslimitierungen",
-					"grinder" : "Mühlenlimitierungen",
-					"tailor" : "Schneiderlimitierungen",
-					"technologist" : "Forschungslimitierungen",
-					"metalsmithjob" : "Schmiedlimitierungem",
-					"kilnjob" : "Brennofenlimitierungen",
-					"gunsmithjob" : "Waffenschmiedlimitierungen",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "Schmiedelimitierungen",
-					"woodcutter" : "Holzfällerlimitierungen"
-				},
-				"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
-				"hoverpriority" : {
-					"a" : "Herstellungs-Priorität",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "Du bist Gestorben.",
-				"respawn" : "Wiederbeleben"
-			},
-			"quickstart" : {
-				"previous" : "Vorherige",
-				"next" : "Nächste",
-				"openmanual" : "Handbuch öffnen (PDF)",
-				"closehelp" : "Drücke F1, um dieses Menü zu öffnen und zu schließen",
-				"closetoggle" : "Nie wieder anzeigen"
-			},
-			"specialblockremoval" : {
-				"header" : "Spezielle Blockentfernung",
-				"description" : "Diesen Block des Typs {0} zu entfenen könnte Probleme für eine Kolonie bedeuten. Was möchtest Du tun?",
-				"button" : "Entfernen"
+				"miner" : "Bergarbeiter",
+				"minera" : "Baut Erze ab",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Bergarbeiterwerkzeug",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "Unfruchtbar",
+				"notflat" : "Nicht eben!",
+				"notool" : "Kein Werkzeug ausgewählt",
+				"occupiedblocks" : "Blöcke sind im Weg",
+				"slinger" : "Steinschleuder",
+				"slingertooltip" : "Schaden: 50 HP\nReichweite: 12 Blöcke\nLadegeschwindigkeit: 3 Sekunden",
+				"toolarge" : "Zu groß",
+				"toonarrow" : "Zu schmal für Bäume",
+				"toosmall" : "Zu klein",
+				"wheata" : "",
+				"wheatb" : "Benötigt: Getreidesamen\nPlatziere auf Gras oder Dreck",
+				"wheatfarmer" : "Getreidebauer",
+				"wheatfarmertool" : "Getreidebauerwerkzeug"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Betten:",
-			"colonistcount" : "Kolonisten:",
-			"laborercount" : "Arbeitslos:",
-			"foodstorage" : "Nahrung:",
-			"foodusage" : "Verbrauch:",
-			"ammocount" : "Munition:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "Grundlagen",
 				"description" : "Willkommen bei Colony Survival!",
+				"header" : "Grundlagen",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "Du brauchst Essen und Betten, um Kolonisten zu rekrutieren. Kolonisten brauchen Essen, um zu überleben. Stelle sicher,dass immer genug Essen verfügbar ist, oder sie verhungern!",
 				"text3" : "Drücke 'I' um ein Bett zu craften. Du kannst nur Dinge mit den Items in den Slots ganz unten craften. Kolonisten können nur Items im Lager benutzen. Sie greifen auf das Lager mit Hilfe von Kisten zu.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "Essens-Produktion",
 				"description" : "Du brauchst Essen zum Rekrutieren und deine Kolonisten zu halten!",
+				"header" : "Essens-Produktion",
 				"text1" : "Benutze das Befehlswerkzeug (Drücke '1') um einen Beeren Farmer zu erstellen. Rechtsklicke auf einen Block Gras, wähle den Job und erstelle einen Bereich für den Farmer. Linksklicke, um den Job-Typ zu ändern.",
 				"text2" : "Brot produzieren ist eine komplizierte, aber effiziente Methode der Essensproduktion. Starte mit einer Getreide Farm. Nach zwei Nächten ist dein Getreide ausgewachsen und deine Farmer werden es ernten.",
 				"text3" : "Anschließend bildest du zwei neue Kolonisten aus, indem du einen Mühlstein und einen Ofen platzierst. Der Mühlstein wird benutzt, um Getreide in Mehl zu mahlen. Ein Bäcker wird den Ofen benutzen, um Brot zu backen."
 			},
 			"page3" : {
-				"header" : "Kolonie-Verteidigung",
 				"description" : "Verteidige deine Kolonie gegen die Monster der Nacht!",
+				"header" : "Kolonie-Verteidigung",
 				"text1" : "Nachts werden Monster versuchen, deine Kolonie anzugreifen. Platziere Wachen, baue Mauern und schaufle Gräben um deine Kolonie zu verteidigen. Monster können nicht über zwei Blöcke klettern.",
 				"text2" : "Isoliere deine Kolonie nicht komplett! Wenn es keinen Weg zu deinem Banner gibt, wird der 'Belagerungs Modus' aktiviert. Während des Belagerungsmodus, wird dein gelagertes Essen rasch verbraucht.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "Erhöhte Gesundheit I",
-					"description" : "Erhöht die maximale Gesundheit auf 125"
+		"settingsmenu" : {
+			"audio" : "Ton",
+			"audiomenu" : {
+				"ambientvolume" : "Umgebungslautstärke",
+				"effectsvolume" : "Effektlautstärke",
+				"full" : "Toneinstellungen",
+				"mastervolume" : "Hauptlautstärke",
+				"menuvolume" : "Menülautstärke",
+				"torchvolume" : "Fackellautstärke"
+			},
+			"gameplay" : "Spiel",
+			"gameplaymenu" : {
+				"full" : "Spieleinstellungen",
+				"keymapping" : "Tastaturbelegung",
+				"keymenu" : {
+					"resetall" : "Alles zurücksetzen"
 				},
-				"healthsize2" : {
-					"name" : "Erhöhte Gesundheit II",
-					"description" : "Erhöht die maximale Gesundheit auf 150"
+				"mousemenu" : {
+					"invertx" : "Spiegelund der x-achse",
+					"inverty" : "Spiegelung der y-achse",
+					"sensitivitylock" : "Achsen synchronisieren",
+					"sensitivityx" : "Mausempfindlichkeit X-achse",
+					"sensitivityy" : "Mausempfindlichkeit Y-achse",
+					"smooth" : "Mausglättung",
+					"smoothlock" : "Mausglättung synchronisieren",
+					"smoothx" : "Mausglättung X-achse",
+					"smoothy" : "Mausglättung Y-achse"
 				},
-				"healthsize3" : {
-					"name" : "Erhöhte Gesundheit III",
-					"description" : "Erhöht die maximale Gesundheit auf 175"
-				},
-				"healthsize4" : {
-					"name" : "Erhöhte Gesundheit IV",
-					"description" : "Erhöht die maximale Gesundheit auf 200"
-				},
-				"healthregensize1" : {
-					"name" : "Erhöhte Regeneration I",
-					"description" : "Erhöht die regenerierte Gesundheit von 30 auf 50"
-				},
-				"healthregensize2" : {
-					"name" : "Erhöhte Regeneration II",
-					"description" : "Erhöht die regenerierte Gesundheit von 50 auf 65"
-				},
-				"healthregensize3" : {
-					"name" : "Erhöhte Regeneration III",
-					"description" : "Erhöht die regenerierte Gesundheit von 65 auf 85"
-				},
-				"healthregensize4" : {
-					"name" : "Erhöhte Regeneration IV",
-					"description" : "Erhöht die regenerierte Gesundheit von 85 auf 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "Schnellere Regeneration I",
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 0.5 HP\/s auf 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "Schnellere Regeneration II",
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 1 HP\/s auf 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "Schnellere Regeneration III",
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 2 HP\/s auf 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "Schnellere Regeneration IV",
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP\/s auf 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Mauseinstellungen"
+			},
+			"language" : "Sprache",
+			"languagemenu" : {
+				"coverage" : "Diese Übersetzung ist zu {0:F1}% komplett. Um zu helfen, besuche das Forum oder unser Repository auf GitHub!",
+				"full" : "Spracheinstellungen",
+				"language" : "Sprache",
+				"wiptext" : "In Bearbeitung. Betrifft nicht alles im Spiel, und manche Sprachen sind ausführlicher übersetzt als andere."
+			},
+			"qualityhigh" : "Hoch",
+			"qualitylow" : "Niedrig",
+			"qualitymaximum" : "Maximum",
+			"qualitymedium" : "Mittemäßig",
+			"qualityoff" : "Aus",
+			"qualityon" : "An",
+			"qualityveryhigh" : "Sehr hoch",
+			"qualityverylow" : "Sehr niedrig",
+			"video" : "Bild",
+			"videomenu" : {
+				"ambientocclusion" : "Umgebungsunschärfe",
+				"ambientreflections" : "Reflektionen",
+				"anisotropic" : "Anisotropische Filterung x16",
+				"antialiasing" : "Antialiasing",
+				"bloom" : "Bloom",
+				"depthoffield" : "Tiefenunschärfe",
+				"eyeadaptation" : "Augenanpassung",
+				"fieldofview" : "Sichtfeld",
+				"full" : "Bildeinstellungen",
+				"fullscreen" : "Vollbild",
+				"fxaahigh" : "FXAA Hoch",
+				"fxaalow" : "FXAA Niedrig",
+				"fxaamedium" : "FXAA Mittel",
+				"lightscattering" : "Lichtbrechung",
+				"resolution" : "Auflösung",
+				"shaderquality" : "Shaderqualität",
+				"skyboxconstant" : "Skybox Konstant",
+				"skyboxfrequent" : "Skybox Regelmäßig",
+				"skyboxslow" : "Skybox Langsam",
+				"skyboxveryfrequent" : "Skybox Sehr regelmäßig",
+				"skyboxveryslow" : "Skybox Sehr langsam",
+				"sunshadowcascades" : "Sonnenschatten-Kaskaden",
+				"sunshadowdistance" : "Schattenentfernung",
+				"sunshadowquality" : "Sonnenschatten-Qualität",
+				"taa" : "TAA",
+				"terrainconstant" : "Landschaft Konstant",
+				"terrainfrequent" : "Landschaft Regemläßig",
+				"terrainveryfrequent" : "Landschaft Sehr regelmäßig",
+				"vsync" : "VSync",
+				"vsyncdouble" : "Doppel"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Name der Kolonie:",
+			"daymonsters" : "Monster am Tag",
+			"delete" : "Löschen",
+			"doubledmonsters" : "Doppelte Anzahl der Monster",
+			"load" : "Laden",
+			"loadworld" : "Welt laden",
+			"newworld" : "Neue Welt",
+			"play" : "Spielen",
+			"spawnmonsters" : "Monster spawnen",
+			"worlddate" : "Datum",
+			"worldname" : "Name"
 		}
 	},
 	"types" : {
-		"grass" : "Gras",
-		"grasstemperate" : "Gras (Waldgebiet)",
-		"grasstundra" : "Gras (Tundra)",
-		"grasstaiga" : "Gras (Taiga)",
-		"grasssavanna" : "Gras (Savanne)",
-		"grassrainforest" : "Gras (Regenwald)",
-		"water" : "Wasser",
-		"sand" : "Sand",
-		"snow" : "Schnee",
-		"banner" : "Banner",
-		"dirt" : "Dreck",
-		"stoneblock" : "Steinblock",
-		"planks" : "Bretter",
-		"log" : "Baumstamm",
-		"logtemperate" : "Baumstamm (Waldgebiet)",
-		"logtaiga" : "Baumstamm (Taiga)",
-		"leaves" : "Blätter",
-		"leavestemperate" : "Blätter (Waldgebiet)",
-		"leavestaiga" : "Blätter (Taiga)",
-		"torch" : "Fackel",
-		"crate" : "Kiste",
-		"stonebricks" : "Steinziegel",
-		"coatedplanks" : "Lackierte Bretter",
 		"adobe" : "Lehmziegel",
-		"workbench" : "Werkbank",
-		"mint" : "Münzpresse",
-		"shop" : "Markt",
-		"plasterblock" : "Putz",
-		"furnace" : "Schmelze",
-		"oven" : "Backofen",
-		"sappling" : "Setzling",
-		"flaxstage1" : "Flachssamen",
-		"wheatstage1" : "Getreidesamen",
-		"straw" : "Stroh",
-		"linseedoil" : "Leinöl",
-		"flax" : "Flachs",
-		"wheat" : "Getreide",
-		"bread" : "Brot",
-		"coalore" : "Kohle",
-		"gypsum" : "Gips",
-		"ironore" : "Eisenerz",
-		"goldore" : "Golderz",
-		"ironingot" : "Eisenbarren",
-		"goldingot" : "Goldbarren",
-		"goldcoin" : "Goldmünze",
-		"bow" : "Bogen",
-		"commandtool" : "Befehlswerkzeug",
+		"banner" : "Banner",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Bett",
-		"clay" : "Lehm",
-		"bricks" : "Ziegelsteine",
-		"berrybush" : "Beerensetzling",
 		"berry" : "Beeren",
-		"grindstone" : "Mühlstein",
-		"flour" : "Mehl",
-		"cherrysapling" : "Kirschsetzling",
-		"cherryblossom" : "Kirschblüte",
-		"redplanks" : "Rote Planken",
+		"berrybush" : "Beerensetzling",
 		"blackplanks" : "Schwarze Bretter",
-		"linen" : "Leinentuch",
-		"clothing" : "Kleidung",
-		"carpetred" : "Roter Teppich",
-		"carpetblue" : "Blauer Teppich",
-		"carpetyellow" : "Gelber Teppich",
-		"tailorshop" : "Schneiderei",
-		"technologisttable" : "Technologie-Tisch",
-		"sciencebaglife" : "Wissenschaftstasche (Leben)",
-		"sciencebagbasic" : "Wissenschaftstasche (Basis)",
-		"linenbag" : "Leinensack",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "Bogen",
 		"bowstring" : "Bogensehne",
+		"bread" : "Brot",
+		"bricks" : "Ziegelsteine",
 		"bronzeanvil" : "Bronzeamboss",
 		"bronzearrow" : "Bronzepfeil",
 		"bronzeaxe" : "Bonzeaxt",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "Bronzebarren",
 		"bronzepickaxe" : "Bronzespitzhacke",
 		"bronzeplate" : "Bronzeplatte",
+		"carpetblue" : "Blauer Teppich",
+		"carpetred" : "Roter Teppich",
+		"carpetyellow" : "Gelber Teppich",
 		"charcoal" : "Holzkohle",
+		"cherryblossom" : "Kirschblüte",
+		"cherrysapling" : "Kirschsetzling",
+		"clay" : "Lehm",
+		"clothing" : "Kleidung",
+		"coalore" : "Kohle",
+		"coatedplanks" : "Lackierte Bretter",
 		"cokes" : "Koks",
+		"commandtool" : "Befehlswerkzeug",
+		"copper" : "Kupfer",
+		"coppernails" : "Kupfernägel",
 		"copperparts" : "Kupferteile",
 		"coppertools" : "Kupferwerkzeuge",
+		"crate" : "Kiste",
 		"crossbow" : "Armbrust",
 		"crossbowbolt" : "Armbrustbolzen",
+		"dirt" : "Dreck",
 		"fineryforge" : "Schmiede",
+		"firewood" : "Feuerholz",
+		"flax" : "Flachs",
+		"flaxstage1" : "Flachssamen",
+		"flour" : "Mehl",
+		"furnace" : "Schmelze",
 		"galenalead" : "Galenit (Bleihaltig)",
 		"galenasilver" : "Galenit (Silberhaltig)",
-		"gunpowder" : "Schießpulver",
-		"gunpowderpouch" : "Schießpulverbeutel",
-		"gunsmithshop" : "Büchsenmacher",
-		"ironblock" : "Eisenblock",
-		"ironrivet" : "Eisennieten",
-		"ironsword" : "Eisenschwert",
-		"ironwrought" : "Schmiedeeisen",
-		"kiln" : "Brennofen",
-		"lead" : "Blei",
-		"leadbullet" : "Bleikugel",
-		"linenpouch" : "Stoffbeutel",
-		"matchlockgun" : "Muskete",
-		"salpeter" : "Salpeter",
-		"sciencebagmilitary" : "Wissenschaftsbeutel (Militär)",
-		"sciencelab" : "Forschungslabor",
-		"silveringot" : "Silberbarren",
-		"sling" : "Steinschleuder",
-		"slingbullet" : "Geschoß",
-		"steelingot" : "Stahlbarren",
-		"steelparts" : "Stahlteile",
-		"tin" : "Zinn",
-		"firewood" : "Feuerholz",
-		"splittingstump" : "Spaltstumpf",
-		"sciencebagadvanced" : "Erweiterte Wissenschaftstasche",
-		"sciencebagcolony" : "Koloniale Wissenschaftstasche",
-		"minerjob" : "Bergarbeiter",
-		"guardslingerdayjob" : "Schleuder-Wache tagsüber",
-		"guardslingernightjob" : "Schleuder-Wache nachts",
+		"goldcoin" : "Goldmünze",
+		"goldingot" : "Goldbarren",
+		"goldore" : "Golderz",
+		"grass" : "Gras",
+		"grassrainforest" : "Gras (Regenwald)",
+		"grasssavanna" : "Gras (Savanne)",
+		"grasstaiga" : "Gras (Taiga)",
+		"grasstemperate" : "Gras (Waldgebiet)",
+		"grasstundra" : "Gras (Tundra)",
+		"grindstone" : "Mühlstein",
 		"guardbowdayjob" : "Bogen-Wache tagsüber",
 		"guardbownightjob" : "Bogen-Wache nachts",
 		"guardcrossbowdayjob" : "Armbrust-Wache tagsüber",
 		"guardcrossbownightjob" : "Armbrust-Wache nachts",
 		"guardmatchlockdayjob" : "Musketen-Wache tagsüber",
 		"guardmatchlocknightjob" : "Musketen-Wache nachts",
-		"copper" : "Kupfer",
-		"coppernails" : "Kupfernägel"
+		"guardslingerdayjob" : "Schleuder-Wache tagsüber",
+		"guardslingernightjob" : "Schleuder-Wache nachts",
+		"gunpowder" : "Schießpulver",
+		"gunpowderpouch" : "Schießpulverbeutel",
+		"gunsmithshop" : "Büchsenmacher",
+		"gypsum" : "Gips",
+		"ironblock" : "Eisenblock",
+		"ironingot" : "Eisenbarren",
+		"ironore" : "Eisenerz",
+		"ironrivet" : "Eisennieten",
+		"ironsword" : "Eisenschwert",
+		"ironwrought" : "Schmiedeeisen",
+		"kiln" : "Brennofen",
+		"lead" : "Blei",
+		"leadbullet" : "Bleikugel",
+		"leaves" : "Blätter",
+		"leavestaiga" : "Blätter (Taiga)",
+		"leavestemperate" : "Blätter (Waldgebiet)",
+		"linen" : "Leinentuch",
+		"linenbag" : "Leinensack",
+		"linenpouch" : "Stoffbeutel",
+		"linseedoil" : "Leinöl",
+		"log" : "Baumstamm",
+		"logtaiga" : "Baumstamm (Taiga)",
+		"logtemperate" : "Baumstamm (Waldgebiet)",
+		"matchlockgun" : "Muskete",
+		"minerjob" : "Bergarbeiter",
+		"mint" : "Münzpresse",
+		"oven" : "Backofen",
+		"planks" : "Bretter",
+		"plasterblock" : "Putz",
+		"redplanks" : "Rote Planken",
+		"salpeter" : "Salpeter",
+		"sand" : "Sand",
+		"sappling" : "Setzling",
+		"sciencebagadvanced" : "Erweiterte Wissenschaftstasche",
+		"sciencebagbasic" : "Wissenschaftstasche (Basis)",
+		"sciencebagcolony" : "Koloniale Wissenschaftstasche",
+		"sciencebaglife" : "Wissenschaftstasche (Leben)",
+		"sciencebagmilitary" : "Wissenschaftsbeutel (Militär)",
+		"sciencelab" : "Forschungslabor",
+		"shop" : "Markt",
+		"silveringot" : "Silberbarren",
+		"sling" : "Steinschleuder",
+		"slingbullet" : "Geschoß",
+		"snow" : "Schnee",
+		"splittingstump" : "Spaltstumpf",
+		"steelingot" : "Stahlbarren",
+		"steelparts" : "Stahlteile",
+		"stoneblock" : "Steinblock",
+		"stonebricks" : "Steinziegel",
+		"straw" : "Stroh",
+		"tailorshop" : "Schneiderei",
+		"technologisttable" : "Technologie-Tisch",
+		"tin" : "Zinn",
+		"torch" : "Fackel",
+		"water" : "Wasser",
+		"wheat" : "Getreide",
+		"wheatstage1" : "Getreidesamen",
+		"workbench" : "Werkbank"
 	},
 	"typeuses" : {
-		"planks" : "Aus eins mach vier!",
-		"torch" : "Da woll'n wir nicht lange Fackeln!",
-		"crate" : "Idealer Lagerplatz!",
-		"workbench" : "Rekrutiert einen Handwerker. Nie wieder selber werkeln!",
-		"plasterblock" : "Für wenn's modern aussehen muss.",
-		"wheatstage1" : "Möchte später mal Brot werden.",
-		"straw" : "Ein Nebenprodukt des Getreideanbaus; wird für Betten oder Dächer benötigt.",
-		"wheat" : "Ein Kolonist mit einem Mühlstein macht daraus Mehl.",
-		"bread" : "Heilung für Körper und Seele!",
-		"bed" : "Macht das Schlafen einfacher.",
-		"bow" : "Ohne den hier weigern sich Wachen zu arbeiten - ihr Wurfarm ist nicht so gut.",
-		"snow" : "Weis(s) nichts...",
-		"grasstemperate" : "Runter von meinem Rasen!",
-		"grasstundra" : "Bloß nicht ins Gras beissen!",
-		"grasstaiga" : "Betreten (nicht) verboten!",
-		"grasssavanna" : "Das Gras auf der anderen Seite ist grüner.",
-		"grassrainforest" : "Dieses Gras ist grüner.",
-		"water" : "Was hast du jetzt schon wieder angerichtet? Du machst alles nass!",
-		"sand" : "Nein, jetzt wird keine Sandburg gebaut!",
-		"dirt" : "Dreckig",
 		"adobe" : "Dreck für Reiche",
-		"mint" : "Geldfälschung? Was ist das?",
-		"shop" : "Nur Kaufen, kein Verkaufen!",
-		"flaxstage1" : "Jetzt mach bloß keine Flachsen... ähm, Faxen!",
-		"flax" : "Die schönste Blume im ganzen Spiel! Gibt ja auch nicht viel Konkurrenz...",
-		"linseedoil" : "Macht Blöcke schön.",
-		"coatedplanks" : "Es glänzt!",
-		"clay" : "Ich wünschte, ich könnte es anfassen!",
-		"bricks" : "Letztendlich ist es immernoch ein niederländisches Spiel.",
-		"flour" : "Ein Kolonist mit einem Ofen backt daraus Brot.",
-		"grindstone" : "Mahlt Getreide zu Mehl.",
-		"berrybush" : "Kolonisten können diese Pflanzen für einfache Nahrung anbauen.",
+		"bed" : "Macht das Schlafen einfacher.",
 		"berry" : "Nicht giftig.",
-		"redplanks" : "Hat keinen Nährwert, aber schmeckt sehr gut.",
+		"berrybush" : "Kolonisten können diese Pflanzen für einfache Nahrung anbauen.",
 		"blackplanks" : "Leicht entflammbar.",
-		"cherryblossom" : "Das pinkeste Ding in diesem Spiel!",
-		"tailorshop" : "Stellt Leinen, Teppiche, Kleindung und Säcke her.",
-		"clothing" : "Es sieht aus wie etwas, dass Du tragen könntest. Kannst Du aber nicht.",
-		"linen" : "Dessous sind Unterwäsche aus Leinen.",
-		"carpetred" : "Es macht nichts, wenn Du auf diesem Teppich Beerensaft verschüttest!",
-		"carpetyellow" : "Es ist sooo flauschig!",
-		"carpetblue" : "Für die, die des Roten Teppichs nicht würdig sind.",
-		"technologisttable" : "Stellt Forschungsbeutel her.",
-		"sciencebaglife" : "Erforderlich für die Erforschung von Gesundheit und Leben.",
-		"sciencebagbasic" : "Erforderlich für die grundlegenede Forschung.",
-		"linenbag" : "Besser als eine Plastiktüte.",
-		"stonebricks" : "Im Notfall einschlagen!",
-		"coalore" : "Warnung: kann zu Klimaproblemen führen!",
-		"ironore" : "Abgebaut mit einer Eisenspitzhacke aus Eisen.",
-		"goldore" : "Verliere es nicht.",
-		"goldingot" : "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
-		"goldcoin" : "Mit einem Porträt des Königs auf einer Seite.",
-		"sappling" : "Zukünftiger Baum",
-		"leavestemperate" : "Versuche mal, von einem hohen Turm in einen Haufen davon zu springen.",
-		"logtemperate" : "Wie ein Stammbaum, nur anders.",
-		"sciencelab" : "Ein Wissenschaftler kann hier forschen. Mehrere können zusammenarbeiten!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "Ohne den hier weigern sich Wachen zu arbeiten - ihr Wurfarm ist nicht so gut.",
 		"bowstring" : "Ploink",
+		"bread" : "Heilung für Körper und Seele!",
+		"bricks" : "Letztendlich ist es immernoch ein niederländisches Spiel.",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "Förster benötigen eine!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "Wie das meiste Essen - benutze es, bevor es grün wird!",
+		"carpetblue" : "Für die, die des Roten Teppichs nicht würdig sind.",
+		"carpetred" : "Es macht nichts, wenn Du auf diesem Teppich Beerensaft verschüttest!",
+		"carpetyellow" : "Es ist sooo flauschig!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "Das pinkeste Ding in diesem Spiel!",
+		"clay" : "Ich wünschte, ich könnte es anfassen!",
+		"clothing" : "Es sieht aus wie etwas, dass Du tragen könntest. Kannst Du aber nicht.",
+		"coalore" : "Warnung: kann zu Klimaproblemen führen!",
+		"coatedplanks" : "Es glänzt!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "Ein innovativer Weg, Holz zusammenzufügen",
 		"copperparts" : "Metall verbessert alles",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "Idealer Lagerplatz!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "Härter, besser, schneller, stärker",
+		"dirt" : "Dreckig",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "Die schönste Blume im ganzen Spiel! Gibt ja auch nicht viel Konkurrenz...",
+		"flaxstage1" : "Jetzt mach bloß keine Flachsen... ähm, Faxen!",
+		"flour" : "Ein Kolonist mit einem Ofen backt daraus Brot.",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "Enthält eine menge Blei",
 		"galenasilver" : "Enthält eine menge Silber",
+		"goldcoin" : "Mit einem Porträt des Königs auf einer Seite.",
+		"goldingot" : "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
+		"goldore" : "Verliere es nicht.",
+		"grassrainforest" : "Dieses Gras ist grüner.",
+		"grasssavanna" : "Das Gras auf der anderen Seite ist grüner.",
+		"grasstaiga" : "Betreten (nicht) verboten!",
+		"grasstemperate" : "Runter von meinem Rasen!",
+		"grasstundra" : "Bloß nicht ins Gras beissen!",
+		"grindstone" : "Mahlt Getreide zu Mehl.",
 		"gunpowder" : "Gib acht!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "Abgebaut mit einer Eisenspitzhacke aus Eisen.",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "Versuche mal, von einem hohen Turm in einen Haufen davon zu springen.",
+		"linen" : "Dessous sind Unterwäsche aus Leinen.",
+		"linenbag" : "Besser als eine Plastiktüte.",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "Macht Blöcke schön.",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "Wie ein Stammbaum, nur anders.",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "Geldfälschung? Was ist das?",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "Aus eins mach vier!",
+		"plasterblock" : "Für wenn's modern aussehen muss.",
+		"redplanks" : "Hat keinen Nährwert, aber schmeckt sehr gut.",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "Nein, jetzt wird keine Sandburg gebaut!",
+		"sappling" : "Zukünftiger Baum",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "Erforderlich für die grundlegenede Forschung.",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "Erforderlich für die Erforschung von Gesundheit und Leben.",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "Ein Wissenschaftler kann hier forschen. Mehrere können zusammenarbeiten!",
+		"shop" : "Nur Kaufen, kein Verkaufen!",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "Weis(s) nichts...",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "Im Notfall einschlagen!",
+		"straw" : "Ein Nebenprodukt des Getreideanbaus; wird für Betten oder Dächer benötigt.",
+		"tailorshop" : "Stellt Leinen, Teppiche, Kleindung und Säcke her.",
+		"technologisttable" : "Stellt Forschungsbeutel her.",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "Härter, besser, schneller, stärker",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 80.7486631016043
+		"torch" : "Da woll'n wir nicht lange Fackeln!",
+		"water" : "Was hast du jetzt schon wieder angerichtet? Du machst alles nass!",
+		"wheat" : "Ein Kolonist mit einem Mühlstein macht daraus Mehl.",
+		"wheatstage1" : "Möchte später mal Brot werden.",
+		"workbench" : "Rekrutiert einen Handwerker. Nie wieder selber werkeln!"
+	}
 }

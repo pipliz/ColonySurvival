@@ -1,561 +1,504 @@
 {
+	"coverage" : 50.7964601769912,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Vrátit se do hry",
+			"info" : "Info",
+			"quitdesktop" : "Odejít na plochu",
+			"quitmain" : "Odejít do hlavního menu",
+			"settings" : "Nastavení"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "_MISSING_Ammo:",
+			"bedcount" : "Postele:",
+			"colonistcount" : "Kolonisti:",
+			"foodstorage" : "Jídlo:",
+			"foodusage" : "Spotřeba jídla/den:",
+			"laborercount" : "Nezaměstnaní:"
+		},
 		"general" : {
-			"close" : "Zavřít",
-			"back" : "Zpátky",
 			"apply" : "Použít",
-			"none" : "Žádný",
-			"reset" : "Reset",
+			"back" : "Zpátky",
+			"close" : "Zavřít",
 			"inputplaceholder" : "Zadejte text...",
+			"next" : "Další",
+			"none" : "Žádný",
 			"previous" : "Předchozí",
-			"next" : "Další"
+			"reset" : "Reset"
+		},
+		"infomenu" : {
+			"changelog" : "Seznam změn",
+			"credits" : "Vytvořeno",
+			"quickstart" : "Rychlý start"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Hra pro jednoho hráče",
-			"multiplayer" : "Hra pro více hráčů",
-			"settings" : "Nastavení",
+			"back" : "Zpátky",
 			"info" : "Info",
+			"multiplayer" : "Hra pro více hráčů",
 			"quit" : "Odejít",
-			"back" : "Zpátky"
-		},
-		"singleplayermenu" : {
-			"newworld" : "Nový svět",
-			"colonyname" : "Jméno kolonie",
-			"spawnmonsters" : "Zrození monster",
-			"doubledmonsters" : "Dvojnásobný počet monster",
-			"daymonsters" : "Monstra během dne",
-			"loadworld" : "Načíst svět",
-			"load" : "Načíst",
-			"worldname" : "Jméno",
-			"worlddate" : "Datum",
-			"play" : "Hrát",
-			"delete" : "Vymazat"
+			"settings" : "Nastavení",
+			"singleplayer" : "Hra pro jednoho hráče"
 		},
 		"multiplayermenu" : {
+			"connect" : "Připojit se ke zvolenému serveru",
+			"connectlocal" : "Připojit k lokálnímu serveru",
+			"hostserver" : "Hostování serveru",
+			"hostserverdescription" : "Můžete hostovat server otevřením následujícího soubory pomocí Windows Průzkumníka:\nJděte do Vlastností hry na Steamu a klikněte na 'MÍSTNÍ SOUBORY' a následně na 'PROCHÁZET MÍSTNÍ SOUBORY'. Otevřete 'colonyserver.exe' pro vytvoření serveru.",
 			"joininternet" : "Připojit se přes internet",
 			"joininternetmenu" : "Připojit se k internetovému serveru",
 			"joinserverlan" : "Připojit se přes LAN",
 			"joinserverlanfull" : "Připojit se k LAN serveru",
-			"servername" : "Jméno",
-			"serverplayers" : "Hráči",
-			"serverping" : "Odezva",
-			"hostserver" : "Hostování serveru",
-			"connectlocal" : "Připojit k lokálnímu serveru",
-			"connect" : "Připojit se ke zvolenému serveru",
 			"refresh" : "Obnov list serverů",
 			"refreshing" : "Obnovování...",
-			"hostserverdescription" : "Můžete hostovat server otevřením následujícího soubory pomocí Windows Průzkumníka:\nJděte do Vlastností hry na Steamu a klikněte na 'MÍSTNÍ SOUBORY' a následně na 'PROCHÁZET MÍSTNÍ SOUBORY'. Otevřete 'colonyserver.exe' pro vytvoření serveru.",
+			"servername" : "Jméno",
+			"serverping" : "Odezva",
+			"serverplayers" : "Hráči",
 			"startserver" : "Spusť server"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Maximum",
-			"qualityveryhigh" : "Velmi vysoká",
-			"qualityhigh" : "Vysoká",
-			"qualitymedium" : "Střední",
-			"qualitylow" : "Nízká",
-			"qualityverylow" : "Velmi nízká",
-			"qualityon" : "Zapnuto",
-			"qualityoff" : "Vypnuto",
-			"video" : "Grafika",
-			"videomenu" : {
-				"full" : "Nastavení grafiky",
-				"resolution" : "Rozlišení",
-				"fullscreen" : "Celá obrazovka",
-				"vsync" : "VSync",
-				"vsyncdouble" : "Dvojité",
-				"anisotropic" : "Anizotropní filtrování x16",
-				"shaderquality" : "Kvalita stínů",
-				"sunshadowquality" : "Kvalita stínů slunce",
-				"sunshadowcascades" : "Kaskádové stíny slunce",
-				"sunshadowdistance" : "Vzdálenost stínů",
-				"fieldofview" : "Vzdálenost dohledu",
-				"lightscattering" : "Rozptyl světla",
-				"ambientocclusion" : "Ambient occlusion",
-				"eyeadaptation" : "Eye adaptation",
-				"bloom" : "Bloom",
-				"ambientreflections" : "Ambient reflections",
-				"depthoffield" : "Depth of field",
-				"antialiasing" : "Vyhlazování",
-				"fxaalow" : "FXAA Nízké",
-				"fxaamedium" : "FXAA Střední",
-				"fxaahigh" : "FXAA Vysoké",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Mraky - velice pomalé",
-				"skyboxslow" : "Mraky - pomalé",
-				"skyboxfrequent" : "Mraky - rychlé",
-				"skyboxveryfrequent" : "Mraky - velmi rychlé",
-				"skyboxconstant" : "Mraky - konstatní",
-				"terrainfrequent" : "Terén - častý",
-				"terrainveryfrequent" : "Terén - velmi častý",
-				"terrainconstant" : "Terén - konstantní"
-			},
-			"audio" : "Audio",
-			"audiomenu" : {
-				"full" : "Audio nastavení",
-				"mastervolume" : "Hlasitost",
-				"effectsvolume" : "Hlasitost efektů",
-				"ambientvolume" : "Hlasitost okolí",
-				"torchvolume" : "Hlasitost pochodní",
-				"menuvolume" : "Hlasitost v menu"
-			},
-			"gameplay" : "Gameplay",
-			"gameplaymenu" : {
-				"full" : "Nastavení Gameplaye",
-				"mousesettings" : "Nastavení myši",
-				"keymapping" : "Nastavení kláves",
-				"mousemenu" : {
-					"sensitivityx" : "Citlivost myši osa-X",
-					"sensitivityy" : "Citlivost myši osa-Y",
-					"sensitivitylock" : "Společná senzitivita obou os",
-					"invertx" : "Prohodit osu-x",
-					"inverty" : "Prohodit osu-y",
-					"smooth" : "Vyhlazení pohybu myši",
-					"smoothx" : "Vyhlazení pohybu myši osy-X",
-					"smoothy" : "Vyhlazení pohybu myši osy-Y",
-					"smoothlock" : "Společné vyhlazení pohybu myši pro obě osy"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Resetovat vše"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
+					"name" : "_MISSING_Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
+					"name" : "_MISSING_Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
+					"name" : "_MISSING_Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
+					"name" : "_MISSING_Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"name" : "_MISSING_Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"name" : "_MISSING_Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"name" : "_MISSING_Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"name" : "_MISSING_Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "_MISSING_Increases Max HP to 125",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "_MISSING_Increases Max HP to 150",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "_MISSING_Increases Max HP to 175",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "_MISSING_Increases Max HP to 200",
+					"name" : "_MISSING_Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "Jazyk",
-			"languagemenu" : {
-				"full" : "Jazykové nastavení",
-				"wiptext" : "Práce probíhají. Nejedná se o překlad kompletní hry, a některé překlady mohou obsahovat více nedodělků než jiné.",
-				"language" : "Jazyk",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Rychlý start",
-			"credits" : "Vytvořeno",
-			"changelog" : "Seznam změn"
-		},
-		"escapemenu" : {
-			"back" : "Vrátit se do hry",
-			"settings" : "Nastavení",
-			"info" : "Info",
-			"quitmain" : "Odejít do hlavního menu",
-			"quitdesktop" : "Odejít na plochu"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Zavřít",
+				"description" : "Zvolte, jestli chcete tuto oblast odstranit nebo ne.",
+				"header" : "Menu oblasti",
+				"remove" : "Odstranit oblast"
+			},
 			"banner" : {
-				"header" : "Správa kolonie",
-				"description" : "Kolonisté potřebují 5 jídla na den a postel. Rekrutování kolonisty stojí 50 jídla.",
 				"button" : "Rekrutuj kolonistu",
+				"description" : "Kolonisté potřebují 5 jídla na den a postel. Rekrutování kolonisty stojí 50 jídla.",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "Správa kolonie",
 				"resetbutton" : "Resetuj kolonii",
 				"resettooltipa" : "",
 				"resettooltipb" : "Toto zabije všechny vaše kolonisty a zníčí vaší kolonii.",
-				"resettooltipc" : "Také vám to dá čistý inventář a nové zásoby.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "Také vám to dá čistý inventář a nové zásoby."
+			},
+			"death" : {
+				"description" : "Zemřel jste.",
+				"respawn" : "Oživit"
+			},
+			"inventory" : {
+				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"foodvalue" : "Hodnota jídla:",
+				"science" : {
+					"available" : "_MISSING_Available",
+					"completed" : "_MISSING_Completed",
+					"dependencies" : "_MISSING_Required technologies:",
+					"header" : "_MISSING_Science",
+					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist",
+					"requirements" : "_MISSING_Requirements for one research cycle:",
+					"researchactive" : "_MISSING_Current research: {0}",
+					"researchselected" : "_MISSING_Select to research",
+					"unavailable" : "_MISSING_Unavailable"
+				},
+				"stockpiledescription" : "Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisti mohou používat věci pouze z vašich zásob.",
+				"tooltip" : {
+					"and" : "a",
+					"instockpile" : "_MISSING_in stockpile",
+					"needs" : "Potřebuje: "
+				}
+			},
+			"limits" : {
+				"description" : "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Limity pečení",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "Limity výroby",
+					"fineryforgejob" : "_MISSING_Finery forge limits",
+					"grinder" : "Limity mletí mouky",
+					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"kilnjob" : "_MISSING_Kiln limits",
+					"merchant" : "Limity nákupu",
+					"metalsmithjob" : "_MISSING_Metalsmith limits",
+					"minter" : "Limity řezání",
+					"smelter" : "Limity tavení rudy",
+					"tailor" : "_MISSING_Tailoring limits",
+					"technologist" : "_MISSING_Technologist limits",
+					"woodcutter" : "_MISSING_Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Stisknětě F1 pro zavření nebo otevření tohoto menu",
+				"closetoggle" : "Nezobrazovat znova",
+				"next" : "Další",
+				"openmanual" : "Otevřít manuál (PDF)",
+				"previous" : "Předchozí"
+			},
+			"specialblockremoval" : {
+				"button" : "_MISSING_Remove",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"header" : "_MISSING_Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "Stavitel",
+				"buildera" : "",
+				"builderb" : "Potřebuje oblast pro stavění",
+				"builderc" : "Staví věci",
+				"description" : "Vyberte typ oblasti, kterou chcete vytvořit.",
+				"destroyer" : "Ničitel",
+				"destroyera" : "",
+				"destroyerb" : "Potřebuje oblast pro níčení",
+				"destroyerc" : "Níčí věci",
+				"header" : "Nástroj pro konstrukce"
 			},
 			"tooljob" : {
-				"header" : "Nástroj pro příkazy",
+				"berrya" : "Rychlé a jednoduché jídlo, začněte s tímto!",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "Sběrač bobulí",
+				"berryfarmertool" : "Nástroj sběrače bobulí",
+				"bow" : "_MISSING_Bow",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "Překrývá se s existující oblastí",
+				"crossbow" : "_MISSING_Crossbow",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Vyberte typ oblasti, kterou chcete vytvořit.",
-				"wheatfarmer" : "Farmář pšenice",
-				"wheata" : "Pouze pro pokročilé kolonie",
-				"miner" : "Horník",
-				"minera" : "Těží rudy",
+				"flaxa" : "Pouze pro pokročilé kolonie",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "Farmář lenu",
+				"flaxfarmertool" : "Nástroj farmáře lenu",
 				"forester" : "Dřevorubec",
 				"forestera" : "Sází a kácí stromy",
-				"flaxfarmer" : "Farmář lenu",
-				"flaxa" : "Pouze pro pokročilé kolonie",
-				"notflat" : "Nerovná oblast",
-				"toosmall" : "Moc malé",
-				"toolarge" : "Moc velké",
-				"coversarea" : "Překrývá se s existující oblastí",
-				"toonarrow" : "Příliš úzké pro stromy",
-				"notarable" : "Nejedná se o ornou půdu",
-				"occupiedblocks" : "Obsazeno bloky",
-				"wheatfarmertool" : "Nástroj farmáře pšenice",
-				"minertool" : "Nástroj horníka",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"forestertool" : "Nástroj dřevorubce",
-				"flaxfarmertool" : "Nástroj farmáře lenu",
-				"notool" : "Nástroj nevybrán",
-				"berryfarmertool" : "Nástroj sběrače bobulí",
-				"berryfarmer" : "Sběrač bobulí",
-				"berrya" : "Rychlé a jednoduché jídlo, začněte s tímto!",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"header" : "Nástroj pro příkazy",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
 				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"matchlock" : "_MISSING_Matchlock",
 				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone"
-			},
-			"toolconstruction" : {
-				"header" : "Nástroj pro konstrukce",
-				"description" : "Vyberte typ oblasti, kterou chcete vytvořit.",
-				"builder" : "Stavitel",
-				"buildera" : "",
-				"builderb" : "Potřebuje oblast pro stavění",
-				"builderc" : "Staví věci",
-				"destroyer" : "Ničitel",
-				"destroyera" : "",
-				"destroyerb" : "Potřebuje oblast pro níčení",
-				"destroyerc" : "Níčí věci"
-			},
-			"areaselection" : {
-				"header" : "Menu oblasti",
-				"description" : "Zvolte, jestli chcete tuto oblast odstranit nebo ne.",
-				"close" : "Zavřít",
-				"remove" : "Odstranit oblast"
-			},
-			"inventory" : {
-				"stockpiledescription" : "Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisti mohou používat věci pouze z vašich zásob.",
-				"foodvalue" : "Hodnota jídla:",
-				"tooltip" : {
-					"needs" : "Potřebuje: ",
-					"and" : "a",
-					"instockpile" : "_MISSING_in stockpile"
-				},
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
-				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Limity výroby",
-					"baker" : "Limity pečení",
-					"smelter" : "Limity tavení rudy",
-					"minter" : "Limity řezání",
-					"merchant" : "Limity nákupu",
-					"grinder" : "Limity mletí mouky",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
-				},
-				"description" : "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách.",
-				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "Zemřel jste.",
-				"respawn" : "Oživit"
-			},
-			"quickstart" : {
-				"previous" : "Předchozí",
-				"next" : "Další",
-				"openmanual" : "Otevřít manuál (PDF)",
-				"closehelp" : "Stisknětě F1 pro zavření nebo otevření tohoto menu",
-				"closetoggle" : "Nezobrazovat znova"
-			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"miner" : "Horník",
+				"minera" : "Těží rudy",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Nástroj horníka",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "Nejedná se o ornou půdu",
+				"notflat" : "Nerovná oblast",
+				"notool" : "Nástroj nevybrán",
+				"occupiedblocks" : "Obsazeno bloky",
+				"slinger" : "_MISSING_Slinger",
+				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"toolarge" : "Moc velké",
+				"toonarrow" : "Příliš úzké pro stromy",
+				"toosmall" : "Moc malé",
+				"wheata" : "Pouze pro pokročilé kolonie",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "Farmář pšenice",
+				"wheatfarmertool" : "Nástroj farmáře pšenice"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Postele:",
-			"colonistcount" : "Kolonisti:",
-			"laborercount" : "Nezaměstnaní:",
-			"foodstorage" : "Jídlo:",
-			"foodusage" : "Spotřeba jídla/den:",
-			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "Základy",
 				"description" : "Vítejte v Colony Survival!",
+				"header" : "Základy",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "Potřebujete jídlo a postele pro rekrutování kolonistů. Kolonisté potřebují jíst aby přežili. Ujistěte se, že máte dostatek jídla nebo budou hladovět!",
 				"text3" : "Stiskněte \"I\" pro vyrobení postele. Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisté mohou používat předměty pouze ze zásob. K přístupu k zásobám používají bedny.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "Produkce jídla",
 				"description" : "Budete potřebovat jídlo aby jste rekrutovali a udrželi kolonisty!",
+				"header" : "Produkce jídla",
 				"text1" : "Použijte Nástroj pro příkazy (stiskněte 1) pro vytvoření Sběrače bobulí. Klikněte pravým na blok trávy, vyberte správnou práci a zvolte oblast pro sběrače. Levým klikem změníte typ práce. ",
 				"text2" : "Výroba chleba je náročná, ale účinná metoda výroby jídla. Začněte vytvářením pšeničných farem. Po dvou nocích bude vaše pšenice zralá a vaši farmáři ji sklidí. ",
 				"text3" : "Poté budete potřebovat rekrutovat dva nové lidi položením mlecích kamenů a peci. Mlecí kameny jsou použity pro výrobu mouky z pšenice. Pekař použije pec pro upečení chleba."
 			},
 			"page3" : {
-				"header" : "Obrana kolonie",
 				"description" : "Braňte svou kolonii před nočními útoky monster!",
+				"header" : "Obrana kolonie",
 				"text1" : "V noci se budou snažit monstra zaútočit na vaší kolonii. Položte strážce, postavte zdi a vykopejte příkopy aby jste ubránili svojí kolonii. Monstra nevyšplhají přes dva bloky.",
 				"text2" : "Do not completely isolate your colony! Pokud není k vašemu praporu žádná cesta, aktivuje se 'Režim Obležení'. Během Režimu Obležení je vaše jídlo velice rychle konzumováno.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+		"settingsmenu" : {
+			"audio" : "Audio",
+			"audiomenu" : {
+				"ambientvolume" : "Hlasitost okolí",
+				"effectsvolume" : "Hlasitost efektů",
+				"full" : "Audio nastavení",
+				"mastervolume" : "Hlasitost",
+				"menuvolume" : "Hlasitost v menu",
+				"torchvolume" : "Hlasitost pochodní"
+			},
+			"gameplay" : "Gameplay",
+			"gameplaymenu" : {
+				"full" : "Nastavení Gameplaye",
+				"keymapping" : "Nastavení kláves",
+				"keymenu" : {
+					"resetall" : "Resetovat vše"
 				},
-				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+				"mousemenu" : {
+					"invertx" : "Prohodit osu-x",
+					"inverty" : "Prohodit osu-y",
+					"sensitivitylock" : "Společná senzitivita obou os",
+					"sensitivityx" : "Citlivost myši osa-X",
+					"sensitivityy" : "Citlivost myši osa-Y",
+					"smooth" : "Vyhlazení pohybu myši",
+					"smoothlock" : "Společné vyhlazení pohybu myši pro obě osy",
+					"smoothx" : "Vyhlazení pohybu myši osy-X",
+					"smoothy" : "Vyhlazení pohybu myši osy-Y"
 				},
-				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Nastavení myši"
+			},
+			"language" : "Jazyk",
+			"languagemenu" : {
+				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "Jazykové nastavení",
+				"language" : "Jazyk",
+				"wiptext" : "Práce probíhají. Nejedná se o překlad kompletní hry, a některé překlady mohou obsahovat více nedodělků než jiné."
+			},
+			"qualityhigh" : "Vysoká",
+			"qualitylow" : "Nízká",
+			"qualitymaximum" : "Maximum",
+			"qualitymedium" : "Střední",
+			"qualityoff" : "Vypnuto",
+			"qualityon" : "Zapnuto",
+			"qualityveryhigh" : "Velmi vysoká",
+			"qualityverylow" : "Velmi nízká",
+			"video" : "Grafika",
+			"videomenu" : {
+				"ambientocclusion" : "Ambient occlusion",
+				"ambientreflections" : "Ambient reflections",
+				"anisotropic" : "Anizotropní filtrování x16",
+				"antialiasing" : "Vyhlazování",
+				"bloom" : "Bloom",
+				"depthoffield" : "Depth of field",
+				"eyeadaptation" : "Eye adaptation",
+				"fieldofview" : "Vzdálenost dohledu",
+				"full" : "Nastavení grafiky",
+				"fullscreen" : "Celá obrazovka",
+				"fxaahigh" : "FXAA Vysoké",
+				"fxaalow" : "FXAA Nízké",
+				"fxaamedium" : "FXAA Střední",
+				"lightscattering" : "Rozptyl světla",
+				"resolution" : "Rozlišení",
+				"shaderquality" : "Kvalita stínů",
+				"skyboxconstant" : "Mraky - konstatní",
+				"skyboxfrequent" : "Mraky - rychlé",
+				"skyboxslow" : "Mraky - pomalé",
+				"skyboxveryfrequent" : "Mraky - velmi rychlé",
+				"skyboxveryslow" : "Mraky - velice pomalé",
+				"sunshadowcascades" : "Kaskádové stíny slunce",
+				"sunshadowdistance" : "Vzdálenost stínů",
+				"sunshadowquality" : "Kvalita stínů slunce",
+				"taa" : "TAA",
+				"terrainconstant" : "Terén - konstantní",
+				"terrainfrequent" : "Terén - častý",
+				"terrainveryfrequent" : "Terén - velmi častý",
+				"vsync" : "VSync",
+				"vsyncdouble" : "Dvojité"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Jméno kolonie",
+			"daymonsters" : "Monstra během dne",
+			"delete" : "Vymazat",
+			"doubledmonsters" : "Dvojnásobný počet monster",
+			"load" : "Načíst",
+			"loadworld" : "Načíst svět",
+			"newworld" : "Nový svět",
+			"play" : "Hrát",
+			"spawnmonsters" : "Zrození monster",
+			"worlddate" : "Datum",
+			"worldname" : "Jméno"
 		}
 	},
 	"types" : {
-		"grass" : "Tráva",
-		"grasstemperate" : "Tráva mírných pásů",
-		"grasstundra" : "Tráva tundry",
-		"grasstaiga" : "Tráva taigy",
-		"grasssavanna" : "Tráva savany",
-		"grassrainforest" : "Tráva deštného lesa",
-		"water" : "Voda",
-		"sand" : "Písek",
-		"snow" : "Sníh",
-		"banner" : "Prapor",
-		"dirt" : "Hlína",
-		"stoneblock" : "Stone Block",
-		"planks" : "Prkna",
-		"log" : "Dřevo",
-		"logtemperate" : "Dřevo mírných pásů",
-		"logtaiga" : "Dřevo taigy",
-		"leaves" : "Listí",
-		"leavestemperate" : "Listí mírných pásů",
-		"leavestaiga" : "Listí taigy",
-		"torch" : "Pochodeň",
-		"crate" : "Bedna",
-		"stonebricks" : "Kamenné cíhly",
-		"coatedplanks" : "Opracované prkna",
 		"adobe" : "Vepřovice",
-		"workbench" : "Pracovní stůl",
-		"mint" : "Mincovna",
-		"shop" : "Obchod",
-		"plasterblock" : "Sádrový blok",
-		"furnace" : "Huť",
-		"oven" : "Pec",
-		"sappling" : "Sazenice",
-		"flaxstage1" : "Semínka lenu",
-		"wheatstage1" : "Semínka pšenice",
-		"straw" : "Sláma",
-		"linseedoil" : "Olej ze semínek lenu",
-		"flax" : "Len",
-		"wheat" : "Pšenice",
-		"bread" : "Chleba",
-		"coalore" : "Uhlí",
-		"gypsum" : "Sádra",
-		"ironore" : "Železná ruda",
-		"goldore" : "Zlatá ruda",
-		"ironingot" : "Železný ingot",
-		"goldingot" : "Zlatý ingot",
-		"goldcoin" : "Zlatá mince",
-		"bow" : "Luk",
-		"commandtool" : "Nástroj pro příkazy",
+		"banner" : "Prapor",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Postel",
-		"clay" : "Jíl",
-		"bricks" : "Cihly",
-		"berrybush" : "Semínka bobulí",
 		"berry" : "Bobule",
-		"grindstone" : "Mlecí kámen",
-		"flour" : "Mouka",
-		"cherrysapling" : "Sazenice třešně",
-		"cherryblossom" : "Květ třešně",
-		"redplanks" : "Červená prkna",
+		"berrybush" : "Semínka bobulí",
 		"blackplanks" : "Černá prkna",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "Luk",
 		"bowstring" : "_MISSING_Bowstring",
+		"bread" : "Chleba",
+		"bricks" : "Cihly",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "_MISSING_Bronze Ingot",
 		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
 		"bronzeplate" : "_MISSING_Bronze Plate",
+		"carpetblue" : "_MISSING_Blue Carpet",
+		"carpetred" : "_MISSING_Red Carpet",
+		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
+		"cherryblossom" : "Květ třešně",
+		"cherrysapling" : "Sazenice třešně",
+		"clay" : "Jíl",
+		"clothing" : "_MISSING_Clothing",
+		"coalore" : "Uhlí",
+		"coatedplanks" : "Opracované prkna",
 		"cokes" : "_MISSING_Cokes",
+		"commandtool" : "Nástroj pro příkazy",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
+		"crate" : "Bedna",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"dirt" : "Hlína",
 		"fineryforge" : "_MISSING_Finery Forge",
+		"firewood" : "_MISSING_Firewood",
+		"flax" : "Len",
+		"flaxstage1" : "Semínka lenu",
+		"flour" : "Mouka",
+		"furnace" : "Huť",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"goldcoin" : "Zlatá mince",
+		"goldingot" : "Zlatý ingot",
+		"goldore" : "Zlatá ruda",
+		"grass" : "Tráva",
+		"grassrainforest" : "Tráva deštného lesa",
+		"grasssavanna" : "Tráva savany",
+		"grasstaiga" : "Tráva taigy",
+		"grasstemperate" : "Tráva mírných pásů",
+		"grasstundra" : "Tráva tundry",
+		"grindstone" : "Mlecí kámen",
 		"guardbowdayjob" : "_MISSING_Day Bow Guard",
 		"guardbownightjob" : "_MISSING_Night Bow Guard",
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
 		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"gunpowder" : "_MISSING_Gunpowder",
+		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
+		"gunsmithshop" : "_MISSING_Gunsmith Shop",
+		"gypsum" : "Sádra",
+		"ironblock" : "_MISSING_Iron Block",
+		"ironingot" : "Železný ingot",
+		"ironore" : "Železná ruda",
+		"ironrivet" : "_MISSING_Iron Rivet",
+		"ironsword" : "_MISSING_Iron Sword",
+		"ironwrought" : "_MISSING_Wrought Iron",
+		"kiln" : "_MISSING_Kiln",
+		"lead" : "_MISSING_Lead",
+		"leadbullet" : "_MISSING_Lead Bullet",
+		"leaves" : "Listí",
+		"leavestaiga" : "Listí taigy",
+		"leavestemperate" : "Listí mírných pásů",
+		"linen" : "_MISSING_Linen",
+		"linenbag" : "_MISSING_Linen Bag",
+		"linenpouch" : "_MISSING_Linen Pouch",
+		"linseedoil" : "Olej ze semínek lenu",
+		"log" : "Dřevo",
+		"logtaiga" : "Dřevo taigy",
+		"logtemperate" : "Dřevo mírných pásů",
+		"matchlockgun" : "_MISSING_Matchlock Gun",
+		"minerjob" : "_MISSING_Miner Job",
+		"mint" : "Mincovna",
+		"oven" : "Pec",
+		"planks" : "Prkna",
+		"plasterblock" : "Sádrový blok",
+		"redplanks" : "Červená prkna",
+		"salpeter" : "_MISSING_Salpeter",
+		"sand" : "Písek",
+		"sappling" : "Sazenice",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagbasic" : "_MISSING_Basic Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"sciencebaglife" : "_MISSING_Life Science Bag",
+		"sciencebagmilitary" : "_MISSING_Military Science Bag",
+		"sciencelab" : "_MISSING_Science Lab",
+		"shop" : "Obchod",
+		"silveringot" : "_MISSING_Silver Ingot",
+		"sling" : "_MISSING_Sling",
+		"slingbullet" : "_MISSING_Sling Bullet",
+		"snow" : "Sníh",
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"steelingot" : "_MISSING_Steel Ingot",
+		"steelparts" : "_MISSING_Steel Parts",
+		"stoneblock" : "Stone Block",
+		"stonebricks" : "Kamenné cíhly",
+		"straw" : "Sláma",
+		"tailorshop" : "_MISSING_Tailor Shop",
+		"technologisttable" : "_MISSING_Technologist's Table",
+		"tin" : "_MISSING_Tin",
+		"torch" : "Pochodeň",
+		"water" : "Voda",
+		"wheat" : "Pšenice",
+		"wheatstage1" : "Semínka pšenice",
+		"workbench" : "Pracovní stůl"
 	},
 	"typeuses" : {
-		"planks" : "Nyní 4násobně objemnější než dřevo!",
-		"torch" : "Budiž světlo!",
-		"crate" : "Pro uložení všeho!",
-		"workbench" : "Rekrutuj řemeslníka. Bude pro tebe dělat výrobu!",
-		"plasterblock" : "Pro moderní vzhled",
-		"wheatstage1" : "Budoucí chleba",
-		"straw" : "Potřeba pro postele, vedlejší produkt z pšenice",
-		"wheat" : "Kolonista s mlecím kamenem přemění pšenici na mouku",
-		"bread" : "Chutná dobře, vyléčí tvá zranění",
-		"bed" : "Ulehčuje spaní",
-		"bow" : "Strážci ho potřebují!",
-		"snow" : "Nic nevíš",
-		"grasstemperate" : "Vypadní z trávníku!",
-		"grasstundra" : "Vypadní z trávníku!",
-		"grasstaiga" : "Vypadní z trávníku!",
-		"grasssavanna" : "Tráva vypadá na druhé straně zelenější",
-		"grassrainforest" : "Tahle tráva nevypadá moc zeleně",
-		"water" : "Neměl by jste to mít ve svém inventáři!",
-		"sand" : "Moc dobře nefunguje s hady",
-		"dirt" : "Špinavý",
 		"adobe" : "Hlína pro bohaté lidi",
-		"mint" : "Není to padělání když král říká, že je to v pořádku",
-		"shop" : "Pouze nakupování, ne prodávání",
-		"flaxstage1" : "Položte to na zem",
-		"flax" : "Nejkrásnější rostlina ve hře. A také jediná",
-		"linseedoil" : "Dělá věci lesklé",
-		"coatedplanks" : "Lesklé!",
-		"clay" : "Přál bych si aby jste se toho mohl dotknout",
-		"bricks" : "Je to Holandská hra koneckonců...",
-		"flour" : "Kolonista z pecí z tohohle udělá chleba",
-		"grindstone" : "Používá se pro rozmletí pšenice na mouku",
-		"berrybush" : "Kolonisté tohle mohou využít pro snadné získání jídla",
+		"bed" : "Ulehčuje spaní",
 		"berry" : "Není to jedovaté",
-		"redplanks" : "Nemá to žádnou výživovou hodnotu, ale chutná to skvěle",
+		"berrybush" : "Kolonisté tohle mohou využít pro snadné získání jídla",
 		"blackplanks" : "Velice hořlavé",
-		"cherryblossom" : "Nejrůžovější věc ve hře",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "Strážci ho potřebují!",
 		"bowstring" : "_MISSING_Ploink",
+		"bread" : "Chutná dobře, vyléčí tvá zranění",
+		"bricks" : "Je to Holandská hra koneckonců...",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
+		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
+		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "Nejrůžovější věc ve hře",
+		"clay" : "Přál bych si aby jste se toho mohl dotknout",
+		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
+		"coalore" : "_MISSING_Warning: might cause climate problems",
+		"coatedplanks" : "Lesklé!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "Pro uložení všeho!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"dirt" : "Špinavý",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "Nejkrásnější rostlina ve hře. A také jediná",
+		"flaxstage1" : "Položte to na zem",
+		"flour" : "Kolonista z pecí z tohohle udělá chleba",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
+		"goldcoin" : "_MISSING_With a portrait of the king on one side",
+		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
+		"goldore" : "_MISSING_Don't lose it",
+		"grassrainforest" : "Tahle tráva nevypadá moc zeleně",
+		"grasssavanna" : "Tráva vypadá na druhé straně zelenější",
+		"grasstaiga" : "Vypadní z trávníku!",
+		"grasstemperate" : "Vypadní z trávníku!",
+		"grasstundra" : "Vypadní z trávníku!",
+		"grindstone" : "Používá se pro rozmletí pšenice na mouku",
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
+		"linen" : "_MISSING_Lingerie means underwear made of linen",
+		"linenbag" : "_MISSING_Better than a plastic bag",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "Dělá věci lesklé",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "_MISSING_Like an output log, but different",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "Není to padělání když král říká, že je to v pořádku",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "Nyní 4násobně objemnější než dřevo!",
+		"plasterblock" : "Pro moderní vzhled",
+		"redplanks" : "Nemá to žádnou výživovou hodnotu, ale chutná to skvěle",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "Moc dobře nefunguje s hady",
+		"sappling" : "_MISSING_Future tree",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "_MISSING_Required to research basic science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"shop" : "Pouze nakupování, ne prodávání",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "Nic nevíš",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"straw" : "Potřeba pro postele, vedlejší produkt z pšenice",
+		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
+		"technologisttable" : "_MISSING_Crafts Science Bags",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 51.1586452762923
+		"torch" : "Budiž světlo!",
+		"water" : "Neměl by jste to mít ve svém inventáři!",
+		"wheat" : "Kolonista s mlecím kamenem přemění pšenici na mouku",
+		"wheatstage1" : "Budoucí chleba",
+		"workbench" : "Rekrutuj řemeslníka. Bude pro tebe dělat výrobu!"
+	}
 }
