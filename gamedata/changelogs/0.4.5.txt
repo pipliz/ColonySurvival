@@ -1,6 +1,7 @@
 0.4.5 (2017-12-01)
 
 -Added a basic autosave for non-block data (players, jobs etc), every 5 minutes by default.
+-Added a '/tps' command to get the ticks per second the server is running at (to see if it's lagging badly, gives avg fps over 10 seconds)
 -Changed saving of JSON files to prevent file corruption if the game crashes during saving (similar to regions change a few patches back).
 -Fixed npc's sometimes deciding to stand at the side of a block that isn't the closest to them
 -Fixed an issue with water spreading (it would spread anyway even after you filled a water block)
