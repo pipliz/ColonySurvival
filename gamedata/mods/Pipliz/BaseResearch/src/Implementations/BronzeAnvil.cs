@@ -19,6 +19,8 @@ namespace Pipliz.BaseResearch.Implementations
 		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bronzeanvil", true, "pipliz.crafter");
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bow", true, "pipliz.crafter");
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bowstring", true, "pipliz.crafter");
 			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.bronzeanvil");
 		}
 	}

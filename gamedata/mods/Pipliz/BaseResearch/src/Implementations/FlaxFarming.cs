@@ -17,6 +17,10 @@ namespace Pipliz.BaseResearch.Implementations
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.linseedoil", true, "pipliz.crafter");
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.coatedplanks", true, "pipliz.crafter");
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.adobe", true, "pipliz.crafter");
+
 			if (reason == EResearchCompletionReason.ProgressCompleted) {
 				Stockpile.GetStockPile(manager.Player).Add(BlockTypes.Builtin.BuiltinBlocks.FlaxStage1, 100);
 				if (manager.Player.IsConnected) {
