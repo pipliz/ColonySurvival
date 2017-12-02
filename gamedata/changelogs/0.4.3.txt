@@ -1,5 +1,24 @@
 0.4.3 (2017-11-22)
 
+Welcome to Update 0.4.3!
+
+We noticed that the added complexity of 0.4.0 made the game difficult to understand for new players. To streamline the early stages of building a colony, non-vital content has been locked behind research. We hope this will make the game less overwhelming for new players. We understand that it might be annoying for more experienced players and people who've already started colonies. The research costs are low to make sure they can unlock the content they were used to quickly. We've also worked to make the research menu more aesthetically pleasing.
+
+Changelog summary:
+
+-New colonies don't start with wheat seeds and flax seeds anymore, but gain them by unlocking the related research
+-New colonies start with extra straw to compensate for wheat being locked behind research
+-Swords actually deal extra damage now
+-We added a shortcut to the science interface in the Banner Menu.
+-We've motivated the tailor to work quicker
+-Wheat farmers, flax farmers, archers, crossbow guards, matchlock gunners, ovens, grindstones, kilns, splitting stumps, mints & shops are now locked behind (mostly quick & easy) research
+-Categories in the science interface are now labeled clearly; available, unavailable & unlocked.
+-Unavailable research is now black & white, to make it appear less overwhelming and important
+-Added a text to to the science interface that explains how to recruit scientists
+-Updated some tooltips to better reflect the changes in 0.4.0
+
+Full changelog:
+
 -Changed science menu to be clearer & more beautiful
 -Changed mint & shop recipes to require research to be done first
 -Changed wheat farming to require research to be done first
@@ -10,7 +29,10 @@
 -Changed the torch recipe to use firewood instead of charcoal (and made the player cost equivalent to the npc cost)
 -Changed science lab recipe to require planks instead of coated planks
 -Grayed out buttons in the command tool for jobs that are not researched yet
+-Boosted tailor throughput in making linen
+-Hitting a npc/zombie while carrying an iron sword now does more damage
 
+-Fixed the crafting limit field having issues with values above 9999 and below 1000000
 -Fixed changelogs not being included in the build (broken for 0.4.1, 0.4.2)
 -Updated unity from 5.6.3p2 to 5.6.4p2
 -Fixed the recipe requirements in the crafting limits inventory checking the requirements in the inventory instead of the stockpile
@@ -21,12 +43,19 @@
 -Fixed an issue when running the dedicated server wrapper with another directory as working directory in the commandline
 -Added a button to go to the science menu in the banner menu
 -Disabled the hotbar in the science menu
--Changed a few tooltips to better describe what the block/item is useful for
 -Sorted banner radius 1 research requirements to match the iteration requirements
 -Added copper/copper nails to localized files
--Changed berry farmer tooltip to be consistent with the others
--Renamed japanese locale from jp-JP to ja-JP
 -Merged the default mods' modInfo.json files together
+
+-Changed miner tooltip to reflect the changes to the ore system
+-Changed berry farmer tooltip to be consistent with the others
+-Changed a few tooltips to better describe what the block/item is useful for
+-Renamed japanese locale from jp-JP to ja-JP
+-Updated de-DE locale
+-Updated fr-FR locale
+-Updated es-ES locale
 
 Modding changes:
 -IResearchable.OnResearchComplete now takes an additional Server.Science.EResearchCompletionReason parameter, to indicate if it's completed due to loading or due to researching
+-Removed Colony.Location - Use BannerTracker combined with the owner to get a banner location
+-Improved support for multiple banners under a single colony

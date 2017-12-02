@@ -22,6 +22,7 @@ namespace Pipliz.APIProvider
 		}
 
 		[ModLoader.ModCallback (ModLoader.EModCallbackType.OnQuit, "pipliz.apiprovider.jobs.save")]
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAutoSaveWorld, "pipliz.apiprovider.jobs.autosave")]
 		public static void OnQuit ()
 		{
 			Jobs.BlockJobManagerTracker.Save();

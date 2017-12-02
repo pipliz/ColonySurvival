@@ -15,7 +15,7 @@ namespace ColonyServerWrapper
 		static TcpListener ServerListener = null;
 		static Thread LoggingThread = null;
 		static List<KeyValuePair<string, string>> MessagesToSend = new List<KeyValuePair<string, string>>();
-		static List<char> InputChars = new List<char> ();
+		static Queue<string> QueuedLogs = new Queue<string>();
 
 		static bool IsServerRunning {
 			get {
@@ -30,11 +30,27 @@ namespace ColonyServerWrapper
 			}
 		}
 
+		static void CheckDllFile (string source, string target)
+		{
+			try {
+				if (File.Exists(source)) {
+					WriteConsole("Copying {0} to {1}", source, target);
+					File.Copy(source, target, true);
+				}
+			} catch (Exception e) {
+				Console.WriteLine(e.ToString());
+			}
+		}
+
 		public static void Main (string[] args)
 		{
 			Console.Title = "Colony Survival Dedicated Server";
 			WriteConsole("Launching Colony Survival Dedicated Server");
+
 			FixWorkingDirectory();
+			
+			CheckDllFile("linux32/steamclient.so", "colonyserver_Data/Plugins/x86/steamclient.so");
+			CheckDllFile("linux64/steamclient.so", "colonyserver_Data/Plugins/x86_64/steamclient.so");
 
 			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs e) =>
 			{
@@ -62,60 +78,73 @@ namespace ColonyServerWrapper
 			}
 
 			while (true) {
-				string read = null;
-				while (read == null) {
-					if (Console.KeyAvailable) {
-						ReadConsoleKey(ref read);
-					} else {
-						Thread.Sleep(1);
+				if (Console.KeyAvailable) {
+					PrintQueuedLogs();
+					Console.WriteLine("--Logging paused. Enter your command:");
+					Console.Write("> ");
+					if (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX) {
+						Console.ReadKey(true);
 					}
-				}
-				read = read.TrimStart(' ', '\t', '\n', '\r');
-				if (string.IsNullOrEmpty(read)) {
-					ListHelp();
-					continue;
-				}
-				string start = read;
-				if (read.Contains(" ")) {
-					start = read.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0];
-				}
-				switch (start) {
-					case "quit":
-						WriteConsole(string.Format("> {0}", read));
-						if (IsServerRunning) {
+					string read = Console.ReadLine();
+					if (read != null) {
+						read = read.TrimStart(' ', '\t', '\n', '\r');
+					}
+					if (string.IsNullOrEmpty(read)) {
+						Console.WriteLine("--Logging continue");
+						continue;
+					}
+
+					string start = read;
+					if (read.Contains(" ")) {
+						start = read.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0];
+					}
+					switch (start) {
+						case "quit":
+							if (IsServerRunning) {
+								StopServer();
+							}
+							return;
+						case "help":
+						case "list":
+						case "?":
+							ListHelp();
+							break;
+						case "start_server":
+							if (read.Length < "start_server  ".Length) {
+								goto case "help";
+							}
+							StringBuilder str = new StringBuilder();
+							str.Append(read, "start_server ".Length, read.Length - "start_server ".Length);
+							str.AppendFormat(" +parentprocess {0} ", Process.GetCurrentProcess().Id);
+							StartServer(str.ToString());
+							break;
+						case "stop_server":
 							StopServer();
-						}
-						return;
-					case "help":
-					case "list":
-					case "?":
-						WriteConsole(string.Format("> {0}", read));
-						ListHelp();
-						break;
-					case "start_server":
-						if (read.Length < "start_server  ".Length) {
-							goto case "help";
-						}
-						WriteConsole(string.Format("> {0}", read));
-						StringBuilder str = new StringBuilder();
-						str.Append(read, "start_server ".Length, read.Length - "start_server ".Length);
-						str.AppendFormat(" +parentprocess {0} ", Process.GetCurrentProcess().Id);
-						StartServer(str.ToString());
-						break;
-					case "stop_server":
-						WriteConsole(string.Format("> {0}", read));
-						StopServer();
-						break;
-					case "send":
-						if (read.Length < "send  ".Length) {
-							goto case "help";
-						}
-						WriteConsole(string.Format("> {0}", read));
-						SendLog(read.Remove(0, "send ".Length));
-						break;
-					default:
-						WriteConsole("Unexpected command: {0}", read);
-						break;
+							break;
+						case "send":
+							if (read.Length < "send  ".Length) {
+								goto case "help";
+							}
+							SendLog(read.Remove(0, "send ".Length));
+							break;
+						default:
+							Console.WriteLine("Unknown command");
+							break;
+					}
+					Console.WriteLine("--Logging continue");
+				}
+				PrintQueuedLogs();
+				Thread.Sleep(50);
+			}
+		}
+
+		static void PrintQueuedLogs ()
+		{
+			if (QueuedLogs.Count > 0) {
+				lock (QueuedLogs) {
+					while (QueuedLogs.Count > 0) {
+						Console.WriteLine(QueuedLogs.Dequeue());
+					}
 				}
 			}
 		}
@@ -129,74 +158,35 @@ namespace ColonyServerWrapper
 			WriteConsole("Setting working directory to {0}", newPath);
 		}
 
-		static void ReadConsoleKey (ref string read) {
-			ConsoleKeyInfo key = Console.ReadKey (true);
-
-			switch (key.Key) {
-			case ConsoleKey.Backspace:
-				if (InputChars.Count > 0) {
-					InputChars.RemoveAt (InputChars.Count - 1);
-				}
-				break;
-			case ConsoleKey.Enter:
-				read = new string (InputChars.ToArray ());
-				InputChars.Clear ();
-				break;
-			case ConsoleKey.Escape:
-				InputChars.Clear ();
-				break;
-			case ConsoleKey.Home:
-			case ConsoleKey.Tab:
-				break;
-			default:
-				if (key.KeyChar == '\u0000') {
-					break;
-				}
-				InputChars.Add (key.KeyChar);
-				break;
-			}
-			Console.CursorLeft = 0;
-			Console.Write (new string (' ', Console.BufferWidth - 1));
-			PrintCurrentTyping ();
-		}
-
-		static void PrintCurrentTyping () {
-			Console.CursorLeft = 0;
-			string toPrint;
-			if (InputChars.Count < Console.BufferWidth) {
-				toPrint = new string (InputChars.ToArray ());
-			} else {
-				char[] chars = new char[Console.BufferWidth - 1];
-				int tooMany = InputChars.Count - Console.BufferWidth + 1;
-
-				for (int i = 0; i < chars.Length; i++) {
-					chars [i] = InputChars [i + tooMany];
-				}
-				toPrint = new string (chars);
-			}
-			Console.Write (toPrint);
-		}
-
-		static void ListHelp () {
-			WriteConsole ("Available commands:");
-			WriteConsole ("quit                      - Exits this program");
-			WriteConsole ("list,help,?               - Lists available commands");
-			WriteConsole ("start_server              - Starts a server. Arguments possible:");
-			WriteConsole ("| +server.world           - followed by worldname to load/create");
-			WriteConsole ("| +server.name            - server name to display in the server browser");
-			WriteConsole ("| +server.networktype     - Network type to host as, options are Singleplayer (connects to client), LAN (localhost client connects), SteamLAN, SteamOnline");
-			WriteConsole ("| +server.maxplayers      - max players to be active at the same time, default 10");
-			WriteConsole ("| +server.gameport        - port used by the game (for discovery mostly) default 27016");
-			WriteConsole ("| +server.ip              - which IP to use to select the network adapter. Not needed in most cases. 0.0.0.0 for auto");
-			WriteConsole ("| +server.steamport       - port used by steam, default 27017");
-			WriteConsole ("| +server.usevac          - whether to filter for VAC status, true or false. Untested, default false.");
-			WriteConsole ("| +server.seed            - if new world, seed used to generate terrain. type integer");
-			WriteConsole ("| +server.monsterson      - if new world, whether to spawn monsters. default true");
-			WriteConsole ("| +server.initialsettings - if new world, initialsettings file to use, default normal");
-			WriteConsole ("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
-			WriteConsole ("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
-			WriteConsole ("stop_server             - Stops a server");
-			WriteConsole ("send                    - Send text to the server (example: send Hey Everyone!)");
+		static void ListHelp ()
+		{
+			WriteConsole("Available commands:");
+			WriteConsole("quit                      - Exits this program");
+			WriteConsole("list,help,?               - Lists available commands");
+			WriteConsole("start_server              - Starts a server. Arguments possible:");
+			WriteConsole("- Example: start_server +server.world \"test world\" +server.networktype LAN");
+			WriteConsole("| All options and things below are case sensitive");
+			WriteConsole("| +server.world           - followed by worldname to load/create");
+			WriteConsole("| +server.name            - server name to display in the server browser");
+			WriteConsole("| +server.networktype     - Network type to host. Possible options below:");
+			WriteConsole("-| Singleplayer  - connects to a localhost client, not really usable manually");
+			WriteConsole(" | LAN           - allows connecting from localhost through the ingame button");
+			WriteConsole(" | SteamLAN      - steam networking, does not port forward or check authentication");
+			WriteConsole(" | SteamOnline   - steam networking, port forwards and checks authentication");
+			WriteConsole("| +server.maxplayers      - default 10; max players to be active at the same time");
+			WriteConsole("| +server.gameport        - default 27016; port queried for info to display in the server browser");
+			WriteConsole("| +server.ip              - default 0.0.0.0 (auto); IP to use when selecting local adapter");
+			WriteConsole("| +server.steamport       - default 27017; port passed for 'steam use', seems unused");
+			WriteConsole("| +server.usevac          - default false; whether to filter for VAC status, true or false");
+			WriteConsole("| +server.seed            - if new world, seed used to generate terrain. type integer");
+			WriteConsole("| +server.monsterson      - if new world, whether to spawn monsters. default true");
+			WriteConsole("| +server.initialsettings - if new world, initialsettings file to use, default normal");
+			WriteConsole("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
+			WriteConsole("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
+			WriteConsole("stop_server             - Stops a server");
+			WriteConsole("send                    - Send text to the server");
+			WriteConsole("- Example 1: send Hey Everyone!");
+			WriteConsole("| Example 2: send /time add 10");
 		}
 
 		static void SendLog (string log) {
@@ -234,7 +224,7 @@ namespace ColonyServerWrapper
 			WriteConsole ("Started listening for logging at {0}...", endPoint);
 			LoggingThread = new Thread (Logger);
 			LoggingThread.Start ();
-			ServerProcess = System.Diagnostics.Process.Start (path, string.Format ("-batchmode -nographics +logto {0} {1}", endPoint.Port, arg));
+			ServerProcess = Process.Start (path, string.Format ("-batchmode -nographics +logto {0} {1}", endPoint.Port, arg));
 		}
 
 		static void StopServer () {
@@ -244,13 +234,17 @@ namespace ColonyServerWrapper
 			}
 
 			WriteConsole ("Sending quit message");
+			PrintQueuedLogs();
 			lock (MessagesToSend) {
 				MessagesToSend.Add (new KeyValuePair<string, string> ("quit", null));
 			}
-			while (ServerProcess != null && ServerProcess.WaitForExit (2500)) {
+			while (ServerProcess != null && ServerProcess.WaitForExit (500)) {
 				WriteConsole ("Waiting for server exit...");
+				PrintQueuedLogs();
+				Thread.Sleep(500);
 			}
 			WriteConsole ("Succesfully closed server");
+			PrintQueuedLogs();
 			ServerProcess = null;
 		}
 
@@ -335,16 +329,14 @@ namespace ColonyServerWrapper
 			return args;
 		}
 
-		static void WriteConsole (string s, params object[] args) {
-			Console.CursorLeft = 0;
-			Console.Write (new String (' ', Console.BufferWidth - 1));
-			Console.CursorLeft = 0;
+		static void WriteConsole (string s, params object[] args)
+		{
 			if (args != null && args.Length > 0) {
-				Console.WriteLine(s, args);
-			} else {
-				Console.WriteLine(s);
+				s = string.Format(s, args);
 			}
-			PrintCurrentTyping ();
+			lock (QueuedLogs) {
+				QueuedLogs.Enqueue(s);
+			}
 		}
 	}
 }

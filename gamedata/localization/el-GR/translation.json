@@ -1,561 +1,504 @@
 {
+	"coverage" : 47.6106194690266,
 	"sentences" : {
+		"escapemenu" : {
+			"back" : "Πήγαινε πίσω",
+			"info" : "Πληροφορίες",
+			"quitdesktop" : "Έξοδος Παιχνιδιού",
+			"quitmain" : "Επιστροφή στο κεντρικό μενού",
+			"settings" : "Ρυθμίσεις"
+		},
+		"firstpersonstats" : {
+			"ammocount" : "_MISSING_Ammo:",
+			"bedcount" : "Κρεβάτια:",
+			"colonistcount" : "Αποικιστές:",
+			"foodstorage" : "Τρόφιμα:",
+			"foodusage" : "Χρήση τροφήμων / ημέρα:",
+			"laborercount" : "Άνεργοι:"
+		},
 		"general" : {
-			"close" : "Κλείσε",
-			"back" : "Πίσω",
 			"apply" : "Εφάρμοσε",
-			"none" : "Κανένα",
-			"reset" : "Επαναφορά",
+			"back" : "Πίσω",
+			"close" : "Κλείσε",
 			"inputplaceholder" : "Τόπος Εισαγωγής",
+			"next" : "_MISSING_Next",
+			"none" : "Κανένα",
 			"previous" : "_MISSING_Previous",
-			"next" : "_MISSING_Next"
+			"reset" : "Επαναφορά"
+		},
+		"infomenu" : {
+			"changelog" : "_MISSING_Changelog",
+			"credits" : "Πιστώσεις",
+			"quickstart" : "Γρήγορη Εκίνηση"
 		},
 		"mainmenu" : {
-			"singleplayer" : "Παιχνίδι Ενός Παίκτη",
-			"multiplayer" : "Παιχνίδι Πολλών Παικτών",
-			"settings" : "Ρυθμίσεις",
+			"back" : "Πίσω",
 			"info" : "Πληροφορίες",
+			"multiplayer" : "Παιχνίδι Πολλών Παικτών",
 			"quit" : "Εγκατέλειψε",
-			"back" : "Πίσω"
-		},
-		"singleplayermenu" : {
-			"newworld" : "Νέος Κόσμος",
-			"colonyname" : "Όνομα Αποικίας:",
-			"spawnmonsters" : "Αναγέννηση Ζόμπι:",
-			"loadworld" : "Φόρτωση υφιστάμενου κόσμου",
-			"load" : "Φόρτιση",
-			"worldname" : "Όνομα Κόσμου",
-			"worlddate" : "Ημερομηνία Κόσμου",
-			"play" : "Παίξε",
-			"delete" : "Διέγραψε",
-			"doubledmonsters" : "_MISSING_Double monster amount",
-			"daymonsters" : "_MISSING_Monsters during daytime"
+			"settings" : "Ρυθμίσεις",
+			"singleplayer" : "Παιχνίδι Ενός Παίκτη"
 		},
 		"multiplayermenu" : {
+			"connect" : "Σύνδεση",
+			"connectlocal" : "Συνδέσου στο τοπικό",
+			"hostserver" : "Δημιούργησε διακομιστή",
+			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server.",
 			"joininternet" : "Σύνδεση στο διαδίκτυο",
 			"joininternetmenu" : "Σύνδεση στο διαδίκτυο μενού",
 			"joinserverlan" : "Σύνδεση στο τοπικό διαδίκτυο",
 			"joinserverlanfull" : "Το τοπικό διαδίκτυο είναι πλήρες",
-			"servername" : "Όνομα διακομιστή",
-			"serverplayers" : "Παίκτες",
-			"serverping" : "Ping",
-			"hostserver" : "Δημιούργησε διακομιστή",
-			"connectlocal" : "Συνδέσου στο τοπικό",
-			"connect" : "Σύνδεση",
 			"refresh" : "Ανανέωση",
 			"refreshing" : "Γίνεται Ανανέωση...",
-			"startserver" : "Έναρξη διακομιστή",
-			"hostserverdescription" : "_MISSING_You can host a server by opening the following file through a file explorer:\nGo to the game properties in steam and click 'browse local files'. Open 'colonyserver.exe' to host a server."
+			"servername" : "Όνομα διακομιστή",
+			"serverping" : "Ping",
+			"serverplayers" : "Παίκτες",
+			"startserver" : "Έναρξη διακομιστή"
 		},
-		"settingsmenu" : {
-			"qualitymaximum" : "Μέγιστα",
-			"qualityveryhigh" : "Πολύ υψηλά",
-			"qualityhigh" : "Υψηλά",
-			"qualitymedium" : "Μέτρια",
-			"qualitylow" : "Χαμηλά",
-			"qualityverylow" : "Πολύ Χαμηλά",
-			"qualityon" : "Ποιότητα Ενεργή",
-			"qualityoff" : "Ποιότητα μη Ενεργή",
-			"video" : "Βίντεο",
-			"videomenu" : {
-				"full" : "Ρυθμίσεις Βίντεο",
-				"resolution" : "Ανάλυση",
-				"fullscreen" : "Πλήρης Οθόνη",
-				"vsync" : "V συγχρονισμός",
-				"vsyncdouble" : "V Διπλός συγχρονισμός",
-				"anisotropic" : "ανισοτροπικό Φίλτρο x16",
-				"shaderquality" : "Ποιότητα σκίασης",
-				"sunshadowquality" : "Ποιότητα σκίασης ηλίου",
-				"sunshadowcascades" : "Sonnenschatten-Kaskaden",
-				"sunshadowdistance" : "Απόσταση σκίασης ηλίου",
-				"fieldofview" : "Οπτικό πεδίο",
-				"lightscattering" : "Φωτεινή σκέδαση",
-				"ambientocclusion" : "Απόφραξη του περιβάλλοντος",
-				"eyeadaptation" : "Προσαρμογή των ματιών",
-				"bloom" : "Άνθηση",
-				"ambientreflections" : "Ανακλάσεις περιβάλλοντος",
-				"depthoffield" : "Βάθος πεδίου",
-				"antialiasing" : "Τονικότητα στα γραφικά",
-				"fxaalow" : "FXAA Χαμηλή",
-				"fxaamedium" : "FXAA Μέτρια",
-				"fxaahigh" : "FXAA Υψηλή",
-				"taa" : "TAA",
-				"skyboxveryslow" : "Skybox Πολύ Αργό",
-				"skyboxslow" : "Skybox Αργό",
-				"skyboxfrequent" : "Skybox Συχνό",
-				"skyboxveryfrequent" : "Skybox Πολύ Συχνό",
-				"skyboxconstant" : "Skybox Συνεχές",
-				"terrainfrequent" : "Έδαφος Συχνό",
-				"terrainveryfrequent" : "Έδαφος Πολύ Συχνό",
-				"terrainconstant" : "Έδαφος Συνεχές"
-			},
-			"audio" : "Ήχος",
-			"audiomenu" : {
-				"full" : "Μενού Ήχου",
-				"mastervolume" : "Γενική ένταση",
-				"effectsvolume" : "Ένταση εφέ",
-				"ambientvolume" : "Ένταση Περιβάλλοντος",
-				"torchvolume" : "Ένταση πυρσού",
-				"menuvolume" : "Ένταση Μενού"
-			},
-			"gameplay" : "Παιχνίδι",
-			"gameplaymenu" : {
-				"full" : "Μενού Παιχνιδιού",
-				"mousesettings" : "Ρυθμίσεις Ποντικιού",
-				"keymapping" : "Χαρτογράφηση πλήκτρων",
-				"mousemenu" : {
-					"sensitivityx" : "Ευαισθησία X-άξονας",
-					"sensitivityy" : "Ευαισθησία Y-άξονας",
-					"sensitivitylock" : "Κλείδωμα ευαισθησίας",
-					"invertx" : "Αναστροφή στον X άξονα",
-					"inverty" : "Αναστροφή στον Y άξονα",
-					"smooth" : "Λείωση Ποντικιού",
-					"smoothx" : "Λείωση προς τον X άξονα",
-					"smoothy" : "Λείωση προς τον Y άξονα",
-					"smoothlock" : "Κλείδωση Λείωσης"
+		"pipliz" : {
+			"baseresearch" : {
+				"bannerradius1" : {
+					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
+					"name" : "_MISSING_Banner Radius I"
 				},
-				"keymenu" : {
-					"resetall" : "Επαναφορά όλων"
+				"bannerradius2" : {
+					"description" : "_MISSING_Increases the safe radius created to 55 blocks",
+					"name" : "_MISSING_Banner Radius II"
+				},
+				"bannerradius3" : {
+					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
+					"name" : "_MISSING_Banner Radius III"
+				},
+				"bannerradius4" : {
+					"description" : "_MISSING_Increases the safe radius created to 85 blocks",
+					"name" : "_MISSING_Banner Radius IV"
+				},
+				"bannerradius5" : {
+					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"name" : "_MISSING_Banner Radius V"
+				},
+				"bloomery" : {
+					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
+					"name" : "_MISSING_Bloomery"
+				},
+				"bronzeanvil" : {
+					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
+					"name" : "_MISSING_Bronze Anvil"
+				},
+				"bronzeminting" : {
+					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
+					"name" : "_MISSING_Mints & Shops"
+				},
+				"crossbow" : {
+					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
+					"name" : "_MISSING_Crossbow"
+				},
+				"crossbowbolt" : {
+					"description" : "_MISSING_Unlocks Crossbow Bolts",
+					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"fineryforge" : {
+					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
+					"name" : "_MISSING_Finery Forge"
+				},
+				"flaxfarming" : {
+					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"name" : "_MISSING_Flax Farming"
+				},
+				"gunpowder" : {
+					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
+					"name" : "_MISSING_Gunpowder"
+				},
+				"gunsmithshop" : {
+					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
+					"name" : "_MISSING_Gunsmith Shop"
+				},
+				"healthregensize1" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
+					"name" : "_MISSING_Regeneration Increase I"
+				},
+				"healthregensize2" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
+					"name" : "_MISSING_Regeneration Increase II"
+				},
+				"healthregensize3" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
+					"name" : "_MISSING_Regeneration Increase III"
+				},
+				"healthregensize4" : {
+					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
+					"name" : "_MISSING_Regeneration Increase IV"
+				},
+				"healthregenspeed1" : {
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"name" : "_MISSING_Regeneration Speed I"
+				},
+				"healthregenspeed2" : {
+					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"name" : "_MISSING_Regeneration Speed II"
+				},
+				"healthregenspeed3" : {
+					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"name" : "_MISSING_Regeneration Speed III"
+				},
+				"healthregenspeed4" : {
+					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"name" : "_MISSING_Regeneration Speed IV"
+				},
+				"healthsize1" : {
+					"description" : "_MISSING_Increases Max HP to 125",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"healthsize2" : {
+					"description" : "_MISSING_Increases Max HP to 150",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"healthsize3" : {
+					"description" : "_MISSING_Increases Max HP to 175",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"healthsize4" : {
+					"description" : "_MISSING_Increases Max HP to 200",
+					"name" : "_MISSING_Health Increase IV"
+				},
+				"kiln" : {
+					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
+					"name" : "_MISSING_Kiln"
+				},
+				"matchlockgun" : {
+					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
+					"name" : "_MISSING_Matchlock Gun"
+				},
+				"sciencebagadvanced" : {
+					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
+					"name" : "_MISSING_Advanced Science Bag"
+				},
+				"sciencebagbasic" : {
+					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
+					"name" : "_MISSING_Basic Science Bag"
+				},
+				"sciencebagcolony" : {
+					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
+					"name" : "_MISSING_Colony Science Bag"
+				},
+				"sciencebaglife" : {
+					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
+					"name" : "_MISSING_Life Science Bag"
+				},
+				"sciencebagmilitary" : {
+					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
+					"name" : "_MISSING_Military science bag"
+				},
+				"splittingstump" : {
+					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
+					"name" : "_MISSING_Splitting Stump"
+				},
+				"tailorshop" : {
+					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
+					"name" : "_MISSING_Tailor"
+				},
+				"technologisttable" : {
+					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags",
+					"name" : "_MISSING_Technologist"
+				},
+				"wheatfarming" : {
+					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"name" : "_MISSING_Bread Production"
 				}
-			},
-			"language" : "Γλώσσα",
-			"languagemenu" : {
-				"full" : "Μενού Γλώσσας",
-				"wiptext" : "Εργασία σε εξέλιξη. Αυτό δεν καλύπτει όλο το κείμενο στο παιχνίδι, και μερικές μεταφράσεις μπορούν να καλύπτουν λιγότερο από τις άλλες.",
-				"language" : "Γλώσσα",
-				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github"
 			}
 		},
-		"infomenu" : {
-			"quickstart" : "Γρήγορη Εκίνηση",
-			"credits" : "Πιστώσεις",
-			"changelog" : "_MISSING_Changelog"
-		},
-		"escapemenu" : {
-			"back" : "Πήγαινε πίσω",
-			"settings" : "Ρυθμίσεις",
-			"info" : "Πληροφορίες",
-			"quitmain" : "Επιστροφή στο κεντρικό μενού",
-			"quitdesktop" : "Έξοδος Παιχνιδιού"
-		},
 		"popup" : {
+			"areaselection" : {
+				"close" : "Κλείσε",
+				"description" : "Επιλέξτε αν θέλετε να καταργήσετε αυτή την περιοχή η όχι.",
+				"header" : "Μενού Περιοχής",
+				"remove" : "Διέγραψε την περιοχή"
+			},
 			"banner" : {
-				"header" : "Διαχείριση αποικίας",
-				"description" : "Οι αποικιστές χρειάζονται 5 μονάδες φαγητού την ημέρα και ένα κρεβάτι. Η πρόσληψη ενός άποικου κοστίζει 50 μονάδες τροφίμων.",
 				"button" : "Πρόσληψη ενός άποικου",
+				"description" : "Οι αποικιστές χρειάζονται 5 μονάδες φαγητού την ημέρα και ένα κρεβάτι. Η πρόσληψη ενός άποικου κοστίζει 50 μονάδες τροφίμων.",
+				"gotoscience" : "_MISSING_Science menu",
+				"header" : "Διαχείριση αποικίας",
 				"resetbutton" : "_MISSING_Reset colony",
 				"resettooltipa" : "_MISSING_",
 				"resettooltipb" : "_MISSING_This kills all your colonists and removes your job fields.",
-				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile.",
-				"gotoscience" : "_MISSING_Science menu"
+				"resettooltipc" : "_MISSING_It also gives you a fresh new inventory and stockpile."
+			},
+			"death" : {
+				"description" : "Πέθανες.",
+				"respawn" : "Αναγέννηση"
+			},
+			"inventory" : {
+				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
+				"foodvalue" : "_MISSING_Food value:",
+				"science" : {
+					"available" : "_MISSING_Available",
+					"completed" : "_MISSING_Completed",
+					"dependencies" : "_MISSING_Required technologies:",
+					"header" : "_MISSING_Science",
+					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
+					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist",
+					"requirements" : "_MISSING_Requirements for one research cycle:",
+					"researchactive" : "_MISSING_Current research: {0}",
+					"researchselected" : "_MISSING_Select to research",
+					"unavailable" : "_MISSING_Unavailable"
+				},
+				"stockpiledescription" : "Μπορείτε να φτιάξετε μόνο πράγματα με τα αντικείμενα στις υποδοχές στο κάτω μέρος. Οι αποικιστές μπορούν να χρησιμοποιήσουν μόνο αντικείμενα στο απόθεμά σας. ",
+				"tooltip" : {
+					"and" : "και",
+					"instockpile" : "_MISSING_in stockpile",
+					"needs" : "Ανάγκες: "
+				}
+			},
+			"limits" : {
+				"description" : "Οι αποικιστές θα δουλέψουν έως ότου επιτευχθεί το καθορισμένο ποσό στο απόθεμα.",
+				"hoverpriority" : {
+					"a" : "_MISSING_Crafting Priority",
+					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+				},
+				"pipliz" : {
+					"baker" : "Όρια ψησίματος",
+					"bloomeryjob" : "_MISSING_Bloomery limits",
+					"crafter" : "Όρια κατασκευής",
+					"fineryforgejob" : "_MISSING_Finery forge limits",
+					"grinder" : "Όρια άλεσης",
+					"gunsmithjob" : "_MISSING_Gunsmith limits",
+					"kilnjob" : "_MISSING_Kiln limits",
+					"merchant" : "Όρια αγορών",
+					"metalsmithjob" : "_MISSING_Metalsmith limits",
+					"minter" : "Όρια κοπής νομισμάτων",
+					"smelter" : "Όρια τήξης",
+					"tailor" : "_MISSING_Tailoring limits",
+					"technologist" : "_MISSING_Technologist limits",
+					"woodcutter" : "_MISSING_Wood cutting limits"
+				}
+			},
+			"quickstart" : {
+				"closehelp" : "Πατήστε F1 για να κλείσετε ή να ανοίξετε ξανά αυτό το μενού",
+				"closetoggle" : "Μην το ξαναδείξεις",
+				"next" : "Επόμενο",
+				"openmanual" : "Άνοιγμα εγχειριδίου (PDF)",
+				"previous" : "Προηγούμενο"
+			},
+			"specialblockremoval" : {
+				"button" : "_MISSING_Remove",
+				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
+				"header" : "_MISSING_Special Block removal"
+			},
+			"toolconstruction" : {
+				"builder" : "Οικοδόμος",
+				"buildera" : "",
+				"builderb" : "Χρειάζεται μια περιοχή κατασκευής",
+				"builderc" : "Χτίζει πράγματα",
+				"description" : "Επιλέξτε τον τύπο περιοχής που θέλετε να δημιουργήσετε.",
+				"destroyer" : "Καταστροφέας",
+				"destroyera" : "",
+				"destroyerb" : "Χρειάζεται μια περιοχή καταστροφών",
+				"destroyerc" : "Διαλύει πράγματα",
+				"header" : "Εργαλείο Καταστευής"
 			},
 			"tooljob" : {
-				"header" : "Εργαλείο εντολών",
+				"berrya" : "Γρήγορο και εύκολο φαγητό, ξεκίνα με αυτό!",
+				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryfarmer" : "Αγρότης μούρων",
+				"berryfarmertool" : "Εργαλείο για τους αγρότες μούρων",
+				"bow" : "_MISSING_Bow",
+				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"coversarea" : "Καλύπτει μια υπάρχουσα περιοχή",
+				"crossbow" : "_MISSING_Crossbow",
+				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Επιλέξτε τον τύπο της περιοχής που θέλετε να δημιουργήσετε.",
-				"wheatfarmer" : "Γεωργός σιταριού",
-				"wheata" : "Μόνο για προηγμένες αποικίες",
-				"miner" : "Μεταλλωρύχος",
-				"minera" : "Εκμετάλλευση Ορυκτών",
+				"flaxa" : "Για προηγμένες αποικίες μόνο",
+				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxfarmer" : "Γεωργός λινού",
+				"flaxfarmertool" : "Εργαλείο για τους γεωργούς λινού",
 				"forester" : "Ξυλοκόπος",
 				"forestera" : "Φυτεύει και κόβει δέντρα",
-				"flaxfarmer" : "Γεωργός λινού",
-				"flaxa" : "Για προηγμένες αποικίες μόνο",
-				"notflat" : "Το σημείο δεν είναι λέιο",
-				"toosmall" : "Το σημείο που χαράξατε είναι πολύ μικρό",
-				"toolarge" : "Το σημείο που χαράξατε είναι πολύ μεγάλο",
-				"coversarea" : "Καλύπτει μια υπάρχουσα περιοχή",
-				"toonarrow" : "Πολύ στενό για τα δέντρα",
-				"notarable" : "Δεν είναι αρόσιμη",
-				"occupiedblocks" : "Καταλαμβάνεται από έδαφος/η",
-				"wheatfarmertool" : "Εργαλείο για τους γεωργούς σιταριού",
-				"minertool" : "Εργαλείο για τους μεταλλωρύχους",
+				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
 				"forestertool" : "Εργαλέιο για τους ξυλοκόπους",
-				"flaxfarmertool" : "Εργαλείο για τους γεωργούς λινού",
-				"notool" : "Κανένα Εργαλείο",
-				"berryfarmertool" : "Εργαλείο για τους αγρότες μούρων",
-				"berryfarmer" : "Αγρότης μούρων",
-				"berrya" : "Γρήγορο και εύκολο φαγητό, ξεκίνα με αυτό!",
 				"guard" : "_MISSING_Guard",
 				"guarda" : "_MISSING_Protect your colony!",
 				"guardb" : "_MISSING_This will open another menu where you can select the guard types",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
-				"slinger" : "_MISSING_Slinger",
-				"minerb" : "_MISSING_Needs: Pickaxe\nPlace on bottom layer of the world",
-				"crossbow" : "_MISSING_Crossbow",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
-				"bow" : "_MISSING_Bow",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
-				"matchlock" : "_MISSING_Matchlock",
-				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
-				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"header" : "Εργαλείο εντολών",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
 				"jobcrossbownight" : "_MISSING_Nighttime Crossbow Guard",
 				"jobmatchlockday" : "_MISSING_Daytime Matchlock Gun Guard",
 				"jobmatchlocknight" : "_MISSING_Nighttime Matchlock Gun Guard",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
+				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
+				"matchlock" : "_MISSING_Matchlock",
+				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
+				"miner" : "Μεταλλωρύχος",
+				"minera" : "Εκμετάλλευση Ορυκτών",
+				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minertool" : "Εργαλείο για τους μεταλλωρύχους",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"notarable" : "Δεν είναι αρόσιμη",
+				"notflat" : "Το σημείο δεν είναι λέιο",
+				"notool" : "Κανένα Εργαλείο",
+				"occupiedblocks" : "Καταλαμβάνεται από έδαφος/η",
+				"slinger" : "_MISSING_Slinger",
 				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
-				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds"
-			},
-			"toolconstruction" : {
-				"header" : "Εργαλείο Καταστευής",
-				"description" : "Επιλέξτε τον τύπο περιοχής που θέλετε να δημιουργήσετε.",
-				"builder" : "Οικοδόμος",
-				"buildera" : "",
-				"builderb" : "Χρειάζεται μια περιοχή κατασκευής",
-				"builderc" : "Χτίζει πράγματα",
-				"destroyer" : "Καταστροφέας",
-				"destroyera" : "",
-				"destroyerb" : "Χρειάζεται μια περιοχή καταστροφών",
-				"destroyerc" : "Διαλύει πράγματα"
-			},
-			"areaselection" : {
-				"header" : "Μενού Περιοχής",
-				"description" : "Επιλέξτε αν θέλετε να καταργήσετε αυτή την περιοχή η όχι.",
-				"close" : "Κλείσε",
-				"remove" : "Διέγραψε την περιοχή"
-			},
-			"inventory" : {
-				"stockpiledescription" : "Μπορείτε να φτιάξετε μόνο πράγματα με τα αντικείμενα στις υποδοχές στο κάτω μέρος. Οι αποικιστές μπορούν να χρησιμοποιήσουν μόνο αντικείμενα στο απόθεμά σας. ",
-				"tooltip" : {
-					"needs" : "Ανάγκες: ",
-					"and" : "και",
-					"instockpile" : "_MISSING_in stockpile"
-				},
-				"foodvalue" : "_MISSING_Food value:",
-				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
-				"science" : {
-					"header" : "_MISSING_Science",
-					"dependencies" : "_MISSING_Required technologies:",
-					"requirements" : "_MISSING_Requirements for one research cycle:",
-					"iterations" : "_MISSING_Research cycles: {0} out of {1}",
-					"researchselected" : "_MISSING_Select to research",
-					"researchactive" : "_MISSING_Current research: {0}",
-					"available" : "_MISSING_Available",
-					"unavailable" : "_MISSING_Unavailable",
-					"completed" : "_MISSING_Completed",
-					"placelab" : "_MISSING_Place a Science Lab to recruit a scientist"
-				}
-			},
-			"limits" : {
-				"pipliz" : {
-					"crafter" : "Όρια κατασκευής",
-					"baker" : "Όρια ψησίματος",
-					"smelter" : "Όρια τήξης",
-					"minter" : "Όρια κοπής νομισμάτων",
-					"merchant" : "Όρια αγορών",
-					"grinder" : "Όρια άλεσης",
-					"tailor" : "_MISSING_Tailoring limits",
-					"technologist" : "_MISSING_Technologist limits",
-					"metalsmithjob" : "_MISSING_Metalsmith limits",
-					"kilnjob" : "_MISSING_Kiln limits",
-					"gunsmithjob" : "_MISSING_Gunsmith limits",
-					"bloomeryjob" : "_MISSING_Bloomery limits",
-					"fineryforgejob" : "_MISSING_Finery forge limits",
-					"woodcutter" : "_MISSING_Wood cutting limits"
-				},
-				"description" : "Οι αποικιστές θα δουλέψουν έως ότου επιτευχθεί το καθορισμένο ποσό στο απόθεμα.",
-				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
-				}
-			},
-			"death" : {
-				"description" : "Πέθανες.",
-				"respawn" : "Αναγέννηση"
-			},
-			"quickstart" : {
-				"previous" : "Προηγούμενο",
-				"next" : "Επόμενο",
-				"openmanual" : "Άνοιγμα εγχειριδίου (PDF)",
-				"closehelp" : "Πατήστε F1 για να κλείσετε ή να ανοίξετε ξανά αυτό το μενού",
-				"closetoggle" : "Μην το ξαναδείξεις"
-			},
-			"specialblockremoval" : {
-				"header" : "_MISSING_Special Block removal",
-				"description" : "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"button" : "_MISSING_Remove"
+				"toolarge" : "Το σημείο που χαράξατε είναι πολύ μεγάλο",
+				"toonarrow" : "Πολύ στενό για τα δέντρα",
+				"toosmall" : "Το σημείο που χαράξατε είναι πολύ μικρό",
+				"wheata" : "Μόνο για προηγμένες αποικίες",
+				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatfarmer" : "Γεωργός σιταριού",
+				"wheatfarmertool" : "Εργαλείο για τους γεωργούς σιταριού"
 			}
-		},
-		"firstpersonstats" : {
-			"bedcount" : "Κρεβάτια:",
-			"colonistcount" : "Αποικιστές:",
-			"laborercount" : "Άνεργοι:",
-			"foodstorage" : "Τρόφιμα:",
-			"foodusage" : "Χρήση τροφήμων / ημέρα:",
-			"ammocount" : "_MISSING_Ammo:"
 		},
 		"quickstart" : {
 			"page1" : {
-				"header" : "Βασικά",
 				"description" : "Καλώς Ήρθατε στο Colony Survival!",
+				"header" : "Βασικά",
+				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "Χρειάζεσαι τρόφιμα και κρεβάτια για να φιλοξενήσεις / αναθέσεις αποίκους. Οι άποικοι πρέπει να τρώνε για να επιβιώσουν . Βεβαιώσου ότι υπάρχει αρκετή διαθέσιμη τροφή, αλλιώς θα πεινάσουν!",
 				"text3" : "Πάτα το \"I\" για να φτιάξεις ένα κρεβάτι. Μπορείς να σχεδιάσεις μόνο πράγματα με τα αντικείμενα στις υποδοχές στο κάτω μέρος. Οι αποικιστές μπορούν να χρησιμοποιήσουν μόνο αντικείμενα στο απόθεμα σας. Παίρνουν πρόσβαση στο απόθεμα χρησιμοποιώντας τα κιβώτια.",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"header" : "Παραγωγή Τροφίμων",
 				"description" : "Θα χρειαστείς φαγητό για να αναθέσεις και να διατηρήσεις τους αποίκους σου!",
+				"header" : "Παραγωγή Τροφίμων",
 				"text1" : "Χρησιμοποίησε το Εργαλείο εντολών (πάτησε 1) για να δημιουργήσεις έναν καλλιεργητή μούρων. Πάτα δεξί κλικ σε ένα μπλοκ / έδαφος γρασιδιού , επίλεξε τη σωστή εργασία και δημιούργησε μια περιοχή για τον αγρότη. Πάτα αριστερό κλικ για να αλλάξεις τον τύπο εργασίας. ",
 				"text2" : "Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
 				"text3" : "Μετά από αυτό, θα πρέπει να στρατολογήσεις / αναθέσεις δύο νέους ανθρώπους τοποθετώντας ένα τριβείο και ένα φούρνο. Το τριβείο χρησιμοποιείται για να μετατρέψει το σιτάρι σε αλεύρι. Ένας φούρναρης θα χρησιμοποιήσει το φούρνο για να ψήσει το ψωμί."
 			},
 			"page3" : {
-				"header" : "Άμυνα Αποικίας",
 				"description" : "Προστάτεψε την αποικία σου από τα τέρατα της νύχτας!",
+				"header" : "Άμυνα Αποικίας",
 				"text1" : "Τη νύχτα, τα τέρατα θα προσπαθήσουν να επιτεθούν στην αποικία σου. Τοποθέτησε φρουρούς, χτίσε τοίχους και σκάψε τάφρους για να υπερασπιστείς την αποικία σου. Τα τέρατα δεν μπορούν να αναρριχηθούν πάνω από δύο τετράγωνα.",
 				"text2" : "Μην απομονώνετε πλήρως την αποικία σας! Εάν δεν υπάρχει διαδρομή προς το πανό σας, ενεργοποιείται η λειτουργία \"Πολιορκία\". Κατά τη διάρκεια της λειτουργίας της πολιορκίας, το αποθηκευμένο σας φαγητό καταναλώνεται γρήγορα.",
 				"text3" : "_MISSING_The amount of monsters increases when the amount of colonists grows! Make sure your guards have enough missiles!",
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"header" : "_MISSING_Mining",
 				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
+				"header" : "_MISSING_Mining",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"header" : "_MISSING_Scientific Research",
 				"description" : "_MISSING_Only the smallest colonies can do without science!",
+				"header" : "_MISSING_Scientific Research",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
 		},
-		"pipliz" : {
-			"baseresearch" : {
-				"healthsize1" : {
-					"name" : "_MISSING_Health Increase I",
-					"description" : "_MISSING_Increases Max HP to 125"
+		"settingsmenu" : {
+			"audio" : "Ήχος",
+			"audiomenu" : {
+				"ambientvolume" : "Ένταση Περιβάλλοντος",
+				"effectsvolume" : "Ένταση εφέ",
+				"full" : "Μενού Ήχου",
+				"mastervolume" : "Γενική ένταση",
+				"menuvolume" : "Ένταση Μενού",
+				"torchvolume" : "Ένταση πυρσού"
+			},
+			"gameplay" : "Παιχνίδι",
+			"gameplaymenu" : {
+				"full" : "Μενού Παιχνιδιού",
+				"keymapping" : "Χαρτογράφηση πλήκτρων",
+				"keymenu" : {
+					"resetall" : "Επαναφορά όλων"
 				},
-				"healthsize2" : {
-					"name" : "_MISSING_Health Increase II",
-					"description" : "_MISSING_Increases Max HP to 150"
+				"mousemenu" : {
+					"invertx" : "Αναστροφή στον X άξονα",
+					"inverty" : "Αναστροφή στον Y άξονα",
+					"sensitivitylock" : "Κλείδωμα ευαισθησίας",
+					"sensitivityx" : "Ευαισθησία X-άξονας",
+					"sensitivityy" : "Ευαισθησία Y-άξονας",
+					"smooth" : "Λείωση Ποντικιού",
+					"smoothlock" : "Κλείδωση Λείωσης",
+					"smoothx" : "Λείωση προς τον X άξονα",
+					"smoothy" : "Λείωση προς τον Y άξονα"
 				},
-				"healthsize3" : {
-					"name" : "_MISSING_Health Increase III",
-					"description" : "_MISSING_Increases Max HP to 175"
-				},
-				"healthsize4" : {
-					"name" : "_MISSING_Health Increase IV",
-					"description" : "_MISSING_Increases Max HP to 200"
-				},
-				"healthregensize1" : {
-					"name" : "_MISSING_Regeneration Increase I",
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50"
-				},
-				"healthregensize2" : {
-					"name" : "_MISSING_Regeneration Increase II",
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65"
-				},
-				"healthregensize3" : {
-					"name" : "_MISSING_Regeneration Increase III",
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85"
-				},
-				"healthregensize4" : {
-					"name" : "_MISSING_Regeneration Increase IV",
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100"
-				},
-				"healthregenspeed1" : {
-					"name" : "_MISSING_Regeneration Speed I",
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s"
-				},
-				"healthregenspeed2" : {
-					"name" : "_MISSING_Regeneration Speed II",
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s"
-				},
-				"healthregenspeed3" : {
-					"name" : "_MISSING_Regeneration Speed III",
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s"
-				},
-				"healthregenspeed4" : {
-					"name" : "_MISSING_Regeneration Speed IV",
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s"
-				},
-				"sciencebaglife" : {
-					"name" : "_MISSING_Life Science Bag",
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades"
-				},
-				"bloomery" : {
-					"name" : "_MISSING_Bloomery",
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore"
-				},
-				"bronzeanvil" : {
-					"name" : "_MISSING_Bronze Anvil",
-					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze"
-				},
-				"crossbow" : {
-					"name" : "_MISSING_Crossbow",
-					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow"
-				},
-				"crossbowbolt" : {
-					"name" : "_MISSING_Crossbow Bolts",
-					"description" : "_MISSING_Unlocks Crossbow Bolts"
-				},
-				"fineryforge" : {
-					"name" : "_MISSING_Finery Forge",
-					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots"
-				},
-				"gunpowder" : {
-					"name" : "_MISSING_Gunpowder",
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive"
-				},
-				"gunsmithshop" : {
-					"name" : "_MISSING_Gunsmith Shop",
-					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns"
-				},
-				"matchlockgun" : {
-					"name" : "_MISSING_Matchlock Gun",
-					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun"
-				},
-				"sciencebagadvanced" : {
-					"name" : "_MISSING_Advanced Science Bag",
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research"
-				},
-				"sciencebagbasic" : {
-					"name" : "_MISSING_Basic Science Bag",
-					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research"
-				},
-				"sciencebagcolony" : {
-					"name" : "_MISSING_Colony Science Bag",
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research"
-				},
-				"sciencebagmilitary" : {
-					"name" : "_MISSING_Military science bag",
-					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research"
-				},
-				"tailorshop" : {
-					"name" : "_MISSING_Tailor",
-					"description" : "_MISSING_Unlock the tailor, who turns flax into linen"
-				},
-				"technologisttable" : {
-					"name" : "_MISSING_Technologist",
-					"description" : "_MISSING_Unlocks the technologist, who crafts Science Bags"
-				},
-				"bannerradius1" : {
-					"name" : "_MISSING_Banner Radius I",
-					"description" : "_MISSING_Increases the safe radius created to 40 blocks"
-				},
-				"bannerradius2" : {
-					"name" : "_MISSING_Banner Radius II",
-					"description" : "_MISSING_Increases the safe radius created to 55 blocks"
-				},
-				"bannerradius3" : {
-					"name" : "_MISSING_Banner Radius III",
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks"
-				},
-				"bannerradius4" : {
-					"name" : "_MISSING_Banner Radius IV",
-					"description" : "_MISSING_Increases the safe radius created to 85 blocks"
-				},
-				"bannerradius5" : {
-					"name" : "_MISSING_Banner Radius V",
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks"
-				},
-				"wheatfarming" : {
-					"name" : "_MISSING_Bread Production",
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds."
-				},
-				"flaxfarming" : {
-					"name" : "_MISSING_Flax Farming",
-					"description" : "_MISSING_Unlocks flax farmers, required to produce linen. Grants 100 flax seeds."
-				},
-				"bronzeminting" : {
-					"name" : "_MISSING_Mints & Shops",
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items"
-				},
-				"kiln" : {
-					"name" : "_MISSING_Kiln",
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal."
-				},
-				"splittingstump" : {
-					"name" : "_MISSING_Splitting Stump",
-					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench."
-				}
+				"mousesettings" : "Ρυθμίσεις Ποντικιού"
+			},
+			"language" : "Γλώσσα",
+			"languagemenu" : {
+				"coverage" : "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"full" : "Μενού Γλώσσας",
+				"language" : "Γλώσσα",
+				"wiptext" : "Εργασία σε εξέλιξη. Αυτό δεν καλύπτει όλο το κείμενο στο παιχνίδι, και μερικές μεταφράσεις μπορούν να καλύπτουν λιγότερο από τις άλλες."
+			},
+			"qualityhigh" : "Υψηλά",
+			"qualitylow" : "Χαμηλά",
+			"qualitymaximum" : "Μέγιστα",
+			"qualitymedium" : "Μέτρια",
+			"qualityoff" : "Ποιότητα μη Ενεργή",
+			"qualityon" : "Ποιότητα Ενεργή",
+			"qualityveryhigh" : "Πολύ υψηλά",
+			"qualityverylow" : "Πολύ Χαμηλά",
+			"video" : "Βίντεο",
+			"videomenu" : {
+				"ambientocclusion" : "Απόφραξη του περιβάλλοντος",
+				"ambientreflections" : "Ανακλάσεις περιβάλλοντος",
+				"anisotropic" : "ανισοτροπικό Φίλτρο x16",
+				"antialiasing" : "Τονικότητα στα γραφικά",
+				"bloom" : "Άνθηση",
+				"depthoffield" : "Βάθος πεδίου",
+				"eyeadaptation" : "Προσαρμογή των ματιών",
+				"fieldofview" : "Οπτικό πεδίο",
+				"full" : "Ρυθμίσεις Βίντεο",
+				"fullscreen" : "Πλήρης Οθόνη",
+				"fxaahigh" : "FXAA Υψηλή",
+				"fxaalow" : "FXAA Χαμηλή",
+				"fxaamedium" : "FXAA Μέτρια",
+				"lightscattering" : "Φωτεινή σκέδαση",
+				"resolution" : "Ανάλυση",
+				"shaderquality" : "Ποιότητα σκίασης",
+				"skyboxconstant" : "Skybox Συνεχές",
+				"skyboxfrequent" : "Skybox Συχνό",
+				"skyboxslow" : "Skybox Αργό",
+				"skyboxveryfrequent" : "Skybox Πολύ Συχνό",
+				"skyboxveryslow" : "Skybox Πολύ Αργό",
+				"sunshadowcascades" : "Sonnenschatten-Kaskaden",
+				"sunshadowdistance" : "Απόσταση σκίασης ηλίου",
+				"sunshadowquality" : "Ποιότητα σκίασης ηλίου",
+				"taa" : "TAA",
+				"terrainconstant" : "Έδαφος Συνεχές",
+				"terrainfrequent" : "Έδαφος Συχνό",
+				"terrainveryfrequent" : "Έδαφος Πολύ Συχνό",
+				"vsync" : "V συγχρονισμός",
+				"vsyncdouble" : "V Διπλός συγχρονισμός"
 			}
+		},
+		"singleplayermenu" : {
+			"colonyname" : "Όνομα Αποικίας:",
+			"daymonsters" : "_MISSING_Monsters during daytime",
+			"delete" : "Διέγραψε",
+			"doubledmonsters" : "_MISSING_Double monster amount",
+			"load" : "Φόρτιση",
+			"loadworld" : "Φόρτωση υφιστάμενου κόσμου",
+			"newworld" : "Νέος Κόσμος",
+			"play" : "Παίξε",
+			"spawnmonsters" : "Αναγέννηση Ζόμπι:",
+			"worlddate" : "Ημερομηνία Κόσμου",
+			"worldname" : "Όνομα Κόσμου"
 		}
 	},
 	"types" : {
-		"grass" : "Γρασίδι",
-		"grasstemperate" : "Γρασίδι εύκρατου κλίματος",
-		"grasstundra" : "Γρασίδι τούνδρας",
-		"grasstaiga" : "Γρασίδι τάιγκας",
-		"grasssavanna" : "Γρασίδι σαβάννας",
-		"grassrainforest" : "Γρασίδι τροπικού δάσους",
-		"water" : "Νερό",
-		"sand" : "ʼμμος",
-		"snow" : "Χιόνι",
-		"banner" : "Πανό",
-		"dirt" : "Χώμα",
-		"stoneblock" : "Πέτρα",
-		"planks" : "Σανίδες",
-		"log" : "Κούτσουρο",
-		"logtemperate" : "Κούτσουρο εύκρατου κλίματος",
-		"logtaiga" : "Κούτσουρο τάιγκας",
-		"leaves" : "Φύλλα",
-		"leavestemperate" : "Φύλλα εύκρατου κλίματος",
-		"leavestaiga" : "Φύλλα τάιγκας",
-		"torch" : "Πυρσός",
-		"crate" : "Κουτί",
-		"stonebricks" : "Πέτρινα τούβλα",
-		"coatedplanks" : "Επιστρωμένες σανίδες",
 		"adobe" : "Πλίθα",
-		"workbench" : "Πάγκος εργασίας",
-		"mint" : "Νομισματοκοπείο",
-		"shop" : "Μαγαζί",
-		"plasterblock" : "Μπλοκ γύψου",
-		"furnace" : "Furnace",
-		"oven" : "Φούρνος",
-		"sappling" : "Δενδρύλλιο / Βλαστάρι",
-		"flaxstage1" : "Λιναρόσπορος",
-		"wheatstage1" : "Σπόρος σιταριού",
-		"straw" : "ʼχυρο",
-		"linseedoil" : "Λινέλαιο",
-		"flax" : "Λινάρι",
-		"wheat" : "Σιτάρι",
-		"bread" : "Ψωμί",
-		"coalore" : "Κάρβουνο",
-		"gypsum" : "Γύψος",
-		"ironore" : "Σιδηρομετάλλευμα",
-		"goldore" : "Χρυσός",
-		"ironingot" : "Ράβδος Σιδήρου",
-		"goldingot" : "Ράβδος Χρυσού",
-		"goldcoin" : "Χρυσό νόμισμα",
-		"bow" : "Τόξο",
-		"commandtool" : "Εργαλείο εντολών",
+		"banner" : "Πανό",
+		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Κρεβάτι",
-		"clay" : "Πηλός",
-		"bricks" : "Τούβλα",
-		"berrybush" : "Θάμνος μούρων",
 		"berry" : "Μούρο",
-		"grindstone" : "Ακόνι",
-		"flour" : "Αλεύρι",
-		"cherrysapling" : "_MISSING_Cherry Sapling",
-		"cherryblossom" : "_MISSING_Cherry Blossom",
-		"redplanks" : "_MISSING_Red Planks",
+		"berrybush" : "Θάμνος μούρων",
 		"blackplanks" : "_MISSING_Black Planks",
-		"linen" : "_MISSING_Linen",
-		"clothing" : "_MISSING_Clothing",
-		"carpetred" : "_MISSING_Red Carpet",
-		"carpetblue" : "_MISSING_Blue Carpet",
-		"carpetyellow" : "_MISSING_Yellow Carpet",
-		"tailorshop" : "_MISSING_Tailor Shop",
-		"technologisttable" : "_MISSING_Technologist's Table",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
-		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"linenbag" : "_MISSING_Linen Bag",
 		"bloomery" : "_MISSING_Bloomery",
+		"bow" : "Τόξο",
 		"bowstring" : "_MISSING_Bowstring",
+		"bread" : "Ψωμί",
+		"bricks" : "Τούβλα",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -563,154 +506,215 @@
 		"bronzeingot" : "_MISSING_Bronze Ingot",
 		"bronzepickaxe" : "_MISSING_Bronze Pickaxe",
 		"bronzeplate" : "_MISSING_Bronze Plate",
+		"carpetblue" : "_MISSING_Blue Carpet",
+		"carpetred" : "_MISSING_Red Carpet",
+		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
+		"cherryblossom" : "_MISSING_Cherry Blossom",
+		"cherrysapling" : "_MISSING_Cherry Sapling",
+		"clay" : "Πηλός",
+		"clothing" : "_MISSING_Clothing",
+		"coalore" : "Κάρβουνο",
+		"coatedplanks" : "Επιστρωμένες σανίδες",
 		"cokes" : "_MISSING_Cokes",
+		"commandtool" : "Εργαλείο εντολών",
+		"copper" : "_MISSING_Copper",
+		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
 		"coppertools" : "_MISSING_Copper Tools",
+		"crate" : "Κουτί",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"dirt" : "Χώμα",
 		"fineryforge" : "_MISSING_Finery Forge",
+		"firewood" : "_MISSING_Firewood",
+		"flax" : "Λινάρι",
+		"flaxstage1" : "Λιναρόσπορος",
+		"flour" : "Αλεύρι",
+		"furnace" : "Furnace",
 		"galenalead" : "_MISSING_Galena (Lead rich)",
 		"galenasilver" : "_MISSING_Galena (Silver rich)",
-		"gunpowder" : "_MISSING_Gunpowder",
-		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
-		"gunsmithshop" : "_MISSING_Gunsmith Shop",
-		"ironblock" : "_MISSING_Iron Block",
-		"ironrivet" : "_MISSING_Iron Rivet",
-		"ironsword" : "_MISSING_Iron Sword",
-		"ironwrought" : "_MISSING_Wrought Iron",
-		"kiln" : "_MISSING_Kiln",
-		"lead" : "_MISSING_Lead",
-		"leadbullet" : "_MISSING_Lead Bullet",
-		"linenpouch" : "_MISSING_Linen Pouch",
-		"matchlockgun" : "_MISSING_Matchlock Gun",
-		"salpeter" : "_MISSING_Salpeter",
-		"sciencebagmilitary" : "_MISSING_Military Science Bag",
-		"sciencelab" : "_MISSING_Science Lab",
-		"silveringot" : "_MISSING_Silver Ingot",
-		"sling" : "_MISSING_Sling",
-		"slingbullet" : "_MISSING_Sling Bullet",
-		"steelingot" : "_MISSING_Steel Ingot",
-		"steelparts" : "_MISSING_Steel Parts",
-		"tin" : "_MISSING_Tin",
-		"firewood" : "_MISSING_Firewood",
-		"splittingstump" : "_MISSING_Splitting Stump",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"minerjob" : "_MISSING_Miner Job",
-		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
-		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"goldcoin" : "Χρυσό νόμισμα",
+		"goldingot" : "Ράβδος Χρυσού",
+		"goldore" : "Χρυσός",
+		"grass" : "Γρασίδι",
+		"grassrainforest" : "Γρασίδι τροπικού δάσους",
+		"grasssavanna" : "Γρασίδι σαβάννας",
+		"grasstaiga" : "Γρασίδι τάιγκας",
+		"grasstemperate" : "Γρασίδι εύκρατου κλίματος",
+		"grasstundra" : "Γρασίδι τούνδρας",
+		"grindstone" : "Ακόνι",
 		"guardbowdayjob" : "_MISSING_Day Bow Guard",
 		"guardbownightjob" : "_MISSING_Night Bow Guard",
 		"guardcrossbowdayjob" : "_MISSING_Day Crossbow Guard",
 		"guardcrossbownightjob" : "_MISSING_Night Crossbow Guard",
 		"guardmatchlockdayjob" : "_MISSING_Day Matchlock Guard",
 		"guardmatchlocknightjob" : "_MISSING_Night Matchlock Guard",
-		"copper" : "_MISSING_Copper",
-		"coppernails" : "_MISSING_Copper Nails"
+		"guardslingerdayjob" : "_MISSING_Day Slinger Guard",
+		"guardslingernightjob" : "_MISSING_Night Slinger Guard",
+		"gunpowder" : "_MISSING_Gunpowder",
+		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
+		"gunsmithshop" : "_MISSING_Gunsmith Shop",
+		"gypsum" : "Γύψος",
+		"ironblock" : "_MISSING_Iron Block",
+		"ironingot" : "Ράβδος Σιδήρου",
+		"ironore" : "Σιδηρομετάλλευμα",
+		"ironrivet" : "_MISSING_Iron Rivet",
+		"ironsword" : "_MISSING_Iron Sword",
+		"ironwrought" : "_MISSING_Wrought Iron",
+		"kiln" : "_MISSING_Kiln",
+		"lead" : "_MISSING_Lead",
+		"leadbullet" : "_MISSING_Lead Bullet",
+		"leaves" : "Φύλλα",
+		"leavestaiga" : "Φύλλα τάιγκας",
+		"leavestemperate" : "Φύλλα εύκρατου κλίματος",
+		"linen" : "_MISSING_Linen",
+		"linenbag" : "_MISSING_Linen Bag",
+		"linenpouch" : "_MISSING_Linen Pouch",
+		"linseedoil" : "Λινέλαιο",
+		"log" : "Κούτσουρο",
+		"logtaiga" : "Κούτσουρο τάιγκας",
+		"logtemperate" : "Κούτσουρο εύκρατου κλίματος",
+		"matchlockgun" : "_MISSING_Matchlock Gun",
+		"minerjob" : "_MISSING_Miner Job",
+		"mint" : "Νομισματοκοπείο",
+		"oven" : "Φούρνος",
+		"planks" : "Σανίδες",
+		"plasterblock" : "Μπλοκ γύψου",
+		"redplanks" : "_MISSING_Red Planks",
+		"salpeter" : "_MISSING_Salpeter",
+		"sand" : "ʼμμος",
+		"sappling" : "Δενδρύλλιο / Βλαστάρι",
+		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
+		"sciencebagbasic" : "_MISSING_Basic Science Bag",
+		"sciencebagcolony" : "_MISSING_Colony Science Bag",
+		"sciencebaglife" : "_MISSING_Life Science Bag",
+		"sciencebagmilitary" : "_MISSING_Military Science Bag",
+		"sciencelab" : "_MISSING_Science Lab",
+		"shop" : "Μαγαζί",
+		"silveringot" : "_MISSING_Silver Ingot",
+		"sling" : "_MISSING_Sling",
+		"slingbullet" : "_MISSING_Sling Bullet",
+		"snow" : "Χιόνι",
+		"splittingstump" : "_MISSING_Splitting Stump",
+		"steelingot" : "_MISSING_Steel Ingot",
+		"steelparts" : "_MISSING_Steel Parts",
+		"stoneblock" : "Πέτρα",
+		"stonebricks" : "Πέτρινα τούβλα",
+		"straw" : "ʼχυρο",
+		"tailorshop" : "_MISSING_Tailor Shop",
+		"technologisttable" : "_MISSING_Technologist's Table",
+		"tin" : "_MISSING_Tin",
+		"torch" : "Πυρσός",
+		"water" : "Νερό",
+		"wheat" : "Σιτάρι",
+		"wheatstage1" : "Σπόρος σιταριού",
+		"workbench" : "Πάγκος εργασίας"
 	},
 	"typeuses" : {
-		"planks" : "Τώρα 4 φορές μεγαλύτερο απο τον όγκο των κορμών!",
-		"torch" : "Και ας υπάρξει φως!",
-		"crate" : "Για όλες τις ανάγκες αποθήκευσης!",
-		"workbench" : "Προσλαμβάνει έναν τεχνίτη. Θα κάνει τη χειροτεχνία για σας!",
-		"plasterblock" : "Για αυτή τη μοντέρνα εμφάνιση",
-		"wheatstage1" : "Μελλοντικό ψωμί",
-		"straw" : "Χρειάζεται κρεβάτια, υποπροϊόν της καλλιέργειας σιταριού",
-		"wheat" : "Ένας άποικος με ένα τριβείο θα το μετατρέψει σε αλεύρι",
-		"bread" : "Γευστικό, θεραπεύει τις πληγές σας",
-		"bed" : "Κάνει τον ύπνο ευκολότερο",
-		"bow" : "Οι φρουροί χρειάζονται ένα!",
-		"snow" : "Δεν ξέρει τίποτα",
-		"grasstemperate" : "Βγείτε από το γκαζόν μου!",
-		"grasstundra" : "Βγείτε από το γκαζόν μου!",
-		"grasstaiga" : "Βγείτε από το γκαζόν μου!",
-		"grasssavanna" : "Το γρασίδι φαίνεται πιο πράσινο από την άλλη πλευρά",
-		"grassrainforest" : "Αυτό το γρασίδι φαίνεται αρκετά πράσινο",
-		"water" : "Υποτίθεται ότι ΔΕΝ το έχετε αυτό στα αντικείμενα σας",
-		"sand" : "Δεν αναμιγνύεται καλά με τα φίδια",
-		"dirt" : "Βρώμικο",
 		"adobe" : "Χώμα για πλούσιους ανθρώπους",
-		"mint" : "Δεν είναι παραποίηση εάν ο βασιλιάς λέει ότι είναι εντάξει",
-		"shop" : "Αγορά μόνο, όχι πώληση",
-		"flaxstage1" : "Βάλτε το στο έδαφος",
-		"flax" : "Το πιο όμορφο λουλούδι στο παιχνίδι. Και το μοναδικό",
-		"linseedoil" : "Κάνει τα πράγματα λαμπερά",
-		"coatedplanks" : "Λαμπερή!",
-		"clay" : "Εύχομαι να το άγγιζες",
-		"bricks" : "Είναι τελικά ένα ολλανδικό παιχνίδι",
-		"flour" : "Ένας άποικος με φούρνο θα το μετατρέψει σε ψωμί",
-		"grindstone" : "Χρησιμοποιείται για την άλεση σιταριού σε αλεύρι",
-		"berrybush" : "Οι αποικιστές μπορούν να τα φυτέψουν για εύκολο φαγητό",
+		"bed" : "Κάνει τον ύπνο ευκολότερο",
 		"berry" : "Δεν είναι δηλητηριώδες",
-		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
+		"berrybush" : "Οι αποικιστές μπορούν να τα φυτέψουν για εύκολο φαγητό",
 		"blackplanks" : "_MISSING_Highly flammable",
-		"cherryblossom" : "_MISSING_The pinkest thing in the game",
-		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
-		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
-		"linen" : "_MISSING_Lingerie means underwear made of linen",
-		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
-		"carpetyellow" : "_MISSING_It's so fluffy!",
-		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
-		"technologisttable" : "_MISSING_Crafts Science Bags",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
-		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"linenbag" : "_MISSING_Better than a plastic bag",
-		"stonebricks" : "_MISSING_Punch in case of emergency",
-		"coalore" : "_MISSING_Warning: might cause climate problems",
-		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
-		"goldore" : "_MISSING_Don't lose it",
-		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
-		"goldcoin" : "_MISSING_With a portrait of the king on one side",
-		"sappling" : "_MISSING_Future tree",
-		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
-		"logtemperate" : "_MISSING_Like an output log, but different",
-		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
+		"bow" : "Οι φρουροί χρειάζονται ένα!",
 		"bowstring" : "_MISSING_Ploink",
+		"bread" : "Γευστικό, θεραπεύει τις πληγές σας",
+		"bricks" : "Είναι τελικά ένα ολλανδικό παιχνίδι",
 		"bronzeanvil" : "_MISSING_A unique anvil in the shape of a block",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
 		"bronzeaxe" : "_MISSING_Foresters need one!",
+		"bronzecoin" : "_MISSING_Not as valuable as the gold variant",
 		"bronzeingot" : "_MISSING_Bronze stronk",
+		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
+		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
+		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
+		"cherryblossom" : "_MISSING_The pinkest thing in the game",
+		"clay" : "Εύχομαι να το άγγιζες",
+		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
+		"coalore" : "_MISSING_Warning: might cause climate problems",
+		"coatedplanks" : "Λαμπερή!",
 		"cokes" : "_MISSING_Creating and burning this stuff is probably totally safe for your health and the environment",
 		"copper" : "_MISSING_Does not need to be smelted. So convenient!",
 		"coppernails" : "_MISSING_An innovative way to combine pieces of wood",
 		"copperparts" : "_MISSING_Metal improves everything",
 		"coppertools" : "_MISSING_You can't even cut bread without tools",
+		"crate" : "Για όλες τις ανάγκες αποθήκευσης!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
+		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"dirt" : "Βρώμικο",
+		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
+		"firewood" : "_MISSING_Basic fuel",
+		"flax" : "Το πιο όμορφο λουλούδι στο παιχνίδι. Και το μοναδικό",
+		"flaxstage1" : "Βάλτε το στο έδαφος",
+		"flour" : "Ένας άποικος με φούρνο θα το μετατρέψει σε ψωμί",
+		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "_MISSING_Contains lots of lead",
 		"galenasilver" : "_MISSING_Contains lots of silver",
+		"goldcoin" : "_MISSING_With a portrait of the king on one side",
+		"goldingot" : "_MISSING_Was once used to guarantee the value of paper money",
+		"goldore" : "_MISSING_Don't lose it",
+		"grassrainforest" : "Αυτό το γρασίδι φαίνεται αρκετά πράσινο",
+		"grasssavanna" : "Το γρασίδι φαίνεται πιο πράσινο από την άλλη πλευρά",
+		"grasstaiga" : "Βγείτε από το γκαζόν μου!",
+		"grasstemperate" : "Βγείτε από το γκαζόν μου!",
+		"grasstundra" : "Βγείτε από το γκαζόν μου!",
+		"grindstone" : "Χρησιμοποιείται για την άλεση σιταριού σε αλεύρι",
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
 		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
+		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
+		"leavestemperate" : "_MISSING_Try to jump into a pile of these from a high tower",
+		"linen" : "_MISSING_Lingerie means underwear made of linen",
+		"linenbag" : "_MISSING_Better than a plastic bag",
 		"linenpouch" : "_MISSING_Can be used to store gunpowder",
+		"linseedoil" : "Κάνει τα πράγματα λαμπερά",
+		"logtaiga" : "_MISSING_Slightly colder",
+		"logtemperate" : "_MISSING_Like an output log, but different",
 		"matchlockgun" : "_MISSING_Requires gunpowder pouches to fire lead bullets",
+		"mint" : "Δεν είναι παραποίηση εάν ο βασιλιάς λέει ότι είναι εντάξει",
+		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
+		"planks" : "Τώρα 4 φορές μεγαλύτερο απο τον όγκο των κορμών!",
+		"plasterblock" : "Για αυτή τη μοντέρνα εμφάνιση",
+		"redplanks" : "_MISSING_Does not have any food value, but it tastes pretty good",
 		"salpeter" : "_MISSING_Don't spice up your food with this",
+		"sand" : "Δεν αναμιγνύεται καλά με τα φίδια",
+		"sappling" : "_MISSING_Future tree",
+		"sciencebagadvanced" : "_MISSING_Required for advanced science",
+		"sciencebagbasic" : "_MISSING_Required to research basic science",
+		"sciencebagcolony" : "_MISSING_Required for colony-related science",
+		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
+		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
+		"shop" : "Αγορά μόνο, όχι πώληση",
 		"silveringot" : "_MISSING_Slightly more valuable than lead",
 		"sling" : "_MISSING_Be careful, Goliath",
 		"slingbullet" : "_MISSING_Just a small stone, actually",
+		"snow" : "Δεν ξέρει τίποτα",
+		"splittingstump" : "_MISSING_A quicker way to split wood into firewood",
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
+		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"straw" : "Χρειάζεται κρεβάτια, υποπροϊόν της καλλιέργειας σιταριού",
+		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
+		"technologisttable" : "_MISSING_Crafts Science Bags",
 		"tin" : "_MISSING_Just a little toxic",
-		"bronzepickaxe" : "_MISSING_Use the command tool to assign a miner. He'll use a pickaxe to extract infinite ores or stones from a block!",
-		"firewood" : "_MISSING_Basic fuel",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
-		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"oven" : "_MISSING_Uses firewood as fuel to bake flour into bread",
-		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
-		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
-		"splittingstump" : "_MISSING_A quicker way to split wood into firewood"
-	},
-	"coverage" : 47.9500891265597
+		"torch" : "Και ας υπάρξει φως!",
+		"water" : "Υποτίθεται ότι ΔΕΝ το έχετε αυτό στα αντικείμενα σας",
+		"wheat" : "Ένας άποικος με ένα τριβείο θα το μετατρέψει σε αλεύρι",
+		"wheatstage1" : "Μελλοντικό ψωμί",
+		"workbench" : "Προσλαμβάνει έναν τεχνίτη. Θα κάνει τη χειροτεχνία για σας!"
+	}
 }
