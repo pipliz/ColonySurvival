@@ -26,3 +26,7 @@ Modding changes:
 -Changed JSONNode internals to use a sorted list instead of a dictionary
 -Fixed a problem with using sortedList.AddOverride or setting through the indexer
 -Allow multiple [ModCallback] attributes on 1 method, though they'll all use the same providesfor/dependson
+
+-0.4.5.1 (2017-12-04)
+
+-Small fix so that the server doesn't spew errors after a few dozen hours
