@@ -37,7 +37,12 @@ Adding localization to the game
 Adding meshes to the game
 
 	Simply place it in a folder somewhere, and reference it in the type descriptio; "mesh" : "path/to/file.obj"
-	File format should be .obj, with triangulated polygons and UV mapping. Normals/tangents are not used.
+	File formats supported:
+		.obj, with UV mapping.
+		.ply, with UV mapping or vertex colors or both
+	Normals/tangents should not be included in the file, they are recalculate upon import.
+	All faces should be triangulated (i.e, no 4+-vertex-faces)
+	If the exporter has a direction option, set y+ = up, and z- = forward
 	
 Adding textures to the game
 

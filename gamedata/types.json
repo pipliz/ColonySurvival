@@ -1,60 +1,94 @@
 {
-	"air" : {
-		"isSolid" : false,
-		"isPlaceable" : false
-	},
 	"adobe" : {
-		"sideall" : "SELF",
 		"icon" : "gamedata/textures/icons/adobe.png",
+		"maxStackSize" : 200,
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
-		"maxStackSize" : 200
+		"sideall" : "SELF"
+	},
+	"air" : {
+		"isPlaceable" : false,
+		"isSolid" : false
 	},
 	"banner" : {
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAmount" : 0,
-		"isSolid" : false,
-		"needsBase" : true,
-		"icon" : "gamedata/textures/icons/banner.png",
-		"sideall" : "SELF",
-		"mesh" : "gamedata/meshes/banner.obj",
 		"customData" : {
+			"colors" : ["#ff0000->#341a05","#00ff00->#ceac0d","#0000ff->#960909"],
 			"farShadows" : true,
 			"warnRemoval" : true
-		}
+		},
+		"icon" : "gamedata/textures/icons/banner.png",
+		"isSolid" : false,
+		"mesh" : "gamedata/meshes/banner.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAmount" : 0,
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
 	},
-	"bedx+" : {
+	"bannertool" : {
+		"isPlaceable" : false
+	},
+	"bed" : {
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"]
+		},
+		"icon" : "gamedata/textures/icons/bed.png",
+		"isRotatable" : true,
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"rotatablex-" : "bedx-",
+		"rotatablex+" : "bedx+",
+		"rotatablez-" : "bedz-",
+		"rotatablez+" : "bedz+",
+		"sideall" : "neutral"
+	},
+	"bedend" : {
+		"isRotatable" : true,
 		"parentType" : "bed",
-		"mesh" : "gamedata/meshes/bedx+.obj"
-	},
-	"bedx-" : {
-		"parentType" : "bed",
-		"mesh" : "gamedata/meshes/bedx-.obj"
-	},
-	"bedz+" : {
-		"parentType" : "bed",
-		"mesh" : "gamedata/meshes/bedz+.obj"
-	},
-	"bedz-" : {
-		"parentType" : "bed",
-		"mesh" : "gamedata/meshes/bedz-.obj"
-	},
-	"bedendx+" : {
-		"parentType" : "bedend",
-		"mesh" : "gamedata/meshes/bedendx+.obj"
+		"rotatablex-" : "bedendx-",
+		"rotatablex+" : "bedendx+",
+		"rotatablez-" : "bedendz-",
+		"rotatablez+" : "bedendz+"
 	},
 	"bedendx-" : {
-		"parentType" : "bedend",
-		"mesh" : "gamedata/meshes/bedendx-.obj"
+		"mesh" : "gamedata/meshes/bedendx-.ply",
+		"parentType" : "bedend"
 	},
-	"bedendz+" : {
-		"parentType" : "bedend",
-		"mesh" : "gamedata/meshes/bedendz+.obj"
+	"bedendx+" : {
+		"mesh" : "gamedata/meshes/bedendx+.ply",
+		"parentType" : "bedend"
 	},
 	"bedendz-" : {
-		"parentType" : "bedend",
-		"mesh" : "gamedata/meshes/bedendz-.obj"
+		"mesh" : "gamedata/meshes/bedendz-.ply",
+		"parentType" : "bedend"
+	},
+	"bedendz+" : {
+		"mesh" : "gamedata/meshes/bedendz+.ply",
+		"parentType" : "bedend"
+	},
+	"bedx-" : {
+		"mesh" : "gamedata/meshes/bedx-.ply",
+		"parentType" : "bed"
+	},
+	"bedx+" : {
+		"mesh" : "gamedata/meshes/bedx+.ply",
+		"parentType" : "bed"
+	},
+	"bedz-" : {
+		"mesh" : "gamedata/meshes/bedz-.ply",
+		"parentType" : "bed"
+	},
+	"bedz+" : {
+		"mesh" : "gamedata/meshes/bedz+.ply",
+		"parentType" : "bed"
+	},
+	"berry" : {
+		"icon" : "gamedata/textures/icons/berry.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600,
+		"nutritionalValue" : 0.6
 	},
 	"berrybush" : {
 		"icon" : "gamedata/textures/icons/berrybush.png",
@@ -64,17 +98,58 @@
 	},
 	"blackplanks" : {
 		"icon" : "gamedata/textures/icons/blackplanks.png",
-		"onRemoveAudio" : "woodDeleteLight",
+		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
-		"sideall" : "SELF",
-		"maxStackSize" : 200
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
+	},
+	"bow" : {
+		"icon" : "gamedata/textures/icons/bow.png",
+		"isPlaceable" : false
+	},
+	"bowstring" : {
+		"icon" : "gamedata/textures/icons/bowstring.png",
+		"isPlaceable" : false
+	},
+	"bread" : {
+		"icon" : "gamedata/textures/icons/bread.png",
+		"isPlaceable" : false,
+		"nutritionalValue" : 3
 	},
 	"bricks" : {
-		"sideall" : "SELF",
 		"icon" : "gamedata/textures/icons/bricks.png",
+		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"maxStackSize" : 100
+		"sideall" : "SELF"
+	},
+	"bricksblack" : {
+		"color" : "#434343",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "bricksgeneric"
+	},
+	"bricksdarkred" : {
+		"color" : "#69413c",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "bricksgeneric"
+	},
+	"bricksdarkyellow" : {
+		"color" : "#8d5f38",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "bricksgeneric"
+	},
+	"bricksred" : {
+		"color" : "#7c312e",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "bricksgeneric"
 	},
 	"bronzeanvil" : {
 		"icon" : "gamedata/textures/icons/bronzeanvil.png",
@@ -83,990 +158,105 @@
 		"sideall" : "stonebricks",
 		"sidey+" : "bronzeanvil"
 	},
-	"carpetblue" : {
-		"parentType" : "carpet",
-		"onRemoveType" : "carpetblue",
-		"icon" : "gamedata/textures/icons/carpetblue.png",
-		"sideall" : "SELF"
+	"bronzearrow" : {
+		"icon" : "gamedata/textures/icons/bronzearrow.png",
+		"isPlaceable" : false
 	},
-	"carpetred" : {
-		"parentType" : "carpet",
-		"onRemoveType" : "carpetred",
-		"icon" : "gamedata/textures/icons/carpetred.png",
-		"sideall" : "SELF"
+	"bronzeaxe" : {
+		"icon" : "gamedata/textures/icons/bronzeaxe.png",
+		"isPlaceable" : false
 	},
-	"carpetyellow" : {
-		"parentType" : "carpet",
-		"onRemoveType" : "carpetyellow",
-		"icon" : "gamedata/textures/icons/carpetyellow.png",
-		"sideall" : "SELF"
+	"bronzecoin" : {
+		"icon" : "gamedata/textures/icons/bronzecoin.png",
+		"isPlaceable" : false
 	},
-	"cherryblossom" : {
-		"parentType" : "leaves",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/cherryblossom.png",
-		"onRemove" : [
-			{
-				"type" : "cherryblossom",
-				"amount" : 1,
-				"chance" : 0.6
-			},
-			{
-				"type" : "cherrysapling",
-				"amount" : 1,
-				"chance" : 0.1
-			}
-		]
+	"bronzeingot" : {
+		"icon" : "gamedata/textures/icons/bronzeingot.png",
+		"isPlaceable" : false
 	},
-	"cherrysapling" : {
-		"isSolid" : false,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "grassDelete",
-		"sideall" : "sappling",
-		"icon" : "gamedata/textures/icons/cherrysapling.png",
-		"mesh" : "gamedata/meshes/cherrysapling.obj"
+	"bronzepickaxe" : {
+		"icon" : "gamedata/textures/icons/bronzepickaxe.png",
+		"isPlaceable" : false
 	},
-	"clay" : {
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/clay.png",
+	"bronzeplate" : {
+		"icon" : "gamedata/textures/icons/bronzeplate.png",
+		"isPlaceable" : false
+	},
+	"carpet" : {
+		"maxStackSize" : 200,
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete"
 	},
-	"coatedplanks" : {
-		"sideall" : "SELF",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"maxStackSize" : 200,
-		"icon" : "gamedata/textures/icons/coatedplanks.png"
-	},
-	"crate" : {
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/crate.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace"
-	},
-	"dirt" : {
-		"isFertile" : true,
-		"icon" : "gamedata/textures/icons/dirt.png",
-		"sideall" : "SELF",
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace",
-		"maxStackSize" : 200
-	},
-	"flaxstage1" : {
-		"icon" : "gamedata/textures/icons/flaxstage1.png",
-		"parentType" : "flaxstage",
-		"mesh" : "gamedata/meshes/flaxstage1.obj",
-		"onRemove" : [
-			{
-				"type" : "flaxstage1",
-				"amount" : 1,
-				"chance" : 0.8
-			}
-		]
-	},
-	"flaxstage2" : {
-		"parentType" : "flaxstage",
-		"mesh" : "gamedata/meshes/flaxstage2.obj",
-		"onRemove" : [
-			{
-				"type" : "flaxstage1",
-				"amount" : 1,
-				"chance" : 1
-			},
-			{
-				"type" : "flaxstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "flax",
-				"amount" : 1,
-				"chance" : 0.5
-			}
-		]
-	},
-	"grassrainforest" : {
-		"parentType" : "grass",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/grassrainforest.png",
-		"onRemove" : [
-			{
-				"type" : "grassrainforest",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "sappling",
-				"amount" : 1,
-				"chance" : 0.03
-			}
-		]
-	},
-	"grasssavanna" : {
-		"parentType" : "grass",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/grasssavanna.png",
-		"onRemove" : [
-			{
-				"type" : "grasssavanna",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			}
-		]
-	},
-	"grasstaiga" : {
-		"parentType" : "grass",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/grasstaiga.png",
-		"onRemove" : [
-			{
-				"type" : "grasstaiga",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "sappling",
-				"amount" : 1,
-				"chance" : 0.03
-			}
-		]
-	},
-	"grasstemperate" : {
-		"parentType" : "grass",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/grasstemperate.png",
-		"onRemove" : [
-			{
-				"type" : "grasstemperate",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "sappling",
-				"amount" : 1,
-				"chance" : 0.03
-			}
-		]
-	},
-	"grasstundra" : {
-		"parentType" : "grass",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/grasstundra.png",
-		"onRemove" : [
-			{
-				"type" : "grasstundra",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			}
-		]
-	},
-	"grindstone" : {
-		"onPlaceAudio" : "stonePlace",
-		"icon" : "gamedata/textures/icons/grindstone.png",
-		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "planks",
-		"sidey+" : "grindstone"
-	},
-	"gunsmithshop" : {
-		"icon" : "gamedata/textures/icons/gunsmithshop.png",
-		"onPlaceAudio" : "stonePlace",
-		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "ironblock",
-		"sidey+" : "gunsmithshop"
-	},
-	"ironblock" : {
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/ironblock.png",
-		"onRemoveAudio" : "stonePlace",
-		"onPlaceAudio" : "stoneDelete"
-	},
-	"leavestaiga" : {
-		"parentType" : "leaves",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/leavestaiga.png",
-		"onRemove" : [
-			{
-				"type" : "leavestaiga",
-				"amount" : 1,
-				"chance" : 0.6
-			},
-			{
-				"type" : "sappling",
-				"amount" : 1,
-				"chance" : 0.1
-			}
-		]
-	},
-	"leavestemperate" : {
-		"parentType" : "leaves",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/leavestemperate.png",
-		"onRemove" : [
-			{
-				"type" : "leavestemperate",
-				"amount" : 1,
-				"chance" : 0.6
-			},
-			{
-				"type" : "sappling",
-				"amount" : 1,
-				"chance" : 0.1
-			}
-		]
-	},
-	"logtaiga" : {
-		"parentType" : "log",
-		"icon" : "gamedata/textures/icons/logtaiga.png",
-		"sideall" : "SELF",
-		"onRemoveAmount" : 1
-	},
-	"logtemperate" : {
-		"parentType" : "log",
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/logtemperate.png",
-		"onRemoveAmount" : 1
-	},
-	"mint" : {
-		"icon" : "gamedata/textures/icons/mint.png",
-		"onPlaceAudio" : "stonePlace",
-		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "planks",
-		"sidey+" : "mint"
-	},
-	"planks" : {
-		"icon" : "gamedata/textures/icons/planks.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"sideall" : "SELF",
-		"maxStackSize" : 200
-	},
-	"plasterblock" : {
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/plasterblock.png",
-		"onRemoveAudio" : "dirtPlace",
-		"onPlaceAudio" :"dirtPlace"
-	},
-	"redplanks" : {
-		"icon" : "gamedata/textures/icons/redplanks.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"sideall" : "SELF",
-		"maxStackSize" : 200
-	},
-	"sand" : {
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace",
-		"icon" : "gamedata/textures/icons/sand.png",
-		"sideall" : "SELF"
-	},
-	"sappling" : {
-		"icon" : "gamedata/textures/icons/sapling.png",
-		"isSolid" : false,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "grassDelete",
-		"sideall" : "SELF",
-		"mesh" : "gamedata/meshes/sapling.obj"
-	},
-	"sciencelab" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "coatedplanks",
-		"sidey+" : "sciencelab",
-		"icon" : "gamedata/textures/icons/sciencelab.png"
-	},
-	"shop" : {
-		"icon" : "gamedata/textures/icons/shop.png",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "planks",
-		"sidey+" : "shop"
-	},
-	"splittingstump" : {
-		"icon" : "gamedata/textures/icons/splittingstump.png",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteHeavy",
-		"sideall" : "logtemperate",
-		"sidey+" : "splittingstump"
-	},
-	"snow" : {
-		"icon" : "gamedata/textures/icons/snow.png",
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace",
-		"sideall" : "SELF"
-	},
-	"stonebricks" : {
-		"sideall" : "SELF",
-		"icon" : "gamedata/textures/icons/stonebricks.png",
-		"onPlaceAudio" : "stonePlace",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 600,
-		"maxStackSize" : 100
-	},
-	"straw" : {
-		"icon" : "gamedata/textures/icons/straw.png",
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" :"dirtPlace",
-		"sideall" : "SELF",
-		"maxStackSize" : 100
-	},
-	"tailorshop" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "planks",
-		"sidey+" : "tailorshop",
-		"icon" : "gamedata/textures/icons/tailorshop.png"
-	},
-	"technologisttable" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "coatedplanks",
-		"sidey+" : "technologisttable",
-		"icon" : "gamedata/textures/icons/technologisttable.png"
-	},
-	"torchy+" : {
-		"needsBase" : true,
-		"parentType" : "torch",
-		"mesh" : "gamedata/meshes/torchy+.obj",
-		"customData" : {
-			"torches" : {
-				"a" : {
-					"volume" : 0.5,
-					"intensity" : 12.5,
-					"range" : 16,
-					"red" : 195.0,
-					"green" : 135.0,
-					"blue" : 46.0,
-					"offsety" : -0.08
-				}
-			}
-		}
-	},
-	"torchx-" : {
-		"parentType" : "torch",
-		"mesh" : "gamedata/meshes/torchx-.obj",
-		"customData" : {
-			"torches" : {
-				"a" : {
-					"volume" : 0.5,
-					"intensity" : 12.5,
-					"range" : 16,
-					"red" : 195.0,
-					"green" : 135.0,
-					"blue" : 46.0,
-					"offsety" : 0.18,
-					"offsetx" : -0.25
-				}
-			}
-		}
-	},
-	"torchx+" : {
-		"parentType" : "torch",
-		"mesh" : "gamedata/meshes/torchx+.obj",
-		"customData" : {
-			"torches" : {
-				"a" : {
-					"volume" : 0.5,
-					"intensity" : 12.5,
-					"range" : 16,
-					"red" : 195.0,
-					"green" : 135.0,
-					"blue" : 46.0,
-					"offsety" : 0.18,
-					"offsetx" : 0.25
-				}
-			}
-		}
-	},
-	"torchz+" : {
-		"parentType" : "torch",
-		"mesh" : "gamedata/meshes/torchz+.obj",
-		"customData" : {
-			"torches" : {
-				"a" : {
-					"volume" : 0.5,
-					"intensity" : 12.5,
-					"range" : 16,
-					"red" : 195.0,
-					"green" : 135.0,
-					"blue" : 46.0,
-					"offsety" : 0.18,
-					"offsetz" : 0.25
-				}
-			}
-		}
-	},
-	"torchz-" : {
-		"parentType" : "torch",
-		"mesh" : "gamedata/meshes/torchz-.obj",
-		"customData" : {
-			"torches" : {
-				"a" : {
-					"volume" : 0.5,
-					"intensity" : 12.5,
-					"range" : 16,
-					"red" : 195.0,
-					"green" : 135.0,
-					"blue" : 46.0,
-					"offsety" : 0.18,
-					"offsetz" : -0.25
-				}
-			}
-		}
-	},
-	"water" : {
-		"isSolid" : false,
-		"icon" : "gamedata/textures/icons/water.png"
-	},
-	"wheatstage1" : {
-		"icon" : "gamedata/textures/icons/wheatstage1.png",
-		"parentType" : "wheatstage",
-		"sideall" : "wheatwheat",
-		"mesh" : "gamedata/meshes/wheatstage1.obj",
-		"onRemove" : [
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.8
-			}
-		]
-	},
-	"wheatstage2" : {
-		"parentType" : "wheatstage",
-		"sideall" : "wheatwheat",
-		"mesh" : "gamedata/meshes/wheatstage2.obj",
-		"onRemove" : [
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.8
-			},
-			{
-				"type" : "straw",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "wheat",
-				"amount" : 1,
-				"chance" : 0.3
-			}
-		]
-	},
-	"wheatstage3" : {
-		"parentType" : "wheatstage",
-		"sideall" : "wheatwheat",
-		"mesh" : "gamedata/meshes/wheatstage3.obj",
-		"onRemove" : [
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "wheatstage1",
-				"amount" : 1,
-				"chance" : 0.1
-			},
-			{
-				"type" : "wheat",
-				"amount" : 1,
-				"chance" : 1.0
-			},
-			{
-				"type" : "straw",
-				"amount" : 1,
-				"chance" : 0.333333
-			}
-		]
-	},
-	"workbench" : {
-		"icon" : "gamedata/textures/icons/workbench.png",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "planks",
-		"sidey+" : "workbenchtop"
-	},
-
-
-
-	"darkstone" : {
-		"onRemoveType" : "stonebricks",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 750,
-		"sideall" : "infinitestone",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 3.0
-		}
-	},
-	"infiniteclay" : {
-		"onRemoveType" : "clay",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 1250,
-		"sideall" : "SELF",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 8.0
-		}
-	},
-	"infinitecoal" : {
-		"onRemoveType" : "coalore",
-		"sideall" : "SELF",
-		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"infinitecopper" : {
-		"onRemoveType" : "copper",
-		"sideall" : "SELF",
-		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"infinitegalena" : {
-		"sideall" : "SELF",
-		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete",
-		"onRemove" : [
-			{
-				"type" : "galenalead",
-				"amount" : 1,
-				"chance" : 1
-			},
-			{
-				"type" : "galenasilver",
-				"amount" : 1,
-				"chance" : 0.11
-			}
-		],
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"infinitegold" : {
-		"onRemoveType" : "goldore",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 5000,
-		"sideall" : "SELF",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 13.3
-		}
-	},
-	"infinitegypsum" : {
-		"onRemoveType" : "gypsum",
-		"onRemoveAmount" : 5,
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 1250,
-		"sideall" : "SELF",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"infiniteiron" : {
-		"onRemoveType" : "ironore",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 1250,
-		"sideall" : "SELF",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 13.3
-		}
-	},
-	"infinitesalpeter" : {
-		"onRemoveType" : "salpeter",
-		"sideall" : "SELF",
-		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"infinitestone" : {
-		"onRemoveType" : "stonebricks",
-		"onRemoveAudio" : "stoneDelete",
-		"destructionTime" : 1250,
-		"sideall" : "SELF",
-		"isDestructible" : false,
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 3.0
-		}
-	},
-	"infinitetin" : {
-		"onRemoveType" : "tin",
-		"sideall" : "SELF",
-		"destructionTime" : 1250,
-		"onRemoveAudio" : "stoneDelete",
-		"customData" : {
-			"minerIsMineable" : true,
-			"minerMiningTime" : 10.0
-		}
-	},
-	"lumberarea" : {
-		"onRemoveType" : "grasstemperate",
-		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete",
-		"sideall" : "SELF",
-		"isFertile" : true
-	},
-	"stoneblock" : {
-		"onPlaceAudio" : "stonePlace",
-		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "SELF",
-		"onRemoveType" : "stonebricks",
-		"destructionTime" : 600
-	},
-
-
-
-	"bed" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"icon" : "gamedata/textures/icons/bed.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"needsBase" : true,
-		"sideall" : "SELF",
-		"rotatablex+" : "bedx+",
-		"rotatablex-" : "bedx-",
-		"rotatablez+" : "bedz+",
-		"rotatablez-" : "bedz-"
-	},
-	"torch" : {
-		"icon" : "gamedata/textures/icons/torch.png",
-		"onRemoveAudio" : "woodDeleteLight",
-		"onPlaceAudio" : "woodPlace",
-		"maxStackSize" : 600,
-		"sideall" : "SELF",
-		"isSolid" : false
-	},
-
-
-	"bedend" : {
-		"parentType" : "bed",
-		"isRotatable" : true,
-		"rotatablex+" : "bedendx+",
-		"rotatablex-" : "bedendx-",
-		"rotatablez+" : "bedendz+",
-		"rotatablez-" : "bedendz-"
-	},
-	"carpet" : {
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace",
-		"maxStackSize" : 200
-	},
-	"flaxstage" : {
-		"isSolid" : false,
-		"needsBase" : true,
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "grassDelete",
-		"maxStackSize" : 1200,
-		"sideall" : "flax"
-	},
-	"grass" : {
-		"isFertile" : true,
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "dirtPlace",
-		"maxStackSize" : 200
-	},
-	"leaves" : {
-		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete",
-		"destructionTime" : 200
-	},
-	"log" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteHeavy"
-	},
-	"wheatstage" : {
-		"isSolid" : false,
-		"needsBase" : true,
-		"onRemoveAudio" : "grassDelete",
-		"onPlaceAudio" : "grassDelete",
-		"maxStackSize" : 1200
-	},
-
-
-
-	"berry" : {
-		"icon" : "gamedata/textures/icons/berry.png",
-		"isPlaceable" : false,
-		"nutritionalValue" : 0.6,
-		"maxStackSize" : 600
-	},
-	"bow" : {
-		"icon" : "gamedata/textures/icons/bow.png",
-		"isPlaceable" : false
-	},
-	"bowstring" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bowstring.png"
-	},
-	"bread" : {
-		"icon" : "gamedata/textures/icons/bread.png",
-		"isPlaceable" : false,
-		"nutritionalValue" : 3.0
-	},
-	"bronzearrow" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzearrow.png"
-	},
-	"bronzeaxe" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzeaxe.png"
-	},
-	"bronzecoin" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzecoin.png"
-	},
-	"bronzeingot" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzeingot.png"
-	},
-	"bronzepickaxe" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzepickaxe.png"
-	},
-	"bronzeplate" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/bronzeplate.png"
+	"carpetblue" : {
+		"color" : "#0e3f77",
+		"icon" : "gamedata/textures/icons/carpetblue.png",
+		"onRemoveType" : "carpetblue",
+		"parentType" : "carpet",
+		"sideall" : "carpet"
+	},
+	"carpetred" : {
+		"color" : "#971113",
+		"icon" : "gamedata/textures/icons/carpetred.png",
+		"onRemoveType" : "carpetred",
+		"parentType" : "carpet",
+		"sideall" : "carpet"
+	},
+	"carpetyellow" : {
+		"color" : "#c6a218",
+		"icon" : "gamedata/textures/icons/carpetyellow.png",
+		"onRemoveType" : "carpetyellow",
+		"parentType" : "carpet",
+		"sideall" : "carpet"
 	},
 	"charcoal" : {
 		"icon" : "gamedata/textures/icons/charcoal.png",
 		"isPlaceable" : false
 	},
+	"cherryblossom" : {
+		"icon" : "gamedata/textures/icons/cherryblossom.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"cherryblossom"},
+			{"amount":1,"chance":0.1,"type":"cherrysapling"}
+		],
+		"parentType" : "leaves",
+		"sideall" : "SELF"
+	},
+	"cherrysapling" : {
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#dda5c7"]
+		},
+		"icon" : "gamedata/textures/icons/sapling.png",
+		"isSolid" : false,
+		"mesh" : "gamedata/meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"clay" : {
+		"icon" : "gamedata/textures/icons/clay.png",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
 	"clothing" : {
-		"maxStackSize" : 25,
 		"icon" : "gamedata/textures/icons/clothing.png",
-		"isPlaceable" : false
+		"isPlaceable" : false,
+		"maxStackSize" : 25
 	},
 	"coalore" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/coalore.png"
+		"icon" : "gamedata/textures/icons/coalore.png",
+		"isPlaceable" : false
+	},
+	"coatedplanks" : {
+		"icon" : "gamedata/textures/icons/coatedplanks.png",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
 	},
 	"cokes" : {
 		"icon" : "gamedata/textures/icons/cokes.png",
-		"isPlaceable" : false
-	},
-	"copper" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/copper.png"
-	},
-	"coppernails" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/coppernails.png"
-	},
-	"copperparts" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/copperparts.png"
-	},
-	"coppertools" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/coppertools.png"
-	},
-	"crossbow" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/crossbow.png"
-	},
-	"crossbowbolt" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/crossbowbolt.png"
-	},
-	"firewood" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/firewood.png"
-	},
-	"flax" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/flax.png",
-		"maxStackSize" : 600
-	},
-	"flour" : {
-		"icon" : "gamedata/textures/icons/flour.png",
-		"isPlaceable" : false,
-		"maxStackSize" : 600
-	},
-	"galenalead" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/galenalead.png"
-	},
-	"galenasilver" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/galenasilver.png"
-	},
-	"goldcoin" : {
-		"maxStackSize" : 400,
-		"icon" : "gamedata/textures/icons/goldcoin.png",
-		"isPlaceable" : false
-	},
-	"goldingot" : {
-		"maxStackSize" : 200,
-		"icon" : "gamedata/textures/icons/goldingot.png",
-		"isPlaceable" : false
-	},
-	"goldore" : {
-		"icon" : "gamedata/textures/icons/goldore.png",
-		"isPlaceable" : false
-	},
-	"gunpowder" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/gunpowder.png"
-	},
-	"gunpowderpouch" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/gunpowderpouch.png"
-	},
-	"gypsum" : {
-		"maxStackSize" : 200,
-		"icon" : "gamedata/textures/icons/gypsum.png",
-		"isPlaceable" : false
-	},
-	"ironingot" : {
-		"icon" : "gamedata/textures/icons/ironingot.png",
-		"isPlaceable" : false
-	},
-	"ironore" : {
-		"icon" : "gamedata/textures/icons/ironore.png",
-		"isPlaceable" : false
-	},
-	"ironrivet" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/ironrivet.png"
-	},
-	"ironsword" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/ironsword.png"
-	},
-	"ironwrought" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/ironwrought.png"
-	},
-	"lead" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/lead.png"
-	},
-	"leadbullet" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/leadbullet.png"
-	},
-	"linen" : {
-		"maxStackSize" : 100,
-		"icon" : "gamedata/textures/icons/linen.png",
-		"isPlaceable" : false
-	},
-	"linenbag" : {
-		"icon" : "gamedata/textures/icons/linenbag.png",
-		"isPlaceable" : false
-	},
-	"linenpouch" : {
-		"icon" : "gamedata/textures/icons/linenpouch.png",
-		"isPlaceable" : false
-	},
-	"linseedoil" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/linseedoil.png",
-		"maxStackSize" : 600
-	},
-	"matchlockgun" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/matchlockgun.png"
-	},
-	"salpeter" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/salpeter.png"
-	},
-	"sciencebagbasic" : {
-		"icon" : "gamedata/textures/icons/sciencebagbasic.png",
-		"isPlaceable" : false
-	},
-	"sciencebaglife" : {
-		"icon" : "gamedata/textures/icons/sciencebaglife.png",
-		"isPlaceable" : false
-	},
-	"sciencebagmilitary" : {
-		"icon" : "gamedata/textures/icons/sciencebagmilitary.png",
-		"isPlaceable" : false
-	},
-	"sciencebagadvanced" : {
-		"icon" : "gamedata/textures/icons/sciencebagadvanced.png",
-		"isPlaceable" : false
-	},
-	"sciencebagcolony" : {
-		"icon" : "gamedata/textures/icons/sciencebagcolony.png",
-		"isPlaceable" : false
-	},
-	"silveringot" : {
-		"icon" : "gamedata/textures/icons/silveringot.png",
-		"isPlaceable" : false
-	},
-	"sling" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/sling.png"
-	},
-	"slingbullet" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/slingbullet.png"
-	},
-	"steelingot" : {
-		"icon" : "gamedata/textures/icons/steelingot.png",
-		"isPlaceable" : false
-	},
-	"steelparts" : {
-		"icon" : "gamedata/textures/icons/steelparts.png",
-		"isPlaceable" : false
-	},
-	"tin" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/tin.png"
-	},
-	"wheat" : {
-		"isPlaceable" : false,
-		"icon" : "gamedata/textures/icons/wheat.png",
-		"nutritionalValue" : 0.4,
-		"maxStackSize" : 600
-	},
-
-
-
-	"bannertool" : {
 		"isPlaceable" : false
 	},
 	"commandtool" : {
@@ -1077,41 +267,839 @@
 		"icon" : "gamedata/textures/icons/constructiontool.png",
 		"isPlaceable" : false
 	},
-	"savetool" : {
+	"copper" : {
+		"icon" : "gamedata/textures/icons/copper.png",
+		"isPlaceable" : false
 	},
-
-	
-	"projectile_arrow" : {
-		"mesh" : "gamedata/meshes/arrow.obj",
-		"sideall" : "projectile"
+	"coppernails" : {
+		"icon" : "gamedata/textures/icons/coppernails.png",
+		"isPlaceable" : false
 	},
-	"projectile_crossbowbolt" : {
-		"mesh" : "gamedata/meshes/crossbowbolt.obj",
-		"sideall" : "projectile"
+	"copperparts" : {
+		"icon" : "gamedata/textures/icons/copperparts.png",
+		"isPlaceable" : false
 	},
-	"projectile_slingbullet" : {
-		"mesh" : "gamedata/meshes/slingbullet.obj",
-		"sideall" : "projectile"
+	"coppertools" : {
+		"icon" : "gamedata/textures/icons/coppertools.png",
+		"isPlaceable" : false
 	},
-	"projectile_leadbullet" : {
-		"mesh" : "gamedata/meshes/leadbullet.obj",
-		"sideall" : "projectile"
+	"crate" : {
+		"icon" : "gamedata/textures/icons/crate.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
 	},
-
+	"crossbow" : {
+		"icon" : "gamedata/textures/icons/crossbow.png",
+		"isPlaceable" : false
+	},
+	"crossbowbolt" : {
+		"icon" : "gamedata/textures/icons/crossbowbolt.png",
+		"isPlaceable" : false
+	},
+	"crystal" : {
+		"isPlaceable" : false
+	},
+	"darkstone" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 3
+		},
+		"destructionTime" : 750,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "stonebricks",
+		"sideall" : "infinitestone"
+	},
+	"dirt" : {
+		"icon" : "gamedata/textures/icons/dirt.png",
+		"isFertile" : true,
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
+	"dyertable" : {
+		"sideall" : "coatedplanks",
+		"sidey+" : "dyertable"
+	},
 	"erroridle" : {
-		"parentType" : "missingerror",
-		"icon" : "gamedata/textures/icons/errorIdle.png"
+		"icon" : "gamedata/textures/icons/errorIdle.png",
+		"parentType" : "missingerror"
 	},
 	"errornofuel" : {
-		"parentType" : "missingerror",
-		"icon" : "gamedata/textures/icons/errorNoFuel.png"
+		"icon" : "gamedata/textures/icons/errorNoFuel.png",
+		"parentType" : "missingerror"
 	},
 	"errornopath" : {
-		"parentType" : "missingerror",
-		"icon" : "gamedata/textures/icons/errorNoPath.png"
+		"icon" : "gamedata/textures/icons/errorNoPath.png",
+		"parentType" : "missingerror"
+	},
+	"firewood" : {
+		"icon" : "gamedata/textures/icons/firewood.png",
+		"isPlaceable" : false
+	},
+	"flax" : {
+		"icon" : "gamedata/textures/icons/flax.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"flaxstage" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847","#00ff00->#7e48ed"]
+		},
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"flaxstage1" : {
+		"icon" : "gamedata/textures/icons/flaxstage1.png",
+		"mesh" : "gamedata/meshes/flaxstage1.ply",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"flaxstage1"}
+		],
+		"parentType" : "flaxstage"
+	},
+	"flaxstage2" : {
+		"mesh" : "gamedata/meshes/flaxstage2.ply",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"flaxstage1"},
+			{"amount":1,"chance":0.1,"type":"flaxstage1"},
+			{"amount":1,"chance":0.5,"type":"flax"}
+		],
+		"parentType" : "flaxstage"
+	},
+	"flour" : {
+		"icon" : "gamedata/textures/icons/flour.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"galenalead" : {
+		"icon" : "gamedata/textures/icons/galenalead.png",
+		"isPlaceable" : false
+	},
+	"galenasilver" : {
+		"icon" : "gamedata/textures/icons/galenasilver.png",
+		"isPlaceable" : false
+	},
+	"goldcoin" : {
+		"icon" : "gamedata/textures/icons/goldcoin.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 400
+	},
+	"goldingot" : {
+		"icon" : "gamedata/textures/icons/goldingot.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 200
+	},
+	"goldore" : {
+		"icon" : "gamedata/textures/icons/goldore.png",
+		"isPlaceable" : false
+	},
+	"grass" : {
+		"isFertile" : true,
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete"
+	},
+	"grassrainforest" : {
+		"icon" : "gamedata/textures/icons/grassrainforest.png",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"grassrainforest"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"},
+			{"amount":1,"chance":0.03,"type":"sappling"}
+		],
+		"parentType" : "grass",
+		"sideall" : "SELF"
+	},
+	"grasssavanna" : {
+		"icon" : "gamedata/textures/icons/grasssavanna.png",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"grasssavanna"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"}
+		],
+		"parentType" : "grass",
+		"sideall" : "SELF"
+	},
+	"grasstaiga" : {
+		"icon" : "gamedata/textures/icons/grasstaiga.png",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"grasstaiga"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"},
+			{"amount":1,"chance":0.03,"type":"sappling"}
+		],
+		"parentType" : "grass",
+		"sideall" : "SELF"
+	},
+	"grasstemperate" : {
+		"icon" : "gamedata/textures/icons/grasstemperate.png",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"grasstemperate"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"},
+			{"amount":1,"chance":0.03,"type":"sappling"}
+		],
+		"parentType" : "grass",
+		"sideall" : "SELF"
+	},
+	"grasstundra" : {
+		"icon" : "gamedata/textures/icons/grasstundra.png",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"grasstundra"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"}
+		],
+		"parentType" : "grass",
+		"sideall" : "SELF"
+	},
+	"grindstone" : {
+		"icon" : "gamedata/textures/icons/grindstone.png",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "planks",
+		"sidey+" : "grindstone"
+	},
+	"gunpowder" : {
+		"icon" : "gamedata/textures/icons/gunpowder.png",
+		"isPlaceable" : false
+	},
+	"gunpowderpouch" : {
+		"icon" : "gamedata/textures/icons/gunpowderpouch.png",
+		"isPlaceable" : false
+	},
+	"gunsmithshop" : {
+		"icon" : "gamedata/textures/icons/gunsmithshop.png",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "ironblock",
+		"sidey+" : "gunsmithshop"
+	},
+	"gypsum" : {
+		"icon" : "gamedata/textures/icons/gypsum.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 200
+	},
+	"infiniteclay" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 8
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "clay",
+		"sideall" : "SELF"
+	},
+	"infinitecoal" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "coalore",
+		"sideall" : "SELF"
+	},
+	"infinitecopper" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "copper",
+		"sideall" : "SELF"
+	},
+	"infinitegalena" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"galenalead"},
+			{"amount":1,"chance":0.11,"type":"galenasilver"}
+		],
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "SELF"
+	},
+	"infinitegold" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 13.3
+		},
+		"destructionTime" : 5000,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "goldore",
+		"sideall" : "SELF"
+	},
+	"infinitegypsum" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemoveAmount" : 5,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "gypsum",
+		"sideall" : "SELF"
+	},
+	"infiniteiron" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 13.3
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "ironore",
+		"sideall" : "SELF"
+	},
+	"infinitesalpeter" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "salpeter",
+		"sideall" : "SELF"
+	},
+	"infinitestone" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 3
+		},
+		"destructionTime" : 1250,
+		"isDestructible" : false,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "stonebricks",
+		"sideall" : "SELF"
+	},
+	"infinitetin" : {
+		"customData" : {
+			"minerIsMineable" : true,
+			"minerMiningTime" : 10
+		},
+		"destructionTime" : 1250,
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "tin",
+		"sideall" : "SELF"
+	},
+	"ironblock" : {
+		"icon" : "gamedata/textures/icons/ironblock.png",
+		"onPlaceAudio" : "stoneDelete",
+		"onRemoveAudio" : "stonePlace",
+		"sideall" : "SELF"
+	},
+	"ironingot" : {
+		"icon" : "gamedata/textures/icons/ironingot.png",
+		"isPlaceable" : false
+	},
+	"ironore" : {
+		"icon" : "gamedata/textures/icons/ironore.png",
+		"isPlaceable" : false
+	},
+	"ironrivet" : {
+		"icon" : "gamedata/textures/icons/ironrivet.png",
+		"isPlaceable" : false
+	},
+	"ironsword" : {
+		"icon" : "gamedata/textures/icons/ironsword.png",
+		"isPlaceable" : false
+	},
+	"ironwrought" : {
+		"icon" : "gamedata/textures/icons/ironwrought.png",
+		"isPlaceable" : false
+	},
+	"lanternblue" : {
+		"color" : "#3646e5",
+		"customData" : {
+			"torches" : {"a":{"color":"#3646e5","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanterncyan" : {
+		"color" : "#45e0de",
+		"customData" : {
+			"torches" : {"a":{"color":"#45e0de","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanterngreen" : {
+		"color" : "#71e261",
+		"customData" : {
+			"torches" : {"a":{"color":"#71e261","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanternorange" : {
+		"color" : "#e66f27",
+		"customData" : {
+			"torches" : {"a":{"color":"#e66f27","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanternpink" : {
+		"color" : "#e939b9",
+		"customData" : {
+			"torches" : {"a":{"color":"#e939b9","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanternred" : {
+		"color" : "#d33030",
+		"customData" : {
+			"torches" : {"a":{"color":"#d33030","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanternwhite" : {
+		"color" : "#ededed",
+		"customData" : {
+			"torches" : {"a":{"color":"#ededed","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lanternyellow" : {
+		"color" : "#997b45",
+		"customData" : {
+			"torches" : {"a":{"color":"#997b45","intensity":12.5,"range":16,"volume":0.5}}
+		},
+		"maxStackSize" : 100,
+		"sideall" : "lantern"
+	},
+	"lead" : {
+		"icon" : "gamedata/textures/icons/lead.png",
+		"isPlaceable" : false
+	},
+	"leadbullet" : {
+		"icon" : "gamedata/textures/icons/leadbullet.png",
+		"isPlaceable" : false
+	},
+	"leaves" : {
+		"destructionTime" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete"
+	},
+	"leavestaiga" : {
+		"icon" : "gamedata/textures/icons/leavestaiga.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavestaiga"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves",
+		"sideall" : "SELF"
+	},
+	"leavestemperate" : {
+		"icon" : "gamedata/textures/icons/leavestemperate.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavestemperate"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves",
+		"sideall" : "SELF"
+	},
+	"linen" : {
+		"icon" : "gamedata/textures/icons/linen.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 100
+	},
+	"linenbag" : {
+		"icon" : "gamedata/textures/icons/linenbag.png",
+		"isPlaceable" : false
+	},
+	"linenpouch" : {
+		"icon" : "gamedata/textures/icons/linenpouch.png",
+		"isPlaceable" : false
+	},
+	"linseedoil" : {
+		"icon" : "gamedata/textures/icons/linseedoil.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"log" : {
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteHeavy"
+	},
+	"logtaiga" : {
+		"icon" : "gamedata/textures/icons/logtaiga.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "log",
+		"sideall" : "SELF"
+	},
+	"logtemperate" : {
+		"icon" : "gamedata/textures/icons/logtemperate.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "log",
+		"sideall" : "SELF"
+	},
+	"lumberarea" : {
+		"isFertile" : true,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"onRemoveType" : "grasstemperate",
+		"sideall" : "SELF"
+	},
+	"matchlockgun" : {
+		"icon" : "gamedata/textures/icons/matchlockgun.png",
+		"isPlaceable" : false
+	},
+	"mint" : {
+		"icon" : "gamedata/textures/icons/mint.png",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "planks",
+		"sidey+" : "mint"
 	},
 	"missingerror" : {
-		"sideall" : "error",
-		"icon" : "gamedata/textures/icons/error.png"
+		"icon" : "gamedata/textures/icons/error.png",
+		"sideall" : "error"
+	},
+	"planks" : {
+		"icon" : "gamedata/textures/icons/planks.png",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
+	},
+	"planksblue" : {
+		"color" : "#36487c",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"plankscyan" : {
+		"color" : "#50b4ae",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"planksgreen" : {
+		"color" : "#4e9a42",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"planksgrey" : {
+		"color" : "#696969",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"plankspink" : {
+		"color" : "#f99eb4",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"planksred" : {
+		"color" : "#8b3426",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"planksyellow" : {
+		"color" : "#c6cd53",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planksgeneric"
+	},
+	"plasterblock" : {
+		"icon" : "gamedata/textures/icons/plasterblock.png",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "dirtPlace",
+		"sideall" : "SELF"
+	},
+	"projectile_arrow" : {
+		"mesh" : "gamedata/meshes/arrow.ply",
+		"parentType" : "projectile_parent"
+	},
+	"projectile_crossbowbolt" : {
+		"mesh" : "gamedata/meshes/crossbowbolt.ply",
+		"parentType" : "projectile_parent"
+	},
+	"projectile_leadbullet" : {
+		"mesh" : "gamedata/meshes/leadbullet.ply",
+		"parentType" : "projectile_parent"
+	},
+	"projectile_parent" : {
+		"customData" : {
+			"colors" : ["#ff0000->#666666","#00ff00->#803036","#0000ff->#e6e800","#ffff00->#c91c25"]
+		},
+		"sideall" : "neutral"
+	},
+	"projectile_slingbullet" : {
+		"mesh" : "gamedata/meshes/slingbullet.ply",
+		"parentType" : "projectile_parent"
+	},
+	"redplanks" : {
+		"icon" : "gamedata/textures/icons/redplanks.png",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
+	},
+	"salpeter" : {
+		"icon" : "gamedata/textures/icons/salpeter.png",
+		"isPlaceable" : false
+	},
+	"sand" : {
+		"icon" : "gamedata/textures/icons/sand.png",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
+	"sappling" : {
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#0e6306"]
+		},
+		"icon" : "gamedata/textures/icons/sapling.png",
+		"isSolid" : false,
+		"mesh" : "gamedata/meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"savetool" : {
+		
+	},
+	"sciencebagadvanced" : {
+		"icon" : "gamedata/textures/icons/sciencebagadvanced.png",
+		"isPlaceable" : false
+	},
+	"sciencebagbasic" : {
+		"icon" : "gamedata/textures/icons/sciencebagbasic.png",
+		"isPlaceable" : false
+	},
+	"sciencebagcolony" : {
+		"icon" : "gamedata/textures/icons/sciencebagcolony.png",
+		"isPlaceable" : false
+	},
+	"sciencebaglife" : {
+		"icon" : "gamedata/textures/icons/sciencebaglife.png",
+		"isPlaceable" : false
+	},
+	"sciencebagmilitary" : {
+		"icon" : "gamedata/textures/icons/sciencebagmilitary.png",
+		"isPlaceable" : false
+	},
+	"sciencelab" : {
+		"icon" : "gamedata/textures/icons/sciencelab.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "coatedplanks",
+		"sidey+" : "sciencelab"
+	},
+	"shop" : {
+		"icon" : "gamedata/textures/icons/shop.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "shop"
+	},
+	"silveringot" : {
+		"icon" : "gamedata/textures/icons/silveringot.png",
+		"isPlaceable" : false
+	},
+	"sling" : {
+		"icon" : "gamedata/textures/icons/sling.png",
+		"isPlaceable" : false
+	},
+	"slingbullet" : {
+		"icon" : "gamedata/textures/icons/slingbullet.png",
+		"isPlaceable" : false
+	},
+	"snow" : {
+		"icon" : "gamedata/textures/icons/snow.png",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
+	"splittingstump" : {
+		"icon" : "gamedata/textures/icons/splittingstump.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteHeavy",
+		"sideall" : "logtemperate",
+		"sidey+" : "splittingstump"
+	},
+	"steelingot" : {
+		"icon" : "gamedata/textures/icons/steelingot.png",
+		"isPlaceable" : false
+	},
+	"steelparts" : {
+		"icon" : "gamedata/textures/icons/steelparts.png",
+		"isPlaceable" : false
+	},
+	"stoneblock" : {
+		"destructionTime" : 600,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"onRemoveType" : "stonebricks",
+		"sideall" : "SELF"
+	},
+	"stonebricks" : {
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/stonebricks.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "SELF"
+	},
+	"stonemasonworkbench" : {
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "stonebricks",
+		"sidey+" : "stonemasonworkbench"
+	},
+	"straw" : {
+		"icon" : "gamedata/textures/icons/straw.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
+	},
+	"tailorshop" : {
+		"icon" : "gamedata/textures/icons/tailorshop.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "tailorshop"
+	},
+	"technologisttable" : {
+		"icon" : "gamedata/textures/icons/technologisttable.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "coatedplanks",
+		"sidey+" : "technologisttable"
+	},
+	"tin" : {
+		"icon" : "gamedata/textures/icons/tin.png",
+		"isPlaceable" : false
+	},
+	"torch" : {
+		"icon" : "gamedata/textures/icons/torch.png",
+		"isSolid" : false,
+		"maxStackSize" : 600,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
+	},
+	"torchx-" : {
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
+		},
+		"mesh" : "gamedata/meshes/torchx-.ply",
+		"parentType" : "torch"
+	},
+	"torchx+" : {
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":0.25,"offsety":0.18,"range":16,"volume":0.5}}
+		},
+		"mesh" : "gamedata/meshes/torchx+.ply",
+		"parentType" : "torch"
+	},
+	"torchy+" : {
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":-0.08,"range":16,"volume":0.5}}
+		},
+		"mesh" : "gamedata/meshes/torchy+.ply",
+		"needsBase" : true,
+		"parentType" : "torch"
+	},
+	"torchz-" : {
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
+		},
+		"mesh" : "gamedata/meshes/torchz-.ply",
+		"parentType" : "torch"
+	},
+	"torchz+" : {
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":0.25,"range":16,"volume":0.5}}
+		},
+		"mesh" : "gamedata/meshes/torchz+.ply",
+		"parentType" : "torch"
+	},
+	"water" : {
+		"icon" : "gamedata/textures/icons/water.png",
+		"isSolid" : false
+	},
+	"wheat" : {
+		"icon" : "gamedata/textures/icons/wheat.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600,
+		"nutritionalValue" : 0.4
+	},
+	"wheatstage" : {
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemoveAudio" : "grassDelete"
+	},
+	"wheatstage1" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"icon" : "gamedata/textures/icons/wheatstage1.png",
+		"mesh" : "gamedata/meshes/wheatstage1.ply",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"wheatstage1"}
+		],
+		"parentType" : "wheatstage",
+		"sideall" : "neutral"
+	},
+	"wheatstage2" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"mesh" : "gamedata/meshes/wheatstage2.ply",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"wheatstage1"},
+			{"amount":1,"chance":0.1,"type":"straw"},
+			{"amount":1,"chance":0.3,"type":"wheat"}
+		],
+		"parentType" : "wheatstage",
+		"sideall" : "neutral"
+	},
+	"wheatstage3" : {
+		"customData" : {
+			"colors" : ["#ff0000->#ceac0d"]
+		},
+		"mesh" : "gamedata/meshes/wheatstage3.ply",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"wheatstage1"},
+			{"amount":1,"chance":0.1,"type":"wheatstage1"},
+			{"amount":1,"chance":1,"type":"wheat"},
+			{"amount":1,"chance":0.333333,"type":"straw"}
+		],
+		"parentType" : "wheatstage",
+		"sideall" : "neutral"
+	},
+	"workbench" : {
+		"icon" : "gamedata/textures/icons/workbench.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "planks",
+		"sidey+" : "workbenchtop"
 	}
 }

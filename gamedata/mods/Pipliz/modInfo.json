@@ -1,64 +1,47 @@
-{
-	"assemblies" : [
-		{
-			"name" : "pipliz.apiprovider",
-			"path" : "APIProvider/APIProvider.dll",
-			"enabled" : true,
-			"compatibleversions" : [
-				{
-					"Major" : 0,
-					"Minor" : 4,
-					"Build" : 4
-				}
-			]
-		},
-		{
-			"name" : "pipliz.baseresearch",
-			"path" : "BaseResearch/BaseResearch.dll",
-			"enabled" : true,
-			"compatibleversions" : [
-				{
-					"Major" : 0,
-					"Minor" : 4,
-					"Build" : 4
-				}
-			]
-		},
-		{
-			"name" : "pipliz.blocknpcs",
-			"path" : "BlockNPCs/BlockNPCs.dll",
-			"enabled" : true,
-			"compatibleversions" : [
-				{
-					"Major" : 0,
-					"Minor" : 4,
-					"Build" : 4
-				}
-			]
-		},
-		{
-			"name" : "pipliz.colonyserverwrapper",
-			"path" : "colonyserverwrapper/colonyserverwrapperdll.dll",
-			"enabled" : true,
-			"compatibleversions" : [
-				{
-					"Major" : 0,
-					"Minor" : 4,
-					"Build" : 4
-				}
-			]
-		},
-		{
-			"name" : "pipliz.worldconverter",
-			"path" : "WorldConverter/WorldConverter.dll",
-			"enabled" : false,
-			"compatibleversions" : [
-				{
-					"Major" : 0,
-					"Minor" : 4,
-					"Build" : 4
-				}
-			]
-		}
-	]
-}
+[
+	{
+		"name" : "pipliz.apiprovider",
+		"version" : "0.1.0",
+		"dllpath" : "APIProvider/APIProvider.dll",
+		"enabled" : true,
+		"compatibleversions" : [
+			"0.5.0"
+		]
+	},
+	{
+		"name" : "pipliz.baseresearch",
+		"version" : "0.1.0",
+		"dllpath" : "BaseResearch/BaseResearch.dll",
+		"enabled" : true,
+		"compatibleversions" : [
+			"0.5.0"
+		]
+	},
+	{
+		"name" : "pipliz.blocknpcs",
+		"version" : "0.1.0",
+		"dllpath" : "BlockNPCs/BlockNPCs.dll",
+		"enabled" : true,
+		"compatibleversions" : [
+			"0.5.0"
+		]
+	},
+	{
+		"name" : "pipliz.colonyserverwrapper",
+		"version" : "0.1.0",
+		"dllpath" : "colonyserverwrapper/colonyserverwrapperdll.dll",
+		"enabled" : true,
+		"compatibleversions" : [
+			"0.5.0"
+		]
+	},
+	{
+		"name" : "pipliz.worldconverter",
+		"version" : "0.1.0",
+		"dllpath" : "WorldConverter/WorldConverter.dll",
+		"enabled" : false,
+		"compatibleversions" : [
+			"0.5.0"
+		]
+	}
+]

@@ -63,6 +63,19 @@
 		"defaultPriority" : -100
 	},
 	{
+		"name" : "pipliz.metalsmith.lanternyellow",
+		"results":[{"type":"lanternyellow"}],
+		"requires":[
+			{"type":"lead","amount":4},
+			{"type":"ironrivet","amount":4},
+			{"type":"ironwrought","amount":4},
+			{"type":"crystal"},
+			{"type":"charcoal","amount":5}
+		],
+		"defaultLimit" : 5,
+		"defaultPriority" : -100
+	},
+	{
 		"name" : "pipliz.metalsmith.crossbowbolt",
 		"results":[{"type":"crossbowbolt","amount":5}],
 		"requires":[{"type":"ironwrought"},{"type":"ironrivet","amount":5}],

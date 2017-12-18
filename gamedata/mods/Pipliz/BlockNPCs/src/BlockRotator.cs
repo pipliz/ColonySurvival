@@ -182,9 +182,7 @@ namespace Pipliz.BlockNPCs
 							.SetAs("volume", 0.3f)
 							.SetAs("intensity", 2.5f)
 							.SetAs("range", 8)
-							.SetAs("red", 195f)
-							.SetAs("green", 135f)
-							.SetAs("blue", 46f)
+							.SetAs("color", "#c3872e")
 							.SetAs("offsetx", 0f)
 							.SetAs("offsety", 0.55f)
 							.SetAs("offsetz", 0f)
@@ -193,9 +191,7 @@ namespace Pipliz.BlockNPCs
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 1f)
 							.SetAs("range", 8)
-							.SetAs("red", 195f)
-							.SetAs("green", 135f)
-							.SetAs("blue", 46f)
+							.SetAs("color", "#c3872e")
 							.SetAs("offsetx", 0.55f)
 							.SetAs("offsety", -0.25f)
 							.SetAs("offsetz", 0f)
@@ -224,9 +220,7 @@ namespace Pipliz.BlockNPCs
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
 							.SetAs("range", 8)
-							.SetAs("red", 195f)
-							.SetAs("green", 135f)
-							.SetAs("blue", 46f)
+							.SetAs("color", "#c3872e")
 							.SetAs("offsetx", 0.55f)
 							.SetAs("offsety", -0.25f)
 							.SetAs("offsetz", 0f)
@@ -255,9 +249,7 @@ namespace Pipliz.BlockNPCs
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
 							.SetAs("range", 8)
-							.SetAs("red", 195f)
-							.SetAs("green", 135f)
-							.SetAs("blue", 46f)
+							.SetAs("color", "#c3872e")
 							.SetAs("offsetx", 0.55f)
 							.SetAs("offsety", -0.25f)
 							.SetAs("offsetz", 0f)
@@ -286,9 +278,7 @@ namespace Pipliz.BlockNPCs
 							.SetAs("volume", 0.2f)
 							.SetAs("intensity", 2.0f)
 							.SetAs("range", 8)
-							.SetAs("red", 195f)
-							.SetAs("green", 135f)
-							.SetAs("blue", 46f)
+							.SetAs("color", "#c3872e")
 							.SetAs("offsetx", 0.55f)
 							.SetAs("offsety", -0.25f)
 							.SetAs("offsetz", 0f)
@@ -314,39 +304,18 @@ namespace Pipliz.BlockNPCs
 				null
 			);
 
-			ItemRotator(
-				items,
-				new RotatorSettings(
-					new ItemTypesServer.ItemTypeRaw("minerjob", new JSONNode()
-						.SetAs("needsBase", true)
-						.SetAs("isSolid", false)
-						.SetAs("onRemove", new JSONNode(NodeType.Array))
-						.SetAs("mesh", "gamedata/meshes/outline_miner.obj")
-						.SetAs("sideall", "outlinedblock")
-						.SetAs("customData", new JSONNode()
-							.SetAs("renderOnlyIfSelected", "commandtool")
-							.SetAs("warnRemoval", true)
-						)
-					),
-					null,
-					null,
-					null,
-					null
-				),
-				null
-			);
-
-			RegisterGuardBlock(items, "guardslingerdayjob", "gamedata/meshes/outline_sling.obj");
-			RegisterGuardBlock(items, "guardslingernightjob", "gamedata/meshes/outline_sling.obj");
-			RegisterGuardBlock(items, "guardbowdayjob", "gamedata/meshes/outline_bow.obj");
-			RegisterGuardBlock(items, "guardbownightjob", "gamedata/meshes/outline_bow.obj");
-			RegisterGuardBlock(items, "guardcrossbowdayjob", "gamedata/meshes/outline_crossbow.obj");
-			RegisterGuardBlock(items, "guardcrossbownightjob", "gamedata/meshes/outline_crossbow.obj");
-			RegisterGuardBlock(items, "guardmatchlockdayjob", "gamedata/meshes/outline_matchlock.obj");
-			RegisterGuardBlock(items, "guardmatchlocknightjob", "gamedata/meshes/outline_matchlock.obj");
+			RegisterGuardBlock(items, "minerjob", "#2a2aac");
+			RegisterGuardBlock(items, "guardslingerdayjob", "#474747");
+			RegisterGuardBlock(items, "guardslingernightjob", "#474747");
+			RegisterGuardBlock(items, "guardbowdayjob", "#c3621b");
+			RegisterGuardBlock(items, "guardbownightjob", "#c3621b");
+			RegisterGuardBlock(items, "guardcrossbowdayjob", "#919dba");
+			RegisterGuardBlock(items, "guardcrossbownightjob", "#919dba");
+			RegisterGuardBlock(items, "guardmatchlockdayjob", "#e5e960");
+			RegisterGuardBlock(items, "guardmatchlocknightjob", "#e5e960");
 		}
 
-		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string mesh)
+		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string colorGoal)
 		{
 
 			ItemRotator(
@@ -356,11 +325,14 @@ namespace Pipliz.BlockNPCs
 						.SetAs("needsBase", true)
 						.SetAs("isSolid", false)
 						.SetAs("onRemove", new JSONNode(NodeType.Array))
-						.SetAs("mesh", mesh)
+						.SetAs("mesh", "gamedata/meshes/outlinedblock.ply")
 						.SetAs("sideall", "outlinedblock")
 						.SetAs("customData", new JSONNode()
 							.SetAs("renderOnlyIfSelected", "commandtool")
 							.SetAs("warnRemoval", true)
+							.SetAs("colors", new JSONNode(NodeType.Array)
+								.AddToArray(new JSONNode(null).SetAs(string.Format("#ff0000->{0}", colorGoal)))
+							)
 						)
 					),
 					null,

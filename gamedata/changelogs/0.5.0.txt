@@ -1,0 +1,62 @@
+0.5.0 (2017-12-**)
+
+-Added stonemason job (TODO: icon, tooltip, textures, science)
+| Makes dark red, black, dark yellow and red colored bricks from standard bricks
+-Added lanterns, light emitting blocks (TODO: icons, textures, science?)
+| Made with the bronze anvil, requiring higher end ingredients
+-Added a new type of planks (TODO: icons, 'normal' color planks with the new textures?)
+-Added crystal, result of smelting silver rich galena (TODO: icon, tooltip)
+-Added dyer job (TODO: icon, tooltip, textures, science)
+| Colors planks and lanterns:
+| Blue, cyan, green, grey, pink, red and yellow planks
+| Blue, cyan, green, orange, pink, red and white lanterns
+| Black, dark red, dark yellow and red bricks (TODO: icons)
+
+-Added support for colored variants of blocks (with a mask texture to determine what part to color)
+-Added support for importing .ply files with vertex colors
+-Added an example texture pack mod (/gamedata/mods/Examples/TexturePack/)
+-Substantially simplified modding existing game files
+
+-Fixed a few blocks having incorrect normal mapping
+-Changed emissive / mask textures to be in linear space instead of gamma space
+-Changed height / smoothness / specularity textures to be in linear space instead of gamma space
+-Limit time spend spawning zombies per server tick; 50 ms cap per tick default (server.json setting, Zombies -> MSPerTick)
+-Tweaked lighting brightness a bit if eye adaptation is disabled
+-Tweaked TAA settings to remove some artifacts (could see movement through blocks). Should look less blurry overall as well.
+-Changed internal mesh structure, ever so slightly faster rendering + (V)RAM savings:
+| Removed 4 bytes / vertex (precalculate the offset fixing gaps)
+| Removed 4 bytes / vertex (compress uv components into 1 float)
+| Removed 8 bytes / vertex (compress the 4 texture indices to 2 floats)
+| Added 4 bytes / vertex (mesh color)
+| Saves about 45 MB RAM, ~18 MB VRAM in a benchmark
+-Ported various blocks with solid colors to the new color system
+-Sorted the types by alphabet in types.json & texturemapping.json
+-Collapsed some nodes of types.json to lower size/line count
+-Fixed snow, sand and cherry blossom not sorting in the stockpile
+
+Modding changes:
+-Changed the torches customData fields from "red", "green", "blue" integers to a "color" : "#ffffff" field
+-Fixed normal maps requiring you to flip the red channel to work properly
+-Added ability to (through code):
+| Change the npc textures; NPCTypeNormalSettings has some static fields for it
+| Change the water textures; ItemTypesServer.Texture_Water_* are static fields for it
+-Changed modinfo.json format:
+| Removed the root object node with the "assemblies" key. Root node is now the inner array used previously
+| Changed compatibleversions array to use "x.x.x" as version instead of major/minor/build objects
+| Added a mod version field to each mod description
+| Renamed "path" key to "dllpath"
+-Added the following keys to every mod description in modinfo.json's. Each loads replacement files from the set directory if they exist.
+| "overrideAlbedoFolder"
+| "overrideEmissiveFolder"
+| "overrideHeightFolder"
+| "overrideNormalFolder"
+| "overrideMeshesFolder"
+| "overrideIconFolder"
+| "overrideNPCFolder"
+| "overrideWaterFolder"
+| "overrideAudioFolder"
+-Changed ModLoader.ModAssembly class into ModLoader.ModDescription.
+| Assemblies are optional
+| Access to the description JSON
+-Added ModLoader.AddFolderRedirection() and ModLoader.RedirectFile().
+| Used to implement the overrideFolder keys above. Call RedirectFile with a path to a file and it may return the 'replaced' path.

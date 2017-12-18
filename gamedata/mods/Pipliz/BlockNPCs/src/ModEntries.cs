@@ -43,6 +43,8 @@ namespace Pipliz.BlockNPCs
 			BlockJobManagerTracker.Register<TailorJob>("tailorshop");
 			BlockJobManagerTracker.Register<TechnologistJob>("technologisttable");
 			BlockJobManagerTracker.Register<WorkBenchJob>("workbench");
+			BlockJobManagerTracker.Register<StonemasonJob>("stonemasonworkbench");
+			BlockJobManagerTracker.Register<DyerJob>("dyertable");
 		}
 	}
 }
