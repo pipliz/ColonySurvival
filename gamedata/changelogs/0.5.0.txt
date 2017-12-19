@@ -24,19 +24,20 @@
 -Tweaked lighting brightness a bit if eye adaptation is disabled
 -Tweaked TAA settings to remove some artifacts (could see movement through blocks). Should look less blurry overall as well.
 -Changed internal mesh structure, ever so slightly faster rendering + (V)RAM savings:
-| Removed 4 bytes / vertex (precalculate the offset fixing gaps)
-| Removed 4 bytes / vertex (compress uv components into 1 float)
-| Removed 8 bytes / vertex (compress the 4 texture indices to 2 floats)
-| Added 4 bytes / vertex (mesh color)
-| Saves about 45 MB RAM, ~18 MB VRAM in a benchmark
+| Removed about 12 bytes / vertex by compressing some data, saving about 45 MB RAM / ~18 MB VRAM in a benchmark.
 -Ported various blocks with solid colors to the new color system
 -Sorted the types by alphabet in types.json & texturemapping.json
 -Collapsed some nodes of types.json to lower size/line count
 -Fixed snow, sand and cherry blossom not sorting in the stockpile
 
 Modding changes:
--Changed the torches customData fields from "red", "green", "blue" integers to a "color" : "#ffffff" field
+-Changed the torches customData fields from "red", "green", "blue" integers to a "color" : "#ffffff" (hex color code) field
 -Fixed normal maps requiring you to flip the red channel to work properly
+-Overhauled various things in code:
+| Fully replaced the old UpdatableBlocks code with a combination of the Server.GrowableBlocks and Pipliz.Mods.APIProvider.GrowableBlocks namespaces (base implementation)
+| Fully replaced the old AreaJobs code with a combination of the AreaJobTracker and Pipliz.Mods.APIProvider.AreaJobs namespace (base implementation)
+| Merged the BaseResearch and BlockNPCs code into a "BaseGame" mod.
+| Changed namespaces of most of the APIProvider / BaseGame mods - went from "Pipliz.APIProvider" to "Pipliz.Mods.APIProvider" mostly.
 -Added ability to (through code):
 | Change the npc textures; NPCTypeNormalSettings has some static fields for it
 | Change the water textures; ItemTypesServer.Texture_Water_* are static fields for it
@@ -45,7 +46,7 @@ Modding changes:
 | Changed compatibleversions array to use "x.x.x" as version instead of major/minor/build objects
 | Added a mod version field to each mod description
 | Renamed "path" key to "dllpath"
--Added the following keys to every mod description in modinfo.json's. Each loads replacement files from the set directory if they exist.
+-Added the following possible keys to a mod description in modinfo.json's. Each loads replacement files from the set directory if they exist.
 | "overrideAlbedoFolder"
 | "overrideEmissiveFolder"
 | "overrideHeightFolder"
@@ -60,3 +61,5 @@ Modding changes:
 | Access to the description JSON
 -Added ModLoader.AddFolderRedirection() and ModLoader.RedirectFile().
 | Used to implement the overrideFolder keys above. Call RedirectFile with a path to a file and it may return the 'replaced' path.
+-Renamed TimeCycle.NightLengthLeft to TimeCycle.TimeTillSunRise
+-Added TimeCycle.TimeTillSunSet

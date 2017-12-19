@@ -34,6 +34,13 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AreaJobs\AreaJobDefinitionAutoLoaderAttribute.cs" />
+    <Compile Include="AreaJobs\AreaJobDefinitionDefault.cs" />
+    <Compile Include="AreaJobs\DefaultFarmerAreaJob.cs" />
+    <Compile Include="GrowableBlocks\GrowableBlock.cs" />
+    <Compile Include="GrowableBlocks\GrowableBlockDefinition.cs" />
+    <Compile Include="GrowableBlocks\GrowableBlockDefinitionAutoLoaderAttribute.cs" />
+    <Compile Include="GrowableBlocks\GrowableStage.cs" />
     <Compile Include="Jobs\BlockJobBase.cs" />
     <Compile Include="Jobs\BlockJobManager.cs" />
     <Compile Include="Jobs\BlockJobManagerTracker.cs" />

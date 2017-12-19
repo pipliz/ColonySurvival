@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Pipliz.APIProvider.Science
+namespace Pipliz.Mods.APIProvider.Science
 {
 	public static class ResearchableManager
 	{

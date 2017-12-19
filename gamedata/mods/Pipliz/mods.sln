@@ -7,13 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "colonyserverwrapperdll", "c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIProvider", "APIProvider\src\APIProvider.csproj", "{F44A61C4-9F5F-4C4E-BFE9-EA9CB2834997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseResearch", "BaseResearch\src\BaseResearch.csproj", "{347E605F-7B37-4F45-BE2C-10CD5D1AF231}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockNPCs", "BlockNPCs\src\BlockNPCs.csproj", "{41A956D0-162C-497C-875B-E6CB0C00C525}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldConverter", "WorldConverter\src\WorldConverter.csproj", "{9FB77173-EADD-43D4-AE72-1AA6E6679259}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "colonyserverwrapper", "colonyserverwrapper\colonyserverwrapper\colonyserverwrapper.csproj", "{C5E2BE9B-EFC5-472A-A1F4-FCDCD9483D01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseGame", "BaseGame\src\BaseGame.csproj", "{41A956D0-162C-497C-875B-E6CB0C00C525}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,22 +37,6 @@ Global
 		{F44A61C4-9F5F-4C4E-BFE9-EA9CB2834997}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F44A61C4-9F5F-4C4E-BFE9-EA9CB2834997}.Release|x86.ActiveCfg = Release|Any CPU
 		{F44A61C4-9F5F-4C4E-BFE9-EA9CB2834997}.Release|x86.Build.0 = Release|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Debug|x86.Build.0 = Debug|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Release|Any CPU.Build.0 = Release|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Release|x86.ActiveCfg = Release|Any CPU
-		{347E605F-7B37-4F45-BE2C-10CD5D1AF231}.Release|x86.Build.0 = Release|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|x86.Build.0 = Debug|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|x86.ActiveCfg = Release|Any CPU
-		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|x86.Build.0 = Release|Any CPU
 		{9FB77173-EADD-43D4-AE72-1AA6E6679259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FB77173-EADD-43D4-AE72-1AA6E6679259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FB77173-EADD-43D4-AE72-1AA6E6679259}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -69,6 +51,14 @@ Global
 		{C5E2BE9B-EFC5-472A-A1F4-FCDCD9483D01}.Release|Any CPU.ActiveCfg = Release|x86
 		{C5E2BE9B-EFC5-472A-A1F4-FCDCD9483D01}.Release|x86.ActiveCfg = Release|x86
 		{C5E2BE9B-EFC5-472A-A1F4-FCDCD9483D01}.Release|x86.Build.0 = Release|x86
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Debug|x86.Build.0 = Debug|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|x86.ActiveCfg = Release|Any CPU
+		{41A956D0-162C-497C-875B-E6CB0C00C525}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

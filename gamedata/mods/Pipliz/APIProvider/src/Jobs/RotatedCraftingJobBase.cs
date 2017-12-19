@@ -1,6 +1,6 @@
 ﻿using Pipliz.JSON;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class RotatedCraftingJobBase : CraftingJobBase, IRecipeLimitsProvider
 	{

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41A956D0-162C-497C-875B-E6CB0C00C525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseGame</RootNamespace>
+    <AssemblyName>BaseGame</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AreaJobs\BerryFarmerAreaJob.cs" />
+    <Compile Include="AreaJobs\FlaxFarmerAreaJob.cs" />
+    <Compile Include="AreaJobs\TemperateForesterAreaJob.cs" />
+    <Compile Include="AreaJobs\WheatFarmerAreaJob.cs" />
+    <Compile Include="BlockJobsImplementations\GuardMatchlockNight.cs" />
+    <Compile Include="BlockJobsImplementations\GuardCrossbowNight.cs" />
+    <Compile Include="BlockJobsImplementations\GuardMatchlockDay.cs" />
+    <Compile Include="BlockJobsImplementations\GuardCrossbowDay.cs" />
+    <Compile Include="BlockJobsImplementations\GuardBowDay.cs" />
+    <Compile Include="BlockJobsImplementations\GuardBowNight.cs" />
+    <Compile Include="BlockJobsImplementations\GuardSlingerJobNight.cs" />
+    <Compile Include="BlockJobsImplementations\MinerJob.cs" />
+    <Compile Include="BlockJobsImplementations\Dyer.cs" />
+    <Compile Include="BlockJobsImplementations\Stonemason.cs" />
+    <Compile Include="BlockJobsImplementations\WoodcutterJob.cs" />
+    <Compile Include="BlockRotator.cs" />
+    <Compile Include="BlockJobsImplementations\FineryForgeJob.cs" />
+    <Compile Include="BlockJobsImplementations\GunSmithJob.cs" />
+    <Compile Include="BlockJobsImplementations\BloomeryJob.cs" />
+    <Compile Include="BlockJobsImplementations\KilnJob.cs" />
+    <Compile Include="BlockJobsImplementations\ScientistJob.cs" />
+    <Compile Include="BlockJobsImplementations\MetalSmithJob.cs" />
+    <Compile Include="BlockJobsImplementations\TechnologistJob.cs" />
+    <Compile Include="BlockJobsImplementations\TailorJob.cs" />
+    <Compile Include="BlockJobsImplementations\GuardSlingerJobDay.cs" />
+    <Compile Include="BlockJobsImplementations\GrinderJob.cs" />
+    <Compile Include="BlockJobsImplementations\MintJob.cs" />
+    <Compile Include="BlockJobsImplementations\ShopJob.cs" />
+    <Compile Include="BlockJobsImplementations\WorkBenchJob.cs" />
+    <Compile Include="BlockJobsImplementations\OvenJob.cs" />
+    <Compile Include="BlockJobsImplementations\FurnaceJob.cs" />
+    <Compile Include="GrowableBlocks\CherrySapling.cs" />
+    <Compile Include="GrowableBlocks\Flax.cs" />
+    <Compile Include="GrowableBlocks\TemperateSapling.cs" />
+    <Compile Include="GrowableBlocks\Wheat.cs" />
+    <Compile Include="Research\BannerRadius\BannerRadius1.cs" />
+    <Compile Include="Research\BannerRadius\BannerRadius2.cs" />
+    <Compile Include="Research\BannerRadius\BannerRadius3.cs" />
+    <Compile Include="Research\BannerRadius\BannerRadius4.cs" />
+    <Compile Include="Research\BannerRadius\BannerRadius5.cs" />
+    <Compile Include="Research\Bloomery.cs" />
+    <Compile Include="Research\BronzeAnvil.cs" />
+    <Compile Include="Research\BronzeMinting.cs" />
+    <Compile Include="Research\CrossBow.cs" />
+    <Compile Include="Research\CrossBowBolts.cs" />
+    <Compile Include="Research\FineryForge.cs" />
+    <Compile Include="Research\FlaxFarming.cs" />
+    <Compile Include="Research\GunPowder.cs" />
+    <Compile Include="Research\GunSmithShop.cs" />
+    <Compile Include="Research\Health\HealthRegenSize1.cs" />
+    <Compile Include="Research\Health\HealthRegenSize2.cs" />
+    <Compile Include="Research\Health\HealthRegenSize3.cs" />
+    <Compile Include="Research\Health\HealthRegenSize4.cs" />
+    <Compile Include="Research\Health\HealthRegenSpeed1.cs" />
+    <Compile Include="Research\Health\HealthRegenSpeed2.cs" />
+    <Compile Include="Research\Health\HealthRegenSpeed3.cs" />
+    <Compile Include="Research\Health\HealthRegenSpeed4.cs" />
+    <Compile Include="Research\Health\HealthSize1.cs" />
+    <Compile Include="Research\Health\HealthSize2.cs" />
+    <Compile Include="Research\Health\HealthSize3.cs" />
+    <Compile Include="Research\Health\HealthSize4.cs" />
+    <Compile Include="Research\Kiln.cs" />
+    <Compile Include="Research\MatchlockGun.cs" />
+    <Compile Include="Research\ScienceBagAdvanced.cs" />
+    <Compile Include="Research\ScienceBagBasic.cs" />
+    <Compile Include="Research\ScienceBagColony.cs" />
+    <Compile Include="Research\ScienceBagLife.cs" />
+    <Compile Include="Research\ScienceBagMilitary.cs" />
+    <Compile Include="Research\SplittingStump.cs" />
+    <Compile Include="Research\TailorShop.cs" />
+    <Compile Include="Research\TechnologistTable.cs" />
+    <Compile Include="Research\WheatFarming.cs" />
+    <Compile Include="BlockJobsModEntries.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="APIProvider">
+      <HintPath>..\..\APIProvider\APIProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\colonyserver_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\colonyserver_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(ProjectDir)..\$(TargetFileName)
+copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)..\$(TargetName).pdb
+$(ProjectDir)..\..\pdb2mdb.exe $(ProjectDir)..\$(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	/// <remarks>
 	/// Sorry for creating a ManagerTracker :)

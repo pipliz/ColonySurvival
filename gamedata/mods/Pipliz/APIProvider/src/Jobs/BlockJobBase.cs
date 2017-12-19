@@ -2,7 +2,7 @@
 using Pipliz.JSON;
 using Server.NPCs;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class BlockJobBase : IJob, ITrackableBlock
 	{

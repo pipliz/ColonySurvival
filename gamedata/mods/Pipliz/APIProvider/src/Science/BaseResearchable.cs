@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Assertions;
 
-namespace Pipliz.APIProvider.Science
+namespace Pipliz.Mods.APIProvider.Science
 {
 	public class BaseResearchable : IResearchable
 	{

@@ -1,4 +1,4 @@
-﻿namespace Pipliz.APIProvider.Jobs
+﻿namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class BlockJobManager<T> : IBlockJobManager where T : IBlockJobBase, ITrackableBlock, new()
 	{

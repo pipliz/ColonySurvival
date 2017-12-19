@@ -1,0 +1,26 @@
+﻿using Pipliz.Mods.APIProvider.Science;
+using Server.Science;
+
+namespace Pipliz.Mods.BaseGame.Researches
+{
+	[AutoLoadedResearchable]
+	public class TechnologistTable : BaseResearchable
+	{
+		public TechnologistTable ()
+		{
+			key = "pipliz.baseresearch.technologisttable";
+			icon = "gamedata/textures/icons/technologisttable.png";
+			iterationCount = 3;
+			AddIterationRequirement("coatedplanks");
+			AddIterationRequirement("bronzeplate", 2);
+			AddIterationRequirement("coppernails");
+			AddDependency("pipliz.baseresearch.tailorshop");
+		}
+
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		{
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.technologisttable", true, "pipliz.crafter");
+			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.technologisttable");
+		}
+	}
+}

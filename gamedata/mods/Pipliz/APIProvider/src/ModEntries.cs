@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pipliz.APIProvider
+namespace Pipliz.Mods.APIProvider
 {
 	/// <summary>
 	/// Contains the callback entries for this mod.
