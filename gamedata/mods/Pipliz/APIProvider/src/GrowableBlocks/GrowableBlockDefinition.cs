@@ -101,8 +101,6 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 			// runs in the thread pool
 			General.Application.StartAsyncQuitToComplete(delegate ()
 			{
-				Log.Write("Saving {0}", filePath);
-
 				JSONNode root = new JSONNode();
 				root.SetAs("version", 0);
 				if (SaveArray == null) {

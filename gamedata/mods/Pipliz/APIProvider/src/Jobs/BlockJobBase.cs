@@ -11,17 +11,31 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		protected Players.Player owner;
 
 		bool isValid = true;
+		bool worldTypeChecked = false;
 		NPCType cached_NPCType;
 		protected NPCBase.NPCGoal lastGoal;
 
 		public virtual Vector3Int KeyLocation { get { return position; } }
 
-		public virtual bool IsValid { get { return isValid; } }
+		public virtual bool IsValid
+		{
+			get
+			{
+				if (isValid && !worldTypeChecked) {
+					ushort type;
+					if (World.TryGetTypeAt(position, out type)) {
+						worldTypeChecked = true;
+						if (type == 0) {
+							BlockJobManagerTracker.RemoveBlockTypeAt(GetType(), position);
+							return false;
+						}
+					}
+				}
+				return isValid;
+			}
+		}
 
 		public virtual Players.Player Owner { get { return owner; } }
-
-		// excuse me for this, it's a stub needed for the area jobs atm
-		public void CopyData (ByteBuilder b) { }
 
 		public virtual NPCType NPCType
 		{

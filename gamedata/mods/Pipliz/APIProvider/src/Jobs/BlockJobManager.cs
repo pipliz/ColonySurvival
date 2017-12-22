@@ -26,12 +26,12 @@
 			tracker.Save();
 		}
 
-		void OnRemove (Vector3Int position, ushort type, Players.Player player)
+		public void OnRemove (Vector3Int position, ushort type, Players.Player player)
 		{
 			tracker.Remove(position);
 		}
 
-		void OnAdd (Vector3Int position, ushort type, Players.Player player)
+		public void OnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
 			tracker.Add((T)new T().InitializeOnAdd(position, type, player));
 		}
