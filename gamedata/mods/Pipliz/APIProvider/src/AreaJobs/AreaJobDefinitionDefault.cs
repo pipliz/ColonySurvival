@@ -118,7 +118,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				ushort type;
 				if (World.TryGetTypeAt(positionSub, out type)) {
 					ushort typeSeeds = stages[0];
-					ushort typeFinal = stages[1];
+					ushort typeFinal = stages[stages.Length - 1];
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
 							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
