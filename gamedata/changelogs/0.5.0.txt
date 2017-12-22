@@ -1,22 +1,40 @@
 0.5.0 (2017-12-**)
 
--Added stonemason job (TODO: icon, tooltip, textures, science)
-| Makes dark red, black, dark yellow and red colored bricks from standard bricks
--Added lanterns, light emitting blocks (TODO: icons, textures, science?)
+-Added 3 new farmers, primarily used for dyes:
+| Alkanet farmer, Hollyhock farmer, Wolfsbane farmer
+-Added lanterns, light emitting blocks (TODO: tooltips)
 | Made with the bronze anvil, requiring higher end ingredients
--Added a new type of planks (TODO: icons, 'normal' color planks with the new textures?)
--Added crystal, result of smelting silver rich galena (TODO: icon, tooltip)
--Added dyer job (TODO: icon, tooltip, textures, science)
+-Added 3 new plants:
+| Alkanet (used as blue dye) (TODO: tooltips)
+| Hollyhock (used as red dye) (TODO: tooltips)
+| Wolfsbane (used as yellow dye) (TODO: tooltips)
+-Added a new (colored) type of planks (TODO: tooltips)
+-Added (colored) cobble stone (TODO: tooltips)
+-Added colored stone bricks (TODO: tooltips)
+-Added crystal, result of smelting silver rich galena
+-Added white carpet (TODO: tooltips)
+-Added stonemason job (TODO: tooltip)
+| Makes dark red, black, dark yellow and red colored bricks from standard bricks
+| Makes black, brown, grey and blue cobble stone from standard stone bricks
+| Makes the (dark) 'smooth' stone blocks from standard stone bricks
+-Added dyer job (TODO: tooltip)
 | Colors planks and lanterns:
 | Blue, cyan, green, grey, pink, red and yellow planks
 | Blue, cyan, green, orange, pink, red and white lanterns
-| Black, dark red, dark yellow and red bricks (TODO: icons)
+| Black, dark red, dark yellow and red bricks
+| Red cobble stone
+-Added Archery research, that unlocks the bow & bow guard (instead of the bronze anvil doing it)
 
 -Added support for colored variants of blocks (with a mask texture to determine what part to color)
 -Added support for importing .ply files with vertex colors
 -Added an example texture pack mod (/gamedata/mods/Examples/TexturePack/)
 -Substantially simplified modding existing game files
 
+-The farmers will now check if their crops are actually going to grow, so if it broke (due to savegame issues) they'll fix it automatically
+-Fixed glitchy selection graphics when areas neighboured eachother
+-Doubled charcoal production
+-Fixed an issue blowing up the server after X amount of time (really, it should be fixed now :( )
+-Science bag basic research now requires linen bags
 -Fixed a few blocks having incorrect normal mapping
 -Changed emissive / mask textures to be in linear space instead of gamma space
 -Changed height / smoothness / specularity textures to be in linear space instead of gamma space

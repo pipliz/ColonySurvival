@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace Pipliz.Mods.BaseGame
+namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
 	using JSON;
@@ -14,8 +14,10 @@ namespace Pipliz.Mods.BaseGame
 		{
 			identifier = "pipliz.flaxfarm";
 			fileName = "flaxfarms";
-			typeSeeds = BuiltinBlocks.FlaxStage1;
-			typeFinal = BuiltinBlocks.FlaxStage2;
+			stages = new ushort[] {
+				BuiltinBlocks.FlaxStage1,
+				BuiltinBlocks.FlaxStage2
+			};
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.flaxfarmer");
 		}
 

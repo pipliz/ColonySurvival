@@ -1,5 +1,5 @@
 {
-	"coverage" : 89.9488926746167,
+	"coverage" : 83.7320574162679,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "返回游戏",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "旗帜安全距离增加到 40 格",
 					"name" : "旗帜半径 I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "解锁弩弹药",
 					"name" : "弩箭"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "将最大生命增加到 200",
 					"name" : "增加健康 IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
 					"name" : "_MISSING_Kiln"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "解锁的火绳枪，枪的早期型",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "_MISSING_Splitting Stump"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "解开裁缝，把亚麻变成亚麻",
@@ -260,6 +280,7 @@
 					"baker" : "烘焙达到最大",
 					"bloomeryjob" : "锻铁炉限制",
 					"crafter" : "手工制作达到最大",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "服饰限制",
 					"grinder" : "磨坊达到最大",
 					"gunsmithjob" : "工坊限制",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "采矿限制",
 					"minter" : "铸造达到最大",
 					"smelter" : "冶炼达到最大",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "裁缝限制",
 					"technologist" : "技术限制",
 					"woodcutter" : "木材限制"
@@ -298,6 +320,9 @@
 				"header" : "施工工具"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "快速方便的食物，殖民从这里开始！",
 				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "浆果农民",
@@ -308,10 +333,12 @@
 				"crossbow" : "弩",
 				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "选择要创建的区域的类型.",
-				"flaxa" : "使你的殖民地持续前行",
 				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "纺织工",
 				"flaxfarmertool" : "需要划定纺织工的工作区域",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "伐木工",
 				"forestera" : "植树和砍伐树木",
 				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
@@ -322,6 +349,9 @@
 				"guardsday" : "白天的警卫",
 				"guardsnight" : "夜间警卫",
 				"header" : "命令工具",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "白天弓守卫",
 				"jobbownight" : "夜间弓守卫",
 				"jobcrossbowday" : "白天弩守卫",
@@ -349,7 +379,10 @@
 				"wheata" : "使你的殖民地持续前行",
 				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "农民",
-				"wheatfarmertool" : "需要划定农民的工作区域"
+				"wheatfarmertool" : "需要划定农民的工作区域",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "土砖",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "旗帜",
 		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "床",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "青铜板",
 		"carpetblue" : "蓝色的地毯",
 		"carpetred" : "红地毯",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "黄色的地毯",
 		"charcoal" : "木炭",
 		"cherryblossom" : "樱花",
@@ -520,6 +556,11 @@
 		"clothing" : "服装",
 		"coalore" : "煤矿",
 		"coatedplanks" : "亮光漆木板",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "焦炭",
 		"commandtool" : "命令工具",
 		"copper" : "_MISSING_Copper",
@@ -530,6 +571,7 @@
 		"crossbow" : "弩",
 		"crossbowbolt" : "弩箭",
 		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "泥土",
 		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "优雅的服装",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "火药袋",
 		"gunsmithshop" : "工坊店",
 		"gypsum" : "石膏",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "铁滑车",
 		"ironingot" : "铁锭",
 		"ironore" : "铁矿",
@@ -622,6 +666,9 @@
 		"steelparts" : "钢制零件",
 		"stoneblock" : "砖块",
 		"stonebricks" : "石砖",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "稻草",
 		"tailorshop" : "裁缝店",
@@ -631,11 +678,13 @@
 		"water" : "水",
 		"wheat" : "小麦",
 		"wheatstage1" : "小麦种子",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "工作台"
 	},
 	"typeuses" : {
 		"adobe" : "有钱人就是好",
-		"bed" : "让睡觉更容易",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "真的没有毒哦,来你尝尝~",
 		"berrybush" : "屁民可以种植这些作为临时饱腹的食物。",
 		"blackplanks" : "高度易燃,小心火烛",
@@ -668,6 +717,7 @@
 		"crate" : "这是个异次元箱子!",
 		"crossbow" : "小兄弟的arcuballista",
 		"crossbowbolt" : "更硬，更好，更快，更强",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "脏兮兮的",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "基本的燃料",
@@ -692,7 +742,7 @@
 		"ironblock" : "不要把它放在你的脚下",
 		"ironore" : "用铁镐使铁矿石开采",
 		"ironrivet" : "比胶带更强大",
-		"ironsword" : "显然，只对科学家有用。",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "锻造意味着“工作”",
 		"kiln" : "把木板变成木炭",
 		"lead" : "使用它在您的管道和铅中毒毁灭你们的文明",

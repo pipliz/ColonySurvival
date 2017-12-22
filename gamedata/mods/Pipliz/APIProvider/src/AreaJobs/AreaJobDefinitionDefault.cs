@@ -12,8 +12,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 	{
 		protected string fileName;
 		protected string identifier;
-		protected ushort typeSeeds;
-		protected ushort typeFinal;
+		protected ushort[] stages;
 		protected NPCType npcType;
 
 		protected SortedList<Players.Player, JSONNode> SavedJobs;
@@ -23,7 +22,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		public virtual NPCType UsedNPCType { get { return npcType; } }
 
-		public virtual string Identifier { get { return Identifier; } }
+		public virtual string Identifier { get { return identifier; } }
 
 		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/{1}.json", ServerManager.WorldName, fileName); } }
 
@@ -60,11 +59,11 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		public virtual void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
 		{
-			if (typeSeeds == 0) {
+			if (stages == null || stages.Length < 2) {
 				return;
 			}
 
-			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(typeSeeds);
+			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(stages[0]);
 			bool reversed = false;
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
@@ -88,7 +87,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							return;
 						}
 					}
-					if (type == typeFinal) {
+					if (type == stages[stages.Length - 1]) {
 						positionSub = possiblePositionSub;
 						return;
 					}
@@ -110,10 +109,16 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		public virtual void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
+			if (stages == null || stages.Length < 2) {
+				state.SetCooldown(1.0);
+				return;
+			}
 			state.JobIsDone = true;
 			if (positionSub.IsValid) {
 				ushort type;
 				if (World.TryGetTypeAt(positionSub, out type)) {
+					ushort typeSeeds = stages[0];
+					ushort typeFinal = stages[1];
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
 							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
@@ -131,8 +136,26 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 						state.SetCooldown(1.0);
 						shouldDumpInventory = false;
 					} else {
-						state.SetCooldown(5.0);
 						shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
+
+						Server.GrowableBlocks.IGrowableBlock block;
+						if (Server.GrowableBlocks.GrowableBlockManager.TryGetGrowableBlock(positionSub, out block)) {
+							state.SetCooldown(5.0);
+						} else {
+							bool found = false;
+							for (int i = 0; i < stages.Length; i++) {
+								if (stages[i] == type) {
+									ItemTypesServer.OnChange(positionSub, 0, type, null);
+									state.SetIndicator(NPCIndicatorType.Crafted, 2f, type);
+									state.SetCooldown(0.2);
+									found = true;
+									break;
+								}
+							}
+							if (!found) {
+								state.SetCooldown(5.0);
+							}
+						}
 					}
 				} else {
 					state.SetCooldown(Random.NextFloat(3f, 6f));

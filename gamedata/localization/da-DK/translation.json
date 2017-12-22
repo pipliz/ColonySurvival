@@ -1,5 +1,5 @@
 {
-	"coverage" : 48.381601362862,
+	"coverage" : 44.9760765550239,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Vend tilbage til spillet",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
 					"name" : "_MISSING_Banner Radius I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "_MISSING_Unlocks Crossbow Bolts",
 					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "_MISSING_Increases Max HP to 200",
 					"name" : "_MISSING_Health Increase IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
 					"name" : "_MISSING_Kiln"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "_MISSING_Splitting Stump"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
@@ -260,6 +280,7 @@
 					"baker" : "Bage begrænsning",
 					"bloomeryjob" : "_MISSING_Bloomery limits",
 					"crafter" : "Crafting begrænsning",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "_MISSING_Finery forge limits",
 					"grinder" : "Male begrænsning",
 					"gunsmithjob" : "_MISSING_Gunsmith limits",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "_MISSING_Metalsmith limits",
 					"minter" : "Mønt produktions begrænsning",
 					"smelter" : "Smeltnings bregrænsning",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "_MISSING_Tailoring limits",
 					"technologist" : "_MISSING_Technologist limits",
 					"woodcutter" : "_MISSING_Wood cutting limits"
@@ -298,6 +320,9 @@
 				"header" : "Bygnings Reskab"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "Hurtig og let mad, start med dette!",
 				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "Bær Plukker",
@@ -308,10 +333,12 @@
 				"crossbow" : "_MISSING_Crossbow",
 				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Vælg vilken type område du vil skabe.",
-				"flaxa" : "Kun for advanceret kolonier",
 				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Hør Bonde",
 				"flaxfarmertool" : "Hør Bonde Redskab",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "Skovhugger",
 				"forestera" : "Planter & fælder træer",
 				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
@@ -322,6 +349,9 @@
 				"guardsday" : "_MISSING_Daytime guards",
 				"guardsnight" : "_MISSING_Nighttime guards",
 				"header" : "Befalingsredskab",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
@@ -349,7 +379,10 @@
 				"wheata" : "Kun for advanceret kolonier",
 				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "Hvede Bonde",
-				"wheatfarmertool" : "Hvede Bonde Redskab"
+				"wheatfarmertool" : "Hvede Bonde Redskab",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "Lersten",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "Banner",
 		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Seng",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "_MISSING_Bronze Plate",
 		"carpetblue" : "_MISSING_Blue Carpet",
 		"carpetred" : "_MISSING_Red Carpet",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
 		"cherryblossom" : "Kirsebær blomster",
@@ -520,6 +556,11 @@
 		"clothing" : "_MISSING_Clothing",
 		"coalore" : "Kulmalm",
 		"coatedplanks" : "Belagte Planker",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "_MISSING_Cokes",
 		"commandtool" : "Befalingsredskab",
 		"copper" : "_MISSING_Copper",
@@ -530,6 +571,7 @@
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
 		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "Jord",
 		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "_MISSING_Finery Forge",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
 		"gunsmithshop" : "_MISSING_Gunsmith Shop",
 		"gypsum" : "Gips",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "_MISSING_Iron Block",
 		"ironingot" : "Jernbarre",
 		"ironore" : "Jernmalm",
@@ -622,6 +666,9 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"stoneblock" : "Sten",
 		"stonebricks" : "Sten Mursten",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "Strå",
 		"tailorshop" : "_MISSING_Tailor Shop",
@@ -631,11 +678,13 @@
 		"water" : "Vand",
 		"wheat" : "Hvede",
 		"wheatstage1" : "Hvede frø",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "Arbejdsbord"
 	},
 	"typeuses" : {
 		"adobe" : "Jord for rige mennesker",
-		"bed" : "Gør det lettere at sove",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "Ikke giftige",
 		"berrybush" : "Kolonister kan plante disse for hurtig mad",
 		"blackplanks" : "Meget brandbar",
@@ -668,6 +717,7 @@
 		"crate" : "Til alle dine opbevarings behov!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
 		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "Snavset",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "_MISSING_Basic fuel",
@@ -692,7 +742,7 @@
 		"ironblock" : "_MISSING_Don't drop it on your foot",
 		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
-		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",

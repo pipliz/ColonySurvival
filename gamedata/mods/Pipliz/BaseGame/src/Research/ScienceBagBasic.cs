@@ -11,6 +11,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 			key = "pipliz.baseresearch.sciencebagbasic";
 			icon = "gamedata/textures/icons/sciencebagbasic.png";
 			iterationCount = 3;
+			AddIterationRequirement("linenbag");
 			AddIterationRequirement("coppertools");
 			AddIterationRequirement("bronzeplate");
 			AddIterationRequirement("bricks", 3);

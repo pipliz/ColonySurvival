@@ -35,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AreaJobs\BerryFarmerAreaJob.cs" />
+    <Compile Include="AreaJobs\Alkanet.cs" />
+    <Compile Include="AreaJobs\Wolfsbane.cs" />
+    <Compile Include="AreaJobs\Hollyhock.cs" />
     <Compile Include="AreaJobs\FlaxFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\TemperateForesterAreaJob.cs" />
     <Compile Include="AreaJobs\WheatFarmerAreaJob.cs" />
@@ -65,7 +68,10 @@
     <Compile Include="BlockJobsImplementations\WorkBenchJob.cs" />
     <Compile Include="BlockJobsImplementations\OvenJob.cs" />
     <Compile Include="BlockJobsImplementations\FurnaceJob.cs" />
+    <Compile Include="GrowableBlocks\Wolfsbane.cs" />
+    <Compile Include="GrowableBlocks\Hollyhock.cs" />
     <Compile Include="GrowableBlocks\CherrySapling.cs" />
+    <Compile Include="GrowableBlocks\Alkanet.cs" />
     <Compile Include="GrowableBlocks\Flax.cs" />
     <Compile Include="GrowableBlocks\TemperateSapling.cs" />
     <Compile Include="GrowableBlocks\Wheat.cs" />
@@ -75,6 +81,10 @@
     <Compile Include="Research\BannerRadius\BannerRadius4.cs" />
     <Compile Include="Research\BannerRadius\BannerRadius5.cs" />
     <Compile Include="Research\Bloomery.cs" />
+    <Compile Include="Research\Archery.cs" />
+    <Compile Include="Research\DyerTable.cs" />
+    <Compile Include="Research\Lantern.cs" />
+    <Compile Include="Research\Stonemasonworkbench.cs" />
     <Compile Include="Research\BronzeAnvil.cs" />
     <Compile Include="Research\BronzeMinting.cs" />
     <Compile Include="Research\CrossBow.cs" />
@@ -95,6 +105,7 @@
     <Compile Include="Research\Health\HealthSize2.cs" />
     <Compile Include="Research\Health\HealthSize3.cs" />
     <Compile Include="Research\Health\HealthSize4.cs" />
+    <Compile Include="Research\HerbFarming.cs" />
     <Compile Include="Research\Kiln.cs" />
     <Compile Include="Research\MatchlockGun.cs" />
     <Compile Include="Research\ScienceBagAdvanced.cs" />

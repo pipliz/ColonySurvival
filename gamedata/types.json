@@ -10,6 +10,44 @@
 		"isPlaceable" : false,
 		"isSolid" : false
 	},
+	"alkanet" : {
+		"icon" : "gamedata/textures/icons/alkanet.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"alkanetstage1" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"icon" : "gamedata/textures/icons/alkanetstage1.png",
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage1.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"alkanetstage1"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"alkanetstage2" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847","#00ff00->#446bc8"]
+		},
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage2.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"alkanetstage1"},
+			{"amount":1,"chance":0.1,"type":"alkanetstage1"},
+			{"amount":1,"chance":0.5,"type":"alkanet"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
 	"banner" : {
 		"customData" : {
 			"colors" : ["#ff0000->#341a05","#00ff00->#ceac0d","#0000ff->#960909"],
@@ -125,6 +163,7 @@
 	},
 	"bricksblack" : {
 		"color" : "#434343",
+		"icon" : "gamedata/textures/icons/bricksblack.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -132,6 +171,7 @@
 	},
 	"bricksdarkred" : {
 		"color" : "#69413c",
+		"icon" : "gamedata/textures/icons/bricksdarkred.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -139,6 +179,7 @@
 	},
 	"bricksdarkyellow" : {
 		"color" : "#8d5f38",
+		"icon" : "gamedata/textures/icons/bricksdarkyellow.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -146,6 +187,7 @@
 	},
 	"bricksred" : {
 		"color" : "#7c312e",
+		"icon" : "gamedata/textures/icons/bricksred.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -182,30 +224,36 @@
 		"icon" : "gamedata/textures/icons/bronzeplate.png",
 		"isPlaceable" : false
 	},
-	"carpet" : {
-		"maxStackSize" : 200,
-		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete"
-	},
 	"carpetblue" : {
 		"color" : "#0e3f77",
 		"icon" : "gamedata/textures/icons/carpetblue.png",
-		"onRemoveType" : "carpetblue",
-		"parentType" : "carpet",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "carpet"
 	},
 	"carpetred" : {
 		"color" : "#971113",
 		"icon" : "gamedata/textures/icons/carpetred.png",
-		"onRemoveType" : "carpetred",
-		"parentType" : "carpet",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "carpet"
+	},
+	"carpetwhite" : {
+		"color" : "#dedede",
+		"icon" : "gamedata/textures/icons/carpetwhite.png",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "carpet"
 	},
 	"carpetyellow" : {
 		"color" : "#c6a218",
 		"icon" : "gamedata/textures/icons/carpetyellow.png",
-		"onRemoveType" : "carpetyellow",
-		"parentType" : "carpet",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "carpet"
 	},
 	"charcoal" : {
@@ -255,6 +303,51 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "SELF"
 	},
+	"cobblestoneblack" : {
+		"color" : "#161616",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/cobblestoneblack.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "cobblestone"
+	},
+	"cobblestoneblue" : {
+		"color" : "#2b344f",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/cobblestoneblue.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "cobblestone"
+	},
+	"cobblestonebrown" : {
+		"color" : "#807767",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/cobblestonebrown.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "cobblestone"
+	},
+	"cobblestonegrey" : {
+		"color" : "#8b8b8b",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/cobblestonegrey.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "cobblestone"
+	},
+	"cobblestonered" : {
+		"color" : "#761f1f",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/cobblestonered.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "cobblestone"
+	},
 	"cokes" : {
 		"icon" : "gamedata/textures/icons/cokes.png",
 		"isPlaceable" : false
@@ -298,6 +391,7 @@
 		"isPlaceable" : false
 	},
 	"crystal" : {
+		"icon" : "gamedata/textures/icons/crystal.png",
 		"isPlaceable" : false
 	},
 	"darkstone" : {
@@ -306,6 +400,8 @@
 			"minerMiningTime" : 3
 		},
 		"destructionTime" : 750,
+		"icon" : "gamedata/textures/icons/darkstone.png",
+		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
 		"onRemoveType" : "stonebricks",
 		"sideall" : "infinitestone"
@@ -319,6 +415,9 @@
 		"sideall" : "SELF"
 	},
 	"dyertable" : {
+		"icon" : "gamedata/textures/icons/dyertable.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "coatedplanks",
 		"sidey+" : "dyertable"
 	},
@@ -343,33 +442,38 @@
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
-	"flaxstage" : {
+	"flaxstage1" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"icon" : "gamedata/textures/icons/flaxstage1.png",
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage1.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"flaxstage1"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"flaxstage2" : {
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#7e48ed"]
 		},
 		"isSolid" : false,
 		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage2.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemoveAudio" : "grassDelete",
-		"sideall" : "neutral"
-	},
-	"flaxstage1" : {
-		"icon" : "gamedata/textures/icons/flaxstage1.png",
-		"mesh" : "gamedata/meshes/flaxstage1.ply",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"flaxstage1"}
-		],
-		"parentType" : "flaxstage"
-	},
-	"flaxstage2" : {
-		"mesh" : "gamedata/meshes/flaxstage2.ply",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"flaxstage1"},
 			{"amount":1,"chance":0.1,"type":"flaxstage1"},
 			{"amount":1,"chance":0.5,"type":"flax"}
 		],
-		"parentType" : "flaxstage"
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
 	},
 	"flour" : {
 		"icon" : "gamedata/textures/icons/flour.png",
@@ -478,6 +582,44 @@
 		"icon" : "gamedata/textures/icons/gypsum.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 200
+	},
+	"hollyhock" : {
+		"icon" : "gamedata/textures/icons/hollyhock.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"hollyhockstage1" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"icon" : "gamedata/textures/icons/hollyhockstage1.png",
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage1.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"hollyhockstage1"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"hollyhockstage2" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847","#00ff00->#850f18"]
+		},
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage2.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"hollyhockstage1"},
+			{"amount":1,"chance":0.1,"type":"hollyhockstage1"},
+			{"amount":1,"chance":0.5,"type":"hollyhock"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
 	},
 	"infiniteclay" : {
 		"customData" : {
@@ -611,27 +753,36 @@
 		"isPlaceable" : false
 	},
 	"lanternblue" : {
-		"color" : "#3646e5",
+		"color" : "#4f5fff",
 		"customData" : {
-			"torches" : {"a":{"color":"#3646e5","intensity":12.5,"range":16,"volume":0.5}}
+			"torches" : {"a":{"color":"#4f5fff","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternblue.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanterncyan" : {
-		"color" : "#45e0de",
+		"color" : "#3bc1bf",
 		"customData" : {
-			"torches" : {"a":{"color":"#45e0de","intensity":12.5,"range":16,"volume":0.5}}
+			"torches" : {"a":{"color":"#3bc1bf","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanterncyan.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanterngreen" : {
-		"color" : "#71e261",
+		"color" : "#56ad4a",
 		"customData" : {
-			"torches" : {"a":{"color":"#71e261","intensity":12.5,"range":16,"volume":0.5}}
+			"torches" : {"a":{"color":"#56ad4a","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanterngreen.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanternorange" : {
@@ -639,15 +790,21 @@
 		"customData" : {
 			"torches" : {"a":{"color":"#e66f27","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternorange.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanternpink" : {
-		"color" : "#e939b9",
+		"color" : "#d233a6",
 		"customData" : {
-			"torches" : {"a":{"color":"#e939b9","intensity":12.5,"range":16,"volume":0.5}}
+			"torches" : {"a":{"color":"#d233a6","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternpink.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanternred" : {
@@ -655,15 +812,21 @@
 		"customData" : {
 			"torches" : {"a":{"color":"#d33030","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternred.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanternwhite" : {
-		"color" : "#ededed",
+		"color" : "#a7a7a7",
 		"customData" : {
-			"torches" : {"a":{"color":"#ededed","intensity":12.5,"range":16,"volume":0.5}}
+			"torches" : {"a":{"color":"#a7a7a7","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternwhite.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lanternyellow" : {
@@ -671,7 +834,10 @@
 		"customData" : {
 			"torches" : {"a":{"color":"#997b45","intensity":12.5,"range":16,"volume":0.5}}
 		},
-		"maxStackSize" : 100,
+		"icon" : "gamedata/textures/icons/lanternyellow.png",
+		"maxStackSize" : 25,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "lantern"
 	},
 	"lead" : {
@@ -770,6 +936,7 @@
 	},
 	"planksblue" : {
 		"color" : "#36487c",
+		"icon" : "gamedata/textures/icons/planksblue.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -777,6 +944,7 @@
 	},
 	"plankscyan" : {
 		"color" : "#50b4ae",
+		"icon" : "gamedata/textures/icons/plankscyan.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -784,6 +952,7 @@
 	},
 	"planksgreen" : {
 		"color" : "#4e9a42",
+		"icon" : "gamedata/textures/icons/planksgreen.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -791,6 +960,7 @@
 	},
 	"planksgrey" : {
 		"color" : "#696969",
+		"icon" : "gamedata/textures/icons/planksgrey.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -798,6 +968,7 @@
 	},
 	"plankspink" : {
 		"color" : "#f99eb4",
+		"icon" : "gamedata/textures/icons/plankspink.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -805,6 +976,7 @@
 	},
 	"planksred" : {
 		"color" : "#8b3426",
+		"icon" : "gamedata/textures/icons/planksred.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -812,6 +984,7 @@
 	},
 	"planksyellow" : {
 		"color" : "#c6cd53",
+		"icon" : "gamedata/textures/icons/planksyellow.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -946,6 +1119,7 @@
 	},
 	"stoneblock" : {
 		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/stoneblock.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
 		"onRemoveType" : "stonebricks",
@@ -959,10 +1133,38 @@
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "SELF"
 	},
-	"stonemasonworkbench" : {
+	"stonebricksblack" : {
+		"color" : "#343434",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/stonebricksblack.png",
+		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "stonebricks",
+		"sideall" : "stonebricksgeneric"
+	},
+	"stonebricksbrown" : {
+		"color" : "#7a6b47",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/stonebricksbrown.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "stonebricksgeneric"
+	},
+	"stonebrickswhite" : {
+		"color" : "#b2b2b2",
+		"destructionTime" : 600,
+		"icon" : "gamedata/textures/icons/stonebrickswhite.png",
+		"maxStackSize" : 100,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "stonebricksgeneric"
+	},
+	"stonemasonworkbench" : {
+		"icon" : "gamedata/textures/icons/stonemasonworkbench.png",
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "stoneblock",
 		"sidey+" : "stonemasonworkbench"
 	},
 	"straw" : {
@@ -1093,6 +1295,44 @@
 			{"amount":1,"chance":0.333333,"type":"straw"}
 		],
 		"parentType" : "wheatstage",
+		"sideall" : "neutral"
+	},
+	"wolfsbane" : {
+		"icon" : "gamedata/textures/icons/wolfsbane.png",
+		"isPlaceable" : false,
+		"maxStackSize" : 600
+	},
+	"wolfsbanestage1" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847"]
+		},
+		"icon" : "gamedata/textures/icons/wolfsbanestage1.png",
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage1.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":0.8,"type":"wolfsbanestage1"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "neutral"
+	},
+	"wolfsbanestage2" : {
+		"customData" : {
+			"colors" : ["#ff0000->#8fc847","#00ff00->#ecdc02"]
+		},
+		"isSolid" : false,
+		"maxStackSize" : 1200,
+		"mesh" : "gamedata/meshes/flaxstage2.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemove" : [
+			{"amount":1,"chance":1,"type":"wolfsbanestage1"},
+			{"amount":1,"chance":0.1,"type":"wolfsbanestage1"},
+			{"amount":1,"chance":0.5,"type":"wolfsbane"}
+		],
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
 	},
 	"workbench" : {

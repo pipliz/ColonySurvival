@@ -1,5 +1,5 @@
 {
-	"coverage" : 92.3339011925043,
+	"coverage" : 85.9649122807018,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "게임으로",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "안전 지역 반경을 40블럭으로 확장합니다.",
 					"name" : "안전 지역 확장 I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "석궁으로 쏠 수 있는 볼트를 연구합니다.",
 					"name" : "석궁 볼트"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "석탄을 태워 강철과 금괴를 만들 수 있습니다.",
@@ -161,9 +169,17 @@
 					"description" : "최대 체력이 200까지 증가합니다.",
 					"name" : "최대 체력 증가 IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "숯가마를 사용해 효율높은 연료를 제작할 수 있습니다.",
 					"name" : "숯 제조법"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "초기의 소총, 화승총을 연구합니다.",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "장작을 더 빨리 만들 수 있는 모탕을 연구합니다.",
 					"name" : "모탕"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "아마를 천으로 만드는 재단사를 연구합니다.",
@@ -260,6 +280,7 @@
 					"baker" : "제빵 목표량",
 					"bloomeryjob" : "제철 목표량",
 					"crafter" : "제작 목표량",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "제련 목표량",
 					"grinder" : "제분 목표량",
 					"gunsmithjob" : "총기 제작 목표량",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "도구 제작 목표량",
 					"minter" : "화폐 주조 목표량",
 					"smelter" : "제련 목표량",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "재단 목표량",
 					"technologist" : "기술 목표량",
 					"woodcutter" : "제재 목표량"
@@ -298,6 +320,9 @@
 				"header" : "건설 도구"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "빠르게 자라기 때문에 초반에 유용합니다.",
 				"berryb" : "딸기 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"berryfarmer" : "딸기 농사꾼",
@@ -308,10 +333,12 @@
 				"crossbow" : "석궁병",
 				"crossbowtooltip" : "공격력: 300 HP\n사정거리: 25 블록\n재장전 시간: 8 초",
 				"description" : "원하는 직업을 선택하세요.",
-				"flaxa" : "발전한 마을에 추천합니다.",
 				"flaxb" : "아마 꽃 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"flaxfarmer" : "꽃 농사꾼",
 				"flaxfarmertool" : "꽃 농사 도구",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "나무꾼",
 				"forestera" : "나무를 심고 베어냅니다.",
 				"foresterb" : "묘목, 도끼가 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
@@ -322,6 +349,9 @@
 				"guardsday" : "주간 경비",
 				"guardsnight" : "야간 경비",
 				"header" : "직업 설정",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "주간 경비: 궁병",
 				"jobbownight" : "야간 경비: 궁병",
 				"jobcrossbowday" : "주간 경비: 석궁병",
@@ -349,7 +379,10 @@
 				"wheata" : "발전한 마을에 추천합니다.",
 				"wheatb" : "밀알이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"wheatfarmer" : "밀 농사꾼",
-				"wheatfarmertool" : "밀 농사 도구"
+				"wheatfarmertool" : "밀 농사 도구",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "아도비 점토",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "깃발",
 		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "침대",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "동판",
 		"carpetblue" : "푸른 카펫",
 		"carpetred" : "레드 카펫",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "노란 카펫",
 		"charcoal" : "숯",
 		"cherryblossom" : "벚꽃",
@@ -520,6 +556,11 @@
 		"clothing" : "옷감",
 		"coalore" : "석탄 원석",
 		"coatedplanks" : "코팅된 널빤지",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "석탄",
 		"commandtool" : "직업 도구",
 		"copper" : "구리",
@@ -530,6 +571,7 @@
 		"crossbow" : "석궁",
 		"crossbowbolt" : "석궁 볼트",
 		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "흙",
 		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "강철 제철소",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "화약 주머니",
 		"gunsmithshop" : "총기 작업대",
 		"gypsum" : "석고",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "철 블럭",
 		"ironingot" : "철괴",
 		"ironore" : "철광석",
@@ -622,6 +666,9 @@
 		"steelparts" : "강철 부품",
 		"stoneblock" : "돌 블럭",
 		"stonebricks" : "돌 벽돌",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "짚",
 		"tailorshop" : "재단사 작업대",
@@ -631,11 +678,13 @@
 		"water" : "물",
 		"wheat" : "밀",
 		"wheatstage1" : "밀알",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "작업대"
 	},
 	"typeuses" : {
 		"adobe" : "비싼 흙",
-		"bed" : "흔들리지 않는 편안함",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "안심하세요. 독은 없습니다.",
 		"berrybush" : "쉽게 재배할 수 있는 작물입니다.",
 		"blackplanks" : "주의! 불을 피우지 마시오.",
@@ -668,6 +717,7 @@
 		"crate" : "모든 창고는 시공으로 연결되어있습니다.",
 		"crossbow" : "느리지만 강력한 아이.",
 		"crossbowbolt" : "작은 고추가 맵다.",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "윽 더러워.",
 		"fineryforge" : "석탄으로 강철과 금괴를 만듭니다.",
 		"firewood" : "기본적인 연료.",
@@ -692,7 +742,7 @@
 		"ironblock" : "발 쪽으로 떨어트리지 마세요!",
 		"ironore" : "철기시대의 주인공.",
 		"ironrivet" : "청테이프보다는 더 단단하군요.",
-		"ironsword" : "과학자 전용입니다. 의외죠?",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "단단한데 유연하기까지!",
 		"kiln" : "널빤지로 숯을 구워냅니다.",
 		"lead" : "납 중독으로 전세계의 파괴를 노리고 있습니다.",

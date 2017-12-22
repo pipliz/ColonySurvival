@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace Pipliz.Mods.BaseGame
+namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
 	using JSON;
@@ -14,8 +14,11 @@ namespace Pipliz.Mods.BaseGame
 		{
 			identifier = "pipliz.wheatfarm";
 			fileName = "wheatfarms";
-			typeSeeds = BuiltinBlocks.WheatStage1;
-			typeFinal = BuiltinBlocks.WheatStage3;
+			stages = new ushort[] {
+				BuiltinBlocks.WheatStage1,
+				BuiltinBlocks.WheatStage2,
+				BuiltinBlocks.WheatStage3
+			};
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.wheatfarmer");
 		}
 

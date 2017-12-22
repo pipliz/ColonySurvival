@@ -17,6 +17,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddIterationRequirement("linenbag");
 			AddDependency("pipliz.baseresearch.technologisttable");
 			AddDependency("pipliz.baseresearch.bloomery");
+			AddDependency("pipliz.baseresearch.archery");
 		}
 
 		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)

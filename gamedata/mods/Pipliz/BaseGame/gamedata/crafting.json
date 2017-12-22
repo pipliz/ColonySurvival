@@ -109,20 +109,6 @@
 		"defaultPriority" : -100
 	},
 	{
-		"name" : "pipliz.crafter.redplanks",
-		"results":[{"type":"redplanks"}],
-		"requires":[{"type":"planks"},{"type":"berry"}],
-		"defaultLimit" : 0,
-		"defaultPriority" : -100
-	},
-	{
-		"name" : "pipliz.crafter.blackplanks",
-		"results":[{"type":"blackplanks"}],
-		"requires":[{"type":"planks"},{"type":"charcoal"}],
-		"defaultLimit" : 0,
-		"defaultPriority" : -100
-	},
-	{
 		"name" : "pipliz.crafter.bow",
 		"results":[{"type":"bow"}],
 		"requires":[{"type":"planks","amount":2},{"type":"bowstring"}],
@@ -222,6 +208,22 @@
 		"name" : "pipliz.crafter.technologisttable",
 		"results":[{"type":"technologisttable"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate","amount":2},{"type":"coppernails"}],
+		"defaultLimit" : 1,
+		"isOptional" : true,
+		"defaultPriority" : -100
+	},
+	{
+		"name" : "pipliz.crafter.stonemasonworkbench",
+		"results":[{"type":"stonemasonworkbench"}],
+		"requires":[{"type":"stonebricks"},{"type":"coppertools"}],
+		"defaultLimit" : 1,
+		"isOptional" : true,
+		"defaultPriority" : -100
+	},
+	{
+		"name" : "pipliz.crafter.dyertable",
+		"results":[{"type":"dyertable"}],
+		"requires":[{"type":"coatedplanks"}],
 		"defaultLimit" : 1,
 		"isOptional" : true,
 		"defaultPriority" : -100

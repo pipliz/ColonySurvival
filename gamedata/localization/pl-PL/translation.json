@@ -1,5 +1,5 @@
 {
-	"coverage" : 89.4378194207837,
+	"coverage" : 83.2535885167464,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Wróć do gry",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "Zwiększa zapewniony bezpieczny zasięg do 40 bloków",
 					"name" : "Zasięg sztandaru I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "Odblokowuje bełty do kuszy",
 					"name" : "Bełty do kuszy"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "Zwiększa maksymalną ilość PŻ do 200",
 					"name" : "Zwiększenie wyrzymałości IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
 					"name" : "_MISSING_Kiln"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "Odblokowuje muszkiet, wszesny typ broni palnej",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "_MISSING_Splitting Stump"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "Odblokowuje krawca, który przetwarza len",
@@ -260,6 +280,7 @@
 					"baker" : "Limit pieczenia",
 					"bloomeryjob" : "Limit dymarki",
 					"crafter" : "Limit wyrobów",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "Limit wytwornej kuźni",
 					"grinder" : "Limit mielenia",
 					"gunsmithjob" : "Limit rusznikarstwa",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "Limit kowalstwa",
 					"minter" : "Limit wybijania",
 					"smelter" : "Limit wytapiania",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "Limit krawiectwa",
 					"technologist" : "Limit technologii",
 					"woodcutter" : "Limit drwala"
@@ -298,6 +320,9 @@
 				"header" : "Narzędzie budowania"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "Szybko i prosty sposób, zacznij tym!",
 				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "Farmer jagód",
@@ -308,10 +333,12 @@
 				"crossbow" : "Kusza",
 				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Wybierz rodzaj pola jakie chcesz zrobić.",
-				"flaxa" : "Tylko dla zaawansowych kolonii.",
 				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Farmer lnu",
 				"flaxfarmertool" : "Narzędzie farmera lnu",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "Leśniczy",
 				"forestera" : "Sadzi i ścina drzewa",
 				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
@@ -322,6 +349,9 @@
 				"guardsday" : "Dzienni strażnicy",
 				"guardsnight" : "Nocni strażnicy",
 				"header" : "Narzędzie dowodzenia",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "Dzienny strażnik z łukiem",
 				"jobbownight" : "Nocny strażnik z łukiem",
 				"jobcrossbowday" : "Dzienny strażnik z kuszą",
@@ -349,7 +379,10 @@
 				"wheata" : "Tylko dla zaawansowych kolonii",
 				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "Farmer pszenicy",
-				"wheatfarmertool" : "Narzędzie farmera pszenicy"
+				"wheatfarmertool" : "Narzędzie farmera pszenicy",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "Cegła suszona",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "Sztandar",
 		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Łózko",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "Płytka brązu",
 		"carpetblue" : "Niebieski dywan",
 		"carpetred" : "Czerwony dywan",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "Żółty dywan",
 		"charcoal" : "Węgiel drzewny",
 		"cherryblossom" : "Kwiat wiśni",
@@ -520,6 +556,11 @@
 		"clothing" : "Ubranie",
 		"coalore" : "Ruda węgla",
 		"coatedplanks" : "Pokryte deski",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "Koks",
 		"commandtool" : "Narzędzie dowodzenia",
 		"copper" : "_MISSING_Copper",
@@ -530,6 +571,7 @@
 		"crossbow" : "Kusza",
 		"crossbowbolt" : "Bełt do kuszy",
 		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "Ziemia",
 		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "Wytworna kuźnia",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "Torba prochu",
 		"gunsmithshop" : "Warsztat rusznikarza",
 		"gypsum" : "Gips",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "Blok żelaza",
 		"ironingot" : "Sztabka żelaza",
 		"ironore" : "Ruda żelaza",
@@ -622,6 +666,9 @@
 		"steelparts" : "Stalowe narzędzia",
 		"stoneblock" : "Kamienny blok",
 		"stonebricks" : "Kamienne cegły",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "Słoma",
 		"tailorshop" : "Warsztat krawiecki",
@@ -631,11 +678,13 @@
 		"water" : "Woda",
 		"wheat" : "Pszenica",
 		"wheatstage1" : "Nasiona pszenicy",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "Warsztat"
 	},
 	"typeuses" : {
 		"adobe" : "Tylko dla bogatych.",
-		"bed" : "Nie śpij na ziemi",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "Nie trujące",
 		"berrybush" : "Gdy kolonista to posadzi, pojawi sie jedzenie.",
 		"blackplanks" : "Wysoce łatwopalne",
@@ -668,6 +717,7 @@
 		"crate" : "Dla wszelnich potrzeb składowania!",
 		"crossbow" : "Mała siostra balisty",
 		"crossbowbolt" : "Ostrym końcem od siebie",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "Brudna",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "Podstawowe paliwo",
@@ -692,7 +742,7 @@
 		"ironblock" : "Nie upuść sobie na stopę",
 		"ironore" : "Wydobyty za pomocą żelaznego kilofa który został zrobiony z rudy żelaza.",
 		"ironrivet" : "Lepsze niż taśma klejąca",
-		"ironsword" : "Z jakiegoś powodu przydatne tylko dla naukowca",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "Po prostu wzmocnione",
 		"kiln" : "Zamienia deski w węgiel drzewny",
 		"lead" : "Zrób z tego rury wodociągowe i zakończ swoją cywilizację poprzez zatrucie ołowiem",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 96.252129471891,
+	"coverage" : 93.1419457735247,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Reprendre la partie",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "Augmente le rayon de la zone de sécurité autour de la bannière à 40 blocs",
 					"name" : "Zone de sécurité I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "Débloque les carreaux d'arbalètes, les munitions pour les arbalètes",
 					"name" : "Carreaux d'arbalète"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "Débloque la raffinerie, qui utilise du coke pour créer de l'acier et des lingots d'or",
@@ -161,9 +169,17 @@
 					"description" : "Augmentation des PV Max à 200",
 					"name" : "Augmentation des points de vie IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "Débloque les tourailles. Nécessaire pour créer des combustibles avancés comme le charbon de bois.",
 					"name" : "Touraille"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "Débloque la platine à mèche, une première arme à feu",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "Débloque les souches à couper le bois. Peuvent être utilisées pour créer du bois à brûler plus rapidement que l'établi.",
 					"name" : "Souche à couper le bois"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "Débloque le couturier, qui transforme le lin cultivé en toile de lin",
@@ -260,6 +280,7 @@
 					"baker" : "Limites de la boulangerie",
 					"bloomeryjob" : "Limites du bas fourneau",
 					"crafter" : "Limites de fabrication",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "Limites de la raffinerie",
 					"grinder" : "Limites de la mouture",
 					"gunsmithjob" : "Limites de l'armurier",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "Limites du forgeron",
 					"minter" : "Limites de la frappe",
 					"smelter" : "Limites de la fonderie",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "Limites du couturier",
 					"technologist" : "Limites du technicien",
 					"woodcutter" : "Limites de coupe du bois"
@@ -298,6 +320,9 @@
 				"header" : "Outil de construction"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "De la nourriture rapide et facile, commencez par cela !",
 				"berryb" : "Requiert : Graines de baies\nÀ placer sur de l'herbe ou de la terre",
 				"berryfarmer" : "Cultivateur de baies",
@@ -308,10 +333,12 @@
 				"crossbow" : "Arbalète",
 				"crossbowtooltip" : "Dégâts : 300 PV\nPortée : 25 blocs\nRechargement : 8 secondes",
 				"description" : "Sélectionnez le type de zone que vous souhaitez créer.",
-				"flaxa" : "Pour les colonies avancées seulement",
 				"flaxb" : "Requiert : Graines de lin\nÀ placer sur de l'herbe ou de la terre",
 				"flaxfarmer" : "Cultivateur de lin",
 				"flaxfarmertool" : "Outil de cultivateur de lin",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "Bûcheron",
 				"forestera" : "Plante et coupe des arbres",
 				"foresterb" : "Requiert : des pousses et une hache\nÀ placer sur de l'herbe ou de la terre",
@@ -322,6 +349,9 @@
 				"guardsday" : "Gardes de jour",
 				"guardsnight" : "Gardes de nuit",
 				"header" : "Outil de commande",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "Archer de jour",
 				"jobbownight" : "Archer de nuit",
 				"jobcrossbowday" : "Arbalétrier de jour",
@@ -349,7 +379,10 @@
 				"wheata" : "Pour les colonies avancées seulement",
 				"wheatb" : "Requiert : Graines de blé\nÀ placer sur de l'herbe ou de la terre",
 				"wheatfarmer" : "Cultivateur de blé",
-				"wheatfarmertool" : "Outil de cultivateur de blé"
+				"wheatfarmertool" : "Outil de cultivateur de blé",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "Torchis",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "Bannière",
 		"bannertool" : "Outil de bannière",
 		"bed" : "Lit",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "Plaque de bronze",
 		"carpetblue" : "Tapis bleu",
 		"carpetred" : "Tapis rouge",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "Tapis jaune",
 		"charcoal" : "Charbon de bois",
 		"cherryblossom" : "Feuilles de cerisier en fleur",
@@ -520,6 +556,11 @@
 		"clothing" : "Vêtements",
 		"coalore" : "Minerai de charbon",
 		"coatedplanks" : "Planches vernies",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "Coke",
 		"commandtool" : "Outil de commande",
 		"copper" : "Cuivre",
@@ -530,6 +571,7 @@
 		"crossbow" : "Arbalète",
 		"crossbowbolt" : "Carreau d'arbalète",
 		"crystal" : "Cristal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "Terre",
 		"dyertable" : "Atelier du teinturier",
 		"fineryforge" : "Raffinerie",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "Sac de poudre à canon",
 		"gunsmithshop" : "Échoppe du forgeron",
 		"gypsum" : "Gypse",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "Bloc de fer",
 		"ironingot" : "Lingot de fer",
 		"ironore" : "Minerai de fer",
@@ -622,6 +666,9 @@
 		"steelparts" : "Éléments en acier",
 		"stoneblock" : "Bloc de pierre",
 		"stonebricks" : "Briques de pierre",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "Établi du tailleur de pierres",
 		"straw" : "Paille",
 		"tailorshop" : "Atelier de couture",
@@ -631,11 +678,13 @@
 		"water" : "Eau",
 		"wheat" : "Blé",
 		"wheatstage1" : "Graines de blé",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "Établi"
 	},
 	"typeuses" : {
 		"adobe" : "Une terre séchée au soleil. De la terre pour les riches.",
-		"bed" : "Rend le sommeil plus facile",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "Comestible.",
 		"berrybush" : "Les colons peuvent les planter pour de la nourriture rapide et facile.",
 		"blackplanks" : "Hautement inflammable",
@@ -668,6 +717,7 @@
 		"crate" : "Pour tous vos besoins de stockage !",
 		"crossbow" : "Petite sœur de la baliste",
 		"crossbowbolt" : "Plus rapide, plus dur, plus fort",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "Sale",
 		"fineryforge" : "Nécessite des cokes pour créer de l'acier et des lingots d'or",
 		"firewood" : "Combustible de base",
@@ -692,7 +742,7 @@
 		"ironblock" : "Ne pas le faire tomber sur les pieds",
 		"ironore" : "Miné avec une pioche en fer",
 		"ironrivet" : "Bien plus efficace que le ruban adhésif",
-		"ironsword" : "Apparemment, utile seulement pour le scientifique",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "Bien mieux comme ça",
 		"kiln" : "Transforme les planches en charbon de bois",
 		"lead" : "À utiliser dans les canalisations pour détruire les civilisations par saturnisme",

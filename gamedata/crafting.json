@@ -80,16 +80,6 @@
 		"requires":[{"type":"bronzeingot"},{"type":"planks"}]
 	},
 	{
-		"name" : "pipliz.player.stonemasonworkbench",
-		"results":[{"type":"stonemasonworkbench"}],
-		"requires":[{"type":"stonebricks"},{"type":"coppertools"}]
-	},
-	{
-		"name" : "pipliz.player.dyertable",
-		"results":[{"type":"dyertable"}],
-		"requires":[{"type":"coatedplanks"}]
-	},
-	{
 		"name" : "pipliz.player.oven",
 		"results":[{"type":"oven"}],
 		"requires":[{"type":"stonebricks"},{"type":"copperparts","amount":4}],
@@ -135,6 +125,18 @@
 		"name" : "pipliz.player.technologisttable",
 		"results":[{"type":"technologisttable"}],
 		"requires":[{"type":"coatedplanks"},{"type":"bronzeplate","amount":2},{"type":"coppernails"}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.stonemasonworkbench",
+		"results":[{"type":"stonemasonworkbench"}],
+		"requires":[{"type":"stonebricks"},{"type":"coppertools"}],
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.player.dyertable",
+		"results":[{"type":"dyertable"}],
+		"requires":[{"type":"coatedplanks"}],
 		"isOptional" : true
 	},
 	{

@@ -3,7 +3,7 @@ using NPC;
 using System.IO;
 using System.Threading;
 
-namespace Pipliz.Mods.BaseGame
+namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
 	using JSON;
