@@ -20,6 +20,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.linseedoil", true, "pipliz.crafter");
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.coatedplanks", true, "pipliz.crafter");
 			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.adobe", true, "pipliz.crafter");
+			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.bowstring", true, "pipliz.crafter");
 
 			if (reason == EResearchCompletionReason.ProgressCompleted) {
 				Stockpile.GetStockPile(manager.Player).Add(BlockTypes.Builtin.BuiltinBlocks.FlaxStage1, 100);
