@@ -1,5 +1,5 @@
 {
-	"coverage" : 96.252129471891,
+	"coverage" : 93.4609250398724,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "ゲームに戻る",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "安全圏の範囲を40ブロックまでに拡大する",
 					"name" : "バナー範囲 I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "「クロスボウのボルト」をアンロックする",
 					"name" : "クロスボウのボルト"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "コークスを使って鋼鉄と金のインゴットを作れる「精製炉」をアンロックする",
@@ -161,9 +169,17 @@
 					"description" : "最大HPを200まで向上させる",
 					"name" : "ヘルス向上 IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "「炭焼き窯」をアンロックする。 木炭のような上位の燃料を作るのに必要。",
 					"name" : "炭焼き窯"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "初期の銃火器である「火縄銃」をアンロックする",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "「薪割り台」をアンロック。 作業台より素早く薪を作るのに使える。",
 					"name" : "薪割り台"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "亜麻からリネンを作り出す「仕立て屋」をアンロックする",
@@ -260,6 +280,7 @@
 					"baker" : "焼成の上限",
 					"bloomeryjob" : "塊鉄炉の上限",
 					"crafter" : "作成の上限",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "精製炉の上限",
 					"grinder" : "粉挽きの上限",
 					"gunsmithjob" : "鉄砲鍛冶の上限",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "鍛冶の上限",
 					"minter" : "鋳造の上限",
 					"smelter" : "製錬の上限",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "仕立ての上限",
 					"technologist" : "技術者の上限",
 					"woodcutter" : "製材の上限"
@@ -298,6 +320,9 @@
 				"header" : "建設ツール"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "素早く簡単な食料源、まずはこれ！",
 				"berryb" : "必要: ベリーの種\n草か土の上に設置する",
 				"berryfarmer" : "ベリー農家",
@@ -308,10 +333,12 @@
 				"crossbow" : "クロスボウ",
 				"crossbowtooltip" : "ダメージ: 300 HP\n射程: 25ブロック\nリロード速度: 8秒",
 				"description" : "作成したいエリアの種類を選んでください。",
-				"flaxa" : "発展したコロニー向け",
 				"flaxb" : "必要: 亜麻仁\n草か土の上に設置する",
 				"flaxfarmer" : "亜麻農家",
 				"flaxfarmertool" : "亜麻農家ツール",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "林業者",
 				"forestera" : "木を植えて伐採する",
 				"foresterb" : "必要: 苗木と斧\n草か土の上に設置する",
@@ -322,6 +349,9 @@
 				"guardsday" : "昼間担当の衛兵",
 				"guardsnight" : "夜間担当の衛兵",
 				"header" : "コマンドツール",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "昼間担当弓兵",
 				"jobbownight" : "夜間担当弓兵",
 				"jobcrossbowday" : "昼間担当クロスボウ兵",
@@ -349,7 +379,10 @@
 				"wheata" : "発展したコロニー向け",
 				"wheatb" : "必要: 小麦の種\n草か土の上に設置する",
 				"wheatfarmer" : "小麦農家",
-				"wheatfarmertool" : "小麦農家ツール"
+				"wheatfarmertool" : "小麦農家ツール",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +521,8 @@
 	},
 	"types" : {
 		"adobe" : "アドベ",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "バナー",
 		"bannertool" : "バナーツール",
 		"bed" : "ベッド",
@@ -512,6 +547,7 @@
 		"bronzeplate" : "青銅のプレート",
 		"carpetblue" : "カーペット（青）",
 		"carpetred" : "カーペット（赤）",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "カーペット（黄）",
 		"charcoal" : "木炭",
 		"cherryblossom" : "桜の花",
@@ -520,6 +556,11 @@
 		"clothing" : "衣類",
 		"coalore" : "石炭",
 		"coatedplanks" : "磨いた板",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "コークス",
 		"commandtool" : "コマンドツール",
 		"copper" : "銅",
@@ -530,6 +571,7 @@
 		"crossbow" : "クロスボウ",
 		"crossbowbolt" : "クロスボウのボルト",
 		"crystal" : "水晶",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "土",
 		"dyertable" : "染色師のテーブル",
 		"fineryforge" : "精製炉",
@@ -562,6 +604,8 @@
 		"gunpowderpouch" : "火薬袋",
 		"gunsmithshop" : "鉄砲鍛冶の工房",
 		"gypsum" : "石膏",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "鉄ブロック",
 		"ironingot" : "鉄インゴット",
 		"ironore" : "鉄鉱石",
@@ -622,6 +666,9 @@
 		"steelparts" : "鋼鉄の金具",
 		"stoneblock" : "石ブロック",
 		"stonebricks" : "石レンガ",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
 		"stonemasonworkbench" : "石工の作業台",
 		"straw" : "藁",
 		"tailorshop" : "仕立て屋",
@@ -631,6 +678,8 @@
 		"water" : "水",
 		"wheat" : "小麦",
 		"wheatstage1" : "小麦の種",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "作業台"
 	},
 	"typeuses" : {
@@ -668,6 +717,7 @@
 		"crate" : "【きばこ】\n《Crate》\n倉庫が必要ならコレだ！",
 		"crossbow" : "【くろすぼう】\n《Crossbow》\n強力石弓の弟分",
 		"crossbowbolt" : "【くろすぼうのぼると】\n《Crossbow Bolt》\nより丈夫で、より良く、より速く、より強い",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "【つち】\n《Dirt》\n泥んこ！",
 		"fineryforge" : "【せいせいろ】\n《Finery Forge》\n鋼鉄と金のインゴットを作るには、コークスが必要",
 		"firewood" : "【まき / たきぎ】\n《Firewood》\n基本的な燃料",
