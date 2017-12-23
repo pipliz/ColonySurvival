@@ -46,6 +46,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						JSON.Deserialize(path, out legacyJSON, false);
 						File.Delete(path);
 					}
+				} catch (System.Exception e) {
+					Log.WriteException(e);
 				} finally {
 					AsyncLoad(obj);
 				}

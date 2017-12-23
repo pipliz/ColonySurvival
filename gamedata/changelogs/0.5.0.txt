@@ -1,4 +1,4 @@
-0.5.0 (2017-12-**)
+0.5.0 (2017-12-22)
 
 Welcome to the Christmas Update; Colony Survival 0.5.0
 
@@ -10,22 +10,22 @@ Merry Christmas and a Happy New Year!
 
 -Added 3 new farmers, primarily used for dyes:
 | Alkanet farmer, Hollyhock farmer, Wolfsbane farmer
--Added lanterns, light emitting blocks (TODO: tooltips)
+-Added lanterns, light emitting blocks
 | Made with the bronze anvil, requiring higher end ingredients
 -Added 3 new plants:
-| Alkanet (used as blue dye) (TODO: tooltips)
-| Hollyhock (used as red dye) (TODO: tooltips)
-| Wolfsbane (used as yellow dye) (TODO: tooltips)
--Added a new (colored) type of planks (TODO: tooltips)
--Added (colored) cobble stone (TODO: tooltips)
--Added colored stone bricks (TODO: tooltips)
+| Alkanet (used as blue dye)
+| Hollyhock (used as red dye)
+| Wolfsbane (used as yellow dye)
+-Added a new (colored) type of planks
+-Added (colored) cobble stone
+-Added colored stone bricks
 -Added crystal, result of smelting silver rich galena
--Added white carpet (TODO: tooltips)
--Added stonemason job (TODO: tooltip)
+-Added white carpet
+-Added stonemason job
 | Makes dark red, black, dark yellow and red colored bricks from standard bricks
 | Makes black, brown, grey and blue cobble stone from standard stone bricks
 | Makes the (dark) 'smooth' stone blocks from standard stone bricks
--Added dyer job (TODO: tooltip)
+-Added dyer jobx
 | Colors planks and lanterns:
 | Blue, cyan, green, grey, pink, red and yellow planks
 | Blue, cyan, green, orange, pink, red and white lanterns
@@ -90,3 +90,7 @@ Modding changes:
 | Used to implement the overrideFolder keys above. Call RedirectFile with a path to a file and it may return the 'replaced' path.
 -Renamed TimeCycle.NightLengthLeft to TimeCycle.TimeTillSunRise
 -Added TimeCycle.TimeTillSunSet
+
+0.5.0 post-release
+-Various fixes to make the farmers / forester work
+-More fixes for above -.-
