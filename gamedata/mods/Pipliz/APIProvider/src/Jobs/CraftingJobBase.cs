@@ -3,7 +3,7 @@ using Pipliz.JSON;
 using System.Collections.Generic;
 using UnityEngine.Assertions;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class CraftingJobBase : BlockJobBase, IRecipeLimitsProvider
 	{

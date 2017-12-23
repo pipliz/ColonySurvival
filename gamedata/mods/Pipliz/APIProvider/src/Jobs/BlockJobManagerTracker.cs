@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	/// <remarks>
 	/// Sorry for creating a ManagerTracker :)
@@ -10,8 +10,8 @@ namespace Pipliz.APIProvider.Jobs
 	public static class BlockJobManagerTracker
 	{
 		static List<IBlockJobManager> InstanceList = new List<IBlockJobManager>();
-		static List<KeyValuePair<string, IRecipeLimitsProvider>> LimitsProviders = new List<KeyValuePair<string, IRecipeLimitsProvider>>();
 
+		static List<KeyValuePair<string, IRecipeLimitsProvider>> LimitsProviders = new List<KeyValuePair<string, IRecipeLimitsProvider>>();
 		static Dictionary<string, Action<string>> RegisteredTypes = new Dictionary<string, Action<string>>();
 
 		/// <summary>
@@ -54,6 +54,7 @@ namespace Pipliz.APIProvider.Jobs
 					Log.WriteException("Error resolving blockjob {0}:", e, pair.Key);
 				}
 			}
+			RegisteredTypes = null;
 		}
 
 		/// <summary>
@@ -67,6 +68,16 @@ namespace Pipliz.APIProvider.Jobs
 				LimitsProviders.Add(new KeyValuePair<string, IRecipeLimitsProvider>(blockName, (IRecipeLimitsProvider)instance));
 			}
 			InstanceList.Add(new BlockJobManager<T>(blockName));
+		}
+
+		public static void RemoveBlockTypeAt (Type t, Vector3Int position)
+		{
+			for (int i = 0; i < InstanceList.Count; i++) {
+				if (InstanceList[i].GetType().GetGenericArguments()[0].Equals(t)) {
+					InstanceList[i].OnRemove(position, 0, null);
+					return;
+				}
+			}
 		}
 
 		/// <summary>
@@ -138,6 +149,7 @@ namespace Pipliz.APIProvider.Jobs
 					Log.WriteException("Error registering recipes for blockjob {0}:", e, LimitsProviders[i].ToString());
 				}
 			}
+			LimitsProviders = null;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public interface IRecipeLimitsProvider
 	{

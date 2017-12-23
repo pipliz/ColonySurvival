@@ -1,5 +1,5 @@
 {
-	"coverage" : 85.6637168141593,
+	"coverage" : 79.53125,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Вернуться в игру",
@@ -9,7 +9,7 @@
 			"settings" : "Настройки"
 		},
 		"firstpersonstats" : {
-			"ammocount" : "_MISSING_Ammo:",
+			"ammocount" : "Потронов:",
 			"bedcount" : "Кроватей:",
 			"colonistcount" : "Колонистов:",
 			"foodstorage" : "Еды:",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "Увеличивает безопасный радиус вокруг баннера на 40 блоков",
 					"name" : "Радиус банера I"
@@ -86,8 +90,8 @@
 					"name" : "Бронзоая наковальня"
 				},
 				"bronzeminting" : {
-					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
-					"name" : "_MISSING_Mints & Shops"
+					"description" : "Разблокируйте монеты и магазины. Вы сможете покупать семена, землю и другие различные предметы",
+					"name" : "Монеты и Магазины"
 				},
 				"crossbow" : {
 					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "_MISSING_Unlocks Crossbow Bolts",
 					"name" : "Арбалетные болты"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "Увеличивает максимальное ХП до 200",
 					"name" : "Увеличение здоровья IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
-					"name" : "_MISSING_Kiln"
+					"description" : "Разблокируйте печь. Требуется для создания современных видео топлива, например, угля.",
+					"name" : "Печь"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
@@ -193,17 +209,21 @@
 					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "_MISSING_Splitting Stump"
 				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
+				},
 				"tailorshop" : {
 					"description" : "Разблокирует портного, который превращает лён в белье",
 					"name" : "Портной"
 				},
 				"technologisttable" : {
-					"description" : "Разблокирует технолога, которы занимает созданием исследовательских сумок",
+					"description" : "Разблокирует технолога, который занимается созданием исследовательских сумок",
 					"name" : "Технолог"
 				},
 				"wheatfarming" : {
 					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
-					"name" : "_MISSING_Bread Production"
+					"name" : "Хлебная продукция"
 				}
 			}
 		},
@@ -217,7 +237,7 @@
 			"banner" : {
 				"button" : "Нанять колониста",
 				"description" : "Колонист требует 5 ед. еды в день и кровать. Для найма нужно 50 ед. еды.",
-				"gotoscience" : "_MISSING_Science menu",
+				"gotoscience" : "Исследовательско меню",
 				"header" : "Управление колонистами",
 				"resetbutton" : "Сбросить колонию",
 				"resettooltipa" : "",
@@ -232,8 +252,8 @@
 				"craftingstockpile" : "Крафт и запасы",
 				"foodvalue" : "Еды:",
 				"science" : {
-					"available" : "_MISSING_Available",
-					"completed" : "_MISSING_Completed",
+					"available" : "Доступно",
+					"completed" : "Выполнено",
 					"dependencies" : "Требуемые технологии:",
 					"header" : "Наука",
 					"iterations" : "Циклы исследования: {0} из {1}",
@@ -241,25 +261,26 @@
 					"requirements" : "Требования для одного исследовательского цикла:",
 					"researchactive" : "Текущее исследование: {0}",
 					"researchselected" : "Выберите исследование",
-					"unavailable" : "_MISSING_Unavailable"
+					"unavailable" : "Недоступно"
 				},
 				"stockpiledescription" : "Вы можете крафтить вещи только из предметов находящихся в слоте снизу. Колонисты могут брать предметы из Склада",
 				"tooltip" : {
 					"and" : "и",
-					"instockpile" : "_MISSING_in stockpile",
+					"instockpile" : "в запасах",
 					"needs" : "Требуется: "
 				}
 			},
 			"limits" : {
 				"description" : "Колонисты будут работать, пока на Складе не будет указанное кол-во предметов",
 				"hoverpriority" : {
-					"a" : "_MISSING_Crafting Priority",
-					"b" : "_MISSING_Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
+					"a" : "Приоритет крафтинга",
+					"b" : "Рецепты с приоритетом +++ создаются первыми.\nРецепты с приоритетом + создаются последними."
 				},
 				"pipliz" : {
 					"baker" : "Лимит выпечки",
 					"bloomeryjob" : "Лимит сыродутного горна",
 					"crafter" : "Лимит крафтинга",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "Лимит по кузнечному делу",
 					"grinder" : "Лимит измельчения",
 					"gunsmithjob" : "Лимит оружейника",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "Лимит металообработки",
 					"minter" : "Лимит чеканки",
 					"smelter" : "Лимит плавки",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "Лимит шитья",
 					"technologist" : "Лимит технолога",
 					"woodcutter" : "Лимит по резке дерева"
@@ -298,23 +320,28 @@
 				"header" : "Инструмент Строителя"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "Быстрая и легкая еда. Начните с этого!",
-				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
+				"berryb" : "Требуется: Семена ягод\nРазмещать на траве или грази",
 				"berryfarmer" : "Ягодное поле",
 				"berryfarmertool" : "Инструмент Ягодного фермера",
 				"bow" : "Лук",
-				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"bowtooltip" : "Урон: 100 HP\nРадиус: 20 плоков\nВремя перезярядки: 5 секунд",
 				"coversarea" : "Цепляет существующую область",
 				"crossbow" : "Арбалет",
-				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
+				"crossbowtooltip" : "Урон: 300 HP\nРадиус: 25 блоков\nВремя перезарядки: 8 секунд",
 				"description" : "Выберите тип области, которую вы хотите создать.",
-				"flaxa" : "Только для продвинутых колонистов",
-				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
+				"flaxb" : "Требуется: Льняные семена\nРазмещать на траве или грази",
 				"flaxfarmer" : "Льное поле",
 				"flaxfarmertool" : "Инструмент Фермера льна",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "Лес",
 				"forestera" : "Рубит деревья и растения",
-				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
+				"foresterb" : "Требуется: Саженцы и топор\nРазмещать на траве или грази",
 				"forestertool" : "Инструмент лесника",
 				"guard" : "Охрана",
 				"guarda" : "Защитит вашу колонию",
@@ -322,6 +349,9 @@
 				"guardsday" : "Дневная охрана",
 				"guardsnight" : "Ночная охрана",
 				"header" : "Инструмент командования",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
@@ -331,35 +361,37 @@
 				"jobslingerday" : "_MISSING_Daytime Slinger Guard",
 				"jobslingernight" : "_MISSING_Nighttime Slinger Guard",
 				"matchlock" : "Самопал",
-				"matchlocktooltip" : "_MISSING_Damage: 500 HP\nRange: 30 blocks\nReload speed: 12 seconds",
+				"matchlocktooltip" : "Урон: 500 HP\nРадиус: 30 блоков\nВремя перезарядки: 12 секунд",
 				"miner" : "Шахта",
 				"minera" : "Шахта с рудами",
-				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
+				"minerb" : "Требуется: Кирка\nКопайте и кладите поверх руд или темного камня",
 				"minertool" : "Инструмент шахтера",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"missingscience" : "<color=red>Требуется '{0}' для разблокировки.<\/color>",
 				"notarable" : "Не пропахиваемый",
 				"notflat" : "Не плоская область",
 				"notool" : "Нет выбранного инструмента",
 				"occupiedblocks" : "Место занято блоками",
 				"slinger" : "Стропальщик",
-				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"slingertooltip" : "Урон: 50 HP\nРадиус: 12 Блоков\nВремя перезарядки: 3 секунды",
 				"toolarge" : "Слишком большая область",
 				"toonarrow" : "Слишком узкая для деревьев",
 				"toosmall" : "Слишком маленькая область",
-				"wheata" : "Только для продвинутых колоний",
-				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
+				"wheatb" : "Требуется: Пшеничные семена\nРазмещать на траве или грази",
 				"wheatfarmer" : "Пшеничное поле",
-				"wheatfarmertool" : "Инструмент Пшеничного фермера"
+				"wheatfarmertool" : "Инструмент Пшеничного фермера",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
 			"page1" : {
 				"description" : "Добро пожаловать в Colony Survival!",
 				"header" : "Основы",
-				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
+				"text1" : "Баннер - это центр вашей колонии. Нажмите '2', чтобы разместить его. Щелкните правой кнопкой по банеру, чтобы нанять колонистов. Иснтрумент 'Управление баннером' выделит места, где появляются монстры, красным цветом.",
 				"text2" : "Вам потребуется Еда и кровати для найма колонистов. Колонисты должны есть, чтобы не умереть. Удостоверьтесь, что у вас достаточно еды!",
 				"text3" : "Нажмите \"I\", чтобы скрафтить кровать. Вы можете делать вещи только из предметов в слотах снизу. Колонисты будут использовать предметы из вашего Склада. Они получают доступ к складу с помощью ящиков.",
-				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
+				"text4" : "Монстру атакуют вашу колонию ночью! Используйте Инструмент коммандования для установки защитных устройств. Нажмите '1' и кликните, чтобы выбрать его. Нажмите 'R' для вращения определенных блоков."
 			},
 			"page2" : {
 				"description" : "Вам понадобится еда для обеспечения жизни вашим колонистам!",
@@ -377,16 +409,16 @@
 				"text4" : "_MISSING_Defeat stronger monsters by unlocking new weapons with the Science Lab. They inflict more damage and can hit monsters from a longer distance."
 			},
 			"page4" : {
-				"description" : "_MISSING_Ores are a fundamental requirement for your colony.",
-				"header" : "_MISSING_Mining",
+				"description" : "Руды являются основным требованием для процветания вашей колонии.",
+				"header" : "Шахтерство",
 				"text1" : "_MISSING_Deep under the earth's crust, all kinds of ores can be found. Dig down or dig into the side of a mountain to find them.",
 				"text2" : "_MISSING_Right-click ores or dark blocks of stone with the Command Tool to set miners to work. Don't forget to place a crate nearby.",
 				"text3" : "_MISSING_Place a furnace to recruit an unemployed colonist as a smelter. He'll use firewood to smelt copper and tin into bronze ingots.",
 				"text4" : "_MISSING_Colonists use workbenches and anvils to craft metals into useful products. Use the Science Lab to unlock the anvil."
 			},
 			"page5" : {
-				"description" : "_MISSING_Only the smallest colonies can do without science!",
-				"header" : "_MISSING_Scientific Research",
+				"description" : "Только самые маленькие колонии могут обойтись без науки!",
+				"header" : "Научные исследования",
 				"text1" : "_MISSING_Place the Science Lab to recruit a scientist. Right-click the lab or use the tab in the inventory menu to view the science menu.",
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
@@ -425,10 +457,10 @@
 			},
 			"language" : "Язык",
 			"languagemenu" : {
-				"coverage" : "Перевод выполнен на {0:F1}%. Для помощи в переводе посетите форум или репозиторий на github.",
+				"coverage" : "Перевод выполнен на {0:F1}%. Мне срочно требуется ваша помощь, посетите github!",
 				"full" : "Настройки языка",
 				"language" : "Язык:",
-				"wiptext" : "Перевод может содержать ошибки и неточности.\nПеревёл: Oleg720"
+				"wiptext" : "Перевод может содержать ошибки и неточности.\nПеревели: Oleg720"
 			},
 			"qualityhigh" : "Выс.",
 			"qualitylow" : "Низ.",
@@ -488,8 +520,10 @@
 	},
 	"types" : {
 		"adobe" : "Необожженный кирпич",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "Баннер",
-		"bannertool" : "_MISSING_Banner Tool",
+		"bannertool" : "Управление баннером",
 		"bed" : "Кровать",
 		"berry" : "Ягода",
 		"berrybush" : "Семена ягод",
@@ -499,6 +533,10 @@
 		"bowstring" : "Тетива",
 		"bread" : "Хлеб",
 		"bricks" : "Кирпичи",
+		"bricksblack" : "_MISSING_Black Bricks",
+		"bricksdarkred" : "_MISSING_Dark Red Bricks",
+		"bricksdarkyellow" : "_MISSING_Dark Yellow Bricks",
+		"bricksred" : "_MISSING_Red Bricks",
 		"bronzeanvil" : "Бронзовая наковальня",
 		"bronzearrow" : "Бронзоая стрела",
 		"bronzeaxe" : "Бронзовый топор",
@@ -508,6 +546,7 @@
 		"bronzeplate" : "Бронзовая тарелка",
 		"carpetblue" : "Синий ковер",
 		"carpetred" : "Красный ковер",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "Желтый ковер",
 		"charcoal" : "Древесный уголь",
 		"cherryblossom" : "Вишня",
@@ -516,6 +555,11 @@
 		"clothing" : "Одежда",
 		"coalore" : "Угольная руда",
 		"coatedplanks" : "Доски с покрытием",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "Кокс",
 		"commandtool" : "Инструмент командования",
 		"copper" : "_MISSING_Copper",
@@ -525,7 +569,10 @@
 		"crate" : "Ящик",
 		"crossbow" : "Арбалет",
 		"crossbowbolt" : "Арбалетные болт",
+		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "Грязь",
+		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "Кузнкчная промышленность",
 		"firewood" : "Дрова",
 		"flax" : "Лен",
@@ -556,6 +603,8 @@
 		"gunpowderpouch" : "Пороховой мешочек",
 		"gunsmithshop" : "Оружейный магазин",
 		"gypsum" : "Гипс",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "Железный блок",
 		"ironingot" : "Железный слиток",
 		"ironore" : "Железная руда",
@@ -563,6 +612,14 @@
 		"ironsword" : "Железный меч",
 		"ironwrought" : "Кованое железо",
 		"kiln" : "Печь для обжига и сушки",
+		"lanternblue" : "_MISSING_Blue Lantern",
+		"lanterncyan" : "_MISSING_Cyan Lantern",
+		"lanterngreen" : "_MISSING_Green Lantern",
+		"lanternorange" : "_MISSING_Orange Lantern",
+		"lanternpink" : "_MISSING_Pink Lantern",
+		"lanternred" : "_MISSING_Red Lantern",
+		"lanternwhite" : "_MISSING_White Lantern",
+		"lanternyellow" : "_MISSING_Lantern",
 		"lead" : "Свинец",
 		"leadbullet" : "Свинцовая пуля",
 		"leaves" : "Листва",
@@ -580,6 +637,13 @@
 		"mint" : "Станок для чеканки монет",
 		"oven" : "Печь",
 		"planks" : "Доски",
+		"planksblue" : "_MISSING_Blue Planks",
+		"plankscyan" : "_MISSING_Cyan Planks",
+		"planksgreen" : "_MISSING_Green Planks",
+		"planksgrey" : "_MISSING_Grey Planks",
+		"plankspink" : "_MISSING_Pink Planks",
+		"planksred" : "_MISSING_Red Planks",
+		"planksyellow" : "_MISSING_Yellow Planks",
 		"plasterblock" : "Штукатурный блок",
 		"redplanks" : "Красные доски",
 		"salpeter" : "Сэлпетер",
@@ -601,6 +665,10 @@
 		"steelparts" : "Стальные детали",
 		"stoneblock" : "Каменный блок",
 		"stonebricks" : "Каменные кирпичи",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
+		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "Солома",
 		"tailorshop" : "Ателье",
 		"technologisttable" : "Стол технологов",
@@ -609,11 +677,14 @@
 		"water" : "Вода",
 		"wheat" : "Пшеница",
 		"wheatstage1" : "Семена пшеницы",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "Верстак"
 	},
 	"typeuses" : {
 		"adobe" : "Грязь для богатых людей",
-		"bed" : "Это лучше чем спать на полу ;)",
+		"alkanet" : "_MISSING_In real life, a source of red dye",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "Не ядовитая",
 		"berrybush" : "Колонисты могут сажать это для получения пищи",
 		"blackplanks" : "Легковоспламеняющиеся",
@@ -631,9 +702,11 @@
 		"bronzeplate" : "Исползуйте его, пока он не станет зеленым. Впрочем, как и большинство продуктов",
 		"carpetblue" : "Для людей не заслуживших красную ковровую дорожку",
 		"carpetred" : "Ничего страшного, если вы прольете ягодный сок на это ковер!",
+		"carpetwhite" : "_MISSING_Color it with a dyer",
 		"carpetyellow" : "Это так пушисто!",
 		"charcoal" : "Абсорбирует ционид",
 		"cherryblossom" : "Самая розовая вещь в мире!",
+		"cherrysapling" : "_MISSING_Cosmetic item. Pay 10 Colonycoins to unlock",
 		"clay" : "Хотелось бы, чтобы вы прикоснулись к этому",
 		"clothing" : "Это позоже на то, что вы можете носить",
 		"coalore" : "Внимание: может вызвать проблемы с климатом",
@@ -646,10 +719,12 @@
 		"crate" : "С помощью этого, ваши колонисты получат доступ к складу!",
 		"crossbow" : "Млажший брат аркабулисты",
 		"crossbowbolt" : "Сложнее, быстрее, лучше, сильнее",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "Грязная",
+		"dyertable" : "_MISSING_Legendary painting skills",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "Базовое топливо",
-		"flax" : "Самый красивый цветок в мире. Наверное потому, что единственный",
+		"flax" : "_MISSING_The imperial color",
 		"flaxstage1" : "Поместите это в землю",
 		"flour" : "Колонист с печью превратит это в хлеб",
 		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
@@ -667,12 +742,20 @@
 		"gunpowder" : "Обращайтесь с осторожностью!",
 		"gunpowderpouch" : "Может использоваться для стрельбы из оружия",
 		"gunsmithshop" : "Крафтинг оружия и патронов",
+		"gypsum" : "_MISSING_Cosmetic item. Should have been a microtransaction",
+		"hollyhock" : "_MISSING_A laxative in real life. Not in-game. Yet.",
 		"ironblock" : "Не бросайте его на ногу",
+		"ironingot" : "_MISSING_Iron stronker",
 		"ironore" : "Добывается железной киркой, сделанной из железной руды",
 		"ironrivet" : "Намного лучше, чем клейкая лента",
-		"ironsword" : "По-видимому - это может быть полезно только для ученого",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "Очень кованное",
 		"kiln" : "Превращает доски в древесный уголь",
+		"lanterncyan" : "_MISSING_The future is now",
+		"lanterngreen" : "_MISSING_Makes your colony eco-friendly",
+		"lanternorange" : "_MISSING_Extra cozy",
+		"lanternred" : "_MISSING_These are popular in Amsterdam too",
+		"lanternyellow" : "_MISSING_Expensive torch",
 		"lead" : "Интересный факт: Свинец мягкий металл и легко царапается",
 		"leadbullet" : "Этим можно стрелять из пистолета",
 		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
@@ -707,6 +790,7 @@
 		"steelingot" : "Прочный, как сталь",
 		"steelparts" : "Слитки несколько громозки",
 		"stonebricks" : "Пунш в случае черезвычайной сетуации",
+		"stonemasonworkbench" : "_MISSING_Creates fifty shades of brick",
 		"straw" : "Необходим для кровати, побочный продукт при выращивании пшеницы",
 		"tailorshop" : "Можно сделать белье, ковры, одежду и сумки",
 		"technologisttable" : "Сумка для ремесел",
@@ -715,6 +799,7 @@
 		"water" : "Вы НЕ должны иметь это в своем инвентаре!",
 		"wheat" : "Колонист с жерновом превратит это в муку",
 		"wheatstage1" : "Будущий хлеб",
+		"wolfsbane" : "_MISSING_Prevents wolves from attacking your colony",
 		"workbench" : "Дайте это ремесленнику. И он скрафтит для вас, что угодно!"
 	}
 }

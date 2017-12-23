@@ -269,22 +269,22 @@ namespace ColonyServerWrapper
 						}
 
 						while (IsServerRunning) {
+							if (MessagesToSend.Count > 0) {
+								lock (MessagesToSend) {
+									foreach (var send in MessagesToSend) {
+										clientWriter.Write(send.Key);
+										if (send.Value != null) {
+											clientWriter.Write(send.Value);
+										}
+									}
+									MessagesToSend.Clear();
+								}
+							}
 							while (client.Available >= 1) {
 								switch (clientReader.ReadString ()) {
 								case "log":
 									WriteConsole (clientReader.ReadString ());
 									break;
-								}
-							}
-							if (MessagesToSend.Count > 0) {
-								lock (MessagesToSend) {
-									foreach (var send in MessagesToSend) {
-										clientWriter.Write (send.Key);
-										if (send.Value != null) {
-											clientWriter.Write (send.Value);
-										}
-									}
-									MessagesToSend.Clear ();
 								}
 							}
 							Thread.Sleep (50);

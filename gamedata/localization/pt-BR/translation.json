@@ -1,5 +1,5 @@
 {
-	"coverage" : 55.929203539823,
+	"coverage" : 48.75,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Retornar ao Jogo",
@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "_MISSING_Unlocks bow guards and production of bows at the workbench",
+					"name" : "_MISSING_Archery"
+				},
 				"bannerradius1" : {
 					"description" : "_MISSING_Increases the safe radius created to 40 blocks",
 					"name" : "_MISSING_Banner Radius I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "_MISSING_Unlocks Crossbow Bolts",
 					"name" : "_MISSING_Crossbow Bolts"
+				},
+				"dyertable" : {
+					"description" : "_MISSING_Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "_MISSING_Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "_MISSING_Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "_MISSING_Increases Max HP to 200",
 					"name" : "_MISSING_Health Increase IV"
 				},
+				"herbfarming" : {
+					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "_MISSING_Herb Farming"
+				},
 				"kiln" : {
 					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
 					"name" : "_MISSING_Kiln"
+				},
+				"lantern" : {
+					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "_MISSING_Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "_MISSING_Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "_MISSING_Splitting Stump"
+				},
+				"stonemasonworkbench" : {
+					"description" : "_MISSING_Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "_MISSING_Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "_MISSING_Unlock the tailor, who turns flax into linen",
@@ -260,6 +280,7 @@
 					"baker" : "Limite de cozinheiros",
 					"bloomeryjob" : "_MISSING_Bloomery limits",
 					"crafter" : "Limite de fabricantes",
+					"dyer" : "_MISSING_Dyeing limits",
 					"fineryforgejob" : "Limite de forjadores",
 					"grinder" : "Limite de moedores",
 					"gunsmithjob" : "Limite de ferreiros",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "Limite de ferreiros",
 					"minter" : "Limite de cobradores",
 					"smelter" : "Limite de ferreiros",
+					"stonemason" : "_MISSING_Masonry limits",
 					"tailor" : "Limite de adaptadores",
 					"technologist" : "Limite de pesquisadores",
 					"woodcutter" : "Limite de lenhadores"
@@ -298,6 +320,9 @@
 				"header" : "Ferramenta de Construção"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "_MISSING_Alkanet Farmer",
+				"alkanetfarmertool" : "_MISSING_Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "_MISSING_Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "Comida rápida e fácil, comece com isso!",
 				"berryb" : "_MISSING_Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "Fazenda de Fruta",
@@ -308,10 +333,12 @@
 				"crossbow" : "Besta",
 				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Selecione o tipo de área que você quer criar.",
-				"flaxa" : "Somente para colônias avançadas",
 				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Fazendeiro de Linho",
 				"flaxfarmertool" : "Ferramenta Fazenda de Linhaça",
+				"flaxherbfarming" : "_MISSING_Flax & Herbs",
+				"flaxherbfarminga" : "_MISSING_Flax and Herb Farmers",
+				"flaxherbfarmingb" : "_MISSING_This will open another menu where you can select the farmer types",
 				"forester" : "Lenhador",
 				"forestera" : "Planta e corta árvores",
 				"foresterb" : "_MISSING_Needs: Saplings and an axe\nPlace on grass or dirt",
@@ -322,6 +349,9 @@
 				"guardsday" : "Guardas do dia",
 				"guardsnight" : "Guardas da noite",
 				"header" : "Ferramenta de Comando",
+				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
+				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "Arqueiro da manhã",
 				"jobbownight" : "Arqueiro da noite",
 				"jobcrossbowday" : "Besteiro da manhã",
@@ -346,10 +376,12 @@
 				"toolarge" : "Muito largo",
 				"toonarrow" : "Muito estreito para árvores",
 				"toosmall" : "Muito pequeno",
-				"wheata" : "Somente para colônias avançadas",
 				"wheatb" : "_MISSING_Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "Fazendeiro de Trigo",
-				"wheatfarmertool" : "Ferramenta Fazenda de Trigo"
+				"wheatfarmertool" : "Ferramenta Fazenda de Trigo",
+				"wolfsbanefarmer" : "_MISSING_Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "_MISSING_Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "_MISSING_Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +520,8 @@
 	},
 	"types" : {
 		"adobe" : "Adobe",
+		"alkanet" : "_MISSING_Alkanet",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "Bandeira",
 		"bannertool" : "_MISSING_Banner Tool",
 		"bed" : "Cama",
@@ -499,6 +533,10 @@
 		"bowstring" : "_MISSING_Bowstring",
 		"bread" : "Pão",
 		"bricks" : "Tijolos",
+		"bricksblack" : "_MISSING_Black Bricks",
+		"bricksdarkred" : "_MISSING_Dark Red Bricks",
+		"bricksdarkyellow" : "_MISSING_Dark Yellow Bricks",
+		"bricksred" : "_MISSING_Red Bricks",
 		"bronzeanvil" : "_MISSING_Bronze Anvil",
 		"bronzearrow" : "_MISSING_Bronze Arrow",
 		"bronzeaxe" : "_MISSING_Bronze Axe",
@@ -508,6 +546,7 @@
 		"bronzeplate" : "_MISSING_Bronze Plate",
 		"carpetblue" : "_MISSING_Blue Carpet",
 		"carpetred" : "_MISSING_Red Carpet",
+		"carpetwhite" : "_MISSING_White Carpet",
 		"carpetyellow" : "_MISSING_Yellow Carpet",
 		"charcoal" : "_MISSING_Charcoal",
 		"cherryblossom" : "_MISSING_Cherry Blossom",
@@ -516,6 +555,11 @@
 		"clothing" : "_MISSING_Clothing",
 		"coalore" : "Minério de Carvão",
 		"coatedplanks" : "Tábua Revestida",
+		"cobblestoneblack" : "_MISSING_Black Cobblestone",
+		"cobblestoneblue" : "_MISSING_Blue Cobblestone",
+		"cobblestonebrown" : "_MISSING_Brown Cobblestone",
+		"cobblestonegrey" : "_MISSING_Grey Cobblestone",
+		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "_MISSING_Cokes",
 		"commandtool" : "Ferramenta de Comando",
 		"copper" : "_MISSING_Copper",
@@ -525,7 +569,10 @@
 		"crate" : "Caixote",
 		"crossbow" : "_MISSING_Crossbow",
 		"crossbowbolt" : "_MISSING_Crossbow Bolt",
+		"crystal" : "_MISSING_Crystal",
+		"darkstone" : "_MISSING_Dark Stone Block",
 		"dirt" : "Terra",
+		"dyertable" : "_MISSING_Dyer's table",
 		"fineryforge" : "_MISSING_Finery Forge",
 		"firewood" : "_MISSING_Firewood",
 		"flax" : "Linho",
@@ -556,6 +603,8 @@
 		"gunpowderpouch" : "_MISSING_Gunpowder Pouch",
 		"gunsmithshop" : "_MISSING_Gunsmith Shop",
 		"gypsum" : "Gesso",
+		"hollyhock" : "_MISSING_Hollyhock",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"ironblock" : "_MISSING_Iron Block",
 		"ironingot" : "Barra de Ferro",
 		"ironore" : "Minério de Ferro",
@@ -563,6 +612,14 @@
 		"ironsword" : "_MISSING_Iron Sword",
 		"ironwrought" : "_MISSING_Wrought Iron",
 		"kiln" : "_MISSING_Kiln",
+		"lanternblue" : "_MISSING_Blue Lantern",
+		"lanterncyan" : "_MISSING_Cyan Lantern",
+		"lanterngreen" : "_MISSING_Green Lantern",
+		"lanternorange" : "_MISSING_Orange Lantern",
+		"lanternpink" : "_MISSING_Pink Lantern",
+		"lanternred" : "_MISSING_Red Lantern",
+		"lanternwhite" : "_MISSING_White Lantern",
+		"lanternyellow" : "_MISSING_Lantern",
 		"lead" : "_MISSING_Lead",
 		"leadbullet" : "_MISSING_Lead Bullet",
 		"leaves" : "Folhas",
@@ -580,6 +637,13 @@
 		"mint" : "Amoedar",
 		"oven" : "Forno",
 		"planks" : "Tábuas",
+		"planksblue" : "_MISSING_Blue Planks",
+		"plankscyan" : "_MISSING_Cyan Planks",
+		"planksgreen" : "_MISSING_Green Planks",
+		"planksgrey" : "_MISSING_Grey Planks",
+		"plankspink" : "_MISSING_Pink Planks",
+		"planksred" : "_MISSING_Red Planks",
+		"planksyellow" : "_MISSING_Yellow Planks",
 		"plasterblock" : "Bloco de Gesso",
 		"redplanks" : "_MISSING_Red Planks",
 		"salpeter" : "_MISSING_Salpeter",
@@ -601,6 +665,10 @@
 		"steelparts" : "_MISSING_Steel Parts",
 		"stoneblock" : "Bloco de Pedra",
 		"stonebricks" : "Tijolo de Pedra",
+		"stonebricksblack" : "_MISSING_Black Stone Bricks",
+		"stonebricksbrown" : "_MISSING_Brown Stone Bricks",
+		"stonebrickswhite" : "_MISSING_White Stone Bricks",
+		"stonemasonworkbench" : "_MISSING_Stonemason's Workbench",
 		"straw" : "Palha",
 		"tailorshop" : "_MISSING_Tailor Shop",
 		"technologisttable" : "_MISSING_Technologist's Table",
@@ -609,11 +677,14 @@
 		"water" : "Água",
 		"wheat" : "Trigo",
 		"wheatstage1" : "Sementes de Trigo",
+		"wolfsbane" : "_MISSING_Wolfsbane",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"workbench" : "Bancada de Trabalho"
 	},
 	"typeuses" : {
 		"adobe" : "Terra para pessoas ricas",
-		"bed" : "Faz o sono mais confortável",
+		"alkanet" : "_MISSING_In real life, a source of red dye",
+		"bed" : "_MISSING_Requires straw, not screws",
 		"berry" : "Não venenoso",
 		"berrybush" : "Colonos podem plantar isso para ter comida fácil",
 		"blackplanks" : "_MISSING_Highly flammable",
@@ -631,9 +702,11 @@
 		"bronzeplate" : "_MISSING_Like most foods, use it before it turns green!",
 		"carpetblue" : "_MISSING_When people don't deserve the red-carpet treatment",
 		"carpetred" : "_MISSING_It doesn't matter if you spill berry juice on this carpet!",
+		"carpetwhite" : "_MISSING_Color it with a dyer",
 		"carpetyellow" : "_MISSING_It's so fluffy!",
 		"charcoal" : "_MISSING_Absorbs cyanide",
 		"cherryblossom" : "_MISSING_The pinkest thing in the game",
+		"cherrysapling" : "_MISSING_Cosmetic item. Pay 10 Colonycoins to unlock",
 		"clay" : "Eu queria que você pudesse tocá-lo",
 		"clothing" : "_MISSING_It looks like something you can wear. You can't.",
 		"coalore" : "_MISSING_Warning: might cause climate problems",
@@ -646,10 +719,12 @@
 		"crate" : "Para todas suas necessidades de armazenagem!",
 		"crossbow" : "_MISSING_Smaller brother of the arcuballista",
 		"crossbowbolt" : "_MISSING_Harder, better, faster, stronger",
+		"crystal" : "_MISSING_Produced when rich galena is smelted",
 		"dirt" : "Terra",
+		"dyertable" : "_MISSING_Legendary painting skills",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "_MISSING_Basic fuel",
-		"flax" : "A mais bela flor do jogo. E a única",
+		"flax" : "_MISSING_The imperial color",
 		"flaxstage1" : "Coloque-o no chão",
 		"flour" : "Um colono com um forno vai assar isso em pão",
 		"furnace" : "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
@@ -667,12 +742,20 @@
 		"gunpowder" : "_MISSING_Handle with care!",
 		"gunpowderpouch" : "_MISSING_Can be used to fire a matchlock gun",
 		"gunsmithshop" : "_MISSING_Crafts guns and ammo",
+		"gypsum" : "_MISSING_Cosmetic item. Should have been a microtransaction",
+		"hollyhock" : "_MISSING_A laxative in real life. Not in-game. Yet.",
 		"ironblock" : "_MISSING_Don't drop it on your foot",
+		"ironingot" : "_MISSING_Iron stronker",
 		"ironore" : "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "_MISSING_More powerful than duct tape",
-		"ironsword" : "_MISSING_Apparently, only useful for the scientist",
+		"ironsword" : "_MISSING_Stick 'em with the pointy end!",
 		"ironwrought" : "_MISSING_Wrought just means 'worked'",
 		"kiln" : "_MISSING_Turns wooden planks into charcoal",
+		"lanterncyan" : "_MISSING_The future is now",
+		"lanterngreen" : "_MISSING_Makes your colony eco-friendly",
+		"lanternorange" : "_MISSING_Extra cozy",
+		"lanternred" : "_MISSING_These are popular in Amsterdam too",
+		"lanternyellow" : "_MISSING_Expensive torch",
 		"lead" : "_MISSING_Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "_MISSING_Can be fired by a matchlock gun",
 		"leavestaiga" : "_MISSING_I've got a Christmas feeling now",
@@ -707,6 +790,7 @@
 		"steelingot" : "_MISSING_It's strong as steel",
 		"steelparts" : "_MISSING_Ingots are so unwieldy",
 		"stonebricks" : "_MISSING_Punch in case of emergency",
+		"stonemasonworkbench" : "_MISSING_Creates fifty shades of brick",
 		"straw" : "Necessário para camas, subproduto da fazenda de trigo",
 		"tailorshop" : "_MISSING_Can make linen, carpet, clothing and bags",
 		"technologisttable" : "_MISSING_Crafts Science Bags",
@@ -715,6 +799,7 @@
 		"water" : "Você NÃO deve ter isso em seu inventário!",
 		"wheat" : "Um colono com uma mó transforma isso em farinha",
 		"wheatstage1" : "Futuro pão",
+		"wolfsbane" : "_MISSING_Prevents wolves from attacking your colony",
 		"workbench" : "Recrute um artesão. Fabrica as coisas pra você!"
 	}
 }

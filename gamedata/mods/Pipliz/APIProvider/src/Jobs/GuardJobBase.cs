@@ -4,7 +4,7 @@ using Server.Monsters;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Pipliz.APIProvider.Jobs
+namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class GuardBaseJob : BlockJobBase, IBlockJobBase
 	{

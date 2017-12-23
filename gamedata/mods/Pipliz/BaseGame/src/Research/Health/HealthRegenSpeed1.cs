@@ -1,0 +1,24 @@
+﻿using Pipliz.Mods.APIProvider.Science;
+using Server.Science;
+
+namespace Pipliz.Mods.BaseGame.Researches
+{
+	[AutoLoadedResearchable]
+	public class HealthRegenSpeed1 : BaseResearchable
+	{
+		public HealthRegenSpeed1 ()
+		{
+			key = "pipliz.baseresearch.healthregenspeed1";
+			icon = "gamedata/textures/icons/baseresearch_healthregenspeed1.png";
+			iterationCount = 15;
+			AddIterationRequirement("sciencebagbasic", 2);
+			AddIterationRequirement("sciencebaglife");
+			AddDependency("pipliz.baseresearch.sciencebaglife");
+		}
+
+		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		{
+			manager.Player.GetTempValues(true).Set("pipliz.healthregenspeed", 2f);
+		}
+	}
+}

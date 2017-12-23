@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pipliz.APIProvider
+namespace Pipliz.Mods.APIProvider
 {
 	/// <summary>
 	/// Contains the callback entries for this mod.
@@ -49,16 +49,18 @@ namespace Pipliz.APIProvider
 		/// </summary>
 		/// <param name="assemblies"></param>
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterModsLoaded, "pipliz.apiprovider.parsemods")]
-		public static void AfterModsLoaded (List<ModLoader.ModAssembly> assemblies)
+		public static void AfterModsLoaded (List<ModLoader.ModDescription> assemblies)
 		{
 			foreach (var modAssembly in assemblies) {
-				foreach (System.Type type in modAssembly.Types) {
-					try {
-						if (type.IsDefined (typeof(Science.AutoLoadedResearchableAttribute), true)) {
-							Science.ResearchableManager.Add(type);
+				if (modAssembly.HasAssembly) {
+					foreach (System.Type type in modAssembly.LoadedAssemblyTypes) {
+						try {
+							if (type.IsDefined(typeof(Science.AutoLoadedResearchableAttribute), true)) {
+								Science.ResearchableManager.Add(type);
+							}
+						} catch (System.Exception e) {
+							Log.WriteException("APIProvider threw exception parsing dll {0}, type {1}", e, System.IO.Path.GetFileName(modAssembly.LoadedAssembly.Location), type.FullName);
 						}
-					} catch (System.Exception e) {
-						Log.WriteException("APIProvider threw exception parsing dll {0}, type {1}", e, System.IO.Path.GetFileName(modAssembly.Assembly.Location), type.FullName);
 					}
 				}
 			}

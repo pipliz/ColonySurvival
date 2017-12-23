@@ -57,6 +57,10 @@
 		},
 		"pipliz" : {
 			"baseresearch" : {
+				"archery" : {
+					"description" : "Unlocks bow guards and production of bows at the workbench",
+					"name" : "Archery"
+				},
 				"bannerradius1" : {
 					"description" : "Increases the safe radius created to 40 blocks",
 					"name" : "Banner Radius I"
@@ -96,6 +100,10 @@
 				"crossbowbolt" : {
 					"description" : "Unlocks Crossbow Bolts",
 					"name" : "Crossbow Bolts"
+				},
+				"dyertable" : {
+					"description" : "Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
+					"name" : "Dyer's Table"
 				},
 				"fineryforge" : {
 					"description" : "Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
@@ -161,9 +169,17 @@
 					"description" : "Increases Max HP to 200",
 					"name" : "Health Increase IV"
 				},
+				"herbfarming" : {
+					"description" : "Unlocks three different herb farmers. The herbs can be used by the dyer",
+					"name" : "Herb Farming"
+				},
 				"kiln" : {
 					"description" : "Unlocks kilns. Required to create advanced fuels like charcoal.",
 					"name" : "Kiln"
+				},
+				"lantern" : {
+					"description" : "Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
+					"name" : "Lanterns"
 				},
 				"matchlockgun" : {
 					"description" : "Unlocks the Matchlock Gun, an early type of gun",
@@ -192,6 +208,10 @@
 				"splittingstump" : {
 					"description" : "Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "Splitting Stump"
+				},
+				"stonemasonworkbench" : {
+					"description" : "Unlocks the stonemason, who can craft different varieties of bricks",
+					"name" : "Stonemason's Workbench"
 				},
 				"tailorshop" : {
 					"description" : "Unlock the tailor, who turns flax into linen",
@@ -260,6 +280,7 @@
 					"baker" : "Baking limits",
 					"bloomeryjob" : "Bloomery limits",
 					"crafter" : "Crafting limits",
+					"dyer" : "Dyeing limits",
 					"fineryforgejob" : "Finery forge limits",
 					"grinder" : "Grinding limits",
 					"gunsmithjob" : "Gunsmith limits",
@@ -268,6 +289,7 @@
 					"metalsmithjob" : "Metalsmith limits",
 					"minter" : "Minting limits",
 					"smelter" : "Smelting limits",
+					"stonemason" : "Masonry limits",
 					"tailor" : "Tailoring limits",
 					"technologist" : "Technologist limits",
 					"woodcutter" : "Wood cutting limits"
@@ -298,6 +320,9 @@
 				"header" : "Construction tool"
 			},
 			"tooljob" : {
+				"alkanetfarmer" : "Alkanet Farmer",
+				"alkanetfarmertool" : "Alkanet Farmer Tool",
+				"alkanetfarmertooltip" : "Needs: Alkanet Seeds\nPlace on grass or dirt",
 				"berrya" : "Quick and easy food, start with this!",
 				"berryb" : "Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "Berry Farmer",
@@ -308,10 +333,12 @@
 				"crossbow" : "Crossbow",
 				"crossbowtooltip" : "Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Select the type of area you want to create.",
-				"flaxa" : "For advanced colonies only",
 				"flaxb" : "Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Flax Farmer",
 				"flaxfarmertool" : "Flax Farmer Tool",
+				"flaxherbfarming" : "Flax & Herbs",
+				"flaxherbfarminga" : "Flax and Herb Farmers",
+				"flaxherbfarmingb" : "This will open another menu where you can select the farmer types",
 				"forester" : "Forester",
 				"forestera" : "Plants & chops trees",
 				"foresterb" : "Needs: Saplings and an axe\nPlace on grass or dirt",
@@ -322,6 +349,9 @@
 				"guardsday" : "Daytime guards",
 				"guardsnight" : "Nighttime guards",
 				"header" : "Command tool",
+				"hollyhockfarmer" : "Hollyhock Farmer",
+				"hollyhockfarmertool" : "Hollyhock Farmer Tool",
+				"hollyhockfarmertooltip" : "Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"jobbowday" : "Daytime Bow Guard",
 				"jobbownight" : "Nighttime Bow Guard",
 				"jobcrossbowday" : "Daytime Crossbow Guard",
@@ -346,10 +376,12 @@
 				"toolarge" : "Too large",
 				"toonarrow" : "Too narrow for trees",
 				"toosmall" : "Too small",
-				"wheata" : "For advanced colonies only",
 				"wheatb" : "Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "Wheat Farmer",
-				"wheatfarmertool" : "Wheat Farmer Tool"
+				"wheatfarmertool" : "Wheat Farmer Tool",
+				"wolfsbanefarmer" : "Wolfsbane Farmer",
+				"wolfsbanefarmertool" : "Wolfsbane Farmer Tool",
+				"wolfsbanefarmertooltip" : "Needs: Wolfsbane Seeds\nPlace on grass or dirt"
 			}
 		},
 		"quickstart" : {
@@ -488,6 +520,8 @@
 	},
 	"types" : {
 		"adobe" : "Adobe",
+		"alkanet" : "Alkanet",
+		"alkanetstage1" : "Alkanet Seeds",
 		"banner" : "Banner",
 		"bannertool" : "Banner Tool",
 		"bed" : "Bed",
@@ -499,6 +533,10 @@
 		"bowstring" : "Bowstring",
 		"bread" : "Bread",
 		"bricks" : "Bricks",
+		"bricksblack" : "Black Bricks",
+		"bricksdarkred" : "Dark Red Bricks",
+		"bricksdarkyellow" : "Dark Yellow Bricks",
+		"bricksred" : "Red Bricks",
 		"bronzeanvil" : "Bronze Anvil",
 		"bronzearrow" : "Bronze Arrow",
 		"bronzeaxe" : "Bronze Axe",
@@ -508,6 +546,7 @@
 		"bronzeplate" : "Bronze Plate",
 		"carpetblue" : "Blue Carpet",
 		"carpetred" : "Red Carpet",
+		"carpetwhite" : "White Carpet",
 		"carpetyellow" : "Yellow Carpet",
 		"charcoal" : "Charcoal",
 		"cherryblossom" : "Cherry Blossom",
@@ -516,6 +555,11 @@
 		"clothing" : "Clothing",
 		"coalore" : "Coal Ore",
 		"coatedplanks" : "Coated Planks",
+		"cobblestoneblack" : "Black Cobblestone",
+		"cobblestoneblue" : "Blue Cobblestone",
+		"cobblestonebrown" : "Brown Cobblestone",
+		"cobblestonegrey" : "Grey Cobblestone",
+		"cobblestonered" : "Red Cobblestone",
 		"cokes" : "Cokes",
 		"commandtool" : "Command Tool",
 		"copper" : "Copper",
@@ -525,7 +569,10 @@
 		"crate" : "Crate",
 		"crossbow" : "Crossbow",
 		"crossbowbolt" : "Crossbow Bolt",
+		"crystal" : "Crystal",
+		"darkstone" : "Dark Stone Block",
 		"dirt" : "Dirt",
+		"dyertable" : "Dyer's table",
 		"fineryforge" : "Finery Forge",
 		"firewood" : "Firewood",
 		"flax" : "Flax",
@@ -556,6 +603,8 @@
 		"gunpowderpouch" : "Gunpowder Pouch",
 		"gunsmithshop" : "Gunsmith Shop",
 		"gypsum" : "Gypsum",
+		"hollyhock" : "Hollyhock",
+		"hollyhockstage1" : "Hollyhock Seeds",
 		"ironblock" : "Iron Block",
 		"ironingot" : "Iron Ingot",
 		"ironore" : "Iron Ore",
@@ -563,6 +612,14 @@
 		"ironsword" : "Iron Sword",
 		"ironwrought" : "Wrought Iron",
 		"kiln" : "Kiln",
+		"lanternblue" : "Blue Lantern",
+		"lanterncyan" : "Cyan Lantern",
+		"lanterngreen" : "Green Lantern",
+		"lanternorange" : "Orange Lantern",
+		"lanternpink" : "Pink Lantern",
+		"lanternred" : "Red Lantern",
+		"lanternwhite" : "White Lantern",
+		"lanternyellow" : "Lantern",
 		"lead" : "Lead",
 		"leadbullet" : "Lead Bullet",
 		"leaves" : "Leaves",
@@ -580,6 +637,13 @@
 		"mint" : "Mint",
 		"oven" : "Oven",
 		"planks" : "Planks",
+		"planksblue" : "Blue Planks",
+		"plankscyan" : "Cyan Planks",
+		"planksgreen" : "Green Planks",
+		"planksgrey" : "Grey Planks",
+		"plankspink" : "Pink Planks",
+		"planksred" : "Red Planks",
+		"planksyellow" : "Yellow Planks",
 		"plasterblock" : "Plaster Block",
 		"redplanks" : "Red Planks",
 		"salpeter" : "Salpeter",
@@ -601,6 +665,10 @@
 		"steelparts" : "Steel Parts",
 		"stoneblock" : "Stone Block",
 		"stonebricks" : "Stone Bricks",
+		"stonebricksblack" : "Black Stone Bricks",
+		"stonebricksbrown" : "Brown Stone Bricks",
+		"stonebrickswhite" : "White Stone Bricks",
+		"stonemasonworkbench" : "Stonemason's Workbench",
 		"straw" : "Straw",
 		"tailorshop" : "Tailor Shop",
 		"technologisttable" : "Technologist's Table",
@@ -609,11 +677,14 @@
 		"water" : "Water",
 		"wheat" : "Wheat",
 		"wheatstage1" : "Wheat seeds",
+		"wolfsbane" : "Wolfsbane",
+		"wolfsbanestage1" : "Wolfsbane Seeds",
 		"workbench" : "Workbench"
 	},
 	"typeuses" : {
 		"adobe" : "Dirt for rich people",
-		"bed" : "Makes sleeping easier",
+		"alkanet" : "In real life, a source of red dye",
+		"bed" : "Requires straw, not screws",
 		"berry" : "Not poisonous",
 		"berrybush" : "Colonists can plant these for easy food",
 		"blackplanks" : "Highly flammable",
@@ -631,9 +702,11 @@
 		"bronzeplate" : "Like most foods, use it before it turns green!",
 		"carpetblue" : "When people don't deserve the red-carpet treatment",
 		"carpetred" : "It doesn't matter if you spill berry juice on this carpet!",
+		"carpetwhite" : "Color it with a dyer",
 		"carpetyellow" : "It's so fluffy!",
 		"charcoal" : "Absorbs cyanide",
 		"cherryblossom" : "The pinkest thing in the game",
+		"cherrysapling" : "Cosmetic item. Pay 10 Colonycoins to unlock",
 		"clay" : "I wish you could touch it",
 		"clothing" : "It looks like something you can wear. You can't.",
 		"coalore" : "Warning: might cause climate problems",
@@ -646,10 +719,12 @@
 		"crate" : "For all your storage needs!",
 		"crossbow" : "Smaller brother of the arcuballista",
 		"crossbowbolt" : "Harder, better, faster, stronger",
+		"crystal" : "Produced when rich galena is smelted",
 		"dirt" : "Dirty",
+		"dyertable" : "Legendary painting skills",
 		"fineryforge" : "Requires cokes to create steel and gold ingots",
 		"firewood" : "Basic fuel",
-		"flax" : "The most beautiful flower in the game. And the only one",
+		"flax" : "The imperial color",
 		"flaxstage1" : "Put it in the ground",
 		"flour" : "A colonist with an oven will bake this into bread",
 		"furnace" : "Uses firewood as fuel to craft bronze ingots and bricks",
@@ -667,12 +742,20 @@
 		"gunpowder" : "Handle with care!",
 		"gunpowderpouch" : "Can be used to fire a matchlock gun",
 		"gunsmithshop" : "Crafts guns and ammo",
+		"gypsum" : "Cosmetic item. Should have been a microtransaction",
+		"hollyhock" : "A laxative in real life. Not in-game. Yet.",
 		"ironblock" : "Don't drop it on your foot",
+		"ironingot" : "Iron stronker",
 		"ironore" : "Mined with an iron pickaxe that's made of iron ore",
 		"ironrivet" : "More powerful than duct tape",
-		"ironsword" : "Apparently, only useful for the scientist",
+		"ironsword" : "Stick 'em with the pointy end!",
 		"ironwrought" : "Wrought just means 'worked'",
 		"kiln" : "Turns wooden planks into charcoal",
+		"lanterncyan" : "The future is now",
+		"lanterngreen" : "Makes your colony eco-friendly",
+		"lanternorange" : "Extra cozy",
+		"lanternred" : "These are popular in Amsterdam too",
+		"lanternyellow" : "Expensive torch",
 		"lead" : "Use it in your pipes and destroy your civilization with lead poisoning",
 		"leadbullet" : "Can be fired by a matchlock gun",
 		"leavestaiga" : "I've got a Christmas feeling now",
@@ -707,6 +790,7 @@
 		"steelingot" : "It's strong as steel",
 		"steelparts" : "Ingots are so unwieldy",
 		"stonebricks" : "Punch in case of emergency",
+		"stonemasonworkbench" : "Creates fifty shades of brick",
 		"straw" : "Needed for beds, byproduct of wheat farming",
 		"tailorshop" : "Can make linen, carpet, clothing and bags",
 		"technologisttable" : "Crafts Science Bags",
@@ -715,6 +799,7 @@
 		"water" : "You are NOT supposed to have this in your inventory!",
 		"wheat" : "A colonist with a grindstone will turn this into flour",
 		"wheatstage1" : "Future bread",
+		"wolfsbane" : "Prevents wolves from attacking your colony",
 		"workbench" : "Recruits an artisan. Will do the crafting for you!"
 	}
 }
