@@ -110,7 +110,7 @@
 					"name" : "Raffinerie"
 				},
 				"flaxfarming" : {
-					"description" : "Débloque les cultivateurs de lin, nécessaires pour produire du lin. Accorde 100 graines de lin.",
+					"description" : "Débloque les cultivateurs de lin, nécessaires pour produire du lin. Fournit 100 graines de lin.",
 					"name" : "Culture du lin"
 				},
 				"gunpowder" : {
@@ -222,7 +222,7 @@
 					"name" : "Technicien"
 				},
 				"wheatfarming" : {
-					"description" : "Une méthode plus complexe pour produire de la nourrituer, réservée aux colonies avancées. Débloque le cultivateur de blé, la meule et le four. Accorde 400 graines de blé.",
+					"description" : "Une méthode plus complexe pour produire de la nourriture, réservée aux colonies avancées. Débloque le cultivateur de blé, la meule et le four. Fournit 400 graines de blé.",
 					"name" : "Production de pain"
 				}
 			}
@@ -249,7 +249,7 @@
 				"respawn" : "Réapparaître ?"
 			},
 			"inventory" : {
-				"craftingstockpile" : "Fabrication et stockage",
+				"craftingstockpile" : "Fabrication et stock",
 				"foodvalue" : "Valeur nutritive :",
 				"science" : {
 					"available" : "Disponible",
@@ -260,14 +260,14 @@
 					"placelab" : "Placer un laboratoire pour recruter un scientifique",
 					"requirements" : "Besoins pour un cycle de recherche :",
 					"researchactive" : "Recherche en cours : {0}",
-					"researchselected" : "Recherche sélectionnée",
+					"researchselected" : "Rechercher",
 					"unavailable" : "Non disponible"
 				},
 				"stockpiledescription" : "Vous pouvez seulement fabriquer des objets avec d'autres objets placés dans l'inventaire personnel. Les colons peuvent seulement utiliser les objets du stock principal.",
 				"tooltip" : {
 					"and" : "et",
 					"instockpile" : "en stock",
-					"needs" : "Requiert :"
+					"needs" : "Requiert : "
 				}
 			},
 			"limits" : {
@@ -366,7 +366,7 @@
 				"minera" : "Mine des minerais",
 				"minerb" : "Requiert : Pioche\nCreuse sous ses pieds et à placer sur des minerais ou la roche sombre.",
 				"minertool" : "Outil de mineur",
-				"missingscience" : "<color=red>'{0}' doit d'abord avoir été débloqué(e).<\/color>",
+				"missingscience" : "<color=red>La technologie « {0} » doit d'abord avoir été débloquée.<\/color>",
 				"notarable" : "Non cultivable",
 				"notflat" : "Le terrain n'est pas plat",
 				"notool" : "Aucun outil sélectionné",
@@ -376,6 +376,7 @@
 				"toolarge" : "Trop grand",
 				"toonarrow" : "Trop étroit",
 				"toosmall" : "Trop petit",
+				"wheata" : "Pour les colonies avancées seulement",
 				"wheatb" : "Requiert : Graines de blé\nÀ placer sur de l'herbe ou de la terre",
 				"wheatfarmer" : "Cultivateur de blé",
 				"wheatfarmertool" : "Outil de cultivateur de blé",
@@ -564,8 +565,8 @@
 		"commandtool" : "Outil de commande",
 		"copper" : "Cuivre",
 		"coppernails" : "Clous en cuivre",
-		"copperparts" : "Éléments en bronze",
-		"coppertools" : "Outils en bronze",
+		"copperparts" : "Éléments en cuivre",
+		"coppertools" : "Outils en cuivre",
 		"crate" : "Caisse",
 		"crossbow" : "Arbalète",
 		"crossbowbolt" : "Carreau d'arbalète",
@@ -600,7 +601,7 @@
 		"guardslingerdayjob" : "Frondeur de jour",
 		"guardslingernightjob" : "Frondeur de nuit",
 		"gunpowder" : "Poudre à canon",
-		"gunpowderpouch" : "Sac de poudre à canon",
+		"gunpowderpouch" : "Sachet de poudre à canon",
 		"gunsmithshop" : "Échoppe du forgeron",
 		"gypsum" : "Gypse",
 		"hollyhock" : "Rose trémière",
@@ -627,7 +628,7 @@
 		"leavestemperate" : "Feuilles tempérées",
 		"linen" : "Toile de lin",
 		"linenbag" : "Sac en lin",
-		"linenpouch" : "Sac en lin",
+		"linenpouch" : "Sachet en lin",
 		"linseedoil" : "Huile de lin",
 		"log" : "Bûche",
 		"logtaiga" : "Bûche enneigée",
@@ -658,7 +659,7 @@
 		"shop" : "Échoppe",
 		"silveringot" : "Lingot d'argent",
 		"sling" : "Fronde",
-		"slingbullet" : "Balle de fronde",
+		"slingbullet" : "Projectile pour fronde",
 		"snow" : "Neige",
 		"splittingstump" : "Souche à couper le bois",
 		"steelingot" : "Lingot d'acier",
@@ -754,13 +755,14 @@
 		"lanterncyan" : "Futuriste",
 		"lanterngreen" : "Rend la colonie écolo",
 		"lanternorange" : "Ambiance douce",
+ +		"lanternpink" : "Pour voir la vie en rose",
 		"lanternred" : "Très populaire à Amsterdam",
 		"lanternyellow" : "Comme une torche, mais plus chère",
 		"lead" : "À utiliser dans les canalisations pour détruire les civilisations par saturnisme",
 		"leadbullet" : "Peut être tirée avec une platine à mèche",
 		"leavestaiga" : "C'est bientôt Noël ?",
 		"leavestemperate" : "Essayez de sauter dans un tas de feuilles depuis une haute tour",
-		"linen" : "Lingerie signifie sous-vêtements en lin",
+		"linen" : "Linge",
 		"linenbag" : "Mieux qu'un sac en plastique",
 		"linenpouch" : "Peut être utilisé pour stocker de la poudre à canon",
 		"linseedoil" : "Fait briller les choses",
@@ -789,12 +791,12 @@
 		"splittingstump" : "Un moyen plus rapide d'obtenir du bois à brûler",
 		"steelingot" : "Dur comme l'acier",
 		"steelparts" : "Les lingots d'acier sont superfétatoires",
-		"stonebricks" : "Pour se protèger.",
+		"stonebricks" : "Pour se protéger.",
 		"stonemasonworkbench" : "Crée 50 nuances de briques",
 		"straw" : "Utile pour les lits, produit secondaire de la récolte du blé",
 		"tailorshop" : "Pour fabriquer du linge, des tapis, des vêtements et des sacs",
 		"technologisttable" : "Pour fabriquer des sacs servant à la recherche.",
-		"tin" : "Un petit peu toxique",
+		"tin" : "Serait-ce toxique ?",
 		"torch" : "Et la lumière fut !",
 		"water" : "Vous n'êtes PAS censé(e) avoir ceci dans votre inventaire !",
 		"wheat" : "Un colon avec une meule transformera le blé en farine",
