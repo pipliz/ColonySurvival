@@ -1,6 +1,13 @@
 0.5.1 (2017-01-**)
 
+-Added back the old red & black planks ("coated" planks from the dyer)
+
 -Updated de-DE, es-ES, fr-FR, ja-JP and ru-RU locales for 0.5 coverage (credits to contributors of https://github.com/pipliz/ColonySurvival )
 -Updated ko-KR, pt-BR locales for 0.5 coverage (credits to those who emailed them)
 -Enable tcp nodelay for client<->server singleplayer connections
 -Wait for the previous autosave to complete before starting a new one (rare edge case)
+-Updated unity from 5.6.4p2 to 5.6.4p4
+-Fixed silver+crystal recipe to continue being crafted until both limits are reached (instead of stopping if one of them reaches it)
+
+Modding changes:
+-Probably fixed errors that happened if a version wasn't exactly in the format x.x.x (it'll fill in missing ones with 0)
