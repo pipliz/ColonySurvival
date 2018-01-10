@@ -43,8 +43,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				max.z = child.GetAsOrDefault("z", -1);
 			}
 			int npcID = node.GetAsOrDefault("npcID", 0);
-
-			return new DefaultFarmerAreaJob<T>(owner, min, max, npcID);
+			return CreateAreaJob(owner, min, max, npcID);
 		}
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
