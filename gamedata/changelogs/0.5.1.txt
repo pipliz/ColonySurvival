@@ -1,0 +1,22 @@
+0.5.1 (2017-01-**)
+
+-Added back the old red & black planks ("coated" planks from the dyer)
+-Include white carpet in the carpet count achievement
+
+-Updated de-DE, es-ES, fr-FR, ja-JP and ru-RU locales for 0.5 coverage (credits to contributors of https://github.com/pipliz/ColonySurvival )
+-Updated ko-KR, pt-BR locales for 0.5 coverage (credits to those who emailed them)
+-Fixed silver+crystal recipe to continue being crafted until both limits are reached (instead of stopping if one of them reaches it)
+
+-Removed the loading screen before the main menu
+-Fixed connection screen freezing for multiple seconds
+-Fixed files loading count in the connection screen being incorrect
+-Fixed an issue preventing farm removal from happening properly at some specific places
+-Fixed berry farmer working as 10x3 but not 3x10. Removed the "reserved" side.
+| Berry farmers will replant their bushes to the changed positions
+-Fixed areas with a Z size smaller than 3 complaining about "Too narrow for trees" (without actually being a forester area)
+-Enable tcp nodelay for client<->server singleplayer connections
+-Wait for the previous autosave to complete before starting a new one (rare edge case)
+-Updated unity from 5.6.4p2 to 5.6.4p4
+-Fixed a possible null reference bug in the npc update code
+-Removed client side "piracy detection"
+-Updated server side "piracy detection", should warn players about it being triggered now.

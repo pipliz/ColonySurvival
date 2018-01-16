@@ -61,6 +61,8 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 					if (File.Exists(path)) {
 						JSON.Deserialize(path, out updatableBlocks, false);
 					}
+				} catch (System.Exception e) {
+					Log.WriteException(e);
 				} finally {
 					AsyncLoad(obj);
 				}
@@ -93,8 +95,8 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 
 		public override bool TryAdvanceStage (IGrowableBlock block, byte currentStageIndex)
 		{
-			if (currentStageIndex == 0) {
-				Vector3Int pos = block.Position;
+			Vector3Int pos = block.Position;
+			if (currentStageIndex == 0 && pos.IsValid) {
 				for (int i = 0; i < logs.Count; i++) {
 					ushort currentType;
 					if (World.TryGetTypeAt(pos + logs[i], out currentType)) {

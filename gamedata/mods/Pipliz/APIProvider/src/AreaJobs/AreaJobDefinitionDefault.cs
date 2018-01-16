@@ -43,8 +43,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				max.z = child.GetAsOrDefault("z", -1);
 			}
 			int npcID = node.GetAsOrDefault("npcID", 0);
-
-			return new DefaultFarmerAreaJob<T>(owner, min, max, npcID);
+			return CreateAreaJob(owner, min, max, npcID);
 		}
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
@@ -175,6 +174,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		{
 			try {
 				JSON.Deserialize(FilePath, out LoadedRoot, false);
+			} catch (System.Exception e) {
+				Log.WriteException(e);
 			} finally {
 				FinishedLoadingEvent.Set();
 			}
@@ -214,17 +215,19 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			}
 			JSONNode array;
 			if (!SavedJobs.TryGetValue(owner, out array)) {
-				SavedJobs[owner] = array = new JSONNode(NodeType.Array);
+				array = new JSONNode(NodeType.Array);
+				SavedJobs[owner] = array;
 			}
 			array.AddToArray(data);
 		}
 
 		public virtual void FinishSaving ()
 		{
-			string filePath = FilePath;
 			General.Application.StartAsyncQuitToComplete(delegate ()
 			{
-				Log.Write("Saving {0}", filePath);
+				if (General.Application.IsQuiting) {
+					Log.Write("Saving {0}", fileName);
+				}
 
 				JSONNode root = new JSONNode();
 				root.SetAs("version", 0);
@@ -238,6 +241,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					}
 					SavedJobs = null;
 				}
+
+				string filePath = FilePath;
 				IOHelper.CreateDirectoryFromFile(filePath);
 				JSON.Serialize(filePath, root, 3);
 			});
