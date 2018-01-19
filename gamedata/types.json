@@ -1018,6 +1018,207 @@
 		"mesh" : "gamedata/meshes/slingbullet.ply",
 		"parentType" : "projectile_parent"
 	},
+	"quarterblockblack" : {
+		"customData" : {
+			"colors" : ["#ff0000->#242321"]
+		},
+		"isRotatable" : true,
+		"parentType" : "quarterblockroot",
+		"rotatablex-" : "quarterblockblackx-",
+		"rotatablex+" : "quarterblockblackx+",
+		"rotatablez-" : "quarterblockblackz-",
+		"rotatablez+" : "quarterblockblackz+"
+	},
+	"quarterblockblackx-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx-.ply",
+		"parentType" : "quarterblockblack"
+	},
+	"quarterblockblackx+" : {
+		"boxColliders" : [
+			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx+.ply",
+		"parentType" : "quarterblockblack"
+	},
+	"quarterblockblackz-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz-.ply",
+		"parentType" : "quarterblockblack"
+	},
+	"quarterblockblackz+" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockblack"
+	},
+	"quarterblockbrowndark" : {
+		"customData" : {
+			"colors" : ["#ff0000->#332106"]
+		},
+		"isRotatable" : true,
+		"parentType" : "quarterblockroot",
+		"rotatablex-" : "quarterblockbrowndarkx-",
+		"rotatablex+" : "quarterblockbrowndarkx+",
+		"rotatablez-" : "quarterblockbrowndarkz-",
+		"rotatablez+" : "quarterblockbrowndarkz+"
+	},
+	"quarterblockbrowndarkx-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx-.ply",
+		"parentType" : "quarterblockbrowndark"
+	},
+	"quarterblockbrowndarkx+" : {
+		"boxColliders" : [
+			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx+.ply",
+		"parentType" : "quarterblockbrowndark"
+	},
+	"quarterblockbrowndarkz-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz-.ply",
+		"parentType" : "quarterblockbrowndark"
+	},
+	"quarterblockbrowndarkz+" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockbrowndark"
+	},
+	"quarterblockbrownlight" : {
+		"customData" : {
+			"colors" : ["#ff0000->#917451"]
+		},
+		"isRotatable" : true,
+		"parentType" : "quarterblockroot",
+		"rotatablex-" : "quarterblockbrownlightx-",
+		"rotatablex+" : "quarterblockbrownlightx+",
+		"rotatablez-" : "quarterblockbrownlightz-",
+		"rotatablez+" : "quarterblockbrownlightz+"
+	},
+	"quarterblockbrownlightx-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx-.ply",
+		"parentType" : "quarterblockbrownlight"
+	},
+	"quarterblockbrownlightx+" : {
+		"boxColliders" : [
+			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx+.ply",
+		"parentType" : "quarterblockbrownlight"
+	},
+	"quarterblockbrownlightz-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz-.ply",
+		"parentType" : "quarterblockbrownlight"
+	},
+	"quarterblockbrownlightz+" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockbrownlight"
+	},
+	"quarterblockgrey" : {
+		"customData" : {
+			"colors" : ["#ff0000->#636363"]
+		},
+		"isRotatable" : true,
+		"parentType" : "quarterblockroot",
+		"rotatablex-" : "quarterblockgreyx-",
+		"rotatablex+" : "quarterblockgreyx+",
+		"rotatablez-" : "quarterblockgreyz-",
+		"rotatablez+" : "quarterblockgreyz+"
+	},
+	"quarterblockgreyx-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx-.ply",
+		"parentType" : "quarterblockgrey"
+	},
+	"quarterblockgreyx+" : {
+		"boxColliders" : [
+			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx+.ply",
+		"parentType" : "quarterblockgrey"
+	},
+	"quarterblockgreyz-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz-.ply",
+		"parentType" : "quarterblockgrey"
+	},
+	"quarterblockgreyz+" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockgrey"
+	},
+	"quarterblockroot" : {
+		"isSolid" : false,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
+	},
+	"quarterblockwhite" : {
+		"customData" : {
+			"colors" : ["#ff0000->#c7c7c7"]
+		},
+		"isRotatable" : true,
+		"parentType" : "quarterblockroot",
+		"rotatablex-" : "quarterblockwhitex-",
+		"rotatablex+" : "quarterblockwhitex+",
+		"rotatablez-" : "quarterblockwhitez-",
+		"rotatablez+" : "quarterblockwhitez+"
+	},
+	"quarterblockwhitex-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx-.ply",
+		"parentType" : "quarterblockwhite"
+	},
+	"quarterblockwhitex+" : {
+		"boxColliders" : [
+			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockx+.ply",
+		"parentType" : "quarterblockwhite"
+	},
+	"quarterblockwhitez-" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz-.ply",
+		"parentType" : "quarterblockwhite"
+	},
+	"quarterblockwhitez+" : {
+		"boxColliders" : [
+			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
+		],
+		"mesh" : "gamedata/meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockwhite"
+	},
 	"redplanks" : {
 		"icon" : "gamedata/textures/icons/redplanks.png",
 		"maxStackSize" : 200,
