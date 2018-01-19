@@ -16,5 +16,19 @@
 		"results" : [{"type":"firewood","amount":6}],
 		"requires" : [{"type":"planks"}],
 		"defaultLimit" : 20
+	},
+	{
+		"name" : "pipliz.woodcutter.quarterblockbrowndark",
+		"results" : [{"type":"quarterblockbrowndark", "amount":4}],
+		"requires" : [{"type":"planks","amount":1}],
+		"defaultLimit" : 3,
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.woodcutter.quarterblockbrownlight",
+		"results" : [{"type":"quarterblockbrownlight", "amount":4}],
+		"requires" : [{"type":"planks","amount":1}],
+		"defaultLimit" : 3,
+		"isOptional" : true
 	}
 ]

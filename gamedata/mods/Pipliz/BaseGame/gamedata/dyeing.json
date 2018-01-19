@@ -1,5 +1,19 @@
 [
 	{
+		"name" : "pipliz.dyer.quarterblockblack",
+		"results" : [{"type":"quarterblockblack", "amount":4}],
+		"requires" : [{"type":"quarterblockgrey","amount":4},{"type":"charcoal"}],
+		"defaultLimit" : 3,
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.dyer.quarterblockwhite",
+		"results" : [{"type":"quarterblockwhite", "amount":4}],
+		"requires" : [{"type":"quarterblockgrey","amount":4},{"type":"gypsum"}],
+		"defaultLimit" : 3,
+		"isOptional" : true
+	},
+	{
 		"name" : "pipliz.dyer.planksred",
 		"results":[{"type":"planksred","amount":5}],
 		"requires":[{"type":"planks","amount":5},{"type":"hollyhock","amount":3}],
