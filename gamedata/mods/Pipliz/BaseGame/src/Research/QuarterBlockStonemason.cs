@@ -9,7 +9,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 		public QuarterBlockStonemason ()
 		{
 			key = "pipliz.baseresearch.quarterblockstonemason";
-			//icon = "gamedata/textures/icons/quarterblock.png";
+			icon = "gamedata/textures/icons/quarterblockgrey.png";
 			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
 			AddDependency("pipliz.baseresearch.stonemasonworkbench");

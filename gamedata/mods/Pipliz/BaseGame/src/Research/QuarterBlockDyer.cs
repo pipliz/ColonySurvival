@@ -9,9 +9,11 @@ namespace Pipliz.Mods.BaseGame.Researches
 		public QuarterBlockDyer ()
 		{
 			key = "pipliz.baseresearch.quarterblockdyer";
-			//icon = "gamedata/textures/icons/quarterblock.png";
+			icon = "gamedata/textures/icons/quarterblockwhite.png";
 			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
+			AddIterationRequirement("gypsum");
+			AddIterationRequirement("charcoal");
 			AddDependency("pipliz.baseresearch.dyertable");
 		}
 

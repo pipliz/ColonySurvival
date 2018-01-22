@@ -1022,12 +1022,17 @@
 		"customData" : {
 			"colors" : ["#ff0000->#242321"]
 		},
+		"icon" : "gamedata/textures/icons/quarterblockblack.png",
 		"isRotatable" : true,
-		"parentType" : "quarterblockroot",
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"rotatablex-" : "quarterblockblackx-",
 		"rotatablex+" : "quarterblockblackx+",
 		"rotatablez-" : "quarterblockblackz-",
-		"rotatablez+" : "quarterblockblackz+"
+		"rotatablez+" : "quarterblockblackz+",
+		"sideall" : "neutral"
 	},
 	"quarterblockblackx-" : {
 		"boxColliders" : [
@@ -1061,12 +1066,17 @@
 		"customData" : {
 			"colors" : ["#ff0000->#332106"]
 		},
+		"icon" : "gamedata/textures/icons/quarterblockbrowndark.png",
 		"isRotatable" : true,
-		"parentType" : "quarterblockroot",
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"rotatablex-" : "quarterblockbrowndarkx-",
 		"rotatablex+" : "quarterblockbrowndarkx+",
 		"rotatablez-" : "quarterblockbrowndarkz-",
-		"rotatablez+" : "quarterblockbrowndarkz+"
+		"rotatablez+" : "quarterblockbrowndarkz+",
+		"sideall" : "neutral"
 	},
 	"quarterblockbrowndarkx-" : {
 		"boxColliders" : [
@@ -1100,12 +1110,17 @@
 		"customData" : {
 			"colors" : ["#ff0000->#917451"]
 		},
+		"icon" : "gamedata/textures/icons/quarterblockbrownlight.png",
 		"isRotatable" : true,
-		"parentType" : "quarterblockroot",
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"rotatablex-" : "quarterblockbrownlightx-",
 		"rotatablex+" : "quarterblockbrownlightx+",
 		"rotatablez-" : "quarterblockbrownlightz-",
-		"rotatablez+" : "quarterblockbrownlightz+"
+		"rotatablez+" : "quarterblockbrownlightz+",
+		"sideall" : "neutral"
 	},
 	"quarterblockbrownlightx-" : {
 		"boxColliders" : [
@@ -1139,12 +1154,17 @@
 		"customData" : {
 			"colors" : ["#ff0000->#636363"]
 		},
+		"icon" : "gamedata/textures/icons/quarterblockgrey.png",
 		"isRotatable" : true,
-		"parentType" : "quarterblockroot",
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"rotatablex-" : "quarterblockgreyx-",
 		"rotatablex+" : "quarterblockgreyx+",
 		"rotatablez-" : "quarterblockgreyz-",
-		"rotatablez+" : "quarterblockgreyz+"
+		"rotatablez+" : "quarterblockgreyz+",
+		"sideall" : "neutral"
 	},
 	"quarterblockgreyx-" : {
 		"boxColliders" : [
@@ -1174,23 +1194,21 @@
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockgrey"
 	},
-	"quarterblockroot" : {
-		"isSolid" : false,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "neutral"
-	},
 	"quarterblockwhite" : {
 		"customData" : {
 			"colors" : ["#ff0000->#c7c7c7"]
 		},
+		"icon" : "gamedata/textures/icons/quarterblockwhite.png",
 		"isRotatable" : true,
-		"parentType" : "quarterblockroot",
+		"isSolid" : false,
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"rotatablex-" : "quarterblockwhitex-",
 		"rotatablex+" : "quarterblockwhitex+",
 		"rotatablez-" : "quarterblockwhitez-",
-		"rotatablez+" : "quarterblockwhitez+"
+		"rotatablez+" : "quarterblockwhitez+",
+		"sideall" : "neutral"
 	},
 	"quarterblockwhitex-" : {
 		"boxColliders" : [

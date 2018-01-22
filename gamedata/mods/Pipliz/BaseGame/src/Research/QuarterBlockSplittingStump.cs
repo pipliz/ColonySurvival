@@ -9,7 +9,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 		public QuarterBlockSplittingStump ()
 		{
 			key = "pipliz.baseresearch.quarterblocksplittingstump";
-			//icon = "gamedata/textures/icons/quarterblock.png";
+			icon = "gamedata/textures/icons/quarterblockbrownlight.png";
 			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
 			AddDependency("pipliz.baseresearch.splittingstump");
@@ -18,8 +18,8 @@ namespace Pipliz.Mods.BaseGame.Researches
 		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
 		{
 			var storage = RecipeStorage.GetPlayerStorage(manager.Player);
-			storage.SetRecipeAvailability("pipliz.dyer.quarterblockbrowndark", true, "pipliz.woodcutter");
-			storage.SetRecipeAvailability("pipliz.dyer.quarterblockbrownlight", true, "pipliz.woodcutter");
+			storage.SetRecipeAvailability("pipliz.woodcutter.quarterblockbrowndark", true, "pipliz.woodcutter");
+			storage.SetRecipeAvailability("pipliz.woodcutter.quarterblockbrownlight", true, "pipliz.woodcutter");
 		}
 	}
 }
