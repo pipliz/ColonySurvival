@@ -96,6 +96,7 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 		public virtual void FinishSaving ()
 		{
 			string filePath = FilePath;
+			JSONNode arrayCopy = SaveArray;
 			// use StartAsyncQuitToComplete so that the game does not wait on writing to disk
 			// it'll wait for this to complete before quitting
 			// runs in the thread pool
@@ -103,13 +104,15 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 			{
 				JSONNode root = new JSONNode();
 				root.SetAs("version", 0);
-				if (SaveArray == null) {
-					SaveArray = new JSONNode(NodeType.Array);
+				if (arrayCopy == null) {
+					arrayCopy = new JSONNode(NodeType.Array);
 				}
-				root.SetAs("array", SaveArray);
+				root.SetAs("array", arrayCopy);
 				IOHelper.CreateDirectoryFromFile(filePath);
 				JSON.Serialize(filePath, root);
 			});
+
+			SaveArray = null;
 		}
 
 		/// <summary>

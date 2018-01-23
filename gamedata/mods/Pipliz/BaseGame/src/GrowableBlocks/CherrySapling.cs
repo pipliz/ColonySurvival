@@ -128,6 +128,8 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 					if (File.Exists(path)) {
 						JSON.Deserialize(path, out updatableBlocks, false);
 					}
+				} catch (System.Exception e) {
+					Log.WriteException(e);
 				} finally {
 					AsyncLoad(obj);
 				}

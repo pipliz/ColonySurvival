@@ -1,5 +1,19 @@
 [
 	{
+		"name" : "pipliz.dyer.quarterblockblack",
+		"results" : [{"type":"quarterblockblack", "amount":4}],
+		"requires" : [{"type":"quarterblockgrey","amount":4},{"type":"charcoal"}],
+		"defaultLimit" : 3,
+		"isOptional" : true
+	},
+	{
+		"name" : "pipliz.dyer.quarterblockwhite",
+		"results" : [{"type":"quarterblockwhite", "amount":4}],
+		"requires" : [{"type":"quarterblockgrey","amount":4},{"type":"gypsum"}],
+		"defaultLimit" : 3,
+		"isOptional" : true
+	},
+	{
 		"name" : "pipliz.dyer.planksred",
 		"results":[{"type":"planksred","amount":5}],
 		"requires":[{"type":"planks","amount":5},{"type":"hollyhock","amount":3}],
@@ -39,6 +53,18 @@
 		"name" : "pipliz.dyer.planksgrey",
 		"results":[{"type":"planksgrey","amount":5}],
 		"requires":[{"type":"planks","amount":5},{"type":"charcoal"},{"type":"gypsum","amount":2}],
+		"defaultLimit" : 0
+	},
+	{
+		"name" : "pipliz.dyer.redplanks",
+		"results":[{"type":"redplanks","amount":5}],
+		"requires":[{"type":"coatedplanks","amount":5},{"type":"hollyhock","amount":3}],
+		"defaultLimit" : 0
+	},
+	{
+		"name" : "pipliz.dyer.blackplanks",
+		"results":[{"type":"blackplanks","amount":5}],
+		"requires":[{"type":"coatedplanks","amount":5},{"type":"charcoal","amount":2}],
 		"defaultLimit" : 0
 	},
 	{

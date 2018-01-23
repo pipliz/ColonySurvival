@@ -78,12 +78,22 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			if (positionSub.x == min.x || positionSub.x == max.x
 				|| positionSub.z == min.z || positionSub.z == max.z
 				|| (positionSub.x - (min.x + 1)) % 3 != 0
-				|| (positionSub.z - (min.z + 1)) % 3 != 0) {
-				state.SetCooldown(5.0);
-				positionSub = Vector3Int.invalidPos;
-				return;
-			}
-			if (positionSub.IsValid) {
+				|| (positionSub.z - (min.z + 1)) % 3 != 0)
+			{
+				ushort type;
+				if (World.TryGetTypeAt(positionSub.Add(1, 0, 1), out type)) {
+					if (type == BuiltinBlocks.Sapling) {
+						Server.GrowableBlocks.IGrowableBlock block;
+						if (Server.GrowableBlocks.GrowableBlockManager.TryGetGrowableBlock(positionSub.Add(1, 0, 1), out block)) {
+							state.SetCooldown(5.0);
+						} else {
+							ItemTypesServer.OnChange(positionSub.Add(1, 0, 1), 0, BuiltinBlocks.Sapling, null);
+							state.SetIndicator(NPCIndicatorType.Crafted, 2f, BuiltinBlocks.Sapling);
+							state.SetCooldown(0.2);
+						}
+					}
+				}
+			} else if (positionSub.IsValid) {
 				ushort type;
 				if (World.TryGetTypeAt(positionSub, out type)) {
 					if (type == 0) {
@@ -108,10 +118,10 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				} else {
 					state.SetCooldown(Random.NextFloat(3f, 6f));
 				}
-				positionSub = Vector3Int.invalidPos;
 			} else {
 				state.SetCooldown(10.0);
 			}
+			positionSub = Vector3Int.invalidPos;
 		}
 
 		static bool ChopTree (Vector3Int p)
@@ -159,6 +169,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						JSON.Deserialize(path, out legacyJSON, false);
 						File.Delete(path);
 					}
+				} catch (System.Exception e) {
+					Log.WriteException(e);
 				} finally {
 					AsyncLoad(obj);
 				}

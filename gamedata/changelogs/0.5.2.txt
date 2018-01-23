@@ -1,0 +1,17 @@
+0.5.2 (2017-01-19)
+
+-Added "stair blocks" in the form of 5 colored quarter blocks.
+-Changed how torches/lanterns are managed, to significantly reduce any lag spikes associated with them during block updates
+| Also fixes the longer lag spike upon rendering the first torch/lantern
+-Fixed the issue with 'time traveling' where the time would rapidly change under server load
+-Fixed an issue with the stoneblock normal map
+
+-Added 2 new options to the gamedata/savegames/client.json file:
+| "TorchUpdatesPerFrameMax" - how many torches can update per frame. Default is 5.
+| "AutoClimbStepSize" - how big the step size is one can autoclimb onto. Default is 0.5 - should be an option in the future to set it to 1 (for autoclimbing full blocks)
+
+Modding changes
+-Added "boxColliders" key to item types, see new blocks included in the update
+-VoxelRayCastHit now includes the box bounds the ray hit (if it hit a block). Includes for PlayerClickedData
+-Added a bool at the end of the NPCUpdate package sent to a client, to indicate whether or not to compensate for standing on a box collider block or not (false -> compensate)
+-Replaced ReceiveTimeData client package with a ReceiveHeartBeat
