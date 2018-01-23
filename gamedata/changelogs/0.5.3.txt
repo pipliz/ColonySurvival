@@ -1,3 +1,10 @@
 0.5.3 (2017-01-**)
 
 -Updated fr-FR & ja-JP locale (both to 100% of what is localizable)
+-Increased stack size of stairs to 50 so it is multiple of the crafting recipe
+
+-Fixed an issue preventing lights from updating their shadows in some situations
+-Removed QuarterBlockRoot from builtinblocks (didn't exist in the final build of 0.5.2)
+
+Modding changes:
+-Added Server.Monsters.MonsterTracker.MonstersTotal
