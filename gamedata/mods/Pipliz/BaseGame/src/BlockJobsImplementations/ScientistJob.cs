@@ -37,7 +37,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			usedNPC.LookAt(position.Vector);
 			ScienceManagerPlayer scienceManager;
 			if (!ScienceManager.TryGetPlayerManager(owner, out scienceManager)) {
-				state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
+				state.SetIndicator(new Shared.IndicatorState(6f, BuiltinBlocks.ErrorIdle));
 				state.JobIsDone = false;
 				return;
 			}
@@ -60,13 +60,13 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 							}
 						}
 						float cooldown = Random.NextFloat(8f, 16f);
-						state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, missing);
+						state.SetIndicator(new Shared.IndicatorState(cooldown, missing, true, false));
 						state.JobIsDone = false;
 					}
 				} else {
 					float cooldown = Random.NextFloat(8f, 16f);
 					// no items, no research -> wait for research
-					state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
+					state.SetIndicator(new Shared.IndicatorState(cooldown, BuiltinBlocks.ErrorIdle));
 					state.JobIsDone = false;
 				}
 			} else {
@@ -96,7 +96,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 						}
 						state.Inventory.Add(BuiltinBlocks.LinenBag, recycled);
 						scienceManager.AddActiveResearchProgress(1);
-						state.SetIndicator(NPCIndicatorType.ScienceProgress, StaticCraftingCooldown);
+						state.SetIndicator(new Shared.IndicatorState(StaticCraftingCooldown, NPCIndicatorType.Science));
 					} else {
 						state.SetCooldown(0.3);
 					}

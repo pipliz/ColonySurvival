@@ -60,7 +60,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
 					blockInventory.Remove(selectedRecipe.Requirements);
 					blockInventory.Add(selectedRecipe.Results);
-					state.SetIndicator(NPCIndicatorType.Crafted, CraftingCooldown, selectedRecipe.Results[0].Type);
+					state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, selectedRecipe.Results[0].Type));
 					state.JobIsDone = false;
 					recipesToCraft--;
 					OnRecipeCrafted();
@@ -89,9 +89,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 							state.JobIsDone = false;
 							float cooldown = Random.NextFloat(8f, 16f);
 							if (recipeMatch.MatchType == Recipe.RecipeMatchType.AllDone) {
-								state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
+								state.SetIndicator(new Shared.IndicatorState(cooldown, BlockTypes.Builtin.BuiltinBlocks.ErrorIdle));
 							} else {
-								state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, recipeMatch.FoundRecipe.FindMissingType(owner));
+								state.SetIndicator(new Shared.IndicatorState(cooldown, recipeMatch.FoundRecipe.FindMissingType(owner), true, false));
 							}
 						}
 						break;

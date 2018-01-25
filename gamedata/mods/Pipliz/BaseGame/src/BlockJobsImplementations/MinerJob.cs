@@ -67,7 +67,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			var itemList = ItemTypes.GetType(typeBelow).OnRemoveItems;
 			state.Inventory.Add(itemList);
 			state.JobIsDone = true;
-			state.SetIndicator(NPCIndicatorType.Crafted, cooldown, itemList[0].item.Type);
+			state.SetIndicator(new Shared.IndicatorState(cooldown, itemList[0].item.Type));
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

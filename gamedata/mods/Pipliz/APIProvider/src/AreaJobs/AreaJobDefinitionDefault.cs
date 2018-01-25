@@ -125,7 +125,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							state.SetCooldown(1.0);
 							shouldDumpInventory = false;
 						} else {
-							state.SetIndicator(NPCIndicatorType.MissingItem, 2f, typeSeeds);
+							state.SetIndicator(new Shared.IndicatorState(2f, typeSeeds, true, false));
 							shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
 						}
 					} else if (type == typeFinal) {
@@ -145,7 +145,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							for (int i = 0; i < stages.Length; i++) {
 								if (stages[i] == type) {
 									ItemTypesServer.OnChange(positionSub, 0, type, null);
-									state.SetIndicator(NPCIndicatorType.Crafted, 2f, type);
+									state.SetIndicator(new Shared.IndicatorState(2f, type));
 									state.SetCooldown(0.2);
 									found = true;
 									break;

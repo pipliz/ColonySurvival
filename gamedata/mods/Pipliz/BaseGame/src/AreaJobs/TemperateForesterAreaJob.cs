@@ -88,7 +88,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							state.SetCooldown(5.0);
 						} else {
 							ItemTypesServer.OnChange(positionSub.Add(1, 0, 1), 0, BuiltinBlocks.Sapling, null);
-							state.SetIndicator(NPCIndicatorType.Crafted, 2f, BuiltinBlocks.Sapling);
+							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 							state.SetCooldown(0.2);
 						}
 					}
@@ -102,11 +102,11 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, ServerManager.SetBlockFlags.DefaultAudio);
 							state.SetCooldown(2.0);
 						} else {
-							state.SetIndicator(NPCIndicatorType.MissingItem, 2f, BuiltinBlocks.Sapling);
+							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 						}
 					} else if (type == BuiltinBlocks.LogTemperate) {
 						if (ChopTree(positionSub)) {
-							state.SetIndicator(NPCIndicatorType.Crafted, 10f, BuiltinBlocks.LogTemperate);
+							state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
 							ServerManager.SendAudio(positionSub.Vector, "woodDeleteHeavy");
 							AddResults(job.UsedNPC.Inventory);
 						} else {

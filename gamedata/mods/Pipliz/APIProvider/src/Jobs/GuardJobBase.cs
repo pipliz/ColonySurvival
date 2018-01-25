@@ -106,9 +106,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		{
 			if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
 				OnShoot();
-				state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
+				state.SetIndicator(new Shared.IndicatorState(guardSettings.cooldownShot, guardSettings.shootItem[0].Type));
 			} else {
-				state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
+				state.SetIndicator(new Shared.IndicatorState(guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type, true, false));
 			}
 		}
 

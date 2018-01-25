@@ -85,7 +85,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, ServerManager.SetBlockFlags.DefaultAudio);
 						state.SetCooldown(2.0);
 					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush);
+						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
 					}
 				} else if (job.removingOldBush) {
 					if (ServerManager.TryChangeBlock(job.bushLocation, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
@@ -98,14 +98,14 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						job.checkMissingBushes = true;
 						state.SetCooldown(1.0, 4.0);
 					} else if (type == BuiltinBlocks.BerryBush) {
-						state.SetIndicator(NPCIndicatorType.Crafted, 8.5f, BuiltinBlocks.Berry);
+						state.SetIndicator(new Shared.IndicatorState(8.5f, BuiltinBlocks.Berry));
 						NPCInventory inv = job.UsedNPC.Inventory;
 						inv.Add(BuiltinBlocks.Berry);
 						if (Random.Next(0, 10) >= 9) {
 							inv.Add(BuiltinBlocks.BerryBush);
 						}
 					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, Random.NextFloat(8f, 14f), BuiltinBlocks.ErrorMissing);
+						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.ErrorMissing));
 					}
 				} else {
 					state.SetCooldown(Random.NextFloat(3f, 6f));
