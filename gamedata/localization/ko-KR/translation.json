@@ -1,11 +1,11 @@
 {
-	"coverage" : 95.0844854070661,
+	"coverage" : 95.3917050691244,
 	"sentences" : {
 		"escapemenu" : {
-			"back" : "게임으로",
+			"back" : "게임으로 돌아가기",
 			"info" : "정보",
-			"quitdesktop" : "게임종료",
-			"quitmain" : "메인메뉴",
+			"quitdesktop" : "게임 종료",
+			"quitmain" : "메인메뉴로 나가기",
 			"settings" : "설정"
 		},
 		"firstpersonstats" : {
@@ -24,7 +24,7 @@
 			"next" : "다음",
 			"none" : "없음",
 			"previous" : "이전",
-			"reset" : "초기화"
+			"reset" : "리셋"
 		},
 		"infomenu" : {
 			"changelog" : "업데이트 내용",
@@ -248,7 +248,7 @@
 			},
 			"banner" : {
 				"button" : "주민 모집",
-				"description" : "주민 1명 모집에는 빈 침대 1개, 식량 50이 필요하며, 하루에 식량을 5씩 소비합니다.",
+				"description" : "주민 1명 당 침대 1개를 차지하며, 하루에 음식을 5씩 소비합니다. 새로운 주민을 모집하려면 음식 50이 필요합니다.",
 				"gotoscience" : "과학 연구",
 				"header" : "마을 운영",
 				"resetbutton" : "마을 초기화",
@@ -373,7 +373,7 @@
 				"jobslingerday" : "주간 경비: 새총병",
 				"jobslingernight" : "야간 경비: 새총병",
 				"matchlock" : "화승총병",
-				"matchlocktooltip" : "공격력: 500 HP\n사정거리: 30 블록\n재장전 시간: 12 초",
+				"matchlocktooltip" : "먼저 화승총 연구를 완료하세요.\n데미지: 500\n사정거리: 30블럭\n재장전 시간: 12초",
 				"miner" : "광부",
 				"minera" : "광석을 캡니다.",
 				"minerb" : "곡괭이가 필요합니다.\n광석이나 짙은색 돌 위에 배치하세요.",
@@ -384,9 +384,9 @@
 				"notool" : "도구를 선택하세요.",
 				"occupiedblocks" : "정리하지 않은 블럭이 있습니다.",
 				"slinger" : "새총병",
-				"slingertooltip" : "공격력: 50 HP\n사정거리: 12 블록\n재장전 시간: 3 초",
+				"slingertooltip" : "초반에 유용합니다.\n데미지: 50\n사정거리: 12블럭\n재장전 시간: 3초",
 				"toolarge" : "너무 큽니다.",
-				"toonarrow" : "너무 좁습니다.",
+				"toonarrow" : "나무를 심기엔 너무 좁습니다.",
 				"toosmall" : "너무 작습니다.",
 				"wheatb" : "밀알이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"wheatfarmer" : "밀 농사꾼",
@@ -469,7 +469,7 @@
 			},
 			"language" : "언어",
 			"languagemenu" : {
-				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역 제작은 유튜브 크리에이터 왕군이 진행했으며, 도움을 주시고 싶으신 분들은 pdkkoedol@gmail.com 으로 메일 부탁드립니다.",
+				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역을 돕기 위해서는 포럼이나 github를 참고해주세요.",
 				"full" : "언어 설정",
 				"language" : "언어",
 				"wiptext" : "아직 게임의 모든 부분이 번역되지 않았습니다. 몇몇 언어는 번역 진행률이 다른 언어보다 더 낮을 수 있습니다."
@@ -539,7 +539,7 @@
 		"bed" : "침대",
 		"berry" : "딸기",
 		"berrybush" : "딸기 씨앗",
-		"blackplanks" : "_MISSING_Coated Black Planks",
+		"blackplanks" : "검은 널빤지",
 		"bloomery" : "제철 용광로",
 		"bow" : "활",
 		"bowstring" : "활 시위",
@@ -662,7 +662,7 @@
 		"quarterblockbrownlight" : "_MISSING_Light Brown Quarter Block",
 		"quarterblockgrey" : "_MISSING_Grey Quarter Block",
 		"quarterblockwhite" : "_MISSING_White Quarter Block",
-		"redplanks" : "_MISSING_Coated Red Planks",
+		"redplanks" : "붉은 널빤지",
 		"salpeter" : "초석",
 		"sand" : "모래",
 		"sappling" : "묘목",
