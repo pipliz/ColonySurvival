@@ -5,6 +5,8 @@
 
 -Fixed an issue preventing lights from updating their shadows in some situations
 -Removed QuarterBlockRoot from builtinblocks (didn't exist in the final build of 0.5.2)
+-Optimized a method related to finding the closest crate (that really was a slow one)
+-Slightly optimized some network traffic (don't send indicator updates if people are out of npc rendering range anyway)
 
 Modding changes:
 -Added Server.Monsters.MonsterTracker.MonstersTotal
