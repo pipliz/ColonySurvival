@@ -36,7 +36,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			return CachedSettings;
 		}
 
-		protected override GuardSettings SetupSettings ()
+		public override GuardSettings SetupSettings ()
 		{
 			return GetGuardSettings();
 		}

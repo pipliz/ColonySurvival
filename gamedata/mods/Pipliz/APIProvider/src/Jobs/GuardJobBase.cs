@@ -12,9 +12,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		public IMonster target;
 		public GuardSettings guardSettings;
 
-		protected virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
+		public virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
 
-		protected virtual void OnShoot ()
+		public virtual void OnShoot ()
 		{
 			if (guardSettings.OnShootAudio != null) {
 				ServerManager.SendAudio(position.Vector, guardSettings.OnShootAudio);
