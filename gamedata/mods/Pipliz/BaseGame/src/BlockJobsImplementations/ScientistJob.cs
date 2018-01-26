@@ -18,6 +18,8 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		bool shouldTakeItems;
 		public override string NPCTypeKey { get { return "pipliz.scientist"; } }
 
+		public virtual float CraftingCooldown { get { return StaticCraftingCooldown; } }
+
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
@@ -96,7 +98,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 						}
 						state.Inventory.Add(BuiltinBlocks.LinenBag, recycled);
 						scienceManager.AddActiveResearchProgress(1);
-						state.SetIndicator(new Shared.IndicatorState(StaticCraftingCooldown, NPCIndicatorType.Science));
+						state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science));
 					} else {
 						state.SetCooldown(0.3);
 					}

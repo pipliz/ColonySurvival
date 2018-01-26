@@ -1,4 +1,4 @@
-0.5.3 (2017-01-**)
+0.5.3 (2017-01-26)
 
 -Increased stack size of stairs to 60 so it is multiple of the crafting recipe
 
@@ -21,3 +21,6 @@ Modding changes:
 | which is now replaced with:
 | - state.SetIndicator(new Shared.IndicatorState(8.5f, BuiltinBlocks.Berry));
 | Most of the 'special' NPCIndicatorTypes are removed, in favor of manually selecting whether the progress bar is red or green and whether the diagonal red line shows up.
+-Added BlockJobBase.UsedNPC property
+-Added CraftingJobBase.BlockInventory property
+-Added ScientistJob.CraftingCooldown property

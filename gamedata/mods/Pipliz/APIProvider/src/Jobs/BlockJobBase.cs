@@ -17,6 +17,8 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual Vector3Int KeyLocation { get { return position; } }
 
+		public virtual NPCBase UsedNPC { get { return usedNPC; } }
+
 		public virtual bool IsValid
 		{
 			get

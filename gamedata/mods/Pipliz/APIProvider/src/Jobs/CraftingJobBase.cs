@@ -33,6 +33,8 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			return this;
 		}
 
+		public virtual NPCInventory BlockInventory { get { return blockInventory; } }
+
 		public virtual void OnStartCrafting () { wasCrafting = true; }
 
 		public virtual void OnStopCrafting () { wasCrafting = false; }
