@@ -5,18 +5,30 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 {
 	using JSON;
 
-	public class DefaultFarmerAreaJob<T> : Job, IAreaJob where T : IAreaJobDefinition
+	public class DefaultFarmerAreaJob<T> : IJob, IAreaJob where T : IAreaJobDefinition
 	{
+		protected NPCBase usedNPC;
 		protected Vector3Int positionSub = Vector3Int.invalidPos;
 		protected Vector3Int positionMin;
 		protected Vector3Int positionMax;
 		protected bool shouldDumpInventory = false;
+		protected Players.Player owner;
+		protected bool isValid = true;
 
 		protected static T TypeSingleton;
 
+		public virtual Vector3Int KeyLocation { get { return positionMin; } }
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
 		public virtual NPCBase UsedNPC { get { return usedNPC; } }
+		public virtual Players.Player Owner { get { return owner; } }
+		public virtual bool IsValid { get { return isValid; } }
+		public virtual bool NeedsNPC { get { return usedNPC == null || !usedNPC.IsValid; } }
+		public virtual InventoryItem RecruitementItem { get { return InventoryItem.Empty; } }
+		public virtual NPCType NPCType { get { return Definition.UsedNPCType; } }
+		public virtual bool NeedsItems { get { return shouldDumpInventory; } }
+		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
+		public virtual Shared.EAreaType AreaType { get { return Shared.EAreaType.TwoD; } }
 
 		public virtual IAreaJobDefinition Definition
 		{
@@ -33,15 +45,35 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			}
 		}
 
-		public override NPCType NPCType { get { return Definition.UsedNPCType; } }
-
-		public override bool NeedsItems { get { return shouldDumpInventory; } }
 
 		public DefaultFarmerAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
 			positionMin = min;
 			positionMax = max;
-			InitializeJob(owner, min, npcID);
+			this.owner = owner;
+
+			if (npcID != 0 && NPCTracker.TryGetNPC(npcID, out usedNPC)) {
+				usedNPC.TakeJob(this);
+			} else {
+				npcID = 0;
+			}
+			if (usedNPC == null) {
+				JobTracker.Add(this);
+			}
+		}
+
+		public virtual NPCBase.NPCGoal CalculateGoal (ref NPCBase.NPCState state)
+		{
+			if (ToSleep) {
+				if (!state.Inventory.IsEmpty) {
+					return NPCBase.NPCGoal.Stockpile;
+				}
+				return NPCBase.NPCGoal.Bed;
+			}
+			if (state.Inventory.Full || NeedsItems) {
+				return NPCBase.NPCGoal.Stockpile;
+			}
+			return NPCBase.NPCGoal.Job;
 		}
 
 		public virtual void CalculateSubPosition ()
@@ -49,18 +81,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			Definition.CalculateSubPosition(this, ref positionSub);
 		}
 
-		public override void OnNPCAtJob (ref NPCBase.NPCState state)
-		{
-			Definition.OnNPCAtJob(this, ref positionSub, ref state, ref shouldDumpInventory);
-		}
-
-		public override void TakeItems (ref NPCBase.NPCState state)
-		{
-			base.TakeItems(ref state);
-			shouldDumpInventory = false;
-		}
-
-		public override Vector3Int GetJobLocation ()
+		public virtual Vector3Int GetJobLocation ()
 		{
 			if (!positionSub.IsValid) {
 				CalculateSubPosition();
@@ -68,22 +89,60 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			return positionSub;
 		}
 
-		public override JSONNode GetJSON ()
+		public virtual void OnAssignedNPC (NPCBase npc)
 		{
-			return base.GetJSON()
-				.SetAs("min", (JSONNode)positionMin)
-				.SetAs("max", (JSONNode)positionMax);
+			usedNPC = npc;
+		}
+
+		public virtual void OnNPCAtJob (ref NPCBase.NPCState state)
+		{
+			Definition.OnNPCAtJob(this, ref positionSub, ref state, ref shouldDumpInventory);
+		}
+
+		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
+		{
+			if (ToSleep) {
+				TryDumpNPCInventory(ref state);
+				state.JobIsDone = true;
+				state.SetCooldown(0.3);
+			} else {
+				TakeItems(ref state);
+				state.SetCooldown(0.3);
+			}
+		}
+
+		public virtual void OnRemove ()
+		{
+			Definition.OnRemove(this);
+			isValid = false;
+			if (usedNPC != null) {
+				usedNPC.ClearJob();
+				usedNPC = null;
+			}
+			JobTracker.Remove(owner, KeyLocation);
+		}
+
+		public virtual void OnRemovedNPC ()
+		{
+			usedNPC = null;
+			JobTracker.Add(this);
 		}
 
 		public virtual void SaveAreaJob ()
 		{
-			Definition.SaveJob(owner, GetJSON());
+			Definition.SaveJob(owner, new JSONNode()
+				.SetAs("npcID", usedNPC == null ? 0 : usedNPC.ID)
+				.SetAs("min", (JSONNode)positionMin)
+				.SetAs("max", (JSONNode)positionMax)
+			);
 		}
 
-		public override void OnRemove ()
+		public virtual void TakeItems (ref NPCBase.NPCState state)
 		{
-			Definition.OnRemove(this);
-			base.OnRemove();
+			if (TryDumpNPCInventory(ref state)) {
+				state.JobIsDone = true;
+			}
+			shouldDumpInventory = false;
 		}
 
 		protected void SetLayer (ushort type, int layer)
@@ -94,6 +153,14 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type);
 				}
 			}
+		}
+
+		protected bool TryDumpNPCInventory (ref NPCBase.NPCState npcState)
+		{
+			if (!npcState.Inventory.IsEmpty) {
+				npcState.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			}
+			return true;
 		}
 	}
 }

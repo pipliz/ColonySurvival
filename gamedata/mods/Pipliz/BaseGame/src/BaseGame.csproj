@@ -36,11 +36,14 @@
   <ItemGroup>
     <Compile Include="AreaJobs\BerryFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\Alkanet.cs" />
+    <Compile Include="AreaJobs\BuilderDigger\DiggerAreaJob.cs" />
+    <Compile Include="AreaJobs\BuilderDigger\DiggerAreaDefinition.cs" />
     <Compile Include="AreaJobs\Wolfsbane.cs" />
     <Compile Include="AreaJobs\Hollyhock.cs" />
     <Compile Include="AreaJobs\FlaxFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\TemperateForesterAreaJob.cs" />
     <Compile Include="AreaJobs\WheatFarmerAreaJob.cs" />
+    <Compile Include="BlockJobsImplementations\DiggerJob.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardCrossbowNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockDay.cs" />

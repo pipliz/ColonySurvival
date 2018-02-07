@@ -1,0 +1,22 @@
+0.6.0 (2017-**-**)
+
+-Basic version of diggers (Much WIP, make an area using the command tool to dig, then place digger jobs from the command tool adjacent to it)
+
+-The area selected during the 'area removal popup' is now sort of transparent to show up more clearly
+-Fixed an issue where colonists could run into a circle, where they're switching between 2 crates thinking they get closer each time.
+| Should also somewhat improve crate finding (i.e, they won't swap incorrectly for a further away crate when halfway)
+-Fix colonists missing items to take a job (i.e, pickaxe, axe, slings etc) displaying a ? instead of the item as missing
+-Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
+-Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
+-Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
+
+Modding changes:
+-Removed NPC.Job; was only used by DefaultFarmerAreaJob<T>. Get/reuse code from the job types available in the APIProvider mod included instead
+-Added IAreaJob.AreaType, to indicate whether the area should show a 2d or 3d frame in the client
+-Added IAreaJob.IsValid, to indicate whether this area his been removed (to check invalidated references)
+-Added bool AreaJobTracker.ExistingAreaAt (min, max, out List<jobs>)
+| Get a list of areas overlapping the area between min and max
+| Optionally return the List<jobs> to AreaJobTracker.AreaJobListPool when you're done with it
+-Pipliz.Helpers.IOHelper.CreateDirectoryFromFile now doesn't error if there's no directory in the path (will return null though)
+-The JSON Deserialize methods now have a bool option "stringInterning", defaults to true.
+| Set it to false if the json you're loading has lots of unique string data that isn't stored for the duration of the game
