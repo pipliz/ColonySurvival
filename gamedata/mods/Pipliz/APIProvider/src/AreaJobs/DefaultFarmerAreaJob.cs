@@ -145,16 +145,6 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			shouldDumpInventory = false;
 		}
 
-		protected void SetLayer (ushort type, int layer)
-		{
-			int yLayer = positionMin.y + layer;
-			for (int x = positionMin.x; x <= positionMax.x; x++) {
-				for (int z = positionMin.z; z <= positionMax.z; z++) {
-					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type);
-				}
-			}
-		}
-
 		protected bool TryDumpNPCInventory (ref NPCBase.NPCState npcState)
 		{
 			if (!npcState.Inventory.IsEmpty) {

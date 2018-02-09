@@ -82,13 +82,13 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				if (job.placingMissingBush) {
 					if (job.UsedNPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.BerryBush)) {
 						job.placingMissingBush = false;
-						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, ServerManager.SetBlockFlags.DefaultAudio);
+						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio);
 						state.SetCooldown(2.0);
 					} else {
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
 					}
 				} else if (job.removingOldBush) {
-					if (ServerManager.TryChangeBlock(job.bushLocation, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
+					if (ServerManager.TryChangeBlock(job.bushLocation, 0, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
 						job.UsedNPC.Colony.UsedStockpile.Add(BuiltinBlocks.BerryBush);
 						job.removingOldBush = false;
 					}

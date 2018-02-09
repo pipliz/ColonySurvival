@@ -23,7 +23,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
-			SetLayer(min, max, BuiltinBlocks.Dirt, -1);
+			SetLayer(min, max, BuiltinBlocks.Dirt, -1, owner);
 			return base.CreateAreaJob(owner, min, max, npcID);
 		}
 

@@ -121,7 +121,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
 							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
-							ServerManager.TryChangeBlock(positionSub, typeSeeds, ServerManager.SetBlockFlags.DefaultAudio);
+							ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
 							state.SetCooldown(1.0);
 							shouldDumpInventory = false;
 						} else {
@@ -129,7 +129,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
 						}
 					} else if (type == typeFinal) {
-						if (ServerManager.TryChangeBlock(positionSub, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
+						if (ServerManager.TryChangeBlock(positionSub, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
 							job.UsedNPC.Inventory.Add(ItemTypes.GetType(typeFinal).OnRemoveItems);
 						}
 						state.SetCooldown(1.0);
@@ -248,12 +248,12 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			});
 		}
 
-		protected void SetLayer (Vector3Int min, Vector3Int max, ushort type, int layer)
+		protected void SetLayer (Vector3Int min, Vector3Int max, ushort type, int layer, Players.Player owner)
 		{
 			int yLayer = min.y + layer;
 			for (int x = min.x; x <= max.x; x++) {
 				for (int z = min.z; z <= max.z; z++) {
-					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type);
+					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type, owner);
 				}
 			}
 		}

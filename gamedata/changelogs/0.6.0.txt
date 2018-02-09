@@ -1,4 +1,4 @@
-0.6.0 (2017-**-**)
+0.6.0 (2018-**-**)
 
 -Basic version of diggers (Much WIP, make an area using the command tool to dig, then place digger jobs from the command tool adjacent to it)
 
@@ -9,6 +9,9 @@
 -Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
 -Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
 -Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
+-Fixed 0.5.1+ changelog dates being in 2017
+-Fixed modded locales falling back to the clients' en-US instead of the server one
+-Fixed an issue where a world used for both singleplayer and multiplayer would return the singleplayer player in multiplayer for Players.TryMatchName (yey edge cases)
 
 Modding changes:
 -Removed NPC.Job; was only used by DefaultFarmerAreaJob<T>. Get/reuse code from the job types available in the APIProvider mod included instead
@@ -20,3 +23,24 @@ Modding changes:
 -Pipliz.Helpers.IOHelper.CreateDirectoryFromFile now doesn't error if there's no directory in the path (will return null though)
 -The JSON Deserialize methods now have a bool option "stringInterning", defaults to true.
 | Set it to false if the json you're loading has lots of unique string data that isn't stored for the duration of the game
+-ThreadedObjectPool<T> constructor function is now optional, will fallback to Activator.CreateInstance<T>()
+-Merged ServerManager.TryChangeBlock, ServerManager.TryChangeBlockUserRequest and ServerManager.TryChangeBlockUserRequest
+| Mainly changed so that diggers can be limited by anti-grief
+| See updated mod_callbacks.txt on OnTryChangeBlock
+| Changed OnTryChangeBlockUser callback from "bool OnTryChangeBlockUser" to "void OnTryChangeBlock"
+| Removed OnTryChangeBlockUserRequest callback (merged into OnTryChangeBlock)
+| OnTryChangeBlock now receives callbacks for game caused changes (water spreading, leaves removal)
+| ServerManager.TryChangeBlock now has an optional causingPlayers argument
+| Removed SetBlockFlags.SendToPlayers (since it's basically useless to change blocks on the server without sending it to players)
+| Substantially changed OnTryChangeBlockUserData (and renamed to OnTryChangeBlockData)
+-Changed IMonster.OnHit(damage) to take optional arguments for damage source and damage source type.
+-Changed OnMonsterHit callback to be of type Action<IMonster, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnMonsterHit
+-Changed NPC.NPCBase.OnHit(damage) to take optional arguments for damage source and damage source type.
+-Changed OnNPCHit callback to be of type Action<NPC.NPCBase, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnNPCHit
+-Changed Players.TakeHit (Players.Player, float, bool = false)
+| sendToPlayer argument is removed, was always true (why take damage and not send it to the user)
+| Added optional arguments for damage source and damage source type
+-Changed OnPlayerHit callback to be of type Action<Players.Player, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnPlayerHit

@@ -94,7 +94,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			}
 
 			Assert.IsNotNull(diggerArea);
-			diggerArea.DoJob(ref state);
+			diggerArea.DoJob(this, ref state);
 		}
 	}
 }

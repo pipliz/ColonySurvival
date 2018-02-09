@@ -226,16 +226,23 @@ Player {p} was disconnected.
 void OnPlayerMoved (Player p)
 Player {p} sent an updated position. Called approx 6 times per second per player. New position/rotation is set in {p}.
 
-bool OnTryChangeBlockUser (ModLoader.OnTryChangeBlockUserData d)
-Player {d.requestedBy} requested a block change from {d.typeTillNow} to {d.typeToBuild} at {d.VoxelToChange}.
-Used for building/digging by the player. The client assumes the change is okay, and renders the change immediately to reduce ping.
-Returning false will send a revert-the-change message to the client.
-Return whether or not to allow this change
-
-bool OnTryChangeBlockUserRequest (ModLoader.OnTryChangeBlockUserRequestData d)
-Similar to OnTryChangeBlockUser, but the client does not pre-emptively do the change, and does not expect a response.
-Used for the remove special block menu (banner, miner jobs, guard jobs)
-Return whether or not to allow this change
+void OnTryChangeBlock (ModLoader.OnTryChangeBlockData d)
+Callback triggered by ServerManager.TryChangeBlock. {d} has the following fields:
+{d.RequestedByPlayer} - the player (in)directly calling TryChangeBlock. Can be null for code originating calls.
+{d.Position} - the position where the change is desired
+{d.TypeOld} - block type at {d.Position} before any change
+{d.TypeNew} - block type desired at {d.Position} - BuiltinBlocks.Air for block removal. Can be changed.
+{d.CallbackState} - enum to communicate the effect of this callback. Can be changed.
+| Default - callback doesn't require altered handling of TryChangeBlock
+  - Will call World.TrySetTypeAt, ItemTypesServer.OnChange, send audio if callback origin is server & the flag is set and lastly it'll send the block change to players
+| CallbackConsumed - TryChangeBlock won't do anything more, and return {d.CallbackConsumedResult}
+| Cancelled - TryChangeBlock won't do anything more, and return false. (use for anti-grief etc)
+{d.CallbackOrigin} - enum to indicate what triggered TryChangeBlock
+| ClientPlayerManual - player digging
+| ClientScript - player through tools ('special block removal', command tool placing jobs)
+| Server - caused by server code
+{d.InventoryItemResults} - inventory results for the player, if the CallbackOrigin == ClientPlayerManual. Can be changed (don't null or store it though)
+{d.CallbackConsumedResult} - return value of TryChangeBlock when CallbackState is set to CallbackConsumed. Can be changed.
 
 void OnLoadingPlayer (JSONNode n, Player p)
 Player {p} was loaded with json file {n}.
@@ -327,9 +334,20 @@ Builtin callback uses:
 void OnMonsterDied (IMonster monster)
 Called when a monster died
 
-void OnMonsterHit (IMonster monster, Pipliz.Box<float> box)
-box.item1 -> damage
-{monster} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnMonsterHit (IMonster monster, ModLoader.OnHitData d)
+{monster} - the monster instance that is being hit
+{d.ResultDamage} - the resulting damage that will be applied to the {monster}
+{d.HitDamage} - the damage amount being done
+{d.HitSourceObject} & {d.HitSourceObjectType}
+| type enum indicates what type of source is used
+| None -> unknown, shouldn't really be used
+| Misc -> mod use?
+| PlayerProjectile -> hit by a players projectile, sourceObject is the Players.Player
+| PlayerClick -> hit by a players melee, sourceObject is the Players.Player
+| NPC -> hit by the npc's actions, sourceObject is the NPCBase
+| Monster -> hit by a monster's actions, sourceObject is the IMonster
+| FallDamage -> damage from falling. sourceObject is who caused the fall? :)
+
 
 void OnMonsterSpawned (IMonster monster)
 Called when a monster was spawned
@@ -358,13 +376,11 @@ Builtin callback uses:
   pipliz.server.refundrecruitement
     Add {old job} recruitment item to the stockpile
 
-void OnNPCHit (NPC.NPCBase npc, Pipliz.Box<float> box)
-box.item1 -> damage
-{npc} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnNPCHit (NPC.NPCBase npc, ModLoader.OnHitData d)
+See OnMonsterHit callback, they're pretty equivalent
 
-void OnPlayerHit (Players.Player player, Pipliz.Box<float> box)
-box.item1 -> damage
-{player} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnPlayerHit (Players.Player player, ModLoader.OnHitData d)
+See OnMonsterHit callback, they're pretty equivalent
 
 void OnPlayerClicked (Players.Player player, Pipliz.Box<Shared.PlayerClickedData> boxedData)
 boxedData.item1 -> clickedData

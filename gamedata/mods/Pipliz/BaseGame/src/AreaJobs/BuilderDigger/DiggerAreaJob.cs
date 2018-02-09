@@ -67,7 +67,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				.SetAs("max", (JSONNode)positionMax));
 		}
 
-		public virtual void DoJob (ref NPCBase.NPCState state)
+		public virtual void DoJob (IJob job, ref NPCBase.NPCState state)
 		{
 			while (iterationChunk0.y >= (positionMin.y & -16)) {
 				while (iterationChunk0.x <= (positionMax.x & -16)) {
@@ -85,7 +85,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 													while (iterationPosition.x < 4) {
 														while (iterationPosition.z < 4) {
 															Vector3Int pos = iterationChunk2 + iterationPosition;
-															if (DoJobAt(ref state, ref pos)) {
+															if (DoJobAt(job, ref state, ref pos)) {
 																return;
 															}
 														}
@@ -149,7 +149,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			AreaJobTracker.RemoveJob(this);
 		}
 
-		bool DoJobAt (ref NPCBase.NPCState state, ref Vector3Int jobPosition)
+		bool DoJobAt (IJob job, ref NPCBase.NPCState state, ref Vector3Int jobPosition)
 		{
 			if (jobPosition.x > positionMax.x
 				|| jobPosition.y > positionMax.y
@@ -163,7 +163,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			ushort foundType;
 			if (World.TryGetTypeAt(jobPosition, out foundType)) {
 				if (foundType != 0 && foundType != BuiltinBlocks.Water) {
-					if (ServerManager.TryChangeBlock(jobPosition, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
+					if (ServerManager.TryChangeBlock(jobPosition, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
 						iterationPosition.z++;
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(2.5f, 3.5f), foundType));
 					} else {
