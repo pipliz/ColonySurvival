@@ -1,24 +1,3 @@
-The current builtin mods:
--Pipliz/BlockNPCs
---Uses API's provided by Pipliz/APIProvider to define the furnace, grinder, mint, oven, quiver, shop and workbench.
--Pipliz/APIProvider
---Provides base classes/interfaces/managers for handling jobs definition
---Provides a basic recipe manager
---Provides a researchable manager/loader
--Pipliz/BaseResearch
---Provides the base game researchables
--Pipliz/WorldConverter
---When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
--Pipliz/colonyserverwrapper/colonyserverwrapperdll
---When the game is start with +logto {port}, this mod will try and connect the logging output / chat input to a tcp socket on that port on the local host.
-
-To get an idea of how to receive callbacks etc, take a look at the included mod sources.
-For mod development I'd recommend the debug and/or development branches of the game, as those are build as unity development builds.
-This should also allow connecting the unity profiler after installing unity, to log/check performance much more accurately than the included graphs. 
-
-
-
-
 These callbacks are called in order of placement here:
 
 void OnAssemblyLoaded (string p)
@@ -417,17 +396,3 @@ NPC temporary values - unused by server code
 Monster temporary values - unused by server code
 Player Temporary values: Variables stored in player.GetTempValues() dict (if set - defaults may not be in there)
 
-float pipliz.healthregenmax
-  Limit to which health regenerates, set by health regen size research
-
-float pipliz.healthregenspeed
-  Speed at which health regenerates, set by health regen speed research 
-
-float pipliz.healthmax
-  Max health, set by health size research
-
-int pipliz.bannersaferadius
-  Monster spawn safe radius
-
-bool pipliz.setflight
-  Whether or not /setflight true is active

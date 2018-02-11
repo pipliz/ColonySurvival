@@ -14,6 +14,7 @@
 -Fixed an issue where a world used for both singleplayer and multiplayer would return the singleplayer player in multiplayer for Players.TryMatchName (yey edge cases)
 
 Modding changes:
+-Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json
 -Removed NPC.Job; was only used by DefaultFarmerAreaJob<T>. Get/reuse code from the job types available in the APIProvider mod included instead
 -Added IAreaJob.AreaType, to indicate whether the area should show a 2d or 3d frame in the client
 -Added IAreaJob.IsValid, to indicate whether this area his been removed (to check invalidated references)

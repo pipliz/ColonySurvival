@@ -1,0 +1,123 @@
+types in types.json allow the following properties:
+
+"isDestructible"
+|	Defaults to true. Reads from parent if not set
+|	If set to false, the block won't be destroyed by the client but just drop the results.
+"isRotatable"
+|	Defaults to false. Doesn't read from parent
+|	If set to true, the client will show the rotation tool
+|	Will read rotated types from "rotatablex+", "rotatablex-", "rotatablez+", "rotatablez-"
+"isSolid"
+|	Defaults to true. Reads from parent if not set
+|	If true:
+-	|	The block will be rendered as a solid block
+	|	The block won't be traversable by AI
+	|	The block will cast shadows from torches
+|	If false:
+-	|	The block will be rendered using the "mesh" key
+	|	The block will be traversable by AI
+	|	The block won't cast shadows from torches
+"isFertile"
+|	Defaults to false. Reads from parent if not set
+|	If true, the game will allow placement of crops and farmers on top of this block
+"isPlaceable"
+|	Defaults to true. Reads from parent if not set
+|	If false, nothing will happen by rightclicking when this item is selected
+"needsBase"
+|	Defaults to false. Reads from parent if not set
+|	If true, the type will require a solid block below it to be placed, and if that block is removed the type will be removed.
+|	At the time of writing, this auto-removal does not refund the block to the owner / digger
+"maxStackSize"
+|	Default to 50. Reads from parent if not set. Range is [0, 2^16)
+|	Sets the stack size for the inventory hotbar and dragging.
+|	Influences how much a npc can gather before his inventory is full
+"nutritionalValue"
+|	Defaults to 0. Reads from parent if not set.
+|	Determines how edible this type is. Used for feeding colonists and healing yourself
+"mesh"
+|	No default. Reads from parent if not set.
+|	The mesh used to render this type. Requires "isSolid" : false in order to be rendered.
+|	Formats supported are .obj and .ply. Both have to be triangulated
+|	.obj supports only vertices, triangles and uv
+|	.ply supports vertices, triangles, uv and a color channel.
+|	Normals and tangents are discarded
+"icon"
+|	Defaults to "gamedata/textures/icons/error.png". Reads from parent if not set.
+|	Size preferably 64x64, format preferably .png. .jpg may work as well (untested).
+|	The icon used for display in the stockpile / inventory. 
+"onRemoveAudio"
+|	No default. Reads from parent if not set.
+|	The audio clip to play upon block removal
+"onPlaceAudio"
+|	No default. Reads from parent if not set.
+|	The audio clip to play upon block placement
+"destructionTime"
+|	Defaults to 400. Reads from parent if not set. -1 means use the default. Other negatives are undefined.
+|	Time in milliseconds for the player to hold the mouse to remove this type
+"customData"
+|	Custom data in JSON, intended for rare usecases and mod use. Available through code.
+|	No default, doesn't read from a parent.
+|	Builtin uses:
+-	|	"colors"
+	-	|	Only usable in combination with a .ply "mesh" containing vertex colors
+		|	Value is an array of strings in the format "#RRGGBB->#RRGGBB".
+		|	The first color in the string is the "source" vertex color, the second is the "goal" vertex color
+		|	It'll replace the colors of the mesh for this type
+	|	"farShadows"
+	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
+		|	If set to true, this type will cast shadows further in the distance and when off-screen.
+	|	"warnRemoval"
+	-	|	Boolean value, defaults to false.
+		|	If set to true, removal of this type will trigger a popup to confirm the action
+	|	"minerIsMineable"
+	-	|	Boolean value, defaults to false.
+		|	If set to true, a miner job can be placed on top of this job.
+	|	"minerMiningtime"
+	-	|	Floating point value.
+		|	Used when "minerIsMineable" : true.
+		|	The cooldown in seconds for the miner upon digging this.
+	|	"torches"
+	-	|	Config to add torches to a block.
+		|	Allows for adding 2 torches via using "a" and "b" keys
+		|	Range must be [1, 16]
+	|	"useNormalMap"
+	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
+		|	If true, the shader will enable normal maps for this type
+	|	"useHeightMap"
+	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
+		|	If true, the shader will enable height maps for this type
+	|	"renderOnlyIfSelected"
+	-	|	String value, must be a registered type. Only used in combination with a "mesh" key.
+		|	If set, meshes of this type will only be rendered when the set type is selected in the inventory.
+"parentType"
+|	No default, won't read from parents. Set the parent type, to use as a fallback for reading various keys.
+"rotatablex+"
+"rotatablex-"
+"rotatablez+"
+"rotatablez-"
+|	No default, won't read from parents. See "isRotatable"
+"sideall"
+|	Defaults to "missingerror", reads from parents if not set.
+|	Only used if not a "mesh" but a block type
+|	If set, this will be the base texturemapping used. Set to "SELF" and it'll use the type itself (going up the parent chain if available)
+"sidex+"
+"sidex-"
+"sidey+"
+"sidey-"
+"sidez+"
+"sidez-"
+|	Defaults to "sideall" if that is set. Otherwise, "missingerror"
+|	Only used if not a "mesh" but a block type.
+|	Specific sides of the block. When both these and "sideall" are set, these will take priority.
+"color"
+|	Defaults to #FFFFFF. Reads from parents if not set.
+|	Color which will be multiplied with the albedo texture in the shader.
+|	Used to make multiple color variants of the same textures.
+"onRemoveType"
+"onRemoveAmount"
+"onRemoveChance"
+"onRemove"
+|	Defaults to dropping 1 of the type itself.
+|	Searches for the first instance of any of these keys going up the hierarchy
+|	When found, it checks for onRemove. If onRemove exists, those are the items/chances dropped upon removal
+|	If onRemove doesn't exist, it'll drop according to onRemoveType, onRemoveAmount and onRemoveChance (which default to this type, 1 amount, 1.0 chance)
