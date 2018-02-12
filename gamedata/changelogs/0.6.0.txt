@@ -2,16 +2,22 @@
 
 -Basic version of diggers (Much WIP, make an area using the command tool to dig, then place digger jobs from the command tool adjacent to it)
 
+-Disable Eye Adaptation setting if hardware/drivers don't support it (requires shader model 5 / compute shaders)
+-Added a modifier key to hold while recruiting colonists to recruit 15 per click (default left control, "Quick Hire Modifier" in controls menu)
 -The area selected during the 'area removal popup' is now sort of transparent to show up more clearly
 -Fixed an issue where colonists could run into a circle, where they're switching between 2 crates thinking they get closer each time.
 | Should also somewhat improve crate finding (i.e, they won't swap incorrectly for a further away crate when halfway)
 -Fix colonists missing items to take a job (i.e, pickaxe, axe, slings etc) displaying a ? instead of the item as missing
--Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
--Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
--Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
 -Fixed 0.5.1+ changelog dates being in 2017
 -Fixed modded locales falling back to the clients' en-US instead of the server one
 -Fixed an issue where a world used for both singleplayer and multiplayer would return the singleplayer player in multiplayer for Players.TryMatchName (yey edge cases)
+-Changed npc eating to be more random (they get 70%-130% of the food value) in order to spread their eating moments throughout the day
+-Changed npc hunger to try and maintain a minimum 3 hours of food instead of 1 hour minimum
+-Changed npc hunger to eat up to 10 hours of food, instead of up to 15 hours.
+
+-Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
+-Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
+-Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
 
 Modding changes:
 -Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json
@@ -45,3 +51,5 @@ Modding changes:
 | Added optional arguments for damage source and damage source type
 -Changed OnPlayerHit callback to be of type Action<Players.Player, ModLoader.OnHitData>
 | See updated mod_callbacks.txt on OnPlayerHit
+-Added support for 4th version digit (Major.Minor[.Build[.Revision]], -1 = unused digit)
+| Added version.IsSubVersionOf(other) to check for subversions (i.e, other revision count if checking against x.x.x, or other build count if checking against x.x are allowed)

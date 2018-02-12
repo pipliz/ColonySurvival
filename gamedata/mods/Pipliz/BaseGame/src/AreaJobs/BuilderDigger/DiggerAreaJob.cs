@@ -164,6 +164,12 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			if (World.TryGetTypeAt(jobPosition, out foundType)) {
 				if (foundType != 0 && foundType != BuiltinBlocks.Water) {
 					if (ServerManager.TryChangeBlock(jobPosition, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+						var drops = ItemTypes.GetType(foundType).OnRemoveItems;
+						for (int i = 0; i < drops.Count; i++) {
+							if (Random.NextDouble() <= drops[i].chance) {
+								Stockpile.GetStockPile(job.Owner).Add(drops[i].item);
+							}
+						}
 						iterationPosition.z++;
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(2.5f, 3.5f), foundType));
 					} else {
