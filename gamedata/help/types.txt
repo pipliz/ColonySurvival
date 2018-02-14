@@ -121,3 +121,14 @@ types in types.json allow the following properties:
 |	Searches for the first instance of any of these keys going up the hierarchy
 |	When found, it checks for onRemove. If onRemove exists, those are the items/chances dropped upon removal
 |	If onRemove doesn't exist, it'll drop according to onRemoveType, onRemoveAmount and onRemoveChance (which default to this type, 1 amount, 1.0 chance)
+"colliders"
+|	No default. Reads from parents if not set.
+|	Defines a list of colliders and what type of colliders they are
+|	Available keys within the colliders object node:
+-	|	"collidePlayer" - defaults to true; whether or not these boxes collide with the player
+	|	"collideSelection" - defaults to true; whether or not these boxes collide with selection rays
+	|	"boxes" - no default; array of format [{"min":[-0.5, -0.5, -0.5],"max":[0.5, 0.5, 0.5]}, ....].
+	-	|	min is the minimum corner of the box, max the maximum corner. max - min = size of box. Center (0, 0, 0) is the middle of the voxel.
+"blocksPathing"
+|	Reads from parents if not set. If not found, defaults to what "isSolid" finds
+|	Allows to make a type block pathing while having a mesh

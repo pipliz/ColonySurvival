@@ -16,6 +16,10 @@
 		"maxStackSize" : 600
 	},
 	"alkanetstage1" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -32,6 +36,10 @@
 		"sideall" : "neutral"
 	},
 	"alkanetstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#446bc8"]
 		},
@@ -83,6 +91,10 @@
 		"sideall" : "neutral"
 	},
 	"bedend" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"isRotatable" : true,
 		"parentType" : "bed",
 		"rotatablex-" : "bedendx-",
@@ -107,18 +119,34 @@
 		"parentType" : "bedend"
 	},
 	"bedx-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[0.4,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedx-.ply",
 		"parentType" : "bed"
 	},
 	"bedx+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedx+.ply",
 		"parentType" : "bed"
 	},
 	"bedz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[-0.5,-0.5,0.4]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedz-.ply",
 		"parentType" : "bed"
 	},
 	"bedz+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,-0.4],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedz+.ply",
 		"parentType" : "bed"
 	},
@@ -270,6 +298,10 @@
 		"sideall" : "SELF"
 	},
 	"cherrysapling" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#dda5c7"]
 		},
@@ -435,6 +467,10 @@
 		"maxStackSize" : 600
 	},
 	"flaxstage1" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -451,6 +487,10 @@
 		"sideall" : "neutral"
 	},
 	"flaxstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#7e48ed"]
 		},
@@ -581,6 +621,10 @@
 		"maxStackSize" : 600
 	},
 	"hollyhockstage1" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -597,6 +641,10 @@
 		"sideall" : "neutral"
 	},
 	"hollyhockstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#850f18"]
 		},
@@ -1028,30 +1076,30 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockblackx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockblack"
 	},
@@ -1073,30 +1121,30 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockbrowndarkx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
@@ -1118,30 +1166,30 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockbrownlightx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
@@ -1163,30 +1211,30 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockgreyx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockgrey"
 	},
@@ -1208,30 +1256,30 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockwhitex-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitex+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitez-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitez+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockwhite"
 	},
@@ -1253,6 +1301,10 @@
 		"sideall" : "SELF"
 	},
 	"sappling" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#0e6306"]
 		},
@@ -1418,6 +1470,10 @@
 		"sideall" : "SELF"
 	},
 	"torchx-" : {
+		"colliders" : {
+			"boxes" : [{"max":[-0.1,0.3,0.25],"min":[-0.5,-0.25,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
@@ -1426,6 +1482,10 @@
 		"parentType" : "torch"
 	},
 	"torchx+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.3,0.25],"min":[0.1,-0.25,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":0.25,"offsety":0.18,"range":16,"volume":0.5}}
@@ -1434,6 +1494,10 @@
 		"parentType" : "torch"
 	},
 	"torchy+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.1,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":-0.08,"range":16,"volume":0.5}}
@@ -1443,6 +1507,10 @@
 		"parentType" : "torch"
 	},
 	"torchz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.3,-0.1],"min":[-0.25,-0.25,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
@@ -1451,6 +1519,10 @@
 		"parentType" : "torch"
 	},
 	"torchz+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.3,0.5],"min":[-0.25,-0.25,0.1]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":0.25,"range":16,"volume":0.5}}
@@ -1476,6 +1548,10 @@
 		"onRemoveAudio" : "grassDelete"
 	},
 	"wheatstage1" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1488,6 +1564,10 @@
 		"sideall" : "neutral"
 	},
 	"wheatstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1501,6 +1581,10 @@
 		"sideall" : "neutral"
 	},
 	"wheatstage3" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#ceac0d"]
 		},
@@ -1520,6 +1604,10 @@
 		"maxStackSize" : 600
 	},
 	"wolfsbanestage1" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1536,6 +1624,10 @@
 		"sideall" : "neutral"
 	},
 	"wolfsbanestage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#ecdc02"]
 		},
