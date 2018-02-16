@@ -28,7 +28,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual NPCType NPCType { get { return Definition.UsedNPCType; } }
 		public virtual bool NeedsItems { get { return shouldDumpInventory; } }
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
-		public virtual Shared.EAreaType AreaType { get { return Shared.EAreaType.TwoD; } }
+		public virtual Shared.EAreaType AreaType { get { return Shared.EAreaType.ThreeD; } }
 
 		public virtual IAreaJobDefinition Definition
 		{

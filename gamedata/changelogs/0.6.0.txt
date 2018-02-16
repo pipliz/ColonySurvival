@@ -4,8 +4,13 @@
 -Added a "crouch" button, which will slow you down and prevent falling off edges (default left control)
 -Added more precise collision boxes to most complex objects (beds, crops, torches, job outlines)
 -Added a modifier key to hold while recruiting colonists to recruit 15 per click (default left control, "Quick Hire Modifier" in controls menu)
--Changed the "Special Block Removal" warning popup to appear after you've destroyed the block like any normal block (so it's not instant on click anymore)
+-Removed the "Special Block Removal" warning popup when destroying a warning block
+| Warning blocks destroy like any normal block now. "Hidden" blocks will re-appear while destroying them.
+| Popup still appears if clicking on them with the command tool
+-Disabled remove area popup when digging through blocks below an area - click it while holding the command tool instead
 
+-Taught farmers how to farm on a place with existing crops
+-Taught farmers to abandon their farm if one of their ground blocks is removed or changed to something non-fertile
 -Disable Eye Adaptation setting if hardware/drivers don't support it (requires shader model 5 / compute shaders)
 -The area selected during the 'area removal popup' is now sort of transparent to show up more clearly
 -Fixed an issue where colonists could run into a circle, where they're switching between 2 crates thinking they get closer each time.
@@ -23,6 +28,7 @@
 -Fixed an issue with the "height" at which npc's stand on top of non-block-sized types.
 | They'll stand/walk at the height returned by sweeping a box sized (0.25, 0.25, 0.25) through the boxcolliders from the middle-top straight down
 -Slightly improved collision detection during low framerates
+-Fixed a rare server error which breaks chunk loading (happens when 2 or more players queue up an already loaded chunk at the same time)
 -Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
 -Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
 -Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
@@ -64,3 +70,8 @@ Modding changes:
 -Changed "boxColliders" format used in types.json - see "colliders" at end of gamedata/help/types.txt
 -Removed outdated/unused World.CanSee() method
 -Added type.BlocksPathing, type.CollidePlayer, type.CollideSelection - see gamedata/help/types.txt
+-Added a setter to ScientistJob.CraftingCooldown
+-Added a MiningCooldown property to the MinerJob
+-Made some fields public in the MinerJob
+-"renderOnlyIfSelected" types will now render if the player is actively hitting them
+-Removed Shared.EAreaType.TwoD, only ThreeD and ThreeDActive now

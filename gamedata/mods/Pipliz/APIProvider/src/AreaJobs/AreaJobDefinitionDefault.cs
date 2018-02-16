@@ -121,9 +121,22 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
 							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
-							ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
-							state.SetCooldown(1.0);
-							shouldDumpInventory = false;
+							ushort typeBelow;
+							if (World.TryGetTypeAt(positionSub.Add(0, -1, 0), out typeBelow)) {
+								// check for fertile below
+								if (ItemTypes.GetType(typeBelow).IsFertile) {
+									ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
+									state.SetCooldown(1.0);
+									shouldDumpInventory = false;
+								} else {
+									// not fertile below
+									AreaJobTracker.RemoveJob(job);
+									state.SetCooldown(2.0);
+								}
+							} else {
+								// didn't load this part of the world
+								state.SetCooldown(Random.NextFloat(3f, 6f));
+							}
 						} else {
 							state.SetIndicator(new Shared.IndicatorState(2f, typeSeeds, true, false));
 							shouldDumpInventory = state.Inventory.UsedCapacity > 0f;

@@ -318,7 +318,6 @@ namespace Pipliz.Mods.BaseGame
 
 		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string colorGoal)
 		{
-
 			ItemRotator(
 				items,
 				new RotatorSettings(
@@ -340,7 +339,8 @@ namespace Pipliz.Mods.BaseGame
 								)
 							)
 						)
-						.SetAs("destructionTime", 600)
+						.SetAs("onRemoveAudio", "woodDeleteLight")
+						.SetAs("destructionTime", 1000)
 						.SetAs("needsBase", true)
 						.SetAs("isSolid", false)
 						.SetAs("onRemove", new JSONNode(NodeType.Array))
