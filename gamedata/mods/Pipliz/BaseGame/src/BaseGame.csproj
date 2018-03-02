@@ -36,14 +36,14 @@
   <ItemGroup>
     <Compile Include="AreaJobs\BerryFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\Alkanet.cs" />
-    <Compile Include="AreaJobs\BuilderDigger\DiggerAreaJob.cs" />
-    <Compile Include="AreaJobs\BuilderDigger\DiggerAreaDefinition.cs" />
+    <Compile Include="BuilderDigger\ConstructionArea.cs" />
+    <Compile Include="BuilderDigger\ConstructionAreaDefinition.cs" />
     <Compile Include="AreaJobs\Wolfsbane.cs" />
     <Compile Include="AreaJobs\Hollyhock.cs" />
     <Compile Include="AreaJobs\FlaxFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\TemperateForesterAreaJob.cs" />
     <Compile Include="AreaJobs\WheatFarmerAreaJob.cs" />
-    <Compile Include="BlockJobsImplementations\DiggerJob.cs" />
+    <Compile Include="BuilderDigger\ConstructionJob.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardCrossbowNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockDay.cs" />
@@ -71,6 +71,13 @@
     <Compile Include="BlockJobsImplementations\WorkBenchJob.cs" />
     <Compile Include="BlockJobsImplementations\OvenJob.cs" />
     <Compile Include="BlockJobsImplementations\FurnaceJob.cs" />
+    <Compile Include="BuilderDigger\IIterationType.cs" />
+    <Compile Include="BuilderDigger\Iterators\BottomToTop.cs" />
+    <Compile Include="BuilderDigger\Iterators\IteratorHelper.cs" />
+    <Compile Include="BuilderDigger\Iterators\TopToBottom.cs" />
+    <Compile Include="BuilderDigger\Types\BuilderBasic.cs" />
+    <Compile Include="BuilderDigger\Types\DiggerBasic.cs" />
+    <Compile Include="BuilderDigger\IConstructionType.cs" />
     <Compile Include="GrowableBlocks\Wolfsbane.cs" />
     <Compile Include="GrowableBlocks\Hollyhock.cs" />
     <Compile Include="GrowableBlocks\CherrySapling.cs" />

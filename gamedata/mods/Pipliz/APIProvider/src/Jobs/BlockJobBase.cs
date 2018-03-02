@@ -84,8 +84,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			state.SetCooldown(0.1);
+			state.JobIsDone = true;
 		}
 
 		public virtual void OnAssignedNPC (NPCBase npc)

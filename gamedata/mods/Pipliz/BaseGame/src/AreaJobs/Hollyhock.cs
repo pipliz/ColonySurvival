@@ -16,6 +16,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				BuiltinBlocks.HollyhockStage2
 			};
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.hollyhockfarmer");
+			areaType = Shared.EAreaType.HollyhockFarm;
 		}
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)

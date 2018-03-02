@@ -132,3 +132,7 @@ types in types.json allow the following properties:
 "blocksPathing"
 |	Reads from parents if not set. If not found, defaults to what "isSolid" finds
 |	Allows to make a type block pathing while having a mesh
+"categories"
+|	Defaults to none, Does not read from parents.
+|	Array node of strings that indicate which categories this type belongs to, from most important to least important.
+|	The client will sort the stockpile according to these categories.

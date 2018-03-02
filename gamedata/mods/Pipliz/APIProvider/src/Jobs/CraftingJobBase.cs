@@ -28,7 +28,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
-			blockInventory = new NPCInventory(node["inventory"]);
+			blockInventory = new NPCInventory(10000000f, node["inventory"]);
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			return this;
 		}
@@ -118,7 +118,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 				state.SetCooldown(0.3);
 			}
 			state.JobIsDone = true;

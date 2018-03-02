@@ -19,6 +19,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				BuiltinBlocks.FlaxStage2
 			};
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.flaxfarmer");
+			areaType = Shared.EAreaType.FlaxFarm;
 		}
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)

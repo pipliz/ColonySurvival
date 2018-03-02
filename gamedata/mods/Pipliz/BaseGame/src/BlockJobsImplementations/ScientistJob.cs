@@ -116,7 +116,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			}
 			state.SetCooldown(0.5);
 			state.JobIsDone = true;

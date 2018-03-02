@@ -16,6 +16,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			identifier = "pipliz.berryfarm";
 			fileName = "berryfarms";
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
+			areaType = Shared.EAreaType.BerryFarm;
 		}
 
 		/// Override it to use custom berryfarmerjob, to store some per-job data

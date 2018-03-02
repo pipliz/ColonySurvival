@@ -16,6 +16,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			identifier = "pipliz.temperateforest";
 			fileName = "temperateforester";
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.forester");
+			areaType = Shared.EAreaType.Forestry;
 		}
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)

@@ -18,7 +18,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
 		public static void AfterDefiningNPCTypes ()
 		{
-			BlockJobManagerTracker.Register<DiggerJob>("diggerjob");
+			BlockJobManagerTracker.Register<Construction.ConstructionJob>("constructionjob");
 			BlockJobManagerTracker.Register<MinerJob>("minerjob");
 			BlockJobManagerTracker.Register<WoodcutterJob>("splittingstump");
 			BlockJobManagerTracker.Register<BloomeryJob>("bloomery");

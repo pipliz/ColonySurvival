@@ -1,13 +1,14 @@
 0.6.0 (2018-**-**)
 
--Basic version of diggers (Much WIP, make an area using the command tool to dig, then place digger jobs from the command tool adjacent to it)
+-Basic version of diggers (Much WIP, make an area using the command tool to dig, then place construction jobs from the command tool adjacent to it)
+-Basic version of builders (Much WIP, make an area using the command tool to dig, then place construction jobs from the command tool adjacent to it)
 -Added a "crouch" button, which will slow you down and prevent falling off edges (default left control)
 -Added more precise collision boxes to most complex objects (beds, crops, torches, job outlines)
 -Added a modifier key to hold while recruiting colonists to recruit 15 per click (default left control, "Quick Hire Modifier" in controls menu)
 -Removed the "Special Block Removal" warning popup when destroying a warning block
 | Warning blocks destroy like any normal block now. "Hidden" blocks will re-appear while destroying them.
 | Popup still appears if clicking on them with the command tool
--Disabled remove area popup when digging through blocks below an area - click it while holding the command tool instead
+-Disabled remove area popup when digging through blocks below/in an area - click it while holding the command tool instead
 
 -Taught farmers how to farm on a place with existing crops
 -Taught farmers to abandon their farm if one of their ground blocks is removed or changed to something non-fertile
@@ -32,18 +33,25 @@
 -Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
 -Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
 -Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
+-Optimized performance:
+| In a very large world fps went from ~10 on 0.5.3 to ~40+ on 0.6.0 (!)
+| Overhauled NPC rendering - very large improvement in performance
+| Optimized rendering large amounts of meshed blocks (wheat, beds - using larger batches & optimized code, tiny improvement)
+| Reduced indicator rendering range from 180 blocks to 75 blocks
+-NPCs now have to dump their inventory manually after changing jobs / losing their job, instead of magic clearing
+-Added ragdoll settings to /gamedata/savegames/client.json (ragdoll count, ragdoll alive duration)
 
 Modding changes:
 -Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json
 -Removed NPC.Job; was only used by DefaultFarmerAreaJob<T>. Get/reuse code from the job types available in the APIProvider mod included instead
--Added IAreaJob.AreaType, to indicate whether the area should show a 2d or 3d frame in the client
 -Added IAreaJob.IsValid, to indicate whether this area his been removed (to check invalidated references)
 -Added bool AreaJobTracker.ExistingAreaAt (min, max, out List<jobs>)
 | Get a list of areas overlapping the area between min and max
 | Optionally return the List<jobs> to AreaJobTracker.AreaJobListPool when you're done with it
 -Pipliz.Helpers.IOHelper.CreateDirectoryFromFile now doesn't error if there's no directory in the path (will return null though)
 -The JSON Deserialize methods now have a bool option "stringInterning", defaults to true.
-| Set it to false if the json you're loading has lots of unique string data that isn't stored for the duration of the game
+-ByteReader.ReadString and .ReadOptionalString now take an optional parameter whether or not to intern the string. Defaults to false.
+| Set it to false if the data you're reading is unique and short lived
 -ThreadedObjectPool<T> constructor function is now optional, will fallback to Activator.CreateInstance<T>()
 -Merged ServerManager.TryChangeBlock, ServerManager.TryChangeBlockUserRequest and ServerManager.TryChangeBlockUserRequest
 | Mainly changed so that diggers can be limited by anti-grief
@@ -74,4 +82,17 @@ Modding changes:
 -Added a MiningCooldown property to the MinerJob
 -Made some fields public in the MinerJob
 -"renderOnlyIfSelected" types will now render if the player is actively hitting them
--Removed Shared.EAreaType.TwoD, only ThreeD and ThreeDActive now
+-Removed NPCInventory.SetCapacity() - the Capacity property now has a public setter.
+-Changed NPCInventory(JSONNode) constructor - now takes an argument for inventory size instead of reading it from the jsonnode.
+-Changed NPCInventory.GetJSON() - doesn't store capacity in the node anymore
+-Renamed NPCInventory.TryDump (Stockpile) to NPCInventory.Dump (Stockpile) - there was no trying involved
+-Renamed AreaType to Shared.EAreaType
+-Renamed Shared.EAreaType to Shared.EAreaTypeMesh (yeah this will be confusing)
+-Added IAreaJob.AreaType - used to indicate the area type to the client (used by the command tool to check for digger area presence)
+-Added IAreaJob.AreaTypeMesh - to indicate what type of visualization the area should use on the client
+-Added a protected areaType variable to the AreaJobDefinitionDefault from the APIProvider, which the DefaultFarmerAreaJob uses to implement IAreaJob.AreaType
+-ItemType.OnRemoveItems can now be null
+-Added ItemType.Categories, a (nullable) List<string> of categories the item belongs to, sorted by priority. Used for sorting the stockpile on the client. See gamedata/help/types.txt.
+-Added ItemType.HasCategory (category) for easier category checking
+-Added ItemTypes.NotableTypes - a List<ItemType> of all types that have categories set to them. Used for the /lootall command
+-Removed ItemTypesServer.ItemSortOrder & co, replaced with the ItemType.Categories field & ItemTypes.NotableTypes property

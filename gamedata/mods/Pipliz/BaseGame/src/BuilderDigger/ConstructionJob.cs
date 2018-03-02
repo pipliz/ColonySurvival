@@ -7,24 +7,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace Pipliz.Mods.BaseGame.BlockNPCs
+namespace Pipliz.Mods.BaseGame.Construction
 {
-	public class DiggerJob : BlockJobBase, IBlockJobBase, INPCTypeDefiner
+	public class ConstructionJob : BlockJobBase, IBlockJobBase, INPCTypeDefiner
 	{
-		protected AreaJobs.DiggerAreaJob diggerArea;
+		protected ConstructionArea constructionArea;
 		protected bool isAreaPresenceTestDone = false;
 		protected ushort blockType;
 
-		public override string NPCTypeKey { get { return "pipliz.bloomeryjob"; } }
+		public override string NPCTypeKey { get { return "pipliz.constructor"; } }
 
 		public NPCTypeStandardSettings GetNPCTypeDefinition ()
 		{
 			return new NPCTypeStandardSettings()
 			{
 				keyName = NPCTypeKey,
-				printName = "DiggerDude",
-				maskColor1 = new UnityEngine.Color32(255, 255, 0, 255),
-				type = NPCTypeID.GetNextID()
+				printName = "Construction Worker",
+				maskColor1 = new Color32(255, 255, 0, 255),
+				type = NPCTypeID.GetNextID(),
+				inventoryCapacity = 0.1f
 			};
 		}
 
@@ -50,38 +51,38 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
-			if (diggerArea != null && !diggerArea.IsValid) {
-				diggerArea = null;
+			if (constructionArea != null && !constructionArea.IsValid) {
+				constructionArea = null;
 			}
 
 			Vector3 pos = usedNPC.Position.Vector;
 			if (blockType == 0) {
 				World.TryGetTypeAt(position, out blockType);
 			}
-			if (blockType == BuiltinBlocks.DiggerJobXP) {
+			if (blockType == BuiltinBlocks.ConstructionJobXP) {
 				usedNPC.LookAt(pos + Vector3.right);
-			} else if (blockType == BuiltinBlocks.DiggerJobXN) {
+			} else if (blockType == BuiltinBlocks.ConstructionJobXN) {
 				usedNPC.LookAt(pos + Vector3.left);
-			} else if (blockType == BuiltinBlocks.DiggerJobZP) {
+			} else if (blockType == BuiltinBlocks.ConstructionJobZP) {
 				usedNPC.LookAt(pos + Vector3.forward);
-			} else if (blockType == BuiltinBlocks.DiggerJobZN) {
+			} else if (blockType == BuiltinBlocks.ConstructionJobZN) {
 				usedNPC.LookAt(pos + Vector3.back);
 			}
 
-			if (diggerArea == null) {
+			if (constructionArea == null) {
 				List<IAreaJob> jobs;
 				if (AreaJobTracker.ExistingAreaAt(position.Add(-1, -1, -1), position.Add(1, 1, 1), out jobs)) {
 					for (int i = 0; i < jobs.Count; i++) {
-						AreaJobs.DiggerAreaJob diggerAreaTest = jobs[i] as AreaJobs.DiggerAreaJob;
-						if (diggerAreaTest != null) {
-							diggerArea = diggerAreaTest;
+						ConstructionArea neighbourArea = jobs[i] as ConstructionArea;
+						if (neighbourArea != null) {
+							constructionArea = neighbourArea;
 							break;
 						}
 					}
 					AreaJobTracker.AreaJobListPool.Return(jobs);
 				}
 
-				if (diggerArea == null) {
+				if (constructionArea == null) {
 					if (isAreaPresenceTestDone) {
 						state.SetCooldown(0.5);
 						ServerManager.TryChangeBlock(position, 0);
@@ -93,8 +94,8 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				}
 			}
 
-			Assert.IsNotNull(diggerArea);
-			diggerArea.DoJob(this, ref state);
+			Assert.IsNotNull(constructionArea);
+			constructionArea.DoJob(this, ref state);
 		}
 	}
 }

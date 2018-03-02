@@ -28,7 +28,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual NPCType NPCType { get { return Definition.UsedNPCType; } }
 		public virtual bool NeedsItems { get { return shouldDumpInventory; } }
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
-		public virtual Shared.EAreaType AreaType { get { return Shared.EAreaType.ThreeD; } }
+		public virtual Shared.EAreaType AreaType { get { return Definition.AreaType; } }
+		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.AutoSelect; } }
 
 		public virtual IAreaJobDefinition Definition
 		{
@@ -147,9 +148,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		protected bool TryDumpNPCInventory (ref NPCBase.NPCState npcState)
 		{
-			if (!npcState.Inventory.IsEmpty) {
-				npcState.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
-			}
+			npcState.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			return true;
 		}
 	}

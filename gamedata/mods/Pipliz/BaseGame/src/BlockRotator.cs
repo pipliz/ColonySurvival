@@ -170,6 +170,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "furnaceside")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"furnacelittop",
 					"furnaceunlittop",
@@ -208,6 +211,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "stonebricks")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"stonebricks",
 					"stonebricks",
@@ -237,6 +243,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "bricks")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"bricks",
 					"bricks",
@@ -266,6 +275,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "ironblock")
 						.SetAs("destructionTime", 1500)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"ironblock",
 					"ironblock",
@@ -295,6 +307,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "grassDelete")
 						.SetAs("sideall", "dirt")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					null,
 					"dirt",
@@ -313,7 +328,7 @@ namespace Pipliz.Mods.BaseGame
 			RegisterGuardBlock(items, "guardcrossbownightjob", "#919dba");
 			RegisterGuardBlock(items, "guardmatchlockdayjob", "#e5e960");
 			RegisterGuardBlock(items, "guardmatchlocknightjob", "#e5e960");
-			RegisterGuardBlock(items, "diggerjob", "#ff00ff");
+			RegisterGuardBlock(items, "constructionjob", "#ff00ff");
 		}
 
 		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string colorGoal)
@@ -340,7 +355,6 @@ namespace Pipliz.Mods.BaseGame
 							)
 						)
 						.SetAs("onRemoveAudio", "woodDeleteLight")
-						.SetAs("destructionTime", 1000)
 						.SetAs("needsBase", true)
 						.SetAs("isSolid", false)
 						.SetAs("onRemove", new JSONNode(NodeType.Array))

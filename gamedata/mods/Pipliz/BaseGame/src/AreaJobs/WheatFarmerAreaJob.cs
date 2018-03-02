@@ -20,6 +20,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				BuiltinBlocks.WheatStage3
 			};
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.wheatfarmer");
+			areaType = Shared.EAreaType.WheatFarm;
 		}
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)

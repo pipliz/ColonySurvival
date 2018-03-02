@@ -1,4 +1,4 @@
-﻿namespace Pipliz.Mods.BaseGame.AreaJobs
+﻿namespace Pipliz.Mods.BaseGame.Construction
 {
 	using APIProvider.AreaJobs;
 	using Collections;
@@ -7,11 +7,13 @@
 	using NPC;
 	using Server.NPCs;
 	using System.Threading;
+	using Shared;
+	using System;
 
 	[AreaJobDefinitionAutoLoader]
-	public class DiggerAreaDefinition : IAreaJobDefinition
+	public class ConstructionAreaDefinition : IAreaJobDefinition
 	{
-		protected NPCType npcType = NPCType.GetByKeyNameOrDefault("pipliz.digger");
+		protected NPCType npcType = NPCType.GetByKeyNameOrDefault("pipliz.constructor");
 
 		protected SortedList<Players.Player, JSONNode> SavedJobs;
 
@@ -20,9 +22,11 @@
 
 		public virtual NPCType UsedNPCType { get { return npcType; } }
 
-		public virtual string Identifier { get { return "pipliz.diggerarea"; } }
+		public virtual string Identifier { get { return "pipliz.constructionarea"; } }
 
-		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/diggerareas.json", ServerManager.WorldName); } }
+		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/constructionareas.json", ServerManager.WorldName); } }
+
+		public virtual EAreaType AreaType { get { throw new NotImplementedException(); } }
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, JSONNode node)
 		{
@@ -40,17 +44,24 @@
 				max.y = child.GetAsOrDefault("y", -1);
 				max.z = child.GetAsOrDefault("z", -1);
 			}
-			return CreateAreaJob(owner, min, max);
+			JSONNode args;
+			if (node.TryGetChild("arguments", out args)) {
+				if (args.NodeType == NodeType.Value && args.GetAs<string>() == "none") {
+					return null;
+				}
+			}
+			ConstructionArea area = (ConstructionArea)CreateAreaJob(owner, min, max);
+			area.SetArgument(args);
+			return area;
 		}
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
-			return new DiggerAreaJob(owner, min, max);
+			return new ConstructionArea(owner, min, max);
 		}
 
 		public virtual void OnRemove (IAreaJob job)
 		{
-
 		}
 
 		public virtual void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
@@ -80,7 +91,7 @@
 		public virtual void FinishLoading ()
 		{
 			while (!FinishedLoadingEvent.WaitOne(500)) {
-				Log.Write("Waiting for digger areas to finish loading...");
+				Log.Write("Waiting for construction areas to finish loading...");
 			}
 			FinishedLoadingEvent = null;
 			if (LoadedRoot != null) {
@@ -97,6 +108,9 @@
 				JSONNode array = pair.Value;
 				for (int i = 0; i < array.ChildCount; i++) {
 					var job = CreateAreaJob(player, array[i]);
+					if (job == null) {
+						continue;
+					}
 					if (!AreaJobTracker.RegisterAreaJob(job)) {
 						job.OnRemove();
 					}
@@ -106,7 +120,7 @@
 
 		public virtual void SaveJob (Players.Player owner, JSONNode data)
 		{
-			Log.Write("Saving a digger area");
+			Log.Write("Saving a construction area");
 			if (SavedJobs == null) {
 				SavedJobs = new SortedList<Players.Player, JSONNode>(10);
 			}
@@ -123,7 +137,7 @@
 			General.Application.StartAsyncQuitToComplete(delegate ()
 			{
 				if (General.Application.IsQuiting) {
-					Log.Write("Saving {0} diggerareas", SavedJobs == null ? 0 : SavedJobs.Count);
+					Log.Write("Saving {0} construction areas", SavedJobs == null ? 0 : SavedJobs.Count);
 				}
 
 				JSONNode root = new JSONNode();

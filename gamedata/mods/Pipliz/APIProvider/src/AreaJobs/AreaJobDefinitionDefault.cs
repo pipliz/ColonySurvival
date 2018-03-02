@@ -14,6 +14,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		protected string identifier;
 		protected ushort[] stages;
 		protected NPCType npcType;
+		protected Shared.EAreaType areaType;
 
 		protected SortedList<Players.Player, JSONNode> SavedJobs;
 
@@ -25,6 +26,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual string Identifier { get { return identifier; } }
 
 		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/{1}.json", ServerManager.WorldName, fileName); } }
+
+		public virtual Shared.EAreaType AreaType { get { return areaType; } }
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, JSONNode node)
 		{
