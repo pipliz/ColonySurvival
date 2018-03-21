@@ -198,6 +198,8 @@ Builtin callback uses:
     Calls ITerrainGenerator.StartSendingBiomeData on the active terrain generator.
   pipliz.server.sendsetflight
     Sends whether or not /setflight true was active
+  pipliz.mods.basegame.sendconstructiondata
+    Sends builder & digger limits
 
 void OnPlayerDisconnected (Player p)
 Player {p} was disconnected.
