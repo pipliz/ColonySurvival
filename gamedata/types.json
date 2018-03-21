@@ -1,5 +1,8 @@
 {
 	"adobe" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/adobe.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "dirtPlace",
@@ -11,11 +14,23 @@
 		"isSolid" : false
 	},
 	"alkanet" : {
+		"categories" : [
+			"food",
+			"flower"
+		],
 		"icon" : "gamedata/textures/icons/alkanet.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
 	"alkanetstage1" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -32,6 +47,10 @@
 		"sideall" : "neutral"
 	},
 	"alkanetstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#446bc8"]
 		},
@@ -67,6 +86,9 @@
 		"isPlaceable" : false
 	},
 	"bed" : {
+		"categories" : [
+			"essential"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"]
 		},
@@ -83,6 +105,10 @@
 		"sideall" : "neutral"
 	},
 	"bedend" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"isRotatable" : true,
 		"parentType" : "bed",
 		"rotatablex-" : "bedendx-",
@@ -107,34 +133,62 @@
 		"parentType" : "bedend"
 	},
 	"bedx-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[0.4,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedx-.ply",
 		"parentType" : "bed"
 	},
 	"bedx+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedx+.ply",
 		"parentType" : "bed"
 	},
 	"bedz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[-0.5,-0.5,0.4]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedz-.ply",
 		"parentType" : "bed"
 	},
 	"bedz+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,-0.4],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"mesh" : "gamedata/meshes/bedz+.ply",
 		"parentType" : "bed"
 	},
 	"berry" : {
+		"categories" : [
+			"food"
+		],
 		"icon" : "gamedata/textures/icons/berry.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600,
 		"nutritionalValue" : 0.6
 	},
 	"berrybush" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/berrybush.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"blackplanks" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"icon" : "gamedata/textures/icons/blackplanks.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
@@ -142,19 +196,33 @@
 		"sideall" : "SELF"
 	},
 	"bow" : {
+		"categories" : [
+			"essential",
+			"weapon"
+		],
 		"icon" : "gamedata/textures/icons/bow.png",
 		"isPlaceable" : false
 	},
 	"bowstring" : {
+		"categories" : [
+			"ingredient"
+		],
 		"icon" : "gamedata/textures/icons/bowstring.png",
 		"isPlaceable" : false
 	},
 	"bread" : {
+		"categories" : [
+			"food"
+		],
 		"icon" : "gamedata/textures/icons/bread.png",
 		"isPlaceable" : false,
 		"nutritionalValue" : 3
 	},
 	"bricks" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"icon" : "gamedata/textures/icons/bricks.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "stonePlace",
@@ -162,6 +230,10 @@
 		"sideall" : "SELF"
 	},
 	"bricksblack" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#434343",
 		"icon" : "gamedata/textures/icons/bricksblack.png",
 		"maxStackSize" : 100,
@@ -170,6 +242,10 @@
 		"sideall" : "bricksgeneric"
 	},
 	"bricksdarkred" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#69413c",
 		"icon" : "gamedata/textures/icons/bricksdarkred.png",
 		"maxStackSize" : 100,
@@ -178,6 +254,10 @@
 		"sideall" : "bricksgeneric"
 	},
 	"bricksdarkyellow" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#8d5f38",
 		"icon" : "gamedata/textures/icons/bricksdarkyellow.png",
 		"maxStackSize" : 100,
@@ -186,6 +266,10 @@
 		"sideall" : "bricksgeneric"
 	},
 	"bricksred" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#7c312e",
 		"icon" : "gamedata/textures/icons/bricksred.png",
 		"maxStackSize" : 100,
@@ -194,6 +278,9 @@
 		"sideall" : "bricksgeneric"
 	},
 	"bronzeanvil" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/bronzeanvil.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -201,30 +288,58 @@
 		"sidey+" : "bronzeanvil"
 	},
 	"bronzearrow" : {
+		"categories" : [
+			"essential",
+			"ammo"
+		],
 		"icon" : "gamedata/textures/icons/bronzearrow.png",
 		"isPlaceable" : false
 	},
 	"bronzeaxe" : {
+		"categories" : [
+			"essential",
+			"bronze"
+		],
 		"icon" : "gamedata/textures/icons/bronzeaxe.png",
 		"isPlaceable" : false
 	},
 	"bronzecoin" : {
+		"categories" : [
+			"ingredient",
+			"bronze"
+		],
 		"icon" : "gamedata/textures/icons/bronzecoin.png",
 		"isPlaceable" : false
 	},
 	"bronzeingot" : {
+		"categories" : [
+			"ingredient",
+			"bronze"
+		],
 		"icon" : "gamedata/textures/icons/bronzeingot.png",
 		"isPlaceable" : false
 	},
 	"bronzepickaxe" : {
+		"categories" : [
+			"essential",
+			"bronze"
+		],
 		"icon" : "gamedata/textures/icons/bronzepickaxe.png",
 		"isPlaceable" : false
 	},
 	"bronzeplate" : {
+		"categories" : [
+			"ingredient",
+			"bronze"
+		],
 		"icon" : "gamedata/textures/icons/bronzeplate.png",
 		"isPlaceable" : false
 	},
 	"carpetblue" : {
+		"categories" : [
+			"decorative",
+			"carpet"
+		],
 		"color" : "#0e3f77",
 		"icon" : "gamedata/textures/icons/carpetblue.png",
 		"maxStackSize" : 200,
@@ -233,6 +348,10 @@
 		"sideall" : "carpet"
 	},
 	"carpetred" : {
+		"categories" : [
+			"decorative",
+			"carpet"
+		],
 		"color" : "#971113",
 		"icon" : "gamedata/textures/icons/carpetred.png",
 		"maxStackSize" : 200,
@@ -241,6 +360,10 @@
 		"sideall" : "carpet"
 	},
 	"carpetwhite" : {
+		"categories" : [
+			"decorative",
+			"carpet"
+		],
 		"color" : "#dedede",
 		"icon" : "gamedata/textures/icons/carpetwhite.png",
 		"maxStackSize" : 200,
@@ -249,6 +372,10 @@
 		"sideall" : "carpet"
 	},
 	"carpetyellow" : {
+		"categories" : [
+			"decorative",
+			"carpet"
+		],
 		"color" : "#c6a218",
 		"icon" : "gamedata/textures/icons/carpetyellow.png",
 		"maxStackSize" : 200,
@@ -257,10 +384,17 @@
 		"sideall" : "carpet"
 	},
 	"charcoal" : {
+		"categories" : [
+			"ingredient",
+			"fuel"
+		],
 		"icon" : "gamedata/textures/icons/charcoal.png",
 		"isPlaceable" : false
 	},
 	"cherryblossom" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/cherryblossom.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"cherryblossom"},
@@ -270,6 +404,14 @@
 		"sideall" : "SELF"
 	},
 	"cherrysapling" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#dda5c7"]
 		},
@@ -282,21 +424,36 @@
 		"sideall" : "neutral"
 	},
 	"clay" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/clay.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"clothing" : {
+		"categories" : [
+			"ingredient",
+			"linen"
+		],
 		"icon" : "gamedata/textures/icons/clothing.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 25
 	},
 	"coalore" : {
+		"categories" : [
+			"ingredient",
+			"fuel"
+		],
 		"icon" : "gamedata/textures/icons/coalore.png",
 		"isPlaceable" : false
 	},
 	"coatedplanks" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"icon" : "gamedata/textures/icons/coatedplanks.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
@@ -304,6 +461,10 @@
 		"sideall" : "SELF"
 	},
 	"cobblestoneblack" : {
+		"categories" : [
+			"decorative",
+			"cobblestone"
+		],
 		"color" : "#161616",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/cobblestoneblack.png",
@@ -313,6 +474,10 @@
 		"sideall" : "cobblestone"
 	},
 	"cobblestoneblue" : {
+		"categories" : [
+			"decorative",
+			"cobblestone"
+		],
 		"color" : "#2b344f",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/cobblestoneblue.png",
@@ -322,6 +487,10 @@
 		"sideall" : "cobblestone"
 	},
 	"cobblestonebrown" : {
+		"categories" : [
+			"decorative",
+			"cobblestone"
+		],
 		"color" : "#807767",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/cobblestonebrown.png",
@@ -331,6 +500,10 @@
 		"sideall" : "cobblestone"
 	},
 	"cobblestonegrey" : {
+		"categories" : [
+			"decorative",
+			"cobblestone"
+		],
 		"color" : "#8b8b8b",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/cobblestonegrey.png",
@@ -340,6 +513,10 @@
 		"sideall" : "cobblestone"
 	},
 	"cobblestonered" : {
+		"categories" : [
+			"decorative",
+			"cobblestone"
+		],
 		"color" : "#761f1f",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/cobblestonered.png",
@@ -349,6 +526,10 @@
 		"sideall" : "cobblestone"
 	},
 	"cokes" : {
+		"categories" : [
+			"ingredient",
+			"fuel"
+		],
 		"icon" : "gamedata/textures/icons/cokes.png",
 		"isPlaceable" : false
 	},
@@ -356,45 +537,75 @@
 		"icon" : "gamedata/textures/icons/commandtool.png",
 		"isPlaceable" : false
 	},
-	"constructiontool" : {
-		"icon" : "gamedata/textures/icons/constructiontool.png",
-		"isPlaceable" : false
-	},
 	"copper" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/copper.png",
 		"isPlaceable" : false
 	},
 	"coppernails" : {
+		"categories" : [
+			"ingredient",
+			"copper"
+		],
 		"icon" : "gamedata/textures/icons/coppernails.png",
 		"isPlaceable" : false
 	},
 	"copperparts" : {
+		"categories" : [
+			"ingredient",
+			"copper"
+		],
 		"icon" : "gamedata/textures/icons/copperparts.png",
 		"isPlaceable" : false
 	},
 	"coppertools" : {
+		"categories" : [
+			"ingredient",
+			"copper"
+		],
 		"icon" : "gamedata/textures/icons/coppertools.png",
 		"isPlaceable" : false
 	},
 	"crate" : {
+		"categories" : [
+			"essential",
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/crate.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "SELF"
 	},
 	"crossbow" : {
+		"categories" : [
+			"essential",
+			"weapon"
+		],
 		"icon" : "gamedata/textures/icons/crossbow.png",
 		"isPlaceable" : false
 	},
 	"crossbowbolt" : {
+		"categories" : [
+			"essential",
+			"ammo"
+		],
 		"icon" : "gamedata/textures/icons/crossbowbolt.png",
 		"isPlaceable" : false
 	},
 	"crystal" : {
+		"categories" : [
+			"ingredient"
+		],
 		"icon" : "gamedata/textures/icons/crystal.png",
 		"isPlaceable" : false
 	},
 	"darkstone" : {
+		"categories" : [
+			"decorative"
+		],
 		"customData" : {
 			"minerIsMineable" : true,
 			"minerMiningTime" : 3
@@ -407,6 +618,9 @@
 		"sideall" : "infinitestone"
 	},
 	"dirt" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/dirt.png",
 		"isFertile" : true,
 		"maxStackSize" : 200,
@@ -415,6 +629,9 @@
 		"sideall" : "SELF"
 	},
 	"dyertable" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/dyertable.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -430,15 +647,31 @@
 		"parentType" : "missingerror"
 	},
 	"firewood" : {
+		"categories" : [
+			"ingredient",
+			"fuel"
+		],
 		"icon" : "gamedata/textures/icons/firewood.png",
 		"isPlaceable" : false
 	},
 	"flax" : {
+		"categories" : [
+			"food",
+			"flower"
+		],
 		"icon" : "gamedata/textures/icons/flax.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
 	"flaxstage1" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -455,6 +688,10 @@
 		"sideall" : "neutral"
 	},
 	"flaxstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#7e48ed"]
 		},
@@ -472,29 +709,52 @@
 		"sideall" : "neutral"
 	},
 	"flour" : {
+		"categories" : [
+			"food"
+		],
 		"icon" : "gamedata/textures/icons/flour.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
 	"galenalead" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/galenalead.png",
 		"isPlaceable" : false
 	},
 	"galenasilver" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/galenasilver.png",
 		"isPlaceable" : false
 	},
 	"goldcoin" : {
+		"categories" : [
+			"ingredient",
+			"gold"
+		],
 		"icon" : "gamedata/textures/icons/goldcoin.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 400
 	},
 	"goldingot" : {
+		"categories" : [
+			"ingredient",
+			"gold"
+		],
 		"icon" : "gamedata/textures/icons/goldingot.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 200
 	},
 	"goldore" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/goldore.png",
 		"isPlaceable" : false
 	},
@@ -505,6 +765,10 @@
 		"onRemoveAudio" : "grassDelete"
 	},
 	"grassrainforest" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
 		"icon" : "gamedata/textures/icons/grassrainforest.png",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"grassrainforest"},
@@ -515,6 +779,10 @@
 		"sideall" : "SELF"
 	},
 	"grasssavanna" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
 		"icon" : "gamedata/textures/icons/grasssavanna.png",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"grasssavanna"},
@@ -524,6 +792,10 @@
 		"sideall" : "SELF"
 	},
 	"grasstaiga" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
 		"icon" : "gamedata/textures/icons/grasstaiga.png",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"grasstaiga"},
@@ -534,6 +806,10 @@
 		"sideall" : "SELF"
 	},
 	"grasstemperate" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
 		"icon" : "gamedata/textures/icons/grasstemperate.png",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"grasstemperate"},
@@ -544,6 +820,10 @@
 		"sideall" : "SELF"
 	},
 	"grasstundra" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
 		"icon" : "gamedata/textures/icons/grasstundra.png",
 		"onRemove" : [
 			{"amount":1,"chance":1,"type":"grasstundra"},
@@ -553,6 +833,9 @@
 		"sideall" : "SELF"
 	},
 	"grindstone" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/grindstone.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -560,14 +843,24 @@
 		"sidey+" : "grindstone"
 	},
 	"gunpowder" : {
+		"categories" : [
+			"ingredient"
+		],
 		"icon" : "gamedata/textures/icons/gunpowder.png",
 		"isPlaceable" : false
 	},
 	"gunpowderpouch" : {
+		"categories" : [
+			"essential",
+			"ammo"
+		],
 		"icon" : "gamedata/textures/icons/gunpowderpouch.png",
 		"isPlaceable" : false
 	},
 	"gunsmithshop" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/gunsmithshop.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -575,16 +868,32 @@
 		"sidey+" : "gunsmithshop"
 	},
 	"gypsum" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/gypsum.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 200
 	},
 	"hollyhock" : {
+		"categories" : [
+			"food",
+			"flower"
+		],
 		"icon" : "gamedata/textures/icons/hollyhock.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
 	"hollyhockstage1" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -601,6 +910,10 @@
 		"sideall" : "neutral"
 	},
 	"hollyhockstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#850f18"]
 		},
@@ -723,32 +1036,60 @@
 		"sideall" : "SELF"
 	},
 	"ironblock" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/ironblock.png",
 		"onPlaceAudio" : "stoneDelete",
 		"onRemoveAudio" : "stonePlace",
 		"sideall" : "SELF"
 	},
 	"ironingot" : {
+		"categories" : [
+			"ingredient",
+			"iron"
+		],
 		"icon" : "gamedata/textures/icons/ironingot.png",
 		"isPlaceable" : false
 	},
 	"ironore" : {
+		"categories" : [
+			"ingredient",
+			"raw",
+			"iron"
+		],
 		"icon" : "gamedata/textures/icons/ironore.png",
 		"isPlaceable" : false
 	},
 	"ironrivet" : {
+		"categories" : [
+			"ingredient",
+			"iron"
+		],
 		"icon" : "gamedata/textures/icons/ironrivet.png",
 		"isPlaceable" : false
 	},
 	"ironsword" : {
+		"categories" : [
+			"ingredient",
+			"iron"
+		],
 		"icon" : "gamedata/textures/icons/ironsword.png",
 		"isPlaceable" : false
 	},
 	"ironwrought" : {
+		"categories" : [
+			"ingredient",
+			"iron"
+		],
 		"icon" : "gamedata/textures/icons/ironwrought.png",
 		"isPlaceable" : false
 	},
 	"lanternblue" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#4f5fff",
 		"customData" : {
 			"torches" : {"a":{"color":"#4f5fff","intensity":12.5,"range":16,"volume":0.5}}
@@ -760,6 +1101,10 @@
 		"sideall" : "lantern"
 	},
 	"lanterncyan" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#3bc1bf",
 		"customData" : {
 			"torches" : {"a":{"color":"#3bc1bf","intensity":12.5,"range":16,"volume":0.5}}
@@ -771,6 +1116,10 @@
 		"sideall" : "lantern"
 	},
 	"lanterngreen" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#56ad4a",
 		"customData" : {
 			"torches" : {"a":{"color":"#56ad4a","intensity":12.5,"range":16,"volume":0.5}}
@@ -782,6 +1131,10 @@
 		"sideall" : "lantern"
 	},
 	"lanternorange" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#e66f27",
 		"customData" : {
 			"torches" : {"a":{"color":"#e66f27","intensity":12.5,"range":16,"volume":0.5}}
@@ -793,6 +1146,10 @@
 		"sideall" : "lantern"
 	},
 	"lanternpink" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#d233a6",
 		"customData" : {
 			"torches" : {"a":{"color":"#d233a6","intensity":12.5,"range":16,"volume":0.5}}
@@ -804,6 +1161,10 @@
 		"sideall" : "lantern"
 	},
 	"lanternred" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#d33030",
 		"customData" : {
 			"torches" : {"a":{"color":"#d33030","intensity":12.5,"range":16,"volume":0.5}}
@@ -815,6 +1176,10 @@
 		"sideall" : "lantern"
 	},
 	"lanternwhite" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#a7a7a7",
 		"customData" : {
 			"torches" : {"a":{"color":"#a7a7a7","intensity":12.5,"range":16,"volume":0.5}}
@@ -826,6 +1191,10 @@
 		"sideall" : "lantern"
 	},
 	"lanternyellow" : {
+		"categories" : [
+			"decorative",
+			"lantern"
+		],
 		"color" : "#997b45",
 		"customData" : {
 			"torches" : {"a":{"color":"#997b45","intensity":12.5,"range":16,"volume":0.5}}
@@ -837,10 +1206,18 @@
 		"sideall" : "lantern"
 	},
 	"lead" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/lead.png",
 		"isPlaceable" : false
 	},
 	"leadbullet" : {
+		"categories" : [
+			"essential",
+			"ammo"
+		],
 		"icon" : "gamedata/textures/icons/leadbullet.png",
 		"isPlaceable" : false
 	},
@@ -850,6 +1227,10 @@
 		"onRemoveAudio" : "grassDelete"
 	},
 	"leavestaiga" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
 		"icon" : "gamedata/textures/icons/leavestaiga.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestaiga"},
@@ -859,6 +1240,10 @@
 		"sideall" : "SELF"
 	},
 	"leavestemperate" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
 		"icon" : "gamedata/textures/icons/leavestemperate.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestemperate"},
@@ -868,19 +1253,34 @@
 		"sideall" : "SELF"
 	},
 	"linen" : {
+		"categories" : [
+			"ingredient",
+			"linen"
+		],
 		"icon" : "gamedata/textures/icons/linen.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 100
 	},
 	"linenbag" : {
+		"categories" : [
+			"ingredient",
+			"linen"
+		],
 		"icon" : "gamedata/textures/icons/linenbag.png",
 		"isPlaceable" : false
 	},
 	"linenpouch" : {
+		"categories" : [
+			"ingredient",
+			"linen"
+		],
 		"icon" : "gamedata/textures/icons/linenpouch.png",
 		"isPlaceable" : false
 	},
 	"linseedoil" : {
+		"categories" : [
+			"ingredient"
+		],
 		"icon" : "gamedata/textures/icons/linseedoil.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
@@ -890,12 +1290,20 @@
 		"onRemoveAudio" : "woodDeleteHeavy"
 	},
 	"logtaiga" : {
+		"categories" : [
+			"essential",
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/logtaiga.png",
 		"onRemoveAmount" : 1,
 		"parentType" : "log",
 		"sideall" : "SELF"
 	},
 	"logtemperate" : {
+		"categories" : [
+			"essential",
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/logtemperate.png",
 		"onRemoveAmount" : 1,
 		"parentType" : "log",
@@ -909,10 +1317,17 @@
 		"sideall" : "SELF"
 	},
 	"matchlockgun" : {
+		"categories" : [
+			"essential",
+			"weapon"
+		],
 		"icon" : "gamedata/textures/icons/matchlockgun.png",
 		"isPlaceable" : false
 	},
 	"mint" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/mint.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -924,6 +1339,11 @@
 		"sideall" : "error"
 	},
 	"planks" : {
+		"categories" : [
+			"essential",
+			"decorative",
+			"planks"
+		],
 		"icon" : "gamedata/textures/icons/planks.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
@@ -931,6 +1351,10 @@
 		"sideall" : "SELF"
 	},
 	"planksblue" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#36487c",
 		"icon" : "gamedata/textures/icons/planksblue.png",
 		"maxStackSize" : 200,
@@ -939,6 +1363,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"plankscyan" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#50b4ae",
 		"icon" : "gamedata/textures/icons/plankscyan.png",
 		"maxStackSize" : 200,
@@ -947,6 +1375,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"planksgreen" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#4e9a42",
 		"icon" : "gamedata/textures/icons/planksgreen.png",
 		"maxStackSize" : 200,
@@ -955,6 +1387,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"planksgrey" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#696969",
 		"icon" : "gamedata/textures/icons/planksgrey.png",
 		"maxStackSize" : 200,
@@ -963,6 +1399,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"plankspink" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#f99eb4",
 		"icon" : "gamedata/textures/icons/plankspink.png",
 		"maxStackSize" : 200,
@@ -971,6 +1411,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"planksred" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#8b3426",
 		"icon" : "gamedata/textures/icons/planksred.png",
 		"maxStackSize" : 200,
@@ -979,6 +1423,10 @@
 		"sideall" : "planksgeneric"
 	},
 	"planksyellow" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"color" : "#c6cd53",
 		"icon" : "gamedata/textures/icons/planksyellow.png",
 		"maxStackSize" : 200,
@@ -987,6 +1435,9 @@
 		"sideall" : "planksgeneric"
 	},
 	"plasterblock" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/plasterblock.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "dirtPlace",
@@ -1015,6 +1466,10 @@
 		"parentType" : "projectile_parent"
 	},
 	"quarterblockblack" : {
+		"categories" : [
+			"decorative",
+			"stairs"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#242321"]
 		},
@@ -1032,34 +1487,38 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockblackx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockbrowndark" : {
+		"categories" : [
+			"decorative",
+			"stairs"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#332106"]
 		},
@@ -1077,34 +1536,38 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockbrowndarkx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrownlight" : {
+		"categories" : [
+			"decorative",
+			"stairs"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#917451"]
 		},
@@ -1122,34 +1585,38 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockbrownlightx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockgrey" : {
+		"categories" : [
+			"decorative",
+			"stairs"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#636363"]
 		},
@@ -1167,34 +1634,38 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockgreyx-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyx+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyz-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyz+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockwhite" : {
+		"categories" : [
+			"decorative",
+			"stairs"
+		],
 		"customData" : {
 			"colors" : ["#ff0000->#c7c7c7"]
 		},
@@ -1212,34 +1683,38 @@
 		"sideall" : "neutral"
 	},
 	"quarterblockwhitex-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.0, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitex+" : {
-		"boxColliders" : [
-			"{0.0, -0.5, -0.5}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitez-" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, -0.5}, {0.5, 0.0, 0.0}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitez+" : {
-		"boxColliders" : [
-			"{-0.5, -0.5, 0.0}, {0.5, 0.0, 0.5}"
-		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
+		},
 		"mesh" : "gamedata/meshes/quarterblockz+.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"redplanks" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
 		"icon" : "gamedata/textures/icons/redplanks.png",
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
@@ -1247,16 +1722,31 @@
 		"sideall" : "SELF"
 	},
 	"salpeter" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/salpeter.png",
 		"isPlaceable" : false
 	},
 	"sand" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/sand.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"sappling" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#0e6306"]
 		},
@@ -1272,26 +1762,44 @@
 		
 	},
 	"sciencebagadvanced" : {
+		"categories" : [
+			"sciencebag"
+		],
 		"icon" : "gamedata/textures/icons/sciencebagadvanced.png",
 		"isPlaceable" : false
 	},
 	"sciencebagbasic" : {
+		"categories" : [
+			"sciencebag"
+		],
 		"icon" : "gamedata/textures/icons/sciencebagbasic.png",
 		"isPlaceable" : false
 	},
 	"sciencebagcolony" : {
+		"categories" : [
+			"sciencebag"
+		],
 		"icon" : "gamedata/textures/icons/sciencebagcolony.png",
 		"isPlaceable" : false
 	},
 	"sciencebaglife" : {
+		"categories" : [
+			"sciencebag"
+		],
 		"icon" : "gamedata/textures/icons/sciencebaglife.png",
 		"isPlaceable" : false
 	},
 	"sciencebagmilitary" : {
+		"categories" : [
+			"sciencebag"
+		],
 		"icon" : "gamedata/textures/icons/sciencebagmilitary.png",
 		"isPlaceable" : false
 	},
 	"sciencelab" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/sciencelab.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1299,6 +1807,9 @@
 		"sidey+" : "sciencelab"
 	},
 	"shop" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/shop.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1306,24 +1817,42 @@
 		"sidey+" : "shop"
 	},
 	"silveringot" : {
+		"categories" : [
+			"ingredient",
+			"silver"
+		],
 		"icon" : "gamedata/textures/icons/silveringot.png",
 		"isPlaceable" : false
 	},
 	"sling" : {
+		"categories" : [
+			"essential",
+			"weapon"
+		],
 		"icon" : "gamedata/textures/icons/sling.png",
 		"isPlaceable" : false
 	},
 	"slingbullet" : {
+		"categories" : [
+			"essential",
+			"ammo"
+		],
 		"icon" : "gamedata/textures/icons/slingbullet.png",
 		"isPlaceable" : false
 	},
 	"snow" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/snow.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"splittingstump" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/splittingstump.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteHeavy",
@@ -1331,14 +1860,25 @@
 		"sidey+" : "splittingstump"
 	},
 	"steelingot" : {
+		"categories" : [
+			"ingredient",
+			"steel"
+		],
 		"icon" : "gamedata/textures/icons/steelingot.png",
 		"isPlaceable" : false
 	},
 	"steelparts" : {
+		"categories" : [
+			"ingredient",
+			"steel"
+		],
 		"icon" : "gamedata/textures/icons/steelparts.png",
 		"isPlaceable" : false
 	},
 	"stoneblock" : {
+		"categories" : [
+			"decorative"
+		],
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/stoneblock.png",
 		"onPlaceAudio" : "stonePlace",
@@ -1347,6 +1887,10 @@
 		"sideall" : "SELF"
 	},
 	"stonebricks" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/stonebricks.png",
 		"maxStackSize" : 100,
@@ -1355,6 +1899,10 @@
 		"sideall" : "SELF"
 	},
 	"stonebricksblack" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#343434",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/stonebricksblack.png",
@@ -1364,6 +1912,10 @@
 		"sideall" : "stonebricksgeneric"
 	},
 	"stonebricksbrown" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#7a6b47",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/stonebricksbrown.png",
@@ -1373,6 +1925,10 @@
 		"sideall" : "stonebricksgeneric"
 	},
 	"stonebrickswhite" : {
+		"categories" : [
+			"decorative",
+			"bricks"
+		],
 		"color" : "#b2b2b2",
 		"destructionTime" : 600,
 		"icon" : "gamedata/textures/icons/stonebrickswhite.png",
@@ -1382,6 +1938,9 @@
 		"sideall" : "stonebricksgeneric"
 	},
 	"stonemasonworkbench" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/stonemasonworkbench.png",
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
@@ -1389,6 +1948,9 @@
 		"sidey+" : "stonemasonworkbench"
 	},
 	"straw" : {
+		"categories" : [
+			"decorative"
+		],
 		"icon" : "gamedata/textures/icons/straw.png",
 		"maxStackSize" : 100,
 		"onPlaceAudio" : "dirtPlace",
@@ -1396,6 +1958,9 @@
 		"sideall" : "SELF"
 	},
 	"tailorshop" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/tailorshop.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1403,6 +1968,9 @@
 		"sidey+" : "tailorshop"
 	},
 	"technologisttable" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/technologisttable.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1410,10 +1978,17 @@
 		"sidey+" : "technologisttable"
 	},
 	"tin" : {
+		"categories" : [
+			"ingredient",
+			"raw"
+		],
 		"icon" : "gamedata/textures/icons/tin.png",
 		"isPlaceable" : false
 	},
 	"torch" : {
+		"categories" : [
+			"essential"
+		],
 		"icon" : "gamedata/textures/icons/torch.png",
 		"isSolid" : false,
 		"maxStackSize" : 600,
@@ -1422,6 +1997,10 @@
 		"sideall" : "SELF"
 	},
 	"torchx-" : {
+		"colliders" : {
+			"boxes" : [{"max":[-0.1,0.3,0.25],"min":[-0.5,-0.25,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
@@ -1430,6 +2009,10 @@
 		"parentType" : "torch"
 	},
 	"torchx+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.3,0.25],"min":[0.1,-0.25,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":0.25,"offsety":0.18,"range":16,"volume":0.5}}
@@ -1438,6 +2021,10 @@
 		"parentType" : "torch"
 	},
 	"torchy+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.1,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":-0.08,"range":16,"volume":0.5}}
@@ -1447,6 +2034,10 @@
 		"parentType" : "torch"
 	},
 	"torchz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.3,-0.1],"min":[-0.25,-0.25,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
@@ -1455,6 +2046,10 @@
 		"parentType" : "torch"
 	},
 	"torchz+" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.3,0.5],"min":[-0.25,-0.25,0.1]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":0.25,"range":16,"volume":0.5}}
@@ -1464,9 +2059,13 @@
 	},
 	"water" : {
 		"icon" : "gamedata/textures/icons/water.png",
+		"isDestructible" : false,
 		"isSolid" : false
 	},
 	"wheat" : {
+		"categories" : [
+			"food"
+		],
 		"icon" : "gamedata/textures/icons/wheat.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600,
@@ -1480,6 +2079,14 @@
 		"onRemoveAudio" : "grassDelete"
 	},
 	"wheatstage1" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1492,6 +2099,10 @@
 		"sideall" : "neutral"
 	},
 	"wheatstage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1505,6 +2116,10 @@
 		"sideall" : "neutral"
 	},
 	"wheatstage3" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#ceac0d"]
 		},
@@ -1519,11 +2134,23 @@
 		"sideall" : "neutral"
 	},
 	"wolfsbane" : {
+		"categories" : [
+			"food",
+			"flower"
+		],
 		"icon" : "gamedata/textures/icons/wolfsbane.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
 	"wolfsbanestage1" : {
+		"categories" : [
+			"food",
+			"seed"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
@@ -1540,6 +2167,10 @@
 		"sideall" : "neutral"
 	},
 	"wolfsbanestage2" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
+			"collidePlayer" : false
+		},
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847","#00ff00->#ecdc02"]
 		},
@@ -1557,6 +2188,9 @@
 		"sideall" : "neutral"
 	},
 	"workbench" : {
+		"categories" : [
+			"job"
+		],
 		"icon" : "gamedata/textures/icons/workbench.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",

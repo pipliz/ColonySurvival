@@ -47,13 +47,19 @@
 	{
 		"name" : "pipliz.merchant.dirt",
 		"results":[{"type":"dirt","amount":10}],
-		"requires":[{"type":"bronzecoin","amount":3}],
+		"requires":[{"type":"bronzecoin","amount":6}],
 		"defaultLimit" : 0
 	},
 	{
 		"name" : "pipliz.merchant.grasstemperate",
 		"results":[{"type":"grasstemperate","amount":10}],
-		"requires":[{"type":"bronzecoin","amount":3}],
+		"requires":[{"type":"bronzecoin","amount":6}],
+		"defaultLimit" : 0
+	},
+	{
+		"name" : "pipliz.merchant.sand",
+		"results":[{"type":"sand","amount":10}],
+		"requires":[{"type":"bronzecoin","amount":10}],
 		"defaultLimit" : 0
 	}
 ]

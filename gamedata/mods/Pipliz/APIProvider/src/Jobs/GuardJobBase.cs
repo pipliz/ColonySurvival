@@ -22,7 +22,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (guardSettings.OnHitAudio != null) {
 				ServerManager.SendAudio(target.PositionToAimFor, guardSettings.OnHitAudio);
 			}
-			target.OnHit(guardSettings.shootDamage);
+			target.OnHit(guardSettings.shootDamage, usedNPC, ModLoader.OnHitData.EHitSourceType.NPC);
 		}
 
 		public override bool ToSleep

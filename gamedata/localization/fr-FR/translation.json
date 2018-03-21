@@ -1,5 +1,5 @@
 {
-	"coverage" : 100,
+	"coverage" : 93.8040345821326,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Reprendre la partie",
@@ -93,6 +93,54 @@
 					"description" : "Débloque l'atelier monétaire et les échoppes. La monnaie peut être utilisée pour acheter des graines, de la terre ou d'autres objets divers et variés",
 					"name" : "Monnaie et boutiques"
 				},
+				"constructionbuilder" : {
+					"description" : "_MISSING_Unlock builder areas for the construction worker",
+					"name" : "_MISSING_Builder"
+				},
+				"constructionbuildersize1" : {
+					"description" : "_MISSING_Increases maximum builder area size to 25.000",
+					"name" : "_MISSING_Builder Limit I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "_MISSING_Increases maximum builder area size to 100.000",
+					"name" : "_MISSING_Builder Limit II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "_MISSING_Increases maximum builder area size to 250.000",
+					"name" : "_MISSING_Builder Limit III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "_MISSING_Increases maximum builder area size to 500.000",
+					"name" : "_MISSING_Builder Limit IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
+					"name" : "_MISSING_Builder Limit V"
+				},
+				"constructiondigger" : {
+					"description" : "_MISSING_Unlock digger areas for the construction worker",
+					"name" : "_MISSING_Digger"
+				},
+				"constructiondiggersize1" : {
+					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
+					"name" : "_MISSING_Digger Limit I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "_MISSING_Increases maximum digger area size to 100.000",
+					"name" : "_MISSING_Digger Limit II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "_MISSING_Increases maximum digger area size to 250.000",
+					"name" : "_MISSING_Digger Limit III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "_MISSING_Increases maximum digger area size to 500.000",
+					"name" : "_MISSING_Digger Limit IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
+					"name" : "_MISSING_Digger Limit V"
+				},
 				"crossbow" : {
 					"description" : "Débloque l'arbalète, une arme plus puissante que l'arc",
 					"name" : "Arbalète"
@@ -138,19 +186,19 @@
 					"name" : "Augmentation des points de régénération IV"
 				},
 				"healthregenspeed1" : {
-					"description" : "Augmente la vitesse de régénération de 0,5 PV\/s à 1 PV\/s",
+					"description" : "Augmente la vitesse de régénération de 0,5 PV/s à 1 PV/s",
 					"name" : "Vitesse de régénération des PV I"
 				},
 				"healthregenspeed2" : {
-					"description" : "Augmente la vitesse de régénération de 1 PV\/s à 2 PV\/s",
+					"description" : "Augmente la vitesse de régénération de 1 PV/s à 2 PV/s",
 					"name" : "Vitesse de régénération des PV II"
 				},
 				"healthregenspeed3" : {
-					"description" : "Augmente la vitesse de régénération de 2 PV\/s à 3 PV\/s",
+					"description" : "Augmente la vitesse de régénération de 2 PV/s à 3 PV/s",
 					"name" : "Vitesse de régénération des PV III"
 				},
 				"healthregenspeed4" : {
-					"description" : "Augmente la vitesse de régénération de 3 PV\/s à 4 PV\/s",
+					"description" : "Augmente la vitesse de régénération de 3 PV/s à 4 PV/s",
 					"name" : "Vitesse de régénération des PV IV"
 				},
 				"healthsize1" : {
@@ -341,10 +389,22 @@
 				"berryfarmertool" : "Outil de cultivateur de baies",
 				"bow" : "Arc",
 				"bowtooltip" : "Dégâts : 100 PV\nPortée : 20 blocs\nRechargement : 5 secondes",
+				"buildera" : "_MISSING_Fill an area of the world",
+				"builderarea" : "_MISSING_Builder Area",
+				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"construction" : "_MISSING_Construction",
+				"construction1" : "_MISSING_Let them do the work",
+				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
+				"constructionjob" : "_MISSING_Construction Job",
+				"constructionjoba" : "_MISSING_Hires a construction worker",
+				"constructionjobb" : "_MISSING_Place next to a construction area",
 				"coversarea" : "La surface recouvre une zone de culture existante",
 				"crossbow" : "Arbalète",
 				"crossbowtooltip" : "Dégâts : 300 PV\nPortée : 25 blocs\nRechargement : 8 secondes",
 				"description" : "Sélectionnez le type de zone que vous souhaitez créer.",
+				"diggera" : "_MISSING_Dig out an area of the world",
+				"diggerarea" : "_MISSING_Digger Area",
+				"diggerb" : "_MISSING_Select the area to dig out",
 				"flaxb" : "Requiert : Graines de lin\nÀ placer sur de l'herbe ou de la terre",
 				"flaxfarmer" : "Cultivateur de lin",
 				"flaxfarmertool" : "Outil de cultivateur de lin",
@@ -364,6 +424,7 @@
 				"hollyhockfarmer" : "Cultivateur de roses trémières",
 				"hollyhockfarmertool" : "Outil de cultivateur de roses",
 				"hollyhockfarmertooltip" : "Requiert : graines de roses trémières\nÀ placer sur de l'herbe ou de la terre",
+				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "Archer de jour",
 				"jobbownight" : "Archer de nuit",
 				"jobcrossbowday" : "Arbalétrier de jour",
@@ -378,7 +439,8 @@
 				"minera" : "Mine des minerais",
 				"minerb" : "Requiert : Pioche\nCreuse sous ses pieds et à placer sur des minerais ou la roche sombre.",
 				"minertool" : "Outil de mineur",
-				"missingscience" : "<color=red>La technologie « {0} » doit d'abord avoir été débloquée.<\/color>",
+				"missingscience" : "<color=red>La technologie « {0} » doit d'abord avoir été débloquée.</color>",
+				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "Non cultivable",
 				"notflat" : "Le terrain n'est pas plat",
 				"notool" : "Aucun outil sélectionné",
@@ -474,10 +536,12 @@
 				"language" : "Langue",
 				"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent être moins complètes que d'autres."
 			},
+			"qualitycustom" : "_MISSING_Custom",
 			"qualityhigh" : "Élevé",
 			"qualitylow" : "Bas",
 			"qualitymaximum" : "Maximum",
 			"qualitymedium" : "Moyen",
+			"qualityminimum" : "_MISSING_Minimum",
 			"qualityoff" : "Désactivé",
 			"qualityon" : "Activé",
 			"qualityveryhigh" : "Très élevé",
@@ -490,6 +554,7 @@
 				"antialiasing" : "Anti-crénelage",
 				"bloom" : "Flou lumineux",
 				"depthoffield" : "Profondeur de champ",
+				"drawdistance" : "_MISSING_Draw distance",
 				"eyeadaptation" : "Adaptation des yeux",
 				"fieldofview" : "Champ de vision",
 				"full" : "Paramètres vidéo",
@@ -498,6 +563,7 @@
 				"fxaalow" : "FXAA bas",
 				"fxaamedium" : "FXAA moyen",
 				"lightscattering" : "Diffusion de la lumière",
+				"preset" : "_MISSING_Preset",
 				"resolution" : "Résolution",
 				"shaderquality" : "Qualité du shader",
 				"skyboxconstant" : "Skybox constante",
@@ -574,6 +640,7 @@
 		"cobblestonered" : "Pierres rouges",
 		"cokes" : "Coke",
 		"commandtool" : "Outil de commande",
+		"constructionjob" : "_MISSING_Construction Job",
 		"copper" : "Cuivre",
 		"coppernails" : "Clous en cuivre",
 		"copperparts" : "Éléments en cuivre",

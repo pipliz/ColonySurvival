@@ -15,9 +15,8 @@ namespace Pipliz.ColonyServerWrapper
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAssemblyLoaded, "pipliz.colonyserverwrapper.load")]
 		static void OnLoad (string path) {
-			Dictionary<string, string> args = UnityWrapper.ProcessLaunchArguments();
 			string logto;
-			if (args.TryGetValue("+logto", out logto)) {
+			if (UnityWrapper.CommandLineArgs.TryGetValue("+logto", out logto)) {
 				int port;
 				if (int.TryParse(logto, out port)) {
 					StartSendingLogsTo(port);

@@ -18,7 +18,10 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		bool shouldTakeItems;
 		public override string NPCTypeKey { get { return "pipliz.scientist"; } }
 
-		public virtual float CraftingCooldown { get { return StaticCraftingCooldown; } }
+		public virtual float CraftingCooldown {
+			get { return StaticCraftingCooldown; }
+			set { StaticCraftingCooldown = value; }
+		}
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
@@ -113,7 +116,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			}
 			state.SetCooldown(0.5);
 			state.JobIsDone = true;
