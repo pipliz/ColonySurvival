@@ -7,24 +7,26 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 		public Shared.EAreaType AreaType { get { return Shared.EAreaType.DiggerArea; } }
 		public Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
 
-		public void DoJob (IIterationType iterationType, IAreaJob job, ref NPC.NPCBase.NPCState state)
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
+		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPC.NPCBase.NPCState state)
 		{
 			if (iterationType == null) {
-				AreaJobTracker.RemoveJob(job);
+				AreaJobTracker.RemoveJob(areaJob);
 				return;
 			}
 
 			while (true) {
 				Vector3Int jobPosition = iterationType.CurrentPosition;
-
+				if (!jobPosition.IsValid) {
+					// failed to find next position to do job at, self-destruct
+					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
+					AreaJobTracker.RemoveJob(areaJob);
+					return;
+				}
 				ushort foundTypeIndex;
 				if (World.TryGetTypeAt(jobPosition, out foundTypeIndex)) {
-					if (!iterationType.MoveNext()) {
-						// failed to find next position to do job at, self-destruct
-						state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
-						AreaJobTracker.RemoveJob(job);
-						return;
-					}
+					iterationType.MoveNext();
 					if (foundTypeIndex != 0) {
 						ItemTypes.ItemType foundType = ItemTypes.GetType(foundTypeIndex);
 
@@ -32,22 +34,23 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 							continue; // skip this block, retry
 						}
 
-						if (ServerManager.TryChangeBlock(jobPosition, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
-							InventoryItem typeDropped = InventoryItem.Empty;
-							var onRemoveItems = ItemTypes.GetType(foundTypeIndex).OnRemoveItems;
-							for (int i = 0; i < onRemoveItems.Count; i++) {
-								if (Random.NextDouble() <= onRemoveItems[i].chance) {
-									typeDropped = onRemoveItems[i].item;
-									state.Inventory.Add(typeDropped);
-								}
+						if (ServerManager.TryChangeBlock(jobPosition, 0, areaJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+							float blockDestructionTime = GetCooldown(foundType.DestructionTime * 0.001f);
+							GatherResults.Clear();
+							var itemList = foundType.OnRemoveItems;
+							for (int i = 0; i < itemList.Count; i++) {
+								GatherResults.Add(itemList[i]);
 							}
 
-							float blockDestructionTime = GetCooldown(foundType.DestructionTime * 0.001f);
-							if (typeDropped.Amount > 0) {
-								state.SetIndicator(new Shared.IndicatorState(blockDestructionTime, typeDropped.Type));
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job, jobPosition, GatherResults);
+
+							InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+							if (toShow.Amount > 0) {
+								state.SetIndicator(new Shared.IndicatorState(blockDestructionTime, toShow.Type));
 							} else {
 								state.SetCooldown(blockDestructionTime);
 							}
+							state.Inventory.Add(GatherResults);
 						} else {
 							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
 						}

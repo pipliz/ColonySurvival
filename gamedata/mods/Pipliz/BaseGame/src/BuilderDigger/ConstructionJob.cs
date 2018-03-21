@@ -14,8 +14,11 @@ namespace Pipliz.Mods.BaseGame.Construction
 		protected ConstructionArea constructionArea;
 		protected bool isAreaPresenceTestDone = false;
 		protected ushort blockType;
+		public int storedItems = 0;
 
 		public override string NPCTypeKey { get { return "pipliz.constructor"; } }
+
+		public override bool NeedsItems { get { return storedItems == 0; } }
 
 		public NPCTypeStandardSettings GetNPCTypeDefinition ()
 		{
@@ -23,7 +26,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 			{
 				keyName = NPCTypeKey,
 				printName = "Construction Worker",
-				maskColor1 = new Color32(255, 255, 0, 255),
+				maskColor1 = new Color32(145, 22, 22, 255),
 				type = NPCTypeID.GetNextID(),
 				inventoryCapacity = 0.1f
 			};
@@ -32,6 +35,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
 			blockType = ItemTypes.IndexLookup.GetIndex(node.GetAsOrDefault("type", "air"));
+			storedItems = node.GetAsOrDefault("storedItems", 0);
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			return this;
 		}
@@ -45,8 +49,14 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public override JSONNode GetJSON ()
 		{
-			return base.GetJSON()
-				.SetAs("type", ItemTypes.IndexLookup.GetName(blockType));
+			JSONNode baseJSON = base.GetJSON();
+			if (blockType != 0) {
+				baseJSON.SetAs("type", ItemTypes.IndexLookup.GetName(blockType));
+			}
+			if (storedItems > 0) {
+				baseJSON.SetAs("storedItems", storedItems);
+			}
+			return baseJSON;
 		}
 
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
@@ -97,5 +107,15 @@ namespace Pipliz.Mods.BaseGame.Construction
 			Assert.IsNotNull(constructionArea);
 			constructionArea.DoJob(this, ref state);
 		}
+
+		public override void OnNPCAtStockpile (ref NPCBase.NPCState state)
+		{
+			storedItems = MaxStoredItems;
+			state.JobIsDone = true;
+			state.SetCooldown(0.2);
+			state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
+		}
+
+		public static int MaxStoredItems { get { return 5; } }
 	}
 }

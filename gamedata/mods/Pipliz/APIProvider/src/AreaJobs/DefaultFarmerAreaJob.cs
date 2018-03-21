@@ -20,7 +20,6 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual Vector3Int KeyLocation { get { return positionMin; } }
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
-		public virtual NPCBase UsedNPC { get { return usedNPC; } }
 		public virtual Players.Player Owner { get { return owner; } }
 		public virtual bool IsValid { get { return isValid; } }
 		public virtual bool NeedsNPC { get { return usedNPC == null || !usedNPC.IsValid; } }
@@ -30,6 +29,27 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
 		public virtual Shared.EAreaType AreaType { get { return Definition.AreaType; } }
 		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.AutoSelect; } }
+
+		public virtual NPCBase NPC
+		{
+			get { return usedNPC; }
+			set
+			{
+				if (usedNPC != value) {
+					if (usedNPC != null) {
+						usedNPC.ClearJob();
+					}
+					usedNPC = value;
+					if (usedNPC == null) {
+						JobTracker.Add(this);
+					} else {
+						usedNPC.TakeJob(this);
+					}
+				} else if (value == null) {
+					JobTracker.Add(this);
+				}
+			}
+		}
 
 		public virtual IAreaJobDefinition Definition
 		{
@@ -53,14 +73,11 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			positionMax = max;
 			this.owner = owner;
 
-			if (npcID != 0 && NPCTracker.TryGetNPC(npcID, out usedNPC)) {
-				usedNPC.TakeJob(this);
-			} else {
-				npcID = 0;
+			NPCBase foundNPC = null;
+			if (npcID != 0) {
+				NPCTracker.TryGetNPC(npcID, out foundNPC);
 			}
-			if (usedNPC == null) {
-				JobTracker.Add(this);
-			}
+			NPC = foundNPC;
 		}
 
 		public virtual NPCBase.NPCGoal CalculateGoal (ref NPCBase.NPCState state)
@@ -90,11 +107,6 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			return positionSub;
 		}
 
-		public virtual void OnAssignedNPC (NPCBase npc)
-		{
-			usedNPC = npc;
-		}
-
 		public virtual void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			Definition.OnNPCAtJob(this, ref positionSub, ref state, ref shouldDumpInventory);
@@ -116,17 +128,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		{
 			Definition.OnRemove(this);
 			isValid = false;
-			if (usedNPC != null) {
-				usedNPC.ClearJob();
-				usedNPC = null;
-			}
+			NPC = null;
 			JobTracker.Remove(owner, KeyLocation);
-		}
-
-		public virtual void OnRemovedNPC ()
-		{
-			usedNPC = null;
-			JobTracker.Add(this);
 		}
 
 		public virtual void SaveAreaJob ()

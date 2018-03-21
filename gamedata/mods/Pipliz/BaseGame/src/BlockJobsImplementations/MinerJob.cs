@@ -55,6 +55,8 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				.SetAs("type", ItemTypes.IndexLookup.GetName(type));
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			Vector3 rotate = usedNPC.Position.Vector;
@@ -70,10 +72,24 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			usedNPC.LookAt(rotate);
 
 			ServerManager.SendAudio(position.Vector, "stoneDelete");
+
+			GatherResults.Clear();
 			var itemList = ItemTypes.GetType(typeBelow).OnRemoveItems;
-			state.Inventory.Add(itemList);
+			for (int i = 0; i < itemList.Count; i++) {
+				GatherResults.Add(itemList[i]);
+			}
+
+			ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, position.Add(0, -1, 0), GatherResults);
+
+			InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+			if (toShow.Amount > 0) {
+				state.SetIndicator(new Shared.IndicatorState(MiningCooldown, toShow.Type));
+			} else {
+				state.SetCooldown(MiningCooldown);
+			}
+
+			state.Inventory.Add(GatherResults);
 			state.JobIsDone = true;
-			state.SetIndicator(new Shared.IndicatorState(MiningCooldown, itemList[0].item.Type));
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

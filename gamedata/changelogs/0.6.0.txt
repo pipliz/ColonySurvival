@@ -1,16 +1,22 @@
-0.6.0 (2018-**-**)
+0.6.0 (2018-03-23)
 
--Basic version of diggers (Much WIP, make an area using the command tool to dig, then place construction jobs from the command tool adjacent to it)
--Basic version of builders (Much WIP, make an area using the command tool to dig, then place construction jobs from the command tool adjacent to it)
--Added a "crouch" button, which will slow you down and prevent falling off edges (default left control)
+TODO: proper playerclicked data from special block removal popup
+
+-Added diggers
+-Added builders
+-Added a "crouch" button, which will slow you down and prevent falling off edges (default: left control)
+-Added draw distance setting (low, medium, high, very high - previously default was medium)
+-Added video setting presets
+-Very large performance improvements for larger colonies: NPC rendering vastly improved possibly quadrupling fps, various other things optimized
+-Vastly improved the speed and reliability of loading chunks, and vastly reduced network bandwith required for it
 -Added more precise collision boxes to most complex objects (beds, crops, torches, job outlines)
--Added a modifier key to hold while recruiting colonists to recruit 15 per click (default left control, "Quick Hire Modifier" in controls menu)
+-Farmer areas can now be made over existing crops
+-Added a modifier key to hold while recruiting colonists to recruit 15 per click (default: left control, "Quick Hire Modifier" in controls menu)
 -Removed the "Special Block Removal" warning popup when destroying a warning block
 | Warning blocks destroy like any normal block now. "Hidden" blocks will re-appear while destroying them.
 | Popup still appears if clicking on them with the command tool
 -Disabled remove area popup when digging through blocks below/in an area - click it while holding the command tool instead
 
--Taught farmers how to farm on a place with existing crops
 -Taught farmers to abandon their farm if one of their ground blocks is removed or changed to something non-fertile
 -Disable Eye Adaptation setting if hardware/drivers don't support it (requires shader model 5 / compute shaders)
 -The area selected during the 'area removal popup' is now sort of transparent to show up more clearly
@@ -40,6 +46,26 @@
 | Reduced indicator rendering range from 180 blocks to 75 blocks
 -NPCs now have to dump their inventory manually after changing jobs / losing their job, instead of magic clearing
 -Added ragdoll settings to /gamedata/savegames/client.json (ragdoll count, ragdoll alive duration)
+-Rewrote chunk transfer between client and server.
+| Fixes the issue where terrain does not load correctly (gaps, 'reused' chunks)
+| Fixes the issue where terrain does not load from close to far
+| Reduces 'unplayable' time for lower bandwidth connections
+-Optimized part of world loading (tiny lag spikes every 16 meter got tinier, with less garbage as well)
+-Optimized light creation (substantially reduced the lag spikes associated with loading 100's of lights)
+-Reduced garbage collection pressure created by terrain generation on the server
+-Optimized the terrain generator to not spend a lot of time on far-in-the-air-chunks
+-Compress chunk data send over the network a lot more - about 3 times size reduction.
+-Optimized various bits of networking to send less data (~50% reduction on avg)
+-Fixed an issue where a mod failing to load cascades into breaking other mods (they're not passed as a "loaded mod" in AfterModsLoaded)
+-Fixed the skybox starting at the "old" time when switching between worlds
+-Removed "/reloadvariablesclient" and "/reloadvariablesserver" and the code supporting it (long unused feature)
+-The singleplayer server now uses a port provided by the OS (through the client) instead of a fixed one
+-Changed server networking to use more threads
+-Fixed inverted Y-axis setting reverting when re-entering the menu
+-Made water a bit less of a sticky soup and more something you can get out of
+-Fixed ragdolls being limited to 30 fps
+-Fixed an issue where colonists would appear away from their actual position (mostly flying in formation)
+-Added sand to the merchant
 
 Modding changes:
 -Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json
@@ -96,3 +122,18 @@ Modding changes:
 -Added ItemType.HasCategory (category) for easier category checking
 -Added ItemTypes.NotableTypes - a List<ItemType> of all types that have categories set to them. Used for the /lootall command
 -Removed ItemTypesServer.ItemSortOrder & co, replaced with the ItemType.Categories field & ItemTypes.NotableTypes property
+-Changed the Func<T, T, bool> arg required for the custom (Threaded)BinaryHeap class; it's now a Func<T, T, int> (consistent with IComparable<T>) and optional like the SortedList<TKey, TValue>
+-Added an optional Action<TValue> to be called upon disposing the item to Pipliz.Collection.CacheLastUsed - so you can use an object pool for the values.
+-Changed ServerMessageType & ClientMessageType sending in packets; they use a seperate overload of bytereader / bytebuilder now, using variable length encoding
+-Added OnPlayerRecipeSettingChanged callback - see callbacks help file
+-Added OnNPCCraftedRecipe callback - see callbacks help file
+-Renamed IAreaJob.UsedNPC to IAreaJob.NPC (to match the IJob change)
+-Replaced IJob.OnAssignedNPC(npc) and IJob.OnRemovedNPC() with a NPCBase NPC {get; set;} property.
+-Added OnNPCGathered callback - see callbacks help file
+-Added OnShouldKeepChunkLoaded callback - see callbacks help file
+-Removed BannerTracker.GetBanners() - use a combination of GetCount and TryGetAtIndex (made it threadsafe for OnShouldKeepChunkLoaded)
+-Changed type of Colony.collection to a ThreadedDict (to make it threadsafe for OnShouldKeepChunkLoaded)
+-Added Player.DrawDistance (used to limit Players.SendToNearbyDrawDistance)
+-Added Players.SendToNearbyDrawDistance - same as Players.SendToNearby, but also limits to per player draw distance
+-Added bool BlockTracker<T>.ContainsblockWithinDistanceByAxis(pos, dist, out bock) overload
+-Added Banner BannerTracker.GetClosest(position, axisRadius)

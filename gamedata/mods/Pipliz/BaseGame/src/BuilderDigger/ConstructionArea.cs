@@ -20,7 +20,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
-		public virtual NPCBase UsedNPC { get { return null; } }
+		public virtual NPCBase NPC { get { return null; } set { } }
 		public virtual Players.Player Owner { get { return owner; } }
 		public virtual Shared.EAreaType AreaType { get { return constructionType == null ? Shared.EAreaType.Unknown : constructionType.AreaType; } }
 		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return constructionType == null ? Shared.EAreaMeshType.AutoSelect : constructionType.AreaTypeMesh;; } }
@@ -118,10 +118,10 @@ namespace Pipliz.Mods.BaseGame.Construction
 			Definition.SaveJob(owner, node);
 		}
 
-		public virtual void DoJob (IJob job, ref NPCBase.NPCState state)
+		public virtual void DoJob (ConstructionJob job, ref NPCBase.NPCState state)
 		{
 			if (constructionType != null) {
-				constructionType.DoJob(iterationType, this, ref state);
+				constructionType.DoJob(iterationType, this, job, ref state);
 			}
 		}
 	}

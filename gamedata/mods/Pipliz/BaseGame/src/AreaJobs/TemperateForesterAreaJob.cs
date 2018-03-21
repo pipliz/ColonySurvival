@@ -32,7 +32,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 		public override void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
 		{
-			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(BuiltinBlocks.Sapling);
+			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(BuiltinBlocks.Sapling);
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
 			Vector3Int max = job.Maximum;
@@ -71,6 +71,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			positionSub = new Vector3Int(xRandom, min.y, zRandom);
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public override void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
 			state.JobIsDone = true;
@@ -98,8 +100,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				ushort type;
 				if (World.TryGetTypeAt(positionSub, out type)) {
 					if (type == 0) {
-						if (job.UsedNPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
-							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.Sapling)) {
+						if (job.NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
+							|| job.NPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.Sapling)) {
 							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
 							state.SetCooldown(2.0);
 						} else {
@@ -109,7 +111,16 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						if (ChopTree(positionSub, job.Owner)) {
 							state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
 							ServerManager.SendAudio(positionSub.Vector, "woodDeleteHeavy");
-							AddResults(job.UsedNPC.Inventory);
+
+							GatherResults.Clear();
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0.25));
+
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, positionSub, GatherResults);
+
+							job.NPC.Inventory.Add(GatherResults);
 						} else {
 							state.SetCooldown(Random.NextFloat(3f, 6f));
 						}
@@ -130,16 +141,6 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			return ServerManager.TryChangeBlock(p, 0, owner)
 				&& ServerManager.TryChangeBlock(p.Add(0, 1, 0), 0, owner)
 				&& ServerManager.TryChangeBlock(p.Add(0, 2, 0), 0, owner);
-		}
-
-		static void AddResults (NPCInventory inv)
-		{
-			inv.Add(BuiltinBlocks.LogTemperate, 3);
-			inv.Add(BuiltinBlocks.LeavesTemperate, 9);
-			inv.Add(BuiltinBlocks.Sapling);
-			if (Random.NextDouble() > 0.25) {
-				inv.Add(BuiltinBlocks.Sapling);
-			}
 		}
 
 		#region LOAD_LEGACY_BLOCKS_WORKAROUND

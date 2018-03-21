@@ -14,10 +14,10 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 			this.buildType = buildType;
 		}
 
-		public void DoJob (IIterationType iterationType, IAreaJob job, ref NPC.NPCBase.NPCState state)
+		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPC.NPCBase.NPCState state)
 		{
 			if (iterationType == null || buildType == null || buildType.ItemIndex == 0) {
-				AreaJobTracker.RemoveJob(job);
+				AreaJobTracker.RemoveJob(areaJob);
 				return;
 			}
 
@@ -26,17 +26,20 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 				ushort foundTypeIndex;
 				if (World.TryGetTypeAt(jobPosition, out foundTypeIndex)) {
-					if (foundTypeIndex == 0) {
-						Stockpile ownerStockPile = Stockpile.GetStockPile(job.Owner);
+					if (foundTypeIndex == 0 || foundTypeIndex == BuiltinBlocks.Water) {
+						Stockpile ownerStockPile = Stockpile.GetStockPile(areaJob.Owner);
 						if (ownerStockPile.Contains(buildType.ItemIndex)) {
-							if (ServerManager.TryChangeBlock(jobPosition, buildType.ItemIndex, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+							if (ServerManager.TryChangeBlock(jobPosition, buildType.ItemIndex, areaJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+								if (--job.storedItems == 0) {
+									state.JobIsDone = true;
+								}
 								ownerStockPile.TryRemove(buildType.ItemIndex);
 								if (iterationType.MoveNext()) {
 									state.SetIndicator(new Shared.IndicatorState(GetCooldown(), buildType.ItemIndex));
 								} else {
 									// failed to find next position to do job at, self-destruct
 									state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
-									AreaJobTracker.RemoveJob(job);
+									AreaJobTracker.RemoveJob(areaJob);
 								}
 								return;
 							} else {
@@ -53,7 +56,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 						if (!iterationType.MoveNext()) {
 							// failed to find next position to do job at, self-destruct
 							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
-							AreaJobTracker.RemoveJob(job);
+							AreaJobTracker.RemoveJob(areaJob);
 						}
 						continue; // found non-air, try next loop
 					}
@@ -69,7 +72,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 		public static float GetCooldown ()
 		{
-			return Random.NextFloat(3f, 5f);
+			return Random.NextFloat(1.5f, 2.5f);
 		}
 	}
 }

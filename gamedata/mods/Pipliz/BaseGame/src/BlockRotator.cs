@@ -328,7 +328,7 @@ namespace Pipliz.Mods.BaseGame
 			RegisterGuardBlock(items, "guardcrossbownightjob", "#919dba");
 			RegisterGuardBlock(items, "guardmatchlockdayjob", "#e5e960");
 			RegisterGuardBlock(items, "guardmatchlocknightjob", "#e5e960");
-			RegisterGuardBlock(items, "constructionjob", "#ff00ff");
+			RegisterGuardBlock(items, "constructionjob", "#911616");
 		}
 
 		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string colorGoal)

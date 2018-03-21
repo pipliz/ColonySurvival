@@ -65,7 +65,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				return;
 			}
 
-			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(stages[0]);
+			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(stages[0]);
 			bool reversed = false;
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
@@ -109,6 +109,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			positionSub = new Vector3Int(xRandom, min.y, zRandom);
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public virtual void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
 			if (stages == null || stages.Length < 2) {
@@ -123,7 +125,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					ushort typeFinal = stages[stages.Length - 1];
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
-							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
+							|| job.NPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
 							ushort typeBelow;
 							if (World.TryGetTypeAt(positionSub.Add(0, -1, 0), out typeBelow)) {
 								// check for fertile below
@@ -146,7 +148,15 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 						}
 					} else if (type == typeFinal) {
 						if (ServerManager.TryChangeBlock(positionSub, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
-							job.UsedNPC.Inventory.Add(ItemTypes.GetType(typeFinal).OnRemoveItems);
+							GatherResults.Clear();
+							var results = ItemTypes.GetType(typeFinal).OnRemoveItems;
+							for (int i = 0; i < results.Count; i++) {
+								GatherResults.Add(results[i]);
+							}
+
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, positionSub, GatherResults);
+
+							job.NPC.Inventory.Add(GatherResults);
 						}
 						state.SetCooldown(1.0);
 						shouldDumpInventory = false;

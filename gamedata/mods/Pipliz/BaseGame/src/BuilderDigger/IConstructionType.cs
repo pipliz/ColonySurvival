@@ -1,10 +1,12 @@
-﻿namespace Pipliz.Mods.BaseGame.Construction
+﻿using NPC;
+
+namespace Pipliz.Mods.BaseGame.Construction
 {
 	public interface IConstructionType
 	{
 		Shared.EAreaType AreaType { get; }
 		Shared.EAreaMeshType AreaTypeMesh { get; }
 
-		void DoJob (IIterationType iterationType, IAreaJob job, ref NPC.NPCBase.NPCState state);
+		void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPCBase.NPCState state);
 	}
 }

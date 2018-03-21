@@ -50,6 +50,7 @@
 							iterationChunkLocation.y -= 16;
 
 							if (iterationChunkLocation.y < (positionMin.y & -16)) {
+								cursor = Vector3Int.invalidPos;
 								return false;
 							}
 						}

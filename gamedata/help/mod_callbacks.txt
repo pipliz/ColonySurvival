@@ -204,6 +204,9 @@ Player {p} was disconnected.
 
 void OnPlayerMoved (Player p)
 Player {p} sent an updated position. Called approx 6 times per second per player. New position/rotation is set in {p}.
+Builtin uses:
+  pipliz.server.loadsurroundings
+    Queues chunks to ChunkQueue for loading the players' surroundings
 
 void OnTryChangeBlock (ModLoader.OnTryChangeBlockData d)
 Callback triggered by ServerManager.TryChangeBlock. {d} has the following fields:
@@ -222,6 +225,7 @@ Callback triggered by ServerManager.TryChangeBlock. {d} has the following fields
 | Server - caused by server code
 {d.InventoryItemResults} - inventory results for the player, if the CallbackOrigin == ClientPlayerManual. Can be changed (don't null or store it though)
 {d.CallbackConsumedResult} - return value of TryChangeBlock when CallbackState is set to CallbackConsumed. Can be changed.
+{d.PlayerClickedData} - only set if callback origin is from the client. Same data as in the "OnPlayerClicked" callback.
 
 void OnLoadingPlayer (JSONNode n, Player p)
 Player {p} was loaded with json file {n}.
@@ -391,6 +395,37 @@ void OnAutoSaveWorld ()
 Triggered every x seconds, to autosave non-block data (jobs, npc's, players)
 Builtin callback uses:
   A lot. Basically all callbacks from OnQuit to do with saving are in here as well (but then with auto in their identifier)
+
+void OnPlayerRecipeSettingChanged (RecipeStorage.PlayerRecipeStorage storage, Recipe recipe, Box<RecipeSetting> recipeSetting)
+Triggered every time a recipe limit is changed. Don't store the Box<> (it gets reused)
+See storage.Player for the owner
+This is also called upon loading the settings from JSON.
+It's only calledif the setting is not (!) the default priority / limit of said recipe.
+
+void OnNPCCraftedRecipe (IJob job, Recipe recipe, List<InventoryItem> results)
+Triggered every time a npc crafts a recipe. Don't store the List<>, it's reused.
+Results contains the recipe.Results by default, the List<> can be edited.
+After the callback the results will be added to the block's inventory.
+If the results list is not empty after the callback, the npc indicator will show a random type from the results.
+
+void OnNPCGathered (IJob job, Vector3Int location, List<ItemTypes.ItemTypeDrops> results)
+Triggered every time a npc gathers something at {location}. Don't store the List<>, it's reused.
+Results contains the default gathered materials, can be edited.
+After the callback the results will be added to the npc's inventory.
+The location is the position where something happened, doesn't have to be the job position.
+
+void OnShouldKeepChunkLoaded (ChunkUpdating.KeepChunkLoadedData data)
+!!! can be called from multiple threads, be aware !!!
+Periodically triggered for every chunk loaded. Use it to keep chunks loaded outside of the player / banner zones.
+{data.CheckedChunk} - the chunk being checked
+{data.MillisecondsTillNextCheck} - the time till the next check will be issued. Starts at Random between 24000 and 64000
+{data.Result} - bool indicating whether or not to keep this chunk. Defaults to false.
+Builtin callback uses:
+  pipliz.server.bannercheck
+    Sets result to true if any banner within Banner.LoadedRadius has colonists associated with it
+	If that's true, also multiplies time till next check by 5; assuming a colony doesn't disappear often.
+  pipliz.server.playercheck
+    if Result is false, checks whether there are connected players nearby. If so, sets result to true.
 
 NPC temporary values - unused by server code
 Monster temporary values - unused by server code
