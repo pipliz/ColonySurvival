@@ -3,12 +3,19 @@ using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
 {
-	public class DiggerBasic : IConstructionType
+	public class DiggerSpecial : IConstructionType
 	{
-		public Shared.EAreaType AreaType { get { return Shared.EAreaType.DiggerArea; } }
+		public Shared.EAreaType AreaType { get { return Shared.EAreaType.DiggerSpecial; } }
 		public Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
 
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
+		protected ItemTypes.ItemType digType;
+
+		public DiggerSpecial (ItemTypes.ItemType digType)
+		{
+			this.digType = digType;
+		}
 
 		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPC.NPCBase.NPCState state)
 		{
@@ -34,6 +41,23 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 						if (!foundType.IsDestructible) {
 							continue; // skip this block, retry
+						}
+
+						if (foundType != digType) {
+							bool success = false;
+							var parentType = foundType.ParentItemType;
+							while (parentType != null) {
+								if (parentType == digType) {
+									success = true;
+									break;
+								} else {
+									parentType = parentType.ParentItemType;
+								}
+							}
+
+							if (!success) {
+								continue;
+							}
 						}
 
 						if (ServerManager.TryChangeBlock(jobPosition, 0, areaJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {

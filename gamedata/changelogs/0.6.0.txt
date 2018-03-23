@@ -2,8 +2,9 @@
 
 TODO: proper playerclicked data from special block removal popup
 
--Added diggers
--Added builders
+-Added diggers - they remove all blocks in an area
+-Added builders - place a certain type in an area
+-Added "special" diggers - they remove a certain type from an area
 -Added a "crouch" button, which will slow you down and prevent falling off edges (default: left control)
 -Added draw distance setting (low, medium, high, very high - previously default was medium)
 -Added video setting presets
@@ -16,6 +17,8 @@ TODO: proper playerclicked data from special block removal popup
 | Warning blocks destroy like any normal block now. "Hidden" blocks will re-appear while destroying them.
 | Popup still appears if clicking on them with the command tool
 -Disabled remove area popup when digging through blocks below/in an area - click it while holding the command tool instead
+-Added 2 new achievements
+-Updated Unity3D from 5.6.4p4 to 5.6.5p3
 
 -Taught farmers to abandon their farm if one of their ground blocks is removed or changed to something non-fertile
 -Disable Eye Adaptation setting if hardware/drivers don't support it (requires shader model 5 / compute shaders)
@@ -67,6 +70,9 @@ TODO: proper playerclicked data from special block removal popup
 -Fixed an issue where colonists would appear away from their actual position (mostly flying in formation)
 -Added sand to the merchant
 -Fixed the tooltip not updating when clicking though dependencies in the science menu
+-Fixed npc indicators staying at the wrong position for an extended period of time (offset from sleeping)
+-Show area's and job spots when selecting a crate in the hotbar
+-Updated oven, crate, stonebricks, bricks, bed icons
 
 Modding changes:
 -Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json

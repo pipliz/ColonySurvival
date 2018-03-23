@@ -1,4 +1,5 @@
 ﻿using BlockTypes.Builtin;
+using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
 {
@@ -21,7 +22,8 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 				return;
 			}
 
-			while (true) {
+			int iMax = 4096;
+			while (iMax-- > 0) {
 				Vector3Int jobPosition = iterationType.CurrentPosition;
 
 				ushort foundTypeIndex;
@@ -67,7 +69,9 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 				}
 				// unreachable
 			}
-			// unreachable
+			// reached loop count limit
+			Assert.IsTrue(iMax <= 0);
+			state.SetCooldown(1.0);
 		}
 
 		public static float GetCooldown ()

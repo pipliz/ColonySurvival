@@ -72,6 +72,15 @@ namespace Pipliz.Mods.BaseGame.Construction
 					SetConstructionType(new Types.DiggerBasic());
 					SetIterationType(new Iterators.TopToBottom(this));
 					break;
+				case "pipliz.diggerspecial":
+					if (args != null) {
+						ItemTypes.ItemType digTpe = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(args.GetAsOrDefault("diggerBlockType", "air")));
+						if (digTpe != null && digTpe.ItemIndex != 0) {
+							SetConstructionType(new Types.DiggerSpecial(digTpe));
+							SetIterationType(new Iterators.TopToBottom(this));
+						}
+					}
+					break;
 				case "pipliz.builder":
 					if (args != null) {
 						ItemTypes.ItemType buildType = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(args.GetAsOrDefault("builderBlockType", "air")));
