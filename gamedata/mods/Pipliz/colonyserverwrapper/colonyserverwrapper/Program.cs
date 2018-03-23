@@ -206,12 +206,14 @@ namespace ColonyServerWrapper
 			}
 
 			string path;
-			if (File.Exists ("colonyserver.exe")) {
+			if (File.Exists("colonyserver.exe")) {
 				path = "colonyserver.exe";
-			} else if (File.Exists ("colonyserver.x86")) {
+			} else if (File.Exists("colonyserver.x86")) {
 				path = "colonyserver.x86";
-			} else if (File.Exists ("colonyserver.x86_64")) {
+			} else if (File.Exists("colonyserver.x86_64")) {
 				path = "colonyserver.x86_64";
+			} else if (File.Exists("colonyserver.app")) {
+				path = "colonyserver.app/Contents/MacOS/colonyserver";
 			} else {
 				WriteConsole ("Failed to find colonyserver executable");
 				return;
