@@ -1,5 +1,5 @@
 {
-	"coverage" : 37.0199692780338,
+	"coverage" : 34.3304843304843,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Ritorna al Gioco",
@@ -93,6 +93,58 @@
 					"description" : "_MISSING_Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
 					"name" : "_MISSING_Mints & Shops"
 				},
+				"constructionbuilder" : {
+					"description" : "_MISSING_Unlock builder areas for the construction worker",
+					"name" : "_MISSING_Builder"
+				},
+				"constructionbuildersize1" : {
+					"description" : "_MISSING_Increases maximum builder area size to 25.000",
+					"name" : "_MISSING_Builder Limit I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "_MISSING_Increases maximum builder area size to 100.000",
+					"name" : "_MISSING_Builder Limit II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "_MISSING_Increases maximum builder area size to 250.000",
+					"name" : "_MISSING_Builder Limit III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "_MISSING_Increases maximum builder area size to 500.000",
+					"name" : "_MISSING_Builder Limit IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
+					"name" : "_MISSING_Builder Limit V"
+				},
+				"constructiondigger" : {
+					"description" : "_MISSING_Unlock digger areas for the construction worker",
+					"name" : "_MISSING_Digger"
+				},
+				"constructiondiggersize1" : {
+					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
+					"name" : "_MISSING_Digger Limit I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "_MISSING_Increases maximum digger area size to 100.000",
+					"name" : "_MISSING_Digger Limit II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "_MISSING_Increases maximum digger area size to 250.000",
+					"name" : "_MISSING_Digger Limit III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "_MISSING_Increases maximum digger area size to 500.000",
+					"name" : "_MISSING_Digger Limit IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
+					"name" : "_MISSING_Digger Limit V"
+				},
+				"constructiondiggerspecial" : {
+					"description" : "_MISSING_Unlock special digger areas for the construction worker",
+					"name" : "_MISSING_Special Digger"
+				},
 				"crossbow" : {
 					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
 					"name" : "_MISSING_Crossbow"
@@ -138,19 +190,19 @@
 					"name" : "_MISSING_Regeneration Increase IV"
 				},
 				"healthregenspeed1" : {
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP\/s to 1 HP\/s",
+					"description" : "_MISSING_Increases regeneration speed from 0.5 HP/s to 1 HP/s",
 					"name" : "_MISSING_Regeneration Speed I"
 				},
 				"healthregenspeed2" : {
-					"description" : "_MISSING_Increases regeneration speed from 1 HP\/s to 2 HP\/s",
+					"description" : "_MISSING_Increases regeneration speed from 1 HP/s to 2 HP/s",
 					"name" : "_MISSING_Regeneration Speed II"
 				},
 				"healthregenspeed3" : {
-					"description" : "_MISSING_Increases regeneration speed from 2 HP\/s to 3 HP\/s",
+					"description" : "_MISSING_Increases regeneration speed from 2 HP/s to 3 HP/s",
 					"name" : "_MISSING_Regeneration Speed III"
 				},
 				"healthregenspeed4" : {
-					"description" : "_MISSING_Increases regeneration speed from 3 HP\/s to 4 HP\/s",
+					"description" : "_MISSING_Increases regeneration speed from 3 HP/s to 4 HP/s",
 					"name" : "_MISSING_Regeneration Speed IV"
 				},
 				"healthsize1" : {
@@ -341,10 +393,26 @@
 				"berryfarmertool" : "_MISSING_Berry Farmer Tool",
 				"bow" : "_MISSING_Bow",
 				"bowtooltip" : "_MISSING_Damage: 100 HP\nRange: 20 blocks\nReload speed: 5 seconds",
+				"buildera" : "_MISSING_Fill an area of the world",
+				"builderarea" : "_MISSING_Builder Area",
+				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"construction" : "_MISSING_Construction",
+				"construction1" : "_MISSING_Let them do the work",
+				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
+				"constructionjob" : "_MISSING_Construction Job",
+				"constructionjoba" : "_MISSING_Hires a construction worker",
+				"constructionjobb" : "_MISSING_Place next to a construction area",
 				"coversarea" : "Copre l'area esistente",
 				"crossbow" : "_MISSING_Crossbow",
 				"crossbowtooltip" : "_MISSING_Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
 				"description" : "Seleziona il tipo di area che si desidera creare.",
+				"diggera" : "_MISSING_Dig out an area of the world",
+				"diggerarea" : "_MISSING_Digger Area",
+				"diggerb" : "_MISSING_Select the area to dig out",
+				"diggerspecial" : "_MISSING_Special Digger Area",
+				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
+				"diggerspecialarea" : "_MISSING_Special Digger Area",
+				"diggerspecialb" : "_MISSING_Select the area to remove it from",
 				"flaxb" : "_MISSING_Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Mugnaio",
 				"flaxfarmertool" : "Strumento per Mugnaio",
@@ -364,6 +432,7 @@
 				"hollyhockfarmer" : "_MISSING_Hollyhock Farmer",
 				"hollyhockfarmertool" : "_MISSING_Hollyhock Farmer Tool",
 				"hollyhockfarmertooltip" : "_MISSING_Needs: Hollyhock Seeds\nPlace on grass or dirt",
+				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "_MISSING_Daytime Bow Guard",
 				"jobbownight" : "_MISSING_Nighttime Bow Guard",
 				"jobcrossbowday" : "_MISSING_Daytime Crossbow Guard",
@@ -378,11 +447,13 @@
 				"minera" : "",
 				"minerb" : "_MISSING_Needs: Pickaxe\nDig down and place on top of ores or dark stone",
 				"minertool" : "Strumento per Minatore",
-				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.<\/color>",
+				"missingscience" : "_MISSING_<color=red>Requires '{0}' to be unlocked first.</color>",
+				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "Non arabile",
 				"notflat" : "Non piatto",
 				"notool" : "Nessun Strumento Selezionato",
 				"occupiedblocks" : "Occupato da blocchi",
+				"selectitem" : "_MISSING_Select an item type to use",
 				"slinger" : "_MISSING_Slinger",
 				"slingertooltip" : "_MISSING_Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
 				"toolarge" : "Troppo Grande",
@@ -474,10 +545,12 @@
 				"language" : "Lingua",
 				"wiptext" : "Lavori in corso. Questa traduzione potrebbe non essere totalmente tradotta e alcune traduzioni possono risultare meno complete o più complete di questa."
 			},
+			"qualitycustom" : "_MISSING_Custom",
 			"qualityhigh" : "Alto",
 			"qualitylow" : "Basso",
 			"qualitymaximum" : "Massimo",
 			"qualitymedium" : "Medio",
+			"qualityminimum" : "_MISSING_Minimum",
 			"qualityoff" : "No",
 			"qualityon" : "Si",
 			"qualityveryhigh" : "Molto Alto",
@@ -490,6 +563,7 @@
 				"antialiasing" : "Anti aliasing",
 				"bloom" : "Bloom-Fioritura",
 				"depthoffield" : "Profondità di campo",
+				"drawdistance" : "_MISSING_Draw distance (*)",
 				"eyeadaptation" : "Adattamento dell'occhio",
 				"fieldofview" : "Campo Visivo",
 				"full" : "Impostazioni Video",
@@ -498,7 +572,9 @@
 				"fxaalow" : "FXAA Basso",
 				"fxaamedium" : "FXAA Medio",
 				"lightscattering" : "Dispersione Di Luce",
+				"preset" : "_MISSING_Preset",
 				"resolution" : "risoluzione",
+				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
 				"shaderquality" : "Qualità Shader",
 				"skyboxconstant" : "Skybox Costante",
 				"skyboxfrequent" : "Skybox Frequente",
@@ -574,6 +650,7 @@
 		"cobblestonered" : "_MISSING_Red Cobblestone",
 		"cokes" : "_MISSING_Cokes",
 		"commandtool" : "Strumento di Comando",
+		"constructionjob" : "_MISSING_Construction Job",
 		"copper" : "_MISSING_Copper",
 		"coppernails" : "_MISSING_Copper Nails",
 		"copperparts" : "_MISSING_Copper Parts",
@@ -663,7 +740,7 @@
 		"quarterblockgrey" : "_MISSING_Grey Quarter Block",
 		"quarterblockwhite" : "_MISSING_White Quarter Block",
 		"redplanks" : "_MISSING_Coated Red Planks",
-		"salpeter" : "_MISSING_Salpeter",
+		"salpeter" : "_MISSING_Saltpeter",
 		"sand" : "Sabbia",
 		"sappling" : "Seme di Albero",
 		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",

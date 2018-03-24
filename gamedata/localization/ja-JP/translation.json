@@ -1,5 +1,5 @@
 {
-	"coverage" : 100,
+	"coverage" : 98.8603988603989,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "ゲームに戻る",
@@ -93,6 +93,58 @@
 					"description" : "「造幣局」と「店」をアンロックする。 種や土、その他様々な品を購入できるようになる。",
 					"name" : "造幣局＆店"
 				},
+				"constructionbuilder" : {
+					"description" : "人足を作業させるための建設エリアをアンロックする",
+					"name" : "建設人足"
+				},
+				"constructionbuildersize1" : {
+					"description" : "建設エリアの最大サイズを25,000までに拡大する",
+					"name" : "建設上限 I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "建設エリアの最大サイズを100,000までに拡大する",
+					"name" : "建設上限 II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "建設エリアの最大サイズを250,000までに拡大する",
+					"name" : "建設上限 III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "建設エリアの最大サイズを500,000までに拡大する",
+					"name" : "建設上限 IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "建設エリアの最大サイズを1,000,000までに拡大する",
+					"name" : "建設上限 V"
+				},
+				"constructiondigger" : {
+					"description" : "人足を作業させるための掘削エリアをアンロックする",
+					"name" : "掘削人足"
+				},
+				"constructiondiggersize1" : {
+					"description" : "掘削エリアの最大サイズを25,000までに拡大する",
+					"name" : "掘削上限 I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "掘削エリアの最大サイズを100,000までに拡大する",
+					"name" : "掘削上限 II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "掘削エリアの最大サイズを250,000までに拡大する",
+					"name" : "掘削上限 III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "掘削エリアの最大サイズを500,000までに拡大する",
+					"name" : "掘削上限 IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "掘削エリアの最大サイズを1,000,000までに拡大する",
+					"name" : "掘削上限 V"
+				},
+				"constructiondiggerspecial" : {
+					"description" : "_MISSING_Unlock special digger areas for the construction worker",
+					"name" : "_MISSING_Special Digger"
+				},
 				"crossbow" : {
 					"description" : "弓よりも強力な武器「クロスボウ」をアンロックする",
 					"name" : "クロスボウ"
@@ -138,19 +190,19 @@
 					"name" : "再生力向上 IV"
 				},
 				"healthregenspeed1" : {
-					"description" : "再生速度を0.5 HP/sから1 HP/sに向上させる",
+					"description" : "再生速度を0.5HP/秒から1HP/秒に向上させる",
 					"name" : "再生速度 I"
 				},
 				"healthregenspeed2" : {
-					"description" : "再生速度を1 HP/sから2 HP/sに向上させる",
+					"description" : "再生速度を1HP/秒から2HP/秒に向上させる",
 					"name" : "再生速度 II"
 				},
 				"healthregenspeed3" : {
-					"description" : "再生速度を2 HP/sから3 HP/sに向上させる",
+					"description" : "再生速度を2HP/秒から3HP/秒に向上させる",
 					"name" : "再生速度 III"
 				},
 				"healthregenspeed4" : {
-					"description" : "再生速度を3 HP/sから4 HP/sに向上させる",
+					"description" : "再生速度を3HP/秒から4HP/秒に向上させる",
 					"name" : "再生速度 IV"
 				},
 				"healthsize1" : {
@@ -170,7 +222,7 @@
 					"name" : "ヘルス向上 IV"
 				},
 				"herbfarming" : {
-					"description" : "3種類のハーブ農家をアンロックする。ハーブは染色師が使用する",
+					"description" : "3種類のハーブ農家をアンロックする。 ハーブは染色師が使用する",
 					"name" : "ハーブ栽培"
 				},
 				"kiln" : {
@@ -341,10 +393,26 @@
 				"berryfarmertool" : "ベリー農家ツール",
 				"bow" : "弓",
 				"bowtooltip" : "ダメージ: 100 HP\n射程: 20ブロック\nリロード速度: 5秒",
+				"buildera" : "指定したエリアをブロックで埋める",
+				"builderarea" : "建設人足作業エリア",
+				"builderb" : "ブロックの種類を選択するメニューが開いた後、そのブロックで埋めるエリアを指定します",
+				"construction" : "土木建築",
+				"construction1" : "人足たちを作業に従事させよう",
+				"construction2" : "作業の種類を選択するための別メニューが開きます",
+				"constructionjob" : "人足",
+				"constructionjoba" : "人足を雇う",
+				"constructionjobb" : "土木建築エリアに隣接して設置してください",
 				"coversarea" : "既にあるエリアと重なる",
 				"crossbow" : "クロスボウ",
 				"crossbowtooltip" : "ダメージ: 300 HP\n射程: 25ブロック\nリロード速度: 8秒",
 				"description" : "作成したいエリアの種類を選んでください。",
+				"diggera" : "指定したエリアを掘削する",
+				"diggerarea" : "掘削人足作業エリア",
+				"diggerb" : "掘削するエリアを指定してください",
+				"diggerspecial" : "_MISSING_Special Digger Area",
+				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
+				"diggerspecialarea" : "_MISSING_Special Digger Area",
+				"diggerspecialb" : "_MISSING_Select the area to remove it from",
 				"flaxb" : "必要: 亜麻仁\n草か土の上に設置する",
 				"flaxfarmer" : "亜麻農家",
 				"flaxfarmertool" : "亜麻農家ツール",
@@ -364,6 +432,7 @@
 				"hollyhockfarmer" : "タチアオイ農家",
 				"hollyhockfarmertool" : "タチアオイ農家ツール",
 				"hollyhockfarmertooltip" : "必要: タチアオイの種\n草か土の上に設置する",
+				"insidearea" : "エリア内には設置不可能",
 				"jobbowday" : "昼間担当弓兵",
 				"jobbownight" : "夜間担当弓兵",
 				"jobcrossbowday" : "昼間担当クロスボウ兵",
@@ -376,13 +445,15 @@
 				"matchlocktooltip" : "ダメージ: 500 HP\n射程: 30ブロック\n リロード速度: 12秒",
 				"miner" : "鉱員",
 				"minera" : "鉱石を採掘する",
-				"minerb" : "必要: つるはし\n穴を掘り、鉱石か暗い色の石の上に設置する",
+				"minerb" : "必要: つるはし\n穴を掘り、鉱石か石ブロック（暗色）の上に設置する",
 				"minertool" : "鉱員ツール",
 				"missingscience" : "<color=red>先に「{0}」をアンロックする必要があります。</color>",
+				"noconstructionareanearby" : "付近に土木建築エリアがない",
 				"notarable" : "耕作不可能",
 				"notflat" : "平らではない",
 				"notool" : "ツールが選択されていない",
 				"occupiedblocks" : "ブロックが既に存在している",
+				"selectitem" : "_MISSING_Select an item type to use",
 				"slinger" : "スリング",
 				"slingertooltip" : "ダメージ: 50 HP\n射程: 12ブロック\nリロード速度: 3秒",
 				"toolarge" : "大きすぎる",
@@ -433,7 +504,7 @@
 				"header" : "科学的研究",
 				"text1" : "科学者を雇うため、研究所を設置しましょう。 研究所を右クリックするか、インベントリメニューのタブを利用することで、科学メニューを見ることができます。",
 				"text2" : "研究対象を選択し、科学者にアンロックさせましょう。 科学者は研究を完了するため、一定回数のサイクルで作業を繰り返します。 研究の必要素材は各サイクル毎に消費されます。",
-				"text3" : "より高度な研究にはサイエンスバッグが必要になります。 サイエンスバッグを作成するため、技術者を雇いましょう。 バッグ自体は複数回の再利用が可能です。",
+				"text3" : "より高度な研究にはサイエンスバッグが必要になります。 サイエンスバッグを作成するため、技術者を雇いましょう。 使って空になったバッグは複数回の再利用が可能です。",
 				"text4" : "複数の科学者が一緒になって作業することで、研究の進行速度を速めることができます。 さらなる科学者を雇うために、もっと研究所を設置しましょう！"
 			}
 		},
@@ -474,10 +545,12 @@
 				"language" : "言語",
 				"wiptext" : "翻訳作業中のため、未翻訳の部分が残っていたり、他言語より翻訳完了率が低かったりすることがあります。"
 			},
+			"qualitycustom" : "カスタム",
 			"qualityhigh" : "高品質",
 			"qualitylow" : "低品質",
 			"qualitymaximum" : "最高品質",
 			"qualitymedium" : "中品質",
+			"qualityminimum" : "最低品質",
 			"qualityoff" : "Off",
 			"qualityon" : "On",
 			"qualityveryhigh" : "かなり高品質",
@@ -490,6 +563,7 @@
 				"antialiasing" : "アンチエイリアシング",
 				"bloom" : "ブルーム",
 				"depthoffield" : "被写界深度",
+				"drawdistance" : "描画距離 (*)",
 				"eyeadaptation" : "目の適応",
 				"fieldofview" : "視野角",
 				"full" : "ビデオ設定",
@@ -498,7 +572,9 @@
 				"fxaalow" : "FXAA 低",
 				"fxaamedium" : "FXAA 中",
 				"lightscattering" : "光散乱",
+				"preset" : "プリセット",
 				"resolution" : "解像度",
+				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
 				"shaderquality" : "シェーダー品質",
 				"skyboxconstant" : "スカイボックス 固定",
 				"skyboxfrequent" : "スカイボックス 高速",
@@ -574,6 +650,7 @@
 		"cobblestonered" : "丸石（赤）",
 		"cokes" : "コークス",
 		"commandtool" : "コマンドツール",
+		"constructionjob" : "人足",
 		"copper" : "銅",
 		"coppernails" : "銅の釘",
 		"copperparts" : "銅の金具",

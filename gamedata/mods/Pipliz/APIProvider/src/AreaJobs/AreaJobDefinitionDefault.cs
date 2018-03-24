@@ -14,6 +14,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		protected string identifier;
 		protected ushort[] stages;
 		protected NPCType npcType;
+		protected Shared.EAreaType areaType;
 
 		protected SortedList<Players.Player, JSONNode> SavedJobs;
 
@@ -25,6 +26,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		public virtual string Identifier { get { return identifier; } }
 
 		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/{1}.json", ServerManager.WorldName, fileName); } }
+
+		public virtual Shared.EAreaType AreaType { get { return areaType; } }
 
 		public virtual IAreaJob CreateAreaJob (Players.Player owner, JSONNode node)
 		{
@@ -62,7 +65,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				return;
 			}
 
-			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(stages[0]);
+			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(stages[0]);
 			bool reversed = false;
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
@@ -106,6 +109,8 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			positionSub = new Vector3Int(xRandom, min.y, zRandom);
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public virtual void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
 			if (stages == null || stages.Length < 2) {
@@ -120,17 +125,38 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					ushort typeFinal = stages[stages.Length - 1];
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
-							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
-							ServerManager.TryChangeBlock(positionSub, typeSeeds, ServerManager.SetBlockFlags.DefaultAudio);
-							state.SetCooldown(1.0);
-							shouldDumpInventory = false;
+							|| job.NPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
+							ushort typeBelow;
+							if (World.TryGetTypeAt(positionSub.Add(0, -1, 0), out typeBelow)) {
+								// check for fertile below
+								if (ItemTypes.GetType(typeBelow).IsFertile) {
+									ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
+									state.SetCooldown(1.0);
+									shouldDumpInventory = false;
+								} else {
+									// not fertile below
+									AreaJobTracker.RemoveJob(job);
+									state.SetCooldown(2.0);
+								}
+							} else {
+								// didn't load this part of the world
+								state.SetCooldown(Random.NextFloat(3f, 6f));
+							}
 						} else {
-							state.SetIndicator(NPCIndicatorType.MissingItem, 2f, typeSeeds);
+							state.SetIndicator(new Shared.IndicatorState(2f, typeSeeds, true, false));
 							shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
 						}
 					} else if (type == typeFinal) {
-						if (ServerManager.TryChangeBlock(positionSub, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
-							job.UsedNPC.Inventory.Add(ItemTypes.GetType(typeFinal).OnRemoveItems);
+						if (ServerManager.TryChangeBlock(positionSub, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+							GatherResults.Clear();
+							var results = ItemTypes.GetType(typeFinal).OnRemoveItems;
+							for (int i = 0; i < results.Count; i++) {
+								GatherResults.Add(results[i]);
+							}
+
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, positionSub, GatherResults);
+
+							job.NPC.Inventory.Add(GatherResults);
 						}
 						state.SetCooldown(1.0);
 						shouldDumpInventory = false;
@@ -145,7 +171,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							for (int i = 0; i < stages.Length; i++) {
 								if (stages[i] == type) {
 									ItemTypesServer.OnChange(positionSub, 0, type, null);
-									state.SetIndicator(NPCIndicatorType.Crafted, 2f, type);
+									state.SetIndicator(new Shared.IndicatorState(2f, type));
 									state.SetCooldown(0.2);
 									found = true;
 									break;
@@ -248,12 +274,12 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			});
 		}
 
-		protected void SetLayer (Vector3Int min, Vector3Int max, ushort type, int layer)
+		protected void SetLayer (Vector3Int min, Vector3Int max, ushort type, int layer, Players.Player owner)
 		{
 			int yLayer = min.y + layer;
 			for (int x = min.x; x <= max.x; x++) {
 				for (int z = min.z; z <= max.z; z++) {
-					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type);
+					ServerManager.TryChangeBlock(new Vector3Int(x, yLayer, z), type, owner);
 				}
 			}
 		}

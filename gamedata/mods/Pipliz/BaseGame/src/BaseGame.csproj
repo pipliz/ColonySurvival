@@ -36,11 +36,14 @@
   <ItemGroup>
     <Compile Include="AreaJobs\BerryFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\Alkanet.cs" />
+    <Compile Include="BuilderDigger\ConstructionArea.cs" />
+    <Compile Include="BuilderDigger\ConstructionAreaDefinition.cs" />
     <Compile Include="AreaJobs\Wolfsbane.cs" />
     <Compile Include="AreaJobs\Hollyhock.cs" />
     <Compile Include="AreaJobs\FlaxFarmerAreaJob.cs" />
     <Compile Include="AreaJobs\TemperateForesterAreaJob.cs" />
     <Compile Include="AreaJobs\WheatFarmerAreaJob.cs" />
+    <Compile Include="BuilderDigger\ConstructionJob.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardCrossbowNight.cs" />
     <Compile Include="BlockJobsImplementations\GuardMatchlockDay.cs" />
@@ -68,6 +71,14 @@
     <Compile Include="BlockJobsImplementations\WorkBenchJob.cs" />
     <Compile Include="BlockJobsImplementations\OvenJob.cs" />
     <Compile Include="BlockJobsImplementations\FurnaceJob.cs" />
+    <Compile Include="BuilderDigger\IIterationType.cs" />
+    <Compile Include="BuilderDigger\Iterators\BottomToTop.cs" />
+    <Compile Include="BuilderDigger\Iterators\IteratorHelper.cs" />
+    <Compile Include="BuilderDigger\Iterators\TopToBottom.cs" />
+    <Compile Include="BuilderDigger\Types\BuilderBasic.cs" />
+    <Compile Include="BuilderDigger\Types\DiggerSpecial.cs" />
+    <Compile Include="BuilderDigger\Types\DiggerBasic.cs" />
+    <Compile Include="BuilderDigger\IConstructionType.cs" />
     <Compile Include="GrowableBlocks\Wolfsbane.cs" />
     <Compile Include="GrowableBlocks\Hollyhock.cs" />
     <Compile Include="GrowableBlocks\CherrySapling.cs" />
@@ -82,6 +93,19 @@
     <Compile Include="Research\BannerRadius\BannerRadius5.cs" />
     <Compile Include="Research\Bloomery.cs" />
     <Compile Include="Research\Archery.cs" />
+    <Compile Include="Research\Construction\ConstructionHelper.cs" />
+    <Compile Include="Research\Construction\DiggerSpecial.cs" />
+    <Compile Include="Research\Construction\DiggerSize5.cs" />
+    <Compile Include="Research\Construction\DiggerSize4.cs" />
+    <Compile Include="Research\Construction\DiggerSize3.cs" />
+    <Compile Include="Research\Construction\DiggerSize2.cs" />
+    <Compile Include="Research\Construction\DiggerSize1.cs" />
+    <Compile Include="Research\Construction\BuilderSize5.cs" />
+    <Compile Include="Research\Construction\BuilderSize4.cs" />
+    <Compile Include="Research\Construction\BuilderSize3.cs" />
+    <Compile Include="Research\Construction\BuilderSize2.cs" />
+    <Compile Include="Research\Construction\BuilderSize1.cs" />
+    <Compile Include="Research\Construction\Builder.cs" />
     <Compile Include="Research\DyerTable.cs" />
     <Compile Include="Research\QuarterBlockSplittingStump.cs" />
     <Compile Include="Research\QuarterBlockDyer.cs" />
@@ -119,6 +143,7 @@
     <Compile Include="Research\SplittingStump.cs" />
     <Compile Include="Research\TailorShop.cs" />
     <Compile Include="Research\TechnologistTable.cs" />
+    <Compile Include="Research\Construction\Digger.cs" />
     <Compile Include="Research\WheatFarming.cs" />
     <Compile Include="BlockJobsModEntries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -18,6 +18,11 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		bool shouldTakeItems;
 		public override string NPCTypeKey { get { return "pipliz.scientist"; } }
 
+		public virtual float CraftingCooldown {
+			get { return StaticCraftingCooldown; }
+			set { StaticCraftingCooldown = value; }
+		}
+
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
@@ -37,7 +42,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			usedNPC.LookAt(position.Vector);
 			ScienceManagerPlayer scienceManager;
 			if (!ScienceManager.TryGetPlayerManager(owner, out scienceManager)) {
-				state.SetIndicator(NPCIndicatorType.SuccessIdle, 6f);
+				state.SetIndicator(new Shared.IndicatorState(6f, BuiltinBlocks.ErrorIdle));
 				state.JobIsDone = false;
 				return;
 			}
@@ -60,13 +65,13 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 							}
 						}
 						float cooldown = Random.NextFloat(8f, 16f);
-						state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, missing);
+						state.SetIndicator(new Shared.IndicatorState(cooldown, missing, true, false));
 						state.JobIsDone = false;
 					}
 				} else {
 					float cooldown = Random.NextFloat(8f, 16f);
 					// no items, no research -> wait for research
-					state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
+					state.SetIndicator(new Shared.IndicatorState(cooldown, BuiltinBlocks.ErrorIdle));
 					state.JobIsDone = false;
 				}
 			} else {
@@ -96,7 +101,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 						}
 						state.Inventory.Add(BuiltinBlocks.LinenBag, recycled);
 						scienceManager.AddActiveResearchProgress(1);
-						state.SetIndicator(NPCIndicatorType.ScienceProgress, StaticCraftingCooldown);
+						state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science));
 					} else {
 						state.SetCooldown(0.3);
 					}
@@ -111,7 +116,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			}
 			state.SetCooldown(0.5);
 			state.JobIsDone = true;

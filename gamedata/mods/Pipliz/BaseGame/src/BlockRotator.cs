@@ -170,6 +170,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "furnaceside")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"furnacelittop",
 					"furnaceunlittop",
@@ -208,6 +211,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "stonebricks")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"stonebricks",
 					"stonebricks",
@@ -237,6 +243,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "bricks")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"bricks",
 					"bricks",
@@ -266,6 +275,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "stoneDelete")
 						.SetAs("sideall", "ironblock")
 						.SetAs("destructionTime", 1500)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					"ironblock",
 					"ironblock",
@@ -295,6 +307,9 @@ namespace Pipliz.Mods.BaseGame
 						.SetAs("onRemoveAudio", "grassDelete")
 						.SetAs("sideall", "dirt")
 						.SetAs("destructionTime", 800)
+						.SetAs("categories", new JSONNode(NodeType.Array)
+							.AddToArray(new JSONNode("job"))
+						)
 					),
 					null,
 					"dirt",
@@ -313,15 +328,33 @@ namespace Pipliz.Mods.BaseGame
 			RegisterGuardBlock(items, "guardcrossbownightjob", "#919dba");
 			RegisterGuardBlock(items, "guardmatchlockdayjob", "#e5e960");
 			RegisterGuardBlock(items, "guardmatchlocknightjob", "#e5e960");
+			RegisterGuardBlock(items, "constructionjob", "#911616");
 		}
 
 		static void RegisterGuardBlock (Dictionary<string, ItemTypesServer.ItemTypeRaw> items, string name, string colorGoal)
 		{
-
 			ItemRotator(
 				items,
 				new RotatorSettings(
 					new ItemTypesServer.ItemTypeRaw(name, new JSONNode()
+						.SetAs("colliders", new JSONNode()
+							.SetAs("collidePlayer", false)
+							.SetAs("boxes", new JSONNode(NodeType.Array)
+								.AddToArray(new JSONNode()
+									.SetAs("min", new JSONNode(NodeType.Array)
+										.AddToArray(new JSONNode(-0.5))
+										.AddToArray(new JSONNode(-0.5))
+										.AddToArray(new JSONNode(-0.5))
+									)
+									.SetAs("max", new JSONNode(NodeType.Array)
+										.AddToArray(new JSONNode(0.5))
+										.AddToArray(new JSONNode(-0.35))
+										.AddToArray(new JSONNode(0.5))
+									)
+								)
+							)
+						)
+						.SetAs("onRemoveAudio", "woodDeleteLight")
 						.SetAs("needsBase", true)
 						.SetAs("isSolid", false)
 						.SetAs("onRemove", new JSONNode(NodeType.Array))

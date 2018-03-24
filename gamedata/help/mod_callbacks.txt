@@ -1,24 +1,3 @@
-The current builtin mods:
--Pipliz/BlockNPCs
---Uses API's provided by Pipliz/APIProvider to define the furnace, grinder, mint, oven, quiver, shop and workbench.
--Pipliz/APIProvider
---Provides base classes/interfaces/managers for handling jobs definition
---Provides a basic recipe manager
---Provides a researchable manager/loader
--Pipliz/BaseResearch
---Provides the base game researchables
--Pipliz/WorldConverter
---When enabled provides an interface on the server that allows moving a worlds' region files from one itemtypetable to another
--Pipliz/colonyserverwrapper/colonyserverwrapperdll
---When the game is start with +logto {port}, this mod will try and connect the logging output / chat input to a tcp socket on that port on the local host.
-
-To get an idea of how to receive callbacks etc, take a look at the included mod sources.
-For mod development I'd recommend the debug and/or development branches of the game, as those are build as unity development builds.
-This should also allow connecting the unity profiler after installing unity, to log/check performance much more accurately than the included graphs. 
-
-
-
-
 These callbacks are called in order of placement here:
 
 void OnAssemblyLoaded (string p)
@@ -219,23 +198,36 @@ Builtin callback uses:
     Calls ITerrainGenerator.StartSendingBiomeData on the active terrain generator.
   pipliz.server.sendsetflight
     Sends whether or not /setflight true was active
+  pipliz.mods.basegame.sendconstructiondata
+    Sends builder & digger limits
 
 void OnPlayerDisconnected (Player p)
 Player {p} was disconnected.
 
 void OnPlayerMoved (Player p)
 Player {p} sent an updated position. Called approx 6 times per second per player. New position/rotation is set in {p}.
+Builtin uses:
+  pipliz.server.loadsurroundings
+    Queues chunks to ChunkQueue for loading the players' surroundings
 
-bool OnTryChangeBlockUser (ModLoader.OnTryChangeBlockUserData d)
-Player {d.requestedBy} requested a block change from {d.typeTillNow} to {d.typeToBuild} at {d.VoxelToChange}.
-Used for building/digging by the player. The client assumes the change is okay, and renders the change immediately to reduce ping.
-Returning false will send a revert-the-change message to the client.
-Return whether or not to allow this change
-
-bool OnTryChangeBlockUserRequest (ModLoader.OnTryChangeBlockUserRequestData d)
-Similar to OnTryChangeBlockUser, but the client does not pre-emptively do the change, and does not expect a response.
-Used for the remove special block menu (banner, miner jobs, guard jobs)
-Return whether or not to allow this change
+void OnTryChangeBlock (ModLoader.OnTryChangeBlockData d)
+Callback triggered by ServerManager.TryChangeBlock. {d} has the following fields:
+{d.RequestedByPlayer} - the player (in)directly calling TryChangeBlock. Can be null for code originating calls.
+{d.Position} - the position where the change is desired
+{d.TypeOld} - block type at {d.Position} before any change
+{d.TypeNew} - block type desired at {d.Position} - BuiltinBlocks.Air for block removal. Can be changed.
+{d.CallbackState} - enum to communicate the effect of this callback. Can be changed.
+| Default - callback doesn't require altered handling of TryChangeBlock
+  - Will call World.TrySetTypeAt, ItemTypesServer.OnChange, send audio if callback origin is server & the flag is set and lastly it'll send the block change to players
+| CallbackConsumed - TryChangeBlock won't do anything more, and return {d.CallbackConsumedResult}
+| Cancelled - TryChangeBlock won't do anything more, and return false. (use for anti-grief etc)
+{d.CallbackOrigin} - enum to indicate what triggered TryChangeBlock
+| ClientPlayerManual - player digging
+| ClientScript - player through tools ('special block removal', command tool placing jobs)
+| Server - caused by server code
+{d.InventoryItemResults} - inventory results for the player, if the CallbackOrigin == ClientPlayerManual. Can be changed (don't null or store it though)
+{d.CallbackConsumedResult} - return value of TryChangeBlock when CallbackState is set to CallbackConsumed. Can be changed.
+{d.PlayerClickedData} - only set if callback origin is from the client. Same data as in the "OnPlayerClicked" callback.
 
 void OnLoadingPlayer (JSONNode n, Player p)
 Player {p} was loaded with json file {n}.
@@ -327,9 +319,20 @@ Builtin callback uses:
 void OnMonsterDied (IMonster monster)
 Called when a monster died
 
-void OnMonsterHit (IMonster monster, Pipliz.Box<float> box)
-box.item1 -> damage
-{monster} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnMonsterHit (IMonster monster, ModLoader.OnHitData d)
+{monster} - the monster instance that is being hit
+{d.ResultDamage} - the resulting damage that will be applied to the {monster}
+{d.HitDamage} - the damage amount being done
+{d.HitSourceObject} & {d.HitSourceObjectType}
+| type enum indicates what type of source is used
+| None -> unknown, shouldn't really be used
+| Misc -> mod use?
+| PlayerProjectile -> hit by a players projectile, sourceObject is the Players.Player
+| PlayerClick -> hit by a players melee, sourceObject is the Players.Player
+| NPC -> hit by the npc's actions, sourceObject is the NPCBase
+| Monster -> hit by a monster's actions, sourceObject is the IMonster
+| FallDamage -> damage from falling. sourceObject is who caused the fall? :)
+
 
 void OnMonsterSpawned (IMonster monster)
 Called when a monster was spawned
@@ -358,13 +361,11 @@ Builtin callback uses:
   pipliz.server.refundrecruitement
     Add {old job} recruitment item to the stockpile
 
-void OnNPCHit (NPC.NPCBase npc, Pipliz.Box<float> box)
-box.item1 -> damage
-{npc} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnNPCHit (NPC.NPCBase npc, ModLoader.OnHitData d)
+See OnMonsterHit callback, they're pretty equivalent
 
-void OnPlayerHit (Players.Player player, Pipliz.Box<float> box)
-box.item1 -> damage
-{player} is getting hit for {damage}. Can adjust damage. Don't store the Box<>.
+void OnPlayerHit (Players.Player player, ModLoader.OnHitData d)
+See OnMonsterHit callback, they're pretty equivalent
 
 void OnPlayerClicked (Players.Player player, Pipliz.Box<Shared.PlayerClickedData> boxedData)
 boxedData.item1 -> clickedData
@@ -397,21 +398,38 @@ Triggered every x seconds, to autosave non-block data (jobs, npc's, players)
 Builtin callback uses:
   A lot. Basically all callbacks from OnQuit to do with saving are in here as well (but then with auto in their identifier)
 
+void OnPlayerRecipeSettingChanged (RecipeStorage.PlayerRecipeStorage storage, Recipe recipe, Box<RecipeSetting> recipeSetting)
+Triggered every time a recipe limit is changed. Don't store the Box<> (it gets reused)
+See storage.Player for the owner
+This is also called upon loading the settings from JSON.
+It's only calledif the setting is not (!) the default priority / limit of said recipe.
+
+void OnNPCCraftedRecipe (IJob job, Recipe recipe, List<InventoryItem> results)
+Triggered every time a npc crafts a recipe. Don't store the List<>, it's reused.
+Results contains the recipe.Results by default, the List<> can be edited.
+After the callback the results will be added to the block's inventory.
+If the results list is not empty after the callback, the npc indicator will show a random type from the results.
+
+void OnNPCGathered (IJob job, Vector3Int location, List<ItemTypes.ItemTypeDrops> results)
+Triggered every time a npc gathers something at {location}. Don't store the List<>, it's reused.
+Results contains the default gathered materials, can be edited.
+After the callback the results will be added to the npc's inventory.
+The location is the position where something happened, doesn't have to be the job position.
+
+void OnShouldKeepChunkLoaded (ChunkUpdating.KeepChunkLoadedData data)
+!!! can be called from multiple threads, be aware !!!
+Periodically triggered for every chunk loaded. Use it to keep chunks loaded outside of the player / banner zones.
+{data.CheckedChunk} - the chunk being checked
+{data.MillisecondsTillNextCheck} - the time till the next check will be issued. Starts at Random between 24000 and 64000
+{data.Result} - bool indicating whether or not to keep this chunk. Defaults to false.
+Builtin callback uses:
+  pipliz.server.bannercheck
+    Sets result to true if any banner within Banner.LoadedRadius has colonists associated with it
+	If that's true, also multiplies time till next check by 5; assuming a colony doesn't disappear often.
+  pipliz.server.playercheck
+    if Result is false, checks whether there are connected players nearby. If so, sets result to true.
+
 NPC temporary values - unused by server code
 Monster temporary values - unused by server code
 Player Temporary values: Variables stored in player.GetTempValues() dict (if set - defaults may not be in there)
 
-float pipliz.healthregenmax
-  Limit to which health regenerates, set by health regen size research
-
-float pipliz.healthregenspeed
-  Speed at which health regenerates, set by health regen speed research 
-
-float pipliz.healthmax
-  Max health, set by health size research
-
-int pipliz.bannersaferadius
-  Monster spawn safe radius
-
-bool pipliz.setflight
-  Whether or not /setflight true is active

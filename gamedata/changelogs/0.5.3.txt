@@ -1,3 +1,27 @@
-0.5.3 (2017-01-**)
+0.5.3 (2018-01-26)
 
--Updated fr-FR & ja-JP locale (both to 100% of what is localizable)
+-Increased stack size of stairs to 60 so it is multiple of the crafting recipe
+
+-Updated fr-FR, ja-JP and es-ES locale through github (to 100% of what is localizable)
+-Updated pt-BR locale from email to 100% (by nafodebit, https://steamcommunity.com/id/nadiongaming/)
+-Updated ko-KR locale from email (by 왕군게임국 , https://www.youtube.com/channel/UCqONn4EbAYzIVEGAoQxmZUA). Had some collisions with github updated locales.
+
+-Fixed an issue where the servername would get overwritten in gamedata/savegames/server.json
+-Fixed an issue preventing lights from updating their shadows in some situations
+-Removed QuarterBlockRoot from builtinblocks (didn't exist in the final build of 0.5.2)
+-Optimized a method related to finding the closest crate (that really was a slow one)
+-Slightly optimized some network traffic (don't send indicator updates if people are out of npc rendering range anyway)
+
+Modding changes:
+-Added Server.Monsters.MonsterTracker.MonstersTotal
+-Revamped the npc indicator system.
+| Check Server.Indicator.Send* for ways to send indicators to positions and npc's
+| Typical change would be a job where one calls:
+| - state.SetIndicator(NPCIndicatorType.Crafted, 8.5f, BuiltinBlocks.Berry);
+| which is now replaced with:
+| - state.SetIndicator(new Shared.IndicatorState(8.5f, BuiltinBlocks.Berry));
+| Most of the 'special' NPCIndicatorTypes are removed, in favor of manually selecting whether the progress bar is red or green and whether the diagonal red line shows up.
+-Added BlockJobBase.UsedNPC property
+-Added CraftingJobBase.BlockInventory property
+-Added ScientistJob.CraftingCooldown property
+-Made GuardJobBase.SetupSettings() and GuardJobBase.OnShoot() public

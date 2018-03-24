@@ -16,22 +16,23 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			identifier = "pipliz.temperateforest";
 			fileName = "temperateforester";
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.forester");
+			areaType = Shared.EAreaType.Forestry;
 		}
 
 		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
-			SetLayer(min, max, BuiltinBlocks.LumberArea, -1);
+			SetLayer(min, max, BuiltinBlocks.LumberArea, -1, owner);
 			return base.CreateAreaJob(owner, min, max, npcID);
 		}
 
 		public override void OnRemove (IAreaJob job)
 		{
-			SetLayer(job.Minimum, job.Maximum, BuiltinBlocks.GrassTemperate, -1);
+			SetLayer(job.Minimum, job.Maximum, BuiltinBlocks.GrassTemperate, -1, job.Owner);
 		}
 
 		public override void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
 		{
-			bool hasSeeds = job.UsedNPC.Colony.UsedStockpile.Contains(BuiltinBlocks.Sapling);
+			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(BuiltinBlocks.Sapling);
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
 			Vector3Int max = job.Maximum;
@@ -70,6 +71,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			positionSub = new Vector3Int(xRandom, min.y, zRandom);
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public override void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
 			state.JobIsDone = true;
@@ -88,7 +91,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							state.SetCooldown(5.0);
 						} else {
 							ItemTypesServer.OnChange(positionSub.Add(1, 0, 1), 0, BuiltinBlocks.Sapling, null);
-							state.SetIndicator(NPCIndicatorType.Crafted, 2f, BuiltinBlocks.Sapling);
+							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 							state.SetCooldown(0.2);
 						}
 					}
@@ -97,18 +100,27 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				ushort type;
 				if (World.TryGetTypeAt(positionSub, out type)) {
 					if (type == 0) {
-						if (job.UsedNPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
-							|| job.UsedNPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.Sapling)) {
-							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, ServerManager.SetBlockFlags.DefaultAudio);
+						if (job.NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
+							|| job.NPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.Sapling)) {
+							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
 							state.SetCooldown(2.0);
 						} else {
-							state.SetIndicator(NPCIndicatorType.MissingItem, 2f, BuiltinBlocks.Sapling);
+							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 						}
 					} else if (type == BuiltinBlocks.LogTemperate) {
-						if (ChopTree(positionSub)) {
-							state.SetIndicator(NPCIndicatorType.Crafted, 10f, BuiltinBlocks.LogTemperate);
+						if (ChopTree(positionSub, job.Owner)) {
+							state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
 							ServerManager.SendAudio(positionSub.Vector, "woodDeleteHeavy");
-							AddResults(job.UsedNPC.Inventory);
+
+							GatherResults.Clear();
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1.0));
+							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0.25));
+
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, positionSub, GatherResults);
+
+							job.NPC.Inventory.Add(GatherResults);
 						} else {
 							state.SetCooldown(Random.NextFloat(3f, 6f));
 						}
@@ -124,30 +136,11 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			positionSub = Vector3Int.invalidPos;
 		}
 
-		static bool ChopTree (Vector3Int p)
+		static bool ChopTree (Vector3Int p, Players.Player owner)
 		{
-			return ServerManager.TryChangeBlock(p, 0)
-				&& ServerManager.TryChangeBlock(p.Add(0, 1, 0), 0)
-				&& ServerManager.TryChangeBlock(p.Add(0, 2, 0), 0)
-				&& ServerManager.TryChangeBlock(p.Add(0, 2, 1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(1, 2, 1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(1, 2, 0), 0)
-				&& ServerManager.TryChangeBlock(p.Add(1, 2, -1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(0, 2, -1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(-1, 2, -1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(-1, 2, 0), 0)
-				&& ServerManager.TryChangeBlock(p.Add(-1, 2, 1), 0)
-				&& ServerManager.TryChangeBlock(p.Add(0, 3, 0), 0);
-		}
-
-		static void AddResults (NPCInventory inv)
-		{
-			inv.Add(BuiltinBlocks.LogTemperate, 3);
-			inv.Add(BuiltinBlocks.LeavesTemperate, 9);
-			inv.Add(BuiltinBlocks.Sapling);
-			if (Random.NextDouble() > 0.25) {
-				inv.Add(BuiltinBlocks.Sapling);
-			}
+			return ServerManager.TryChangeBlock(p, 0, owner)
+				&& ServerManager.TryChangeBlock(p.Add(0, 1, 0), 0, owner)
+				&& ServerManager.TryChangeBlock(p.Add(0, 2, 0), 0, owner);
 		}
 
 		#region LOAD_LEGACY_BLOCKS_WORKAROUND

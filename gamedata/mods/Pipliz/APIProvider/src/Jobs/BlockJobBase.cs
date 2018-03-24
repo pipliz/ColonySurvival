@@ -17,6 +17,27 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual Vector3Int KeyLocation { get { return position; } }
 
+		public virtual NPCBase NPC
+		{
+			get { return usedNPC; }
+			set
+			{
+				if (usedNPC != value) {
+					if (usedNPC != null) {
+						usedNPC.ClearJob();
+					}
+					usedNPC = value;
+					if (usedNPC == null) {
+						JobTracker.Add(this);
+					} else {
+						usedNPC.TakeJob(this);
+					}
+				} else if (value == null) {
+					JobTracker.Add(this);
+				}
+			}
+		}
+
 		public virtual bool IsValid
 		{
 			get
@@ -63,16 +84,14 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			this.position = position;
 			this.owner = owner;
 
+			NPCBase foundNPC = null;
+
 			if (desiredNPCID != 0) {
-				if (NPCTracker.TryGetNPC(desiredNPCID, out usedNPC)) {
-					usedNPC.TakeJob(this);
-				} else {
+				if (!NPCTracker.TryGetNPC(desiredNPCID, out foundNPC)) {
 					Log.WriteWarning("Failed to find npc ID {0}", desiredNPCID);
 				}
 			}
-			if (usedNPC == null) {
-				JobTracker.Add(this);
-			}
+			NPC = foundNPC;
 		}
 
 		public virtual void OnNPCAtJob (ref NPCBase.NPCState state)
@@ -82,28 +101,15 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+			state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 			state.SetCooldown(0.1);
+			state.JobIsDone = true;
 		}
 
-		public virtual void OnAssignedNPC (NPCBase npc)
-		{
-			usedNPC = npc;
-		}
-
-		public virtual void OnRemovedNPC ()
-		{
-			usedNPC = null;
-			JobTracker.Add(this);
-		}
-		
 		public virtual void OnRemove ()
 		{
 			isValid = false;
-			if (usedNPC != null) {
-				usedNPC.ClearJob();
-				usedNPC = null;
-			}
+			NPC = null;
 			JobTracker.Remove(owner, KeyLocation);
 		}
 

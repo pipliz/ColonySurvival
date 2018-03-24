@@ -16,6 +16,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			identifier = "pipliz.berryfarm";
 			fileName = "berryfarms";
 			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
+			areaType = Shared.EAreaType.BerryFarm;
 		}
 
 		/// Override it to use custom berryfarmerjob, to store some per-job data
@@ -31,7 +32,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			Vector3Int min = job.Minimum;
 			Vector3Int max = job.Maximum;
 
-			if (job.checkMissingBushes && job.UsedNPC.Colony.UsedStockpile.Contains(BuiltinBlocks.BerryBush)) {
+			if (job.checkMissingBushes && job.NPC.Colony.UsedStockpile.Contains(BuiltinBlocks.BerryBush)) {
 				// remove legacy positions
 				for (int x = min.x + 1; x <= max.x; x += 2) {
 					for (int z = min.z; z <= max.z; z += 2) {
@@ -43,7 +44,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						if (type == BuiltinBlocks.BerryBush) {
 							job.removingOldBush = true;
 							job.bushLocation = possiblePositionSub;
-							positionSub = Server.AI.AIManager.ClosestPosition(job.bushLocation, job.UsedNPC.Position);
+							positionSub = Server.AI.AIManager.ClosestPosition(job.bushLocation, job.NPC.Position);
 							return;
 						}
 					}
@@ -59,7 +60,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						if (type == 0) {
 							job.placingMissingBush = true;
 							job.bushLocation = possiblePositionSub;
-							positionSub = Server.AI.AIManager.ClosestPositionNotAt(job.bushLocation, job.UsedNPC.Position);
+							positionSub = Server.AI.AIManager.ClosestPositionNotAt(job.bushLocation, job.NPC.Position);
 							return;
 						}
 					}
@@ -72,6 +73,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			positionSub.z += Random.Next(0, (max.z - min.z) / 2 + 1) * 2;
 		}
 
+		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
 		public override void OnNPCAtJob (IAreaJob rawJob, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
 		{
 			BerryFarmerJob job = (BerryFarmerJob)rawJob;
@@ -80,16 +83,16 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			if (positionSub.IsValid) {
 				ushort type;
 				if (job.placingMissingBush) {
-					if (job.UsedNPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.BerryBush)) {
+					if (job.NPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.BerryBush)) {
 						job.placingMissingBush = false;
-						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, ServerManager.SetBlockFlags.DefaultAudio);
+						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio);
 						state.SetCooldown(2.0);
 					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush);
+						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
 					}
 				} else if (job.removingOldBush) {
-					if (ServerManager.TryChangeBlock(job.bushLocation, 0, ServerManager.SetBlockFlags.DefaultAudio)) {
-						job.UsedNPC.Colony.UsedStockpile.Add(BuiltinBlocks.BerryBush);
+					if (ServerManager.TryChangeBlock(job.bushLocation, 0, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+						job.NPC.Colony.UsedStockpile.Add(BuiltinBlocks.BerryBush);
 						job.removingOldBush = false;
 					}
 					state.SetCooldown(2.0);
@@ -98,14 +101,22 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						job.checkMissingBushes = true;
 						state.SetCooldown(1.0, 4.0);
 					} else if (type == BuiltinBlocks.BerryBush) {
-						state.SetIndicator(NPCIndicatorType.Crafted, 8.5f, BuiltinBlocks.Berry);
-						NPCInventory inv = job.UsedNPC.Inventory;
-						inv.Add(BuiltinBlocks.Berry);
-						if (Random.Next(0, 10) >= 9) {
-							inv.Add(BuiltinBlocks.BerryBush);
+						GatherResults.Clear();
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Berry, 1, 1.0));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.BerryBush, 1, 0.1));
+
+						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, rawJob as IJob, positionSub, GatherResults);
+
+						InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+						if (toShow.Amount > 0) {
+							state.SetIndicator(new Shared.IndicatorState(8.5f, toShow.Type));
+						} else {
+							state.SetCooldown(8.5);
 						}
+
+						job.NPC.Inventory.Add(GatherResults);
 					} else {
-						state.SetIndicator(NPCIndicatorType.MissingItem, Random.NextFloat(8f, 14f), BuiltinBlocks.ErrorMissing);
+						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.ErrorMissing));
 					}
 				} else {
 					state.SetCooldown(Random.NextFloat(3f, 6f));

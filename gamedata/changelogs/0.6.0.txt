@@ -1,0 +1,151 @@
+0.6.0 (2018-03-23)
+
+Welcome to 0.6.0, the Construction Update! 
+The major new feature is three new jobs. You can now let your colonists place and remove blocks! 
+There's an important new graphics settings. It's now possible to greatly increase your view range. 
+We've also added two minor features. Hold CTRL to crouch and not fall of edges anymore, or to recruit 15 colonists simultaneously. 
+This update also includes optimized NPC rendering, resulting in massive performance increases for big colonies. 
+Have fun, report bugs and tell us about your experiences!
+
+-Added diggers - they remove all blocks in an area
+-Added builders - place a certain type in an area
+-Added "special" diggers - they remove a certain type from an area
+-Added a "crouch" button, which will slow you down and prevent falling off edges (default: left control)
+-Added draw distance setting (low, medium, high, very high - previously default was medium)
+-Added video setting presets
+-Very large performance improvements for larger colonies: NPC rendering vastly improved possibly quadrupling fps, various other things optimized
+-Vastly improved the speed and reliability of loading chunks, and vastly reduced network bandwith required for it
+-Added more precise collision boxes to most complex objects (beds, crops, torches, job outlines)
+-Farmer areas can now be made over existing crops
+-Added a modifier key to hold while recruiting colonists to recruit 15 per click (default: left control, "Quick Hire Modifier" in controls menu)
+-Removed the "Special Block Removal" warning popup when destroying a warning block
+| Warning blocks destroy like any normal block now. "Hidden" blocks will re-appear while destroying them.
+| Popup still appears if clicking on them with the command tool
+-Disabled remove area popup when digging through blocks below/in an area - click it while holding the command tool instead
+-Added 2 new achievements
+-Updated Unity3D from 5.6.4p4 to 5.6.5p3
+
+-Taught farmers to abandon their farm if one of their ground blocks is removed or changed to something non-fertile
+-Disable Eye Adaptation setting if hardware/drivers don't support it (requires shader model 5 / compute shaders)
+-The area selected during the 'area removal popup' is now sort of transparent to show up more clearly
+-Fixed an issue where colonists could run into a circle, where they're switching between 2 crates thinking they get closer each time.
+| Should also somewhat improve crate finding (i.e, they won't swap incorrectly for a further away crate when halfway)
+-Fix colonists missing items to take a job (i.e, pickaxe, axe, slings etc) displaying a ? instead of the item as missing
+-Fixed 0.5.1+ changelog dates being in 2017
+-Fixed modded locales falling back to the clients' en-US instead of the server one
+-Fixed an issue where a world used for both singleplayer and multiplayer would return the singleplayer player in multiplayer for Players.TryMatchName (yey edge cases)
+-Changed npc eating to be more random (they get 70%-130% of the food value) in order to spread their eating moments throughout the day
+-Changed npc hunger to try and maintain a minimum 3 hours of food instead of 1 hour minimum
+-Changed npc hunger to eat up to 10 hours of food, instead of up to 15 hours.
+-Fixed npcs & monsters glitching through walls / over moats if they had a path calculated before the wall/moat appeared (they'll still walk up to it though)
+-Fixed an issue where crops would mysteriously reappear to continue growing after being removed combined with a server restart
+-Extended the green area of banners by 40 cm to indicate the previously half-green half-red block is safe
+-Fixed an issue with the "height" at which npc's stand on top of non-block-sized types.
+| They'll stand/walk at the height returned by sweeping a box sized (0.25, 0.25, 0.25) through the boxcolliders from the middle-top straight down
+-Slightly improved collision detection during low framerates
+-Fixed a rare server error which breaks chunk loading (happens when 2 or more players queue up an already loaded chunk at the same time)
+-Discard cached files on the server if the player connected in singleplayer mode (saves ~35 MB of ram from ~135 to ~100)
+-Improved JSON string (un)escape handling. Now only does it on read/write to disk, instead of upon SetAs/GetAs
+-Added string interning for parsed JSON (RAM on mega world before: 3150 MB, after: 2843 MB)
+-Optimized performance:
+| In a very large world fps went from ~10 on 0.5.3 to ~40+ on 0.6.0 (!)
+| Overhauled NPC rendering - very large improvement in performance
+| Optimized rendering large amounts of meshed blocks (wheat, beds - using larger batches & optimized code, tiny improvement)
+| Reduced indicator rendering range from 180 blocks to 75 blocks
+-NPCs now have to dump their inventory manually after changing jobs / losing their job, instead of magic clearing
+-Added ragdoll settings to /gamedata/savegames/client.json (ragdoll count, ragdoll alive duration)
+-Rewrote chunk transfer between client and server.
+| Fixes the issue where terrain does not load correctly (gaps, 'reused' chunks)
+| Fixes the issue where terrain does not load from close to far
+| Reduces 'unplayable' time for lower bandwidth connections
+-Optimized part of world loading (tiny lag spikes every 16 meter got tinier, with less garbage as well)
+-Optimized light creation (substantially reduced the lag spikes associated with loading 100's of lights)
+-Reduced garbage collection pressure created by terrain generation on the server
+-Optimized the terrain generator to not spend a lot of time on far-in-the-air-chunks
+-Compress chunk data send over the network a lot more - about 3 times size reduction.
+-Optimized various bits of networking to send less data (~50% reduction on avg)
+-Fixed an issue where a mod failing to load cascades into breaking other mods (they're not passed as a "loaded mod" in AfterModsLoaded)
+-Fixed the skybox starting at the "old" time when switching between worlds
+-Removed "/reloadvariablesclient" and "/reloadvariablesserver" and the code supporting it (long unused feature)
+-The singleplayer server now uses a port provided by the OS (through the client) instead of a fixed one
+-Changed server networking to use more threads
+-Fixed inverted Y-axis setting reverting when re-entering the menu
+-Made water a bit less of a sticky soup and more something you can get out of
+-Fixed ragdolls being limited to 30 fps
+-Fixed an issue where colonists would appear away from their actual position (mostly flying in formation)
+-Added sand to the merchant
+-Fixed the tooltip not updating when clicking though dependencies in the science menu
+-Fixed npc indicators staying at the wrong position for an extended period of time (offset from sleeping)
+-Show area's and job spots when selecting a crate in the hotbar
+-Updated oven, crate, stonebricks, bricks, bed icons
+
+Modding changes:
+-Updated gamedata/help/ with a types.txt to describe the keys available to use in types.json
+-Removed NPC.Job; was only used by DefaultFarmerAreaJob<T>. Get/reuse code from the job types available in the APIProvider mod included instead
+-Added IAreaJob.IsValid, to indicate whether this area his been removed (to check invalidated references)
+-Added bool AreaJobTracker.ExistingAreaAt (min, max, out List<jobs>)
+| Get a list of areas overlapping the area between min and max
+| Optionally return the List<jobs> to AreaJobTracker.AreaJobListPool when you're done with it
+-Pipliz.Helpers.IOHelper.CreateDirectoryFromFile now doesn't error if there's no directory in the path (will return null though)
+-The JSON Deserialize methods now have a bool option "stringInterning", defaults to true.
+-ByteReader.ReadString and .ReadOptionalString now take an optional parameter whether or not to intern the string. Defaults to false.
+| Set it to false if the data you're reading is unique and short lived
+-ThreadedObjectPool<T> constructor function is now optional, will fallback to Activator.CreateInstance<T>()
+-Merged ServerManager.TryChangeBlock, ServerManager.TryChangeBlockUserRequest and ServerManager.TryChangeBlockUserRequest
+| Mainly changed so that diggers can be limited by anti-grief
+| See updated mod_callbacks.txt on OnTryChangeBlock
+| Changed OnTryChangeBlockUser callback from "bool OnTryChangeBlockUser" to "void OnTryChangeBlock"
+| Removed OnTryChangeBlockUserRequest callback (merged into OnTryChangeBlock)
+| OnTryChangeBlock now receives callbacks for game caused changes (water spreading, leaves removal)
+| ServerManager.TryChangeBlock now has an optional causingPlayers argument
+| Removed SetBlockFlags.SendToPlayers (since it's basically useless to change blocks on the server without sending it to players)
+| Substantially changed OnTryChangeBlockUserData (and renamed to OnTryChangeBlockData)
+-Changed IMonster.OnHit(damage) to take optional arguments for damage source and damage source type.
+-Changed OnMonsterHit callback to be of type Action<IMonster, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnMonsterHit
+-Changed NPC.NPCBase.OnHit(damage) to take optional arguments for damage source and damage source type.
+-Changed OnNPCHit callback to be of type Action<NPC.NPCBase, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnNPCHit
+-Changed Players.TakeHit (Players.Player, float, bool = false)
+| sendToPlayer argument is removed, was always true (why take damage and not send it to the user)
+| Added optional arguments for damage source and damage source type
+-Changed OnPlayerHit callback to be of type Action<Players.Player, ModLoader.OnHitData>
+| See updated mod_callbacks.txt on OnPlayerHit
+-Added support for 4th version digit (Major.Minor[.Build[.Revision]], -1 = unused digit)
+| Added version.IsSubVersionOf(other) to check for subversions (i.e, other revision count if checking against x.x.x, or other build count if checking against x.x are allowed)
+-Changed "boxColliders" format used in types.json - see "colliders" at end of gamedata/help/types.txt
+-Removed outdated/unused World.CanSee() method
+-Added type.BlocksPathing, type.CollidePlayer, type.CollideSelection - see gamedata/help/types.txt
+-Added a setter to ScientistJob.CraftingCooldown
+-Added a MiningCooldown property to the MinerJob
+-Made some fields public in the MinerJob
+-"renderOnlyIfSelected" types will now render if the player is actively hitting them
+-Removed NPCInventory.SetCapacity() - the Capacity property now has a public setter.
+-Changed NPCInventory(JSONNode) constructor - now takes an argument for inventory size instead of reading it from the jsonnode.
+-Changed NPCInventory.GetJSON() - doesn't store capacity in the node anymore
+-Renamed NPCInventory.TryDump (Stockpile) to NPCInventory.Dump (Stockpile) - there was no trying involved
+-Renamed AreaType to Shared.EAreaType
+-Renamed Shared.EAreaType to Shared.EAreaTypeMesh (yeah this will be confusing)
+-Added IAreaJob.AreaType - used to indicate the area type to the client (used by the command tool to check for digger area presence)
+-Added IAreaJob.AreaTypeMesh - to indicate what type of visualization the area should use on the client
+-Added a protected areaType variable to the AreaJobDefinitionDefault from the APIProvider, which the DefaultFarmerAreaJob uses to implement IAreaJob.AreaType
+-ItemType.OnRemoveItems can now be null
+-Added ItemType.Categories, a (nullable) List<string> of categories the item belongs to, sorted by priority. Used for sorting the stockpile on the client. See gamedata/help/types.txt.
+-Added ItemType.HasCategory (category) for easier category checking
+-Added ItemTypes.NotableTypes - a List<ItemType> of all types that have categories set to them. Used for the /lootall command
+-Removed ItemTypesServer.ItemSortOrder & co, replaced with the ItemType.Categories field & ItemTypes.NotableTypes property
+-Changed the Func<T, T, bool> arg required for the custom (Threaded)BinaryHeap class; it's now a Func<T, T, int> (consistent with IComparable<T>) and optional like the SortedList<TKey, TValue>
+-Added an optional Action<TValue> to be called upon disposing the item to Pipliz.Collection.CacheLastUsed - so you can use an object pool for the values.
+-Changed ServerMessageType & ClientMessageType sending in packets; they use a seperate overload of bytereader / bytebuilder now, using variable length encoding
+-Added OnPlayerRecipeSettingChanged callback - see callbacks help file
+-Added OnNPCCraftedRecipe callback - see callbacks help file
+-Renamed IAreaJob.UsedNPC to IAreaJob.NPC (to match the IJob change)
+-Replaced IJob.OnAssignedNPC(npc) and IJob.OnRemovedNPC() with a NPCBase NPC {get; set;} property.
+-Added OnNPCGathered callback - see callbacks help file
+-Added OnShouldKeepChunkLoaded callback - see callbacks help file
+-Removed BannerTracker.GetBanners() - use a combination of GetCount and TryGetAtIndex (made it threadsafe for OnShouldKeepChunkLoaded)
+-Changed type of Colony.collection to a ThreadedDict (to make it threadsafe for OnShouldKeepChunkLoaded)
+-Added Player.DrawDistance (used to limit Players.SendToNearbyDrawDistance)
+-Added Players.SendToNearbyDrawDistance - same as Players.SendToNearby, but also limits to per player draw distance
+-Added bool BlockTracker<T>.ContainsblockWithinDistanceByAxis(pos, dist, out bock) overload
+-Added Banner BannerTracker.GetClosest(position, axisRadius)

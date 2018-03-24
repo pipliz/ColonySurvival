@@ -1,11 +1,11 @@
 {
-	"coverage" : 95.0844854070661,
+	"coverage" : 88.4615384615385,
 	"sentences" : {
 		"escapemenu" : {
-			"back" : "게임으로",
+			"back" : "게임으로 돌아가기",
 			"info" : "정보",
-			"quitdesktop" : "게임종료",
-			"quitmain" : "메인메뉴",
+			"quitdesktop" : "게임 종료",
+			"quitmain" : "메인메뉴로 나가기",
 			"settings" : "설정"
 		},
 		"firstpersonstats" : {
@@ -24,7 +24,7 @@
 			"next" : "다음",
 			"none" : "없음",
 			"previous" : "이전",
-			"reset" : "초기화"
+			"reset" : "리셋"
 		},
 		"infomenu" : {
 			"changelog" : "업데이트 내용",
@@ -92,6 +92,58 @@
 				"bronzeminting" : {
 					"description" : "화폐 주조소와 시장을 배치할 수 있게 됩니다. 시장에선 씨앗, 흙 등 여러 아이템을 구매할 수 있습니다.",
 					"name" : "화폐 경제"
+				},
+				"constructionbuilder" : {
+					"description" : "_MISSING_Unlock builder areas for the construction worker",
+					"name" : "_MISSING_Builder"
+				},
+				"constructionbuildersize1" : {
+					"description" : "_MISSING_Increases maximum builder area size to 25.000",
+					"name" : "_MISSING_Builder Limit I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "_MISSING_Increases maximum builder area size to 100.000",
+					"name" : "_MISSING_Builder Limit II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "_MISSING_Increases maximum builder area size to 250.000",
+					"name" : "_MISSING_Builder Limit III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "_MISSING_Increases maximum builder area size to 500.000",
+					"name" : "_MISSING_Builder Limit IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
+					"name" : "_MISSING_Builder Limit V"
+				},
+				"constructiondigger" : {
+					"description" : "_MISSING_Unlock digger areas for the construction worker",
+					"name" : "_MISSING_Digger"
+				},
+				"constructiondiggersize1" : {
+					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
+					"name" : "_MISSING_Digger Limit I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "_MISSING_Increases maximum digger area size to 100.000",
+					"name" : "_MISSING_Digger Limit II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "_MISSING_Increases maximum digger area size to 250.000",
+					"name" : "_MISSING_Digger Limit III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "_MISSING_Increases maximum digger area size to 500.000",
+					"name" : "_MISSING_Digger Limit IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
+					"name" : "_MISSING_Digger Limit V"
+				},
+				"constructiondiggerspecial" : {
+					"description" : "_MISSING_Unlock special digger areas for the construction worker",
+					"name" : "_MISSING_Special Digger"
 				},
 				"crossbow" : {
 					"description" : "활보다 강력한 무기, 석궁을 연구합니다.",
@@ -248,7 +300,7 @@
 			},
 			"banner" : {
 				"button" : "주민 모집",
-				"description" : "주민 1명 모집에는 빈 침대 1개, 식량 50이 필요하며, 하루에 식량을 5씩 소비합니다.",
+				"description" : "주민 1명 당 침대 1개를 차지하며, 하루에 음식을 5씩 소비합니다. 새로운 주민을 모집하려면 음식 50이 필요합니다.",
 				"gotoscience" : "과학 연구",
 				"header" : "마을 운영",
 				"resetbutton" : "마을 초기화",
@@ -341,10 +393,26 @@
 				"berryfarmertool" : "딸기 농사 짓기",
 				"bow" : "궁병",
 				"bowtooltip" : "공격력: 100 HP\n사정거리: 20 블록\n재장전 시간: 5 초",
+				"buildera" : "_MISSING_Fill an area of the world",
+				"builderarea" : "_MISSING_Builder Area",
+				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"construction" : "_MISSING_Construction",
+				"construction1" : "_MISSING_Let them do the work",
+				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
+				"constructionjob" : "_MISSING_Construction Job",
+				"constructionjoba" : "_MISSING_Hires a construction worker",
+				"constructionjobb" : "_MISSING_Place next to a construction area",
 				"coversarea" : "다른 구역과 겹칩니다.",
 				"crossbow" : "석궁병",
 				"crossbowtooltip" : "공격력: 300 HP\n사정거리: 25 블록\n재장전 시간: 8 초",
 				"description" : "원하는 직업을 선택하세요.",
+				"diggera" : "_MISSING_Dig out an area of the world",
+				"diggerarea" : "_MISSING_Digger Area",
+				"diggerb" : "_MISSING_Select the area to dig out",
+				"diggerspecial" : "_MISSING_Special Digger Area",
+				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
+				"diggerspecialarea" : "_MISSING_Special Digger Area",
+				"diggerspecialb" : "_MISSING_Select the area to remove it from",
 				"flaxb" : "아마꽃 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"flaxfarmer" : "아마꽃",
 				"flaxfarmertool" : "아마꽃 농사 짓기",
@@ -364,6 +432,7 @@
 				"hollyhockfarmer" : "접시꽃",
 				"hollyhockfarmertool" : "접시꽃 농사 짓기",
 				"hollyhockfarmertooltip" : "접시꽃 씨앗이 필요합니다.\n붉은색입니다.\n풀, 흙에만 배치할 수 있습니다.",
+				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "주간 경비: 궁병",
 				"jobbownight" : "야간 경비: 궁병",
 				"jobcrossbowday" : "주간 경비: 석궁병",
@@ -373,20 +442,22 @@
 				"jobslingerday" : "주간 경비: 새총병",
 				"jobslingernight" : "야간 경비: 새총병",
 				"matchlock" : "화승총병",
-				"matchlocktooltip" : "공격력: 500 HP\n사정거리: 30 블록\n재장전 시간: 12 초",
+				"matchlocktooltip" : "먼저 화승총 연구를 완료하세요.\n데미지: 500\n사정거리: 30블럭\n재장전 시간: 12초",
 				"miner" : "광부",
 				"minera" : "광석을 캡니다.",
 				"minerb" : "곡괭이가 필요합니다.\n광석이나 짙은색 돌 위에 배치하세요.",
 				"minertool" : "광부 도구",
-				"missingscience" : "<color=red>연구 탭에서 '{0}' 기술을 먼저 연구하세요.<\/color>",
+				"missingscience" : "<color=red>연구 탭에서 '{0}' 기술을 먼저 연구하세요.</color>",
+				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "배치할 수 없습니다.",
 				"notflat" : "평지가 아닙니다.",
 				"notool" : "도구를 선택하세요.",
 				"occupiedblocks" : "정리하지 않은 블럭이 있습니다.",
+				"selectitem" : "_MISSING_Select an item type to use",
 				"slinger" : "새총병",
-				"slingertooltip" : "공격력: 50 HP\n사정거리: 12 블록\n재장전 시간: 3 초",
+				"slingertooltip" : "초반에 유용합니다.\n데미지: 50\n사정거리: 12블럭\n재장전 시간: 3초",
 				"toolarge" : "너무 큽니다.",
-				"toonarrow" : "너무 좁습니다.",
+				"toonarrow" : "나무를 심기엔 너무 좁습니다.",
 				"toosmall" : "너무 작습니다.",
 				"wheatb" : "밀알이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"wheatfarmer" : "밀 농사꾼",
@@ -469,15 +540,17 @@
 			},
 			"language" : "언어",
 			"languagemenu" : {
-				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역 제작은 유튜브 크리에이터 왕군이 진행했으며, 도움을 주시고 싶으신 분들은 pdkkoedol@gmail.com 으로 메일 부탁드립니다.",
+				"coverage" : "이 번역의 완성도는 {0:F1}% 입니다. 번역을 돕기 위해서는 포럼이나 github를 참고해주세요.",
 				"full" : "언어 설정",
 				"language" : "언어",
 				"wiptext" : "아직 게임의 모든 부분이 번역되지 않았습니다. 몇몇 언어는 번역 진행률이 다른 언어보다 더 낮을 수 있습니다."
 			},
+			"qualitycustom" : "_MISSING_Custom",
 			"qualityhigh" : "높음",
 			"qualitylow" : "낮음",
 			"qualitymaximum" : "최대",
 			"qualitymedium" : "중간",
+			"qualityminimum" : "_MISSING_Minimum",
 			"qualityoff" : "끄기",
 			"qualityon" : "켜기",
 			"qualityveryhigh" : "매우 높음",
@@ -490,6 +563,7 @@
 				"antialiasing" : "안티 엘리어싱",
 				"bloom" : "반짝임",
 				"depthoffield" : "피사계 심도",
+				"drawdistance" : "_MISSING_Draw distance (*)",
 				"eyeadaptation" : "눈 적응",
 				"fieldofview" : "시야각",
 				"full" : "비디오 설정",
@@ -498,7 +572,9 @@
 				"fxaalow" : "FXAA 낮음",
 				"fxaamedium" : "FXAA 중간",
 				"lightscattering" : "빛 분산",
+				"preset" : "_MISSING_Preset",
 				"resolution" : "해상도",
+				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
 				"shaderquality" : "쉐이더 퀄리티",
 				"skyboxconstant" : "_MISSING_Skybox constant",
 				"skyboxfrequent" : "_MISSING_Skybox frequent",
@@ -539,7 +615,7 @@
 		"bed" : "침대",
 		"berry" : "딸기",
 		"berrybush" : "딸기 씨앗",
-		"blackplanks" : "_MISSING_Coated Black Planks",
+		"blackplanks" : "검은 널빤지",
 		"bloomery" : "제철 용광로",
 		"bow" : "활",
 		"bowstring" : "활 시위",
@@ -574,6 +650,7 @@
 		"cobblestonered" : "붉은 자갈",
 		"cokes" : "석탄",
 		"commandtool" : "직업 도구",
+		"constructionjob" : "_MISSING_Construction Job",
 		"copper" : "구리",
 		"coppernails" : "구리 못",
 		"copperparts" : "구리 부품",
@@ -662,7 +739,7 @@
 		"quarterblockbrownlight" : "_MISSING_Light Brown Quarter Block",
 		"quarterblockgrey" : "_MISSING_Grey Quarter Block",
 		"quarterblockwhite" : "_MISSING_White Quarter Block",
-		"redplanks" : "_MISSING_Coated Red Planks",
+		"redplanks" : "붉은 널빤지",
 		"salpeter" : "초석",
 		"sand" : "모래",
 		"sappling" : "묘목",

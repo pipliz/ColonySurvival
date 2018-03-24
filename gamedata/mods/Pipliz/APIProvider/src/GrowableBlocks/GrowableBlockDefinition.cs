@@ -74,7 +74,9 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 		/// </summary>
 		public virtual void PrepareSaving (IGrowableBlock block)
 		{
-			BlockCountToSave++;
+			if (block.IsValid) {
+				BlockCountToSave++;
+			}
 		}
 
 		/// <summary>
@@ -82,12 +84,14 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 		/// </summary>
 		public virtual void SaveBlock (IGrowableBlock block)
 		{
-			if (SaveArray == null) {
-				SaveArray = new JSONNode(NodeType.Array);
-				SaveArray.SetArrayCapacity(BlockCountToSave);
-				BlockCountToSave = 0; // reset capacity for next autosave/quit
+			if (block.IsValid) {
+				if (SaveArray == null) {
+					SaveArray = new JSONNode(NodeType.Array);
+					SaveArray.SetArrayCapacity(BlockCountToSave);
+					BlockCountToSave = 0; // reset capacity for next autosave/quit
+				}
+				SaveArray.AddToArray(block.GetJSON());
 			}
-			SaveArray.AddToArray(block.GetJSON());
 		}
 
 		/// <summary>

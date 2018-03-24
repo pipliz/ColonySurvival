@@ -1,5 +1,5 @@
 {
-	"coverage" : 98.0030721966206,
+	"coverage" : 92.7350427350427,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Retornar ao Jogo",
@@ -92,6 +92,58 @@
 				"bronzeminting" : {
 					"description" : "Desbloqueia lojas e moedas. Pode ser usada para comprar sementes, terra e outras miscelâneas",
 					"name" : "Lojas e Moedas"
+				},
+				"constructionbuilder" : {
+					"description" : "_MISSING_Unlock builder areas for the construction worker",
+					"name" : "_MISSING_Builder"
+				},
+				"constructionbuildersize1" : {
+					"description" : "_MISSING_Increases maximum builder area size to 25.000",
+					"name" : "_MISSING_Builder Limit I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "_MISSING_Increases maximum builder area size to 100.000",
+					"name" : "_MISSING_Builder Limit II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "_MISSING_Increases maximum builder area size to 250.000",
+					"name" : "_MISSING_Builder Limit III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "_MISSING_Increases maximum builder area size to 500.000",
+					"name" : "_MISSING_Builder Limit IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
+					"name" : "_MISSING_Builder Limit V"
+				},
+				"constructiondigger" : {
+					"description" : "_MISSING_Unlock digger areas for the construction worker",
+					"name" : "_MISSING_Digger"
+				},
+				"constructiondiggersize1" : {
+					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
+					"name" : "_MISSING_Digger Limit I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "_MISSING_Increases maximum digger area size to 100.000",
+					"name" : "_MISSING_Digger Limit II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "_MISSING_Increases maximum digger area size to 250.000",
+					"name" : "_MISSING_Digger Limit III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "_MISSING_Increases maximum digger area size to 500.000",
+					"name" : "_MISSING_Digger Limit IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
+					"name" : "_MISSING_Digger Limit V"
+				},
+				"constructiondiggerspecial" : {
+					"description" : "_MISSING_Unlock special digger areas for the construction worker",
+					"name" : "_MISSING_Special Digger"
 				},
 				"crossbow" : {
 					"description" : "Desbloqueia a besta, uma arma mais poderosa do que o arco",
@@ -186,16 +238,16 @@
 					"name" : "Arma de Mosqueteiro"
 				},
 				"quarterblockdyer" : {
-					"description" : "_MISSING_Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
-					"name" : "_MISSING_Dyed Quarter Blocks"
+					"description" : "Desbloqueia a produção de quarto de bloco tingidos pelo artesão, pode ser usado para construir escadas",
+					"name" : "Quarto de Blocos Tingidos"
 				},
 				"quarterblocksplittingstump" : {
-					"description" : "_MISSING_Unlocks the productions of wood colored quarterblocks at the splitting stump, can be used to build stairs",
-					"name" : "_MISSING_Wooden Quarter Blocks"
+					"description" : "Desbloqueia a produção de quarto de blocos de madeira coloridos no divisor de troncos, pode ser usado para construir escadas",
+					"name" : "Quarto de Bloco de Madeira"
 				},
 				"quarterblockstonemason" : {
-					"description" : "_MISSING_Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
-					"name" : "_MISSING_Grey Quarter Blocks"
+					"description" : "Desbloqueia a produção de quarto de blocos cinzas pelo pedreiro, pode ser usado para construir escadas",
+					"name" : "Quarto de Bloco Cinza"
 				},
 				"sciencebagadvanced" : {
 					"description" : "Desbloqueia a mochila avançada de cientista, usada para pesquisas avançadas",
@@ -218,8 +270,8 @@
 					"name" : "Mochila Científica Militar"
 				},
 				"splittingstump" : {
-					"description" : "Desbloqueia troncos divididos. Pode ser usado para construir lenha mais rapidamente do que a mesa de construção.",
-					"name" : "Troncos Divididos"
+					"description" : "Desbloqueia divisor de troncos. Pode ser usado para construir lenha mais rapidamente do que a mesa de construção.",
+					"name" : "Divisor de Troncos"
 				},
 				"stonemasonworkbench" : {
 					"description" : "Desbloqueia o pedreiro, no qual pode construir diferentes variáveis de tijolos",
@@ -341,10 +393,26 @@
 				"berryfarmertool" : "Ferramenta Fazenda de Fruta",
 				"bow" : "Arco",
 				"bowtooltip" : "Dano: 100 HP\nDistância: 20 blocos\nVelocidade de carregamento: 5 segundos",
+				"buildera" : "_MISSING_Fill an area of the world",
+				"builderarea" : "_MISSING_Builder Area",
+				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"construction" : "_MISSING_Construction",
+				"construction1" : "_MISSING_Let them do the work",
+				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
+				"constructionjob" : "_MISSING_Construction Job",
+				"constructionjoba" : "_MISSING_Hires a construction worker",
+				"constructionjobb" : "_MISSING_Place next to a construction area",
 				"coversarea" : "Cobrindo área existente",
 				"crossbow" : "Besta",
 				"crossbowtooltip" : "Dano: 300 HP\nDistância: 25 blocos\nVelocidade de carregamento: 8 segundos",
 				"description" : "Selecione o tipo de área que você quer criar.",
+				"diggera" : "_MISSING_Dig out an area of the world",
+				"diggerarea" : "_MISSING_Digger Area",
+				"diggerb" : "_MISSING_Select the area to dig out",
+				"diggerspecial" : "_MISSING_Special Digger Area",
+				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
+				"diggerspecialarea" : "_MISSING_Special Digger Area",
+				"diggerspecialb" : "_MISSING_Select the area to remove it from",
 				"flaxb" : "Precisa de: Sementes de Linhaça\nColoque na grama ou na terra",
 				"flaxfarmer" : "Fazendeiro de Linhaça",
 				"flaxfarmertool" : "Ferramenta de fazendeiro de Linhaça",
@@ -364,6 +432,7 @@
 				"hollyhockfarmer" : "Fazendeiro de Alcea",
 				"hollyhockfarmertool" : "Ferramenta de fazendeiro de Alcea",
 				"hollyhockfarmertooltip" : "Precisa de: sementes de Alcea\nColoque na grama ou na terra",
+				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "Arqueiro matutino",
 				"jobbownight" : "Arqueiro noturno",
 				"jobcrossbowday" : "Besteiro matutino",
@@ -378,11 +447,13 @@
 				"minera" : "Minera os minérios",
 				"minerb" : "Precisa de: Picareta\nCave pra baixo e coloque no topo dos minérios ou pedra negra",
 				"minertool" : "Ferramenta Mineiro",
-				"missingscience" : "<color=red>Necessita de '{0}' para desbloquear primeiro.<\/color>",
+				"missingscience" : "<color=red>Necessita de '{0}' para desbloquear primeiro.</color>",
+				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "Não arável",
 				"notflat" : "Não é plano",
 				"notool" : "Nenhuma ferramenta selecionada",
 				"occupiedblocks" : "Ocupado por blocos",
+				"selectitem" : "_MISSING_Select an item type to use",
 				"slinger" : "Atirador",
 				"slingertooltip" : "Dano: 50 HP\nDistância: 12 blocos\nVelocidade de carregamento: 3 segundos",
 				"toolarge" : "Muito largo",
@@ -474,10 +545,12 @@
 				"language" : "Idioma",
 				"wiptext" : "Trabalho em progresso. Não abrange todos os textos do jogo e algumas traduções são menos traduzidas que outras."
 			},
+			"qualitycustom" : "_MISSING_Custom",
 			"qualityhigh" : "Alto",
 			"qualitylow" : "Baixo",
 			"qualitymaximum" : "Máximo",
 			"qualitymedium" : "Médio",
+			"qualityminimum" : "_MISSING_Minimum",
 			"qualityoff" : "Desligado",
 			"qualityon" : "Ligado",
 			"qualityveryhigh" : "Muito Alto",
@@ -490,6 +563,7 @@
 				"antialiasing" : "Anti-aliasing",
 				"bloom" : "Bloom",
 				"depthoffield" : "Profundidade de Campo",
+				"drawdistance" : "_MISSING_Draw distance (*)",
 				"eyeadaptation" : "Adaptação do Olho",
 				"fieldofview" : "Campo de Visão",
 				"full" : "Configurações de Vídeo",
@@ -498,7 +572,9 @@
 				"fxaalow" : "FXAA Baixo",
 				"fxaamedium" : "FXAA Médio",
 				"lightscattering" : "Dispersão da Luz",
+				"preset" : "_MISSING_Preset",
 				"resolution" : "Resolução",
+				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
 				"shaderquality" : "Qualidade da Sombra",
 				"skyboxconstant" : "Skybox constante",
 				"skyboxfrequent" : "Skybox frequente",
@@ -539,7 +615,7 @@
 		"bed" : "Cama",
 		"berry" : "Fruta",
 		"berrybush" : "Semente de Fruta",
-		"blackplanks" : "_MISSING_Coated Black Planks",
+		"blackplanks" : "Tábua Preta",
 		"bloomery" : "Forno",
 		"bow" : "Arco",
 		"bowstring" : "Corda",
@@ -574,6 +650,7 @@
 		"cobblestonered" : "Pedregulho vermelho",
 		"cokes" : "Coca",
 		"commandtool" : "Ferramenta de Comando",
+		"constructionjob" : "_MISSING_Construction Job",
 		"copper" : "Bronze",
 		"coppernails" : "Pregos de bronze",
 		"copperparts" : "Partes de cobre",
@@ -657,12 +734,12 @@
 		"planksred" : "Tábuas Vermelhas",
 		"planksyellow" : "Tábuas Amarelas",
 		"plasterblock" : "Bloco de Gesso",
-		"quarterblockblack" : "_MISSING_Black Quarter Block",
-		"quarterblockbrowndark" : "_MISSING_Dark Brown Quarter Block",
-		"quarterblockbrownlight" : "_MISSING_Light Brown Quarter Block",
-		"quarterblockgrey" : "_MISSING_Grey Quarter Block",
-		"quarterblockwhite" : "_MISSING_White Quarter Block",
-		"redplanks" : "_MISSING_Coated Red Planks",
+		"quarterblockblack" : "Quarto de Bloco Preto",
+		"quarterblockbrowndark" : "Quarto de Bloco Marrom Escuro",
+		"quarterblockbrownlight" : "Quarto de Bloco Marrom Claro",
+		"quarterblockgrey" : "Quarto de Bloco Cinza",
+		"quarterblockwhite" : "Quarto de Bloco Branco",
+		"redplanks" : "Tábua Vermelha",
 		"salpeter" : "Salitre",
 		"sand" : "Areia",
 		"sappling" : "Muda",

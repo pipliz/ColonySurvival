@@ -12,9 +12,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		public IMonster target;
 		public GuardSettings guardSettings;
 
-		protected virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
+		public virtual GuardSettings SetupSettings () { throw new System.NotImplementedException(); }
 
-		protected virtual void OnShoot ()
+		public virtual void OnShoot ()
 		{
 			if (guardSettings.OnShootAudio != null) {
 				ServerManager.SendAudio(position.Vector, guardSettings.OnShootAudio);
@@ -22,7 +22,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (guardSettings.OnHitAudio != null) {
 				ServerManager.SendAudio(target.PositionToAimFor, guardSettings.OnHitAudio);
 			}
-			target.OnHit(guardSettings.shootDamage);
+			target.OnHit(guardSettings.shootDamage, usedNPC, ModLoader.OnHitData.EHitSourceType.NPC);
 		}
 
 		public override bool ToSleep
@@ -106,9 +106,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		{
 			if (Stockpile.GetStockPile(owner).TryRemove(guardSettings.shootItem)) {
 				OnShoot();
-				state.SetIndicator(NPCIndicatorType.Crafted, guardSettings.cooldownShot, guardSettings.shootItem[0].Type);
+				state.SetIndicator(new Shared.IndicatorState(guardSettings.cooldownShot, guardSettings.shootItem[0].Type));
 			} else {
-				state.SetIndicator(NPCIndicatorType.MissingItem, guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type);
+				state.SetIndicator(new Shared.IndicatorState(guardSettings.cooldownMissingItem, guardSettings.shootItem[0].Type, true, false));
 			}
 		}
 

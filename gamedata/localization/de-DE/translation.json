@@ -1,5 +1,5 @@
 {
-	"coverage" : 98.310291858679,
+	"coverage" : 91.1680911680912,
 	"sentences" : {
 		"escapemenu" : {
 			"back" : "Spiel fortsetzen",
@@ -93,6 +93,58 @@
 					"description" : "Schaltet Münzenn und Märkte frei. Kann verwendet werden, um Samen, Dreck und andere Gegenstände zu kaufen",
 					"name" : "Münzenn und Märkte"
 				},
+				"constructionbuilder" : {
+					"description" : "_MISSING_Unlock builder areas for the construction worker",
+					"name" : "_MISSING_Builder"
+				},
+				"constructionbuildersize1" : {
+					"description" : "_MISSING_Increases maximum builder area size to 25.000",
+					"name" : "_MISSING_Builder Limit I"
+				},
+				"constructionbuildersize2" : {
+					"description" : "_MISSING_Increases maximum builder area size to 100.000",
+					"name" : "_MISSING_Builder Limit II"
+				},
+				"constructionbuildersize3" : {
+					"description" : "_MISSING_Increases maximum builder area size to 250.000",
+					"name" : "_MISSING_Builder Limit III"
+				},
+				"constructionbuildersize4" : {
+					"description" : "_MISSING_Increases maximum builder area size to 500.000",
+					"name" : "_MISSING_Builder Limit IV"
+				},
+				"constructionbuildersize5" : {
+					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
+					"name" : "_MISSING_Builder Limit V"
+				},
+				"constructiondigger" : {
+					"description" : "_MISSING_Unlock digger areas for the construction worker",
+					"name" : "_MISSING_Digger"
+				},
+				"constructiondiggersize1" : {
+					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
+					"name" : "_MISSING_Digger Limit I"
+				},
+				"constructiondiggersize2" : {
+					"description" : "_MISSING_Increases maximum digger area size to 100.000",
+					"name" : "_MISSING_Digger Limit II"
+				},
+				"constructiondiggersize3" : {
+					"description" : "_MISSING_Increases maximum digger area size to 250.000",
+					"name" : "_MISSING_Digger Limit III"
+				},
+				"constructiondiggersize4" : {
+					"description" : "_MISSING_Increases maximum digger area size to 500.000",
+					"name" : "_MISSING_Digger Limit IV"
+				},
+				"constructiondiggersize5" : {
+					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
+					"name" : "_MISSING_Digger Limit V"
+				},
+				"constructiondiggerspecial" : {
+					"description" : "_MISSING_Unlock special digger areas for the construction worker",
+					"name" : "_MISSING_Special Digger"
+				},
 				"crossbow" : {
 					"description" : "Schaltet die Armbrust frei, eine stärkere Waffe als der Bogen",
 					"name" : "Armbrust"
@@ -138,19 +190,19 @@
 					"name" : "Erhöhte Regeneration IV"
 				},
 				"healthregenspeed1" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 0.5 HP\/s auf 1 HP\/s",
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 0.5 HP/s auf 1 HP/s",
 					"name" : "Schnellere Regeneration I"
 				},
 				"healthregenspeed2" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 1 HP\/s auf 2 HP\/s",
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 1 HP/s auf 2 HP/s",
 					"name" : "Schnellere Regeneration II"
 				},
 				"healthregenspeed3" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 2 HP\/s auf 3 HP\/s",
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 2 HP/s auf 3 HP/s",
 					"name" : "Schnellere Regeneration III"
 				},
 				"healthregenspeed4" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP\/s auf 4 HP\/s",
+					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP/s auf 4 HP/s",
 					"name" : "Schnellere Regeneration IV"
 				},
 				"healthsize1" : {
@@ -341,10 +393,26 @@
 				"berryfarmertool" : "Beerenfarmerwerkzeug",
 				"bow" : "Bogen",
 				"bowtooltip" : "Schaden: 100 HP\nReichweite: 20 Blöcke\nLadesgeschwindigkeit: 5 Sekunden",
+				"buildera" : "_MISSING_Fill an area of the world",
+				"builderarea" : "_MISSING_Builder Area",
+				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"construction" : "_MISSING_Construction",
+				"construction1" : "_MISSING_Let them do the work",
+				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
+				"constructionjob" : "_MISSING_Construction Job",
+				"constructionjoba" : "_MISSING_Hires a construction worker",
+				"constructionjobb" : "_MISSING_Place next to a construction area",
 				"coversarea" : "Bedeckt Gebiet",
 				"crossbow" : "Armbrust",
 				"crossbowtooltip" : "Schaden: 300 HP\nReichweite: 25 Blöcke\nLadegeschwindigkeit: 8 Sekunden",
 				"description" : "Wähle den Gebietstyp aus, den du zuweisen willst.",
+				"diggera" : "_MISSING_Dig out an area of the world",
+				"diggerarea" : "_MISSING_Digger Area",
+				"diggerb" : "_MISSING_Select the area to dig out",
+				"diggerspecial" : "_MISSING_Special Digger Area",
+				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
+				"diggerspecialarea" : "_MISSING_Special Digger Area",
+				"diggerspecialb" : "_MISSING_Select the area to remove it from",
 				"flaxb" : "Benötigt: Flachssamen\nPlatziere auf Gras oder Dreck",
 				"flaxfarmer" : "Flachsbauer",
 				"flaxfarmertool" : "Flachsbauerwerkzeug",
@@ -364,6 +432,7 @@
 				"hollyhockfarmer" : "Stockrosen Bauer",
 				"hollyhockfarmertool" : "Stockrosen Bauer Werkzeug",
 				"hollyhockfarmertooltip" : "Benötigt: Stockrosensamen\nPlatziere sie auf Gras oder Dreck",
+				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "Bogen-Wache tagsüber",
 				"jobbownight" : "Bogen-Wache nachts",
 				"jobcrossbowday" : "Armbrust-Wache tagsüber",
@@ -379,10 +448,12 @@
 				"minerb" : "Benötigt: Spitzhacke\nmuss auf Stein oder auf Erz abgelegt werden",
 				"minertool" : "Bergarbeiterwerkzeug",
 				"missingscience" : "<color=red>Benötigt '{0}', um zuerst freigeschaltet zu werden.</color>",
+				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "Unfruchtbar",
 				"notflat" : "Nicht eben!",
 				"notool" : "Kein Werkzeug ausgewählt",
 				"occupiedblocks" : "Blöcke sind im Weg",
+				"selectitem" : "_MISSING_Select an item type to use",
 				"slinger" : "Steinschleuder",
 				"slingertooltip" : "Schaden: 50 HP\nReichweite: 12 Blöcke\nLadegeschwindigkeit: 3 Sekunden",
 				"toolarge" : "Zu groß",
@@ -474,10 +545,12 @@
 				"language" : "Sprache",
 				"wiptext" : "In Bearbeitung. Betrifft nicht alles im Spiel, und manche Sprachen sind ausführlicher übersetzt als andere."
 			},
+			"qualitycustom" : "_MISSING_Custom",
 			"qualityhigh" : "Hoch",
 			"qualitylow" : "Niedrig",
 			"qualitymaximum" : "Maximum",
 			"qualitymedium" : "Mittemäßig",
+			"qualityminimum" : "_MISSING_Minimum",
 			"qualityoff" : "Aus",
 			"qualityon" : "An",
 			"qualityveryhigh" : "Sehr hoch",
@@ -490,6 +563,7 @@
 				"antialiasing" : "Antialiasing",
 				"bloom" : "Bloom",
 				"depthoffield" : "Tiefenunschärfe",
+				"drawdistance" : "_MISSING_Draw distance (*)",
 				"eyeadaptation" : "Augenanpassung",
 				"fieldofview" : "Sichtfeld",
 				"full" : "Bildeinstellungen",
@@ -498,7 +572,9 @@
 				"fxaalow" : "FXAA Niedrig",
 				"fxaamedium" : "FXAA Mittel",
 				"lightscattering" : "Lichtbrechung",
+				"preset" : "_MISSING_Preset",
 				"resolution" : "Auflösung",
+				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
 				"shaderquality" : "Shaderqualität",
 				"skyboxconstant" : "Skybox Konstant",
 				"skyboxfrequent" : "Skybox Regelmäßig",
@@ -574,6 +650,7 @@
 		"cobblestonered" : "rotes Kopfsteinpflaster",
 		"cokes" : "Koks",
 		"commandtool" : "Befehlswerkzeug",
+		"constructionjob" : "_MISSING_Construction Job",
 		"copper" : "Kupfer",
 		"coppernails" : "Kupfernägel",
 		"copperparts" : "Kupferteile",

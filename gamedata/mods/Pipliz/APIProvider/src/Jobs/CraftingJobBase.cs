@@ -28,10 +28,12 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
-			blockInventory = new NPCInventory(node["inventory"]);
+			blockInventory = new NPCInventory(10000000f, node["inventory"]);
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			return this;
 		}
+
+		public virtual NPCInventory BlockInventory { get { return blockInventory; } }
 
 		public virtual void OnStartCrafting () { wasCrafting = true; }
 
@@ -49,6 +51,8 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			set { throw new System.NotImplementedException(); }
 		}
 
+		static List<InventoryItem> craftingResults = new List<InventoryItem>();
+
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
 			state.JobIsDone = true;
@@ -59,8 +63,27 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (selectedRecipe != null) {
 				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
 					blockInventory.Remove(selectedRecipe.Requirements);
-					blockInventory.Add(selectedRecipe.Results);
-					state.SetIndicator(NPCIndicatorType.Crafted, CraftingCooldown, selectedRecipe.Results[0].Type);
+
+					craftingResults.Clear();
+					for (int i = 0; i < selectedRecipe.Results.Count; i++) {
+						craftingResults.Add(selectedRecipe.Results[i]);
+					}
+					ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCCraftedRecipe, (IJob)this, selectedRecipe, craftingResults);
+
+					if (craftingResults.Count > 0) {
+						blockInventory.Add(craftingResults);
+						ushort typeToShow;
+						if (craftingResults.Count > 1) {
+							typeToShow = craftingResults[Random.Next(0, craftingResults.Count)].Type;
+						} else {
+							typeToShow = craftingResults[0].Type;
+						}
+
+						state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, typeToShow));
+					} else {
+						state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.None));
+					}
+
 					state.JobIsDone = false;
 					recipesToCraft--;
 					OnRecipeCrafted();
@@ -89,9 +112,9 @@ namespace Pipliz.Mods.APIProvider.Jobs
 							state.JobIsDone = false;
 							float cooldown = Random.NextFloat(8f, 16f);
 							if (recipeMatch.MatchType == Recipe.RecipeMatchType.AllDone) {
-								state.SetIndicator(NPCIndicatorType.SuccessIdle, cooldown);
+								state.SetIndicator(new Shared.IndicatorState(cooldown, BlockTypes.Builtin.BuiltinBlocks.ErrorIdle));
 							} else {
-								state.SetIndicator(NPCIndicatorType.MissingItem, cooldown, recipeMatch.FoundRecipe.FindMissingType(owner));
+								state.SetIndicator(new Shared.IndicatorState(cooldown, recipeMatch.FoundRecipe.FindMissingType(owner), true, false));
 							}
 						}
 						break;
@@ -116,7 +139,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.TryDump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
 				state.SetCooldown(0.3);
 			}
 			state.JobIsDone = true;
