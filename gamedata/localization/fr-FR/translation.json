@@ -45,13 +45,13 @@
 			"hostserver" : "Serveur hôte",
 			"hostserverdescription" : "Vous pouvez héberger un serveur en ouvrant le fichier suivant dans l'explorateur de fichiers:\nAller dans les propriétés du jeu dans Steam et cliquer 'Parcourir les fichiers locaux'. Ouvrir 'colonyserver.exe' pour héberger le serveur.",
 			"joininternet" : "Partie en ligne",
-			"joininternetmenu" : "Rejoindre un serveur",
-			"joinserverlan" : "Partie LAN",
+			"joininternetmenu" : "Rejoindre un serveur Internet",
+			"joinserverlan" : "Partie locale",
 			"joinserverlanfull" : "Rejoindre un serveur LAN",
 			"refresh" : "Actualiser la liste des serveurs",
 			"refreshing" : "Actualisation...",
 			"servername" : "Nom",
-			"serverping" : "Ping",
+			"serverping" : "Latence",
 			"serverplayers" : "Joueurs",
 			"startserver" : "Démarrer le serveur"
 		},
@@ -94,56 +94,56 @@
 					"name" : "Monnaie et boutiques"
 				},
 				"constructionbuilder" : {
-					"description" : "_MISSING_Unlock builder areas for the construction worker",
-					"name" : "_MISSING_Builder"
+					"description" : "Débloque les zones de construction pour les chantiers",
+					"name" : "Construction"
 				},
 				"constructionbuildersize1" : {
-					"description" : "_MISSING_Increases maximum builder area size to 25.000",
-					"name" : "_MISSING_Builder Limit I"
+					"description" : "Augmente la taille maximale de la zone de construction à 25.000",
+					"name" : "Limite de construction I"
 				},
 				"constructionbuildersize2" : {
-					"description" : "_MISSING_Increases maximum builder area size to 100.000",
-					"name" : "_MISSING_Builder Limit II"
+					"description" : "Augmente la taille maximale de la zone de construction à 100.000",
+					"name" : "Limite de construction II"
 				},
 				"constructionbuildersize3" : {
-					"description" : "_MISSING_Increases maximum builder area size to 250.000",
-					"name" : "_MISSING_Builder Limit III"
+					"description" : "Augmente la taille maximale de la zone de construction à 250.000",
+					"name" : "Limite de construction III"
 				},
 				"constructionbuildersize4" : {
-					"description" : "_MISSING_Increases maximum builder area size to 500.000",
-					"name" : "_MISSING_Builder Limit IV"
+					"description" : "Augmente la taille maximale de la zone de construction à 500.000",
+					"name" : "Limite de construction IV"
 				},
 				"constructionbuildersize5" : {
-					"description" : "_MISSING_Increases maximum builder area size to 1.000.000",
-					"name" : "_MISSING_Builder Limit V"
+					"description" : "Augmente la taille maximale de la zone de construction à 1.000.000",
+					"name" : "Limite de construction V"
 				},
 				"constructiondigger" : {
-					"description" : "_MISSING_Unlock digger areas for the construction worker",
-					"name" : "_MISSING_Digger"
+					"description" : "Débloque les zones d'excavation pour les chantiers",
+					"name" : "Excavation"
 				},
 				"constructiondiggersize1" : {
-					"description" : "_MISSING_Inceases maximum digger area size to 25.000",
-					"name" : "_MISSING_Digger Limit I"
+					"description" : "Augmente la taille maximale de la zone d'excavation à 25.000",
+					"name" : "Limite d'excavation I"
 				},
 				"constructiondiggersize2" : {
-					"description" : "_MISSING_Increases maximum digger area size to 100.000",
-					"name" : "_MISSING_Digger Limit II"
+					"description" : "Augmente la taille maximale de la zone d'excavation à 100.000",
+					"name" : "Limite d'excavation II"
 				},
 				"constructiondiggersize3" : {
-					"description" : "_MISSING_Increases maximum digger area size to 250.000",
-					"name" : "_MISSING_Digger Limit III"
+					"description" : "Augmente la taille maximale de la zone d'excavation à 250.000",
+					"name" : "Limite d'excavation III"
 				},
 				"constructiondiggersize4" : {
-					"description" : "_MISSING_Increases maximum digger area size to 500.000",
-					"name" : "_MISSING_Digger Limit IV"
+					"description" : "Augmente la taille maximale de la zone d'excavation à 500.000",
+					"name" : "Limite d'excavation IV"
 				},
 				"constructiondiggersize5" : {
-					"description" : "_MISSING_Increases maximum digger area size to 1.000.000",
-					"name" : "_MISSING_Digger Limit V"
+					"description" : "Augmente la taille maximale de la zone d'excavation à 1.000.000",
+					"name" : "Limite d'excavation V"
 				},
 				"constructiondiggerspecial" : {
-					"description" : "_MISSING_Unlock special digger areas for the construction worker",
-					"name" : "_MISSING_Special Digger"
+					"description" : "Débloque les zones d'excavation sélective pour les chantiers",
+					"name" : "Excavation sélective"
 				},
 				"crossbow" : {
 					"description" : "Débloque l'arbalète, une arme plus puissante que l'arc",
@@ -242,7 +242,7 @@
 					"name" : "Quarts de blocs colorés"
 				},
 				"quarterblocksplittingstump" : {
-					"description" : "Débloque la production de quarts de blocs en bois colorés à la souche à couper le bois, pouvant être utilisés comme escaliers",
+					"description" : "Débloque la production de quarts de blocs en bois colorés au billot, pouvant être utilisés comme escaliers",
 					"name" : "Quarts de blocs en bois"
 				},
 				"quarterblockstonemason" : {
@@ -270,8 +270,8 @@
 					"name" : "Sac de science militaire"
 				},
 				"splittingstump" : {
-					"description" : "Débloque les souches à couper le bois. Peuvent être utilisées pour créer du bois à brûler plus rapidement que l'établi.",
-					"name" : "Souche à couper le bois"
+					"description" : "Débloque les billots. Peuvent être utilisés pour créer du bois de coupe plus rapidement que l'établi.",
+					"name" : "Billot"
 				},
 				"stonemasonworkbench" : {
 					"description" : "Débloque le tailleur de pierres, qui peut créer différentes variétés de briques",
@@ -393,26 +393,26 @@
 				"berryfarmertool" : "Outil de cultivateur de baies",
 				"bow" : "Arc",
 				"bowtooltip" : "Dégâts : 100 PV\nPortée : 20 blocs\nRechargement : 5 secondes",
-				"buildera" : "_MISSING_Fill an area of the world",
-				"builderarea" : "_MISSING_Builder Area",
-				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
-				"construction" : "_MISSING_Construction",
-				"construction1" : "_MISSING_Let them do the work",
-				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
-				"constructionjob" : "_MISSING_Construction Job",
-				"constructionjoba" : "_MISSING_Hires a construction worker",
-				"constructionjobb" : "_MISSING_Place next to a construction area",
+				"buildera" : "Construit dans une zone du monde",
+				"builderarea" : "Zone de construction",
+				"builderb" : "Choisissez le bloc à placer, puis sélectionnez la zone à construire",
+				"construction" : "Chantier",
+				"construction1" : "Laissez-les construire à votre place",
+				"construction2" : "Cela ouvre un menu dans lequel vous pourrez choisir le type de chantier",
+				"constructionjob" : "Ouvrier de chantier",
+				"constructionjoba" : "Recrute un ouvrier de chantier",
+				"constructionjobb" : "Doit être adjacent à une zone de chantier",
 				"coversarea" : "La surface recouvre une zone de culture existante",
 				"crossbow" : "Arbalète",
 				"crossbowtooltip" : "Dégâts : 300 PV\nPortée : 25 blocs\nRechargement : 8 secondes",
 				"description" : "Sélectionnez le type de zone que vous souhaitez créer.",
-				"diggera" : "_MISSING_Dig out an area of the world",
-				"diggerarea" : "_MISSING_Digger Area",
-				"diggerb" : "_MISSING_Select the area to dig out",
-				"diggerspecial" : "_MISSING_Special Digger Area",
-				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
-				"diggerspecialarea" : "_MISSING_Special Digger Area",
-				"diggerspecialb" : "_MISSING_Select the area to remove it from",
+				"diggera" : "Terrasse une zone du monde",
+				"diggerarea" : "Zone d'excavation",
+				"diggerb" : "Sélectionnez la zone à creuser",
+				"diggerspecial" : "Zone d'excavation sélective",
+				"diggerspeciala" : "Déblaie les blocs spécifiés dans une zone",
+				"diggerspecialarea" : "Zone d'excavation sélective",
+				"diggerspecialb" : "Sélectionnez la zone à déblayer",
 				"flaxb" : "Requiert : Graines de lin\nÀ placer sur de l'herbe ou de la terre",
 				"flaxfarmer" : "Cultivateur de lin",
 				"flaxfarmertool" : "Outil de cultivateur de lin",
@@ -432,7 +432,7 @@
 				"hollyhockfarmer" : "Cultivateur de roses trémières",
 				"hollyhockfarmertool" : "Outil de cultivateur de roses",
 				"hollyhockfarmertooltip" : "Requiert : graines de roses trémières\nÀ placer sur de l'herbe ou de la terre",
-				"insidearea" : "_MISSING_Can't place inside an area",
+				"insidearea" : "Placement impossible à l'intérieur d'une zone",
 				"jobbowday" : "Archer de jour",
 				"jobbownight" : "Archer de nuit",
 				"jobcrossbowday" : "Arbalétrier de jour",
@@ -448,12 +448,12 @@
 				"minerb" : "Requiert : Pioche\nCreuse sous ses pieds et à placer sur des minerais ou la roche sombre.",
 				"minertool" : "Outil de mineur",
 				"missingscience" : "<color=red>La technologie « {0} » doit d'abord avoir été débloquée.</color>",
-				"noconstructionareanearby" : "_MISSING_No construction area nearby",
+				"noconstructionareanearby" : "Aucun chantier à proximité",
 				"notarable" : "Non cultivable",
 				"notflat" : "Le terrain n'est pas plat",
 				"notool" : "Aucun outil sélectionné",
 				"occupiedblocks" : "Occupé par des blocs",
-				"selectitem" : "_MISSING_Select an item type to use",
+				"selectitem" : "Sélectionner un objet à utiliser",
 				"slinger" : "Frondeur",
 				"slingertooltip" : "Dégâts : 50 PV\nPortée : 12 blocs\nRechargement : 3 secondes",
 				"toolarge" : "Trop grand",
@@ -471,15 +471,15 @@
 			"page1" : {
 				"description" : "Bienvenue sur Colony Survival !",
 				"header" : "Bases",
-				"text1" : "La bannière est le centre de votre colonie. Appuyez sur '2' pour la planter. Faites un clic-droit pour recruter des colons. L'outil de bannière affiche en rouge la zone où les monstres peuvent apparaître.",
+				"text1" : "La bannière est le centre de votre colonie. Appuyez sur « 2 » pour la planter. Faites un clic-droit pour recruter des colons. L'outil de bannière affiche en rouge la zone où les monstres peuvent apparaître.",
 				"text2" : "Vous avez besoin de nourriture et de lits pour recruter des colons. Les colons doivent manger pour survivre. Assurez-vous qu'il y ait suffisamment de nourriture disponible dans le stock ou ils auront faim !",
-				"text3" : "Appuyez sur \"I\" pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets présents dans votre stock personnel. Les colons peuvent seulement utiliser les objets du stock principal. Ils ont accès au stock en utilisant des caisses.",
+				"text3" : "Appuyez sur « I » pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets présents dans votre stock personnel. Les colons peuvent seulement utiliser les objets du stock principal. Ils ont accès au stock en utilisant des caisses.",
 				"text4" : "Des monstres attaqueront votre colonie pendant la nuit ! Utilisez l'Outil de commande pour placer des gardes. Appuyez sur '1' puis cliquez pour le sélectionner. Appuyez sur 'R' pour faire pivoter certains blocs."
 			},
 			"page2" : {
 				"description" : "Vous aurez besoin de nourriture pour recruter et nourrir vos colons !",
 				"header" : "Production de nourriture",
-				"text1" : "Utilisez l'Outil de commande (appuyez sur \"1\") pour recruter un cultivateur de baies. Faites un clic-droit sur un bloc d'herbe, choisissez le travail désiré et créez une zone pour le cultivateur. Cliquez avec le bouton gauche pour changer le type de travail.",
+				"text1" : "Utilisez l'Outil de commande (appuyez sur « 1 ») pour recruter un cultivateur de baies. Faites un clic-droit sur un bloc d'herbe, choisissez le travail désiré et créez une zone pour le cultivateur. Cliquez avec le bouton gauche pour changer le type de travail.",
 				"text2" : "Produire du pain est une méthode compliquée mais efficace pour produire de la nourriture. Commencez par faire un champ de blé. Après deux nuits, votre blé sera arrivé à maturité et vos cultivateurs le récolteront.",
 				"text3" : "Après cela, vous devrez recruter un meunier et un boulanger en plaçant une meule et un four. La meule est utilisée pour broyer le blé et en faire de la farine. Le boulanger utilisera le four pour cuire du pain."
 			},
@@ -496,7 +496,7 @@
 				"header" : "Minage",
 				"text1" : "Profondément enfouis sous la croûte terrestre, différents types de minerais peuvent être trouvés. Creusez dans le sol ou sur le flanc d'une montagne pour les trouver.",
 				"text2" : "Pour placer des mineurs, faites un clic-droit sur des minerais ou des blocs roche foncée avec l'Outil de commande. N'oubliez pas de placer une caisse proche.",
-				"text3" : "Placez un haut fourneau pour recruter un colon sans emploi comme fondeur. Il utilisera du bois à brûler comme combustible pour faire fondre le cuivre et l'étain et ainsi former du bronze.",
+				"text3" : "Placez un haut fourneau pour recruter un colon sans emploi comme fondeur. Il utilisera du bois de coupe comme combustible pour faire fondre le cuivre et l'étain et ainsi former du bronze.",
 				"text4" : "Les colons utiliseront des établis et des enclumes pour fabriquer divers objets utiles en métal. Utilisez le Laboratoire pour débloquer l'enclume."
 			},
 			"page5" : {
@@ -540,17 +540,17 @@
 			},
 			"language" : "Langue",
 			"languagemenu" : {
-				"coverage" : "Ce paramètre est terminé à {0:F1} %. Pour aider à traduire le jeu, consultez les forums ou notre page sur Github.",
+				"coverage" : "Cette traduction est terminée à {0:F1} %. Pour aider à traduire le jeu, consultez les forums ou notre page sur Github.",
 				"full" : "Paramètres de langue",
 				"language" : "Langue",
 				"wiptext" : "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent être moins complètes que d'autres."
 			},
-			"qualitycustom" : "_MISSING_Custom",
+			"qualitycustom" : "Personnalisé",
 			"qualityhigh" : "Élevé",
 			"qualitylow" : "Bas",
 			"qualitymaximum" : "Maximum",
 			"qualitymedium" : "Moyen",
-			"qualityminimum" : "_MISSING_Minimum",
+			"qualityminimum" : "Minimum",
 			"qualityoff" : "Désactivé",
 			"qualityon" : "Activé",
 			"qualityveryhigh" : "Très élevé",
@@ -563,7 +563,7 @@
 				"antialiasing" : "Anti-crénelage",
 				"bloom" : "Flou lumineux",
 				"depthoffield" : "Profondeur de champ",
-				"drawdistance" : "_MISSING_Draw distance (*)",
+				"drawdistance" : "Distance d'affichage (*)",
 				"eyeadaptation" : "Adaptation des yeux",
 				"fieldofview" : "Champ de vision",
 				"full" : "Paramètres vidéo",
@@ -572,10 +572,10 @@
 				"fxaalow" : "FXAA bas",
 				"fxaamedium" : "FXAA moyen",
 				"lightscattering" : "Diffusion de la lumière",
-				"preset" : "_MISSING_Preset",
+				"preset" : "Pré-réglage",
 				"ragdoll" : "_MISSING_Ragdoll quantity",
 				"resolution" : "Résolution",
-				"restarttoapply" : "_MISSING_(*) Requires game restart to apply fully",
+				"restarttoapply" : "(*) Nécessite de relancer le jeu pour être complètement appliqué",
 				"shaderquality" : "Qualité du shader",
 				"skyboxconstant" : "Skybox constante",
 				"skyboxfrequent" : "Skybox fréquent",
@@ -616,7 +616,7 @@
 		"bed" : "Lit",
 		"berry" : "Baies",
 		"berrybush" : "Graines de baies",
-		"blackplanks" : "Parquet noir",
+		"blackplanks" : "Planches vernies noires",
 		"bloomery" : "Bas fourneau",
 		"bow" : "Arc",
 		"bowstring" : "Corde",
@@ -651,7 +651,7 @@
 		"cobblestonered" : "Pierres rouges",
 		"cokes" : "Coke",
 		"commandtool" : "Outil de commande",
-		"constructionjob" : "_MISSING_Construction Job",
+		"constructionjob" : "Ouvrier de construction",
 		"copper" : "Cuivre",
 		"coppernails" : "Clous en cuivre",
 		"copperparts" : "Éléments en cuivre",
@@ -664,7 +664,7 @@
 		"dirt" : "Terre",
 		"dyertable" : "Atelier du teinturier",
 		"fineryforge" : "Raffinerie",
-		"firewood" : "Bois à brûler",
+		"firewood" : "Bois de coupe",
 		"flax" : "Lin cultivé",
 		"flaxstage1" : "Graines de lin",
 		"flour" : "Farine",
@@ -691,7 +691,7 @@
 		"guardslingernightjob" : "Frondeur de nuit",
 		"gunpowder" : "Poudre à canon",
 		"gunpowderpouch" : "Sachet de poudre à canon",
-		"gunsmithshop" : "Échoppe du forgeron",
+		"gunsmithshop" : "Échoppe de l'armurier",
 		"gypsum" : "Gypse",
 		"hollyhock" : "Rose trémière",
 		"hollyhockstage1" : "Graines de rose trémière",
@@ -740,7 +740,7 @@
 		"quarterblockbrownlight" : "Quart de bloc beige",
 		"quarterblockgrey" : "Quart de bloc gris",
 		"quarterblockwhite" : "Quart de bloc blanc",
-		"redplanks" : "Parquet rouge",
+		"redplanks" : "Planches vernies rouges",
 		"salpeter" : "Salpêtre",
 		"sand" : "Sable",
 		"sappling" : "Pousse d'arbre",
@@ -755,7 +755,7 @@
 		"sling" : "Fronde",
 		"slingbullet" : "Projectile pour fronde",
 		"snow" : "Neige",
-		"splittingstump" : "Souche à couper le bois",
+		"splittingstump" : "Billot",
 		"steelingot" : "Lingot d'acier",
 		"steelparts" : "Éléments en acier",
 		"stoneblock" : "Bloc de pierre",
@@ -777,8 +777,8 @@
 		"workbench" : "Établi"
 	},
 	"typeuses" : {
-		"adobe" : "Une terre séchée au soleil. De la terre pour les riches.",
-		"alkanet" : "Source de teinture rouge",
+		"adobe" : "De la terre pour les riches.",
+		"alkanet" : "Dans la vraie vie, c'est une source de teinture rouge.",
 		"bed" : "Requiert de la paille",
 		"berry" : "Comestible.",
 		"berrybush" : "Les colons peuvent les planter pour de la nourriture rapide et facile.",
@@ -814,7 +814,7 @@
 		"crate" : "Pour tous vos besoins de stockage !",
 		"crossbow" : "Petite sœur de la baliste",
 		"crossbowbolt" : "Plus rapide, plus dur, plus fort",
-		"crystal" : "Obtenu lorsque de la galène riche est fondue",
+		"crystal" : "Obtenu lorsque de la galène argentifère est fondue",
 		"dirt" : "C'est sale",
 		"dyertable" : "Doué en coloriage",
 		"fineryforge" : "Nécessite des cokes pour créer de l'acier et des lingots d'or",
@@ -822,7 +822,7 @@
 		"flax" : "La couleur impériale",
 		"flaxstage1" : "Mettez-la dans le sol pour qu'elle pousse.",
 		"flour" : "Un colon avec un four la transformera en pain",
-		"furnace" : "Utilise du bois à brûler comme combustible pour fabriquer des lingots de bronze et des briques",
+		"furnace" : "Utilise du bois de coupe comme combustible pour fabriquer des lingots de bronze et des briques",
 		"galenalead" : "Riche en plomb",
 		"galenasilver" : "Riche en argent",
 		"goldcoin" : "Avec le portrait du roi sur une face",
@@ -844,13 +844,13 @@
 		"ironore" : "Miné avec une pioche en fer",
 		"ironrivet" : "Bien plus efficace que le ruban adhésif",
 		"ironsword" : "En garde !",
-		"ironwrought" : "Bien mieux comme ça",
+		"ironwrought" : "Version améliorée du fer",
 		"kiln" : "Transforme les planches en charbon de bois",
 		"lanterncyan" : "Futuriste",
 		"lanterngreen" : "Rend la colonie écolo",
 		"lanternorange" : "Ambiance douce",
 		"lanternred" : "Très populaire à Amsterdam",
-		"lanternyellow" : "Comme une torche, mais plus chère",
+		"lanternyellow" : "Comme une torche, mais coûte plus cher",
 		"lead" : "À utiliser dans les canalisations pour détruire les civilisations par saturnisme",
 		"leadbullet" : "Peut être tirée avec une platine à mèche",
 		"leavestaiga" : "C'est bientôt Noël ?",
@@ -861,9 +861,9 @@
 		"linseedoil" : "Fait briller les choses",
 		"logtaiga" : "Légèrement plus froid",
 		"logtemperate" : "C'est comme une bûche, mais différente !",
-		"matchlockgun" : "Nécessite des sacs de poudre à canon pour tirer des balles de plomb",
+		"matchlockgun" : "Nécessite des sachets de poudre à canon pour tirer des balles de plomb",
 		"mint" : "Ce n'est pas une contrefaçon si elle ne se tord pas.",
-		"oven" : "Utilise du bois à brûler comme combustible pour faire cuire la farine et obtenir du pain",
+		"oven" : "Utilise du bois de coupe comme combustible pour faire cuire la farine et obtenir du pain",
 		"planks" : "Maintenant avec 4 fois le volume de bûches !",
 		"plasterblock" : "Pour un look moderne",
 		"redplanks" : "N'a pas de valeur nutritive, mais ça a bon goût !",
@@ -871,17 +871,17 @@
 		"sand" : "Ne se mélange pas bien avec les serpents",
 		"sappling" : "Futur arbre",
 		"sciencebagadvanced" : "Nécessaire pour la recherche avancée",
-		"sciencebagbasic" : "Obligatoire pour la recherche scientifique élémentaire",
-		"sciencebagcolony" : "Nécessaire pour les recherches liées à la colonie",
-		"sciencebaglife" : "Obligatoire pour la recherche scientifique liée à la santé et à la vie",
-		"sciencebagmilitary" : "Nécessaire pour les recherches scientifiques liées au combat",
+		"sciencebagbasic" : "Nécessaire pour la recherche élémentaire",
+		"sciencebagcolony" : "Nécessaire pour la recherche liée à la colonie",
+		"sciencebaglife" : "Nécessaire pour la recherche liée à la santé et à la vie",
+		"sciencebagmilitary" : "Nécessaire pour la recherche liée au combat",
 		"sciencelab" : "Utilisé par un scientifique pour débloquer de nouvelles technologies. Plusieurs scientifiques peuvent travailler ensemble !",
 		"shop" : "Pour acheter uniquement, pas pour vendre",
 		"silveringot" : "A légèrement plus de valeur que le plomb",
 		"sling" : "Gare à toi, Goliath",
 		"slingbullet" : "C'est juste un petit caillou, en fait",
 		"snow" : "Plus blanc que blanc",
-		"splittingstump" : "Un moyen plus rapide d'obtenir du bois à brûler",
+		"splittingstump" : "Un moyen plus rapide d'obtenir du bois de coupe",
 		"steelingot" : "Dur comme l'acier",
 		"steelparts" : "Les lingots d'acier sont superfétatoires",
 		"stonebricks" : "Pour se protéger.",
