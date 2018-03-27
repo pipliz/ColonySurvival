@@ -88,9 +88,6 @@ Builtin callback uses:
   pipliz.server.loadresearchables
     [ProvidesFor("pipliz.server.loadplayers")] -> as player savegames contain research progress (which references researchables)
     Loads the researchables
-  pipliz.server.loadsortorder
-    [ProvidesFor("pipliz.server.loadplayers")] -> load players loads the stockpile, which needs this sorting
-	Loads the itemtypes sort order (into ItemTypesServer.ItemSortOrder)
   pipliz.server.loadplayers
     Loads the player save files (stockpile, inventory, position)
   pipliz.server.loadbanners
