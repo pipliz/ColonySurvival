@@ -55,12 +55,14 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 						return; // either changed a block or set indicator, job done
 					} else {
 						// move iterator, not placing at non-air blocks
-						if (!iterationType.MoveNext()) {
+						if (iterationType.MoveNext()) {
+							continue; // found non-air, try next loop
+						} else {
 							// failed to find next position to do job at, self-destruct
 							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
 							AreaJobTracker.RemoveJob(areaJob);
+							return;
 						}
-						continue; // found non-air, try next loop
 					}
 					// unreachable
 				} else {

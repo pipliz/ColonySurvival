@@ -1,10 +1,12 @@
-0.6.1 (2018-03-xx)
+0.6.0.1 (2018-03-28)
 
 -Added a video setting controlling ragdoll quantity
 -Significantly improve logic to how long ragdolls last and when to not spawn them
 -Fixed an issue with textures where they're applying incorrect gamma correction (2.4 instead of 2.2)
 -Changed server & client to deal with the version number in the servers' broadcasted data, instead of removing old versions from the master server entirely
 -Fixed an issue with the OnNPCGathered callback being called with invalid arguments
+-Fixed an issue with incorrect data in the OnTryChangeBlock.PlayerClickedData struct
+-Improved chunk transfer window resizing
 
 From github:
 -Updated fr-FR locale for 0.6
