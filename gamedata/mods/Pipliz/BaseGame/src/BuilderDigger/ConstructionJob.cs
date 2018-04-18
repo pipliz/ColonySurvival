@@ -13,7 +13,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 	{
 		protected ConstructionArea constructionArea;
 		protected bool isAreaPresenceTestDone = false;
-		protected ushort blockType;
 		public int storedItems = 0;
 
 		public override string NPCTypeKey { get { return "pipliz.constructor"; } }
@@ -34,7 +33,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
-			blockType = ItemTypes.IndexLookup.GetIndex(node.GetAsOrDefault("type", "air"));
 			storedItems = node.GetAsOrDefault("storedItems", 0);
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			return this;
@@ -42,7 +40,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
-			blockType = type;
 			InitializeJob(player, position, 0);
 			return this;
 		}
@@ -50,9 +47,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 		public override JSONNode GetJSON ()
 		{
 			JSONNode baseJSON = base.GetJSON();
-			if (blockType != 0) {
-				baseJSON.SetAs("type", ItemTypes.IndexLookup.GetName(blockType));
-			}
 			if (storedItems > 0) {
 				baseJSON.SetAs("storedItems", storedItems);
 			}
@@ -65,18 +59,17 @@ namespace Pipliz.Mods.BaseGame.Construction
 				constructionArea = null;
 			}
 
-			Vector3 pos = usedNPC.Position.Vector;
-			if (blockType == 0) {
-				World.TryGetTypeAt(position, out blockType);
-			}
-			if (blockType == BuiltinBlocks.ConstructionJobXP) {
-				usedNPC.LookAt(pos + Vector3.right);
-			} else if (blockType == BuiltinBlocks.ConstructionJobXN) {
-				usedNPC.LookAt(pos + Vector3.left);
-			} else if (blockType == BuiltinBlocks.ConstructionJobZP) {
-				usedNPC.LookAt(pos + Vector3.forward);
-			} else if (blockType == BuiltinBlocks.ConstructionJobZN) {
-				usedNPC.LookAt(pos + Vector3.back);
+			if (worldTypeChecked) {
+				Vector3 pos = usedNPC.Position.Vector;
+				if (worldType == BuiltinBlocks.ConstructionJobXP) {
+					usedNPC.LookAt(pos + Vector3.right);
+				} else if (worldType == BuiltinBlocks.ConstructionJobXN) {
+					usedNPC.LookAt(pos + Vector3.left);
+				} else if (worldType == BuiltinBlocks.ConstructionJobZP) {
+					usedNPC.LookAt(pos + Vector3.forward);
+				} else if (worldType == BuiltinBlocks.ConstructionJobZN) {
+					usedNPC.LookAt(pos + Vector3.back);
+				}
 			}
 
 			if (constructionArea == null) {
@@ -117,5 +110,13 @@ namespace Pipliz.Mods.BaseGame.Construction
 		}
 
 		public static int MaxStoredItems { get { return 5; } }
+
+		protected override bool IsValidWorldType (ushort type)
+		{
+			return type == BuiltinBlocks.ConstructionJobXN
+				|| type == BuiltinBlocks.ConstructionJobXP
+				|| type == BuiltinBlocks.ConstructionJobZN
+				|| type == BuiltinBlocks.ConstructionJobZP;
+		}
 	}
 }

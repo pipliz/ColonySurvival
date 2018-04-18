@@ -10,8 +10,10 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		protected Vector3Int position;
 		protected Players.Player owner;
 
-		bool isValid = true;
-		bool worldTypeChecked = false;
+		protected bool isValid = true;
+		protected bool worldTypeChecked = false;
+		protected ushort worldType = 0;
+
 		NPCType cached_NPCType;
 		protected NPCBase.NPCGoal lastGoal;
 
@@ -43,14 +45,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			get
 			{
 				if (isValid && !worldTypeChecked) {
-					ushort type;
-					if (World.TryGetTypeAt(position, out type)) {
-						worldTypeChecked = true;
-						if (type == 0) {
-							BlockJobManagerTracker.RemoveBlockTypeAt(GetType(), position);
-							return false;
-						}
-					}
+					CheckWorldType();
 				}
 				return isValid;
 			}
@@ -145,6 +140,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual Vector3Int GetJobLocation ()
 		{
+			if (!worldTypeChecked) { CheckWorldType(); }
 			return KeyLocation;
 		}
 
@@ -156,6 +152,22 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		protected virtual void OnChangedGoal (NPCBase.NPCGoal oldGoal, NPCBase.NPCGoal newGoal)
 		{
 
+		}
+
+		protected virtual void CheckWorldType ()
+		{
+			if (World.TryGetTypeAt(position, out worldType)) {
+				worldTypeChecked = true;
+				if (!IsValidWorldType(worldType)) {
+					Log.WriteWarning("Removing job at {0} because the world type found was not allowed ({1}), job type {2}", position, ItemTypes.IndexLookup.GetName(worldType), GetType());
+					BlockJobManagerTracker.RemoveBlockTypeAt(GetType(), position);
+				}
+			}
+		}
+
+		protected virtual bool IsValidWorldType (ushort type)
+		{
+			return type != 0;
 		}
 	}
 }

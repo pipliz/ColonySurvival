@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
-	public class KilnJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class KilnJob : CraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public static float StaticCraftingCooldown = 6f;
+		protected Vector3Int NPCOffset;
 
 		public override string NPCTypeKey { get { return "pipliz.kilnjob"; } }
 
@@ -19,20 +20,25 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
-		public override Vector3Int GetPositionNPC (Vector3Int position)
+		public override Vector3Int GetJobLocation ()
 		{
-			if (blockType == BuiltinBlocks.KilnXP) {
-				return position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.KilnXN) {
-				return position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.KilnZP) {
-				return position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.KilnZN) {
-				return position.Add(0, 0, -1);
+			return base.GetJobLocation() + NPCOffset;
+		}
+
+		protected override bool IsValidWorldType (ushort type)
+		{
+			if (type == BuiltinBlocks.KilnXP) {
+				NPCOffset = new Vector3Int(1, 0, 0);
+			} else if (type == BuiltinBlocks.KilnXN) {
+				NPCOffset = new Vector3Int(-1, 0, 0);
+			} else if (type == BuiltinBlocks.KilnZP) {
+				NPCOffset = new Vector3Int(0, 0, 1);
+			} else if (type == BuiltinBlocks.KilnZN) {
+				NPCOffset = new Vector3Int(0, 0, -1);
 			} else {
-				World.TryGetTypeAt(position, out blockType);
-				return position;
+				return false;
 			}
+			return true;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
-	public class FineryForgeJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class FineryForgeJob : CraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public static float StaticCraftingCooldown = 6f;
+		protected Vector3Int NPCOffset;
 
 		public override string NPCTypeKey { get { return "pipliz.fineryforgejob"; } }
 
@@ -19,25 +20,32 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
+		public override Vector3Int GetJobLocation ()
+		{
+			return base.GetJobLocation() + NPCOffset;
+		}
+
 		public override void OnStartCrafting ()
 		{
 			base.OnStartCrafting();
 
 			ushort litType;
-			if (blockType == BuiltinBlocks.FineryForgeXP) {
+			if (worldType == BuiltinBlocks.FineryForgeXP) {
 				litType = BuiltinBlocks.FineryForgeLitXP;
-			} else if (blockType == BuiltinBlocks.FineryForgeXN) {
+			} else if (worldType == BuiltinBlocks.FineryForgeXN) {
 				litType = BuiltinBlocks.FineryForgeLitXN;
-			} else if (blockType == BuiltinBlocks.FineryForgeZP) {
+			} else if (worldType == BuiltinBlocks.FineryForgeZP) {
 				litType = BuiltinBlocks.FineryForgeLitZP;
-			} else if (blockType == BuiltinBlocks.FineryForgeZN) {
+			} else if (worldType == BuiltinBlocks.FineryForgeZN) {
 				litType = BuiltinBlocks.FineryForgeLitZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = litType;
-			ServerManager.TryChangeBlock(position, litType);
+
+			if (ServerManager.TryChangeBlock(position, litType)) {
+				worldType = litType;
+			}
 		}
 
 		public override void OnStopCrafting ()
@@ -45,36 +53,38 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			base.OnStopCrafting();
 
 			ushort unLitType;
-			if (blockType == BuiltinBlocks.FineryForgeLitXP) {
+			if (worldType == BuiltinBlocks.FineryForgeLitXP) {
 				unLitType = BuiltinBlocks.FineryForgeXP;
-			} else if (blockType == BuiltinBlocks.FineryForgeLitXN) {
+			} else if (worldType == BuiltinBlocks.FineryForgeLitXN) {
 				unLitType = BuiltinBlocks.FineryForgeXN;
-			} else if (blockType == BuiltinBlocks.FineryForgeLitZP) {
+			} else if (worldType == BuiltinBlocks.FineryForgeLitZP) {
 				unLitType = BuiltinBlocks.FineryForgeZP;
-			} else if (blockType == BuiltinBlocks.FineryForgeLitZN) {
+			} else if (worldType == BuiltinBlocks.FineryForgeLitZN) {
 				unLitType = BuiltinBlocks.FineryForgeZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = unLitType;
-			ServerManager.TryChangeBlock(position, unLitType);
+
+			if (ServerManager.TryChangeBlock(position, unLitType)) {
+				worldType = unLitType;
+			}
 		}
 
-		public override Vector3Int GetPositionNPC (Vector3Int position)
+		protected override bool IsValidWorldType (ushort type)
 		{
-			if (blockType == BuiltinBlocks.FineryForgeLitXP || blockType == BuiltinBlocks.FineryForgeXP) {
-				return position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FineryForgeLitXN || blockType == BuiltinBlocks.FineryForgeXN) {
-				return position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FineryForgeLitZP || blockType == BuiltinBlocks.FineryForgeZP) {
-				return position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.FineryForgeLitZN || blockType == BuiltinBlocks.FineryForgeZN) {
-				return position.Add(0, 0, -1);
+			if (type == BuiltinBlocks.FineryForgeLitXP || type == BuiltinBlocks.FineryForgeXP) {
+				NPCOffset = new Vector3Int(1, 0, 0);
+			} else if (type == BuiltinBlocks.FineryForgeLitXN || type == BuiltinBlocks.FineryForgeXN) {
+				NPCOffset = new Vector3Int(-1, 0, 0);
+			} else if (type == BuiltinBlocks.FineryForgeLitZP || type == BuiltinBlocks.FineryForgeZP) {
+				NPCOffset = new Vector3Int(0, 0, 1);
+			} else if (type == BuiltinBlocks.FineryForgeLitZN || type == BuiltinBlocks.FineryForgeZN) {
+				NPCOffset = new Vector3Int(0, 0, -1);
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
-				return position;
+				return false;
 			}
+			return true;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

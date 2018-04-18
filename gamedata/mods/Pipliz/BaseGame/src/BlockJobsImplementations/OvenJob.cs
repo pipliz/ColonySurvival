@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
-	public class OvenJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class OvenJob : CraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public static float StaticCraftingCooldown = 8.3f;
+		protected Vector3Int NPCOffset;
 
 		public override string NPCTypeKey { get { return "pipliz.baker"; } }
 
@@ -19,24 +20,32 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
+		public override Vector3Int GetJobLocation ()
+		{
+			return base.GetJobLocation() + NPCOffset;
+		}
+
 		public override void OnStartCrafting ()
 		{
 			base.OnStartCrafting();
+
 			ushort litType;
-			if (blockType == BuiltinBlocks.OvenXP) {
+			if (worldType == BuiltinBlocks.OvenXP) {
 				litType = BuiltinBlocks.OvenLitXP;
-			} else if (blockType == BuiltinBlocks.OvenXN) {
+			} else if (worldType == BuiltinBlocks.OvenXN) {
 				litType = BuiltinBlocks.OvenLitXN;
-			} else if (blockType == BuiltinBlocks.OvenZP) {
+			} else if (worldType == BuiltinBlocks.OvenZP) {
 				litType = BuiltinBlocks.OvenLitZP;
-			} else if (blockType == BuiltinBlocks.OvenZN) {
+			} else if (worldType == BuiltinBlocks.OvenZN) {
 				litType = BuiltinBlocks.OvenLitZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = litType;
-			ServerManager.TryChangeBlock(position, litType);
+
+			if (ServerManager.TryChangeBlock(position, litType)) {
+				worldType = litType;
+			}
 		}
 
 		public override void OnStopCrafting ()
@@ -44,35 +53,38 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			base.OnStopCrafting();
 
 			ushort unLitType;
-			if (blockType == BuiltinBlocks.OvenLitXP) {
+			if (worldType == BuiltinBlocks.OvenLitXP) {
 				unLitType = BuiltinBlocks.OvenXP;
-			} else if (blockType == BuiltinBlocks.OvenLitXN) {
+			} else if (worldType == BuiltinBlocks.OvenLitXN) {
 				unLitType = BuiltinBlocks.OvenXN;
-			} else if (blockType == BuiltinBlocks.OvenLitZP) {
+			} else if (worldType == BuiltinBlocks.OvenLitZP) {
 				unLitType = BuiltinBlocks.OvenZP;
-			} else if (blockType == BuiltinBlocks.OvenLitZN) {
+			} else if (worldType == BuiltinBlocks.OvenLitZN) {
 				unLitType = BuiltinBlocks.OvenZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = unLitType;
-			ServerManager.TryChangeBlock(position, unLitType);
+
+			if (ServerManager.TryChangeBlock(position, unLitType)) {
+				worldType = unLitType;
+			}
 		}
 
-		public override Vector3Int GetPositionNPC (Vector3Int position)
+		protected override bool IsValidWorldType (ushort type)
 		{
-			if (blockType == BuiltinBlocks.OvenXP || blockType == BuiltinBlocks.OvenLitXP) {
-				return position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.OvenXN || blockType == BuiltinBlocks.OvenLitXN) {
-				return position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.OvenZP || blockType == BuiltinBlocks.OvenLitZP) {
-				return position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.OvenZN || blockType == BuiltinBlocks.OvenLitZN) {
-				return position.Add(0, 0, -1);
+			if (type == BuiltinBlocks.OvenLitXP || type == BuiltinBlocks.OvenXP) {
+				NPCOffset = new Vector3Int(1, 0, 0);
+			} else if (type == BuiltinBlocks.OvenLitXN || type == BuiltinBlocks.OvenXN) {
+				NPCOffset = new Vector3Int(-1, 0, 0);
+			} else if (type == BuiltinBlocks.OvenLitZP || type == BuiltinBlocks.OvenZP) {
+				NPCOffset = new Vector3Int(0, 0, 1);
+			} else if (type == BuiltinBlocks.OvenLitZN || type == BuiltinBlocks.OvenZN) {
+				NPCOffset = new Vector3Int(0, 0, -1);
 			} else {
-				return position;
+				return false;
 			}
+			return true;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

@@ -1,0 +1,47 @@
+modInfo.json can contain the following key-values;
+
+Base node is an array, to allow for multiple assembly definitions / parts per modinfo file
+Per definition:
+
+name
+-	any string
+-	Unique identifier for your mod
+
+namepretty
+-	any string
+-	Pretty identifier for your mod, it's the one presented to clients in any mod related menu's
+-	If not set, falls back to the name key
+
+marksgamemodded
+-	boolean, defaults to true.
+-	If set to true and the mod loads succesfully, it'll mark the server as modded and this and similar mods will be shown in the server browser.
+
+version
+-	string in the format of "0.1.2.3", "0.1.2" or "0.1", where each number is between 0 and 255
+-	Presented to users, possibly used for mod dependency checking later one
+-	Defaults to "0.0.0" if not set.
+
+dllpath
+-	string in the form of a path relative to the folder that contains the modInfo.json
+-	Place to load a managed dll from, if it's a dll-mod.
+-	Not needed if it's an override-folders-mod
+
+enabled
+-	boolean
+-	Whether or not to process this mod for loading
+
+compatibleversions
+-	Array of version strings, see version key.
+-	Contains game versions this mod is compatible with. If the current game version is not a subversion of a compatible version the mod is not loaded. Some updates may allow loading of earlier version mods.
+
+overrideAlbedoFolder
+overrideEmissiveFolder
+overrideNormalFolder
+overrideMeshesFolder
+overrideIconFolder
+overrideNPCFolder
+overrideWaterFolder
+overrideAudioFolder
+-	Specify a string path relative to the modInfo.json indicating a folder to use to search for replacement files of the specified types
+-	Use the same filename as the original files in their folders, and they should get replaced.
+-	As of time of writing these work for any compatibleversions at & above 0.5.0 (i.e, these break a lot less)

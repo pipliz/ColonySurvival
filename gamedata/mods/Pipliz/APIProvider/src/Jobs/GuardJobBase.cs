@@ -8,7 +8,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 {
 	public class GuardBaseJob : BlockJobBase, IBlockJobBase
 	{
-		protected ushort blockType;
 		public IMonster target;
 		public GuardSettings guardSettings;
 
@@ -45,7 +44,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
-			blockType = ItemTypes.IndexLookup.GetIndex(node.GetAs<string>("type"));
 			InitializeJob(player, (Vector3Int)node["position"], node.GetAs<int>("npcID"));
 			if (guardSettings == null) {
 				guardSettings = SetupSettings();
@@ -55,18 +53,11 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
-			blockType = type;
 			InitializeJob(player, position, 0);
 			if (guardSettings == null) {
 				guardSettings = SetupSettings();
 			}
 			return this;
-		}
-
-		public override JSONNode GetJSON ()
-		{
-			return base.GetJSON()
-				.SetAs("type", ItemTypes.IndexLookup.GetName(blockType));
 		}
 
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
@@ -88,18 +79,28 @@ namespace Pipliz.Mods.APIProvider.Jobs
 				ShootAtTarget(ref state); // <- sets cooldown
 			} else {
 				state.SetCooldown(guardSettings.cooldownSearchingTarget);
-				Vector3 pos = usedNPC.Position.Vector;
-				if (blockType == guardSettings.typeXP) {
-					pos += Vector3.right;
-				} else if (blockType == guardSettings.typeXN) {
-					pos += Vector3.left;
-				} else if (blockType == guardSettings.typeZP) {
-					pos += Vector3.forward;
-				} else if (blockType == guardSettings.typeZN) {
-					pos += Vector3.back;
+				if (worldTypeChecked) {
+					Vector3 pos = usedNPC.Position.Vector;
+					if (worldType == guardSettings.typeXP) {
+						pos += Vector3.right;
+					} else if (worldType == guardSettings.typeXN) {
+						pos += Vector3.left;
+					} else if (worldType == guardSettings.typeZP) {
+						pos += Vector3.forward;
+					} else if (worldType == guardSettings.typeZN) {
+						pos += Vector3.back;
+					}
+					usedNPC.LookAt(pos);
 				}
-				usedNPC.LookAt(pos);
 			}
+		}
+
+		protected override bool IsValidWorldType (ushort type)
+		{
+			return type == guardSettings.typeXP
+				|| type == guardSettings.typeXN
+				|| type == guardSettings.typeZP
+				|| type == guardSettings.typeZN;
 		}
 
 		public virtual void ShootAtTarget (ref NPCBase.NPCState state)

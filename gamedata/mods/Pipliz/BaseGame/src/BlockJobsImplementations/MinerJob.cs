@@ -9,7 +9,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
 	public class MinerJob : BlockJobBase, IBlockJobBase, INPCTypeDefiner
 	{
-		public ushort type;
 		public ushort typeBelow;
 		public float cooldown = 8f;
 
@@ -25,7 +24,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override ITrackableBlock InitializeFromJSON (Players.Player player, JSONNode node)
 		{
-			type = ItemTypes.IndexLookup.GetOrGenerate(node.GetAs<string>("type"));
 			typeBelow = ItemTypes.IndexLookup.GetOrGenerate(node.GetAs<string>("typeBelow"));
 			JSONNode customDataNode = ItemTypes.GetType(typeBelow).CustomDataNode;
 			if (customDataNode != null) {
@@ -37,7 +35,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public ITrackableBlock InitializeOnAdd (Vector3Int position, ushort type, Players.Player player)
 		{
-			this.type = type;
 			if (World.TryGetTypeAt(position.Add(0, -1, 0), out typeBelow)) {
 				JSONNode customDataNode = ItemTypes.GetType(typeBelow).CustomDataNode;
 				if (customDataNode != null) {
@@ -51,25 +48,26 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		public override JSONNode GetJSON ()
 		{
 			return base.GetJSON()
-				.SetAs("typeBelow", ItemTypes.IndexLookup.GetName(typeBelow))
-				.SetAs("type", ItemTypes.IndexLookup.GetName(type));
+				.SetAs("typeBelow", ItemTypes.IndexLookup.GetName(typeBelow));
 		}
 
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
 
 		public override void OnNPCAtJob (ref NPCBase.NPCState state)
 		{
-			Vector3 rotate = usedNPC.Position.Vector;
-			if (type == BuiltinBlocks.MinerJobXN) {
-				rotate += Vector3.left;
-			} else if (type == BuiltinBlocks.MinerJobXP) {
-				rotate += Vector3.right;
-			} else if (type == BuiltinBlocks.MinerJobZP) {
-				rotate += Vector3.forward;
-			} else if (type == BuiltinBlocks.MinerJobZN) {
-				rotate += Vector3.back;
+			if (worldTypeChecked) {
+				Vector3 rotate = usedNPC.Position.Vector;
+				if (worldType == BuiltinBlocks.MinerJobXN) {
+					rotate += Vector3.left;
+				} else if (worldType == BuiltinBlocks.MinerJobXP) {
+					rotate += Vector3.right;
+				} else if (worldType == BuiltinBlocks.MinerJobZP) {
+					rotate += Vector3.forward;
+				} else if (worldType == BuiltinBlocks.MinerJobZN) {
+					rotate += Vector3.back;
+				}
+				usedNPC.LookAt(rotate);
 			}
-			usedNPC.LookAt(rotate);
 
 			ServerManager.SendAudio(position.Vector, "stoneDelete");
 
@@ -90,6 +88,14 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 			state.Inventory.Add(GatherResults);
 			state.JobIsDone = true;
+		}
+
+		protected override bool IsValidWorldType (ushort type)
+		{
+			return type == BuiltinBlocks.MinerJobXN
+				|| type == BuiltinBlocks.MinerJobXP
+				|| type == BuiltinBlocks.MinerJobZN
+				|| type == BuiltinBlocks.MinerJobZP;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

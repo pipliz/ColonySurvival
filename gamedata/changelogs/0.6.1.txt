@@ -1,0 +1,15 @@
+0.6.1 (2018-04-xx)
+
+-Fixed an issue where if the server crashed you could have people trying to go to invisible jobs; they self-destruct now
+
+-Overhauled the server browser menu
+| Fixed the "view players" option per server not working
+| Show whether or not a server is modded, and which mods are running
+
+Modding changes:
+-Log a warning when a mesh file contains more than 65000 vertices
+-Added a modinfo.txt help file to the gamedata/help/ folder
+-Marked RotatedCraftingJobBase as Obsolete; it'll work as it did, but it's not used by any game things anymore. Instead use the IsValidWorldType virtual method described below
+-Added BlockJobBase.worldType, BlockJobBase.worldTypeChecked fields.
+-Added BlockJobBase.CheckWorldType() & BlockJobBase.IsValidWorldType(type)
+--The idea is that at 'critical' points the world type will be sampled once, and passed into IsValidWorldType(type). If that returns false, the job self-destructs.

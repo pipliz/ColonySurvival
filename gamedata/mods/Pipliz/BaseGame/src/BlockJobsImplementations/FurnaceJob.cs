@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
-	public class FurnaceJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class FurnaceJob : CraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public static float StaticCraftingCooldown = 7.5f;
+		protected Vector3Int NPCOffset;
 
 		public override string NPCTypeKey { get { return "pipliz.smelter"; } }
 
@@ -19,25 +20,32 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override int MaxRecipeCraftsPerHaul { get { return 2; } }
 
+		public override Vector3Int GetJobLocation ()
+		{
+			return base.GetJobLocation() + NPCOffset;
+		}
+
 		public override void OnStartCrafting ()
 		{
 			base.OnStartCrafting();
 
 			ushort litType;
-			if (blockType == BuiltinBlocks.FurnaceXP) {
+			if (worldType == BuiltinBlocks.FurnaceXP) {
 				litType = BuiltinBlocks.FurnaceLitXP;
-			} else if (blockType == BuiltinBlocks.FurnaceXN) {
+			} else if (worldType == BuiltinBlocks.FurnaceXN) {
 				litType = BuiltinBlocks.FurnaceLitXN;
-			} else if (blockType == BuiltinBlocks.FurnaceZP) {
+			} else if (worldType == BuiltinBlocks.FurnaceZP) {
 				litType = BuiltinBlocks.FurnaceLitZP;
-			} else if (blockType == BuiltinBlocks.FurnaceZN) {
+			} else if (worldType == BuiltinBlocks.FurnaceZN) {
 				litType = BuiltinBlocks.FurnaceLitZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = litType;
-			ServerManager.TryChangeBlock(position, litType);
+
+			if (ServerManager.TryChangeBlock(position, litType)) {
+				worldType = litType;
+			}
 		}
 
 		public override void OnStopCrafting ()
@@ -45,36 +53,38 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			base.OnStopCrafting();
 
 			ushort unLitType;
-			if (blockType == BuiltinBlocks.FurnaceLitXP) {
+			if (worldType == BuiltinBlocks.FurnaceLitXP) {
 				unLitType = BuiltinBlocks.FurnaceXP;
-			} else if (blockType == BuiltinBlocks.FurnaceLitXN) {
+			} else if (worldType == BuiltinBlocks.FurnaceLitXN) {
 				unLitType = BuiltinBlocks.FurnaceXN;
-			} else if (blockType == BuiltinBlocks.FurnaceLitZP) {
+			} else if (worldType == BuiltinBlocks.FurnaceLitZP) {
 				unLitType = BuiltinBlocks.FurnaceZP;
-			} else if (blockType == BuiltinBlocks.FurnaceLitZN) {
+			} else if (worldType == BuiltinBlocks.FurnaceLitZN) {
 				unLitType = BuiltinBlocks.FurnaceZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = unLitType;
-			ServerManager.TryChangeBlock(position, unLitType);
+
+			if (ServerManager.TryChangeBlock(position, unLitType)) {
+				worldType = unLitType;
+			}
 		}
 
-		public override Vector3Int GetPositionNPC (Vector3Int position)
+		protected override bool IsValidWorldType (ushort type)
 		{
-			if (blockType == BuiltinBlocks.FurnaceLitXP || blockType == BuiltinBlocks.FurnaceXP) {
-				return position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FurnaceLitXN || blockType == BuiltinBlocks.FurnaceXN) {
-				return position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.FurnaceLitZP || blockType == BuiltinBlocks.FurnaceZP) {
-				return position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.FurnaceLitZN || blockType == BuiltinBlocks.FurnaceZN) {
-				return position.Add(0, 0, -1);
+			if (type == BuiltinBlocks.FurnaceLitXP || type == BuiltinBlocks.FurnaceXP) {
+				NPCOffset = new Vector3Int(1, 0, 0);
+			} else if (type == BuiltinBlocks.FurnaceLitXN || type == BuiltinBlocks.FurnaceXN) {
+				NPCOffset = new Vector3Int(-1, 0, 0);
+			} else if (type == BuiltinBlocks.FurnaceLitZP || type == BuiltinBlocks.FurnaceZP) {
+				NPCOffset = new Vector3Int(0, 0, 1);
+			} else if (type == BuiltinBlocks.FurnaceLitZN || type == BuiltinBlocks.FurnaceZN) {
+				NPCOffset = new Vector3Int(0, 0, -1);
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
-				return position;
+				return false;
 			}
+			return true;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()

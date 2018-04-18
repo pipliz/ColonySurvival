@@ -1,4 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Jobs;
+﻿using BlockTypes.Builtin;
+using Pipliz.Mods.APIProvider.Jobs;
 using Server.NPCs;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
@@ -37,6 +38,11 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		protected override string GetRecipeLocation ()
 		{
 			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "crafting.json");
+		}
+
+		protected override bool IsValidWorldType (ushort type)
+		{
+			return type == BuiltinBlocks.WorkBench;
 		}
 	}
 }

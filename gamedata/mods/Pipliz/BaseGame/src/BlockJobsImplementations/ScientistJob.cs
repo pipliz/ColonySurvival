@@ -138,6 +138,11 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			}
 		}
 
+		protected override bool IsValidWorldType (ushort type)
+		{
+			return type == BuiltinBlocks.ScienceLab;
+		}
+
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
 		{
 			return new NPCTypeStandardSettings()

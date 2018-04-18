@@ -2,6 +2,7 @@
 
 namespace Pipliz.Mods.APIProvider.Jobs
 {
+	[System.Obsolete("Implement the npc offset on GetJobLocation manually instead (calculate the offset in IsValidWorldType, see for example the bloomery job code")]
 	public class RotatedCraftingJobBase : CraftingJobBase, IRecipeLimitsProvider
 	{
 		protected ushort blockType;

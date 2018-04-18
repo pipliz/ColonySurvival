@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
-	public class BloomeryJob : RotatedCraftingJobBase, IBlockJobBase, INPCTypeDefiner
+	public class BloomeryJob : CraftingJobBase, IBlockJobBase, INPCTypeDefiner
 	{
 		public static float StaticCraftingCooldown = 6f;
+		protected Vector3Int NPCOffset;
 
 		public override string NPCTypeKey { get { return "pipliz.bloomeryjob"; } }
 
@@ -19,25 +20,32 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		public override int MaxRecipeCraftsPerHaul { get { return 3; } }
 
+		public override Vector3Int GetJobLocation ()
+		{
+			return base.GetJobLocation() + NPCOffset;
+		}
+
 		public override void OnStartCrafting ()
 		{
 			base.OnStartCrafting();
 
 			ushort litType;
-			if (blockType == BuiltinBlocks.BloomeryXP) {
+			if (worldType == BuiltinBlocks.BloomeryXP) {
 				litType = BuiltinBlocks.BloomeryLitXP;
-			} else if (blockType == BuiltinBlocks.BloomeryXN) {
+			} else if (worldType == BuiltinBlocks.BloomeryXN) {
 				litType = BuiltinBlocks.BloomeryLitXN;
-			} else if (blockType == BuiltinBlocks.BloomeryZP) {
+			} else if (worldType == BuiltinBlocks.BloomeryZP) {
 				litType = BuiltinBlocks.BloomeryLitZP;
-			} else if (blockType == BuiltinBlocks.BloomeryZN) {
+			} else if (worldType == BuiltinBlocks.BloomeryZN) {
 				litType = BuiltinBlocks.BloomeryLitZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = litType;
-			ServerManager.TryChangeBlock(position, litType);
+
+			if (ServerManager.TryChangeBlock(position, litType)) {
+				worldType = litType;
+			}
 		}
 
 		public override void OnStopCrafting ()
@@ -45,36 +53,38 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			base.OnStopCrafting();
 
 			ushort unLitType;
-			if (blockType == BuiltinBlocks.BloomeryLitXP) {
+			if (worldType == BuiltinBlocks.BloomeryLitXP) {
 				unLitType = BuiltinBlocks.BloomeryXP;
-			} else if (blockType == BuiltinBlocks.BloomeryLitXN) {
+			} else if (worldType == BuiltinBlocks.BloomeryLitXN) {
 				unLitType = BuiltinBlocks.BloomeryXN;
-			} else if (blockType == BuiltinBlocks.BloomeryLitZP) {
+			} else if (worldType == BuiltinBlocks.BloomeryLitZP) {
 				unLitType = BuiltinBlocks.BloomeryZP;
-			} else if (blockType == BuiltinBlocks.BloomeryLitZN) {
+			} else if (worldType == BuiltinBlocks.BloomeryLitZN) {
 				unLitType = BuiltinBlocks.BloomeryZN;
 			} else {
-				World.TryGetTypeAt(position, out blockType);
+				CheckWorldType();
 				return;
 			}
-			blockType = unLitType;
-			ServerManager.TryChangeBlock(position, unLitType);
+
+			if (ServerManager.TryChangeBlock(position, unLitType)) {
+				worldType = unLitType;
+			}
 		}
 
-		public override Vector3Int GetPositionNPC (Vector3Int position)
+		protected override bool IsValidWorldType (ushort type)
 		{
-			if (blockType == BuiltinBlocks.BloomeryLitXP || blockType == BuiltinBlocks.BloomeryXP) {
-				return position.Add(1, 0, 0);
-			} else if (blockType == BuiltinBlocks.BloomeryLitXN || blockType == BuiltinBlocks.BloomeryXN) {
-				return position.Add(-1, 0, 0);
-			} else if (blockType == BuiltinBlocks.BloomeryLitZP || blockType == BuiltinBlocks.BloomeryZP) {
-				return position.Add(0, 0, 1);
-			} else if (blockType == BuiltinBlocks.BloomeryLitZN || blockType == BuiltinBlocks.BloomeryZN) {
-				return position.Add(0, 0, -1);
+			if (type == BuiltinBlocks.BloomeryLitXP || type == BuiltinBlocks.BloomeryXP) {
+				NPCOffset = new Vector3Int(1, 0, 0);
+			} else if (type == BuiltinBlocks.BloomeryLitXN || type == BuiltinBlocks.BloomeryXN) {
+				NPCOffset = new Vector3Int(-1, 0, 0);
+			} else if (type == BuiltinBlocks.BloomeryLitZP || type == BuiltinBlocks.BloomeryZP) {
+				NPCOffset = new Vector3Int(0, 0, 1);
+			} else if (type == BuiltinBlocks.BloomeryLitZN || type == BuiltinBlocks.BloomeryZN) {
+				NPCOffset = new Vector3Int(0, 0, -1);
 			} else {
-				Log.Write("Unexpect blocktype {0} for job {1} at {2}", ItemTypes.IndexLookup.GetName(blockType), NPCTypeKey, position);
-				return position;
+				return false;
 			}
+			return true;
 		}
 
 		NPCTypeStandardSettings INPCTypeDefiner.GetNPCTypeDefinition ()
