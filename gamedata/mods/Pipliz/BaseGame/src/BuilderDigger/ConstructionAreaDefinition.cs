@@ -120,7 +120,6 @@
 
 		public virtual void SaveJob (Players.Player owner, JSONNode data)
 		{
-			Log.Write("Saving a construction area");
 			if (SavedJobs == null) {
 				SavedJobs = new SortedList<Players.Player, JSONNode>(10);
 			}

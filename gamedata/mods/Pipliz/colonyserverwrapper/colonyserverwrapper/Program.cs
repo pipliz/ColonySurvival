@@ -173,6 +173,7 @@ namespace ColonyServerWrapper
 			WriteConsole(" | LAN           - allows connecting from localhost through the ingame button");
 			WriteConsole(" | SteamLAN      - steam networking, does not port forward or check authentication");
 			WriteConsole(" | SteamOnline   - steam networking, port forwards and checks authentication");
+			WriteConsole("| +server.password        - default none; password required to join the server");
 			WriteConsole("| +server.maxplayers      - default 10; max players to be active at the same time");
 			WriteConsole("| +server.gameport        - default 27016; port queried for info to display in the server browser");
 			WriteConsole("| +server.ip              - default 0.0.0.0 (auto); IP to use when selecting local adapter");

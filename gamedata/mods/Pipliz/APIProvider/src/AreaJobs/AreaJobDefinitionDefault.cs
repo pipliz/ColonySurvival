@@ -77,7 +77,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 					ushort type;
 					Vector3Int possiblePositionSub = new Vector3Int(x, min.y, z);
-					if (!Server.AI.AIManager.Loaded(possiblePositionSub) || !World.TryGetTypeAt(possiblePositionSub, out type)) {
+					if (!World.TryGetTypeAt(possiblePositionSub, out type)) {
 						return;
 					}
 					if (type == 0) {

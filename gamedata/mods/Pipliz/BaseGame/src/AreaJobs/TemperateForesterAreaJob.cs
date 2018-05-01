@@ -94,7 +94,11 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 							state.SetCooldown(0.2);
 						}
+					} else {
+						state.SetCooldown(1.0); // no sapling at sapling spot (shouldn't occur a lot, something changed between calculate sub position and this
 					}
+				} else {
+					state.SetCooldown(4.0); // walked to sapling spot, not loaded
 				}
 			} else if (positionSub.IsValid) {
 				ushort type;

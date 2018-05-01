@@ -1,10 +1,17 @@
 0.6.1 (2018-04-xx)
 
--Fixed an issue where if the server crashed you could have people trying to go to invisible jobs; they self-destruct now
-
 -Overhauled the server browser menu
+| Added password support
+| Show total colonist count on a server
+| Allow sorting by ping, player count, version and server name
+| Allow filtering for empty / full / compatible
 | Fixed the "view players" option per server not working
 | Show whether or not a server is modded, and which mods are running
+
+-Stockpile now keeps tiles when they reach 0, to prevent the tiles from moving about a lot
+-Fixed an issue where if the server crashed you could have people trying to go to invisible jobs; they self-destruct now
+-Improved the use of timestamping to track things; should speed up various parts of the game (server and client)
+-Fixed the forester sometimes not setting a cooldown in its job
 
 Modding changes:
 -Log a warning when a mesh file contains more than 65000 vertices
@@ -13,3 +20,6 @@ Modding changes:
 -Added BlockJobBase.worldType, BlockJobBase.worldTypeChecked fields.
 -Added BlockJobBase.CheckWorldType() & BlockJobBase.IsValidWorldType(type)
 --The idea is that at 'critical' points the world type will be sampled once, and passed into IsValidWorldType(type). If that returns false, the job self-destructs.
+-Added Time.SecondsSinceStartDoubleThisFrame
+-Added Time.MillisecondsSinceStartThisFrame
+-- same as the non-ThisFrame one, but is set once every frame (in an UpdateStart callback) to prevent excessive timestamping calls
