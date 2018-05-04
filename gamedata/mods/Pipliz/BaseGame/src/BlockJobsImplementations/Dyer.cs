@@ -29,11 +29,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			};
 		}
 
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "dyeing.json");
-		}
-
 		protected override bool IsValidWorldType (ushort type)
 		{
 			return type == BuiltinBlocks.DyerTable;

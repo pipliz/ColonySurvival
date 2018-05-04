@@ -22,12 +22,12 @@ Builtin callback uses:
 
 void AfterSelectedWorld ()
 First callback after the world to load has been determined.
-  pipliz.server.loadtexturemappingfile
-    Parses texture mapping file
+  pipliz.server.applytexturemappingpatches
+	ProvidesFor pipliz.server.registertexturemappingtextures
+    Applies texture mapping changes applied through modInfo.json jsonFiles or ItemTypesServer.QueueTextureMapping methods
   pipliz.server.registertexturemappingtextures
-    DependsOn pipliz.server.loadtexturemappingfile
     Actually starts loading the texture files into the filetable
-    So removing/changing texture mappings (ItemTypesServer.TextureMappings) should be done inbetween this and the DependsOn
+    So removing/changing texture mappings (ItemTypesServer.TextureMappings) should be done before this
   pipliz.server.registernpctextures
     Registers the hardcoded npc texture paths to load into the FileTable cache
   pipliz.server.registerwatertextures
@@ -41,8 +41,13 @@ First callback after the world to load has been determined.
   pipliz.server.localization.startload
     Starts loading the json files from disk
 
+void AddItemTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
+Allows altering {dict}, to add/remove types. Called before AfterAddingBaseTypes
+  pipliz.server.applymoditempatches
+    applies types.json patches loaded through the modinfo.json jsonFiles or ItemTypesServer.QueueItemType methods
+
 void AfterAddingBaseTypes (Dictionairy<string, ItemTypesServer.ItemTypeRaw> dict)
-Allows altering {dict}, to add/remove types
+Allows altering {dict}, to add/remove types. Called after AddItemTypes
   pipliz.blocknpcs.addlittypes
     Adds the lit rotatable types like furnace/oven/bloomery/fineryforge/kiln through code.
     They're not in types.json due to the length and repetitiveness of the child types (2x4 + 2, 2 parent types + 2 for lit/unlit * 4 for rotations)
@@ -77,14 +82,14 @@ Builtin callback uses:
 	Queues up the monster textures from npc settings to load in the filetable
   pipliz.apiprovider.jobs.resolvetypes
     [DependsOn("pipliz.server.loadnpctypes")] -> Wait for base game to add npc types first, to allow overriding
-	[ProvidesFor("pipliz.apiprovider.registerrecipes")] -> Checks the job types for recipes, adds those to a list for registerrecipes
+	[ProvidesFor("pipliz.server.loadresearchables")] -> Registers NPC types (which may be used in researchables? not sure :') )
 	Inserts the registered jobs' npctypes into the game
-  pipliz.apiprovider.registerrecipes
-    [ProvidesFor("pipliz.server.loadresearchables")]
-    Inserts the registered jobs' crafting recipes into the game
   pipliz.server.recipeplayerload
     [ProvidesFor("pipliz.server.loadresearchables")] -> researchables may try unlocking these recipes
-    Loads recipes from "gamedata/crafting.json"
+	Applies player recipe patches loaded from modinfo.json jsonFiles or RecipePlayer.QueuePlayerRecipes methods
+  pipliz.server.recipenpcload
+	[ProvidesFor("pipliz.server.loadresearchables")] -> researchables may try unlocking these recipes
+	Applies npc recipe patches loaded from modinfo.json jsonFiles or RecipeStorage.QueueNPCRecipes methods
   pipliz.server.loadresearchables
     [ProvidesFor("pipliz.server.loadplayers")] -> as player savegames contain research progress (which references researchables)
     Loads the researchables

@@ -1,62 +1,72 @@
 [
 	{
+		"defaultLimit" : 5,
+		"isOptional" : true,
 		"name" : "pipliz.technologist.sciencebagbasic",
-		"results":[{"type":"sciencebagbasic"}],
-		"requires":[
+		"requires" : [
 			{"type":"coppertools"},
 			{"type":"bronzeplate"},
-			{"type":"bricks","amount":3},
+			{"amount":3,"type":"bricks"},
 			{"type":"linenbag"}
 		],
-		"defaultLimit" : 5,
-		"isOptional" : true
+		"results" : [
+			{"type":"sciencebagbasic"}
+		]
 	},
 	{
+		"defaultLimit" : 5,
+		"isOptional" : true,
 		"name" : "pipliz.technologist.sciencebagmilitary",
-		"results":[{"type":"sciencebagmilitary"}],
-		"requires":[
+		"requires" : [
 			{"type":"ironsword"},
-			{"type":"bronzearrow","amount":3},
+			{"amount":3,"type":"bronzearrow"},
 			{"type":"bow"},
 			{"type":"linenbag"}
 		],
-		"defaultLimit" : 5,
-		"isOptional" : true
+		"results" : [
+			{"type":"sciencebagmilitary"}
+		]
 	},
 	{
+		"defaultLimit" : 5,
+		"isOptional" : true,
 		"name" : "pipliz.technologist.sciencebaglife",
-		"results":[{"type":"sciencebaglife"}],
-		"requires":[
+		"requires" : [
 			{"type":"flour"},
-			{"type":"berry","amount":5},
+			{"amount":5,"type":"berry"},
 			{"type":"clothing"},
 			{"type":"linenbag"}
 		],
-		"defaultLimit" : 5,
-		"isOptional" : true
+		"results" : [
+			{"type":"sciencebaglife"}
+		]
 	},
 	{
+		"defaultLimit" : 5,
+		"isOptional" : true,
 		"name" : "pipliz.technologist.sciencebagadvanced",
-		"results":[{"type":"sciencebagadvanced"}],
-		"requires":[
+		"requires" : [
 			{"type":"steelparts"},
 			{"type":"gunpowderpouch"},
 			{"type":"silveringot"},
 			{"type":"linenbag"}
 		],
-		"defaultLimit" : 5,
-		"isOptional" : true
+		"results" : [
+			{"type":"sciencebagadvanced"}
+		]
 	},
 	{
+		"defaultLimit" : 5,
+		"isOptional" : true,
 		"name" : "pipliz.technologist.sciencebagcolony",
-		"results":[{"type":"sciencebagcolony"}],
-		"requires":[
+		"requires" : [
 			{"type":"bronzeanvil"},
 			{"type":"fineryforge"},
 			{"type":"matchlockgun"},
 			{"type":"linenbag"}
 		],
-		"defaultLimit" : 5,
-		"isOptional" : true
+		"results" : [
+			{"type":"sciencebagcolony"}
+		]
 	}
 ]

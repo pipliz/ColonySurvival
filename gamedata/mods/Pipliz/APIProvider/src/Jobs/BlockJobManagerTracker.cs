@@ -11,7 +11,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 	{
 		static List<IBlockJobManager> InstanceList = new List<IBlockJobManager>();
 
-		static List<KeyValuePair<string, IRecipeLimitsProvider>> LimitsProviders = new List<KeyValuePair<string, IRecipeLimitsProvider>>();
 		static Dictionary<string, Action<string>> RegisteredTypes = new Dictionary<string, Action<string>>();
 
 		/// <summary>
@@ -64,9 +63,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 		{
 			var instance = new T();
 			Server.NPCs.NPCType.AddSettings(instance.GetNPCTypeDefinition());
-			if (typeof(IRecipeLimitsProvider).IsAssignableFrom(typeof(T))) {
-				LimitsProviders.Add(new KeyValuePair<string, IRecipeLimitsProvider>(blockName, (IRecipeLimitsProvider)instance));
-			}
 			InstanceList.Add(new BlockJobManager<T>(blockName));
 		}
 
@@ -123,33 +119,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 					Log.WriteException("Error saving APIProvider blockjob {0}:", e, InstanceList[i].ToString());
 				}
 			}
-		}
-
-		/// <summary>
-		/// Called by APIProvider ModEntries
-		/// </summary>
-		public static void RegisterRecipes ()
-		{
-			for (int i = 0; i < LimitsProviders.Count; i++) {
-				try {
-					var recipeLimitsProvider = LimitsProviders[i].Value;
-					var list = recipeLimitsProvider.GetCraftingLimitsRecipes();
-					if (list != null) {
-						RecipeStorage.AddLimitTypeRecipes(recipeLimitsProvider.GetCraftingLimitsType(), list);
-						var triggers = recipeLimitsProvider.GetCraftingLimitsTriggers();
-						if (triggers == null) {
-							RecipeStorage.AddBlockToRecipeMapping(LimitsProviders[i].Key, recipeLimitsProvider.GetCraftingLimitsType());
-						} else {
-							for (int i2 = 0; i2 < triggers.Count; i2++) {
-								RecipeStorage.AddBlockToRecipeMapping(triggers[i2], recipeLimitsProvider.GetCraftingLimitsType());
-							}
-						}
-					}
-				} catch (Exception e) {
-					Log.WriteException("Error registering recipes for blockjob {0}:", e, LimitsProviders[i].ToString());
-				}
-			}
-			LimitsProviders = null;
 		}
 	}
 }

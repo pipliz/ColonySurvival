@@ -1,0 +1,26 @@
+[
+	{
+		"defaultLimit" : 50,
+		"name" : "pipliz.smelter.bronzeingot",
+		"requires" : [
+			{"amount":2,"type":"copper"},
+			{"type":"tin"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"amount":2,"type":"bronzeingot"}
+		]
+	},
+	{
+		"defaultLimit" : 8,
+		"defaultPriority" : -100,
+		"name" : "pipliz.smelter.bricks",
+		"requires" : [
+			{"amount":3,"type":"clay"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"amount":3,"type":"bricks"}
+		]
+	}
+]

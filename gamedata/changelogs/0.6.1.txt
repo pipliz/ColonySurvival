@@ -12,14 +12,29 @@
 -Fixed an issue where if the server crashed you could have people trying to go to invisible jobs; they self-destruct now
 -Improved the use of timestamping to track things; should speed up various parts of the game (server and client)
 -Fixed the forester sometimes not setting a cooldown in its job
+-The indicator icon shown above a crafter when a recipe with multiple results is crafted is now chosen weighted by crafted quantities
+-Some speedup to loading the server (and thus loading singleplayer worlds) by multithreading the loading of some types of game files
 
 Modding changes:
+-Added jsonFiles property to modInfo.json files
+--Allows loading various types (player recipes, types, texturemapping, npc recipes) with no code involved
+--See modinfo.txt help file
+-Added support for relative paths in types and texturemapping json files
+-Changed texturemapping json file to include settings (default textures, default folders to look for files, default extension)
+-Added AddItemTypes modcallback type; identical to AfterAddingBaseTypes, but runs before it (it's where the json types are added)
 -Log a warning when a mesh file contains more than 65000 vertices
 -Added a modinfo.txt help file to the gamedata/help/ folder
--Marked RotatedCraftingJobBase as Obsolete; it'll work as it did, but it's not used by any game things anymore. Instead use the IsValidWorldType virtual method described below
+-Removed RotatedCraftingJobBase. Instead use the IsValidWorldType virtual method described below
 -Added BlockJobBase.worldType, BlockJobBase.worldTypeChecked fields.
 -Added BlockJobBase.CheckWorldType() & BlockJobBase.IsValidWorldType(type)
 --The idea is that at 'critical' points the world type will be sampled once, and passed into IsValidWorldType(type). If that returns false, the job self-destructs.
+--worldType can be used with a GetJobLocation override to replicate RotatedCraftingJobBase functionality
 -Added Time.SecondsSinceStartDoubleThisFrame
 -Added Time.MillisecondsSinceStartThisFrame
 -- same as the non-ThisFrame one, but is set once every frame (in an UpdateStart callback) to prevent excessive timestamping calls
+-Removed some callback instances:
+--pipliz.server.loadtexturemappingfile
+| default files are now loaded through the basegame modinfo.json instead
+--pipliz.apiprovider.registerrecipes
+| default npc recipes are now loaded through the basegame modinfo.json instead (pipliz.server.recipenpcload)
+-Removed IRecipeLimitsProvider from the APIProvider; use the modinfo.json way of loading npc recipes instead

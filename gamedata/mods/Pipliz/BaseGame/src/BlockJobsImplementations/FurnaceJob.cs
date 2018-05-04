@@ -97,25 +97,5 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				type = NPCTypeID.GetNextID()
 			};
 		}
-
-		public override List<string> GetCraftingLimitsTriggers ()
-		{
-			return new List<string>()
-			{
-				"furnacex+",
-				"furnacex-",
-				"furnacez+",
-				"furnacez-",
-				"furnacelitx+",
-				"furnacelitx-",
-				"furnacelitz+",
-				"furnacelitz-"
-			};
-		}
-
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "smelting.json");
-		}
 	}
 }

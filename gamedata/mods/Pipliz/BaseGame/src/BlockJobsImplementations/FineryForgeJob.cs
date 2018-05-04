@@ -97,25 +97,5 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				type = NPCTypeID.GetNextID()
 			};
 		}
-
-		public override List<string> GetCraftingLimitsTriggers ()
-		{
-			return new List<string>()
-			{
-				"fineryforgex+",
-				"fineryforgex-",
-				"fineryforgez+",
-				"fineryforgez-",
-				"fineryforgelitx+",
-				"fineryforgelitx-",
-				"fineryforgelitz+",
-				"fineryforgelitz-"
-			};
-		}
-
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "fineryforge.json");
-		}
 	}
 }

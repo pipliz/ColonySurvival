@@ -35,11 +35,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			ServerManager.SendAudio(position.Vector, "anvil");
 		}
 
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "metalsmithing.json");
-		}
-
 		protected override bool IsValidWorldType (ushort type)
 		{
 			return type == BuiltinBlocks.BronzeAnvil;

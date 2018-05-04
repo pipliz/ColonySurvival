@@ -45,3 +45,19 @@ overrideAudioFolder
 -	Specify a string path relative to the modInfo.json indicating a folder to use to search for replacement files of the specified types
 -	Use the same filename as the original files in their folders, and they should get replaced.
 -	As of time of writing these work for any compatibleversions at & above 0.5.0 (i.e, these break a lot less)
+
+jsonFiles
+-	An array of descriptions of things to load from files
+-	Keys allowed per description/config:
+|	-	"absolutePath" - the path of the json file relative to the game root folder
+	-	"relativePath" - the path of the json file relative to this modinfo.json file
+	-	"fileType" - the type of contents that file will have. Requires either absolutePath or relativePath to be set
+	|	Accepted fileTypes:
+		-	"addOrOverrideTextureMappingEntries" - Loads the file as a texturemapping file, adding the entries to the internal table and replacing an entry if the key already exists
+		-	"overrideTypeProperties" - Loads the file as a types file. If the type key already exists, it will override any properties set on the new type into the old type. If it doesn't exist, it just adds the type.
+		-	"addNewTypes" - Loads the file as a types file. If the type key does not exist, it adds the type to the internal table.
+		-	"addOrReplacePlayerRecipes" - Loads the file as a recipes file. If the recipe exists, is must have the same isOptional key, and the other settings are copied over. If it doesn't exist, it just adds the recipe.
+		-	"addOrReplaceNPCRecipes" - Loads the file as a recipes file. Requires "npcType" to be set in this description. Rest is same as addOrReplacePlayerRecipes.
+	-	"limitsUIMapping" - requires "npcType" to be set. Contains an array of block names that will trigger the npcTypes' recipe limits UI when clicked upon. This can be used without setting a path / fileType.
+	-	"npcType" - provides data for "limitsUIMapping" and/or "addOrReplaceNPCRecipes"
+	-	"index" - Defaults to 0. Changes will be applied in order of their index (lowest first). If the index is the same, order is undefined.

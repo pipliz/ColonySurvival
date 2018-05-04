@@ -51,21 +51,5 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				type = NPCTypeID.GetNextID()
 			};
 		}
-
-		public override List<string> GetCraftingLimitsTriggers ()
-		{
-			return new List<string>()
-			{
-				"kilnx+",
-				"kilnx-",
-				"kilnz+",
-				"kilnz-"
-			};
-		}
-
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "kiln.json");
-		}
 	}
 }

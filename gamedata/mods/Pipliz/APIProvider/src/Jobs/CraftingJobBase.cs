@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.APIProvider.Jobs
 {
-	public class CraftingJobBase : BlockJobBase, IRecipeLimitsProvider
+	public class CraftingJobBase : BlockJobBase
 	{
 		protected NPCInventory blockInventory;
 		protected bool shouldTakeItems;
@@ -73,10 +73,20 @@ namespace Pipliz.Mods.APIProvider.Jobs
 					if (craftingResults.Count > 0) {
 						blockInventory.Add(craftingResults);
 						ushort typeToShow;
+						typeToShow = craftingResults[0].Type;
 						if (craftingResults.Count > 1) {
-							typeToShow = craftingResults[Random.Next(0, craftingResults.Count)].Type;
-						} else {
-							typeToShow = craftingResults[0].Type;
+							int totalTypes = 0;
+							for (int i = 0; i < craftingResults.Count; i++) {
+								totalTypes += craftingResults[i].Amount;
+							}
+							totalTypes = Random.Next(0, totalTypes + 1);
+							for (int i = 0; i < craftingResults.Count; i++) {
+								totalTypes -= craftingResults[i].Amount;
+								if (totalTypes <= 0) {
+									typeToShow = craftingResults[i].Type;
+									break;
+								}
+							}
 						}
 
 						state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, typeToShow));
@@ -180,29 +190,6 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (oldGoal == NPCBase.NPCGoal.Job && wasCrafting) {
 				OnStopCrafting();
 			}
-		}
-
-		protected virtual string GetRecipeLocation ()
-		{
-			throw new System.NotImplementedException();
-		}
-
-		// IRecipeLimitsProvider
-		public virtual IList<Recipe> GetCraftingLimitsRecipes ()
-		{
-			return Recipe.LoadRecipes(GetRecipeLocation());
-		}
-
-		// IRecipeLimitsProvider
-		public virtual List<string> GetCraftingLimitsTriggers ()
-		{
-			return null;
-		}
-
-		// IRecipeLimitsProvider
-		public virtual string GetCraftingLimitsType ()
-		{
-			return NPCTypeKey;
 		}
 	}
 }

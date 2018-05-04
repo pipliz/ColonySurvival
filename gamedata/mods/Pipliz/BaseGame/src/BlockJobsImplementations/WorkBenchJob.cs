@@ -35,11 +35,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			ServerManager.SendAudio(position.Vector, "crafting");
 		}
 
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "crafting.json");
-		}
-
 		protected override bool IsValidWorldType (ushort type)
 		{
 			return type == BuiltinBlocks.WorkBench;

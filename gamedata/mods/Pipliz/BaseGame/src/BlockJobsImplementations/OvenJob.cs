@@ -1,7 +1,6 @@
 ﻿using BlockTypes.Builtin;
 using Pipliz.Mods.APIProvider.Jobs;
 using Server.NPCs;
-using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.BlockNPCs
 {
@@ -96,26 +95,6 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 				maskColor1 = new UnityEngine.Color32(192, 160, 117, 255),
 				type = NPCTypeID.GetNextID()
 			};
-		}
-
-		public override List<string> GetCraftingLimitsTriggers ()
-		{
-			return new List<string>()
-			{
-				"ovenx+",
-				"ovenx-",
-				"ovenz+",
-				"ovenz-",
-				"ovenlitx+",
-				"ovenlitx-",
-				"ovenlitz+",
-				"ovenlitz-"
-			};
-		}
-
-		protected override string GetRecipeLocation ()
-		{
-			return System.IO.Path.Combine(ModEntries.ModGamedataDirectory, "baking.json");
 		}
 	}
 }
