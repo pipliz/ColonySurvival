@@ -58,6 +58,7 @@ jsonFiles
 		-	"addNewTypes" - Loads the file as a types file. If the type key does not exist, it adds the type to the internal table.
 		-	"addOrReplacePlayerRecipes" - Loads the file as a recipes file. If the recipe exists, is must have the same isOptional key, and the other settings are copied over. If it doesn't exist, it just adds the recipe.
 		-	"addOrReplaceNPCRecipes" - Loads the file as a recipes file. Requires "npcType" to be set in this description. Rest is same as addOrReplacePlayerRecipes.
+		-	"addOrOverrideLocalization" - Loads the file as a locale file. Name of the file should be en-US.json, pl-PL.json etc. Merges the file if it already exists.
 	-	"limitsUIMapping" - requires "npcType" to be set. Contains an array of block names that will trigger the npcTypes' recipe limits UI when clicked upon. This can be used without setting a path / fileType.
 	-	"npcType" - provides data for "limitsUIMapping" and/or "addOrReplaceNPCRecipes"
 	-	"index" - Defaults to 0. Changes will be applied in order of their index (lowest first). If the index is the same, order is undefined.
