@@ -97,6 +97,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		protected override bool IsValidWorldType (ushort type)
 		{
+			if (guardSettings == null) { guardSettings = SetupSettings(); }
 			return type == guardSettings.typeXP
 				|| type == guardSettings.typeXN
 				|| type == guardSettings.typeZP

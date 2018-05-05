@@ -1,4 +1,4 @@
-0.6.1 (2018-04-xx)
+0.6.1 (2018-05-05)
 
 -Overhauled the server browser menu
 | Added password support
@@ -39,4 +39,9 @@ Modding changes:
 | default files are now loaded through the basegame modinfo.json instead
 --pipliz.apiprovider.registerrecipes
 | default npc recipes are now loaded through the basegame modinfo.json instead (pipliz.server.recipenpcload)
+--pipliz.server.localization.startload
+--pipliz.server.localization.waitforloading
+| Localization will now start loading when the modinfo files are parsed (during mod loading)
 -Removed IRecipeLimitsProvider from the APIProvider; use the modinfo.json way of loading npc recipes instead
+-Removed Localization.LoadedTranslations
+--Use Localization.QueueLocalePatch to add locales that'll be merged into the loaded locales
