@@ -1,14 +1,21 @@
-0.6.1.2 (2018-05-07)
+0.6.1.2 (2018-05-08)
 
 -Fixed server browser scrolling not resetting when changing filters (possibly preventing you from scrolling back to values)
--Improved handling of relative paths
-| This will reset the file cache
 -Fixed history tab of the server browser not working
 -Fixed player loading errors if some science they completed is removed from code
 -Applied the fix to show empty item stacks of types previously seen to the item selection menu for construction areas
--Added a key to hold to make multiple construction areas in a row - defaults to LeftCtrl, see PlaceMultipleAreas in the key mapping menu.
+-Added a key to hold to make multiple construction areas in a row - defaults to Left Alt, see PlaceMultipleAreas in the key mapping menu.
 
 -From github:
 -Locale updates for ja-JP
 -Locale updates for nl-NL
 -Locale updates for fr-FR
+
+modding changes:
+-Improved handling of relative paths to properly support ../ and other complex paths
+-Texturemapping files loaded through modinfo.json files now support specifying full paths in the nodes themselves
+-Added a warning for when a type has sideall etc registered but those do are not registered as texturemappings
+-Added a warning in the recipe json constructor for when requirements/results have <= 0 items or an invalid type
+-Added an auto-formatting step to most places where you can insert paths to make the paths a consistent format (all .\gamedata\etc\etc.type), preventing duplicate issues in the filetable
+| Hopefully you won't notice a thing from this
+-Added a warning when you're registering 2 files that have equivalent paths except for capitalization

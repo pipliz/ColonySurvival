@@ -1,0 +1,38 @@
+format for texturemapping.json files:
+
+All paths can be relative to the location of the json file (if the path starts with a '.', like "./albedo") or relative to the game installation folder ("gamedata/textures/blocks/albedo/")
+Types.json files will point to an entry (collection of the albedo, emissive, height and normal keys) in a texturemapping file using the "sideall", "sidey+" etc keys.
+The entries in the texturemapping file will point to a combination of texture files to use
+
+"_settings" is a special case node to indicate some settings. Options:
+	"defaultAlbedo"
+	"defaultEmissive"
+	"defaultHeight"
+	"defaultNormal"
+	- The path to the default texture file to use if a value ("albedo", "emissive", "height", "normal") is not set.
+	"fileExtension"
+	- The default file extension to use on values. Format it like ".png", only other supported is (probably, untested as of writing) ".jpg" and ".jpeg"
+	"folderAlbedo"
+	"folderEmissive"
+	"folderHeight"
+	"folderNormal"
+	- The folder path to use in which the values can be found.
+"some_node":
+	"albedo"
+	"emissive"
+	"height"
+	"normal"
+	- Each of these is optional. If not set, it will default to the value of defaultAlbedo etc in the _settings node.
+	- if the value does not end in .jpeg, .png or .jpg it will resolve using the folder and file extension specified by the _settings node.
+	- Example:
+		"albedo" : "some_file"
+		"folderAlbedo" : "./path/to/file/"
+		"fileExtension" : ".png"
+		this will result in the file being: "./path/to/file/some_file.png"
+	- If the value does end with .jpeg, .png or .jpg it'll use that as path:
+	- Example:
+		"albedo" : "gamedata/textures/materials/blocks/albedo/neutral.png"
+		this will use the neutral albedo texture that comes with the game
+	- Example:
+		"albedo" : "./albedo/some_file.png"
+		this will use the file some_file.png from the albedo folder *found inside the same folder where the texture mapping file is*
