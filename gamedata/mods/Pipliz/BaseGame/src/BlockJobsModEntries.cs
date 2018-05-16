@@ -9,6 +9,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 		public static string ModGamedataDirectory;
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAssemblyLoaded, "pipliz.blocknpcs.assemblyload")]
+		[ModLoader.ModDocumentation("Sets BaseGame gamedata directory")]
 		public static void OnAssemblyLoaded (string path)
 		{
 			ModGamedataDirectory = Path.Combine(Path.GetDirectoryName(path), "gamedata/");
@@ -16,6 +17,7 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.registerjobs")]
 		[ModLoader.ModCallbackProvidesFor("pipliz.apiprovider.jobs.resolvetypes")]
+		[ModLoader.ModDocumentation("Adds all the job block implementations to BlockJobManagerTracker")]
 		public static void AfterDefiningNPCTypes ()
 		{
 			BlockJobManagerTracker.Register<Construction.ConstructionJob>("constructionjob");

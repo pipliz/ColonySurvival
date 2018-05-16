@@ -14,6 +14,7 @@ namespace Pipliz.ColonyServerWrapper
 		static BinaryWriter clientWriter;
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAssemblyLoaded, "pipliz.colonyserverwrapper.load")]
+		[ModLoader.ModDocumentation("Checks commandline args, sets up connection if required")]
 		static void OnLoad (string path) {
 			string logto;
 			if (UnityWrapper.CommandLineArgs.TryGetValue("+logto", out logto)) {
@@ -28,6 +29,7 @@ namespace Pipliz.ColonyServerWrapper
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnUpdate, "pipliz.colonyserverwrapper.process")]
+		[ModLoader.ModDocumentation("Processes packets from external socket")]
 		static void Process ()
 		{
 			if (client != null) {
@@ -48,6 +50,7 @@ namespace Pipliz.ColonyServerWrapper
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnQuitLate, "pipliz.colonyserverwrapper.dispose")]
 		[ModLoader.ModCallbackDependsOn("pipliz.server.saveworldsettings")]
 		[ModLoader.ModCallbackDependsOn("pipliz.shared.waitforasyncquits")]
+		[ModLoader.ModDocumentation("Close external socket")]
 		static void Quit ()
 		{
 			if (client != null) {

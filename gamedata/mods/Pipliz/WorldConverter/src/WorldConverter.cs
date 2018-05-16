@@ -15,6 +15,7 @@ namespace Pipliz.WorldConverter
 		static string pathTableNew = "New itemTypeTable path here";
 
 		[ModLoader.ModCallback (ModLoader.EModCallbackType.OnGUI, "pipliz.worldconverter.ongui")]
+		[ModLoader.ModDocumentation("Shows some buttons and inputs to config the converter")]
 		static void OnGUI ()
 		{
 			Rect rect = new Rect(Screen.width - 700, 0, 400, 30);

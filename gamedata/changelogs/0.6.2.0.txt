@@ -1,0 +1,12 @@
+0.6.2.0 (2018-xx-xx)
+
+-Changed monster spawner:
+| Previous behaviour would only spawn zombies when old ones died when the zombie cap/colony was hit. This benefitted long mazes disproportionally.
+| Now zombies spawn constantly - irrelevant of the amount alive already.
+-Fixed a very rare edge case where a chunk could be unloaded on the server if somebody disconnects (while it should stay loaded)
+
+Modding changes:
+-Added auto-generating documentation. Uses ModCallback and ModDocumentation attributes. Press F1 in the server UI to generate it (will also generate for mods)
+-Reworked monster spawner code;
+| Removed monsterSpawner.GetMaxZombieCount(colonistCount) - no logical replacement, as there's no max zombie count anymore.
+| Remove ZombiesPerNPC, ZombiesPerNPCSecondary, ZombiesPerNPCSecondaryAtCount from settings/server.json; Replaced by RespawnCooldownPerZombiePerColonist

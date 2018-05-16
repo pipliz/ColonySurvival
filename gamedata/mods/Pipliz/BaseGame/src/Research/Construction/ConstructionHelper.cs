@@ -4,6 +4,7 @@
 	public static class ConstructionHelper
 	{
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnPlayerConnectedLate, "pipliz.mods.basegame.sendconstructiondata")]
+		[ModLoader.ModDocumentation("Sends builder/digger limit size data")]
 		public static void SendPacket (Players.Player player)
 		{
 			if (player.IsConnected) {

@@ -159,6 +159,7 @@ namespace Pipliz.Mods.BaseGame
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterAddingBaseTypes, "pipliz.blocknpcs.addlittypes")]
+		[ModLoader.ModDocumentation("Creates some lit/rotatable types - furnace/torch etc")]
 		static void AddLitTypes (Dictionary<string, ItemTypesServer.ItemTypeRaw> items)
 		{
 			ItemRotator (
@@ -378,6 +379,7 @@ namespace Pipliz.Mods.BaseGame
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.blocknpcs.registerchangetypes")]
+		[ModLoader.ModDocumentation("Registers changetypes for created blocks from pipliz.blocknpcs.addlittypes")]
 		static void RegisterChangeTypes ()
 		{
 			for (int i = 0; i < RegisteringChangeTypes.Count; i++) {

@@ -11,6 +11,7 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 		static List<Type> queuedDefinitions;
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterModsLoaded, "pipliz.mods.apiprovider.growableblocks.findattributes")]
+		[ModLoader.ModDocumentation("Searches for types marked with GrowableBlockDefinitionAutoLoaderAttribute")]
 		static void FindAttributes (List<ModLoader.ModDescription> mods)
 		{
 			for (int i = 0; i < mods.Count; i++) {
@@ -32,6 +33,7 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.mods.apiprovider.growableblocks.insertattributed")]
 		[ModLoader.ModCallbackProvidesFor("pipliz.server.growableblocks.loadblocks")]
+		[ModLoader.ModDocumentation("Creates instance of registered IGrowableBlockDefinitions and registers those to GrowableBlockManager")]
 		static void Load ()
 		{
 			if (queuedDefinitions != null) {
