@@ -180,10 +180,9 @@ namespace ColonyServerWrapper
 			WriteConsole("| +server.steamport       - default 27017; port passed for 'steam use', seems unused");
 			WriteConsole("| +server.usevac          - default false; whether to filter for VAC status, true or false");
 			WriteConsole("| +server.seed            - if new world, seed used to generate terrain. type integer");
-			WriteConsole("| +server.monsterson      - if new world, whether to spawn monsters. default true");
+			WriteConsole("| +server.daydifficulty   - if new world, difficulty of day monsters. default 0");
+			WriteConsole("| +server.nightdifficulty - if new world, difficulty of night monsters. default 2");
 			WriteConsole("| +server.initialsettings - if new world, initialsettings file to use, default normal");
-			WriteConsole("| +server.monstersday     - if new world, whether to spawn monsters during the day, default false");
-			WriteConsole("| +server.monstersdouble  - if new world, whether to spawn double the amount of monsters, default false");
 			WriteConsole("stop_server             - Stops a server");
 			WriteConsole("send                    - Send text to the server");
 			WriteConsole("- Example 1: send Hey Everyone!");

@@ -1,12 +1,49 @@
-0.6.2.0 (2018-xx-xx)
+0.6.2.0 (2018-06-01)
+
+Welcome to update 0.6.2! 
+
+This update overhauls the monster spawning and the stockpile. In the past, long mazes decreased the total amount of monsters that spawned, while killing them early increased the spawned amount. This has been stabilized. Only the amount of colonists determines the amount of spawned monsters now. If you've got long mazes, you might have to readjust your defenses! 
+
+Another change to the monster spawning involves the spawn location. Before this update, monsters only spawned a couple of blocks above and below the original terrain heigth. This mean they would not spawn on buildings made by players, nor in deep tunnels. This has been fixed as well. Monsters might now spawn in locations you aren't used to! 
+
+We've also made it easier to adjust the difficulty in existing worlds. There's now a settings icon in the banner tool menu. Click it, and you'll be able to determine the amount of night monsters and the amount of day monsters you want to fight. 
+
+Last but not least, the stockpile has been updated. You can now craft items directly from the stockpile. Shift-click to transfer items from the stockpile to the inventory. Control-click to produce a full stack of items. 
+
+Have fun!
+
+Detailed changes:
 
 -Changed monster spawner:
 | Previous behaviour would only spawn zombies when old ones died when the zombie cap/colony was hit. This benefitted long mazes disproportionally.
 | Now zombies spawn constantly - irrelevant of the amount alive already.
+| If your colony becomes larger, zombie spawn points will be re-used for a large performance boost.
+-Added a settings menu to the banner menu, where you can change the difficulty
+| Said menu is moddable from the server
 -Fixed a very rare edge case where a chunk could be unloaded on the server if somebody disconnects (while it should stay loaded)
+-NPCs further away don't check the block they walk into for offsets anymore (i.e, stand-on-stairs), not needed in the distance for the performance it costs.
+-Optimized off-screen npc/zombie performance
+-Much improved stockpile/inventory/crafting handling:
+| Shift-click (configurable, InventoryQuickMove) items in the inventory/stockpile to move them to the stockpile/inventory respectively.
+| Changed stack-crafting to be left control (instead of shift, now used for quick moving), to be consistent with stack-recruiting
+| Shouldn't have a ping anymore on interacting with the stockpile on a slow/far away server
+| Closing the stockpile UI now dumps the dragged item back into the stockpile
+| Stockpile only updates ~twice per second max, instead of up to 50 times per second
 
 Modding changes:
 -Added auto-generating documentation. Uses ModCallback and ModDocumentation attributes. Press F1 in the server UI to generate it (will also generate for mods)
 -Reworked monster spawner code;
 | Removed monsterSpawner.GetMaxZombieCount(colonistCount) - no logical replacement, as there's no max zombie count anymore.
 | Remove ZombiesPerNPC, ZombiesPerNPCSecondary, ZombiesPerNPCSecondaryAtCount from settings/server.json; Replaced by RespawnCooldownPerZombiePerColonist
+| MonsterSpawner.SpawnZombie has changed its arguments & now has multiple overloads, changed to deal with the difficulty settings addition
+-Removed Pipliz.Helpers.Helper.GetOrFallback extension method - duplicated functionality of Pipliz.Extensions.GetValueOrDefault
+-Renamed Player.SetTempValues (dict) to ClearTempValuesIfEmpty() in order to better indicate the intended use.
+-Overhauled difficulty settings; 
+| See Difficulty.DifficultyManager & Player.DifficultySetting
+-Added callbacks:
+| OnConstructWorldSettingsUI - allows adding items to the world settings UI
+| OnPlayerChangedNetworkUIStorage - allows parsing the settings one changed in network UIs
+-Overhauled stockpile/inventory/dragged items etc:
+| Inventory.TryAdd now takes an optional index argument, if set it'll only try to add to that index
+| Inventory.TryRemove now takes an optional index argument, if set it'll only try to remove from that index
+| Removed Inventory.SendUpdate() and Stockpile.SendUpdate() - use player.SendStockpileInventory() instead
