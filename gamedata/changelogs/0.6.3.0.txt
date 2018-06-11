@@ -1,3 +1,18 @@
 0.6.3.0 (2018-06-xx)
 
+-Added a search field to the stockpile to filter by type/name/category
+-Added a "made in" part in the tooltip, where it shows at what job an item can be made by npc's.
 -Updated es-ES, fr-FR, ja-JP locales to 0.6.2.x (credits to their respective translators on github)
+-Updated ch-CN locale (from ~70% to 96% up to date, apoligies for late update, it got forgotten)
+-"Stack-hiring" colonists using control now snaps to open jobs / beds left
+
+-Fixed Crossbow bolt science requiring bloomery science explicitly - it's already included in the military science bag dependency (thanks JackPS9)
+-Fixed tooltip clipping out of the game window on lower resolutions
+-Fixed a bug causing the inventory to lower FPS by quite a lot
+-Fixed a performance bug where receiving inventory updates led to a frametime spike
+-Fixed an issue where monsters would only spawn at 1 banner if you have multiple of them (mods/cheats)
+
+Modding changes:
+-Expanded networkUI options:
+| Added DropDownNoLabel, Label, Toggle, ToggleNoLabel, EmptySpace, Line, HorizontalSplit, HorizontalGrid, ItemIcon types
+-Added ItemTypes.ItemType.GetRootParentType()

@@ -13,7 +13,6 @@ namespace Pipliz.Mods.BaseGame.Researches
 			iterationCount = 10;
 			AddIterationRequirement("sciencebagbasic");
 			AddIterationRequirement("sciencebagmilitary");
-			AddDependency("pipliz.baseresearch.bloomery");
 			AddDependency("pipliz.baseresearch.sciencebagmilitary");
 		}
 
