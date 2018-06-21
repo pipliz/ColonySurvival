@@ -1,18 +1,51 @@
-0.6.3.0 (2018-06-xx)
+0.6.3.0 (2018-06-21)
 
+Welcome to update 0.6.3!
+
+This update adds a search bar to the stockpile, a better tooltip for most items, a new loading screen and arrow trails. The trails can be turned off with the "particle effects" setting.
+
+Have fun!
+
+-Reworked the loading/connecting screen
+| Added support for localizing the texts
+| The multiplayer password field is now automatically selected for typing when it pops up
+| Added a nice background
+| Added hints
 -Added a search field to the stockpile to filter by type/name/category
 -Added a "made in" part in the tooltip, where it shows at what job an item can be made by npc's.
 -Updated es-ES, fr-FR, ja-JP locales to 0.6.2.x (credits to their respective translators on github)
 -Updated ch-CN locale (from ~70% to 96% up to date, apoligies for late update, it got forgotten)
 -"Stack-hiring" colonists using control now snaps to open jobs / beds left
+-Changed the stats menu's in the corner of the ingame screen
+-Added particle trails to guards shooting things
+-Added particle trails to projectiles you shoot yourself
+-Area/job highlights now appear when you hold a bed as well (besides the crate and command tool)
 
+-Fixed a bug where chunks entirely of one type get corrupted if the types' item index is more than 127 (triggered by mods mostly)
+-Fixed a plausible crash related to steam if the loading screen stopped before a server ping was returned
+-Fixed video settings menu starting scrolled all the way down
 -Fixed Crossbow bolt science requiring bloomery science explicitly - it's already included in the military science bag dependency (thanks JackPS9)
 -Fixed tooltip clipping out of the game window on lower resolutions
 -Fixed a bug causing the inventory to lower FPS by quite a lot
 -Fixed a performance bug where receiving inventory updates led to a frametime spike
 -Fixed an issue where monsters would only spawn at 1 banner if you have multiple of them (mods/cheats)
+-Tiny RAM use reduction on the server/client -> do not store placeholder localization keys
 
 Modding changes:
 -Expanded networkUI options:
-| Added DropDownNoLabel, Label, Toggle, ToggleNoLabel, EmptySpace, Line, HorizontalSplit, HorizontalGrid, ItemIcon types
+| Added DropDownNoLabel, Label, Toggle, ToggleNoLabel, EmptySpace, Line, HorizontalSplit, HorizontalGrid, ItemIcon, ButtonCallback types
+-Added OnPlayerPushedNetworkUIButton callback to deal with ButtonCallback
 -Added ItemTypes.ItemType.GetRootParentType()
+-Added server-defined popups for the client using NetworkUI menu's:
+| Send a menu using NetworkMenuManager.SendServerPopup, receive the changes using the OnPlayerChangedNetworkUIStorage callback with identifier "server_popup"
+| Added networkmenu.Height / Width properties, only used with this popup
+| Set the popup header text by setting a (localizable) string in the LocalStorage with key "header"
+-Added JSONNode.TryGetChild(index, out node) - get a node inside of an array node by index
+-Added JSONNode.TryGetChild(index, out key, out node) - get a key-node pair insde of an object node by index
+-JSONNode.RemoveChild(index) now works on object nodes
+-Fixed dodgy implementation of TupleStruct<>.GetHashCode()
+-Updated "DevFeatures" menu @ F6 on the client; removed broken shader toggles, added a "dump itemtypes" button that dumps the types table to ./debug/types.json
+| Added ItemTypes.ItemType.ToJSONDEBUG() for this purpose
+-Added JSONNode.Create(IList<T>) overloads to serialize lists in a simple way (makes an array node) for JSON-supported types
+-Added JSONNode.Create(IList<T>, Func<T, JSONNode>) overload to serialize lists of non-standard json types
+-Added OnSendAreaHighlights and OnRemoveAreaHighlight callbacks, to send custom area highlights (the 3d frame around an area)

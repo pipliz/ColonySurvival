@@ -503,6 +503,18 @@ The place to add researchables to Server.Science.ScienceManager
 		_Registers the found autoload researchables_
 
 
+CallbackType: `OnConstructTooltipUI`
+=======
+## Description
+Signature: void(NetworkUI.ConstructTooltipUIData data)
+Constructs the networkMenu of type hovertype that'll be send to the player
+If hoverType is PlayerRecipe, NPCRecipe or Science the hoverKey is set to their respective keys.
+If hoverType is Item, the item is in hoverItem
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
+		_Builds base of tooltip ui_
+
+
 CallbackType: `OnPlayerRecipeSettingChanged`
 =======
 ## Description
@@ -730,8 +742,45 @@ Signature: void (TupleStruct<Players.Player p, JSONNode node, string id> data)
 Arg p: The player that sent changed networkUI storage data
 Arg node: Said changed data
 Arg id: the networkmenu ID
+Possible builtin values for ID: world_settings
 ## Registered callbacks: 1
 0.	`pipliz.parsenetui`
-		_Will call the methods to handle the changed data (world_settings etc)_
+		_Will call the methods to handle the changed data._
+		_Possible identifiers:_
+		_world_settings_
+
+
+CallbackType: `OnPlayerPushedNetworkUIButton`
+=======
+## Description
+Signature: void (NetworkUI.ButtonPressCallbackData data)
+Data -> the storage node, button ID and player that pushed the button
+No registered uses
+
+
+CallbackType: `OnSendAreaHighlights`
+=======
+## Description
+Signature: void(Players.Player player, List<AreaJobTracker.AreaHighlight> list, List<ushort> showWhileHoldingTypes)
+Edit the highlights list, adding desired area highlights to be sent to the player.
+Edit the showWhileHoldingTypes to add/remove types that will show <all> areas when selected in the inventory
+You can manually trigger this callback through AreaJobTracker.SendData(player)
+## Registered callbacks: 2
+0.	`pipliz.sendjobareas`
+		_Sends the registered AreaJobs_
+1.	`pipliz.defaultholdingtypes`
+		_Sets default showWhileHoldingTypes_
+
+
+CallbackType: `OnRemoveAreaHighlight`
+=======
+## Description
+Signature: void(Players.Player player, Vector3Int minimumCorner, Box<bool> isHandled
+Request to remove an area that has said minimum corner
+Check isHandled's content to see if the callback was handled by something else
+Set said isHandled' content to prevent other callbacks from handling it.
+## Registered callbacks: 1
+0.	`pipliz.removejobarea`
+		_Removes a registered areajob if it matches the position_
 
 

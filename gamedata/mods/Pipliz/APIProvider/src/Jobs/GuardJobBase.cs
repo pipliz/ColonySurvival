@@ -21,6 +21,14 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (guardSettings.OnHitAudio != null) {
 				ServerManager.SendAudio(target.PositionToAimFor, guardSettings.OnHitAudio);
 			}
+
+			{
+				Vector3 start = position.Add(0, 1, 0).Vector;
+				Vector3 end = target.PositionToAimFor;
+				Vector3 dirNormalized = (end - start).normalized;
+				ServerManager.SendParticleTrail(start + dirNormalized * 0.15f, end - dirNormalized * 0.15f, Random.NextFloat(1.5f, 2.5f));
+			}
+
 			target.OnHit(guardSettings.shootDamage, usedNPC, ModLoader.OnHitData.EHitSourceType.NPC);
 		}
 
