@@ -1,0 +1,12 @@
+0.6.3.1 (2018-06-22)
+
+-Increased visibility of the password field when connecting to a passworded server
+
+Modding changes:
+-Fixed a problem with setting custom movement speed per npc type
+-Added TerrainGeneratorDefault.GetBiomePrimary (x, z)
+-Made TerrainGeneratorDefaults' internal structs public
+-Added World.GetChunks() to get the base chunk storage dict
+-Added NPCBase.UsedBed property
+-Made some parts of ZombieBase.ZombieDecision public
+-Added MonsterTracker.GetAllMonsters*() methods to access the internal dictionaries
