@@ -1,22 +1,19 @@
-﻿using Server.GrowableBlocks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
 	using APIProvider.GrowableBlocks;
 
-	[GrowableBlockDefinitionAutoLoader]
-	public class Alkanet : GrowableBlockDefinition<Alkanet>
+	public class Alkanet : BaseGrowableBlockDefinition
 	{
 		public Alkanet ()
 		{
-			FileName = "alkanet";
 			GrowthType = EGrowthType.FirstNightRandom;
-			Stages = new List<IGrowableStage>()
+			SetStages(new List<GrowableStage>()
 			{
-				new GrowableStage("alkanetstage1", TimeCycle.NightLength - 0.5f),
+				new GrowableStage("alkanetstage1"),
 				new GrowableStage("alkanetstage2")
-			};
+			});
 		}
 	}
 }

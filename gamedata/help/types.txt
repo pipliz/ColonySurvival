@@ -63,6 +63,9 @@ types in types.json allow the following properties:
 		|	Value is an array of strings in the format "#RRGGBB->#RRGGBB".
 		|	The first color in the string is the "source" vertex color, the second is the "goal" vertex color
 		|	It'll replace the colors of the mesh for this type
+	|	"attachBehaviour"
+	-	|	Array of objects, each having an "id" string. Used by the game to attach behaviours to blocksPathing
+		|	ID options builtin: "crate", "leaves", "log"
 	|	"farShadows"
 	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
 		|	If set to true, this type will cast shadows further in the distance and when off-screen.

@@ -1,27 +1,70 @@
 ﻿using BlockTypes.Builtin;
-using Server.GrowableBlocks;
 using System.Collections.Generic;
-using System.IO;
-using System.Threading;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
 	using APIProvider.GrowableBlocks;
-	using JSON;
 
-	[GrowableBlockDefinitionAutoLoader]
-	public class CherrySapling : GrowableBlockDefinition<CherrySapling>
+	public class CherrySapling : BaseGrowableBlockDefinition
 	{
 		public CherrySapling ()
 		{
-			FileName = "cherrysapling";
 			GrowthType = EGrowthType.Always;
-			RandomStartGrowthMax = 9f / 21f; // to maintain random 9-21 hour growth from < 0.5.0
-			Stages = new List<IGrowableStage>()
+			RandomStartGrowthMax = 9f / 21f; // random 12-21 hour growth
+
+			SetStages(new List<GrowableStage>()
 			{
 				new GrowableStage("cherrysapling", 21f),
-				new GrowableStage()
-			};
+				new GrowableStage() // filler stage, so the logic thinks it's advancing to something
+			});
+		}
+
+		public override void TryAdvanceStage (GrowableBlock block, Chunk chunk, Vector3Int blockPosition)
+		{
+			if (block.StageIndex == 0) {
+				// set all logs
+				for (int i = 0; i < logs.Count; i++) {
+					ushort currentType;
+					if (World.TryGetTypeAt(blockPosition + logs[i], out currentType)) {
+						if (logs[i] == Vector3Int.zero) {
+							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
+							if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
+								return; // not loaded
+							}
+						} else {
+							if (currentType == 0) {
+								if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate)) {
+									return; // not loaded
+								}
+							}
+						}
+					} else {
+						return; // not loaded
+					}
+				}
+				// set all leaves
+				for (int i = 0; i < leaves.Count; i++) {
+					ushort currentType;
+					if (World.TryGetTypeAt(blockPosition + leaves[i], out currentType)) {
+						if (leaves[i] == Vector3Int.zero) {
+							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
+							if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.CherryBlossom, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
+								return; // not loaded
+							}
+						} else {
+							if (currentType == 0) {
+								if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.CherryBlossom)) {
+									return; // not loaded
+								}
+							}
+						}
+					} else {
+						return; // not loaded
+					}
+				}
+			}
+			// succesfully grew, or invalid stage index. Either case, done.
+			block.SetInvalid();
 		}
 
 		static List<Vector3Int> logs = new List<Vector3Int>()
@@ -110,80 +153,5 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 			new Vector3Int(1, 5, 2),
 			new Vector3Int(1, 5, 0)
 		};
-
-		#region LOAD_LEGACY_BLOCKS_WORKAROUND
-		/// <summary>
-		/// This #region code is to load the legacy updatableblocks.json data for upgrading from IUpdatableBlocks to Server.Growables
-		/// from before v0.5.0 to v0.5.0 and later
-		/// </summary>
-		JSONNode updatableBlocks;
-
-		public override void StartLoading ()
-		{
-			// do custom things before base.AsyncLoad so FinishLoading also waits for this to complete
-			ThreadPool.QueueUserWorkItem(delegate (object obj)
-			{
-				try {
-					string path = string.Format("gamedata/savegames/{0}/updatableblocks.json", ServerManager.WorldName);
-					if (File.Exists(path)) {
-						JSON.Deserialize(path, out updatableBlocks, false);
-					}
-				} catch (System.Exception e) {
-					Log.WriteException(e);
-				} finally {
-					AsyncLoad(obj);
-				}
-			});
-		}
-
-		public override void FinishLoading ()
-		{
-			base.FinishLoading();
-			if (updatableBlocks != null) {
-				JSONNode array;
-				if (updatableBlocks.TryGetChild("cherrysapling", out array)) {
-					Log.Write("Loading {0} legacy blocks to type cherrysapling", array.ChildCount);
-					for (int i = 0; i < array.ChildCount; i++) {
-						GrowableBlockManager.RegisterGrowableBlock(MakeGrowableBlockLegacy(array[i]));
-					}
-				}
-			}
-		}
-
-		#endregion LOAD_LEGACY_BLOCKS_WORKAROUND
-
-		public override bool TryAdvanceStage (IGrowableBlock block, byte currentStageIndex)
-		{
-			if (currentStageIndex == 0) {
-				Vector3Int pos = block.Position;
-				for (int i = 0; i < logs.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(pos + logs[i], out currentType)) {
-						if (currentType == 0 || currentType == BuiltinBlocks.CherrySapling) {
-							if (!ServerManager.TryChangeBlock(pos + logs[i], BuiltinBlocks.LogTemperate)) {
-								return false; // not loaded
-							}
-						}
-					} else {
-						return false; // not loaded
-					}
-				}
-				for (int i = 0; i < leaves.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(pos + leaves[i], out currentType)) {
-						if (currentType == 0) {
-							if (!ServerManager.TryChangeBlock(pos + leaves[i], BuiltinBlocks.CherryBlossom)) {
-								return false; // not loaded
-							}
-						}
-					} else {
-						return false; // not loaded
-					}
-				}
-			}
-			// succesfully grew, or invalid stage index. Either case, done.
-			block.SetInvalid();
-			return true;
-		}
 	}
 }

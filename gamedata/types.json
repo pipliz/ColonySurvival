@@ -396,12 +396,17 @@
 		"categories" : [
 			"decorative"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"destructionTime" : 200,
 		"icon" : "./textures/icons/cherryblossom.png",
+		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"cherryblossom"},
 			{"amount":1,"chance":0.1,"type":"cherrysapling"}
 		],
-		"parentType" : "leaves",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"cherrysapling" : {
@@ -575,6 +580,9 @@
 			"essential",
 			"decorative"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"crate"}]
+		},
 		"icon" : "./textures/icons/crate.png",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1222,22 +1230,22 @@
 		"icon" : "./textures/icons/leadbullet.png",
 		"isPlaceable" : false
 	},
-	"leaves" : {
-		"destructionTime" : 200,
-		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete"
-	},
 	"leavestaiga" : {
 		"categories" : [
 			"decorative",
 			"leaves"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"destructionTime" : 200,
 		"icon" : "./textures/icons/leavestaiga.png",
+		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestaiga"},
 			{"amount":1,"chance":0.1,"type":"sappling"}
 		],
-		"parentType" : "leaves",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"leavestemperate" : {
@@ -1245,12 +1253,17 @@
 			"decorative",
 			"leaves"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"destructionTime" : 200,
 		"icon" : "./textures/icons/leavestemperate.png",
+		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestemperate"},
 			{"amount":1,"chance":0.1,"type":"sappling"}
 		],
-		"parentType" : "leaves",
+		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
 	"linen" : {
@@ -1286,18 +1299,17 @@
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
-	"log" : {
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteHeavy"
-	},
 	"logtaiga" : {
 		"categories" : [
 			"essential",
 			"decorative"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"log"}]
+		},
 		"icon" : "./textures/icons/logtaiga.png",
-		"onRemoveAmount" : 1,
-		"parentType" : "log",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteHeavy",
 		"sideall" : "SELF"
 	},
 	"logtemperate" : {
@@ -1305,9 +1317,12 @@
 			"essential",
 			"decorative"
 		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"log"}]
+		},
 		"icon" : "./textures/icons/logtemperate.png",
-		"onRemoveAmount" : 1,
-		"parentType" : "log",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteHeavy",
 		"sideall" : "SELF"
 	},
 	"lumberarea" : {

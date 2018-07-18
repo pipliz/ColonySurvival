@@ -162,25 +162,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 						shouldDumpInventory = false;
 					} else {
 						shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
-
-						Server.GrowableBlocks.IGrowableBlock block;
-						if (Server.GrowableBlocks.GrowableBlockManager.TryGetGrowableBlock(positionSub, out block)) {
-							state.SetCooldown(5.0);
-						} else {
-							bool found = false;
-							for (int i = 0; i < stages.Length; i++) {
-								if (stages[i] == type) {
-									ItemTypesServer.OnChange(positionSub, 0, type, null);
-									state.SetIndicator(new Shared.IndicatorState(2f, type));
-									state.SetCooldown(0.2);
-									found = true;
-									break;
-								}
-							}
-							if (!found) {
-								state.SetCooldown(5.0);
-							}
-						}
+						state.SetCooldown(5.0);
 					}
 				} else {
 					state.SetCooldown(Random.NextFloat(3f, 6f));

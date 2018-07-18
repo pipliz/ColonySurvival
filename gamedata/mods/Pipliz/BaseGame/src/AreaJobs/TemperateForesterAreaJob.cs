@@ -86,14 +86,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				ushort type;
 				if (World.TryGetTypeAt(positionSub.Add(1, 0, 1), out type)) {
 					if (type == BuiltinBlocks.Sapling) {
-						Server.GrowableBlocks.IGrowableBlock block;
-						if (Server.GrowableBlocks.GrowableBlockManager.TryGetGrowableBlock(positionSub.Add(1, 0, 1), out block)) {
-							state.SetCooldown(5.0);
-						} else {
-							ItemTypesServer.OnChange(positionSub.Add(1, 0, 1), 0, BuiltinBlocks.Sapling, null);
-							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
-							state.SetCooldown(0.2);
-						}
+						state.SetCooldown(5.0);
 					} else {
 						state.SetCooldown(1.0); // no sapling at sapling spot (shouldn't occur a lot, something changed between calculate sub position and this
 					}

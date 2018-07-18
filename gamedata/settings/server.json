@@ -20,12 +20,7 @@
 		"RecalculatePriorityCooldownMS" : 750
 	},
 	"Saving" : {
-		"MillisecondsBeforeAutosaveChunk" : 90000,
-		"MillisecondsBeforeAutosaveRegionMin" : 180000,
-		"MillisecondsBeforeAutosaveRegionMax" : 300000,
-		"MillisecondsBeforeRegionExpiredMin" : 360000,
-		"MillisecondsBeforeRegionExpiredMax" : 600000,
-		"SecondsBetweenRegionAutosaveChecks" : 1,
+		"MillisecondsBeforeAutosaveChunk" : 30000,
 		"SecondsBetweenMiscAutoSaving" : 300
 	},
 	"Time" : {
@@ -42,7 +37,6 @@
 		"PunchHeight" : 0.25
 	},
 	"NPCs" : {
-		"MovementSpeed" : 2.3,
 		"ReconsiderDecisionTimeMinimum" : 3500,
 		"ReconsiderDecisionTimeMaximum" : 6000
 	},
@@ -54,6 +48,7 @@
 		"HealthRegenerationSpeed" : 1
 	},
 	"Leaves" : {
-		"MaxLogDistance" : 4
+		"MaxDistanceToLog" : 4,
+		"MaxDistanceToLogCheck" : 8
 	}
 }

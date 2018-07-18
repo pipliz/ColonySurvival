@@ -1,22 +1,19 @@
-﻿using Server.GrowableBlocks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
 	using APIProvider.GrowableBlocks;
 
-	[GrowableBlockDefinitionAutoLoader]
-	public class Hollyhock : GrowableBlockDefinition<Hollyhock>
+	public class Hollyhock : BaseGrowableBlockDefinition
 	{
 		public Hollyhock ()
 		{
-			FileName = "hollyhock";
 			GrowthType = EGrowthType.FirstNightRandom;
-			Stages = new List<IGrowableStage>()
+			SetStages(new List<GrowableStage>()
 			{
-				new GrowableStage("hollyhockstage1", TimeCycle.NightLength - 0.5f),
+				new GrowableStage("hollyhockstage1"),
 				new GrowableStage("hollyhockstage2")
-			};
+			});
 		}
 	}
 }

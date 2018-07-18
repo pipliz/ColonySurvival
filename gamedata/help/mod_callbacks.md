@@ -102,7 +102,7 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 25
+## Registered callbacks: 23
 0.	`pipliz.server.terraingenerator.setdefault`
 		_Sets the default terrain generator to TerrainGenerator.UsedGenerator_
 1.	`pipliz.server.registerdefaultdifficulty`
@@ -123,7 +123,7 @@ First callback after all item types should be defined, so you can resolve types 
 7.	`pipliz.server.loadpermissions`
 		_Load permissions_
 8.	`pipliz.server.loadnpctypes`
-		Provides For 22. `pipliz.server.loadnpcs`
+		Provides For 21. `pipliz.server.loadnpcs`
 		_Loads gamedata/npctypes.json_
 9.	`pipliz.server.registermonstertextures`
 		Depends On 8. `pipliz.server.loadnpctypes`
@@ -136,7 +136,7 @@ First callback after all item types should be defined, so you can resolve types 
 12.	`pipliz.server.growableblocks.loadblocks`
 		_Load all registered growable block types' files_
 13.	`pipliz.mods.apiprovider.areajobs.insertattributed`
-		Provides For 23. `pipliz.server.loadareajobs`
+		Provides For 22. `pipliz.server.loadareajobs`
 		_Creates instance of registered IAreaJobDefinition and registers those to AreaJobTracker_
 14.	`pipliz.endloaddifficulty`
 		Provides For 19. `pipliz.server.loadplayers`
@@ -156,21 +156,15 @@ First callback after all item types should be defined, so you can resolve types 
 		_Load & resolve researchable configs_
 19.	`pipliz.server.loadplayers`
 		_Starts loading player data_
-20.	`pipliz.server.loadstockpileblocks`
-		Depends On 19. `pipliz.server.loadplayers`
-		_Load stockpile blocks_
-21.	`pipliz.server.loadbanners`
+20.	`pipliz.server.loadbanners`
 		Depends On 19. `pipliz.server.loadplayers`
 		_Loads banners_
-22.	`pipliz.server.loadnpcs`
-		Depends On 21. `pipliz.server.loadbanners`
+21.	`pipliz.server.loadnpcs`
+		Depends On 20. `pipliz.server.loadbanners`
 		_Starts loading the npc data_
-23.	`pipliz.server.loadareajobs`
-		Depends On 22. `pipliz.server.loadnpcs`
+22.	`pipliz.server.loadareajobs`
+		Depends On 21. `pipliz.server.loadnpcs`
 		_Load all registered areajobs' files_
-24.	`pipliz.server.loadbedblocks`
-		Depends On 21. `pipliz.server.loadbanners`
-		_Load bed blocks_
 
 
 CallbackType: `AfterWorldLoad`
@@ -354,28 +348,23 @@ CallbackType: `OnQuit`
 ## Description
 Signature: void ()
 Called in the quit method queue (Application.OnQuit 0)
-## Registered callbacks: 11
+## Registered callbacks: 9
 0.	`pipliz.server.savewater`
 		_Saves water data_
 1.	`pipliz.server.savetimecycle`
 		_Saves the time to ServerManager.WorldSettings_
-2.	`pipliz.server.savestockpileblocks`
-		_Save stockpile blocks_
-3.	`pipliz.server.saveplayers`
+2.	`pipliz.server.saveplayers`
 		_Starts saving all dirty-marked players_
-4.	`pipliz.server.savenpc`
+3.	`pipliz.server.savenpc`
 		_Start saving npc data_
-5.	`pipliz.server.savebedblocks`
-		_Save bed blocks_
-6.	`pipliz.server.savebanners`
+4.	`pipliz.server.savebanners`
 		_Saves banners_
-7.	`pipliz.server.saveareajobs`
+5.	`pipliz.server.saveareajobs`
 		_Save all registered areajobs' files_
-8.	`pipliz.server.growableblocks.save`
+6.	`pipliz.server.growableblocks.save`
 		_Start saving growable blocks_
-9.	`pipliz.server.ai.aimanager.quitthread`
-		_Marks the AIManager thread to stop_
-10.	`pipliz.apiprovider.jobs.save`
+7.	`pipliz.jointhreads`
+8.	`pipliz.apiprovider.jobs.save`
 		_Saves files for registered block job trackers_
 
 
@@ -395,22 +384,19 @@ Called late in the quit method queue (Application.OnQuit 100)
 		_Close external socket_
 
 
-CallbackType: `OnSavedChunkToRegion`
+CallbackType: `OnSavedChunk`
 =======
 ## Description
-Signature: void (FileRegion a, Chunk b)
-Arg a: The region the chunk got saved into.
-Arg b: said chunk
-The chunk is still locked for reading at this point
+Signature: void (Chunk a)
+Saved chunk x
 No registered uses
 
 
-CallbackType: `OnSavedRegionToDisk`
+CallbackType: `OnLoadedChunk`
 =======
 ## Description
-Signature: void (FileRegion a)
-Arg a: The region that got saved to disk.
-This callback may be called from multiple threads at once (at shutdown)
+Signature: void (Chunk a)
+Loaded chunk x
 No registered uses
 
 
@@ -423,24 +409,6 @@ Called approx 6 times per second per player. New position/rotation is set on the
 ## Registered callbacks: 1
 0.	`pipliz.server.loadsurroundings`
 		_Queues up chunks to load if the player moves to other chunks_
-
-
-CallbackType: `OnLoadedRegionFromDisk`
-=======
-## Description
-Signature: void (FileRegion a)
-Arg a: The region that got loaded from disk.
-No registered uses
-
-
-CallbackType: `OnLoadedChunkFromRegion`
-=======
-## Description
-Signature: void (FileRegion a, Chunk b)
-Arg a: The region the chunk got loaded from.
-Arg b: said chunk
-The chunk is still locked for writing at this point
-No registered uses
 
 
 CallbackType: `OnTryChangeBlock`
@@ -676,24 +644,20 @@ CallbackType: `OnAutoSaveWorld`
 ## Description
 Signature: void ()
 Triggers an autosave every x minutes, to begin autosaving non-block data (jobs, npc's, players)
-## Registered callbacks: 9
+## Registered callbacks: 7
 0.	`pipliz.server.growableblocks.save`
 		_Start saving growable blocks_
 1.	`pipliz.server.autosavewater`
 		_Saves water data_
-2.	`pipliz.server.autosavestockpileblocks`
-		_Save stockpile blocks_
-3.	`pipliz.server.autosaveplayers`
+2.	`pipliz.server.autosaveplayers`
 		_Starts saving all dirty-marked players_
-4.	`pipliz.server.autosavenpcs`
+3.	`pipliz.server.autosavenpcs`
 		_Start saving npc data_
-5.	`pipliz.server.autosavebedblocks`
-		_Save bed blocks_
-6.	`pipliz.server.autosavebanners`
+4.	`pipliz.server.autosavebanners`
 		_Saves banners_
-7.	`pipliz.server.autosaveareajobs`
+5.	`pipliz.server.autosaveareajobs`
 		_Save all registered areajobs' files_
-8.	`pipliz.apiprovider.jobs.autosave`
+6.	`pipliz.apiprovider.jobs.autosave`
 		_Saves files for registered block job trackers_
 
 
@@ -717,11 +681,13 @@ Periodically triggered for every chunk loaded. Use it to keep chunks loaded - an
 {data.CheckedChunk} -> the chunk
 {data.MillisecondsTillNextCheck} -> the minimum time until another callback will be fired. Defaults to random between 24000 and 64000
 {data.Result} -> bool indicating whether or not to keep this chunk. Defaults to false (set to true to keep it)
+{data.ChunkLoadedSource} -> source for this callback. If loadedstorage / loadedgenerator, the chunk is already locked for writing. if Updater, it is not locked.
 ## Registered callbacks: 2
-0.	`pipliz.server.playercheck`
-		_Keeps chunks near player alive_
-1.	`pipliz.server.bannercheck`
+0.	`pipliz.server.bannercheck`
 		_Checks to keep chunks near banners loaded_
+1.	`pipliz.server.playercheck`
+		Depends On 0. `pipliz.server.bannercheck`
+		_Keeps chunks near player alive_
 
 
 CallbackType: `AddItemTypes`
