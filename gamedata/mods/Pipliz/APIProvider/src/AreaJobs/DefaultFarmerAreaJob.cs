@@ -151,7 +151,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		protected bool TryDumpNPCInventory (ref NPCBase.NPCState npcState)
 		{
-			npcState.Inventory.Dump(usedNPC.Colony.UsedStockpile);
+			npcState.Inventory.Dump(usedNPC.Colony.Stockpile);
 			return true;
 		}
 	}

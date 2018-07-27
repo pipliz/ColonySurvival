@@ -23,12 +23,10 @@ CallbackType: `AfterModsLoaded`
 Signature: void (List<ModLoader.ModAssembly> a)
 Arg a: the loaded assemblies
 Called after parsing all modinfo files
-## Registered callbacks: 3
-0.	`pipliz.mods.apiprovider.growableblocks.findattributes`
-		_Searches for types marked with GrowableBlockDefinitionAutoLoaderAttribute_
-1.	`pipliz.mods.apiprovider.areajobs.findattributes`
+## Registered callbacks: 2
+0.	`pipliz.mods.apiprovider.areajobs.findattributes`
 		_Finds types marked with AreaJobDefinitionAutoLoaderAttribute_
-2.	`pipliz.apiprovider.parsemods`
+1.	`pipliz.apiprovider.parsemods`
 		_Checks loaded types for types marked with APIProvider.Science.AutoLoadedResearchableAttribute_
 
 
@@ -102,19 +100,19 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 23
+## Registered callbacks: 21
 0.	`pipliz.server.terraingenerator.setdefault`
 		_Sets the default terrain generator to TerrainGenerator.UsedGenerator_
 1.	`pipliz.server.registerdefaultdifficulty`
-		Provides For 19. `pipliz.server.loadplayers`
+		Provides For 17. `pipliz.server.loadplayers`
 		_Registers the default difficulty to the DifficultyManager. ProvidesFor loadplayers so that loading the difficulty per player works._
 2.	`pipliz.server.registercallbacks`
 		_Registers base block callbacks (water, crate, beds, those things) to ItemTypesServer_
 3.	`pipliz.server.recipeplayerload`
-		Provides For 18. `pipliz.server.loadresearchables`
+		Provides For 16. `pipliz.server.loadresearchables`
 		_Waits for recipe patches to load, then merges them_
 4.	`pipliz.server.recipenpcload`
-		Provides For 18. `pipliz.server.loadresearchables`
+		Provides For 16. `pipliz.server.loadresearchables`
 		_Waits for npc recipe patches to complete loading, then merges and registers them_
 5.	`pipliz.server.loadwater`
 		_Starts loading water blocks_
@@ -123,47 +121,42 @@ First callback after all item types should be defined, so you can resolve types 
 7.	`pipliz.server.loadpermissions`
 		_Load permissions_
 8.	`pipliz.server.loadnpctypes`
-		Provides For 21. `pipliz.server.loadnpcs`
+		Provides For 19. `pipliz.server.loadnpcs`
 		_Loads gamedata/npctypes.json_
 9.	`pipliz.server.registermonstertextures`
 		Depends On 8. `pipliz.server.loadnpctypes`
 		_Registers monster textures from registered NPCTypes_
 10.	`pipliz.server.blackandwhitelistingreload`
 		_Loads the black & whitelist settings_
-11.	`pipliz.mods.apiprovider.growableblocks.insertattributed`
-		Provides For 12. `pipliz.server.growableblocks.loadblocks`
-		_Creates instance of registered IGrowableBlockDefinitions and registers those to GrowableBlockManager_
-12.	`pipliz.server.growableblocks.loadblocks`
-		_Load all registered growable block types' files_
-13.	`pipliz.mods.apiprovider.areajobs.insertattributed`
-		Provides For 22. `pipliz.server.loadareajobs`
+11.	`pipliz.mods.apiprovider.areajobs.insertattributed`
+		Provides For 20. `pipliz.server.loadareajobs`
 		_Creates instance of registered IAreaJobDefinition and registers those to AreaJobTracker_
-14.	`pipliz.endloaddifficulty`
-		Provides For 19. `pipliz.server.loadplayers`
+12.	`pipliz.endloaddifficulty`
+		Provides For 17. `pipliz.server.loadplayers`
 		_Awaits the difficulty json files to be loaded_
 		_You can edit the difficulties on DifficultySetting.Cooldowns / Keys after this callback (but before loadplayers)_
-15.	`pipliz.blocknpcs.registerjobs`
-		Provides For 17. `pipliz.apiprovider.jobs.resolvetypes`
+13.	`pipliz.blocknpcs.registerjobs`
+		Provides For 15. `pipliz.apiprovider.jobs.resolvetypes`
 		_Adds all the job block implementations to BlockJobManagerTracker_
-16.	`pipliz.blocknpcs.registerchangetypes`
+14.	`pipliz.blocknpcs.registerchangetypes`
 		_Registers changetypes for created blocks from pipliz.blocknpcs.addlittypes_
-17.	`pipliz.apiprovider.jobs.resolvetypes`
+15.	`pipliz.apiprovider.jobs.resolvetypes`
 		Depends On 8. `pipliz.server.loadnpctypes`
-		Provides For 18. `pipliz.server.loadresearchables`
+		Provides For 16. `pipliz.server.loadresearchables`
 		_Activates the blockjobmanagers, and registers block job provided npc types_
-18.	`pipliz.server.loadresearchables`
-		Provides For 19. `pipliz.server.loadplayers`
+16.	`pipliz.server.loadresearchables`
+		Provides For 17. `pipliz.server.loadplayers`
 		_Load & resolve researchable configs_
-19.	`pipliz.server.loadplayers`
+17.	`pipliz.server.loadplayers`
 		_Starts loading player data_
-20.	`pipliz.server.loadbanners`
-		Depends On 19. `pipliz.server.loadplayers`
+18.	`pipliz.server.loadbanners`
+		Depends On 17. `pipliz.server.loadplayers`
 		_Loads banners_
-21.	`pipliz.server.loadnpcs`
-		Depends On 20. `pipliz.server.loadbanners`
+19.	`pipliz.server.loadnpcs`
+		Depends On 18. `pipliz.server.loadbanners`
 		_Starts loading the npc data_
-22.	`pipliz.server.loadareajobs`
-		Depends On 21. `pipliz.server.loadnpcs`
+20.	`pipliz.server.loadareajobs`
+		Depends On 19. `pipliz.server.loadnpcs`
 		_Load all registered areajobs' files_
 
 
@@ -211,18 +204,16 @@ CallbackType: `OnUpdate`
 ## Description
 Signature: void ()
 In the middle of unity's Update method.
-## Registered callbacks: 6
+## Registered callbacks: 5
 0.	`pipliz.server.updatetimecycle`
 		_Updates TimeCycle_
 1.	`pipliz.server.tickscounter`
 		_Counts framerate for /tps_
 2.	`pipliz.server.senddirtyscience`
 		_Send dirty-marked science managers to players_
-3.	`pipliz.server.growables.update`
-		_Updates growable blocks_
-4.	`pipliz.server.chunkupdater`
+3.	`pipliz.server.chunkupdater`
 		_Checks if chunks can be unloaded_
-5.	`pipliz.colonyserverwrapper.process`
+4.	`pipliz.colonyserverwrapper.process`
 		_Processes packets from external socket_
 
 
@@ -348,23 +339,21 @@ CallbackType: `OnQuit`
 ## Description
 Signature: void ()
 Called in the quit method queue (Application.OnQuit 0)
-## Registered callbacks: 9
+## Registered callbacks: 8
 0.	`pipliz.server.savewater`
 		_Saves water data_
 1.	`pipliz.server.savetimecycle`
 		_Saves the time to ServerManager.WorldSettings_
 2.	`pipliz.server.saveplayers`
 		_Starts saving all dirty-marked players_
-3.	`pipliz.server.savenpc`
-		_Start saving npc data_
+3.	`pipliz.server.savecolonies`
+		_Start saving colony data_
 4.	`pipliz.server.savebanners`
 		_Saves banners_
 5.	`pipliz.server.saveareajobs`
 		_Save all registered areajobs' files_
-6.	`pipliz.server.growableblocks.save`
-		_Start saving growable blocks_
-7.	`pipliz.jointhreads`
-8.	`pipliz.apiprovider.jobs.save`
+6.	`pipliz.jointhreads`
+7.	`pipliz.apiprovider.jobs.save`
 		_Saves files for registered block job trackers_
 
 
@@ -644,20 +633,18 @@ CallbackType: `OnAutoSaveWorld`
 ## Description
 Signature: void ()
 Triggers an autosave every x minutes, to begin autosaving non-block data (jobs, npc's, players)
-## Registered callbacks: 7
-0.	`pipliz.server.growableblocks.save`
-		_Start saving growable blocks_
+## Registered callbacks: 6
+0.	`pipliz.server.savecolonies`
+		_Start saving colony data_
 1.	`pipliz.server.autosavewater`
 		_Saves water data_
 2.	`pipliz.server.autosaveplayers`
 		_Starts saving all dirty-marked players_
-3.	`pipliz.server.autosavenpcs`
-		_Start saving npc data_
-4.	`pipliz.server.autosavebanners`
+3.	`pipliz.server.autosavebanners`
 		_Saves banners_
-5.	`pipliz.server.autosaveareajobs`
+4.	`pipliz.server.autosaveareajobs`
 		_Save all registered areajobs' files_
-6.	`pipliz.apiprovider.jobs.autosave`
+5.	`pipliz.apiprovider.jobs.autosave`
 		_Saves files for registered block job trackers_
 
 

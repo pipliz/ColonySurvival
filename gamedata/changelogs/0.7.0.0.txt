@@ -51,8 +51,8 @@ Modding changes
 -Added ItemTypes.GetType(string) (basically short for ItemTypes.GetType(ItemTypes.IndexLookup.GetType(string)) )
 -Added an EChunkLoadedSource enum to the OnShouldKeepChunkLoaded callback
 -Removed crates list from stockpiles, deleted StockpileBlock and StockpileBlockTracker.
-| Colony.GetClosestStockpileCrate is still there, using ServerManager.BlockEntities.CrateTracker underneath
+| Colony.GetClosestStockpileCrate is still there, using ServerManager.BlockEntityCallbacks.CrateTracker underneath
 -Removed BedBlock & BedBlockTracker
-| Functionality moved to ServerManager.BlockEntities.BedTracker & BedTracker.Bed
+| Functionality moved to ServerManager.BlockEntityCallbacks.BedTracker & BedTracker.Bed
 -Removed log/leaves parenttype - log/leaves behaviour is now applied through customData attachBehaviour - see gamedata/help/types.txt
 -Removed GrowableBlocks code. Replaced by BlockEntities & the APIProvider abstract base class "BaseGrowableBlockDefinition". See BaseGame growable blocks (alkanet etc) for how to use it

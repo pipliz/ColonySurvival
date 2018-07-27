@@ -65,7 +65,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				return;
 			}
 
-			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(stages[0]);
+			bool hasSeeds = job.NPC.Colony.Stockpile.Contains(stages[0]);
 			bool reversed = false;
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
@@ -125,7 +125,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					ushort typeFinal = stages[stages.Length - 1];
 					if (type == 0) {
 						if (state.Inventory.TryGetOneItem(typeSeeds)
-							|| job.NPC.Colony.UsedStockpile.TryRemove(typeSeeds)) {
+							|| job.NPC.Colony.Stockpile.TryRemove(typeSeeds)) {
 							ushort typeBelow;
 							if (World.TryGetTypeAt(positionSub.Add(0, -1, 0), out typeBelow)) {
 								// check for fertile below
@@ -245,7 +245,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 					for (int i = 0; i < SavedJobs.Count; i++) {
 						Players.Player p = SavedJobs.GetKeyAtIndex(i);
 						JSONNode n = SavedJobs.GetValueAtIndex(i);
-						table.SetAs(p.IDString, n);
+						table.SetAs(p.ToString(), n);
 					}
 					SavedJobs = null;
 				}

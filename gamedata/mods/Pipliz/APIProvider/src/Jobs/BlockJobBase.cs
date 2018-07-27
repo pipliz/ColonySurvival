@@ -4,11 +4,10 @@ using Server.NPCs;
 
 namespace Pipliz.Mods.APIProvider.Jobs
 {
-	public class BlockJobBase : IJob, ITrackableBlock
+	public abstract class BlockJobBase : IJob, ITrackableBlock
 	{
 		protected NPCBase usedNPC;
 		protected Vector3Int position;
-		protected Players.Player owner;
 
 		protected bool isValid = true;
 		protected bool worldTypeChecked = false;
@@ -51,7 +50,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			}
 		}
 
-		public virtual Players.Player Owner { get { return owner; } }
+		public virtual Colony Owner { get; private set; }
 
 		public virtual NPCType NPCType
 		{
@@ -96,7 +95,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public virtual void OnNPCAtStockpile (ref NPCBase.NPCState state)
 		{
-			state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
+			state.Inventory.Dump(usedNPC.Colony.Stockpile);
 			state.SetCooldown(0.1);
 			state.JobIsDone = true;
 		}

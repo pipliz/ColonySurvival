@@ -41,7 +41,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 
 		public override bool NeedsItems { get { return shouldTakeItems; } }
 
-		public virtual IList<Recipe> GetPossibleRecipes { get { return RecipeStorage.GetPlayerStorage(owner).GetAvailableRecipes<Recipe>(NPCTypeKey); } }
+		public virtual IList<Recipe> GetPossibleRecipes { get { return RecipeStorage.GetColonyStorage(owner).GetAvailableRecipes<Recipe>(NPCTypeKey); } }
 
 		public virtual int MaxRecipeCraftsPerHaul { get { throw new System.NotImplementedException(); } }
 
@@ -61,7 +61,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 				usedNPC.Inventory.Dump(blockInventory);
 			}
 			if (selectedRecipe != null) {
-				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.UsedStockpile, blockInventory)) {
+				if (recipesToCraft > 0 && selectedRecipe.IsPossible(usedNPC.Colony.Stockpile, blockInventory)) {
 					blockInventory.Remove(selectedRecipe.Requirements);
 
 					craftingResults.Clear();
@@ -110,7 +110,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 					}
 				}
 			} else {
-				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.AllDone:
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
@@ -149,13 +149,13 @@ namespace Pipliz.Mods.APIProvider.Jobs
 			if (state.Inventory.IsEmpty) {
 				Assert.IsTrue(shouldTakeItems);
 			} else {
-				state.Inventory.Dump(usedNPC.Colony.UsedStockpile);
+				state.Inventory.Dump(usedNPC.Colony.Stockpile);
 				state.SetCooldown(0.3);
 			}
 			state.JobIsDone = true;
 			if (shouldTakeItems) {
 				shouldTakeItems = false;
-				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony.UsedStockpile);
+				var recipeMatch = Recipe.MatchRecipe<Recipe, IList<Recipe>>(GetPossibleRecipes, usedNPC.Colony);
 				switch (recipeMatch.MatchType) {
 					case Recipe.RecipeMatchType.FoundMissingRequirements:
 					case Recipe.RecipeMatchType.AllDone:
@@ -167,7 +167,7 @@ namespace Pipliz.Mods.APIProvider.Jobs
 						recipesToCraft = Math.Min(recipeMatch.FoundRecipeCount, MaxRecipeCraftsPerHaul);
 						for (int i = 0; i < selectedRecipe.Requirements.Count; i++) {
 							state.Inventory.Add(selectedRecipe.Requirements[i] * recipesToCraft);
-							usedNPC.Colony.UsedStockpile.TryRemove(selectedRecipe.Requirements[i] * recipesToCraft);
+							usedNPC.Colony.Stockpile.TryRemove(selectedRecipe.Requirements[i] * recipesToCraft);
 						}
 						state.SetCooldown(0.5);
 						break;
