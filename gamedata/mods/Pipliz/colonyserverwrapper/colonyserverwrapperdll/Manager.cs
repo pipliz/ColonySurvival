@@ -40,7 +40,7 @@ namespace Pipliz.ColonyServerWrapper
 							Chatting.Chat.ReceiveServer(clientReader.ReadString());
 							break;
 						case "quit":
-							General.Application.QueueKill();
+							Application.QueueKill();
 							break;
 					}
 				}

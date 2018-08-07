@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -20,9 +20,10 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.archery");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.technologist.sciencebagmilitary", true, "pipliz.technologist");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.technologist.sciencebagmilitary"));
 		}
 	}
 }

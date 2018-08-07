@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -15,10 +15,11 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.sciencebagbasic");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.stonemasonworkbench", true, "pipliz.crafter");
-			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.stonemasonworkbench");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.crafter.stonemasonworkbench"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.player.stonemasonworkbench"));
 		}
 	}
 }

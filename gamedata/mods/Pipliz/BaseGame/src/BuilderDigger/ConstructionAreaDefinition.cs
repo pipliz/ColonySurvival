@@ -5,17 +5,17 @@
 	using Helpers;
 	using JSON;
 	using NPC;
-	using Server.NPCs;
 	using System.Threading;
 	using Shared;
 	using System;
+	using Areas;
 
 	[AreaJobDefinitionAutoLoader]
 	public class ConstructionAreaDefinition : IAreaJobDefinition
 	{
 		protected NPCType npcType = NPCType.GetByKeyNameOrDefault("pipliz.constructor");
 
-		protected SortedList<Players.Player, JSONNode> SavedJobs;
+		protected SortedList<Colony, JSONNode> SavedJobs;
 
 		protected JSONNode LoadedRoot;
 		protected ManualResetEvent FinishedLoadingEvent = new ManualResetEvent(false);
@@ -28,7 +28,7 @@
 
 		public virtual EAreaType AreaType { get { throw new NotImplementedException(); } }
 
-		public virtual IAreaJob CreateAreaJob (Players.Player owner, JSONNode node)
+		public virtual IAreaJob CreateAreaJob (Colony owner, JSONNode node)
 		{
 			Vector3Int min = Vector3Int.invalidPos;
 			Vector3Int max = Vector3Int.invalidPos;
@@ -55,7 +55,7 @@
 			return area;
 		}
 
-		public virtual IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public virtual IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
 			return new ConstructionArea(owner, min, max);
 		}
@@ -104,10 +104,10 @@
 		{
 			JSONNode table = node.GetAs<JSONNode>("table");
 			foreach (var pair in table.LoopObject()) {
-				Players.Player player = Players.GetPlayer(NetworkID.Parse(pair.Key));
+				Colony colony = ServerManager.ColonyTracker.Get(int.Parse(pair.Key));
 				JSONNode array = pair.Value;
 				for (int i = 0; i < array.ChildCount; i++) {
-					var job = CreateAreaJob(player, array[i]);
+					var job = CreateAreaJob(colony, array[i]);
 					if (job == null) {
 						continue;
 					}
@@ -118,10 +118,10 @@
 			}
 		}
 
-		public virtual void SaveJob (Players.Player owner, JSONNode data)
+		public virtual void SaveJob (Colony owner, JSONNode data)
 		{
 			if (SavedJobs == null) {
-				SavedJobs = new SortedList<Players.Player, JSONNode>(10);
+				SavedJobs = new SortedList<Colony, JSONNode>(10);
 			}
 			JSONNode array;
 			if (!SavedJobs.TryGetValue(owner, out array)) {
@@ -133,9 +133,9 @@
 
 		public virtual void FinishSaving ()
 		{
-			General.Application.StartAsyncQuitToComplete(delegate ()
+			Application.StartAsyncQuitToComplete(delegate ()
 			{
-				if (General.Application.IsQuiting) {
+				if (Application.IsQuiting) {
 					Log.Write("Saving {0} construction areas", SavedJobs == null ? 0 : SavedJobs.Count);
 				}
 
@@ -145,9 +145,9 @@
 				root.SetAs("table", table);
 				if (SavedJobs != null) {
 					for (int i = 0; i < SavedJobs.Count; i++) {
-						Players.Player p = SavedJobs.GetKeyAtIndex(i);
+						Colony c = SavedJobs.GetKeyAtIndex(i);
 						JSONNode n = SavedJobs.GetValueAtIndex(i);
-						table.SetAs(p.IDString, n);
+						table.SetAs(c.ColonyID.ToString(), n);
 					}
 					SavedJobs = null;
 				}

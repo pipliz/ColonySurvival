@@ -1,4 +1,5 @@
-﻿using BlockTypes.Builtin;
+﻿using Areas;
+using BlockTypes;
 using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
@@ -15,7 +16,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 			this.buildType = buildType;
 		}
 
-		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPC.NPCBase.NPCState state)
+		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJobInstance job, ref NPC.NPCBase.NPCState state)
 		{
 			if (iterationType == null || buildType == null || buildType.ItemIndex == 0) {
 				AreaJobTracker.RemoveJob(areaJob);
@@ -29,10 +30,11 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 				ushort foundTypeIndex;
 				if (World.TryGetTypeAt(jobPosition, out foundTypeIndex)) {
 					if (foundTypeIndex == 0 || foundTypeIndex == BuiltinBlocks.Water) {
-						Stockpile ownerStockPile = Stockpile.GetStockPile(areaJob.Owner);
+						Stockpile ownerStockPile = areaJob.Owner.Stockpile;
 						if (ownerStockPile.Contains(buildType.ItemIndex)) {
-							if (ServerManager.TryChangeBlock(jobPosition, buildType.ItemIndex, areaJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
-								if (--job.storedItems == 0) {
+							// todo use colony as cause
+							if (ServerManager.TryChangeBlock(jobPosition, buildType.ItemIndex, areaJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
+								if (--job.StoredItemCount == 0) {
 									state.JobIsDone = true;
 								}
 								ownerStockPile.TryRemove(buildType.ItemIndex);

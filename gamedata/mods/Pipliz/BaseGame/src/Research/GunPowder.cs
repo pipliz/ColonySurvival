@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -16,10 +16,11 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.gunsmithshop");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.gunsmith.gunpowder", true, "pipliz.gunsmith");
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.gunsmith.gunpowderpouch", true, "pipliz.gunsmith");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.gunsmith.gunpowder"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.gunsmith.gunpowderpouch"));
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using NPC;
+﻿using Areas;
+using NPC;
 
 namespace Pipliz.Mods.BaseGame.Construction
 {
@@ -7,6 +8,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 		Shared.EAreaType AreaType { get; }
 		Shared.EAreaMeshType AreaTypeMesh { get; }
 
-		void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPCBase.NPCState state);
+		void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJobInstance job, ref NPCBase.NPCState state);
 	}
 }

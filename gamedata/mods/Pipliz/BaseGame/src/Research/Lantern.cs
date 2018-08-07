@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -17,17 +17,17 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.bloomery");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			var storage = RecipeStorage.GetPlayerStorage(manager.Player);
-			storage.SetRecipeAvailability("pipliz.metalsmith.lanternyellow", true, "pipliz.metalsmith");
-			storage.SetRecipeAvailability("pipliz.dyer.lanternwhite", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanterngreen", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanternblue", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanternred", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanternorange", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanterncyan", true, "pipliz.dyer");
-			storage.SetRecipeAvailability("pipliz.dyer.lanternpink", true, "pipliz.dyer");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.metalsmith.lanternyellow"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanternwhite"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanterngreen"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanternblue"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanternred"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanternorange"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanterncyan"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.dyer.lanternpink"));
 
 		}
 	}

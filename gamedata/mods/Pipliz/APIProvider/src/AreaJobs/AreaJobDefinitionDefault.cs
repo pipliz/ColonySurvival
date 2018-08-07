@@ -1,11 +1,11 @@
 ﻿using NPC;
 using Pipliz.Collections;
 using Pipliz.Helpers;
-using Server.NPCs;
 using System.Threading;
 
 namespace Pipliz.Mods.APIProvider.AreaJobs
 {
+	using Areas;
 	using JSON;
 
 	public class AreaJobDefinitionDefault<T> : IAreaJobDefinition where T : IAreaJobDefinition
@@ -15,21 +15,16 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		protected ushort[] stages;
 		protected NPCType npcType;
 		protected Shared.EAreaType areaType;
-
-		protected SortedList<Players.Player, JSONNode> SavedJobs;
-
+		protected SortedList<Colony, JSONNode> SavedJobs;
 		protected JSONNode LoadedRoot;
 		protected ManualResetEvent FinishedLoadingEvent = new ManualResetEvent(false);
 
 		public virtual NPCType UsedNPCType { get { return npcType; } }
-
 		public virtual string Identifier { get { return identifier; } }
-
-		public virtual string FilePath { get { return string.Format("gamedata/savegames/{0}/areajobs/{1}.json", ServerManager.WorldName, fileName); } }
-
+		public virtual string FilePath { get { return $"gamedata/savegames/{ServerManager.WorldName}/areajobs/{fileName}.json"; } }
 		public virtual Shared.EAreaType AreaType { get { return areaType; } }
 
-		public virtual IAreaJob CreateAreaJob (Players.Player owner, JSONNode node)
+		public virtual IAreaJob CreateAreaJob (Colony owner, JSONNode node)
 		{
 			Vector3Int min = Vector3Int.invalidPos;
 			Vector3Int max = Vector3Int.invalidPos;
@@ -49,7 +44,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			return CreateAreaJob(owner, min, max, npcID);
 		}
 
-		public virtual IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public virtual IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
 			return new DefaultFarmerAreaJob<T>(owner, min, max, npcID);
 		}
@@ -130,7 +125,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							if (World.TryGetTypeAt(positionSub.Add(0, -1, 0), out typeBelow)) {
 								// check for fertile below
 								if (ItemTypes.GetType(typeBelow).IsFertile) {
-									ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
+									ServerManager.TryChangeBlock(positionSub, typeSeeds, job.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio);
 									state.SetCooldown(1.0);
 									shouldDumpInventory = false;
 								} else {
@@ -147,7 +142,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 							shouldDumpInventory = state.Inventory.UsedCapacity > 0f;
 						}
 					} else if (type == typeFinal) {
-						if (ServerManager.TryChangeBlock(positionSub, 0, job.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+						if (ServerManager.TryChangeBlock(positionSub, 0, job.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
 							GatherResults.Clear();
 							var results = ItemTypes.GetType(typeFinal).OnRemoveItems;
 							for (int i = 0; i < results.Count; i++) {
@@ -205,10 +200,10 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		{
 			JSONNode table = node.GetAs<JSONNode>("table");
 			foreach (var pair in table.LoopObject()) {
-				Players.Player player = Players.GetPlayer(NetworkID.Parse(pair.Key));
+				Colony colony = ServerManager.ColonyTracker.Get(int.Parse(pair.Key));
 				JSONNode array = pair.Value;
 				for (int i = 0; i < array.ChildCount; i++) {
-					var job = CreateAreaJob(player, array[i]);
+					var job = CreateAreaJob(colony, array[i]);
 					if (!AreaJobTracker.RegisterAreaJob(job)) {
 						job.OnRemove();
 					}
@@ -216,10 +211,10 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			}
 		}
 
-		public virtual void SaveJob (Players.Player owner, JSONNode data)
+		public virtual void SaveJob (Colony owner, JSONNode data)
 		{
 			if (SavedJobs == null) {
-				SavedJobs = new SortedList<Players.Player, JSONNode>(10);
+				SavedJobs = new SortedList<Colony, JSONNode>(10);
 			}
 			JSONNode array;
 			if (!SavedJobs.TryGetValue(owner, out array)) {
@@ -231,9 +226,9 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 
 		public virtual void FinishSaving ()
 		{
-			General.Application.StartAsyncQuitToComplete(delegate ()
+			Application.StartAsyncQuitToComplete(delegate ()
 			{
-				if (General.Application.IsQuiting) {
+				if (Application.IsQuiting) {
 					Log.Write("Saving {0}", fileName);
 				}
 
@@ -243,9 +238,9 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 				root.SetAs("table", table);
 				if (SavedJobs != null) {
 					for (int i = 0; i < SavedJobs.Count; i++) {
-						Players.Player p = SavedJobs.GetKeyAtIndex(i);
+						Colony c = SavedJobs.GetKeyAtIndex(i);
 						JSONNode n = SavedJobs.GetValueAtIndex(i);
-						table.SetAs(p.ToString(), n);
+						table.SetAs(c.ColonyID.ToString(), n);
 					}
 					SavedJobs = null;
 				}
@@ -256,6 +251,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 			});
 		}
 
+		// TODO: colony parameter
 		protected void SetLayer (Vector3Int min, Vector3Int max, ushort type, int layer, Players.Player owner)
 		{
 			int yLayer = min.y + layer;

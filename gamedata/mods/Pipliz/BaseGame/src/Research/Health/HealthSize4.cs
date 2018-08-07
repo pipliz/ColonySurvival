@@ -1,5 +1,4 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -16,11 +15,15 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.healthsize3");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			manager.Player.GetTempValues(true).Set("pipliz.healthmax", 200f);
+			manager.Colony.TemporaryData.SetAs("pipliz.healthmax", 200f);
 			if (reason == EResearchCompletionReason.ProgressCompleted) {
-				manager.Player.SendHealthPacket();
+				for (int i = 0; i < manager.Colony.Owners.Length; i++) {
+					if (manager.Colony.Owners[i].ShouldSendData) {
+						manager.Colony.Owners[i].SendHealthPacket();
+					}
+				}
 			}
 		}
 	}

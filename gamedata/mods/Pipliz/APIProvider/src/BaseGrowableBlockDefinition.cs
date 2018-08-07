@@ -7,7 +7,8 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 	using UnityEngine.Assertions;
 
 	// ILoadedByPositionType is only used as a backup if the data one has problems
-	public abstract class BaseGrowableBlockDefinition : ILoadedWithDataByPositionType, ILoadedByPositionType, IChangedWithType, IUnloadedByPosition, IMultiBlockEntityAutoLoader
+	[BlockEntityAutoLoader]
+	public abstract class BaseGrowableBlockDefinition : ILoadedWithDataByPositionType, ILoadedByPositionType, IChangedWithType, IUnloadedByPosition, IMultiBlockEntityMapping
 	{
 		public virtual GrowableStage[] Stages { get; protected set; }
 		public virtual ItemTypes.ItemType[] StageTypes { get; protected set; }
@@ -230,9 +231,13 @@ namespace Pipliz.Mods.APIProvider.GrowableBlocks
 				}
 			}
 
-			public virtual void SerializeToBytes (Vector3Int blockPosition, ByteBuilder builder)
+			public virtual ESerializeEntityResult SerializeToBytes (Vector3Int blockPosition, ByteBuilder builder)
 			{
-				builder.Write(Growth);
+				if (IsValid) {
+					builder.Write(Growth);
+					return ESerializeEntityResult.WroteData;
+				}
+				return ESerializeEntityResult.None;
 			}
 		}
 

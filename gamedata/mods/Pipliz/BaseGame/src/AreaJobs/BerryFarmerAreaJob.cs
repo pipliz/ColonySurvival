@@ -1,12 +1,10 @@
-﻿using BlockTypes.Builtin;
+﻿using BlockTypes;
 using NPC;
-using System.IO;
-using System.Threading;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
-	using JSON;
+	using Areas;
 
 	[AreaJobDefinitionAutoLoader]
 	public class BerryFarmerDefinition : AreaJobDefinitionDefault<BerryFarmerDefinition>
@@ -15,12 +13,12 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 		{
 			identifier = "pipliz.berryfarm";
 			fileName = "berryfarms";
-			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
+			npcType = NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
 			areaType = Shared.EAreaType.BerryFarm;
 		}
 
 		/// Override it to use custom berryfarmerjob, to store some per-job data
-		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
 			return new BerryFarmerJob(owner, min, max, npcID);
 		}
@@ -32,7 +30,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			Vector3Int min = job.Minimum;
 			Vector3Int max = job.Maximum;
 
-			if (job.checkMissingBushes && job.NPC.Colony.UsedStockpile.Contains(BuiltinBlocks.BerryBush)) {
+			if (job.checkMissingBushes && job.NPC.Colony.Stockpile.Contains(BuiltinBlocks.BerryBush)) {
 				// remove legacy positions
 				for (int x = min.x + 1; x <= max.x; x += 2) {
 					for (int z = min.z; z <= max.z; z += 2) {
@@ -44,7 +42,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						if (type == BuiltinBlocks.BerryBush) {
 							job.removingOldBush = true;
 							job.bushLocation = possiblePositionSub;
-							positionSub = Server.AI.AIManager.ClosestPosition(job.bushLocation, job.NPC.Position);
+							positionSub = AI.AIManager.ClosestPosition(job.bushLocation, job.NPC.Position);
 							return;
 						}
 					}
@@ -60,7 +58,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						if (type == 0) {
 							job.placingMissingBush = true;
 							job.bushLocation = possiblePositionSub;
-							positionSub = Server.AI.AIManager.ClosestPositionNotAt(job.bushLocation, job.NPC.Position);
+							positionSub = AI.AIManager.ClosestPositionNotAt(job.bushLocation, job.NPC.Position);
 							return;
 						}
 					}
@@ -83,16 +81,18 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			if (positionSub.IsValid) {
 				ushort type;
 				if (job.placingMissingBush) {
-					if (job.NPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.BerryBush)) {
+					if (job.NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.BerryBush)) {
 						job.placingMissingBush = false;
-						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio);
+						// todo use colony as param
+						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, rawJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio);
 						state.SetCooldown(2.0);
 					} else {
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
 					}
 				} else if (job.removingOldBush) {
-					if (ServerManager.TryChangeBlock(job.bushLocation, 0, rawJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
-						job.NPC.Colony.UsedStockpile.Add(BuiltinBlocks.BerryBush);
+					// todo use colony as param
+					if (ServerManager.TryChangeBlock(job.bushLocation, 0, rawJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
+						job.NPC.Colony.Stockpile.Add(BuiltinBlocks.BerryBush);
 						job.removingOldBush = false;
 					}
 					state.SetCooldown(2.0);
@@ -137,67 +137,10 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			public bool placingMissingBush = false;
 			public bool removingOldBush = false;
 
-			public BerryFarmerJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID)
+			public BerryFarmerJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID)
 			{
 
 			}
 		}
-
-		#region LOAD_LEGACY_BLOCKS_WORKAROUND
-		/// <summary>
-		/// This #region code is to load the legacy json data for upgrading from the old area jobs to this
-		/// from before v0.5.0 to v0.5.0 and later
-		/// </summary>
-		JSONNode legacyJSON;
-
-		public override void StartLoading ()
-		{
-			// do custom things before base.AsyncLoad so FinishLoading also waits for this to complete
-			ThreadPool.QueueUserWorkItem(delegate (object obj)
-			{
-				try {
-					string path = string.Format("gamedata/savegames/{0}/blocktypes/BerryAreaJob.json", ServerManager.WorldName);
-					if (File.Exists(path)) {
-						Log.Write("Loading legacy json from {0}", path);
-						JSON.Deserialize(path, out legacyJSON, false);
-						File.Delete(path);
-					}
-				} catch (System.Exception e) {
-					Log.WriteException(e);
-				} finally {
-					AsyncLoad(obj);
-				}
-			});
-		}
-
-		public override void FinishLoading ()
-		{
-			base.FinishLoading();
-			if (legacyJSON != null) {
-				foreach (var pair in legacyJSON.LoopObject()) {
-					try {
-						Players.Player player = Players.GetPlayer(NetworkID.Parse(pair.Key));
-
-						for (int i = 0; i < pair.Value.ChildCount; i++) {
-							JSONNode jobNode = pair.Value[i];
-
-							int npcID = jobNode.GetAsOrDefault("npcID", 0);
-							Vector3Int min = (Vector3Int)jobNode["positionMin"];
-							Vector3Int max = (Vector3Int)jobNode["positionMax"];
-
-							var job = new DefaultFarmerAreaJob<BerryFarmerDefinition>(player, min, max, npcID);
-							if (!AreaJobTracker.RegisterAreaJob(job)) {
-								job.OnRemove();
-							}
-						}
-					} catch (System.Exception e) {
-						Log.WriteException("Exception loading legacy area job data", e);
-					}
-				}
-				legacyJSON = null;
-			}
-		}
-
-		#endregion LOAD_LEGACY_BLOCKS_WORKAROUND
 	}
 }

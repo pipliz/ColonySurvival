@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -16,17 +16,20 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddIterationRequirement("coppertools");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.oven", true, "pipliz.crafter");
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.grindstone", true, "pipliz.crafter");
-			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.oven");
-			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.grindstone");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.crafter.oven"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.crafter.grindstone"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.player.oven"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.player.grindstone"));
 
 			if (reason == EResearchCompletionReason.ProgressCompleted) {
-				Stockpile.GetStockPile(manager.Player).Add(BlockTypes.Builtin.BuiltinBlocks.WheatStage1, 400);
-				if (manager.Player.IsConnected) {
-					Chatting.Chat.Send(manager.Player, "You received 400 wheat seeds!");
+				manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WheatStage1, 400);
+				for (int i = 0; i < manager.Colony.Owners.Length; i++) {
+					if (manager.Colony.Owners[i].ShouldSendData) {
+						Chatting.Chat.Send(manager.Colony.Owners[i], "You received 400 wheat seeds!");
+					}
 				}
 			}
 		}

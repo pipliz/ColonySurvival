@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -16,9 +16,9 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.healthregenspeed1");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			manager.Player.GetTempValues(true).Set("pipliz.healthregenspeed", 4f);
+			manager.Colony.TemporaryData.SetAs("pipliz.healthregenspeed", 4f);
 		}
 	}
 }

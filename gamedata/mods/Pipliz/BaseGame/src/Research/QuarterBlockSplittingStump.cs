@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -15,11 +15,11 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.splittingstump");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			var storage = RecipeStorage.GetPlayerStorage(manager.Player);
-			storage.SetRecipeAvailability("pipliz.woodcutter.quarterblockbrowndark", true, "pipliz.woodcutter");
-			storage.SetRecipeAvailability("pipliz.woodcutter.quarterblockbrownlight", true, "pipliz.woodcutter");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.woodcutter.quarterblockbrowndark"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.woodcutter.quarterblockbrownlight"));
 		}
 	}
 }

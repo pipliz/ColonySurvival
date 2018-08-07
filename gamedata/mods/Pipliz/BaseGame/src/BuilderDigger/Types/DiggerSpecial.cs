@@ -1,4 +1,5 @@
-﻿using BlockTypes.Builtin;
+﻿using Areas;
+using BlockTypes;
 using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
@@ -17,7 +18,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 			this.digType = digType;
 		}
 
-		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJob job, ref NPC.NPCBase.NPCState state)
+		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJobInstance job, ref NPC.NPCBase.NPCState state)
 		{
 			if (iterationType == null) {
 				AreaJobTracker.RemoveJob(areaJob);
@@ -60,7 +61,8 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 							}
 						}
 
-						if (ServerManager.TryChangeBlock(jobPosition, 0, areaJob.Owner, ServerManager.SetBlockFlags.DefaultAudio)) {
+						// todo use colony as cause
+						if (ServerManager.TryChangeBlock(jobPosition, 0, areaJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
 							float blockDestructionTime = GetCooldown(foundType.DestructionTime * 0.001f);
 							GatherResults.Clear();
 							var itemList = foundType.OnRemoveItems;

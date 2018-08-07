@@ -2,6 +2,7 @@
 
 namespace Pipliz.Mods.BaseGame.Construction
 {
+	using Areas;
 	using JSON;
 
 	public class ConstructionArea : IAreaJob, IAreaJobSubArguments
@@ -9,7 +10,6 @@ namespace Pipliz.Mods.BaseGame.Construction
 		protected Vector3Int positionMin;
 		protected Vector3Int positionMax;
 
-		protected Players.Player owner;
 		protected bool isValid = true;
 
 		protected IConstructionType constructionType;
@@ -18,12 +18,13 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		protected static ConstructionAreaDefinition DefinitionInstance;
 
+		public virtual Colony Owner { get; protected set; }
+
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
 		public virtual NPCBase NPC { get { return null; } set { } }
-		public virtual Players.Player Owner { get { return owner; } }
 		public virtual Shared.EAreaType AreaType { get { return constructionType == null ? Shared.EAreaType.Unknown : constructionType.AreaType; } }
-		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return constructionType == null ? Shared.EAreaMeshType.AutoSelect : constructionType.AreaTypeMesh;; } }
+		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return constructionType == null ? Shared.EAreaMeshType.AutoSelect : constructionType.AreaTypeMesh; ; } }
 		public virtual bool IsValid { get { return isValid && constructionType != null && iterationType != null; } }
 
 		public virtual IAreaJobDefinition Definition
@@ -41,13 +42,13 @@ namespace Pipliz.Mods.BaseGame.Construction
 			}
 		}
 
-		public ConstructionArea (Players.Player owner, Vector3Int min, Vector3Int max)
+		public ConstructionArea (Colony owner, Vector3Int min, Vector3Int max)
 		{
 			min.y = Math.Max(1, min.y);
 			positionMin = min;
 			positionMax = max;
 			isValid = max != Vector3Int.invalidPos;
-			this.owner = owner;
+			Owner = owner;
 		}
 
 		public void SetArgument (JSONNode args)
@@ -124,10 +125,10 @@ namespace Pipliz.Mods.BaseGame.Construction
 				node.SetAs("arguments", arguments);
 			}
 
-			Definition.SaveJob(owner, node);
+			Definition.SaveJob(Owner, node);
 		}
 
-		public virtual void DoJob (ConstructionJob job, ref NPCBase.NPCState state)
+		public virtual void DoJob (ConstructionJobInstance job, ref NPCBase.NPCState state)
 		{
 			if (constructionType != null) {
 				constructionType.DoJob(iterationType, this, job, ref state);

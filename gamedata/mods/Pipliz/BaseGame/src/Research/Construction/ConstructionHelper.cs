@@ -1,22 +1,32 @@
-﻿namespace Pipliz.Mods.BaseGame.Researches
+﻿using Shared.Networking;
+
+namespace Pipliz.Mods.BaseGame.Researches
 {
 	[ModLoader.ModManager]
 	public static class ConstructionHelper
 	{
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnPlayerConnectedLate, "pipliz.mods.basegame.sendconstructiondata")]
-		[ModLoader.ModDocumentation("Sends builder/digger limit size data")]
-		public static void SendPacket (Players.Player player)
+		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnActiveColonyChanges, "sendconstructiondata")]
+		static void SendData (Players.Player player, Colony oldColony, Colony newColony)
 		{
-			if (player.IsConnected) {
-				int builder = player.GetTempValues(false).GetOrDefault("pipliz.builderlimit", 0);
-				int digger = player.GetTempValues(false).GetOrDefault("pipliz.diggerlimit", 0);
+			if (player.ShouldSendData) {
+				NetworkWrapper.Send(GetPacket(newColony), player);
+			}
+		}
 
-				using (ByteBuilder b = ByteBuilder.Get()) {
-					b.Write(General.Networking.ClientMessageType.ReceiveConstructionLimits);
-					b.Write(builder);
-					b.Write(digger);
-					NetworkWrapper.Send(b.ToArray(), player);
-				}
+		public static void SendPacket (Colony colony)
+		{
+			if (colony?.Owners.ShouldSendAny() ?? false) {
+				colony.Owners.SendToActive(colony, GetPacket(colony));
+			}
+		}
+
+		public static byte[] GetPacket (Colony colony)
+		{
+			using (ByteBuilder b = ByteBuilder.Get()) {
+				b.Write(ClientMessageType.ReceiveConstructionLimits);
+				b.Write(colony?.TemporaryData.GetAsOrDefault("pipliz.builderlimit", 0) ?? 0);
+				b.Write(colony?.TemporaryData.GetAsOrDefault("pipliz.diggerlimit", 0) ?? 0);
+				return b.ToArray();
 			}
 		}
 	}

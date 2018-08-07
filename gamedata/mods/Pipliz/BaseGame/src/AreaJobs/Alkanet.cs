@@ -1,8 +1,9 @@
-﻿using BlockTypes.Builtin;
+﻿using BlockTypes;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
+	using Areas;
 
 	[AreaJobDefinitionAutoLoader]
 	public class Alkanet : AreaJobDefinitionDefault<Alkanet>
@@ -15,13 +16,14 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				BuiltinBlocks.AlkanetStage1,
 				BuiltinBlocks.AlkanetStage2
 			};
-			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.alkanetfarmer");
+			npcType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.alkanetfarmer");
 			areaType = Shared.EAreaType.AlkanetFarm;
 		}
 
-		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
-			SetLayer(min, max, BuiltinBlocks.Dirt, -1, owner);
+			// todo: use colony as param of setlayer
+			SetLayer(min, max, BuiltinBlocks.Dirt, -1, owner.Owners[0]);
 			return base.CreateAreaJob(owner, min, max, npcID);
 		}
 	}

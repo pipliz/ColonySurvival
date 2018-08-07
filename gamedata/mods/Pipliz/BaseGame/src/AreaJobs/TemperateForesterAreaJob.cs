@@ -1,12 +1,10 @@
-﻿using BlockTypes.Builtin;
+﻿using BlockTypes;
 using NPC;
-using System.IO;
-using System.Threading;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	using APIProvider.AreaJobs;
-	using JSON;
+	using Areas;
 
 	[AreaJobDefinitionAutoLoader]
 	public class TemperateForesterDefinition : AreaJobDefinitionDefault<TemperateForesterDefinition>
@@ -15,24 +13,26 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 		{
 			identifier = "pipliz.temperateforest";
 			fileName = "temperateforester";
-			npcType = Server.NPCs.NPCType.GetByKeyNameOrDefault("pipliz.forester");
+			npcType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.forester");
 			areaType = Shared.EAreaType.Forestry;
 		}
 
-		public override IAreaJob CreateAreaJob (Players.Player owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
 		{
-			SetLayer(min, max, BuiltinBlocks.LumberArea, -1, owner);
+			// todo use colony as param
+			SetLayer(min, max, BuiltinBlocks.LumberArea, -1, owner.Owners[0]);
 			return base.CreateAreaJob(owner, min, max, npcID);
 		}
 
 		public override void OnRemove (IAreaJob job)
 		{
-			SetLayer(job.Minimum, job.Maximum, BuiltinBlocks.GrassTemperate, -1, job.Owner);
+			// todo use colony as param
+			SetLayer(job.Minimum, job.Maximum, BuiltinBlocks.GrassTemperate, -1, job.Owner.Owners[0]);
 		}
 
 		public override void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
 		{
-			bool hasSeeds = job.NPC.Colony.UsedStockpile.Contains(BuiltinBlocks.Sapling);
+			bool hasSeeds = job.NPC.Colony.Stockpile.Contains(BuiltinBlocks.Sapling);
 			Vector3Int firstPlanting = Vector3Int.invalidPos;
 			Vector3Int min = job.Minimum;
 			Vector3Int max = job.Maximum;
@@ -98,14 +98,16 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				if (World.TryGetTypeAt(positionSub, out type)) {
 					if (type == 0) {
 						if (job.NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
-							|| job.NPC.Colony.UsedStockpile.TryRemove(BuiltinBlocks.Sapling)) {
-							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, job.Owner, ServerManager.SetBlockFlags.DefaultAudio);
+							|| job.NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.Sapling)) {
+							// todo use colony as param
+							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, job.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio);
 							state.SetCooldown(2.0);
 						} else {
 							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
 						}
 					} else if (type == BuiltinBlocks.LogTemperate) {
-						if (ChopTree(positionSub, job.Owner)) {
+						// todo use colony as param
+						if (ChopTree(positionSub, job.Owner.Owners[0])) {
 							state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
 							ServerManager.SendAudio(positionSub.Vector, "woodDeleteHeavy");
 
@@ -133,68 +135,12 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			positionSub = Vector3Int.invalidPos;
 		}
 
+		// todo use colony as param
 		static bool ChopTree (Vector3Int p, Players.Player owner)
 		{
 			return ServerManager.TryChangeBlock(p, 0, owner)
 				&& ServerManager.TryChangeBlock(p.Add(0, 1, 0), 0, owner)
 				&& ServerManager.TryChangeBlock(p.Add(0, 2, 0), 0, owner);
 		}
-
-		#region LOAD_LEGACY_BLOCKS_WORKAROUND
-		/// <summary>
-		/// This #region code is to load the legacy json data for upgrading from the old area jobs to this
-		/// from before v0.5.0 to v0.5.0 and later
-		/// </summary>
-		JSONNode legacyJSON;
-
-		public override void StartLoading ()
-		{
-			// do custom things before base.AsyncLoad so FinishLoading also waits for this to complete
-			ThreadPool.QueueUserWorkItem(delegate (object obj)
-			{
-				try {
-					string path = string.Format("gamedata/savegames/{0}/blocktypes/ForesterAreaJob.json", ServerManager.WorldName);
-					if (File.Exists(path)) {
-						Log.Write("Loading legacy json from {0}", path);
-						JSON.Deserialize(path, out legacyJSON, false);
-						File.Delete(path);
-					}
-				} catch (System.Exception e) {
-					Log.WriteException(e);
-				} finally {
-					AsyncLoad(obj);
-				}
-			});
-		}
-
-		public override void FinishLoading ()
-		{
-			base.FinishLoading();
-			if (legacyJSON != null) {
-				foreach (var pair in legacyJSON.LoopObject()) {
-					try {
-						Players.Player player = Players.GetPlayer(NetworkID.Parse(pair.Key));
-
-						for (int i = 0; i < pair.Value.ChildCount; i++) {
-							JSONNode jobNode = pair.Value[i];
-
-							int npcID = jobNode.GetAsOrDefault("npcID", 0);
-							Vector3Int min = (Vector3Int)jobNode["positionMin"];
-							Vector3Int max = (Vector3Int)jobNode["positionMax"];
-
-							var job = new DefaultFarmerAreaJob<TemperateForesterDefinition>(player, min, max, npcID);
-							if (!AreaJobTracker.RegisterAreaJob(job)) {
-								job.OnRemove();
-							}
-						}
-					} catch (System.Exception e) {
-						Log.WriteException("Exception loading legacy area job data", e);
-					}
-				}
-				legacyJSON = null;
-			}
-		}
-
-		#endregion LOAD_LEGACY_BLOCKS_WORKAROUND
 	}
 }

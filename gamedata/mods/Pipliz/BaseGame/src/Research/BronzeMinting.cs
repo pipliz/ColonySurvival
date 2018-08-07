@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿using Recipes;
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -16,12 +16,13 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.sciencebagbasic");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.mint", true, "pipliz.crafter");
-			RecipeStorage.GetPlayerStorage(manager.Player).SetRecipeAvailability("pipliz.crafter.shop", true, "pipliz.crafter");
-			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.mint");
-			RecipePlayer.UnlockOptionalRecipe(manager.Player, "pipliz.player.shop");
+			var recipeData = manager.Colony.RecipeData;
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.crafter.mint"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.crafter.shop"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.player.mint"));
+			recipeData.UnlockRecipe(new RecipeKey("pipliz.player.shop"));
 		}
 	}
 }

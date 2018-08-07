@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Areas;
+using System;
 using System.Collections.Generic;
 
 namespace Pipliz.Mods.APIProvider.AreaJobs
@@ -31,6 +32,7 @@ namespace Pipliz.Mods.APIProvider.AreaJobs
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "pipliz.mods.apiprovider.areajobs.insertattributed")]
+		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")]
 		[ModLoader.ModCallbackProvidesFor("pipliz.server.loadareajobs")]
 		[ModLoader.ModDocumentation("Creates instance of registered IAreaJobDefinition and registers those to AreaJobTracker")]
 		static void Load ()

@@ -1,5 +1,5 @@
-﻿using Pipliz.Mods.APIProvider.Science;
-using Server.Science;
+﻿
+using Science;
 
 namespace Pipliz.Mods.BaseGame.Researches
 {
@@ -19,10 +19,10 @@ namespace Pipliz.Mods.BaseGame.Researches
 			AddDependency("pipliz.baseresearch.stonemasonworkbench");
 		}
 
-		public override void OnResearchComplete (ScienceManagerPlayer manager, EResearchCompletionReason reason)
+		public override void OnResearchComplete (ColonyScienceState manager, EResearchCompletionReason reason)
 		{
-			manager.Player.GetTempValues(true).Set("pipliz.builderlimit", 1000);
-			ConstructionHelper.SendPacket(manager.Player);
+			manager.Colony.TemporaryData.SetAs("pipliz.builderlimit", 1000);
+			ConstructionHelper.SendPacket(manager.Colony);
 		}
 	}
 }
