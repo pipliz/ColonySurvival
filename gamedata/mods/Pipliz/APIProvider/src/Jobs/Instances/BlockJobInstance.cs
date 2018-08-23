@@ -7,19 +7,19 @@ namespace Pipliz.APIProvider.Jobs
 {
 	public class BlockJobInstance : IJob, IBlockEntitySerializable, IBlockEntityKeepLoaded, IBlockEntityOnRemove
 	{
-		public IBlockJobSettings Settings { get; set; }
-		public Vector3Int Position { get; set; }
-		public Colony Owner { get; set; }
-		public NPCBase NPC { get; set; }
-		public ItemTypes.ItemType BlockType { get; set; }
-		public NPCGoal LastNPCGoal { get; set; }
-		public bool ShouldTakeItems { get; set; }
-		public bool IsBusy { get; set; }
-		public bool IsValid { get; set; }
+		public virtual IBlockJobSettings Settings { get; set; }
+		public virtual Vector3Int Position { get; set; }
+		public virtual Colony Owner { get; set; }
+		public virtual NPCBase NPC { get; set; }
+		public virtual ItemTypes.ItemType BlockType { get; set; }
+		public virtual NPCGoal LastNPCGoal { get; set; }
+		public virtual bool ShouldTakeItems { get; set; }
+		public virtual bool IsBusy { get; set; }
+		public virtual bool IsValid { get; set; }
 
-		public NPCType NPCType { get { return Settings.NPCType; } }
-		public InventoryItem RecruitmentItem { get { return Settings.RecruitmentItem; } }
-		public bool NeedsNPC { get { return NPC == null; } }
+		public virtual NPCType NPCType { get { return Settings.NPCType; } }
+		public virtual InventoryItem RecruitmentItem { get { return Settings.RecruitmentItem; } }
+		public virtual bool NeedsNPC { get { return NPC == null; } }
 
 		public BlockJobInstance (IBlockJobSettings settings, Vector3Int position, ItemTypes.ItemType type, ByteReader reader)
 		{
@@ -44,7 +44,7 @@ namespace Pipliz.APIProvider.Jobs
 			SetColonyAndNPC(colony, 0);
 		}
 
-		public void SetColonyAndNPC (Colony colony, int npcID)
+		public virtual void SetColonyAndNPC (Colony colony, int npcID)
 		{
 			Owner = colony;
 			NPCBase foundNPC = null;
@@ -66,13 +66,13 @@ namespace Pipliz.APIProvider.Jobs
 		/// <summary>
 		/// Ensures the crafting block's chunk is not unloaded as long as it exists
 		/// </summary>
-		public EKeepChunkLoadedResult OnKeepChunkLoaded (Vector3Int blockPosition)
+		public virtual EKeepChunkLoadedResult OnKeepChunkLoaded (Vector3Int blockPosition)
 		{
 			Assert.IsTrue(IsValid);
 			return EKeepChunkLoadedResult.YesLong;
 		}
 
-		public NPCGoal CalculateGoal (ref NPCState state)
+		public virtual NPCGoal CalculateGoal (ref NPCState state)
 		{
 			Assert.IsTrue(IsValid);
 			NPCGoal newGoal;
@@ -88,12 +88,12 @@ namespace Pipliz.APIProvider.Jobs
 			return newGoal;
 		}
 
-		public void SetNPC (NPCBase npc)
+		public virtual void SetNPC (NPCBase npc)
 		{
 			SetNPC(npc, false, false);
 		}
 
-		public void SetNPC (NPCBase npc, bool isLoading, bool callTakeJob)
+		public virtual void SetNPC (NPCBase npc, bool isLoading, bool callTakeJob)
 		{
 			Assert.IsTrue(IsValid);
 			// remove job from current npc if exists
@@ -134,25 +134,25 @@ namespace Pipliz.APIProvider.Jobs
 			}
 		}
 
-		public void OnRemove (Vector3Int blockPosition)
+		public virtual void OnRemove (Vector3Int blockPosition)
 		{
 			Owner.JobFinder.Remove(this);
 			IsValid = false;
 		}
 
-		public Vector3Int GetJobLocation ()
+		public virtual Vector3Int GetJobLocation ()
 		{
 			Assert.IsTrue(IsValid);
 			return Settings.GetJobLocation(this);
 		}
 
-		public void OnNPCAtJob (ref NPCState state)
+		public virtual void OnNPCAtJob (ref NPCState state)
 		{
 			Assert.IsTrue(IsValid);
 			Settings.OnNPCAtJob(this, ref state);
 		}
 
-		public void OnNPCAtStockpile (ref NPCState state)
+		public virtual void OnNPCAtStockpile (ref NPCState state)
 		{
 			Assert.IsTrue(IsValid);
 			Settings.OnNPCAtStockpile(this, ref state);

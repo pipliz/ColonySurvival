@@ -1,6 +1,8 @@
 ﻿using BlockEntities;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Pipliz.APIProvider.Jobs
 {
@@ -10,23 +12,62 @@ namespace Pipliz.APIProvider.Jobs
 	/// The manager creates/removes the sub-class CraftingJobInstance
 	/// IUnloadedByPosition is not implemented because a chunk with crafting jobs will not unload (the instance implements IBlockEntityKeepLoaded for it)
 	/// </summary>
-	public class BlockJobManager<TSettings, TBlockType> : ILoadedWithDataByPositionType, IChangedWithType, IMultiBlockEntityMapping
-		where TSettings : IBlockJobSettings
+	public class BlockJobManager<TBlockType> : ILoadedWithDataByPositionType, IChangedWithType, IMultiBlockEntityMapping
 		where TBlockType : IBlockEntity
 	{
-		public TSettings Settings { get; set; }
-		public Func<TSettings, Vector3Int, ItemTypes.ItemType, ByteReader, TBlockType> Loader { get; set; }
-		public Func<TSettings, Vector3Int, ItemTypes.ItemType, Colony, TBlockType> Adder { get; set; }
+		public IBlockJobSettings Settings { get; set; }
 
-		// ISingleBlockEntityMapping
+		public Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, ByteReader, TBlockType> Loader { get; set; }
+		public Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, Colony, TBlockType> Adder { get; set; }
+
+		// IMultiBlockEntityMapping
 		public IEnumerable<ItemTypes.ItemType> TypesToRegister { get { return Settings.BlockTypes; } }
 
-		public BlockJobManager (TSettings settings,
-			Func<TSettings, Vector3Int, ItemTypes.ItemType, ByteReader, TBlockType> loader,
-			Func<TSettings, Vector3Int, ItemTypes.ItemType, Colony, TBlockType> adder
-		) {
-			Loader = loader;
-			Adder = adder;
+		static Type[] LoaderTypes = new Type[] { typeof(IBlockJobSettings), typeof(Vector3Int), typeof(ItemTypes.ItemType), typeof(ByteReader) };
+		static Type[] AdderTypes = new Type[] { typeof(IBlockJobSettings), typeof(Vector3Int), typeof(ItemTypes.ItemType), typeof(Colony) };
+
+		public BlockJobManager (IBlockJobSettings settings,
+			Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, ByteReader, TBlockType> loader = null,
+			Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, Colony, TBlockType> adder = null)
+		{
+			if (loader == null) {
+				try {
+					ConstructorInfo constructor = typeof(TBlockType).GetConstructor(LoaderTypes);
+					ParameterExpression[] parameters = new[] {
+						Expression.Parameter(typeof(IBlockJobSettings)),
+						Expression.Parameter(typeof(Vector3Int)),
+						Expression.Parameter(typeof(ItemTypes.ItemType)),
+						Expression.Parameter(typeof(ByteReader)),
+					};
+					Loader = Expression.Lambda<Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, ByteReader, TBlockType>>(
+						Expression.New(constructor, parameters), parameters
+					).Compile();
+				} catch (Exception e) {
+					Log.WriteException($"Type <{typeof(TBlockType)}> does not implement a constructor with arguments (IBlockJobSettings, Vector3Int, ItemTypes.ItemType, ByteReader). Required to work with the BlockJobManager.", e);
+				}
+			} else {
+				Loader = loader;
+			}
+
+			if (adder == null) {
+				try {
+					ConstructorInfo constructor = typeof(TBlockType).GetConstructor(AdderTypes);
+					ParameterExpression[] parameters = new[] {
+						Expression.Parameter(typeof(IBlockJobSettings)),
+						Expression.Parameter(typeof(Vector3Int)),
+						Expression.Parameter(typeof(ItemTypes.ItemType)),
+						Expression.Parameter(typeof(Colony)),
+					};
+					Adder = Expression.Lambda<Func<IBlockJobSettings, Vector3Int, ItemTypes.ItemType, Colony, TBlockType>>(
+						Expression.New(constructor, parameters), parameters
+					).Compile();
+				} catch (Exception e) {
+					Log.WriteException($"Type <{typeof(TBlockType)}> does not implement a constructor with arguments (IBlockJobSettings, Vector3Int, ItemTypes.ItemType, Colony). Required to work with the BlockJobManager.", e);
+				}
+			} else {
+				Adder = adder;
+			}
+
 			Settings = settings;
 		}
 
@@ -55,7 +96,9 @@ namespace Pipliz.APIProvider.Jobs
 		// ILoadedWithDataByPositionType
 		public void OnLoadedWithDataPosition (Vector3Int blockPosition, ushort type, ByteReader reader)
 		{
-			ServerManager.BlockEntityTracker.OnAddedEntity(blockPosition, Loader(Settings, blockPosition, ItemTypes.GetType(type), reader));
+			if (Loader != null) {
+				ServerManager.BlockEntityTracker.OnAddedEntity(blockPosition, Loader(Settings, blockPosition, ItemTypes.GetType(type), reader));
+			}
 		}
 
 		public void OnPlaced (Players.Player player, Vector3Int blockPosition, ItemTypes.ItemType type)
@@ -66,7 +109,9 @@ namespace Pipliz.APIProvider.Jobs
 				ServerManager.TryChangeBlock(blockPosition, 0, player, ServerManager.SetBlockFlags.None);
 				return;
 			}
-			ServerManager.BlockEntityTracker.OnAddedEntity(blockPosition, Adder(Settings, blockPosition, type, player.ActiveColony));
+			if (Adder != null) {
+				ServerManager.BlockEntityTracker.OnAddedEntity(blockPosition, Adder(Settings, blockPosition, type, player.ActiveColony));
+			}
 		}
 
 		public void OnRemoved (Vector3Int blockPosition)

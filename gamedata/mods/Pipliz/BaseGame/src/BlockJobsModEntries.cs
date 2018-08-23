@@ -66,53 +66,24 @@ namespace Pipliz.Mods.BaseGame.BlockNPCs
 			settings.OnShootResultItem = new ItemTypes.ItemTypeDrops(BuiltinBlocks.LinenPouch, 1, 0.9);
 			CreateJob(settings);
 
-			// minerjob is special for both (need to save/load additional data in the instance, and custom stockpile/job behaviour)
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(
-				new BlockJobManager<MinerJobSettings, MinerJobInstance>(
-					new MinerJobSettings(),
-					(setting, pos, type, bytedata) => new MinerJobInstance(setting, pos, type, bytedata),
-					(setting, pos, type, colony) => new MinerJobInstance(setting, pos, type, colony)
-				)
-			);
+			CreateJob<MinerJobInstance>(new MinerJobSettings());
+			CreateJob<BlockJobInstance>(new ScientistJobSettings());
+			CreateJob<ConstructionJobInstance>(new ConstructionJobSettings());
+		}
 
-			// scientistjob only has special ijobsettings (to deal with doing the science)
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(
-				new BlockJobManager<ScientistJobSettings, BlockJobInstance>(
-					new ScientistJobSettings(),
-					(setting, pos, type, bytedata) => new BlockJobInstance(setting, pos, type, bytedata),
-					(setting, pos, type, colony) => new BlockJobInstance(setting, pos, type, colony)
-				)
-			);
-
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(
-				new BlockJobManager<ConstructionJobSettings, ConstructionJobInstance>(
-					new ConstructionJobSettings(),
-					(setting, pos, type, bytedata) => new ConstructionJobInstance(setting, pos, type, bytedata),
-					(setting, pos, type, colony) => new ConstructionJobInstance(setting, pos, type, colony)
-				)
-			);
+		static void CreateJob<T> (IBlockJobSettings settings) where T : BlockEntities.IBlockEntity
+		{
+			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<T>(settings));
 		}
 
 		static void CreateJob (GuardJobSettings settings)
 		{
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(
-				new BlockJobManager<GuardJobSettings, GuardJobInstance>(
-					settings,
-					(setting, pos, type, bytedata) => new GuardJobInstance(setting, pos, type, bytedata),
-					(setting, pos, type, colony) => new GuardJobInstance(setting, pos, type, colony)
-				)
-			);
+			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<GuardJobInstance>(settings));
 		}
 
 		static void CreateJob (CraftingJobSettings settings)
 		{
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(
-				new BlockJobManager<CraftingJobSettings, CraftingJobInstance>(
-					settings,
-					(setting, pos, type, bytedata) => new CraftingJobInstance(setting, pos, type, bytedata),
-					(setting, pos, type, colony) => new CraftingJobInstance(setting, pos, type, colony)
-				)
-			);
+			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<CraftingJobInstance>(settings));
 		}
 	}
 }
