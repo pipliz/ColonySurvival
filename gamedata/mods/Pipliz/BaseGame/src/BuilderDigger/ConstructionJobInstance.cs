@@ -1,5 +1,5 @@
 ﻿using BlockEntities;
-using Pipliz.APIProvider.Jobs;
+using Jobs;
 
 namespace Pipliz.Mods.BaseGame.Construction
 {

@@ -1,7 +1,6 @@
-﻿using Areas;
-using BlockTypes;
+﻿using BlockTypes;
+using Jobs;
 using NPC;
-using Pipliz.APIProvider.Jobs;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -17,6 +16,8 @@ namespace Pipliz.Mods.BaseGame.Construction
 		public virtual InventoryItem RecruitmentItem { get; set; }
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
 		public virtual int ItemsFetchedAtStockpileCount { get; set; }
+		public float NPCShopGameHourMinimum { get { return TimeCycle.Settings.SleepTimeEnd; } }
+		public float NPCShopGameHourMaximum { get { return TimeCycle.Settings.SleepTimeStart; } }
 
 		// buffer for onnpcgathered npc code should be threadsafe
 		static protected List<ItemTypes.ItemTypeDrops> GatherResults = new List<ItemTypes.ItemTypeDrops>();
@@ -69,8 +70,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 			}
 
 			if (instance.ConstructionArea == null) {
-				List<IAreaJob> jobs;
-				if (AreaJobTracker.ExistingAreaAt(instance.Position.Add(-1, -1, -1), instance.Position.Add(1, 1, 1), out jobs)) {
+				if (AreaJobTracker.ExistingAreaAt(instance.Position.Add(-1, -1, -1), instance.Position.Add(1, 1, 1), out List<IAreaJob> jobs)) {
 					for (int i = 0; i < jobs.Count; i++) {
 						if (jobs[i] is ConstructionArea neighbourArea) {
 							instance.ConstructionArea = neighbourArea;
@@ -83,8 +83,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 				if (instance.ConstructionArea == null) {
 					if (instance.DidAreaPresenceTest) {
 						state.SetCooldown(0.5);
-						// todo add colony as cause
-						ServerManager.TryChangeBlock(instance.Position, 0);
+						ServerManager.TryChangeBlock(instance.Position, null, ItemTypes.Air, instance.Owner);
 					} else {
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(3f, 5f), BuiltinBlocks.ErrorIdle));
 						instance.DidAreaPresenceTest = true;
@@ -103,6 +102,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 			state.Inventory.Dump(blockJobInstance.Owner.Stockpile);
 			state.SetCooldown(0.3);
 			state.JobIsDone = true;
+			blockJobInstance.ShouldTakeItems = false;
 		}
 	}
 }

@@ -1,58 +1,20 @@
 0.7.0.0 (2018-xx-xx)
 
+---VASTLY OUT OF DATE---
+
 Known issues:
--Client crashes when alt+f4'd, on directX ingame and with Eye Adaptation enabled (workaround in place for a proper quite)
--Input issues on Ubuntu (likely)
--Projectiles slow
+-Possible input issues on Ubuntu (check this)
+-Projectiles slow/laggy
 
--0.7.0 does not load pre-0.7.0 worlds
--Removed 32-bit support
--Update Unity3D version from 5.6.5p3 to 2017.4.6f1
+-Added support for owning multiple colonies
+-Added support for a colony having multiple owners
+-Fully changed the terrain generator - much more varied terrain, quicker, less system load
+-Fully replaced the chunk saving system - quicker, less disk space, less disk writing/reading, more data, more robust
+-Added support for small height differences in farms, so flattening everything is not as needed anymore
+-0.7.0 does not support loading older worlds (0.6.3 and earlier)
+
+-Many, many internal changes, fixes & optimizations not listed here
+-Overall the game should run much better
+
+-Update Unity3D version from 5.6.5p3 to 2017.4.10f1
 -Updated .NET runtime from 3.5 to 4.6
--Updated Open.NAT library version - now has its own seperate managed dll
--Updated Steamworks.NET version - now has its own seperate managed dll
--Updated post processing stack code to a newer version (various fixes/improvements)
--Removed ICSharpCode.SharpZipLib dependency
--Signficantly changed savegame format
-| Now uses a lot less files and is a lot more robust
--Fixed some logic issues which caused inconsistent autosaving of blocks
--Generated chunks are not automatically saved anymore - only chunks that are actually edited are. Increases CPU load on subsequent world loads, but reduces world size very much.
--Fixed a very silly mistake that slowed down writing json files by 7+ times
-
-Modding changes
-- settings/serverperclient.json
-| Removed "ColonistMovementSpeed" and "StandardMonsterMovementSpeed" - they were unused
-- settings/server.json
-| Removed "MovementSpeed" from server.json - unused
-| Removed 5 settings related to Region saving - removed (no more regions)
--Removed TAttribute[] Pipliz.Extensions.GetCustomAttributes<TAttribute> (this MemberInfo type, bool inherit) - builtin .NET now
--Removed bool Pipliz.Extensions.TryGetCustomAttributes<TAttribute> (this MemberInfo type, bool inherit, out TAttribute[] result) - builtin .NET now
--Removed Pipliz.WeakReference<T> - builtin .NET now
--Removed the following classes from Pipliz.Collections.Threadsafe, use builtin classes from System.Collections.Concurrent or manual locking:
-| ThreadedList<T>, ThreadedHashSet<T>, ThreadedDictionary<T, K>
--Updated/Improved/Added the following classes frm Pipliz.Collections.Threadsafe:
-| ThreadedQueue<T>, ThreadedStack<T>
--Renamed World.ChunkCount to World.CalculateCount() - to reflect the increased complexity of its
--Removed ActiveChunks statistic (calculating it is too slow now)
--Changed saving/loading callbacks (regions don't exist anymore):
-| Removed OnSavedChunkToRegion, OnLoadedRegionFromDisk, OnLoadedChunkFromRegion, OnSavedRegionToDisk
-| OnSavedChunkToRegion has become OnSavedChunk
-| OnLoadedChunkFromRegion has become OnLoadedChunk
--Removed FileSaver.FileCompression class - was unused
--Deleted WorldConverter mod (world data changed too much)
--Removed Chunk.ShouldAutoSave {get;} - responsibility moved to the SaveManager
--Removed ChunkUpdating.AddDirty(chunk) - responsibility moved to the SaveManager
--Renamed Chunk.GetBytes() to Chunk.GetNetworkPacket() to better indicate it's use
--Removed Chunk.IChunkData methods CompressNetwork & GetCompressedDisk - they're functions on the chunk now
--Added Chunk.IChunkData.IsAir - quick way of knowing if a chunk is full air or not
--Added Chunk.ForeachData - for efficient processing of chunks in their compressed form
--Added Chunk.ForeachDataReplace - for efficiently replacing one type of block with another. Does not send updates to clients, does not trigger AI recalculations, does not register changes for complex types, beware.
--You can now send full chunk updates to clients - like Players.SendToNearbyDrawDistance(position, chunk.GetNetworkPacket(), 200000); with the chunk locked for reading
--Added ItemTypes.GetType(string) (basically short for ItemTypes.GetType(ItemTypes.IndexLookup.GetType(string)) )
--Added an EChunkLoadedSource enum to the OnShouldKeepChunkLoaded callback
--Removed crates list from stockpiles, deleted StockpileBlock and StockpileBlockTracker.
-| Colony.GetClosestStockpileCrate is still there, using ServerManager.BlockEntityCallbacks.CrateTracker underneath
--Removed BedBlock & BedBlockTracker
-| Functionality moved to ServerManager.BlockEntityCallbacks.BedTracker & BedTracker.Bed
--Removed log/leaves parenttype - log/leaves behaviour is now applied through customData attachBehaviour - see gamedata/help/types.txt
--Removed GrowableBlocks code. Replaced by BlockEntities & the APIProvider abstract base class "BaseGrowableBlockDefinition". See BaseGame growable blocks (alkanet etc) for how to use it

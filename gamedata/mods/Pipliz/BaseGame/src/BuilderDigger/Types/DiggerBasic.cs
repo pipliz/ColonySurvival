@@ -1,5 +1,5 @@
-﻿using Areas;
-using BlockTypes;
+﻿using BlockTypes;
+using Jobs;
 using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
@@ -37,8 +37,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 							continue; // skip this block, retry
 						}
 
-						// todo use colony as cause
-						if (ServerManager.TryChangeBlock(jobPosition, 0, areaJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
+						if (ServerManager.TryChangeBlock(jobPosition, foundTypeIndex, 0, areaJob.Owner, ESetBlockFlags.DefaultAudio) == EServerChangeBlockResult.Success) {
 							float blockDestructionTime = GetCooldown(foundType.DestructionTime * 0.001f);
 							GatherResults.Clear();
 							var itemList = foundType.OnRemoveItems;
@@ -46,7 +45,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 								GatherResults.Add(itemList[i]);
 							}
 
-							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as NPC.IJob, jobPosition, GatherResults);
+							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, jobPosition, GatherResults);
 
 							InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
 							if (toShow.Amount > 0) {

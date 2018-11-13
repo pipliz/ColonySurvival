@@ -1,6 +1,6 @@
 ﻿using BlockTypes;
+using Jobs;
 using NPC;
-using Pipliz.APIProvider.Jobs;
 using Science;
 using System.Collections.Generic;
 using UnityEngine.Assertions;
@@ -19,6 +19,8 @@ namespace Pipliz.Mods.BaseGame
 		public virtual string NPCTypeKey { get { return "pipliz.scientist"; } }
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
 		public InventoryItem RecruitmentItem { get { return InventoryItem.Empty; } }
+		public float NPCShopGameHourMinimum { get { return TimeCycle.Settings.SleepTimeEnd; } }
+		public float NPCShopGameHourMaximum { get { return TimeCycle.Settings.SleepTimeStart; } }
 
 		// buffer for crafting results - not threadsafe but hey npc's aren't threaded
 		static protected List<InventoryItem> craftingResults = new List<InventoryItem>();

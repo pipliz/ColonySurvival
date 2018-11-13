@@ -1,5 +1,5 @@
-﻿using NPC;
-using Pipliz.APIProvider.Jobs;
+﻿using Jobs;
+using NPC;
 using System.Collections.Generic;
 using UnityEngine;
 using static NPC.NPCBase;
@@ -13,6 +13,8 @@ namespace Pipliz.Mods.BaseGame
 		public virtual string NPCTypeKey { get; set; }
 		public virtual InventoryItem RecruitmentItem { get; set; }
 		public virtual string OnCraftedAudio { get; set; }
+		public float NPCShopGameHourMinimum { get { return TimeCycle.Settings.SleepTimeEnd; } }
+		public float NPCShopGameHourMaximum { get { return TimeCycle.Settings.SleepTimeStart; } }
 
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
 

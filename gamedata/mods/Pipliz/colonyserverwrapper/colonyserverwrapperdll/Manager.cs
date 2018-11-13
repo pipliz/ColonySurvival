@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -16,15 +16,16 @@ namespace Pipliz.ColonyServerWrapper
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnAssemblyLoaded, "pipliz.colonyserverwrapper.load")]
 		[ModLoader.ModDocumentation("Checks commandline args, sets up connection if required")]
 		static void OnLoad (string path) {
-			string logto;
-			if (UnityWrapper.CommandLineArgs.TryGetValue("+logto", out logto)) {
-				int port;
-				if (int.TryParse(logto, out port)) {
-					StartSendingLogsTo(port);
-				} else {
-					Log.Write("Could not parse {0} as port", port);
+			string[] args = Environment.GetCommandLineArgs();
+			for (int i = 1; i < args.Length; i++) {
+				if (args[i] == "+logto") {
+					if (int.TryParse(args[i + 1], out int port)) {
+						StartSendingLogsTo(port);
+					} else {
+						Log.Write($"Could not parse {args[i + 1]} as port");
+					}
+					return;
 				}
-				return;
 			}
 		}
 
@@ -48,7 +49,6 @@ namespace Pipliz.ColonyServerWrapper
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnQuitLate, "pipliz.colonyserverwrapper.dispose")]
-		[ModLoader.ModCallbackDependsOn("pipliz.server.saveworldsettings")]
 		[ModLoader.ModCallbackDependsOn("pipliz.shared.waitforasyncquits")]
 		[ModLoader.ModDocumentation("Close external socket")]
 		static void Quit ()

@@ -1,145 +1,176 @@
 ﻿using BlockTypes;
 using NPC;
+using Jobs;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
-	using APIProvider.AreaJobs;
-	using Areas;
-
 	[AreaJobDefinitionAutoLoader]
-	public class BerryFarmerDefinition : AreaJobDefinitionDefault<BerryFarmerDefinition>
+	public class BerryFarmerDefinition : AbstractAreaJobDefinition<BerryFarmerDefinition>
 	{
 		public BerryFarmerDefinition ()
 		{
-			identifier = "pipliz.berryfarm";
+			Identifier = "pipliz.berryfarm";
 			fileName = "berryfarms";
-			npcType = NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
-			areaType = Shared.EAreaType.BerryFarm;
+			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
+			AreaType = Shared.EAreaType.BerryFarm;
 		}
 
-		/// Override it to use custom berryfarmerjob, to store some per-job data
-		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		/// Override it to use custom berryfarmerjob; required for custom bush location logic
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
 			return new BerryFarmerJob(owner, min, max, npcID);
 		}
 
-		public override void CalculateSubPosition (IAreaJob rawJob, ref Vector3Int positionSub)
+		public class BerryFarmerJob : AbstractAreaJob<BerryFarmerDefinition>
 		{
-			BerryFarmerJob job = (BerryFarmerJob)rawJob;
+			// store bushlocation separately from positionSub because the berry farmer will move next to bushes (they're not equal)
+			protected Vector3Int bushLocation = Vector3Int.invalidPos;
+			protected bool checkMissingBushes = true;
+			static ItemTypes.ItemType[] yTypesBuffer = new ItemTypes.ItemType[5]; // max 3 Y + 1 below + 1 above
+			public static float HarvestCooldown = 8.5f;
 
-			Vector3Int min = job.Minimum;
-			Vector3Int max = job.Maximum;
+			public BerryFarmerJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID) { }
 
-			if (job.checkMissingBushes && job.NPC.Colony.Stockpile.Contains(BuiltinBlocks.BerryBush)) {
-				// remove legacy positions
-				for (int x = min.x + 1; x <= max.x; x += 2) {
-					for (int z = min.z; z <= max.z; z += 2) {
-						ushort type;
-						Vector3Int possiblePositionSub = new Vector3Int(x, min.y, z);
-						if (!World.TryGetTypeAt(possiblePositionSub, out type)) {
-							return;
-						}
-						if (type == BuiltinBlocks.BerryBush) {
-							job.removingOldBush = true;
-							job.bushLocation = possiblePositionSub;
-							positionSub = AI.AIManager.ClosestPosition(job.bushLocation, job.NPC.Position);
-							return;
-						}
-					}
-				}
-				// place new positions
-				for (int x = min.x; x <= max.x; x += 2) {
-					for (int z = min.z; z <= max.z; z += 2) {
-						ushort type;
-						Vector3Int possiblePositionSub = new Vector3Int(x, min.y, z);
-						if (!World.TryGetTypeAt(possiblePositionSub, out type)) {
-							return;
-						}
-						if (type == 0) {
-							job.placingMissingBush = true;
-							job.bushLocation = possiblePositionSub;
-							positionSub = AI.AIManager.ClosestPositionNotAt(job.bushLocation, job.NPC.Position);
-							return;
-						}
-					}
-				}
-				job.checkMissingBushes = false;
-			}
-
-			positionSub = min;
-			positionSub.x += Random.Next(0, (max.x - min.x) / 2 + 1) * 2;
-			positionSub.z += Random.Next(0, (max.z - min.z) / 2 + 1) * 2;
-		}
-
-		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
-
-		public override void OnNPCAtJob (IAreaJob rawJob, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
-		{
-			BerryFarmerJob job = (BerryFarmerJob)rawJob;
-
-			state.JobIsDone = true;
-			if (positionSub.IsValid) {
-				ushort type;
-				if (job.placingMissingBush) {
-					if (job.NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.BerryBush)) {
-						job.placingMissingBush = false;
-						// todo use colony as param
-						ServerManager.TryChangeBlock(job.bushLocation, BuiltinBlocks.BerryBush, rawJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio);
-						state.SetCooldown(2.0);
-					} else {
-						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
-					}
-				} else if (job.removingOldBush) {
-					// todo use colony as param
-					if (ServerManager.TryChangeBlock(job.bushLocation, 0, rawJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
-						job.NPC.Colony.Stockpile.Add(BuiltinBlocks.BerryBush);
-						job.removingOldBush = false;
-					}
-					state.SetCooldown(2.0);
-				} else if (World.TryGetTypeAt(positionSub, out type)) {
-					if (type == 0) {
-						job.checkMissingBushes = true;
-						state.SetCooldown(1.0, 4.0);
-					} else if (type == BuiltinBlocks.BerryBush) {
-						GatherResults.Clear();
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Berry, 1, 1.0));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.BerryBush, 1, 0.1));
-
-						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, rawJob as IJob, positionSub, GatherResults);
-
-						InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
-						if (toShow.Amount > 0) {
-							state.SetIndicator(new Shared.IndicatorState(8.5f, toShow.Type));
-						} else {
-							state.SetCooldown(8.5);
-						}
-
-						job.NPC.Inventory.Add(GatherResults);
-					} else {
-						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.ErrorMissing));
-					}
-				} else {
-					state.SetCooldown(Random.NextFloat(3f, 6f));
-				}
-				positionSub = Vector3Int.invalidPos;
-			} else {
-				state.SetCooldown(10.0);
-			}
-		}
-
-		/// <summary>
-		/// Simple wrapper to have some per-job data
-		/// </summary>
-		class BerryFarmerJob : DefaultFarmerAreaJob<BerryFarmerDefinition>
-		{
-			public Vector3Int bushLocation = Vector3Int.invalidPos;
-			public bool checkMissingBushes = true;
-			public bool placingMissingBush = false;
-			public bool removingOldBush = false;
-
-			public BerryFarmerJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID)
+			public override void CalculateSubPosition ()
 			{
+				ThreadManager.AssertIsMainThread();
 
+				Vector3Int min = Minimum;
+				Vector3Int max = Maximum;
+				int ySize = max.y - min.y + 1;
+				if (checkMissingBushes && NPC.Colony.Stockpile.Contains(BuiltinBlocks.BerryBush)) {
+					for (int x = min.x; x <= max.x; x += 2) {
+						for (int z = min.z; z <= max.z; z += 2) {
+							for (int y = -1; y <= ySize; y++) {
+								if (!World.TryGetTypeAt(new Vector3Int(x, min.y + y, z), out yTypesBuffer[y + 1])) {
+									goto DUMB_RANDOM;
+								}
+							}
+
+							for (int y = 0; y < ySize; y++) {
+								ItemTypes.ItemType typeBelow = yTypesBuffer[y];
+								ItemTypes.ItemType type = yTypesBuffer[y + 1];
+								ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
+
+								if (typeAbove.BlocksPathing || !typeBelow.IsFertile) {
+									continue; // check next Y layer
+								}
+								Vector3Int pos = new Vector3Int(x, min.y + y, z);
+
+								if (type == ItemTypes.Air) {
+									bushLocation = pos;
+									positionSub = AI.AIManager.ClosestPositionNotAt(bushLocation, NPC.Position);
+									return;
+								}
+							}
+						}
+					}
+					checkMissingBushes = false;
+				}
+
+				for (int i = 0; i < 5; i++) {
+					// give the random positioning 5 chances to become valid
+					Vector3Int test = min.Add(
+						Random.Next(0, (max.x - min.x) / 2 + 1) * 2,
+						0,
+						Random.Next(0, (max.z - min.z) / 2 + 1) * 2
+					);
+
+					for (int y = -1; y <= ySize; y++) {
+						if (!World.TryGetTypeAt(test.Add(0, y, 0), out yTypesBuffer[y + 1])) {
+							goto DUMB_RANDOM;
+						}
+					}
+
+					for (int y = 0; y < ySize; y++) {
+						ItemTypes.ItemType typeBelow = yTypesBuffer[y];
+						ItemTypes.ItemType type = yTypesBuffer[y + 1];
+						ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
+
+						if (typeAbove.BlocksPathing || !typeBelow.IsFertile) {
+							continue; // check next Y layer
+						}
+						if (type.ItemIndex == BuiltinBlocks.BerryBush) {
+							positionSub = test.Add(0, y, 0);
+							return;
+						}
+
+						if (type.ItemIndex == 0) {
+							checkMissingBushes = true;
+							bushLocation = test.Add(0, y, 0);
+							positionSub = AI.AIManager.ClosestPositionNotAt(bushLocation, NPC.Position);
+							return;
+						}
+					}
+				}
+
+				DUMB_RANDOM:
+				positionSub = min.Add(
+					Random.Next(0, (max.x - min.x) / 2 + 1) * 2,
+					(max.x - min.x) / 2,
+					Random.Next(0, (max.z - min.z) / 2 + 1) * 2
+				);
+			}
+
+			static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
+			public override void OnNPCAtJob (ref NPCBase.NPCState state)
+			{
+				ThreadManager.AssertIsMainThread();
+				state.JobIsDone = true;
+				if (!positionSub.IsValid) {
+					// likely moving in unloaded chunks
+					state.SetCooldown(10.0);
+					return;
+				}
+
+				Vector3Int pos = bushLocation.IsValid ? bushLocation : positionSub;
+				positionSub = Vector3Int.invalidPos; // mark position invalid to force sub location recalculation after this job
+
+				ushort type;
+				if (!World.TryGetTypeAt(pos, out type)) {
+					state.SetCooldown(10.0);
+					return;
+				}
+
+				if (type == BuiltinBlocks.BerryBush) {
+					// at bush, harvesting
+					GatherResults.Clear();
+					GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Berry, 1, 1.0));
+					GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.BerryBush, 1, 0.1));
+
+					ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, pos, GatherResults);
+
+					InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+					if (toShow.Amount > 0) {
+						state.SetIndicator(new Shared.IndicatorState(HarvestCooldown, toShow.Type));
+					} else {
+						state.SetCooldown(HarvestCooldown);
+					}
+
+					NPC.Inventory.Add(GatherResults);
+					return;
+				}
+
+
+				if (type == 0 && pos >= Minimum && pos <= Maximum) {
+					if (World.TryGetTypeAt(pos.Add(0, -1, 0), out ItemTypes.ItemType typeBelow)) {
+						if (typeBelow.IsFertile) {
+							if (NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.BerryBush)) {
+								ServerManager.TryChangeBlock(pos, 0, BuiltinBlocks.BerryBush, Owner, ESetBlockFlags.DefaultAudio);
+								state.SetCooldown(2.0);
+							} else {
+								state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 14f), BuiltinBlocks.BerryBush, true, false));
+							}
+							return;
+						}
+					} else {
+						state.SetCooldown(10.0);
+						return;
+					}
+				}
+				// ? nothing to do at this position
+				state.SetCooldown(Random.NextFloat(3f, 6f));
 			}
 		}
 	}

@@ -26,9 +26,9 @@ namespace Pipliz.Mods.BaseGame.Researches
 
 			if (reason == EResearchCompletionReason.ProgressCompleted) {
 				manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WheatStage1, 400);
-				for (int i = 0; i < manager.Colony.Owners.Length; i++) {
-					if (manager.Colony.Owners[i].ShouldSendData) {
-						Chatting.Chat.Send(manager.Colony.Owners[i], "You received 400 wheat seeds!");
+				foreach (var owner in manager.Colony.Owners) {
+					if (owner.ShouldSendData) {
+						Chatting.Chat.Send(owner, "You received 400 wheat seeds!");
 					}
 				}
 			}

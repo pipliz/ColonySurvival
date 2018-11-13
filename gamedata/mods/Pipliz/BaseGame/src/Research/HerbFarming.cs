@@ -22,9 +22,9 @@ namespace Pipliz.Mods.BaseGame.Researches
 				manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.AlkanetStage1, 100);
 				manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.HollyhockStage1, 100);
 				manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WolfsbaneStage1, 100);
-				for (int i = 0; i < manager.Colony.Owners.Length; i++) {
-					if (manager.Colony.Owners[i].ShouldSendData) {
-						Chatting.Chat.Send(manager.Colony.Owners[i], "You received 100 Alkanet, Hollyhock and Wolfsbane seeds!");
+				foreach (var owner in manager.Colony.Owners) {
+					if (owner.ShouldSendData) {
+						Chatting.Chat.Send(owner, "You received 100 Alkanet, Hollyhock and Wolfsbane seeds!");
 					}
 				}
 			}

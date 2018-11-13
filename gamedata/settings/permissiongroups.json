@@ -1,8 +1,8 @@
 {
 	"defaults" : {
-		"normal" : "peasant",
 		"console" : "god",
 		"localhost" : "localhost",
+		"normal" : "peasant",
 		"permissions" : [
 			"printbiome",
 			"getlimit",
@@ -33,27 +33,6 @@
 			"blacklist.remove"
 		]
 	},
-	"peasant" : {
-		"permissions" : [
-			"printbiome",
-			"getlimit",
-			"setlimit",
-			"resetlimit"
-		]
-	},
-	"king" : {
-		"includes" : [
-			"peasant"
-		],
-		"permissions" : [
-			"loot",
-			"time.add",
-			"teleport.position",
-			"teleport.banner",
-			"health.set",
-			"setflight"
-		]
-	},
 	"emperor" : {
 		"includes" : [
 			"king"
@@ -69,6 +48,11 @@
 			"blacklist.remove"
 		]
 	},
+	"god" : {
+		"permissions" : [
+			""
+		]
+	},
 	"godemperor" : {
 		"includes" : [
 			"emperor"
@@ -77,9 +61,17 @@
 			"permissions"
 		]
 	},
-	"god" : {
+	"king" : {
+		"includes" : [
+			"peasant"
+		],
 		"permissions" : [
-			""
+			"loot",
+			"time.add",
+			"teleport.position",
+			"teleport.banner",
+			"health.set",
+			"setflight"
 		]
 	},
 	"localhost" : {
@@ -88,6 +80,14 @@
 		],
 		"permissions" : [
 			"cheats.enable"
+		]
+	},
+	"peasant" : {
+		"permissions" : [
+			"printbiome",
+			"getlimit",
+			"setlimit",
+			"resetlimit"
 		]
 	}
 }

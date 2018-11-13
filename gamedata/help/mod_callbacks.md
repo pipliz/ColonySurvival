@@ -19,9 +19,7 @@ CallbackType: `AfterModsLoaded`
 Signature: void (List<ModLoader.ModAssembly> a)
 Arg a: the loaded assemblies
 Called after parsing all modinfo files
-## Registered callbacks: 1
-0.	`pipliz.mods.apiprovider.areajobs.findattributes`
-		_Finds types marked with AreaJobDefinitionAutoLoaderAttribute_
+No registered uses
 
 
 CallbackType: `OnItemTypeRegistered`
@@ -60,23 +58,17 @@ CallbackType: `AfterSelectedWorld`
 ## Description
 Signature: void ()
 First callback after the world to load has been determined
-## Registered callbacks: 7
+## Registered callbacks: 6
 0.	`pipliz.server.applytexturemappingpatches`
-		Provides For 4. `pipliz.server.registertexturemappingtextures`
+		Provides For 2. `pipliz.server.registertexturemappingtextures`
 		_Waits for texture mapping patches to load, then merges them._
-1.	`pipliz.server.registeraudiofiles`
-		_Loads the audioFiles.json file_
-2.	`pipliz.server.loadaudiofiles`
-		Depends On 1. `pipliz.server.registeraudiofiles`
-		_Processes the ItemTypesServer.AudioFiles json_
-3.	`pipliz.server.registernpctextures`
-		_Registers the default npc texture files_
-4.	`pipliz.server.registertexturemappingtextures`
+1.	`pipliz.server.loadaudiofiles`
+2.	`pipliz.server.registertexturemappingtextures`
 		_Registers the texture mapping files to load (from the registered texturemappings)_
-5.	`pipliz.server.registerwatertextures`
-		_Registers the default water texture files_
-6.	`pipliz.startloaddifficulty`
+3.	`pipliz.startloaddifficulty`
 		_Starts loading the difficulty json files_
+4.	`registernpctextures`
+5.	`registerwatertextures`
 
 
 CallbackType: `AfterAddingBaseTypes`
@@ -84,9 +76,7 @@ CallbackType: `AfterAddingBaseTypes`
 ## Description
 Signature: void (Dictionary<string, ItemTypesServer.ItemTypeRaw> a)
 Arg a: Loaded items that are about to be parsed - add/remove types here
-## Registered callbacks: 1
-0.	`pipliz.blocknpcs.addlittypes`
-		_Creates some lit/rotatable types - furnace/torch etc_
+No registered uses
 
 
 CallbackType: `AfterItemTypesDefined`
@@ -94,79 +84,79 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 23
-0.	`create_servermanager_trackers`
+## Registered callbacks: 24
+0.	`pipliz.server.loadnpctypes`
+1.	`areajobs.insertattributed`
+		Depends On 0. `pipliz.server.loadnpctypes`
+		Provides For 18. `pipliz.server.loadareajobs`
+		_Finds & registers areajobdefs marked AreaJobDefinitionAutoLoaderAttribute_
+2.	`create_servermanager_trackers`
 		_Starts Various trackers and singletons saved in the servermanager_
-1.	`blockentitycallback.autoloaders`
-		Depends On 0. `create_servermanager_trackers`
-		Provides For 12. `create_savemanager`
+3.	`blockentitycallback.autoloaders`
+		Depends On 2. `create_servermanager_trackers`
+		Provides For 15. `create_savemanager`
 		_Calls BlockEntityCallbacks.SearchAssembliesForAutoLoaders - instantiating classes with the IBlockEntityAutoLoaderBase type interfaces_
 		_Provides for create_savemanager as possibly loaded entities must be registered before it_
-2.	`pipliz.server.terraingenerator.setdefault`
-		_Sets the default terrain generator to TerrainGenerator.UsedGenerator_
-3.	`pipliz.server.registerdefaultdifficulty`
-		Provides For 8. `pipliz.server.loadplayers`
+4.	`chunk_dedupe_initializer`
+5.	`pipliz.server.registerdefaultdifficulty`
+		Provides For 13. `pipliz.server.loadplayers`
 		_Registers the default difficulty to the DifficultyManager. ProvidesFor loadplayers so that loading the difficulty per player works._
-4.	`pipliz.endloaddifficulty`
-		Provides For 8. `pipliz.server.loadplayers`
+6.	`pipliz.endloaddifficulty`
+		Provides For 13. `pipliz.server.loadplayers`
 		_Awaits the difficulty json files to be loaded_
 		_You can edit the difficulties on DifficultySetting.Cooldowns / Keys after this callback (but before loadplayers)_
-5.	`pipliz.server.recipeplayerload`
-		Provides For 7. `pipliz.server.loadresearchables`
+7.	`register.basegame.blockjobs`
+		Depends On 2. `create_servermanager_trackers`
+		Provides For 9. `pipliz.blocknpcs.registerjobs`
+8.	`register.blockjobs`
+		Depends On 2. `create_servermanager_trackers`
+		Provides For 9. `pipliz.blocknpcs.registerjobs`
+9.	`pipliz.blocknpcs.registerjobs`
+		Depends On 2. `create_servermanager_trackers`
+		Provides For 15. `create_savemanager`
+		_Adds all the job block implementations to BlockJobManagerTracker_
+10.	`pipliz.server.recipeplayerload`
+		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for recipe patches to load, then merges them_
-6.	`pipliz.server.recipenpcload`
-		Provides For 7. `pipliz.server.loadresearchables`
+11.	`pipliz.server.recipenpcload`
+		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for npc recipe patches to complete loading, then merges and registers them_
-7.	`pipliz.server.loadresearchables`
-		Depends On 0. `create_servermanager_trackers`
-		Provides For 8. `pipliz.server.loadplayers`
+12.	`pipliz.server.loadresearchables`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 9. `pipliz.blocknpcs.registerjobs`
+		Provides For 13. `pipliz.server.loadplayers`
 		_Load & resolve researchable configs_
-8.	`pipliz.server.loadplayers`
-		Provides For 12. `create_savemanager`
+13.	`pipliz.server.loadplayers`
+		Provides For 15. `create_savemanager`
 		_Starts loading player data_
-9.	`pipliz.server.loadnpctypes`
-		_Loads gamedata/npctypes.json_
-10.	`pipliz.server.loadcolonies`
-		Depends On 0. `create_servermanager_trackers`
-		Depends On 9. `pipliz.server.loadnpctypes`
-		Depends On 8. `pipliz.server.loadplayers`
+14.	`pipliz.server.loadcolonies`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 0. `pipliz.server.loadnpctypes`
+		Depends On 13. `pipliz.server.loadplayers`
 		_Starts loading the colony data_
 		_Includes loading the stockpiles (part of colony afer all)_
 		_Includes loading npc's_
 		_Depends on players load so it can resolve owner data_
-11.	`pipliz.blocknpcs.registerjobs`
-		Depends On 0. `create_servermanager_trackers`
-		Provides For 12. `create_savemanager`
-		_Adds all the job block implementations to BlockJobManagerTracker_
-12.	`create_savemanager`
-		Depends On 10. `pipliz.server.loadcolonies`
-		Depends On 2. `pipliz.server.terraingenerator.setdefault`
+15.	`create_savemanager`
+		Depends On 14. `pipliz.server.loadcolonies`
 		_Starts ServerManager.SaveManager_
 		_Starts loading the index of the chunk storage_
-		_Depends on the terrain generator because loaded banners may start loading chunks_
-13.	`pipliz.blocknpcs.registerchangetypes`
-		_Registers changetypes for created blocks from pipliz.blocknpcs.addlittypes_
-14.	`pipliz.mods.apiprovider.areajobs.insertattributed`
-		Depends On 9. `pipliz.server.loadnpctypes`
-		Provides For 16. `pipliz.server.loadareajobs`
-		_Creates instance of registered IAreaJobDefinition and registers those to AreaJobTracker_
-15.	`pipliz.server.blackandwhitelistingreload`
+16.	`find_auto_chatcommands`
+17.	`pipliz.server.blackandwhitelistingreload`
 		_Loads the black & whitelist settings_
-16.	`pipliz.server.loadareajobs`
+18.	`pipliz.server.loadareajobs`
 		_Load all registered areajobs' files_
-17.	`pipliz.server.loadpermissions`
+19.	`pipliz.server.loadpermissions`
 		_Load permissions_
-18.	`pipliz.server.loadtimecycle`
+20.	`pipliz.server.loadtimecycle`
 		_Sets the TimeCycle time, loading from ServerManager.WorldSettings_
-19.	`pipliz.server.loadwater`
+21.	`pipliz.server.loadwater`
 		_Starts loading water blocks_
-20.	`pipliz.server.registercallbacks`
-		_Registers base block callbacks (water, crate, beds, those things) to ItemTypesServer_
-21.	`pipliz.server.registermonstertextures`
-		Depends On 9. `pipliz.server.loadnpctypes`
+22.	`pipliz.server.registermonstertextures`
+		Depends On 0. `pipliz.server.loadnpctypes`
 		_Registers monster textures from registered NPCTypes_
-22.	`wait_complete_startup_chunks`
-		Depends On 12. `create_savemanager`
+23.	`wait_complete_startup_chunks`
+		Depends On 15. `create_savemanager`
 		_Waits for the savemanager to complete loading its index & the startup chunks_
 
 
@@ -176,7 +166,7 @@ CallbackType: `AfterWorldLoad`
 Signature: void ()
 After all misc data is loaded (structures, npcs, player data, etc)
 Does not mean chunks are loaded though
-## Registered callbacks: 5
+## Registered callbacks: 6
 0.	`pipliz.server.ai.aimanager.defaultpathfinder`
 		_Registers the default pathfinder to AIManager.ZombiePathFinder and AIManager.NPCPathFinder_
 1.	`pipliz.server.localization.convert`
@@ -187,6 +177,7 @@ Does not mean chunks are loaded though
 		_Registers the default monsterspawner to MonsterTracker.MonsterSpawner_
 4.	`save_recipemapping`
 		_Saves the recipe mapping table if it's changed_
+5.	`start_generator`
 
 
 CallbackType: `AfterNetworkSetup`
@@ -212,7 +203,7 @@ CallbackType: `OnUpdate`
 ## Description
 Signature: void ()
 In the middle of unity's Update method.
-## Registered callbacks: 4
+## Registered callbacks: 5
 0.	`pipliz.colonyserverwrapper.process`
 		_Processes packets from external socket_
 1.	`pipliz.server.chunkupdater`
@@ -221,6 +212,7 @@ In the middle of unity's Update method.
 		_Counts framerate for /tps_
 3.	`pipliz.server.updatetimecycle`
 		_Updates TimeCycle_
+4.	`update_water`
 
 
 CallbackType: `OnUpdateEnd`
@@ -230,14 +222,6 @@ Signature: void ()
 At the end of unity's Update method.
 ## Registered callbacks: 1
 0.	`pipliz.server.senddirtystockpiles`
-
-
-CallbackType: `OnGUI`
-=======
-## Description
-Signature: void ()
-Unity's OnGUI method. See unity documentation.
-No registered uses
 
 
 CallbackType: `OnFixedUpdate`
@@ -281,9 +265,10 @@ CallbackType: `OnPlayerConnectedEarly`
 Signature: void (Players.Player a)
 Arg a: The player that is connecting.
 Early on in the player connection process - the player is probably not ready to receive messages yet
-## Registered callbacks: 1
+## Registered callbacks: 2
 0.	`pipliz.server.sendinitialtime`
 		_Sends the time and heartbeat to the player early on_
+1.	`pipliz.server.start_loadsurroundings`
 
 
 CallbackType: `OnPlayerDisconnected`
@@ -291,8 +276,7 @@ CallbackType: `OnPlayerDisconnected`
 ## Description
 Signature: void (Players.Player a)
 Arg a: The player that disconnected.
-## Registered callbacks: 1
-0.	`resetplayersurroundingcache`
+No registered uses
 
 
 CallbackType: `OnSavingPlayer`
@@ -332,7 +316,7 @@ CallbackType: `OnQuit`
 ## Description
 Signature: void ()
 Called in the quit method queue (Application.OnQuit 0)
-## Registered callbacks: 6
+## Registered callbacks: 7
 0.	`pipliz.jointhreads`
 1.	`pipliz.server.saveareajobs`
 		_Save all registered areajobs' files_
@@ -341,9 +325,12 @@ Called in the quit method queue (Application.OnQuit 0)
 3.	`pipliz.server.saveplayers`
 		_Starts saving all dirty-marked players_
 4.	`pipliz.server.savetimecycle`
+		Provides For 6. `pipliz.server.saveworldsettings`
 		_Saves the time to ServerManager.WorldSettings_
 5.	`pipliz.server.savewater`
 		_Saves water data_
+6.	`pipliz.server.saveworldsettings`
+		_Saves ServerManager.WorldSettings_
 
 
 CallbackType: `OnQuitLate`
@@ -351,14 +338,11 @@ CallbackType: `OnQuitLate`
 ## Description
 Signature: void ()
 Called late in the quit method queue (Application.OnQuit 100)
-## Registered callbacks: 3
-0.	`pipliz.server.saveworldsettings`
-		_Saves ServerManager.WorldSettings_
-1.	`pipliz.shared.waitforasyncquits`
+## Registered callbacks: 2
+0.	`pipliz.shared.waitforasyncquits`
 		_Waits for async items to complete (mostly from autosaving)_
-2.	`pipliz.colonyserverwrapper.dispose`
-		Depends On 0. `pipliz.server.saveworldsettings`
-		Depends On 1. `pipliz.shared.waitforasyncquits`
+1.	`pipliz.colonyserverwrapper.dispose`
+		Depends On 0. `pipliz.shared.waitforasyncquits`
 		_Close external socket_
 
 
@@ -381,13 +365,11 @@ No registered uses
 CallbackType: `OnPlayerMoved`
 =======
 ## Description
-Signature: void (Players.Player a)
-Arg a: The player that moved.
+Signature: void (Players.Player a, Vector3 oldPosition)
 Called approx 6 times per second per player. New position/rotation is set on the Players.Player argument.
-## Registered callbacks: 2
+## Registered callbacks: 1
 0.	`pipliz.server.loadsurroundings`
 		_Queues up chunks to load if the player moves to other chunks_
-1.	`recalculate_activecolony`
 
 
 CallbackType: `OnTryChangeBlock`
@@ -421,7 +403,7 @@ CallbackType: `OnPlayerConnectedLate`
 Signature: void (Players.Player a)
 Arg a: The Player that is connecting
 Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed till after the client is done loading.
-## Registered callbacks: 6
+## Registered callbacks: 5
 0.	`pipliz.networkmenumanager`
 		_Sends some networkui menu's to the player. Triggers some callbacks internally_
 1.	`pipliz.server.meshedobjects.sendtable`
@@ -432,8 +414,6 @@ Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed 
 		_Sends the registered NPCType settings to the player_
 4.	`pipliz.server.sendsetflight`
 		_Send player flight state_
-5.	`pipliz.server.terraingenerator.startsendingbiomedata`
-		_Starts sending biome data to players (for background looped audio_
 
 
 CallbackType: `OnAddResearchables`
@@ -667,8 +647,11 @@ CallbackType: `AddItemTypes`
 Signature: void (Dictionary<string, ItemTypesServer.ItemTypeRaw> dict)
 Basically same as 'AfterAddingBaseTypes'
 Mostly used to add...the base types, so that the other callback is correctly named :)
-## Registered callbacks: 1
-0.	`pipliz.server.applymoditempatches`
+## Registered callbacks: 2
+0.	`pipliz.blocknpcs.addlittypes`
+		Provides For 1. `pipliz.server.applymoditempatches`
+		_Creates some lit/rotatable types - furnace/torch etc_
+1.	`pipliz.server.applymoditempatches`
 		_Waits for itemtype patches to load, then merges/registers them to the dict_
 
 
@@ -726,11 +709,11 @@ CallbackType: `OnActiveColonyChanges`
 ## Description
 Signature: void(Players.Player player, Colony previouslyActiveColony, Colony newActiveColony)
 Called when the active colony changes
-## Registered callbacks: 3
+## Registered callbacks: 4
 0.	`onchange`
-		_Logs the change for debugging_
-1.	`sendconstructiondata`
-2.	`sendresearch`
+1.	`resend_areajobs`
+2.	`sendconstructiondata`
+3.	`sendresearch`
 
 
 CallbackType: `OnSavingColony`
@@ -761,5 +744,17 @@ Called when loading a colony
 3.	`loadrecipesettings`
 4.	`loadscience`
 5.	`loadstockpile`
+
+
+CallbackType: `OnLoadingTerrainGenerator`
+=======
+## Description
+Signature: void(TerrainGeneratorBase terrainGen)
+Called from the terrain generator thread, intended to load the tree files
+## Registered callbacks: 3
+0.	`apply_metabiome_patches`
+1.	`load_structure_patches`
+2.	`load_biome_patches`
+		Depends On 1. `load_structure_patches`
 
 

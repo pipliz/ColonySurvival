@@ -1,0 +1,415 @@
+[
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.bronzeanvil",
+			"pipliz.baseresearch.flaxfarming"
+		],
+		"icon" : "gamedata/textures/icons/bow.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"amount":3,"type":"bronzearrow"},
+			{"type":"bowstring"}
+		],
+		"key" : "pipliz.baseresearch.archery",
+		"unlocksRecipes" : [
+			"pipliz.crafter.bow"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.kiln"
+		],
+		"icon" : "gamedata/textures/icons/bloomery.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"}
+		],
+		"key" : "pipliz.baseresearch.bloomery",
+		"unlocksRecipes" : [
+			"pipliz.crafter.bloomery",
+			"pipliz.player.bloomery"
+		]
+	},
+	{
+		"icon" : "gamedata/textures/icons/bronzeanvil.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"bronzeingot"},
+			{"type":"coppertools"},
+			{"type":"coppernails"}
+		],
+		"key" : "pipliz.baseresearch.bronzeanvil",
+		"unlocksRecipes" : [
+			"pipliz.crafter.bronzeanvil",
+			"pipliz.player.bronzeanvil"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
+		"icon" : "gamedata/textures/icons/bronzecoin.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"bronzeingot"}
+		],
+		"key" : "pipliz.baseresearch.bronzeminting",
+		"unlocksRecipes" : [
+			"pipliz.crafter.mint",
+			"pipliz.crafter.shop",
+			"pipliz.player.mint",
+			"pipliz.player.shop"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.crossbowbolt"
+		],
+		"icon" : "gamedata/textures/icons/crossbow.png",
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"sciencebagmilitary"}
+		],
+		"key" : "pipliz.baseresearch.crossbow",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.crossbow"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagmilitary"
+		],
+		"icon" : "gamedata/textures/icons/crossbowbolt.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"sciencebagmilitary"}
+		],
+		"key" : "pipliz.baseresearch.crossbowbolt",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.crossbowbolt"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.herbfarming"
+		],
+		"icon" : "gamedata/textures/icons/dyertable.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"hollyhock"}
+		],
+		"key" : "pipliz.baseresearch.dyertable",
+		"unlocksRecipes" : [
+			"pipliz.crafter.dyertable",
+			"pipliz.player.dyertable"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.bloomery"
+		],
+		"icon" : "gamedata/textures/icons/fineryforge.png",
+		"iterationCount" : 50,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"ironwrought"}
+		],
+		"key" : "pipliz.baseresearch.fineryforge",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.fineryforge"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.gunsmithshop"
+		],
+		"icon" : "gamedata/textures/icons/gunpowder.png",
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"salpeter"},
+			{"type":"sciencebagmilitary"}
+		],
+		"key" : "pipliz.baseresearch.gunpowder",
+		"unlocksRecipes" : [
+			"pipliz.gunsmith.gunpowder",
+			"pipliz.gunsmith.gunpowderpouch"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.fineryforge",
+			"pipliz.baseresearch.sciencebagmilitary"
+		],
+		"icon" : "gamedata/textures/icons/gunsmithshop.png",
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"lead"},
+			{"type":"sciencebagmilitary"}
+		],
+		"key" : "pipliz.baseresearch.gunsmithshop",
+		"unlocksRecipes" : [
+			"pipliz.crafter.gunsmithshop",
+			"pipliz.player.gunsmithshop"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
+		"icon" : "gamedata/textures/icons/kiln.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"bronzeplate"}
+		],
+		"key" : "pipliz.baseresearch.kiln",
+		"unlocksRecipes" : [
+			"pipliz.crafter.kiln",
+			"pipliz.player.kiln"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.bloomery"
+		],
+		"icon" : "gamedata/textures/icons/lanternyellow.png",
+		"iterationCount" : 5,
+		"iterationRequirements" : [
+			{"amount":5,"type":"sciencebagbasic"},
+			{"type":"ironrivet"},
+			{"type":"crystal"}
+		],
+		"key" : "pipliz.baseresearch.lantern",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.lanternyellow",
+			"pipliz.dyer.lanternwhite",
+			"pipliz.dyer.lanterngreen",
+			"pipliz.dyer.lanternblue",
+			"pipliz.dyer.lanternred",
+			"pipliz.dyer.lanternorange",
+			"pipliz.dyer.lanterncyan",
+			"pipliz.dyer.lanternpink"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.gunpowder"
+		],
+		"icon" : "gamedata/textures/icons/matchlockgun.png",
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"leadbullet"},
+			{"type":"gunpowderpouch"},
+			{"type":"sciencebagmilitary"}
+		],
+		"key" : "pipliz.baseresearch.matchlockgun",
+		"unlocksRecipes" : [
+			"pipliz.gunsmith.matchlockgun"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.dyertable"
+		],
+		"icon" : "gamedata/textures/icons/quarterblockwhite.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"gypsum"},
+			{"type":"charcoal"}
+		],
+		"key" : "pipliz.baseresearch.quarterblockdyer",
+		"unlocksRecipes" : [
+			"pipliz.dyer.quarterblockblack",
+			"pipliz.dyer.quarterblockwhite"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.splittingstump"
+		],
+		"icon" : "gamedata/textures/icons/quarterblockbrownlight.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"}
+		],
+		"key" : "pipliz.baseresearch.quarterblocksplittingstump",
+		"unlocksRecipes" : [
+			"pipliz.woodcutter.quarterblockbrowndark",
+			"pipliz.woodcutter.quarterblockbrownlight"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.stonemasonworkbench"
+		],
+		"icon" : "gamedata/textures/icons/quarterblockgrey.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"}
+		],
+		"key" : "pipliz.baseresearch.quarterblockstonemason",
+		"unlocksRecipes" : [
+			"pipliz.stonemason.quarterblockgrey"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.gunpowder"
+		],
+		"icon" : "gamedata/textures/icons/sciencebagadvanced.png",
+		"iterationCount" : 5,
+		"iterationRequirements" : [
+			{"type":"steelparts"},
+			{"type":"gunpowderpouch"},
+			{"type":"silveringot"},
+			{"type":"linenbag"}
+		],
+		"key" : "pipliz.baseresearch.sciencebagadvanced",
+		"unlocksRecipes" : [
+			"pipliz.technologist.sciencebagadvanced"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.technologisttable"
+		],
+		"icon" : "gamedata/textures/icons/sciencebagbasic.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"linenbag"},
+			{"type":"coppertools"},
+			{"type":"bronzeplate"},
+			{"amount":3,"type":"bricks"}
+		],
+		"key" : "pipliz.baseresearch.sciencebagbasic",
+		"unlocksRecipes" : [
+			"pipliz.technologist.sciencebagbasic"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.matchlockgun"
+		],
+		"icon" : "gamedata/textures/icons/sciencebagcolony.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"bronzeanvil"},
+			{"type":"fineryforge"},
+			{"type":"matchlockgun"},
+			{"type":"linenbag"}
+		],
+		"key" : "pipliz.baseresearch.sciencebagcolony",
+		"unlocksRecipes" : [
+			"pipliz.technologist.sciencebagcolony"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.technologisttable",
+			"pipliz.baseresearch.wheatfarming"
+		],
+		"icon" : "gamedata/textures/icons/sciencebaglife.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"flour"},
+			{"amount":5,"type":"berry"},
+			{"type":"clothing"},
+			{"type":"linenbag"}
+		],
+		"key" : "pipliz.baseresearch.sciencebaglife",
+		"unlocksRecipes" : [
+			"pipliz.technologist.sciencebaglife"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.technologisttable",
+			"pipliz.baseresearch.bloomery",
+			"pipliz.baseresearch.archery"
+		],
+		"icon" : "gamedata/textures/icons/sciencebagmilitary.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"ironsword"},
+			{"amount":5,"type":"bronzearrow"},
+			{"type":"bow"},
+			{"type":"linenbag"}
+		],
+		"key" : "pipliz.baseresearch.sciencebagmilitary",
+		"unlocksRecipes" : [
+			"pipliz.technologist.sciencebagmilitary"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
+		"icon" : "gamedata/textures/icons/splittingstump.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"bronzeaxe"}
+		],
+		"key" : "pipliz.baseresearch.splittingstump",
+		"unlocksRecipes" : [
+			"pipliz.crafter.splittingstumptemperate",
+			"pipliz.crafter.splittingstumptaiga",
+			"pipliz.player.splittingstumptemperate",
+			"pipliz.player.splittingstumptaiga"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
+		"icon" : "gamedata/textures/icons/stonemasonworkbench.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"}
+		],
+		"key" : "pipliz.baseresearch.stonemasonworkbench",
+		"unlocksRecipes" : [
+			"pipliz.crafter.stonemasonworkbench",
+			"pipliz.player.stonemasonworkbench"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.flaxfarming"
+		],
+		"icon" : "gamedata/textures/icons/tailorshop.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"coatedplanks"},
+			{"type":"flax"},
+			{"type":"coppertools"}
+		],
+		"key" : "pipliz.baseresearch.tailorshop",
+		"unlocksRecipes" : [
+			"pipliz.crafter.tailorshop",
+			"pipliz.player.tailorshop"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.tailorshop"
+		],
+		"icon" : "gamedata/textures/icons/technologisttable.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"coatedplanks"},
+			{"amount":2,"type":"bronzeplate"},
+			{"type":"coppernails"}
+		],
+		"key" : "pipliz.baseresearch.technologisttable",
+		"unlocksRecipes" : [
+			"pipliz.crafter.technologisttable",
+			"pipliz.player.technologisttable"
+		]
+	}
+]

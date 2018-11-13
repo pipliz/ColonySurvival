@@ -1,30 +1,29 @@
 ﻿using BlockTypes;
+using Jobs;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
-	using APIProvider.AreaJobs;
-	using Areas;
-
 	[AreaJobDefinitionAutoLoader]
-	public class Alkanet : AreaJobDefinitionDefault<Alkanet>
+	public class Alkanet : AbstractFarmAreaJobDefinition<Alkanet>
 	{
 		public Alkanet ()
 		{
-			identifier = "pipliz.alkanetfarm";
-			fileName = "alkanetfarms";
-			stages = new ushort[] {
+			Identifier = "pipliz.alkanetfarm";
+			UsedNPCType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.alkanetfarmer");
+			AreaType = Shared.EAreaType.AlkanetFarm;
+			Stages = new ushort[] {
 				BuiltinBlocks.AlkanetStage1,
 				BuiltinBlocks.AlkanetStage2
 			};
-			npcType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.alkanetfarmer");
-			areaType = Shared.EAreaType.AlkanetFarm;
+			fileName = "alkanetfarms";
 		}
 
-		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
-			// todo: use colony as param of setlayer
-			SetLayer(min, max, BuiltinBlocks.Dirt, -1, owner.Owners[0]);
-			return base.CreateAreaJob(owner, min, max, npcID);
+			if (!isLoaded) {
+				TurnArableIntoDirt(min, max, owner);
+			}
+			return new FarmAreaJob<Alkanet>(owner, min, max, npcID);
 		}
 	}
 }

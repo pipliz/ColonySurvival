@@ -1,0 +1,141 @@
+[
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#2a2aac",
+		"typeName" : "minerjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#474747",
+		"typeName" : "guardslingerdayjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#474747",
+		"typeName" : "guardslingernightjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#c3621b",
+		"typeName" : "guardbowdayjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#c3621b",
+		"typeName" : "guardbownightjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#919dba",
+		"typeName" : "guardcrossbowdayjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#919dba",
+		"typeName" : "guardcrossbownightjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#e5e960",
+		"typeName" : "guardmatchlockdayjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#e5e960",
+		"typeName" : "guardmatchlocknightjob"
+	},
+	{
+		"generateType" : "jobOutline",
+		"outlineColor" : "#911616",
+		"typeName" : "constructionjob"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"destructionTime" : 800,
+			"icon" : "gamedata/textures/icons/furnace.png",
+			"onPlaceAudio" : "stonePlace",
+			"onRemoveAudio" : "stoneDelete",
+			"sideall" : "furnaceside"
+		},
+		"generateType" : "rotateBlock",
+		"litTypeCustomData" : {
+			"torches" : {"a":{"color":"#c3872e","intensity":2.5,"offsetx":0,"offsety":0.55,"offsetz":0,"range":8,"volume":0.3},"b":{"color":"#c3872e","intensity":1,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+		},
+		"sideFrontLit" : "furnacelitfront",
+		"sideFrontUnlit" : "furnaceunlitfront",
+		"sideTopLit" : "furnacelittop",
+		"sideTopUnlit" : "furnaceunlittop",
+		"typeName" : "furnace"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"destructionTime" : 800,
+			"icon" : "gamedata/textures/icons/oven.png",
+			"onPlaceAudio" : "stonePlace",
+			"onRemoveAudio" : "stoneDelete",
+			"sideall" : "stonebricks"
+		},
+		"generateType" : "rotateBlock",
+		"litTypeCustomData" : {
+			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+		},
+		"sideFrontLit" : "ovenlitfront",
+		"sideFrontUnlit" : "ovenunlitfront",
+		"sideTopLit" : "stonebricks",
+		"sideTopUnlit" : "stonebricks",
+		"typeName" : "oven"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"destructionTime" : 800,
+			"icon" : "gamedata/textures/icons/bloomery.png",
+			"onPlaceAudio" : "stonePlace",
+			"onRemoveAudio" : "stoneDelete",
+			"sideall" : "bricks"
+		},
+		"generateType" : "rotateBlock",
+		"litTypeCustomData" : {
+			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+		},
+		"sideFrontLit" : "bloomerylit",
+		"sideFrontUnlit" : "bloomery",
+		"sideTopLit" : "bricks",
+		"sideTopUnlit" : "bricks",
+		"typeName" : "bloomery"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"destructionTime" : 1500,
+			"icon" : "gamedata/textures/icons/fineryforge.png",
+			"onPlaceAudio" : "stonePlace",
+			"onRemoveAudio" : "stoneDelete",
+			"sideall" : "ironblock"
+		},
+		"generateType" : "rotateBlock",
+		"litTypeCustomData" : {
+			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+		},
+		"sideFrontLit" : "fineryforgelit",
+		"sideFrontUnlit" : "fineryforge",
+		"sideTopLit" : "ironblock",
+		"sideTopUnlit" : "ironblock",
+		"typeName" : "fineryforge"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"destructionTime" : 800,
+			"icon" : "gamedata/textures/icons/kiln.png",
+			"onPlaceAudio" : "dirtPlace",
+			"onRemoveAudio" : "grassDelete",
+			"sideall" : "dirt"
+		},
+		"generateType" : "rotateBlock",
+		"sideFrontUnlit" : "kiln",
+		"typeName" : "kiln"
+	}
+]

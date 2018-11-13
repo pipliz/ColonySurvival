@@ -1,10 +1,10 @@
-﻿using BlockTypes;
+﻿using BlockEntities;
+using GrowableBlocks;
 using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
-	using APIProvider.GrowableBlocks;
-
+	[BlockEntityAutoLoader]
 	public class CherrySapling : BaseGrowableBlockDefinition
 	{
 		public CherrySapling ()
@@ -21,45 +21,26 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 
 		public override void TryAdvanceStage (GrowableBlock block, Chunk chunk, Vector3Int blockPosition)
 		{
+			// don't trigger the sappling removal callbacks - nested change callbacks are not supported (deadlocks)
+			// assume only dumb blocks are placed, and only air (& this growable) are replaced
+			ESetBlockFlags flags = ESetBlockFlags.Default & ~(ESetBlockFlags.TriggerEntityCallbacks | ESetBlockFlags.TriggerNeighbourCallbacks);
 			if (block.StageIndex == 0) {
+				ItemTypes.ItemType logType = ItemTypes.GetType("logtemperate");
+				ItemTypes.ItemType leavesType = ItemTypes.GetType("cherryblossom");
+
 				// set all logs
 				for (int i = 0; i < logs.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(blockPosition + logs[i], out currentType)) {
-						if (logs[i] == Vector3Int.zero) {
-							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
-							if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
-								return; // not loaded
-							}
-						} else {
-							if (currentType == 0) {
-								if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate)) {
-									return; // not loaded
-								}
-							}
-						}
-					} else {
-						return; // not loaded
+					ItemTypes.ItemType oldType = logs[i] == Vector3Int.zero ? null : ItemTypes.Air;
+					if (ServerManager.TryChangeBlock(blockPosition + logs[i], oldType, logType, flags: flags) == EServerChangeBlockResult.ChunkNotReady) {
+						return;
 					}
 				}
+
 				// set all leaves
 				for (int i = 0; i < leaves.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(blockPosition + leaves[i], out currentType)) {
-						if (leaves[i] == Vector3Int.zero) {
-							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
-							if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.CherryBlossom, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
-								return; // not loaded
-							}
-						} else {
-							if (currentType == 0) {
-								if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.CherryBlossom)) {
-									return; // not loaded
-								}
-							}
-						}
-					} else {
-						return; // not loaded
+					ItemTypes.ItemType oldType = leaves[i] == Vector3Int.zero ? null : ItemTypes.Air;
+					if (ServerManager.TryChangeBlock(blockPosition + leaves[i], oldType, leavesType, flags: flags) == EServerChangeBlockResult.ChunkNotReady) {
+						return;
 					}
 				}
 			}

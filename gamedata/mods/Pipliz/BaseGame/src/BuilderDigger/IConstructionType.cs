@@ -1,4 +1,4 @@
-﻿using Areas;
+﻿using Jobs;
 using NPC;
 
 namespace Pipliz.Mods.BaseGame.Construction

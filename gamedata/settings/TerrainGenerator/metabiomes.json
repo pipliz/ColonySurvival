@@ -1,0 +1,415 @@
+{
+	"actions" : [
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.32,
+				"zMin" : 0
+			},
+			"comment" : "tropic temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : 33,
+			"temperatureZHighMin" : 26,
+			"temperatureZLowMax" : 33,
+			"temperatureZLowMin" : 26
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"comment" : "desert temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : 33,
+			"temperatureZHighMin" : 22,
+			"temperatureZLowMax" : 33,
+			"temperatureZLowMin" : 26
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.42,
+				"zMin" : 0.39
+			},
+			"comment" : "temperate-desert interpolation temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : 24,
+			"temperatureZHighMin" : 20,
+			"temperatureZLowMax" : 33,
+			"temperatureZLowMin" : 22
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.6,
+				"zMin" : 0.42
+			},
+			"comment" : "middle-temperate temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : 8,
+			"temperatureZHighMin" : 0,
+			"temperatureZLowMax" : 24,
+			"temperatureZLowMin" : 20
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.68,
+				"zMin" : 0.6
+			},
+			"comment" : "tundra temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : -3,
+			"temperatureZHighMin" : -3,
+			"temperatureZLowMax" : 8,
+			"temperatureZLowMin" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 1,
+				"zMin" : 0.68
+			},
+			"comment" : "arctic temperature",
+			"format" : "verticalTemperatureGradient",
+			"temperatureZHighMax" : -5,
+			"temperatureZHighMin" : -10,
+			"temperatureZLowMax" : 3,
+			"temperatureZLowMin" : -3
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.42,
+				"zMin" : 0.39
+			},
+			"comment" : "semi-desert to interpolate into the desert from temperate",
+			"format" : "precipitationBox",
+			"precipitationMax" : 0.6,
+			"precipitationMin" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"comment" : "desert precipitation",
+			"format" : "precipitationBox",
+			"precipitationMax" : 0.3,
+			"precipitationMin" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.32,
+				"zMin" : 0.24
+			},
+			"comment" : "savanna-ish precipitation between desert and tropic",
+			"format" : "precipitationBox",
+			"precipitationMax" : 0.6,
+			"precipitationMin" : 0.3
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.24,
+				"zMin" : 0
+			},
+			"comment" : "tropic precipitation area",
+			"format" : "precipitationBox",
+			"precipitationMax" : 1,
+			"precipitationMin" : 0.5
+		},
+		{
+			"area" : {
+				"xMax" : 0.68,
+				"xMin" : 0.6,
+				"zMax" : 0.68,
+				"zMin" : 0.39
+			},
+			"comment" : "middle-east divide by dry area (steppe)",
+			"format" : "precipitationBox",
+			"precipitationMax" : 0.13,
+			"precipitationMin" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 0.68,
+				"xMin" : 0.4,
+				"zMax" : 0.39,
+				"zMin" : 0.1
+			},
+			"comment" : "turn bottom-mid into semi islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -0.8
+		},
+		{
+			"area" : {
+				"xMax" : 0.68,
+				"xMin" : 0.4,
+				"zMax" : 0.9,
+				"zMin" : 0.6
+			},
+			"comment" : "turn top-mid into semi islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -0.8
+		},
+		{
+			"area" : {
+				"xMax" : 0.29,
+				"xMin" : 0.1,
+				"zMax" : 0.39,
+				"zMin" : 0.1
+			},
+			"comment" : "turn bottom-left into semi islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -1.2
+		},
+		{
+			"area" : {
+				"xMax" : 0.29,
+				"xMin" : 0.1,
+				"zMax" : 0.6,
+				"zMin" : 0.39
+			},
+			"comment" : "turn mid-left into semi islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -0.8
+		},
+		{
+			"area" : {
+				"xMax" : 0.29,
+				"xMin" : 0.1,
+				"zMax" : 0.9,
+				"zMin" : 0.6
+			},
+			"comment" : "turn top-left into semi islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -1.2
+		},
+		{
+			"area" : {
+				"xMax" : 0.4,
+				"xMin" : 0.29,
+				"zMax" : 0.9,
+				"zMin" : 0.1
+			},
+			"comment" : "divide left/centrum with an ocean-ish thing",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -2
+		},
+		{
+			"area" : {
+				"xMax" : 0.4,
+				"xMin" : 0.29,
+				"zMax" : 0.9,
+				"zMin" : 0.1
+			},
+			"cliffScale" : 0.4,
+			"comment" : "nerf features in the ocean seperating west and mid",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.4,
+			"riverScale" : 0.4
+		},
+		{
+			"area" : {
+				"xMax" : 0.9,
+				"xMin" : 0.68,
+				"zMax" : 0.39,
+				"zMin" : 0.1
+			},
+			"comment" : "turn bottom-right into islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -2
+		},
+		{
+			"area" : {
+				"xMax" : 0.9,
+				"xMin" : 0.68,
+				"zMax" : 0.6,
+				"zMin" : 0.39
+			},
+			"comment" : "turn mid-right into a bit of islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -0.3
+		},
+		{
+			"area" : {
+				"xMax" : 0.9,
+				"xMin" : 0.68,
+				"zMax" : 0.9,
+				"zMin" : 0.6
+			},
+			"comment" : "turn top-right into a bit of islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -1.2
+		},
+		{
+			"area" : {
+				"xMax" : 0.6,
+				"xMin" : 0.42,
+				"zMax" : 0.6,
+				"zMin" : 0.39
+			},
+			"comment" : "turn mid-mid into a bit of islandy stuff",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -0.3
+		},
+		{
+			"area" : {
+				"xMax" : 0.29,
+				"xMin" : 0.1,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"comment" : "turn left part of desert flat",
+			"format" : "hillynessScaleBox",
+			"hillynessScale" : 0.75
+		},
+		{
+			"area" : {
+				"xMax" : 0.29,
+				"xMin" : 0.1,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"cliffScale" : 0.4,
+			"comment" : "nerf features in left part of desert",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.4,
+			"riverScale" : 0.4
+		},
+		{
+			"area" : {
+				"xMax" : 0.68,
+				"xMin" : 0.4,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"comment" : "turn middle part of desert flat",
+			"format" : "hillynessScaleBox",
+			"hillynessScale" : 0.75
+		},
+		{
+			"area" : {
+				"xMax" : 0.68,
+				"xMin" : 0.4,
+				"zMax" : 0.39,
+				"zMin" : 0.32
+			},
+			"cliffScale" : 0.4,
+			"comment" : "nerf features in middle part of desert",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.4,
+			"riverScale" : 0.4
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.1,
+				"zMin" : 0
+			},
+			"comment" : "part of surrounding water",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -3
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 1,
+				"zMin" : 0.9
+			},
+			"comment" : "part of surrounding water",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -3
+		},
+		{
+			"area" : {
+				"xMax" : 0.1,
+				"xMin" : 0,
+				"zMax" : 1,
+				"zMin" : 0
+			},
+			"comment" : "part of surrounding water",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -3
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0.9,
+				"zMax" : 1,
+				"zMin" : 0
+			},
+			"comment" : "part of surrounding water",
+			"format" : "hillynessOffsetBox",
+			"hillynessOffset" : -3
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 0.1,
+				"zMin" : 0
+			},
+			"cliffScale" : 0.2,
+			"comment" : "part of surrounding water",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.2,
+			"riverScale" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0,
+				"zMax" : 1,
+				"zMin" : 0.9
+			},
+			"cliffScale" : 0.2,
+			"comment" : "part of surrounding water",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.2,
+			"riverScale" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 0.1,
+				"xMin" : 0,
+				"zMax" : 1,
+				"zMin" : 0
+			},
+			"cliffScale" : 0.2,
+			"comment" : "part of surrounding water",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.2,
+			"riverScale" : 0
+		},
+		{
+			"area" : {
+				"xMax" : 1,
+				"xMin" : 0.9,
+				"zMax" : 1,
+				"zMin" : 0
+			},
+			"cliffScale" : 0.2,
+			"comment" : "part of surrounding water",
+			"format" : "featuresScaleBox",
+			"ridgeScale" : 0.2,
+			"riverScale" : 0
+		}
+	]
+}

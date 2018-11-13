@@ -1,146 +1,203 @@
 ﻿using BlockTypes;
+using Jobs;
 using NPC;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
-	using APIProvider.AreaJobs;
-	using Areas;
-
 	[AreaJobDefinitionAutoLoader]
-	public class TemperateForesterDefinition : AreaJobDefinitionDefault<TemperateForesterDefinition>
+	public class TemperateForesterDefinition : AbstractAreaJobDefinition<TemperateForesterDefinition>
 	{
 		public TemperateForesterDefinition ()
 		{
-			identifier = "pipliz.temperateforest";
+			Identifier = "pipliz.temperateforest";
 			fileName = "temperateforester";
-			npcType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.forester");
-			areaType = Shared.EAreaType.Forestry;
+			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.forester");
+			AreaType = Shared.EAreaType.Forestry;
 		}
 
-		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
-			// todo use colony as param
-			SetLayer(min, max, BuiltinBlocks.LumberArea, -1, owner.Owners[0]);
-			return base.CreateAreaJob(owner, min, max, npcID);
+			if (!isLoaded) {
+				TurnArableIntoDirt(min, max, owner);
+			}
+			return new ForesterJob(owner, min, max, npcID);
 		}
 
-		public override void OnRemove (IAreaJob job)
+		static bool ChopTree (Vector3Int p, BlockChangeRequestOrigin origin)
 		{
-			// todo use colony as param
-			SetLayer(job.Minimum, job.Maximum, BuiltinBlocks.GrassTemperate, -1, job.Owner.Owners[0]);
+			ItemTypes.ItemType logType = ItemTypes.GetType("logtemperate");
+			ItemTypes.ItemType air = ItemTypes.Air;
+			for (int y = 0; y < 5; y++) {
+				switch (ServerManager.TryChangeBlock(p.Add(0, y, 0), logType, air, origin)) {
+					case EServerChangeBlockResult.CancelledByCallback:
+					case EServerChangeBlockResult.ChunkNotReady:
+					default:
+						return false;
+					case EServerChangeBlockResult.Success:
+						break;
+					case EServerChangeBlockResult.UnexpectedOldType:
+						y = 15;
+						break;
+				}
+			}
+			ItemTypes.ItemType leavesType = ItemTypes.GetType("leavestemperate");
+			System.Collections.Generic.List<Vector3Int> leavesOffsets = GrowableBlocks.TemperateSapling.Leaves;
+			for (int i = 0; i < leavesOffsets.Count; i++) {
+				switch (ServerManager.TryChangeBlock(p + leavesOffsets[i], leavesType, air, origin)) {
+					case EServerChangeBlockResult.CancelledByCallback:
+					case EServerChangeBlockResult.ChunkNotReady:
+					default:
+						return false;
+					case EServerChangeBlockResult.Success:
+					case EServerChangeBlockResult.UnexpectedOldType:
+						break;
+				}
+			}
+			return true;
 		}
 
-		public override void CalculateSubPosition (IAreaJob job, ref Vector3Int positionSub)
+		public class ForesterJob : AbstractAreaJob<TemperateForesterDefinition>
 		{
-			bool hasSeeds = job.NPC.Colony.Stockpile.Contains(BuiltinBlocks.Sapling);
-			Vector3Int firstPlanting = Vector3Int.invalidPos;
-			Vector3Int min = job.Minimum;
-			Vector3Int max = job.Maximum;
+			// store treeLocation separately from positionSub because the farmer will move next to these positions(they're not equal)
+			protected Vector3Int treeLocation = Vector3Int.invalidPos;
+			static ItemTypes.ItemType[] yTypesBuffer = new ItemTypes.ItemType[5]; // max 3 Y + 1 below + 1 above
 
-			for (int x = min.x + 1; x < max.x; x += 3) {
-				for (int z = min.z + 1; z < max.z; z += 3) {
-					ushort type;
-					Vector3Int possiblePositionSub = new Vector3Int(x, min.y, z);
-					if (!World.TryGetTypeAt(possiblePositionSub, out type)) {
-						positionSub = min;
-						return;
-					}
-					if (type == 0) {
-						if (hasSeeds) {
-							positionSub = possiblePositionSub; // can plant here
-							return;
-						} else if (!firstPlanting.IsValid) {
-							firstPlanting = possiblePositionSub; // no seeds but should plant here. If no location found, go here
+			public ForesterJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID) { }
+
+			public override void CalculateSubPosition ()
+			{
+				ThreadManager.AssertIsMainThread();
+				bool hasSeeds = NPC.Colony.Stockpile.Contains(BuiltinBlocks.Sapling);
+				Vector3Int min = Minimum;
+				Vector3Int max = Maximum;
+				int ySize = max.y - min.y + 1;
+
+				for (int x = min.x + 1; x < max.x; x += 3) {
+					for (int z = min.z + 1; z < max.z; z += 3) {
+						for (int y = -1; y <= ySize; y++) {
+							if (!World.TryGetTypeAt(new Vector3Int(x, min.y + y, z), out yTypesBuffer[y + 1])) {
+								goto DUMB_RANDOM;
+							}
 						}
-					} else if (type == BuiltinBlocks.LogTemperate) {
-						positionSub = possiblePositionSub; // should cut here
+
+						for (int y = 0; y < ySize; y++) {
+							ItemTypes.ItemType typeBelow = yTypesBuffer[y];
+							ItemTypes.ItemType type = yTypesBuffer[y + 1];
+							ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
+
+							if ((type == ItemTypes.Air && hasSeeds) || type.ItemIndex == BuiltinBlocks.LogTemperate) {
+								if ((typeAbove.ItemIndex != BuiltinBlocks.Air && typeAbove.ItemIndex != BuiltinBlocks.LogTemperate) || !typeBelow.IsFertile) {
+									continue; // check next Y layer
+								}
+								treeLocation = new Vector3Int(x, min.y + y, z);
+								positionSub = AI.AIManager.ClosestPositionNotAt(treeLocation, NPC.Position);
+								return;
+							}
+						}
+					}
+				}
+
+				for (int i = 0; i < 5; i++) {
+					// give the random positioning 5 chances to become valid
+					Vector3Int test = min.Add(
+						Random.Next(0, (max.x - min.x) / 3) * 3,
+						0,
+						Random.Next(0, (max.z - min.z) / 3) * 3
+					);
+
+					for (int y = -1; y <= ySize; y++) {
+						if (!World.TryGetTypeAt(test.Add(0, y, 0), out yTypesBuffer[y + 1])) {
+							goto DUMB_RANDOM;
+						}
+					}
+
+					for (int y = 0; y < ySize; y++) {
+						ItemTypes.ItemType  typeBelow = yTypesBuffer[y];
+						ItemTypes.ItemType  type = yTypesBuffer[y + 1];
+						ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
+
+						if (!typeBelow.BlocksPathing || type.BlocksPathing || typeAbove.BlocksPathing) {
+							continue; // check next Y layer
+						}
+
+						positionSub = test.Add(0, y, 0);
+						treeLocation = Vector3Int.invalidPos;
 						return;
 					}
 				}
+
+				DUMB_RANDOM:
+				positionSub = min.Add(
+					Random.Next(0, (max.x - min.x) / 3) * 3,
+					(max.x - min.x) / 2,
+					Random.Next(0, (max.z - min.z) / 3) * 3
+				);
 			}
 
-			if (firstPlanting.IsValid) {
-				positionSub = firstPlanting;
+			static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+
+			public override void OnNPCAtJob (ref NPCBase.NPCState state)
+			{
+				ThreadManager.AssertIsMainThread();
+				state.JobIsDone = true;
+				positionSub = Vector3Int.invalidPos;
+				Vector3Int min = Minimum;
+				Vector3Int max = Maximum;
+				if (!treeLocation.IsValid) { // probably idling about
+					state.SetCooldown(Random.NextFloat(8f, 16f));
+					return;
+				}
+
+				ushort type;
+				if (!World.TryGetTypeAt(treeLocation, out type)) {
+					state.SetCooldown(10.0);
+					return;
+				}
+
+				if (type == BuiltinBlocks.LogTemperate) {
+					if (ChopTree(treeLocation, Owner)) {
+						state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
+						ServerManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
+
+						GatherResults.Clear();
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1.0));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1.0));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1.0));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0.25));
+
+						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
+
+						NPC.Inventory.Add(GatherResults);
+					} else {
+						state.SetCooldown(Random.NextFloat(3f, 6f));
+					}
+					return;
+				}
+
+				if (type == 0) {
+					// maybe plant sapling?
+					if (World.TryGetTypeAt(treeLocation.Add(0, -1, 0), out ItemTypes.ItemType typeBelow)) {
+						if (typeBelow.IsFertile) {
+							if (NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling) || NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.Sapling)) {
+								ServerManager.TryChangeBlock(treeLocation, 0, BuiltinBlocks.Sapling, Owner, ESetBlockFlags.DefaultAudio);
+								state.SetCooldown(2.0);
+								return;
+							} else {
+								state.SetIndicator(new Shared.IndicatorState(6f, BuiltinBlocks.Sapling, true, false));
+								return;
+							}
+						}
+					} else {
+						state.SetCooldown(10.0);
+						return;
+					}
+
+				}
+
+				// something unexpected
+				state.SetCooldown(Random.NextFloat(8f, 16f));
 				return;
 			}
-
-			int xOffset = max.x - min.x;
-			int zOffset = max.z - min.z;
-			int xRandom = Random.Next(0, xOffset / 3) * 3 + min.x;
-			int zRandom = Random.Next(0, zOffset / 3) * 3 + min.z;
-			positionSub = new Vector3Int(xRandom, min.y, zRandom);
-		}
-
-		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
-
-		public override void OnNPCAtJob (IAreaJob job, ref Vector3Int positionSub, ref NPCBase.NPCState state, ref bool shouldDumpInventory)
-		{
-			state.JobIsDone = true;
-			Vector3Int min = job.Minimum;
-			Vector3Int max = job.Maximum;
-			if (positionSub.x == min.x || positionSub.x == max.x
-				|| positionSub.z == min.z || positionSub.z == max.z
-				|| (positionSub.x - (min.x + 1)) % 3 != 0
-				|| (positionSub.z - (min.z + 1)) % 3 != 0)
-			{
-				ushort type;
-				if (World.TryGetTypeAt(positionSub.Add(1, 0, 1), out type)) {
-					if (type == BuiltinBlocks.Sapling) {
-						state.SetCooldown(5.0);
-					} else {
-						state.SetCooldown(1.0); // no sapling at sapling spot (shouldn't occur a lot, something changed between calculate sub position and this
-					}
-				} else {
-					state.SetCooldown(4.0); // walked to sapling spot, not loaded
-				}
-			} else if (positionSub.IsValid) {
-				ushort type;
-				if (World.TryGetTypeAt(positionSub, out type)) {
-					if (type == 0) {
-						if (job.NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling)
-							|| job.NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.Sapling)) {
-							// todo use colony as param
-							ServerManager.TryChangeBlock(positionSub, BuiltinBlocks.Sapling, job.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio);
-							state.SetCooldown(2.0);
-						} else {
-							state.SetIndicator(new Shared.IndicatorState(2f, BuiltinBlocks.Sapling));
-						}
-					} else if (type == BuiltinBlocks.LogTemperate) {
-						// todo use colony as param
-						if (ChopTree(positionSub, job.Owner.Owners[0])) {
-							state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
-							ServerManager.SendAudio(positionSub.Vector, "woodDeleteHeavy");
-
-							GatherResults.Clear();
-							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1.0));
-							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1.0));
-							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1.0));
-							GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0.25));
-
-							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, positionSub, GatherResults);
-
-							job.NPC.Inventory.Add(GatherResults);
-						} else {
-							state.SetCooldown(Random.NextFloat(3f, 6f));
-						}
-					} else {
-						state.SetCooldown(Random.NextFloat(8f, 16f));
-					}
-				} else {
-					state.SetCooldown(Random.NextFloat(3f, 6f));
-				}
-			} else {
-				state.SetCooldown(10.0);
-			}
-			positionSub = Vector3Int.invalidPos;
-		}
-
-		// todo use colony as param
-		static bool ChopTree (Vector3Int p, Players.Player owner)
-		{
-			return ServerManager.TryChangeBlock(p, 0, owner)
-				&& ServerManager.TryChangeBlock(p.Add(0, 1, 0), 0, owner)
-				&& ServerManager.TryChangeBlock(p.Add(0, 2, 0), 0, owner);
 		}
 	}
 }

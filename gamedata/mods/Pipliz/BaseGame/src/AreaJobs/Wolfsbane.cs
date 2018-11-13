@@ -1,30 +1,29 @@
 ﻿using BlockTypes;
+using Jobs;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
-	using APIProvider.AreaJobs;
-	using Areas;
-
 	[AreaJobDefinitionAutoLoader]
-	public class Wolfsbane : AreaJobDefinitionDefault<Wolfsbane>
+	public class Wolfsbane : AbstractFarmAreaJobDefinition<Wolfsbane>
 	{
 		public Wolfsbane ()
 		{
-			identifier = "pipliz.wolfsbanefarm";
+			Identifier = "pipliz.wolfsbanefarm";
 			fileName = "wolfsbanefarms";
-			stages = new ushort[] {
+			Stages = new ushort[] {
 				BuiltinBlocks.WolfsbaneStage1,
 				BuiltinBlocks.WolfsbaneStage2
 			};
-			npcType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.wolfsbanefarm");
-			areaType = Shared.EAreaType.WolfsbaneFarm;
+			UsedNPCType = NPC.NPCType.GetByKeyNameOrDefault("pipliz.wolfsbanefarm");
+			AreaType = Shared.EAreaType.WolfsbaneFarm;
 		}
 
-		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0)
+		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
-			// todo use colony as param
-			SetLayer(min, max, BuiltinBlocks.Dirt, -1, owner.Owners[0]);
-			return base.CreateAreaJob(owner, min, max, npcID);
+			if (!isLoaded) {
+				TurnArableIntoDirt(min, max, owner);
+			}
+			return new FarmAreaJob<Wolfsbane>(owner, min, max, npcID);
 		}
 	}
 }

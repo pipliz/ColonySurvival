@@ -5,8 +5,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 	[ModLoader.ModManager]
 	public static class ConstructionHelper
 	{
-		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnActiveColonyChanges, "sendconstructiondata")]
-		static void SendData (Players.Player player, Colony oldColony, Colony newColony)
+		public static void OnColonyChange (Players.Player player, Colony oldColony, Colony newColony)
 		{
 			if (player.ShouldSendData) {
 				NetworkWrapper.Send(GetPacket(newColony), player);
@@ -15,7 +14,7 @@ namespace Pipliz.Mods.BaseGame.Researches
 
 		public static void SendPacket (Colony colony)
 		{
-			if (colony?.Owners.ShouldSendAny() ?? false) {
+			if (colony != null && colony.Owners.ShouldSendAny(colony)) {
 				colony.Owners.SendToActive(colony, GetPacket(colony));
 			}
 		}

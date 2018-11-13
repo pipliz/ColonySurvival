@@ -1,0 +1,744 @@
+{
+	"biomeAreas" : [
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : -7,
+				"temperatureMin" : -10
+			},
+			"name" : "arctic",
+			"topBlockType" : "snow"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.2,
+				"temperatureMax" : -4,
+				"temperatureMin" : -7
+			},
+			"name" : "arctic hot",
+			"topBlockType" : "snow"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.2,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : -4,
+				"temperatureMin" : -7
+			},
+			"name" : "arctic tundra",
+			"topBlockType" : "grasstundradry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : -1,
+				"temperatureMin" : -4
+			},
+			"name" : "tundra cold wet",
+			"topBlockType" : "grasstundrawet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : -1,
+				"temperatureMin" : -4
+			},
+			"name" : "tundra cold dry",
+			"topBlockType" : "grasstundradry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.6,
+				"temperatureMax" : 1,
+				"temperatureMin" : -1
+			},
+			"name" : "tundra warm wet",
+			"structures" : {
+				"totalStructureChance" : 0.01,
+				"weights" : [
+					{
+						"name" : "taigatree5tall",
+						"weight" : 60
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 30
+					}
+				]
+			},
+			"topBlockType" : "grasstundrawet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 1,
+				"temperatureMin" : -1
+			},
+			"name" : "tundra warm mid",
+			"structures" : {
+				"totalStructureChance" : 0.004,
+				"weights" : [
+					{
+						"name" : "taigatree5tall",
+						"weight" : 50
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					}
+				]
+			},
+			"topBlockType" : "grasstaigadry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 1,
+				"temperatureMin" : -1
+			},
+			"name" : "tundra warm dry",
+			"topBlockType" : "grasstundradry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 8,
+				"temperatureMin" : 1
+			},
+			"name" : "taiga wet",
+			"structures" : {
+				"totalStructureChance" : 0.034,
+				"weights" : [
+					{
+						"name" : "taigatree8tall",
+						"weight" : 60
+					},
+					{
+						"name" : "taigatree5tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 5
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 3
+					}
+				]
+			},
+			"topBlockType" : "grasstaigawet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 8,
+				"temperatureMin" : 1
+			},
+			"name" : "taiga dry",
+			"structures" : {
+				"totalStructureChance" : 0.02,
+				"weights" : [
+					{
+						"name" : "taigatree8tall",
+						"weight" : 10
+					},
+					{
+						"name" : "taigatree5tall",
+						"weight" : 60
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 20
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 20
+					}
+				]
+			},
+			"topBlockType" : "grasstaigadry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.6,
+				"temperatureMax" : 15,
+				"temperatureMin" : 8
+			},
+			"name" : "cold wet",
+			"structures" : {
+				"totalStructureChance" : 0.032,
+				"weights" : [
+					{
+						"name" : "taigatree8tall",
+						"weight" : 30
+					},
+					{
+						"name" : "taigatree5tall",
+						"weight" : 10
+					},
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 40
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 15
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 8
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 15
+					}
+				]
+			},
+			"topBlockType" : "grasscoldwet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.2,
+				"temperatureMax" : 15,
+				"temperatureMin" : 8
+			},
+			"name" : "cold mid",
+			"structures" : {
+				"totalStructureChance" : 0.016,
+				"weights" : [
+					{
+						"name" : "taigatree8tall",
+						"weight" : 15
+					},
+					{
+						"name" : "taigatree5tall",
+						"weight" : 25
+					},
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 25
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 15
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 25
+					}
+				]
+			},
+			"topBlockType" : "grasscoldmid"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.2,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 15,
+				"temperatureMin" : 8
+			},
+			"name" : "cold dry",
+			"structures" : {
+				"totalStructureChance" : 0.004,
+				"weights" : [
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 5
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 8
+					}
+				]
+			},
+			"topBlockType" : "grasscolddry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.6,
+				"temperatureMax" : 20,
+				"temperatureMin" : 15
+			},
+			"name" : "hot cold wet",
+			"structures" : {
+				"totalStructureChance" : 0.032,
+				"weights" : [
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 60
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 30
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 10
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 15
+					},
+					{
+						"name" : "tropictree15tall",
+						"weight" : 3
+					}
+				]
+			},
+			"topBlockType" : "grasshotwet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 20,
+				"temperatureMin" : 15
+			},
+			"name" : "hot cold mid",
+			"structures" : {
+				"totalStructureChance" : 0.012,
+				"weights" : [
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 30
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 60
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 20
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 15
+					}
+				]
+			},
+			"topBlockType" : "grasshotmid"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0.2,
+				"temperatureMax" : 20,
+				"temperatureMin" : 15
+			},
+			"name" : "hot cold dry",
+			"structures" : {
+				"totalStructureChance" : 0.004,
+				"weights" : [
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 40
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 20
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 60
+					}
+				]
+			},
+			"topBlockType" : "grasshotdry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.2,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 20,
+				"temperatureMin" : 15
+			},
+			"name" : "hot cold driest",
+			"structures" : {
+				"totalStructureChance" : 0.002,
+				"weights" : [
+					{
+						"name" : "genericbush2tall",
+						"weight" : 15
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 90
+					}
+				]
+			},
+			"topBlockType" : "grasshotdriest"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.8,
+				"temperatureMax" : 24,
+				"temperatureMin" : 20
+			},
+			"name" : "hot hot wet",
+			"structures" : {
+				"totalStructureChance" : 0.036,
+				"weights" : [
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 90
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 20
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 10
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 5
+					},
+					{
+						"name" : "tropictree15tall",
+						"weight" : 10
+					}
+				]
+			},
+			"topBlockType" : "grasshotwet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.8,
+				"precipitationFractionMin" : 0.6,
+				"temperatureMax" : 24,
+				"temperatureMin" : 20
+			},
+			"name" : "hot hot mid",
+			"structures" : {
+				"totalStructureChance" : 0.024,
+				"weights" : [
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 50
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 50
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 15
+					},
+					{
+						"name" : "tropictree15tall",
+						"weight" : 5
+					}
+				]
+			},
+			"topBlockType" : "grasshotmid"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 24,
+				"temperatureMin" : 20
+			},
+			"name" : "hot hot dry",
+			"structures" : {
+				"totalStructureChance" : 0.012,
+				"weights" : [
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 80
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 10
+					}
+				]
+			},
+			"topBlockType" : "grasshotdry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.2,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 24,
+				"temperatureMin" : 20
+			},
+			"name" : "hot hot driest",
+			"topBlockType" : "grasshotdriest"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0.2,
+				"temperatureMax" : 24,
+				"temperatureMin" : 20
+			},
+			"name" : "hot hot dry-ish",
+			"structures" : {
+				"totalStructureChance" : 0.0006,
+				"weights" : [
+					{
+						"name" : "savannatree6tall",
+						"weight" : 15
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 30
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					}
+				]
+			},
+			"topBlockType" : "grasshotdriest"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 1,
+				"precipitationFractionMin" : 0.8,
+				"temperatureMax" : 34,
+				"temperatureMin" : 24
+			},
+			"name" : "tropic wet",
+			"structures" : {
+				"totalStructureChance" : 0.04,
+				"weights" : [
+					{
+						"name" : "tropictree20talldoublebush",
+						"weight" : 50
+					},
+					{
+						"name" : "tropictree15tall",
+						"weight" : 25
+					},
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 15
+					},
+					{
+						"name" : "savannatree6tall",
+						"weight" : 10
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 10
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 10
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 5
+					}
+				]
+			},
+			"topBlockType" : "grasstropicwet"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.8,
+				"precipitationFractionMin" : 0.6,
+				"temperatureMax" : 34,
+				"temperatureMin" : 24
+			},
+			"name" : "tropic mid",
+			"structures" : {
+				"totalStructureChance" : 0.032,
+				"weights" : [
+					{
+						"name" : "tropictree20talldoublebush",
+						"weight" : 30
+					},
+					{
+						"name" : "tropictree15tall",
+						"weight" : 50
+					},
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 10
+					},
+					{
+						"name" : "savannatree6tall",
+						"weight" : 10
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 10
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 5
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 10
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 5
+					}
+				]
+			},
+			"topBlockType" : "grasstropicmid"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 30,
+				"temperatureMin" : 24
+			},
+			"name" : "tropic cold dry",
+			"structures" : {
+				"totalStructureChance" : 0.007,
+				"weights" : [
+					{
+						"name" : "savannatree6tall",
+						"weight" : 40
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 30
+					},
+					{
+						"name" : "temperatetree8tall",
+						"weight" : 5
+					},
+					{
+						"name" : "temperatetree5tall",
+						"weight" : 15
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					}
+				]
+			},
+			"topBlockType" : "grasstropicdry"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.6,
+				"precipitationFractionMin" : 0.4,
+				"temperatureMax" : 34,
+				"temperatureMin" : 30
+			},
+			"name" : "tropic warm dry",
+			"structures" : {
+				"totalStructureChance" : 0.005,
+				"weights" : [
+					{
+						"name" : "savannatree6tall",
+						"weight" : 40
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 30
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					}
+				]
+			},
+			"topBlockType" : "grasstropicdriest"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0.2,
+				"temperatureMax" : 30,
+				"temperatureMin" : 24
+			},
+			"name" : "tropic cold driest",
+			"structures" : {
+				"totalStructureChance" : 0.0004,
+				"weights" : [
+					{
+						"name" : "savannatree6tall",
+						"weight" : 15
+					},
+					{
+						"name" : "savannatree4tall",
+						"weight" : 30
+					},
+					{
+						"name" : "genericbush2tall",
+						"weight" : 30
+					},
+					{
+						"name" : "berrybush",
+						"weight" : 50
+					}
+				]
+			},
+			"topBlockType" : "grasstropicdriest"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.2,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 30,
+				"temperatureMin" : 24
+			},
+			"name" : "desert cold",
+			"subTopLayerType" : "sand",
+			"topBlockType" : "sand"
+		},
+		{
+			"area" : {
+				"precipitationFractionMax" : 0.4,
+				"precipitationFractionMin" : 0,
+				"temperatureMax" : 34,
+				"temperatureMin" : 30
+			},
+			"name" : "desert warm",
+			"subTopLayerType" : "sand",
+			"topBlockType" : "sand"
+		}
+	]
+}

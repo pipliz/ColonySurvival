@@ -1,10 +1,9 @@
-﻿using NPC;
+﻿using Jobs;
+using NPC;
+using Pipliz.JSON;
 
 namespace Pipliz.Mods.BaseGame.Construction
 {
-	using Areas;
-	using JSON;
-
 	public class ConstructionArea : IAreaJob, IAreaJobSubArguments
 	{
 		protected Vector3Int positionMin;

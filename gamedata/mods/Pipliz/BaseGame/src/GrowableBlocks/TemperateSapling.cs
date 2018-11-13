@@ -1,12 +1,33 @@
-﻿using BlockTypes;
+﻿using BlockEntities;
+using GrowableBlocks;
 using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
-	using APIProvider.GrowableBlocks;
-
+	[BlockEntityAutoLoader]
 	public class TemperateSapling : BaseGrowableBlockDefinition
 	{
+		public static List<Vector3Int> Logs { get; } = new List<Vector3Int>()
+		{
+			new Vector3Int(0,0,0),
+			new Vector3Int(0,1,0),
+			new Vector3Int(0,2,0),
+			new Vector3Int(0,3,0)
+		};
+
+		public static List<Vector3Int> Leaves { get; } = new List<Vector3Int>()
+		{
+			new Vector3Int(01,3,01),
+			new Vector3Int(01,3,00),
+			new Vector3Int(01,3,-1),
+			new Vector3Int(00,3,-1),
+			new Vector3Int(-1,3,-1),
+			new Vector3Int(-1,3,00),
+			new Vector3Int(-1,3,01),
+			new Vector3Int(00,3,01),
+			new Vector3Int(00,4,00)
+		};
+
 		public TemperateSapling ()
 		{
 			GrowthType = EGrowthType.Always;
@@ -21,68 +42,31 @@ namespace Pipliz.Mods.BaseGame.GrowableBlocks
 
 		public override void TryAdvanceStage (GrowableBlock block, Chunk chunk, Vector3Int blockPosition)
 		{
+			// don't trigger the sappling removal callbacks - nested change callbacks are not supported (deadlocks)
+			// assume only dumb blocks are placed, and only air (& this growable) are replaced
+			ESetBlockFlags flags = ESetBlockFlags.Default & ~(ESetBlockFlags.TriggerEntityCallbacks | ESetBlockFlags.TriggerNeighbourCallbacks);
 			if (block.StageIndex == 0) {
-				for (int i = 0; i < logs.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(blockPosition + logs[i], out currentType)) {
-						if (logs[i] == Vector3Int.zero) {
-							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
-							if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
-								return; // not loaded
-							}
-						} else {
-							if (currentType == 0 || currentType == BuiltinBlocks.Sapling) {
-								if (!ServerManager.TryChangeBlock(blockPosition + logs[i], BuiltinBlocks.LogTemperate)) {
-									return; // not loaded
-								}
-							}
-						}
-					} else {
-						return; // not loaded
+				ItemTypes.ItemType logType = ItemTypes.GetType("logtemperate");
+				ItemTypes.ItemType leavesType = ItemTypes.GetType("leavestemperate");
+
+				// set all logs
+				for (int i = 0; i < Logs.Count; i++) {
+					ItemTypes.ItemType oldType = Logs[i] == Vector3Int.zero ? null : ItemTypes.Air;
+					if (ServerManager.TryChangeBlock(blockPosition + Logs[i], oldType, logType, flags: flags) == EServerChangeBlockResult.ChunkNotReady) {
+						return;
 					}
 				}
-				for (int i = 0; i < leaves.Count; i++) {
-					ushort currentType;
-					if (World.TryGetTypeAt(blockPosition + leaves[i], out currentType)) {
-						if (leaves[i] == Vector3Int.zero) {
-							// don't trigger the sappling entity removal callback - it'll deadlock (removing itself)
-							if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.LeavesTemperate, flags: ServerManager.SetBlockFlags.Default & ~ServerManager.SetBlockFlags.TriggerEntityCallbacks)) {
-								return; // not loaded
-							}
-						} else {
-							if (currentType == 0) {
-								if (!ServerManager.TryChangeBlock(blockPosition + leaves[i], BuiltinBlocks.LeavesTemperate)) {
-									return; // not loaded
-								}
-							}
-						}
-					} else {
-						return; // not loaded
+
+				// set all leaves
+				for (int i = 0; i < Leaves.Count; i++) {
+					ItemTypes.ItemType oldType = Leaves[i] == Vector3Int.zero ? null : ItemTypes.Air;
+					if (ServerManager.TryChangeBlock(blockPosition + Leaves[i], oldType, leavesType, flags: flags) == EServerChangeBlockResult.ChunkNotReady) {
+						return;
 					}
 				}
 			}
 			// succesfully grew, or invalid stage index. Either case, done.
 			block.SetInvalid();
 		}
-
-		static List<Vector3Int> logs = new List<Vector3Int>()
-		{
-			new Vector3Int(0,0,0),
-			new Vector3Int(0,1,0),
-			new Vector3Int(0,2,0)
-		};
-
-		static List<Vector3Int> leaves = new List<Vector3Int>()
-		{
-			new Vector3Int(1,2,1),
-			new Vector3Int(1,2,0),
-			new Vector3Int(1,2,-1),
-			new Vector3Int(0,2,-1),
-			new Vector3Int(-1,2,-1),
-			new Vector3Int(-1,2,0),
-			new Vector3Int(-1,2,1),
-			new Vector3Int(0,2,1),
-			new Vector3Int(0,3,0)
-		};
 	}
 }

@@ -1,5 +1,5 @@
-﻿using Areas;
-using BlockTypes;
+﻿using BlockTypes;
+using Jobs;
 using UnityEngine.Assertions;
 
 namespace Pipliz.Mods.BaseGame.Construction.Types
@@ -32,9 +32,9 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 					if (foundTypeIndex == 0 || foundTypeIndex == BuiltinBlocks.Water) {
 						Stockpile ownerStockPile = areaJob.Owner.Stockpile;
 						if (ownerStockPile.Contains(buildType.ItemIndex)) {
-							// todo use colony as cause
-							if (ServerManager.TryChangeBlock(jobPosition, buildType.ItemIndex, areaJob.Owner.Owners[0], ServerManager.SetBlockFlags.DefaultAudio)) {
-								if (--job.StoredItemCount == 0) {
+							if (ServerManager.TryChangeBlock(jobPosition, foundTypeIndex, buildType.ItemIndex, areaJob.Owner, ESetBlockFlags.DefaultAudio) == EServerChangeBlockResult.Success) {
+								if (--job.StoredItemCount <= 0) {
+									job.ShouldTakeItems = true;
 									state.JobIsDone = true;
 								}
 								ownerStockPile.TryRemove(buildType.ItemIndex);

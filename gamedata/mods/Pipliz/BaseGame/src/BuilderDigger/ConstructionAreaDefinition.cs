@@ -1,14 +1,14 @@
-﻿namespace Pipliz.Mods.BaseGame.Construction
+﻿using Jobs;
+using NPC;
+using Pipliz.Collections;
+using Pipliz.Helpers;
+using Shared;
+using System;
+using System.Threading;
+
+namespace Pipliz.Mods.BaseGame.Construction
 {
-	using APIProvider.AreaJobs;
-	using Collections;
-	using Helpers;
 	using JSON;
-	using NPC;
-	using System.Threading;
-	using Shared;
-	using System;
-	using Areas;
 
 	[AreaJobDefinitionAutoLoader]
 	public class ConstructionAreaDefinition : IAreaJobDefinition
@@ -105,6 +105,9 @@
 			JSONNode table = node.GetAs<JSONNode>("table");
 			foreach (var pair in table.LoopObject()) {
 				Colony colony = ServerManager.ColonyTracker.Get(int.Parse(pair.Key));
+				if (colony == null) {
+					continue;
+				}
 				JSONNode array = pair.Value;
 				for (int i = 0; i < array.ChildCount; i++) {
 					var job = CreateAreaJob(colony, array[i]);

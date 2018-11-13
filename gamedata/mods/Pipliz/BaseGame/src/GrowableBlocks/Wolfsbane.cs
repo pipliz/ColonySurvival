@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using BlockEntities;
+using GrowableBlocks;
+using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.GrowableBlocks
 {
-	using APIProvider.GrowableBlocks;
-
+	[BlockEntityAutoLoader]
 	public class Wolfsbane : BaseGrowableBlockDefinition
 	{
 		public Wolfsbane ()

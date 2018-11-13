@@ -98,10 +98,10 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "bedx-",
 		"rotatablex+" : "bedx+",
-		"rotatablez-" : "bedz-",
+		"rotatablex-" : "bedx-",
 		"rotatablez+" : "bedz+",
+		"rotatablez-" : "bedz-",
 		"sideall" : "neutral"
 	},
 	"bedend" : {
@@ -111,34 +111,26 @@
 		},
 		"isRotatable" : true,
 		"parentType" : "bed",
-		"rotatablex-" : "bedendx-",
 		"rotatablex+" : "bedendx+",
-		"rotatablez-" : "bedendz-",
-		"rotatablez+" : "bedendz+"
-	},
-	"bedendx-" : {
-		"mesh" : "./meshes/bedendx-.ply",
-		"parentType" : "bedend"
+		"rotatablex-" : "bedendx-",
+		"rotatablez+" : "bedendz+",
+		"rotatablez-" : "bedendz-"
 	},
 	"bedendx+" : {
 		"mesh" : "./meshes/bedendx+.ply",
 		"parentType" : "bedend"
 	},
-	"bedendz-" : {
-		"mesh" : "./meshes/bedendz-.ply",
+	"bedendx-" : {
+		"mesh" : "./meshes/bedendx-.ply",
 		"parentType" : "bedend"
 	},
 	"bedendz+" : {
 		"mesh" : "./meshes/bedendz+.ply",
 		"parentType" : "bedend"
 	},
-	"bedx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[0.4,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"mesh" : "./meshes/bedx-.ply",
-		"parentType" : "bed"
+	"bedendz-" : {
+		"mesh" : "./meshes/bedendz-.ply",
+		"parentType" : "bedend"
 	},
 	"bedx+" : {
 		"colliders" : {
@@ -148,12 +140,12 @@
 		"mesh" : "./meshes/bedx+.ply",
 		"parentType" : "bed"
 	},
-	"bedz-" : {
+	"bedx-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[-0.5,-0.5,0.4]}],
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[0.4,-0.5,-0.5]}],
 			"collidePlayer" : false
 		},
-		"mesh" : "./meshes/bedz-.ply",
+		"mesh" : "./meshes/bedx-.ply",
 		"parentType" : "bed"
 	},
 	"bedz+" : {
@@ -162,6 +154,14 @@
 			"collidePlayer" : false
 		},
 		"mesh" : "./meshes/bedz+.ply",
+		"parentType" : "bed"
+	},
+	"bedz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[-0.5,-0.5,0.4]}],
+			"collidePlayer" : false
+		},
+		"mesh" : "./meshes/bedz-.ply",
 		"parentType" : "bed"
 	},
 	"berry" : {
@@ -588,6 +588,17 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "SELF"
 	},
+	"cratebread" : {
+		"categories" : [
+			"essential",
+			"decorative"
+		],
+		"destructionTime" : 150,
+		"icon" : "./textures/icons/cratebread.png",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
+	},
 	"crossbow" : {
 		"categories" : [
 			"essential",
@@ -771,75 +782,158 @@
 		"isFertile" : true,
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete"
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "grassgeneric"
 	},
-	"grassrainforest" : {
+	"grasscolddry" : {
 		"categories" : [
 			"decorative",
 			"grass"
 		],
-		"icon" : "./textures/icons/grassrainforest.png",
-		"onRemove" : [
-			{"amount":1,"chance":1,"type":"grassrainforest"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"},
-			{"amount":1,"chance":0.03,"type":"sappling"}
-		],
-		"parentType" : "grass",
-		"sideall" : "SELF"
+		"color" : "#b6d65f",
+		"icon" : "./textures/icons/grasscolddry.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
 	},
-	"grasssavanna" : {
+	"grasscoldmid" : {
 		"categories" : [
 			"decorative",
 			"grass"
 		],
-		"icon" : "./textures/icons/grasssavanna.png",
-		"onRemove" : [
-			{"amount":1,"chance":1,"type":"grasssavanna"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"}
-		],
-		"parentType" : "grass",
-		"sideall" : "SELF"
+		"color" : "#7dbe3d",
+		"icon" : "./textures/icons/grasscoldmid.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
 	},
-	"grasstaiga" : {
+	"grasscoldwet" : {
 		"categories" : [
 			"decorative",
 			"grass"
 		],
-		"icon" : "./textures/icons/grasstaiga.png",
-		"onRemove" : [
-			{"amount":1,"chance":1,"type":"grasstaiga"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"},
-			{"amount":1,"chance":0.03,"type":"sappling"}
-		],
-		"parentType" : "grass",
-		"sideall" : "SELF"
+		"color" : "#5b9f23",
+		"icon" : "./textures/icons/grasscoldwet.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
 	},
-	"grasstemperate" : {
+	"grasshotdriest" : {
 		"categories" : [
 			"decorative",
 			"grass"
 		],
-		"icon" : "./textures/icons/grasstemperate.png",
-		"onRemove" : [
-			{"amount":1,"chance":1,"type":"grasstemperate"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"},
-			{"amount":1,"chance":0.03,"type":"sappling"}
-		],
-		"parentType" : "grass",
-		"sideall" : "SELF"
+		"color" : "#d1cd5e",
+		"icon" : "./textures/icons/grasshotdriest.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
 	},
-	"grasstundra" : {
+	"grasshotdry" : {
 		"categories" : [
 			"decorative",
 			"grass"
 		],
-		"icon" : "./textures/icons/grasstundra.png",
-		"onRemove" : [
-			{"amount":1,"chance":1,"type":"grasstundra"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"}
+		"color" : "#78b034",
+		"icon" : "./textures/icons/grasshotdry.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasshotmid" : {
+		"categories" : [
+			"decorative",
+			"grass"
 		],
-		"parentType" : "grass",
-		"sideall" : "SELF"
+		"color" : "#4c9a1d",
+		"icon" : "./textures/icons/grasshotmid.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasshotwet" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#307f0e",
+		"icon" : "./textures/icons/grasshotwet.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstaigadry" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#d6ce5d",
+		"icon" : "./textures/icons/grasstaigadry.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstaigawet" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#8ea63c",
+		"icon" : "./textures/icons/grasstaigawet.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstropicdriest" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#f9bf5c",
+		"icon" : "./textures/icons/grasstropicdriest.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstropicdry" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#bfb64e",
+		"icon" : "./textures/icons/grasstropicdry.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstropicmid" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#82a135",
+		"icon" : "./textures/icons/grasstropicmid.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstropicwet" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#335f0f",
+		"icon" : "./textures/icons/grasstropicwet.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstundradry" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#e5953f",
+		"icon" : "./textures/icons/grasstundradry.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
+	},
+	"grasstundrawet" : {
+		"categories" : [
+			"decorative",
+			"grass"
+		],
+		"color" : "#9f1a26",
+		"icon" : "./textures/icons/grasstundrawet.png",
+		"onRemoveAmount" : 1,
+		"parentType" : "grass"
 	},
 	"grindstone" : {
 		"categories" : [
@@ -1230,6 +1324,92 @@
 		"icon" : "./textures/icons/leadbullet.png",
 		"isPlaceable" : false
 	},
+	"leaves" : {
+		"destructionTime" : 200,
+		"onPlaceAudio" : "dirtPlace",
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "leavesgeneric"
+	},
+	"leavesfallorange" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
+		"color" : "#ba762c",
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"icon" : "./textures/icons/leavesfallorange.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavesfallorange"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves"
+	},
+	"leavesfallred" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
+		"color" : "#601728",
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"icon" : "./textures/icons/leavesfallred.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavesfallred"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves"
+	},
+	"leavesfallyellow" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
+		"color" : "#cbd441",
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"icon" : "./textures/icons/leavesfallyellow.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavesfallyellow"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves"
+	},
+	"leavesgreendark" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
+		"color" : "#4b771c",
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"icon" : "./textures/icons/leavesgreendark.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavesgreendark"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves"
+	},
+	"leavesgreenlight" : {
+		"categories" : [
+			"decorative",
+			"leaves"
+		],
+		"color" : "#9bd34b",
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"icon" : "./textures/icons/leavesgreenlight.png",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"leavesgreenlight"},
+			{"amount":1,"chance":0.1,"type":"sappling"}
+		],
+		"parentType" : "leaves"
+	},
 	"leavestaiga" : {
 		"categories" : [
 			"decorative",
@@ -1238,14 +1418,12 @@
 		"customData" : {
 			"attachBehaviour" : [{"id":"leaves"}]
 		},
-		"destructionTime" : 200,
 		"icon" : "./textures/icons/leavestaiga.png",
-		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestaiga"},
 			{"amount":1,"chance":0.1,"type":"sappling"}
 		],
-		"onRemoveAudio" : "grassDelete",
+		"parentType" : "leaves",
 		"sideall" : "SELF"
 	},
 	"leavestemperate" : {
@@ -1256,14 +1434,12 @@
 		"customData" : {
 			"attachBehaviour" : [{"id":"leaves"}]
 		},
-		"destructionTime" : 200,
 		"icon" : "./textures/icons/leavestemperate.png",
-		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestemperate"},
 			{"amount":1,"chance":0.1,"type":"sappling"}
 		],
-		"onRemoveAudio" : "grassDelete",
+		"parentType" : "leaves",
 		"sideall" : "SELF"
 	},
 	"linen" : {
@@ -1325,13 +1501,6 @@
 		"onRemoveAudio" : "woodDeleteHeavy",
 		"sideall" : "SELF"
 	},
-	"lumberarea" : {
-		"isFertile" : true,
-		"onPlaceAudio" : "dirtPlace",
-		"onRemoveAudio" : "grassDelete",
-		"onRemoveType" : "grasstemperate",
-		"sideall" : "SELF"
-	},
 	"matchlockgun" : {
 		"categories" : [
 			"essential",
@@ -1353,6 +1522,13 @@
 	"missingerror" : {
 		"icon" : "./textures/icons/error.png",
 		"sideall" : "error"
+	},
+	"npcshop" : {
+		"categories" : [
+			"job"
+		],
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight"
 	},
 	"planks" : {
 		"categories" : [
@@ -1496,18 +1672,11 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "quarterblockblackx-",
 		"rotatablex+" : "quarterblockblackx+",
-		"rotatablez-" : "quarterblockblackz-",
+		"rotatablex-" : "quarterblockblackx-",
 		"rotatablez+" : "quarterblockblackz+",
+		"rotatablez-" : "quarterblockblackz-",
 		"sideall" : "neutral"
-	},
-	"quarterblockblackx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackx+" : {
 		"colliders" : {
@@ -1516,11 +1685,11 @@
 		"mesh" : "./meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockblack"
 	},
-	"quarterblockblackz-" : {
+	"quarterblockblackx-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
 		},
-		"mesh" : "./meshes/quarterblockz-.ply",
+		"mesh" : "./meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockblackz+" : {
@@ -1528,6 +1697,13 @@
 			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
 		},
 		"mesh" : "./meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockblack"
+	},
+	"quarterblockblackz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
+		"mesh" : "./meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockblack"
 	},
 	"quarterblockbrowndark" : {
@@ -1545,18 +1721,11 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "quarterblockbrowndarkx-",
 		"rotatablex+" : "quarterblockbrowndarkx+",
-		"rotatablez-" : "quarterblockbrowndarkz-",
+		"rotatablex-" : "quarterblockbrowndarkx-",
 		"rotatablez+" : "quarterblockbrowndarkz+",
+		"rotatablez-" : "quarterblockbrowndarkz-",
 		"sideall" : "neutral"
-	},
-	"quarterblockbrowndarkx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkx+" : {
 		"colliders" : {
@@ -1565,11 +1734,11 @@
 		"mesh" : "./meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
-	"quarterblockbrowndarkz-" : {
+	"quarterblockbrowndarkx-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
 		},
-		"mesh" : "./meshes/quarterblockz-.ply",
+		"mesh" : "./meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrowndarkz+" : {
@@ -1577,6 +1746,13 @@
 			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
 		},
 		"mesh" : "./meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockbrowndark"
+	},
+	"quarterblockbrowndarkz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
+		"mesh" : "./meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrowndark"
 	},
 	"quarterblockbrownlight" : {
@@ -1594,18 +1770,11 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "quarterblockbrownlightx-",
 		"rotatablex+" : "quarterblockbrownlightx+",
-		"rotatablez-" : "quarterblockbrownlightz-",
+		"rotatablex-" : "quarterblockbrownlightx-",
 		"rotatablez+" : "quarterblockbrownlightz+",
+		"rotatablez-" : "quarterblockbrownlightz-",
 		"sideall" : "neutral"
-	},
-	"quarterblockbrownlightx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightx+" : {
 		"colliders" : {
@@ -1614,11 +1783,11 @@
 		"mesh" : "./meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
-	"quarterblockbrownlightz-" : {
+	"quarterblockbrownlightx-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
 		},
-		"mesh" : "./meshes/quarterblockz-.ply",
+		"mesh" : "./meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockbrownlightz+" : {
@@ -1626,6 +1795,13 @@
 			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
 		},
 		"mesh" : "./meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockbrownlight"
+	},
+	"quarterblockbrownlightz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
+		"mesh" : "./meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockbrownlight"
 	},
 	"quarterblockgrey" : {
@@ -1643,18 +1819,11 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "quarterblockgreyx-",
 		"rotatablex+" : "quarterblockgreyx+",
-		"rotatablez-" : "quarterblockgreyz-",
+		"rotatablex-" : "quarterblockgreyx-",
 		"rotatablez+" : "quarterblockgreyz+",
+		"rotatablez-" : "quarterblockgreyz-",
 		"sideall" : "neutral"
-	},
-	"quarterblockgreyx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyx+" : {
 		"colliders" : {
@@ -1663,11 +1832,11 @@
 		"mesh" : "./meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockgrey"
 	},
-	"quarterblockgreyz-" : {
+	"quarterblockgreyx-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
 		},
-		"mesh" : "./meshes/quarterblockz-.ply",
+		"mesh" : "./meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockgreyz+" : {
@@ -1675,6 +1844,13 @@
 			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
 		},
 		"mesh" : "./meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockgrey"
+	},
+	"quarterblockgreyz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
+		"mesh" : "./meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockgrey"
 	},
 	"quarterblockwhite" : {
@@ -1692,18 +1868,11 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex-" : "quarterblockwhitex-",
 		"rotatablex+" : "quarterblockwhitex+",
-		"rotatablez-" : "quarterblockwhitez-",
+		"rotatablex-" : "quarterblockwhitex-",
 		"rotatablez+" : "quarterblockwhitez+",
+		"rotatablez-" : "quarterblockwhitez-",
 		"sideall" : "neutral"
-	},
-	"quarterblockwhitex-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitex+" : {
 		"colliders" : {
@@ -1712,11 +1881,11 @@
 		"mesh" : "./meshes/quarterblockx+.ply",
 		"parentType" : "quarterblockwhite"
 	},
-	"quarterblockwhitez-" : {
+	"quarterblockwhitex-" : {
 		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
 		},
-		"mesh" : "./meshes/quarterblockz-.ply",
+		"mesh" : "./meshes/quarterblockx-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"quarterblockwhitez+" : {
@@ -1724,6 +1893,13 @@
 			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
 		},
 		"mesh" : "./meshes/quarterblockz+.ply",
+		"parentType" : "quarterblockwhite"
+	},
+	"quarterblockwhitez-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
+		},
+		"mesh" : "./meshes/quarterblockz-.ply",
 		"parentType" : "quarterblockwhite"
 	},
 	"redplanks" : {
@@ -2012,18 +2188,6 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "SELF"
 	},
-	"torchx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[-0.1,0.3,0.25],"min":[-0.5,-0.25,-0.25]}],
-			"collidePlayer" : false
-		},
-		"customData" : {
-			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
-			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
-		},
-		"mesh" : "./meshes/torchx-.ply",
-		"parentType" : "torch"
-	},
 	"torchx+" : {
 		"colliders" : {
 			"boxes" : [{"max":[0.5,0.3,0.25],"min":[0.1,-0.25,-0.25]}],
@@ -2034,6 +2198,18 @@
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":0.25,"offsety":0.18,"range":16,"volume":0.5}}
 		},
 		"mesh" : "./meshes/torchx+.ply",
+		"parentType" : "torch"
+	},
+	"torchx-" : {
+		"colliders" : {
+			"boxes" : [{"max":[-0.1,0.3,0.25],"min":[-0.5,-0.25,-0.25]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
+		},
+		"mesh" : "./meshes/torchx-.ply",
 		"parentType" : "torch"
 	},
 	"torchy+" : {
@@ -2049,18 +2225,6 @@
 		"needsBase" : true,
 		"parentType" : "torch"
 	},
-	"torchz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.25,0.3,-0.1],"min":[-0.25,-0.25,-0.5]}],
-			"collidePlayer" : false
-		},
-		"customData" : {
-			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
-			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
-		},
-		"mesh" : "./meshes/torchz-.ply",
-		"parentType" : "torch"
-	},
 	"torchz+" : {
 		"colliders" : {
 			"boxes" : [{"max":[0.25,0.3,0.5],"min":[-0.25,-0.25,0.1]}],
@@ -2071,6 +2235,18 @@
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":0.25,"range":16,"volume":0.5}}
 		},
 		"mesh" : "./meshes/torchz+.ply",
+		"parentType" : "torch"
+	},
+	"torchz-" : {
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0.3,-0.1],"min":[-0.25,-0.25,-0.5]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
+			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
+		},
+		"mesh" : "./meshes/torchz-.ply",
 		"parentType" : "torch"
 	},
 	"water" : {

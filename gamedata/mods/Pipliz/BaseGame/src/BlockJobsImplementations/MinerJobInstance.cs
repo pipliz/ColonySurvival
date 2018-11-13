@@ -1,5 +1,5 @@
 ﻿using BlockEntities;
-using Pipliz.APIProvider.Jobs;
+using Jobs;
 
 namespace Pipliz.Mods.BaseGame
 {
@@ -19,24 +19,22 @@ namespace Pipliz.Mods.BaseGame
 				BlockTypeBelow = foundtype;
 				MiningCooldown = cooldown;
 			} else {
-				// attempt to remove the job (loaded wrongly)
-				// todo use colony as param
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, 0, null));
+				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
+				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, ItemTypes.Air, Owner));
 			}
 		}
 
 		public MinerJobInstance (IBlockJobSettings settings, Vector3Int position, ItemTypes.ItemType type, Colony colony) : base(settings, position, type, colony)
 		{
 			float cooldown = 1f;
-			if (World.TryGetTypeAt(position.Add(0, -1, 0), out ushort itemIndex)
-				&& ItemTypes.TryGetType(itemIndex, out ItemTypes.ItemType foundtype)
-				&& (foundtype.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
+			if (World.TryGetTypeAt(position.Add(0, -1, 0), out ItemTypes.ItemType itemIndex)
+				&& (itemIndex.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
 			) {
-				BlockTypeBelow = foundtype;
+				BlockTypeBelow = itemIndex;
 				MiningCooldown = cooldown;
 			} else {
-				// todo use colony as param
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, 0, null));
+				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
+				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, ItemTypes.Air, Owner));
 			}
 		}
 
