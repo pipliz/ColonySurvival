@@ -487,7 +487,7 @@
 		"iterationCount" : 15,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
-			{"type":"sciencebaglife", "amount":2}
+			{"amount":2,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregensize1"
 	},
@@ -499,7 +499,7 @@
 		"iterationCount" : 25,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
-			{"type":"sciencebaglife", "amount":3}
+			{"amount":3,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregensize2"
 	},
@@ -511,7 +511,7 @@
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagadvanced"},
-			{"type":"sciencebaglife", "amount":3}
+			{"amount":3,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregensize3"
 	},
@@ -522,8 +522,8 @@
 		"icon" : "./textures/icons/baseresearch_healthregensize4.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagadvanced", "amount":3},
-			{"type":"sciencebaglife", "amount":5}
+			{"amount":3,"type":"sciencebagadvanced"},
+			{"amount":5,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregensize4"
 	},
@@ -534,8 +534,8 @@
 		"icon" : "./textures/icons/baseresearch_healthregenspeed1.png",
 		"iterationCount" : 15,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic", "amount":2},
-			{"type":"sciencebaglife", "amount":1}
+			{"amount":2,"type":"sciencebagbasic"},
+			{"amount":1,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregenspeed1"
 	},
@@ -546,8 +546,8 @@
 		"icon" : "./textures/icons/baseresearch_healthregenspeed2.png",
 		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic", "amount":3},
-			{"type":"sciencebaglife", "amount":1}
+			{"amount":3,"type":"sciencebagbasic"},
+			{"amount":1,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregenspeed2"
 	},
@@ -558,8 +558,8 @@
 		"icon" : "./textures/icons/baseresearch_healthregenspeed3.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagadvanced", "amount":3},
-			{"type":"sciencebaglife", "amount":1}
+			{"amount":3,"type":"sciencebagadvanced"},
+			{"amount":1,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregenspeed3"
 	},
@@ -570,8 +570,8 @@
 		"icon" : "./textures/icons/baseresearch_healthregenspeed4.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagadvanced", "amount":5},
-			{"type":"sciencebaglife", "amount":3}
+			{"amount":5,"type":"sciencebagadvanced"},
+			{"amount":3,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthregenspeed4"
 	},
@@ -582,8 +582,8 @@
 		"icon" : "./textures/icons/baseresearch_healthsize1.png",
 		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic", "amount":1},
-			{"type":"sciencebaglife", "amount":1}
+			{"amount":1,"type":"sciencebagbasic"},
+			{"amount":1,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthsize1"
 	},
@@ -594,8 +594,8 @@
 		"icon" : "./textures/icons/baseresearch_healthsize2.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic", "amount":1},
-			{"type":"sciencebaglife", "amount":1}
+			{"amount":1,"type":"sciencebagbasic"},
+			{"amount":1,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthsize2"
 	},
@@ -606,8 +606,8 @@
 		"icon" : "./textures/icons/baseresearch_healthsize3.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagadvanced", "amount":2},
-			{"type":"sciencebaglife", "amount":2}
+			{"amount":2,"type":"sciencebagadvanced"},
+			{"amount":2,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthsize3"
 	},
@@ -618,8 +618,8 @@
 		"icon" : "./textures/icons/baseresearch_healthsize4.png",
 		"iterationCount" : 100,
 		"iterationRequirements" : [
-			{"type":"sciencebagadvanced", "amount":2},
-			{"type":"sciencebaglife", "amount":2}
+			{"amount":2,"type":"sciencebagadvanced"},
+			{"amount":2,"type":"sciencebaglife"}
 		],
 		"key" : "pipliz.baseresearch.healthsize4"
 	},
@@ -627,210 +627,210 @@
 		"icon" : "./textures/icons/flax.png",
 		"iterationCount" : 3,
 		"iterationRequirements" : [
-			{"type":"berry", "amount":3},
-			{"type":"coppernails", "amount":1}
+			{"amount":3,"type":"berry"},
+			{"amount":1,"type":"coppernails"}
 		],
+		"key" : "pipliz.baseresearch.flaxfarming",
 		"unlocksRecipes" : [
 			"pipliz.crafter.linseedoil",
 			"pipliz.crafter.coatedplanks",
 			"pipliz.crafter.adobe",
 			"pipliz.crafter.bowstring"
-		],
-		"key" : "pipliz.baseresearch.flaxfarming"
+		]
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
 		"icon" : "./textures/icons/alkanet.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic", "amount":1}
+			{"amount":1,"type":"sciencebagbasic"}
 		],
+		"key" : "pipliz.baseresearch.herbfarming",
 		"unlocksRecipes" : [
 			"pipliz.merchant.alkanetseeds",
 			"pipliz.merchant.hollyhockseeds",
 			"pipliz.merchant.wolfsbaneseeds"
-		],
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
-		],
-		"key" : "pipliz.baseresearch.herbfarming"
+		]
 	},
 	{
 		"icon" : "./textures/icons/bread.png",
 		"iterationCount" : 5,
 		"iterationRequirements" : [
-			{"type":"berry", "amount":10},
-			{"type":"copperparts","amount":2},
+			{"amount":10,"type":"berry"},
+			{"amount":2,"type":"copperparts"},
 			{"type":"coppertools"}
 		],
+		"key" : "pipliz.baseresearch.wheatfarming",
 		"unlocksRecipes" : [
 			"pipliz.crafter.oven",
 			"pipliz.crafter.grindstone",
 			"pipliz.player.oven",
 			"pipliz.player.grindstone"
-		],
-		"key" : "pipliz.baseresearch.wheatfarming"
+		]
 	},
 	{
-		"icon" : "./textures/icons/bricksred.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"stoneblock","amount":5},
-			{"type":"cobblestonegrey","amount":5},
-			{"type":"bricksred","amount":5}
-		],
 		"dependencies" : [
 			"pipliz.baseresearch.constructiondigger",
 			"pipliz.baseresearch.stonemasonworkbench"
 		],
+		"icon" : "./textures/icons/bricksred.png",
+		"iterationCount" : 50,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"amount":5,"type":"stoneblock"},
+			{"amount":5,"type":"cobblestonegrey"},
+			{"amount":5,"type":"bricksred"}
+		],
 		"key" : "pipliz.baseresearch.constructionbuilder"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuilder"
+		],
 		"icon" : "./textures/icons/buildersize1.png",
 		"iterationCount" : 30,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
-			{"type":"stoneblock","amount":5}
-		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuilder"
+			{"amount":5,"type":"stoneblock"}
 		],
 		"key" : "pipliz.baseresearch.constructionbuildersize1"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuildersize1",
+			"pipliz.baseresearch.sciencebagadvanced"
+		],
 		"icon" : "./textures/icons/buildersize2.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize1",
-			"pipliz.baseresearch.sciencebagadvanced"
-		],
 		"key" : "pipliz.baseresearch.constructionbuildersize2"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuildersize2",
+			"pipliz.baseresearch.sciencebagcolony"
+		],
 		"icon" : "./textures/icons/buildersize3.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize2",
-			"pipliz.baseresearch.sciencebagcolony"
-		],
 		"key" : "pipliz.baseresearch.constructionbuildersize3"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuildersize3"
+		],
 		"icon" : "./textures/icons/buildersize4.png",
 		"iterationCount" : 100,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize3"
-		],
 		"key" : "pipliz.baseresearch.constructionbuildersize4"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuildersize4"
+		],
 		"icon" : "./textures/icons/buildersize5.png",
 		"iterationCount" : 250,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize4"
-		],
 		"key" : "pipliz.baseresearch.constructionbuildersize5"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.sciencebagbasic"
+		],
 		"icon" : "./textures/icons/bronzepickaxe.png",
 		"iterationCount" : 30,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
 			{"type":"bronzepickaxe"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
-		],
 		"key" : "pipliz.baseresearch.constructiondigger"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructiondigger"
+		],
 		"icon" : "./textures/icons/diggersize1.png",
 		"iterationCount" : 30,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
-			{"type":"stoneblock","amount":5}
-		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondigger"
+			{"amount":5,"type":"stoneblock"}
 		],
 		"key" : "pipliz.baseresearch.constructiondiggersize1"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructiondiggersize1",
+			"pipliz.baseresearch.sciencebagadvanced"
+		],
 		"icon" : "./textures/icons/diggersize2.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize1",
-			"pipliz.baseresearch.sciencebagadvanced"
-		],
 		"key" : "pipliz.baseresearch.constructiondiggersize2"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructiondiggersize2",
+			"pipliz.baseresearch.sciencebagcolony"
+		],
 		"icon" : "./textures/icons/diggersize3.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize2",
-			"pipliz.baseresearch.sciencebagcolony"
-		],
 		"key" : "pipliz.baseresearch.constructiondiggersize3"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructiondiggersize3"
+		],
 		"icon" : "./textures/icons/diggersize4.png",
 		"iterationCount" : 100,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize3"
-		],
 		"key" : "pipliz.baseresearch.constructiondiggersize4"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructiondiggersize4"
+		],
 		"icon" : "./textures/icons/diggersize5.png",
 		"iterationCount" : 250,
 		"iterationRequirements" : [
 			{"type":"sciencebagcolony"},
 			{"type":"sciencebagadvanced"}
 		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize4"
-		],
 		"key" : "pipliz.baseresearch.constructiondiggersize5"
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.constructionbuilder",
+			"pipliz.baseresearch.sciencebagadvanced"
+		],
 		"icon" : "./textures/icons/bronzeaxe.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
 			{"type":"sciencebagbasic"},
 			{"type":"sciencebagadvanced"}
-		],
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuilder",
-			"pipliz.baseresearch.sciencebagadvanced"
 		],
 		"key" : "pipliz.baseresearch.constructiondiggerspecial"
 	}
