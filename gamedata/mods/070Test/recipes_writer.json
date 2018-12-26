@@ -1,0 +1,30 @@
+[
+	{
+		"name" : "test.writer.paperempty",
+		"requires" : [
+			{"type":"test_chickenskin"}
+		],
+		"results" : [
+			{"type":"test_paperempty"}
+		]
+	},
+	{
+		"name" : "test.writer.papertext",
+		"requires" : [
+			{"type":"test_paperempty"}
+		],
+		"results" : [
+			{"type":"test_papertext"}
+		]
+	},
+	{
+		"name" : "test.writer.book",
+		"requires" : [
+			{"type":"test_paperempty","amount":20},
+			{"type":"test_chickenskin","amount":4}
+		],
+		"results" : [
+			{"type":"test_book"}
+		]
+	}
+]

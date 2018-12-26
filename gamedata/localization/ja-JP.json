@@ -1,5 +1,5 @@
 {
-	"coverage" : 97.4193548387097,
+	"coverage" : 94.3396226415094,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -47,8 +47,9 @@
 			"sp_3" : "ステージ 3/{0} - サーバー起動完了、接続を待っています",
 			"sp_alreadyrunning1" : "このインストール向けのサーバーは起動していますが、終了処理中の可能性があります。 あと5秒でリトライします。",
 			"sp_alreadyrunning2" : "サーバーは既に起動中です。 あと5秒でメインメニューに戻ります。",
-			"steam1" : "ステージ 1/{0} - {1}から接続データを取得中",
-			"steam2" : "ステージ 2/{0} - サーバー接続をセットアップ中",
+			"steam01" : "_MISSING_Stage 1/{0} - Trying to setup TCP connection to {1}",
+			"steam02" : "_MISSING_Stage 2/{0} - Trying to setup steam connection",
+			"steam03" : "_MISSING_Stage 3/{0} - Connection succesful, authenticating",
 			"steamfail" : "接続データの取得に失敗しました。 あと5秒でメインメニューに戻ります。"
 		},
 		"escapemenu" : {
@@ -64,6 +65,7 @@
 			"colonistcount" : "入植者:",
 			"foodstorage" : "食料:",
 			"foodusage" : "食料消費/日:",
+			"happiness" : "_MISSING_Happiness:",
 			"laborercount" : "失業者:"
 		},
 		"general" : {
@@ -82,6 +84,17 @@
 			"veryhigh" : "かなり高",
 			"yes" : "はい"
 		},
+		"happiness" : {
+			"availablefood" : "_MISSING_{0}% availability for {1}",
+			"availableluxury" : "_MISSING_{0}% availability for {1}",
+			"baseamount" : "_MISSING_King's presence",
+			"colonistcount" : "_MISSING_Crowdedness",
+			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"rationratio" : "_MISSING_Ration ratio",
+			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0}",
+			"sciencespeed" : "_MISSING_Science speed: {0:P0}",
+			"totalhappiness" : "_MISSING_Total happiness: {0}"
+		},
 		"infomenu" : {
 			"changelog" : "更新履歴",
 			"credits" : "クレジット",
@@ -89,6 +102,7 @@
 		},
 		"mainmenu" : {
 			"back" : "戻る",
+			"coop" : "_MISSING_Co-op",
 			"info" : "情報",
 			"multiplayer" : "マルチプレイヤー",
 			"quit" : "終了",
@@ -378,6 +392,10 @@
 			"inventory" : {
 				"craftingstockpile" : "作成 & 備蓄品",
 				"foodvalue" : "食料としての価値:",
+				"happinessvalue" : "_MISSING_Happiness value:",
+				"happy" : {
+					"header" : "_MISSING_Happiness"
+				},
 				"madeintooltip" : "これで作成:",
 				"science" : {
 					"available" : "研究可能",
@@ -532,6 +550,7 @@
 			},
 			"worldsettings" : {
 				"daymonsters" : "昼間のモンスター総量",
+				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "ワールド設定",
 				"nightmonsters" : "夜間のモンスター総量"
 			}
@@ -664,17 +683,22 @@
 			}
 		},
 		"singleplayermenu" : {
+			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "コロニー名",
-			"daymonsters" : "昼にもモンスターがスポーン",
+			"confirmdelete" : "_MISSING_Confirm deleting",
+			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "削除",
-			"doubledmonsters" : "モンスターの数が2倍",
+			"hostingoptions" : "_MISSING_Hosting Settings",
 			"load" : "ロード",
 			"loadworld" : "ワールドをロード",
 			"newworld" : "新規ワールド",
+			"password" : "_MISSING_Password",
 			"play" : "プレイ",
-			"spawnmonsters" : "モンスターがスポーンする",
+			"servername" : "_MISSING_Server Name",
+			"serverport" : "_MISSING_Server Port",
 			"worlddate" : "日付",
-			"worldname" : "ワールド名"
+			"worldname" : "ワールド名",
+			"worldseed" : "_MISSING_World seed"
 		}
 	},
 	"types" : {

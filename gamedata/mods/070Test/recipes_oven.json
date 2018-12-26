@@ -1,0 +1,23 @@
+[
+	{
+		"name" : "test.oven.beeswax",
+		"requires" : [
+			{"type":"test_rawbeeswax","amount":3},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"test_beeswax"}
+		]
+	},
+	{
+		"name" : "pipliz.baker.bread",
+		"requires" : [
+			{"amount":5,"type":"flour"},
+			{"type":"test_bucketwater"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"amount":2,"type":"bread"}
+		]
+	}
+]

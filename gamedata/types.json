@@ -168,10 +168,11 @@
 		"categories" : [
 			"food"
 		],
+		"happiness" : 10,
 		"icon" : "./textures/icons/berry.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600,
-		"nutritionalValue" : 0.6
+		"nutritionalValue" : 0.1
 	},
 	"berrybush" : {
 		"categories" : [
@@ -214,10 +215,11 @@
 		"categories" : [
 			"food"
 		],
+		"happiness" : 10,
 		"icon" : "./textures/icons/bread.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 300,
-		"nutritionalValue" : 3
+		"nutritionalValue" : 0.33334
 	},
 	"bricks" : {
 		"categories" : [
@@ -1536,7 +1538,9 @@
 			"decorative",
 			"planks"
 		],
+		"happiness" : 10,
 		"icon" : "./textures/icons/planks.png",
+		"luxuryHours" : 48,
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -2260,8 +2264,7 @@
 		],
 		"icon" : "./textures/icons/wheat.png",
 		"isPlaceable" : false,
-		"maxStackSize" : 600,
-		"nutritionalValue" : 0.4
+		"maxStackSize" : 600
 	},
 	"wheatstage" : {
 		"isSolid" : false,

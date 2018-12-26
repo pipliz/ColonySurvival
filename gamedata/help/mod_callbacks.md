@@ -58,17 +58,19 @@ CallbackType: `AfterSelectedWorld`
 ## Description
 Signature: void ()
 First callback after the world to load has been determined
-## Registered callbacks: 6
+## Registered callbacks: 7
 0.	`pipliz.server.applytexturemappingpatches`
-		Provides For 2. `pipliz.server.registertexturemappingtextures`
+		Provides For 3. `pipliz.server.registertexturemappingtextures`
 		_Waits for texture mapping patches to load, then merges them._
 1.	`pipliz.server.loadaudiofiles`
-2.	`pipliz.server.registertexturemappingtextures`
+2.	`pipliz.server.loadtimecycle`
+		_Sets the TimeCycle time, loading from ServerManager.WorldSettings_
+3.	`pipliz.server.registertexturemappingtextures`
 		_Registers the texture mapping files to load (from the registered texturemappings)_
-3.	`pipliz.startloaddifficulty`
+4.	`pipliz.startloaddifficulty`
 		_Starts loading the difficulty json files_
-4.	`registernpctextures`
-5.	`registerwatertextures`
+5.	`registernpctextures`
+6.	`registerwatertextures`
 
 
 CallbackType: `AfterAddingBaseTypes`
@@ -84,7 +86,7 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 24
+## Registered callbacks: 23
 0.	`pipliz.server.loadnpctypes`
 1.	`areajobs.insertattributed`
 		Depends On 0. `pipliz.server.loadnpctypes`
@@ -116,9 +118,11 @@ First callback after all item types should be defined, so you can resolve types 
 		Provides For 15. `create_savemanager`
 		_Adds all the job block implementations to BlockJobManagerTracker_
 10.	`pipliz.server.recipeplayerload`
+		Depends On 2. `create_servermanager_trackers`
 		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for recipe patches to load, then merges them_
 11.	`pipliz.server.recipenpcload`
+		Depends On 2. `create_servermanager_trackers`
 		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for npc recipe patches to complete loading, then merges and registers them_
 12.	`pipliz.server.loadresearchables`
@@ -148,14 +152,12 @@ First callback after all item types should be defined, so you can resolve types 
 		_Load all registered areajobs' files_
 19.	`pipliz.server.loadpermissions`
 		_Load permissions_
-20.	`pipliz.server.loadtimecycle`
-		_Sets the TimeCycle time, loading from ServerManager.WorldSettings_
-21.	`pipliz.server.loadwater`
+20.	`pipliz.server.loadwater`
 		_Starts loading water blocks_
-22.	`pipliz.server.registermonstertextures`
+21.	`pipliz.server.registermonstertextures`
 		Depends On 0. `pipliz.server.loadnpctypes`
 		_Registers monster textures from registered NPCTypes_
-23.	`wait_complete_startup_chunks`
+22.	`wait_complete_startup_chunks`
 		Depends On 15. `create_savemanager`
 		_Waits for the savemanager to complete loading its index & the startup chunks_
 
@@ -203,16 +205,14 @@ CallbackType: `OnUpdate`
 ## Description
 Signature: void ()
 In the middle of unity's Update method.
-## Registered callbacks: 5
-0.	`pipliz.colonyserverwrapper.process`
-		_Processes packets from external socket_
-1.	`pipliz.server.chunkupdater`
+## Registered callbacks: 4
+0.	`pipliz.server.chunkupdater`
 		_Checks if chunks can be unloaded_
-2.	`pipliz.server.tickscounter`
+1.	`pipliz.server.tickscounter`
 		_Counts framerate for /tps_
-3.	`pipliz.server.updatetimecycle`
+2.	`pipliz.server.updatetimecycle`
 		_Updates TimeCycle_
-4.	`update_water`
+3.	`update_water`
 
 
 CallbackType: `OnUpdateEnd`
@@ -338,12 +338,9 @@ CallbackType: `OnQuitLate`
 ## Description
 Signature: void ()
 Called late in the quit method queue (Application.OnQuit 100)
-## Registered callbacks: 2
+## Registered callbacks: 1
 0.	`pipliz.shared.waitforasyncquits`
 		_Waits for async items to complete (mostly from autosaving)_
-1.	`pipliz.colonyserverwrapper.dispose`
-		Depends On 0. `pipliz.shared.waitforasyncquits`
-		_Close external socket_
 
 
 CallbackType: `OnSavedChunk`
@@ -358,7 +355,7 @@ CallbackType: `OnLoadedChunk`
 =======
 ## Description
 Signature: void (Chunk a)
-Loaded chunk x
+Loaded chunk x from the save manager
 No registered uses
 
 
@@ -370,6 +367,17 @@ Called approx 6 times per second per player. New position/rotation is set on the
 ## Registered callbacks: 1
 0.	`pipliz.server.loadsurroundings`
 		_Queues up chunks to load if the player moves to other chunks_
+
+
+CallbackType: `OnModifyResearchables`
+=======
+## Description
+Signature: void (Dictionary<string, BaseResearchable> researches)
+Called inside of OnAddResearchables - allows modifying researches added through jsonFiles before they're registered
+## Registered callbacks: 3
+0.	`addbannercallbacks`
+1.	`addhealthcallbacks`
+2.	`farmingresults`
 
 
 CallbackType: `OnTryChangeBlock`
@@ -394,7 +402,8 @@ CallbackOrigin - enum to indicate the origin of this callback
 InventoryItemResults - Inventory results the player will receive, only used if the origin is ClientPlayerManual. Don't store or change the reference - but you can change the contents.
 CallbackConsumedResult - Return value of TryChangeBlock if you set callbackState to Consumed
 PlayerClickedData - only set if callback origin is from the client. Same data as in the OnPlayerClicked callback
-No registered uses
+## Registered callbacks: 1
+0.	`TODO_FIX_BANNER_MOVING`
 
 
 CallbackType: `OnPlayerConnectedLate`
@@ -403,16 +412,14 @@ CallbackType: `OnPlayerConnectedLate`
 Signature: void (Players.Player a)
 Arg a: The Player that is connecting
 Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed till after the client is done loading.
-## Registered callbacks: 5
+## Registered callbacks: 4
 0.	`pipliz.networkmenumanager`
 		_Sends some networkui menu's to the player. Triggers some callbacks internally_
 1.	`pipliz.server.meshedobjects.sendtable`
 		_Sends the meshed object settings data_
-2.	`pipliz.server.sendaudiomapping`
-		_Sends a compressed version of the audiofiles settings_
-3.	`pipliz.server.sendnpctypes`
+2.	`pipliz.server.sendnpctypes`
 		_Sends the registered NPCType settings to the player_
-4.	`pipliz.server.sendsetflight`
+3.	`pipliz.server.sendsetflight`
 		_Send player flight state_
 
 
@@ -709,11 +716,12 @@ CallbackType: `OnActiveColonyChanges`
 ## Description
 Signature: void(Players.Player player, Colony previouslyActiveColony, Colony newActiveColony)
 Called when the active colony changes
-## Registered callbacks: 4
+## Registered callbacks: 5
 0.	`onchange`
 1.	`resend_areajobs`
 2.	`sendconstructiondata`
-3.	`sendresearch`
+3.	`sendhappiness`
+4.	`sendresearch`
 
 
 CallbackType: `OnSavingColony`
@@ -721,14 +729,15 @@ CallbackType: `OnSavingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when saving a colony
-## Registered callbacks: 6
+## Registered callbacks: 7
 0.	`savedifficulty`
 		_Saved the active difficulty setting, into node['difficulty']. If the setting equals the default, does not write there_
-1.	`savenpcs`
-2.	`saveowners`
-3.	`saverecipesettings`
-4.	`savescience`
-5.	`savestockpile`
+1.	`savehappiness`
+2.	`savenpcs`
+3.	`saveowners`
+4.	`saverecipesettings`
+5.	`savescience`
+6.	`savestockpile`
 
 
 CallbackType: `OnLoadingColony`
@@ -736,14 +745,15 @@ CallbackType: `OnLoadingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when loading a colony
-## Registered callbacks: 6
+## Registered callbacks: 7
 0.	`loaddifficulty`
 		_Loads the node['difficulty'] key if present, using the node['difficulty']['key'] type of difficulty loader_
-1.	`loadnpcs`
-2.	`loadowners`
-3.	`loadrecipesettings`
-4.	`loadscience`
-5.	`loadstockpile`
+1.	`loadhappiness`
+2.	`loadnpcs`
+3.	`loadowners`
+4.	`loadrecipesettings`
+5.	`loadscience`
+6.	`loadstockpile`
 
 
 CallbackType: `OnLoadingTerrainGenerator`
@@ -756,5 +766,13 @@ Called from the terrain generator thread, intended to load the tree files
 1.	`load_structure_patches`
 2.	`load_biome_patches`
 		Depends On 1. `load_structure_patches`
+
+
+CallbackType: `OnPlayerEditedNetworkInputfield`
+=======
+## Description
+Signature: void (NetworkUI.InputfieldEditCallbackData data)
+Data -> the storage node, inputfield ID and player that pushed the button
+No registered uses
 
 

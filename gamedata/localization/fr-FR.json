@@ -1,5 +1,5 @@
 {
-	"coverage" : 97.4193548387097,
+	"coverage" : 94.3396226415094,
 	"hints" : {
 		"0" : "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1" : "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -47,8 +47,9 @@
 			"sp_3" : "Étape 3/{0} – Serveur lancé, en attente de connexion",
 			"sp_alreadyrunning1" : "Un serveur pour cette installation est déjà lancé. Il est peut-être toujours en train de quitter. Nouvelle tentative dans 5 secondes.",
 			"sp_alreadyrunning2" : "Un serveur est déjà lancé. Retour au menu principal dans 5 secondes.",
-			"steam1" : "Étape 1/{0} – Récupération des données de connexions depuis {1}",
-			"steam2" : "Étape 2/{0} – Établissement de la connexion au serveur",
+			"steam01" : "_MISSING_Stage 1/{0} - Trying to setup TCP connection to {1}",
+			"steam02" : "_MISSING_Stage 2/{0} - Trying to setup steam connection",
+			"steam03" : "_MISSING_Stage 3/{0} - Connection succesful, authenticating",
 			"steamfail" : "Impossible de recevoir les données de connexion. Retour au menu principal dans 5 secondes."
 		},
 		"escapemenu" : {
@@ -64,6 +65,7 @@
 			"colonistcount" : "Colons :",
 			"foodstorage" : "Nouriture :",
 			"foodusage" : "Nourriture/jour :",
+			"happiness" : "_MISSING_Happiness:",
 			"laborercount" : "Sans emploi :"
 		},
 		"general" : {
@@ -82,6 +84,17 @@
 			"veryhigh" : "Très élevé",
 			"yes" : "Oui"
 		},
+		"happiness" : {
+			"availablefood" : "_MISSING_{0}% availability for {1}",
+			"availableluxury" : "_MISSING_{0}% availability for {1}",
+			"baseamount" : "_MISSING_King's presence",
+			"colonistcount" : "_MISSING_Crowdedness",
+			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"rationratio" : "_MISSING_Ration ratio",
+			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0}",
+			"sciencespeed" : "_MISSING_Science speed: {0:P0}",
+			"totalhappiness" : "_MISSING_Total happiness: {0}"
+		},
 		"infomenu" : {
 			"changelog" : "Nouveautés de la version",
 			"credits" : "Crédits",
@@ -89,6 +102,7 @@
 		},
 		"mainmenu" : {
 			"back" : "Retour",
+			"coop" : "_MISSING_Co-op",
 			"info" : "Informations",
 			"multiplayer" : "Multijoueur",
 			"quit" : "Quitter",
@@ -378,6 +392,10 @@
 			"inventory" : {
 				"craftingstockpile" : "Fabrication et stock",
 				"foodvalue" : "Valeur nutritive :",
+				"happinessvalue" : "_MISSING_Happiness value:",
+				"happy" : {
+					"header" : "_MISSING_Happiness"
+				},
 				"madeintooltip" : "Fabriqué(e) dans :",
 				"science" : {
 					"available" : "Disponible",
@@ -532,6 +550,7 @@
 			},
 			"worldsettings" : {
 				"daymonsters" : "Quantité de monstres le jour",
+				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "Paramètres du monde",
 				"nightmonsters" : "Quantité de monstres la nuit"
 			}
@@ -664,17 +683,22 @@
 			}
 		},
 		"singleplayermenu" : {
+			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Nom de la colonie",
-			"daymonsters" : "Monstres la journée",
+			"confirmdelete" : "_MISSING_Confirm deleting",
+			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "Effacer",
-			"doubledmonsters" : "Deux fois plus de monstres",
+			"hostingoptions" : "_MISSING_Hosting Settings",
 			"load" : "Charger",
 			"loadworld" : "Charger le monde",
 			"newworld" : "Nouveau monde",
+			"password" : "_MISSING_Password",
 			"play" : "Jouer",
-			"spawnmonsters" : "Apparition des monstres",
+			"servername" : "_MISSING_Server Name",
+			"serverport" : "_MISSING_Server Port",
 			"worlddate" : "Date",
-			"worldname" : "Nom"
+			"worldname" : "Nom",
+			"worldseed" : "_MISSING_World seed"
 		}
 	},
 	"types" : {

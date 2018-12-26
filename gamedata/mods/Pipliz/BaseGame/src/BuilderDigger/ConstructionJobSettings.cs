@@ -83,7 +83,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 				if (instance.ConstructionArea == null) {
 					if (instance.DidAreaPresenceTest) {
 						state.SetCooldown(0.5);
-						ServerManager.TryChangeBlock(instance.Position, null, ItemTypes.Air, instance.Owner);
+						ServerManager.TryChangeBlock(instance.Position, instance.BlockType, ItemTypes.Air, instance.Owner);
 					} else {
 						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(3f, 5f), BuiltinBlocks.ErrorIdle));
 						instance.DidAreaPresenceTest = true;

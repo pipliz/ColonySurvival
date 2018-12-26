@@ -1,5 +1,5 @@
 {
-	"coverage" : 33.2903225806452,
+	"coverage" : 32.0754716981132,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -47,9 +47,10 @@
 			"sp_3" : "_MISSING_Stage 3/{0} - Started server, awaiting connection",
 			"sp_alreadyrunning1" : "_MISSING_A server for this install is already running. It may still be quitting. Will retry in 5 seconds.",
 			"sp_alreadyrunning2" : "_MISSING_A server is already running. Returning to the main menu in 5 seconds.",
-			"steam1" : "_MISSING_Stage 1/{0} - Getting connection data from {1}",
-			"steam2" : "_MISSING_Stage 2/{0} - Setting up server connection",
-			"steamfail" : "_MISSING_Failed to receive connection data. Returning to main menu in 5 seconds."
+			"steam01" : "_MISSING_Stage 1/{0} - Trying to setup TCP connection to {1}",
+			"steam02" : "_MISSING_Stage 2/{0} - Trying to setup steam connection",
+			"steam03" : "_MISSING_Stage 3/{0} - Connection succesful, authenticating",
+			"steamfail" : "_MISSING_Failed to setup a connection. Returning to main menu in 5 seconds."
 		},
 		"escapemenu" : {
 			"back" : "Palaa peliin",
@@ -64,6 +65,7 @@
 			"colonistcount" : "Asukkeja:",
 			"foodstorage" : "Ruokaa:",
 			"foodusage" : "Ruuankulutus/vrk:",
+			"happiness" : "_MISSING_Happiness:",
 			"laborercount" : "Työttömiä:"
 		},
 		"general" : {
@@ -82,6 +84,17 @@
 			"veryhigh" : "_MISSING_Very High",
 			"yes" : "_MISSING_Yes"
 		},
+		"happiness" : {
+			"availablefood" : "_MISSING_{0}% availability for {1}",
+			"availableluxury" : "_MISSING_{0}% availability for {1}",
+			"baseamount" : "_MISSING_King's presence",
+			"colonistcount" : "_MISSING_Crowdedness",
+			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"rationratio" : "_MISSING_Ration ratio",
+			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0}",
+			"sciencespeed" : "_MISSING_Science speed: {0:P0}",
+			"totalhappiness" : "_MISSING_Total happiness: {0}"
+		},
 		"infomenu" : {
 			"changelog" : "Muutoskirjaus",
 			"credits" : "Lopputekstit",
@@ -89,6 +102,7 @@
 		},
 		"mainmenu" : {
 			"back" : "Palaa",
+			"coop" : "_MISSING_Co-op",
 			"info" : "Info",
 			"multiplayer" : "Moninpeli",
 			"quit" : "Lopeta",
@@ -378,6 +392,10 @@
 			"inventory" : {
 				"craftingstockpile" : "_MISSING_Crafting & Stockpile",
 				"foodvalue" : "Ruoka-arvo:",
+				"happinessvalue" : "_MISSING_Happiness value:",
+				"happy" : {
+					"header" : "_MISSING_Happiness"
+				},
 				"madeintooltip" : "_MISSING_Made in:",
 				"science" : {
 					"available" : "_MISSING_Available",
@@ -532,6 +550,7 @@
 			},
 			"worldsettings" : {
 				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "_MISSING_World Settings",
 				"nightmonsters" : "_MISSING_Night Monster Amount"
 			}
@@ -664,17 +683,22 @@
 			}
 		},
 		"singleplayermenu" : {
+			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Asutuksen nimi",
-			"daymonsters" : "Hirviöitä päiväsaikaan",
+			"confirmdelete" : "_MISSING_Confirm deleting",
+			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "Poista",
-			"doubledmonsters" : "Kaksin verroin hirviöitä",
+			"hostingoptions" : "_MISSING_Hosting Settings",
 			"load" : "Lataa",
 			"loadworld" : "Lataa maailma",
 			"newworld" : "Uusi maailma",
+			"password" : "_MISSING_Password",
 			"play" : "Pelaa",
-			"spawnmonsters" : "Hirviöiden luonti",
+			"servername" : "_MISSING_Server Name",
+			"serverport" : "_MISSING_Server Port",
 			"worlddate" : "Päiväys",
-			"worldname" : "Nimi"
+			"worldname" : "Nimi",
+			"worldseed" : "_MISSING_World seed"
 		}
 	},
 	"types" : {

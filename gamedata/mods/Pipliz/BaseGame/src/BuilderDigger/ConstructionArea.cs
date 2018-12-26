@@ -1,6 +1,7 @@
 ﻿using Jobs;
 using NPC;
 using Pipliz.JSON;
+using System.Collections.Generic;
 
 namespace Pipliz.Mods.BaseGame.Construction
 {
@@ -11,20 +12,23 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		protected bool isValid = true;
 
-		protected IConstructionType constructionType;
-		protected IIterationType iterationType;
+		public IConstructionType ConstructionType { get; set; }
+		public IIterationType IterationType { get; set; }
+
 		protected JSONNode arguments;
 
 		protected static ConstructionAreaDefinition DefinitionInstance;
+
+		public static Dictionary<string, IConstructionLoader> constructionLoaders = new Dictionary<string, IConstructionLoader>();
 
 		public virtual Colony Owner { get; protected set; }
 
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
 		public virtual NPCBase NPC { get { return null; } set { } }
-		public virtual Shared.EAreaType AreaType { get { return constructionType == null ? Shared.EAreaType.Unknown : constructionType.AreaType; } }
-		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return constructionType == null ? Shared.EAreaMeshType.AutoSelect : constructionType.AreaTypeMesh; ; } }
-		public virtual bool IsValid { get { return isValid && constructionType != null && iterationType != null; } }
+		public virtual Shared.EAreaType AreaType { get { return ConstructionType == null ? Shared.EAreaType.Unknown : ConstructionType.AreaType; } }
+		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return ConstructionType == null ? Shared.EAreaMeshType.AutoSelect : ConstructionType.AreaTypeMesh; ; } }
+		public virtual bool IsValid { get { return isValid && arguments != null && ConstructionType != null && IterationType != null; } }
 
 		public virtual IAreaJobDefinition Definition
 		{
@@ -41,6 +45,13 @@ namespace Pipliz.Mods.BaseGame.Construction
 			}
 		}
 
+		static ConstructionArea ()
+		{
+			RegisterLoader(new Loaders.BuilderLoader());
+			RegisterLoader(new Loaders.DiggerLoader());
+			RegisterLoader(new Loaders.DiggerSpecialLoader());
+		}
+
 		public ConstructionArea (Colony owner, Vector3Int min, Vector3Int max)
 		{
 			min.y = Math.Max(1, min.y);
@@ -52,58 +63,25 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public void SetArgument (JSONNode args)
 		{
-			arguments = args;
 			if (args == null) {
 				Log.WriteWarning("Unexpected construction area args; null");
 				return;
 			}
-			string type;
-			if (args.TryGetAs("constructionType", out type)) {
-				SetConstructionType(type, args);
-			} else {
-				Log.WriteWarning("Unexpected construction area args; no constructionType");
-			}
-		}
-
-		public void SetConstructionType (string type, JSONNode args = null)
-		{
-			switch (type) {
-				case "pipliz.digger":
-					SetConstructionType(new Types.DiggerBasic());
-					SetIterationType(new Iterators.TopToBottom(this));
-					break;
-				case "pipliz.diggerspecial":
-					if (args != null) {
-						ItemTypes.ItemType digTpe = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(args.GetAsOrDefault("diggerBlockType", "air")));
-						if (digTpe != null && digTpe.ItemIndex != 0) {
-							SetConstructionType(new Types.DiggerSpecial(digTpe));
-							SetIterationType(new Iterators.TopToBottom(this));
-						}
-					}
-					break;
-				case "pipliz.builder":
-					if (args != null) {
-						ItemTypes.ItemType buildType = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(args.GetAsOrDefault("builderBlockType", "air")));
-						if (buildType != null && buildType.ItemIndex != 0) {
-							SetConstructionType(new Types.BuilderBasic(buildType));
-							SetIterationType(new Iterators.BottomToTop(this));
-						}
-					}
-					break;
-				default:
+			arguments = args;
+			if (args.TryGetAs("constructionType", out string type)) {
+				if (constructionLoaders.TryGetValue(type, out IConstructionLoader jobCallbacks)) {
+					jobCallbacks.ApplyTypes(this, args);
+				} else {
 					Log.WriteWarning("Unexpected construction type: {0}", type);
-					break;
+				}
+			} else {
+				Log.WriteWarning("Unexpected construction area args; no constructionType set");
 			}
 		}
 
-		public void SetConstructionType (IConstructionType type)
+		public static void RegisterLoader (IConstructionLoader type)
 		{
-			constructionType = type;
-		}
-
-		public void SetIterationType (IIterationType type)
-		{
-			iterationType = type;
+			constructionLoaders[type.JobName] = type;
 		}
 
 		public virtual void OnRemove ()
@@ -114,23 +92,24 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public virtual void SaveAreaJob ()
 		{
-			JSONNode node = new JSONNode()
-				.SetAs("min", (JSONNode)positionMin)
-				.SetAs("max", (JSONNode)positionMax);
+			if (arguments != null) {
+				JSONNode node = new JSONNode()
+					.SetAs("min", (JSONNode)positionMin)
+					.SetAs("max", (JSONNode)positionMax)
+					.SetAs("arguments", arguments);
 
-			if (arguments == null) {
-				node.SetAs("arguments", "none");
-			} else {
-				node.SetAs("arguments", arguments);
+				if (arguments.TryGetAs("constructionType", out string type) && constructionLoaders.TryGetValue(type, out IConstructionLoader jobCallbacks)) {
+					jobCallbacks.SaveTypes(this, node);
+				}
+
+				Definition.SaveJob(Owner, node);
 			}
-
-			Definition.SaveJob(Owner, node);
 		}
 
 		public virtual void DoJob (ConstructionJobInstance job, ref NPCBase.NPCState state)
 		{
-			if (constructionType != null) {
-				constructionType.DoJob(iterationType, this, job, ref state);
+			if (ConstructionType != null) {
+				ConstructionType.DoJob(IterationType, this, job, ref state);
 			}
 		}
 	}

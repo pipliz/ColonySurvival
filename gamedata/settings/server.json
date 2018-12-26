@@ -97,6 +97,7 @@
 		"TimeoutSeconds" : 1
 	},
 	"Colony" : {
+		"BaseHappiness" : 25,
 		"ExclusiveRadius" : 200
 	},
 	"Leaves" : {
@@ -105,8 +106,9 @@
 	},
 	"NPCs" : {
 		"FoodUseMultiplierSiegeMode" : 6,
-		"FoodUsePerHour" : 0.208333,
-		"MaxFoodCarried" : 10.0,
+		"FoodUsePerHour" : 0.0416667,
+		"InitialFoodCarriedHours" : 24,
+		"MaxFoodCarriedHours" : 48,
 		"ReconsiderDecisionTimeMaximum" : 6000,
 		"ReconsiderDecisionTimeMinimum" : 3500,
 		"RecruitmentCost" : 50

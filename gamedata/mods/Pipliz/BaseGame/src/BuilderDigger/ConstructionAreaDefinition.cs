@@ -4,11 +4,11 @@ using Pipliz.Collections;
 using Pipliz.Helpers;
 using Shared;
 using System;
-using System.Threading;
 
 namespace Pipliz.Mods.BaseGame.Construction
 {
 	using JSON;
+	using System.Threading.Tasks;
 
 	[AreaJobDefinitionAutoLoader]
 	public class ConstructionAreaDefinition : IAreaJobDefinition
@@ -18,7 +18,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 		protected SortedList<Colony, JSONNode> SavedJobs;
 
 		protected JSONNode LoadedRoot;
-		protected ManualResetEvent FinishedLoadingEvent = new ManualResetEvent(false);
+		protected Task LoadingDataTask;
 
 		public virtual NPCType UsedNPCType { get { return npcType; } }
 
@@ -44,11 +44,10 @@ namespace Pipliz.Mods.BaseGame.Construction
 				max.y = child.GetAsOrDefault("y", -1);
 				max.z = child.GetAsOrDefault("z", -1);
 			}
+
 			JSONNode args;
-			if (node.TryGetChild("arguments", out args)) {
-				if (args.NodeType == NodeType.Value && args.GetAs<string>() == "none") {
-					return null;
-				}
+			if (!node.TryGetChild("arguments", out args)) {
+				return null;
 			}
 			ConstructionArea area = (ConstructionArea)CreateAreaJob(owner, min, max);
 			area.SetArgument(args);
@@ -74,26 +73,26 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public virtual void StartLoading ()
 		{
-			ThreadPool.QueueUserWorkItem(AsyncLoad);
-		}
-
-		protected virtual void AsyncLoad (object obj)
-		{
-			try {
+			LoadingDataTask = Task.Run(() =>
+			{
 				JSON.Deserialize(FilePath, out LoadedRoot, false);
-			} catch (System.Exception e) {
-				Log.WriteException(e);
-			} finally {
-				FinishedLoadingEvent.Set();
-			}
+			});
 		}
 
 		public virtual void FinishLoading ()
 		{
-			while (!FinishedLoadingEvent.WaitOne(500)) {
-				Log.Write("Waiting for construction areas to finish loading...");
+			while (LoadingDataTask != null) {
+				if (LoadingDataTask.IsCompleted) {
+					LoadingDataTask = null;
+				} else {
+					try {
+						Log.Write("Waiting for construction areas to load");
+						LoadingDataTask.Wait(500);
+					} catch (Exception e) {
+						Log.WriteException("Exception waiting for construction areas:", e);
+					}
+				}
 			}
-			FinishedLoadingEvent = null;
 			if (LoadedRoot != null) {
 				LoadJSON(LoadedRoot);
 				LoadedRoot = null;
@@ -110,8 +109,8 @@ namespace Pipliz.Mods.BaseGame.Construction
 				}
 				JSONNode array = pair.Value;
 				for (int i = 0; i < array.ChildCount; i++) {
-					var job = CreateAreaJob(colony, array[i]);
-					if (job == null) {
+					IAreaJob job = CreateAreaJob(colony, array[i]);
+					if (job == null || !job.IsValid) {
 						continue;
 					}
 					if (!AreaJobTracker.RegisterAreaJob(job)) {

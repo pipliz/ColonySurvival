@@ -1,5 +1,5 @@
 {
-	"coverage" : 97.4193548387097,
+	"coverage" : 94.3396226415094,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -47,8 +47,9 @@
 			"sp_3" : "Этап 3/{0} - Сервер запущен, ожидание подключений",
 			"sp_alreadyrunning1" : "Сервер для этой установки уже запущен. Он все равно может быть выключен. Повторите попытку через 5 секунд.",
 			"sp_alreadyrunning2" : "Сервер уже запущен. Возвращение в главное меню через 5 секунд.",
-			"steam1" : "Этап 1/{0} - Получение данных с {1}",
-			"steam2" : "Этап 2/{0} - Установка соединения с сервером",
+			"steam01" : "_MISSING_Stage 1/{0} - Trying to setup TCP connection to {1}",
+			"steam02" : "_MISSING_Stage 2/{0} - Trying to setup steam connection",
+			"steam03" : "_MISSING_Stage 3/{0} - Connection succesful, authenticating",
 			"steamfail" : "Не удалось получить данные. Возвращение в главное меню через 5 секунд."
 		},
 		"escapemenu" : {
@@ -64,6 +65,7 @@
 			"colonistcount" : "Колонистов:",
 			"foodstorage" : "Еды:",
 			"foodusage" : "Еды/день:",
+			"happiness" : "_MISSING_Happiness:",
 			"laborercount" : "Безработных:"
 		},
 		"general" : {
@@ -82,6 +84,17 @@
 			"veryhigh" : "Оч. много",
 			"yes" : "Да"
 		},
+		"happiness" : {
+			"availablefood" : "_MISSING_{0}% availability for {1}",
+			"availableluxury" : "_MISSING_{0}% availability for {1}",
+			"baseamount" : "_MISSING_King's presence",
+			"colonistcount" : "_MISSING_Crowdedness",
+			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"rationratio" : "_MISSING_Ration ratio",
+			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0}",
+			"sciencespeed" : "_MISSING_Science speed: {0:P0}",
+			"totalhappiness" : "_MISSING_Total happiness: {0}"
+		},
 		"infomenu" : {
 			"changelog" : "Что нового?",
 			"credits" : "Авторы",
@@ -89,6 +102,7 @@
 		},
 		"mainmenu" : {
 			"back" : "Назад",
+			"coop" : "_MISSING_Co-op",
 			"info" : "Информация",
 			"multiplayer" : "Сетевая игра",
 			"quit" : "Выйти",
@@ -378,6 +392,10 @@
 			"inventory" : {
 				"craftingstockpile" : "Крафт и запасы",
 				"foodvalue" : "Еды:",
+				"happinessvalue" : "_MISSING_Happiness value:",
+				"happy" : {
+					"header" : "_MISSING_Happiness"
+				},
 				"madeintooltip" : "Делается в:",
 				"science" : {
 					"available" : "Доступно",
@@ -532,6 +550,7 @@
 			},
 			"worldsettings" : {
 				"daymonsters" : "Кол-во монстров днём",
+				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "Настройки мира",
 				"nightmonsters" : "Кол-во монстро ночью"
 			}
@@ -664,17 +683,22 @@
 			}
 		},
 		"singleplayermenu" : {
+			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Имя колонии:",
-			"daymonsters" : "Монстры в дневное время",
+			"confirmdelete" : "_MISSING_Confirm deleting",
+			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "Удалить",
-			"doubledmonsters" : "В двое больше монстров",
+			"hostingoptions" : "_MISSING_Hosting Settings",
 			"load" : "Загрузить",
 			"loadworld" : "Загрузить мир",
 			"newworld" : "Новый мир",
+			"password" : "_MISSING_Password",
 			"play" : "Играть",
-			"spawnmonsters" : "Спавнить монстров",
+			"servername" : "_MISSING_Server Name",
+			"serverport" : "_MISSING_Server Port",
 			"worlddate" : "Дата",
-			"worldname" : "Имя"
+			"worldname" : "Имя",
+			"worldseed" : "_MISSING_World seed"
 		}
 	},
 	"types" : {

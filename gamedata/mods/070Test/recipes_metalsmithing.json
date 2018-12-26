@@ -1,0 +1,24 @@
+[
+	{
+		"name" : "pipliz.metalsmith.bronzearrow",
+		"requires" : [
+			{"type":"bronzeingot"},
+			{"type":"planks"},
+			{"type":"test_feather","amount":5}
+		],
+		"results" : [
+			{"amount":5,"type":"bronzearrow"}
+		]
+	},
+	{
+		"name" : "test.jewelry",
+		"requires" : [
+			{"type":"goldingot"},
+			{"type":"silveringot"},
+			{"type":"steelparts"}
+		],
+		"results" : [
+			{"type":"test_jewelry"}
+		]
+	}
+]
