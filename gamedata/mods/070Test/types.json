@@ -1,113 +1,56 @@
 {
-	"test_rawbeeswax" : {
+	"test_barley" : {
 		"categories" : [
 			"test"
 		],
 		"isPlaceable" : false
+	},
+	"test_barleyfarmer" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
+	},
+	"test_beehive" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
 	},
 	"test_beeswax" : {
 		"categories" : [
 			"test"
 		],
+		"icon" : "./icons/beeswax.png",
 		"isPlaceable" : false
-	},
-	"test_candle" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 35,
-		"luxuryHours" : 24
-	},
-	"test_undershirt" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 35,
-		"luxuryHours" : 240
-	},
-	"test_jewelry" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 35,
-		"luxuryHours" : 480
-	},
-	"test_olive" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_rawfish" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_lobster" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_lobsterprepared" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 25,
-		"nutritionalValue" : 0.4
-	},
-	"test_woodcoating" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_waxtablet" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 30,
-		"luxuryHours" : 168
-	},
-	"test_oliveoil" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_luxurymeal" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 60,
-		"nutritionalValue" : 15
-	},
-	"test_cookedfish" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 15,
-		"nutritionalValue" : 2
-	},
-	"test_perpetualstew" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"nutritionalValue" : 6
 	},
 	"test_boilingwater" : {
 		"categories" : [
 			"test"
 		],
+		"isPlaceable" : false
+	},
+	"test_book" : {
+		"categories" : [
+			"test"
+		],
+		"happiness" : 50,
+		"icon" : "./icons/book.png",
+		"isPlaceable" : false,
+		"luxuryHours" : 480
+	},
+	"test_bucketempty" : {
+		"categories" : [
+			"test"
+		],
+		"icon" : "./icons/bucketempty.png",
+		"isPlaceable" : false
+	},
+	"test_bucketwater" : {
+		"categories" : [
+			"test"
+		],
+		"icon" : "./icons/bucketwater.png",
 		"isPlaceable" : false
 	},
 	"test_cabbage" : {
@@ -116,11 +59,81 @@
 		],
 		"isPlaceable" : false
 	},
+	"test_cabbagefarmer" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
+	},
 	"test_cabbageseed" : {
 		"categories" : [
 			"test"
 		],
 		"isPlaceable" : false
+	},
+	"test_cake" : {
+		"categories" : [
+			"test"
+		],
+		"dailyFoodFractionOptimal" : 0.03,
+		"foodValue" : 0.1,
+		"happiness" : 30,
+		"icon" : "./icons/cake.png",
+		"isPlaceable" : false
+	},
+	"test_candle" : {
+		"categories" : [
+			"test"
+		],
+		"happiness" : 35,
+		"icon" : "./icons/candle.png",
+		"isPlaceable" : false,
+		"luxuryHours" : 24
+	},
+	"test_chickenfarmer" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
+	},
+	"test_chickenmeat" : {
+		"categories" : [
+			"test"
+		],
+		"isPlaceable" : false
+	},
+	"test_chickenskin" : {
+		"categories" : [
+			"test"
+		],
+		"isPlaceable" : false
+	},
+	"test_cookedfish" : {
+		"categories" : [
+			"test"
+		],
+		"dailyFoodFractionOptimal" : 0.04,
+		"foodValue" : 0.2,
+		"happiness" : 15,
+		"isPlaceable" : false
+	},
+	"test_egg" : {
+		"categories" : [
+			"test"
+		],
+		"isPlaceable" : false
+	},
+	"test_feather" : {
+		"categories" : [
+			"test"
+		],
+		"isPlaceable" : false
+	},
+	"test_fisherman" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
 	},
 	"test_fishmeal" : {
 		"categories" : [
@@ -132,32 +145,66 @@
 		"categories" : [
 			"test"
 		],
+		"icon" : "./icons/honey.png",
 		"isPlaceable" : false
 	},
-	"test_cake" : {
+	"test_ink" : {
 		"categories" : [
 			"test"
 		],
+		"isPlaceable" : false
+	},
+	"test_jewelry" : {
+		"categories" : [
+			"test"
+		],
+		"happiness" : 35,
+		"icon" : "./icons/jewelry.png",
 		"isPlaceable" : false,
-		"happiness" : 30,
-		"nutritionalValue" : 0.1
+		"luxuryHours" : 480
 	},
-	"test_bucketempty" : {
+	"test_lobster" : {
 		"categories" : [
 			"test"
 		],
 		"isPlaceable" : false
 	},
-	"test_bucketwater" : {
+	"test_lobsterprepared" : {
 		"categories" : [
 			"test"
 		],
+		"dailyFoodFractionOptimal" : 0.04,
+		"foodValue" : 0.2,
+		"happiness" : 25,
 		"isPlaceable" : false
 	},
-	"test_barley" : {
+	"test_luxurymeal" : {
 		"categories" : [
 			"test"
 		],
+		"dailyFoodFractionOptimal" : 0.166667,
+		"foodValue" : 5,
+		"happiness" : 60,
+		"isPlaceable" : false
+	},
+	"test_olive" : {
+		"categories" : [
+			"test"
+		],
+		"icon" : "./icons/olive.png",
+		"isPlaceable" : false
+	},
+	"test_olivefarm" : {
+		"categories" : [
+			"test"
+		],
+		"sideall" : "SELF"
+	},
+	"test_oliveoil" : {
+		"categories" : [
+			"test"
+		],
+		"icon" : "./icons/oliveoil.png",
 		"isPlaceable" : false
 	},
 	"test_paperempty" : {
@@ -172,73 +219,34 @@
 		],
 		"isPlaceable" : false
 	},
-	"test_ink" : {
+	"test_perpetualstew" : {
 		"categories" : [
 			"test"
 		],
+		"dailyFoodFractionOptimal" : 0.5,
+		"foodValue" : 4.2,
+		"happiness" : 75,
+		"icon" : "./icons/perpetualstew.png",
 		"isPlaceable" : false
 	},
-	"test_book" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false,
-		"happiness" : 50,
-		"luxuryHours" : 480
-	},
-	"test_egg" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_chickenmeat" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_chickenskin" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_feather" : {
-		"categories" : [
-			"test"
-		],
-		"isPlaceable" : false
-	},
-	"test_beehive" : {
+	"test_printingpress" : {
 		"categories" : [
 			"test"
 		],
 		"sideall" : "SELF"
 	},
-	"test_olivefarm" : {
+	"test_rawbeeswax" : {
 		"categories" : [
 			"test"
 		],
-		"sideall" : "SELF"
+		"icon" : "./icons/beeswaxraw.png",
+		"isPlaceable" : false
 	},
-	"test_watergatherer" : {
+	"test_rawfish" : {
 		"categories" : [
 			"test"
 		],
-		"sideall" : "SELF"
-	},
-	"test_fisherman" : {
-		"categories" : [
-			"test"
-		],
-		"sideall" : "SELF"
-	},
-	"test_cabbagefarmer" : {
-		"categories" : [
-			"test"
-		],
-		"sideall" : "SELF"
+		"isPlaceable" : false
 	},
 	"test_stove" : {
 		"categories" : [
@@ -246,25 +254,37 @@
 		],
 		"sideall" : "SELF"
 	},
-	"test_barleyfarmer" : {
+	"test_undershirt" : {
+		"categories" : [
+			"test"
+		],
+		"happiness" : 35,
+		"isPlaceable" : false,
+		"luxuryHours" : 240
+	},
+	"test_watergatherer" : {
 		"categories" : [
 			"test"
 		],
 		"sideall" : "SELF"
 	},
-	"test_chickenfarmer" : {
+	"test_waxtablet" : {
 		"categories" : [
 			"test"
 		],
-		"sideall" : "SELF"
+		"happiness" : 30,
+		"icon" : "./icons/waxtablet.png",
+		"isPlaceable" : false,
+		"luxuryHours" : 168
+	},
+	"test_woodcoating" : {
+		"categories" : [
+			"test"
+		],
+		"icon" : "./icons/woodcoating.png",
+		"isPlaceable" : false
 	},
 	"test_writer" : {
-		"categories" : [
-			"test"
-		],
-		"sideall" : "SELF"
-	},
-	"test_printingpress" : {
 		"categories" : [
 			"test"
 		],

@@ -5,14 +5,12 @@ using NPC;
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	[AreaJobDefinitionAutoLoader]
-	public class TemperateForesterDefinition : AbstractAreaJobDefinition<TemperateForesterDefinition>
+	public class TemperateForesterDefinition : AbstractAreaJobDefinition
 	{
 		public TemperateForesterDefinition ()
 		{
 			Identifier = "pipliz.temperateforest";
-			fileName = "temperateforester";
 			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.forester");
-			AreaType = Shared.EAreaType.Forestry;
 		}
 
 		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
@@ -20,7 +18,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			if (!isLoaded) {
 				TurnArableIntoDirt(min, max, owner);
 			}
-			return new ForesterJob(owner, min, max, npcID);
+			return new ForesterJob(this, owner, min, max, npcID);
 		}
 
 		static bool ChopTree (Vector3Int p, BlockChangeRequestOrigin origin)
@@ -56,13 +54,13 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			return true;
 		}
 
-		public class ForesterJob : AbstractAreaJob<TemperateForesterDefinition>
+		public class ForesterJob : AbstractAreaJob
 		{
 			// store treeLocation separately from positionSub because the farmer will move next to these positions(they're not equal)
 			protected Vector3Int treeLocation = Vector3Int.invalidPos;
 			static ItemTypes.ItemType[] yTypesBuffer = new ItemTypes.ItemType[5]; // max 3 Y + 1 below + 1 above
 
-			public ForesterJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID) { }
+			public ForesterJob (AbstractAreaJobDefinition def, Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(def, owner, min, max, npcID) { }
 
 			public override void CalculateSubPosition ()
 			{

@@ -6,9 +6,6 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 {
 	public class BuilderBasic : IConstructionType
 	{
-		public Shared.EAreaType AreaType { get { return Shared.EAreaType.BuilderArea; } }
-		public Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
-
 		protected ItemTypes.ItemType buildType;
 
 		public BuilderBasic (ItemTypes.ItemType buildType)

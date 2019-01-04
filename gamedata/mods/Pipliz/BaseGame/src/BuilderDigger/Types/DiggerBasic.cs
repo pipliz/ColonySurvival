@@ -6,9 +6,6 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 {
 	public class DiggerBasic : IConstructionType
 	{
-		public Shared.EAreaType AreaType { get { return Shared.EAreaType.DiggerArea; } }
-		public Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
-
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
 
 		public void DoJob (IIterationType iterationType, IAreaJob areaJob, ConstructionJobInstance job, ref NPC.NPCBase.NPCState state)

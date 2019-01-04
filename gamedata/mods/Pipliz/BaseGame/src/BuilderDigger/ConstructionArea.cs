@@ -9,15 +9,12 @@ namespace Pipliz.Mods.BaseGame.Construction
 	{
 		protected Vector3Int positionMin;
 		protected Vector3Int positionMax;
-
+		protected JSONNode arguments;
+		protected ConstructionAreaDefinition definition;
 		protected bool isValid = true;
 
 		public IConstructionType ConstructionType { get; set; }
 		public IIterationType IterationType { get; set; }
-
-		protected JSONNode arguments;
-
-		protected static ConstructionAreaDefinition DefinitionInstance;
 
 		public static Dictionary<string, IConstructionLoader> constructionLoaders = new Dictionary<string, IConstructionLoader>();
 
@@ -26,24 +23,9 @@ namespace Pipliz.Mods.BaseGame.Construction
 		public virtual Vector3Int Minimum { get { return positionMin; } }
 		public virtual Vector3Int Maximum { get { return positionMax; } }
 		public virtual NPCBase NPC { get { return null; } set { } }
-		public virtual Shared.EAreaType AreaType { get { return ConstructionType == null ? Shared.EAreaType.Unknown : ConstructionType.AreaType; } }
-		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return ConstructionType == null ? Shared.EAreaMeshType.AutoSelect : ConstructionType.AreaTypeMesh; ; } }
+		public virtual Shared.EServerAreaType AreaType { get { return Shared.EServerAreaType.ConstructionArea; } }
+		public virtual Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
 		public virtual bool IsValid { get { return isValid && arguments != null && ConstructionType != null && IterationType != null; } }
-
-		public virtual IAreaJobDefinition Definition
-		{
-			get
-			{
-				if (DefinitionInstance == null) {
-					foreach (var instance in AreaJobTracker.RegisteredAreaJobDefinitions) {
-						if (instance.GetType() == typeof(ConstructionAreaDefinition)) {
-							DefinitionInstance = (ConstructionAreaDefinition)instance;
-						}
-					}
-				}
-				return DefinitionInstance;
-			}
-		}
 
 		static ConstructionArea ()
 		{
@@ -52,8 +34,9 @@ namespace Pipliz.Mods.BaseGame.Construction
 			RegisterLoader(new Loaders.DiggerSpecialLoader());
 		}
 
-		public ConstructionArea (Colony owner, Vector3Int min, Vector3Int max)
+		public ConstructionArea (ConstructionAreaDefinition definition, Colony owner, Vector3Int min, Vector3Int max)
 		{
+			this.definition = definition;
 			min.y = Math.Max(1, min.y);
 			positionMin = min;
 			positionMax = max;
@@ -86,23 +69,33 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public virtual void OnRemove ()
 		{
-			Definition.OnRemove(this);
+			definition.OnRemove(this);
 			isValid = false;
 		}
 
-		public virtual void SaveAreaJob ()
+		public virtual void SaveAreaJob (JSONNode colonyRootNode)
 		{
 			if (arguments != null) {
+				JSONNode identifierNode;
+				if (!colonyRootNode.TryGetChild(definition.Identifier, out identifierNode)) {
+					identifierNode = new JSONNode(NodeType.Array);
+					colonyRootNode[definition.Identifier] = identifierNode;
+				}
+
 				JSONNode node = new JSONNode()
-					.SetAs("min", (JSONNode)positionMin)
-					.SetAs("max", (JSONNode)positionMax)
-					.SetAs("arguments", arguments);
+					.SetAs("x-", positionMin.x)
+					.SetAs("y-", positionMin.y)
+					.SetAs("z-", positionMin.z)
+					.SetAs("xd", positionMax.x - positionMin.x)
+					.SetAs("yd", positionMax.y - positionMin.y)
+					.SetAs("zd", positionMax.z - positionMin.z)
+					.SetAs("args", arguments);
 
 				if (arguments.TryGetAs("constructionType", out string type) && constructionLoaders.TryGetValue(type, out IConstructionLoader jobCallbacks)) {
 					jobCallbacks.SaveTypes(this, node);
 				}
 
-				Definition.SaveJob(Owner, node);
+				identifierNode.AddToArray(node);
 			}
 		}
 

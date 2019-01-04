@@ -6,9 +6,6 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 {
 	public class DiggerSpecial : IConstructionType
 	{
-		public Shared.EAreaType AreaType { get { return Shared.EAreaType.DiggerSpecial; } }
-		public Shared.EAreaMeshType AreaTypeMesh { get { return Shared.EAreaMeshType.ThreeD; } }
-
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
 
 		protected ItemTypes.ItemType digType;

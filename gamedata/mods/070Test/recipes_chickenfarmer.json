@@ -2,21 +2,37 @@
 	{
 		"name" : "test.chickenfarmer.egg",
 		"requires" : [
-			{"type":"test_barley","amount":3}
+			{
+				"amount" : 3,
+				"type" : "test_barley"
+			}
 		],
 		"results" : [
-			{"type":"test_egg"}
+			{
+				"type" : "test_egg"
+			}
 		]
 	},
 	{
 		"name" : "test.chickenfarmer.chickenmeat",
 		"requires" : [
-			{"type":"test_barley", "amount":15}
+			{
+				"amount" : 15,
+				"type" : "test_barley"
+			}
 		],
 		"results" : [
-			{"type":"test_chickenmeat"},
-			{"type":"test_chickenskin","amount":3},
-			{"type":"test_feather","amount":25}
+			{
+				"type" : "test_chickenmeat"
+			},
+			{
+				"amount" : 3,
+				"type" : "test_chickenskin"
+			},
+			{
+				"amount" : 25,
+				"type" : "test_feather"
+			}
 		]
 	}
 ]

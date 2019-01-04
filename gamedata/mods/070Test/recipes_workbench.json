@@ -2,77 +2,136 @@
 	{
 		"name" : "test.workbench.ink",
 		"requires" : [
-			{"type":"galenalead"},
-			{"type":"charcoal"},
-			{"type":"test_egg","amount":5},
-			{"type":"test_boilingwater"}
+			{
+				"type" : "galenalead"
+			},
+			{
+				"type" : "charcoal"
+			},
+			{
+				"amount" : 5,
+				"type" : "test_egg"
+			},
+			{
+				"type" : "test_boilingwater"
+			}
 		],
 		"results" : [
-			{"type":"test_ink"}
+			{
+				"type" : "test_ink"
+			}
 		]
 	},
 	{
 		"name" : "test.workbench.candle",
 		"requires" : [
-			{"type":"test_beeswax"},
-			{"type":"linen"}
+			{
+				"type" : "test_beeswax"
+			},
+			{
+				"type" : "linen"
+			}
 		],
 		"results" : [
-			{"type":"test_candle"}
+			{
+				"type" : "test_candle"
+			}
 		]
 	},
 	{
 		"name" : "test.workbench.woodcoating",
 		"requires" : [
-			{"type":"test_oliveoil"},
-			{"type":"test_beeswax"}
+			{
+				"type" : "test_oliveoil"
+			},
+			{
+				"type" : "test_beeswax"
+			}
 		],
 		"results" : [
-			{"type":"test_woodcoating"}
+			{
+				"type" : "test_woodcoating"
+			}
 		]
 	},
 	{
 		"name" : "test.workbench.waxtablet",
 		"requires" : [
-			{"type":"coatedplanks"},
-			{"type":"ironrivet", "amount":2}
-			{"type":"test_beeswax","amount":5}
+			{
+				"type" : "coatedplanks"
+			},
+			{
+				"amount" : 2,
+				"type" : "ironrivet"
+			},
+			{
+				"amount" : 5,
+				"type" : "test_beeswax"
+			}
 		],
 		"results" : [
-			{"type":"test_woodcoating"}
+			{
+				"type" : "test_woodcoating"
+			}
 		]
 	},
 	{
 		"name" : "test.workbench.bucketempty",
 		"requires" : [
-			{"type":"planks"},
-			{"type":"coppernails", "amount":4}
-			{"type":"copperparts","amount":2}
+			{
+				"type" : "planks"
+			},
+			{
+				"amount" : 4,
+				"type" : "coppernails"
+			},
+			{
+				"amount" : 2,
+				"type" : "copperparts"
+			}
 		],
 		"results" : [
-			{"type":"test_bucketempty"}
+			{
+				"type" : "test_bucketempty"
+			}
 		]
 	},
 	{
 		"isOptional" : true,
 		"name" : "pipliz.crafter.bowstring",
 		"requires" : [
-			{"amount":2,"type":"flax"},
-			{"type":"test_beeswax"}
+			{
+				"amount" : 2,
+				"type" : "flax"
+			},
+			{
+				"type" : "test_beeswax"
+			}
 		],
 		"results" : [
-			{"type":"bowstring"}
+			{
+				"type" : "bowstring"
+			}
 		]
 	},
 	{
 		"isOptional" : true,
 		"name" : "pipliz.crafter.coatedplanks",
 		"requires" : [
-			{"amount":3,"type":"test_woodcoating"},
-			{"amount":3,"type":"planks"}
+			{
+				"amount" : 3,
+				"type" : "test_woodcoating"
+			},
+			{
+				"amount" : 3,
+				"type" : "planks"
+			}
 		],
 		"results" : [
-			{"amount":3,"type":"coatedplanks"}
+			{
+				"amount" : 3,
+				"type" : "coatedplanks"
+			}
 		]
 	}
 ]

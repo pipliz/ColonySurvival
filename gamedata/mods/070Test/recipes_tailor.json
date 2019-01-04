@@ -2,11 +2,19 @@
 	{
 		"name" : "test.tailor.undershirt",
 		"requires" : [
-			{"type":"linen","amount":5},
-			{"type":"wolfsbane","amount":3}
+			{
+				"amount" : 5,
+				"type" : "linen"
+			},
+			{
+				"amount" : 3,
+				"type" : "wolfsbane"
+			}
 		],
 		"results" : [
-			{"type":"test_undershirt"}
+			{
+				"type" : "test_undershirt"
+			}
 		]
 	}
 ]

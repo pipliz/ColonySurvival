@@ -2,23 +2,41 @@
 	{
 		"name" : "pipliz.metalsmith.bronzearrow",
 		"requires" : [
-			{"type":"bronzeingot"},
-			{"type":"planks"},
-			{"type":"test_feather","amount":5}
+			{
+				"type" : "bronzeingot"
+			},
+			{
+				"type" : "planks"
+			},
+			{
+				"amount" : 5,
+				"type" : "test_feather"
+			}
 		],
 		"results" : [
-			{"amount":5,"type":"bronzearrow"}
+			{
+				"amount" : 5,
+				"type" : "bronzearrow"
+			}
 		]
 	},
 	{
 		"name" : "test.jewelry",
 		"requires" : [
-			{"type":"goldingot"},
-			{"type":"silveringot"},
-			{"type":"steelparts"}
+			{
+				"type" : "goldingot"
+			},
+			{
+				"type" : "silveringot"
+			},
+			{
+				"type" : "steelparts"
+			}
 		],
 		"results" : [
-			{"type":"test_jewelry"}
+			{
+				"type" : "test_jewelry"
+			}
 		]
 	}
 ]

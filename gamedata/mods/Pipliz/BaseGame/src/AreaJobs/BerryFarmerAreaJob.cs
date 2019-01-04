@@ -5,23 +5,21 @@ using Jobs;
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	[AreaJobDefinitionAutoLoader]
-	public class BerryFarmerDefinition : AbstractAreaJobDefinition<BerryFarmerDefinition>
+	public class BerryFarmerDefinition : AbstractAreaJobDefinition
 	{
 		public BerryFarmerDefinition ()
 		{
 			Identifier = "pipliz.berryfarm";
-			fileName = "berryfarms";
 			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.berryfarmer");
-			AreaType = Shared.EAreaType.BerryFarm;
 		}
 
 		/// Override it to use custom berryfarmerjob; required for custom bush location logic
 		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
-			return new BerryFarmerJob(owner, min, max, npcID);
+			return new BerryFarmerJob(this, owner, min, max, npcID);
 		}
 
-		public class BerryFarmerJob : AbstractAreaJob<BerryFarmerDefinition>
+		public class BerryFarmerJob : AbstractAreaJob
 		{
 			// store bushlocation separately from positionSub because the berry farmer will move next to bushes (they're not equal)
 			protected Vector3Int bushLocation = Vector3Int.invalidPos;
@@ -29,7 +27,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			static ItemTypes.ItemType[] yTypesBuffer = new ItemTypes.ItemType[5]; // max 3 Y + 1 below + 1 above
 			public static float HarvestCooldown = 8.5f;
 
-			public BerryFarmerJob (Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(owner, min, max, npcID) { }
+			public BerryFarmerJob (AbstractAreaJobDefinition def, Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(def, owner, min, max, npcID) { }
 
 			public override void CalculateSubPosition ()
 			{

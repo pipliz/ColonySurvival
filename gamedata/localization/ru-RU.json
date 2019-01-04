@@ -1,5 +1,5 @@
 {
-	"coverage" : 94.3396226415094,
+	"coverage" : 93.984962406015,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -85,14 +85,16 @@
 			"yes" : "Да"
 		},
 		"happiness" : {
+			"actual" : "_MISSING_Actual",
 			"availablefood" : "_MISSING_{0}% availability for {1}",
 			"availableluxury" : "_MISSING_{0}% availability for {1}",
 			"baseamount" : "_MISSING_King's presence",
 			"colonistcount" : "_MISSING_Crowdedness",
 			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"goal" : "_MISSING_Goal",
 			"rationratio" : "_MISSING_Ration ratio",
-			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0}",
-			"sciencespeed" : "_MISSING_Science speed: {0:P0}",
+			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0} of normal",
+			"sciencespeed" : "_MISSING_Science speed: {0:P0} of normal",
 			"totalhappiness" : "_MISSING_Total happiness: {0}"
 		},
 		"infomenu" : {
@@ -397,6 +399,7 @@
 					"header" : "_MISSING_Happiness"
 				},
 				"madeintooltip" : "Делается в:",
+				"noactivecolony" : "_MISSING_No active colony!",
 				"science" : {
 					"available" : "Доступно",
 					"completed" : "Выполнено",

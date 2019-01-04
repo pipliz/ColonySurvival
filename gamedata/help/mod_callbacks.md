@@ -86,17 +86,17 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 23
+## Registered callbacks: 24
 0.	`pipliz.server.loadnpctypes`
 1.	`areajobs.insertattributed`
 		Depends On 0. `pipliz.server.loadnpctypes`
-		Provides For 18. `pipliz.server.loadareajobs`
+		Provides For 15. `pipliz.server.loadcolonies`
 		_Finds & registers areajobdefs marked AreaJobDefinitionAutoLoaderAttribute_
 2.	`create_servermanager_trackers`
 		_Starts Various trackers and singletons saved in the servermanager_
 3.	`blockentitycallback.autoloaders`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 15. `create_savemanager`
+		Provides For 17. `create_savemanager`
 		_Calls BlockEntityCallbacks.SearchAssembliesForAutoLoaders - instantiating classes with the IBlockEntityAutoLoaderBase type interfaces_
 		_Provides for create_savemanager as possibly loaded entities must be registered before it_
 4.	`chunk_dedupe_initializer`
@@ -115,7 +115,7 @@ First callback after all item types should be defined, so you can resolve types 
 		Provides For 9. `pipliz.blocknpcs.registerjobs`
 9.	`pipliz.blocknpcs.registerjobs`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 15. `create_savemanager`
+		Provides For 17. `create_savemanager`
 		_Adds all the job block implementations to BlockJobManagerTracker_
 10.	`pipliz.server.recipeplayerload`
 		Depends On 2. `create_servermanager_trackers`
@@ -131,9 +131,14 @@ First callback after all item types should be defined, so you can resolve types 
 		Provides For 13. `pipliz.server.loadplayers`
 		_Load & resolve researchable configs_
 13.	`pipliz.server.loadplayers`
-		Provides For 15. `create_savemanager`
+		Provides For 17. `create_savemanager`
 		_Starts loading player data_
-14.	`pipliz.server.loadcolonies`
+14.	`createareajobdefinitions`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 0. `pipliz.server.loadnpctypes`
+		Provides For 15. `pipliz.server.loadcolonies`
+		_Registers json area jobs_
+15.	`pipliz.server.loadcolonies`
 		Depends On 2. `create_servermanager_trackers`
 		Depends On 0. `pipliz.server.loadnpctypes`
 		Depends On 13. `pipliz.server.loadplayers`
@@ -141,24 +146,26 @@ First callback after all item types should be defined, so you can resolve types 
 		_Includes loading the stockpiles (part of colony afer all)_
 		_Includes loading npc's_
 		_Depends on players load so it can resolve owner data_
-15.	`create_savemanager`
-		Depends On 14. `pipliz.server.loadcolonies`
+16.	`creategrowabledefinitions`
+		Depends On 2. `create_servermanager_trackers`
+		Provides For 17. `create_savemanager`
+		_Registers growable block json types_
+17.	`create_savemanager`
+		Depends On 15. `pipliz.server.loadcolonies`
 		_Starts ServerManager.SaveManager_
 		_Starts loading the index of the chunk storage_
-16.	`find_auto_chatcommands`
-17.	`pipliz.server.blackandwhitelistingreload`
+18.	`find_auto_chatcommands`
+19.	`pipliz.server.blackandwhitelistingreload`
 		_Loads the black & whitelist settings_
-18.	`pipliz.server.loadareajobs`
-		_Load all registered areajobs' files_
-19.	`pipliz.server.loadpermissions`
+20.	`pipliz.server.loadpermissions`
 		_Load permissions_
-20.	`pipliz.server.loadwater`
+21.	`pipliz.server.loadwater`
 		_Starts loading water blocks_
-21.	`pipliz.server.registermonstertextures`
+22.	`pipliz.server.registermonstertextures`
 		Depends On 0. `pipliz.server.loadnpctypes`
 		_Registers monster textures from registered NPCTypes_
-22.	`wait_complete_startup_chunks`
-		Depends On 15. `create_savemanager`
+23.	`wait_complete_startup_chunks`
+		Depends On 17. `create_savemanager`
 		_Waits for the savemanager to complete loading its index & the startup chunks_
 
 
@@ -316,20 +323,18 @@ CallbackType: `OnQuit`
 ## Description
 Signature: void ()
 Called in the quit method queue (Application.OnQuit 0)
-## Registered callbacks: 7
+## Registered callbacks: 6
 0.	`pipliz.jointhreads`
-1.	`pipliz.server.saveareajobs`
-		_Save all registered areajobs' files_
-2.	`pipliz.server.savecolonies`
+1.	`pipliz.server.savecolonies`
 		_Start saving colony data_
-3.	`pipliz.server.saveplayers`
+2.	`pipliz.server.saveplayers`
 		_Starts saving all dirty-marked players_
-4.	`pipliz.server.savetimecycle`
-		Provides For 6. `pipliz.server.saveworldsettings`
+3.	`pipliz.server.savetimecycle`
+		Provides For 5. `pipliz.server.saveworldsettings`
 		_Saves the time to ServerManager.WorldSettings_
-5.	`pipliz.server.savewater`
+4.	`pipliz.server.savewater`
 		_Saves water data_
-6.	`pipliz.server.saveworldsettings`
+5.	`pipliz.server.saveworldsettings`
 		_Saves ServerManager.WorldSettings_
 
 
@@ -606,14 +611,12 @@ CallbackType: `OnAutoSaveWorld`
 ## Description
 Signature: void ()
 Triggers an autosave every x minutes, to begin autosaving non-block data (jobs, npc's, players)
-## Registered callbacks: 4
-0.	`pipliz.server.autosaveareajobs`
-		_Save all registered areajobs' files_
-1.	`pipliz.server.autosaveplayers`
+## Registered callbacks: 3
+0.	`pipliz.server.autosaveplayers`
 		_Starts saving all dirty-marked players_
-2.	`pipliz.server.autosavewater`
+1.	`pipliz.server.autosavewater`
 		_Saves water data_
-3.	`pipliz.server.savecolonies`
+2.	`pipliz.server.savecolonies`
 		_Start saving colony data_
 
 
@@ -729,15 +732,16 @@ CallbackType: `OnSavingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when saving a colony
-## Registered callbacks: 7
-0.	`savedifficulty`
+## Registered callbacks: 8
+0.	`saveareajobs`
+1.	`savedifficulty`
 		_Saved the active difficulty setting, into node['difficulty']. If the setting equals the default, does not write there_
-1.	`savehappiness`
-2.	`savenpcs`
-3.	`saveowners`
-4.	`saverecipesettings`
-5.	`savescience`
-6.	`savestockpile`
+2.	`savehappiness`
+3.	`savenpcs`
+4.	`saveowners`
+5.	`saverecipesettings`
+6.	`savescience`
+7.	`savestockpile`
 
 
 CallbackType: `OnLoadingColony`
@@ -745,15 +749,17 @@ CallbackType: `OnLoadingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when loading a colony
-## Registered callbacks: 7
-0.	`loaddifficulty`
+## Registered callbacks: 8
+0.	`loadnpcs`
+1.	`loadareajobs`
+		Depends On 0. `loadnpcs`
+2.	`loaddifficulty`
 		_Loads the node['difficulty'] key if present, using the node['difficulty']['key'] type of difficulty loader_
-1.	`loadhappiness`
-2.	`loadnpcs`
-3.	`loadowners`
-4.	`loadrecipesettings`
-5.	`loadscience`
-6.	`loadstockpile`
+3.	`loadhappiness`
+4.	`loadowners`
+5.	`loadrecipesettings`
+6.	`loadscience`
+7.	`loadstockpile`
 
 
 CallbackType: `OnLoadingTerrainGenerator`

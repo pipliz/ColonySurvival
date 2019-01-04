@@ -119,7 +119,7 @@ namespace Pipliz.Mods.BaseGame
 		{
 			public static void OnColonyChange (Players.Player player, Colony oldColony, Colony newColony)
 			{
-				if (player.ShouldSendData) {
+				if (player.ShouldSendData && newColony != null) {
 					NetworkWrapper.Send(GetPacket(newColony), player);
 				}
 			}

@@ -2,11 +2,20 @@
 	{
 		"name" : "test.printingpress.papertext",
 		"requires" : [
-			{"type":"test_paperempty","amount":3},
-			{"type":"test_ink","amount":3}
+			{
+				"amount" : 3,
+				"type" : "test_paperempty"
+			},
+			{
+				"amount" : 3,
+				"type" : "test_ink"
+			}
 		],
 		"results" : [
-			{"type":"test_papertext","amount":3}
+			{
+				"amount" : 3,
+				"type" : "test_papertext"
+			}
 		]
 	}
 ]
