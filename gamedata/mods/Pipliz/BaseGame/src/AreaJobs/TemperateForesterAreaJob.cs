@@ -5,12 +5,16 @@ using NPC;
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	[AreaJobDefinitionAutoLoader]
-	public class TemperateForesterDefinition : AbstractAreaJobDefinition
+	public class TemperateForesterDefinition : AbstractFarmAreaJobDefinition
 	{
 		public TemperateForesterDefinition ()
 		{
 			Identifier = "pipliz.temperateforest";
 			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.forester");
+			Stages = new ushort[] {
+				ItemTypes.IndexLookup.GetIndex("sappling"),
+				ItemTypes.IndexLookup.GetIndex("logtemperate")
+			};
 		}
 
 		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
@@ -23,7 +27,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 		static bool ChopTree (Vector3Int p, BlockChangeRequestOrigin origin)
 		{
-			ItemTypes.ItemType logType = ItemTypes.GetType("logtemperate");
+			ItemTypes.ItemType logType = ItemTypes.GetType(BuiltinBlocks.LogTemperate);
 			ItemTypes.ItemType air = ItemTypes.Air;
 			for (int y = 0; y < 5; y++) {
 				switch (ServerManager.TryChangeBlock(p.Add(0, y, 0), logType, air, origin)) {
@@ -38,7 +42,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						break;
 				}
 			}
-			ItemTypes.ItemType leavesType = ItemTypes.GetType("leavestemperate");
+			ItemTypes.ItemType leavesType = ItemTypes.GetType(BuiltinBlocks.LeavesTemperate);
 			System.Collections.Generic.List<Vector3Int> leavesOffsets = GrowableBlocks.TemperateSapling.Leaves;
 			for (int i = 0; i < leavesOffsets.Count; i++) {
 				switch (ServerManager.TryChangeBlock(p + leavesOffsets[i], leavesType, air, origin)) {
@@ -72,10 +76,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 				for (int x = min.x + 1; x < max.x; x += 3) {
 					for (int z = min.z + 1; z < max.z; z += 3) {
-						for (int y = -1; y <= ySize; y++) {
-							if (!World.TryGetTypeAt(new Vector3Int(x, min.y + y, z), out yTypesBuffer[y + 1])) {
-								goto DUMB_RANDOM;
-							}
+						if (!World.TryGetColumn(new Vector3Int(x, min.y - 1, z), ySize + 2, yTypesBuffer)) {
+							goto DUMB_RANDOM;
 						}
 
 						for (int y = 0; y < ySize; y++) {
@@ -83,10 +85,11 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							ItemTypes.ItemType type = yTypesBuffer[y + 1];
 							ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
 
-							if ((type == ItemTypes.Air && hasSeeds) || type.ItemIndex == BuiltinBlocks.LogTemperate) {
-								if ((typeAbove.ItemIndex != BuiltinBlocks.Air && typeAbove.ItemIndex != BuiltinBlocks.LogTemperate) || !typeBelow.IsFertile) {
-									continue; // check next Y layer
-								}
+							if (
+								((type == ItemTypes.Air && hasSeeds) || type.ItemIndex == BuiltinBlocks.LogTemperate)
+								&& (typeAbove == ItemTypes.Air || typeAbove.ItemIndex == BuiltinBlocks.LogTemperate)
+								&& typeBelow.IsFertile
+							) {
 								treeLocation = new Vector3Int(x, min.y + y, z);
 								positionSub = AI.AIManager.ClosestPositionNotAt(treeLocation, NPC.Position);
 								return;
@@ -95,39 +98,33 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 					}
 				}
 
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < 15; i++) {
 					// give the random positioning 5 chances to become valid
-					Vector3Int test = min.Add(
-						Random.Next(0, (max.x - min.x) / 3) * 3,
-						0,
-						Random.Next(0, (max.z - min.z) / 3) * 3
-					);
+					int testX = min.x + Random.Next(0, (max.x - min.x - 2) / 3 + 1) * 3;
+					int testZ = min.z + Random.Next(0, (max.z - min.z - 2) / 3 + 1) * 3;
 
-					for (int y = -1; y <= ySize; y++) {
-						if (!World.TryGetTypeAt(test.Add(0, y, 0), out yTypesBuffer[y + 1])) {
-							goto DUMB_RANDOM;
-						}
+					if (!World.TryGetColumn(new Vector3Int(testX, min.y - 1, testZ), ySize + 2, yTypesBuffer)) {
+						goto DUMB_RANDOM;
 					}
 
 					for (int y = 0; y < ySize; y++) {
-						ItemTypes.ItemType  typeBelow = yTypesBuffer[y];
-						ItemTypes.ItemType  type = yTypesBuffer[y + 1];
+						ItemTypes.ItemType typeBelow = yTypesBuffer[y];
+						ItemTypes.ItemType type = yTypesBuffer[y + 1];
 						ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
 
-						if (!typeBelow.BlocksPathing || type.BlocksPathing || typeAbove.BlocksPathing) {
-							continue; // check next Y layer
+						if (typeBelow.BlocksPathing && !type.BlocksPathing && !typeAbove.BlocksPathing) {
+							positionSub = new Vector3Int(testX, min.y + y, testZ);
+							treeLocation = Vector3Int.invalidPos;
+							return;
 						}
-
-						positionSub = test.Add(0, y, 0);
-						treeLocation = Vector3Int.invalidPos;
-						return;
 					}
 				}
 
 				DUMB_RANDOM:
+				treeLocation = Vector3Int.invalidPos;
 				positionSub = min.Add(
 					Random.Next(0, (max.x - min.x) / 3) * 3,
-					(max.x - min.x) / 2,
+					(max.y - min.y) / 2,
 					Random.Next(0, (max.z - min.z) / 3) * 3
 				);
 			}
@@ -158,10 +155,10 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						ServerManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
 
 						GatherResults.Clear();
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1.0));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1.0));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1.0));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0.25));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1f));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1f));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1f));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0f));
 
 						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
 

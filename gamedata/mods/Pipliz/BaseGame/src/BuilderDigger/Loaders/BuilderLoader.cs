@@ -8,8 +8,9 @@ namespace Pipliz.Mods.BaseGame.Construction.Loaders
 
 		public void ApplyTypes (ConstructionArea area, JSONNode node)
 		{
-			if (node != null) {
-				ItemTypes.ItemType buildType = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(node.GetAsOrDefault("builderBlockType", "air")));
+			JSONNode arr;
+			if (node != null && node.TryGetChild("selectedTypes", out arr) && arr.NodeType == NodeType.Array && arr.ChildCount > 0) {
+				ItemTypes.ItemType buildType = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(arr[0].GetAs<string>()));
 				if (buildType != null && buildType.ItemIndex != 0) {
 					area.ConstructionType = new Types.BuilderBasic(buildType);
 					area.IterationType = new Iterators.BottomToTop(area);

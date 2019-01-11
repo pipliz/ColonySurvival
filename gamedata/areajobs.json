@@ -1,5 +1,38 @@
 [
 	{
+		"identifier" : "pipliz.berryfarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.berryfarmer",
+		"cooldown" : 8.5,
+		"blockPlaceRequirement" : {
+			"type" : "berrybush"
+		},
+		"blockPlaced" : "berrybush",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
+		"identifier" : "pipliz.beekeeperfarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.beekeeper",
+		"cooldown" : 8.5,
+		"blockPlaceRequirement" : {
+			"type" : "beehive"
+		},
+		"blockPlaced" : "beehive",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
+		"identifier" : "pipliz.chickenfarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.chickenfarmer",
+		"cooldown" : 8.5,
+		"blockPlaceRequirement" : {
+			"type" : "chickencoop"
+		},
+		"blockPlaced" : "chickencoop",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
 		"identifier" : "pipliz.alkanetfarm",
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.alkanetfarmer",
@@ -48,6 +81,26 @@
 		"stages" : [
 			"wolfsbanestage1",
 			"wolfsbanestage2"
+		]
+	},
+	{
+		"identifier" : "pipliz.barleyfarmer",
+		"patchType" : "simpleFarm",
+		"npcType" : "pipliz.barleyfarmer",
+		"shouldTurnArableIntoDirt" : true,
+		"stages" : [
+			"barleystage1",
+			"barleystage2"
+		]
+	},
+	{
+		"identifier" : "pipliz.cabbagefarm",
+		"patchType" : "simpleFarm",
+		"npcType" : "pipliz.cabbagefarmer",
+		"shouldTurnArableIntoDirt" : true,
+		"stages" : [
+			"cabbagestage1",
+			"cabbagestage2"
 		]
 	}
 ]

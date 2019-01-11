@@ -230,7 +230,8 @@
 		"isOptional" : true,
 		"name" : "pipliz.crafter.bowstring",
 		"requires" : [
-			{"amount":2,"type":"flax"}
+			{"amount":2,"type":"flax"},
+			{"type":"beeswax"}
 		],
 		"results" : [
 			{"type":"bowstring"}
@@ -308,7 +309,7 @@
 		"isOptional" : true,
 		"name" : "pipliz.crafter.coatedplanks",
 		"requires" : [
-			{"amount":3,"type":"linseedoil"},
+			{"amount":3,"type":"woodcoating"},
 			{"amount":3,"type":"planks"}
 		],
 		"results" : [
@@ -461,6 +462,62 @@
 		],
 		"results" : [
 			{"type":"shop"}
+		]
+	},
+	{
+		"name" : "pipliz.crafter.ink",
+		"requires" : [
+			{"type":"galenalead"},
+			{"type":"charcoal"},
+			{"amount":5,"type":"egg"},
+			{"type":"boilingwater"}
+		],
+		"results" : [
+			{"type":"ink"}
+		]
+	},
+	{
+		"isOptional" : true,
+		"name" : "pipliz.crafter.candle",
+		"requires" : [
+			{"type":"beeswax"},
+			{"type":"linen"}
+		],
+		"results" : [
+			{"type":"candle"}
+		]
+	},
+	{
+		"name" : "pipliz.crafter.woodcoating",
+		"requires" : [
+			{"type":"oliveoil"},
+			{"type":"beeswax"}
+		],
+		"results" : [
+			{"type":"woodcoating"}
+		]
+	},
+	{
+		"isOptional" : true,
+		"name" : "pipliz.crafter.waxtablet",
+		"requires" : [
+			{"type":"coatedplanks"},
+			{"amount":2,"type":"ironrivet"},
+			{"amount":5,"type":"beeswax"}
+		],
+		"results" : [
+			{"type":"woodcoating"}
+		]
+	},
+	{
+		"name" : "pipliz.crafter.bucketempty",
+		"requires" : [
+			{"type":"planks"},
+			{"amount":4,"type":"coppernails"},
+			{"amount":2,"type":"copperparts"}
+		],
+		"results" : [
+			{"type":"bucketempty"}
 		]
 	}
 ]

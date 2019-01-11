@@ -8,8 +8,9 @@ namespace Pipliz.Mods.BaseGame.Construction.Loaders
 
 		public void ApplyTypes (ConstructionArea area, JSONNode node)
 		{
-			if (node != null) {
-				ItemTypes.ItemType digTpe = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(node.GetAsOrDefault("diggerBlockType", "air")));
+			JSONNode arr;
+			if (node != null && node.TryGetChild("selectedTypes", out arr) && arr.NodeType == NodeType.Array && arr.ChildCount > 0) {
+				ItemTypes.ItemType digTpe = ItemTypes.GetType(ItemTypes.IndexLookup.GetIndex(arr[0].GetAs<string>()));
 				if (digTpe != null && digTpe.ItemIndex != 0) {
 					area.ConstructionType = new Types.DiggerSpecial(digTpe);
 					area.IterationType = new Iterators.TopToBottom(area);

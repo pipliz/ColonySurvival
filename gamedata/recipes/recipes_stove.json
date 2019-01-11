@@ -1,0 +1,82 @@
+[
+	{
+		"name" : "cook.boilingwater",
+		"requires" : [
+			{"type":"bucketwater"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"cake"}
+		]
+	},
+	{
+		"name" : "cook.cookedfish",
+		"requires" : [
+			{"type":"rawfish"},
+			{"type":"oliveoil"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"cookedfish"}
+		]
+	},
+	{
+		"name" : "cook.lobsterprepared",
+		"requires" : [
+			{"type":"lobster"},
+			{"type":"honey"},
+			{"type":"oliveoil"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"lobsterprepared"}
+		]
+	},
+	{
+		"name" : "cook.perpetualstew",
+		"requires" : [
+			{"amount":5,"type":"boilingwater"},
+			{"amount":5,"type":"rawfish"},
+			{"amount":10,"type":"cabbage"},
+			{"amount":10,"type":"berry"},
+			{"amount":5,"type":"honey"},
+			{"amount":3,"type":"oliveoil"},
+			{"amount":2,"type":"bread"},
+			{"amount":3,"type":"firewood"}
+		],
+		"results" : [
+			{"type":"perpetualstew"}
+		]
+	},
+	{
+		"name" : "cook.cake",
+		"requires" : [
+			{"amount":5,"type":"wheat"},
+			{"amount":5,"type":"egg"},
+			{"type":"bucketwater"},
+			{"amount":3,"type":"honey"},
+			{"amount":5,"type":"berry"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"cake"}
+		]
+	},
+	{
+		"name" : "cook.luxurymeal",
+		"requires" : [
+			{"amount":3,"type":"chickenmeat"},
+			{"amount":5,"type":"cabbage"},
+			{"amount":10,"type":"egg"},
+			{"amount":3,"type":"bread"},
+			{"amount":2,"type":"cookedfish"},
+			{"amount":3,"type":"oliveoil"},
+			{"amount":3,"type":"honey"},
+			{"amount":3,"type":"boilingwater"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"luxurymeal"}
+		]
+	}
+]

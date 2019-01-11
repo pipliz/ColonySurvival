@@ -1,0 +1,30 @@
+[
+	{
+		"name" : "writer.paperempty",
+		"requires" : [
+			{"type":"chickenskin"}
+		],
+		"results" : [
+			{"type":"paperempty"}
+		]
+	},
+	{
+		"name" : "writer.papertext",
+		"requires" : [
+			{"type":"paperempty"}
+		],
+		"results" : [
+			{"type":"papertext"}
+		]
+	},
+	{
+		"name" : "writer.book",
+		"requires" : [
+			{"amount":20,"type":"paperempty"},
+			{"amount":4,"type":"chickenskin"}
+		],
+		"results" : [
+			{"type":"book"}
+		]
+	}
+]

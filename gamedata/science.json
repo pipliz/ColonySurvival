@@ -1,6 +1,146 @@
 [
 	{
 		"dependencies" : [
+			"pipliz.baseresearch.herbfarming"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"flax"}
+		],
+		"key" : "pipliz.baseresearch.beekeeper"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.beekeeper"
+		],
+		"icon" : "./textures/icons/candle.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"linen"},
+			{"type":"beeswax"}
+		],
+		"key" : "pipliz.baseresearch.candles",
+		"unlocksRecipes" : [
+			"pipliz.crafter.candle"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.candles",
+			"pipliz.baseresearch.sciencebagbasic"
+		],
+		"icon" : "./textures/icons/waxtablet.png",
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"sciencebagbasic"},
+			{"type":"coatedplanks"},
+			{"amount":2,"type":"ironrivet"},
+			{"amount":5,"type":"beeswax"}
+		],
+		"key" : "pipliz.baseresearch.waxtablet",
+		"unlocksRecipes" : [
+			"pipliz.crafter.waxtablet"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.beekeeper"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"rawbeeswax"}
+		],
+		"key" : "pipliz.baseresearch.olivefarmer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.olivefarmer"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"olive"}
+		],
+		"key" : "pipliz.baseresearch.watergatherer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.olivefarmer"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"olive"}
+		],
+		"key" : "pipliz.baseresearch.fisherman"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.fisherman"
+		],
+		"iterationCount" : 20,
+		"iterationRequirements" : [
+			{"type":"oliveoil"},
+			{"type":"rawfish"},
+			{"type":"firewood"}
+		],
+		"key" : "pipliz.baseresearch.cook"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.cook"
+		],
+		"icon" : "./textures/icons/cabbage.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"fishmeal"}
+		],
+		"key" : "pipliz.baseresearch.cabbagefarmer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.cabbagefarmer"
+		],
+		"icon" : "./textures/icons/barley.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"perpetualstew"}
+		],
+		"key" : "pipliz.baseresearch.barleyfarmer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.barleyfarmer"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"amount":25,"type":"barley"}
+		],
+		"key" : "pipliz.baseresearch.chickenfarmer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.chickenfarmer"
+		],
+		"iterationCount" : 30,
+		"iterationRequirements" : [
+			{"type":"chickenskin"}
+		],
+		"key" : "pipliz.baseresearch.writer"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.writer",
+			"pipliz.baseresearch.matchlockgun"
+		],
+		"icon" : "./textures/icons/book.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"book"},
+			{"type":"sciencebagadvanced"}
+		],
+		"key" : "pipliz.baseresearch.printingpress"
+	},
+	{
+		"dependencies" : [
 			"pipliz.baseresearch.bronzeanvil",
 			"pipliz.baseresearch.flaxfarming"
 		],

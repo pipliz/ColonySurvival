@@ -1,0 +1,22 @@
+[
+	{
+		"name" : "chickenfarmer.egg",
+		"requires" : [
+			{"amount":3,"type":"barley"}
+		],
+		"results" : [
+			{"type":"egg"}
+		]
+	},
+	{
+		"name" : "chickenfarmer.chickenmeat",
+		"requires" : [
+			{"amount":15,"type":"barley"}
+		],
+		"results" : [
+			{"type":"chickenmeat"},
+			{"amount":3,"type":"chickenskin"},
+			{"amount":25,"type":"feather"}
+		]
+	}
+]

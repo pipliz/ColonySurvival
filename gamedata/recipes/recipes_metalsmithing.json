@@ -40,10 +40,22 @@
 		"name" : "pipliz.metalsmith.bronzearrow",
 		"requires" : [
 			{"type":"bronzeingot"},
-			{"type":"planks"}
+			{"type":"planks"},
+			{"amount":5,"type":"feather"}
 		],
 		"results" : [
 			{"amount":5,"type":"bronzearrow"}
+		]
+	},
+	{
+		"name" : "pipliz.metalsmith.jewelry",
+		"requires" : [
+			{"type":"goldingot"},
+			{"type":"silveringot"},
+			{"type":"steelparts"}
+		],
+		"results" : [
+			{"type":"jewelry"}
 		]
 	},
 	{

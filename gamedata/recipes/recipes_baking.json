@@ -3,10 +3,21 @@
 		"name" : "pipliz.baker.bread",
 		"requires" : [
 			{"amount":5,"type":"flour"},
+			{"type":"bucketwater"},
 			{"type":"firewood"}
 		],
 		"results" : [
 			{"amount":2,"type":"bread"}
+		]
+	},
+	{
+		"name" : "pipliz.baker.beeswax",
+		"requires" : [
+			{"amount":3,"type":"rawbeeswax"},
+			{"type":"firewood"}
+		],
+		"results" : [
+			{"type":"beeswax"}
 		]
 	}
 ]
