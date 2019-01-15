@@ -37,6 +37,7 @@ namespace Pipliz.Mods.BaseGame
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<MinerJobInstance>(new MinerJobSettings()));
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<ScientistJobInstance>(new ScientistJobSettings()));
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<ConstructionJobInstance>(new ConstructionJobSettings()));
+			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<WaterGathererInstance>(new WaterGathererSettings()));
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnActiveColonyChanges, "sendconstructiondata")]

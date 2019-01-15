@@ -214,9 +214,10 @@
 			"test"
 		],
 		"mesh" : "./meshes/beehive.ply",
-		"sideall" : "neutral",
+		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight"
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
 	},
 	"beeswax" : {
 		"categories" : [
@@ -365,10 +366,11 @@
 			"job"
 		],
 		"icon" : "./textures/icons/bronzeanvil.png",
+		"mesh" : "./meshes/bronzeanvil.ply",
+		"needsBase" : true,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "stonebricks",
-		"sidey+" : "bronzeanvil"
+		"sideall" : "neutral"
 	},
 	"bronzearrow" : {
 		"categories" : [
@@ -592,10 +594,11 @@
 		"categories" : [
 			"test"
 		],
-		"sideall" : "neutral",
 		"mesh" : "./meshes/chickencoop.ply",
+		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight"
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
 	},
 	"chickenmeat" : {
 		"categories" : [
@@ -1154,10 +1157,11 @@
 			"job"
 		],
 		"icon" : "./textures/icons/grindstone.png",
+		"mesh" : "./meshes/grindstone.ply",
+		"needsBase" : true,
 		"onPlaceAudio" : "stonePlace",
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "planks",
-		"sidey+" : "grindstone"
+		"sideall" : "neutral"
 	},
 	"gunpowder" : {
 		"categories" : [
@@ -1790,8 +1794,11 @@
 		"categories" : [
 			"job"
 		],
+		"mesh" : "./meshes/npcshop.ply",
+		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight"
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
 	},
 	"olive" : {
 		"categories" : [
@@ -1946,6 +1953,7 @@
 			"test"
 		],
 		"mesh" : "./meshes/press.ply",
+		"needsBase" : true,
 		"sideall" : "neutral"
 	},
 	"projectile_arrow" : {
@@ -2470,7 +2478,12 @@
 	"stove" : {
 		"categories" : [
 			"test"
-		]
+		],
+		"mesh" : "./meshes/stove.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "stonePlace",
+		"onRemoveAudio" : "stoneDelete",
+		"sideall" : "neutral"
 	},
 	"straw" : {
 		"categories" : [
@@ -2594,11 +2607,6 @@
 		"icon" : "./textures/icons/water.png",
 		"isDestructible" : false,
 		"isSolid" : false
-	},
-	"watergatherer" : {
-		"categories" : [
-			"test"
-		]
 	},
 	"waxtablet" : {
 		"categories" : [
@@ -2752,9 +2760,14 @@
 		"sideall" : "planks",
 		"sidey+" : "workbenchtop"
 	},
-	"writer" : {
+	"writerdesk" : {
 		"categories" : [
 			"test"
-		]
+		],
+		"mesh" : "./meshes/writerdesk.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
 	}
 }

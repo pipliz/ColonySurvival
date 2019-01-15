@@ -1,5 +1,14 @@
 [
 	{
+		"name" : "pipliz.player.npcshop",
+		"requires" : [
+			{"type":"planks"}
+		],
+		"results" : [
+			{"type":"npcshop"}
+		]
+	},
+	{
 		"name" : "pipliz.player.slingtemperate",
 		"requires" : [
 			{"type":"leavestemperate"}
@@ -240,7 +249,7 @@
 		"isOptional" : true,
 		"name" : "pipliz.player.tailorshop",
 		"requires" : [
-			{"type":"coatedplanks"},
+			{"type":"planks"},
 			{"type":"flax"},
 			{"type":"coppertools"}
 		],
