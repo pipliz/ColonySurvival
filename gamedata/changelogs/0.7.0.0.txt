@@ -1,20 +1,27 @@
-0.7.0.0 (2018-xx-xx)
+0.7.0.0 (2019-xx-xx)
 
----VASTLY OUT OF DATE---
+This update will not be compatible with worlds loaded from before ( < 0.6.3), since there are too many big changes to properly convert a world.
 
-Known issues:
--Possible input issues on Ubuntu (check this)
--Projectiles slow/laggy
+- Added a new terrain generator with proper biomes and more landscape features
+- Added an entirely new system for saving chunks and block data
+- Added support for owning multiple colonies
+- Added support for a colony having multiple owners
+- Added support for hosting & playing on a LAN without an internet connection (suprisingly much work)
+- Added a co-op menu to easily host worlds for co-op
+- Added support for remotely administrating a server using colonyserverrcon.exe
+- Replaced/upgraded a <lot> of internal systems in order to fix various bugs and code maintenance issues
+- Noticably reduced network traffic reduced the cpu usage of networking
+- Generally improved performance of both the client and server
+- Vastly improved mod support in preparation for steam workshop support; a lot of content based modding can be done through config files now
+- Optimized loading so it should work quicker on slow hard drives
 
--Added support for owning multiple colonies
--Added support for a colony having multiple owners
--Fully changed the terrain generator - much more varied terrain, quicker, less system load
--Fully replaced the chunk saving system - quicker, less disk space, less disk writing/reading, more data, more robust
--Added support for small height differences in farms, so flattening everything is not as needed anymore
--0.7.0 does not support loading older worlds (0.6.3 and earlier)
+- Added the npcshop - npcs require to visit one every day to get their food & luxury items
+- Added a whole heap of new items, jobs and science (see ingame for those)
+- Added support for making "3D farms", to better deal with building on hills
+- Added a happiness system (gives benefits for providing a nice variety of food and luxury items)
+- Reworked a lot of icons to be much more visually pleasing
+- Reworked a lot of blocks to be an actual object instead of a cube (like the bronze anvil - it's an anvil now)
 
--Many, many internal changes, fixes & optimizations not listed here
--Overall the game should run much better
-
--Update Unity3D version from 5.6.5p3 to 2017.4.10f1
--Updated .NET runtime from 3.5 to 4.6
+- Update Unity3D version from 5.6.5p3 to 2017.4.15f1
+- Updated .NET runtime from 3.5 to 4.6
+- Updated steamworks version from 1.39 to 1.42
