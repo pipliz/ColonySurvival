@@ -12,6 +12,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 		{
 			base.UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.constructor");
 			base.Identifier = "pipliz.constructionarea";
+			MaxGathersPerRun = 5;
 		}
 
 		// need to parse some additional data that the default one doesn't

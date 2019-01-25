@@ -1,12 +1,13 @@
 [
 	{
+		"defaultLimit" : 10,
 		"name" : "cook.boilingwater",
 		"requires" : [
 			{"type":"bucketwater"},
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"cake"}
+			{"type":"boilingwater"}
 		]
 	},
 	{
@@ -17,7 +18,8 @@
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"cookedfish"}
+			{"type":"cookedfish"},
+			{"type":"fishmeal"}
 		]
 	},
 	{
@@ -45,7 +47,8 @@
 			{"amount":3,"type":"firewood"}
 		],
 		"results" : [
-			{"type":"perpetualstew"}
+			{"type":"perpetualstew"},
+			{"amount":5,"type":"bucketempty"}
 		]
 	},
 	{
@@ -59,7 +62,8 @@
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"cake"}
+			{"type":"cake"},
+			{"type":"bucketempty"}
 		]
 	},
 	{
@@ -76,7 +80,8 @@
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"luxurymeal"}
+			{"type":"luxurymeal"},
+			{"amount":3,"type":"bucketempty"}
 		]
 	}
 ]

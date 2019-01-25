@@ -13,6 +13,7 @@ namespace Pipliz.Mods.BaseGame
 		public virtual string NPCTypeKey { get; set; }
 		public virtual InventoryItem RecruitmentItem { get; set; }
 		public virtual string OnCraftedAudio { get; set; }
+		public int MaxCraftsPerRun { get; set; }
 		public float NPCShopGameHourMinimum { get { return TimeCycle.Settings.SleepTimeEnd; } }
 		public float NPCShopGameHourMaximum { get { return TimeCycle.Settings.SleepTimeStart; } }
 
@@ -33,6 +34,7 @@ namespace Pipliz.Mods.BaseGame
 			NPCTypeKey = "pipliz.minerjob";
 			NPCType = NPCType.GetByKeyNameOrDefault(NPCTypeKey);
 			OnCraftedAudio = "stoneDelete";
+			MaxCraftsPerRun = 5;
 		}
 
 		public virtual void OnGoalChanged (BlockJobInstance instance, NPCGoal oldGoal, NPCGoal newGoal) { }
@@ -83,10 +85,16 @@ namespace Pipliz.Mods.BaseGame
 
 			state.Inventory.Add(GatherResults);
 			state.JobIsDone = true;
+
+			instance.GatheredItemCount++;
+			if (instance.GatheredItemCount >= MaxCraftsPerRun) {
+				instance.ShouldTakeItems = true;
+			}
 		}
 
 		public virtual void OnNPCAtStockpile (BlockJobInstance blockJobInstance, ref NPCState state)
 		{
+			blockJobInstance.ShouldTakeItems = false;
 			state.Inventory.Dump(blockJobInstance.Owner.Stockpile);
 			state.SetCooldown(0.3);
 			state.JobIsDone = true;

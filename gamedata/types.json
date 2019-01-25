@@ -16,7 +16,8 @@
 	"alkanet" : {
 		"categories" : [
 			"food",
-			"flower"
+			"flower",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/alkanet.png",
 		"isPlaceable" : false,
@@ -88,14 +89,16 @@
 	},
 	"barley" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/barley.png",
 		"isPlaceable" : false
 	},
 	"barleystage1" : {
 		"categories" : [
-			"test"
+			"food",
+			"seed"
 		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
@@ -130,89 +133,12 @@
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
 	},
-	"bed" : {
-		"categories" : [
-			"essential"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"]
-		},
-		"icon" : "./textures/icons/bed.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "bedx+",
-		"rotatablex-" : "bedx-",
-		"rotatablez+" : "bedz+",
-		"rotatablez-" : "bedz-",
-		"sideall" : "neutral"
-	},
-	"bedend" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"isRotatable" : true,
-		"parentType" : "bed",
-		"rotatablex+" : "bedendx+",
-		"rotatablex-" : "bedendx-",
-		"rotatablez+" : "bedendz+",
-		"rotatablez-" : "bedendz-"
-	},
-	"bedendx+" : {
-		"mesh" : "./meshes/bedendx+.ply",
-		"parentType" : "bedend"
-	},
-	"bedendx-" : {
-		"mesh" : "./meshes/bedendx-.ply",
-		"parentType" : "bedend"
-	},
-	"bedendz+" : {
-		"mesh" : "./meshes/bedendz+.ply",
-		"parentType" : "bedend"
-	},
-	"bedendz-" : {
-		"mesh" : "./meshes/bedendz-.ply",
-		"parentType" : "bedend"
-	},
-	"bedx+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"mesh" : "./meshes/bedx+.ply",
-		"parentType" : "bed"
-	},
-	"bedx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[0.4,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"mesh" : "./meshes/bedx-.ply",
-		"parentType" : "bed"
-	},
-	"bedz+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,-0.4],"min":[-0.5,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"mesh" : "./meshes/bedz+.ply",
-		"parentType" : "bed"
-	},
-	"bedz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[0.5,0.5,0.5],"min":[-0.5,-0.5,0.4]}],
-			"collidePlayer" : false
-		},
-		"mesh" : "./meshes/bedz-.ply",
-		"parentType" : "bed"
-	},
 	"beehive" : {
 		"categories" : [
-			"test"
+			"decorative",
+			"bees"
 		],
+		"icon" : "./textures/icons/beehive.png",
 		"mesh" : "./meshes/beehive.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -221,17 +147,19 @@
 	},
 	"beeswax" : {
 		"categories" : [
-			"test"
+			"ingredient",
+			"bees"
 		],
 		"icon" : "./textures/icons/beeswax.png",
 		"isPlaceable" : false
 	},
 	"berry" : {
 		"categories" : [
-			"food"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.5,
-		"foodValue" : 0.1,
+		"foodValue" : 0.12,
 		"happiness" : 10,
 		"icon" : "./textures/icons/berry.png",
 		"isPlaceable" : false,
@@ -262,14 +190,15 @@
 	},
 	"boilingwater" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/boilingwater.png",
 		"isPlaceable" : false
 	},
 	"book" : {
 		"categories" : [
-			"test"
+			"luxury"
 		],
 		"happiness" : 50,
 		"icon" : "./textures/icons/book.png",
@@ -293,10 +222,11 @@
 	},
 	"bread" : {
 		"categories" : [
-			"food"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.5,
-		"foodValue" : 0.33334,
+		"foodValue" : 0.6,
 		"happiness" : 10,
 		"icon" : "./textures/icons/bread.png",
 		"isPlaceable" : false,
@@ -361,21 +291,11 @@
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "bricksgeneric"
 	},
-	"bronzeanvil" : {
-		"categories" : [
-			"job"
-		],
-		"icon" : "./textures/icons/bronzeanvil.png",
-		"mesh" : "./meshes/bronzeanvil.ply",
-		"needsBase" : true,
-		"onPlaceAudio" : "stonePlace",
-		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "neutral"
-	},
 	"bronzearrow" : {
 		"categories" : [
 			"essential",
-			"ammo"
+			"ammo",
+			"bronze"
 		],
 		"icon" : "./textures/icons/bronzearrow.png",
 		"isPlaceable" : false
@@ -422,28 +342,32 @@
 	},
 	"bucketempty" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/bucketempty.png",
 		"isPlaceable" : false
 	},
 	"bucketwater" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/bucketwater.png",
 		"isPlaceable" : false
 	},
 	"cabbage" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/cabbage.png",
 		"isPlaceable" : false
 	},
 	"cabbagestage1" : {
 		"categories" : [
-			"test"
+			"food",
+			"seed"
 		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
@@ -479,7 +403,8 @@
 	},
 	"cake" : {
 		"categories" : [
-			"test"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.03,
 		"foodValue" : 0.1,
@@ -489,7 +414,7 @@
 	},
 	"candle" : {
 		"categories" : [
-			"test"
+			"luxury"
 		],
 		"happiness" : 35,
 		"icon" : "./textures/icons/candle.png",
@@ -554,7 +479,8 @@
 	},
 	"cherryblossom" : {
 		"categories" : [
-			"decorative"
+			"decorative",
+			"leaves"
 		],
 		"customData" : {
 			"attachBehaviour" : [{"id":"leaves"}]
@@ -572,7 +498,8 @@
 	"cherrysapling" : {
 		"categories" : [
 			"food",
-			"seed"
+			"seed",
+			"decorative"
 		],
 		"colliders" : {
 			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
@@ -592,8 +519,9 @@
 	},
 	"chickencoop" : {
 		"categories" : [
-			"test"
+			"decorative"
 		],
+		"icon" : "./textures/icons/chickencoop.png",
 		"mesh" : "./meshes/chickencoop.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -602,14 +530,18 @@
 	},
 	"chickenmeat" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
+		"icon" : "./textures/icons/chickenmeat.png",
 		"isPlaceable" : false
 	},
 	"chickenskin" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
+		"icon" : "./textures/icons/chickenskin.png",
 		"isPlaceable" : false
 	},
 	"clay" : {
@@ -620,15 +552,6 @@
 		"onPlaceAudio" : "dirtPlace",
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
-	},
-	"clothing" : {
-		"categories" : [
-			"ingredient",
-			"linen"
-		],
-		"icon" : "./textures/icons/clothing.png",
-		"isPlaceable" : false,
-		"maxStackSize" : 25
 	},
 	"coalore" : {
 		"categories" : [
@@ -728,7 +651,8 @@
 	},
 	"cookedfish" : {
 		"categories" : [
-			"test"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.04,
 		"foodValue" : 0.2,
@@ -853,8 +777,10 @@
 	},
 	"egg" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
+		"icon" : "./textures/icons/egg.png",
 		"isPlaceable" : false
 	},
 	"erroridle" : {
@@ -867,8 +793,10 @@
 	},
 	"feather" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
+		"icon" : "./textures/icons/feather.png",
 		"isPlaceable" : false
 	},
 	"firewood" : {
@@ -879,21 +807,19 @@
 		"icon" : "./textures/icons/firewood.png",
 		"isPlaceable" : false
 	},
-	"fisherman" : {
-		"categories" : [
-			"test"
-		]
-	},
 	"fishmeal" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
+		"icon" : "./textures/icons/fishmeal.png",
 		"isPlaceable" : false
 	},
 	"flax" : {
 		"categories" : [
 			"food",
-			"flower"
+			"flower",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/flax.png",
 		"isPlaceable" : false,
@@ -947,7 +873,8 @@
 	},
 	"flour" : {
 		"categories" : [
-			"food"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/flour.png",
 		"isPlaceable" : false,
@@ -990,7 +917,8 @@
 	"goldore" : {
 		"categories" : [
 			"ingredient",
-			"raw"
+			"raw",
+			"gold"
 		],
 		"icon" : "./textures/icons/goldore.png",
 		"isPlaceable" : false
@@ -1200,7 +1128,8 @@
 	"hollyhock" : {
 		"categories" : [
 			"food",
-			"flower"
+			"flower",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/hollyhock.png",
 		"isPlaceable" : false,
@@ -1254,7 +1183,8 @@
 	},
 	"honey" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/honey.png",
 		"isPlaceable" : false
@@ -1366,13 +1296,15 @@
 	},
 	"ink" : {
 		"categories" : [
-			"test"
+			"ingredient"
 		],
+		"icon" : "./textures/icons/ink.png",
 		"isPlaceable" : false
 	},
 	"ironblock" : {
 		"categories" : [
-			"decorative"
+			"decorative",
+			"iron"
 		],
 		"icon" : "./textures/icons/ironblock.png",
 		"onPlaceAudio" : "stoneDelete",
@@ -1422,7 +1354,7 @@
 	},
 	"jewelry" : {
 		"categories" : [
-			"test"
+			"luxury"
 		],
 		"happiness" : 35,
 		"icon" : "./textures/icons/jewelry.png",
@@ -1708,24 +1640,18 @@
 		"icon" : "./textures/icons/linenpouch.png",
 		"isPlaceable" : false
 	},
-	"linseedoil" : {
-		"categories" : [
-			"ingredient"
-		],
-		"icon" : "./textures/icons/linseedoil.png",
-		"isPlaceable" : false,
-		"maxStackSize" : 600
-	},
 	"lobster" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/lobsterraw.png",
 		"isPlaceable" : false
 	},
 	"lobsterprepared" : {
 		"categories" : [
-			"test"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.04,
 		"foodValue" : 0.2,
@@ -1761,11 +1687,13 @@
 	},
 	"luxurymeal" : {
 		"categories" : [
-			"test"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.166667,
 		"foodValue" : 5,
 		"happiness" : 60,
+		"icon" : "./textures/icons/luxurymeal.png",
 		"isPlaceable" : false
 	},
 	"matchlockgun" : {
@@ -1794,6 +1722,7 @@
 		"categories" : [
 			"job"
 		],
+		"icon" : "./textures/icons/npcshop.png",
 		"mesh" : "./meshes/npcshop.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -1802,38 +1731,77 @@
 	},
 	"olive" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/olive.png",
 		"isPlaceable" : false
 	},
-	"olivefarm" : {
+	"oliveleaves" : {
 		"categories" : [
-			"test"
-		]
+			"decorative"
+		],
+		"customData" : {
+			"attachBehaviour" : [{"id":"leaves"}]
+		},
+		"destructionTime" : 200,
+		"icon" : "./textures/icons/oliveleaves.png",
+		"onPlaceAudio" : "dirtPlace",
+		"onRemove" : [
+			{"amount":1,"chance":0.6,"type":"oliveleaves"},
+			{"amount":1,"chance":0.1,"type":"olivesapling"}
+		],
+		"onRemoveAudio" : "grassDelete",
+		"sideall" : "SELF"
 	},
 	"oliveoil" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/oliveoil.png",
 		"isPlaceable" : false
 	},
+	"olivesapling" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#99b544"]
+		},
+		"icon" : "./textures/icons/olivesapling.png",
+		"isSolid" : false,
+		"mesh" : "./meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"requiresFertileBelow" : true,
+		"sideall" : "neutral"
+	},
 	"paperempty" : {
 		"categories" : [
-			"test"
+			"ingredient"
 		],
+		"icon" : "./textures/icons/paperempty.png",
 		"isPlaceable" : false
 	},
 	"papertext" : {
 		"categories" : [
-			"test"
+			"ingredient"
 		],
+		"icon" : "./textures/icons/papertext.png",
 		"isPlaceable" : false
 	},
 	"perpetualstew" : {
 		"categories" : [
-			"test"
+			"food",
+			"edible"
 		],
 		"dailyFoodFractionOptimal" : 0.5,
 		"foodValue" : 4.2,
@@ -1847,9 +1815,7 @@
 			"decorative",
 			"planks"
 		],
-		"happiness" : 10,
 		"icon" : "./textures/icons/planks.png",
-		"luxuryHours" : 48,
 		"maxStackSize" : 200,
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -1950,10 +1916,13 @@
 	},
 	"printingpress" : {
 		"categories" : [
-			"test"
+			"job"
 		],
+		"icon" : "./textures/icons/printingpress.png",
 		"mesh" : "./meshes/press.ply",
 		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "neutral"
 	},
 	"projectile_arrow" : {
@@ -1978,261 +1947,18 @@
 		"mesh" : "./meshes/slingbullet.ply",
 		"parentType" : "projectile_parent"
 	},
-	"quarterblockblack" : {
-		"categories" : [
-			"decorative",
-			"stairs"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#242321"]
-		},
-		"icon" : "./textures/icons/quarterblockblack.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"maxStackSize" : 60,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "quarterblockblackx+",
-		"rotatablex-" : "quarterblockblackx-",
-		"rotatablez+" : "quarterblockblackz+",
-		"rotatablez-" : "quarterblockblackz-",
-		"sideall" : "neutral"
-	},
-	"quarterblockblackx+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx+.ply",
-		"parentType" : "quarterblockblack"
-	},
-	"quarterblockblackx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockblack"
-	},
-	"quarterblockblackz+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
-		},
-		"mesh" : "./meshes/quarterblockz+.ply",
-		"parentType" : "quarterblockblack"
-	},
-	"quarterblockblackz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockz-.ply",
-		"parentType" : "quarterblockblack"
-	},
-	"quarterblockbrowndark" : {
-		"categories" : [
-			"decorative",
-			"stairs"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#332106"]
-		},
-		"icon" : "./textures/icons/quarterblockbrowndark.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"maxStackSize" : 60,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "quarterblockbrowndarkx+",
-		"rotatablex-" : "quarterblockbrowndarkx-",
-		"rotatablez+" : "quarterblockbrowndarkz+",
-		"rotatablez-" : "quarterblockbrowndarkz-",
-		"sideall" : "neutral"
-	},
-	"quarterblockbrowndarkx+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx+.ply",
-		"parentType" : "quarterblockbrowndark"
-	},
-	"quarterblockbrowndarkx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockbrowndark"
-	},
-	"quarterblockbrowndarkz+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
-		},
-		"mesh" : "./meshes/quarterblockz+.ply",
-		"parentType" : "quarterblockbrowndark"
-	},
-	"quarterblockbrowndarkz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockz-.ply",
-		"parentType" : "quarterblockbrowndark"
-	},
-	"quarterblockbrownlight" : {
-		"categories" : [
-			"decorative",
-			"stairs"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#917451"]
-		},
-		"icon" : "./textures/icons/quarterblockbrownlight.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"maxStackSize" : 60,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "quarterblockbrownlightx+",
-		"rotatablex-" : "quarterblockbrownlightx-",
-		"rotatablez+" : "quarterblockbrownlightz+",
-		"rotatablez-" : "quarterblockbrownlightz-",
-		"sideall" : "neutral"
-	},
-	"quarterblockbrownlightx+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx+.ply",
-		"parentType" : "quarterblockbrownlight"
-	},
-	"quarterblockbrownlightx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockbrownlight"
-	},
-	"quarterblockbrownlightz+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
-		},
-		"mesh" : "./meshes/quarterblockz+.ply",
-		"parentType" : "quarterblockbrownlight"
-	},
-	"quarterblockbrownlightz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockz-.ply",
-		"parentType" : "quarterblockbrownlight"
-	},
-	"quarterblockgrey" : {
-		"categories" : [
-			"decorative",
-			"stairs"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#636363"]
-		},
-		"icon" : "./textures/icons/quarterblockgrey.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"maxStackSize" : 60,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "quarterblockgreyx+",
-		"rotatablex-" : "quarterblockgreyx-",
-		"rotatablez+" : "quarterblockgreyz+",
-		"rotatablez-" : "quarterblockgreyz-",
-		"sideall" : "neutral"
-	},
-	"quarterblockgreyx+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx+.ply",
-		"parentType" : "quarterblockgrey"
-	},
-	"quarterblockgreyx-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockgrey"
-	},
-	"quarterblockgreyz+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
-		},
-		"mesh" : "./meshes/quarterblockz+.ply",
-		"parentType" : "quarterblockgrey"
-	},
-	"quarterblockgreyz-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockz-.ply",
-		"parentType" : "quarterblockgrey"
-	},
-	"quarterblockwhite" : {
-		"categories" : [
-			"decorative",
-			"stairs"
-		],
-		"customData" : {
-			"colors" : ["#ff0000->#c7c7c7"]
-		},
-		"icon" : "./textures/icons/quarterblockwhite.png",
-		"isRotatable" : true,
-		"isSolid" : false,
-		"maxStackSize" : 60,
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"rotatablex+" : "quarterblockwhitex+",
-		"rotatablex-" : "quarterblockwhitex-",
-		"rotatablez+" : "quarterblockwhitez+",
-		"rotatablez-" : "quarterblockwhitez-",
-		"sideall" : "neutral"
-	},
-	"quarterblockwhitex+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx+.ply",
-		"parentType" : "quarterblockwhite"
-	},
-	"quarterblockwhitex-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0,0,0.5],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockx-.ply",
-		"parentType" : "quarterblockwhite"
-	},
-	"quarterblockwhitez+" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0.5],"min":[-0.5,-0.5,0]}]
-		},
-		"mesh" : "./meshes/quarterblockz+.ply",
-		"parentType" : "quarterblockwhite"
-	},
-	"quarterblockwhitez-" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0,0],"min":[-0.5,-0.5,-0.5]}]
-		},
-		"mesh" : "./meshes/quarterblockz-.ply",
-		"parentType" : "quarterblockwhite"
-	},
 	"rawbeeswax" : {
 		"categories" : [
-			"test"
+			"ingredient",
+			"bees"
 		],
 		"icon" : "./textures/icons/beeswaxraw.png",
 		"isPlaceable" : false
 	},
 	"rawfish" : {
 		"categories" : [
-			"test"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/fishraw.png",
 		"isPlaceable" : false
@@ -2268,7 +1994,8 @@
 	"sappling" : {
 		"categories" : [
 			"food",
-			"seed"
+			"seed",
+			"decorative"
 		],
 		"colliders" : {
 			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
@@ -2477,8 +2204,9 @@
 	},
 	"stove" : {
 		"categories" : [
-			"test"
+			"job"
 		],
+		"icon" : "./textures/icons/stove.png",
 		"mesh" : "./meshes/stove.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "stonePlace",
@@ -2555,7 +2283,12 @@
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsetx":-0.25,"offsety":0.18,"range":16,"volume":0.5}}
 		},
-		"mesh" : "./meshes/torchx-.ply",
+		"mesh" : "./meshes/torchx+.ply",
+		"meshRotationEuler" : {
+			"x" : 0,
+			"y" : 180,
+			"z" : 0
+		},
 		"parentType" : "torch"
 	},
 	"torchy+" : {
@@ -2580,7 +2313,12 @@
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":0.25,"range":16,"volume":0.5}}
 		},
-		"mesh" : "./meshes/torchz+.ply",
+		"mesh" : "./meshes/torchx+.ply",
+		"meshRotationEuler" : {
+			"x" : 0,
+			"y" : 270,
+			"z" : 0
+		},
 		"parentType" : "torch"
 	},
 	"torchz-" : {
@@ -2592,15 +2330,23 @@
 			"colors" : ["#ff0000->#71310a","#00ff00->#997b45","#0000ff->#3e3e3e"],
 			"torches" : {"a":{"color":"#c3872e","intensity":12.5,"offsety":0.18,"offsetz":-0.25,"range":16,"volume":0.5}}
 		},
-		"mesh" : "./meshes/torchz-.ply",
+		"mesh" : "./meshes/torchx+.ply",
+		"meshRotationEuler" : {
+			"x" : 0,
+			"y" : 90,
+			"z" : 0
+		},
 		"parentType" : "torch"
 	},
 	"undershirt" : {
 		"categories" : [
-			"test"
+			"luxury",
+			"linen"
 		],
 		"happiness" : 35,
+		"icon" : "./textures/icons/undershirt.png",
 		"isPlaceable" : false,
+		"maxStackSize" : 25,
 		"luxuryHours" : 240
 	},
 	"water" : {
@@ -2610,7 +2356,7 @@
 	},
 	"waxtablet" : {
 		"categories" : [
-			"test"
+			"luxury"
 		],
 		"happiness" : 30,
 		"icon" : "./textures/icons/waxtablet.png",
@@ -2619,7 +2365,8 @@
 	},
 	"wheat" : {
 		"categories" : [
-			"food"
+			"food",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/wheat.png",
 		"isPlaceable" : false,
@@ -2691,7 +2438,8 @@
 	"wolfsbane" : {
 		"categories" : [
 			"food",
-			"flower"
+			"flower",
+			"ingredient"
 		],
 		"icon" : "./textures/icons/wolfsbane.png",
 		"isPlaceable" : false,
@@ -2745,7 +2493,7 @@
 	},
 	"woodcoating" : {
 		"categories" : [
-			"test"
+			"ingredient"
 		],
 		"icon" : "./textures/icons/woodcoating.png",
 		"isPlaceable" : false
@@ -2759,15 +2507,5 @@
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "planks",
 		"sidey+" : "workbenchtop"
-	},
-	"writerdesk" : {
-		"categories" : [
-			"test"
-		],
-		"mesh" : "./meshes/writerdesk.ply",
-		"needsBase" : true,
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "neutral"
 	}
 }

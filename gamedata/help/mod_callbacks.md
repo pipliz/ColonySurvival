@@ -467,7 +467,7 @@ No registered uses
 CallbackType: `OnNPCCraftedRecipe`
 =======
 ## Description
-Signature: void (IJob job, Recipe recipe, List<InventoryItem> results)
+Signature: void (IJob job, Recipe recipe, List<ItemTypes.InventoryItemDrops> results)
 Triggered when an npc doing {job} crafts {recipe}, creating {results}
 The results are re-used, don't store it.
 Results can be edited. After the callback they'll be added to the npc/block's inventory

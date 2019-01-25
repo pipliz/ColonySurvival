@@ -1,5 +1,6 @@
 [
 	{
+		"defaultLimit" : 10,
 		"name" : "writer.paperempty",
 		"requires" : [
 			{"type":"chickenskin"}
@@ -9,15 +10,18 @@
 		]
 	},
 	{
+		"defaultLimit" : 10,
 		"name" : "writer.papertext",
 		"requires" : [
-			{"type":"paperempty"}
+			{"type":"paperempty"},
+			{"type":"ink"}
 		],
 		"results" : [
 			{"type":"papertext"}
 		]
 	},
 	{
+		"defaultLimit" : 25,
 		"name" : "writer.book",
 		"requires" : [
 			{"amount":20,"type":"paperempty"},

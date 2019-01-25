@@ -1,20 +1,12 @@
 [
 	{
-		"name" : "fisherman.rawfish",
+		"name" : "pipliz.fisherman.rawfish",
 		"requires" : [
 			
 		],
 		"results" : [
-			{"type":"rawfish"}
-		]
-	},
-	{
-		"name" : "fisherman.lobster",
-		"requires" : [
-			
-		],
-		"results" : [
-			{"type":"lobster"}
+			{"chance":0.95,"type":"rawfish"},
+			{"chance":0.05,"type":"lobster"}
 		]
 	}
 ]

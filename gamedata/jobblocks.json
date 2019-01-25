@@ -1,5 +1,19 @@
 [
 	{
+		"blockType" : "watergathererjob",
+		"cooldown" : 8,
+		"jobType" : "craftingblocknearwater",
+		"maxCraftsPerHaul" : 4,
+		"npcType" : "pipliz.watergatherer"
+	},
+	{
+		"blockType" : "fishermanjob",
+		"cooldown" : 8,
+		"jobType" : "craftingblocknearwater",
+		"maxCraftsPerHaul" : 4,
+		"npcType" : "pipliz.fisherman"
+	},
+	{
 		"blockType" : "dyertable",
 		"cooldown" : 5,
 		"jobType" : "craftingblock",
@@ -23,7 +37,7 @@
 	{
 		"blockType" : "bronzeanvil",
 		"cooldown" : 5,
-		"jobType" : "craftingblock",
+		"jobType" : "craftingblockrotated",
 		"maxCraftsPerHaul" : 3,
 		"npcType" : "pipliz.metalsmithjob",
 		"onCraftedAudio" : "anvil"
@@ -261,20 +275,6 @@
 		"sleepType" : "Day"
 	},
 	{
-		"blockType" : "olivefarm",
-		"cooldown" : 8.5,
-		"jobType" : "craftingblock",
-		"maxCraftsPerHaul" : 4,
-		"npcType" : "olivefarm"
-	},
-	{
-		"blockType" : "fisherman",
-		"cooldown" : 10,
-		"jobType" : "craftingblock",
-		"maxCraftsPerHaul" : 4,
-		"npcType" : "fisherman"
-	},
-	{
 		"blockType" : "stove",
 		"cooldown" : 10,
 		"jobType" : "craftingblock",
@@ -284,7 +284,7 @@
 	{
 		"blockType" : "writerdesk",
 		"cooldown" : 10,
-		"jobType" : "craftingblock",
+		"jobType" : "craftingblockrotated",
 		"maxCraftsPerHaul" : 4,
 		"npcType" : "pipliz.writer"
 	},

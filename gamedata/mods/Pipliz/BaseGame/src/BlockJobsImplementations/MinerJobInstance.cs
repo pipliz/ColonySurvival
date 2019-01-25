@@ -8,6 +8,7 @@ namespace Pipliz.Mods.BaseGame
 	{
 		public float MiningCooldown { get; set; }
 		public ItemTypes.ItemType BlockTypeBelow { get; set; }
+		public int GatheredItemCount { get; set; }
 
 		public MinerJobInstance (IBlockJobSettings settings, Vector3Int position, ItemTypes.ItemType type, ByteReader reader) : base(settings, position, type, reader)
 		{

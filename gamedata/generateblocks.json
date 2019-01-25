@@ -11,6 +11,11 @@
 	},
 	{
 		"generateType" : "jobOutline",
+		"outlineColor" : "#ff00ff",
+		"typeName" : "fishermanjob"
+	},
+	{
+		"generateType" : "jobOutline",
 		"outlineColor" : "#474747",
 		"typeName" : "guardslingerdayjob"
 	},
@@ -53,6 +58,142 @@
 		"generateType" : "jobOutline",
 		"outlineColor" : "#911616",
 		"typeName" : "constructionjob"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"icon" : "./textures/icons/writerdesk.png",
+			"mesh" : "./meshes/writerdesk.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "writerdesk"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
+			"icon" : "./textures/icons/bronzeanvil.png",
+			"mesh" : "./meshes/bronzeanvil.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "stonePlace",
+			"onRemoveAudio" : "stoneDelete",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "bronzeanvil"
+	},
+	{
+		"baseType" : {
+			"categories" : ["decorative","stairs"],
+			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
+			"customData" : {"colors":["#ff0000->#242321"]},
+			"icon" : "./textures/icons/quarterblockblack.png",
+			"isSolid" : false,
+			"maxStackSize" : 60,
+			"mesh" : "./meshes/quarterblockx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "quarterblockblack"
+	},
+	{
+		"baseType" : {
+			"categories" : ["decorative","stairs"],
+			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
+			"customData" : {"colors":["#ff0000->#332106"]},
+			"icon" : "./textures/icons/quarterblockbrowndark.png",
+			"isSolid" : false,
+			"maxStackSize" : 60,
+			"mesh" : "./meshes/quarterblockx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "quarterblockbrowndark"
+	},
+	{
+		"baseType" : {
+			"categories" : ["decorative","stairs"],
+			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
+			"customData" : {"colors":["#ff0000->#917451"]},
+			"icon" : "./textures/icons/quarterblockbrownlight.png",
+			"isSolid" : false,
+			"maxStackSize" : 60,
+			"mesh" : "./meshes/quarterblockx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "quarterblockbrownlight"
+	},
+	{
+		"baseType" : {
+			"categories" : ["decorative","stairs"],
+			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
+			"customData" : {"colors":["#ff0000->#636363"]},
+			"icon" : "./textures/icons/quarterblockgrey.png",
+			"isSolid" : false,
+			"maxStackSize" : 60,
+			"mesh" : "./meshes/quarterblockx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "quarterblockgrey"
+	},
+	{
+		"baseType" : {
+			"categories" : ["decorative","stairs"],
+			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
+			"customData" : {"colors":["#ff0000->#c7c7c7"]},
+			"icon" : "./textures/icons/quarterblockwhite.png",
+			"isSolid" : false,
+			"maxStackSize" : 60,
+			"mesh" : "./meshes/quarterblockx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "quarterblockwhite"
+	},
+	{
+		"baseType" : {
+			"categories" : ["essential"],
+			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
+			"customData" : {"colors":["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"]},
+			"icon" : "./textures/icons/bed.png",
+			"isSolid" : false,
+			"mesh" : "./meshes/bedx+.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "bed"
+	},
+	{
+		"baseType" : {
+			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
+			"mesh" : "./meshes/bedendx+.ply",
+			"parentType" : "bed"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "bedend"
 	},
 	{
 		"baseType" : {

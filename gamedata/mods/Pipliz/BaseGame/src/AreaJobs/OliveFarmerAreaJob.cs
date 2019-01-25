@@ -1,55 +1,40 @@
 ﻿using BlockTypes;
 using Jobs;
 using NPC;
+using Recipes;
 
 namespace Pipliz.Mods.BaseGame.AreaJobs
 {
 	[AreaJobDefinitionAutoLoader]
-	public class TemperateForesterDefinition : AbstractFarmAreaJobDefinition
+	public class OliveFarmerAreaJob : AbstractFarmAreaJobDefinition
 	{
-		public TemperateForesterDefinition ()
+		public string NPCTypeString { get; protected set; }
+		public float Cooldown { get; set; } = 8.5f;
+
+		public OliveFarmerAreaJob ()
 		{
-			Identifier = "pipliz.temperateforest";
-			UsedNPCType = NPCType.GetByKeyNameOrDefault("pipliz.forester");
-			MaxGathersPerRun = 1;
+			Identifier = NPCTypeString = "pipliz.olivefarmer";
+			UsedNPCType = NPCType.GetByKeyNameOrDefault(NPCTypeString);
+			MaxGathersPerRun = 5;
 			Stages = new ushort[] {
-				ItemTypes.IndexLookup.GetIndex("sappling"),
+				ItemTypes.IndexLookup.GetIndex("olivesapling"),
 				ItemTypes.IndexLookup.GetIndex("logtemperate")
 			};
 		}
 
 		public override IAreaJob CreateAreaJob (Colony owner, Vector3Int min, Vector3Int max, bool isLoaded, int npcID = 0)
 		{
-			return new ForesterJob(this, owner, min, max, npcID);
+			return new OliveFarmerJob(this, owner, min, max, npcID);
 		}
 
-		static bool ChopTree (Vector3Int p, BlockChangeRequestOrigin origin)
-		{
-			ItemTypes.ItemType logType = ItemTypes.GetType(BuiltinBlocks.LogTemperate);
-			ItemTypes.ItemType air = ItemTypes.Air;
-			for (int y = 0; y < 5; y++) {
-				switch (ServerManager.TryChangeBlock(p.Add(0, y, 0), logType, air, origin)) {
-					case EServerChangeBlockResult.CancelledByCallback:
-					case EServerChangeBlockResult.ChunkNotReady:
-					default:
-						return false;
-					case EServerChangeBlockResult.Success:
-						break;
-					case EServerChangeBlockResult.UnexpectedOldType:
-						y = 15;
-						break;
-				}
-			}
-			return true;
-		}
-
-		public class ForesterJob : AbstractAreaJob
+		public class OliveFarmerJob : AbstractAreaJob
 		{
 			// store treeLocation separately from positionSub because the farmer will move next to these positions(they're not equal)
 			protected Vector3Int treeLocation = Vector3Int.invalidPos;
 			static ItemTypes.ItemType[] yTypesBuffer = new ItemTypes.ItemType[5]; // max 3 Y + 1 below + 1 above
+			public int GatheredCount { get; set; }
 
-			public ForesterJob (AbstractAreaJobDefinition def, Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(def, owner, min, max, npcID) { }
+			public OliveFarmerJob (AbstractAreaJobDefinition def, Colony owner, Vector3Int min, Vector3Int max, int npcID = 0) : base(def, owner, min, max, npcID) { }
 
 			public override void CalculateSubPosition ()
 			{
@@ -118,6 +103,9 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 			public override void OnNPCAtJob (ref NPCBase.NPCState state)
 			{
+				OliveFarmerAreaJob def = (OliveFarmerAreaJob)definition;
+				ItemTypes.ItemType saplingType = ItemTypes.GetType("olivesapling");
+
 				ThreadManager.AssertIsMainThread();
 				state.JobIsDone = true;
 				positionSub = Vector3Int.invalidPos;
@@ -135,40 +123,60 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				}
 
 				if (type == BuiltinBlocks.LogTemperate) {
-					if (ChopTree(treeLocation, Owner)) {
-						state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
-						ServerManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
+					var recipes = Owner.RecipeData.GetAvailableRecipes(def.NPCTypeString);
+					Recipe.RecipeMatch match = Recipe.MatchRecipe(recipes, Owner);
+					switch (match.MatchType) {
+						case Recipe.RecipeMatchType.AllDone:
+						case Recipe.RecipeMatchType.FoundMissingRequirements:
+							if (state.Inventory.IsEmpty) {
+								state.JobIsDone = true;
+								if (match.MatchType == Recipe.RecipeMatchType.AllDone) {
+									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, BuiltinBlocks.ErrorIdle));
+								} else {
+									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, match.FoundRecipe.FindMissingType(Owner.Stockpile), true, false));
+								}
+							} else {
+								shouldDumpInventory = true;
+							}
+							return;
+						case Recipe.RecipeMatchType.FoundCraftable:
+							var recipe = match.FoundRecipe;
+							if (Owner.Stockpile.TryRemove(recipe.Requirements)) {
+								// should always succeed, as the match above was succesfull
+								GatherResults.Clear();
+								for (int i = 0; i < recipe.Results.Count; i++) {
+									GatherResults.Add(recipe.Results[i]);
+								}
 
-						GatherResults.Clear();
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0f));
+								ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
 
-						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
+								InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+								if (toShow.Amount > 0) {
+									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, toShow.Type));
+								} else {
+									state.SetCooldown(def.Cooldown);
+								}
 
-						NPC.Inventory.Add(GatherResults);
-						GatheredItemsCount++;
-						if (GatheredItemsCount >= definition.MaxGathersPerRun) {
-							shouldDumpInventory = true;
-							GatheredItemsCount = 0;
-						}
-					} else {
-						state.SetCooldown(Random.NextFloat(3f, 6f));
+								NPC.Inventory.Add(GatherResults);
+
+								GatheredCount++;
+								if (GatheredCount >= def.MaxGathersPerRun) {
+									GatheredCount = 0;
+									shouldDumpInventory = true;
+								}
+							}
+							return;
 					}
-					return;
-				}
-
-				if (type == 0) {
+				} else if (type == 0) {
 					// maybe plant sapling?
 					if (World.TryGetTypeAt(treeLocation.Add(0, -1, 0), out ItemTypes.ItemType typeBelow)) {
 						if (typeBelow.IsFertile) {
-							if (NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling) || NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.Sapling)) {
-								ServerManager.TryChangeBlock(treeLocation, 0, BuiltinBlocks.Sapling, Owner, ESetBlockFlags.DefaultAudio);
+							if (Owner.Stockpile.TryRemove(saplingType.ItemIndex)) {
+								ServerManager.TryChangeBlock(treeLocation, ItemTypes.Air, saplingType, Owner, ESetBlockFlags.DefaultAudio);
 								state.SetCooldown(2.0);
 								return;
 							} else {
-								state.SetIndicator(new Shared.IndicatorState(6f, BuiltinBlocks.Sapling, true, false));
+								state.SetIndicator(new Shared.IndicatorState(6f, saplingType.ItemIndex, true, false));
 								return;
 							}
 						}
@@ -176,7 +184,6 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						state.SetCooldown(10.0);
 						return;
 					}
-
 				}
 
 				// something unexpected

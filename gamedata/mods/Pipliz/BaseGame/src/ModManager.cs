@@ -37,7 +37,6 @@ namespace Pipliz.Mods.BaseGame
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<MinerJobInstance>(new MinerJobSettings()));
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<ScientistJobInstance>(new ScientistJobSettings()));
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<ConstructionJobInstance>(new ConstructionJobSettings()));
-			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<WaterGathererInstance>(new WaterGathererSettings()));
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnActiveColonyChanges, "sendconstructiondata")]
@@ -57,7 +56,7 @@ namespace Pipliz.Mods.BaseGame
 				}
 			});
 
-			RegisterCallback(dict, "pipliz.baseresearch.herbfaming", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
+			RegisterCallback(dict, "pipliz.baseresearch.herbfarming", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
 			{
 				if (reason == EResearchCompletionReason.ProgressCompleted) {
 					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.AlkanetStage1, 100);
@@ -72,6 +71,22 @@ namespace Pipliz.Mods.BaseGame
 				if (reason == EResearchCompletionReason.ProgressCompleted) {
 					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WheatStage1, 400);
 					SendMessage(manager.Colony, "You received 400 wheat seeds!");
+				}
+			});
+
+			RegisterCallback(dict, "pipliz.baseresearch.barleyfarmer", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
+			{
+				if (reason == EResearchCompletionReason.ProgressCompleted) {
+					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.BarleyStage1, 200);
+					SendMessage(manager.Colony, "You received 200 barley seeds!");
+				}
+			});
+
+			RegisterCallback(dict, "pipliz.baseresearch.cabbagefarmer", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
+			{
+				if (reason == EResearchCompletionReason.ProgressCompleted) {
+					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.CabbageStage1, 200);
+					SendMessage(manager.Colony, "You received 200 cabbage seeds!");
 				}
 			});
 
@@ -104,6 +119,8 @@ namespace Pipliz.Mods.BaseGame
 		{
 			if (dict.TryGetValue(key, out BaseResearchable res)) {
 				res.AddOnCompleteAction(action);
+			} else {
+				Log.WriteWarning($"Tried to register callback to research {key}, which was not registered");
 			}
 		}
 

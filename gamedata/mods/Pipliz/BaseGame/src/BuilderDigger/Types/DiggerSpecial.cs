@@ -6,6 +6,8 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 {
 	public class DiggerSpecial : IConstructionType
 	{
+		public int MaxGatheredPerRun { get; set; } = 5;
+
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
 
 		protected ItemTypes.ItemType digType;
@@ -75,6 +77,12 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 								state.SetCooldown(blockDestructionTime);
 							}
 							state.Inventory.Add(GatherResults);
+
+							job.StoredItemCount++;
+							if (job.StoredItemCount >= MaxGatheredPerRun) {
+								job.ShouldTakeItems = true;
+								state.JobIsDone = true;
+							}
 						} else {
 							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
 						}

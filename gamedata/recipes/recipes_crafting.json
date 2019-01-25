@@ -295,18 +295,6 @@
 		"defaultLimit" : 3,
 		"defaultPriority" : -100,
 		"isOptional" : true,
-		"name" : "pipliz.crafter.linseedoil",
-		"requires" : [
-			{"amount":3,"type":"flax"}
-		],
-		"results" : [
-			{"amount":3,"type":"linseedoil"}
-		]
-	},
-	{
-		"defaultLimit" : 3,
-		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.coatedplanks",
 		"requires" : [
 			{"amount":3,"type":"woodcoating"},
@@ -322,7 +310,7 @@
 		"isOptional" : true,
 		"name" : "pipliz.crafter.adobe",
 		"requires" : [
-			{"type":"linseedoil"},
+			{"type":"woodcoating"},
 			{"type":"dirt"}
 		],
 		"results" : [
@@ -412,6 +400,20 @@
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
 		"isOptional" : true,
+		"name" : "pipliz.crafter.stove",
+		"requires" : [
+			{"amount":4,"type":"copper"},
+			{"amount":4,"type":"copperparts"},
+			{"amount":8,"type":"coppernails"}
+		],
+		"results" : [
+			{"type":"stove"}
+		]
+	},
+	{
+		"defaultLimit" : 1,
+		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.crafter.bloomery",
 		"requires" : [
 			{"type":"bricks"},
@@ -475,23 +477,14 @@
 			{"type":"boilingwater"}
 		],
 		"results" : [
-			{"type":"ink"}
+			{"type":"ink"},
+			{"type":"bucketempty"}
 		]
 	},
 	{
-		"isOptional" : true,
-		"name" : "pipliz.crafter.candle",
-		"requires" : [
-			{"type":"beeswax"},
-			{"type":"linen"}
-		],
-		"results" : [
-			{"type":"candle"}
-		]
-	},
-	{
-		"defaultLimit" : 0,
+		"defaultLimit" : 5,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.crafter.woodcoating",
 		"requires" : [
 			{"type":"oliveoil"},
@@ -502,6 +495,8 @@
 		]
 	},
 	{
+		"defaultLimit" : 5,
+		"defaultPriority" : -100,
 		"isOptional" : true,
 		"name" : "pipliz.crafter.waxtablet",
 		"requires" : [
@@ -510,12 +505,13 @@
 			{"amount":5,"type":"beeswax"}
 		],
 		"results" : [
-			{"type":"woodcoating"}
+			{"type":"waxtablet"}
 		]
 	},
 	{
-		"defaultLimit" : 0,
+		"defaultLimit" : 5,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.crafter.bucketempty",
 		"requires" : [
 			{"type":"planks"},

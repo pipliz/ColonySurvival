@@ -1,5 +1,6 @@
 [
 	{
+		"defaultLimit" : 40,
 		"name" : "pipliz.beekeeper.rawbeeswax",
 		"requires" : [
 			
@@ -9,12 +10,26 @@
 		]
 	},
 	{
+		"defaultLimit" : 40,
 		"name" : "pipliz.beekeeper.honey",
 		"requires" : [
 			
 		],
 		"results" : [
 			{"type":"honey"}
+		]
+	},
+	{
+		"defaultLimit" : 20,
+		"defaultPriority" : 100,
+		"isOptional" : true,
+		"name" : "pipliz.beekeeper.candle",
+		"requires" : [
+			{"type":"beeswax"},
+			{"type":"linen"}
+		],
+		"results" : [
+			{"type":"candle"}
 		]
 	}
 ]

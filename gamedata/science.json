@@ -1,8 +1,9 @@
 [
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.herbfarming"
+			"pipliz.baseresearch.flaxfarming"
 		],
+		"icon" : "./textures/icons/beehive.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"flax"}
@@ -21,7 +22,7 @@
 		],
 		"key" : "pipliz.baseresearch.candles",
 		"unlocksRecipes" : [
-			"pipliz.crafter.candle"
+			"pipliz.beekeeper.candle"
 		]
 	},
 	{
@@ -46,6 +47,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.beekeeper"
 		],
+		"icon" : "./textures/icons/olive.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"rawbeeswax"}
@@ -53,19 +55,23 @@
 		"key" : "pipliz.baseresearch.olivefarmer"
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.olivefarmer"
-		],
-		"iterationCount" : 10,
+		"icon" : "./textures/icons/bucketwater.png",
+		"iterationCount" : 5,
 		"iterationRequirements" : [
-			{"type":"olive"}
+			{"type":"planks"},
+			{"amount":4,"type":"coppernails"},
+			{"amount":2,"type":"copperparts"}
 		],
-		"key" : "pipliz.baseresearch.watergatherer"
+		"key" : "pipliz.baseresearch.watergatherer",
+		"unlocksRecipes" : [
+			"pipliz.crafter.bucketempty"
+		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.olivefarmer"
 		],
+		"icon" : "./textures/icons/fishcooked.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"olive"}
@@ -76,13 +82,17 @@
 		"dependencies" : [
 			"pipliz.baseresearch.fisherman"
 		],
+		"icon" : "./textures/icons/stove.png",
 		"iterationCount" : 20,
 		"iterationRequirements" : [
 			{"type":"oliveoil"},
 			{"type":"rawfish"},
 			{"type":"firewood"}
 		],
-		"key" : "pipliz.baseresearch.cook"
+		"key" : "pipliz.baseresearch.cook",
+		"unlocksRecipes" : [
+			"pipliz.crafter.stove"
+		]
 	},
 	{
 		"dependencies" : [
@@ -110,6 +120,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.barleyfarmer"
 		],
+		"icon" : "./textures/icons/chickencoop.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"amount":25,"type":"barley"}
@@ -120,6 +131,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.chickenfarmer"
 		],
+		"icon" : "./textures/icons/writerdesk.png",
 		"iterationCount" : 30,
 		"iterationRequirements" : [
 			{"type":"chickenskin"}
@@ -458,7 +470,7 @@
 		"iterationRequirements" : [
 			{"type":"flour"},
 			{"amount":5,"type":"berry"},
-			{"type":"clothing"},
+			{"type":"undershirt"},
 			{"type":"linenbag"}
 		],
 		"key" : "pipliz.baseresearch.sciencebaglife",
@@ -772,7 +784,7 @@
 		],
 		"key" : "pipliz.baseresearch.flaxfarming",
 		"unlocksRecipes" : [
-			"pipliz.crafter.linseedoil",
+			"pipliz.crafter.woodcoating",
 			"pipliz.crafter.coatedplanks",
 			"pipliz.crafter.adobe",
 			"pipliz.crafter.bowstring"
@@ -795,6 +807,9 @@
 		]
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.watergatherer"
+		],
 		"icon" : "./textures/icons/bread.png",
 		"iterationCount" : 5,
 		"iterationRequirements" : [
