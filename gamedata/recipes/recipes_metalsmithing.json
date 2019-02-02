@@ -2,6 +2,7 @@
 	{
 		"defaultLimit" : 2,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.bronzepickaxe",
 		"requires" : [
 			{"type":"bronzeingot"},
@@ -14,6 +15,7 @@
 	{
 		"defaultLimit" : 2,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.bronzeaxe",
 		"requires" : [
 			{"type":"bronzeingot"},
@@ -26,6 +28,7 @@
 	{
 		"defaultLimit" : 10,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.bronzeplate",
 		"requires" : [
 			{"type":"bronzeingot"}
@@ -37,6 +40,7 @@
 	{
 		"defaultLimit" : 60,
 		"defaultPriority" : 100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.bronzearrow",
 		"requires" : [
 			{"type":"bronzeingot"},
@@ -49,6 +53,7 @@
 	},
 	{
 		"defaultLimit" : 20,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.jewelry",
 		"requires" : [
 			{"type":"goldingot"},
@@ -62,6 +67,7 @@
 	{
 		"defaultLimit" : 10,
 		"defaultPriority" : 0,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.ironrivets",
 		"requires" : [
 			{"type":"ironingot"}
@@ -73,6 +79,7 @@
 	{
 		"defaultLimit" : 15,
 		"defaultPriority" : 0,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.ironwrought",
 		"requires" : [
 			{"type":"ironingot"}
@@ -84,6 +91,7 @@
 	{
 		"defaultLimit" : 10,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.ironsword",
 		"requires" : [
 			{"amount":2,"type":"ironwrought"},
@@ -97,6 +105,7 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.ironblock",
 		"requires" : [
 			{"amount":12,"type":"ironwrought"}
@@ -108,6 +117,7 @@
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.steelparts",
 		"requires" : [
 			{"type":"steelingot"}
@@ -164,6 +174,19 @@
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
 		"isOptional" : true,
+		"name" : "pipliz.metalsmith.waterpump",
+		"requires" : [
+			{"amount":5,"type":"bronzeingot"},
+			{"amount":20,"type":"coppernails"}
+		],
+		"results" : [
+			{"type":"waterpump"}
+		]
+	},
+	{
+		"defaultLimit" : 1,
+		"defaultPriority" : -100,
+		"isOptional" : true,
 		"name" : "pipliz.metalsmith.fineryforge",
 		"requires" : [
 			{"type":"ironblock"},
@@ -172,6 +195,20 @@
 		],
 		"results" : [
 			{"type":"fineryforge"}
+		]
+	},
+	{
+		"defaultLimit" : 1,
+		"defaultPriority" : -100,
+		"isOptional" : true,
+		"name" : "pipliz.metalsmith.printingpress",
+		"requires" : [
+			{"type":"coatedplanks"},
+			{"amount":4,"type":"steelparts"},
+			{"amount":10,"type":"ironrivet"}
+		],
+		"results" : [
+			{"type":"printingpress"}
 		]
 	}
 ]

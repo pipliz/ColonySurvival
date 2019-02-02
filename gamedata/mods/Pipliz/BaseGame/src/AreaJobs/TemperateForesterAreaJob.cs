@@ -25,10 +25,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 		static bool ChopTree (Vector3Int p, BlockChangeRequestOrigin origin)
 		{
-			ItemTypes.ItemType logType = ItemTypes.GetType(BuiltinBlocks.LogTemperate);
-			ItemTypes.ItemType air = ItemTypes.Air;
 			for (int y = 0; y < 5; y++) {
-				switch (ServerManager.TryChangeBlock(p.Add(0, y, 0), logType, air, origin)) {
+				switch (ServerManager.TryChangeBlock(p.Add(0, y, 0), BuiltinBlocks.Types.logtemperate, BuiltinBlocks.Types.air, origin)) {
 					case EServerChangeBlockResult.CancelledByCallback:
 					case EServerChangeBlockResult.ChunkNotReady:
 					default:
@@ -54,7 +52,6 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			public override void CalculateSubPosition ()
 			{
 				ThreadManager.AssertIsMainThread();
-				bool hasSeeds = NPC.Colony.Stockpile.Contains(BuiltinBlocks.Sapling);
 				Vector3Int min = Minimum;
 				Vector3Int max = Maximum;
 				int ySize = max.y - min.y + 1;
@@ -71,8 +68,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
 
 							if (
-								((type == ItemTypes.Air && hasSeeds) || type.ItemIndex == BuiltinBlocks.LogTemperate)
-								&& (typeAbove == ItemTypes.Air || typeAbove.ItemIndex == BuiltinBlocks.LogTemperate)
+								(type == BuiltinBlocks.Types.air || type == BuiltinBlocks.Types.logtemperate)
+								&& (typeAbove == BuiltinBlocks.Types.air || typeAbove == BuiltinBlocks.Types.logtemperate)
 								&& typeBelow.IsFertile
 							) {
 								treeLocation = new Vector3Int(x, min.y + y, z);
@@ -134,16 +131,14 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 					return;
 				}
 
-				if (type == BuiltinBlocks.LogTemperate) {
+				if (type == BuiltinBlocks.Indices.logtemperate) {
 					if (ChopTree(treeLocation, Owner)) {
-						state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.LogTemperate));
+						state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.Indices.logtemperate));
 						ServerManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
 
 						GatherResults.Clear();
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LogTemperate, 3, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.LeavesTemperate, 9, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 1f));
-						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Sapling, 1, 0f));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Indices.logtemperate, 3, 1f));
+						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Indices.leavestemperate, 9, 1f));
 
 						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
 
@@ -163,14 +158,9 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 					// maybe plant sapling?
 					if (World.TryGetTypeAt(treeLocation.Add(0, -1, 0), out ItemTypes.ItemType typeBelow)) {
 						if (typeBelow.IsFertile) {
-							if (NPC.Inventory.TryGetOneItem(BuiltinBlocks.Sapling) || NPC.Colony.Stockpile.TryRemove(BuiltinBlocks.Sapling)) {
-								ServerManager.TryChangeBlock(treeLocation, 0, BuiltinBlocks.Sapling, Owner, ESetBlockFlags.DefaultAudio);
-								state.SetCooldown(2.0);
-								return;
-							} else {
-								state.SetIndicator(new Shared.IndicatorState(6f, BuiltinBlocks.Sapling, true, false));
-								return;
-							}
+							ServerManager.TryChangeBlock(treeLocation, BuiltinBlocks.Types.air, BuiltinBlocks.Types.sappling, Owner, ESetBlockFlags.DefaultAudio);
+							state.SetCooldown(2.0);
+							return;
 						}
 					} else {
 						state.SetCooldown(10.0);

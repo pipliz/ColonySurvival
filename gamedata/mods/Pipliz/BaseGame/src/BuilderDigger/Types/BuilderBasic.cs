@@ -26,7 +26,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 				ushort foundTypeIndex;
 				if (World.TryGetTypeAt(jobPosition, out foundTypeIndex)) {
-					if (foundTypeIndex == 0 || foundTypeIndex == BuiltinBlocks.Water) {
+					if (foundTypeIndex == 0 || foundTypeIndex == BuiltinBlocks.Indices.water) {
 						Stockpile ownerStockPile = areaJob.Owner.Stockpile;
 						if (ownerStockPile.Contains(buildType.ItemIndex)) {
 							if (ServerManager.TryChangeBlock(jobPosition, foundTypeIndex, buildType.ItemIndex, areaJob.Owner, ESetBlockFlags.DefaultAudio) == EServerChangeBlockResult.Success) {
@@ -39,13 +39,13 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 									state.SetIndicator(new Shared.IndicatorState(GetCooldown(), buildType.ItemIndex));
 								} else {
 									// failed to find next position to do job at, self-destruct
-									state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
+									state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.erroridle));
 									AreaJobTracker.RemoveJob(areaJob);
 								}
 								return;
 							} else {
 								// shouldn't really happen, world not loaded (just checked)
-								state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
+								state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.missingerror, true, false));
 							}
 						} else {
 							// missing building item
@@ -58,14 +58,14 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 							continue; // found non-air, try next loop
 						} else {
 							// failed to find next position to do job at, self-destruct
-							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
+							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.erroridle));
 							AreaJobTracker.RemoveJob(areaJob);
 							return;
 						}
 					}
 					// unreachable
 				} else {
-					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
+					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.missingerror, true, false));
 					return; // end loop, wait for world to load
 				}
 				// unreachable

@@ -4,9 +4,6 @@
 		"patchType" : "blockFarm",
 		"npcType" : "pipliz.berryfarmer",
 		"cooldown" : 8.5,
-		"blockPlaceRequirement" : {
-			"type" : "berrybush"
-		},
 		"blockPlaced" : "berrybush",
 		"maxGatheredBeforeCrate" : 6
 	},
@@ -23,9 +20,6 @@
 		"patchType" : "blockFarm",
 		"npcType" : "pipliz.chickenfarmer",
 		"cooldown" : 8.5,
-		"blockPlaceRequirement" : {
-			"type" : "chickencoop"
-		},
 		"blockPlaced" : "chickencoop",
 		"maxGatheredBeforeCrate" : 6
 	},
@@ -34,6 +28,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.alkanetfarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"alkanetstage1",
 			"alkanetstage2"
@@ -44,6 +39,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.flaxfarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"flaxstage1",
 			"flaxstage2"
@@ -54,6 +50,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.hollyhockfarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"hollyhockstage1",
 			"hollyhockstage2"
@@ -64,6 +61,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.wheatfarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"wheatstage1",
 			"wheatstage2",
@@ -75,6 +73,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.wolfsbanefarm",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"wolfsbanestage1",
 			"wolfsbanestage2"
@@ -85,6 +84,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.barleyfarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"barleystage1",
 			"barleystage2"
@@ -95,6 +95,7 @@
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.cabbagefarmer",
 		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
 		"stages" : [
 			"cabbagestage1",
 			"cabbagestage2"

@@ -8,7 +8,12 @@
 		"iterationRequirements" : [
 			{"type":"flax"}
 		],
-		"key" : "pipliz.baseresearch.beekeeper"
+		"key" : "pipliz.baseresearch.beekeeper",
+		"unlocksRecipes" : [
+			"pipliz.baker.beeswax",
+			"pipliz.beekeeper.rawbeeswax",
+			"pipliz.beekeeper.honey"
+		]
 	},
 	{
 		"dependencies" : [
@@ -52,7 +57,11 @@
 		"iterationRequirements" : [
 			{"type":"rawbeeswax"}
 		],
-		"key" : "pipliz.baseresearch.olivefarmer"
+		"key" : "pipliz.baseresearch.olivefarmer",
+		"unlocksRecipes" : [
+			"pipliz.grinder.oliveoil",
+			"pipliz.olivefarmer.gatherolive"
+		]
 	},
 	{
 		"icon" : "./textures/icons/bucketwater.png",
@@ -64,7 +73,25 @@
 		],
 		"key" : "pipliz.baseresearch.watergatherer",
 		"unlocksRecipes" : [
-			"pipliz.crafter.bucketempty"
+			"pipliz.crafter.bucketempty",
+			"pipliz.watergatherer.waterbucket"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.watergatherer",
+			"pipliz.baseresearch.bronzeanvil"
+		],
+		"icon" : "./textures/icons/waterpump.png",
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"amount":5,"type":"bronzeingot"},
+			{"amount":20,"type":"coppernails"}
+		],
+		"key" : "pipliz.baseresearch.waterpump",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.waterpump",
+			"pipliz.waterpump.waterbucket"
 		]
 	},
 	{
@@ -76,7 +103,10 @@
 		"iterationRequirements" : [
 			{"type":"olive"}
 		],
-		"key" : "pipliz.baseresearch.fisherman"
+		"key" : "pipliz.baseresearch.fisherman",
+		"unlocksRecipes" : [
+			"pipliz.fisherman.rawfish"
+		]
 	},
 	{
 		"dependencies" : [
@@ -91,7 +121,13 @@
 		],
 		"key" : "pipliz.baseresearch.cook",
 		"unlocksRecipes" : [
-			"pipliz.crafter.stove"
+			"pipliz.crafter.stove",
+			"cook.boilingwater",
+			"cook.cookedfish",
+			"cook.lobsterprepared",
+			"cook.perpetualstew",
+			"cook.cake",
+			"cook.luxurymeal"
 		]
 	},
 	{
@@ -107,12 +143,14 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.cabbagefarmer"
+			"pipliz.baseresearch.wheatfarming"
 		],
 		"icon" : "./textures/icons/barley.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"perpetualstew"}
+			{"type":"copper"},
+			{"type":"tin"},
+			{"type":"berry"}
 		],
 		"key" : "pipliz.baseresearch.barleyfarmer"
 	},
@@ -125,7 +163,12 @@
 		"iterationRequirements" : [
 			{"amount":25,"type":"barley"}
 		],
-		"key" : "pipliz.baseresearch.chickenfarmer"
+		"key" : "pipliz.baseresearch.chickenfarmer",
+		"unlocksRecipes" : [
+			"chickenfarmer.egg",
+			"chickenfarmer.chickenmeat",
+			"pipliz.metalsmith.bronzearrow"
+		]
 	},
 	{
 		"dependencies" : [
@@ -136,7 +179,14 @@
 		"iterationRequirements" : [
 			{"type":"chickenskin"}
 		],
-		"key" : "pipliz.baseresearch.writer"
+		"key" : "pipliz.baseresearch.writer",
+		"unlocksRecipes" : [
+			"writer.paperempty",
+			"writer.papertext",
+			"writer.book",
+			"pipliz.crafter.ink",
+			"pipliz.crafter.writerdesk"
+		]
 	},
 	{
 		"dependencies" : [
@@ -149,12 +199,17 @@
 			{"type":"book"},
 			{"type":"sciencebagadvanced"}
 		],
-		"key" : "pipliz.baseresearch.printingpress"
+		"key" : "pipliz.baseresearch.printingpress",
+		"unlocksRecipes" : [
+			"printingpress.papertext",
+			"pipliz.metalsmith.printingpress"
+		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.bronzeanvil",
-			"pipliz.baseresearch.flaxfarming"
+			"pipliz.baseresearch.flaxfarming",
+			"pipliz.baseresearch.chickenfarmer"
 		],
 		"icon" : "./textures/icons/bow.png",
 		"iterationCount" : 3,
@@ -179,7 +234,14 @@
 		"key" : "pipliz.baseresearch.bloomery",
 		"unlocksRecipes" : [
 			"pipliz.crafter.bloomery",
-			"pipliz.player.bloomery"
+			"pipliz.player.bloomery",
+			"pipliz.bloomery.ironingot",
+			"pipliz.bloomery.galenalead",
+			"pipliz.bloomery.galenasilver",
+			"pipliz.metalsmith.ironrivets",
+			"pipliz.metalsmith.ironwrought",
+			"pipliz.metalsmith.ironsword",
+			"pipliz.metalsmith.ironblock"
 		]
 	},
 	{
@@ -193,7 +255,10 @@
 		"key" : "pipliz.baseresearch.bronzeanvil",
 		"unlocksRecipes" : [
 			"pipliz.crafter.bronzeanvil",
-			"pipliz.player.bronzeanvil"
+			"pipliz.player.bronzeanvil",
+			"pipliz.metalsmith.bronzepickaxe",
+			"pipliz.metalsmith.bronzeaxe",
+			"pipliz.metalsmith.bronzeplate"
 		]
 	},
 	{
@@ -211,7 +276,16 @@
 			"pipliz.crafter.mint",
 			"pipliz.crafter.shop",
 			"pipliz.player.mint",
-			"pipliz.player.shop"
+			"pipliz.player.shop",
+			"pipliz.minter.goldcoin",
+			"pipliz.minter.bronzecoin",
+			"pipliz.merchant.flaxseeds",
+			"pipliz.merchant.berrybushes",
+			"pipliz.merchant.wheatseeds",
+			"pipliz.merchant.cherrysaplings",
+			"pipliz.merchant.dirt",
+			"pipliz.merchant.grass",
+			"pipliz.merchant.sand"
 		]
 	},
 	{
@@ -272,7 +346,11 @@
 		],
 		"key" : "pipliz.baseresearch.fineryforge",
 		"unlocksRecipes" : [
-			"pipliz.metalsmith.fineryforge"
+			"pipliz.metalsmith.fineryforge",
+			"pipliz.fineryforge.steelingot",
+			"pipliz.fineryforge.goldingot",
+			"pipliz.metalsmith.jewelry",
+			"pipliz.metalsmith.steelparts"
 		]
 	},
 	{
@@ -305,7 +383,8 @@
 		"key" : "pipliz.baseresearch.gunsmithshop",
 		"unlocksRecipes" : [
 			"pipliz.crafter.gunsmithshop",
-			"pipliz.player.gunsmithshop"
+			"pipliz.player.gunsmithshop",
+			"pipliz.gunsmith.leadbullet"
 		]
 	},
 	{
@@ -321,7 +400,9 @@
 		"key" : "pipliz.baseresearch.kiln",
 		"unlocksRecipes" : [
 			"pipliz.crafter.kiln",
-			"pipliz.player.kiln"
+			"pipliz.player.kiln",
+			"pipliz.kiln.charcoal",
+			"pipliz.kiln.cokes"
 		]
 	},
 	{
@@ -512,7 +593,10 @@
 			"pipliz.crafter.splittingstumptemperate",
 			"pipliz.crafter.splittingstumptaiga",
 			"pipliz.player.splittingstumptemperate",
-			"pipliz.player.splittingstumptaiga"
+			"pipliz.player.splittingstumptaiga",
+			"pipliz.woodcutter.plankstemperate",
+			"pipliz.woodcutter.plankstaiga",
+			"pipliz.woodcutter.firewood"
 		]
 	},
 	{
@@ -527,7 +611,18 @@
 		"key" : "pipliz.baseresearch.stonemasonworkbench",
 		"unlocksRecipes" : [
 			"pipliz.crafter.stonemasonworkbench",
-			"pipliz.player.stonemasonworkbench"
+			"pipliz.player.stonemasonworkbench",
+			"pipliz.stonemason.stoneblock",
+			"pipliz.stonemason.darkstone",
+			"pipliz.stonemason.stonebricksbrown",
+			"pipliz.stonemason.bricksdarkred",
+			"pipliz.stonemason.bricksblack",
+			"pipliz.stonemason.bricksdarkyellow",
+			"pipliz.stonemason.bricksred",
+			"pipliz.stonemason.cobblestoneblack",
+			"pipliz.stonemason.cobblestonebrown",
+			"pipliz.stonemason.cobblestonegrey",
+			"pipliz.stonemason.cobblestoneblue"
 		]
 	},
 	{
@@ -544,7 +639,11 @@
 		"key" : "pipliz.baseresearch.tailorshop",
 		"unlocksRecipes" : [
 			"pipliz.crafter.tailorshop",
-			"pipliz.player.tailorshop"
+			"pipliz.player.tailorshop",
+			"pipliz.tailor.linen",
+			"pipliz.tailor.linenpouch",
+			"pipliz.tailor.linenbag",
+			"pipliz.tailor.carpetwhite"
 		]
 	},
 	{
@@ -803,7 +902,8 @@
 		"unlocksRecipes" : [
 			"pipliz.merchant.alkanetseeds",
 			"pipliz.merchant.hollyhockseeds",
-			"pipliz.merchant.wolfsbaneseeds"
+			"pipliz.merchant.wolfsbaneseeds",
+			"pipliz.tailor.undershirt"
 		]
 	},
 	{
@@ -822,7 +922,9 @@
 			"pipliz.crafter.oven",
 			"pipliz.crafter.grindstone",
 			"pipliz.player.oven",
-			"pipliz.player.grindstone"
+			"pipliz.player.grindstone",
+			"pipliz.baker.bread",
+			"pipliz.grinder.flour"
 		]
 	},
 	{

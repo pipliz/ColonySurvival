@@ -25,7 +25,7 @@ namespace Pipliz.Mods.BaseGame
 
 		public ScientistJobSettings ()
 		{
-			BlockTypes = new ItemTypes.ItemType[] { ItemTypes.GetType("sciencelab") };
+			BlockTypes = new ItemTypes.ItemType[] { BuiltinBlocks.Types.sciencelab };
 			NPCType = NPCType.GetByKeyNameOrDefault(NPCTypeKey);
 			CraftingCooldown = 14f;
 		}
@@ -63,7 +63,7 @@ namespace Pipliz.Mods.BaseGame
 				} else {
 					float cooldown = Random.NextFloat(8f, 16f);
 					// no items, no research -> wait for research
-					state.SetIndicator(new Shared.IndicatorState(cooldown, BuiltinBlocks.ErrorIdle));
+					state.SetIndicator(new Shared.IndicatorState(cooldown, BuiltinBlocks.Indices.erroridle));
 					state.JobIsDone = false;
 				}
 			} else {
@@ -101,9 +101,9 @@ namespace Pipliz.Mods.BaseGame
 						int recycled = 0;
 						for (int i = 0; i < requirements.Count; i++) {
 							ushort type = requirements[i].Type;
-							if (type == BuiltinBlocks.ScienceBagLife
-								|| type == BuiltinBlocks.ScienceBagBasic
-								|| type == BuiltinBlocks.ScienceBagMilitary
+							if (   type == BuiltinBlocks.Indices.sciencebaglife
+								|| type == BuiltinBlocks.Indices.sciencebagbasic
+								|| type == BuiltinBlocks.Indices.sciencebagmilitary
 							) {
 								recycled += requirements[i].Amount;
 							}
@@ -113,7 +113,7 @@ namespace Pipliz.Mods.BaseGame
 								recycled--;
 							}
 						}
-						owner.Stockpile.Add(BuiltinBlocks.LinenBag, recycled);
+						owner.Stockpile.Add(BuiltinBlocks.Indices.linenbag, recycled);
 
 						OnSuccess(instance, scienceData, progressCycles, ref state);
 					} else {

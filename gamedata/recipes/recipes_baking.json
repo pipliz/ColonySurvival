@@ -1,5 +1,6 @@
 [
 	{
+		"isOptional" : true,
 		"name" : "pipliz.baker.bread",
 		"requires" : [
 			{"amount":5,"type":"flour"},
@@ -13,9 +14,10 @@
 	},
 	{
 		"defaultLimit" : 15,
+		"isOptional" : true,
 		"name" : "pipliz.baker.beeswax",
 		"requires" : [
-			{"amount":3,"type":"rawbeeswax"},
+			{"amount":2,"type":"rawbeeswax"},
 			{"type":"firewood"}
 		],
 		"results" : [

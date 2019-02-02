@@ -62,6 +62,19 @@
 	{
 		"baseType" : {
 			"categories" : ["job"],
+			"icon" : "./textures/icons/waterpump.png",
+			"mesh" : "./meshes/waterpump.ply",
+			"needsBase" : true,
+			"onPlaceAudio" : "woodPlace",
+			"onRemoveAudio" : "woodDeleteLight",
+			"sideall" : "neutral"
+		},
+		"generateType" : "rotateBlock",
+		"typeName" : "waterpump"
+	},
+	{
+		"baseType" : {
+			"categories" : ["job"],
 			"icon" : "./textures/icons/writerdesk.png",
 			"mesh" : "./meshes/writerdesk.ply",
 			"needsBase" : true,

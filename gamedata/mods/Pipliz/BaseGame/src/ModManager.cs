@@ -48,48 +48,6 @@ namespace Pipliz.Mods.BaseGame
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnModifyResearchables, "farmingresults")]
 		static void AddFarmingResults (Dictionary<string, BaseResearchable> dict)
 		{
-			RegisterCallback(dict, "pipliz.baseresearch.flaxfarming", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
-			{
-				if (reason == EResearchCompletionReason.ProgressCompleted) {
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.FlaxStage1, 100);
-					SendMessage(manager.Colony, "You received 100 flax seeds!");
-				}
-			});
-
-			RegisterCallback(dict, "pipliz.baseresearch.herbfarming", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
-			{
-				if (reason == EResearchCompletionReason.ProgressCompleted) {
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.AlkanetStage1, 100);
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.HollyhockStage1, 100);
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WolfsbaneStage1, 100);
-					SendMessage(manager.Colony, "You received 100 Alkanet, Hollyhock and Wolfsbane seeds!");
-				}
-			});
-
-			RegisterCallback(dict, "pipliz.baseresearch.wheatfarming", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
-			{
-				if (reason == EResearchCompletionReason.ProgressCompleted) {
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.WheatStage1, 400);
-					SendMessage(manager.Colony, "You received 400 wheat seeds!");
-				}
-			});
-
-			RegisterCallback(dict, "pipliz.baseresearch.barleyfarmer", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
-			{
-				if (reason == EResearchCompletionReason.ProgressCompleted) {
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.BarleyStage1, 200);
-					SendMessage(manager.Colony, "You received 200 barley seeds!");
-				}
-			});
-
-			RegisterCallback(dict, "pipliz.baseresearch.cabbagefarmer", (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason) =>
-			{
-				if (reason == EResearchCompletionReason.ProgressCompleted) {
-					manager.Colony.Stockpile.Add(BlockTypes.BuiltinBlocks.CabbageStage1, 200);
-					SendMessage(manager.Colony, "You received 200 cabbage seeds!");
-				}
-			});
-
 			foreach (var pair in BuilderLimits) {
 				RegisterCallback(dict, pair.Key, BuilderLimitResearch);
 			}

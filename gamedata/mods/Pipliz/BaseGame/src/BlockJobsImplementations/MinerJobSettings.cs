@@ -1,4 +1,5 @@
-﻿using Jobs;
+﻿using BlockTypes;
+using Jobs;
 using NPC;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,11 +26,11 @@ namespace Pipliz.Mods.BaseGame
 		public MinerJobSettings ()
 		{
 			BlockTypes = new ItemTypes.ItemType[] {
-				ItemTypes.GetType("minerjob"),
-				ItemTypes.GetType("minerjobx+"),
-				ItemTypes.GetType("minerjobx-"),
-				ItemTypes.GetType("minerjobz+"),
-				ItemTypes.GetType("minerjobz-")
+				BuiltinBlocks.Types.minerjob,
+				BuiltinBlocks.Types.minerjobxp,
+				BuiltinBlocks.Types.minerjobxn,
+				BuiltinBlocks.Types.minerjobzp,
+				BuiltinBlocks.Types.minerjobzn
 			};
 			NPCTypeKey = "pipliz.minerjob";
 			NPCType = NPCType.GetByKeyNameOrDefault(NPCTypeKey);

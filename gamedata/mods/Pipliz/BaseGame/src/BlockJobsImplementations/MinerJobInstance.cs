@@ -1,4 +1,5 @@
 ﻿using BlockEntities;
+using BlockTypes;
 using Jobs;
 
 namespace Pipliz.Mods.BaseGame
@@ -21,7 +22,7 @@ namespace Pipliz.Mods.BaseGame
 				MiningCooldown = cooldown;
 			} else {
 				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, ItemTypes.Air, Owner));
+				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
 			}
 		}
 
@@ -35,7 +36,7 @@ namespace Pipliz.Mods.BaseGame
 				MiningCooldown = cooldown;
 			} else {
 				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, ItemTypes.Air, Owner));
+				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
 			}
 		}
 

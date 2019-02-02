@@ -26,11 +26,11 @@ namespace Pipliz.Mods.BaseGame.Construction
 		{
 			ItemsFetchedAtStockpileCount = fetchItemsCount;
 			BlockTypes = new ItemTypes.ItemType[] {
-				ItemTypes.GetType("constructionjob"),
-				ItemTypes.GetType("constructionjobx-"),
-				ItemTypes.GetType("constructionjobx+"),
-				ItemTypes.GetType("constructionjobz-"),
-				ItemTypes.GetType("constructionjobz+")
+				BuiltinBlocks.Types.constructionjob,
+				BuiltinBlocks.Types.constructionjobxn,
+				BuiltinBlocks.Types.constructionjobxp,
+				BuiltinBlocks.Types.constructionjobzn,
+				BuiltinBlocks.Types.constructionjobzp
 			};
 			NPCTypeKey = "pipliz.constructor";
 			NPCType = NPCType.GetByKeyNameOrDefault(NPCTypeKey);
@@ -83,9 +83,9 @@ namespace Pipliz.Mods.BaseGame.Construction
 				if (instance.ConstructionArea == null) {
 					if (instance.DidAreaPresenceTest) {
 						state.SetCooldown(0.5);
-						ServerManager.TryChangeBlock(instance.Position, instance.BlockType, ItemTypes.Air, instance.Owner);
+						ServerManager.TryChangeBlock(instance.Position, instance.BlockType, BuiltinBlocks.Types.air, instance.Owner);
 					} else {
-						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(3f, 5f), BuiltinBlocks.ErrorIdle));
+						state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(3f, 5f), BuiltinBlocks.Indices.erroridle));
 						instance.DidAreaPresenceTest = true;
 					}
 					return;

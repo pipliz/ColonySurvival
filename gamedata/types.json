@@ -24,10 +24,6 @@
 		"maxStackSize" : 600
 	},
 	"alkanetstage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -35,15 +31,12 @@
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
-		"icon" : "./textures/icons/alkanetstage1.png",
 		"isSolid" : false,
 		"maxStackSize" : 1200,
 		"mesh" : "./meshes/flaxstage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"alkanetstage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -62,9 +55,7 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"alkanetstage1"},
-			{"amount":1,"chance":0.1,"type":"alkanetstage1"},
-			{"amount":1,"chance":0.5,"type":"alkanet"}
+			{"chance":0.5,"type":"alkanet"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
@@ -96,10 +87,6 @@
 		"isPlaceable" : false
 	},
 	"barleystage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -108,9 +95,7 @@
 		"mesh" : "./meshes/barleystage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"barleystage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -125,10 +110,8 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"barleystage1"},
-			{"amount":1,"chance":0.1,"type":"barleystage1"},
-			{"amount":1,"chance":1,"type":"barley"},
-			{"amount":1,"chance":0.333333,"type":"straw"}
+			{"type":"barley"},
+			{"chance":0.333333,"type":"straw"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
@@ -142,6 +125,7 @@
 		"mesh" : "./meshes/beehive.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "neutral"
 	},
@@ -365,10 +349,6 @@
 		"isPlaceable" : false
 	},
 	"cabbagestage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -377,9 +357,7 @@
 		"mesh" : "./meshes/cabbagestage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"cabbagestage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -394,9 +372,7 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"cabbagestage1"},
-			{"amount":1,"chance":0.1,"type":"cabbagestage1"},
-			{"amount":1,"chance":1,"type":"cabbage"}
+			{"type":"cabbage"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
@@ -489,8 +465,8 @@
 		"icon" : "./textures/icons/cherryblossom.png",
 		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
-			{"amount":1,"chance":0.6,"type":"cherryblossom"},
-			{"amount":1,"chance":0.1,"type":"cherrysapling"}
+			{"chance":0.6,"type":"cherryblossom"},
+			{"chance":0.1,"type":"cherrysapling"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
@@ -525,6 +501,7 @@
 		"mesh" : "./meshes/chickencoop.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "neutral"
 	},
@@ -826,10 +803,6 @@
 		"maxStackSize" : 600
 	},
 	"flaxstage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -837,15 +810,12 @@
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
-		"icon" : "./textures/icons/flaxstage1.png",
 		"isSolid" : false,
 		"maxStackSize" : 1200,
 		"mesh" : "./meshes/flaxstage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"flaxstage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -864,9 +834,7 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"flaxstage1"},
-			{"amount":1,"chance":0.1,"type":"flaxstage1"},
-			{"amount":1,"chance":0.5,"type":"flax"}
+			{"chance":0.5,"type":"flax"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
@@ -1136,10 +1104,6 @@
 		"maxStackSize" : 600
 	},
 	"hollyhockstage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -1147,15 +1111,12 @@
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
-		"icon" : "./textures/icons/hollyhockstage1.png",
 		"isSolid" : false,
 		"maxStackSize" : 1200,
 		"mesh" : "./meshes/flaxstage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"hollyhockstage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -1174,9 +1135,7 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"hollyhockstage1"},
-			{"amount":1,"chance":0.1,"type":"hollyhockstage1"},
-			{"amount":1,"chance":0.5,"type":"hollyhock"}
+			{"chance":0.5,"type":"hollyhock"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
@@ -2013,9 +1972,6 @@
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
 	},
-	"savetool" : {
-		
-	},
 	"sciencebagadvanced" : {
 		"categories" : [
 			"sciencebag"
@@ -2346,8 +2302,8 @@
 		"happiness" : 35,
 		"icon" : "./textures/icons/undershirt.png",
 		"isPlaceable" : false,
-		"maxStackSize" : 25,
-		"luxuryHours" : 240
+		"luxuryHours" : 240,
+		"maxStackSize" : 25
 	},
 	"water" : {
 		"icon" : "./textures/icons/water.png",
@@ -2380,10 +2336,6 @@
 		"onRemoveAudio" : "grassDelete"
 	},
 	"wheatstage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -2391,11 +2343,8 @@
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
-		"icon" : "./textures/icons/wheatstage1.png",
 		"mesh" : "./meshes/wheatstage1.ply",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"wheatstage1"}
-		],
+		"onRemoveAmount" : 0,
 		"parentType" : "wheatstage",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -2410,9 +2359,8 @@
 		},
 		"mesh" : "./meshes/wheatstage2.ply",
 		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"wheatstage1"},
-			{"amount":1,"chance":0.1,"type":"straw"},
-			{"amount":1,"chance":0.3,"type":"wheat"}
+			{"chance":0.1,"type":"straw"},
+			{"chance":0.3,"type":"wheat"}
 		],
 		"parentType" : "wheatstage",
 		"sideall" : "neutral"
@@ -2427,10 +2375,8 @@
 		},
 		"mesh" : "./meshes/wheatstage3.ply",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"wheatstage1"},
-			{"amount":1,"chance":0.1,"type":"wheatstage1"},
-			{"amount":1,"chance":1,"type":"wheat"},
-			{"amount":1,"chance":0.333333,"type":"straw"}
+			{"chance":1,"type":"wheat"},
+			{"chance":0.333333,"type":"straw"}
 		],
 		"parentType" : "wheatstage",
 		"sideall" : "neutral"
@@ -2446,10 +2392,6 @@
 		"maxStackSize" : 600
 	},
 	"wolfsbanestage1" : {
-		"categories" : [
-			"food",
-			"seed"
-		],
 		"colliders" : {
 			"boxes" : [{"max":[0.5,-0.35,0.5],"min":[-0.5,-0.5,-0.5]}],
 			"collidePlayer" : false
@@ -2457,15 +2399,12 @@
 		"customData" : {
 			"colors" : ["#ff0000->#8fc847"]
 		},
-		"icon" : "./textures/icons/wolfsbanestage1.png",
 		"isSolid" : false,
 		"maxStackSize" : 1200,
 		"mesh" : "./meshes/flaxstage1.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"amount":1,"chance":0.8,"type":"wolfsbanestage1"}
-		],
+		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
@@ -2484,9 +2423,7 @@
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemove" : [
-			{"amount":1,"chance":1,"type":"wolfsbanestage1"},
-			{"amount":1,"chance":0.1,"type":"wolfsbanestage1"},
-			{"amount":1,"chance":0.5,"type":"wolfsbane"}
+			{"chance":0.5,"type":"wolfsbane"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"

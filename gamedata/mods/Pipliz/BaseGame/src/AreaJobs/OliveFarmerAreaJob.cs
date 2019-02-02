@@ -9,7 +9,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 	public class OliveFarmerAreaJob : AbstractFarmAreaJobDefinition
 	{
 		public string NPCTypeString { get; protected set; }
-		public float Cooldown { get; set; } = 8.5f;
+		public float Cooldown { get; set; } = 4.25f;
 
 		public OliveFarmerAreaJob ()
 		{
@@ -39,7 +39,6 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			public override void CalculateSubPosition ()
 			{
 				ThreadManager.AssertIsMainThread();
-				bool hasSeeds = NPC.Colony.Stockpile.Contains(BuiltinBlocks.Sapling);
 				Vector3Int min = Minimum;
 				Vector3Int max = Maximum;
 				int ySize = max.y - min.y + 1;
@@ -56,8 +55,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							ItemTypes.ItemType typeAbove = yTypesBuffer[y + 2];
 
 							if (
-								((type == ItemTypes.Air && hasSeeds) || type.ItemIndex == BuiltinBlocks.LogTemperate)
-								&& (typeAbove == ItemTypes.Air || typeAbove.ItemIndex == BuiltinBlocks.LogTemperate)
+								(type == BuiltinBlocks.Types.air || type == BuiltinBlocks.Types.logtemperate)
+								&& (typeAbove == BuiltinBlocks.Types.air || typeAbove == BuiltinBlocks.Types.logtemperate)
 								&& typeBelow.IsFertile
 							) {
 								treeLocation = new Vector3Int(x, min.y + y, z);
@@ -104,7 +103,6 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 			public override void OnNPCAtJob (ref NPCBase.NPCState state)
 			{
 				OliveFarmerAreaJob def = (OliveFarmerAreaJob)definition;
-				ItemTypes.ItemType saplingType = ItemTypes.GetType("olivesapling");
 
 				ThreadManager.AssertIsMainThread();
 				state.JobIsDone = true;
@@ -122,7 +120,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 					return;
 				}
 
-				if (type == BuiltinBlocks.LogTemperate) {
+				if (type == BuiltinBlocks.Indices.logtemperate) {
 					var recipes = Owner.RecipeData.GetAvailableRecipes(def.NPCTypeString);
 					Recipe.RecipeMatch match = Recipe.MatchRecipe(recipes, Owner);
 					switch (match.MatchType) {
@@ -131,7 +129,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 							if (state.Inventory.IsEmpty) {
 								state.JobIsDone = true;
 								if (match.MatchType == Recipe.RecipeMatchType.AllDone) {
-									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, BuiltinBlocks.ErrorIdle));
+									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, BuiltinBlocks.Indices.erroridle));
 								} else {
 									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, match.FoundRecipe.FindMissingType(Owner.Stockpile), true, false));
 								}
@@ -171,14 +169,9 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 					// maybe plant sapling?
 					if (World.TryGetTypeAt(treeLocation.Add(0, -1, 0), out ItemTypes.ItemType typeBelow)) {
 						if (typeBelow.IsFertile) {
-							if (Owner.Stockpile.TryRemove(saplingType.ItemIndex)) {
-								ServerManager.TryChangeBlock(treeLocation, ItemTypes.Air, saplingType, Owner, ESetBlockFlags.DefaultAudio);
-								state.SetCooldown(2.0);
-								return;
-							} else {
-								state.SetIndicator(new Shared.IndicatorState(6f, saplingType.ItemIndex, true, false));
-								return;
-							}
+							ServerManager.TryChangeBlock(treeLocation, BuiltinBlocks.Types.air, BuiltinBlocks.Types.olivesapling, Owner, ESetBlockFlags.DefaultAudio);
+							state.SetCooldown(2.0);
+							return;
 						}
 					} else {
 						state.SetCooldown(10.0);

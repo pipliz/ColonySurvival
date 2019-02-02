@@ -1,5 +1,6 @@
 [
 	{
+		"isOptional" : true,
 		"name" : "pipliz.grinder.flour",
 		"requires" : [
 			{"amount":2,"type":"wheat"}
@@ -10,9 +11,10 @@
 	},
 	{
 		"defaultLimit" : 15,
+		"isOptional" : true,
 		"name" : "pipliz.grinder.oliveoil",
 		"requires" : [
-			{"amount":5,"type":"olive"}
+			{"amount":3,"type":"olive"}
 		],
 		"results" : [
 			{"type":"oliveoil"}

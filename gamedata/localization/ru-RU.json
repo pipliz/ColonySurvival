@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.7826086956522,
+	"coverage" : 84.6597462514418,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -91,6 +91,7 @@
 			"colonistcount" : "_MISSING_Population",
 			"disabledeffect" : "_MISSING_Happiness Disabled",
 			"rationratio" : "_MISSING_Ration ratio",
+			"rationscause" : "_MISSING_Rationing",
 			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0} of normal",
 			"sciencespeed" : "_MISSING_Science speed: {0:P0} of normal",
 			"totalhappiness" : "_MISSING_Total happiness: {0}"
@@ -742,11 +743,9 @@
 	"types" : {
 		"adobe" : "Необожженный кирпич",
 		"alkanet" : "Алканна",
-		"alkanetstage1" : "Семена Алканны",
 		"banner" : "Баннер",
 		"bannertool" : "Управление баннером",
 		"barley" : "_MISSING_Barley",
-		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "Кровать",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -774,7 +773,6 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
-		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "Синий ковёр",
@@ -818,7 +816,6 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "Лен",
-		"flaxstage1" : "Семена льна",
 		"flour" : "Мука",
 		"furnace" : "Горн",
 		"galenalead" : "Галенит свинцовый",
@@ -855,7 +852,6 @@
 		"gunsmithshop" : "Оружейный магазин",
 		"gypsum" : "Гипс",
 		"hollyhock" : "Штокроза",
-		"hollyhockstage1" : "Семена Штокрозы",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "Железный блок",
@@ -953,11 +949,10 @@
 		"undershirt" : "_MISSING_Undershirt",
 		"water" : "Вода",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
+		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Пшеница",
-		"wheatstage1" : "Семена пшеницы",
 		"wolfsbane" : "Аконит",
-		"wolfsbanestage1" : "Семена Аконита",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "Верстак",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1007,7 +1002,6 @@
 		"fineryforge" : "Требует кокс для создания стальных и золотых слитков",
 		"firewood" : "Базовое топливо",
 		"flax" : "Цвет империи",
-		"flaxstage1" : "Поместите это в землю",
 		"flour" : "Колонист с печью превратит это в хлеб",
 		"furnace" : "Использует дрова в качестве топлива, для создания бронзовых слитков и кирпичей",
 		"galenalead" : "Содержит много свинца",
@@ -1076,7 +1070,6 @@
 		"water" : "Вы НЕ должны иметь это в своем инвентаре!",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Колонист с жерновом превратит это в муку",
-		"wheatstage1" : "Будущий хлеб",
 		"wolfsbane" : "Предотвращает нападение волков на вашу колонию",
 		"workbench" : "Дайте это ремесленнику. И он скрафтит для вас, что угодно!"
 	}

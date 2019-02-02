@@ -22,7 +22,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 				Vector3Int jobPosition = iterationType.CurrentPosition;
 				if (!jobPosition.IsValid) {
 					// failed to find next position to do job at, self-destruct
-					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorIdle));
+					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.erroridle));
 					AreaJobTracker.RemoveJob(areaJob);
 					return;
 				}
@@ -60,7 +60,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 								state.JobIsDone = true;
 							}
 						} else {
-							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
+							state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.missingerror, true, false));
 						}
 						return; // either changed a block or set indicator, job done
 					} else {
@@ -68,7 +68,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 					}
 					// unreachable
 				} else {
-					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.ErrorMissing, true, false));
+					state.SetIndicator(new Shared.IndicatorState(5f, BuiltinBlocks.Indices.missingerror, true, false));
 					return; // end loop, wait for world to load
 				}
 				// unreachable

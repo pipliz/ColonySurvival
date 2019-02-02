@@ -1,6 +1,7 @@
 [
 	{
 		"defaultLimit" : 10,
+		"isOptional" : true,
 		"name" : "cook.boilingwater",
 		"requires" : [
 			{"type":"bucketwater"},
@@ -11,6 +12,7 @@
 		]
 	},
 	{
+		"isOptional" : true,
 		"name" : "cook.cookedfish",
 		"requires" : [
 			{"type":"rawfish"},
@@ -23,6 +25,7 @@
 		]
 	},
 	{
+		"isOptional" : true,
 		"name" : "cook.lobsterprepared",
 		"requires" : [
 			{"type":"lobster"},
@@ -35,6 +38,7 @@
 		]
 	},
 	{
+		"isOptional" : true,
 		"name" : "cook.perpetualstew",
 		"requires" : [
 			{"amount":5,"type":"boilingwater"},
@@ -52,9 +56,10 @@
 		]
 	},
 	{
+		"isOptional" : true,
 		"name" : "cook.cake",
 		"requires" : [
-			{"amount":5,"type":"wheat"},
+			{"amount":5,"type":"flour"},
 			{"amount":5,"type":"egg"},
 			{"type":"bucketwater"},
 			{"amount":3,"type":"honey"},
@@ -67,13 +72,14 @@
 		]
 	},
 	{
+		"isOptional" : true,
 		"name" : "cook.luxurymeal",
 		"requires" : [
 			{"amount":3,"type":"chickenmeat"},
 			{"amount":5,"type":"cabbage"},
 			{"amount":10,"type":"egg"},
 			{"amount":3,"type":"bread"},
-			{"amount":2,"type":"cookedfish"},
+			{"amount":2,"type":"rawfish"},
 			{"amount":3,"type":"oliveoil"},
 			{"amount":3,"type":"honey"},
 			{"amount":3,"type":"boilingwater"},
