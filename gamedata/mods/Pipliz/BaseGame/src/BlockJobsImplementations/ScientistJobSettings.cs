@@ -52,7 +52,7 @@ namespace Pipliz.Mods.BaseGame
 			if (instance.StoredItemCount <= 0) {
 				if (activeResearch.IsValid && !activeResearch.IsCompleted(scienceData)) {
 					// no items, but valid research -> try to get items
-					IList<InventoryItem> requirements = activeResearch.Researchable.Researchable.GetScienceRequirements();
+					IList<InventoryItem> requirements = activeResearch.Researchable.GetScienceRequirements();
 					if (owner.Stockpile.Contains(requirements)) {
 						instance.ShouldTakeItems = true;
 						state.SetCooldown(0.3);
@@ -75,7 +75,7 @@ namespace Pipliz.Mods.BaseGame
 					state.SetCooldown(0.3);
 					return;
 				}
-				var research = activeResearch.Researchable.Researchable;
+				IResearchable research = activeResearch.Researchable;
 				float progress = activeResearch.GetProgress(scienceData);
 				if (progress >= research.GetResearchIterationCount()) {
 					activeResearch = new ScienceKey();

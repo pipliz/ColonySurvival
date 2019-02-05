@@ -30,8 +30,9 @@ namespace Pipliz.Mods.BaseGame
 		};
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.AfterItemTypesDefined, "register.basegame.blockjobs")]
-		[ModLoader.ModCallbackDependsOn("create_servermanager_trackers")]
-		[ModLoader.ModCallbackProvidesFor("pipliz.blocknpcs.registerjobs")]
+		[ModLoader.ModCallbackDependsOn("create_servermanager_trackers")] // creates BlockEntityCallbacks there
+		[ModLoader.ModCallbackDependsOn("pipliz.server.loadnpctypes")] // resolve npc types per block job types
+		[ModLoader.ModCallbackProvidesFor("create_savemanager")] // want the jobs to exist before any jobs' blocks are loaded
 		static void AfterDefiningNPCTypes ()
 		{
 			ServerManager.BlockEntityCallbacks.RegisterEntityManager(new BlockJobManager<MinerJobInstance>(new MinerJobSettings()));

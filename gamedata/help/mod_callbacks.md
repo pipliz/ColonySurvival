@@ -60,12 +60,12 @@ Signature: void ()
 First callback after the world to load has been determined
 ## Registered callbacks: 7
 0.	`pipliz.server.applytexturemappingpatches`
-		Provides For 3. `pipliz.server.registertexturemappingtextures`
 		_Waits for texture mapping patches to load, then merges them._
 1.	`pipliz.server.loadaudiofiles`
 2.	`pipliz.server.loadtimecycle`
 		_Sets the TimeCycle time, loading from ServerManager.WorldSettings_
 3.	`pipliz.server.registertexturemappingtextures`
+		Depends On 0. `pipliz.server.applytexturemappingpatches`
 		_Registers the texture mapping files to load (from the registered texturemappings)_
 4.	`pipliz.startloaddifficulty`
 		_Starts loading the difficulty json files_
@@ -90,83 +90,80 @@ First callback after all item types should be defined, so you can resolve types 
 0.	`pipliz.server.loadnpctypes`
 1.	`areajobs.insertattributed`
 		Depends On 0. `pipliz.server.loadnpctypes`
-		Provides For 15. `pipliz.server.loadcolonies`
 		_Finds & registers areajobdefs marked AreaJobDefinitionAutoLoaderAttribute_
 2.	`create_servermanager_trackers`
 		_Starts Various trackers and singletons saved in the servermanager_
 3.	`blockentitycallback.autoloaders`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 17. `create_savemanager`
 		_Calls BlockEntityCallbacks.SearchAssembliesForAutoLoaders - instantiating classes with the IBlockEntityAutoLoaderBase type interfaces_
-		_Provides for create_savemanager as possibly loaded entities must be registered before it_
 4.	`chunk_dedupe_initializer`
 5.	`pipliz.server.registerdefaultdifficulty`
-		Provides For 13. `pipliz.server.loadplayers`
 		_Registers the default difficulty to the DifficultyManager. ProvidesFor loadplayers so that loading the difficulty per player works._
 6.	`pipliz.endloaddifficulty`
-		Provides For 13. `pipliz.server.loadplayers`
-		_Awaits the difficulty json files to be loaded_
-		_You can edit the difficulties on DifficultySetting.Cooldowns / Keys after this callback (but before loadplayers)_
-7.	`register.basegame.blockjobs`
+		_Awaits loading of settings/difficulty.json from pipliz.startloaddifficulty_
+7.	`pipliz.server.recipeplayerload`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 9. `pipliz.blocknpcs.registerjobs`
-8.	`register.blockjobs`
-		Depends On 2. `create_servermanager_trackers`
-		Provides For 9. `pipliz.blocknpcs.registerjobs`
-9.	`pipliz.blocknpcs.registerjobs`
-		Depends On 2. `create_servermanager_trackers`
-		Provides For 17. `create_savemanager`
-		_Adds all the job block implementations to BlockJobManagerTracker_
-10.	`pipliz.server.recipeplayerload`
-		Depends On 2. `create_servermanager_trackers`
-		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for recipe patches to load, then merges them_
-11.	`pipliz.server.recipenpcload`
+8.	`pipliz.server.recipenpcload`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 12. `pipliz.server.loadresearchables`
 		_Waits for npc recipe patches to complete loading, then merges and registers them_
-12.	`pipliz.server.loadresearchables`
+9.	`pipliz.server.loadresearchables`
 		Depends On 2. `create_servermanager_trackers`
-		Depends On 9. `pipliz.blocknpcs.registerjobs`
-		Provides For 13. `pipliz.server.loadplayers`
 		_Load & resolve researchable configs_
-13.	`pipliz.server.loadplayers`
-		Provides For 17. `create_savemanager`
+10.	`pipliz.server.loadplayers`
 		_Starts loading player data_
-14.	`createareajobdefinitions`
-		Depends On 2. `create_servermanager_trackers`
+11.	`createareajobdefinitions`
 		Depends On 0. `pipliz.server.loadnpctypes`
-		Provides For 15. `pipliz.server.loadcolonies`
 		_Registers json area jobs_
-15.	`pipliz.server.loadcolonies`
+12.	`pipliz.server.loadcolonies`
+		Depends On 1. `areajobs.insertattributed`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 11. `createareajobdefinitions`
+		Depends On 6. `pipliz.endloaddifficulty`
+		Depends On 0. `pipliz.server.loadnpctypes`
+		Depends On 10. `pipliz.server.loadplayers`
+		Depends On 9. `pipliz.server.loadresearchables`
+		Depends On 8. `pipliz.server.recipenpcload`
+		Depends On 7. `pipliz.server.recipeplayerload`
+		Depends On 5. `pipliz.server.registerdefaultdifficulty`
+		_Starts loading the colony data; also trigger OnLoadingColony_
+13.	`pipliz.blocknpcs.registerjobs`
 		Depends On 2. `create_servermanager_trackers`
 		Depends On 0. `pipliz.server.loadnpctypes`
-		Depends On 13. `pipliz.server.loadplayers`
-		_Starts loading the colony data_
-		_Includes loading the stockpiles (part of colony afer all)_
-		_Includes loading npc's_
-		_Depends on players load so it can resolve owner data_
-16.	`creategrowabledefinitions`
+		_Adds all the job block implementations to BlockJobManagerTracker_
+14.	`creategrowabledefinitions`
 		Depends On 2. `create_servermanager_trackers`
-		Provides For 17. `create_savemanager`
 		_Registers growable block json types_
-17.	`create_savemanager`
-		Depends On 15. `pipliz.server.loadcolonies`
+15.	`register.basegame.blockjobs`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 0. `pipliz.server.loadnpctypes`
+		Provides For 16. `create_savemanager`
+16.	`create_savemanager`
+		Depends On 3. `blockentitycallback.autoloaders`
+		Depends On 4. `chunk_dedupe_initializer`
+		Depends On 14. `creategrowabledefinitions`
+		Depends On 13. `pipliz.blocknpcs.registerjobs`
+		Depends On 12. `pipliz.server.loadcolonies`
 		_Starts ServerManager.SaveManager_
 		_Starts loading the index of the chunk storage_
-18.	`find_auto_chatcommands`
-19.	`pipliz.server.blackandwhitelistingreload`
+17.	`find_auto_chatcommands`
+18.	`pipliz.server.blackandwhitelistingreload`
 		_Loads the black & whitelist settings_
-20.	`pipliz.server.loadpermissions`
+19.	`pipliz.server.loadpermissions`
 		_Load permissions_
-21.	`pipliz.server.loadwater`
+20.	`pipliz.server.loadwater`
 		_Starts loading water blocks_
-22.	`pipliz.server.registermonstertextures`
+21.	`pipliz.server.registermonstertextures`
 		Depends On 0. `pipliz.server.loadnpctypes`
 		_Registers monster textures from registered NPCTypes_
-23.	`wait_complete_startup_chunks`
-		Depends On 17. `create_savemanager`
+22.	`wait_complete_startup_chunks`
+		Depends On 16. `create_savemanager`
 		_Waits for the savemanager to complete loading its index & the startup chunks_
+23.	`set_colony_sciencemask`
+		Depends On 2. `create_servermanager_trackers`
+		Depends On 12. `pipliz.server.loadcolonies`
+		Depends On 22. `wait_complete_startup_chunks`
+		_Will disable missing science and set the correct biome dependent science for loaded colonies_
 
 
 CallbackType: `AfterWorldLoad`
@@ -330,11 +327,11 @@ Called in the quit method queue (Application.OnQuit 0)
 2.	`pipliz.server.saveplayers`
 		_Starts saving all dirty-marked players_
 3.	`pipliz.server.savetimecycle`
-		Provides For 5. `pipliz.server.saveworldsettings`
 		_Saves the time to ServerManager.WorldSettings_
 4.	`pipliz.server.savewater`
 		_Saves water data_
 5.	`pipliz.server.saveworldsettings`
+		Depends On 3. `pipliz.server.savetimecycle`
 		_Saves ServerManager.WorldSettings_
 
 
@@ -659,9 +656,9 @@ Basically same as 'AfterAddingBaseTypes'
 Mostly used to add...the base types, so that the other callback is correctly named :)
 ## Registered callbacks: 2
 0.	`pipliz.blocknpcs.addlittypes`
-		Provides For 1. `pipliz.server.applymoditempatches`
 		_Creates some lit/rotatable types - furnace/torch etc_
 1.	`pipliz.server.applymoditempatches`
+		Depends On 0. `pipliz.blocknpcs.addlittypes`
 		_Waits for itemtype patches to load, then merges/registers them to the dict_
 
 
@@ -766,12 +763,13 @@ CallbackType: `OnLoadingTerrainGenerator`
 =======
 ## Description
 Signature: void(TerrainGeneratorBase terrainGen)
-Called from the terrain generator thread, intended to load the tree files
-## Registered callbacks: 3
+Called when the terrain generator is created - during create_servermanager_trackers in AfterItemTypesDefined
+## Registered callbacks: 4
 0.	`apply_metabiome_patches`
-1.	`load_structure_patches`
-2.	`load_biome_patches`
-		Depends On 1. `load_structure_patches`
+1.	`apply_sciencebiome_patches`
+2.	`load_structure_patches`
+3.	`load_biome_patches`
+		Depends On 2. `load_structure_patches`
 
 
 CallbackType: `OnPlayerEditedNetworkInputfield`
@@ -780,5 +778,16 @@ CallbackType: `OnPlayerEditedNetworkInputfield`
 Signature: void (NetworkUI.InputfieldEditCallbackData data)
 Data -> the storage node, inputfield ID and player that pushed the button
 No registered uses
+
+
+CallbackType: `OnCreatedColony`
+=======
+## Description
+Signature: void(Colony colony)
+Called when a colony is created, does not include loaded colonies (!)
+## Registered callbacks: 1
+0.	`disable_some_science`
+		_Will disable any science that is missing its implementation or that requires a biome._
+		_Biome dependent science will be re-enabled after adding a banner if required_
 
 
