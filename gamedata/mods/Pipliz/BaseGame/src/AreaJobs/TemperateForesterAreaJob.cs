@@ -73,7 +73,17 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 								&& typeBelow.IsFertile
 							) {
 								treeLocation = new Vector3Int(x, min.y + y, z);
-								positionSub = AI.AIManager.ClosestPositionNotAt(treeLocation, NPC.Position);
+								bool canStand;
+								Vector3Int position;
+								if (AI.PathingManager.TryGetClosestPositionWorldNotAt(treeLocation, NPC.Position, out canStand, out position)) {
+									if (canStand) {
+										positionSub = position;
+									} else {
+										positionSub = Vector3Int.invalidPos;
+									}
+								} else {
+									positionSub = Vector3Int.invalidPos;
+								}
 								return;
 							}
 						}

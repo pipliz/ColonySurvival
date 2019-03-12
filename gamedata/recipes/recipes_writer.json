@@ -1,7 +1,6 @@
 [
 	{
 		"defaultLimit" : 10,
-		"isOptional" : true,
 		"name" : "writer.paperempty",
 		"requires" : [
 			{"type":"chickenskin"}
@@ -11,8 +10,7 @@
 		]
 	},
 	{
-		"defaultLimit" : 10,
-		"isOptional" : true,
+		"defaultLimit" : 30,
 		"name" : "writer.papertext",
 		"requires" : [
 			{"type":"paperempty"},
@@ -24,10 +22,9 @@
 	},
 	{
 		"defaultLimit" : 25,
-		"isOptional" : true,
 		"name" : "writer.book",
 		"requires" : [
-			{"amount":20,"type":"paperempty"},
+			{"amount":20,"type":"papertext"},
 			{"amount":4,"type":"chickenskin"}
 		],
 		"results" : [

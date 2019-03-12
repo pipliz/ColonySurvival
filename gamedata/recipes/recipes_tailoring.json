@@ -1,7 +1,27 @@
 [
 	{
+		"defaultLimit" : 20,
+		"name" : "pipliz.tailor.silk",
+		"requires" : [
+			{"amount":20,"type":"silkthread"}
+		],
+		"results" : [
+			{"type":"silk"}
+		]
+	},
+	{
+		"defaultLimit" : 20,
+		"name" : "pipliz.tailor.silkpillow",
+		"requires" : [
+			{"amount":3,"type":"silk"},
+			{"amount":10,"type":"feather"}
+		],
+		"results" : [
+			{"type":"silkpillow"}
+		]
+	},
+	{
 		"defaultLimit" : 5,
-		"isOptional" : true,
 		"name" : "pipliz.tailor.linen",
 		"requires" : [
 			{"amount":2,"type":"flax"}
@@ -12,7 +32,6 @@
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
 		"name" : "pipliz.tailor.linenpouch",
 		"requires" : [
 			{"type":"linen"}
@@ -23,7 +42,6 @@
 	},
 	{
 		"defaultLimit" : 5,
-		"isOptional" : true,
 		"name" : "pipliz.tailor.linenbag",
 		"requires" : [
 			{"amount":3,"type":"linen"}
@@ -34,7 +52,6 @@
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
 		"name" : "pipliz.tailor.carpetwhite",
 		"requires" : [
 			{"type":"planks"},
@@ -46,7 +63,6 @@
 	},
 	{
 		"defaultLimit" : 3,
-		"isOptional" : true,
 		"name" : "pipliz.tailor.undershirt",
 		"requires" : [
 			{"amount":5,"type":"linen"},

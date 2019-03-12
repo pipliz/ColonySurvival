@@ -244,7 +244,6 @@ Arg p: The player that'll receive this menu
 Arg m: The menu that can be edited / made, will be send after the callback completes
 ## Registered callbacks: 1
 0.	`pipliz.buildbase`
-		_Builds base of the world settings ui_
 
 
 CallbackType: `OnApplicationFocus`
@@ -414,14 +413,12 @@ CallbackType: `OnPlayerConnectedLate`
 Signature: void (Players.Player a)
 Arg a: The Player that is connecting
 Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed till after the client is done loading.
-## Registered callbacks: 4
-0.	`pipliz.networkmenumanager`
-		_Sends some networkui menu's to the player. Triggers some callbacks internally_
-1.	`pipliz.server.meshedobjects.sendtable`
+## Registered callbacks: 3
+0.	`pipliz.server.meshedobjects.sendtable`
 		_Sends the meshed object settings data_
-2.	`pipliz.server.sendnpctypes`
+1.	`pipliz.server.sendnpctypes`
 		_Sends the registered NPCType settings to the player_
-3.	`pipliz.server.sendsetflight`
+2.	`pipliz.server.sendsetflight`
 		_Send player flight state_
 
 
@@ -669,12 +666,8 @@ Signature: void (TupleStruct<Players.Player p, JSONNode node, string id> data)
 Arg p: The player that sent changed networkUI storage data
 Arg node: Said changed data
 Arg id: the networkmenu ID
-Possible builtin values for ID: world_settings
 ## Registered callbacks: 1
 0.	`pipliz.parsenetui`
-		_Will call the methods to handle the changed data._
-		_Possible identifiers:_
-		_world_settings_
 
 
 CallbackType: `OnPlayerPushedNetworkUIButton`
@@ -682,7 +675,8 @@ CallbackType: `OnPlayerPushedNetworkUIButton`
 ## Description
 Signature: void (NetworkUI.ButtonPressCallbackData data)
 Data -> the storage node, button ID and player that pushed the button
-No registered uses
+## Registered callbacks: 1
+0.	`handle_builtin`
 
 
 CallbackType: `OnSendAreaHighlights`
@@ -777,7 +771,8 @@ CallbackType: `OnPlayerEditedNetworkInputfield`
 ## Description
 Signature: void (NetworkUI.InputfieldEditCallbackData data)
 Data -> the storage node, inputfield ID and player that pushed the button
-No registered uses
+## Registered callbacks: 1
+0.	`handle_builtin`
 
 
 CallbackType: `OnCreatedColony`
@@ -789,5 +784,35 @@ Called when a colony is created, does not include loaded colonies (!)
 0.	`disable_some_science`
 		_Will disable any science that is missing its implementation or that requires a biome._
 		_Biome dependent science will be re-enabled after adding a banner if required_
+
+
+CallbackType: `OnConstructColonyOwnerManagementUI`
+=======
+## Description
+Signature: void(Players.Player p, NetworkUI.NetworkMenu m)
+Arg p: The player that'll receive this menu
+Arg m: The menu that can be edited / made, will be send after the callback completes
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
+
+
+CallbackType: `OnConstructInventoryManageColonyUI`
+=======
+## Description
+Signature: void(Players.Player p, NetworkUI.NetworkMenu m)
+Arg p: The player that'll receive this menu
+Arg m: The menu that can be edited / made, will be send after the callback completes
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
+
+
+CallbackType: `OnConstructColonyRecruitmentUI`
+=======
+## Description
+Signature: void(Players.Player p, NetworkUI.NetworkMenu m)
+Arg p: The player that'll receive this menu
+Arg m: The menu that can be edited / made, will be send after the callback completes
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
 
 

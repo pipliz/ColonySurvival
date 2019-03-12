@@ -22,9 +22,9 @@ namespace Pipliz.Mods.BaseGame
 
 		}
 
-		public override ESerializeEntityResult SerializeToBytes (Vector3Int blockPosition, ByteBuilder builder)
+		public override ESerializeEntityResult SerializeToBytes (Chunk chunk, Vector3Byte blockPosition, ByteBuilder builder)
 		{
-			var result = base.SerializeToBytes(blockPosition, builder);
+			var result = base.SerializeToBytes(chunk, blockPosition, builder);
 			builder.WriteVariable(StoredItemCount);
 			return result;
 		}

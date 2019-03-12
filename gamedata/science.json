@@ -1,48 +1,125 @@
 [
 	{
 		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"banner"}
-		],
-		"key" : "dummy.test.oldworld",
+		"iterationCount" : 0,
+		"key" : "biome.oldworld",
 		"requiredScienceBiome" : "sciencebiome.oldworld"
 	},
 	{
 		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"banner"}
-		],
-		"key" : "dummy.test.newworld",
+		"iterationCount" : 0,
+		"key" : "biome.newworld",
 		"requiredScienceBiome" : "sciencebiome.newworld"
 	},
 	{
 		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"banner"}
+		"iterationCount" : 0,
+		"key" : "biome.fareast",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipeGroups" : [
+			"pipliz.silkwormfarmer",
+			"pipliz.wheelspinner"
 		],
-		"key" : "dummy.test.fareast",
-		"requiredScienceBiome" : "sciencebiome.fareast"
+		"unlocksRecipes" : [
+			"cook.ricemeal",
+			"pipliz.tailor.silk",
+			"pipliz.tailor.silkpillow",
+			"pipliz.crafter.spinningwheel",
+			"pipliz.stonemason.porcelainraw",
+			"pipliz.kiln.porcelainbiscuit",
+			"pipliz.kiln.porcelainglazed"
+		]
 	},
 	{
 		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"banner"}
-		],
-		"key" : "dummy.test.arctic",
+		"iterationCount" : 0,
+		"key" : "biome.arctic",
 		"requiredScienceBiome" : "sciencebiome.arctic"
 	},
 	{
 		"icon" : "./textures/icons/commandtool.png",
+		"iterationCount" : 0,
+		"key" : "biome.tropics",
+		"requiredScienceBiome" : "sciencebiome.tropics"
+	},
+	{
 		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"banner"}
+			{"type":"berry"}
 		],
-		"key" : "dummy.test.tropics",
-		"requiredScienceBiome" : "sciencebiome.tropics"
+		"key" : "pipliz.baseresearch.ricefarmer",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipes" : [
+			"cook.ricemeal"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.ricefarmer"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"ricemeal"}
+		],
+		"key" : "pipliz.baseresearch.silkwormfarmer",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipeGroups" : [
+			"pipliz.silkwormfarmer"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.silkwormfarmer"
+		],
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"silkwormcocoon"}
+		],
+		"key" : "pipliz.baseresearch.spinningwheel",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipeGroups" : [
+			"pipliz.wheelspinner"
+		],
+		"unlocksRecipes" : [
+			"pipliz.tailor.silk",
+			"pipliz.tailor.silkpillow",
+			"pipliz.crafter.spinningwheel"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.ricefarmer"
+		],
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"ricemeal"}
+		],
+		"key" : "pipliz.baseresearch.porcelain",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipes" : [
+			"pipliz.stonemason.porcelainraw",
+			"pipliz.kiln.porcelainbiscuit",
+			"pipliz.kiln.porcelainglazed"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.ricefarmer"
+		],
+		"iterationCount" : 25,
+		"iterationRequirements" : [
+			{"type":"ricemeal"}
+		],
+		"key" : "pipliz.baseresearch.teafarmer",
+		"requiredScienceBiome" : "sciencebiome.fareast",
+		"unlocksRecipeGroups" : [
+			"pipliz.teafarmer"
+		],
+		"unlocksRecipes" : [
+			"pipliz.grinder.tealeavesprocessed",
+			"pipliz.grinder.tealeavesprocesseddried",
+			"cook.tea"
+		]
 	},
 	{
 		"dependencies" : [
@@ -54,10 +131,12 @@
 			{"type":"flax"}
 		],
 		"key" : "pipliz.baseresearch.beekeeper",
+		"unlocksRecipeGroups" : [
+			"pipliz.beekeeper"
+		],
 		"unlocksRecipes" : [
 			"pipliz.baker.beeswax",
-			"pipliz.beekeeper.rawbeeswax",
-			"pipliz.beekeeper.honey"
+			"pipliz.crafter.bowstring"
 		]
 	},
 	{
@@ -105,7 +184,10 @@
 		"key" : "pipliz.baseresearch.olivefarmer",
 		"unlocksRecipes" : [
 			"pipliz.grinder.oliveoil",
-			"pipliz.olivefarmer.gatherolive"
+			"pipliz.olivefarmer.gatherolive",
+			"pipliz.crafter.woodcoating",
+			"pipliz.crafter.adobe",
+			"pipliz.crafter.coatedplanks"
 		]
 	},
 	{
@@ -117,9 +199,11 @@
 			{"amount":2,"type":"copperparts"}
 		],
 		"key" : "pipliz.baseresearch.watergatherer",
+		"unlocksRecipeGroups" : [
+			"pipliz.watergatherer"
+		],
 		"unlocksRecipes" : [
-			"pipliz.crafter.bucketempty",
-			"pipliz.watergatherer.waterbucket"
+			"pipliz.crafter.bucketempty"
 		]
 	},
 	{
@@ -134,9 +218,11 @@
 			{"amount":20,"type":"coppernails"}
 		],
 		"key" : "pipliz.baseresearch.waterpump",
+		"unlocksRecipeGroups" : [
+			"pipliz.waterpump"
+		],
 		"unlocksRecipes" : [
-			"pipliz.metalsmith.waterpump",
-			"pipliz.waterpump.waterbucket"
+			"pipliz.metalsmith.waterpump"
 		]
 	},
 	{
@@ -149,8 +235,8 @@
 			{"type":"olive"}
 		],
 		"key" : "pipliz.baseresearch.fisherman",
-		"unlocksRecipes" : [
-			"pipliz.fisherman.rawfish"
+		"unlocksRecipeGroups" : [
+			"pipliz.fisherman"
 		]
 	},
 	{
@@ -165,14 +251,11 @@
 			{"type":"firewood"}
 		],
 		"key" : "pipliz.baseresearch.cook",
+		"unlocksRecipeGroups" : [
+			"pipliz.cook"
+		],
 		"unlocksRecipes" : [
-			"pipliz.crafter.stove",
-			"cook.boilingwater",
-			"cook.cookedfish",
-			"cook.lobsterprepared",
-			"cook.perpetualstew",
-			"cook.cake",
-			"cook.luxurymeal"
+			"pipliz.crafter.stove"
 		]
 	},
 	{
@@ -209,9 +292,10 @@
 			{"amount":25,"type":"barley"}
 		],
 		"key" : "pipliz.baseresearch.chickenfarmer",
+		"unlocksRecipeGroups" : [
+			"pipliz.chickenfarmer"
+		],
 		"unlocksRecipes" : [
-			"chickenfarmer.egg",
-			"chickenfarmer.chickenmeat",
 			"pipliz.metalsmith.bronzearrow"
 		]
 	},
@@ -225,10 +309,10 @@
 			{"type":"chickenskin"}
 		],
 		"key" : "pipliz.baseresearch.writer",
+		"unlocksRecipeGroups" : [
+			"pipliz.writer"
+		],
 		"unlocksRecipes" : [
-			"writer.paperempty",
-			"writer.papertext",
-			"writer.book",
 			"pipliz.crafter.ink",
 			"pipliz.crafter.writerdesk"
 		]
@@ -277,12 +361,12 @@
 			{"type":"sciencebagbasic"}
 		],
 		"key" : "pipliz.baseresearch.bloomery",
+		"unlocksRecipeGroups" : [
+			"pipliz.bloomeryjob"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.bloomery",
 			"pipliz.player.bloomery",
-			"pipliz.bloomery.ironingot",
-			"pipliz.bloomery.galenalead",
-			"pipliz.bloomery.galenasilver",
 			"pipliz.metalsmith.ironrivets",
 			"pipliz.metalsmith.ironwrought",
 			"pipliz.metalsmith.ironsword",
@@ -298,12 +382,12 @@
 			{"type":"coppernails"}
 		],
 		"key" : "pipliz.baseresearch.bronzeanvil",
+		"unlocksRecipeGroups" : [
+			"pipliz.metalsmithjob"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.bronzeanvil",
-			"pipliz.player.bronzeanvil",
-			"pipliz.metalsmith.bronzepickaxe",
-			"pipliz.metalsmith.bronzeaxe",
-			"pipliz.metalsmith.bronzeplate"
+			"pipliz.player.bronzeanvil"
 		]
 	},
 	{
@@ -317,20 +401,15 @@
 			{"type":"bronzeingot"}
 		],
 		"key" : "pipliz.baseresearch.bronzeminting",
+		"unlocksRecipeGroups" : [
+			"pipliz.minter",
+			"pipliz.merchant"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.mint",
 			"pipliz.crafter.shop",
 			"pipliz.player.mint",
-			"pipliz.player.shop",
-			"pipliz.minter.goldcoin",
-			"pipliz.minter.bronzecoin",
-			"pipliz.merchant.flaxseeds",
-			"pipliz.merchant.berrybushes",
-			"pipliz.merchant.wheatseeds",
-			"pipliz.merchant.cherrysaplings",
-			"pipliz.merchant.dirt",
-			"pipliz.merchant.grass",
-			"pipliz.merchant.sand"
+			"pipliz.player.shop"
 		]
 	},
 	{
@@ -374,6 +453,9 @@
 			{"type":"hollyhock"}
 		],
 		"key" : "pipliz.baseresearch.dyertable",
+		"unlocksRecipeGroups" : [
+			"pipliz.dyer"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.dyertable",
 			"pipliz.player.dyertable"
@@ -390,10 +472,11 @@
 			{"type":"ironwrought"}
 		],
 		"key" : "pipliz.baseresearch.fineryforge",
+		"unlocksRecipeGroups" : [
+			"pipliz.fineryforgejob"
+		],
 		"unlocksRecipes" : [
 			"pipliz.metalsmith.fineryforge",
-			"pipliz.fineryforge.steelingot",
-			"pipliz.fineryforge.goldingot",
 			"pipliz.metalsmith.jewelry",
 			"pipliz.metalsmith.steelparts"
 		]
@@ -409,9 +492,8 @@
 			{"type":"sciencebagmilitary"}
 		],
 		"key" : "pipliz.baseresearch.gunpowder",
-		"unlocksRecipes" : [
-			"pipliz.gunsmith.gunpowder",
-			"pipliz.gunsmith.gunpowderpouch"
+		"unlocksRecipeGroups" : [
+			"pipliz.gunsmithjob"
 		]
 	},
 	{
@@ -443,11 +525,12 @@
 			{"type":"bronzeplate"}
 		],
 		"key" : "pipliz.baseresearch.kiln",
+		"unlocksRecipeGroups" : [
+			"pipliz.kilnjob"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.kiln",
-			"pipliz.player.kiln",
-			"pipliz.kiln.charcoal",
-			"pipliz.kiln.cokes"
+			"pipliz.player.kiln"
 		]
 	},
 	{
@@ -531,8 +614,8 @@
 			{"type":"sciencebagbasic"}
 		],
 		"key" : "pipliz.baseresearch.quarterblockstonemason",
-		"unlocksRecipes" : [
-			"pipliz.stonemason.quarterblockgrey"
+		"unlocksRecipeGroups" : [
+			"pipliz.stonemason"
 		]
 	},
 	{
@@ -634,14 +717,14 @@
 			{"type":"bronzeaxe"}
 		],
 		"key" : "pipliz.baseresearch.splittingstump",
+		"unlocksRecipeGroups" : [
+			"pipliz.woodcutter"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.splittingstumptemperate",
 			"pipliz.crafter.splittingstumptaiga",
 			"pipliz.player.splittingstumptemperate",
-			"pipliz.player.splittingstumptaiga",
-			"pipliz.woodcutter.plankstemperate",
-			"pipliz.woodcutter.plankstaiga",
-			"pipliz.woodcutter.firewood"
+			"pipliz.player.splittingstumptaiga"
 		]
 	},
 	{
@@ -682,13 +765,12 @@
 			{"type":"coppertools"}
 		],
 		"key" : "pipliz.baseresearch.tailorshop",
+		"unlocksRecipeGroups" : [
+			"pipliz.tailor"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.tailorshop",
-			"pipliz.player.tailorshop",
-			"pipliz.tailor.linen",
-			"pipliz.tailor.linenpouch",
-			"pipliz.tailor.linenbag",
-			"pipliz.tailor.carpetwhite"
+			"pipliz.player.tailorshop"
 		]
 	},
 	{
@@ -703,6 +785,9 @@
 			{"type":"coppernails"}
 		],
 		"key" : "pipliz.baseresearch.technologisttable",
+		"unlocksRecipeGroups" : [
+			"pipliz.technologist"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.technologisttable",
 			"pipliz.player.technologisttable"
@@ -963,13 +1048,17 @@
 			{"type":"coppertools"}
 		],
 		"key" : "pipliz.baseresearch.wheatfarming",
+		"unlocksRecipeGroups" : [
+			"pipliz.baker",
+			"pipliz.grinder"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.oven",
 			"pipliz.crafter.grindstone",
 			"pipliz.player.oven",
 			"pipliz.player.grindstone",
-			"pipliz.baker.bread",
-			"pipliz.grinder.flour"
+			"pipliz.crafter.cratebread",
+			"pipliz.player.cratebread"
 		]
 	},
 	{

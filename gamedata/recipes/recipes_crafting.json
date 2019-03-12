@@ -1,5 +1,16 @@
 [
 	{
+		"defaultLimit" : 2,
+		"name" : "pipliz.crafter.spinningwheel",
+		"requires" : [
+			{"amount":6,"type":"coppernails"},
+			{"amount":2,"type":"planks"}
+		],
+		"results" : [
+			{"type":"spinningwheel"}
+		]
+	},
+	{
 		"defaultLimit" : 5,
 		"defaultPriority" : 100,
 		"name" : "pipliz.crafter.slingtemperate",
@@ -208,13 +219,12 @@
 		],
 		"results" : [
 			{"amount":50,"type":"bread"},
-			{"type":"crate"}
+			{"isOptional":true,"type":"crate"}
 		]
 	},
 	{
 		"defaultLimit" : 3,
 		"defaultPriority" : 100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.bow",
 		"requires" : [
 			{"amount":2,"type":"planks"},
@@ -227,7 +237,6 @@
 	{
 		"defaultLimit" : 3,
 		"defaultPriority" : 100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.bowstring",
 		"requires" : [
 			{"amount":2,"type":"flax"},
@@ -240,7 +249,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.oven",
 		"requires" : [
 			{"type":"stonebricks"},
@@ -253,7 +261,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.grindstone",
 		"requires" : [
 			{"type":"planks"},
@@ -266,7 +273,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.bronzeanvil",
 		"requires" : [
 			{"amount":5,"type":"bronzeingot"},
@@ -280,7 +286,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.kiln",
 		"requires" : [
 			{"type":"dirt"},
@@ -294,7 +299,6 @@
 	{
 		"defaultLimit" : 3,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.coatedplanks",
 		"requires" : [
 			{"amount":3,"type":"woodcoating"},
@@ -307,7 +311,6 @@
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.adobe",
 		"requires" : [
 			{"type":"woodcoating"},
@@ -320,7 +323,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.splittingstumptaiga",
 		"requires" : [
 			{"type":"logtaiga"},
@@ -333,7 +335,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.splittingstumptemperate",
 		"requires" : [
 			{"type":"logtemperate"},
@@ -346,7 +347,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.tailorshop",
 		"requires" : [
 			{"type":"coatedplanks"},
@@ -360,7 +360,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.technologisttable",
 		"requires" : [
 			{"type":"coatedplanks"},
@@ -374,7 +373,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.stonemasonworkbench",
 		"requires" : [
 			{"type":"stonebricks"},
@@ -387,7 +385,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.dyertable",
 		"requires" : [
 			{"type":"coatedplanks"}
@@ -399,7 +396,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.stove",
 		"requires" : [
 			{"amount":4,"type":"copper"},
@@ -413,7 +409,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.bloomery",
 		"requires" : [
 			{"type":"bricks"},
@@ -427,7 +422,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.gunsmithshop",
 		"requires" : [
 			{"type":"coatedplanks"},
@@ -441,7 +435,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.mint",
 		"requires" : [
 			{"type":"planks"},
@@ -455,7 +448,6 @@
 	{
 		"defaultLimit" : 1,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.shop",
 		"requires" : [
 			{"type":"planks"},
@@ -469,7 +461,6 @@
 	{
 		"defaultLimit" : 0,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.writerdesk",
 		"requires" : [
 			{"type":"coatedplanks"},
@@ -483,7 +474,6 @@
 	{
 		"defaultLimit" : 0,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.ink",
 		"requires" : [
 			{"type":"galenalead"},
@@ -493,13 +483,12 @@
 		],
 		"results" : [
 			{"type":"ink"},
-			{"type":"bucketempty"}
+			{"isOptional":true,"type":"bucketempty"}
 		]
 	},
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.woodcoating",
 		"requires" : [
 			{"type":"oliveoil"},
@@ -512,7 +501,6 @@
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.waxtablet",
 		"requires" : [
 			{"type":"coatedplanks"},
@@ -526,7 +514,6 @@
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
-		"isOptional" : true,
 		"name" : "pipliz.crafter.bucketempty",
 		"requires" : [
 			{"type":"planks"},

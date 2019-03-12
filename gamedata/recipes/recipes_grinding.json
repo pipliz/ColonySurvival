@@ -1,6 +1,5 @@
 [
 	{
-		"isOptional" : true,
 		"name" : "pipliz.grinder.flour",
 		"requires" : [
 			{"amount":2,"type":"wheat"}
@@ -11,13 +10,32 @@
 	},
 	{
 		"defaultLimit" : 15,
-		"isOptional" : true,
 		"name" : "pipliz.grinder.oliveoil",
 		"requires" : [
 			{"amount":3,"type":"olive"}
 		],
 		"results" : [
 			{"type":"oliveoil"}
+		]
+	},
+	{
+		"defaultLimit" : 15,
+		"name" : "pipliz.grinder.tealeavesprocessed",
+		"requires" : [
+			{"type":"tealeavesraw"}
+		],
+		"results" : [
+			{"type":"tealeavesprocessed"}
+		]
+	},
+	{
+		"defaultLimit" : 15,
+		"name" : "pipliz.grinder.tealeavesprocesseddried",
+		"requires" : [
+			{"amount":3,"type":"tealeavesprocessed"}
+		],
+		"results" : [
+			{"amount":3,"type":"tealeavesprocesseddried"}
 		]
 	}
 ]

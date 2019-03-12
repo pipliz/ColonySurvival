@@ -24,6 +24,22 @@
 		"maxGatheredBeforeCrate" : 6
 	},
 	{
+		"identifier" : "pipliz.silkwormfarmer",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.silkwormfarmer",
+		"cooldown" : 8.5,
+		"blockPlaced" : "leavesgreendark",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
+		"identifier" : "pipliz.teafarmer",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.teafarmer",
+		"cooldown" : 8.5,
+		"blockPlaced" : "leavesgreenlight",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
 		"identifier" : "pipliz.alkanetfarm",
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.alkanetfarmer",
@@ -32,6 +48,17 @@
 		"stages" : [
 			"alkanetstage1",
 			"alkanetstage2"
+		]
+	},
+	{
+		"identifier" : "pipliz.ricefarm",
+		"patchType" : "simpleFarm",
+		"npcType" : "pipliz.ricefarmer",
+		"shouldTurnArableIntoDirt" : true,
+		"requiresSeeds" : false,
+		"stages" : [
+			"ricestage1",
+			"ricestage2"
 		]
 	},
 	{

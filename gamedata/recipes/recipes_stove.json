@@ -1,7 +1,6 @@
 [
 	{
 		"defaultLimit" : 10,
-		"isOptional" : true,
 		"name" : "cook.boilingwater",
 		"requires" : [
 			{"type":"bucketwater"},
@@ -12,7 +11,28 @@
 		]
 	},
 	{
-		"isOptional" : true,
+		"name" : "cook.ricemeal",
+		"requires" : [
+			{"type":"rice"},
+			{"type":"cabbage"},
+			{"type":"chickenmeat"}
+		],
+		"results" : [
+			{"type":"ricemeal"}
+		]
+	},
+	{
+		"name" : "cook.tea",
+		"requires" : [
+			{"type":"tealeavesprocesseddried"},
+			{"type":"boilingwater"}
+		],
+		"results" : [
+			{"type":"tea"},
+			{"isOptional":true,"type":"bucketempty"}
+		]
+	},
+	{
 		"name" : "cook.cookedfish",
 		"requires" : [
 			{"type":"rawfish"},
@@ -25,7 +45,6 @@
 		]
 	},
 	{
-		"isOptional" : true,
 		"name" : "cook.lobsterprepared",
 		"requires" : [
 			{"type":"lobster"},
@@ -38,7 +57,6 @@
 		]
 	},
 	{
-		"isOptional" : true,
 		"name" : "cook.perpetualstew",
 		"requires" : [
 			{"amount":5,"type":"boilingwater"},
@@ -52,11 +70,10 @@
 		],
 		"results" : [
 			{"type":"perpetualstew"},
-			{"amount":5,"type":"bucketempty"}
+			{"amount":5,"isOptional":true,"type":"bucketempty"}
 		]
 	},
 	{
-		"isOptional" : true,
 		"name" : "cook.cake",
 		"requires" : [
 			{"amount":5,"type":"flour"},
@@ -68,11 +85,10 @@
 		],
 		"results" : [
 			{"type":"cake"},
-			{"type":"bucketempty"}
+			{"isOptional":true,"type":"bucketempty"}
 		]
 	},
 	{
-		"isOptional" : true,
 		"name" : "cook.luxurymeal",
 		"requires" : [
 			{"amount":3,"type":"chickenmeat"},
@@ -87,7 +103,7 @@
 		],
 		"results" : [
 			{"type":"luxurymeal"},
-			{"amount":3,"type":"bucketempty"}
+			{"amount":3,"isOptional":true,"type":"bucketempty"}
 		]
 	}
 ]

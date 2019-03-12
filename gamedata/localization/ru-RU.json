@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.6597462514418,
+	"coverage" : 81.2222222222222,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -19,6 +19,49 @@
 		"9" : "Стрельба из мушкета требует пулю и порох, но льняной мешок, в котором содержится порох, часто сохраняется."
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "_MISSING_Delete Banner",
+			"header" : "_MISSING_Banner Options",
+			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "_MISSING_Active Colony: {0}",
+			"addbanner" : "_MISSING_Add Banner",
+			"header" : "_MISSING_Banner Placement",
+			"movebanner" : "_MISSING_Move Banner",
+			"movebannerwarning" : "_MISSING_Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
+			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
+				"header" : "_MISSING_World Settings",
+				"nightmonsters" : "_MISSING_Night Monster Amount"
+			},
+			"connectedplayers" : "_MISSING_Connected Players",
+			"currentowners" : "_MISSING_Current Owners",
+			"inventoryheader" : "_MISSING_Colony",
+			"invite" : "_MISSING_Add as colony owner",
+			"kick" : "_MISSING_Kick from colony",
+			"leader" : "_MISSING_Leader",
+			"leave" : "_MISSING_Leave colony",
+			"manageheader" : "_MISSING_Ownership Management",
+			"manageowners" : "_MISSING_Manage Owners",
+			"nameedit" : "_MISSING_Edit Colony Name:",
+			"namefield" : "_MISSING_Colony Name:",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
+			"recruitmentheader" : "_MISSING_Recruitment",
+			"recruittext1" : "_MISSING_Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
+			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"settoleader" : "_MISSING_Set to leader",
+			"startrecruitment" : "_MISSING_Recruitment",
+			"startsettings" : "_MISSING_Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "Этап{0}/{1} - Требуется пароль",
 			"general_2" : "Этап {0}/{1} - Требуется таблица данных сервера",
@@ -376,16 +419,6 @@
 				"header" : "Меню области",
 				"remove" : "Удалить область"
 			},
-			"banner" : {
-				"button" : "Нанять колониста",
-				"description" : "_MISSING_Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "Исследовательское меню",
-				"header" : "Управление колонистами",
-				"resetbutton" : "Сбросить колонию",
-				"resettooltipa" : "",
-				"resettooltipb" : "Это убъет всех ваших колонистов!",
-				"resettooltipc" : "Также это сбросит ваш инвентарь до первоначального состояния."
-			},
 			"death" : {
 				"description" : "Вы умерли.",
 				"respawn" : "Возродиться"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "Фермер Аконита",
 				"wolfsbanefarmertool" : "Инструмент Фермера Аконита",
 				"wolfsbanefarmertooltip" : "Требуется: семена Аконита\nРазмещать на траве или грази"
-			},
-			"worldsettings" : {
-				"daymonsters" : "Кол-во монстров днём",
-				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "Настройки мира",
-				"nightmonsters" : "Кол-во монстро ночью"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Имя колонии:",
 			"confirmdelete" : "_MISSING_Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "Необожженный кирпич",
 		"alkanet" : "Алканна",
+		"alkanetstage1" : "Семена Алканны",
 		"banner" : "Баннер",
 		"bannertool" : "Управление баннером",
 		"barley" : "_MISSING_Barley",
+		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "Кровать",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
+		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "Синий ковёр",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "Лен",
+		"flaxstage1" : "Семена льна",
 		"flour" : "Мука",
 		"furnace" : "Горн",
 		"galenalead" : "Галенит свинцовый",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "Оружейный магазин",
 		"gypsum" : "Гипс",
 		"hollyhock" : "Штокроза",
+		"hollyhockstage1" : "Семена Штокрозы",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "Железный блок",
@@ -952,7 +985,9 @@
 		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Пшеница",
+		"wheatstage1" : "Семена пшеницы",
 		"wolfsbane" : "Аконит",
+		"wolfsbanestage1" : "Семена Аконита",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "Верстак",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "Требует кокс для создания стальных и золотых слитков",
 		"firewood" : "Базовое топливо",
 		"flax" : "Цвет империи",
+		"flaxstage1" : "Поместите это в землю",
 		"flour" : "Колонист с печью превратит это в хлеб",
 		"furnace" : "Использует дрова в качестве топлива, для создания бронзовых слитков и кирпичей",
 		"galenalead" : "Содержит много свинца",
@@ -1070,6 +1106,7 @@
 		"water" : "Вы НЕ должны иметь это в своем инвентаре!",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Колонист с жерновом превратит это в муку",
+		"wheatstage1" : "Будущий хлеб",
 		"wolfsbane" : "Предотвращает нападение волков на вашу колонию",
 		"workbench" : "Дайте это ремесленнику. И он скрафтит для вас, что угодно!"
 	}

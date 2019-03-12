@@ -1,87 +1,89 @@
 [
 	{
-		"defaultLimit" : 1,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.flaxseeds",
 		"requires" : [
-			{"amount":30,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":100,"type":"flaxstage1"}
+			{"amount":10,"type":"flaxstage1"}
 		]
 	},
 	{
-		"defaultLimit" : 2,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.berrybushes",
 		"requires" : [
-			{"amount":30,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
 			{"amount":10,"type":"berrybush"}
 		]
 	},
 	{
-		"defaultLimit" : 3,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.wheatseeds",
 		"requires" : [
-			{"amount":2,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
 			{"amount":10,"type":"wheatstage1"}
 		]
 	},
 	{
-		"defaultLimit" : 1,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.alkanetseeds",
 		"requires" : [
-			{"amount":30,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":100,"type":"alkanetstage1"}
+			{"amount":10,"type":"alkanetstage1"}
 		]
 	},
 	{
-		"defaultLimit" : 1,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.hollyhockseeds",
 		"requires" : [
-			{"amount":30,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":100,"type":"hollyhockstage1"}
+			{"amount":10,"type":"hollyhockstage1"}
 		]
 	},
 	{
-		"defaultLimit" : 1,
-		"isOptional" : true,
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.wolfsbaneseeds",
 		"requires" : [
-			{"amount":30,"type":"bronzecoin"}
+			{"amount":3,"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":100,"type":"wolfsbanestage1"}
+			{"amount":10,"type":"wolfsbanestage1"}
 		]
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
 		"name" : "pipliz.merchant.cherrysaplings",
 		"requires" : [
-			{"amount":10,"type":"bronzecoin"}
+			{"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":1,"type":"cherrysapling"}
+			{"type":"cherrysapling"}
 		]
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
+		"name" : "pipliz.merchant.sand",
+		"requires" : [
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"sand"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
 		"name" : "pipliz.merchant.dirt",
 		"requires" : [
-			{"amount":6,"type":"bronzecoin"}
+			{"type":"bronzecoin"}
 		],
 		"results" : [
 			{"amount":10,"type":"dirt"}
@@ -89,10 +91,49 @@
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
-		"name" : "pipliz.merchant.grass",
+		"name" : "pipliz.merchant.grasscoldwet",
 		"requires" : [
-			{"amount":6,"type":"bronzecoin"}
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"grasscoldwet"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"name" : "pipliz.merchant.grasscoldmid",
+		"requires" : [
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"grasscoldmid"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"name" : "pipliz.merchant.grasscolddry",
+		"requires" : [
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"grasscolddry"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"name" : "pipliz.merchant.grasshotwet",
+		"requires" : [
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"grasshotwet"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"name" : "pipliz.merchant.grasshotmid",
+		"requires" : [
+			{"type":"bronzecoin"}
 		],
 		"results" : [
 			{"amount":10,"type":"grasshotmid"}
@@ -100,13 +141,22 @@
 	},
 	{
 		"defaultLimit" : 0,
-		"isOptional" : true,
-		"name" : "pipliz.merchant.sand",
+		"name" : "pipliz.merchant.grasshotdry",
 		"requires" : [
-			{"amount":10,"type":"bronzecoin"}
+			{"type":"bronzecoin"}
 		],
 		"results" : [
-			{"amount":10,"type":"sand"}
+			{"amount":10,"type":"grasshotdry"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"name" : "pipliz.merchant.grasshotdriest",
+		"requires" : [
+			{"type":"bronzecoin"}
+		],
+		"results" : [
+			{"amount":10,"type":"grasshotdriest"}
 		]
 	}
 ]

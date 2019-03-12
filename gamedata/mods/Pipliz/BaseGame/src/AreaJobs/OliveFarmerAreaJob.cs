@@ -9,7 +9,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 	public class OliveFarmerAreaJob : AbstractFarmAreaJobDefinition
 	{
 		public string NPCTypeString { get; protected set; }
-		public float Cooldown { get; set; } = 4.25f;
+		public float Cooldown { get; set; } = 6.8f;
 
 		public OliveFarmerAreaJob ()
 		{
@@ -60,7 +60,17 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 								&& typeBelow.IsFertile
 							) {
 								treeLocation = new Vector3Int(x, min.y + y, z);
-								positionSub = AI.AIManager.ClosestPositionNotAt(treeLocation, NPC.Position);
+								bool canStand;
+								Vector3Int position;
+								if (AI.PathingManager.TryGetClosestPositionWorldNotAt(treeLocation, NPC.Position, out canStand, out position)) {
+									if (canStand) {
+										positionSub = position;
+									} else {
+										positionSub = Vector3Int.invalidPos;
+									}
+								} else {
+									positionSub = Vector3Int.invalidPos;
+								}
 								return;
 							}
 						}
@@ -98,7 +108,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				);
 			}
 
-			static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
+			static System.Collections.Generic.List<RecipeResult> GatherResults = new System.Collections.Generic.List<RecipeResult>();
 
 			public override void OnNPCAtJob (ref NPCBase.NPCState state)
 			{
@@ -148,7 +158,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 
 								ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
 
-								InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
+								RecipeResult toShow = RecipeResult.GetWeightedRandom(GatherResults);
 								if (toShow.Amount > 0) {
 									state.SetIndicator(new Shared.IndicatorState(def.Cooldown, toShow.Type));
 								} else {

@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.6597462514418,
+	"coverage" : 81.2222222222222,
 	"hints" : {
 		"0" : "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1" : "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -19,6 +19,49 @@
 		"9" : "Tirer à la platine à mèche consomme une balle et de la poudre à canon, mais le sac de lin qui contenait la pourdre à canon est souvent conservé."
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "_MISSING_Delete Banner",
+			"header" : "_MISSING_Banner Options",
+			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "_MISSING_Active Colony: {0}",
+			"addbanner" : "_MISSING_Add Banner",
+			"header" : "_MISSING_Banner Placement",
+			"movebanner" : "_MISSING_Move Banner",
+			"movebannerwarning" : "_MISSING_Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
+			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
+				"header" : "_MISSING_World Settings",
+				"nightmonsters" : "_MISSING_Night Monster Amount"
+			},
+			"connectedplayers" : "_MISSING_Connected Players",
+			"currentowners" : "_MISSING_Current Owners",
+			"inventoryheader" : "_MISSING_Colony",
+			"invite" : "_MISSING_Add as colony owner",
+			"kick" : "_MISSING_Kick from colony",
+			"leader" : "_MISSING_Leader",
+			"leave" : "_MISSING_Leave colony",
+			"manageheader" : "_MISSING_Ownership Management",
+			"manageowners" : "_MISSING_Manage Owners",
+			"nameedit" : "_MISSING_Edit Colony Name:",
+			"namefield" : "_MISSING_Colony Name:",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
+			"recruitmentheader" : "_MISSING_Recruitment",
+			"recruittext1" : "_MISSING_Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
+			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"settoleader" : "_MISSING_Set to leader",
+			"startrecruitment" : "_MISSING_Recruitment",
+			"startsettings" : "_MISSING_Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "Étape {0}/{1} – Mot de passe nécessaire",
 			"general_2" : "Étape {0}/{1} – Table de fichiers de serveur demandée",
@@ -376,16 +419,6 @@
 				"header" : "Menu de zone",
 				"remove" : "Supprimer la zone"
 			},
-			"banner" : {
-				"button" : "Recruter un colon",
-				"description" : "_MISSING_Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "Menu Science",
-				"header" : "Gestion de la colonie",
-				"resetbutton" : "Réinitialiser la colonie",
-				"resettooltipa" : "Réinitialiser les conseils",
-				"resettooltipb" : "Cela tue tous vos colons et supprime vos champs.",
-				"resettooltipc" : "Cela donne un nouvel inventaire et un nouveau stock."
-			},
 			"death" : {
 				"description" : "Vous êtes mort(e).",
 				"respawn" : "Réapparaître ?"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "Cultivateur de gaudes",
 				"wolfsbanefarmertool" : "Outil de cultivateur de gaudes",
 				"wolfsbanefarmertooltip" : "Requiert : graines de gaudes\nÀ placer sur de l'herbe ou de la terre"
-			},
-			"worldsettings" : {
-				"daymonsters" : "Quantité de monstres le jour",
-				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "Paramètres du monde",
-				"nightmonsters" : "Quantité de monstres la nuit"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Nom de la colonie",
 			"confirmdelete" : "_MISSING_Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "Torchis",
 		"alkanet" : "Orcanette",
+		"alkanetstage1" : "Graines d'orcanette",
 		"banner" : "Bannière",
 		"bannertool" : "Outil de bannière",
 		"barley" : "_MISSING_Barley",
+		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "Lit",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
+		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "Tapis bleu",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "Lin cultivé",
+		"flaxstage1" : "Graines de lin",
 		"flour" : "Farine",
 		"furnace" : "Haut fourneau",
 		"galenalead" : "Galène plombifère",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "Échoppe de l'armurier",
 		"gypsum" : "Gypse",
 		"hollyhock" : "Rose trémière",
+		"hollyhockstage1" : "Graines de rose trémière",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "Bloc de fer",
@@ -952,7 +985,9 @@
 		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Blé",
+		"wheatstage1" : "Graines de blé",
 		"wolfsbane" : "Gaude",
+		"wolfsbanestage1" : "Graines de gaude",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "Établi",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "Nécessite des cokes pour créer de l'acier et des lingots d'or",
 		"firewood" : "Combustible de base",
 		"flax" : "La couleur impériale",
+		"flaxstage1" : "Mettez-la dans le sol pour qu'elle pousse.",
 		"flour" : "Un colon avec un four la transformera en pain",
 		"furnace" : "Utilise du bois de coupe comme combustible pour fabriquer des lingots de bronze et des briques",
 		"galenalead" : "Riche en plomb",
@@ -1070,6 +1106,7 @@
 		"water" : "Vous n'êtes PAS censé(e) avoir ceci dans votre inventaire !",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Un colon avec une meule transformera le blé en farine",
+		"wheatstage1" : "Futur pain",
 		"wolfsbane" : "On l'appelle aussi réséda dans le milieu",
 		"workbench" : "Recrute un artisan. Il fabriquera pour vous !"
 	}

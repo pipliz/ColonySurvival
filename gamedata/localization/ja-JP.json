@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.6597462514418,
+	"coverage" : 80.4444444444444,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -19,6 +19,49 @@
 		"9" : "マスケット銃を撃つと弾丸と火薬を消費するが、火薬が入ったリネンの小袋は多くの場合消費しない。"
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "_MISSING_Delete Banner",
+			"header" : "_MISSING_Banner Options",
+			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "_MISSING_Active Colony: {0}",
+			"addbanner" : "_MISSING_Add Banner",
+			"header" : "_MISSING_Banner Placement",
+			"movebanner" : "_MISSING_Move Banner",
+			"movebannerwarning" : "_MISSING_Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
+			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
+				"header" : "_MISSING_World Settings",
+				"nightmonsters" : "_MISSING_Night Monster Amount"
+			},
+			"connectedplayers" : "_MISSING_Connected Players",
+			"currentowners" : "_MISSING_Current Owners",
+			"inventoryheader" : "_MISSING_Colony",
+			"invite" : "_MISSING_Add as colony owner",
+			"kick" : "_MISSING_Kick from colony",
+			"leader" : "_MISSING_Leader",
+			"leave" : "_MISSING_Leave colony",
+			"manageheader" : "_MISSING_Ownership Management",
+			"manageowners" : "_MISSING_Manage Owners",
+			"nameedit" : "_MISSING_Edit Colony Name:",
+			"namefield" : "_MISSING_Colony Name:",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
+			"recruitmentheader" : "_MISSING_Recruitment",
+			"recruittext1" : "_MISSING_Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
+			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"settoleader" : "_MISSING_Set to leader",
+			"startrecruitment" : "_MISSING_Recruitment",
+			"startsettings" : "_MISSING_Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "ステージ {0}/{1} - パスワードを要求",
 			"general_2" : "ステージ {0}/{1} - サーバーファイルの一覧を参照",
@@ -376,16 +419,6 @@
 				"header" : "エリアメニュー",
 				"remove" : "エリアを解除"
 			},
-			"banner" : {
-				"button" : "入植者を募集する",
-				"description" : "_MISSING_Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "科学メニューへ",
-				"header" : "コロニー管理",
-				"resetbutton" : "コロニーをリセットする",
-				"resettooltipa" : "",
-				"resettooltipb" : "この操作により、全ての入植者が死亡し、仕事場が解除されます。",
-				"resettooltipc" : "また所持品と備蓄品は初期状態に戻ります。"
-			},
 			"death" : {
 				"description" : "あなたは死にました",
 				"respawn" : "リスポーン"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "トリカブト農家",
 				"wolfsbanefarmertool" : "トリカブト農家ツール",
 				"wolfsbanefarmertooltip" : "必要: トリカブトの種\n草か土の上に設置する"
-			},
-			"worldsettings" : {
-				"daymonsters" : "昼間のモンスター総量",
-				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "ワールド設定",
-				"nightmonsters" : "夜間のモンスター総量"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "コロニー名",
 			"confirmdelete" : "_MISSING_Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "アドベ",
 		"alkanet" : "アルカネット",
+		"alkanetstage1" : "_MISSING_Alkanet Seeds",
 		"banner" : "バナー",
 		"bannertool" : "バナーツール",
 		"barley" : "_MISSING_Barley",
+		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "ベッド",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
+		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "カーペット（青）",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "亜麻",
+		"flaxstage1" : "_MISSING_Flax seeds",
 		"flour" : "小麦粉",
 		"furnace" : "炉",
 		"galenalead" : "方鉛鉱（鉛豊富）",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "鉄砲鍛冶の工房",
 		"gypsum" : "石膏",
 		"hollyhock" : "タチアオイ",
+		"hollyhockstage1" : "_MISSING_Hollyhock Seeds",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "鉄ブロック",
@@ -952,7 +985,9 @@
 		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "小麦",
+		"wheatstage1" : "_MISSING_Wheat Seeds",
 		"wolfsbane" : "トリカブト",
+		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "作業台",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "【せいせいろ】\n《Finery Forge》\n鋼鉄と金のインゴットを作るには、コークスが必要",
 		"firewood" : "【まき / たきぎ】\n《Firewood》\n基本的な燃料",
 		"flax" : "【あま】\n《Flax》\n帝国の色",
+		"flaxstage1" : "_MISSING_Put it in the ground",
 		"flour" : "【こむぎこ】\n《Flour》\n入植者がオーブンでパンを焼いてくれるよ",
 		"furnace" : "【ろ】\n《Furnace》\n青銅インゴットとレンガを作るには、薪を燃料として使う",
 		"galenalead" : "【ほうえんこう（なまりほうふ）】\n《Galena (Lead rich)》\n鉛がたっぷり",
@@ -1070,6 +1106,7 @@
 		"water" : "【みず】\n《Water》\nこれはインベントリにはないはず！",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "【こむぎ】\n《Wheat》\n入植者が石臼を使って小麦粉に変える",
+		"wheatstage1" : "_MISSING_Future bread",
 		"wolfsbane" : "【とりかぶと】\n《Wolfsbane》\nオオカミがコロニーを襲うのを防ぐ",
 		"workbench" : "【さぎょうだい】\n《Workbench》\n職人を雇用する。あなたのために作業します！"
 	}

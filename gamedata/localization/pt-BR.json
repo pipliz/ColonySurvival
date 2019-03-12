@@ -1,5 +1,5 @@
 {
-	"coverage" : 70.242214532872,
+	"coverage" : 67.6666666666667,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -19,6 +19,49 @@
 		"9" : "_MISSING_Firing a musket consumes a bullet and gunpowder, but the linen pouch that contained the gunpowder is often conserved."
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "_MISSING_Delete Banner",
+			"header" : "_MISSING_Banner Options",
+			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "_MISSING_Active Colony: {0}",
+			"addbanner" : "_MISSING_Add Banner",
+			"header" : "_MISSING_Banner Placement",
+			"movebanner" : "_MISSING_Move Banner",
+			"movebannerwarning" : "_MISSING_Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
+			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
+				"header" : "_MISSING_World Settings",
+				"nightmonsters" : "_MISSING_Night Monster Amount"
+			},
+			"connectedplayers" : "_MISSING_Connected Players",
+			"currentowners" : "_MISSING_Current Owners",
+			"inventoryheader" : "_MISSING_Colony",
+			"invite" : "_MISSING_Add as colony owner",
+			"kick" : "_MISSING_Kick from colony",
+			"leader" : "_MISSING_Leader",
+			"leave" : "_MISSING_Leave colony",
+			"manageheader" : "_MISSING_Ownership Management",
+			"manageowners" : "_MISSING_Manage Owners",
+			"nameedit" : "_MISSING_Edit Colony Name:",
+			"namefield" : "_MISSING_Colony Name:",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
+			"recruitmentheader" : "_MISSING_Recruitment",
+			"recruittext1" : "_MISSING_Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
+			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"settoleader" : "_MISSING_Set to leader",
+			"startrecruitment" : "_MISSING_Recruitment",
+			"startsettings" : "_MISSING_Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "_MISSING_Stage {0}/{1} - Password required",
 			"general_2" : "_MISSING_Stage {0}/{1} - Requested server files table",
@@ -376,16 +419,6 @@
 				"header" : "Menu de Área",
 				"remove" : "Remover área"
 			},
-			"banner" : {
-				"button" : "Recrutar colono",
-				"description" : "_MISSING_Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "Menu de Ciências",
-				"header" : "Gerenciar Colônia",
-				"resetbutton" : "Resetar colônia",
-				"resettooltipa" : "",
-				"resettooltipb" : "Isso mata todos seus colonos e remove todos campos de trabalho.",
-				"resettooltipc" : "Também oferece um inventário e estoque novo."
-			},
 			"death" : {
 				"description" : "Você morreu.",
 				"respawn" : "Renascer"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "Fazendeiro de Aconitum",
 				"wolfsbanefarmertool" : "Ferramenta de fazendeiro de Aconitum",
 				"wolfsbanefarmertooltip" : "Necessita de: sementes de Aconitum\nColoque na grama ou na terra"
-			},
-			"worldsettings" : {
-				"daymonsters" : "_MISSING_Day Monster Amount",
-				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "_MISSING_World Settings",
-				"nightmonsters" : "_MISSING_Night Monster Amount"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "Nome da Colônia",
 			"confirmdelete" : "_MISSING_Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "Adobe",
 		"alkanet" : "Alkanet",
+		"alkanetstage1" : "Sementes de Alkanet",
 		"banner" : "Bandeira",
 		"bannertool" : "Ferramenta da bandeira",
 		"barley" : "_MISSING_Barley",
+		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "Cama",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
+		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "Carpete azul",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "Linhaça",
+		"flaxstage1" : "Sementes de Linhaça",
 		"flour" : "Farinha",
 		"furnace" : "Fornalha",
 		"galenalead" : "Galena (Rica em chumbo)",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "Loja do Ferreiro",
 		"gypsum" : "Gesso",
 		"hollyhock" : "Alcea",
+		"hollyhockstage1" : "Semente de Alcea",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "Bloco de Ferro",
@@ -952,7 +985,9 @@
 		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Trigo",
+		"wheatstage1" : "Sementes de Trigo",
 		"wolfsbane" : "Aconitum",
+		"wolfsbanestage1" : "Semente de Aconitum",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "Bancada de Trabalho",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "Necessita de coca para criar aço e barras de ferro",
 		"firewood" : "Gasolina básica",
 		"flax" : "A cor imperial",
+		"flaxstage1" : "Coloque-o no chão",
 		"flour" : "Um colono com um forno vai assar isso em pão",
 		"furnace" : "Utiliza lenha como combustível para construir barras de bronze e tijolos",
 		"galenalead" : "Contém muito chumbo",
@@ -1070,6 +1106,7 @@
 		"water" : "Você não deve ter isso em seu inventário!",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Um colono com uma mó transforma isso em farinha",
+		"wheatstage1" : "Futuro pão",
 		"wolfsbane" : "Previne lobos de atacar sua colônia",
 		"workbench" : "Recrute um artesão. Fabrica as coisas pra você!"
 	}

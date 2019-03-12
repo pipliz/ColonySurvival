@@ -52,16 +52,16 @@ namespace Pipliz.Mods.BaseGame
 				Vector3 rotate = instance.NPC.Position.Vector;
 				switch (index) {
 					case 1:
-						rotate.x -= 1f;
-						break;
-					case 2:
 						rotate.x += 1f;
 						break;
+					case 2:
+						rotate.x -= 1f;
+						break;
 					case 3:
-						rotate.z -= 1f;
+						rotate.z += 1f;
 						break;
 					case 4:
-						rotate.z += 1f;
+						rotate.z -= 1f;
 						break;
 				}
 				instance.NPC.LookAt(rotate);
@@ -95,7 +95,9 @@ namespace Pipliz.Mods.BaseGame
 
 		public virtual void OnNPCAtStockpile (BlockJobInstance blockJobInstance, ref NPCState state)
 		{
-			blockJobInstance.ShouldTakeItems = false;
+			MinerJobInstance inst = (MinerJobInstance)blockJobInstance;
+			inst.ShouldTakeItems = false;
+			inst.GatheredItemCount = 0;
 			state.Inventory.Dump(blockJobInstance.Owner.Stockpile);
 			state.SetCooldown(0.3);
 			state.JobIsDone = true;

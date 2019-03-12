@@ -19,7 +19,7 @@ namespace Pipliz.Mods.BaseGame
 				&& (foundtype.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
 			) {
 				BlockTypeBelow = foundtype;
-				MiningCooldown = cooldown;
+				MiningCooldown = Random.NextFloat(0.9f, 1.1f) * cooldown;
 			} else {
 				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
 				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
@@ -33,16 +33,16 @@ namespace Pipliz.Mods.BaseGame
 				&& (itemIndex.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
 			) {
 				BlockTypeBelow = itemIndex;
-				MiningCooldown = cooldown;
+				MiningCooldown = Random.NextFloat(0.9f, 1.1f) * cooldown;
 			} else {
 				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
 				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
 			}
 		}
 
-		public override ESerializeEntityResult SerializeToBytes (Vector3Int blockPosition, ByteBuilder builder)
+		public override ESerializeEntityResult SerializeToBytes (Chunk chunk, Vector3Byte blockPosition, ByteBuilder builder)
 		{
-			var result = base.SerializeToBytes(blockPosition, builder);
+			var result = base.SerializeToBytes(chunk, blockPosition, builder);
 			builder.WriteVariable(BlockTypeBelow?.ItemIndex ?? 0);
 			return result;
 		}

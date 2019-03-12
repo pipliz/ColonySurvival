@@ -1,5 +1,5 @@
 {
-	"coverage" : 66.7820069204152,
+	"coverage" : 64.3333333333333,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -19,6 +19,49 @@
 		"9" : "_MISSING_Firing a musket consumes a bullet and gunpowder, but the linen pouch that contained the gunpowder is often conserved."
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "_MISSING_Delete Banner",
+			"header" : "_MISSING_Banner Options",
+			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "_MISSING_Active Colony: {0}",
+			"addbanner" : "_MISSING_Add Banner",
+			"header" : "_MISSING_Banner Placement",
+			"movebanner" : "_MISSING_Move Banner",
+			"movebannerwarning" : "_MISSING_Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
+			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "_MISSING_Day Monster Amount",
+				"enablehappiness" : "_MISSING_Use Happiness",
+				"header" : "_MISSING_World Settings",
+				"nightmonsters" : "_MISSING_Night Monster Amount"
+			},
+			"connectedplayers" : "_MISSING_Connected Players",
+			"currentowners" : "_MISSING_Current Owners",
+			"inventoryheader" : "_MISSING_Colony",
+			"invite" : "_MISSING_Add as colony owner",
+			"kick" : "_MISSING_Kick from colony",
+			"leader" : "_MISSING_Leader",
+			"leave" : "_MISSING_Leave colony",
+			"manageheader" : "_MISSING_Ownership Management",
+			"manageowners" : "_MISSING_Manage Owners",
+			"nameedit" : "_MISSING_Edit Colony Name:",
+			"namefield" : "_MISSING_Colony Name:",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
+			"recruitmentheader" : "_MISSING_Recruitment",
+			"recruittext1" : "_MISSING_Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
+			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"settoleader" : "_MISSING_Set to leader",
+			"startrecruitment" : "_MISSING_Recruitment",
+			"startsettings" : "_MISSING_Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "_MISSING_Stage {0}/{1} - Password required",
 			"general_2" : "_MISSING_Stage {0}/{1} - Requested server files table",
@@ -376,16 +419,6 @@
 				"header" : "지역 도구",
 				"remove" : "작업 중단"
 			},
-			"banner" : {
-				"button" : "주민 모집",
-				"description" : "_MISSING_Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "과학 연구",
-				"header" : "마을 운영",
-				"resetbutton" : "마을 초기화",
-				"resettooltipa" : "",
-				"resettooltipb" : "모든 주민을 죽이고 농사 구역, 광산 구역 등을 전부 제거합니다.",
-				"resettooltipc" : "인벤토리 또한 완전히 비게 됩니다."
-			},
 			"death" : {
 				"description" : "고인의 명복을 빕니다.",
 				"respawn" : "리스폰"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "투구꽃",
 				"wolfsbanefarmertool" : "투구꽃 농사 짓기",
 				"wolfsbanefarmertooltip" : "투구꽃 씨앗이 필요합니다.\n노란색입니다.\n풀, 흙에만 배치할 수 있습니다."
-			},
-			"worldsettings" : {
-				"daymonsters" : "_MISSING_Day Monster Amount",
-				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "_MISSING_World Settings",
-				"nightmonsters" : "_MISSING_Night Monster Amount"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
 			"colonyname" : "콜로니 이름",
 			"confirmdelete" : "_MISSING_Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "아도비 점토",
 		"alkanet" : "알카넷 허브",
+		"alkanetstage1" : "알카넷 허브 씨앗",
 		"banner" : "깃발",
 		"bannertool" : "깃발 도구",
 		"barley" : "_MISSING_Barley",
+		"barleystage1" : "_MISSING_Barley Seeds",
 		"bed" : "침대",
 		"beehive" : "_MISSING_Beehive",
 		"beeswax" : "_MISSING_Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "_MISSING_Empty Bucket",
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
+		"cabbagestage1" : "_MISSING_Cabbage Seeds",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "푸른 카펫",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
 		"flax" : "아마꽃",
+		"flaxstage1" : "아마꽃 씨앗",
 		"flour" : "밀가루",
 		"furnace" : "용광로",
 		"galenalead" : "방연석(납)",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "총기 작업대",
 		"gypsum" : "석고",
 		"hollyhock" : "접시꽃",
+		"hollyhockstage1" : "접시꽃 씨앗",
 		"honey" : "_MISSING_Honey",
 		"ink" : "_MISSING_Ink",
 		"ironblock" : "철 블럭",
@@ -952,7 +985,9 @@
 		"waterpump" : "_MISSING_Water Pump",
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "밀",
+		"wheatstage1" : "밀알",
 		"wolfsbane" : "투구꽃",
+		"wolfsbanestage1" : "투구꽃 씨앗",
 		"woodcoating" : "_MISSING_Wood Coating",
 		"workbench" : "작업대",
 		"writerdesk" : "_MISSING_Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "석탄으로 강철과 금괴를 만듭니다.",
 		"firewood" : "기본적인 연료.",
 		"flax" : "천의 기본 재료.",
+		"flaxstage1" : "땅에 뿌려주세요.",
 		"flour" : "오븐으로 빵을 구울 수 있습니다.",
 		"furnace" : "장작을 태워 동괴와 벽돌을 만듭니다.",
 		"galenalead" : "납이 많이 함유되어 있습니다.",
@@ -1070,6 +1106,7 @@
 		"water" : "어! 이거 인벤토리에 있으면 안되는데!",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "마음이 풍족해지네요.",
+		"wheatstage1" : "미래에 빵이 됩니다.",
 		"wolfsbane" : "영어로 울프스베인, 늑대인간을 억제하는 약초였죠.",
 		"workbench" : "다양한 물건들을 만들 수 있습니다."
 	}

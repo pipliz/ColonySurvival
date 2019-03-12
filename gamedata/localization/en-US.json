@@ -19,6 +19,49 @@
 		"9" : "Firing a musket consumes a bullet and gunpowder, but the linen pouch that contained the gunpowder is often conserved."
 	},
 	"sentences" : {
+		"bannerclickedpopup" : {
+			"deletebanner" : "Delete Banner",
+			"header" : "Banner Options",
+			"removelastwarning" : "Can't remove the last banner at the moment"
+		},
+		"bannerplacementpopup" : {
+			"activecolony" : "Active Colony: {0}",
+			"addbanner" : "Add Banner",
+			"header" : "Banner Placement",
+			"movebanner" : "Move Banner",
+			"movebannerwarning" : "Be careful with moving the banner, it can create problems for the colony.",
+			"mustbeleader" : "Must be the colony leader to change banners.",
+			"startcolony" : "Start a new colony here"
+		},
+		"colonymanagement" : {
+			"colonysettings" : {
+				"daymonsters" : "Day Monster Amount",
+				"enablehappiness" : "Use Happiness",
+				"header" : "World Settings",
+				"nightmonsters" : "Night Monster Amount"
+			},
+			"connectedplayers" : "Connected Players",
+			"currentowners" : "Current Owners",
+			"inventoryheader" : "Colony",
+			"invite" : "Add as colony owner",
+			"kick" : "Kick from colony",
+			"leader" : "Leader",
+			"leave" : "Leave colony",
+			"manageheader" : "Ownership Management",
+			"manageowners" : "Manage Owners",
+			"nameedit" : "Edit Colony Name:",
+			"namefield" : "Colony Name:",
+			"recruitmentamount" : "Amount of colonists to recruit:",
+			"recruitmentbutton" : "Recruit Colonist",
+			"recruitmentheader" : "Recruitment",
+			"recruittext1" : "Colonists require 1 food units per day and a bed.",
+			"recruittext2" : "Recruiting the next colonist costs {0} food units.",
+			"recruittofillbeds" : "Recruit to fill all beds",
+			"recruittofilljobs" : "Recruit to fill all jobs",
+			"settoleader" : "Set to leader",
+			"startrecruitment" : "Recruitment",
+			"startsettings" : "Colony Settings"
+		},
 		"connectingscreen" : {
 			"general_1" : "Stage {0}/{1} - Password required",
 			"general_2" : "Stage {0}/{1} - Requested server files table",
@@ -376,16 +419,6 @@
 				"header" : "Area menu",
 				"remove" : "Remove area"
 			},
-			"banner" : {
-				"button" : "Recruit a colonist",
-				"description" : "Colonists require 1 food units per day, and a bed. Recruiting a colonist costs 8 food units.",
-				"gotoscience" : "Science menu",
-				"header" : "Colony management",
-				"resetbutton" : "Reset colony",
-				"resettooltipa" : "",
-				"resettooltipb" : "This kills all your colonists and removes your job fields.",
-				"resettooltipc" : "It also gives you a fresh new inventory and stockpile."
-			},
 			"death" : {
 				"description" : "You died.",
 				"respawn" : "Respawn"
@@ -586,12 +619,6 @@
 				"wolfsbanefarmer" : "Wolfsbane Farmer",
 				"wolfsbanefarmertool" : "Wolfsbane Farmer Tool",
 				"wolfsbanefarmertooltip" : "Needs: Wolfsbane Seeds\nPlace on grass or dirt"
-			},
-			"worldsettings" : {
-				"daymonsters" : "Day Monster Amount",
-				"enablehappiness" : "Use Happiness",
-				"header" : "World Settings",
-				"nightmonsters" : "Night Monster Amount"
 			}
 		},
 		"quickstart" : {
@@ -722,6 +749,7 @@
 			}
 		},
 		"singleplayermenu" : {
+			"alreadyexists" : "World already exists!",
 			"cancel" : "Cancel",
 			"colonyname" : "Colony Name",
 			"confirmdelete" : "Confirm deleting",
@@ -743,9 +771,11 @@
 	"types" : {
 		"adobe" : "Adobe",
 		"alkanet" : "Alkanet",
+		"alkanetstage1" : "Alkanet Seeds",
 		"banner" : "Banner",
 		"bannertool" : "Banner Tool",
 		"barley" : "Barley",
+		"barleystage1" : "Barley Seeds",
 		"bed" : "Bed",
 		"beehive" : "Beehive",
 		"beeswax" : "Beeswax",
@@ -773,6 +803,7 @@
 		"bucketempty" : "Empty Bucket",
 		"bucketwater" : "Water Bucket",
 		"cabbage" : "Cabbage",
+		"cabbagestage1" : "Cabbage Seeds",
 		"cake" : "Cake",
 		"candle" : "Candle",
 		"carpetblue" : "Blue Carpet",
@@ -816,6 +847,7 @@
 		"fishermanjob" : "Fisherman Job",
 		"fishmeal" : "Fishmeal",
 		"flax" : "Flax",
+		"flaxstage1" : "Flax seeds",
 		"flour" : "Flour",
 		"furnace" : "Furnace",
 		"galenalead" : "Galena (Lead rich)",
@@ -852,6 +884,7 @@
 		"gunsmithshop" : "Gunsmith Shop",
 		"gypsum" : "Gypsum",
 		"hollyhock" : "Hollyhock",
+		"hollyhockstage1" : "Hollyhock Seeds",
 		"honey" : "Honey",
 		"ink" : "Ink",
 		"ironblock" : "Iron Block",
@@ -952,7 +985,9 @@
 		"waterpump" : "Water Pump",
 		"waxtablet" : "Wax Tablet",
 		"wheat" : "Wheat",
+		"wheatstage1" : "Wheat Seeds",
 		"wolfsbane" : "Wolfsbane",
+		"wolfsbanestage1" : "Wolfsbane Seeds",
 		"woodcoating" : "Wood Coating",
 		"workbench" : "Workbench",
 		"writerdesk" : "Writer's Desk"
@@ -1002,6 +1037,7 @@
 		"fineryforge" : "Requires cokes to create steel and gold ingots",
 		"firewood" : "Basic fuel",
 		"flax" : "The imperial color",
+		"flaxstage1" : "Put it in the ground",
 		"flour" : "A colonist with an oven will bake this into bread",
 		"furnace" : "Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "Contains lots of lead",
@@ -1070,6 +1106,7 @@
 		"water" : "You are NOT supposed to have this in your inventory!",
 		"waxtablet" : "No headphone jack",
 		"wheat" : "A colonist with a grindstone will turn this into flour",
+		"wheatstage1" : "Future bread",
 		"wolfsbane" : "Prevents wolves from attacking your colony",
 		"workbench" : "Recruits an artisan. Will do the crafting for you!"
 	}
