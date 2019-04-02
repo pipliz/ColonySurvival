@@ -38,9 +38,7 @@ CallbackType: `OnLateUpdate`
 ## Description
 Signature: void ()
 Called inside unity's LateUpdate method
-## Registered callbacks: 1
-0.	`pipliz.server.ai.aimanager.queuebatchedchunks`
-		_Queues the batch of dirty chunks for recalculating AI data_
+No registered uses
 
 
 CallbackType: `AfterStartup`
@@ -48,9 +46,7 @@ CallbackType: `AfterStartup`
 ## Description
 Signature: void ()
 Called somewhere after startup, in the first frame start
-## Registered callbacks: 1
-0.	`pipliz.server.ai.aimanager.startthread`
-		_Starts AI precalculation thread_
+No registered uses
 
 
 CallbackType: `AfterSelectedWorld`
@@ -86,7 +82,7 @@ CallbackType: `AfterItemTypesDefined`
 ## Description
 Signature: void ()
 First callback after all item types should be defined, so you can resolve types etc here
-## Registered callbacks: 24
+## Registered callbacks: 25
 0.	`pipliz.server.loadnpctypes`
 1.	`areajobs.insertattributed`
 		Depends On 0. `pipliz.server.loadnpctypes`
@@ -109,6 +105,8 @@ First callback after all item types should be defined, so you can resolve types 
 		_Waits for npc recipe patches to complete loading, then merges and registers them_
 9.	`pipliz.server.loadresearchables`
 		Depends On 2. `create_servermanager_trackers`
+		Depends On 8. `pipliz.server.recipenpcload`
+		Depends On 7. `pipliz.server.recipeplayerload`
 		_Load & resolve researchable configs_
 10.	`pipliz.server.loadplayers`
 		_Starts loading player data_
@@ -164,6 +162,11 @@ First callback after all item types should be defined, so you can resolve types 
 		Depends On 12. `pipliz.server.loadcolonies`
 		Depends On 22. `wait_complete_startup_chunks`
 		_Will disable missing science and set the correct biome dependent science for loaded colonies_
+24.	`trading.doublelinkrules`
+		Depends On 12. `pipliz.server.loadcolonies`
+		_Copies all outgoing rules to the respective goal colonies' incoming rules._
+		_It seems not essential to have this happen before npc's are loaded:_
+		_worst case trader npcs will idle for a few second upon loading (which they do anyway @ AI gen)_
 
 
 CallbackType: `AfterWorldLoad`
@@ -172,18 +175,16 @@ CallbackType: `AfterWorldLoad`
 Signature: void ()
 After all misc data is loaded (structures, npcs, player data, etc)
 Does not mean chunks are loaded though
-## Registered callbacks: 6
-0.	`pipliz.server.ai.aimanager.defaultpathfinder`
-		_Registers the default pathfinder to AIManager.ZombiePathFinder and AIManager.NPCPathFinder_
-1.	`pipliz.server.localization.convert`
+## Registered callbacks: 5
+0.	`pipliz.server.localization.convert`
 		_Waits for locale patches to have loaded, then merges them and prepares the network packages_
-2.	`pipliz.server.monsterspawner.fetchnpctypes`
+1.	`pipliz.server.monsterspawner.fetchnpctypes`
 		_Caches the default monster types_
-3.	`pipliz.server.monsterspawner.register`
+2.	`pipliz.server.monsterspawner.register`
 		_Registers the default monsterspawner to MonsterTracker.MonsterSpawner_
-4.	`save_recipemapping`
+3.	`save_recipemapping`
 		_Saves the recipe mapping table if it's changed_
-5.	`start_generator`
+4.	`start_generator`
 
 
 CallbackType: `AfterNetworkSetup`
@@ -365,9 +366,10 @@ CallbackType: `OnPlayerMoved`
 ## Description
 Signature: void (Players.Player a, Vector3 oldPosition)
 Called approx 6 times per second per player. New position/rotation is set on the Players.Player argument.
-## Registered callbacks: 1
+## Registered callbacks: 2
 0.	`pipliz.server.loadsurroundings`
 		_Queues up chunks to load if the player moves to other chunks_
+1.	`send_audiobiome`
 
 
 CallbackType: `OnModifyResearchables`
@@ -413,13 +415,14 @@ CallbackType: `OnPlayerConnectedLate`
 Signature: void (Players.Player a)
 Arg a: The Player that is connecting
 Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed till after the client is done loading.
-## Registered callbacks: 3
+## Registered callbacks: 4
 0.	`pipliz.server.meshedobjects.sendtable`
 		_Sends the meshed object settings data_
 1.	`pipliz.server.sendnpctypes`
 		_Sends the registered NPCType settings to the player_
 2.	`pipliz.server.sendsetflight`
 		_Send player flight state_
+3.	`send_audiobiome`
 
 
 CallbackType: `OnAddResearchables`
@@ -461,11 +464,11 @@ No registered uses
 CallbackType: `OnNPCCraftedRecipe`
 =======
 ## Description
-Signature: void (IJob job, Recipe recipe, List<ItemTypes.InventoryItemDrops> results)
+Signature: void (IJob job, Recipe recipe, List<Recipes.RecipeResult> results)
 Triggered when an npc doing {job} crafts {recipe}, creating {results}
 The results are re-used, don't store it.
 Results can be edited. After the callback they'll be added to the npc/block's inventory
-If the results are not empty, the npc will show a npc indicator with a weighted random type from the results
+If the results are not empty, the npc will show a npc indicator with a weighted random type from the non-optional results
 No registered uses
 
 
@@ -587,8 +590,9 @@ fields in {boxedData.item1}:
 	-rayCastHit.rayHitType -> indicates which other data is valid:
 	--if it's Block - distanceToHit, voxelHit, voxelSideHit and typeHit are valid
 	--if it's NPC - distanceToHit and hitNPCID become valid
-## Registered callbacks: 1
-0.	`pipliz.server.players.hitnpc`
+## Registered callbacks: 2
+0.	`check_banner_click`
+1.	`pipliz.server.players.hitnpc`
 		_Manages players punching npcs/monsters_
 
 
@@ -723,7 +727,7 @@ CallbackType: `OnSavingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when saving a colony
-## Registered callbacks: 8
+## Registered callbacks: 9
 0.	`saveareajobs`
 1.	`savedifficulty`
 		_Saved the active difficulty setting, into node['difficulty']. If the setting equals the default, does not write there_
@@ -733,6 +737,7 @@ Called when saving a colony
 5.	`saverecipesettings`
 6.	`savescience`
 7.	`savestockpile`
+8.	`savetrading`
 
 
 CallbackType: `OnLoadingColony`
@@ -740,7 +745,7 @@ CallbackType: `OnLoadingColony`
 ## Description
 Signature: void(Colony colony, JSONNode json)
 Called when loading a colony
-## Registered callbacks: 8
+## Registered callbacks: 9
 0.	`loadnpcs`
 1.	`loadareajobs`
 		Depends On 0. `loadnpcs`
@@ -751,6 +756,7 @@ Called when loading a colony
 5.	`loadrecipesettings`
 6.	`loadscience`
 7.	`loadstockpile`
+8.	`loadtrading`
 
 
 CallbackType: `OnLoadingTerrainGenerator`
@@ -758,12 +764,14 @@ CallbackType: `OnLoadingTerrainGenerator`
 ## Description
 Signature: void(TerrainGeneratorBase terrainGen)
 Called when the terrain generator is created - during create_servermanager_trackers in AfterItemTypesDefined
-## Registered callbacks: 4
+## Registered callbacks: 5
 0.	`apply_metabiome_patches`
 1.	`apply_sciencebiome_patches`
-2.	`load_structure_patches`
-3.	`load_biome_patches`
-		Depends On 2. `load_structure_patches`
+2.	`apply_orelayers`
+		Depends On 1. `apply_sciencebiome_patches`
+3.	`load_structure_patches`
+4.	`load_biome_patches`
+		Depends On 3. `load_structure_patches`
 
 
 CallbackType: `OnPlayerEditedNetworkInputfield`
@@ -814,5 +822,42 @@ Arg p: The player that'll receive this menu
 Arg m: The menu that can be edited / made, will be send after the callback completes
 ## Registered callbacks: 1
 0.	`pipliz.buildbase`
+
+
+CallbackType: `OnConstructBannerPlacementUI`
+=======
+## Description
+Signature: void(Players.Player p, NetworkUI.NetworkMenu m)
+Arg p: The player that'll receive this menu
+Arg m: The menu that can be edited / made, will be send after the callback completes
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
+
+
+CallbackType: `OnConstructBannerClickedUI`
+=======
+## Description
+Signature: void(Players.Player p, NetworkUI.NetworkMenu m)
+Arg p: The player that'll receive this menu
+Arg m: The menu that can be edited / made, will be send after the callback completes
+## Registered callbacks: 1
+0.	`pipliz.buildbase`
+
+
+CallbackType: `OnHandleColonySelected`
+=======
+## Description
+Signature: void(NetworkUI.ButtonPressCallbackData data, int colonyID)
+## Registered callbacks: 1
+0.	`handle_builtin`
+
+
+CallbackType: `OnPlayerSelectedTypePopup`
+=======
+## Description
+Signature: void(Players.Player player, ushort selectedItemType, JSONNode payload)
+payload is what was used as arg when first sent, to identify who sent it for what reason
+## Registered callbacks: 1
+0.	`traderule`
 
 

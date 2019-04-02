@@ -98,13 +98,17 @@
 	},
 	"Colony" : {
 		"BaseHappiness" : 25,
-		"ExclusiveRadius" : 200
+		"ExclusiveRadius" : 200,
+		"TradingBaseStacksPerSecond" : 0.02,
+		"TradingCooldownMS" : 1000
 	},
 	"Leaves" : {
 		"MaxDistanceToLog" : 4,
 		"MaxDistanceToLogCheck" : 8
 	},
 	"NPCs" : {
+		"BuilderCooldownMultiplierSeconds" : 1,
+		"DiggerCooldownMultiplierSeconds" : 1,
 		"FoodUseMultiplierSiegeMode" : 6,
 		"FoodUsePerHour" : 0.0416667,
 		"InitialFoodCarriedHours" : 24,
@@ -183,7 +187,10 @@
 		"wolfsbanestage2"
 	],
 	"Saving" : {
+		"FreeChunksBatchMaxDelayMilliseconds" : 31000,
+		"FreeChunksBatchSizeMax" : 250,
 		"MillisecondsBeforeAutosaveChunk" : 30000,
+		"MillisecondsBetweenDirtyChunkChecks" : 8000,
 		"SecondsBetweenMiscAutoSaving" : 300
 	},
 	"Time" : {

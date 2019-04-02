@@ -15,20 +15,7 @@
 		"icon" : "./textures/icons/commandtool.png",
 		"iterationCount" : 0,
 		"key" : "biome.fareast",
-		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksRecipeGroups" : [
-			"pipliz.silkwormfarmer",
-			"pipliz.wheelspinner"
-		],
-		"unlocksRecipes" : [
-			"cook.ricemeal",
-			"pipliz.tailor.silk",
-			"pipliz.tailor.silkpillow",
-			"pipliz.crafter.spinningwheel",
-			"pipliz.stonemason.porcelainraw",
-			"pipliz.kiln.porcelainbiscuit",
-			"pipliz.kiln.porcelainglazed"
-		]
+		"requiredScienceBiome" : "sciencebiome.fareast"
 	},
 	{
 		"icon" : "./textures/icons/commandtool.png",
@@ -41,6 +28,134 @@
 		"iterationCount" : 0,
 		"key" : "biome.tropics",
 		"requiredScienceBiome" : "sciencebiome.tropics"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.watergatherer"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"cassava"},
+			{"type":"banana"},
+			{"type":"bucketwater"}
+		],
+		"key" : "pipliz.baseresearch.foofoo",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksRecipes" : [
+			"pipliz.grinder.foofoo"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.foofoo"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"foofoo"}
+		],
+		"key" : "pipliz.baseresearch.papyrus",
+		"requiredScienceBiome" : "sciencebiome.tropics"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.foofoo"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"foofoo"}
+		],
+		"key" : "pipliz.baseresearch.sugarcane",
+		"requiredScienceBiome" : "sciencebiome.tropics"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.sugarcane",
+			"pipliz.baseresearch.papyrus",
+			"pipliz.baseresearch.coffee"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"coffeebeans"},
+			{"type":"sugar"},
+			{"type":"papyrus"}
+		],
+		"key" : "pipliz.baseresearch.diamondprocessing",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksRecipes" : [
+			"pipliz.metalsmith.diamondnecklace"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.foofoo"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"foofoo"}
+		],
+		"key" : "pipliz.baseresearch.coffee",
+		"requiredScienceBiome" : "sciencebiome.tropics"
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.tailorshop"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"newworldmeal"}
+		],
+		"key" : "pipliz.baseresearch.spinningwheel.newworld",
+		"requiredScienceBiome" : "sciencebiome.newworld",
+		"unlocksRecipeGroups" : [
+			"pipliz.wheelspinner.newworld"
+		],
+		"unlocksRecipes" : [
+			"pipliz.crafter.spinningwheelnewworld",
+			"pipliz.tailor.cotton"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.spinningwheel.newworld"
+		],
+		"iterationCount" : 3,
+		"iterationRequirements" : [
+			{"type":"cotton"}
+		],
+		"key" : "pipliz.baseresearch.cottontowel",
+		"requiredScienceBiome" : "sciencebiome.newworld",
+		"unlocksRecipes" : [
+			"pipliz.tailor.cottontowel"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.bronzeminting",
+			"pipliz.baseresearch.fineryforge"
+		],
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"goldcoin"}
+		],
+		"key" : "pipliz.baseresearch.fur",
+		"requiredScienceBiome" : "sciencebiome.newworld",
+		"unlocksRecipes" : [
+			"pipliz.merchant.fur"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.fur"
+		],
+		"iterationCount" : 5,
+		"iterationRequirements" : [
+			{"type":"fur"}
+		],
+		"key" : "pipliz.baseresearch.wintercoat",
+		"requiredScienceBiome" : "sciencebiome.newworld",
+		"unlocksRecipes" : [
+			"pipliz.tailor.wintercoat"
+		]
 	},
 	{
 		"iterationCount" : 10,
@@ -75,15 +190,15 @@
 		"iterationRequirements" : [
 			{"type":"silkwormcocoon"}
 		],
-		"key" : "pipliz.baseresearch.spinningwheel",
+		"key" : "pipliz.baseresearch.spinningwheel.fareast",
 		"requiredScienceBiome" : "sciencebiome.fareast",
 		"unlocksRecipeGroups" : [
-			"pipliz.wheelspinner"
+			"pipliz.wheelspinner.fareast"
 		],
 		"unlocksRecipes" : [
 			"pipliz.tailor.silk",
 			"pipliz.tailor.silkpillow",
-			"pipliz.crafter.spinningwheel"
+			"pipliz.crafter.spinningwheelfareast"
 		]
 	},
 	{
@@ -614,8 +729,8 @@
 			{"type":"sciencebagbasic"}
 		],
 		"key" : "pipliz.baseresearch.quarterblockstonemason",
-		"unlocksRecipeGroups" : [
-			"pipliz.stonemason"
+		"unlocksRecipes" : [
+			"pipliz.stonemason.quarterblockgrey"
 		]
 	},
 	{
@@ -737,20 +852,12 @@
 			{"type":"sciencebagbasic"}
 		],
 		"key" : "pipliz.baseresearch.stonemasonworkbench",
+		"unlocksRecipeGroups" : [
+			"pipliz.stonemason"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.stonemasonworkbench",
-			"pipliz.player.stonemasonworkbench",
-			"pipliz.stonemason.stoneblock",
-			"pipliz.stonemason.darkstone",
-			"pipliz.stonemason.stonebricksbrown",
-			"pipliz.stonemason.bricksdarkred",
-			"pipliz.stonemason.bricksblack",
-			"pipliz.stonemason.bricksdarkyellow",
-			"pipliz.stonemason.bricksred",
-			"pipliz.stonemason.cobblestoneblack",
-			"pipliz.stonemason.cobblestonebrown",
-			"pipliz.stonemason.cobblestonegrey",
-			"pipliz.stonemason.cobblestoneblue"
+			"pipliz.player.stonemasonworkbench"
 		]
 	},
 	{

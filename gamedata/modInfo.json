@@ -20,6 +20,12 @@
 			{
 				"fileType" : "addOrReplaceNPCRecipes",
 				"index" : -1000000,
+				"npcType" : "pipliz.coffeebeanfarmer",
+				"relativePath" : "recipes/recipes_coffeebeanfarmer.json"
+			},
+			{
+				"fileType" : "addOrReplaceNPCRecipes",
+				"index" : -1000000,
 				"npcType" : "pipliz.berryfarmer",
 				"relativePath" : "recipes/recipes_berryfarmer.json"
 			},
@@ -33,10 +39,19 @@
 				"fileType" : "addOrReplaceNPCRecipes",
 				"index" : -1000000,
 				"limitsUIMapping" : [
-					"spinningwheel"
+					"spinningwheelfareast"
 				],
-				"npcType" : "pipliz.wheelspinner",
-				"relativePath" : "recipes/recipes_wheelspinner.json"
+				"npcType" : "pipliz.wheelspinner.fareast",
+				"relativePath" : "recipes/recipes_wheelspinner_fareast.json"
+			},
+			{
+				"fileType" : "addOrReplaceNPCRecipes",
+				"index" : -1000000,
+				"limitsUIMapping" : [
+					"spinningwheelnewworld"
+				],
+				"npcType" : "pipliz.wheelspinner.newworld",
+				"relativePath" : "recipes/recipes_wheelspinner_newworld.json"
 			},
 			{
 				"fileType" : "addOrReplaceNPCRecipes",
@@ -166,6 +181,11 @@
 				"fileType" : "addOrReplaceAudio",
 				"index" : -1000000,
 				"relativePath" : "audio/audioFiles.json"
+			},
+			{
+				"fileType" : "addOrReplaceAudioAmbient",
+				"index" : -1000000,
+				"relativePath" : "audio/audioAmbient.json"
 			},
 			{
 				"fileType" : "addOrOverrideTextureMappingEntries",

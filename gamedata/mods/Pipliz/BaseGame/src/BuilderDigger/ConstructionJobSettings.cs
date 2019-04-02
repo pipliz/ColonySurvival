@@ -15,16 +15,14 @@ namespace Pipliz.Mods.BaseGame.Construction
 		public virtual string NPCTypeKey { get; set; }
 		public virtual InventoryItem RecruitmentItem { get; set; }
 		public virtual bool ToSleep { get { return TimeCycle.ShouldSleep; } }
-		public virtual int ItemsFetchedAtStockpileCount { get; set; }
 		public float NPCShopGameHourMinimum { get { return TimeCycle.Settings.SleepTimeEnd; } }
 		public float NPCShopGameHourMaximum { get { return TimeCycle.Settings.SleepTimeStart; } }
 
 		// buffer for onnpcgathered npc code should be threadsafe
 		static protected List<ItemTypes.ItemTypeDrops> GatherResults = new List<ItemTypes.ItemTypeDrops>();
 
-		public ConstructionJobSettings (int fetchItemsCount = 5)
+		public ConstructionJobSettings ()
 		{
-			ItemsFetchedAtStockpileCount = fetchItemsCount;
 			BlockTypes = new ItemTypes.ItemType[] {
 				BuiltinBlocks.Types.constructionjob,
 				BuiltinBlocks.Types.constructionjobxn,
@@ -98,7 +96,7 @@ namespace Pipliz.Mods.BaseGame.Construction
 
 		public virtual void OnNPCAtStockpile (BlockJobInstance blockJobInstance, ref NPCState state)
 		{
-			((ConstructionJobInstance)blockJobInstance).StoredItemCount = ItemsFetchedAtStockpileCount;
+			((ConstructionJobInstance)blockJobInstance).OnNPCAtConstructionStockpile();
 			state.Inventory.Dump(blockJobInstance.Owner.Stockpile);
 			state.SetCooldown(0.3);
 			state.JobIsDone = true;

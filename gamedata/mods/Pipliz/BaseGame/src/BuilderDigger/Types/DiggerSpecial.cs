@@ -7,6 +7,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 	public class DiggerSpecial : IConstructionType
 	{
 		public int MaxGatheredPerRun { get; set; } = 5;
+		public int OnStockpileNewItemCount => 0;
 
 		static System.Collections.Generic.List<ItemTypes.ItemTypeDrops> GatherResults = new System.Collections.Generic.List<ItemTypes.ItemTypeDrops>();
 
@@ -104,7 +105,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 		public static float GetCooldown (float blockDestructionTime)
 		{
-			return Math.Clamp(Random.NextFloat(4f * blockDestructionTime, 6f * blockDestructionTime), 0.2f, 15f);
+			return Math.Clamp(Random.NextFloat(4f * blockDestructionTime, 6f * blockDestructionTime) * ServerManager.ServerSettings.NPCs.DiggerCooldownMultiplierSeconds, 0.05f, 15f);
 		}
 	}
 }

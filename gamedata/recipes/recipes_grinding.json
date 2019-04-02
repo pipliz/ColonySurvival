@@ -37,5 +37,18 @@
 		"results" : [
 			{"amount":3,"type":"tealeavesprocesseddried"}
 		]
+	},
+	{
+		"defaultLimit" : 15,
+		"name" : "pipliz.grinder.foofoo",
+		"requires" : [
+			{"type":"banana"},
+			{"type":"cassava"},
+			{"type":"bucketwater"}
+		],
+		"results" : [
+			{"type":"foofoo"},
+			{"isOptional":true,"type":"bucketempty"}
+		]
 	}
 ]

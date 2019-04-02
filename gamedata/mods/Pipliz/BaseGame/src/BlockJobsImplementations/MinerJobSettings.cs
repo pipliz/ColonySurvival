@@ -67,7 +67,7 @@ namespace Pipliz.Mods.BaseGame
 				instance.NPC.LookAt(rotate);
 			}
 
-			ServerManager.SendAudio(instance.Position.Vector, "stoneDelete");
+			AudioManager.SendAudio(instance.Position.Vector, "stoneDelete");
 
 			GatherResults.Clear();
 			var itemList =  instance.BlockTypeBelow.OnRemoveItems;

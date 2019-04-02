@@ -8,6 +8,8 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 	{
 		protected ItemTypes.ItemType buildType;
 
+		public int OnStockpileNewItemCount => 5;
+
 		public BuilderBasic (ItemTypes.ItemType buildType)
 		{
 			this.buildType = buildType;
@@ -77,7 +79,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 
 		public static float GetCooldown ()
 		{
-			return Random.NextFloat(1.5f, 2.5f);
+			return Random.NextFloat(1.5f, 2.5f) * ServerManager.ServerSettings.NPCs.BuilderCooldownMultiplierSeconds;
 		}
 	}
 }

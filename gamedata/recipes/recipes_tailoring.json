@@ -1,6 +1,37 @@
 [
 	{
 		"defaultLimit" : 20,
+		"name" : "pipliz.tailor.cotton",
+		"requires" : [
+			{"amount":20,"type":"cottonthread"}
+		],
+		"results" : [
+			{"type":"cotton"}
+		]
+	},
+	{
+		"defaultLimit" : 20,
+		"name" : "pipliz.tailor.cottontowel",
+		"requires" : [
+			{"amount":2,"type":"cotton"}
+		],
+		"results" : [
+			{"type":"cottontowel"}
+		]
+	},
+	{
+		"defaultLimit" : 10,
+		"name" : "pipliz.tailor.wintercoat",
+		"requires" : [
+			{"amount":2,"type":"fur"},
+			{"amount":5,"type":"cotton"}
+		],
+		"results" : [
+			{"type":"wintercoat"}
+		]
+	},
+	{
+		"defaultLimit" : 20,
 		"name" : "pipliz.tailor.silk",
 		"requires" : [
 			{"amount":20,"type":"silkthread"}

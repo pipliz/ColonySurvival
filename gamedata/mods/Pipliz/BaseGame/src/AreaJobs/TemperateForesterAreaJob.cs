@@ -144,7 +144,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				if (type == BuiltinBlocks.Indices.logtemperate) {
 					if (ChopTree(treeLocation, Owner)) {
 						state.SetIndicator(new Shared.IndicatorState(10f, BuiltinBlocks.Indices.logtemperate));
-						ServerManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
+						AudioManager.SendAudio(treeLocation.Vector, "woodDeleteHeavy");
 
 						GatherResults.Clear();
 						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Indices.logtemperate, 3, 1f));

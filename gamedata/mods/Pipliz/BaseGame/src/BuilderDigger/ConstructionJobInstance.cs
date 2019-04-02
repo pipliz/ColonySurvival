@@ -25,5 +25,10 @@ namespace Pipliz.Mods.BaseGame.Construction
 			builder.WriteVariable(StoredItemCount);
 			return result;
 		}
+
+		public virtual void OnNPCAtConstructionStockpile ()
+		{
+			StoredItemCount = ConstructionArea?.ConstructionType?.OnStockpileNewItemCount ?? 5;
+		}
 	}
 }
