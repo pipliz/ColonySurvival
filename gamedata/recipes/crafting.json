@@ -149,6 +149,17 @@
 		]
 	},
 	{
+		"name" : "pipliz.player.shop",
+		"requires" : [
+			{"type":"planks"},
+			{"amount":4,"type":"linen"},
+			{"amount":5,"type":"bronzecoin"}
+		],
+		"results" : [
+			{"type":"shop"}
+		]
+	},
+	{
 		"name" : "pipliz.player.bronzepickaxe",
 		"requires" : [
 			{"type":"bronzeingot"},
@@ -314,14 +325,15 @@
 		]
 	},
 	{
-		"name" : "pipliz.player.shop",
+		"name" : "pipliz.player.glider",
 		"requires" : [
-			{"type":"planks"},
-			{"amount":4,"type":"linen"},
-			{"amount":5,"type":"bronzecoin"}
+			{"amount":100,"type":"linen"},
+			{"amount":50,"type":"ironrivet"},
+			{"amount":10,"type":"coatedplanks"},
+			{"amount":25,"type":"steelparts"}
 		],
 		"results" : [
-			{"type":"shop"}
+			{"type":"glider"}
 		]
 	},
 	{

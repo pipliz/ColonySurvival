@@ -11,6 +11,17 @@
 		]
 	},
 	{
+		"name" : "cook.newworldmeal",
+		"requires" : [
+			{"type":"potato"},
+			{"type":"tomato"},
+			{"type":"chickenmeat"}
+		],
+		"results" : [
+			{"type":"newworldmeal"}
+		]
+	},
+	{
 		"name" : "cook.ricemeal",
 		"requires" : [
 			{"type":"rice"},
@@ -19,6 +30,17 @@
 		],
 		"results" : [
 			{"type":"ricemeal"}
+		]
+	},
+	{
+		"name" : "cook.coffee",
+		"requires" : [
+			{"amount":3,"type":"coffeebeans"},
+			{"type":"boilingwater"}
+		],
+		"results" : [
+			{"type":"coffee"},
+			{"isOptional":true,"type":"bucketempty"}
 		]
 	},
 	{

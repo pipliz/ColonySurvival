@@ -1,5 +1,5 @@
 {
-	"coverage" : 62.7982646420824,
+	"coverage" : 52.7138914443422,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -21,8 +21,11 @@
 	"sentences" : {
 		"bannerclickedpopup" : {
 			"deletebanner" : "_MISSING_Delete Banner",
+			"deletecolony" : "_MISSING_Delete Colony",
+			"deletecolonydescription" : "_MISSING_Deleting the last banner of a colony will remove all npcs and make the colony unusable. To confirm this is what you want, type 'delete' below.",
 			"header" : "_MISSING_Banner Options",
-			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+			"noconfirmationdelete" : "_MISSING_Ignoring deletion command, did not get confirmation",
+			"placementfail" : "_MISSING_Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
 			"activecolony" : "_MISSING_Active Colony: {0}",
@@ -31,6 +34,32 @@
 			"movebanner" : "_MISSING_Move Banner",
 			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
 			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"biome" : {
+			"arctic" : {
+				"description" : "_MISSING_Colony is based in the Arctic",
+				"name" : "_MISSING_Arctic Colony"
+			},
+			"fareast" : {
+				"description" : "_MISSING_Colony is based in the Far East",
+				"name" : "_MISSING_Far East Colony"
+			},
+			"newworld" : {
+				"description" : "_MISSING_Colony is based in the New World",
+				"name" : "_MISSING_New World Colony"
+			},
+			"oldworld" : {
+				"description" : "_MISSING_Colony is based in the Old World",
+				"name" : "_MISSING_Old World Colony"
+			},
+			"tropics" : {
+				"description" : "_MISSING_Colony is based in the Tropics",
+				"name" : "_MISSING_Tropics Colony"
+			}
+		},
+		"chat" : {
+			"onsciencedone" : "_MISSING_You've completed science {0}",
+			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -41,6 +70,17 @@
 			},
 			"connectedplayers" : "_MISSING_Connected Players",
 			"currentowners" : "_MISSING_Current Owners",
+			"diplomacy" : {
+				"incomingdeals" : "_MISSING_Incoming deals",
+				"mainbutton" : "_MISSING_Diplomacy",
+				"mainheader" : "_MISSING_Diplomacy",
+				"outgoingdeals" : "_MISSING_Outgoing deals",
+				"pendingdeals" : "_MISSING_Pending incoming deals",
+				"ruleaccept" : "_MISSING_Accept",
+				"ruleactive" : "_MISSING_Active",
+				"rulepending" : "_MISSING_Pending",
+				"ruleremove" : "_MISSING_Remove"
+			},
 			"inventoryheader" : "_MISSING_Colony",
 			"invite" : "_MISSING_Add as colony owner",
 			"kick" : "_MISSING_Kick from colony",
@@ -57,6 +97,12 @@
 			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"science" : {
+				"incomingdescription" : "_MISSING_{0} will share their science with you",
+				"newagreement" : "_MISSING_Propose science agreement",
+				"outgoingdescription" : "_MISSING_You provide {0} with your science",
+				"selectcolony" : "_MISSING_Select a colony to sent science to"
+			},
 			"selectcolony" : {
 				"headercolonists" : "_MISSING_Colonists",
 				"headercolony" : "_MISSING_Colony",
@@ -66,25 +112,26 @@
 				"select" : "_MISSING_Select"
 			},
 			"settoleader" : "_MISSING_Set to leader",
+			"start" : {
+				"create" : "_MISSING_Create Colony",
+				"defaultkit" : "_MISSING_First time starter kit is used",
+				"kits" : "_MISSING_Available Kits",
+				"missingkit" : "_MISSING_Missing a colony starter kit",
+				"name" : "_MISSING_Colony Name",
+				"parentcolony" : "_MISSING_Parent Colony",
+				"popupheader" : "_MISSING_Colony Creation",
+				"usescienceagreement" : "_MISSING_Transfer Science"
+			},
 			"startrecruitment" : "_MISSING_Recruitment",
 			"startsettings" : "_MISSING_Colony Settings",
 			"switchcolony" : "_MISSING_Switch to {0}",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
-				"mainbutton" : "_MISSING_Trading",
-				"mainheader" : "_MISSING_Trading Rules",
-				"newrule" : "_MISSING_Create a new trading rule",
-				"ruleaccept" : "_MISSING_Accept",
-				"ruleactive" : "_MISSING_Active",
+				"newrule" : "_MISSING_Propose trading rule",
 				"ruledescription" : "_MISSING_Traders will trade item type {0} from colony {1} to colony {2} if:",
 				"ruleincomingdescr" : "_MISSING_Get type {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "_MISSING_{0} has more than: ",
 				"ruleoutgoingdescr" : "_MISSING_Send type {0} to {1} if we have more than {2}",
-				"rulepending" : "_MISSING_Pending",
-				"ruleremove" : "_MISSING_Remove",
-				"rulesincoming" : "_MISSING_Incoming rules",
-				"rulesoutgoing" : "_MISSING_Outgoing rules",
-				"rulespending" : "_MISSING_Pending incoming rules",
 				"selectcolony" : "_MISSING_Select a colony to trade to"
 			}
 		},
@@ -228,6 +275,14 @@
 					"description" : "안전 지역 반경을 100블럭으로 확장합니다.",
 					"name" : "안전 지역 확장 V"
 				},
+				"barleyfarmer" : {
+					"description" : "_MISSING_Unlocks the barley farmer, which is used to feed livestock",
+					"name" : "_MISSING_Barley Farming"
+				},
+				"beekeeper" : {
+					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
+					"name" : "_MISSING_Beekeeping"
+				},
 				"bloomery" : {
 					"description" : "철기 시대가 시작됩니다! 철광석, 납광석을 제련할 수 있는 제철 용광로를 연구합니다.",
 					"name" : "제철 용광로"
@@ -239,6 +294,26 @@
 				"bronzeminting" : {
 					"description" : "화폐 주조소와 시장을 배치할 수 있게 됩니다. 시장에선 씨앗, 흙 등 여러 아이템을 구매할 수 있습니다.",
 					"name" : "화폐 경제"
+				},
+				"cabbagefarmer" : {
+					"description" : "_MISSING_Unlocks the cabbage farmer",
+					"name" : "_MISSING_Cabbage Farming"
+				},
+				"candles" : {
+					"description" : "_MISSING_Unlocks producing candles by a beekeeper",
+					"name" : "_MISSING_Candles"
+				},
+				"chickenfarmer" : {
+					"description" : "_MISSING_Unlocks the chicken farmer",
+					"name" : "_MISSING_Chicken Farming"
+				},
+				"coffee" : {
+					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
+					"name" : "_MISSING_Coffee"
+				},
+				"colonykit" : {
+					"description" : "_MISSING_Allows construction of a colony kit",
+					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
 					"description" : "_MISSING_Unlock builder areas for the construction worker",
@@ -292,6 +367,14 @@
 					"description" : "_MISSING_Unlock special digger areas for the construction worker",
 					"name" : "_MISSING_Special Digger"
 				},
+				"cook" : {
+					"description" : "_MISSING_Unlocks the cook, which can make meals for your colonists",
+					"name" : "_MISSING_Cook"
+				},
+				"cottontowel" : {
+					"description" : "_MISSING_Unlocks the cotton towel luxury item",
+					"name" : "_MISSING_Cotton Towel"
+				},
 				"crossbow" : {
 					"description" : "활보다 강력한 무기, 석궁을 연구합니다.",
 					"name" : "석궁"
@@ -299,6 +382,10 @@
 				"crossbowbolt" : {
 					"description" : "석궁으로 쏠 수 있는 볼트를 연구합니다.",
 					"name" : "석궁 볼트"
+				},
+				"diamondprocessing" : {
+					"description" : "_MISSING_Unlocks processing diamonds",
+					"name" : "_MISSING_Diamonds"
 				},
 				"dyertable" : {
 					"description" : "각종 허브를 이용해 블럭과 등불을 염색할 수 있게 됩니다.",
@@ -308,9 +395,25 @@
 					"description" : "석탄을 태워 강철과 금괴를 만들 수 있습니다.",
 					"name" : "강철 제련소"
 				},
+				"fisherman" : {
+					"description" : "_MISSING_Unlocks the fisherman",
+					"name" : "_MISSING_Fishing"
+				},
 				"flaxfarming" : {
 					"description" : "옷감 재료인 아마 꽃 농사를 지을 수 있게 됩니다. 연구를 완료하면 아마 꽃 씨앗 100개를 선물해드립니다.",
 					"name" : "아마 꽃 농법"
+				},
+				"foofoo" : {
+					"description" : "_MISSING_Unlocks cooking foofoo",
+					"name" : "_MISSING_Foofoo"
+				},
+				"fur" : {
+					"description" : "_MISSING_Unlocks fur processing",
+					"name" : "_MISSING_Fur"
+				},
+				"glider" : {
+					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
+					"name" : "_MISSING_Glider"
 				},
 				"gunpowder" : {
 					"description" : "강력한 폭발력을 가진 화약을 연구합니다.",
@@ -384,6 +487,22 @@
 					"description" : "초기의 소총, 화승총을 연구합니다.",
 					"name" : "화승총"
 				},
+				"olivefarmer" : {
+					"description" : "_MISSING_Unlocks the olive farmer, a part of creating more complex meals",
+					"name" : "_MISSING_Olive Farming"
+				},
+				"papyrus" : {
+					"description" : "_MISSING_Unlocks papyrus production",
+					"name" : "_MISSING_Papyrus"
+				},
+				"porcelain" : {
+					"description" : "_MISSING_Unlocks porcelain production",
+					"name" : "_MISSING_Porcelain"
+				},
+				"printingpress" : {
+					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
+					"name" : "_MISSING_Printing Press"
+				},
 				"quarterblockdyer" : {
 					"description" : "_MISSING_Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
 					"name" : "_MISSING_Dyed Quarter Blocks"
@@ -395,6 +514,10 @@
 				"quarterblockstonemason" : {
 					"description" : "_MISSING_Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
 					"name" : "_MISSING_Grey Quarter Blocks"
+				},
+				"ricefarmer" : {
+					"description" : "_MISSING_Unlocks rice farming",
+					"name" : "_MISSING_Rice farming"
 				},
 				"sciencebagadvanced" : {
 					"description" : "고급 연구에 쓰이는 고급 연구팩을 연구합니다.",
@@ -416,6 +539,20 @@
 					"description" : "군사 연구에 쓰이는 군사 연구팩을 연구합니다.",
 					"name" : "군사 연구팩"
 				},
+				"silkwormfarmer" : {
+					"description" : "_MISSING_Unlocks silkworm farming",
+					"name" : "_MISSING_Silkworm Farming"
+				},
+				"spinningwheel" : {
+					"fareast" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					},
+					"newworld" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					}
+				},
 				"splittingstump" : {
 					"description" : "장작을 더 빨리 만들 수 있는 모탕을 연구합니다.",
 					"name" : "모탕"
@@ -424,17 +561,45 @@
 					"description" : "다양한 벽돌을 만드는 석공을 연구합니다.",
 					"name" : "석공업"
 				},
+				"sugarcane" : {
+					"description" : "_MISSING_Unlocks sugar cane farming",
+					"name" : "_MISSING_Sugarcane"
+				},
 				"tailorshop" : {
 					"description" : "아마를 천으로 만드는 재단사를 연구합니다.",
 					"name" : "재단사"
+				},
+				"teafarmer" : {
+					"description" : "_MISSING_Unlocks tea farming",
+					"name" : "_MISSING_Tea"
 				},
 				"technologisttable" : {
 					"description" : "연구팩을 만드는 기술자를 연구합니다.",
 					"name" : "기술자"
 				},
+				"watergatherer" : {
+					"description" : "_MISSING_Unlocks the water gatherer, filling buckets with water from open water",
+					"name" : "_MISSING_Water Gathering"
+				},
+				"waterpump" : {
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"name" : "_MISSING_Water Pump"
+				},
+				"waxtablet" : {
+					"description" : "_MISSING_Unlocks the wax tablet, a luxury product",
+					"name" : "_MISSING_Wax Tablet"
+				},
 				"wheatfarming" : {
 					"description" : "복잡한 식량 공급 방법이라 발전한 마을에 권장합니다. 밀 농사가 가능해지고 맷돌, 오븐을 사용할 수 있습니다. 연구를 완료하면 밀알 400개를 선물로 드립니다.",
 					"name" : "제빵"
+				},
+				"wintercoat" : {
+					"description" : "_MISSING_Unlocks winter coat production",
+					"name" : "_MISSING_Wintercoat"
+				},
+				"writer" : {
+					"description" : "_MISSING_Unlocks the writer, able to produce books for enjoyment",
+					"name" : "_MISSING_Writing"
 				}
 			}
 		},
@@ -480,8 +645,13 @@
 				"tooltip" : {
 					"and" : ",",
 					"instockpile" : "재고량",
-					"needs" : "필요 아이템: "
+					"needs" : "필요 아이템: ",
+					"nothing" : "_MISSING_Nothing"
 				}
+			},
+			"itemselector" : {
+				"description" : "_MISSING_Select an item type to use",
+				"header" : "_MISSING_Item Selection"
 			},
 			"limits" : {
 				"description" : "주민들은 목표량에 닿을 때까지 일합니다.",
@@ -505,6 +675,7 @@
 					"stonemason" : "석공 목표량",
 					"tailor" : "재단 목표량",
 					"technologist" : "기술 목표량",
+					"wheelspinner" : "_MISSING_Spinningwheel Limits",
 					"woodcutter" : "제재 목표량"
 				}
 			},
@@ -535,17 +706,16 @@
 			"tooljob" : {
 				"alkanetfarmer" : "알카넷 허브",
 				"alkanetfarmertool" : "알카넷 농사 짓기",
-				"alkanetfarmertooltip" : "알카넷 씨앗이 필요합니다.\n푸른색입니다.\n풀, 흙에만 배치할 수 있습니다.",
-				"barleya" : "_MISSING_TODO_BARLEY_A",
-				"barleyb" : "_MISSING_TODO_BARLEY_B",
+				"bananafarmb" : "_MISSING_For... bananas",
+				"bananafarmer" : "_MISSING_Banana Farmer",
+				"bananatool" : "_MISSING_Banana Farmer Tool",
+				"barleya" : "_MISSING_Primarily for livestock feed",
 				"barleyfarmer" : "_MISSING_Barley Farmer",
 				"barleyfarmertool" : "_MISSING_Barley Farmer Tool",
 				"beekeeper" : "_MISSING_Beekeeper",
-				"beekeepera" : "_MISSING_TODO_BEEKEEPER_A",
-				"beekeeperb" : "_MISSING_TODO_BEEKEEPER_B",
+				"beekeepera" : "_MISSING_Essential to some luxury items",
 				"beekeepertool" : "_MISSING_Beekeeper Tool",
 				"berrya" : "빠르게 자라기 때문에 초반에 유용합니다.",
-				"berryb" : "딸기 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"berryfarmer" : "딸기 농사",
 				"berryfarmertool" : "딸기 농사 짓기",
 				"bow" : "궁병",
@@ -553,20 +723,27 @@
 				"buildera" : "_MISSING_Fill an area of the world",
 				"builderarea" : "_MISSING_Builder Area",
 				"builderb" : "_MISSING_Opens a menu to select the type, then select the area to fill",
-				"cabbagea" : "_MISSING_TODO_CABBAGE_A",
-				"cabbageb" : "_MISSING_TODO_CABBAGE_B",
+				"cabbagea" : "_MISSING_Essential for some luxury foods",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cabbagefarmertool" : "_MISSING_Cabbage Farmer Tool",
+				"cassavab" : "_MISSING_Tropical carbs, used for foofoo",
+				"cassavafarmer" : "_MISSING_Cassava Farmer",
+				"cassavatool" : "_MISSING_Cassava Farmer Tool",
 				"chickenfarmer" : "_MISSING_Chicken Farmer",
-				"chickenfarmera" : "_MISSING_TODO_CHICKEN_FARMER_A",
-				"chickenfarmerb" : "_MISSING_TODO_CHICKEN_FARMER_B",
+				"chickenfarmera" : "_MISSING_Chickens create eggs, meat and feathers",
 				"chickenfarmertool" : "_MISSING_Chicken Farmer Tool",
+				"cofeeb" : "_MISSING_Coffeebeans",
+				"coffeebeanfarmer" : "_MISSING_Coffeebean Farmer",
+				"coffeebeanfarmertool" : "_MISSING_Coffebean Farmer Tool",
 				"construction" : "_MISSING_Construction",
 				"construction1" : "_MISSING_Let them do the work",
 				"construction2" : "_MISSING_This will open another menu where you can select the construction type",
 				"constructionjob" : "_MISSING_Construction Job",
 				"constructionjoba" : "_MISSING_Hires a construction worker",
 				"constructionjobb" : "_MISSING_Place next to a construction area",
+				"cottonb" : "_MISSING_Made into towels",
+				"cottonfarmer" : "_MISSING_Cotton Farmer",
+				"cottontool" : "_MISSING_Cotton Farmer Tool",
 				"coversarea" : "다른 구역과 겹칩니다.",
 				"crossbow" : "석궁병",
 				"crossbowtooltip" : "공격력: 300 HP\n사정거리: 25 블록\n재장전 시간: 8 초",
@@ -578,19 +755,20 @@
 				"diggerspeciala" : "_MISSING_Remove a specific type in an area",
 				"diggerspecialarea" : "_MISSING_Special Digger Area",
 				"diggerspecialb" : "_MISSING_Select the area to remove it from",
+				"fareast" : "_MISSING_Far East",
+				"fareasta" : "_MISSING_Jobs specific to the Far East region",
+				"fareastb" : "_MISSING_Research colonization before attempting this",
 				"fisherman" : "_MISSING_Fisherman",
-				"fishermana" : "_MISSING_TODO_FISHER_MAN_HOVER_A",
-				"fishermanb" : "_MISSING_TODO_FISHER_MAN_HOVER_B",
+				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
-				"flaxb" : "아마꽃 씨앗이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"flaxfarmer" : "아마꽃",
 				"flaxfarmertool" : "아마꽃 농사 짓기",
 				"flaxherbfarming" : "꽃과 허브 농사",
 				"flaxherbfarminga" : "천과 염색의 재료를 만듭니다.",
 				"flaxherbfarmingb" : "농사지을 꽃과 허브를 선택할 수 있는 메뉴가 열립니다.",
 				"food" : "_MISSING_Food",
-				"food1" : "_MISSING_TODO_FOOD_A",
-				"food2" : "_MISSING_TODO_FOOD_B",
+				"food1" : "_MISSING_Food production",
+				"food2" : "_MISSING_Various ways of preventing your colonists from starving",
 				"forester" : "나무꾼",
 				"forestera" : "나무를 심고 베어냅니다.",
 				"foresterb" : "묘목, 도끼가 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
@@ -603,7 +781,6 @@
 				"header" : "무슨 직업을 배치할까요?",
 				"hollyhockfarmer" : "접시꽃",
 				"hollyhockfarmertool" : "접시꽃 농사 짓기",
-				"hollyhockfarmertooltip" : "접시꽃 씨앗이 필요합니다.\n붉은색입니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"insidearea" : "_MISSING_Can't place inside an area",
 				"jobbowday" : "주간 경비: 궁병",
 				"jobbownight" : "야간 경비: 궁병",
@@ -620,31 +797,55 @@
 				"minerb" : "곡괭이가 필요합니다.\n광석이나 짙은색 돌 위에 배치하세요.",
 				"minertool" : "광부 도구",
 				"missingscience" : "<color=red>연구 탭에서 '{0}' 기술을 먼저 연구하세요.</color>",
+				"newworld" : "_MISSING_New World",
+				"newworlda" : "_MISSING_Jobs specific to the New World region",
+				"newworldb" : "_MISSING_Research colonization before attempting this",
 				"noconstructionareanearby" : "_MISSING_No construction area nearby",
 				"notarable" : "배치할 수 없습니다.",
 				"notflat" : "평지가 아닙니다.",
 				"nowaternearby" : "_MISSING_No water nearby",
 				"occupiedblocks" : "정리하지 않은 블럭이 있습니다.",
 				"olivefarmer" : "_MISSING_Olive Farmer",
-				"olivefarmera" : "_MISSING_TODO_OLIVE_FARMER_A",
-				"olivefarmerb" : "_MISSING_TODO_OLIVE_FARMER_B",
+				"olivefarmera" : "_MISSING_Creates olive trees and gathers olives",
 				"olivefarmertool" : "_MISSING_Olive Farmer Tool",
-				"selectitem" : "_MISSING_Select an item type to use",
+				"papyrusb" : "_MISSING_Papyrus",
+				"papyrusfarmer" : "_MISSING_Papyrus Farmer",
+				"papyrustool" : "_MISSING_Papyrus Farmer Tool",
+				"potatob" : "_MISSING_New World carbs",
+				"potatofarmer" : "_MISSING_Potato Farmer",
+				"potatotool" : "_MISSING_Potato Farmer Tool",
+				"requiresarable" : "_MISSING_Requires arable ground",
+				"riceb" : "_MISSING_Far East carbs",
+				"ricefarmer" : "_MISSING_Rice Farmer",
+				"ricefarmertool" : "_MISSING_Rice Farmer Tool",
+				"silkwormb" : "_MISSING_Used to make silk eventually",
+				"silkwormfarmer" : "_MISSING_Silkworm Farmer",
+				"silkwormfarmertool" : "_MISSING_Silkworm Farmer Tool",
 				"slinger" : "새총병",
 				"slingertooltip" : "초반에 유용합니다.\n데미지: 50\n사정거리: 12블럭\n재장전 시간: 3초",
+				"sugarcaneb" : "_MISSING_Sugarcane",
+				"sugarcanefarmer" : "_MISSING_Sugarcane Farmer",
+				"sugarcanetool" : "_MISSING_Sugarcane Farmer Tool",
+				"teafarmer" : "_MISSING_Tea Farmer",
+				"teafarmerb" : "_MISSING_Produces leaves which lead to tea",
+				"teafarmertool" : "_MISSING_Tea Farmer Tool",
+				"tomatob" : "_MISSING_Tomatoes",
+				"tomatofarmer" : "_MISSING_Tomato Farmer",
+				"tomatotool" : "_MISSING_Tomato Tool",
 				"toolarge" : "너무 큽니다.",
 				"toonarrow" : "나무를 심기엔 너무 좁습니다.",
 				"toosmall" : "너무 작습니다.",
+				"tropics" : "_MISSING_Tropics",
+				"tropicsa" : "_MISSING_Jobs specific to the Tropics region",
+				"tropicsb" : "_MISSING_Research colonization before attempting this",
+				"wateradjacent" : "_MISSING_Requires water adjacent to the job location",
 				"watergatherer" : "_MISSING_Watergatherer",
-				"watergatherera" : "_MISSING_TODO_WATER_GATHERER_HOVER_A",
-				"watergathererb" : "_MISSING_TODO_WATER_GATHERER_HOVER_B",
+				"watergatherera" : "_MISSING_Fills buckets from open water",
 				"watergatherertool" : "_MISSING_Watergatherer Tool",
-				"wheatb" : "밀알이 필요합니다.\n풀, 흙에만 배치할 수 있습니다.",
 				"wheatfarmer" : "밀 농사꾼",
 				"wheatfarmertool" : "밀 농사 짓기",
 				"wolfsbanefarmer" : "투구꽃",
-				"wolfsbanefarmertool" : "투구꽃 농사 짓기",
-				"wolfsbanefarmertooltip" : "투구꽃 씨앗이 필요합니다.\n노란색입니다.\n풀, 흙에만 배치할 수 있습니다."
+				"wolfsbanefarmertool" : "투구꽃 농사 짓기"
 			}
 		},
 		"quickstart" : {
@@ -687,6 +888,16 @@
 				"text3" : "높은 수준의 연구를 진행할때는 '연구팩'이 필요합니다. '연구팩'은 기술자들이 만듭니다. '연구팩'은 여러번 재사용이 가능합니다.",
 				"text4" : "백짓장도 맞들면 낫듯이, 여러명의 과학자가 함께하면 연구 진행이 더욱 빨라집니다. 연구소를 많이 설치해서 과학자를 많이 모집해보세요!"
 			}
+		},
+		"sciencebiome" : {
+			"arctic" : "_MISSING_The Arctic",
+			"currentarea" : "_MISSING_Current area: {0}",
+			"fareast" : "_MISSING_The Far East",
+			"newworld" : "_MISSING_The New World",
+			"noarea" : "_MISSING_None",
+			"none" : "_MISSING_None",
+			"oldworld" : "_MISSING_The Old World",
+			"tropics" : "_MISSING_The Tropics"
 		},
 		"settingsmenu" : {
 			"audio" : "음향",
@@ -798,6 +1009,7 @@
 		"adobe" : "아도비 점토",
 		"alkanet" : "알카넷 허브",
 		"alkanetstage1" : "알카넷 허브 씨앗",
+		"banana" : "_MISSING_Banana",
 		"banner" : "깃발",
 		"bannertool" : "깃발 도구",
 		"barley" : "_MISSING_Barley",
@@ -836,12 +1048,12 @@
 		"carpetred" : "레드 카펫",
 		"carpetwhite" : "하얀 카펫",
 		"carpetyellow" : "노란 카펫",
+		"cassava" : "_MISSING_Cassava",
 		"charcoal" : "숯",
 		"cherryblossom" : "벚꽃",
 		"cherrysapling" : "벚꽃나무 묘목",
 		"chickencoop" : "_MISSING_Chicken Coop",
 		"chickenmeat" : "_MISSING_Chicken Meat",
-		"chickenskin" : "_MISSING_Chicken Skin",
 		"clay" : "진흙",
 		"coalore" : "석탄 원석",
 		"coatedplanks" : "코팅된 널빤지",
@@ -850,7 +1062,10 @@
 		"cobblestonebrown" : "갈색 자갈",
 		"cobblestonegrey" : "회색 자갈",
 		"cobblestonered" : "붉은 자갈",
+		"coffee" : "_MISSING_Coffee",
+		"coffeebeans" : "_MISSING_Coffee Beans",
 		"cokes" : "석탄",
+		"colonykit" : "_MISSING_Colony Starter Kit",
 		"commandtool" : "직업 도구",
 		"constructionjob" : "_MISSING_Construction Job",
 		"cookedfish" : "_MISSING_Cooked Fish",
@@ -858,12 +1073,18 @@
 		"coppernails" : "구리 못",
 		"copperparts" : "구리 부품",
 		"coppertools" : "구리 도구",
+		"cotton" : "_MISSING_Cotton",
+		"cottonraw" : "_MISSING_Raw Cotton",
+		"cottonthread" : "_MISSING_Cotton Thread",
+		"cottontowel" : "_MISSING_Cotton Towel",
 		"crate" : "상자",
 		"cratebread" : "_MISSING_Bread Crate",
 		"crossbow" : "석궁",
 		"crossbowbolt" : "석궁 볼트",
 		"crystal" : "크리스탈",
 		"darkstone" : "어두운 돌 블럭",
+		"diamond" : "_MISSING_Diamond",
+		"diamondnecklace" : "_MISSING_Diamond Necklace",
 		"dirt" : "흙",
 		"dyertable" : "염색 테이블",
 		"egg" : "_MISSING_Egg",
@@ -875,9 +1096,12 @@
 		"flax" : "아마꽃",
 		"flaxstage1" : "아마꽃 씨앗",
 		"flour" : "밀가루",
+		"foofoo" : "_MISSING_Foofoo",
+		"fur" : "_MISSING_Fur",
 		"furnace" : "용광로",
 		"galenalead" : "방연석(납)",
 		"galenasilver" : "방연석(은)",
+		"glider" : "_MISSING_Glider",
 		"goldcoin" : "금화",
 		"goldingot" : "금괴",
 		"goldore" : "금광석",
@@ -920,6 +1144,7 @@
 		"ironsword" : "철검",
 		"ironwrought" : "연철",
 		"jewelry" : "_MISSING_Jewelry",
+		"kaolinite" : "_MISSING_Kaolinite",
 		"kiln" : "숯가마",
 		"lanternblue" : "푸른 등불",
 		"lanterncyan" : "청록 등불",
@@ -949,6 +1174,7 @@
 		"matchlockgun" : "화승총",
 		"minerjob" : "광부",
 		"mint" : "화폐 주조소",
+		"newworldmeal" : "_MISSING_New World Meal",
 		"npcshop" : "_MISSING_NPC Shop",
 		"olive" : "_MISSING_Olive",
 		"oliveleaves" : "_MISSING_Olive Leaves",
@@ -957,6 +1183,7 @@
 		"oven" : "오븐",
 		"paperempty" : "_MISSING_Empty Paper",
 		"papertext" : "_MISSING_Paper With Text",
+		"papyrus" : "_MISSING_Papyrus",
 		"perpetualstew" : "_MISSING_Perpetual Stew",
 		"planks" : "널빤지",
 		"planksblue" : "푸른 널빤지",
@@ -967,6 +1194,10 @@
 		"planksred" : "붉은 널빤지",
 		"planksyellow" : "노란 널빤지",
 		"plasterblock" : "석고 블럭",
+		"porcelainbiscuit" : "_MISSING_Porcelain Biscuit",
+		"porcelainglazed" : "_MISSING_Glazed Porcelain",
+		"porcelainraw" : "_MISSING_Raw Porcelain",
+		"potato" : "_MISSING_Potato",
 		"printingpress" : "_MISSING_Printing Press",
 		"quarterblockblack" : "_MISSING_Black Quarter Block",
 		"quarterblockbrowndark" : "_MISSING_Dark Brown Quarter Block",
@@ -976,6 +1207,8 @@
 		"rawbeeswax" : "_MISSING_Raw Beeswax",
 		"rawfish" : "_MISSING_Raw Fish",
 		"redplanks" : "붉은 널빤지",
+		"rice" : "_MISSING_Rice",
+		"ricemeal" : "_MISSING_Rice Meal",
 		"salpeter" : "초석",
 		"sand" : "모래",
 		"sappling" : "묘목",
@@ -986,10 +1219,15 @@
 		"sciencebagmilitary" : "군사 연구팩",
 		"sciencelab" : "연구소",
 		"shop" : "시장",
+		"silk" : "_MISSING_Silk",
+		"silkpillow" : "_MISSING_Silk Pillow",
+		"silkthread" : "_MISSING_Silk Thread",
+		"silkwormcocoon" : "_MISSING_Silkworm Cocoon",
 		"silveringot" : "은괴",
 		"sling" : "새총",
 		"slingbullet" : "새총알",
 		"snow" : "눈",
+		"spinningwheel" : "_MISSING_Spinning Wheel",
 		"splittingstump" : "모탕",
 		"steelingot" : "강철",
 		"steelparts" : "강철 부품",
@@ -1001,10 +1239,17 @@
 		"stonemasonworkbench" : "석공의 작업대",
 		"stove" : "_MISSING_Stove",
 		"straw" : "짚",
+		"sugar" : "_MISSING_Sugar",
 		"tailorshop" : "재단사 작업대",
+		"tea" : "_MISSING_Tea",
+		"tealeavesprocessed" : "_MISSING_Processed Tea Leaves",
+		"tealeavesprocesseddried" : "_MISSING_Dried Tea Leaves",
+		"tealeavesraw" : "_MISSING_Raw Tea Leaves",
 		"technologisttable" : "기술자 작업대",
 		"tin" : "주석",
+		"tomato" : "_MISSING_Tomato",
 		"torch" : "횃불",
+		"trader" : "_MISSING_Trader",
 		"undershirt" : "_MISSING_Undershirt",
 		"water" : "물",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
@@ -1012,6 +1257,7 @@
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "밀",
 		"wheatstage1" : "밀알",
+		"wintercoat" : "_MISSING_Winter Coat",
 		"wolfsbane" : "투구꽃",
 		"wolfsbanestage1" : "투구꽃 씨앗",
 		"woodcoating" : "_MISSING_Wood Coating",
@@ -1048,7 +1294,9 @@
 		"clay" : "액체괴물 아니에요.",
 		"coalore" : "환경 단체에서 반대합니다.",
 		"coatedplanks" : "블링블링!",
+		"coffee" : "_MISSING_Useful when rushing deadlines",
 		"cokes" : "건강과 환경에 전혀 문제를 일으키지 않습니다! 아마도요!",
+		"colonykit" : "_MISSING_Required to start additional colonies",
 		"copper" : "제련 할 필요 없이 바로 쓰면 됩니다! 참 쉽죠?",
 		"coppernails" : "생각해보면 정말 혁신적인 조립 도구입니다!",
 		"copperparts" : "금속이 모든 것을 해결할지어다.",
@@ -1068,6 +1316,7 @@
 		"furnace" : "장작을 태워 동괴와 벽돌을 만듭니다.",
 		"galenalead" : "납이 많이 함유되어 있습니다.",
 		"galenasilver" : "은이 많이 함유되어 있습니다.",
+		"glider" : "_MISSING_Press space to go up!",
 		"goldcoin" : "왕의 초상화가 새겨져있네요.",
 		"goldingot" : "돈이 휴지조각이 되더라도, 이 아이는 멀쩡하겠군요.",
 		"goldore" : "심봤다!",

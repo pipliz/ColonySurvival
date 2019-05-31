@@ -5,15 +5,18 @@ This update will not be compatible with worlds loaded from before ( < 0.6.3), si
 - Added a new terrain generator with proper biomes and more landscape features
 - Added an entirely new system for saving chunks and block data
 - Added support for owning multiple colonies
-- Added support for a colony having multiple owners
+- Added support for a colony having multiple owners (= co-op)
 - Added support for hosting & playing on a LAN without an internet connection (suprisingly much work)
-- Added a co-op menu to easily host worlds for co-op
+- Added a co-op menu to easily host worlds for co-op (worlds are seperate from singleplayer)
 - Added support for remotely administrating a server using colonyserverrcon.exe
-- Replaced/upgraded a <lot> of internal systems in order to fix various bugs and code maintenance issues
-- Noticably reduced network traffic reduced the cpu usage of networking
+- Replaced/upgraded a <lot> of internal systems in order to fix various bugs, performance and code maintenance issues
+- Noticably reduced network traffic required & reduced the cpu usage of networking
 - Generally improved performance of both the client and server
-- Vastly improved mod support in preparation for steam workshop support; a lot of content based modding can be done through config files now
+- Improved mod support in preparation for steam workshop support; a lot of content based modding can be done through config files now
 - Optimized loading so it should work quicker on slow hard drives
+- Added basic trade deals between colonies
+- Added basic science sharing agreements between colonies
+- Added gliders as a form of transport
 
 - Added the npcshop - npcs require to visit one every day to get their food & luxury items
 - Added a whole heap of new items, jobs and science (see ingame for those)
@@ -21,7 +24,7 @@ This update will not be compatible with worlds loaded from before ( < 0.6.3), si
 - Added a happiness system (gives benefits for providing a nice variety of food and luxury items)
 - Reworked a lot of icons to be much more visually pleasing
 - Reworked a lot of blocks to be an actual object instead of a cube (like the bronze anvil - it's an anvil now)
+- Removed the requirement for seeds from farmers
 
-- Update Unity3D version from 5.6.5p3 to 2017.4.15f1
+- Update Unity3D version from 5.6.5p3 to 2018.4.0f1
 - Updated .NET runtime from 3.5 to 4.6
-- Updated steamworks version from 1.39 to 1.42

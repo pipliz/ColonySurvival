@@ -69,7 +69,7 @@ namespace Pipliz.Mods.BaseGame.Construction.Types
 								GatherResults.Add(itemList[i]);
 							}
 
-							ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, job as IJob, jobPosition, GatherResults);
+							ModLoader.Callbacks.OnNPCGathered.Invoke(job, jobPosition, GatherResults);
 
 							InventoryItem toShow = ItemTypes.ItemTypeDrops.GetWeightedRandom(GatherResults);
 							if (toShow.Amount > 0) {

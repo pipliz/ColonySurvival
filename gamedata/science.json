@@ -31,8 +31,24 @@
 	},
 	{
 		"dependencies" : [
+			"pipliz.baseresearch.glider"
+		],
+		"icon" : "./textures/icons/commandtool.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"glider"}
+		],
+		"key" : "pipliz.baseresearch.colonykit",
+		"requiredScienceBiome" : "sciencebiome.oldworld",
+		"unlocksRecipes" : [
+			"pipliz.player.colonykit"
+		]
+	},
+	{
+		"dependencies" : [
 			"pipliz.baseresearch.watergatherer"
 		],
+		"icon" : "./textures/icons/foofoo.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"cassava"},
@@ -49,6 +65,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.foofoo"
 		],
+		"icon" : "./textures/icons/papyrus.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"foofoo"}
@@ -60,6 +77,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.foofoo"
 		],
+		"icon" : "./textures/icons/sugarcane.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"foofoo"}
@@ -71,8 +89,9 @@
 		"dependencies" : [
 			"pipliz.baseresearch.sugarcane",
 			"pipliz.baseresearch.papyrus",
-			"pipliz.baseresearch.coffee"
+			"pipliz.baseresearch.coffeebeans"
 		],
+		"icon" : "./textures/icons/diamond.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"coffeebeans"},
@@ -89,16 +108,32 @@
 		"dependencies" : [
 			"pipliz.baseresearch.foofoo"
 		],
+		"icon" : "./textures/icons/coffeebeans.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"foofoo"}
 		],
-		"key" : "pipliz.baseresearch.coffee",
+		"key" : "pipliz.baseresearch.coffeebeans",
 		"requiredScienceBiome" : "sciencebiome.tropics"
 	},
 	{
+		"icon" : "./textures/icons/newworldmeal.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"potato"},
+			{"type":"tomato"},
+			{"type":"chickenmeat"}
+		],
+		"key" : "pipliz.baseresearch.newworldmeal",
+		"requiredScienceBiome" : "sciencebiome.newworld",
+		"unlocksRecipes" : [
+			"cook.newworldmeal"
+		]
+	},
+	{
 		"dependencies" : [
-			"pipliz.baseresearch.tailorshop"
+			"pipliz.baseresearch.tailorshop",
+			"pipliz.baseresearch.newworldmeal"
 		],
 		"icon" : "./textures/icons/spinningwheel.png",
 		"iterationCount" : 10,
@@ -107,18 +142,17 @@
 		],
 		"key" : "pipliz.baseresearch.spinningwheel.newworld",
 		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksRecipeGroups" : [
-			"pipliz.wheelspinner.newworld"
-		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.spinningwheelnewworld",
-			"pipliz.tailor.cotton"
+			"pipliz.tailor.cotton",
+			"wheelspinner.cottonthread"
 		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.spinningwheel.newworld"
 		],
+		"icon" : "./textures/icons/cottontowel.png",
 		"iterationCount" : 3,
 		"iterationRequirements" : [
 			{"type":"cotton"}
@@ -134,6 +168,7 @@
 			"pipliz.baseresearch.bronzeminting",
 			"pipliz.baseresearch.fineryforge"
 		],
+		"icon" : "./textures/icons/fur.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"goldcoin"}
@@ -148,6 +183,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.fur"
 		],
+		"icon" : "./textures/icons/wintercoat.png",
 		"iterationCount" : 5,
 		"iterationRequirements" : [
 			{"type":"fur"}
@@ -159,6 +195,7 @@
 		]
 	},
 	{
+		"icon" : "./textures/icons/rice.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"berry"}
@@ -173,6 +210,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.ricefarmer"
 		],
+		"icon" : "./textures/icons/silkwormcocoon.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"ricemeal"}
@@ -194,19 +232,18 @@
 		],
 		"key" : "pipliz.baseresearch.spinningwheel.fareast",
 		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksRecipeGroups" : [
-			"pipliz.wheelspinner.fareast"
-		],
 		"unlocksRecipes" : [
 			"pipliz.tailor.silk",
 			"pipliz.tailor.silkpillow",
-			"pipliz.crafter.spinningwheelfareast"
+			"pipliz.crafter.spinningwheelfareast",
+			"wheelspinner.silkthread"
 		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.ricefarmer"
 		],
+		"icon" : "./textures/icons/porcelainraw.png",
 		"iterationCount" : 25,
 		"iterationRequirements" : [
 			{"type":"ricemeal"}
@@ -223,6 +260,7 @@
 		"dependencies" : [
 			"pipliz.baseresearch.ricefarmer"
 		],
+		"icon" : "./textures/icons/tea.png",
 		"iterationCount" : 25,
 		"iterationRequirements" : [
 			{"type":"ricemeal"}
@@ -418,14 +456,31 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.chickenfarmer"
+			"pipliz.baseresearch.colonykit"
+		],
+		"icon" : "./textures/icons/coffee.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"boilingwater"},
+			{"amount":3,"type":"coffeebeans"}
+		],
+		"key" : "pipliz.baseresearch.coffee",
+		"requiredScienceBiome" : "sciencebiome.oldworld",
+		"unlocksRecipes" : [
+			"cook.coffee"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.colonykit"
 		],
 		"icon" : "./textures/icons/writerdesk.png",
 		"iterationCount" : 30,
 		"iterationRequirements" : [
-			{"type":"chickenskin"}
+			{"type":"papyrus"}
 		],
 		"key" : "pipliz.baseresearch.writer",
+		"requiredScienceBiome" : "sciencebiome.oldworld",
 		"unlocksRecipeGroups" : [
 			"pipliz.writer"
 		],
@@ -436,8 +491,23 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.writer",
-			"pipliz.baseresearch.matchlockgun"
+			"pipliz.baseresearch.sciencebagadvanced",
+			"pipliz.baseresearch.sciencebagcolony"
+		],
+		"icon" : "./textures/icons/glider.png",
+		"iterationCount" : 50,
+		"iterationRequirements" : [
+			{"type":"sciencebagadvanced"},
+			{"type":"sciencebagcolony"}
+		],
+		"key" : "pipliz.baseresearch.glider",
+		"unlocksRecipes" : [
+			"pipliz.player.glider"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.writer"
 		],
 		"icon" : "./textures/icons/book.png",
 		"iterationCount" : 10,
@@ -446,6 +516,7 @@
 			{"type":"sciencebagadvanced"}
 		],
 		"key" : "pipliz.baseresearch.printingpress",
+		"requiredScienceBiome" : "sciencebiome.oldworld",
 		"unlocksRecipes" : [
 			"printingpress.papertext",
 			"pipliz.metalsmith.printingpress"
@@ -884,7 +955,8 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.tailorshop"
+			"pipliz.baseresearch.tailorshop",
+			"pipliz.baseresearch.bronzeanvil"
 		],
 		"icon" : "./textures/icons/technologisttable.png",
 		"iterationCount" : 3,

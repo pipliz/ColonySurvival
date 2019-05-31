@@ -1,5 +1,5 @@
 {
-	"coverage" : 78.5249457700651,
+	"coverage" : 65.9613615455382,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -21,8 +21,11 @@
 	"sentences" : {
 		"bannerclickedpopup" : {
 			"deletebanner" : "_MISSING_Delete Banner",
+			"deletecolony" : "_MISSING_Delete Colony",
+			"deletecolonydescription" : "_MISSING_Deleting the last banner of a colony will remove all npcs and make the colony unusable. To confirm this is what you want, type 'delete' below.",
 			"header" : "_MISSING_Banner Options",
-			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+			"noconfirmationdelete" : "_MISSING_Ignoring deletion command, did not get confirmation",
+			"placementfail" : "_MISSING_Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
 			"activecolony" : "_MISSING_Active Colony: {0}",
@@ -31,6 +34,32 @@
 			"movebanner" : "_MISSING_Move Banner",
 			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
 			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"biome" : {
+			"arctic" : {
+				"description" : "_MISSING_Colony is based in the Arctic",
+				"name" : "_MISSING_Arctic Colony"
+			},
+			"fareast" : {
+				"description" : "_MISSING_Colony is based in the Far East",
+				"name" : "_MISSING_Far East Colony"
+			},
+			"newworld" : {
+				"description" : "_MISSING_Colony is based in the New World",
+				"name" : "_MISSING_New World Colony"
+			},
+			"oldworld" : {
+				"description" : "_MISSING_Colony is based in the Old World",
+				"name" : "_MISSING_Old World Colony"
+			},
+			"tropics" : {
+				"description" : "_MISSING_Colony is based in the Tropics",
+				"name" : "_MISSING_Tropics Colony"
+			}
+		},
+		"chat" : {
+			"onsciencedone" : "_MISSING_You've completed science {0}",
+			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -41,6 +70,17 @@
 			},
 			"connectedplayers" : "_MISSING_Connected Players",
 			"currentowners" : "_MISSING_Current Owners",
+			"diplomacy" : {
+				"incomingdeals" : "_MISSING_Incoming deals",
+				"mainbutton" : "_MISSING_Diplomacy",
+				"mainheader" : "_MISSING_Diplomacy",
+				"outgoingdeals" : "_MISSING_Outgoing deals",
+				"pendingdeals" : "_MISSING_Pending incoming deals",
+				"ruleaccept" : "_MISSING_Accept",
+				"ruleactive" : "_MISSING_Active",
+				"rulepending" : "_MISSING_Pending",
+				"ruleremove" : "_MISSING_Remove"
+			},
 			"inventoryheader" : "_MISSING_Colony",
 			"invite" : "_MISSING_Add as colony owner",
 			"kick" : "_MISSING_Kick from colony",
@@ -57,6 +97,12 @@
 			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"science" : {
+				"incomingdescription" : "_MISSING_{0} will share their science with you",
+				"newagreement" : "_MISSING_Propose science agreement",
+				"outgoingdescription" : "_MISSING_You provide {0} with your science",
+				"selectcolony" : "_MISSING_Select a colony to sent science to"
+			},
 			"selectcolony" : {
 				"headercolonists" : "_MISSING_Colonists",
 				"headercolony" : "_MISSING_Colony",
@@ -66,25 +112,26 @@
 				"select" : "_MISSING_Select"
 			},
 			"settoleader" : "_MISSING_Set to leader",
+			"start" : {
+				"create" : "_MISSING_Create Colony",
+				"defaultkit" : "_MISSING_First time starter kit is used",
+				"kits" : "_MISSING_Available Kits",
+				"missingkit" : "_MISSING_Missing a colony starter kit",
+				"name" : "_MISSING_Colony Name",
+				"parentcolony" : "_MISSING_Parent Colony",
+				"popupheader" : "_MISSING_Colony Creation",
+				"usescienceagreement" : "_MISSING_Transfer Science"
+			},
 			"startrecruitment" : "_MISSING_Recruitment",
 			"startsettings" : "_MISSING_Colony Settings",
 			"switchcolony" : "_MISSING_Switch to {0}",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
-				"mainbutton" : "_MISSING_Trading",
-				"mainheader" : "_MISSING_Trading Rules",
-				"newrule" : "_MISSING_Create a new trading rule",
-				"ruleaccept" : "_MISSING_Accept",
-				"ruleactive" : "_MISSING_Active",
+				"newrule" : "_MISSING_Propose trading rule",
 				"ruledescription" : "_MISSING_Traders will trade item type {0} from colony {1} to colony {2} if:",
 				"ruleincomingdescr" : "_MISSING_Get type {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "_MISSING_{0} has more than: ",
 				"ruleoutgoingdescr" : "_MISSING_Send type {0} to {1} if we have more than {2}",
-				"rulepending" : "_MISSING_Pending",
-				"ruleremove" : "_MISSING_Remove",
-				"rulesincoming" : "_MISSING_Incoming rules",
-				"rulesoutgoing" : "_MISSING_Outgoing rules",
-				"rulespending" : "_MISSING_Pending incoming rules",
 				"selectcolony" : "_MISSING_Select a colony to trade to"
 			}
 		},
@@ -228,6 +275,14 @@
 					"description" : "安全圏の範囲を100ブロックまでに拡大する",
 					"name" : "バナー範囲 V"
 				},
+				"barleyfarmer" : {
+					"description" : "_MISSING_Unlocks the barley farmer, which is used to feed livestock",
+					"name" : "_MISSING_Barley Farming"
+				},
+				"beekeeper" : {
+					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
+					"name" : "_MISSING_Beekeeping"
+				},
 				"bloomery" : {
 					"description" : "鉄鉱石と方鉛鉱を加工できる「塊鉄炉」をアンロックする",
 					"name" : "塊鉄炉"
@@ -239,6 +294,26 @@
 				"bronzeminting" : {
 					"description" : "「造幣局」と「店」をアンロックする。 種や土、その他様々な品を購入できるようになる。",
 					"name" : "造幣局＆店"
+				},
+				"cabbagefarmer" : {
+					"description" : "_MISSING_Unlocks the cabbage farmer",
+					"name" : "_MISSING_Cabbage Farming"
+				},
+				"candles" : {
+					"description" : "_MISSING_Unlocks producing candles by a beekeeper",
+					"name" : "_MISSING_Candles"
+				},
+				"chickenfarmer" : {
+					"description" : "_MISSING_Unlocks the chicken farmer",
+					"name" : "_MISSING_Chicken Farming"
+				},
+				"coffee" : {
+					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
+					"name" : "_MISSING_Coffee"
+				},
+				"colonykit" : {
+					"description" : "_MISSING_Allows construction of a colony kit",
+					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
 					"description" : "人足を作業させるための建設エリアをアンロックする",
@@ -292,6 +367,14 @@
 					"description" : "人足を作業させるための特殊掘削エリアをアンロックする",
 					"name" : "特殊掘削人足"
 				},
+				"cook" : {
+					"description" : "_MISSING_Unlocks the cook, which can make meals for your colonists",
+					"name" : "_MISSING_Cook"
+				},
+				"cottontowel" : {
+					"description" : "_MISSING_Unlocks the cotton towel luxury item",
+					"name" : "_MISSING_Cotton Towel"
+				},
 				"crossbow" : {
 					"description" : "弓よりも強力な武器「クロスボウ」をアンロックする",
 					"name" : "クロスボウ"
@@ -299,6 +382,10 @@
 				"crossbowbolt" : {
 					"description" : "「クロスボウのボルト」をアンロックする",
 					"name" : "クロスボウのボルト"
+				},
+				"diamondprocessing" : {
+					"description" : "_MISSING_Unlocks processing diamonds",
+					"name" : "_MISSING_Diamonds"
 				},
 				"dyertable" : {
 					"description" : "ハーブを使って特定のブロックやランタンを色づけする「染色師」をアンロックする",
@@ -308,9 +395,25 @@
 					"description" : "コークスを使って鋼鉄と金のインゴットを作れる「精製炉」をアンロックする",
 					"name" : "精製炉"
 				},
+				"fisherman" : {
+					"description" : "_MISSING_Unlocks the fisherman",
+					"name" : "_MISSING_Fishing"
+				},
 				"flaxfarming" : {
 					"description" : "リネンの生産に必要な「亜麻農家」をアンロックする。 100個の亜麻仁を付与する。",
 					"name" : "亜麻栽培"
+				},
+				"foofoo" : {
+					"description" : "_MISSING_Unlocks cooking foofoo",
+					"name" : "_MISSING_Foofoo"
+				},
+				"fur" : {
+					"description" : "_MISSING_Unlocks fur processing",
+					"name" : "_MISSING_Fur"
+				},
+				"glider" : {
+					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
+					"name" : "_MISSING_Glider"
 				},
 				"gunpowder" : {
 					"description" : "強力な爆発物である「火薬」をアンロックする",
@@ -384,6 +487,22 @@
 					"description" : "初期の銃火器である「火縄銃」をアンロックする",
 					"name" : "火縄銃"
 				},
+				"olivefarmer" : {
+					"description" : "_MISSING_Unlocks the olive farmer, a part of creating more complex meals",
+					"name" : "_MISSING_Olive Farming"
+				},
+				"papyrus" : {
+					"description" : "_MISSING_Unlocks papyrus production",
+					"name" : "_MISSING_Papyrus"
+				},
+				"porcelain" : {
+					"description" : "_MISSING_Unlocks porcelain production",
+					"name" : "_MISSING_Porcelain"
+				},
+				"printingpress" : {
+					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
+					"name" : "_MISSING_Printing Press"
+				},
 				"quarterblockdyer" : {
 					"description" : "階段の構築に使える、色つきクォーターブロックの染色師による生産をアンロックする",
 					"name" : "色つきクォーターブロック"
@@ -395,6 +514,10 @@
 				"quarterblockstonemason" : {
 					"description" : "階段の構築に使える「クォーターブロック（灰色）」の石工による生産をアンロックする",
 					"name" : "クォーターブロック（灰色）"
+				},
+				"ricefarmer" : {
+					"description" : "_MISSING_Unlocks rice farming",
+					"name" : "_MISSING_Rice farming"
 				},
 				"sciencebagadvanced" : {
 					"description" : "高度な研究に用いられる「先進的科学の袋」をアンロックする",
@@ -416,6 +539,20 @@
 					"description" : "軍事研究に用いられる「軍事科学の袋」をアンロックする",
 					"name" : "軍事科学の袋"
 				},
+				"silkwormfarmer" : {
+					"description" : "_MISSING_Unlocks silkworm farming",
+					"name" : "_MISSING_Silkworm Farming"
+				},
+				"spinningwheel" : {
+					"fareast" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					},
+					"newworld" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					}
+				},
 				"splittingstump" : {
 					"description" : "「薪割り台」をアンロック。 作業台より素早く薪を作るのに使える。",
 					"name" : "薪割り台"
@@ -424,17 +561,45 @@
 					"description" : "様々なレンガ類を生産する「石工」をアンロックする",
 					"name" : "石工の作業台"
 				},
+				"sugarcane" : {
+					"description" : "_MISSING_Unlocks sugar cane farming",
+					"name" : "_MISSING_Sugarcane"
+				},
 				"tailorshop" : {
 					"description" : "亜麻からリネンを作り出す「仕立て屋」をアンロックする",
 					"name" : "仕立て屋"
+				},
+				"teafarmer" : {
+					"description" : "_MISSING_Unlocks tea farming",
+					"name" : "_MISSING_Tea"
 				},
 				"technologisttable" : {
 					"description" : "サイエンスバッグを作成する「技術者」をアンロックする",
 					"name" : "技術者"
 				},
+				"watergatherer" : {
+					"description" : "_MISSING_Unlocks the water gatherer, filling buckets with water from open water",
+					"name" : "_MISSING_Water Gathering"
+				},
+				"waterpump" : {
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"name" : "_MISSING_Water Pump"
+				},
+				"waxtablet" : {
+					"description" : "_MISSING_Unlocks the wax tablet, a luxury product",
+					"name" : "_MISSING_Wax Tablet"
+				},
 				"wheatfarming" : {
 					"description" : "発展したコロニー向けのより複雑な食料生産手段。 「小麦農家」「石臼」と「オーブン」をアンロックする。 400個の小麦の種を付与する。",
 					"name" : "パン生産"
+				},
+				"wintercoat" : {
+					"description" : "_MISSING_Unlocks winter coat production",
+					"name" : "_MISSING_Wintercoat"
+				},
+				"writer" : {
+					"description" : "_MISSING_Unlocks the writer, able to produce books for enjoyment",
+					"name" : "_MISSING_Writing"
 				}
 			}
 		},
@@ -480,8 +645,13 @@
 				"tooltip" : {
 					"and" : "と",
 					"instockpile" : "（備蓄品内に）",
-					"needs" : "必要: "
+					"needs" : "必要: ",
+					"nothing" : "_MISSING_Nothing"
 				}
+			},
+			"itemselector" : {
+				"description" : "_MISSING_Select an item type to use",
+				"header" : "_MISSING_Item Selection"
 			},
 			"limits" : {
 				"description" : "入植者は備蓄品の中が指定した量になるまで作業を続けます。",
@@ -505,6 +675,7 @@
 					"stonemason" : "石材加工の上限",
 					"tailor" : "仕立ての上限",
 					"technologist" : "技術者の上限",
+					"wheelspinner" : "_MISSING_Spinningwheel Limits",
 					"woodcutter" : "製材の上限"
 				}
 			},
@@ -535,17 +706,16 @@
 			"tooljob" : {
 				"alkanetfarmer" : "アルカネット農家",
 				"alkanetfarmertool" : "アルカネット農家ツール",
-				"alkanetfarmertooltip" : "必要: アルカネットの種\n草か土の上に設置する",
-				"barleya" : "_MISSING_TODO_BARLEY_A",
-				"barleyb" : "_MISSING_TODO_BARLEY_B",
+				"bananafarmb" : "_MISSING_For... bananas",
+				"bananafarmer" : "_MISSING_Banana Farmer",
+				"bananatool" : "_MISSING_Banana Farmer Tool",
+				"barleya" : "_MISSING_Primarily for livestock feed",
 				"barleyfarmer" : "_MISSING_Barley Farmer",
 				"barleyfarmertool" : "_MISSING_Barley Farmer Tool",
 				"beekeeper" : "_MISSING_Beekeeper",
-				"beekeepera" : "_MISSING_TODO_BEEKEEPER_A",
-				"beekeeperb" : "_MISSING_TODO_BEEKEEPER_B",
+				"beekeepera" : "_MISSING_Essential to some luxury items",
 				"beekeepertool" : "_MISSING_Beekeeper Tool",
 				"berrya" : "素早く簡単な食料源、まずはこれ！",
-				"berryb" : "必要: ベリーの種\n草か土の上に設置する",
 				"berryfarmer" : "ベリー農家",
 				"berryfarmertool" : "ベリー農家ツール",
 				"bow" : "弓",
@@ -553,20 +723,27 @@
 				"buildera" : "指定したエリアをブロックで埋める",
 				"builderarea" : "建設人足作業エリア",
 				"builderb" : "ブロックの種類を選択するメニューが開いた後、そのブロックで埋めるエリアを指定します",
-				"cabbagea" : "_MISSING_TODO_CABBAGE_A",
-				"cabbageb" : "_MISSING_TODO_CABBAGE_B",
+				"cabbagea" : "_MISSING_Essential for some luxury foods",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cabbagefarmertool" : "_MISSING_Cabbage Farmer Tool",
+				"cassavab" : "_MISSING_Tropical carbs, used for foofoo",
+				"cassavafarmer" : "_MISSING_Cassava Farmer",
+				"cassavatool" : "_MISSING_Cassava Farmer Tool",
 				"chickenfarmer" : "_MISSING_Chicken Farmer",
-				"chickenfarmera" : "_MISSING_TODO_CHICKEN_FARMER_A",
-				"chickenfarmerb" : "_MISSING_TODO_CHICKEN_FARMER_B",
+				"chickenfarmera" : "_MISSING_Chickens create eggs, meat and feathers",
 				"chickenfarmertool" : "_MISSING_Chicken Farmer Tool",
+				"cofeeb" : "_MISSING_Coffeebeans",
+				"coffeebeanfarmer" : "_MISSING_Coffeebean Farmer",
+				"coffeebeanfarmertool" : "_MISSING_Coffebean Farmer Tool",
 				"construction" : "土木建築",
 				"construction1" : "人足たちを作業に従事させよう",
 				"construction2" : "作業の種類を選択するための別メニューが開きます",
 				"constructionjob" : "人足",
 				"constructionjoba" : "人足を雇う",
 				"constructionjobb" : "土木建築エリアに隣接して設置してください",
+				"cottonb" : "_MISSING_Made into towels",
+				"cottonfarmer" : "_MISSING_Cotton Farmer",
+				"cottontool" : "_MISSING_Cotton Farmer Tool",
 				"coversarea" : "既にあるエリアと重なる",
 				"crossbow" : "クロスボウ",
 				"crossbowtooltip" : "ダメージ: 300 HP\n射程: 25ブロック\nリロード速度: 8秒",
@@ -578,19 +755,20 @@
 				"diggerspeciala" : "エリア内の特定のブロックのみを撤去する",
 				"diggerspecialarea" : "特殊掘削人足作業エリア",
 				"diggerspecialb" : "選択したブロックを撤去するエリアを指定してください",
+				"fareast" : "_MISSING_Far East",
+				"fareasta" : "_MISSING_Jobs specific to the Far East region",
+				"fareastb" : "_MISSING_Research colonization before attempting this",
 				"fisherman" : "_MISSING_Fisherman",
-				"fishermana" : "_MISSING_TODO_FISHER_MAN_HOVER_A",
-				"fishermanb" : "_MISSING_TODO_FISHER_MAN_HOVER_B",
+				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
-				"flaxb" : "必要: 亜麻仁\n草か土の上に設置する",
 				"flaxfarmer" : "亜麻農家",
 				"flaxfarmertool" : "亜麻農家ツール",
 				"flaxherbfarming" : "亜麻＆ハーブ類",
 				"flaxherbfarminga" : "亜麻とハーブの農家",
 				"flaxherbfarmingb" : "農家の種類を選択するための別メニューが開きます",
 				"food" : "_MISSING_Food",
-				"food1" : "_MISSING_TODO_FOOD_A",
-				"food2" : "_MISSING_TODO_FOOD_B",
+				"food1" : "_MISSING_Food production",
+				"food2" : "_MISSING_Various ways of preventing your colonists from starving",
 				"forester" : "林業者",
 				"forestera" : "木を植えて伐採する",
 				"foresterb" : "必要: 苗木と斧\n草か土の上に設置する",
@@ -603,7 +781,6 @@
 				"header" : "コマンドツール",
 				"hollyhockfarmer" : "タチアオイ農家",
 				"hollyhockfarmertool" : "タチアオイ農家ツール",
-				"hollyhockfarmertooltip" : "必要: タチアオイの種\n草か土の上に設置する",
 				"insidearea" : "エリア内には設置不可能",
 				"jobbowday" : "昼間担当弓兵",
 				"jobbownight" : "夜間担当弓兵",
@@ -620,31 +797,55 @@
 				"minerb" : "必要: つるはし\n穴を掘り、鉱石か石ブロック（暗色）の上に設置する",
 				"minertool" : "鉱員ツール",
 				"missingscience" : "<color=red>先に「{0}」をアンロックする必要があります。</color>",
+				"newworld" : "_MISSING_New World",
+				"newworlda" : "_MISSING_Jobs specific to the New World region",
+				"newworldb" : "_MISSING_Research colonization before attempting this",
 				"noconstructionareanearby" : "付近に土木建築エリアがない",
 				"notarable" : "耕作不可能",
 				"notflat" : "平らではない",
 				"nowaternearby" : "_MISSING_No water nearby",
 				"occupiedblocks" : "ブロックが既に存在している",
 				"olivefarmer" : "_MISSING_Olive Farmer",
-				"olivefarmera" : "_MISSING_TODO_OLIVE_FARMER_A",
-				"olivefarmerb" : "_MISSING_TODO_OLIVE_FARMER_B",
+				"olivefarmera" : "_MISSING_Creates olive trees and gathers olives",
 				"olivefarmertool" : "_MISSING_Olive Farmer Tool",
-				"selectitem" : "対象とするアイテムの種類を選択してください",
+				"papyrusb" : "_MISSING_Papyrus",
+				"papyrusfarmer" : "_MISSING_Papyrus Farmer",
+				"papyrustool" : "_MISSING_Papyrus Farmer Tool",
+				"potatob" : "_MISSING_New World carbs",
+				"potatofarmer" : "_MISSING_Potato Farmer",
+				"potatotool" : "_MISSING_Potato Farmer Tool",
+				"requiresarable" : "_MISSING_Requires arable ground",
+				"riceb" : "_MISSING_Far East carbs",
+				"ricefarmer" : "_MISSING_Rice Farmer",
+				"ricefarmertool" : "_MISSING_Rice Farmer Tool",
+				"silkwormb" : "_MISSING_Used to make silk eventually",
+				"silkwormfarmer" : "_MISSING_Silkworm Farmer",
+				"silkwormfarmertool" : "_MISSING_Silkworm Farmer Tool",
 				"slinger" : "スリング",
 				"slingertooltip" : "ダメージ: 50 HP\n射程: 12ブロック\nリロード速度: 3秒",
+				"sugarcaneb" : "_MISSING_Sugarcane",
+				"sugarcanefarmer" : "_MISSING_Sugarcane Farmer",
+				"sugarcanetool" : "_MISSING_Sugarcane Farmer Tool",
+				"teafarmer" : "_MISSING_Tea Farmer",
+				"teafarmerb" : "_MISSING_Produces leaves which lead to tea",
+				"teafarmertool" : "_MISSING_Tea Farmer Tool",
+				"tomatob" : "_MISSING_Tomatoes",
+				"tomatofarmer" : "_MISSING_Tomato Farmer",
+				"tomatotool" : "_MISSING_Tomato Tool",
 				"toolarge" : "大きすぎる",
 				"toonarrow" : "植樹には狭すぎる",
 				"toosmall" : "小さすぎる",
+				"tropics" : "_MISSING_Tropics",
+				"tropicsa" : "_MISSING_Jobs specific to the Tropics region",
+				"tropicsb" : "_MISSING_Research colonization before attempting this",
+				"wateradjacent" : "_MISSING_Requires water adjacent to the job location",
 				"watergatherer" : "_MISSING_Watergatherer",
-				"watergatherera" : "_MISSING_TODO_WATER_GATHERER_HOVER_A",
-				"watergathererb" : "_MISSING_TODO_WATER_GATHERER_HOVER_B",
+				"watergatherera" : "_MISSING_Fills buckets from open water",
 				"watergatherertool" : "_MISSING_Watergatherer Tool",
-				"wheatb" : "必要: 小麦の種\n草か土の上に設置する",
 				"wheatfarmer" : "小麦農家",
 				"wheatfarmertool" : "小麦農家ツール",
 				"wolfsbanefarmer" : "トリカブト農家",
-				"wolfsbanefarmertool" : "トリカブト農家ツール",
-				"wolfsbanefarmertooltip" : "必要: トリカブトの種\n草か土の上に設置する"
+				"wolfsbanefarmertool" : "トリカブト農家ツール"
 			}
 		},
 		"quickstart" : {
@@ -687,6 +888,16 @@
 				"text3" : "より高度な研究にはサイエンスバッグが必要になります。 サイエンスバッグを作成するため、技術者を雇いましょう。 使って空になったバッグは複数回の再利用が可能です。",
 				"text4" : "複数の科学者が一緒になって作業することで、研究の進行速度を速めることができます。 さらなる科学者を雇うために、もっと研究所を設置しましょう！"
 			}
+		},
+		"sciencebiome" : {
+			"arctic" : "_MISSING_The Arctic",
+			"currentarea" : "_MISSING_Current area: {0}",
+			"fareast" : "_MISSING_The Far East",
+			"newworld" : "_MISSING_The New World",
+			"noarea" : "_MISSING_None",
+			"none" : "_MISSING_None",
+			"oldworld" : "_MISSING_The Old World",
+			"tropics" : "_MISSING_The Tropics"
 		},
 		"settingsmenu" : {
 			"audio" : "オーディオ",
@@ -798,6 +1009,7 @@
 		"adobe" : "アドベ",
 		"alkanet" : "アルカネット",
 		"alkanetstage1" : "_MISSING_Alkanet Seeds",
+		"banana" : "_MISSING_Banana",
 		"banner" : "バナー",
 		"bannertool" : "バナーツール",
 		"barley" : "_MISSING_Barley",
@@ -836,12 +1048,12 @@
 		"carpetred" : "カーペット（赤）",
 		"carpetwhite" : "カーペット（白）",
 		"carpetyellow" : "カーペット（黄）",
+		"cassava" : "_MISSING_Cassava",
 		"charcoal" : "木炭",
 		"cherryblossom" : "桜の花",
 		"cherrysapling" : "桜の苗木",
 		"chickencoop" : "_MISSING_Chicken Coop",
 		"chickenmeat" : "_MISSING_Chicken Meat",
-		"chickenskin" : "_MISSING_Chicken Skin",
 		"clay" : "粘土",
 		"coalore" : "石炭",
 		"coatedplanks" : "磨いた板",
@@ -850,7 +1062,10 @@
 		"cobblestonebrown" : "丸石（茶色）",
 		"cobblestonegrey" : "丸石（灰色）",
 		"cobblestonered" : "丸石（赤）",
+		"coffee" : "_MISSING_Coffee",
+		"coffeebeans" : "_MISSING_Coffee Beans",
 		"cokes" : "コークス",
+		"colonykit" : "_MISSING_Colony Starter Kit",
 		"commandtool" : "コマンドツール",
 		"constructionjob" : "人足",
 		"cookedfish" : "_MISSING_Cooked Fish",
@@ -858,12 +1073,18 @@
 		"coppernails" : "銅の釘",
 		"copperparts" : "銅の金具",
 		"coppertools" : "銅のツール",
+		"cotton" : "_MISSING_Cotton",
+		"cottonraw" : "_MISSING_Raw Cotton",
+		"cottonthread" : "_MISSING_Cotton Thread",
+		"cottontowel" : "_MISSING_Cotton Towel",
 		"crate" : "木箱",
 		"cratebread" : "パン入りの木箱",
 		"crossbow" : "クロスボウ",
 		"crossbowbolt" : "クロスボウのボルト",
 		"crystal" : "水晶",
 		"darkstone" : "石ブロック（暗色）",
+		"diamond" : "_MISSING_Diamond",
+		"diamondnecklace" : "_MISSING_Diamond Necklace",
 		"dirt" : "土",
 		"dyertable" : "染色師のテーブル",
 		"egg" : "_MISSING_Egg",
@@ -875,9 +1096,12 @@
 		"flax" : "亜麻",
 		"flaxstage1" : "_MISSING_Flax seeds",
 		"flour" : "小麦粉",
+		"foofoo" : "_MISSING_Foofoo",
+		"fur" : "_MISSING_Fur",
 		"furnace" : "炉",
 		"galenalead" : "方鉛鉱（鉛豊富）",
 		"galenasilver" : "方鉛鉱（銀豊富）",
+		"glider" : "_MISSING_Glider",
 		"goldcoin" : "金貨",
 		"goldingot" : "金インゴット",
 		"goldore" : "金鉱石",
@@ -920,6 +1144,7 @@
 		"ironsword" : "鉄の剣",
 		"ironwrought" : "鍛鉄",
 		"jewelry" : "_MISSING_Jewelry",
+		"kaolinite" : "_MISSING_Kaolinite",
 		"kiln" : "炭焼き窯",
 		"lanternblue" : "ランタン（青）",
 		"lanterncyan" : "ランタン（シアン）",
@@ -949,6 +1174,7 @@
 		"matchlockgun" : "火縄銃",
 		"minerjob" : "鉱員",
 		"mint" : "造幣局",
+		"newworldmeal" : "_MISSING_New World Meal",
 		"npcshop" : "_MISSING_NPC Shop",
 		"olive" : "_MISSING_Olive",
 		"oliveleaves" : "_MISSING_Olive Leaves",
@@ -957,6 +1183,7 @@
 		"oven" : "オーブン",
 		"paperempty" : "_MISSING_Empty Paper",
 		"papertext" : "_MISSING_Paper With Text",
+		"papyrus" : "_MISSING_Papyrus",
 		"perpetualstew" : "_MISSING_Perpetual Stew",
 		"planks" : "板",
 		"planksblue" : "板（青）",
@@ -967,6 +1194,10 @@
 		"planksred" : "板（赤）",
 		"planksyellow" : "板（黄）",
 		"plasterblock" : "石膏ブロック",
+		"porcelainbiscuit" : "_MISSING_Porcelain Biscuit",
+		"porcelainglazed" : "_MISSING_Glazed Porcelain",
+		"porcelainraw" : "_MISSING_Raw Porcelain",
+		"potato" : "_MISSING_Potato",
 		"printingpress" : "_MISSING_Printing Press",
 		"quarterblockblack" : "クォーターブロック（黒）",
 		"quarterblockbrowndark" : "クォーターブロック（焦茶色）",
@@ -976,6 +1207,8 @@
 		"rawbeeswax" : "_MISSING_Raw Beeswax",
 		"rawfish" : "_MISSING_Raw Fish",
 		"redplanks" : "磨いた板（赤）",
+		"rice" : "_MISSING_Rice",
+		"ricemeal" : "_MISSING_Rice Meal",
 		"salpeter" : "硝石",
 		"sand" : "砂",
 		"sappling" : "苗木",
@@ -986,10 +1219,15 @@
 		"sciencebagmilitary" : "軍事科学の袋",
 		"sciencelab" : "研究所",
 		"shop" : "店",
+		"silk" : "_MISSING_Silk",
+		"silkpillow" : "_MISSING_Silk Pillow",
+		"silkthread" : "_MISSING_Silk Thread",
+		"silkwormcocoon" : "_MISSING_Silkworm Cocoon",
 		"silveringot" : "銀インゴット",
 		"sling" : "スリング",
 		"slingbullet" : "スリングの石弾",
 		"snow" : "雪",
+		"spinningwheel" : "_MISSING_Spinning Wheel",
 		"splittingstump" : "薪割り台",
 		"steelingot" : "鋼鉄インゴット",
 		"steelparts" : "鋼鉄の金具",
@@ -1001,10 +1239,17 @@
 		"stonemasonworkbench" : "石工の作業台",
 		"stove" : "_MISSING_Stove",
 		"straw" : "藁",
+		"sugar" : "_MISSING_Sugar",
 		"tailorshop" : "仕立て屋",
+		"tea" : "_MISSING_Tea",
+		"tealeavesprocessed" : "_MISSING_Processed Tea Leaves",
+		"tealeavesprocesseddried" : "_MISSING_Dried Tea Leaves",
+		"tealeavesraw" : "_MISSING_Raw Tea Leaves",
 		"technologisttable" : "技術者のテーブル",
 		"tin" : "錫",
+		"tomato" : "_MISSING_Tomato",
 		"torch" : "松明",
+		"trader" : "_MISSING_Trader",
 		"undershirt" : "_MISSING_Undershirt",
 		"water" : "水",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
@@ -1012,6 +1257,7 @@
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "小麦",
 		"wheatstage1" : "_MISSING_Wheat Seeds",
+		"wintercoat" : "_MISSING_Winter Coat",
 		"wolfsbane" : "トリカブト",
 		"wolfsbanestage1" : "_MISSING_Wolfsbane Seeds",
 		"woodcoating" : "_MISSING_Wood Coating",
@@ -1048,7 +1294,9 @@
 		"clay" : "【ねんど】\n《Clay》\n触ってごらん",
 		"coalore" : "【せきたん】\n《Coal Ore》\n警告: 気候変動を引き起こすかも",
 		"coatedplanks" : "【みがいたいた】\n《Coated Planks》\nピッカピカ！",
+		"coffee" : "_MISSING_Useful when rushing deadlines",
 		"cokes" : "【こーくす】\n《Cokes》\nこれを作って燃やすことが、あなたの健康や環境に悪影響を及ぼすことは全くありません、たぶんね",
+		"colonykit" : "_MISSING_Required to start additional colonies",
 		"copper" : "【どう】\n《Copper》\n製錬の必要がなくってラクチン！",
 		"coppernails" : "【どうのくぎ】\n《Copper Nails》\n木片を繋ぎあわせる画期的な手法",
 		"copperparts" : "【どうのかなぐ】\n《Copper Parts》\n金属は全てを改善する",
@@ -1068,6 +1316,7 @@
 		"furnace" : "【ろ】\n《Furnace》\n青銅インゴットとレンガを作るには、薪を燃料として使う",
 		"galenalead" : "【ほうえんこう（なまりほうふ）】\n《Galena (Lead rich)》\n鉛がたっぷり",
 		"galenasilver" : "【ほうえんこう（ぎんほうふ）】\n《Galena (Silver rich)》\n銀がたっぷり",
+		"glider" : "_MISSING_Press space to go up!",
 		"goldcoin" : "【きんか】\n《Gold Coin》\n片面に王様の肖像がある",
 		"goldingot" : "【きんいんごっと】\n《Gold Ingot》\nかつては紙幣の価値を担保するのに使われた",
 		"goldore" : "【きんこうせき】\n《Gold Ore》\nなくしちゃダメだよ",

@@ -150,7 +150,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Indices.logtemperate, 3, 1f));
 						GatherResults.Add(new ItemTypes.ItemTypeDrops(BuiltinBlocks.Indices.leavestemperate, 9, 1f));
 
-						ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
+						ModLoader.Callbacks.OnNPCGathered.Invoke(this, treeLocation, GatherResults);
 
 						NPC.Inventory.Add(GatherResults);
 						GatheredItemsCount++;

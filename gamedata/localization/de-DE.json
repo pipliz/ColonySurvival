@@ -1,5 +1,5 @@
 {
-	"coverage" : 79.2841648590022,
+	"coverage" : 66.6053357865685,
 	"hints" : {
 		"0" : "Für viele farmen gilt, dass sie mehr produzieren, wenn sie größer sind. Beerensammeler sind eine Ausnahme.",
 		"1" : "Wenn du mehr Kolonisten rekrutierst, erscheinen auch mehr Monster.",
@@ -21,8 +21,11 @@
 	"sentences" : {
 		"bannerclickedpopup" : {
 			"deletebanner" : "_MISSING_Delete Banner",
+			"deletecolony" : "_MISSING_Delete Colony",
+			"deletecolonydescription" : "_MISSING_Deleting the last banner of a colony will remove all npcs and make the colony unusable. To confirm this is what you want, type 'delete' below.",
 			"header" : "_MISSING_Banner Options",
-			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+			"noconfirmationdelete" : "_MISSING_Ignoring deletion command, did not get confirmation",
+			"placementfail" : "_MISSING_Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
 			"activecolony" : "_MISSING_Active Colony: {0}",
@@ -31,6 +34,32 @@
 			"movebanner" : "_MISSING_Move Banner",
 			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
 			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"biome" : {
+			"arctic" : {
+				"description" : "_MISSING_Colony is based in the Arctic",
+				"name" : "_MISSING_Arctic Colony"
+			},
+			"fareast" : {
+				"description" : "_MISSING_Colony is based in the Far East",
+				"name" : "_MISSING_Far East Colony"
+			},
+			"newworld" : {
+				"description" : "_MISSING_Colony is based in the New World",
+				"name" : "_MISSING_New World Colony"
+			},
+			"oldworld" : {
+				"description" : "_MISSING_Colony is based in the Old World",
+				"name" : "_MISSING_Old World Colony"
+			},
+			"tropics" : {
+				"description" : "_MISSING_Colony is based in the Tropics",
+				"name" : "_MISSING_Tropics Colony"
+			}
+		},
+		"chat" : {
+			"onsciencedone" : "_MISSING_You've completed science {0}",
+			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -41,6 +70,17 @@
 			},
 			"connectedplayers" : "_MISSING_Connected Players",
 			"currentowners" : "_MISSING_Current Owners",
+			"diplomacy" : {
+				"incomingdeals" : "_MISSING_Incoming deals",
+				"mainbutton" : "_MISSING_Diplomacy",
+				"mainheader" : "_MISSING_Diplomacy",
+				"outgoingdeals" : "_MISSING_Outgoing deals",
+				"pendingdeals" : "_MISSING_Pending incoming deals",
+				"ruleaccept" : "_MISSING_Accept",
+				"ruleactive" : "_MISSING_Active",
+				"rulepending" : "_MISSING_Pending",
+				"ruleremove" : "_MISSING_Remove"
+			},
 			"inventoryheader" : "_MISSING_Colony",
 			"invite" : "_MISSING_Add as colony owner",
 			"kick" : "_MISSING_Kick from colony",
@@ -57,6 +97,12 @@
 			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"science" : {
+				"incomingdescription" : "_MISSING_{0} will share their science with you",
+				"newagreement" : "_MISSING_Propose science agreement",
+				"outgoingdescription" : "_MISSING_You provide {0} with your science",
+				"selectcolony" : "_MISSING_Select a colony to sent science to"
+			},
 			"selectcolony" : {
 				"headercolonists" : "_MISSING_Colonists",
 				"headercolony" : "_MISSING_Colony",
@@ -66,25 +112,26 @@
 				"select" : "_MISSING_Select"
 			},
 			"settoleader" : "_MISSING_Set to leader",
+			"start" : {
+				"create" : "_MISSING_Create Colony",
+				"defaultkit" : "_MISSING_First time starter kit is used",
+				"kits" : "_MISSING_Available Kits",
+				"missingkit" : "_MISSING_Missing a colony starter kit",
+				"name" : "_MISSING_Colony Name",
+				"parentcolony" : "_MISSING_Parent Colony",
+				"popupheader" : "_MISSING_Colony Creation",
+				"usescienceagreement" : "_MISSING_Transfer Science"
+			},
 			"startrecruitment" : "_MISSING_Recruitment",
 			"startsettings" : "_MISSING_Colony Settings",
 			"switchcolony" : "_MISSING_Switch to {0}",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
-				"mainbutton" : "_MISSING_Trading",
-				"mainheader" : "_MISSING_Trading Rules",
-				"newrule" : "_MISSING_Create a new trading rule",
-				"ruleaccept" : "_MISSING_Accept",
-				"ruleactive" : "_MISSING_Active",
+				"newrule" : "_MISSING_Propose trading rule",
 				"ruledescription" : "_MISSING_Traders will trade item type {0} from colony {1} to colony {2} if:",
 				"ruleincomingdescr" : "_MISSING_Get type {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "_MISSING_{0} has more than: ",
 				"ruleoutgoingdescr" : "_MISSING_Send type {0} to {1} if we have more than {2}",
-				"rulepending" : "_MISSING_Pending",
-				"ruleremove" : "_MISSING_Remove",
-				"rulesincoming" : "_MISSING_Incoming rules",
-				"rulesoutgoing" : "_MISSING_Outgoing rules",
-				"rulespending" : "_MISSING_Pending incoming rules",
 				"selectcolony" : "_MISSING_Select a colony to trade to"
 			}
 		},
@@ -228,6 +275,14 @@
 					"description" : "Erhöht den Sicherheitsradius, auf 100 Blöcke",
 					"name" : "Banner Radius V"
 				},
+				"barleyfarmer" : {
+					"description" : "_MISSING_Unlocks the barley farmer, which is used to feed livestock",
+					"name" : "_MISSING_Barley Farming"
+				},
+				"beekeeper" : {
+					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
+					"name" : "_MISSING_Beekeeping"
+				},
 				"bloomery" : {
 					"description" : "Schaltet den Schmelzofen frei, der Eisen und Galeniterz verarbeiten kann",
 					"name" : "Schmelzofen"
@@ -239,6 +294,26 @@
 				"bronzeminting" : {
 					"description" : "Schaltet Münzenn und Märkte frei. Kann verwendet werden, um Samen, Dreck und andere Gegenstände zu kaufen",
 					"name" : "Münzenn und Märkte"
+				},
+				"cabbagefarmer" : {
+					"description" : "_MISSING_Unlocks the cabbage farmer",
+					"name" : "_MISSING_Cabbage Farming"
+				},
+				"candles" : {
+					"description" : "_MISSING_Unlocks producing candles by a beekeeper",
+					"name" : "_MISSING_Candles"
+				},
+				"chickenfarmer" : {
+					"description" : "_MISSING_Unlocks the chicken farmer",
+					"name" : "_MISSING_Chicken Farming"
+				},
+				"coffee" : {
+					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
+					"name" : "_MISSING_Coffee"
+				},
+				"colonykit" : {
+					"description" : "_MISSING_Allows construction of a colony kit",
+					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
 					"description" : "Schaltet Bauflächen für den Erbauer frei",
@@ -292,6 +367,14 @@
 					"description" : "Schaltet den speziellen Ausgrabmodus für den Erbauer frei",
 					"name" : "Spezielle Ausgrabung"
 				},
+				"cook" : {
+					"description" : "_MISSING_Unlocks the cook, which can make meals for your colonists",
+					"name" : "_MISSING_Cook"
+				},
+				"cottontowel" : {
+					"description" : "_MISSING_Unlocks the cotton towel luxury item",
+					"name" : "_MISSING_Cotton Towel"
+				},
 				"crossbow" : {
 					"description" : "Schaltet die Armbrust frei, eine stärkere Waffe als der Bogen",
 					"name" : "Armbrust"
@@ -299,6 +382,10 @@
 				"crossbowbolt" : {
 					"description" : "Schaltet Armbrustbolzen",
 					"name" : "Armbrustbolzen"
+				},
+				"diamondprocessing" : {
+					"description" : "_MISSING_Unlocks processing diamonds",
+					"name" : "_MISSING_Diamonds"
 				},
 				"dyertable" : {
 					"description" : "Schaltet den Färber frei, er verwendet Kräuter um bestimmte Blöcke und Laternen zu bemalen",
@@ -308,9 +395,25 @@
 					"description" : "Schaltet die Feinschmiede frei, die Koks verwendet, um Stahl- und Goldbarren herzustellen",
 					"name" : "Feinschmiede"
 				},
+				"fisherman" : {
+					"description" : "_MISSING_Unlocks the fisherman",
+					"name" : "_MISSING_Fishing"
+				},
 				"flaxfarming" : {
 					"description" : "Schaltet den Flachsbauern frei, der Leinen produziert. Gibt 100 Leinsamen.",
 					"name" : "Flachsbauer"
+				},
+				"foofoo" : {
+					"description" : "_MISSING_Unlocks cooking foofoo",
+					"name" : "_MISSING_Foofoo"
+				},
+				"fur" : {
+					"description" : "_MISSING_Unlocks fur processing",
+					"name" : "_MISSING_Fur"
+				},
+				"glider" : {
+					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
+					"name" : "_MISSING_Glider"
 				},
 				"gunpowder" : {
 					"description" : "Schaltet Schießpulver frei, einen starken Sprengstoff, frei",
@@ -384,6 +487,22 @@
 					"description" : "Schaltet die Muskete frei, eine frühe Waffenart",
 					"name" : "Muskete"
 				},
+				"olivefarmer" : {
+					"description" : "_MISSING_Unlocks the olive farmer, a part of creating more complex meals",
+					"name" : "_MISSING_Olive Farming"
+				},
+				"papyrus" : {
+					"description" : "_MISSING_Unlocks papyrus production",
+					"name" : "_MISSING_Papyrus"
+				},
+				"porcelain" : {
+					"description" : "_MISSING_Unlocks porcelain production",
+					"name" : "_MISSING_Porcelain"
+				},
+				"printingpress" : {
+					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
+					"name" : "_MISSING_Printing Press"
+				},
 				"quarterblockdyer" : {
 					"description" : "Schaltet Viertelblöcke für den Färber frei, diese können zum Treppenbauen verwendet werden",
 					"name" : "Gefärbte Viertelblöcke"
@@ -395,6 +514,10 @@
 				"quarterblockstonemason" : {
 					"description" : "Schaltet graue Viertelblöcke frei, die vom Steinmetz produziert werden. Können für Treppen verwendet werden",
 					"name" : "Graue Viertelblöcke"
+				},
+				"ricefarmer" : {
+					"description" : "_MISSING_Unlocks rice farming",
+					"name" : "_MISSING_Rice farming"
 				},
 				"sciencebagadvanced" : {
 					"description" : "Schaltet den fortgeschritten Wissenschaftsbeutel frei, der für fortgeschrittene Forschung verwendet wird",
@@ -416,6 +539,20 @@
 					"description" : "Schaltet den Militärwissenschaftbeutel frei, der für Forschung benötigt wird",
 					"name" : "Militärwissenschaftbeutel"
 				},
+				"silkwormfarmer" : {
+					"description" : "_MISSING_Unlocks silkworm farming",
+					"name" : "_MISSING_Silkworm Farming"
+				},
+				"spinningwheel" : {
+					"fareast" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					},
+					"newworld" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					}
+				},
 				"splittingstump" : {
 					"description" : "Schaltet den Hackklotz frei. Kann verwendet werden um Brennholz schneller als bei der Werkbank herzustellen.",
 					"name" : "Hackklotz"
@@ -424,17 +561,45 @@
 					"description" : "Schaltet den Steinmetz frei, stellt verschiedene Arten von Steinen her",
 					"name" : "Steinmetz"
 				},
+				"sugarcane" : {
+					"description" : "_MISSING_Unlocks sugar cane farming",
+					"name" : "_MISSING_Sugarcane"
+				},
 				"tailorshop" : {
 					"description" : "Schaltet den Schneider frei, verarbeitet Flachs zu Leinen ",
 					"name" : "Schneider"
+				},
+				"teafarmer" : {
+					"description" : "_MISSING_Unlocks tea farming",
+					"name" : "_MISSING_Tea"
 				},
 				"technologisttable" : {
 					"description" : "Schaltet den Wissenschaftler frei, der Wissenschaftsbeutel herstellt",
 					"name" : "Wissenschaftler"
 				},
+				"watergatherer" : {
+					"description" : "_MISSING_Unlocks the water gatherer, filling buckets with water from open water",
+					"name" : "_MISSING_Water Gathering"
+				},
+				"waterpump" : {
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"name" : "_MISSING_Water Pump"
+				},
+				"waxtablet" : {
+					"description" : "_MISSING_Unlocks the wax tablet, a luxury product",
+					"name" : "_MISSING_Wax Tablet"
+				},
 				"wheatfarming" : {
 					"description" : "Eine komplexere Methode der Nahrungsmittelproduktion, nur für fortgeschrittene Kolonien. Schaltet Weizenbauern, den Schleifstein und den Ofen frei. Gibt 400 Weizensamen.",
 					"name" : "Brot Produktion"
+				},
+				"wintercoat" : {
+					"description" : "_MISSING_Unlocks winter coat production",
+					"name" : "_MISSING_Wintercoat"
+				},
+				"writer" : {
+					"description" : "_MISSING_Unlocks the writer, able to produce books for enjoyment",
+					"name" : "_MISSING_Writing"
 				}
 			}
 		},
@@ -480,8 +645,13 @@
 				"tooltip" : {
 					"and" : "und",
 					"instockpile" : "im Lager",
-					"needs" : "Benötigt: "
+					"needs" : "Benötigt: ",
+					"nothing" : "_MISSING_Nothing"
 				}
+			},
+			"itemselector" : {
+				"description" : "_MISSING_Select an item type to use",
+				"header" : "_MISSING_Item Selection"
 			},
 			"limits" : {
 				"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
@@ -505,6 +675,7 @@
 					"stonemason" : "Steinmetzlimitierungen",
 					"tailor" : "Schneiderlimitierungen",
 					"technologist" : "Forschungslimitierungen",
+					"wheelspinner" : "_MISSING_Spinningwheel Limits",
 					"woodcutter" : "Holzfällerlimitierungen"
 				}
 			},
@@ -535,17 +706,16 @@
 			"tooljob" : {
 				"alkanetfarmer" : "Alkanna Bauer",
 				"alkanetfarmertool" : "Alkanna Bauer Werkzeug",
-				"alkanetfarmertooltip" : "Benötigt: Alkannasamen\nPlatziere sie auf Gras oder Dreck",
-				"barleya" : "_MISSING_TODO_BARLEY_A",
-				"barleyb" : "_MISSING_TODO_BARLEY_B",
+				"bananafarmb" : "_MISSING_For... bananas",
+				"bananafarmer" : "_MISSING_Banana Farmer",
+				"bananatool" : "_MISSING_Banana Farmer Tool",
+				"barleya" : "_MISSING_Primarily for livestock feed",
 				"barleyfarmer" : "_MISSING_Barley Farmer",
 				"barleyfarmertool" : "_MISSING_Barley Farmer Tool",
 				"beekeeper" : "_MISSING_Beekeeper",
-				"beekeepera" : "_MISSING_TODO_BEEKEEPER_A",
-				"beekeeperb" : "_MISSING_TODO_BEEKEEPER_B",
+				"beekeepera" : "_MISSING_Essential to some luxury items",
 				"beekeepertool" : "_MISSING_Beekeeper Tool",
 				"berrya" : "Schnelles und einfaches Essen, starte hiermit!",
-				"berryb" : "Benötigt: Beerensamen\nPlatziere auf Gras oder Dreck",
 				"berryfarmer" : "Beeren Farmer",
 				"berryfarmertool" : "Beerenfarmerwerkzeug",
 				"bow" : "Bogen",
@@ -553,20 +723,27 @@
 				"buildera" : "Fülle einen Bereich mit Blöcken",
 				"builderarea" : "Erbauer Fläche",
 				"builderb" : "Öffnet ein Menü um den Typ auszuwählen, danach die zu füllende Fläche bestimmen",
-				"cabbagea" : "_MISSING_TODO_CABBAGE_A",
-				"cabbageb" : "_MISSING_TODO_CABBAGE_B",
+				"cabbagea" : "_MISSING_Essential for some luxury foods",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cabbagefarmertool" : "_MISSING_Cabbage Farmer Tool",
+				"cassavab" : "_MISSING_Tropical carbs, used for foofoo",
+				"cassavafarmer" : "_MISSING_Cassava Farmer",
+				"cassavatool" : "_MISSING_Cassava Farmer Tool",
 				"chickenfarmer" : "_MISSING_Chicken Farmer",
-				"chickenfarmera" : "_MISSING_TODO_CHICKEN_FARMER_A",
-				"chickenfarmerb" : "_MISSING_TODO_CHICKEN_FARMER_B",
+				"chickenfarmera" : "_MISSING_Chickens create eggs, meat and feathers",
 				"chickenfarmertool" : "_MISSING_Chicken Farmer Tool",
+				"cofeeb" : "_MISSING_Coffeebeans",
+				"coffeebeanfarmer" : "_MISSING_Coffeebean Farmer",
+				"coffeebeanfarmertool" : "_MISSING_Coffebean Farmer Tool",
 				"construction" : "Erbauung",
 				"construction1" : "Lass Sie die Arbeit machen",
 				"construction2" : "Dies öffnet ein zweites Menü um den Bautyp auszuwählen",
 				"constructionjob" : "Erbauer Job",
 				"constructionjoba" : "Bestimmt einen Colonisten zum Erbauer",
 				"constructionjobb" : "Platziere es neben einer Baufläche",
+				"cottonb" : "_MISSING_Made into towels",
+				"cottonfarmer" : "_MISSING_Cotton Farmer",
+				"cottontool" : "_MISSING_Cotton Farmer Tool",
 				"coversarea" : "Bedeckt Gebiet",
 				"crossbow" : "Armbrust",
 				"crossbowtooltip" : "Schaden: 300 HP\nReichweite: 25 Blöcke\nLadegeschwindigkeit: 8 Sekunden",
@@ -578,19 +755,20 @@
 				"diggerspeciala" : "Baut nur einen bestimmten Block in einem Bereich ab",
 				"diggerspecialarea" : "Spezielle Ausgrabfläche",
 				"diggerspecialb" : "Wähle die Fläche zum Ausgraben aus",
+				"fareast" : "_MISSING_Far East",
+				"fareasta" : "_MISSING_Jobs specific to the Far East region",
+				"fareastb" : "_MISSING_Research colonization before attempting this",
 				"fisherman" : "_MISSING_Fisherman",
-				"fishermana" : "_MISSING_TODO_FISHER_MAN_HOVER_A",
-				"fishermanb" : "_MISSING_TODO_FISHER_MAN_HOVER_B",
+				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
-				"flaxb" : "Benötigt: Flachssamen\nPlatziere auf Gras oder Dreck",
 				"flaxfarmer" : "Flachsbauer",
 				"flaxfarmertool" : "Flachsbauerwerkzeug",
 				"flaxherbfarming" : "Flachs & Kräuter",
 				"flaxherbfarminga" : "Flachs & Kräuter Bauer",
 				"flaxherbfarmingb" : "Dies öffnet ein weiteres Menü, in dem Sie die Bauerntypen auswählen können",
 				"food" : "_MISSING_Food",
-				"food1" : "_MISSING_TODO_FOOD_A",
-				"food2" : "_MISSING_TODO_FOOD_B",
+				"food1" : "_MISSING_Food production",
+				"food2" : "_MISSING_Various ways of preventing your colonists from starving",
 				"forester" : "Baumgärtner",
 				"forestera" : "Pflanzt und fällt Bäume",
 				"foresterb" : "Benötigt: Setzlinge und eine Axt\nPlatziere sie auf Gras oder Dreck",
@@ -603,7 +781,6 @@
 				"header" : "Befehlswerkzeug",
 				"hollyhockfarmer" : "Stockrosen Bauer",
 				"hollyhockfarmertool" : "Stockrosen Bauer Werkzeug",
-				"hollyhockfarmertooltip" : "Benötigt: Stockrosensamen\nPlatziere sie auf Gras oder Dreck",
 				"insidearea" : "Kann nicht innerhalb eines Bereichs platziert werden",
 				"jobbowday" : "Bogen-Wache tagsüber",
 				"jobbownight" : "Bogen-Wache nachts",
@@ -620,31 +797,55 @@
 				"minerb" : "Benötigt: Spitzhacke\nmuss auf Stein oder auf Erz abgelegt werden",
 				"minertool" : "Bergarbeiterwerkzeug",
 				"missingscience" : "<color=red>Benötigt '{0}', um zuerst freigeschaltet zu werden.</color>",
+				"newworld" : "_MISSING_New World",
+				"newworlda" : "_MISSING_Jobs specific to the New World region",
+				"newworldb" : "_MISSING_Research colonization before attempting this",
 				"noconstructionareanearby" : "Kein Baubereich in der Nähe",
 				"notarable" : "Unfruchtbar",
 				"notflat" : "Nicht eben!",
 				"nowaternearby" : "_MISSING_No water nearby",
 				"occupiedblocks" : "Blöcke sind im Weg",
 				"olivefarmer" : "_MISSING_Olive Farmer",
-				"olivefarmera" : "_MISSING_TODO_OLIVE_FARMER_A",
-				"olivefarmerb" : "_MISSING_TODO_OLIVE_FARMER_B",
+				"olivefarmera" : "_MISSING_Creates olive trees and gathers olives",
 				"olivefarmertool" : "_MISSING_Olive Farmer Tool",
-				"selectitem" : "Wähle den Blocktyp aus",
+				"papyrusb" : "_MISSING_Papyrus",
+				"papyrusfarmer" : "_MISSING_Papyrus Farmer",
+				"papyrustool" : "_MISSING_Papyrus Farmer Tool",
+				"potatob" : "_MISSING_New World carbs",
+				"potatofarmer" : "_MISSING_Potato Farmer",
+				"potatotool" : "_MISSING_Potato Farmer Tool",
+				"requiresarable" : "_MISSING_Requires arable ground",
+				"riceb" : "_MISSING_Far East carbs",
+				"ricefarmer" : "_MISSING_Rice Farmer",
+				"ricefarmertool" : "_MISSING_Rice Farmer Tool",
+				"silkwormb" : "_MISSING_Used to make silk eventually",
+				"silkwormfarmer" : "_MISSING_Silkworm Farmer",
+				"silkwormfarmertool" : "_MISSING_Silkworm Farmer Tool",
 				"slinger" : "Steinschleuder",
 				"slingertooltip" : "Schaden: 50 HP\nReichweite: 12 Blöcke\nLadegeschwindigkeit: 3 Sekunden",
+				"sugarcaneb" : "_MISSING_Sugarcane",
+				"sugarcanefarmer" : "_MISSING_Sugarcane Farmer",
+				"sugarcanetool" : "_MISSING_Sugarcane Farmer Tool",
+				"teafarmer" : "_MISSING_Tea Farmer",
+				"teafarmerb" : "_MISSING_Produces leaves which lead to tea",
+				"teafarmertool" : "_MISSING_Tea Farmer Tool",
+				"tomatob" : "_MISSING_Tomatoes",
+				"tomatofarmer" : "_MISSING_Tomato Farmer",
+				"tomatotool" : "_MISSING_Tomato Tool",
 				"toolarge" : "Zu groß",
 				"toonarrow" : "Zu schmal für Bäume",
 				"toosmall" : "Zu klein",
+				"tropics" : "_MISSING_Tropics",
+				"tropicsa" : "_MISSING_Jobs specific to the Tropics region",
+				"tropicsb" : "_MISSING_Research colonization before attempting this",
+				"wateradjacent" : "_MISSING_Requires water adjacent to the job location",
 				"watergatherer" : "_MISSING_Watergatherer",
-				"watergatherera" : "_MISSING_TODO_WATER_GATHERER_HOVER_A",
-				"watergathererb" : "_MISSING_TODO_WATER_GATHERER_HOVER_B",
+				"watergatherera" : "_MISSING_Fills buckets from open water",
 				"watergatherertool" : "_MISSING_Watergatherer Tool",
-				"wheatb" : "Benötigt: Getreidesamen\nPlatziere auf Gras oder Dreck",
 				"wheatfarmer" : "Getreidebauer",
 				"wheatfarmertool" : "Getreidebauerwerkzeug",
 				"wolfsbanefarmer" : "Eisenhut Bauer",
-				"wolfsbanefarmertool" : "Eisenhut Bauer Werkzeug",
-				"wolfsbanefarmertooltip" : "Benötigt: Eisenhutsamen\nPlatziere sie auf Gras oder Dreck"
+				"wolfsbanefarmertool" : "Eisenhut Bauer Werkzeug"
 			}
 		},
 		"quickstart" : {
@@ -687,6 +888,16 @@
 				"text3" : "Höhere Forschungen erfordern Forschungsbeutel. Rekrutiere einen Technologen, um Forschungsbeutel herzustellen. Die Taschen selbst können mehrfach wiederverwendet werden.",
 				"text4" : "Wissenschaftler können zusammenarbeiten, um die Forschung zu beschleunigen. Platziere weitere Forschungslabore, um zusätzliche Wissenschaftler zu rekrutieren!"
 			}
+		},
+		"sciencebiome" : {
+			"arctic" : "_MISSING_The Arctic",
+			"currentarea" : "_MISSING_Current area: {0}",
+			"fareast" : "_MISSING_The Far East",
+			"newworld" : "_MISSING_The New World",
+			"noarea" : "_MISSING_None",
+			"none" : "_MISSING_None",
+			"oldworld" : "_MISSING_The Old World",
+			"tropics" : "_MISSING_The Tropics"
 		},
 		"settingsmenu" : {
 			"audio" : "Ton",
@@ -798,6 +1009,7 @@
 		"adobe" : "Lehmziegel",
 		"alkanet" : "Alkanna",
 		"alkanetstage1" : "Alkannasamen",
+		"banana" : "_MISSING_Banana",
 		"banner" : "Banner",
 		"bannertool" : "Banner Werkzeug",
 		"barley" : "_MISSING_Barley",
@@ -836,12 +1048,12 @@
 		"carpetred" : "Roter Teppich",
 		"carpetwhite" : "weiß Teppich",
 		"carpetyellow" : "Gelber Teppich",
+		"cassava" : "_MISSING_Cassava",
 		"charcoal" : "Holzkohle",
 		"cherryblossom" : "Kirschblüte",
 		"cherrysapling" : "Kirschsetzling",
 		"chickencoop" : "_MISSING_Chicken Coop",
 		"chickenmeat" : "_MISSING_Chicken Meat",
-		"chickenskin" : "_MISSING_Chicken Skin",
 		"clay" : "Lehm",
 		"coalore" : "Kohle",
 		"coatedplanks" : "Lackierte Bretter",
@@ -850,7 +1062,10 @@
 		"cobblestonebrown" : "braunes Kopfsteinpflaster",
 		"cobblestonegrey" : "graues Kopfsteinpflaster",
 		"cobblestonered" : "rotes Kopfsteinpflaster",
+		"coffee" : "_MISSING_Coffee",
+		"coffeebeans" : "_MISSING_Coffee Beans",
 		"cokes" : "Koks",
+		"colonykit" : "_MISSING_Colony Starter Kit",
 		"commandtool" : "Befehlswerkzeug",
 		"constructionjob" : "Erbauer",
 		"cookedfish" : "_MISSING_Cooked Fish",
@@ -858,12 +1073,18 @@
 		"coppernails" : "Kupfernägel",
 		"copperparts" : "Kupferteile",
 		"coppertools" : "Kupferwerkzeuge",
+		"cotton" : "_MISSING_Cotton",
+		"cottonraw" : "_MISSING_Raw Cotton",
+		"cottonthread" : "_MISSING_Cotton Thread",
+		"cottontowel" : "_MISSING_Cotton Towel",
 		"crate" : "Kiste",
 		"cratebread" : "Brotkiste",
 		"crossbow" : "Armbrust",
 		"crossbowbolt" : "Armbrustbolzen",
 		"crystal" : "Kristall",
 		"darkstone" : "Dunkler Steinblock",
+		"diamond" : "_MISSING_Diamond",
+		"diamondnecklace" : "_MISSING_Diamond Necklace",
 		"dirt" : "Dreck",
 		"dyertable" : "Färber Tisch",
 		"egg" : "_MISSING_Egg",
@@ -875,9 +1096,12 @@
 		"flax" : "Flachs",
 		"flaxstage1" : "Flachssamen",
 		"flour" : "Mehl",
+		"foofoo" : "_MISSING_Foofoo",
+		"fur" : "_MISSING_Fur",
 		"furnace" : "Schmelze",
 		"galenalead" : "Galenit (Bleihaltig)",
 		"galenasilver" : "Galenit (Silberhaltig)",
+		"glider" : "_MISSING_Glider",
 		"goldcoin" : "Goldmünze",
 		"goldingot" : "Goldbarren",
 		"goldore" : "Golderz",
@@ -920,6 +1144,7 @@
 		"ironsword" : "Eisenschwert",
 		"ironwrought" : "Schmiedeeisen",
 		"jewelry" : "_MISSING_Jewelry",
+		"kaolinite" : "_MISSING_Kaolinite",
 		"kiln" : "Brennofen",
 		"lanternblue" : "blaue Laterne",
 		"lanterncyan" : "cyan Laterne",
@@ -949,6 +1174,7 @@
 		"matchlockgun" : "Muskete",
 		"minerjob" : "Bergarbeiter",
 		"mint" : "Münzpresse",
+		"newworldmeal" : "_MISSING_New World Meal",
 		"npcshop" : "_MISSING_NPC Shop",
 		"olive" : "_MISSING_Olive",
 		"oliveleaves" : "_MISSING_Olive Leaves",
@@ -957,6 +1183,7 @@
 		"oven" : "Backofen",
 		"paperempty" : "_MISSING_Empty Paper",
 		"papertext" : "_MISSING_Paper With Text",
+		"papyrus" : "_MISSING_Papyrus",
 		"perpetualstew" : "_MISSING_Perpetual Stew",
 		"planks" : "Bretter",
 		"planksblue" : "blaue Bretter",
@@ -967,6 +1194,10 @@
 		"planksred" : "rote Bretter",
 		"planksyellow" : "gelbe Bretter",
 		"plasterblock" : "Putz",
+		"porcelainbiscuit" : "_MISSING_Porcelain Biscuit",
+		"porcelainglazed" : "_MISSING_Glazed Porcelain",
+		"porcelainraw" : "_MISSING_Raw Porcelain",
+		"potato" : "_MISSING_Potato",
 		"printingpress" : "_MISSING_Printing Press",
 		"quarterblockblack" : "Schwarzer Viertelblock",
 		"quarterblockbrowndark" : "Dunkelbrauner Viertelblock",
@@ -976,6 +1207,8 @@
 		"rawbeeswax" : "_MISSING_Raw Beeswax",
 		"rawfish" : "_MISSING_Raw Fish",
 		"redplanks" : "Beschichtete rote Bretter",
+		"rice" : "_MISSING_Rice",
+		"ricemeal" : "_MISSING_Rice Meal",
 		"salpeter" : "Salpeter",
 		"sand" : "Sand",
 		"sappling" : "Setzling",
@@ -986,10 +1219,15 @@
 		"sciencebagmilitary" : "Wissenschaftsbeutel (Militär)",
 		"sciencelab" : "Forschungslabor",
 		"shop" : "Markt",
+		"silk" : "_MISSING_Silk",
+		"silkpillow" : "_MISSING_Silk Pillow",
+		"silkthread" : "_MISSING_Silk Thread",
+		"silkwormcocoon" : "_MISSING_Silkworm Cocoon",
 		"silveringot" : "Silberbarren",
 		"sling" : "Steinschleuder",
 		"slingbullet" : "Geschoß",
 		"snow" : "Schnee",
+		"spinningwheel" : "_MISSING_Spinning Wheel",
 		"splittingstump" : "Spaltstumpf",
 		"steelingot" : "Stahlbarren",
 		"steelparts" : "Stahlteile",
@@ -1001,10 +1239,17 @@
 		"stonemasonworkbench" : "Steinmetz Werkbank",
 		"stove" : "_MISSING_Stove",
 		"straw" : "Stroh",
+		"sugar" : "_MISSING_Sugar",
 		"tailorshop" : "Schneiderei",
+		"tea" : "_MISSING_Tea",
+		"tealeavesprocessed" : "_MISSING_Processed Tea Leaves",
+		"tealeavesprocesseddried" : "_MISSING_Dried Tea Leaves",
+		"tealeavesraw" : "_MISSING_Raw Tea Leaves",
 		"technologisttable" : "Technologie-Tisch",
 		"tin" : "Zinn",
+		"tomato" : "_MISSING_Tomato",
 		"torch" : "Fackel",
+		"trader" : "_MISSING_Trader",
 		"undershirt" : "_MISSING_Undershirt",
 		"water" : "Wasser",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
@@ -1012,6 +1257,7 @@
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Getreide",
 		"wheatstage1" : "Getreidesamen",
+		"wintercoat" : "_MISSING_Winter Coat",
 		"wolfsbane" : "Eisenhut",
 		"wolfsbanestage1" : "Eisenhutsamen",
 		"woodcoating" : "_MISSING_Wood Coating",
@@ -1048,7 +1294,9 @@
 		"clay" : "Ich wünschte, ich könnte es anfassen!",
 		"coalore" : "Warnung: kann zu Klimaproblemen führen!",
 		"coatedplanks" : "Es glänzt!",
+		"coffee" : "_MISSING_Useful when rushing deadlines",
 		"cokes" : "Das Erstellen und Brennen dieses Materials ist wahrscheinlich völlig ungefährlich für Ihre Gesundheit und Umwelt",
+		"colonykit" : "_MISSING_Required to start additional colonies",
 		"copper" : "Muss nicht geschmolzen werden. So praktisch!",
 		"coppernails" : "Ein innovativer Weg, Holz zusammenzufügen",
 		"copperparts" : "Metall verbessert alles",
@@ -1068,6 +1316,7 @@
 		"furnace" : "Verwendet Brennholz als Brennstoff, um Bronzebarren herzustellen",
 		"galenalead" : "Enthält eine menge Blei",
 		"galenasilver" : "Enthält eine menge Silber",
+		"glider" : "_MISSING_Press space to go up!",
 		"goldcoin" : "Mit einem Porträt des Königs auf einer Seite.",
 		"goldingot" : "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
 		"goldore" : "Verliere es nicht.",

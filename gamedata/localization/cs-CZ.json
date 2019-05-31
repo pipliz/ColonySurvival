@@ -1,5 +1,5 @@
 {
-	"coverage" : 71.6919739696312,
+	"coverage" : 60.165593376265,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -21,8 +21,11 @@
 	"sentences" : {
 		"bannerclickedpopup" : {
 			"deletebanner" : "_MISSING_Delete Banner",
+			"deletecolony" : "_MISSING_Delete Colony",
+			"deletecolonydescription" : "_MISSING_Deleting the last banner of a colony will remove all npcs and make the colony unusable. To confirm this is what you want, type 'delete' below.",
 			"header" : "_MISSING_Banner Options",
-			"removelastwarning" : "_MISSING_Can't remove the last banner at the moment"
+			"noconfirmationdelete" : "_MISSING_Ignoring deletion command, did not get confirmation",
+			"placementfail" : "_MISSING_Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
 			"activecolony" : "_MISSING_Active Colony: {0}",
@@ -31,6 +34,32 @@
 			"movebanner" : "_MISSING_Move Banner",
 			"mustbeleader" : "_MISSING_Must be the colony leader to change banners.",
 			"startcolony" : "_MISSING_Start a new colony here"
+		},
+		"biome" : {
+			"arctic" : {
+				"description" : "_MISSING_Colony is based in the Arctic",
+				"name" : "_MISSING_Arctic Colony"
+			},
+			"fareast" : {
+				"description" : "_MISSING_Colony is based in the Far East",
+				"name" : "_MISSING_Far East Colony"
+			},
+			"newworld" : {
+				"description" : "_MISSING_Colony is based in the New World",
+				"name" : "_MISSING_New World Colony"
+			},
+			"oldworld" : {
+				"description" : "_MISSING_Colony is based in the Old World",
+				"name" : "_MISSING_Old World Colony"
+			},
+			"tropics" : {
+				"description" : "_MISSING_Colony is based in the Tropics",
+				"name" : "_MISSING_Tropics Colony"
+			}
+		},
+		"chat" : {
+			"onsciencedone" : "_MISSING_You've completed science {0}",
+			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -41,6 +70,17 @@
 			},
 			"connectedplayers" : "_MISSING_Connected Players",
 			"currentowners" : "_MISSING_Current Owners",
+			"diplomacy" : {
+				"incomingdeals" : "_MISSING_Incoming deals",
+				"mainbutton" : "_MISSING_Diplomacy",
+				"mainheader" : "_MISSING_Diplomacy",
+				"outgoingdeals" : "_MISSING_Outgoing deals",
+				"pendingdeals" : "_MISSING_Pending incoming deals",
+				"ruleaccept" : "_MISSING_Accept",
+				"ruleactive" : "_MISSING_Active",
+				"rulepending" : "_MISSING_Pending",
+				"ruleremove" : "_MISSING_Remove"
+			},
 			"inventoryheader" : "_MISSING_Colony",
 			"invite" : "_MISSING_Add as colony owner",
 			"kick" : "_MISSING_Kick from colony",
@@ -57,6 +97,12 @@
 			"recruittext2" : "_MISSING_Recruiting the next colonist costs {0} food units.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
+			"science" : {
+				"incomingdescription" : "_MISSING_{0} will share their science with you",
+				"newagreement" : "_MISSING_Propose science agreement",
+				"outgoingdescription" : "_MISSING_You provide {0} with your science",
+				"selectcolony" : "_MISSING_Select a colony to sent science to"
+			},
 			"selectcolony" : {
 				"headercolonists" : "_MISSING_Colonists",
 				"headercolony" : "_MISSING_Colony",
@@ -66,25 +112,26 @@
 				"select" : "_MISSING_Select"
 			},
 			"settoleader" : "_MISSING_Set to leader",
+			"start" : {
+				"create" : "_MISSING_Create Colony",
+				"defaultkit" : "_MISSING_First time starter kit is used",
+				"kits" : "_MISSING_Available Kits",
+				"missingkit" : "_MISSING_Missing a colony starter kit",
+				"name" : "_MISSING_Colony Name",
+				"parentcolony" : "_MISSING_Parent Colony",
+				"popupheader" : "_MISSING_Colony Creation",
+				"usescienceagreement" : "_MISSING_Transfer Science"
+			},
 			"startrecruitment" : "_MISSING_Recruitment",
 			"startsettings" : "_MISSING_Colony Settings",
 			"switchcolony" : "_MISSING_Switch to {0}",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
-				"mainbutton" : "_MISSING_Trading",
-				"mainheader" : "_MISSING_Trading Rules",
-				"newrule" : "_MISSING_Create a new trading rule",
-				"ruleaccept" : "_MISSING_Accept",
-				"ruleactive" : "_MISSING_Active",
+				"newrule" : "_MISSING_Propose trading rule",
 				"ruledescription" : "_MISSING_Traders will trade item type {0} from colony {1} to colony {2} if:",
 				"ruleincomingdescr" : "_MISSING_Get type {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "_MISSING_{0} has more than: ",
 				"ruleoutgoingdescr" : "_MISSING_Send type {0} to {1} if we have more than {2}",
-				"rulepending" : "_MISSING_Pending",
-				"ruleremove" : "_MISSING_Remove",
-				"rulesincoming" : "_MISSING_Incoming rules",
-				"rulesoutgoing" : "_MISSING_Outgoing rules",
-				"rulespending" : "_MISSING_Pending incoming rules",
 				"selectcolony" : "_MISSING_Select a colony to trade to"
 			}
 		},
@@ -228,6 +275,14 @@
 					"description" : "Zvyšuje ochranný rádius na 100 bloků",
 					"name" : "Rádius praporu V"
 				},
+				"barleyfarmer" : {
+					"description" : "_MISSING_Unlocks the barley farmer, which is used to feed livestock",
+					"name" : "_MISSING_Barley Farming"
+				},
+				"beekeeper" : {
+					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
+					"name" : "_MISSING_Beekeeping"
+				},
 				"bloomery" : {
 					"description" : "Odemyká nízkou pec, která umožňuje tavení železa a galenitu",
 					"name" : "Nízká pec"
@@ -239,6 +294,26 @@
 				"bronzeminting" : {
 					"description" : "Odemyká mincovny a obchody. Přes ně můžete za mince nakupovat trávu, hlínu a další věci",
 					"name" : "Mincovny a obchody"
+				},
+				"cabbagefarmer" : {
+					"description" : "_MISSING_Unlocks the cabbage farmer",
+					"name" : "_MISSING_Cabbage Farming"
+				},
+				"candles" : {
+					"description" : "_MISSING_Unlocks producing candles by a beekeeper",
+					"name" : "_MISSING_Candles"
+				},
+				"chickenfarmer" : {
+					"description" : "_MISSING_Unlocks the chicken farmer",
+					"name" : "_MISSING_Chicken Farming"
+				},
+				"coffee" : {
+					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
+					"name" : "_MISSING_Coffee"
+				},
+				"colonykit" : {
+					"description" : "_MISSING_Allows construction of a colony kit",
+					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
 					"description" : "Odemyká stavitele, který staví z vybraných materiálů na určených místech",
@@ -292,6 +367,14 @@
 					"description" : "Odemyká zacílené dělníky, kteří kopou jen určené bloky",
 					"name" : "Zacílený dělník"
 				},
+				"cook" : {
+					"description" : "_MISSING_Unlocks the cook, which can make meals for your colonists",
+					"name" : "_MISSING_Cook"
+				},
+				"cottontowel" : {
+					"description" : "_MISSING_Unlocks the cotton towel luxury item",
+					"name" : "_MISSING_Cotton Towel"
+				},
 				"crossbow" : {
 					"description" : "Odemyká kuši, která je silnější než baxtrix",
 					"name" : "Kuše"
@@ -299,6 +382,10 @@
 				"crossbowbolt" : {
 					"description" : "Odemyká kušní šipky",
 					"name" : "Kušní šipky"
+				},
+				"diamondprocessing" : {
+					"description" : "_MISSING_Unlocks processing diamonds",
+					"name" : "_MISSING_Diamonds"
 				},
 				"dyertable" : {
 					"description" : "Odemyká barviče, který zpracovává byliny na barvení určitých bloků a lucern",
@@ -308,9 +395,25 @@
 					"description" : "Odemyká jemné kování, které umožňuje vyrábět ocel a zlaté ingoty",
 					"name" : "Jemné kování"
 				},
+				"fisherman" : {
+					"description" : "_MISSING_Unlocks the fisherman",
+					"name" : "_MISSING_Fishing"
+				},
 				"flaxfarming" : {
 					"description" : "Odemyká farmáře lenu, který je potřebný na vyrábění látky.",
 					"name" : "Farmaření lnu"
+				},
+				"foofoo" : {
+					"description" : "_MISSING_Unlocks cooking foofoo",
+					"name" : "_MISSING_Foofoo"
+				},
+				"fur" : {
+					"description" : "_MISSING_Unlocks fur processing",
+					"name" : "_MISSING_Fur"
+				},
+				"glider" : {
+					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
+					"name" : "_MISSING_Glider"
 				},
 				"gunpowder" : {
 					"description" : "Odemyká střelný prach, který odpaluje kulky",
@@ -384,6 +487,22 @@
 					"description" : "Odemyká bambitku, dřívější verzi pistole",
 					"name" : "Bambitka"
 				},
+				"olivefarmer" : {
+					"description" : "_MISSING_Unlocks the olive farmer, a part of creating more complex meals",
+					"name" : "_MISSING_Olive Farming"
+				},
+				"papyrus" : {
+					"description" : "_MISSING_Unlocks papyrus production",
+					"name" : "_MISSING_Papyrus"
+				},
+				"porcelain" : {
+					"description" : "_MISSING_Unlocks porcelain production",
+					"name" : "_MISSING_Porcelain"
+				},
+				"printingpress" : {
+					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
+					"name" : "_MISSING_Printing Press"
+				},
 				"quarterblockdyer" : {
 					"description" : "Odemyká produkci obarvených čtvrt bloků které mohou být obarveny barvičem, můžou se z nich udělat schody",
 					"name" : "Barvené čtvrtbloky"
@@ -395,6 +514,10 @@
 				"quarterblockstonemason" : {
 					"description" : "Odemyká produkci šedých čtvrtbloků na kameníkově stole, můžou se z nich udělat schody",
 					"name" : "Šedé čtvrtbloky"
+				},
+				"ricefarmer" : {
+					"description" : "_MISSING_Unlocks rice farming",
+					"name" : "_MISSING_Rice farming"
 				},
 				"sciencebagadvanced" : {
 					"description" : "Odemyká pokročilé vědecké tašky, které se používají k pokročilému výzkumu",
@@ -416,6 +539,20 @@
 					"description" : "Odemyká vojenskou vědeckou tašku, která se používá k výzkumu vztahovanému ke zbraním",
 					"name" : "Vojenská vědecká taška"
 				},
+				"silkwormfarmer" : {
+					"description" : "_MISSING_Unlocks silkworm farming",
+					"name" : "_MISSING_Silkworm Farming"
+				},
+				"spinningwheel" : {
+					"fareast" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					},
+					"newworld" : {
+						"description" : "_MISSING_Unlocks the spinning wheel",
+						"name" : "_MISSING_Spinning wheel"
+					}
+				},
 				"splittingstump" : {
 					"description" : "Odemyká dělící pařez. Používá se k výrobě dřeva na podpal rychleji, než v pracovním stole.",
 					"name" : "Dělící pařez"
@@ -424,17 +561,45 @@
 					"description" : "Odemyká kameníka, který vyrábí různé druhy cihel",
 					"name" : "Kameník"
 				},
+				"sugarcane" : {
+					"description" : "_MISSING_Unlocks sugar cane farming",
+					"name" : "_MISSING_Sugarcane"
+				},
 				"tailorshop" : {
 					"description" : "Odemyká ševce, který zpracovává len do látky",
 					"name" : "Švec"
+				},
+				"teafarmer" : {
+					"description" : "_MISSING_Unlocks tea farming",
+					"name" : "_MISSING_Tea"
 				},
 				"technologisttable" : {
 					"description" : "Odemyká technologistu, který vyrábí vědecké tašky",
 					"name" : "Technologista"
 				},
+				"watergatherer" : {
+					"description" : "_MISSING_Unlocks the water gatherer, filling buckets with water from open water",
+					"name" : "_MISSING_Water Gathering"
+				},
+				"waterpump" : {
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"name" : "_MISSING_Water Pump"
+				},
+				"waxtablet" : {
+					"description" : "_MISSING_Unlocks the wax tablet, a luxury product",
+					"name" : "_MISSING_Wax Tablet"
+				},
 				"wheatfarming" : {
 					"description" : "Více komplexní metoda jídla, pouze pro trošku pokročilé kolonie. Také odemyká mlecí kámen pro zpracování pšenice na mouku a pec na chleba. Přidává 400 semínek žita.",
 					"name" : "Žito, mouka a chleba"
+				},
+				"wintercoat" : {
+					"description" : "_MISSING_Unlocks winter coat production",
+					"name" : "_MISSING_Wintercoat"
+				},
+				"writer" : {
+					"description" : "_MISSING_Unlocks the writer, able to produce books for enjoyment",
+					"name" : "_MISSING_Writing"
 				}
 			}
 		},
@@ -480,8 +645,13 @@
 				"tooltip" : {
 					"and" : "a",
 					"instockpile" : "V zásobách",
-					"needs" : "Potřebuje: "
+					"needs" : "Potřebuje: ",
+					"nothing" : "_MISSING_Nothing"
 				}
+			},
+			"itemselector" : {
+				"description" : "_MISSING_Select an item type to use",
+				"header" : "_MISSING_Item Selection"
 			},
 			"limits" : {
 				"description" : "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách.",
@@ -505,6 +675,7 @@
 					"stonemason" : "Limity kameníka",
 					"tailor" : "Limity šití",
 					"technologist" : "Limity vyrábění vědeckých tašek",
+					"wheelspinner" : "_MISSING_Spinningwheel Limits",
 					"woodcutter" : "Limity sekání dřeva"
 				}
 			},
@@ -535,17 +706,16 @@
 			"tooljob" : {
 				"alkanetfarmer" : "Farmář alkanny",
 				"alkanetfarmertool" : "Nástroj farmáře alkany",
-				"alkanetfarmertooltip" : "Potřebuje: Semínka alkanny/nPoložte na hlínu nebo trávu",
-				"barleya" : "_MISSING_TODO_BARLEY_A",
-				"barleyb" : "_MISSING_TODO_BARLEY_B",
+				"bananafarmb" : "_MISSING_For... bananas",
+				"bananafarmer" : "_MISSING_Banana Farmer",
+				"bananatool" : "_MISSING_Banana Farmer Tool",
+				"barleya" : "_MISSING_Primarily for livestock feed",
 				"barleyfarmer" : "_MISSING_Barley Farmer",
 				"barleyfarmertool" : "_MISSING_Barley Farmer Tool",
 				"beekeeper" : "_MISSING_Beekeeper",
-				"beekeepera" : "_MISSING_TODO_BEEKEEPER_A",
-				"beekeeperb" : "_MISSING_TODO_BEEKEEPER_B",
+				"beekeepera" : "_MISSING_Essential to some luxury items",
 				"beekeepertool" : "_MISSING_Beekeeper Tool",
 				"berrya" : "Rychlé a jednoduché jídlo, začněte s tímto!",
-				"berryb" : "Potřebuje: Semínka bobulí\nPoložte to na zem nebo trávu",
 				"berryfarmer" : "Sběrač bobulí",
 				"berryfarmertool" : "Nástroj sběrače bobulí",
 				"bow" : "Lučištník",
@@ -553,20 +723,27 @@
 				"buildera" : "Zacpi díry ve světě",
 				"builderarea" : "Stavitelův prostor",
 				"builderb" : "Odemyká menu, kde určíte, ze kterého materiálu bude váš stavitel stavět",
-				"cabbagea" : "_MISSING_TODO_CABBAGE_A",
-				"cabbageb" : "_MISSING_TODO_CABBAGE_B",
+				"cabbagea" : "_MISSING_Essential for some luxury foods",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cabbagefarmertool" : "_MISSING_Cabbage Farmer Tool",
+				"cassavab" : "_MISSING_Tropical carbs, used for foofoo",
+				"cassavafarmer" : "_MISSING_Cassava Farmer",
+				"cassavatool" : "_MISSING_Cassava Farmer Tool",
 				"chickenfarmer" : "_MISSING_Chicken Farmer",
-				"chickenfarmera" : "_MISSING_TODO_CHICKEN_FARMER_A",
-				"chickenfarmerb" : "_MISSING_TODO_CHICKEN_FARMER_B",
+				"chickenfarmera" : "_MISSING_Chickens create eggs, meat and feathers",
 				"chickenfarmertool" : "_MISSING_Chicken Farmer Tool",
+				"cofeeb" : "_MISSING_Coffeebeans",
+				"coffeebeanfarmer" : "_MISSING_Coffeebean Farmer",
+				"coffeebeanfarmertool" : "_MISSING_Coffebean Farmer Tool",
 				"construction" : "Konstrukce",
 				"construction1" : "Nechte je stavět a kopat za vás",
 				"construction2" : "Toto otevře další menu, kde si zvolíte konstruktéra",
 				"constructionjob" : "Zaměstnat dělníka",
 				"constructionjoba" : "Zaměstná kolonistu jako dělníka",
 				"constructionjobb" : "Položte to blízko prostoru konstruktéra",
+				"cottonb" : "_MISSING_Made into towels",
+				"cottonfarmer" : "_MISSING_Cotton Farmer",
+				"cottontool" : "_MISSING_Cotton Farmer Tool",
 				"coversarea" : "Překrývá se s existující oblastí",
 				"crossbow" : "Kuše",
 				"crossbowtooltip" : "Poškození: 300 HP\nDosah: 25 bloků\nRychlost přebíjení: 8 sekund",
@@ -578,19 +755,20 @@
 				"diggerspeciala" : "Odstrňte specifické bloky",
 				"diggerspecialarea" : "Prostor zacíleného dělníka",
 				"diggerspecialb" : "Vyberte prostor, kde bude zacílený dělník kopat",
+				"fareast" : "_MISSING_Far East",
+				"fareasta" : "_MISSING_Jobs specific to the Far East region",
+				"fareastb" : "_MISSING_Research colonization before attempting this",
 				"fisherman" : "_MISSING_Fisherman",
-				"fishermana" : "_MISSING_TODO_FISHER_MAN_HOVER_A",
-				"fishermanb" : "_MISSING_TODO_FISHER_MAN_HOVER_B",
+				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
-				"flaxb" : "Potřebuje: Semínka lnu\nPoložte to na trávu nebo hlínu",
 				"flaxfarmer" : "Farmář lenu",
 				"flaxfarmertool" : "Nástroj farmáře lenu",
 				"flaxherbfarming" : "Len a byliny",
 				"flaxherbfarminga" : "Farmáři lnu a bylin",
 				"flaxherbfarmingb" : "Toto otevře další menu, kde si můžete vybrat z více druhů farmářů",
 				"food" : "_MISSING_Food",
-				"food1" : "_MISSING_TODO_FOOD_A",
-				"food2" : "_MISSING_TODO_FOOD_B",
+				"food1" : "_MISSING_Food production",
+				"food2" : "_MISSING_Various ways of preventing your colonists from starving",
 				"forester" : "Dřevorubec",
 				"forestera" : "Sází a kácí stromy",
 				"foresterb" : "Potřebuje: Sazenice a sekera\nPoložte to na hlínu nebo trávu",
@@ -603,7 +781,6 @@
 				"header" : "Nástroj pro příkazy",
 				"hollyhockfarmer" : "Farmář topolovky",
 				"hollyhockfarmertool" : "Nástroj farmáře topolovky",
-				"hollyhockfarmertooltip" : "Potřebuje: Semínka topolovky\nPoložte to na trávu nebo hlínu",
 				"insidearea" : "Nemůžete dát další prostor do prostoru",
 				"jobbowday" : "Denní lukostřelec",
 				"jobbownight" : "Noční lukostřelec",
@@ -620,31 +797,55 @@
 				"minerb" : "Potřebuje: Krumpáč\nProkopej se dolu Prokope a vyber rudu nebo kámen.",
 				"minertool" : "Nástroj horníka",
 				"missingscience" : "<color=red>Potřebuje '{0}' abyste mohli dělat výzkum.</color>",
+				"newworld" : "_MISSING_New World",
+				"newworlda" : "_MISSING_Jobs specific to the New World region",
+				"newworldb" : "_MISSING_Research colonization before attempting this",
 				"noconstructionareanearby" : "Žádná konstrukce blízko",
 				"notarable" : "Nejedná se o ornou půdu",
 				"notflat" : "Nerovná oblast",
 				"nowaternearby" : "_MISSING_No water nearby",
 				"occupiedblocks" : "Obsazeno bloky",
 				"olivefarmer" : "_MISSING_Olive Farmer",
-				"olivefarmera" : "_MISSING_TODO_OLIVE_FARMER_A",
-				"olivefarmerb" : "_MISSING_TODO_OLIVE_FARMER_B",
+				"olivefarmera" : "_MISSING_Creates olive trees and gathers olives",
 				"olivefarmertool" : "_MISSING_Olive Farmer Tool",
-				"selectitem" : "Vyberte věc kterou chcete použít",
+				"papyrusb" : "_MISSING_Papyrus",
+				"papyrusfarmer" : "_MISSING_Papyrus Farmer",
+				"papyrustool" : "_MISSING_Papyrus Farmer Tool",
+				"potatob" : "_MISSING_New World carbs",
+				"potatofarmer" : "_MISSING_Potato Farmer",
+				"potatotool" : "_MISSING_Potato Farmer Tool",
+				"requiresarable" : "_MISSING_Requires arable ground",
+				"riceb" : "_MISSING_Far East carbs",
+				"ricefarmer" : "_MISSING_Rice Farmer",
+				"ricefarmertool" : "_MISSING_Rice Farmer Tool",
+				"silkwormb" : "_MISSING_Used to make silk eventually",
+				"silkwormfarmer" : "_MISSING_Silkworm Farmer",
+				"silkwormfarmertool" : "_MISSING_Silkworm Farmer Tool",
 				"slinger" : "Práče",
 				"slingertooltip" : "Poškození: 50 HP\nDosah: 12 bloků\nRychlost přebíjení: 3 sekundy",
+				"sugarcaneb" : "_MISSING_Sugarcane",
+				"sugarcanefarmer" : "_MISSING_Sugarcane Farmer",
+				"sugarcanetool" : "_MISSING_Sugarcane Farmer Tool",
+				"teafarmer" : "_MISSING_Tea Farmer",
+				"teafarmerb" : "_MISSING_Produces leaves which lead to tea",
+				"teafarmertool" : "_MISSING_Tea Farmer Tool",
+				"tomatob" : "_MISSING_Tomatoes",
+				"tomatofarmer" : "_MISSING_Tomato Farmer",
+				"tomatotool" : "_MISSING_Tomato Tool",
 				"toolarge" : "Moc velké",
 				"toonarrow" : "Příliš úzké pro stromy",
 				"toosmall" : "Moc malé",
+				"tropics" : "_MISSING_Tropics",
+				"tropicsa" : "_MISSING_Jobs specific to the Tropics region",
+				"tropicsb" : "_MISSING_Research colonization before attempting this",
+				"wateradjacent" : "_MISSING_Requires water adjacent to the job location",
 				"watergatherer" : "_MISSING_Watergatherer",
-				"watergatherera" : "_MISSING_TODO_WATER_GATHERER_HOVER_A",
-				"watergathererb" : "_MISSING_TODO_WATER_GATHERER_HOVER_B",
+				"watergatherera" : "_MISSING_Fills buckets from open water",
 				"watergatherertool" : "_MISSING_Watergatherer Tool",
-				"wheatb" : "Potřebuje: Semínka pšenice\nPoložte to na trávu nebo hlínu",
 				"wheatfarmer" : "Farmář pšenice",
 				"wheatfarmertool" : "Nástroj farmáře pšenice",
 				"wolfsbanefarmer" : "Farmář oměje",
-				"wolfsbanefarmertool" : "Nástroj farmáře oměje",
-				"wolfsbanefarmertooltip" : "Potřebuje: Semínka oměje\nPoložte to na trávu nebo hlínu"
+				"wolfsbanefarmertool" : "Nástroj farmáře oměje"
 			}
 		},
 		"quickstart" : {
@@ -687,6 +888,16 @@
 				"text3" : "Lepší výzkumy potřebují vědecké tašky. Rekrutujte technologistu, který bude vyrábět vědecké tašky. Tašky můžou být znovu využity.",
 				"text4" : "Víc vědců zrychluje zkoumání. Položte další laboratoře pro extra rychlost!"
 			}
+		},
+		"sciencebiome" : {
+			"arctic" : "_MISSING_The Arctic",
+			"currentarea" : "_MISSING_Current area: {0}",
+			"fareast" : "_MISSING_The Far East",
+			"newworld" : "_MISSING_The New World",
+			"noarea" : "_MISSING_None",
+			"none" : "_MISSING_None",
+			"oldworld" : "_MISSING_The Old World",
+			"tropics" : "_MISSING_The Tropics"
 		},
 		"settingsmenu" : {
 			"audio" : "Audio",
@@ -798,6 +1009,7 @@
 		"adobe" : "Vepřovice",
 		"alkanet" : "Alkana",
 		"alkanetstage1" : "Alkana",
+		"banana" : "_MISSING_Banana",
 		"banner" : "Prapor",
 		"bannertool" : "Nástroj praporu",
 		"barley" : "_MISSING_Barley",
@@ -836,12 +1048,12 @@
 		"carpetred" : "Červený koberec",
 		"carpetwhite" : "Bílý koberec",
 		"carpetyellow" : "Žlutý koberec",
+		"cassava" : "_MISSING_Cassava",
 		"charcoal" : "Dřevěné uhlí",
 		"cherryblossom" : "Květ třešně",
 		"cherrysapling" : "Sazenice třešně",
 		"chickencoop" : "_MISSING_Chicken Coop",
 		"chickenmeat" : "_MISSING_Chicken Meat",
-		"chickenskin" : "_MISSING_Chicken Skin",
 		"clay" : "Jíl",
 		"coalore" : "Uhlí",
 		"coatedplanks" : "Opracované prkna",
@@ -850,7 +1062,10 @@
 		"cobblestonebrown" : "Hnědé dlažební kostky",
 		"cobblestonegrey" : "Šedé dlažební kostky",
 		"cobblestonered" : "Červené dlažební kostky",
+		"coffee" : "_MISSING_Coffee",
+		"coffeebeans" : "_MISSING_Coffee Beans",
 		"cokes" : "Koks",
+		"colonykit" : "_MISSING_Colony Starter Kit",
 		"commandtool" : "Nástroj pro příkazy",
 		"constructionjob" : "Konstrukce",
 		"cookedfish" : "_MISSING_Cooked Fish",
@@ -858,12 +1073,18 @@
 		"coppernails" : "Měďené hřebíky",
 		"copperparts" : "Měděné části",
 		"coppertools" : "Měděné nástroje",
+		"cotton" : "_MISSING_Cotton",
+		"cottonraw" : "_MISSING_Raw Cotton",
+		"cottonthread" : "_MISSING_Cotton Thread",
+		"cottontowel" : "_MISSING_Cotton Towel",
 		"crate" : "Bedna",
 		"cratebread" : "_MISSING_Bread Crate",
 		"crossbow" : "Kuše",
 		"crossbowbolt" : "Kušní šipka",
 		"crystal" : "Krystal",
 		"darkstone" : "Blok temného kamene",
+		"diamond" : "_MISSING_Diamond",
+		"diamondnecklace" : "_MISSING_Diamond Necklace",
 		"dirt" : "Hlína",
 		"dyertable" : "Barvičův stůl",
 		"egg" : "_MISSING_Egg",
@@ -875,9 +1096,12 @@
 		"flax" : "Len",
 		"flaxstage1" : "Semínka lenu",
 		"flour" : "Mouka",
+		"foofoo" : "_MISSING_Foofoo",
+		"fur" : "_MISSING_Fur",
 		"furnace" : "Huť",
 		"galenalead" : "Galenit (olověný)",
 		"galenasilver" : "Galenit (stříbřitý)",
+		"glider" : "_MISSING_Glider",
 		"goldcoin" : "Zlatá mince",
 		"goldingot" : "Zlatý ingot",
 		"goldore" : "Zlatá ruda",
@@ -920,6 +1144,7 @@
 		"ironsword" : "Železný meč",
 		"ironwrought" : "Tepané železo",
 		"jewelry" : "_MISSING_Jewelry",
+		"kaolinite" : "_MISSING_Kaolinite",
 		"kiln" : "Sušící pec",
 		"lanternblue" : "Modrá lucerna",
 		"lanterncyan" : "Tyrkysová lucerna",
@@ -949,6 +1174,7 @@
 		"matchlockgun" : "Bambitka",
 		"minerjob" : "Horník",
 		"mint" : "Mincovna",
+		"newworldmeal" : "_MISSING_New World Meal",
 		"npcshop" : "_MISSING_NPC Shop",
 		"olive" : "_MISSING_Olive",
 		"oliveleaves" : "_MISSING_Olive Leaves",
@@ -957,6 +1183,7 @@
 		"oven" : "Pec",
 		"paperempty" : "_MISSING_Empty Paper",
 		"papertext" : "_MISSING_Paper With Text",
+		"papyrus" : "_MISSING_Papyrus",
 		"perpetualstew" : "_MISSING_Perpetual Stew",
 		"planks" : "Prkna",
 		"planksblue" : "Modrá prkna",
@@ -967,6 +1194,10 @@
 		"planksred" : "Červená prkna",
 		"planksyellow" : "Žlutá prkna",
 		"plasterblock" : "Sádrový blok",
+		"porcelainbiscuit" : "_MISSING_Porcelain Biscuit",
+		"porcelainglazed" : "_MISSING_Glazed Porcelain",
+		"porcelainraw" : "_MISSING_Raw Porcelain",
+		"potato" : "_MISSING_Potato",
 		"printingpress" : "_MISSING_Printing Press",
 		"quarterblockblack" : "Černý čtvrtblok",
 		"quarterblockbrowndark" : "Tmavě hnědý čtvrtblok",
@@ -976,6 +1207,8 @@
 		"rawbeeswax" : "_MISSING_Raw Beeswax",
 		"rawfish" : "_MISSING_Raw Fish",
 		"redplanks" : "Opracovaná červená prkna",
+		"rice" : "_MISSING_Rice",
+		"ricemeal" : "_MISSING_Rice Meal",
 		"salpeter" : "Šalupa",
 		"sand" : "Písek",
 		"sappling" : "Sazenice",
@@ -986,10 +1219,15 @@
 		"sciencebagmilitary" : "Vojenská vědecká taška",
 		"sciencelab" : "Laboratoř",
 		"shop" : "Obchod",
+		"silk" : "_MISSING_Silk",
+		"silkpillow" : "_MISSING_Silk Pillow",
+		"silkthread" : "_MISSING_Silk Thread",
+		"silkwormcocoon" : "_MISSING_Silkworm Cocoon",
 		"silveringot" : "Stříbrný ingot",
 		"sling" : "Prak",
 		"slingbullet" : "Náboj praku",
 		"snow" : "Sníh",
+		"spinningwheel" : "_MISSING_Spinning Wheel",
 		"splittingstump" : "Dělící pařez",
 		"steelingot" : "Ocelový ingot",
 		"steelparts" : "Ocelové části",
@@ -1001,10 +1239,17 @@
 		"stonemasonworkbench" : "Kameníkův stůl",
 		"stove" : "_MISSING_Stove",
 		"straw" : "Sláma",
+		"sugar" : "_MISSING_Sugar",
 		"tailorshop" : "Obchod ševce",
+		"tea" : "_MISSING_Tea",
+		"tealeavesprocessed" : "_MISSING_Processed Tea Leaves",
+		"tealeavesprocesseddried" : "_MISSING_Dried Tea Leaves",
+		"tealeavesraw" : "_MISSING_Raw Tea Leaves",
 		"technologisttable" : "Technologistův stolek",
 		"tin" : "Cín",
+		"tomato" : "_MISSING_Tomato",
 		"torch" : "Pochodeň",
+		"trader" : "_MISSING_Trader",
 		"undershirt" : "_MISSING_Undershirt",
 		"water" : "Voda",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
@@ -1012,6 +1257,7 @@
 		"waxtablet" : "_MISSING_Wax Tablet",
 		"wheat" : "Pšenice",
 		"wheatstage1" : "Semínka pšenice",
+		"wintercoat" : "_MISSING_Winter Coat",
 		"wolfsbane" : "Oměj",
 		"wolfsbanestage1" : "Semínka oměje",
 		"woodcoating" : "_MISSING_Wood Coating",
@@ -1048,7 +1294,9 @@
 		"clay" : "Přál bych si aby jste se toho mohl dotknout",
 		"coalore" : "Upozornění: může způsobit změnu klimatu",
 		"coatedplanks" : "Lesklé!",
+		"coffee" : "_MISSING_Useful when rushing deadlines",
 		"cokes" : "Vytváření a pálení téhle věci je nejspíš úplně bezpečné pro vaše zdraví a okolní prostředí",
+		"colonykit" : "_MISSING_Required to start additional colonies",
 		"copper" : "Nepotřebuje být tavena. Jak obvyklé!",
 		"coppernails" : "Inovativní cesta jak sbíjet dřevo dohromady",
 		"copperparts" : "Kov improvuje vše",
@@ -1068,6 +1316,7 @@
 		"furnace" : "Používá dřevo na podpal jako palivo na výrobu bronzových ingotů a cihel",
 		"galenalead" : "Obshuje hodně olova",
 		"galenasilver" : "Obsahuje hodně stříbra",
+		"glider" : "_MISSING_Press space to go up!",
 		"goldcoin" : "S portrétem krále na zadní straně",
 		"goldingot" : "Jednou byl použit jako bankovka",
 		"goldore" : "Neztrať to",

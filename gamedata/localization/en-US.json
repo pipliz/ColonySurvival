@@ -19,19 +19,13 @@
 		"9" : "Firing a musket consumes a bullet and gunpowder, but the linen pouch that contained the gunpowder is often conserved."
 	},
 	"sentences" : {
-		"sciencebiome" : {
-			"oldworld" : "The Old World",
-			"newworld" : "The New World",
-			"fareast" : "The Far East",
-			"arctic" : "The Arctic",
-			"tropics" : "The Tropics",
-			"currentarea" : "Current area: {0}",
-			"noarea" : "None"
-		},
 		"bannerclickedpopup" : {
 			"deletebanner" : "Delete Banner",
+			"deletecolony" : "Delete Colony",
+			"deletecolonydescription" : "Deleting the last banner of a colony will remove all npcs and make the colony unusable. To confirm this is what you want, type 'delete' below.",
 			"header" : "Banner Options",
-			"removelastwarning" : "Can't remove the last banner at the moment"
+			"noconfirmationdelete" : "Ignoring deletion command, did not get confirmation",
+			"placementfail" : "Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
 			"activecolony" : "Active Colony: {0}",
@@ -40,6 +34,32 @@
 			"movebanner" : "Move Banner",
 			"mustbeleader" : "Must be the colony leader to change banners.",
 			"startcolony" : "Start a new colony here"
+		},
+		"biome" : {
+			"arctic" : {
+				"description" : "Colony is based in the Arctic",
+				"name" : "Arctic Colony"
+			},
+			"fareast" : {
+				"description" : "Colony is based in the Far East",
+				"name" : "Far East Colony"
+			},
+			"newworld" : {
+				"description" : "Colony is based in the New World",
+				"name" : "New World Colony"
+			},
+			"oldworld" : {
+				"description" : "Colony is based in the Old World",
+				"name" : "Old World Colony"
+			},
+			"tropics" : {
+				"description" : "Colony is based in the Tropics",
+				"name" : "Tropics Colony"
+			}
+		},
+		"chat" : {
+			"onsciencedone" : "You've completed science {0}",
+			"onsciencetraded" : "You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -50,6 +70,17 @@
 			},
 			"connectedplayers" : "Connected Players",
 			"currentowners" : "Current Owners",
+			"diplomacy" : {
+				"incomingdeals" : "Incoming deals",
+				"mainbutton" : "Diplomacy",
+				"mainheader" : "Diplomacy",
+				"outgoingdeals" : "Outgoing deals",
+				"pendingdeals" : "Pending incoming deals",
+				"ruleaccept" : "Accept",
+				"ruleactive" : "Active",
+				"rulepending" : "Pending",
+				"ruleremove" : "Remove"
+			},
 			"inventoryheader" : "Colony",
 			"invite" : "Add as colony owner",
 			"kick" : "Kick from colony",
@@ -66,6 +97,12 @@
 			"recruittext2" : "Recruiting the next colonist costs {0} food units.",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
+			"science" : {
+				"incomingdescription" : "{0} will share their science with you",
+				"newagreement" : "Propose science agreement",
+				"outgoingdescription" : "You provide {0} with your science",
+				"selectcolony" : "Select a colony to sent science to"
+			},
 			"selectcolony" : {
 				"headercolonists" : "Colonists",
 				"headercolony" : "Colony",
@@ -75,25 +112,26 @@
 				"select" : "Select"
 			},
 			"settoleader" : "Set to leader",
+			"start" : {
+				"create" : "Create Colony",
+				"defaultkit" : "First time starter kit is used",
+				"kits" : "Available Kits",
+				"missingkit" : "Missing a colony starter kit",
+				"name" : "Colony Name",
+				"parentcolony" : "Parent Colony",
+				"popupheader" : "Colony Creation",
+				"usescienceagreement" : "Transfer Science"
+			},
 			"startrecruitment" : "Recruitment",
 			"startsettings" : "Colony Settings",
 			"switchcolony" : "Switch to {0}",
 			"trading" : {
 				"completerule" : "Create rule",
-				"mainbutton" : "Trading",
-				"mainheader" : "Trading Rules",
-				"newrule" : "Create a new trading rule",
-				"ruleaccept" : "Accept",
-				"ruleactive" : "Active",
+				"newrule" : "Propose trading rule",
 				"ruledescription" : "Traders will trade item type {0} from colony {1} to colony {2} if:",
 				"ruleincomingdescr" : "Get type {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "{0} has more than: ",
 				"ruleoutgoingdescr" : "Send type {0} to {1} if we have more than {2}",
-				"rulepending" : "Pending",
-				"ruleremove" : "Remove",
-				"rulesincoming" : "Incoming rules",
-				"rulesoutgoing" : "Outgoing rules",
-				"rulespending" : "Pending incoming rules",
 				"selectcolony" : "Select a colony to trade to"
 			}
 		},
@@ -237,6 +275,14 @@
 					"description" : "Increases the safe radius created to 100 blocks",
 					"name" : "Banner Radius V"
 				},
+				"barleyfarmer" : {
+					"description" : "Unlocks the barley farmer, which is used to feed livestock",
+					"name" : "Barley Farming"
+				},
+				"beekeeper" : {
+					"description" : "Unlocks the beekeeper, which makes (part of) various luxury items and foods",
+					"name" : "Beekeeping"
+				},
 				"bloomery" : {
 					"description" : "Unlock the Bloomery, which can process iron ore & galena ore",
 					"name" : "Bloomery"
@@ -248,6 +294,26 @@
 				"bronzeminting" : {
 					"description" : "Unlocks mints and shops. Can be used to buy seeds, dirt and other miscellaneous items",
 					"name" : "Mints & Shops"
+				},
+				"cabbagefarmer" : {
+					"description" : "Unlocks the cabbage farmer",
+					"name" : "Cabbage Farming"
+				},
+				"candles" : {
+					"description" : "Unlocks producing candles by a beekeeper",
+					"name" : "Candles"
+				},
+				"chickenfarmer" : {
+					"description" : "Unlocks the chicken farmer",
+					"name" : "Chicken Farming"
+				},
+				"coffee" : {
+					"description" : "Unlocks processing coffeebeans into coffee at the stove",
+					"name" : "Coffee"
+				},
+				"colonykit" : {
+					"description" : "Allows construction of a colony kit",
+					"name" : "Colonization"
 				},
 				"constructionbuilder" : {
 					"description" : "Unlock builder areas for the construction worker",
@@ -301,6 +367,14 @@
 					"description" : "Unlock special digger areas for the construction worker",
 					"name" : "Special Digger"
 				},
+				"cook" : {
+					"description" : "Unlocks the cook, which can make meals for your colonists",
+					"name" : "Cook"
+				},
+				"cottontowel" : {
+					"description" : "Unlocks the cotton towel luxury item",
+					"name" : "Cotton Towel"
+				},
 				"crossbow" : {
 					"description" : "Unlocks the Crossbow, a more powerful weapon than the bow",
 					"name" : "Crossbow"
@@ -308,6 +382,10 @@
 				"crossbowbolt" : {
 					"description" : "Unlocks Crossbow Bolts",
 					"name" : "Crossbow Bolts"
+				},
+				"diamondprocessing" : {
+					"description" : "Unlocks processing diamonds",
+					"name" : "Diamonds"
 				},
 				"dyertable" : {
 					"description" : "Unlocks the dyer, who can use herbs to paint certain blocks and lanterns",
@@ -317,9 +395,25 @@
 					"description" : "Unlocks the Finery Forge, which uses cokes to create steel and gold ingots",
 					"name" : "Finery Forge"
 				},
+				"fisherman" : {
+					"description" : "Unlocks the fisherman",
+					"name" : "Fishing"
+				},
 				"flaxfarming" : {
-					"description" : "Unlocks flax farmers, required to produce linen. Grants 100 flax seeds.",
+					"description" : "Unlocks flax farmers, required to produce linen.",
 					"name" : "Flax Farming"
+				},
+				"foofoo" : {
+					"description" : "Unlocks cooking foofoo",
+					"name" : "Foofoo"
+				},
+				"fur" : {
+					"description" : "Unlocks fur processing",
+					"name" : "Fur"
+				},
+				"glider" : {
+					"description" : "A revolutionary way of transport. Essential in reaching new lands.",
+					"name" : "Glider"
 				},
 				"gunpowder" : {
 					"description" : "Unlock Gunpowder, a powerful explosive",
@@ -393,6 +487,22 @@
 					"description" : "Unlocks the Matchlock Gun, an early type of gun",
 					"name" : "Matchlock Gun"
 				},
+				"olivefarmer" : {
+					"description" : "Unlocks the olive farmer, a part of creating more complex meals",
+					"name" : "Olive Farming"
+				},
+				"papyrus" : {
+					"description" : "Unlocks papyrus production",
+					"name" : "Papyrus"
+				},
+				"porcelain" : {
+					"description" : "Unlocks porcelain production",
+					"name" : "Porcelain"
+				},
+				"printingpress" : {
+					"description" : "Unlocks the printing press, allowing books to be spread much easier",
+					"name" : "Printing Press"
+				},
 				"quarterblockdyer" : {
 					"description" : "Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
 					"name" : "Dyed Quarter Blocks"
@@ -404,6 +514,10 @@
 				"quarterblockstonemason" : {
 					"description" : "Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
 					"name" : "Grey Quarter Blocks"
+				},
+				"ricefarmer" : {
+					"description" : "Unlocks rice farming",
+					"name" : "Rice farming"
 				},
 				"sciencebagadvanced" : {
 					"description" : "Unlocks the Advanced Science Bag, used for advanced research",
@@ -425,6 +539,20 @@
 					"description" : "Unlocks the Military Science Bag, used for military research",
 					"name" : "Military science bag"
 				},
+				"silkwormfarmer" : {
+					"description" : "Unlocks silkworm farming",
+					"name" : "Silkworm Farming"
+				},
+				"spinningwheel" : {
+					"fareast" : {
+						"description" : "Unlocks the spinning wheel",
+						"name" : "Spinning wheel"
+					},
+					"newworld" : {
+						"description" : "Unlocks the spinning wheel",
+						"name" : "Spinning wheel"
+					}
+				},
 				"splittingstump" : {
 					"description" : "Unlocks splitting stumps. Can be used to craft firewood more rapidly than the workbench.",
 					"name" : "Splitting Stump"
@@ -433,17 +561,45 @@
 					"description" : "Unlocks the stonemason, who can craft different varieties of bricks",
 					"name" : "Stonemason's Workbench"
 				},
+				"sugarcane" : {
+					"description" : "Unlocks sugar cane farming",
+					"name" : "Sugarcane"
+				},
 				"tailorshop" : {
 					"description" : "Unlock the tailor, who turns flax into linen",
 					"name" : "Tailor"
+				},
+				"teafarmer" : {
+					"description" : "Unlocks tea farming",
+					"name" : "Tea"
 				},
 				"technologisttable" : {
 					"description" : "Unlocks the technologist, who crafts Science Bags",
 					"name" : "Technologist"
 				},
+				"watergatherer" : {
+					"description" : "Unlocks the water gatherer, filling buckets with water from open water",
+					"name" : "Water Gathering"
+				},
+				"waterpump" : {
+					"description" : "Unlocks the water pump, allowing water to be gathered anywhere",
+					"name" : "Water Pump"
+				},
+				"waxtablet" : {
+					"description" : "Unlocks the wax tablet, a luxury product",
+					"name" : "Wax Tablet"
+				},
 				"wheatfarming" : {
-					"description" : "A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven. Grants 400 wheat seeds.",
+					"description" : "A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven.",
 					"name" : "Bread Production"
+				},
+				"wintercoat" : {
+					"description" : "Unlocks winter coat production",
+					"name" : "Wintercoat"
+				},
+				"writer" : {
+					"description" : "Unlocks the writer, able to produce books for enjoyment",
+					"name" : "Writing"
 				}
 			}
 		},
@@ -489,8 +645,13 @@
 				"tooltip" : {
 					"and" : "and",
 					"instockpile" : "in stockpile",
-					"needs" : "Needs: "
+					"needs" : "Needs: ",
+					"nothing" : "Nothing"
 				}
+			},
+			"itemselector" : {
+				"description" : "Select an item type to use",
+				"header" : "Item Selection"
 			},
 			"limits" : {
 				"description" : "Colonists will work until the set amount is reached in the stockpile.",
@@ -514,6 +675,7 @@
 					"stonemason" : "Masonry limits",
 					"tailor" : "Tailoring limits",
 					"technologist" : "Technologist limits",
+					"wheelspinner" : "Spinningwheel Limits",
 					"woodcutter" : "Wood cutting limits"
 				}
 			},
@@ -544,17 +706,16 @@
 			"tooljob" : {
 				"alkanetfarmer" : "Alkanet Farmer",
 				"alkanetfarmertool" : "Alkanet Farmer Tool",
-				"alkanetfarmertooltip" : "Needs: Alkanet Seeds\nPlace on grass or dirt",
-				"barleya" : "TODO_BARLEY_A",
-				"barleyb" : "TODO_BARLEY_B",
+				"bananafarmb" : "For... bananas",
+				"bananafarmer" : "Banana Farmer",
+				"bananatool" : "Banana Farmer Tool",
+				"barleya" : "Primarily for livestock feed",
 				"barleyfarmer" : "Barley Farmer",
 				"barleyfarmertool" : "Barley Farmer Tool",
 				"beekeeper" : "Beekeeper",
-				"beekeepera" : "TODO_BEEKEEPER_A",
-				"beekeeperb" : "TODO_BEEKEEPER_B",
+				"beekeepera" : "Essential to some luxury items",
 				"beekeepertool" : "Beekeeper Tool",
 				"berrya" : "Quick and easy food, start with this!",
-				"berryb" : "Needs: Berry seeds\nPlace on grass or dirt",
 				"berryfarmer" : "Berry Farmer",
 				"berryfarmertool" : "Berry Farmer Tool",
 				"bow" : "Bow",
@@ -562,20 +723,27 @@
 				"buildera" : "Fill an area of the world",
 				"builderarea" : "Builder Area",
 				"builderb" : "Opens a menu to select the type, then select the area to fill",
-				"cabbagea" : "TODO_CABBAGE_A",
-				"cabbageb" : "TODO_CABBAGE_B",
+				"cabbagea" : "Essential for some luxury foods",
 				"cabbagefarmer" : "Cabbage Farmer",
 				"cabbagefarmertool" : "Cabbage Farmer Tool",
+				"cassavab" : "Tropical carbs, used for foofoo",
+				"cassavafarmer" : "Cassava Farmer",
+				"cassavatool" : "Cassava Farmer Tool",
 				"chickenfarmer" : "Chicken Farmer",
-				"chickenfarmera" : "TODO_CHICKEN_FARMER_A",
-				"chickenfarmerb" : "TODO_CHICKEN_FARMER_B",
+				"chickenfarmera" : "Chickens create eggs, meat and feathers",
 				"chickenfarmertool" : "Chicken Farmer Tool",
+				"cofeeb" : "Coffeebeans",
+				"coffeebeanfarmer" : "Coffeebean Farmer",
+				"coffeebeanfarmertool" : "Coffebean Farmer Tool",
 				"construction" : "Construction",
 				"construction1" : "Let them do the work",
 				"construction2" : "This will open another menu where you can select the construction type",
 				"constructionjob" : "Construction Job",
 				"constructionjoba" : "Hires a construction worker",
 				"constructionjobb" : "Place next to a construction area",
+				"cottonb" : "Made into towels",
+				"cottonfarmer" : "Cotton Farmer",
+				"cottontool" : "Cotton Farmer Tool",
 				"coversarea" : "Covers existing area",
 				"crossbow" : "Crossbow",
 				"crossbowtooltip" : "Damage: 300 HP\nRange: 25 blocks\nReload speed: 8 seconds",
@@ -587,22 +755,23 @@
 				"diggerspeciala" : "Remove a specific type in an area",
 				"diggerspecialarea" : "Special Digger Area",
 				"diggerspecialb" : "Select the area to remove it from",
+				"fareast" : "Far East",
+				"fareasta" : "Jobs specific to the Far East region",
+				"fareastb" : "Research colonization before attempting this",
 				"fisherman" : "Fisherman",
-				"fishermana" : "TODO_FISHER_MAN_HOVER_A",
-				"fishermanb" : "TODO_FISHER_MAN_HOVER_B",
+				"fishermana" : "Will fish for... fishes",
 				"fishermantool" : "Fisherman Tool",
-				"flaxb" : "Needs: Flax Seeds\nPlace on grass or dirt",
 				"flaxfarmer" : "Flax Farmer",
 				"flaxfarmertool" : "Flax Farmer Tool",
 				"flaxherbfarming" : "Flax & Herbs",
 				"flaxherbfarminga" : "Flax and Herb Farmers",
 				"flaxherbfarmingb" : "This will open another menu where you can select the farmer types",
 				"food" : "Food",
-				"food1" : "TODO_FOOD_A",
-				"food2" : "TODO_FOOD_B",
+				"food1" : "Food production",
+				"food2" : "Various ways of preventing your colonists from starving",
 				"forester" : "Forester",
 				"forestera" : "Plants & chops trees",
-				"foresterb" : "Needs: Saplings and an axe\nPlace on grass or dirt",
+				"foresterb" : "Requires an axe and arable ground",
 				"forestertool" : "Forester Tool",
 				"guard" : "Guard",
 				"guarda" : "Protect your colony!",
@@ -612,7 +781,6 @@
 				"header" : "Command tool",
 				"hollyhockfarmer" : "Hollyhock Farmer",
 				"hollyhockfarmertool" : "Hollyhock Farmer Tool",
-				"hollyhockfarmertooltip" : "Needs: Hollyhock Seeds\nPlace on grass or dirt",
 				"insidearea" : "Can't place inside an area",
 				"jobbowday" : "Daytime Bow Guard",
 				"jobbownight" : "Nighttime Bow Guard",
@@ -629,31 +797,55 @@
 				"minerb" : "Needs: Pickaxe\nDig down and place on top of ores or dark stone",
 				"minertool" : "Miner Tool",
 				"missingscience" : "<color=red>Requires '{0}' to be unlocked first.</color>",
+				"newworld" : "New World",
+				"newworlda" : "Jobs specific to the New World region",
+				"newworldb" : "Research colonization before attempting this",
 				"noconstructionareanearby" : "No construction area nearby",
 				"notarable" : "Not arable",
 				"notflat" : "Not flat",
 				"nowaternearby" : "No water nearby",
 				"occupiedblocks" : "Occupied by blocks",
 				"olivefarmer" : "Olive Farmer",
-				"olivefarmera" : "TODO_OLIVE_FARMER_A",
-				"olivefarmerb" : "TODO_OLIVE_FARMER_B",
+				"olivefarmera" : "Creates olive trees and gathers olives",
 				"olivefarmertool" : "Olive Farmer Tool",
-				"selectitem" : "Select an item type to use",
+				"papyrusb" : "Papyrus",
+				"papyrusfarmer" : "Papyrus Farmer",
+				"papyrustool" : "Papyrus Farmer Tool",
+				"potatob" : "New World carbs",
+				"potatofarmer" : "Potato Farmer",
+				"potatotool" : "Potato Farmer Tool",
+				"requiresarable" : "Requires arable ground",
+				"riceb" : "Far East carbs",
+				"ricefarmer" : "Rice Farmer",
+				"ricefarmertool" : "Rice Farmer Tool",
+				"silkwormb" : "Used to make silk eventually",
+				"silkwormfarmer" : "Silkworm Farmer",
+				"silkwormfarmertool" : "Silkworm Farmer Tool",
 				"slinger" : "Slinger",
 				"slingertooltip" : "Damage: 50 HP\nRange: 12 blocks\nReload speed: 3 seconds",
+				"sugarcaneb" : "Sugarcane",
+				"sugarcanefarmer" : "Sugarcane Farmer",
+				"sugarcanetool" : "Sugarcane Farmer Tool",
+				"teafarmer" : "Tea Farmer",
+				"teafarmerb" : "Produces leaves which lead to tea",
+				"teafarmertool" : "Tea Farmer Tool",
+				"tomatob" : "Tomatoes",
+				"tomatofarmer" : "Tomato Farmer",
+				"tomatotool" : "Tomato Tool",
 				"toolarge" : "Too large",
 				"toonarrow" : "Too narrow for trees",
 				"toosmall" : "Too small",
+				"tropics" : "Tropics",
+				"tropicsa" : "Jobs specific to the Tropics region",
+				"tropicsb" : "Research colonization before attempting this",
+				"wateradjacent" : "Requires water adjacent to the job location",
 				"watergatherer" : "Watergatherer",
-				"watergatherera" : "TODO_WATER_GATHERER_HOVER_A",
-				"watergathererb" : "TODO_WATER_GATHERER_HOVER_B",
+				"watergatherera" : "Fills buckets from open water",
 				"watergatherertool" : "Watergatherer Tool",
-				"wheatb" : "Needs: Wheat Seeds\nPlace on grass or dirt",
 				"wheatfarmer" : "Wheat Farmer",
 				"wheatfarmertool" : "Wheat Farmer Tool",
 				"wolfsbanefarmer" : "Wolfsbane Farmer",
-				"wolfsbanefarmertool" : "Wolfsbane Farmer Tool",
-				"wolfsbanefarmertooltip" : "Needs: Wolfsbane Seeds\nPlace on grass or dirt"
+				"wolfsbanefarmertool" : "Wolfsbane Farmer Tool"
 			}
 		},
 		"quickstart" : {
@@ -696,6 +888,16 @@
 				"text3" : "Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
 			}
+		},
+		"sciencebiome" : {
+			"arctic" : "The Arctic",
+			"currentarea" : "Current area: {0}",
+			"fareast" : "The Far East",
+			"newworld" : "The New World",
+			"noarea" : "None",
+			"none" : "None",
+			"oldworld" : "The Old World",
+			"tropics" : "The Tropics"
 		},
 		"settingsmenu" : {
 			"audio" : "Audio",
@@ -807,6 +1009,7 @@
 		"adobe" : "Adobe",
 		"alkanet" : "Alkanet",
 		"alkanetstage1" : "Alkanet Seeds",
+		"banana" : "Banana",
 		"banner" : "Banner",
 		"bannertool" : "Banner Tool",
 		"barley" : "Barley",
@@ -845,12 +1048,12 @@
 		"carpetred" : "Red Carpet",
 		"carpetwhite" : "White Carpet",
 		"carpetyellow" : "Yellow Carpet",
+		"cassava" : "Cassava",
 		"charcoal" : "Charcoal",
 		"cherryblossom" : "Cherry Blossom",
 		"cherrysapling" : "Cherry Sapling",
 		"chickencoop" : "Chicken Coop",
 		"chickenmeat" : "Chicken Meat",
-		"chickenskin" : "Chicken Skin",
 		"clay" : "Clay",
 		"coalore" : "Coal Ore",
 		"coatedplanks" : "Coated Planks",
@@ -859,7 +1062,10 @@
 		"cobblestonebrown" : "Brown Cobblestone",
 		"cobblestonegrey" : "Grey Cobblestone",
 		"cobblestonered" : "Red Cobblestone",
+		"coffee" : "Coffee",
+		"coffeebeans" : "Coffee Beans",
 		"cokes" : "Cokes",
+		"colonykit" : "Colony Starter Kit",
 		"commandtool" : "Command Tool",
 		"constructionjob" : "Construction Job",
 		"cookedfish" : "Cooked Fish",
@@ -867,12 +1073,18 @@
 		"coppernails" : "Copper Nails",
 		"copperparts" : "Copper Parts",
 		"coppertools" : "Copper Tools",
+		"cotton" : "Cotton",
+		"cottonraw" : "Raw Cotton",
+		"cottonthread" : "Cotton Thread",
+		"cottontowel" : "Cotton Towel",
 		"crate" : "Crate",
 		"cratebread" : "Bread Crate",
 		"crossbow" : "Crossbow",
 		"crossbowbolt" : "Crossbow Bolt",
 		"crystal" : "Crystal",
 		"darkstone" : "Dark Stone Block",
+		"diamond" : "Diamond",
+		"diamondnecklace" : "Diamond Necklace",
 		"dirt" : "Dirt",
 		"dyertable" : "Dyer's table",
 		"egg" : "Egg",
@@ -884,9 +1096,12 @@
 		"flax" : "Flax",
 		"flaxstage1" : "Flax seeds",
 		"flour" : "Flour",
+		"foofoo" : "Foofoo",
+		"fur" : "Fur",
 		"furnace" : "Furnace",
 		"galenalead" : "Galena (Lead rich)",
 		"galenasilver" : "Galena (Silver rich)",
+		"glider" : "Glider",
 		"goldcoin" : "Gold Coin",
 		"goldingot" : "Gold Ingot",
 		"goldore" : "Gold Ore",
@@ -929,6 +1144,7 @@
 		"ironsword" : "Iron Sword",
 		"ironwrought" : "Wrought Iron",
 		"jewelry" : "Jewelry",
+		"kaolinite" : "Kaolinite",
 		"kiln" : "Kiln",
 		"lanternblue" : "Blue Lantern",
 		"lanterncyan" : "Cyan Lantern",
@@ -958,6 +1174,7 @@
 		"matchlockgun" : "Matchlock Gun",
 		"minerjob" : "Miner Job",
 		"mint" : "Mint",
+		"newworldmeal" : "New World Meal",
 		"npcshop" : "NPC Shop",
 		"olive" : "Olive",
 		"oliveleaves" : "Olive Leaves",
@@ -966,6 +1183,7 @@
 		"oven" : "Oven",
 		"paperempty" : "Empty Paper",
 		"papertext" : "Paper With Text",
+		"papyrus" : "Papyrus",
 		"perpetualstew" : "Perpetual Stew",
 		"planks" : "Planks",
 		"planksblue" : "Blue Planks",
@@ -976,6 +1194,10 @@
 		"planksred" : "Red Planks",
 		"planksyellow" : "Yellow Planks",
 		"plasterblock" : "Plaster Block",
+		"porcelainbiscuit" : "Porcelain Biscuit",
+		"porcelainglazed" : "Glazed Porcelain",
+		"porcelainraw" : "Raw Porcelain",
+		"potato" : "Potato",
 		"printingpress" : "Printing Press",
 		"quarterblockblack" : "Black Quarter Block",
 		"quarterblockbrowndark" : "Dark Brown Quarter Block",
@@ -985,6 +1207,8 @@
 		"rawbeeswax" : "Raw Beeswax",
 		"rawfish" : "Raw Fish",
 		"redplanks" : "Coated Red Planks",
+		"rice" : "Rice",
+		"ricemeal" : "Rice Meal",
 		"salpeter" : "Saltpeter",
 		"sand" : "Sand",
 		"sappling" : "Sapling",
@@ -995,10 +1219,15 @@
 		"sciencebagmilitary" : "Military Science Bag",
 		"sciencelab" : "Science Lab",
 		"shop" : "Shop",
+		"silk" : "Silk",
+		"silkpillow" : "Silk Pillow",
+		"silkthread" : "Silk Thread",
+		"silkwormcocoon" : "Silkworm Cocoon",
 		"silveringot" : "Silver Ingot",
 		"sling" : "Sling",
 		"slingbullet" : "Sling Bullet",
 		"snow" : "Snow",
+		"spinningwheel" : "Spinning Wheel",
 		"splittingstump" : "Splitting Stump",
 		"steelingot" : "Steel Ingot",
 		"steelparts" : "Steel Parts",
@@ -1010,10 +1239,17 @@
 		"stonemasonworkbench" : "Stonemason's Workbench",
 		"stove" : "Stove",
 		"straw" : "Straw",
+		"sugar" : "Sugar",
 		"tailorshop" : "Tailor Shop",
+		"tea" : "Tea",
+		"tealeavesprocessed" : "Processed Tea Leaves",
+		"tealeavesprocesseddried" : "Dried Tea Leaves",
+		"tealeavesraw" : "Raw Tea Leaves",
 		"technologisttable" : "Technologist's Table",
 		"tin" : "Tin",
+		"tomato" : "Tomato",
 		"torch" : "Torch",
+		"trader" : "Trader",
 		"undershirt" : "Undershirt",
 		"water" : "Water",
 		"watergathererjob" : "Watergatherer Job",
@@ -1021,6 +1257,7 @@
 		"waxtablet" : "Wax Tablet",
 		"wheat" : "Wheat",
 		"wheatstage1" : "Wheat Seeds",
+		"wintercoat" : "Winter Coat",
 		"wolfsbane" : "Wolfsbane",
 		"wolfsbanestage1" : "Wolfsbane Seeds",
 		"woodcoating" : "Wood Coating",
@@ -1057,7 +1294,9 @@
 		"clay" : "I wish you could touch it",
 		"coalore" : "Warning: might cause climate problems",
 		"coatedplanks" : "Shiny!",
+		"coffee" : "Useful when rushing deadlines",
 		"cokes" : "Creating and burning this stuff is probably totally safe for your health and the environment",
+		"colonykit" : "Required to start additional colonies",
 		"copper" : "Does not need to be smelted. So convenient!",
 		"coppernails" : "An innovative way to combine pieces of wood",
 		"copperparts" : "Metal improves everything",
@@ -1077,6 +1316,7 @@
 		"furnace" : "Uses firewood as fuel to craft bronze ingots and bricks",
 		"galenalead" : "Contains lots of lead",
 		"galenasilver" : "Contains lots of silver",
+		"glider" : "Press space to go up!",
 		"goldcoin" : "With a portrait of the king on one side",
 		"goldingot" : "Was once used to guarantee the value of paper money",
 		"goldore" : "Don't lose it",

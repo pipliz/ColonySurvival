@@ -156,7 +156,7 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 									GatherResults.Add(recipe.Results[i]);
 								}
 
-								ModLoader.TriggerCallbacks(ModLoader.EModCallbackType.OnNPCGathered, this as IJob, treeLocation, GatherResults);
+								ModLoader.Callbacks.OnNPCCraftedRecipe.Invoke(this, recipe, GatherResults);
 
 								RecipeResult toShow = RecipeResult.GetWeightedRandom(GatherResults);
 								if (toShow.Amount > 0) {

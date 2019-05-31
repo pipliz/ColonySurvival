@@ -70,6 +70,7 @@
 			"food",
 			"ingredient"
 		],
+		"icon" : "./textures/icons/banana.png",
 		"isPlaceable" : false
 	},
 	"bananastage1" : {
@@ -505,6 +506,7 @@
 			"food",
 			"ingredient"
 		],
+		"icon" : "./textures/icons/cassava.png",
 		"isPlaceable" : false
 	},
 	"cassavastage1" : {
@@ -608,14 +610,6 @@
 		"icon" : "./textures/icons/chickenmeat.png",
 		"isPlaceable" : false
 	},
-	"chickenskin" : {
-		"categories" : [
-			"food",
-			"ingredient"
-		],
-		"icon" : "./textures/icons/chickenskin.png",
-		"isPlaceable" : false
-	},
 	"clay" : {
 		"categories" : [
 			"decorative"
@@ -709,11 +703,22 @@
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "cobblestone"
 	},
+	"coffee" : {
+		"categories" : [
+			"luxury",
+			"tropics"
+		],
+		"happiness" : 75,
+		"icon" : "./textures/icons/coffee.png",
+		"isPlaceable" : false,
+		"luxuryHours" : 24
+	},
 	"coffeebeans" : {
 		"categories" : [
 			"food",
 			"ingredient"
 		],
+		"icon" : "./textures/icons/coffeebeans.png",
 		"isPlaceable" : false
 	},
 	"cokes" : {
@@ -833,6 +838,7 @@
 			"cotton"
 		],
 		"happiness" : 100,
+		"icon" : "./textures/icons/cottontowel.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 360
 	},
@@ -902,6 +908,7 @@
 		"categories" : [
 			"ingredient"
 		],
+		"icon" : "./textures/icons/diamond.png",
 		"isPlaceable" : false
 	},
 	"diamondnecklace" : {
@@ -910,6 +917,7 @@
 			"tropics"
 		],
 		"happiness" : 100,
+		"icon" : "./textures/icons/diamondnecklace.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 720
 	},
@@ -1044,12 +1052,14 @@
 		"dailyFoodFractionOptimal" : 0.7,
 		"foodValue" : 0.6,
 		"happiness" : 30,
+		"icon" : "./textures/icons/foofoo.png",
 		"isPlaceable" : false
 	},
 	"fur" : {
 		"categories" : [
 			"ingredient"
 		],
+		"icon" : "./textures/icons/fur.png",
 		"isPlaceable" : false
 	},
 	"galenalead" : {
@@ -1066,6 +1076,14 @@
 			"raw"
 		],
 		"icon" : "./textures/icons/galenasilver.png",
+		"isPlaceable" : false
+	},
+	"glider" : {
+		"categories" : [
+			"essential",
+			"transport"
+		],
+		"icon" : "./textures/icons/glider.png",
 		"isPlaceable" : false
 	},
 	"goldcoin" : {
@@ -1398,7 +1416,7 @@
 			{"amount":1,"chance":0.98,"type":"stonebricks"}
 		],
 		"onRemoveAudio" : "stoneDelete",
-		"sideall" : "neutral"
+		"sideall" : "infinitediamond"
 	},
 	"infinitegalena" : {
 		"customData" : {
@@ -1925,6 +1943,7 @@
 		"dailyFoodFractionOptimal" : 0.7,
 		"foodValue" : 0.8,
 		"happiness" : 30,
+		"icon" : "./textures/icons/newworldmeal.png",
 		"isPlaceable" : false
 	},
 	"npcshop" : {
@@ -2011,6 +2030,7 @@
 		"categories" : [
 			"ingredient"
 		],
+		"icon" : "./textures/icons/papyrus.png",
 		"isPlaceable" : false
 	},
 	"papyrusstage1" : {
@@ -2293,6 +2313,7 @@
 			"flower",
 			"ingredient"
 		],
+		"icon" : "./textures/icons/rice.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
@@ -2305,6 +2326,7 @@
 		"dailyFoodFractionOptimal" : 0.7,
 		"foodValue" : 0.8,
 		"happiness" : 30,
+		"icon" : "./textures/icons/ricemeal.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
 	},
@@ -2499,17 +2521,7 @@
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
-	"spinningwheelfareast" : {
-		"categories" : [
-			"job"
-		],
-		"icon" : "./textures/icons/spinningwheel.png",
-		"mesh" : "./meshes/spinningwheel.ply",
-		"onPlaceAudio" : "woodPlace",
-		"onRemoveAudio" : "woodDeleteLight",
-		"sideall" : "neutral"
-	},
-	"spinningwheelnewworld" : {
+	"spinningwheel" : {
 		"categories" : [
 			"job"
 		],
@@ -2643,6 +2655,7 @@
 			"food",
 			"ingredient"
 		],
+		"icon" : "./textures/icons/sugar.png",
 		"isPlaceable" : false
 	},
 	"sugarcanestage1" : {
@@ -2693,7 +2706,7 @@
 			"luxury",
 			"far east"
 		],
-		"happiness" : 200,
+		"happiness" : 75,
 		"icon" : "./textures/icons/tea.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 24
@@ -2870,6 +2883,7 @@
 		"categories" : [
 			"job"
 		],
+		"icon" : "./textures/icons/trader.png",
 		"mesh" : "./meshes/trader.ply",
 		"sideall" : "neutral"
 	},
@@ -2971,6 +2985,7 @@
 			"new world"
 		],
 		"happiness" : 300,
+		"icon" : "./textures/icons/wintercoat.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 720
 	},

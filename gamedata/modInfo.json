@@ -39,19 +39,10 @@
 				"fileType" : "addOrReplaceNPCRecipes",
 				"index" : -1000000,
 				"limitsUIMapping" : [
-					"spinningwheelfareast"
+					"spinningwheel"
 				],
-				"npcType" : "pipliz.wheelspinner.fareast",
-				"relativePath" : "recipes/recipes_wheelspinner_fareast.json"
-			},
-			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"spinningwheelnewworld"
-				],
-				"npcType" : "pipliz.wheelspinner.newworld",
-				"relativePath" : "recipes/recipes_wheelspinner_newworld.json"
+				"npcType" : "pipliz.wheelspinner",
+				"relativePath" : "recipes/recipes_wheelspinner.json"
 			},
 			{
 				"fileType" : "addOrReplaceNPCRecipes",
@@ -384,5 +375,189 @@
 		"marksgamemodded" : false,
 		"name" : "pipliz.basejsons",
 		"version" : "0.6.0"
+	},
+	{
+		"compatibleversions" : [
+			"0.7.0"
+		],
+		"enabled" : true,
+		"jsonFiles" : [
+			{
+				"contents" : [
+					{
+						"amount" : 1,
+						"type" : "sciencelab"
+					},
+					{
+						"amount" : 2,
+						"type" : "sling"
+					},
+					{
+						"amount" : 50,
+						"type" : "slingbullet"
+					},
+					{
+						"amount" : 25,
+						"type" : "coppernails"
+					},
+					{
+						"amount" : 10,
+						"type" : "copper"
+					},
+					{
+						"amount" : 6,
+						"type" : "bronzepickaxe"
+					},
+					{
+						"amount" : 4,
+						"type" : "bronzeaxe"
+					},
+					{
+						"amount" : 50,
+						"type" : "logtemperate"
+					},
+					{
+						"amount" : 150,
+						"type" : "planks"
+					},
+					{
+						"amount" : 50,
+						"type" : "stonebricks"
+					},
+					{
+						"amount" : 150,
+						"type" : "bread"
+					},
+					{
+						"amount" : 25,
+						"type" : "torch"
+					},
+					{
+						"amount" : 93,
+						"type" : "straw"
+					},
+					{
+						"amount" : 50,
+						"type" : "firewood"
+					}
+				],
+				"fileType" : "addOrReplaceStarterPack",
+				"index" : -1000000,
+				"packType" : "ColonyStarterPackPrimary"
+			},
+			{
+				"contents" : [
+					{
+						"amount" : 50,
+						"type" : "logtemperate"
+					},
+					{
+						"amount" : 50,
+						"type" : "planks"
+					},
+					{
+						"amount" : 8,
+						"type" : "straw"
+					},
+					{
+						"amount" : 10,
+						"type" : "coppernails"
+					},
+					{
+						"amount" : 5,
+						"type" : "copper"
+					}
+				],
+				"fileType" : "addOrReplaceStarterPack",
+				"index" : -1000000,
+				"packType" : "PlayerStarterPackPrimary"
+			},
+			{
+				"contents" : [
+					{
+						"amount" : 200,
+						"type" : "coppernails"
+					},
+					{
+						"amount" : 100,
+						"type" : "copperparts"
+					},
+					{
+						"amount" : 100,
+						"type" : "coppertools"
+					},
+					{
+						"amount" : 500,
+						"type" : "coppernails"
+					},
+					{
+						"amount" : 10,
+						"type" : "sling"
+					},
+					{
+						"amount" : 500,
+						"type" : "slingbullet"
+					},
+					{
+						"amount" : 50,
+						"type" : "ironingot"
+					},
+					{
+						"amount" : 10,
+						"type" : "bow"
+					},
+					{
+						"amount" : 250,
+						"type" : "bronzearrow"
+					},
+					{
+						"amount" : 4,
+						"type" : "sciencelab"
+					},
+					{
+						"amount" : 200,
+						"type" : "copper"
+					},
+					{
+						"amount" : 100,
+						"type" : "logtemperate"
+					},
+					{
+						"amount" : 300,
+						"type" : "planks"
+					},
+					{
+						"amount" : 300,
+						"type" : "stonebricks"
+					},
+					{
+						"amount" : 500,
+						"type" : "bread"
+					},
+					{
+						"amount" : 50,
+						"type" : "torch"
+					},
+					{
+						"amount" : 50,
+						"type" : "bed"
+					},
+					{
+						"amount" : 200,
+						"type" : "firewood"
+					}
+				],
+				"createPlayerRecipe" : true,
+				"fileType" : "addOrReplaceStarterPack",
+				"icon" : "./textures/icons/commandtool.png",
+				"index" : -1000000,
+				"itemType" : "colonykit",
+				"packType" : "ColonyStarterPackSecondary",
+				"relativePath" : ""
+			}
+		],
+		"marksgamemodded" : false,
+		"name" : "pipliz.starterpacks",
+		"version" : "0.1.0"
 	}
 ]
