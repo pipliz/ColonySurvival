@@ -1,5 +1,5 @@
 {
-	"coverage" : 66.6053357865685,
+	"coverage" : 66.1187214611872,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -65,7 +65,7 @@
 			"colonysettings" : {
 				"daymonsters" : "_MISSING_Day Monster Amount",
 				"enablehappiness" : "_MISSING_Use Happiness",
-				"header" : "_MISSING_World Settings",
+				"header" : "_MISSING_Colony Settings",
 				"nightmonsters" : "_MISSING_Night Monster Amount"
 			},
 			"connectedplayers" : "_MISSING_Connected Players",
@@ -101,7 +101,7 @@
 				"incomingdescription" : "_MISSING_{0} will share their science with you",
 				"newagreement" : "_MISSING_Propose science agreement",
 				"outgoingdescription" : "_MISSING_You provide {0} with your science",
-				"selectcolony" : "_MISSING_Select a colony to sent science to"
+				"selectcolony" : "_MISSING_Select a colony to send science to"
 			},
 			"selectcolony" : {
 				"headercolonists" : "_MISSING_Colonists",
@@ -310,6 +310,10 @@
 				"coffee" : {
 					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
 					"name" : "_MISSING_Coffee"
+				},
+				"coffeebeans" : {
+					"description" : "_MISSING_Unlocks the coffeebean farmer",
+					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
 					"description" : "_MISSING_Allows construction of a colony kit",
@@ -661,7 +665,10 @@
 				},
 				"pipliz" : {
 					"baker" : "Лимит выпечки",
+					"beekeeper" : "_MISSING_Beekeeper limits",
 					"bloomeryjob" : "Лимит сыродутного горна",
+					"chickenfarmer" : "_MISSING_Chickenfarmer limits",
+					"cook" : "_MISSING_Cook limits",
 					"crafter" : "Лимит крафтинга",
 					"dyer" : "Лимит красильщика",
 					"fineryforgejob" : "Лимит по кузнечному делу",
@@ -675,8 +682,11 @@
 					"stonemason" : "Лимит каменщика",
 					"tailor" : "Лимит шитья",
 					"technologist" : "Лимит технолога",
+					"watergatherer" : "_MISSING_Watergatherer limits",
+					"waterpump" : "_MISSING_Waterpump limits",
 					"wheelspinner" : "_MISSING_Spinningwheel Limits",
-					"woodcutter" : "Лимит по резке дерева"
+					"woodcutter" : "Лимит по резке дерева",
+					"writer" : "_MISSING_Writer limits"
 				}
 			},
 			"quickstart" : {
