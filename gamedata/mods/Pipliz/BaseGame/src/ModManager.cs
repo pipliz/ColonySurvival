@@ -47,7 +47,7 @@ namespace Pipliz.Mods.BaseGame
 		}
 
 		[ModLoader.ModCallback(ModLoader.EModCallbackType.OnModifyResearchables, "farmingresults")]
-		static void AddFarmingResults (Dictionary<string, BaseResearchable> dict)
+		static void AddFarmingResults (Dictionary<string, DefaultResearchable> dict)
 		{
 			foreach (var pair in BuilderLimits) {
 				RegisterCallback(dict, pair.Key, BuilderLimitResearch);
@@ -58,7 +58,7 @@ namespace Pipliz.Mods.BaseGame
 			}
 		}
 
-		static void BuilderLimitResearch (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason)
+		static void BuilderLimitResearch (AbstractResearchable res, ColonyScienceState manager, EResearchCompletionReason reason)
 		{
 			int current = manager.Colony.TemporaryData.GetAsOrDefault("pipliz.builderlimit", 0);
 			int next = BuilderLimits[res.GetKey()];
@@ -66,7 +66,7 @@ namespace Pipliz.Mods.BaseGame
 			ConstructionHelper.SendPacket(manager.Colony);
 		}
 
-		static void DiggerLimitResearch (BaseResearchable res, ColonyScienceState manager, EResearchCompletionReason reason)
+		static void DiggerLimitResearch (AbstractResearchable res, ColonyScienceState manager, EResearchCompletionReason reason)
 		{
 			int current = manager.Colony.TemporaryData.GetAsOrDefault("pipliz.diggerlimit", 0);
 			int next = DiggerLimits[res.GetKey()];
@@ -74,9 +74,9 @@ namespace Pipliz.Mods.BaseGame
 			ConstructionHelper.SendPacket(manager.Colony);
 		}
 
-		static void RegisterCallback (Dictionary<string, BaseResearchable> dict, string key, BaseResearchable.OnCompleteAction action)
+		static void RegisterCallback (Dictionary<string, DefaultResearchable> dict, string key, DefaultResearchable.OnCompleteAction action)
 		{
-			if (dict.TryGetValue(key, out BaseResearchable res)) {
+			if (dict.TryGetValue(key, out DefaultResearchable res)) {
 				res.AddOnCompleteAction(action);
 			} else {
 				Log.WriteWarning($"Tried to register callback to research {key}, which was not registered");

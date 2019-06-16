@@ -212,6 +212,18 @@
 	{
 		"defaultLimit" : 0,
 		"defaultPriority" : -100,
+		"name" : "pipliz.crafter.trader",
+		"requires" : [
+			{"type":"coatedplanks"},
+			{"amount":5,"type":"crate"}
+		],
+		"results" : [
+			{"type":"trader"}
+		]
+	},
+	{
+		"defaultLimit" : 0,
+		"defaultPriority" : -100,
 		"name" : "pipliz.crafter.cratebread",
 		"requires" : [
 			{"amount":50,"type":"bread"},
@@ -360,7 +372,7 @@
 		"defaultPriority" : -100,
 		"name" : "pipliz.crafter.tailorshop",
 		"requires" : [
-			{"type":"coatedplanks"},
+			{"type":"planks"},
 			{"type":"flax"},
 			{"type":"coppertools"}
 		],

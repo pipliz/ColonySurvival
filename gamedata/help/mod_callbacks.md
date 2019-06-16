@@ -285,7 +285,7 @@ Registered callbacks: 3
 
 CallbackType: `OnModifyResearchables`  
 =======  
-Method type: System.Action<System.Collections.Generic.Dictionary<string, Science.BaseResearchable>>  
+Method type: System.Action<System.Collections.Generic.Dictionary<string, Science.DefaultResearchable>>  
 Called inside of OnAddResearchables - allows modifying researches added through jsonFiles before they're registered  
 Registered callbacks: 3  
 0.	'addbannercallbacks' -> 'Science.Implementations.BannerResearch.AddCallbacks'   
@@ -308,7 +308,7 @@ Callback triggered upon a call to ServerManager.TryChangeBlock - used by various
 Nothing changed yet when this callback happens and the change can be blocked.  
 You can block is by setting CallbackState to Cancelled  
 Registered callbacks: 1  
-0.	'TODO_FIX_BANNER_MOVING' -> 'ServerManager.TempBannerFix'   
+0.	'preventaccidentalbannerremoval' -> 'ServerManager.TempBannerFix'   
 
 
 CallbackType: `OnPlayerConnectedLate`  
@@ -565,8 +565,10 @@ Registered callbacks: 9
 3.	'loadhappiness' -> 'ColonyTracker.LoadHappiness'   
 4.	'loadowners' -> 'ColonyTracker.LoadOwners'   
 5.	'loadrecipesettings' -> 'ColonyTracker.LoadRecipeSettings'   
-6.	'loadscience' -> 'ColonyTracker.LoadScience'   
-7.	'loadstockpile' -> 'ColonyTracker.LoadStockpile'   
+6.	'loadstockpile' -> 'ColonyTracker.LoadStockpile'   
+7.	'loadscience' -> 'ColonyTracker.LoadScience'   
+		 Parent @ 0 : 'loadnpcs'  
+		 Parent @ 6 : 'loadstockpile'  
 8.	'loadtrading' -> 'ColonyTrading.LoadTrading'   
 
 
@@ -629,7 +631,7 @@ Registered callbacks: 1
 
 CallbackType: `OnConstructBannerClickedUI`  
 =======  
-Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, BlockEntities.Implementations.BannerTracker.Banner>  
 Registered callbacks: 1  
 0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructBannerClicked'   
 

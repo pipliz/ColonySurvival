@@ -3,7 +3,6 @@ using Jobs;
 using NPC;
 using Science;
 using System.Collections.Generic;
-using UnityEngine.Assertions;
 using static NPC.NPCBase;
 
 namespace Pipliz.Mods.BaseGame
@@ -48,43 +47,67 @@ namespace Pipliz.Mods.BaseGame
 			Colony owner = instance.Owner;
 			instance.NPC.LookAt(instance.Position.Vector);
 			ColonyScienceState scienceData = owner.ScienceData;
-			ScienceKey activeResearch = scienceData.ActiveResearch;
+
+			state.JobIsDone = true;
+
+			// if no stored items - check if the stockpile contains the items required for any of the researches
+			var completedCycles = scienceData.CompletedCycles;
 			if (instance.StoredItemCount <= 0) {
-				if (activeResearch.IsValid && !activeResearch.IsCompleted(scienceData)) {
-					// no items, but valid research -> try to get items
-					IList<InventoryItem> requirements = activeResearch.Researchable.GetScienceRequirements();
-					if (owner.Stockpile.Contains(requirements)) {
-						instance.ShouldTakeItems = true;
-						state.SetCooldown(0.3);
-						state.JobIsDone = true;
-					} else {
-						MissingItemHelper(requirements, owner.Stockpile, ref state);
+				if (completedCycles.Count == 0) {
+					// done for now
+					state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 16f), BuiltinBlocks.Indices.erroridle));
+					return;
+				}
+
+				int possibles = 0;
+				for (int i = 0; i < completedCycles.Count; i++) {
+					ScienceKey cyclesResearch = completedCycles.GetKeyAtIndex(i);
+					if (cyclesResearch.Researchable.TryGetCyclesCondition(out ScientistCyclesCondition cyclesData) && completedCycles.GetValueAtIndex(i) < cyclesData.CycleCount) {
+						possibles++;
+						if (owner.Stockpile.Contains(cyclesData.ItemsPerCycle)) {
+							instance.ShouldTakeItems = true;
+							state.SetCooldown(0.3);
+							return; // found an in-progress research that we have items for
+						}
 					}
-				} else {
-					float cooldown = Random.NextFloat(8f, 16f);
-					// no items, no research -> wait for research
-					state.SetIndicator(new Shared.IndicatorState(cooldown, BuiltinBlocks.Indices.erroridle));
-					state.JobIsDone = false;
-				}
-			} else {
-				state.JobIsDone = true;
-
-				if (!activeResearch.IsValid) {
-					// items, but no valid research -> 'dump' items
-					instance.StoredItemCount = 0;
-					state.SetCooldown(0.3);
-					return;
-				}
-				IResearchable research = activeResearch.Researchable;
-				float progress = activeResearch.GetProgress(scienceData);
-				if (progress >= research.GetResearchIterationCount()) {
-					activeResearch = new ScienceKey();
-					instance.StoredItemCount = 0;
-					state.SetCooldown(0.3);
-					return;
 				}
 
-				// items, valid research -> try progress
+				// missing items, find random requirement to use as indicator
+				if (possibles > 0) {
+					int possiblesIdx = Random.Next(0, possibles);
+
+					for (int i = 0; i < completedCycles.Count; i++) {
+						ScienceKey cyclesResearch = completedCycles.GetKeyAtIndex(i);
+						if (cyclesResearch.Researchable.TryGetCyclesCondition(out ScientistCyclesCondition cyclesData) && completedCycles.GetValueAtIndex(i) < cyclesData.CycleCount) {
+							if (possiblesIdx-- <= 0) {
+								MissingItemHelper(cyclesData.ItemsPerCycle, owner.Stockpile, ref state);
+								return;
+							}
+						}
+					}
+					// should be unreachable
+				}
+
+				// done for now
+				state.SetIndicator(new Shared.IndicatorState(Random.NextFloat(8f, 16f), BuiltinBlocks.Indices.erroridle));
+				return;
+			}
+
+			// have stored items, try to forward an active science
+
+			if (completedCycles.Count == 0) {
+				instance.StoredItemCount = 0;
+				state.SetCooldown(0.3);
+				return;
+			}
+
+			for (int i = 0; i < completedCycles.Count; i++) {
+				AbstractResearchable research = completedCycles.GetKeyAtIndex(i).Researchable;
+				float progress = completedCycles.GetValueAtIndex(i);
+
+				if (!research.TryGetCyclesCondition(out ScientistCyclesCondition cyclesCondition) || progress >= cyclesCondition.CycleCount) {
+					continue;
+				}
 
 				float progressCycles = 1f;
 				var happyData = owner.HappinessData;
@@ -94,34 +117,64 @@ namespace Pipliz.Mods.BaseGame
 
 				if ((int)nextProgress != (int)progress) {
 					// euy reached next cycle. Better make sure we can get the requirements
-					IList<InventoryItem> requirements = research.GetScienceRequirements();
+					List<InventoryItem> requirements = cyclesCondition.ItemsPerCycle;
 
 					if (owner.Stockpile.TryRemove(requirements)) {
 						// recycle science bags
 						int recycled = 0;
-						for (int i = 0; i < requirements.Count; i++) {
-							ushort type = requirements[i].Type;
-							if (   type == BuiltinBlocks.Indices.sciencebaglife
+						for (int j = 0; j < requirements.Count; j++) {
+							ushort type = requirements[j].Type;
+							if (type == BuiltinBlocks.Indices.sciencebaglife
 								|| type == BuiltinBlocks.Indices.sciencebagbasic
 								|| type == BuiltinBlocks.Indices.sciencebagmilitary
 							) {
-								recycled += requirements[i].Amount;
+								recycled += requirements[j].Amount;
 							}
 						}
-						for (int i = recycled; i > 0; i--) {
+						for (int j = recycled; j > 0; j--) {
 							if (Random.NextDouble() > RECYCLE_CHANCE) {
 								recycled--;
 							}
 						}
-						owner.Stockpile.Add(BuiltinBlocks.Indices.linenbag, recycled);
-
-						OnSuccess(instance, scienceData, progressCycles, ref state);
+						if (recycled > 0) {
+							owner.Stockpile.Add(BuiltinBlocks.Indices.linenbag, recycled);
+						}
+						OnSuccess(ref state);
+						return;
 					} else {
-						MissingItemHelper(requirements, owner.Stockpile, ref state);
+						continue;
 					}
 				} else {
-					OnSuccess(instance, scienceData, progressCycles, ref state);
+					OnSuccess(ref state);
+					return;
 				}
+				// unreachable
+				void OnSuccess (ref NPCState stateCopy)
+				{
+					scienceData.CyclesAddProgress(research.AssignedKey, progressCycles);
+					stateCopy.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science, (ushort)research.AssignedKey.Index));
+					instance.StoredItemCount--;
+				}
+			}
+
+			// had stored items, but for some reason couldn't dump them in existing research
+			// reset the job basically
+			instance.StoredItemCount = 0;
+			state.SetCooldown(0.3);
+			return;
+
+			void MissingItemHelper (IList<InventoryItem> requirements, Stockpile stockpile, ref NPCState stateCopy)
+			{
+				ushort missing = 0;
+				for (int i = 0; i < requirements.Count; i++) {
+					if (!stockpile.Contains(requirements[i])) {
+						missing = requirements[i].Type;
+						break;
+					}
+				}
+				float cooldown = Random.NextFloat(8f, 16f);
+				stateCopy.SetIndicator(new Shared.IndicatorState(cooldown, missing, true, false));
+				stateCopy.JobIsDone = false;
 			}
 		}
 
@@ -134,27 +187,6 @@ namespace Pipliz.Mods.BaseGame
 			state.SetCooldown(0.5);
 			state.JobIsDone = true;
 			instance.ShouldTakeItems = false;
-		}
-
-		protected void OnSuccess (ScientistJobInstance instance, ColonyScienceState scienceData, float progressCycles, ref NPCState state)
-		{
-			scienceData.AddActiveResearchProgress(progressCycles);
-			state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science));
-			instance.StoredItemCount--;
-		}
-
-		protected static void MissingItemHelper (IList<InventoryItem> requirements, Stockpile stockpile, ref NPCState state)
-		{
-			ushort missing = 0;
-			for (int i = 0; i < requirements.Count; i++) {
-				if (!stockpile.Contains(requirements[i])) {
-					missing = requirements[i].Type;
-					break;
-				}
-			}
-			float cooldown = Random.NextFloat(8f, 16f);
-			state.SetIndicator(new Shared.IndicatorState(cooldown, missing, true, false));
-			state.JobIsDone = false;
 		}
 	}
 }

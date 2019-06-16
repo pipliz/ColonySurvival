@@ -1946,6 +1946,10 @@
 		"icon" : "./textures/icons/newworldmeal.png",
 		"isPlaceable" : false
 	},
+	"npcicon" : {
+		"icon" : "./textures/icons/npc.png",
+		"parentType" : "missingerror"
+	},
 	"npcshop" : {
 		"categories" : [
 			"job"
@@ -2885,6 +2889,8 @@
 		],
 		"icon" : "./textures/icons/trader.png",
 		"mesh" : "./meshes/trader.ply",
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "neutral"
 	},
 	"undershirt" : {
