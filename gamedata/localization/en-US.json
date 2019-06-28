@@ -59,6 +59,7 @@
 		},
 		"chat" : {
 			"onsciencedone" : "You've completed science {0}",
+			"onscienceready" : "Science {0} is ready to complete!",
 			"onsciencetraded" : "You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
@@ -127,11 +128,12 @@
 			"switchcolony" : "Switch to {0}",
 			"trading" : {
 				"completerule" : "Create rule",
+				"mainheader" : "New trading rule settings",
 				"newrule" : "Propose trading rule",
 				"ruledescription" : "Traders will trade item type {0} from colony {1} to colony {2} if:",
-				"ruleincomingdescr" : "Get type {0} from {1} if they have more than {2}",
+				"ruleincomingdescr" : "Get {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "{0} has more than: ",
-				"ruleoutgoingdescr" : "Send type {0} to {1} if we have more than {2}",
+				"ruleoutgoingdescr" : "Send {0} to {1} if we have more than {2}",
 				"selectcolony" : "Select a colony to trade to"
 			}
 		},
@@ -205,7 +207,9 @@
 			"availableluxury" : "{0}% availability for {1}",
 			"baseamount" : "King's presence",
 			"calories" : "Rationed calories",
-			"caloriescause" : "Surplus calories",
+			"calorieshappy" : "Well fed",
+			"calorieshunger" : "Hunger",
+			"caloriesstarvation" : "Starvation",
 			"colonistcount" : "Population",
 			"disabledeffect" : "Happiness Disabled",
 			"recruitmentcost" : "Recruitment cost: {0:P0} of normal",
@@ -651,6 +655,7 @@
 				"noactivecolony" : "No active colony!",
 				"science" : {
 					"available" : "Available",
+					"cancel" : "Cancel",
 					"completed" : "Completed",
 					"completeunlock" : "Complete",
 					"conditioncolonistcount" : "Colonists",

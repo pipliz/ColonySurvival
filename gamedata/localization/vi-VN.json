@@ -1,5 +1,5 @@
 {
-	"coverage" : 17.7892918825561,
+	"coverage" : 17.7128116938951,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -59,6 +59,7 @@
 		},
 		"chat" : {
 			"onsciencedone" : "_MISSING_You've completed science {0}",
+			"onscienceready" : "_MISSING_Science {0} is ready to complete!",
 			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
 		},
 		"colonymanagement" : {
@@ -127,11 +128,12 @@
 			"switchcolony" : "_MISSING_Switch to {0}",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
+				"mainheader" : "_MISSING_New trading rule settings",
 				"newrule" : "_MISSING_Propose trading rule",
 				"ruledescription" : "_MISSING_Traders will trade item type {0} from colony {1} to colony {2} if:",
-				"ruleincomingdescr" : "_MISSING_Get type {0} from {1} if they have more than {2}",
+				"ruleincomingdescr" : "_MISSING_Get {0} from {1} if they have more than {2}",
 				"ruleminimumthis" : "_MISSING_{0} has more than: ",
-				"ruleoutgoingdescr" : "_MISSING_Send type {0} to {1} if we have more than {2}",
+				"ruleoutgoingdescr" : "_MISSING_Send {0} to {1} if we have more than {2}",
 				"selectcolony" : "_MISSING_Select a colony to trade to"
 			}
 		},
@@ -205,7 +207,9 @@
 			"availableluxury" : "_MISSING_{0}% availability for {1}",
 			"baseamount" : "_MISSING_King's presence",
 			"calories" : "_MISSING_Rationed calories",
-			"caloriescause" : "_MISSING_Surplus calories",
+			"calorieshappy" : "_MISSING_Well fed",
+			"calorieshunger" : "_MISSING_Hunger",
+			"caloriesstarvation" : "_MISSING_Starvation",
 			"colonistcount" : "_MISSING_Population",
 			"disabledeffect" : "_MISSING_Happiness Disabled",
 			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0} of normal",
@@ -651,6 +655,7 @@
 				"noactivecolony" : "_MISSING_No active colony!",
 				"science" : {
 					"available" : "_MISSING_Available",
+					"cancel" : "_MISSING_Cancel",
 					"completed" : "_MISSING_Completed",
 					"completeunlock" : "_MISSING_Complete",
 					"conditioncolonistcount" : "_MISSING_Colonists",

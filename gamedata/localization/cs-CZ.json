@@ -1,5 +1,5 @@
 {
-	"coverage" : 93.2642487046632,
+	"coverage" : 92.8632846087704,
 	"hints" : {
 		"0" : "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1" : "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
@@ -59,6 +59,7 @@
 		},
 		"chat" : {
 			"onsciencedone" : "Dokončil jste výzkum {0}!",
+			"onscienceready" : "_MISSING_Science {0} is ready to complete!",
 			"onsciencetraded" : "Dokončil jste výzkum {0} za pomocí obchodování!"
 		},
 		"colonymanagement" : {
@@ -127,6 +128,7 @@
 			"switchcolony" : "Změnit na {0}",
 			"trading" : {
 				"completerule" : "Vytvořit obchodní požadavek",
+				"mainheader" : "_MISSING_New trading rule settings",
 				"newrule" : "Nabídnout obchodní požadavek",
 				"ruledescription" : "Obchodníci pošlou {0} z kolonie {1} do kolonie {2}, pokud:",
 				"ruleincomingdescr" : "Dostanete {0} z {1} pokud mají více než they {2}",
@@ -205,7 +207,9 @@
 			"availableluxury" : "{0}% dostupnost pro {1}",
 			"baseamount" : "Přítomnost krále",
 			"calories" : "_MISSING_Rationed calories",
-			"caloriescause" : "_MISSING_Surplus calories",
+			"calorieshappy" : "_MISSING_Well fed",
+			"calorieshunger" : "_MISSING_Hunger",
+			"caloriesstarvation" : "_MISSING_Starvation",
 			"colonistcount" : "Zalidnění",
 			"disabledeffect" : "Systém spokojenosti nebyl zapnut.",
 			"recruitmentcost" : "Cena rekrutace: {0:P0} normální ceny",
@@ -651,6 +655,7 @@
 				"noactivecolony" : "Nemáte žádnou aktivní kolonii!",
 				"science" : {
 					"available" : "Dostupné",
+					"cancel" : "_MISSING_Cancel",
 					"completed" : "Dokončené",
 					"completeunlock" : "_MISSING_Complete",
 					"conditioncolonistcount" : "_MISSING_Colonists",

@@ -39,7 +39,6 @@
 			{"type":"glider"}
 		],
 		"key" : "pipliz.baseresearch.colonykit",
-		"requiredScienceBiome" : "sciencebiome.oldworld",
 		"unlocksRecipes" : [
 			"pipliz.player.colonykit"
 		]
@@ -326,7 +325,8 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.beekeeper"
+			"pipliz.baseresearch.beekeeper",
+			"pipliz.baseresearch.tailorshop"
 		],
 		"icon" : "./textures/icons/candle.png",
 		"iterationCount" : 10,
@@ -728,8 +728,9 @@
 			{"type":"sciencebagmilitary"}
 		],
 		"key" : "pipliz.baseresearch.gunpowder",
-		"unlocksRecipeGroups" : [
-			"pipliz.gunsmithjob"
+		"unlocksRecipes" : [
+			"pipliz.gunsmith.gunpowder",
+			"pipliz.gunsmith.gunpowderpouch"
 		]
 	},
 	{
@@ -744,10 +745,14 @@
 			{"type":"sciencebagmilitary"}
 		],
 		"key" : "pipliz.baseresearch.gunsmithshop",
+		"unlocksRecipeGroups" : [
+			"pipliz.gunsmithjob"
+		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.gunsmithshop",
 			"pipliz.player.gunsmithshop",
-			"pipliz.gunsmith.leadbullet"
+			"pipliz.gunsmith.leadbullet",
+			"pipliz.gunsmith.matchlockgun"
 		]
 	},
 	{

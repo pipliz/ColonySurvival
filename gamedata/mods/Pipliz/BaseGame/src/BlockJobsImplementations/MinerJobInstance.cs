@@ -1,5 +1,4 @@
 ﻿using BlockEntities;
-using BlockTypes;
 using Jobs;
 
 namespace Pipliz.Mods.BaseGame
@@ -14,30 +13,16 @@ namespace Pipliz.Mods.BaseGame
 		public MinerJobInstance (IBlockJobSettings settings, Vector3Int position, ItemTypes.ItemType type, ByteReader reader) : base(settings, position, type, reader)
 		{
 			ushort belowType = reader.ReadVariableUShort();
-			float cooldown = 1f;
-			if (ItemTypes.TryGetType(belowType, out ItemTypes.ItemType foundtype)
-				&& (foundtype.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
-			) {
+			MiningCooldown = -1f;
+			if (ItemTypes.TryGetType(belowType, out ItemTypes.ItemType foundtype)) {
 				BlockTypeBelow = foundtype;
-				MiningCooldown = Random.NextFloat(0.9f, 1.1f) * cooldown;
-			} else {
-				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
 			}
 		}
 
 		public MinerJobInstance (IBlockJobSettings settings, Vector3Int position, ItemTypes.ItemType type, Colony colony) : base(settings, position, type, colony)
 		{
-			float cooldown = 1f;
-			if (World.TryGetTypeAt(position.Add(0, -1, 0), out ItemTypes.ItemType itemIndex)
-				&& (itemIndex.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false)
-			) {
-				BlockTypeBelow = itemIndex;
-				MiningCooldown = Random.NextFloat(0.9f, 1.1f) * cooldown;
-			} else {
-				// attempt to remove the job (loaded wrongly) - invoke on main thread to prevent nested entity callbacks (unsupported, deadlocks)
-				ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(position, null, BuiltinBlocks.Types.air, Owner));
-			}
+			BlockTypeBelow = null;
+			MiningCooldown = -1f;
 		}
 
 		public override ESerializeEntityResult SerializeToBytes (Chunk chunk, Vector3Byte blockPosition, ByteBuilder builder)

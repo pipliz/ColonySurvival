@@ -101,7 +101,11 @@ namespace Pipliz.Mods.BaseGame
 				return;
 			}
 
-			for (int i = 0; i < completedCycles.Count; i++) {
+			var happyData = owner.HappinessData;
+			float cyclesToAdd = happyData.ScienceSpeedMultiplierCalculator.GetSpeedMultiplier(happyData.CachedHappiness, instance.NPC);
+			int doneScienceIndex = -1;
+
+			for (int i = 0; i < completedCycles.Count && cyclesToAdd >= 0f; i++) {
 				AbstractResearchable research = completedCycles.GetKeyAtIndex(i).Researchable;
 				float progress = completedCycles.GetValueAtIndex(i);
 
@@ -109,13 +113,9 @@ namespace Pipliz.Mods.BaseGame
 					continue;
 				}
 
-				float progressCycles = 1f;
-				var happyData = owner.HappinessData;
-				progressCycles *= happyData.ScienceSpeedMultiplierCalculator.GetSpeedMultiplier(happyData.CachedHappiness, instance.NPC);
+				float freeCycles = (float)System.Math.Ceiling(progress) - progress;
 
-				float nextProgress = progress + progressCycles;
-
-				if ((int)nextProgress != (int)progress) {
+				if (cyclesToAdd > freeCycles) {
 					// euy reached next cycle. Better make sure we can get the requirements
 					List<InventoryItem> requirements = cyclesCondition.ItemsPerCycle;
 
@@ -142,19 +142,50 @@ namespace Pipliz.Mods.BaseGame
 						OnSuccess(ref state);
 						return;
 					} else {
+						if (freeCycles >= 0.01f) {
+							// freecoast up to the limit (99% of a cycle)
+							scienceData.CyclesAddProgress(research.AssignedKey, freeCycles - 0.01f);
+							cyclesToAdd -= freeCycles - 0.01f;
+							doneScienceIndex = (int)research.AssignedKey.Index;
+						}
 						continue;
 					}
 				} else {
-					OnSuccess(ref state);
+					OnSuccess(ref state); // cycles <= freecycles, just add all
 					return;
 				}
+
 				// unreachable
 				void OnSuccess (ref NPCState stateCopy)
 				{
-					scienceData.CyclesAddProgress(research.AssignedKey, progressCycles);
+					scienceData.CyclesAddProgress(research.AssignedKey, cyclesToAdd);
 					stateCopy.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science, (ushort)research.AssignedKey.Index));
 					instance.StoredItemCount--;
+					if (cyclesToAdd + progress >= cyclesCondition.CycleCount && research.AreConditionsMet(scienceData)) {
+						SendCompleteMessage();
+					}
 				}
+
+				void SendCompleteMessage ()
+				{
+					Players.Player[] owners = owner.Owners;
+					for (int j = 0; j < owners.Length; j++) {
+						Players.Player player = owners[j];
+						if (player.ConnectionState == Players.EConnectionState.Connected && player.ActiveColony == owner) {
+							string msg = Localization.GetSentence(player.LastKnownLocale, "chat.onscienceready");
+							string res = Localization.GetSentence(player.LastKnownLocale, research.GetKey() + ".name");
+							msg = string.Format(msg, res);
+							Chatting.Chat.Send(player, msg);
+						}
+					}
+				}
+			}
+
+			if (doneScienceIndex >= 0) {
+				// did some freecoasting
+				state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science, (ushort)doneScienceIndex));
+				instance.StoredItemCount--;
+				return;
 			}
 
 			// had stored items, but for some reason couldn't dump them in existing research

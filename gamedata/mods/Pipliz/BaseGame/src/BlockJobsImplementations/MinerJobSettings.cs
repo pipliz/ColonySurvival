@@ -47,7 +47,35 @@ namespace Pipliz.Mods.BaseGame
 
 		public virtual void OnNPCAtJob (BlockJobInstance blockJobInstance, ref NPCState state)
 		{
+			state.JobIsDone = true;
+
 			MinerJobInstance instance = (MinerJobInstance)blockJobInstance;
+
+			if (instance.BlockTypeBelow == null || instance.BlockTypeBelow == BuiltinBlocks.Types.air) {
+				if (World.TryGetTypeAt(instance.Position.Add(0, -1, 0), out ItemTypes.ItemType foundType)) {
+					if (foundType == BuiltinBlocks.Types.air) {
+						ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(instance.Position, instance.BlockType, BuiltinBlocks.Types.air, instance.Owner));
+						state.SetCooldown(3.0); // I don't know what's going on here, floating miner jobs
+						return;
+					}
+					instance.BlockTypeBelow = foundType;
+				} else {
+					state.SetCooldown(5.0);
+					return;
+				}
+			}
+			if (instance.MiningCooldown <= 0f) {
+				float cooldown = 0f;
+				if (instance.BlockTypeBelow.CustomDataNode?.TryGetAs("minerMiningTime", out cooldown) ?? false) {
+					instance.MiningCooldown = cooldown;
+				}
+				if (instance.MiningCooldown <= 0f) {
+					ThreadManager.InvokeOnMainThread(() => ServerManager.TryChangeBlock(instance.Position, instance.BlockType, BuiltinBlocks.Types.air, instance.Owner));
+					state.SetCooldown(3.0); // loaded block below, but it turned out to be non-mineable
+					return;
+				}
+			}
+
 			if (BlockTypes.ContainsByReference(instance.BlockType, out int index)) {
 				Vector3 rotate = instance.NPC.Position.Vector;
 				switch (index) {
@@ -85,7 +113,6 @@ namespace Pipliz.Mods.BaseGame
 			}
 
 			state.Inventory.Add(GatherResults);
-			state.JobIsDone = true;
 
 			instance.GatheredItemCount++;
 			if (instance.GatheredItemCount >= MaxCraftsPerRun) {
