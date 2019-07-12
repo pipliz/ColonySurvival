@@ -58,9 +58,11 @@
 			}
 		},
 		"chat" : {
+			"colonydied" : "All colonists in {0} were killed.",
 			"onsciencedone" : "You've completed science {0}",
 			"onscienceready" : "Science {0} is ready to complete!",
-			"onsciencetraded" : "You've completed science {0} by trading."
+			"onsciencetraded" : "You've completed science {0} by trading.",
+			"playerdied" : "Player {0} died."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -96,6 +98,7 @@
 			"recruitmentheader" : "Recruitment",
 			"recruittext3" : "Colonists require 2000 calories per day and a bed.",
 			"recruittext4" : "Recruiting the next colonist costs {0} calories.",
+			"recruittext5" : "Cost is {0} of normal cost due to happiness",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
 			"science" : {
@@ -205,13 +208,13 @@
 		"happiness" : {
 			"availablefood" : "{0}% availability for {1}",
 			"availableluxury" : "{0}% availability for {1}",
-			"baseamount" : "King's presence",
+			"baseamount" : "Existential happiness",
 			"calories" : "Rationed calories",
 			"calorieshappy" : "Well fed",
 			"calorieshunger" : "Hunger",
 			"caloriesstarvation" : "Starvation",
 			"colonistcount" : "Population",
-			"disabledeffect" : "Happiness Disabled",
+			"disabledeffect" : "Happiness disabled",
 			"recruitmentcost" : "Recruitment cost: {0:P0} of normal",
 			"sciencespeed" : "Science speed: {0:P0} of normal",
 			"totalhappiness" : "Total happiness: {0}"
@@ -311,6 +314,10 @@
 					"description" : "Unlocks the cabbage farmer",
 					"name" : "Cabbage Farming"
 				},
+				"cacao" : {
+					"description" : "Unlocks cacao farming",
+					"name" : "Cacao"
+				},
 				"candles" : {
 					"description" : "Unlocks producing candles by a beekeeper",
 					"name" : "Candles"
@@ -318,6 +325,10 @@
 				"chickenfarmer" : {
 					"description" : "Unlocks the chicken farmer",
 					"name" : "Chicken Farming"
+				},
+				"chocolate" : {
+					"description" : "Unlocks chocolate production",
+					"name" : "Chocolate"
 				},
 				"coffee" : {
 					"description" : "Unlocks processing coffeebeans into coffee at the stove",
@@ -386,6 +397,10 @@
 				"cook" : {
 					"description" : "Unlocks the cook, which can make meals for your colonists",
 					"name" : "Cook"
+				},
+				"cookies" : {
+					"description" : "Unlocks cookies production",
+					"name" : "Cookies"
 				},
 				"cottontowel" : {
 					"description" : "Unlocks the cotton towel luxury item",
@@ -601,6 +616,10 @@
 					"description" : "Unlock trader npcs, which accelerate trading to other colonies",
 					"name" : "Traders"
 				},
+				"vanilla" : {
+					"description" : "Unlocks vanilla farming",
+					"name" : "Vanilla"
+				},
 				"watergatherer" : {
 					"description" : "Unlocks the water gatherer, filling buckets with water from open water",
 					"name" : "Water Gathering"
@@ -705,6 +724,7 @@
 					"merchant" : "Shopping limits",
 					"metalsmithjob" : "Metalsmith limits",
 					"minter" : "Minting limits",
+					"printingpress" : "Printingpress limits",
 					"smelter" : "Smelting limits",
 					"stonemason" : "Masonry limits",
 					"tailor" : "Tailoring limits",
@@ -763,6 +783,9 @@
 				"cabbagea" : "Essential for some luxury foods",
 				"cabbagefarmer" : "Cabbage Farmer",
 				"cabbagefarmertool" : "Cabbage Farmer Tool",
+				"cacaob" : "Cacao",
+				"cacaofarmer" : "Cacao Farmer",
+				"cacaofarmertool" : "Cacao Farmer Tool",
 				"cassavab" : "Tropical carbs, used for foofoo",
 				"cassavafarmer" : "Cassava Farmer",
 				"cassavatool" : "Cassava Farmer Tool",
@@ -875,6 +898,9 @@
 				"tropics" : "Tropics",
 				"tropicsa" : "Jobs specific to the Tropics region",
 				"tropicsb" : "Research colonization before attempting this",
+				"vanillab" : "Vanilla",
+				"vanillafarmer" : "Vanilla Farmer",
+				"vanillafarmertool" : "Vanilla Farmer Tool",
 				"wateradjacent" : "Requires water adjacent to the job location",
 				"watergatherer" : "Watergatherer",
 				"watergatherera" : "Fills buckets from open water",
@@ -1025,7 +1051,6 @@
 		"singleplayermenu" : {
 			"alreadyexists" : "World already exists!",
 			"cancel" : "Cancel",
-			"colonyname" : "Colony Name",
 			"confirmdelete" : "Confirm deleting",
 			"confirmdeletedescription" : "You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "Delete",
@@ -1039,6 +1064,7 @@
 			"serverport" : "Server Port",
 			"worlddate" : "Date",
 			"worldname" : "Name",
+			"worldname_long" : "World Name",
 			"worldseed" : "World seed"
 		}
 	},
@@ -1079,6 +1105,7 @@
 		"bucketwater" : "Water Bucket",
 		"cabbage" : "Cabbage",
 		"cabbagestage1" : "Cabbage Seeds",
+		"cacao" : "Cacao",
 		"cake" : "Cake",
 		"candle" : "Candle",
 		"carpetblue" : "Blue Carpet",
@@ -1088,9 +1115,11 @@
 		"cassava" : "Cassava",
 		"charcoal" : "Charcoal",
 		"cherryblossom" : "Cherry Blossom",
-		"cherrysapling" : "Cherry Sapling",
+		"cherrysapling" : "Big Cherry Sapling",
+		"cherrysaplingsmall" : "Small Cherry Sapling",
 		"chickencoop" : "Chicken Coop",
 		"chickenmeat" : "Chicken Meat",
+		"chocolate" : "Chocolate",
 		"clay" : "Clay",
 		"coalore" : "Coal Ore",
 		"coatedplanks" : "Coated Planks",
@@ -1106,6 +1135,7 @@
 		"commandtool" : "Command Tool",
 		"constructionjob" : "Construction Job",
 		"cookedfish" : "Cooked Fish",
+		"cookies" : "Cookies",
 		"copper" : "Copper",
 		"coppernails" : "Copper Nails",
 		"copperparts" : "Copper Parts",
@@ -1248,7 +1278,9 @@
 		"ricemeal" : "Rice Meal",
 		"salpeter" : "Saltpeter",
 		"sand" : "Sand",
-		"sappling" : "Sapling",
+		"saplingfallorange" : "Fall Sapling",
+		"saplingtaiga" : "Taiga Sapling",
+		"sappling" : "Temperate Sapling",
 		"sciencebagadvanced" : "Advanced Science Bag",
 		"sciencebagbasic" : "Basic Science Bag",
 		"sciencebagcolony" : "Colony Science Bag",
@@ -1288,6 +1320,7 @@
 		"torch" : "Torch",
 		"trader" : "Trader",
 		"undershirt" : "Undershirt",
+		"vanilla" : "Vanilla",
 		"water" : "Water",
 		"watergathererjob" : "Watergatherer Job",
 		"waterpump" : "Water Pump",
@@ -1327,6 +1360,7 @@
 		"bucketempty" : "Technically a bucket filled with air",
 		"bucketwater" : "No, we won’t allow you to flood your friend’s mine",
 		"cabbage" : "Colonists finally eat their greens",
+		"cacao" : "We hope it's fair trade",
 		"cake" : "The meme is dead",
 		"carpetblue" : "When people don't deserve the red-carpet treatment",
 		"carpetred" : "It doesn't matter if you spill berry juice on this carpet!",
@@ -1336,7 +1370,9 @@
 		"charcoal" : "Absorbs cyanide",
 		"cherryblossom" : "The pinkest thing in the game",
 		"cherrysapling" : "Cosmetic item. Pay 10 Colonycoins to unlock",
+		"cherrysaplingsmall" : "Cosmetic item. Pay 5 Colonycoins to unlock",
 		"chickenmeat" : "Animals were harmed in the making of this food",
+		"chocolate" : "Ancient Gods were punished for sharing this with humans",
 		"clay" : "I wish you could touch it",
 		"coalore" : "Warning: might cause climate problems",
 		"coatedplanks" : "Shiny!",
@@ -1345,6 +1381,7 @@
 		"cokes" : "Creating and burning this stuff is probably totally safe for your health and the environment",
 		"colonykit" : "Required to start additional colonies",
 		"cookedfish" : "Swimming capabilities are dramatically reduced",
+		"cookies" : "Name derives from the Dutch word 'Koekje'",
 		"copper" : "Does not need to be smelted. So convenient!",
 		"coppernails" : "An innovative way to combine pieces of wood",
 		"copperparts" : "Metal improves everything",
@@ -1374,7 +1411,7 @@
 		"galenalead" : "Contains lots of lead",
 		"galenasilver" : "Contains lots of silver",
 		"glider" : "Press space to go up!",
-		"goldcoin" : "With a portrait of the king on one side",
+		"goldcoin" : "With a portrait of the ruler on one side",
 		"goldingot" : "Was once used to guarantee the value of paper money",
 		"goldore" : "Don't lose it",
 		"grindstone" : "Used to grind wheat into flour",
@@ -1433,6 +1470,8 @@
 		"ricemeal" : "Zun’s favorite",
 		"salpeter" : "Don't spice up your food with this",
 		"sand" : "Does not mix well with snakes",
+		"saplingfallorange" : "Orange future tree",
+		"saplingtaiga" : "Slightly different tree",
 		"sappling" : "Future tree",
 		"sciencebagadvanced" : "Required for advanced science",
 		"sciencebagbasic" : "Required to research basic science",
@@ -1462,6 +1501,7 @@
 		"tomato" : "Fruit or vegetable?",
 		"torch" : "And let there be light!",
 		"trader" : "Unexpectedly used for trading",
+		"vanilla" : "Delicious taste",
 		"water" : "You are NOT supposed to have this in your inventory!",
 		"waterpump" : "For when you need to fill your buckets without lakes and rivers nearby",
 		"waxtablet" : "No headphone jack",

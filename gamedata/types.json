@@ -73,37 +73,20 @@
 		"icon" : "./textures/icons/banana.png",
 		"isPlaceable" : false
 	},
-	"bananastage1" : {
+	"bananatree" : {
 		"categories" : [
 			"food",
-			"seed"
+			"seed",
+			"decorative"
 		],
-		"colliders" : {
-			"boxes" : [{"max":[0.5,-0.2,0.5],"min":[-0.5,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
+		"icon" : "./textures/icons/banana.png",
 		"isSolid" : false,
-		"mesh" : "./meshes/barleystage1.ply",
+		"mesh" : "./meshes/bananatree.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
 		"onRemoveAmount" : 0,
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
-		"sideall" : "neutral"
-	},
-	"bananastage2" : {
-		"colliders" : {
-			"boxes" : [{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],
-			"collidePlayer" : false
-		},
-		"isSolid" : false,
-		"mesh" : "./meshes/barleystage2.ply",
-		"needsBase" : true,
-		"onPlaceAudio" : "grassDelete",
-		"onRemove" : [
-			{"type":"banana"}
-		],
-		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
 	},
 	"banner" : {
@@ -433,6 +416,30 @@
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "neutral"
 	},
+	"cacao" : {
+		"categories" : [
+			"food",
+			"ingredient"
+		],
+		"icon" : "./textures/icons/cacao.png",
+		"isPlaceable" : false
+	},
+	"cacaoplant" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
+		"icon" : "./textures/icons/cacao.png",
+		"isSolid" : false,
+		"mesh" : "./meshes/cacaoplant.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "grassDelete",
+		"onRemoveAmount" : 0,
+		"onRemoveAudio" : "grassDelete",
+		"requiresFertileBelow" : true,
+		"sideall" : "neutral"
+	},
 	"cake" : {
 		"categories" : [
 			"food",
@@ -563,7 +570,8 @@
 		"onPlaceAudio" : "dirtPlace",
 		"onRemove" : [
 			{"chance":0.6,"type":"cherryblossom"},
-			{"chance":0.1,"type":"cherrysapling"}
+			{"chance":0.05,"type":"cherrysapling"},
+			{"chance":0.05,"type":"cherrysaplingsmall"}
 		],
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
@@ -580,6 +588,28 @@
 		},
 		"customData" : {
 			"colors" : ["#ff0000->#542909","#00ff00->#dda5c7"]
+		},
+		"icon" : "./textures/icons/sapling.png",
+		"isSolid" : false,
+		"mesh" : "./meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"requiresFertileBelow" : true,
+		"sideall" : "neutral"
+	},
+	"cherrysaplingsmall" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#c974a7"]
 		},
 		"icon" : "./textures/icons/sapling.png",
 		"isSolid" : false,
@@ -608,6 +638,17 @@
 			"ingredient"
 		],
 		"icon" : "./textures/icons/chickenmeat.png",
+		"isPlaceable" : false
+	},
+	"chocolate" : {
+		"categories" : [
+			"food",
+			"edible"
+		],
+		"dailyFoodFractionOptimal" : 0.025,
+		"foodValue" : 0.025,
+		"happiness" : 150,
+		"icon" : "./textures/icons/chocolate.png",
 		"isPlaceable" : false
 	},
 	"clay" : {
@@ -742,6 +783,17 @@
 		"foodValue" : 0.2,
 		"happiness" : 15,
 		"icon" : "./textures/icons/fishcooked.png",
+		"isPlaceable" : false
+	},
+	"cookies" : {
+		"categories" : [
+			"food",
+			"edible"
+		],
+		"dailyFoodFractionOptimal" : 0.05,
+		"foodValue" : 0.05,
+		"happiness" : 100,
+		"icon" : "./textures/icons/cookies.png",
 		"isPlaceable" : false
 	},
 	"copper" : {
@@ -1731,7 +1783,8 @@
 		"icon" : "./textures/icons/leavesfallorange.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavesfallorange"},
-			{"amount":1,"chance":0.1,"type":"sappling"}
+			{"amount":1,"chance":0.05,"type":"sappling"},
+			{"amount":1,"chance":0.05,"type":"saplingfallorange"}
 		],
 		"parentType" : "leaves"
 	},
@@ -1747,7 +1800,8 @@
 		"icon" : "./textures/icons/leavesfallred.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavesfallred"},
-			{"amount":1,"chance":0.1,"type":"sappling"}
+			{"amount":1,"chance":0.05,"type":"sappling"},
+			{"amount":1,"chance":0.05,"type":"saplingfallorange"}
 		],
 		"parentType" : "leaves"
 	},
@@ -1763,7 +1817,8 @@
 		"icon" : "./textures/icons/leavesfallyellow.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavesfallyellow"},
-			{"amount":1,"chance":0.1,"type":"sappling"}
+			{"amount":1,"chance":0.05,"type":"sappling"},
+			{"amount":1,"chance":0.05,"type":"saplingfallorange"}
 		],
 		"parentType" : "leaves"
 	},
@@ -1810,7 +1865,7 @@
 		"icon" : "./textures/icons/leavestaiga.png",
 		"onRemove" : [
 			{"amount":1,"chance":0.6,"type":"leavestaiga"},
-			{"amount":1,"chance":0.1,"type":"sappling"}
+			{"amount":1,"chance":0.1,"type":"saplingtaiga"}
 		],
 		"parentType" : "leaves",
 		"sideall" : "SELF"
@@ -2384,6 +2439,50 @@
 		"onRemoveAudio" : "grassDelete",
 		"sideall" : "SELF"
 	},
+	"saplingfallorange" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#b56f07"]
+		},
+		"icon" : "./textures/icons/sapling.png",
+		"isSolid" : false,
+		"mesh" : "./meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"requiresFertileBelow" : true,
+		"sideall" : "neutral"
+	},
+	"saplingtaiga" : {
+		"categories" : [
+			"food",
+			"seed",
+			"decorative"
+		],
+		"colliders" : {
+			"boxes" : [{"max":[0.25,0,0.25],"min":[-0.25,-0.5,-0.25]}],
+			"collidePlayer" : false
+		},
+		"customData" : {
+			"colors" : ["#ff0000->#542909","#00ff00->#0a4f04"]
+		},
+		"icon" : "./textures/icons/sapling.png",
+		"isSolid" : false,
+		"mesh" : "./meshes/sapling.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "grassDelete",
+		"requiresFertileBelow" : true,
+		"sideall" : "neutral"
+	},
 	"sappling" : {
 		"categories" : [
 			"food",
@@ -2903,6 +3002,14 @@
 		"isPlaceable" : false,
 		"luxuryHours" : 240,
 		"maxStackSize" : 25
+	},
+	"vanilla" : {
+		"categories" : [
+			"food",
+			"ingredient"
+		],
+		"icon" : "./textures/icons/vanilla.png",
+		"isPlaceable" : false
 	},
 	"water" : {
 		"icon" : "./textures/icons/water.png",

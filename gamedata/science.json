@@ -34,7 +34,7 @@
 			"pipliz.baseresearch.glider"
 		],
 		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 10,
+		"iterationCount" : 1,
 		"iterationRequirements" : [
 			{"type":"glider"}
 		],
@@ -92,6 +92,82 @@
 	},
 	{
 		"dependencies" : [
+			"pipliz.baseresearch.papyrus",
+			"pipliz.baseresearch.foofoo",
+			"pipliz.baseresearch.sugarcane",
+			"pipliz.baseresearch.diamondprocessing",
+			"pipliz.baseresearch.coffeebeans"
+		],
+		"icon" : "./textures/icons/cacao.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"wintercoat"},
+			{"type":"tomato"},
+			{"type":"potato"}
+		],
+		"key" : "pipliz.baseresearch.cacao",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksClientHints" : [
+			{"data":"pipliz.cacaofarmer","type":"NPCType"}
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.papyrus",
+			"pipliz.baseresearch.foofoo",
+			"pipliz.baseresearch.sugarcane",
+			"pipliz.baseresearch.diamondprocessing",
+			"pipliz.baseresearch.coffeebeans"
+		],
+		"icon" : "./textures/icons/vanilla.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"wintercoat"},
+			{"type":"tomato"},
+			{"type":"potato"}
+		],
+		"key" : "pipliz.baseresearch.vanilla",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksClientHints" : [
+			{"data":"pipliz.vanillafarmer","type":"NPCType"}
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.vanilla"
+		],
+		"icon" : "./textures/icons/cookies.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"flour"},
+			{"type":"sugar"},
+			{"type":"vanilla"}
+		],
+		"key" : "pipliz.baseresearch.cookies",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksRecipes" : [
+			"cook.cookies"
+		]
+	},
+	{
+		"dependencies" : [
+			"pipliz.baseresearch.cacao"
+		],
+		"icon" : "./textures/icons/chocolate.png",
+		"iterationCount" : 10,
+		"iterationRequirements" : [
+			{"type":"cacao"},
+			{"type":"sugar"},
+			{"type":"vanilla"}
+		],
+		"key" : "pipliz.baseresearch.chocolate",
+		"requiredScienceBiome" : "sciencebiome.tropics",
+		"unlocksRecipes" : [
+			"cook.chocolate"
+		]
+	},
+	{
+		"dependencies" : [
 			"pipliz.baseresearch.foofoo"
 		],
 		"icon" : "./textures/icons/sugarcane.png",
@@ -140,6 +216,9 @@
 		]
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.chickenfarmer"
+		],
 		"icon" : "./textures/icons/newworldmeal.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
@@ -221,6 +300,10 @@
 		]
 	},
 	{
+		"dependencies" : [
+			"pipliz.baseresearch.cabbagefarmer",
+			"pipliz.baseresearch.chickenfarmer"
+		],
 		"icon" : "./textures/icons/rice.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [

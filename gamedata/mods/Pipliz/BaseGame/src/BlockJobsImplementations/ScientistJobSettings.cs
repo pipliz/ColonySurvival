@@ -105,6 +105,14 @@ namespace Pipliz.Mods.BaseGame
 			float cyclesToAdd = happyData.ScienceSpeedMultiplierCalculator.GetSpeedMultiplier(happyData.CachedHappiness, instance.NPC);
 			int doneScienceIndex = -1;
 
+			const float MINIMUM_CYCLES_TO_ADD = 0.001f;
+
+			if (cyclesToAdd <= MINIMUM_CYCLES_TO_ADD) {
+				state.SetIndicator(new Shared.IndicatorState(CraftingCooldown, BuiltinBlocks.Indices.missingerror));
+				Log.WriteWarning($"Cycles below minimum for science job at {instance.Position}!");
+				return;
+			}
+
 			for (int i = 0; i < completedCycles.Count && cyclesToAdd >= 0f; i++) {
 				AbstractResearchable research = completedCycles.GetKeyAtIndex(i).Researchable;
 				float progress = completedCycles.GetValueAtIndex(i);
@@ -113,57 +121,72 @@ namespace Pipliz.Mods.BaseGame
 					continue;
 				}
 
+				bool atCycleBoundary = Math.Abs(progress - Math.RoundToInt(progress)) < MINIMUM_CYCLES_TO_ADD;
 				float freeCycles = (float)System.Math.Ceiling(progress) - progress;
-
-				if (cyclesToAdd > freeCycles) {
-					// euy reached next cycle. Better make sure we can get the requirements
-					List<InventoryItem> requirements = cyclesCondition.ItemsPerCycle;
-
-					if (owner.Stockpile.TryRemove(requirements)) {
-						// recycle science bags
-						int recycled = 0;
-						for (int j = 0; j < requirements.Count; j++) {
-							ushort type = requirements[j].Type;
-							if (type == BuiltinBlocks.Indices.sciencebaglife
-								|| type == BuiltinBlocks.Indices.sciencebagbasic
-								|| type == BuiltinBlocks.Indices.sciencebagmilitary
-							) {
-								recycled += requirements[j].Amount;
-							}
-						}
-						for (int j = recycled; j > 0; j--) {
-							if (Random.NextDouble() > RECYCLE_CHANCE) {
-								recycled--;
-							}
-						}
-						if (recycled > 0) {
-							owner.Stockpile.Add(BuiltinBlocks.Indices.linenbag, recycled);
-						}
-						OnSuccess(ref state);
+				if (!atCycleBoundary) {
+					if (cyclesToAdd <= freeCycles) {
+						OnDoFullCycles(ref state); // cycles <= freecycles, just add all
 						return;
 					} else {
-						if (freeCycles >= 0.01f) {
-							// freecoast up to the limit (99% of a cycle)
-							scienceData.CyclesAddProgress(research.AssignedKey, freeCycles - 0.01f);
-							cyclesToAdd -= freeCycles - 0.01f;
-							doneScienceIndex = (int)research.AssignedKey.Index;
-						}
-						continue;
+						OnDoPartialCycles(ref state, Math.Min(freeCycles, cyclesToAdd));
 					}
-				} else {
-					OnSuccess(ref state); // cycles <= freecycles, just add all
-					return;
 				}
 
+				if (progress >= cyclesCondition.CycleCount) {
+					// completed on a partial cycle (it wasn't completed a few lines up)
+					continue;
+				}
+
+				// at boundary and/or will cross a boundary with the cyclesToAdd
+
+				List<InventoryItem> requirements = cyclesCondition.ItemsPerCycle;
+
+				if (owner.Stockpile.TryRemove(requirements)) {
+					// got the items, deal with recycling, then just add the full cyclesToAdd
+					int recycled = 0;
+					for (int j = 0; j < requirements.Count; j++) {
+						ushort type = requirements[j].Type;
+						if (type == BuiltinBlocks.Indices.sciencebaglife
+							|| type == BuiltinBlocks.Indices.sciencebagbasic
+							|| type == BuiltinBlocks.Indices.sciencebagmilitary
+						) {
+							recycled += requirements[j].Amount;
+						}
+					}
+					for (int j = recycled; j > 0; j--) {
+						if (Random.NextDouble() > RECYCLE_CHANCE) {
+							recycled--;
+						}
+					}
+					if (recycled > 0) {
+						owner.Stockpile.Add(BuiltinBlocks.Indices.linenbag, recycled);
+					}
+					OnDoFullCycles(ref state);
+					return;
+				}
+				continue;
+
 				// unreachable
-				void OnSuccess (ref NPCState stateCopy)
+				void OnDoFullCycles (ref NPCState stateCopy)
 				{
 					scienceData.CyclesAddProgress(research.AssignedKey, cyclesToAdd);
 					stateCopy.SetIndicator(new Shared.IndicatorState(CraftingCooldown, NPCIndicatorType.Science, (ushort)research.AssignedKey.Index));
 					instance.StoredItemCount--;
-					if (cyclesToAdd + progress >= cyclesCondition.CycleCount && research.AreConditionsMet(scienceData)) {
+					progress += cyclesToAdd;
+					if (progress >= cyclesCondition.CycleCount && research.AreConditionsMet(scienceData)) {
 						SendCompleteMessage();
 					}
+				}
+
+				void OnDoPartialCycles (ref NPCState stateCopy, float cyclesToUse)
+				{
+					cyclesToAdd -= cyclesToUse;
+					scienceData.CyclesAddProgress(research.AssignedKey, cyclesToUse);
+					progress += cyclesToUse;
+					if (progress >= cyclesCondition.CycleCount && research.AreConditionsMet(scienceData)) {
+						SendCompleteMessage();
+					}
+					doneScienceIndex = (int)research.AssignedKey.Index;
 				}
 
 				void SendCompleteMessage ()

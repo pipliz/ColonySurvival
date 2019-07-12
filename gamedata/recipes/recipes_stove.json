@@ -11,6 +11,28 @@
 		]
 	},
 	{
+		"name" : "cook.cookies",
+		"requires" : [
+			{"type":"flour"},
+			{"type":"sugar"},
+			{"type":"vanilla"}
+		],
+		"results" : [
+			{"type":"cookies"}
+		]
+	},
+	{
+		"name" : "cook.chocolate",
+		"requires" : [
+			{"type":"cacao"},
+			{"type":"sugar"},
+			{"type":"vanilla"}
+		],
+		"results" : [
+			{"type":"chocolate"}
+		]
+	},
+	{
 		"name" : "cook.newworldmeal",
 		"requires" : [
 			{"type":"potato"},

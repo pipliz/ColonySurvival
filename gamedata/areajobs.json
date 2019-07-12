@@ -48,6 +48,30 @@
 		"maxGatheredBeforeCrate" : 6
 	},
 	{
+		"identifier" : "pipliz.bananafarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.bananafarmer",
+		"cooldown" : 8.5,
+		"blockPlaced" : "bananatree",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
+		"identifier" : "pipliz.cacaofarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.cacaofarmer",
+		"cooldown" : 8.5,
+		"blockPlaced" : "cacaoplant",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
+		"identifier" : "pipliz.vanillafarm",
+		"patchType" : "blockFarm",
+		"npcType" : "pipliz.vanillafarmer",
+		"cooldown" : 8.5,
+		"blockPlaced" : "leavesgreenlight",
+		"maxGatheredBeforeCrate" : 6
+	},
+	{
 		"identifier" : "pipliz.sugarcanefarm",
 		"patchType" : "simpleFarm",
 		"npcType" : "pipliz.sugarcanefarmer",
@@ -67,17 +91,6 @@
 		"stages" : [
 			"papyrusstage1",
 			"papyrusstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.bananafarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.bananafarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"requiresSeeds" : false,
-		"stages" : [
-			"bananastage1",
-			"bananastage2"
 		]
 	},
 	{

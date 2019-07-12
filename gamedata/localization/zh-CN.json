@@ -1,5 +1,5 @@
 {
-	"coverage" : 55.2020636285469,
+	"coverage" : 53.6401673640167,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -58,9 +58,11 @@
 			}
 		},
 		"chat" : {
+			"colonydied" : "_MISSING_All colonists in {0} were killed.",
 			"onsciencedone" : "_MISSING_You've completed science {0}",
 			"onscienceready" : "_MISSING_Science {0} is ready to complete!",
-			"onsciencetraded" : "_MISSING_You've completed science {0} by trading."
+			"onsciencetraded" : "_MISSING_You've completed science {0} by trading.",
+			"playerdied" : "_MISSING_Player {0} died."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -96,6 +98,7 @@
 			"recruitmentheader" : "_MISSING_Recruitment",
 			"recruittext3" : "_MISSING_Colonists require 2000 calories per day and a bed.",
 			"recruittext4" : "_MISSING_Recruiting the next colonist costs {0} calories.",
+			"recruittext5" : "_MISSING_Cost is {0} of normal cost due to happiness",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
 			"science" : {
@@ -205,13 +208,13 @@
 		"happiness" : {
 			"availablefood" : "_MISSING_{0}% availability for {1}",
 			"availableluxury" : "_MISSING_{0}% availability for {1}",
-			"baseamount" : "_MISSING_King's presence",
+			"baseamount" : "_MISSING_Existential happiness",
 			"calories" : "_MISSING_Rationed calories",
 			"calorieshappy" : "_MISSING_Well fed",
 			"calorieshunger" : "_MISSING_Hunger",
 			"caloriesstarvation" : "_MISSING_Starvation",
 			"colonistcount" : "_MISSING_Population",
-			"disabledeffect" : "_MISSING_Happiness Disabled",
+			"disabledeffect" : "_MISSING_Happiness disabled",
 			"recruitmentcost" : "_MISSING_Recruitment cost: {0:P0} of normal",
 			"sciencespeed" : "_MISSING_Science speed: {0:P0} of normal",
 			"totalhappiness" : "_MISSING_Total happiness: {0}"
@@ -311,6 +314,10 @@
 					"description" : "_MISSING_Unlocks the cabbage farmer",
 					"name" : "_MISSING_Cabbage Farming"
 				},
+				"cacao" : {
+					"description" : "_MISSING_Unlocks cacao farming",
+					"name" : "_MISSING_Cacao"
+				},
 				"candles" : {
 					"description" : "_MISSING_Unlocks producing candles by a beekeeper",
 					"name" : "_MISSING_Candles"
@@ -318,6 +325,10 @@
 				"chickenfarmer" : {
 					"description" : "_MISSING_Unlocks the chicken farmer",
 					"name" : "_MISSING_Chicken Farming"
+				},
+				"chocolate" : {
+					"description" : "_MISSING_Unlocks chocolate production",
+					"name" : "_MISSING_Chocolate"
 				},
 				"coffee" : {
 					"description" : "_MISSING_Unlocks processing coffeebeans into coffee at the stove",
@@ -386,6 +397,10 @@
 				"cook" : {
 					"description" : "_MISSING_Unlocks the cook, which can make meals for your colonists",
 					"name" : "_MISSING_Cook"
+				},
+				"cookies" : {
+					"description" : "_MISSING_Unlocks cookies production",
+					"name" : "_MISSING_Cookies"
 				},
 				"cottontowel" : {
 					"description" : "_MISSING_Unlocks the cotton towel luxury item",
@@ -601,6 +616,10 @@
 					"description" : "_MISSING_Unlock trader npcs, which accelerate trading to other colonies",
 					"name" : "_MISSING_Traders"
 				},
+				"vanilla" : {
+					"description" : "_MISSING_Unlocks vanilla farming",
+					"name" : "_MISSING_Vanilla"
+				},
 				"watergatherer" : {
 					"description" : "_MISSING_Unlocks the water gatherer, filling buckets with water from open water",
 					"name" : "_MISSING_Water Gathering"
@@ -705,6 +724,7 @@
 					"merchant" : "作坊达到最大",
 					"metalsmithjob" : "采矿限制",
 					"minter" : "铸造达到最大",
+					"printingpress" : "_MISSING_Printingpress limits",
 					"smelter" : "冶炼达到最大",
 					"stonemason" : "砌体的极限",
 					"tailor" : "裁缝限制",
@@ -763,6 +783,9 @@
 				"cabbagea" : "_MISSING_Essential for some luxury foods",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cabbagefarmertool" : "_MISSING_Cabbage Farmer Tool",
+				"cacaob" : "_MISSING_Cacao",
+				"cacaofarmer" : "_MISSING_Cacao Farmer",
+				"cacaofarmertool" : "_MISSING_Cacao Farmer Tool",
 				"cassavab" : "_MISSING_Tropical carbs, used for foofoo",
 				"cassavafarmer" : "_MISSING_Cassava Farmer",
 				"cassavatool" : "_MISSING_Cassava Farmer Tool",
@@ -875,6 +898,9 @@
 				"tropics" : "_MISSING_Tropics",
 				"tropicsa" : "_MISSING_Jobs specific to the Tropics region",
 				"tropicsb" : "_MISSING_Research colonization before attempting this",
+				"vanillab" : "_MISSING_Vanilla",
+				"vanillafarmer" : "_MISSING_Vanilla Farmer",
+				"vanillafarmertool" : "_MISSING_Vanilla Farmer Tool",
 				"wateradjacent" : "_MISSING_Requires water adjacent to the job location",
 				"watergatherer" : "_MISSING_Watergatherer",
 				"watergatherera" : "_MISSING_Fills buckets from open water",
@@ -1025,7 +1051,6 @@
 		"singleplayermenu" : {
 			"alreadyexists" : "_MISSING_World already exists!",
 			"cancel" : "_MISSING_Cancel",
-			"colonyname" : "殖民地名称",
 			"confirmdelete" : "_MISSING_Confirm deleting",
 			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"delete" : "删除",
@@ -1039,6 +1064,7 @@
 			"serverport" : "_MISSING_Server Port",
 			"worlddate" : "日期",
 			"worldname" : "名字",
+			"worldname_long" : "_MISSING_World Name",
 			"worldseed" : "_MISSING_World seed"
 		}
 	},
@@ -1079,6 +1105,7 @@
 		"bucketwater" : "_MISSING_Water Bucket",
 		"cabbage" : "_MISSING_Cabbage",
 		"cabbagestage1" : "_MISSING_Cabbage Seeds",
+		"cacao" : "_MISSING_Cacao",
 		"cake" : "_MISSING_Cake",
 		"candle" : "_MISSING_Candle",
 		"carpetblue" : "蓝色的地毯",
@@ -1089,8 +1116,10 @@
 		"charcoal" : "木炭",
 		"cherryblossom" : "樱花",
 		"cherrysapling" : "樱桃树苗",
+		"cherrysaplingsmall" : "_MISSING_Small Cherry Sapling",
 		"chickencoop" : "_MISSING_Chicken Coop",
 		"chickenmeat" : "_MISSING_Chicken Meat",
+		"chocolate" : "_MISSING_Chocolate",
 		"clay" : "粘土",
 		"coalore" : "煤矿",
 		"coatedplanks" : "亮光漆木板",
@@ -1106,6 +1135,7 @@
 		"commandtool" : "命令工具",
 		"constructionjob" : "建设工作",
 		"cookedfish" : "_MISSING_Cooked Fish",
+		"cookies" : "_MISSING_Cookies",
 		"copper" : "铜",
 		"coppernails" : "铜钉",
 		"copperparts" : "铜配件",
@@ -1248,6 +1278,8 @@
 		"ricemeal" : "_MISSING_Rice Meal",
 		"salpeter" : "索尔皮特",
 		"sand" : "沙子",
+		"saplingfallorange" : "_MISSING_Fall Sapling",
+		"saplingtaiga" : "_MISSING_Taiga Sapling",
 		"sappling" : "树苗",
 		"sciencebagadvanced" : "先进的科学袋",
 		"sciencebagbasic" : "基础科学袋",
@@ -1288,6 +1320,7 @@
 		"torch" : "火把",
 		"trader" : "_MISSING_Trader",
 		"undershirt" : "_MISSING_Undershirt",
+		"vanilla" : "_MISSING_Vanilla",
 		"water" : "水",
 		"watergathererjob" : "_MISSING_Watergatherer Job",
 		"waterpump" : "_MISSING_Water Pump",
@@ -1327,6 +1360,7 @@
 		"bucketempty" : "_MISSING_Technically a bucket filled with air",
 		"bucketwater" : "_MISSING_No, we won’t allow you to flood your friend’s mine",
 		"cabbage" : "_MISSING_Colonists finally eat their greens",
+		"cacao" : "_MISSING_We hope it's fair trade",
 		"cake" : "_MISSING_The meme is dead",
 		"carpetblue" : "屁民不该受到红地毯的待遇",
 		"carpetred" : "如果你把浆果果汁在地毯上没关系！",
@@ -1336,7 +1370,9 @@
 		"charcoal" : "吸收氰化物",
 		"cherryblossom" : "游戏里面最粉嫩的东西",
 		"cherrysapling" : "美容项目。支付10 殖民地金币解锁",
+		"cherrysaplingsmall" : "_MISSING_Cosmetic item. Pay 5 Colonycoins to unlock",
 		"chickenmeat" : "_MISSING_Animals were harmed in the making of this food",
+		"chocolate" : "_MISSING_Ancient Gods were punished for sharing this with humans",
 		"clay" : "我希望你能碰它",
 		"coalore" : "警告：可能会引起气候问题",
 		"coatedplanks" : "典雅华贵的木板!多闪亮!",
@@ -1345,6 +1381,7 @@
 		"cokes" : "创造和燃烧这东西可能是完全安全的为您的健康和环境",
 		"colonykit" : "_MISSING_Required to start additional colonies",
 		"cookedfish" : "_MISSING_Swimming capabilities are dramatically reduced",
+		"cookies" : "_MISSING_Name derives from the Dutch word 'Koekje'",
 		"copper" : "不需要熔炼。所以方便！",
 		"coppernails" : "一种创新的组合木材的方法",
 		"copperparts" : "金属提高了一切",
@@ -1433,6 +1470,8 @@
 		"ricemeal" : "_MISSING_Zun’s favorite",
 		"salpeter" : "不要用这东西把食物调味",
 		"sand" : "小心沙蛇",
+		"saplingfallorange" : "_MISSING_Orange future tree",
+		"saplingtaiga" : "_MISSING_Slightly different tree",
 		"sappling" : "未来的树",
 		"sciencebagadvanced" : "高级科学要求",
 		"sciencebagbasic" : "基础科学研究所需",
@@ -1462,6 +1501,7 @@
 		"tomato" : "_MISSING_Fruit or vegetable?",
 		"torch" : "让生活充满光明！",
 		"trader" : "_MISSING_Unexpectedly used for trading",
+		"vanilla" : "_MISSING_Delicious taste",
 		"water" : "这玩意不应该在你的清单上",
 		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
 		"waxtablet" : "_MISSING_No headphone jack",
