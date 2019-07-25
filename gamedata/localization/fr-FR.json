@@ -1,5 +1,5 @@
 {
-	"coverage" : 56.5365025466893,
+	"coverage" : 96.8590831918506,
 	"hints" : {
 		"0" : "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1" : "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -95,6 +95,8 @@
 			"namefield" : "Nom de la colonie :",
 			"recruitauto" : "_MISSING_Auto recruit on job placement",
 			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
+			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
+			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "Recrutement",
 			"recruittext3" : "Les colons ont besoin de 2000 calories par jour et d'un lit.",
 			"recruittext4" : "Le recrutement du prochain colon coûte {0} calories.",
@@ -131,6 +133,7 @@
 			"switchcolony" : "Basculer vers {0}",
 			"trading" : {
 				"completerule" : "Créer une règle",
+				"mainheader" : "_MISSING_New trading rule settings",
 				"newrule" : "Proposer la règle commerciale",
 				"ruledescription" : "Les marchands échangeront {0} de la colonie {1} à la colonie {2} si :",
 				"ruleincomingdescr" : "Recevoir {0} de {1} s'ils en ont plus que {2}",
@@ -209,7 +212,9 @@
 			"availableluxury" : "{0} % de disponibilité pour : {1}",
 			"baseamount" : "Bonheur existentiel",
 			"calories" : "Rationnement des calories",
-			"caloriescause" : "Calories en surplus",
+			"calorieshappy" : "_MISSING_Well fed",
+			"calorieshunger" : "_MISSING_Hunger",
+			"caloriesstarvation" : "_MISSING_Starvation",
 			"colonistcount" : "Population",
 			"disabledeffect" : "Bonheur désactivé",
 			"recruitmentcost" : "Coût de recrutement : {0:P0} de la normale",
@@ -527,7 +532,7 @@
 					"newworld" : {
 						"description" : "Débloque le rouet",
 						"name" : "Rouet"
-					},
+					}
 				},
 				"splittingstump" : {
 					"description" : "Débloque les billots. Peuvent être utilisés pour créer du bois de coupe plus rapidement que l'établi.",
@@ -615,6 +620,7 @@
 				"noactivecolony" : "Aucune colonie active !",
 				"science" : {
 					"available" : "Disponible",
+					"cancel" : "_MISSING_Cancel",
 					"completed" : "Terminée",
 					"completeunlock" : "Terminer",
 					"conditioncolonistcount" : "Colons",
@@ -814,7 +820,7 @@
 				"papyrusb" : "Papyrus",
 				"papyrusfarmer" : "Cultivateur de papyrus",
 				"papyrustool" : "Outil de cultivateur de papyrus",
-				"potatob" :  "Glucides du Nouveau Monde",
+				"potatob" : "Glucides du Nouveau Monde",
 				"potatofarmer" : "Cultivateur de pommes de terre",
 				"potatotool" : "Outil de cultivateur de pommes de terre",
 				"requiresarable" : "Nécessite des terres arables",
