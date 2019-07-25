@@ -93,6 +93,8 @@
 			"manageowners" : "Manage Owners",
 			"nameedit" : "Edit Colony Name:",
 			"namefield" : "Colony Name:",
+			"recruitauto" : "Auto recruit on job placement",
+			"recruitautorequirements" : "<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "Amount of colonists to recruit:",
 			"recruitmentbutton" : "Recruit Colonist",
 			"recruitmentheader" : "Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Unlock the Bloomery, which can process iron ore & galena ore",
-					"name" : "Bloomery"
-				},
 				"bronzeanvil" : {
 					"description" : "Unlock the Bronze Anvil, which can process bronze",
 					"name" : "Bronze Anvil"
@@ -339,7 +337,7 @@
 					"name" : "Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "Allows construction of a colony kit",
+					"description" : "Allows construction of a Colony Starter Kit",
 					"name" : "Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Unlocks the Crossbow, a more powerful weapon than the bow",
 					"name" : "Crossbow"
 				},
-				"crossbowbolt" : {
-					"description" : "Unlocks Crossbow Bolts",
-					"name" : "Crossbow Bolts"
-				},
 				"diamondprocessing" : {
 					"description" : "Unlocks processing diamonds",
 					"name" : "Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "Glider"
 				},
-				"gunpowder" : {
-					"description" : "Unlock Gunpowder, a powerful explosive",
-					"name" : "Gunpowder"
-				},
 				"gunsmithshop" : {
 					"description" : "Unlocks the Gunsmith, who processes gunpowder and creates guns",
 					"name" : "Gunsmith Shop"
-				},
-				"healthregensize1" : {
-					"description" : "Increases regenerated amount of HP from 30 to 50",
-					"name" : "Regeneration Increase I"
-				},
-				"healthregensize2" : {
-					"description" : "Increases regenerated amount of HP from 50 to 65",
-					"name" : "Regeneration Increase II"
-				},
-				"healthregensize3" : {
-					"description" : "Increases regenerated amount of HP from 65 to 85",
-					"name" : "Regeneration Increase III"
-				},
-				"healthregensize4" : {
-					"description" : "Increases regenerated amount of HP from 85 to 100",
-					"name" : "Regeneration Increase IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Increases regeneration speed from 0.5 HP/s to 1 HP/s",
-					"name" : "Regeneration Speed I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Increases regeneration speed from 1 HP/s to 2 HP/s",
-					"name" : "Regeneration Speed II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Increases regeneration speed from 2 HP/s to 3 HP/s",
-					"name" : "Regeneration Speed III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Increases regeneration speed from 3 HP/s to 4 HP/s",
-					"name" : "Regeneration Speed IV"
-				},
-				"healthsize1" : {
-					"description" : "Increases Max HP to 125",
-					"name" : "Health Increase I"
-				},
-				"healthsize2" : {
-					"description" : "Increases Max HP to 150",
-					"name" : "Health Increase II"
-				},
-				"healthsize3" : {
-					"description" : "Increases Max HP to 175",
-					"name" : "Health Increase III"
-				},
-				"healthsize4" : {
-					"description" : "Increases Max HP to 200",
-					"name" : "Health Increase IV"
 				},
 				"herbfarming" : {
 					"description" : "Unlocks three different herb farmers. The herbs can be used by the dyer",
 					"name" : "Herb Farming"
 				},
-				"kiln" : {
-					"description" : "Unlocks kilns. Required to create advanced fuels like charcoal.",
-					"name" : "Kiln"
+				"ironsmelting" : {
+					"description" : "Unlocks kiln and bloomery.",
+					"name" : "Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
 					"name" : "Lanterns"
+				},
+				"liferesearch1" : {
+					"description" : "Increases total health, amount of regeneration and regeneration speed",
+					"name" : "Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "Increases total health, amount of regeneration and regeneration speed",
+					"name" : "Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "Increases total health, amount of regeneration and regeneration speed",
+					"name" : "Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "Increases total health, amount of regeneration and regeneration speed",
+					"name" : "Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Unlocks the Matchlock Gun, an early type of gun",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
-					"name" : "Dyed Quarter Blocks"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Unlocks the productions of wood colored quarterblocks at the splitting stump, can be used to build stairs",
-					"name" : "Wooden Quarter Blocks"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
-					"name" : "Grey Quarter Blocks"
 				},
 				"ricefarmer" : {
 					"description" : "Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "Fisherman",
 				"fishermana" : "Will fish for... fishes",
 				"fishermantool" : "Fisherman Tool",
+				"fishfarmer" : "Fish Farmer",
+				"fishfarmera" : "Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "Fish Farmer Tool",
 				"flaxfarmer" : "Flax Farmer",
 				"flaxfarmertool" : "Flax Farmer Tool",
 				"flaxherbfarming" : "Flax & Herbs",
@@ -917,15 +866,15 @@
 				"header" : "Basics",
 				"text1" : "The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
-				"text3" : "Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
+				"text3" : "Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"description" : "You'll need food to recruit and sustain your colonists!",
-				"header" : "Food Production",
-				"text1" : "Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
-				"text2" : "Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
-				"text3" : "After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
+				"description" : "Bread and games are essential to grow your colony",
+				"header" : "Food & Happiness",
+				"text1" : "For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Defend your colony against the monsters of the night!",
@@ -950,6 +899,13 @@
 				"text2" : "Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
+			},
+			"page6" : {
+				"description" : "Explore the world and start new colonies!",
+				"header" : "Colonization",
+				"text1" : "There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Firewood",
 		"fishermanjob" : "Fisherman Job",
 		"fishmeal" : "Fishmeal",
+		"fishtank" : "Fish Tank",
 		"flax" : "Flax",
 		"flaxstage1" : "Flax seeds",
 		"flour" : "Flour",
@@ -1502,8 +1459,8 @@
 		"torch" : "And let there be light!",
 		"trader" : "Unexpectedly used for trading",
 		"vanilla" : "Delicious taste",
-		"water" : "You are NOT supposed to have this in your inventory!",
-		"waterpump" : "For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "Will flood everything if let loose",
+		"waterpump" : "Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "No headphone jack",
 		"wheat" : "A colonist with a grindstone will turn this into flour",
 		"wheatstage1" : "Future bread",

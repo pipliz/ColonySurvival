@@ -218,7 +218,7 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 50,
+		"happiness" : 200,
 		"icon" : "./textures/icons/book.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 480
@@ -445,9 +445,9 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.03,
-		"foodValue" : 0.1,
-		"happiness" : 30,
+		"dailyFoodFractionOptimal" : 0.015,
+		"foodValue" : 0.05,
+		"happiness" : 50,
 		"icon" : "./textures/icons/cake.png",
 		"isPlaceable" : false
 	},
@@ -647,7 +647,7 @@
 		],
 		"dailyFoodFractionOptimal" : 0.025,
 		"foodValue" : 0.025,
-		"happiness" : 150,
+		"happiness" : 100,
 		"icon" : "./textures/icons/chocolate.png",
 		"isPlaceable" : false
 	},
@@ -749,7 +749,7 @@
 			"luxury",
 			"tropics"
 		],
-		"happiness" : 75,
+		"happiness" : 100,
 		"icon" : "./textures/icons/coffee.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 24
@@ -1034,6 +1034,18 @@
 		"icon" : "./textures/icons/fishmeal.png",
 		"isPlaceable" : false
 	},
+	"fishtank" : {
+		"categories" : [
+			"decorative"
+		],
+		"icon" : "./textures/icons/fishtank.png",
+		"mesh" : "./meshes/fishtank.ply",
+		"needsBase" : true,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAmount" : 0,
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "neutral"
+	},
 	"flax" : {
 		"categories" : [
 			"food",
@@ -1103,7 +1115,7 @@
 		],
 		"dailyFoodFractionOptimal" : 0.7,
 		"foodValue" : 0.6,
-		"happiness" : 30,
+		"happiness" : 50,
 		"icon" : "./textures/icons/foofoo.png",
 		"isPlaceable" : false
 	},
@@ -1617,7 +1629,7 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 35,
+		"happiness" : 40,
 		"icon" : "./textures/icons/jewelry.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 480
@@ -1924,9 +1936,9 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.04,
-		"foodValue" : 0.2,
-		"happiness" : 25,
+		"dailyFoodFractionOptimal" : 0.06,
+		"foodValue" : 0.3,
+		"happiness" : 35,
 		"icon" : "./textures/icons/lobstercooked.png",
 		"isPlaceable" : false
 	},
@@ -1995,9 +2007,9 @@
 			"edible",
 			"new world"
 		],
-		"dailyFoodFractionOptimal" : 0.7,
-		"foodValue" : 0.8,
-		"happiness" : 30,
+		"dailyFoodFractionOptimal" : 0.9,
+		"foodValue" : 1.6,
+		"happiness" : 60,
 		"icon" : "./textures/icons/newworldmeal.png",
 		"isPlaceable" : false
 	},
@@ -2382,9 +2394,9 @@
 			"edible",
 			"far east"
 		],
-		"dailyFoodFractionOptimal" : 0.7,
-		"foodValue" : 0.8,
-		"happiness" : 30,
+		"dailyFoodFractionOptimal" : 0.9,
+		"foodValue" : 2.2,
+		"happiness" : 60,
 		"icon" : "./textures/icons/ricemeal.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
@@ -2572,7 +2584,7 @@
 			"luxury",
 			"far east"
 		],
-		"happiness" : 100,
+		"happiness" : 200,
 		"icon" : "./textures/icons/silkpillow.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 360
@@ -3097,7 +3109,7 @@
 			"luxury",
 			"new world"
 		],
-		"happiness" : 300,
+		"happiness" : 150,
 		"icon" : "./textures/icons/wintercoat.png",
 		"isPlaceable" : false,
 		"luxuryHours" : 720

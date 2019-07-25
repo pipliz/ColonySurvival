@@ -1,5 +1,5 @@
 {
-	"coverage" : 53.6401673640167,
+	"coverage" : 50.5942275042445,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "打开锻铁炉，可处理铁矿、方铅矿",
-					"name" : "锻铁炉"
-				},
 				"bronzeanvil" : {
 					"description" : "解开青铜铁砧，它可以加工青铜。",
 					"name" : "青铜砧"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "解开弩，比弓更有力的武器",
 					"name" : "弩"
 				},
-				"crossbowbolt" : {
-					"description" : "解锁弩弹药",
-					"name" : "弩箭"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "解锁火药，一种威力强大的炸药",
-					"name" : "火药"
-				},
 				"gunsmithshop" : {
 					"description" : "打开工坊店了解创造了火药枪和过程",
 					"name" : "工坊店"
-				},
-				"healthregensize1" : {
-					"description" : "将自愈能力由30增强到50",
-					"name" : "自愈增强 I"
-				},
-				"healthregensize2" : {
-					"description" : "将自愈能力由50增强到65",
-					"name" : "自愈增强 II"
-				},
-				"healthregensize3" : {
-					"description" : "将自愈能力由65增强到85",
-					"name" : "自愈增强 III"
-				},
-				"healthregensize4" : {
-					"description" : "将自愈能力由85增强到100",
-					"name" : "自愈增强 IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "增加再生速度 0.5 HP/s 到 1 HP/s",
-					"name" : "再生速度 I"
-				},
-				"healthregenspeed2" : {
-					"description" : "增加再生速度 1 HP/s 到 2 HP/s",
-					"name" : "再生速度 II"
-				},
-				"healthregenspeed3" : {
-					"description" : "增加再生速度 2 HP/s 到 3 HP/s",
-					"name" : "再生速度 III"
-				},
-				"healthregenspeed4" : {
-					"description" : "增加再生速度 3 HP/s 到 4 HP/s",
-					"name" : "再生速度IV"
-				},
-				"healthsize1" : {
-					"description" : "将最大生命增加到 125",
-					"name" : "增加健康 I"
-				},
-				"healthsize2" : {
-					"description" : "将最大生命增加到 150",
-					"name" : "增加健康 II"
-				},
-				"healthsize3" : {
-					"description" : "将最大生命增加到 175",
-					"name" : "增加健康 III"
-				},
-				"healthsize4" : {
-					"description" : "将最大生命增加到 200",
-					"name" : "增加健康 IV"
 				},
 				"herbfarming" : {
 					"description" : "解锁三种不同的药草农夫。中药可以通过染料工使用",
 					"name" : "药草农夫"
 				},
-				"kiln" : {
-					"description" : "解锁窑。需要创造像木炭这样的先进燃料.",
-					"name" : "窑"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "解锁灯的生产在铁砧和彩灯的染料生产",
 					"name" : "灯笼"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "解锁的火绳枪，枪的早期型",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "解锁染色的砖，可用于构建楼梯",
-					"name" : "块染色"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "解锁染色的木砖，可以用来建造楼梯",
-					"name" : "木质块染色"
-				},
-				"quarterblockstonemason" : {
-					"description" : "解锁染色的木砖，可以用来建造楼梯",
-					"name" : "灰色的块"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "纺织工",
 				"flaxfarmertool" : "需要划定纺织工的工作区域",
 				"flaxherbfarming" : "亚麻和草药",
@@ -917,15 +866,15 @@
 				"header" : "基础教程",
 				"text1" : "旗帜是你的殖民地的中心。按“2”种植。右击横幅以招募殖民者。横幅工具突出显示怪物在红色中产卵的区域。.",
 				"text2" : "食物是你殖民地的基础.确保你有足够的食物维持生存并足够供应屁民生活,食物永远不嫌多不是吗!",
-				"text3" : "请按'I'键来打开储物箱,你需要将物品拿在手上才能制造左边手工制作的物品,将物品放到右边共享仓库你的屁民才会使用,当然箱子是异次元的.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "怪物会在晚上攻击你的殖民地！使用命令工具放置警卫。按“1”并单击选择。按“r”旋转某些块."
 			},
 			"page2" : {
-				"description" : "你会需要食物的,我保证!",
-				"header" : "食物供给",
-				"text1" : "选择'1'键并按左键选择需要的工种,然后按住右键在地上拖动来划定区域. ",
-				"text2" : "然后你需要种植小麦,当小麦成熟后进行收割. ",
-				"text3" : "在那之后你会需要招聘屁民将将麦子磨成面粉然后再烤成面包,直接吃麦子貌似吃不饱哦."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "晚上怪物可是会攻击你的殖民地的!",
@@ -950,6 +899,13 @@
 				"text2" : "选择研究让科学家打开它。他将完成一定的周期来完成这项研究。每个周期消耗成分。",
 				"text3" : "更高层次的研究需要科学包。招聘技术人员制作科学包。这些袋子本身可以多次重复使用。",
 				"text4" : "科学家们可以一起工作，加快研究。更科学实验室招募额外的科学家！"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "柴",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "亚麻",
 		"flaxstage1" : "亚麻种子",
 		"flour" : "面粉",
@@ -1502,8 +1459,8 @@
 		"torch" : "让生活充满光明！",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "这玩意不应该在你的清单上",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "用烤箱把它变成面包！",
 		"wheatstage1" : "未来的面包",

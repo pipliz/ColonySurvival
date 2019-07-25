@@ -1,5 +1,5 @@
 {
-	"coverage" : 58.9121338912134,
+	"coverage" : 55.9422750424448,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "鉄鉱石と方鉛鉱を加工できる「塊鉄炉」をアンロックする",
-					"name" : "塊鉄炉"
-				},
 				"bronzeanvil" : {
 					"description" : "青銅を加工できる「青銅の金床」をアンロックする",
 					"name" : "青銅の金床"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "弓よりも強力な武器「クロスボウ」をアンロックする",
 					"name" : "クロスボウ"
 				},
-				"crossbowbolt" : {
-					"description" : "「クロスボウのボルト」をアンロックする",
-					"name" : "クロスボウのボルト"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "強力な爆発物である「火薬」をアンロックする",
-					"name" : "火薬"
-				},
 				"gunsmithshop" : {
 					"description" : "火薬を加工したり鉄砲を製作したりする「鉄砲鍛冶」をアンロックする",
 					"name" : "鉄砲鍛冶の工房"
-				},
-				"healthregensize1" : {
-					"description" : "HPの再生量を30までから50までに向上させる",
-					"name" : "再生力向上 I"
-				},
-				"healthregensize2" : {
-					"description" : "HPの再生量を50までから65までに向上させる",
-					"name" : "再生力向上 II"
-				},
-				"healthregensize3" : {
-					"description" : "HPの再生量を65までから85までに向上させる",
-					"name" : "再生力向上 III"
-				},
-				"healthregensize4" : {
-					"description" : "HPの再生量を85までから100までに向上させる",
-					"name" : "再生力向上 IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "再生速度を0.5HP/秒から1HP/秒に向上させる",
-					"name" : "再生速度 I"
-				},
-				"healthregenspeed2" : {
-					"description" : "再生速度を1HP/秒から2HP/秒に向上させる",
-					"name" : "再生速度 II"
-				},
-				"healthregenspeed3" : {
-					"description" : "再生速度を2HP/秒から3HP/秒に向上させる",
-					"name" : "再生速度 III"
-				},
-				"healthregenspeed4" : {
-					"description" : "再生速度を3HP/秒から4HP/秒に向上させる",
-					"name" : "再生速度 IV"
-				},
-				"healthsize1" : {
-					"description" : "最大HPを125まで向上させる",
-					"name" : "ヘルス向上 I"
-				},
-				"healthsize2" : {
-					"description" : "最大HPを150まで向上させる",
-					"name" : "ヘルス向上 II"
-				},
-				"healthsize3" : {
-					"description" : "最大HPを175まで向上させる",
-					"name" : "ヘルス向上 III"
-				},
-				"healthsize4" : {
-					"description" : "最大HPを200まで向上させる",
-					"name" : "ヘルス向上 IV"
 				},
 				"herbfarming" : {
 					"description" : "3種類のハーブ農家をアンロックする。 ハーブは染色師が使用する",
 					"name" : "ハーブ栽培"
 				},
-				"kiln" : {
-					"description" : "「炭焼き窯」をアンロックする。 木炭のような上位の燃料を作るのに必要。",
-					"name" : "炭焼き窯"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "金床での「ランタン」生産と、染色師による色つきのランタン生産をアンロックする",
 					"name" : "ランタン"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "初期の銃火器である「火縄銃」をアンロックする",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "階段の構築に使える、色つきクォーターブロックの染色師による生産をアンロックする",
-					"name" : "色つきクォーターブロック"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "階段の構築に使える、木の色のクォーターブロックの薪割り台での生産をアンロックする",
-					"name" : "木製クォーターブロック"
-				},
-				"quarterblockstonemason" : {
-					"description" : "階段の構築に使える「クォーターブロック（灰色）」の石工による生産をアンロックする",
-					"name" : "クォーターブロック（灰色）"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "亜麻農家",
 				"flaxfarmertool" : "亜麻農家ツール",
 				"flaxherbfarming" : "亜麻＆ハーブ類",
@@ -917,15 +866,15 @@
 				"header" : "基本事項",
 				"text1" : "バナーはあなたのコロニーの中心です。 「2」を押して立ててください。 入植者を募集するにはバナーを右クリックします。  バナーツールはモンスターがスポーンするエリアを赤でハイライトします。",
 				"text2" : "入植者を募集するためには、食料とベッドが必要です。 入植者が生き残るには、食事をする必要があります。 十分な食料を用意することを忘れないでください、さもないと彼らは飢えてしまいます！",
-				"text3" : "ベッドを作るには「I」を押してください。 あなたは画面下部にあるスロット内のアイテムのみを使ってクラフトできます。 入植者は備蓄品にあるアイテムのみ使用可能です。 彼らは木箱を使って備蓄品にアクセスします。",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "夜間には、モンスターがあなたのコロニーを襲ってきます！ コマンドツールを使って、衛兵を配置しましょう。 「1」を押し、クリックして衛兵を選択します。 「R」を押すことで、ブロックを回転できます。"
 			},
 			"page2" : {
-				"description" : "入植者を募集し維持するには食料が必要です！",
-				"header" : "食料生産",
-				"text1" : "ベリー農家を作るため、コマンドツール（「1」を押す）を使いましょう。 草ブロックを右クリックし、仕事を選択して農民用のエリアを作ります。 左クリックで仕事の種類を変えられます。",
-				"text2" : "パン作りは複雑ですが、効率的な食料生産手段です。 まずは小麦畑を作りましょう。 2晩越すと小麦は十分に育ち、農民が収穫を始めます。",
-				"text3" : "その後、石臼とオーブンを設置してさらに2人雇う必要があります。 石臼は小麦を小麦粉に変えるのに使います。 パン屋はパンを焼くのにオーブンを使います。"
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "夜間に迫り来るモンスターたちからコロニーを防衛せよ！",
@@ -950,6 +899,13 @@
 				"text2" : "研究対象を選択し、科学者にアンロックさせましょう。 科学者は研究を完了するため、一定回数のサイクルで作業を繰り返します。 研究の必要素材は各サイクル毎に消費されます。",
 				"text3" : "より高度な研究にはサイエンスバッグが必要になります。 サイエンスバッグを作成するため、技術者を雇いましょう。 使って空になったバッグは複数回の再利用が可能です。",
 				"text4" : "複数の科学者が一緒になって作業することで、研究の進行速度を速めることができます。 さらなる科学者を雇うために、もっと研究所を設置しましょう！"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "薪",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "亜麻",
 		"flaxstage1" : "_MISSING_Flax seeds",
 		"flour" : "小麦粉",
@@ -1502,8 +1459,8 @@
 		"torch" : "【たいまつ】\n《Torch》\n光あれ！",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "【みず】\n《Water》\nこれはインベントリにはないはず！",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "【こむぎ】\n《Wheat》\n入植者が石臼を使って小麦粉に変える",
 		"wheatstage1" : "_MISSING_Future bread",

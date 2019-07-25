@@ -1,5 +1,5 @@
 {
-	"coverage" : 16.8200836820084,
+	"coverage" : 16.9779286926995,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "_MISSING_Unlock the Bloomery, which can process iron ore & galena ore",
-					"name" : "_MISSING_Bloomery"
-				},
 				"bronzeanvil" : {
 					"description" : "_MISSING_Unlock the Bronze Anvil, which can process bronze",
 					"name" : "_MISSING_Bronze Anvil"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "_MISSING_Unlocks the Crossbow, a more powerful weapon than the bow",
 					"name" : "_MISSING_Crossbow"
 				},
-				"crossbowbolt" : {
-					"description" : "_MISSING_Unlocks Crossbow Bolts",
-					"name" : "_MISSING_Crossbow Bolts"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "_MISSING_Unlock Gunpowder, a powerful explosive",
-					"name" : "_MISSING_Gunpowder"
-				},
 				"gunsmithshop" : {
 					"description" : "_MISSING_Unlocks the Gunsmith, who processes gunpowder and creates guns",
 					"name" : "_MISSING_Gunsmith Shop"
-				},
-				"healthregensize1" : {
-					"description" : "_MISSING_Increases regenerated amount of HP from 30 to 50",
-					"name" : "_MISSING_Regeneration Increase I"
-				},
-				"healthregensize2" : {
-					"description" : "_MISSING_Increases regenerated amount of HP from 50 to 65",
-					"name" : "_MISSING_Regeneration Increase II"
-				},
-				"healthregensize3" : {
-					"description" : "_MISSING_Increases regenerated amount of HP from 65 to 85",
-					"name" : "_MISSING_Regeneration Increase III"
-				},
-				"healthregensize4" : {
-					"description" : "_MISSING_Increases regenerated amount of HP from 85 to 100",
-					"name" : "_MISSING_Regeneration Increase IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "_MISSING_Increases regeneration speed from 0.5 HP/s to 1 HP/s",
-					"name" : "_MISSING_Regeneration Speed I"
-				},
-				"healthregenspeed2" : {
-					"description" : "_MISSING_Increases regeneration speed from 1 HP/s to 2 HP/s",
-					"name" : "_MISSING_Regeneration Speed II"
-				},
-				"healthregenspeed3" : {
-					"description" : "_MISSING_Increases regeneration speed from 2 HP/s to 3 HP/s",
-					"name" : "_MISSING_Regeneration Speed III"
-				},
-				"healthregenspeed4" : {
-					"description" : "_MISSING_Increases regeneration speed from 3 HP/s to 4 HP/s",
-					"name" : "_MISSING_Regeneration Speed IV"
-				},
-				"healthsize1" : {
-					"description" : "_MISSING_Increases Max HP to 125",
-					"name" : "_MISSING_Health Increase I"
-				},
-				"healthsize2" : {
-					"description" : "_MISSING_Increases Max HP to 150",
-					"name" : "_MISSING_Health Increase II"
-				},
-				"healthsize3" : {
-					"description" : "_MISSING_Increases Max HP to 175",
-					"name" : "_MISSING_Health Increase III"
-				},
-				"healthsize4" : {
-					"description" : "_MISSING_Increases Max HP to 200",
-					"name" : "_MISSING_Health Increase IV"
 				},
 				"herbfarming" : {
 					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
 					"name" : "_MISSING_Herb Farming"
 				},
-				"kiln" : {
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
-					"name" : "_MISSING_Kiln"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
 					"name" : "_MISSING_Lanterns"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "_MISSING_Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
-					"name" : "_MISSING_Dyed Quarter Blocks"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "_MISSING_Unlocks the productions of wood colored quarterblocks at the splitting stump, can be used to build stairs",
-					"name" : "_MISSING_Wooden Quarter Blocks"
-				},
-				"quarterblockstonemason" : {
-					"description" : "_MISSING_Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
-					"name" : "_MISSING_Grey Quarter Blocks"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "亞麻農夫",
 				"flaxfarmertool" : "亞麻農夫工具",
 				"flaxherbfarming" : "_MISSING_Flax & Herbs",
@@ -917,15 +866,15 @@
 				"header" : "_MISSING_Basics",
 				"text1" : "_MISSING_The banner is the center of your colony. Press '2' to plant it. Right-click the banner to recruit colonists. The Banner Tool highlights the area where monsters spawn in red.",
 				"text2" : "_MISSING_You need food and beds to recruit colonists. Colonists need to eat to survive. Make sure there is enough food available, or they will starve!",
-				"text3" : "_MISSING_Press \"I\" to craft a bed. You can only craft things with the items in the slots on the bottom. Colonists can only use items in your stockpile. They access the stockpile using crates.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "_MISSING_Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"description" : "_MISSING_You'll need food to recruit and sustain your colonists!",
-				"header" : "_MISSING_Food Production",
-				"text1" : "_MISSING_Use the Commandtool (press 1) to create a berry farmer. Right-click on a block of grass, choose the right job and create an area for the farmer. Left-click to change job type. ",
-				"text2" : "_MISSING_Producing bread is a complicated but efficient method of food production. Start by making a wheat farm. After two nights your wheat will be fully grown and your farmers will harvest it. ",
-				"text3" : "_MISSING_After that, you’ll need to recruit two new people by placing a grindstone and an oven. The grindstone is used to convert the wheat into flour. A baker will use the oven to bake bread."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "_MISSING_Defend your colony against the monsters of the night!",
@@ -950,6 +899,13 @@
 				"text2" : "_MISSING_Select research to let the scientist unlock it. He'll work a certain amount of cycles to complete the research. Every cycle consumes ingredients.",
 				"text3" : "_MISSING_Higher level research requires Science Bags. Recruit a technologist to craft Science Bags. The bags themselves can be reused multiple times.",
 				"text4" : "_MISSING_Scientists can work together to speed up research. Place more Science Labs to recruit extra scientists!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "_MISSING_Firewood",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "亞麻",
 		"flaxstage1" : "_MISSING_Flax seeds",
 		"flour" : "_MISSING_Flour",
@@ -1502,8 +1459,8 @@
 		"torch" : "充滿光明！",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "這玩意不應該在您的清單上",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "_MISSING_A colonist with a grindstone will turn this into flour",
 		"wheatstage1" : "_MISSING_Future bread",

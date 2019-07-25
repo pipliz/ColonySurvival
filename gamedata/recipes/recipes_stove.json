@@ -3,11 +3,11 @@
 		"defaultLimit" : 10,
 		"name" : "cook.boilingwater",
 		"requires" : [
-			{"type":"bucketwater"},
+			{"amount":2,"type":"bucketwater"},
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"boilingwater"}
+			{"amount":2,"type":"boilingwater"}
 		]
 	},
 	{
@@ -35,8 +35,8 @@
 	{
 		"name" : "cook.newworldmeal",
 		"requires" : [
-			{"type":"potato"},
-			{"type":"tomato"},
+			{"amount":10,"type":"potato"},
+			{"amount":5,"type":"tomato"},
 			{"type":"chickenmeat"}
 		],
 		"results" : [
@@ -46,8 +46,8 @@
 	{
 		"name" : "cook.ricemeal",
 		"requires" : [
-			{"type":"rice"},
-			{"type":"cabbage"},
+			{"amount":20,"type":"rice"},
+			{"amount":5,"type":"cabbage"},
 			{"type":"chickenmeat"}
 		],
 		"results" : [
@@ -79,13 +79,13 @@
 	{
 		"name" : "cook.cookedfish",
 		"requires" : [
-			{"type":"rawfish"},
+			{"amount":2,"type":"rawfish"},
 			{"type":"oliveoil"},
-			{"type":"firewood"}
+			{"amount":2,"type":"firewood"}
 		],
 		"results" : [
-			{"type":"cookedfish"},
-			{"type":"fishmeal"}
+			{"amount":2,"type":"cookedfish"},
+			{"amount":2,"type":"fishmeal"}
 		]
 	},
 	{
@@ -103,28 +103,28 @@
 	{
 		"name" : "cook.perpetualstew",
 		"requires" : [
-			{"amount":5,"type":"boilingwater"},
-			{"amount":5,"type":"rawfish"},
+			{"amount":2,"type":"boilingwater"},
+			{"amount":4,"type":"rawfish"},
 			{"amount":10,"type":"cabbage"},
-			{"amount":10,"type":"berry"},
-			{"amount":5,"type":"honey"},
-			{"amount":3,"type":"oliveoil"},
+			{"amount":5,"type":"berry"},
+			{"amount":3,"type":"honey"},
+			{"amount":1,"type":"oliveoil"},
 			{"amount":2,"type":"bread"},
-			{"amount":3,"type":"firewood"}
+			{"amount":2,"type":"firewood"}
 		],
 		"results" : [
 			{"type":"perpetualstew"},
-			{"amount":5,"isOptional":true,"type":"bucketempty"}
+			{"amount":2,"isOptional":true,"type":"bucketempty"}
 		]
 	},
 	{
 		"name" : "cook.cake",
 		"requires" : [
 			{"amount":5,"type":"flour"},
-			{"amount":5,"type":"egg"},
+			{"amount":2,"type":"egg"},
 			{"type":"bucketwater"},
-			{"amount":3,"type":"honey"},
-			{"amount":5,"type":"berry"},
+			{"amount":1,"type":"honey"},
+			{"amount":3,"type":"berry"},
 			{"type":"firewood"}
 		],
 		"results" : [
@@ -135,19 +135,19 @@
 	{
 		"name" : "cook.luxurymeal",
 		"requires" : [
-			{"amount":3,"type":"chickenmeat"},
+			{"amount":2,"type":"chickenmeat"},
 			{"amount":5,"type":"cabbage"},
-			{"amount":10,"type":"egg"},
+			{"amount":3,"type":"egg"},
 			{"amount":3,"type":"bread"},
 			{"amount":2,"type":"rawfish"},
 			{"amount":3,"type":"oliveoil"},
-			{"amount":3,"type":"honey"},
-			{"amount":3,"type":"boilingwater"},
+			{"amount":2,"type":"honey"},
+			{"amount":2,"type":"boilingwater"},
 			{"type":"firewood"}
 		],
 		"results" : [
 			{"type":"luxurymeal"},
-			{"amount":3,"isOptional":true,"type":"bucketempty"}
+			{"amount":2,"isOptional":true,"type":"bucketempty"}
 		]
 	}
 ]

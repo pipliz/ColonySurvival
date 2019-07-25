@@ -1,5 +1,5 @@
 {
-	"coverage" : 59.4979079497908,
+	"coverage" : 56.5365025466893,
 	"hints" : {
 		"0" : "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1" : "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Débloque le bas fourneau, qui permet de traiter les minerais de fer et de galène",
-					"name" : "Bas fourneau"
-				},
 				"bronzeanvil" : {
 					"description" : "Débloque l'enclume en bronze, qui permet de travailler le bronze",
 					"name" : "Enclume en bronze"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Débloque l'arbalète, une arme plus puissante que l'arc",
 					"name" : "Arbalète"
 				},
-				"crossbowbolt" : {
-					"description" : "Débloque les carreaux d'arbalètes, les munitions pour les arbalètes",
-					"name" : "Carreaux d'arbalète"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "Débloque la poudre à canon, un explosif très puissant",
-					"name" : "Poudre à canon"
-				},
 				"gunsmithshop" : {
 					"description" : "Débloque l'armurier, qui crée la poudre à canon et fabrique des armes à feu",
 					"name" : "Armurerie"
-				},
-				"healthregensize1" : {
-					"description" : "Augmente la quantité de PV régénérés de 30 à 50",
-					"name" : "Augmentation des points de régénération  I"
-				},
-				"healthregensize2" : {
-					"description" : "Augmente la quantité de PV régénérés de 50 à 65",
-					"name" : "Augmentation des points de régénération II"
-				},
-				"healthregensize3" : {
-					"description" : "Augmente la quantité de PV régénérés de 65 à 85",
-					"name" : "Augmentation des points de régénération III"
-				},
-				"healthregensize4" : {
-					"description" : "Augmente la quantité de PV régénérés de 85 à 100",
-					"name" : "Augmentation des points de régénération IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Augmente la vitesse de régénération de 0,5 PV/s à 1 PV/s",
-					"name" : "Vitesse de régénération des PV I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Augmente la vitesse de régénération de 1 PV/s à 2 PV/s",
-					"name" : "Vitesse de régénération des PV II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Augmente la vitesse de régénération de 2 PV/s à 3 PV/s",
-					"name" : "Vitesse de régénération des PV III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Augmente la vitesse de régénération de 3 PV/s à 4 PV/s",
-					"name" : "Vitesse de régénération des PV IV"
-				},
-				"healthsize1" : {
-					"description" : "Augmentation des PV Max à 125",
-					"name" : "Augmentation des points de vie I"
-				},
-				"healthsize2" : {
-					"description" : "Augmentation des PV Max à 150",
-					"name" : "Augmentation des points de vie II"
-				},
-				"healthsize3" : {
-					"description" : "Augmentation des PV Max à 175",
-					"name" : "Augmentation des points de vie III"
-				},
-				"healthsize4" : {
-					"description" : "Augmentation des PV Max à 200",
-					"name" : "Augmentation des points de vie IV"
 				},
 				"herbfarming" : {
 					"description" : "Débloque trois cultivateurs d'herbes différents. Les herbes peuvent être utilisées par le teinturier",
 					"name" : "Culture d'herbes"
 				},
-				"kiln" : {
-					"description" : "Débloque les tourailles. Nécessaire pour créer des combustibles avancés comme le charbon de bois.",
-					"name" : "Touraille"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Débloque la production de lanternes à l'enclume et la production de lanternes colorées par le teinturier",
 					"name" : "Lanternes"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Débloque la platine à mèche, une première arme à feu",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "Débloque la production de quarts de blocs colorés par le teinturier, pouvant être utilisés comme escaliers",
-					"name" : "Quarts de blocs colorés"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Débloque la production de quarts de blocs en bois colorés au billot, pouvant être utilisés comme escaliers",
-					"name" : "Quarts de blocs en bois"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Débloque la production de quarts de blocs gris par le tailleur de pierres, pouvant être utilisés comme escaliers",
-					"name" : "Quarts de blocs gris"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Cultivateur de lin",
 				"flaxfarmertool" : "Outil de cultivateur de lin",
 				"flaxherbfarming" : "Lin & herbes",
@@ -917,15 +866,15 @@
 				"header" : "Bases",
 				"text1" : "La bannière est le centre de votre colonie. Appuyez sur « 2 » pour la planter. Faites un clic-droit pour recruter des colons. L'outil de bannière affiche en rouge la zone où les monstres peuvent apparaître.",
 				"text2" : "Vous avez besoin de nourriture et de lits pour recruter des colons. Les colons doivent manger pour survivre. Assurez-vous qu'il y ait suffisamment de nourriture disponible dans le stock ou ils auront faim !",
-				"text3" : "Appuyez sur « I » pour fabriquer un lit. Vous pouvez fabriquer des objets seulement avec les objets présents dans votre stock personnel. Les colons peuvent seulement utiliser les objets du stock principal. Ils ont accès au stock en utilisant des caisses.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Des monstres attaqueront votre colonie pendant la nuit ! Utilisez l'Outil de commande pour placer des gardes. Appuyez sur « 1 » puis cliquez pour le sélectionner. Appuyez sur « R » pour faire pivoter certains blocs."
 			},
 			"page2" : {
-				"description" : "Vous aurez besoin de nourriture pour recruter et nourrir vos colons !",
-				"header" : "Production de nourriture",
-				"text1" : "Utilisez l'Outil de commande (appuyez sur « 1 ») pour recruter un cultivateur de baies. Faites un clic-droit sur un bloc d'herbe, choisissez le travail désiré et créez une zone pour le cultivateur. Cliquez avec le bouton gauche pour changer le type de travail.",
-				"text2" : "Produire du pain est une méthode compliquée mais efficace pour produire de la nourriture. Commencez par faire un champ de blé. Après deux nuits, votre blé sera arrivé à maturité et vos cultivateurs le récolteront.",
-				"text3" : "Après cela, vous devrez recruter un meunier et un boulanger en plaçant une meule et un four. La meule est utilisée pour broyer le blé et en faire de la farine. Le boulanger utilisera le four pour cuire du pain."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Défendez votre colonie contre les monstres de la nuit !",
@@ -950,6 +899,13 @@
 				"text2" : "Sélectionnez une recherche pour permettre au Chercheur de la débloquer. Il travaillera pendant un certain nombre de cycles pour terminer la recherche. Chaque cycle consomme des ingrédients.",
 				"text3" : "Les plus hauts niveaux de recherche nécessitent des Sacs de science. Recrutez un Technicien pour fabriquer des Sacs de science. Les sacs peuvent être réutilisés plusieurs fois.",
 				"text4" : "Les Chercheurs peuvent collaborer pour accélérer la recherche. Placez plusieurs Laboratoires pour recruter des Chercheurs supplémentaires !"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Bois de coupe",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Lin cultivé",
 		"flaxstage1" : "Graines de lin",
 		"flour" : "Farine",
@@ -1502,8 +1459,8 @@
 		"torch" : "Et la lumière fut !",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Vous n'êtes PAS censé(e) avoir ceci dans votre inventaire !",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Un colon avec une meule transformera le blé en farine",
 		"wheatstage1" : "Futur pain",

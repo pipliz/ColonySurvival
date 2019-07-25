@@ -1,5 +1,5 @@
 {
-	"coverage" : 59.4979079497908,
+	"coverage" : 56.5365025466893,
 	"hints" : {
 		"0" : "Für viele farmen gilt, dass sie mehr produzieren, wenn sie größer sind. Beerensammeler sind eine Ausnahme.",
 		"1" : "Wenn du mehr Kolonisten rekrutierst, erscheinen auch mehr Monster.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Schaltet den Schmelzofen frei, der Eisen und Galeniterz verarbeiten kann",
-					"name" : "Schmelzofen"
-				},
 				"bronzeanvil" : {
 					"description" : "Schaltet den Bronze Amboss frei, der Bronze verarbeiten kann",
 					"name" : "Bronze Amboss"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Schaltet die Armbrust frei, eine stärkere Waffe als der Bogen",
 					"name" : "Armbrust"
 				},
-				"crossbowbolt" : {
-					"description" : "Schaltet Armbrustbolzen",
-					"name" : "Armbrustbolzen"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "Schaltet Schießpulver frei, einen starken Sprengstoff, frei",
-					"name" : "Schießpulver"
-				},
 				"gunsmithshop" : {
 					"description" : "Schaltet den Büchsenmacher frei, der Schießpulver verarbeitet und Waffen herstellt",
 					"name" : "Büchsenmacher"
-				},
-				"healthregensize1" : {
-					"description" : "Erhöht die regenerierte Gesundheit von 30 auf 50",
-					"name" : "Erhöhte Regeneration I"
-				},
-				"healthregensize2" : {
-					"description" : "Erhöht die regenerierte Gesundheit von 50 auf 65",
-					"name" : "Erhöhte Regeneration II"
-				},
-				"healthregensize3" : {
-					"description" : "Erhöht die regenerierte Gesundheit von 65 auf 85",
-					"name" : "Erhöhte Regeneration III"
-				},
-				"healthregensize4" : {
-					"description" : "Erhöht die regenerierte Gesundheit von 85 auf 100",
-					"name" : "Erhöhte Regeneration IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 0.5 HP/s auf 1 HP/s",
-					"name" : "Schnellere Regeneration I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 1 HP/s auf 2 HP/s",
-					"name" : "Schnellere Regeneration II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 2 HP/s auf 3 HP/s",
-					"name" : "Schnellere Regeneration III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Erhöht die Regenerationsgeschwindigkeit von 3 HP/s auf 4 HP/s",
-					"name" : "Schnellere Regeneration IV"
-				},
-				"healthsize1" : {
-					"description" : "Erhöht die maximale Gesundheit auf 125",
-					"name" : "Erhöhte Gesundheit I"
-				},
-				"healthsize2" : {
-					"description" : "Erhöht die maximale Gesundheit auf 150",
-					"name" : "Erhöhte Gesundheit II"
-				},
-				"healthsize3" : {
-					"description" : "Erhöht die maximale Gesundheit auf 175",
-					"name" : "Erhöhte Gesundheit III"
-				},
-				"healthsize4" : {
-					"description" : "Erhöht die maximale Gesundheit auf 200",
-					"name" : "Erhöhte Gesundheit IV"
 				},
 				"herbfarming" : {
 					"description" : "Schaltet drei verschiedene Kräuterbauern frei. Die Kräuter können vom Färber verwendet werden",
 					"name" : "Kräuterbauer"
 				},
-				"kiln" : {
-					"description" : "Schaltet den Brennofen frei. Erforderlich, um fortschrittliche Brennstoffe wie Holzkohle zu erzeugen.",
-					"name" : "Brennofen"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Schaltet die Herstellung von Laternen am Amboss frei, und die Herstellung von farbigen Laternen durch den Färber frei",
 					"name" : "Laternen"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Schaltet die Muskete frei, eine frühe Waffenart",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "Schaltet Viertelblöcke für den Färber frei, diese können zum Treppenbauen verwendet werden",
-					"name" : "Gefärbte Viertelblöcke"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Schaltet farbige Viertelblöcke aus Holz frei, die am Holzhackklotz produziert werden. Die Blöcke können für Treppen verwendet werden",
-					"name" : "Holzviertelblöcke"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Schaltet graue Viertelblöcke frei, die vom Steinmetz produziert werden. Können für Treppen verwendet werden",
-					"name" : "Graue Viertelblöcke"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Flachsbauer",
 				"flaxfarmertool" : "Flachsbauerwerkzeug",
 				"flaxherbfarming" : "Flachs & Kräuter",
@@ -917,15 +866,15 @@
 				"header" : "Grundlagen",
 				"text1" : "Das Banner ist das Zentrum deiner Kolonie. Drücke '2', um es zu plazieren. Klicken Sie mit der rechten Maustaste auf das Banner, um Kolonisten zu rekrutieren. Das Banner-Tool hebt den Bereich rot hervor, in dem Monster erscheinen.",
 				"text2" : "Du brauchst Essen und Betten, um Kolonisten zu rekrutieren. Kolonisten brauchen Essen, um zu überleben. Stelle sicher,dass immer genug Essen verfügbar ist, oder sie verhungern!",
-				"text3" : "Drücke 'I' um ein Bett zu craften. Du kannst nur Dinge mit den Items in den Slots ganz unten craften. Kolonisten können nur Items im Lager benutzen. Sie greifen auf das Lager mit Hilfe von Kisten zu.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Monster werden deine Kolonie nachts angreifen! Verwende das Befehlstool, um Wachen zu platzieren. Drücken sie '1' und wählen sie 'Wächter' aus. Drücke 'R', um Blöcke zu drehen."
 			},
 			"page2" : {
-				"description" : "Du brauchst Essen zum Rekrutieren und deine Kolonisten zu halten!",
-				"header" : "Essens-Produktion",
-				"text1" : "Benutze das Befehlswerkzeug (Drücke '1') um einen Beeren Farmer zu erstellen. Rechtsklicke auf einen Block Gras, wähle den Job und erstelle einen Bereich für den Farmer. Linksklicke, um den Job-Typ zu ändern.",
-				"text2" : "Brot produzieren ist eine komplizierte, aber effiziente Methode der Essensproduktion. Starte mit einer Getreide Farm. Nach zwei Nächten ist dein Getreide ausgewachsen und deine Farmer werden es ernten.",
-				"text3" : "Anschließend bildest du zwei neue Kolonisten aus, indem du einen Mühlstein und einen Ofen platzierst. Der Mühlstein wird benutzt, um Getreide in Mehl zu mahlen. Ein Bäcker wird den Ofen benutzen, um Brot zu backen."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Verteidige deine Kolonie gegen die Monster der Nacht!",
@@ -950,6 +899,13 @@
 				"text2" : "Wählen Sie eine Forschung aus, damit der Wissenschaftler sie freischalten kann. Er wird eine bestimmte Anzahl von Zyklen brauchen, um die Forschung abzuschließen. Jeder Zyklus verbraucht bestimmte Materialien.",
 				"text3" : "Höhere Forschungen erfordern Forschungsbeutel. Rekrutiere einen Technologen, um Forschungsbeutel herzustellen. Die Taschen selbst können mehrfach wiederverwendet werden.",
 				"text4" : "Wissenschaftler können zusammenarbeiten, um die Forschung zu beschleunigen. Platziere weitere Forschungslabore, um zusätzliche Wissenschaftler zu rekrutieren!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Feuerholz",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Flachs",
 		"flaxstage1" : "Flachssamen",
 		"flour" : "Mehl",
@@ -1502,8 +1459,8 @@
 		"torch" : "Da woll'n wir nicht lange Fackeln!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Was hast du jetzt schon wieder angerichtet? Du machst alles nass!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Ein Kolonist mit einem Mühlstein macht daraus Mehl.",
 		"wheatstage1" : "Möchte später mal Brot werden.",

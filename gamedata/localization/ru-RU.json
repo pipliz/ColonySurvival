@@ -1,5 +1,5 @@
 {
-	"coverage" : 59.4979079497908,
+	"coverage" : 56.5365025466893,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Разблокирует сыродутный горн, для плавки железной руды и галенита",
-					"name" : "Сыродутный горн"
-				},
 				"bronzeanvil" : {
 					"description" : "Разблокирует бронзовую наковальню, для обработки бронзы",
 					"name" : "Бронзовая наковальня"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Разблокирует арбалет, более мощное оружие, чем лук",
 					"name" : "Арбалет"
 				},
-				"crossbowbolt" : {
-					"description" : "Разблокирует арбалетные болты",
-					"name" : "Арбалетные болты"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "Разблокирует порох, мощную взрывчатку",
-					"name" : "Порох"
-				},
 				"gunsmithshop" : {
 					"description" : "Разблокирует оружейную мастерскую, в которой можно изготавливать порох и ружья",
 					"name" : "Оружейная мастерская"
-				},
-				"healthregensize1" : {
-					"description" : "Увеличивает количесто регенерируемых ХП с 30 до 50",
-					"name" : "Увеличение регенерации I"
-				},
-				"healthregensize2" : {
-					"description" : "Увеличивает количесто регенерируемых ХП с 50 до 65",
-					"name" : "Увеличение регенерации II"
-				},
-				"healthregensize3" : {
-					"description" : "Увеличивает количесто регенерируемых ХП с 65 до 85",
-					"name" : "Увеличение регенерации III"
-				},
-				"healthregensize4" : {
-					"description" : "Увеличивает количесто регенерируемых ХП с 85 до 100",
-					"name" : "Увеличение регенерации IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Увеличивает скорость регенерации с 0.5 ХП/сек до 1 ХП/сек",
-					"name" : "Увеличение скорости регенерации I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Увеличивает скорость регенерации с 1 ХП/сек до 2 ХП/сек",
-					"name" : "Увеличение скорости регенерации II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Увеличивает скорость регенерации с 2 ХП/сек до 3 ХП/сек",
-					"name" : "Увеличение скорости регенерации III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Увеличивает скорость регенерации с 3 ХП/сек до 4 ХП/сек",
-					"name" : "Увеличение скорости регенерации IV"
-				},
-				"healthsize1" : {
-					"description" : "Увеличивает максимальное ХП до 125",
-					"name" : "Увеличение здоровья I"
-				},
-				"healthsize2" : {
-					"description" : "Увеличивает максимальное ХП до 150",
-					"name" : "Увеличение здоровья II"
-				},
-				"healthsize3" : {
-					"description" : "Увеличивает максимальное ХП до 175",
-					"name" : "Увеличение здоровья III"
-				},
-				"healthsize4" : {
-					"description" : "Увеличивает максимальное ХП до 200",
-					"name" : "Увеличение здоровья IV"
 				},
 				"herbfarming" : {
 					"description" : "Разблокирует три различных цветочных фермера. Цветы могут быть использованы красильщиком.",
 					"name" : "Цветочное фермерство"
 				},
-				"kiln" : {
-					"description" : "Разблокируйте печь для обжига. Требуется для создания современных видов топлива, например, угля и кокса.",
-					"name" : "Печь для обжига"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Разблокирует производство светильников в кузне, и цветных светильников у красильщика.",
 					"name" : "Светильники"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Разблокирует мушкет, один из первых видов огнестрельного оружия.",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "Разблокирует производство окрашенных полублоков блоков красильщиком, может использоваться для постройки лестниц",
-					"name" : "Окрашенные полублоки"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Разблокирует производство деревянных цветных полублоков на колоде, может использоваться для постройки лестниц",
-					"name" : "Деревянные полублоки"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Разблокирует производство каменных полублоков",
-					"name" : "Каменные полублоки"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Льное поле",
 				"flaxfarmertool" : "Инструмент Фермера Льна",
 				"flaxherbfarming" : "Лён и Цветы",
@@ -917,15 +866,15 @@
 				"header" : "Основы",
 				"text1" : "Баннер - это центр вашей колонии. Нажмите '2', чтобы разместить его. Щелкните правой кнопкой по банеру, чтобы нанять колонистов. Иснтрумент 'Управление баннером' выделит места, где появляются монстры, красным цветом.",
 				"text2" : "Вам потребуется Еда и кровати для найма колонистов. Колонисты должны есть, чтобы не умереть. Удостоверьтесь, что у вас достаточно еды!",
-				"text3" : "Нажмите \"I\", чтобы скрафтить кровать. Вы можете делать вещи только из предметов в слотах снизу. Колонисты будут использовать предметы из вашего Склада. Они получают доступ к складу с помощью ящиков.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Монстру атакуют вашу колонию ночью! Используйте Инструмент коммандования для установки защитных устройств. Нажмите '1' и кликните, чтобы выбрать его. Нажмите 'R' для вращения определенных блоков."
 			},
 			"page2" : {
-				"description" : "Вам понадобится еда для обеспечения жизни вашим колонистам!",
-				"header" : "Производство еды",
-				"text1" : "Используйте Инструмент командования (нажмите 1) для создания Ягодного фермера. Нажмите правой кнопкой мыши по траве, выберите нужную работу и создайте область для фермера. Щелкните левой кнопкой мыши, чтобы сменить тип работы.",
-				"text2" : "Производство хлеба - сложный, но эффективный метод производства продуктов питания. Начните с создания пшеничной фермы. Через 2 ночи ваша пшеница будет выращена и фермеры соберут её.",
-				"text3" : "После этого вам нужно будет нанять 2-х колонистов и разместить Жернов и Печь. Жернов будет использоваться для превращения пшеницы в муку. Пекарь будет использовать печь для выпечки хлеба."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Защити свою колонию от монстров ночью!",
@@ -950,6 +899,13 @@
 				"text2" : "Выберите исследование чтобы учёный разблокировал его. Он работает в несколько этапов чтобы закончить исследование. Каждый этап расходует ингридиенты.",
 				"text3" : "Более сложные исследования требуют исследовательские пакеты. Наймите технолога чтобы изготавливать исследовательские пакеты. Сами пакеты можно повторно использовать несколько раз.",
 				"text4" : "Учёные могут работать совместно для ускорения исследований. Разместите больше лабораторий чтобы нанять дополнительных учёных!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Дрова",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Лен",
 		"flaxstage1" : "Семена льна",
 		"flour" : "Мука",
@@ -1502,8 +1459,8 @@
 		"torch" : "Да будет свет!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Вы НЕ должны иметь это в своем инвентаре!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Колонист с жерновом превратит это в муку",
 		"wheatstage1" : "Будущий хлеб",

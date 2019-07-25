@@ -25,7 +25,7 @@
 		"name" : "pipliz.kiln.porcelainbiscuit",
 		"requires" : [
 			{"type":"porcelainraw"},
-			{"type":"charcoal"}
+			{"amount":3,"type":"charcoal"}
 		],
 		"results" : [
 			{"type":"porcelainbiscuit"}
@@ -35,10 +35,10 @@
 		"defaultLimit" : 10,
 		"name" : "pipliz.kiln.porcelainglazed",
 		"requires" : [
-			{"type":"porcelainbiscuit"},
-			{"type":"charcoal"},
-			{"type":"tin"},
-			{"type":"lead"}
+			{"amount":2,"type":"porcelainbiscuit"},
+			{"amount":2,"type":"charcoal"},
+			{"amount":3,"type":"tin"},
+			{"amount":2,"type":"lead"}
 		],
 		"results" : [
 			{"type":"porcelainglazed"}

@@ -1,5 +1,5 @@
 {
-	"coverage" : 46.8619246861925,
+	"coverage" : 44.2275042444822,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "철기 시대가 시작됩니다! 철광석, 납광석을 제련할 수 있는 제철 용광로를 연구합니다.",
-					"name" : "제철 용광로"
-				},
 				"bronzeanvil" : {
 					"description" : "도구를 만들 수 있는 모루를 연구합니다.",
 					"name" : "모루"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "활보다 강력한 무기, 석궁을 연구합니다.",
 					"name" : "석궁"
 				},
-				"crossbowbolt" : {
-					"description" : "석궁으로 쏠 수 있는 볼트를 연구합니다.",
-					"name" : "석궁 볼트"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "강력한 폭발력을 가진 화약을 연구합니다.",
-					"name" : "화약"
-				},
 				"gunsmithshop" : {
 					"description" : "화약과 총기류를 만들 수 있는 총기 작업대를 연구합니다.",
 					"name" : "총기 작업대"
-				},
-				"healthregensize1" : {
-					"description" : "체력 회복량이 30에서 50으로 증가합니다.",
-					"name" : "체력 회복량 증가 I"
-				},
-				"healthregensize2" : {
-					"description" : "체력 회복량이 50에서 65로 증가합니다.",
-					"name" : "체력 회복량 증가 II"
-				},
-				"healthregensize3" : {
-					"description" : "체력 회복량이 65에서 85로 증가합니다.",
-					"name" : "체력 회복량 증가 III"
-				},
-				"healthregensize4" : {
-					"description" : "체력 회복량이 85에서 100으로 증가합니다.",
-					"name" : "체력 회복량 증가 IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "체력 회복량이 1초당 0.5에서 1초당 1로 증가합니다.",
-					"name" : "체력 회복 속도 I"
-				},
-				"healthregenspeed2" : {
-					"description" : "체력 회복량이 1초당 1에서 1초당 2로 증가합니다.",
-					"name" : "체력 회복 속도 II"
-				},
-				"healthregenspeed3" : {
-					"description" : "체력 회복량이 1초당 2에서 1초당 3로 증가합니다.",
-					"name" : "체력 회복 속도 III"
-				},
-				"healthregenspeed4" : {
-					"description" : "체력 회복량이 1초당 3에서 1초당 4로 증가합니다.",
-					"name" : "체력 회복 속도 IV"
-				},
-				"healthsize1" : {
-					"description" : "최대 체력이 125까지 증가합니다.",
-					"name" : "최대 체력 증가 I"
-				},
-				"healthsize2" : {
-					"description" : "최대 체력이 150까지 증가합니다.",
-					"name" : "최대 체력 증가 II"
-				},
-				"healthsize3" : {
-					"description" : "최대 체력이 175까지 증가합니다.",
-					"name" : "최대 체력 증가 III"
-				},
-				"healthsize4" : {
-					"description" : "최대 체력이 200까지 증가합니다.",
-					"name" : "최대 체력 증가 IV"
 				},
 				"herbfarming" : {
 					"description" : "염색에 사용할 허브 3가지를 키울 수 있게 됩니다.",
 					"name" : "허브 농법"
 				},
-				"kiln" : {
-					"description" : "숯가마를 사용해 효율높은 연료를 제작할 수 있습니다.",
-					"name" : "숯 제조법"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "모루에서 등불을 생산할 수 있습니다. 염색도 가능하지요.",
 					"name" : "등불 제조"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "초기의 소총, 화승총을 연구합니다.",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "_MISSING_Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
-					"name" : "_MISSING_Dyed Quarter Blocks"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "_MISSING_Unlocks the productions of wood colored quarterblocks at the splitting stump, can be used to build stairs",
-					"name" : "_MISSING_Wooden Quarter Blocks"
-				},
-				"quarterblockstonemason" : {
-					"description" : "_MISSING_Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
-					"name" : "_MISSING_Grey Quarter Blocks"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "아마꽃",
 				"flaxfarmertool" : "아마꽃 농사 짓기",
 				"flaxherbfarming" : "꽃과 허브 농사",
@@ -917,15 +866,15 @@
 				"header" : "기초",
 				"text1" : "깃발은 당신 마을의 중심입니다. 숫자 키 '2'를 눌러 깃발을 설치하세요. 깃발을 선택한 상태에서 우클릭 하면 새로운 주민을 모집할 수 있습니다. 또한, 붉은 색으로 보이는 구역은 몬스터가 스폰되는 구역입니다.",
 				"text2" : "새로운 주민을 모집하려면 식량과 침대가 필요합니다. 주민들을 굶겨선 안됩니다. 충분한 음식이 있는지 꼭 확인하세요.",
-				"text3" : "침대를 만드려면 'I'를 눌러 창고를 여세요. 제작에 쓸 재료는 반드시 아래에 있는 자신의 인벤토리에 가지고 있어야 합니다. 창고에 있는 물건들은 주민들이 사용합니다. 단, 상자에서 물건을 꺼내야만 사용할 수 있습니다",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "밤에는 몬스터들이 마을을 공격합니다! '1'을 눌러 직업 도구를 선택한 후 경비병을 배치하세요. 방향을 바꾸려면 'R'을 누르면 됩니다."
 			},
 			"page2" : {
-				"description" : "새로운 주민을 모집하고, 주민들을 유지하려면 식량이 필요합니다!",
-				"header" : "식량 생산",
-				"text1" : "가장 쉬운 딸기 농사부터 지어볼까요? '1'을 눌러 직업 도구를 선택하고 '딸기 농사꾼'을 선택하세요. 잔디나 흙 위에 우클릭으로 농사를 지을 지역을 설정하세요. 직업 도구를 바꾸려면 좌클릭하세요.",
-				"text2" : "빵을 만드는건 아주 복잡하지만 많은 식량을 생산할 수 있습니다. 밀 농사를 짓는 것부터 시작합시다. 밀알을 심은지 이틀밤이 지나면 밀이 완전히 자라게 되고, 밀 농사꾼이 수확을 합니다.",
-				"text3" : "밀을 수확했다면, 이제 맷돌과 오븐에서 일 할 사람이 필요합니다. 맷돌에서는 밀을 밀가루로 바꾸고, 오븐에서 일하는 제빵사는 그 밀가루를 빵으로 만들어줍니다."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "밤을 틈타 몰려오는 몬스터들을 막아야 합니다!",
@@ -950,6 +899,13 @@
 				"text2" : "연구할 기술을 선택하세요. 모든 기술은 연구를 여러번 진행해야 하는데, 1회 연구마다 자원을 소모합니다.",
 				"text3" : "높은 수준의 연구를 진행할때는 '연구팩'이 필요합니다. '연구팩'은 기술자들이 만듭니다. '연구팩'은 여러번 재사용이 가능합니다.",
 				"text4" : "백짓장도 맞들면 낫듯이, 여러명의 과학자가 함께하면 연구 진행이 더욱 빨라집니다. 연구소를 많이 설치해서 과학자를 많이 모집해보세요!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "땔감",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "아마꽃",
 		"flaxstage1" : "아마꽃 씨앗",
 		"flour" : "밀가루",
@@ -1502,8 +1459,8 @@
 		"torch" : "빛이 있으라!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "어! 이거 인벤토리에 있으면 안되는데!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "마음이 풍족해지네요.",
 		"wheatstage1" : "미래에 빵이 됩니다.",

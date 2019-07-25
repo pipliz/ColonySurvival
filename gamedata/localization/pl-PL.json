@@ -1,5 +1,5 @@
 {
-	"coverage" : 38.9121338912134,
+	"coverage" : 36.3327674023769,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Odblokowuje dymarkę, która może przetwarzać rudę żelaza i galeny",
-					"name" : "Dymarka"
-				},
 				"bronzeanvil" : {
 					"description" : "Odblokowuje kowadło z brązu, które może przetwarzać brąz",
 					"name" : "Kowadło z brązu"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Odblokowuje kuszę, silniejszą broń niż łuk",
 					"name" : "Kusza"
 				},
-				"crossbowbolt" : {
-					"description" : "Odblokowuje bełty do kuszy",
-					"name" : "Bełty do kuszy"
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "Odblokowuje proch strzelniczy, silną substancję wybuchową",
-					"name" : "Proch strzelniczy"
-				},
 				"gunsmithshop" : {
 					"description" : "Odblokowuje warsztat rusznikarza, który wytwarza proch i produkuje broń palną.",
 					"name" : "Warsztat rusznikarza"
-				},
-				"healthregensize1" : {
-					"description" : "Zwiększa ilość regenerowanych PŻ z 30 do 50",
-					"name" : "Zwiększenie regeneracji I"
-				},
-				"healthregensize2" : {
-					"description" : "Zwiększa ilość regenerowanych PŻ z 50 do 65",
-					"name" : "Zwiększenie regeneracji II"
-				},
-				"healthregensize3" : {
-					"description" : "Zwiększa ilość regenerowanych PŻ z 65 do 85",
-					"name" : "Zwiększenie regeneracji III"
-				},
-				"healthregensize4" : {
-					"description" : "Zwiększa ilość regenerowanych PŻ z 85 do 100",
-					"name" : "Zwiększenie regeneracji IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Zwiększa prędkość regeneracji z 0.5 PŻ/s to 1 PŻ/s",
-					"name" : "Prędkość regeneracji I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Zwiększa prędkość regeneracji z 1 PŻ/s to 2 PŻ/s",
-					"name" : "Prędkość regeneracji II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Zwiększa prędkość regeneracji z 2 PŻ/s to 3 PŻ/s",
-					"name" : "Prędkość regeneracji III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Zwiększa prędkość regeneracji z 3 PŻ/s to 4 PŻ/s",
-					"name" : "Prędkość regeneracji IV"
-				},
-				"healthsize1" : {
-					"description" : "Zwiększa maksymalną ilość PŻ do 125",
-					"name" : "Zwiększenie wyrzymałości I"
-				},
-				"healthsize2" : {
-					"description" : "Zwiększa maksymalną ilość PŻ do 150",
-					"name" : "Zwiększenie wyrzymałości II"
-				},
-				"healthsize3" : {
-					"description" : "Zwiększa maksymalną ilość PŻ do 175",
-					"name" : "Zwiększenie wyrzymałości III"
-				},
-				"healthsize4" : {
-					"description" : "Zwiększa maksymalną ilość PŻ do 200",
-					"name" : "Zwiększenie wyrzymałości IV"
 				},
 				"herbfarming" : {
 					"description" : "_MISSING_Unlocks three different herb farmers. The herbs can be used by the dyer",
 					"name" : "_MISSING_Herb Farming"
 				},
-				"kiln" : {
-					"description" : "_MISSING_Unlocks kilns. Required to create advanced fuels like charcoal.",
-					"name" : "_MISSING_Kiln"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "_MISSING_Unlocks the production of lanterns at the anvil and the production of colored lanterns by the dyer",
 					"name" : "_MISSING_Lanterns"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Odblokowuje muszkiet, wszesny typ broni palnej",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "_MISSING_Unlocks the production of dyed quarterblocks by the dyer, can be used to build stairs",
-					"name" : "_MISSING_Dyed Quarter Blocks"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "_MISSING_Unlocks the productions of wood colored quarterblocks at the splitting stump, can be used to build stairs",
-					"name" : "_MISSING_Wooden Quarter Blocks"
-				},
-				"quarterblockstonemason" : {
-					"description" : "_MISSING_Unlocks the production of grey quarterblocks by the stonemason, can be used to build stairs",
-					"name" : "_MISSING_Grey Quarter Blocks"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Farmer lnu",
 				"flaxfarmertool" : "Narzędzie farmera lnu",
 				"flaxherbfarming" : "_MISSING_Flax & Herbs",
@@ -917,15 +866,15 @@
 				"header" : "Podstawy",
 				"text1" : "Sztandar to środek twojej kolonii. wciśnij '2' aby go postawić. Kilknij PPM na sztandar aby zrekrutować kolonistów. Narzędzie sztandaru podświetla miejsca gdzie rodzą się potwory na czerwono.",
 				"text2" : "Potrzebujesz jedzenia oraz łóżek aby zrekrutować kolonistów. Koloniści muszą jeść aby przeżyc. Upewnij się, że masz wystarczająco dużo jedzenia aby nie umarli z głodu!",
-				"text3" : "Wciśnij \"I\" aby stworzyć łóżko. Możesz wytwarzać coś tylko z przedmiotów znajdujących się w polach na dole. Koloniści mogą używać tylko tych przedmiotów, które znajdują się w składzie. Dostęp do składu mają zapewniony poprzed skrzynie.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Potwory będą nocą atakować Twoją kolonię! Użyj narzędzia dowodzenia aby ustawić strażników. Naciśnij '1' i kliknij aby go użyć. Naciśnij 'R' aby obracać określone bloki."
 			},
 			"page2" : {
-				"description" : "Będziesz potrzebował jedzenia aby rekrutować nowych kolonistów, oraz aby utrzymać obecnych!",
-				"header" : "Produkcja jedzenia",
-				"text1" : "Użyj narzędzia dowodzenia (wciśnij 1) aby stworzyć farmera jagód. Wciśnij PPM na bloku trawy, wybierz odpowiednią pracę i stwórz pole dla farmera. Kliknij LPM aby zmienić rodzaj pracy. ",
-				"text2" : "Produkcja chleba to opłacalny lecz skomplikowany sposób na pozyskanie jedzenia. Zacznij od stworzenia farmy pszenicy. Po dwóch nocach Twoja pszenica będzie gotowa do zbiorów.",
-				"text3" : "Po zbiorach, będziesz musiał zrekrutować dwóch nowych ludzi, do mielenia i do pieczenia. Po uzyskaniu mąki z pszenicy, piekarz użyje pieca do upieczenia chleba."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Obroń kolonię przed potworami czyhającymi w nocy!",
@@ -950,6 +899,13 @@
 				"text2" : "Wybierz badanie aby umożliwić naukowcowi odblokowanie technologii. Będzie potrzebował określonej liczby cykli aby zakończyć badanie. Każdy cykl pochłania składniki.",
 				"text3" : "Wyższe poziomy badań wymagają worków naukowych. Zrekrutuj technologa aby wytwarzał worki naukowe. Worki mogą być wykorzystywane wiele razy.",
 				"text4" : "Naukowcy mogą pracować razem aby przyspieszyć badanie. Postaw więcej labolatoriów aby zrekrutować więcej naukowców."
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Drewno opałowe",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Len",
 		"flaxstage1" : "Nasiona lnu",
 		"flour" : "Mąka",
@@ -1502,8 +1459,8 @@
 		"torch" : "Niech nastanie światłość!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Nie powinieneś tego mieć!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Kolonista z żarną stworzy z tego mąkę.",
 		"wheatstage1" : "Przyszły chleb",

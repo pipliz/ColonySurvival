@@ -373,7 +373,7 @@
 			"pipliz.baseresearch.ricefarmer"
 		],
 		"icon" : "./textures/icons/tea.png",
-		"iterationCount" : 25,
+		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"ricemeal"}
 		],
@@ -507,7 +507,8 @@
 		],
 		"key" : "pipliz.baseresearch.fisherman",
 		"unlocksRecipeGroups" : [
-			"pipliz.fisherman"
+			"pipliz.fisherman",
+			"pipliz.fishfarmer"
 		]
 	},
 	{
@@ -541,6 +542,10 @@
 		"key" : "pipliz.baseresearch.cabbagefarmer",
 		"unlocksClientHints" : [
 			{"data":"pipliz.cabbagefarmer","type":"NPCType"}
+		],
+		"unlocksRecipes" : [
+			"cook.luxurymeal",
+			"cook.perpetualstew"
 		]
 	},
 	{
@@ -667,28 +672,6 @@
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.kiln"
-		],
-		"icon" : "./textures/icons/bloomery.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"}
-		],
-		"key" : "pipliz.baseresearch.bloomery",
-		"unlocksRecipeGroups" : [
-			"pipliz.bloomeryjob"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.bloomery",
-			"pipliz.player.bloomery",
-			"pipliz.metalsmith.ironrivets",
-			"pipliz.metalsmith.ironwrought",
-			"pipliz.metalsmith.ironsword",
-			"pipliz.metalsmith.ironblock"
-		]
-	},
-	{
 		"icon" : "./textures/icons/bronzeanvil.png",
 		"iterationCount" : 3,
 		"iterationRequirements" : [
@@ -729,7 +712,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.crossbowbolt"
+			"pipliz.baseresearch.sciencebagmilitary"
 		],
 		"icon" : "./textures/icons/crossbow.png",
 		"iterationCount" : 25,
@@ -743,21 +726,7 @@
 			{"data":"pipliz.guardcrossbownight","type":"NPCType"}
 		],
 		"unlocksRecipes" : [
-			"pipliz.metalsmith.crossbow"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebagmilitary"
-		],
-		"icon" : "./textures/icons/crossbowbolt.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"sciencebagmilitary"}
-		],
-		"key" : "pipliz.baseresearch.crossbowbolt",
-		"unlocksRecipes" : [
+			"pipliz.metalsmith.crossbow",
 			"pipliz.metalsmith.crossbowbolt"
 		]
 	},
@@ -782,7 +751,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.bloomery"
+			"pipliz.baseresearch.ironsmelting"
 		],
 		"icon" : "./textures/icons/fineryforge.png",
 		"iterationCount" : 50,
@@ -802,22 +771,6 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.gunsmithshop"
-		],
-		"icon" : "./textures/icons/gunpowder.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"salpeter"},
-			{"type":"sciencebagmilitary"}
-		],
-		"key" : "pipliz.baseresearch.gunpowder",
-		"unlocksRecipes" : [
-			"pipliz.gunsmith.gunpowder",
-			"pipliz.gunsmith.gunpowderpouch"
-		]
-	},
-	{
-		"dependencies" : [
 			"pipliz.baseresearch.fineryforge",
 			"pipliz.baseresearch.sciencebagmilitary"
 		],
@@ -833,33 +786,41 @@
 		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.gunsmithshop",
-			"pipliz.player.gunsmithshop",
 			"pipliz.gunsmith.leadbullet",
-			"pipliz.gunsmith.matchlockgun"
+			"pipliz.gunsmith.matchlockgun",
+			"pipliz.gunsmith.gunpowder",
+			"pipliz.gunsmith.gunpowderpouch",
+			"pipliz.player.gunsmithshop"
 		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.sciencebagbasic"
 		],
-		"icon" : "./textures/icons/kiln.png",
-		"iterationCount" : 3,
+		"icon" : "./textures/icons/ironwrought.png",
+		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"bronzeplate"}
+			{"type":"sciencebagbasic"}
 		],
-		"key" : "pipliz.baseresearch.kiln",
+		"key" : "pipliz.baseresearch.ironsmelting",
 		"unlocksRecipeGroups" : [
-			"pipliz.kilnjob"
+			"pipliz.kilnjob",
+			"pipliz.bloomeryjob"
 		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.kiln",
-			"pipliz.player.kiln"
+			"pipliz.crafter.bloomery",
+			"pipliz.metalsmith.ironrivets",
+			"pipliz.metalsmith.ironwrought",
+			"pipliz.metalsmith.ironsword",
+			"pipliz.metalsmith.ironblock",
+			"pipliz.player.kiln",
+			"pipliz.player.bloomery"
 		]
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.bloomery"
+			"pipliz.baseresearch.ironsmelting"
 		],
 		"icon" : "./textures/icons/lanternyellow.png",
 		"iterationCount" : 5,
@@ -882,7 +843,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.gunpowder"
+			"pipliz.baseresearch.gunsmithshop"
 		],
 		"icon" : "./textures/icons/matchlockgun.png",
 		"iterationCount" : 25,
@@ -902,53 +863,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.dyertable"
-		],
-		"icon" : "./textures/icons/quarterblockwhite.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"gypsum"},
-			{"type":"charcoal"}
-		],
-		"key" : "pipliz.baseresearch.quarterblockdyer",
-		"unlocksRecipes" : [
-			"pipliz.dyer.quarterblockblack",
-			"pipliz.dyer.quarterblockwhite"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.splittingstump"
-		],
-		"icon" : "./textures/icons/quarterblockbrownlight.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"}
-		],
-		"key" : "pipliz.baseresearch.quarterblocksplittingstump",
-		"unlocksRecipes" : [
-			"pipliz.woodcutter.quarterblockbrowndark",
-			"pipliz.woodcutter.quarterblockbrownlight"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.stonemasonworkbench"
-		],
-		"icon" : "./textures/icons/quarterblockgrey.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"}
-		],
-		"key" : "pipliz.baseresearch.quarterblockstonemason",
-		"unlocksRecipes" : [
-			"pipliz.stonemason.quarterblockgrey"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.gunpowder"
+			"pipliz.baseresearch.gunsmithshop"
 		],
 		"icon" : "./textures/icons/sciencebagadvanced.png",
 		"iterationCount" : 5,
@@ -1019,7 +934,7 @@
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.technologisttable",
-			"pipliz.baseresearch.bloomery",
+			"pipliz.baseresearch.ironsmelting",
 			"pipliz.baseresearch.archery"
 		],
 		"icon" : "./textures/icons/sciencebagmilitary.png",
@@ -1177,148 +1092,61 @@
 		"key" : "pipliz.baseresearch.bannerradius7"
 	},
 	{
+		"colonistCount" : 200,
 		"dependencies" : [
 			"pipliz.baseresearch.sciencebaglife"
 		],
-		"icon" : "./textures/icons/baseresearch_healthregensize1.png",
-		"iterationCount" : 15,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"amount":2,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregensize1"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregensize1"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregensize2.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"amount":3,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregensize2"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregensize2"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregensize3.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagadvanced"},
-			{"amount":3,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregensize3"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregensize3"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregensize4.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"amount":3,"type":"sciencebagadvanced"},
-			{"amount":5,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregensize4"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebaglife"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregenspeed1.png",
-		"iterationCount" : 15,
-		"iterationRequirements" : [
-			{"amount":2,"type":"sciencebagbasic"},
-			{"amount":1,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregenspeed1"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregenspeed1"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregenspeed2.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"amount":3,"type":"sciencebagbasic"},
-			{"amount":1,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregenspeed2"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregenspeed2"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregenspeed3.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"amount":3,"type":"sciencebagadvanced"},
-			{"amount":1,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregenspeed3"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.healthregenspeed3"
-		],
-		"icon" : "./textures/icons/baseresearch_healthregenspeed4.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"amount":5,"type":"sciencebagadvanced"},
-			{"amount":3,"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.healthregenspeed4"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebaglife"
-		],
+		"happinessThreshold" : 0,
 		"icon" : "./textures/icons/baseresearch_healthsize1.png",
 		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"amount":1,"type":"sciencebagbasic"},
-			{"amount":1,"type":"sciencebaglife"}
+			{"type":"sciencebaglife"}
 		],
-		"key" : "pipliz.baseresearch.healthsize1"
+		"key" : "pipliz.baseresearch.liferesearch1"
 	},
 	{
+		"colonistCount" : 300,
 		"dependencies" : [
-			"pipliz.baseresearch.healthsize1"
+			"pipliz.baseresearch.liferesearch1",
+			"pipliz.baseresearch.matchlockgun"
 		],
+		"happinessThreshold" : 0,
 		"icon" : "./textures/icons/baseresearch_healthsize2.png",
-		"iterationCount" : 50,
+		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"amount":1,"type":"sciencebagbasic"},
-			{"amount":1,"type":"sciencebaglife"}
+			{"type":"sciencebaglife"},
+			{"type":"matchlockgun"}
 		],
-		"key" : "pipliz.baseresearch.healthsize2"
+		"key" : "pipliz.baseresearch.liferesearch2"
 	},
 	{
+		"colonistCount" : 500,
 		"dependencies" : [
-			"pipliz.baseresearch.healthsize2"
+			"pipliz.baseresearch.liferesearch2"
 		],
+		"happinessThreshold" : 0,
 		"icon" : "./textures/icons/baseresearch_healthsize3.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"amount":2,"type":"sciencebagadvanced"},
-			{"amount":2,"type":"sciencebaglife"}
+			{"type":"sciencebaglife"},
+			{"type":"tea"}
 		],
-		"key" : "pipliz.baseresearch.healthsize3"
+		"key" : "pipliz.baseresearch.liferesearch3"
 	},
 	{
+		"colonistCount" : 750,
 		"dependencies" : [
-			"pipliz.baseresearch.healthsize3"
+			"pipliz.baseresearch.liferesearch3"
 		],
+		"happinessThreshold" : 0,
 		"icon" : "./textures/icons/baseresearch_healthsize4.png",
 		"iterationCount" : 100,
 		"iterationRequirements" : [
-			{"amount":2,"type":"sciencebagadvanced"},
-			{"amount":2,"type":"sciencebaglife"}
+			{"type":"sciencebaglife"},
+			{"type":"chocolate"},
+			{"type":"cookies"}
 		],
-		"key" : "pipliz.baseresearch.healthsize4"
+		"key" : "pipliz.baseresearch.liferesearch4"
 	},
 	{
 		"icon" : "./textures/icons/flax.png",

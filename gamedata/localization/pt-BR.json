@@ -1,5 +1,5 @@
 {
-	"coverage" : 49.3723849372385,
+	"coverage" : 46.2648556876061,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -93,6 +93,8 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
@@ -298,10 +300,6 @@
 					"description" : "_MISSING_Unlocks the beekeeper, which makes (part of) various luxury items and foods",
 					"name" : "_MISSING_Beekeeping"
 				},
-				"bloomery" : {
-					"description" : "Desbloqueia o forno, que pode processar minério de ferro e minério de galena",
-					"name" : "Forno"
-				},
 				"bronzeanvil" : {
 					"description" : "Desbloqueia a bigorna de bronze, que pode processar bronze",
 					"name" : "Bigorna de Bronze"
@@ -339,7 +337,7 @@
 					"name" : "_MISSING_Coffeebean Farming"
 				},
 				"colonykit" : {
-					"description" : "_MISSING_Allows construction of a colony kit",
+					"description" : "_MISSING_Allows construction of a Colony Starter Kit",
 					"name" : "_MISSING_Colonization"
 				},
 				"constructionbuilder" : {
@@ -410,10 +408,6 @@
 					"description" : "Desbloqueia a besta, uma arma mais poderosa do que o arco",
 					"name" : "Besta"
 				},
-				"crossbowbolt" : {
-					"description" : "Desbloqueia flechas de besta",
-					"name" : ""
-				},
 				"diamondprocessing" : {
 					"description" : "_MISSING_Unlocks processing diamonds",
 					"name" : "_MISSING_Diamonds"
@@ -446,73 +440,37 @@
 					"description" : "_MISSING_A revolutionary way of transport. Essential in reaching new lands.",
 					"name" : "_MISSING_Glider"
 				},
-				"gunpowder" : {
-					"description" : "Desbloqueia pólvora, um poderoso explosivo",
-					"name" : "Pólvora"
-				},
 				"gunsmithshop" : {
 					"description" : "Desbloqueia o ferreiro, no qual processa pólvora e cria armas",
 					"name" : "Loja do Ferreiro"
-				},
-				"healthregensize1" : {
-					"description" : "Aumenta o HP regenerado de 30 para 50",
-					"name" : "Aumento de Regeneração I"
-				},
-				"healthregensize2" : {
-					"description" : "Aumenta o HP regenerado de 50 para 65",
-					"name" : "Aumento de Regeneração II"
-				},
-				"healthregensize3" : {
-					"description" : "Aumenta o HP regenerado de 65 para 85",
-					"name" : "Aumento de Regeneração III"
-				},
-				"healthregensize4" : {
-					"description" : "Aumenta o HP regenerado de 85 para 100",
-					"name" : "Aumento de Regeneração IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Aumenta a velocidade de regeneração de 0.5 HP/segundo para 1 HP/segundo",
-					"name" : "Velocidade de Regeneração I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Aumenta a velocidade de regeneração de 1 HP/segundo para 2 HP/segundo",
-					"name" : "Velocidade de Regeneração II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Aumenta a velocidade de regeneração de 2 HP/segundo para 3 HP/segundo",
-					"name" : "Velocidade de Regeneração III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Aumenta a velocidade de regeneração de 3 HP/segundo para 4 HP/segundo",
-					"name" : "Velocidade de Regeneração IV"
-				},
-				"healthsize1" : {
-					"description" : "Aumenta o HP máximo para 125",
-					"name" : "Aumento de Vida I"
-				},
-				"healthsize2" : {
-					"description" : "Aumenta o HP máximo para 150",
-					"name" : "Aumento de Vida II"
-				},
-				"healthsize3" : {
-					"description" : "Aumenta o HP máximo para 175",
-					"name" : "Aumento de Vida III"
-				},
-				"healthsize4" : {
-					"description" : "Aumenta o HP máximo para 200",
-					"name" : "Aumento de Vida IV"
 				},
 				"herbfarming" : {
 					"description" : "Desbloqueia 3 diferentes tipos de fazendeiros de ervas. As ervas podem ser usadas pelos tingidores",
 					"name" : "Plantação de Erva"
 				},
-				"kiln" : {
-					"description" : "Forno de Combustível. Requerida para criar combustíveis avançados, como carvão vegetal",
-					"name" : "Forno de Combustível"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Desbloqueia a produção de lanternas na bigorna e a produção de lanternas coloridas pelo artesão",
 					"name" : "Lanternas"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Desbloqueia a arma de Mosqueteiro, um tipo inicial de arma",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "_MISSING_Unlocks the printing press, allowing books to be spread much easier",
 					"name" : "_MISSING_Printing Press"
-				},
-				"quarterblockdyer" : {
-					"description" : "Desbloqueia a produção de quarto de bloco tingidos pelo artesão, pode ser usado para construir escadas",
-					"name" : "Quarto de Blocos Tingidos"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Desbloqueia a produção de quarto de blocos de madeira coloridos no divisor de troncos, pode ser usado para construir escadas",
-					"name" : "Quarto de Bloco de Madeira"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Desbloqueia a produção de quarto de blocos cinzas pelo pedreiro, pode ser usado para construir escadas",
-					"name" : "Quarto de Bloco Cinza"
 				},
 				"ricefarmer" : {
 					"description" : "_MISSING_Unlocks rice farming",
@@ -625,7 +571,7 @@
 					"name" : "_MISSING_Water Gathering"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "_MISSING_Water Pump"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "_MISSING_Fisherman",
 				"fishermana" : "_MISSING_Will fish for... fishes",
 				"fishermantool" : "_MISSING_Fisherman Tool",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Fazendeiro de Linhaça",
 				"flaxfarmertool" : "Ferramenta de fazendeiro de Linhaça",
 				"flaxherbfarming" : "Linhaça e ervas",
@@ -917,15 +866,15 @@
 				"header" : "Básico",
 				"text1" : "A bandeira é o centro de sua colônia. Pressione '2' para colocar. Clique com o botão direito para recrutar colonos. A ferramenta da bandeira destaca a área no qual os montros nascerão, em vermelho.",
 				"text2" : "Você precisa de comida e camas para recrutar colonos. Colonos precisam comer para sobreviver. Certifique-se que há comida o suficiente ou eles irão morrer de fome!",
-				"text3" : "Pressione \"I\" para fazer uma cama. Você só pode criar coisas com os itens na barra da parte inferior. Os colonos só podem usar itens do seu estoque. Eles acessam o estoque usando os caixotes.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "Monstros atacarão sua colônia à noite! Use a ferramenta de comandos para defendê-la. Pressione '1' e clique para selecionar. Pressione 'R' para rotacionar certos blocos."
 			},
 			"page2" : {
-				"description" : "Você precisará de comida para recrutar e sustentar seus colonos!",
-				"header" : "Produção de Comida",
-				"text1" : "Use a Ferramenta de Comando (pressione 1) para criar uma fazenda de frutas. Agora botão-direito em um bloco de grama, escolha o trabalho certo e crie uma área para o fazendeiro. Botão-esquerdo muda o tipo de trabalho. ",
-				"text2" : "Produzir pão é um método de comida complicado, porém eficaz. Comece com uma fazenda de trigo. Após duas noites o trigo estará pronto e seus fazendeiros irão começar a colheita. ",
-				"text3" : "Após isso, é necessário contratar duas novas pessoas colocando uma mó e um forno. A mó é usada para converter trigo em farinha. O padeiro usa o forno para fazer pão."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Defenda sua colônia contra os monstros da noite!",
@@ -950,6 +899,13 @@
 				"text2" : "Selecione pesquisas para permitir que o cientista realize-a. Ele trabalhará um certo período para completá-las. Todo período consumirá ingredientes.",
 				"text3" : "Níveis mais altos de pesquisa requerem Mochilas Científicas. Recrute um tecnólogo para construir Mochilas Científicas. As mochilas podem ser reutilizadas várias vezes.",
 				"text4" : "Cientistas podem trabalhar juntos para acelerar a pesquisa. Coloque mais Laboratórios de Pesquisa para recrutar mais cientistas!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Lenha",
 		"fishermanjob" : "_MISSING_Fisherman Job",
 		"fishmeal" : "_MISSING_Fishmeal",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Linhaça",
 		"flaxstage1" : "Sementes de Linhaça",
 		"flour" : "Farinha",
@@ -1502,8 +1459,8 @@
 		"torch" : "E que haja luz!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Você não deve ter isso em seu inventário!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "_MISSING_No headphone jack",
 		"wheat" : "Um colono com uma mó transforma isso em farinha",
 		"wheatstage1" : "Futuro pão",

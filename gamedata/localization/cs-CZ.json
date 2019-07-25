@@ -1,5 +1,5 @@
 {
-	"coverage" : 90.2928870292887,
+	"coverage" : 87.6910016977929,
 	"hints" : {
 		"0" : "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1" : "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
@@ -93,6 +93,8 @@
 			"manageowners" : "Spravovat vlastníky",
 			"nameedit" : "Upravit jméno kolonie:",
 			"namefield" : "Jméno kolonie:",
+			"recruitauto" : "_MISSING_Auto recruit on job placement",
+			"recruitautorequirements" : "_MISSING_<i>Automatic recruitment requires at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed to work</i>",
 			"recruitmentamount" : "Počet rekrutovaných kolonistů:",
 			"recruitmentbutton" : "Rekrutovat kolonistu",
 			"recruitmentheader" : "Rekrutace",
@@ -298,10 +300,6 @@
 					"description" : "Odemyká včelaře, který sklízí výrobky (z části) používané k výrobě různých jídel a luxusních věcí.",
 					"name" : "Včelaření"
 				},
-				"bloomery" : {
-					"description" : "Odemyká nízkou pec, která umožňuje tavení železa a galenitu",
-					"name" : "Nízká pec"
-				},
 				"bronzeanvil" : {
 					"description" : "Odemyká bronzovou kovadlinu, která umožňuje zpracovávání bronzu",
 					"name" : "Bronzová kovadlina"
@@ -410,10 +408,6 @@
 					"description" : "Odemyká kuši, která je silnější než baxtrix",
 					"name" : "Kuše"
 				},
-				"crossbowbolt" : {
-					"description" : "Odemyká kušní šipky",
-					"name" : "Kušní šipky"
-				},
 				"diamondprocessing" : {
 					"description" : "Umožňuje zpracovávání diamantů.",
 					"name" : "Diamanty!"
@@ -446,73 +440,37 @@
 					"description" : "Revolucionářská možnost transportu. Dobré pro objevování nových zemí.",
 					"name" : "Rogalo"
 				},
-				"gunpowder" : {
-					"description" : "Odemyká střelný prach, který odpaluje kulky",
-					"name" : "Střelný prach"
-				},
 				"gunsmithshop" : {
 					"description" : "Odemyká puškaře, který využívá střelný prach a vyrábí bambitky",
 					"name" : "Puškařův obchod"
-				},
-				"healthregensize1" : {
-					"description" : "Zvyšuje regeneraci zdraví z 30 na 50",
-					"name" : "Navýšení regenerace I"
-				},
-				"healthregensize2" : {
-					"description" : "Zvyšuje regeneraci zdraví z 50 na 65",
-					"name" : "Navýšení regenerace II"
-				},
-				"healthregensize3" : {
-					"description" : "Zvyšuje regeneraci zdraví z 65 na 85",
-					"name" : "Navýšení regenerace III"
-				},
-				"healthregensize4" : {
-					"description" : "Zvyšuje regeneraci zdraví z 85 na 100",
-					"name" : "Navýšení regenerace IV"
-				},
-				"healthregenspeed1" : {
-					"description" : "Zvyšuje rychlost regenerace z 0.5 HP/s na 1 HP/s",
-					"name" : "Rychlost regenerace I"
-				},
-				"healthregenspeed2" : {
-					"description" : "Zvyšuje rychlost regenerace z 1 HP/s na 2 HP/s",
-					"name" : "Rychlost regenerace II"
-				},
-				"healthregenspeed3" : {
-					"description" : "Zvyšuje rychlost regenerace z 2 HP/s na 3 HP/s",
-					"name" : "Rychlost regenerace III"
-				},
-				"healthregenspeed4" : {
-					"description" : "Zvyšuje rychlost regenerace z 3 HP/s na 4 HP/s",
-					"name" : "Rychlost regenerace IV"
-				},
-				"healthsize1" : {
-					"description" : "Zvyšuje max. HP na 125",
-					"name" : "Zvýšení max. zdraví I"
-				},
-				"healthsize2" : {
-					"description" : "Zvyšuje max. HP na 150",
-					"name" : "Zvýšení max. zdraví II"
-				},
-				"healthsize3" : {
-					"description" : "Zvyšuje max. HP na 175",
-					"name" : "Zvýšení max. zdraví III"
-				},
-				"healthsize4" : {
-					"description" : "Zvyšuje max. HP na 200",
-					"name" : "Zvýšení max. zdraví IV"
 				},
 				"herbfarming" : {
 					"description" : "Odemyká tři různé druhy farmářů bylinek. Ty můžou být využity barvičem",
 					"name" : "Farmaření bylin"
 				},
-				"kiln" : {
-					"description" : "Odemyká sušící pec. Potřeba pro vyrábění pokročilejších paliv jako například dřevěného uhlí",
-					"name" : "Sušící pec"
+				"ironsmelting" : {
+					"description" : "_MISSING_Unlocks kiln and bloomery.",
+					"name" : "_MISSING_Iron Smelting"
 				},
 				"lantern" : {
 					"description" : "Odemyká produkci lucern, které mohou být vyrobeny v kovadlině a můžou být obarveny barvičem",
 					"name" : "Lucerny"
+				},
+				"liferesearch1" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase I"
+				},
+				"liferesearch2" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase II"
+				},
+				"liferesearch3" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase III"
+				},
+				"liferesearch4" : {
+					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
+					"name" : "_MISSING_Health Increase IV"
 				},
 				"matchlockgun" : {
 					"description" : "Odemyká bambitku, dřívější verzi pistole",
@@ -537,18 +495,6 @@
 				"printingpress" : {
 					"description" : "Umožňuje používání tiskařského lisu, se kterým můžete tisknout knihy.",
 					"name" : "Tiskařský lis"
-				},
-				"quarterblockdyer" : {
-					"description" : "Odemyká produkci obarvených čtvrt bloků které mohou být obarveny barvičem, můžou se z nich udělat schody",
-					"name" : "Barvené čtvrtbloky"
-				},
-				"quarterblocksplittingstump" : {
-					"description" : "Odemyká produkci dřevěných čtvrtbloků na dělícím pařezu, můžou se z nich udělat schody",
-					"name" : "Dřevěné čtvrtbloky"
-				},
-				"quarterblockstonemason" : {
-					"description" : "Odemyká produkci šedých čtvrtbloků na kameníkově stole, můžou se z nich udělat schody",
-					"name" : "Šedé čtvrtbloky"
 				},
 				"ricefarmer" : {
 					"description" : "Umožňuje faramření rýže.",
@@ -625,7 +571,7 @@
 					"name" : "Naběrač vosy"
 				},
 				"waterpump" : {
-					"description" : "Odemyká vodní pumpu, se kterou můžete získávat vodu kdekoli.",
+					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
 					"name" : "Vodní pumpa"
 				},
 				"waxtablet" : {
@@ -821,6 +767,9 @@
 				"fisherman" : "Rybář",
 				"fishermana" : "Bude ti rybařit... ryby",
 				"fishermantool" : "Nástroj rybáře",
+				"fishfarmer" : "_MISSING_Fish Farmer",
+				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
+				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
 				"flaxfarmer" : "Farmář lenu",
 				"flaxfarmertool" : "Nástroj farmáře lenu",
 				"flaxherbfarming" : "Len a byliny",
@@ -917,15 +866,15 @@
 				"header" : "Základy",
 				"text1" : "Prapor je střed vaší kolonie. Zmáčkněte '2' abyste ho položili. Klikněte pravým tlačítkem na banner pro najmutí kolonisty. Nástroj praporu vyznačuje bezpečnou zónu, monstra se rodí v červené.",
 				"text2" : "Potřebujete jídlo a postele pro rekrutování kolonistů. Kolonisté potřebují jíst aby přežili. Ujistěte se, že máte dostatek jídla nebo budou hladovět!",
-				"text3" : "Stiskněte 'I' pro vyrobení postele. Můžete vyrábět předměty pouze z věcí umístěných v dolních slotech. Kolonisté mohou používat předměty pouze ze zásob. K přístupu k zásobám používají bedny.",
+				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
 				"text4" : "V noci budou na vaši kolonii útočit monstra! Použijte nástroj pro příkazy pro rekrutování strážce. Zmáčkněte '1' a klikněte pro jejich rekrutaci. Zmáčkněte 'R' abyste otočili směr."
 			},
 			"page2" : {
-				"description" : "Budete potřebovat jídlo aby jste rekrutovali a udrželi kolonisty!",
-				"header" : "Produkce jídla",
-				"text1" : "Použijte Nástroj pro příkazy (stiskněte 1) pro vytvoření Sběrače bobulí. Klikněte pravým na blok trávy, vyberte správnou práci a zvolte oblast pro sběrače. Levým klikem změníte typ práce. ",
-				"text2" : "Výroba chleba je náročná, ale účinná metoda výroby jídla. Začněte vytvářením pšeničných farem. Po dvou nocích bude vaše pšenice zralá a vaši farmáři ji sklidí. ",
-				"text3" : "Poté budete potřebovat rekrutovat dva nové lidi položením mlecích kamenů a peci. Mlecí kameny jsou použity pro výrobu mouky z pšenice. Pekař použije pec pro upečení chleba."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Food & Happiness",
+				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
+				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Braňte svou kolonii před nočními útoky monster!",
@@ -950,6 +899,13 @@
 				"text2" : "Vyberte výzkum, aby ho vědec vyzkoumal. Bude pracovat několik cyklů pro dokončení výzkumu. Každý cyklus spotřebovává různé věci.",
 				"text3" : "Lepší výzkumy potřebují vědecké tašky. Rekrutujte technologistu, který bude vyrábět vědecké tašky. Tašky můžou být znovu využity.",
 				"text4" : "Víc vědců zrychluje zkoumání. Položte další laboratoře pro extra rychlost!"
+			},
+			"page6" : {
+				"description" : "_MISSING_Explore the world and start new colonies!",
+				"header" : "_MISSING_Colonization",
+				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
+				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
+				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
 			}
 		},
 		"sciencebiome" : {
@@ -1160,6 +1116,7 @@
 		"firewood" : "Dřevo na podpal",
 		"fishermanjob" : "Rybář",
 		"fishmeal" : "Rybí pochutina",
+		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Len",
 		"flaxstage1" : "Semínka lenu",
 		"flour" : "Mouka",
@@ -1502,8 +1459,8 @@
 		"torch" : "Budiž světlo!",
 		"trader" : "_MISSING_Unexpectedly used for trading",
 		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "Neměl by jste to mít ve svém inventáři!",
-		"waterpump" : "_MISSING_For when you need to fill your buckets without lakes and rivers nearby",
+		"water" : "_MISSING_Will flood everything if let loose",
+		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
 		"waxtablet" : "Nejsou to sluchátka",
 		"wheat" : "Kolonista s mlecím kamenem přemění pšenici na mouku",
 		"wheatstage1" : "Budoucí chleba",
