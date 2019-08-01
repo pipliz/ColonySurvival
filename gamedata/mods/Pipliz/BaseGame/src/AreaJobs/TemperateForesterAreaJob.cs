@@ -195,7 +195,8 @@ namespace Pipliz.Mods.BaseGame.AreaJobs
 				terrainGen.QueryTempPrecip(minMid.x, minMid.z, out float temp, out float precip);
 				TerrainGenerator.MetaBiomeLocation metaBiomeLocation = terrainGen.MetaBiomeProvider.GetChunkMetaBiomeLocation(minMid.x, minMid.z);
 
-				for (int itemIndex = treeGen.ItemIndices[(int)(temp - TerrainGenerator.MinimumTemperature)]; itemIndex < treeGen.ItemsLocations.Length; itemIndex++) {
+				int max = treeGen.ItemIndices.Length - 1;
+				for (int itemIndex = treeGen.ItemIndices[Math.Clamp((int)(temp - TerrainGenerator.MinimumTemperature), 0, max)]; itemIndex < treeGen.ItemsLocations.Length; itemIndex++) {
 					TerrainGenerator.BiomeConfigLocation location = treeGen.ItemsLocations[itemIndex];
 					if (!location.IsValid(temp, precip)) {
 						continue;
