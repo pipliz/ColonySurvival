@@ -1,0 +1,1142 @@
+build 1 (I'll start numbering them):
+- moved 0.7.0 test files into the base game jsons (renaming them to get rid of most "test")
+- added "requiresFertileBelow" flag to a type
+- fixed alkanet, hollyhock, wolfsbane and cherry saplings not requiring fertile ground to be placed
+- added barley farmer area job (removed the fake job)
+- added cabbage farmer area job (removed the fake job)
+- added meshes for cabbages, barley, printing press
+- reworked client command tool to make it easier (for me) to add more jobs, hopefully without causing bugs
+- re-ordered command tool menus a bit to make place for the new jobs coming in
+
+build 2:
+- fixed leftover cabbage farmer recipe causing troubles
+- fixed players.json being saved twice
+
+build 3:
+- fixed the farmer-gets-stuck-no-path issue
+- 5 new icons
+- 1 updated icon
+
+build 4:
+this build probably causes some significant problems if used to connect with previous builds (and the other way around)
+- changed recipes code to support chance-based results for npcs
+- this also changed the modcallback OnNPCCrafterRecipe, so beware if your mod uses that
+- ran into a silly issue that probably slowed down server startup time
+- fix some forester no-path issues
+- fix some berry no-path issues
+- berry bushes require fertile ground
+- templated the berry farm job into a general block-farm-area
+- those block-farm-areas use crafting recipes (hence the chance-based results for recipes)
+- removed the requirement to aim at the ground for making farm areas (so it's like the diggers etc)
+- fix new colonies not using the default happiness set to the world
+- fixed the anti-banner-overlap code being a bit generous with banner radius (could claim overlap up to like 1000 blocks away)
+- fixed the anti-banner-overlap code creating glitchy banners
+- 2 new icons (lobsters)
+- add chicken farmer (block farm area like the berry)
+- add beekeeper (block farm area like the berry)
+- both miss textures etc
+- added some researches for the 0.7 items/jobs (but half of them don't actually unlock recipes yet, as there's no recipes for the items)
+
+build 5:
+- added chicken coop mesh
+- added beehive mesh
+- fixed barley meshes using vertices than required
+- set lower 'fits-x-blocks' requirements for chicken coop / chicken farmer compared to the berry farmer
+- added a placeholder player recipe to craft the npcshop
+- replaced coatedplanks with planks in tailor requirements
+
+build 6:
+- updated recruitment cost with the changed food values (50 -> 8)
+- enabled using '/cheats on' for the co-op host
+- set default limits/priorities for some of the new recipes
+- fixed priorities UI showing everything as lowest priority
+- added meshes for the grindstone, bronze anvil, npc shop, writer and stove (removing textures for the ones that had them)
+- removed the generic recipe type from recipedata.GetAvailableRecipes<Recipe>
+- added watergatherer job (fills bucket items, must be near water)
+- require solid base blocks for some of the newly meshed blocks
+
+build 7:
+< breaks server-client compatibility >
+- updated bronze anvil mesh
+- revamped the meshed block renderer -> uses less draw calls by supporting per-type rotation and re-using meshes between types
+- renamed crowdedness to population
+- extra keys supported in types.json:
+-- "meshRotationEuler" - a vector3 euler rotation by which the set mesh is rotated
+-- "meshOffset" - a vector3 position offset by which the set mesh is moved
+-- "meshScale" - a vector3 by which the set mesh is scaled (does not support negative scaling, sadly enough - it messes with lighting)
+- expanded the generateblocks type rotateblock with support for rotating the parent types' mesh and colliders
+- moved bed, bedend, torch and quarterblocks to be defined using generateblocks.json instead of types.json
+- added 10 new icons to the new items
+- updated grindstone icon to fit with the new mesh for it
+
+build 8:
+- fixed stove icon not showing up (typo)
+- removed planks as luxury item (was for testing only)
+- replaced "clothing" with "undershirt"
+- made writerdesk and bronzeanvil rotatable
+- added 5 new icons
+- added proper names to barleystage1 and cabbagestage1 (they're the seeds)
+- added "jobType" : "craftingblocknearwater" -> mostly a crafting job, but it is required to be adjacent to water.
+- added fisherman job
+- moved watergatherer job over to above jobType in json
+
+build 9:
+- fix missing undershirt icon
+- make miner dump his items every 5 times he mines something
+- make farmers dump their items every 10 times they harvest something
+- make forester dump his items every time he chops down a tree
+- make diggers dump their items every 5 times they dug a block out
+- rightclicking the npc shop opens up the happiness menu
+- added ~30 type translations to the locale files
+- change beekeeper science to require flax farming instead of herb farming
+- remove linseed oil, replace it with wood coating
+- lock fisherman & watergatherer behind their respective researches
+- fix an issue with generateblocks.json' rotateblock type, involving created rotated versions of already rotated meshes
+
+build 10:
+- Added default limits to a variety of recipes
+- Beekeeper does not require crafted beehives anymore
+- Watergatherer research is before wheat farming now
+- Fix limits menu not showing up for bronze anvil & writerdesk
+- Add icons to a bunch of researches
+- Add colors to a bunch of npcs
+- Add a recipe to make the stove
+- Fix the boiling water recipe actually making cake
+- Moved candle recipe from crafter to beekeeper
+- Add empty buckets to the results from various recipes using buckets of (boiling) water
+- Added support for making saplings through the growable blocks json system. Ported over cherry & normal saplings to it.
+- Added olive saplings & olive leaves
+- Fixed herbfarming not giving seeds
+- Added olive farmer
+
+build 11:
+- fix a bad error that sneaked in build 10
+
+build 12:
+- open watergatherer limits UI when right clicked
+- added color for olive farmer
+- added color for cook
+- fixed paper-text using paper-empty icon
+
+build 13:
+- make sure mods not marked compatible with 0.7.0.x are not loaded at all
+- fix a nasty exception causing multiple problems that was caused by trying to add a crafting limits UI to a non-existent block
+- fix beekeeper not finding 0 times air to place beehives (they'll just be placed now)
+
+build 14:
+- make sure the locale mod is loaded with the build 13 change (ikr)
+- improve type parsing exception handling & logging
+- removed clothing & linseedoil from builtinblocks (code bits)
+
+build 15:
+- fixed chicken coop using beehive icon
+- added 200 barley & cabbage seeds as reward for completing their research
+- added proper name for watergathererjob / fishermanjob for the popup
+- added back the message to sent upon npc starving
+- fix the underwater audio effect not being reset upon leaving a world
+- fix projectiles being very slow/glitchy
+- added a missing npc cooldown to the waterside jobs in some situations
+- save "current growth" instead of "last updated growth" when saving growable blocks
+- fix updatable entities not getting updated if the first entity added to a chunk was not updatable
+- fix a more general dodgy issue relating to updatable entities
+- fix mesh rendering breaking if the meshed type has a "customData" node, but that node doesnt contain a "colors" node
+- fixed minimum size of foresters
+- fixed health data not updating properly when changing colonies or logging in
+- moved the dragged item icon a bit to the right so the cursor doesn't overlap with the item count
+
+build 16:
+- added categories to a lot of the new items
+- fixed undershirt missing luxuryHours key
+- fix waxtablet recipe making woodcoating
+- fix water-adjacent-job sending null as job to OnNPCGathered
+- added "In stockpile: {x}" to the tooltip for hovering over items anywhere but the inventory
+- set berries and bread to their intended food values (+20% for berries, +80% for bread)
+- don't turn the arable area around a forester to dirt
+- change working of the food value line in the tooltip
+- added happiness system values to the tooltip of happiness related items
+- removed goal/actual columns in the happiness tab (they're in the tooltip now)
+
+build 17:
+- fix some dodgy things with placing beds at invalid locations and outside of colonies (however this does not include the half-floating-bed I think)
+- npcs will now do the logic of the npcshop <before
+going there
+- revamped the npcshop visiting logic to hopefully work properly
+- doesn't require every job to check for npcshop planning anymore
+- allow /time add to work with up to 240 hours instead of 24 hours (since it won't insta starve people anymore)
+- show the missing goal when running into basic pathing errors
+- made ItemTypesServer.BlockRotator.Patches public
+- make the item description in the tooltip use italics and quotes
+- 4 new item descriptions
+- the happiness results should come with a max ping of about 1/4 ingame day, instead of 2 ingame days
+
+build 18:
+- fixed luxury item distribution actually not caring about your setting (it distributed as if it was halfway the slider, irrelevant of actual value)
+
+build 19:
+- updated 0.7.0 changelog in the changelogs menu
+- added "/debug removeblockhere" (removes the block you're standing in as the server, to remove banners etc)
+- fix a plausible issue where a chunk would not be meshed
+- require the research associated with a crafter for the crafters' default recipes
+- increased default rawbeeswax/honey limits to 100
+- updated unity from 2017.4.15f1 to 2017.4.19f1
+- fix a possible source for zombies spawning slightly inside the safe zone when upgraded, would also affect crate/bed finding
+- make cake require flour instead of wheat
+- make luxurymeal use rawfish instead of cookedfish
+- added a recipe to the crafter to make a writerdesk
+- fix science tooltip not getting localized
+- fix a case where the meshing thread would basically idle for a few seconds when it tries to make meshes for chunks that have since been unloaded
+- fix clicking on an empty stockpile spot not dropping items
+- add a recipe to the bronze anvil to make a printingpress
+
+- remove the need for saplings for forester / olive farmer  / berry farmer
+- remove the need for seeds for the herb/cabbage/wheat/etc farmers
+- remove the need for chicken coops and beehives from those jobs
+- removed the seed rewards from farming sciences
+- removed seed drops from growables
+- added cabbage/barley seed icons (welp)
+
+build 20:
+- changed barley farmer to be behind wheat farming instead of the cabbage farmer
+- added OnCreatedColony callback
+- made the happiness thresholds at which the recruitment cost / science speed changes lower
+- undershirt is now unlocked with herbfarming
+- added a happiness cause that's based on ration levels
+
+build 21:
+- fixed bronze arrows being uncraftable (unlocked at chickenfarmer now)
+- round science progress to 2 decimals
+- half olive farmer cooldown
+- coppernails recipe makes 5 instead of 3 nails
+- olveoil recipe requires 3 olives instead of 5
+- beeswax recipe requires 2 rawbeeswax instead of 3
+- remove seed types' localization, icons and categories
+- add waterpump job type (same as watergatherer, but does not require water nearby and is half the speed)
+
+programmy bits
+- autogenerate the BuiltinBlocks class
+- add BuiltinBlocks.Types, move indices to BuiltinBlocks.Indices
+- remove ItemTypes.Air (use BuiltinBlocks.Types.air)
+- removed the savetool from the client
+
+build 22:
+- added waterpump icon
+- add instancetracker<T>.Foreach overload with minimum/maximum bounds
+
+rest is mostly about upgrading the build system so it's quicker and more portable / sensible
+hopefully it doesn't change anything to the build
+- moved some unity build code to a separate build program
+- moved the .bat build code into that build program as well
+- moved the .bat backup code into that as well
+- change the build system to do some things concurrently (so I don't have to wait 30 mins for all platforms to build)
+
+build 23:
+message 1
+- added some dummy science showcasing that the "science biome" system works
+- added a warning if maxStackSize is set to more then 65535, and limit it in that 
+- hide research previously used but now missing an implementation (mods not loaded, obsolete research etc)
+- fix a rare case where a npc shop could be loaded before the code behind it worked (leading to a npc shop without a job)
+- fix a possible issue where the science menu didn't refresh when it should've
+- Fix OnActiveColonyChanges callback triggering before OnCreatedColony callback for newly made colonies
+
+build 23:
+message 2, pogrammy bits:
+- removed researchable.providesfor
+- changed researchable.dependson and researchable.iterationrequirements to arrays instead of lists
+- removed "ResolvedResearchable" - instead add a "IResearchable.AssignedKey" and use IResearchable directly instead for the same purposes
+- replaced the sciencemanager dict mapping string -> sciencekey with one mapping string -> researchable (where you can access the sciencekey from that)
+- added ScienceManager.GetKey(string) and ScienceManager.GetResearch(string)
+- added Pipliz.Collections.BitArray (basically same as the builtin one, but can access the internals to serialize over the network properly)
+- added ColonyScienceState.ScienceMask property, giving a ScienceAvailabilityMask where you can hide science per colony
+- mildly redid modcallback dependency graph for some callbacks, to ensure it'll always be in proper order (and try not to use ProvidesFor as it's confusing)
+- Removed "register.blockjobs" callback from AfterItemTypesDefined - merged it with pipliz.blocknpcs.registerjobs. All it did was register the npcshop
+- added "RequiredScienceBiome" to researchables (null/empty means works everywhere)
+- added some pre-made arrays of 3 research types to the science manager to prevent iterating over the dictionary all the time
+- added TerrainGenerator.ScienceBiomeProvider - which manages what science should be unlocked where
+- Changed OnLoadingTerrainGenerator to be called during create_servermanager_trackers in AfterItemTypesDefined (versus on the terraingen thread after "afterstartup")
+- added "scienceBiomePatches" jsonfile type
+
+build 24:
+- added Colony.CreateStub(int ID) to workaround a problem for pandaros
+
+build 25:
+- reduce time spend by olive farmers by 20%
+- add item stats (happiness / nutrition / use) to every result of a recipe's tooltip
+- added the "in-stockpile" count to recipe tooltips
+- fixed changing locale ingame not working as intended
+- doubled harvest rate of rawbeeswax
+- flip the direction miners look at to be consistent with the other directional jobs
+- round the current science progress to 2 decimals
+
+- change blockfarmareas and craftingjobwater jobs to use OnNPCCraftedRecipe callbacks instead of OnNPCGathered (since they use recipes)
+- added/improved the warning for when 2 entities are registered to the same position
+
+build 26:
+- fix incorrect arg passed to OnNPCCraftedRecipe
+
+build 27: breaking server-client compatibility a bit
+programmey bits only
+- test changing some JSON related code to use newtonsofts' json.net instead of my homebrew version
+- fix an extremely rare possible race condition on saving settings_readonly and settings_variable on world creation
+- fix a less rare possible race condition in the permissionsmanager, if some permissions were changed before the related files were loaded
+- rename HorizontalGrid ui menu item to HorizontalRow
+- add per item width to HorizontalRow
+
+build 28:
+- add support for npc ragdolls colliding with itemtype box colliders if they're marked as player colliders (default)
+- completely redid player movement code:
+-- hopefully fixes glitching into the ground and other weird things
+-- check any changes to movement/swimming/falling/crouching/sprinting/jumping
+- some minor changes to zombie health code to allow per zombie max health
+- change book recipe at the writer to require paper-with-text instead of paper-without-text
+
+build 29:
+- fix default writer limits to be able to make a book
+- chickenfarmer gathers 3 eggs instead of 1 per time
+- fix player movement regression where you can't go up steps if you're also touching a wall
+- fix npcs not loading inventory data from savegames
+- improve the grounding of npc's
+- fix a regression from the player movement change messing things up on world reload
+- added back seed icons etc
+- tweak shopping recipes (mostly cheaper), add the central biomes' grass types
+- add the zombie health changes to the IMonster interface
+
+build 30:
+- start of a colony management screen in the inventory menu:
+-- ability to change the name for your colony
+-- a not-yet-working-as-intended menu to add / remove people to your colony
+- Fix loading further entities in a chunk after trying to load entities with data without a registered callback
+- Remove the 0-banner=remove-colony check
+- Add a warning to banners missing colonies
+
+build 31: (breaks client <-> server compatibility)
+- fixed colony management screen to work:
+-- invite, kick players
+-- set a player to the leader
+-- leave a colony
+- moved recruitment menu from banner menu to colony management tab
+- moved colony settings from banner menu to colony management tab
+- made colony management tab extra ugly
+- added "addScienceUnlocks" modinfo.json option - allows adding extra recipe unlocks to existing science definitions
+programmey bits:
+- add support for default values for networkui inputfields
+- add support for overriding other popups when sending a server-side popup
+- added modcallbacks for the colony management tab generation,  recruitment menu generation, colony owner management generation
+
+build 32: (breaks client <-> server)
+- fix build 31 regression with input not working while chatbox is showing while not typing
+- fix the mouse position resetting when going from the inventory menu to one of the management popups
+- add new banner menu to add/move/remove banners or start a new colony
+- add buttons to recruit to fill all empty jobs or all beds
+- allow overlapping colonies again
+
+programmy:
+- add support for a payload object in BlockChangeRequestOrigin (used for banner placement to indicate colony ID)
+- add option to ButtonCallback to close the popup upon pressing it
+- add callbacks for creating the banner placement & banner clicked UIs
+
+build 33:
+- update unity to 2017.4.20f2 (there were no debuggings symbols for the older version)
+- fix miners going to the crate every time they mine something (after the first 4 times or so)
+- introduce some randomness to the miner cooldown
+- Call OnChange for entities within the block change lock (probably was getting locked out by the saving thread inbetween the actual block change and the callback happening)
+- slightly change chunk unloading/saving, so that it happens in 1 stage instead of 2
+
+build 34:
+- vastly improved the npc crafting indicator performance:
+-- in a test scene looking at ~500 or so miners (with an intel desktop quad core):
+-- before: ~60-70 fps with ~77% cpu usage
+-- after: ~165 fps with ~56% cpu usage
+
+build 35:
+- mess with terrain rendering a bit more, reducing vram/ram usage
+- fix new world menu localization
+- add a warning if a world already exists intead of failing silently
+- disable crouching and sprinting when in a menu
+- fix recipe priority not being loaded correctly
+- fix recipe priority tooltip localization
+- fix inventory hotbar appearing in non-stockpile inventory menus
+- correctly select the inventory tabs' header upon opening it
+- rightclicking into the air with a banner will open the colony tab
+
+- add support for setting a recipe result to optional:
+-- a recipe won't show up in the "made in:" tooltip if the result was optional
+-- a recipe will only look at non-optional results to check if it should be made
+
+- add support for multiple sciences being required to unlock one recipe
+- add support for unlocking all recipes associated with a job in a science
+-- intention here is that stealing/trading a non-unlocked job block won't give full access to the job
+-- and better support for more dynamic tech trees (does't matter if you do say A or B first - both required for the recipe)
+
+- added a debug tool to the server that'll log a message if:
+- 1) a recipe unlocked by a science can't be made based on available items unlocked at that point
+- 2) a science dependency for another science is not strictly required to research it or for the recipe unlocked by the science
+
+build 36:
+cheeky evening build, not much features due to pip absence
+
+- fix player clipping/moving upon loading a world
+- completely rewritten the client mesher:
+-- it now meshes three times as fast
+-- it creates 40% less vertices
+
+build 37:
+- make client chunks use a bit less RAM
+- fix a newly introduced crash upon creating a too complicated mesh
+- added a debug tool -> hit an npc with the command tool and it'll show a line to the goal of the npc (to debug pathfinding issues)
+- significantly reworked pathfinding in hopes of fixing a rare error which would break pathfinding through a chunk until the chunk is changed
+- pathfinding now happens on a dedicated thread
+-- this fixes the server freezes upon sunrise/sunset when you start having 5k-10k+ active npcs (including zombies)
+-- improves server responsiveness in general, at the cost of delayed pathfinding when under load
+- laborers will randomly walk about a bit around the banner instead of standing at a predefined position
+- zombies will randomly walk around instead of dieing when they can't find a path to a goal
+
+Odds are this broke something somewhere related to zombies/npcs
+
+build 38:
+- initial far-east biome contents (rice, silk, tea, porcelain)
+
+build 39:
+- fix spinningwheel not using its mesh
+- fix spinningwheel not having a recipe list
+- fix silkwormfarmer/teafarmer command tool not working
+- fix block jobareas (like berry farmer, beekeeper etc) not placing their initial blocks correctly
+- fix shader effect on the npc-pathing-debug-box
+- fix teafarmer button in commandtool being localized as barleyfarmer
+
+build 40:
+known issue: rice not growing, cocoon icon not assigned
+- rice meshes
+- 3 icons
+- renamed silkwormcacoon to silkwormcocoon
+
+build 41:
+- fixes rice not growing, cocoon icon
+
+build 42:
+- add /debug killnpcs
+- somewhat spread out the cooldown for npcs when they take a job (for mass recruitment mostly)
+- add a warning if you're destroying blocks when your inventory won't be able to hold all drops
+- add /debug spawnbanner [colony]
+- moved stockpile search field to the left to clear up misunderstandings about the associated cross
+- update banner removal message (now that you can move a banner)
+- fixed last banner being removable by removing the block below it
+- refund side-torches if they're removed by removal of the block they're attached to
+- fixed science npc indicators missing icons
+
+programmey
+- fix a possible deadlock with removal of logs locking multiple chunks at once upon removal
+- properly ignore loaded growables if they have somehow grown to their max stage
+- properly discard growables if the type was unexpectedly the max stage
+- add support for matching colonies by name in commands
+- fixed types with OnRemoveAmount : 0 still adding an empty item to the drop list
+- update builtinblocks with now blocks
+- removed some client remnants of the savetool
+
+build 43:
+- added 5 icons & 4 job npc colors for the far east content
+
+build 44:
+- added spinningwheel icon
+- fixed npcs getting stuck with invalid goals (mostly with 3d farms)
+- added kaolonite textures (typo credits to pip)
+- fixed rapid repathing of npcs if they couldn't path to their selected crate/npcshop
+- added support for per-sciencebiome ore layers
+- added kaolonite in the ground @ far east biome
+
+- added a way for npcs to indicate to their job that they couldn't path to provided job location
+
+build 45:
+- fix kaolonite->kaolinite spelling
+- add buttons in the colony menu to swap active colonies if you're in overlapping owned colonies
+- add a button to go to the recruitment menu in the banner menu
+- disable coop/multiplayer buttons in the main menu if steam is not loaded
+- show steam friends' (coop) games in the server browser even if the server can't be pinged (as they'll still be connectable through steam)
+
+build 46:
+- fixed wrong textures being applied if the material index was 
+255
+- removed an obsolete warning
+
+build 47:
+- fix possible issues loading a world if the chunk files contain the same chunk multiple times (can happen after a crash, will only load one of them now)
+- make chunk saving more robust by flushing new written sectors to disk in batches, before freeing old sectors up
+- added some recovery code upon loading a world in case of json writing crashing during file replacement
+- fix client fallback for block textures / icons not working as intended
+- fix stonemason recipe unlocking
+- fix issues manually starting colonyserver.exe if gamedata/savegames/hosting_settings.json doesn't exist (fresh installs)
+- fix digger npcs only digging one block at a time
+- added a server wide multiplier for digger/builder speeds in gamedata/settings/server.json
+
+build 48:
+- fixed ambient audio (probably needs some tweaking for which loops run where)
+- improved recovery of duplicated chunks (again, build 47 has some minor issues with it)
+programmey
+- moved server audio code into a seperate AudioManager class
+- inherit stream with the bytereader to support reading json from it
+
+build 49:
+- testing 'new world' content.
+- splits spinning wheel into a "new world" and "far east" one
+- (missing lots of meshes, icons etc, it's testing)
+
+build 50:
+- meshes for tomato/potato/cotton
+
+build 51:
+- test versions of tropic content
+- fixed the client considering an unavailable research with 0 cycles to be done (it only checked cycles, not availability)
+
+build 52:
+- added a trading system
+- added a trading menu to the colony menu
+- no trading npcs yet
+
+codey/underlying things:
+- added a way to popup the item selection menu from the builder-digger from the server for queries ( = which type to trade)
+- added a colony selection menu that can be sent from the server (= which colony to trade to)
+- added an option for network-based buttons to disable all interactive components of a menu when clicked (to better handle high ping and chained popups)
+
+build 53:
+- cheeky optimization to significantly reduce cost of moving npcs about
+-- turns out physx does take some milliseconds to move 10k colliders every frame
+-- just manually gather npc's and raycast manually; colliders were only used for player/projectiles hitting npcs
+
+build 54:
+after the unity editor full-freezing several times and some chunks resetting:
+- further improved chunk data saving; keep old data around (marked as old) until we're sure it's written to disk instead of OS cache. Should remove one of the last ways of corrupting chunk data on crash/freeze.
+- properly zero out data afterwards, for significant size reductions after zipping (for feature world sharing through steam workshop)
+should load previous worlds correctly (but previous builds won't load ones made in newer builds)
+- added papyrus/cassava meshes
+- fix papyrus and sugarcane dropping cassava
+- add 5 icons
+
+build 55:
+- added trader npc & block (also named "trader"); clicking the block opens trading UI; accelerates trading
+- fixed trading going beyond the threshold selected
+
+build 56:
+- adds trader block mesh
+- use spinningwheel icon for the new biome splitted researchables
+- automatically accept new trading rules if you own the colonies at both sides of the trade rule
+- add /debug clearinventory
+- add /debug clearstockpile
+- make /loot go into the inventory before the stockpile
+-  ensure empty spots in the stockpile are created for items that appear and disappear while the UI is closed
+- save co-op hosting settings entered per world in gamedata/savegames/client.json
+- add singleplayer hosting settings to gamedata/savegames/client.json
+
+build 57, saturday optimization day edition:
+- add a message in chat when moving between science biomes (old world, new world, far east etc)
+- fix some very-rare-but-maybe-possible threading issues
+- added an option that defaults enabled regarding merging multiple chunks into one mesh. Reduces draw calls for terrain by a lot
+| basically reduces cpu use to render terrain by ~60-80%
+| in a test world with max view range:
+| before: 67% cpu, 1230 MB ram, 24% gpu tdp -
+65 fps
+| after--: 65% cpu, 1430 MB ram, 62% gpu tdp -> 178 fps
+| with vsync on it's hard to compare as the CPU starts idling after the optimization.
+| at medium draw distance the effect is ~+10% fps or so
+- fixed a performance issue with my voxel raycast code used for determining what you aim at, saving more cpu time
+- slightly optimized meshed block rendering
+
+build 58, mostly sunday optimization day edition:
+- multithreaded the gathering of meshed blocks to draw; gives a neat bump to fps if you have tens of thousands of crops hanging about and are cpu limited with a 3-4+ core.
+- fix an issue with torches not baking their shadows after switching worlds without restarting the game
+- added /debug placeblockhere -
+places a dirt block at your position
+- fix greedy meshing not working on the X axis for quads facing in (-)Z direction
+
+build 59:
+- WIP prototyping of transport vehicle code (not really usable yet)
+- pass all chat into the chat commands instead of only those starting with "/", to allow more custom chat management
+
+build 60:
+- loot "prototype_flying_box" and place it somewhere; right click it to enter/exit, left click it to push it about somewhat
+- missing: loading/saving of the instances, movement control (= client->server input routing + actual movement code), properly showing transport-attached-players in multiplayer, proper mesh
+
+programmey:
+- reworked "player clicked" data to be much clearer on what is what
+- make the "server controlled meshes" hittable by players
+- add code autogenerating colliders around an object as it moves through the server world and cleaning it up afterwards
+- add some exception throwing around client pointer use (to prevent hard crashes)
+
+build 61:
+- route moveleft/forward/back/right & flyup/down to the server side transport vehicle when entered
+- some test movement added to the prototype_flying_box, works reasonably well
+todo: loading/saving vehicle instances, multiplayer showing, proper zeppelin-ish mesh, fix jittery movement (especially noticable at speed)
+
+build 62:
+- fix jittery/stuttering movement
+- tweak flying mechanics a bit
+
+build 63:
+- fix issues with the server sometimes not keeping chunks nearby the client loaded (it loads, sends and then forgets about the chunk)
+- fixes vehicles getting stuck mid-air
+- add flag per vehicle whether or not to allow editing blocks while in it; disabled for the test vehicle
+- removed left-click-to-push-the-vehicle
+- add left-click-to-destroy if you're not in the vehicle
+- added support for a way to stop rendering a server controlled mesh instantly (vs waiting for the timeout)
+- placing the prototype_flying_box now consumes the item
+- destroying it returns the item
+- increase usability of the player.Rotation property by making it return the full rotation instead of only the euler y-axis
+
+- overhauled prototype_flying_box to work more like a glider (default Q to go up, forward to aim / thrust in that direction)
+
+build 64:
+- updated prototype_flying_box mesh (but did not update colliders yet)
+- added banana/cassava/rice icons
+- use jump instead of FlyUp as key for flying up in the prototype_flying_box
+- increased prototype_flying_box turning circle
+- added an angle offset to the direction of the prototype_flying_box to ease flying level
+- include the colony of an npc in its death message
+- changed debug command to have an arg for size -> "/debug complexblocks <radius>", spawns an alternating block pattern in the radius
+- added "/debug clearcube <radius>", sets blocks in a radius to air
+- client block edit performance; fix performance regression introduced with 0.7 player movement; it was creating colliders for far away block changes
+- client block edit performance; merge the chunk "read old type, then write new type" actions into one to prevent looking up RLE position twice
+- client block edit performance; better algorithm for determining which chunks need to be checked for mesh refreshing
+- client block edit performance; remove very slow visibility check for torch updates that would basically never save time
+- fix blockentities.TriggerUnUpdateAdjacent typo
+- server block edit performance; merge the voxel reads required for triggering neighbouring block update callbacks
+- fixed a bug in the code that merges meshes which would leave some visible meshes around when they should be gone
+
+build 65:
+- tweak player position in the prototype box
+- fix box always spawning down in the ground by half a meter
+- possibly fix other-players-attached-to-mesh rendering; requires testing, will probably end up working in build 66
+
+build 66:
+- fix player rendering not working at all (since build 65 :smiley: )
+- fix being able to remove a prototype box that someone else is using
+- player-using-box rendering still TBD
+
+build 67:
+- fix glider render distance (now min(view radius, 500) instead of 100)
+- fix player rendering offset with the glider (had head through roof)
+- fix player rendering rotation (was wrong order)
+- fix permanent walking animation in glider
+
+build 68:
+- fix last rotation issues with glider player rendering (was laggy and somewhat incorrect)
+
+build 69:
+- fix some recipe related asserts triggering when not needed
+- fix initial stockpile/inventoy not properly loading items with amount = 1 (was the missing science lab for new colonies, does not fix it for existing worlds)
+- upped tailor linen/linenbag default limits
+- add bronze anvil as science dependency to the technologist table
+- add beekeeper npc color
+- fix rounding issues in the happiness tooltip
+- fix water rendering breaking on reloading a world on the client without restarting
+- fix up disposing of meshes/chunks upon exiting a world to be more sensible (quicker & more thorough)
+- turn happiness in UI red if it's negative
+- add "Nothing" to a recipes requirements in the tooltip if there are none
+- upped default limit for bows at the crafter
+- added barleyfarmer npc color
+- fix some edge cases with replacing tracked block types directly between eachother instead of in 2 steps with air inbetween
+- properly recalculate happiness inbetween npc recruiting for batch recruiting
+- add a job deduplication step to the pathing baking thread, reducing baking load a lot for mass block changes (= growing/cutting trees mostly in vanilla, or situations where the baking lags behind a lot)
+
+build 70:
+- clear "old" stockpile spots hanging around when changing colonies
+- improve collision box spawning for player movement; seems to actually help against player clipping?
+- split the item selection popup out of the command tool (fixing the different sized menu for it in the trader UI, and it having "command tool" as header)
+- fix active command tool text showing up through menus
+- move initial stockpile/inventory out of the world/settings files into modinfo.json
+- prepare for adding starter packs for starting colonies
+- update unity from 2017.4.20f2 to 2018.4.0f1:
+-- fix a light flicker issue the became apparent after this update
+-- replaced some obsolete WWW code with UnityWebRequest (for loading local files from disk)
+- improve the warning if an entity callback manager is registered to air
+
+build 71: 
+- Save & load gliders, including whether there are players in them
+- freeze gliders mid-air if there are disconnected players in them
+- rename prototype_flying_box to glider
+- add recipe & science requirement for glider
+- add many item type & science & command tool localization values
+
+- Add OnSaveWorldMisc/OnLoadWorldMisc for saving 'random' world json data (= gliders)
+- Move 'player is in a vehicle' status out of player class ti MeshedObjectManager
+- merged player.IsConnected and player.IsDisconnecting into one enum indicating the connection state
+- added "Connecting" state, where the player is in the loading menu
+- Split the glider specific code out of the transport manager
+- Split the glider settings out into a seperate class
+
+build 72: lots of code stuff
+- add item+recipe generator for colony starting kits (but they're not used yet)
+- add/change 13 icons
+
+- refactor some methods to use nested methods instead
+- rename callback pipliz.blocknpcs.addlittypes to blockgenerator.generateblocks
+- fix inventoryitem.getjson() boxing the struct
+- remove Pipliz.TupleStruct<> in favour of C# 7 native tuples (have fun with this one)
+- changed ModCallback related code in the ModLoader to be statically typed
+- changed ModLoader.TriggerCallback(type) to ModLoader.Callbacks.{typehere}.Invoke()
+- added support for optional callback dependencies (i.e, silently ignore them if they don't exist)
+- added support for an 'index' per modcallback similar to jsonfiles indices - given that callback dependencies are satisfied, the one with lowest index is done first
+- probably added support for adding callbacks at runtime as a byproduct, (i.e, callback.AddCallback() + callback.Sort()) but untested
+- redid help/mod_callbacks.md documentation generation with these new options
+- removed OnQuitEarly and OnQuitLate callbacks (= use the new index)
+- use the indices for existing modcallbacks to better utilize multiple cores (do ones starting threaded work before ones doing main thread work)
+- split up the loading of water/colonies/players/blacklist/whitelist files into separate callbacks for multithreading
+- add a JToken payload per networkUI button for easier dealing with callbacks (so you don't have to smash data into the button ID string)
+
+build 73:
+- mini patch to fix writing invalid world.json files (causing gliders to not save/load)
+
+build 74:
+- fix the server button payload thingy actually not working, breaking a few buttons.
+- also use that system for some other buttons, deleting about 50 lines of code
+
+build 75:
+- add a menu to new banner placement for colony creation, allowing to choose what colony starting kit to use (must be in inventory) and to name the colony
+
+build 76:
+- changed "trading" menu to "diplomacy" menu
+- added the UI & loading/saving for science agreements - but they don't actually do anything yet when made
+- set some background threads to lower priority, possibly fixing low-end pc lag
+
+build 77:
+- removed "completed science message" when you cheat in science
+- localized the complete science message
+- made science agreements functional:
+-- science trading takes priority over item trading, and consumes "trade power" - thus also being boosted with trader npcs
+-- the time to trade a specific science depends on the items it requires
+-- selected science (and its dependencies) is traded to you first
+- added option to start a colony with a science agreement in place, and instantly trade all science when that's done
+
+code things;
+- moved over science agreements from colonyscience over to colonytrading
+- changed "void SortedList<TKey, TVal>.GetAtIndex(int index, out TKey key, out TVal val)" into "(TKey, TVal) SortedList<TKey, TVal>.GetAtIndex(int index)"
+
+build 78:
+- add a colony removal menu when removing the last banner of a colony
+- rename "starting kit" to "starter kit"
+- fix an issue where the banner removal menu used the active colony instead of the banner's colony
+- changed some biome areas' ambient audio from snow to forest
+codey;
+- added various Clear() methods on colony related storage to clear them after removal of a colony
+- colonies remain existing in memory after removal as blocks linking to it can't all be reasonably removed (beds, jobs etc), but the colony has no owners
+- add banner parameter to OnConstructBannerClickedUI modcallback (used for fix above)
+
+build 79:
+- added 13 missing npc colors
+- link up icons for 11 researches that were missing one
+- add localization entry for "no science biome" in the banner placement popup
+-  Revamped rendering of area outlines:
+-- much reduced fps impact of rendering them (while holding crates, banner etc)
+-- fixes a lag spikes that'd happen when adding an area when you already have 1000+ active
+-- fixes a lag spikes that'd happen upon entering/exiting a colony with many areas
+-- reduces lag spike happening every 
+250 blocks moved within a colony with many areas
+-- probably saves some (V)RAM, haven't checked
+
+build 80:
+- fix client science UI things not updating properly in some situations
+- fix an exception when making an area outside of any colony
+- localize the non-standard-biome job menus properly
+- update the changelog a bit
+- added back openGL backup rendering to windows builds
+
+build 81:
+- updated banner/commandtool icons
+- added papyrus, sugarcane icons
+- added research requirement for the colony starter kit
+- removed chickenskin, replaced with papyrus for paper production
+- move writer research post-colony-kit
+- merge the 2 seperate spinning wheels back into one (was not needed)
+- removed 4 old unused textures
+- add an actual texture to the diamond ore
+- add coffee items (cook, old world science post-colonization)
+- removed sapling/berry bushes from starting stockpile
+- change colony kit contents/requirements
+- add a science+recipe to make the newworldmeal
+- fix a useless areamesh type warning on the client
+
+build 82: sunday edition
+- fix meshes not being cleared properly if you removed the last face of a chunk (was the cause of glitchy water+terrain mess)
+- fix new areas not being sent to all players active in a colony
+- expand debug build npc job cooldown log warning with the npc type
+
+build 83:
+- fix limits UI header localization missing for some new jobs
+- fix very rare possible case of an error when placing/removing beds
+- fix the first colonist getting unhappy from crowdedness
+- fix colony creation with transfer science not instantly transfering over biome dependent science when possible
+- remove one of the two entries of copper nails in the colony starter kit recipe
+- fix "to sent science" typo
+- fix localization of coffeebean farmer research
+- change coffeebean farmer to require the coffeebean research instead of the coffee one
+- fix grass not turning to dirt on farm creation due to irrelevant things like torches
+- show npcshop indicator on npcs as they visit the npc shop
+- fix banner radius & health visualizations not being updated on cheating/trading the associated science to completion
+-rename world settings menu popp to colony settings (as the button to go there indicates)
+
+programmey;
+- log an error and ignore a banner placement if it's not happening on the main thread
+
+build 84:
+- fix ambient audio loop restarting at the same position every time after pausing
+
+build 85:
+- changed the client & server chunk queueing system to spread out loading more
+-- hopefully mitigates most latency related issues with flying gliders
+-- may have fixed some of the "got stuck in glider" issues due to chunks not loading properly
+- tried to lower total size of chunk data sent, but failed to get it noticeably lower :upside_down:
+
+build 86:
+- fix npc-crafted tailorship using coatedplanks instead of planks (like hand-crafted)
+- add beekeper as a science requirement to archery (required for bowstrings)
+- add olive farming as a science requirement to the technologist table (requires coated planks)
+- add herbfarming as a science requirement to life science bag research (requires undershirts) 
+- buff olive farmer by 50%
+- doubled speed of beeswax melting @ the baker
+- move the add/move banner buttons below the current biome text (to prevent accidental clicks somewhat)
+- upped default limit for water gatherers filling buckets from 15 to 30
+- localized newworldmeal science
+- fixed "set to leader" button in the colony owners UI not working
+- always use the '3d' area visualization while selecting a builder/digger area
+- fix colony selection UI (for trading goals etc) showing jobless colonist count instead of total colonist count
+- reset stockpile search field on closing stockpile
+- move hotbar icons half a pixel to prevent random pixel gaps from appearing
+- change hotbar selection outline to be more visible
+- add some clamping of player hp to keep it between 0 and max health
+(dev build only) - add last goal type to the warning logged when a npc hasn't received a cooldown
+(internal) - fix a bug with the research reachability checker
+
+build 87:
+- fix an exception related to changing blocks near gliders
+- fix the loading/rendering issues at Y <= 31 introduced in build 85
+- include build number in the ingame version
+- prefix beta server names with [BETA]
+- updated cs-CZ localization to 0.7.0
+programmey:
+- add a warning logging more data for a pathfinding issue (and handle the fail semi-gracefully)
+- add a "RegisterMonsterSpawnedElsewhere" method to monsterspawner
+
+build 88:
+- forget to update version number with build
+- added +server.rconpassword launch arg to server
+- fix an issue where walkable positions in a chunk at local positions (15, 15, z) and (15, 0, z) would note be registered if they were the only non-air position at that height inside the chunk
+- fix "zombie at banner killed" message not noting which colony
+- fix area creation complaining about anything non-air at head level instead of "blockspathing" types
+- possibly make filetable loading more robust on linux
+- fix command tool being able to place guards etc over existing non-solid blocks (like quarter blocks)
+programmey:
+- update steam C# wrapper version
+- made properties etc on CraftingJobWaterSettings virtual
+- better logging for wrong science
+
+build 89:
+- change all mentions of "food value" to use calories
+- nerf the "excess food" happiness effect to max out at 0.2 happy/colonist at double rations (previously would scale all the way to >1 happy/colonist at 5.5x rations)
+- limit npcs to only go to npc shops from their own colony
+- limit npcs to only go to crates from their own colony (only works for newly placed crates)
+- fix a randomly occuring pathing error related to threading
+
+build 90:
+- Massive rework of system underlying the science UI
+- Remove the idea of having 1 "active science", multiple sciences are allowed to be started at the same time
+- Changed science trading to trade whole sciences at once (instead of cycles)
+- Add the ability to require x colonists to complete some science
+- Add the ability to require x happiness to complete some science
+- Changed banner radius research to require colonists/happiness instead of bags
+- Show which recipes a research unlocks in the client UI
+- New banner radius research icons
+- More banner radius research (min/max radius is same; split up more)
+- Show which npc types a research unlocks in the client UI
+- Added about 50 tooltips to types
+- Add system locale dependent group seperators to the calorie/ammo count text
+- Give the stat counts a bit more space (so they don't get cut off)
+- Added research & recipes for the trader job block
+- Fixed happines being off by default in worlds created through the server UI
+- Fixed "fisher man" typo
+Programmey: json-based science should continue working; internally BaseResearchable is now DefaultResearchable & IResearchable is now AbstractResearchable, and a bunch of changes to those.
+hotfix;
+- fixes client mismatch error (okay didn't work, lets try that again)
+- fixes client mismatch error (worked this time)
+
+build 91, sunday slowfix edition:
+- fix 'leave colony' button not working
+- changed some of the "added/removed/changed colony" messages a bit
+- fix server freeze when making a new colony with "share science" on together with having some completed science in the parent colony
+- fixed flaxfarming npc unlock showing up at the tailorshop instead of at flax farming
+- added default limit/priority to the recipe for the trader block
+
+build 92:
+- didn't update ingame version
+- fixed food use effectively being halved after the first day (resets on reloading the game)
+
+build 93: hot weather edition
+- fix getting stuck until teleported when clipping below the world
+- fix scientists being able to do a partial cycle of a research they don't have the items for
+- fix in-progress science sometimes resetting on reload
+- change client calories/day UI to use the actual distributed items from the grocery shop / happiness system
+code:
+- updated builtinblocks
+- removed colony.FoodUsePerHour (was practically unused)
+- fix cross-chunk block reading from the miner in the placement callback
+
+build 94: 3 in 1 day edition
+- fix state of item distribution not slowly changing to 0 if you set the slider to 0
+
+build 95:
+- fix unlocks from gunpowder/gunsmith research not making sense
+- fix loading screen picture wrapping half a pixel at some resolutions
+- fix receiving blocks with a full inventory causing the first item stack in the inventory to be limited to half a stack (best bug here)
+- fix a possible slow edge case in bed-counting with multiple banners per colony
+- increase max unused-bed-search-radius from 100 to 200
+- increase max crate-search-radius from 100 to 200
+- rename "surplus calories" to "well fed", and change the name to "hunger" or "starvation" depending on rationing
+- don't show happiness causes with zero effect
+- fix npcs not starving as intended
+- with "starvation" level food distribution npcs will visit the grocery stores more often until they're either dead or "just hungry" instead of starving
+- count at least 1000 calories/day as minimum consumption for the stats in the top right UI (considering above mechanic)
+- temporarily remove the "add banner" button from the UI until research is added for it (it's way too overpowered at the moment)
+- add tailorshop research as a requirement to candles research
+- fix beds being placeable with the bed-ends in the air
+- include the colony name in the siege mode messages
+codey bits
+- fix the rare guard cooldown warning (added a cooldown to the stockpile visit which is very rare in practice)
+- update CachedRationRatio periodically when nobody is connected
+
+build 96:
+- added a watermark-style beta/WIP text ingame, so it's clear to people that it's a beta even if they did not go through the process of getting the code themselves.
+
+build 97:
+new things;
+- color happiness tab sliders according to the amount actually distributed
+- color total set rations slider according to the amount actually distributed
+- make calories/day text (top-right UI) change color depending on whether people will starve or be hungry
+- add /teleport colony {colonyname}
+- make health research sort-of-global; stats will be the max of any owned colonies
+fixes;
+- fixed mixed use of escape characters for using spaces with chat commands so you a colony named "Zun's Colony" can be inserted like that
+- fix incoming science agreement using the wrong colony in the text
+- don't add new science agreements if one exists with the same source/goal already
+- consider happiness conditions on science to be reached if you have happiness disabled
+- fix moving the banner 1 block down causing it to go missing
+- fix the happiness causes sorting going wonky sometimes
+tweakies;
+- change total set rations slider to be smooth
+- change the happiness menu sliders to allow more precision
+
+build 98:
+new things;
+- add ability to cancel started cycles based research
+- send a "Science xyz is ready to complete" message when it's ready
+fixes & things;
+- fix incoming trade deal text using the wrong colony
+- remove "type" word from trade deal description
+- add a header name to the trade deal creation popup
+- reduce monster spawn distance a bit more aggressively when closer to sunrise
+- add a server log message for when near-banner chunks are done loading post-startup
+- fix siege mode being enabled upon loading a world for a moment (while near-banner chunks are still loading)
+- fix uncompleted science dependencies being completed without being marked as such when loading an savegame with manually edited science
+
+build 99:
+- add slider colors like the happiness tab ones to the crafting limits UI
+- added a back button to the command tool when in sub-menus
+- fix an issue where changing locales would not properly apply to existing text elements
+
+build 100:
+- added cacao/vanilla farming and cookies/chocolate
+- fixed banana farmer not being completed (was a barley farmer copy - now has a banana tree etc)
+- added forester-tree-sized taiga/cherry/fall tree saplings
+- forester will randomly plant different tree types based on the position of the area
+codey:
+- Change all blockfarm jobs to stand next to their farmable block even if they can stand in it
+- Fix a rare edge case with blockfarms; they'd place a block inside themselves if the bush they go for is removed (only the first one)
+- Fix science with only "hints" unlocked like area job types missing their unlocks
+
+build 101:
+- fix a regression from build 100 which made most growable blocks fail to grow in new worlds
+
+build 102: gallstone edition
+- change "colony name" to "world name" in the new world menu
+- Fix crafting limits UI slider colors not taking into account the amount of items a recipe makes
+- Change colonization tech to require 1 glider instead of 10
+- Boosted olive farmer production by 33%
+- Added error handling & logging to the case where a block -> recipegroup mapping was added but no recipes were added to the recipegroup.
+- Add chickenfarmer as dependency for newworldmeal research
+- Add chickenfarmer as dependency for ricefarming research
+- Add cabbagefarmer as dependency for ricefarming research
+- Optimized the unused-bed-searching code to minimize the server lag spikes when colonists decide to go to bed (noticeable at say 15k+ colonists)
+|- programmey; Moved the beds attached to a colony to an instance @ colony.BedTracker (instead of the entity manager class having them)
+- Limit repathing to closer goals if the pathing thread is overloaded
+- Limit repathing to 'idle around' jobs (i.e, laborer jobs)
+- Somewhat randomize pathfinding heuristics so that colonists have some variation in paths taken
+- fix printing press limits UI localization missing
+- Fix total calories overflowing easily with cheated in food
+-  Rename king's presence to existential happiness
+- Refresh recruitment menu upon recruiting a npc (to update cost text)
+- Slightly widen space for numbers in the topleft (to fit -10000 sized numbers)
+- Fixed used calories/day not going to 0 if you set all sliders to 0
+- Fix selected text in the limits UI being visible outside the menu when scrolled
+- Reset the active command tool type upon switching/leaving colonies
+- Hide FoV buttons, autofucos, focuspoint, dev menu and extra smooth mouse toggle function keys behind a setting in gamedata/savegames/client.json
+
+build 103: untested hotfix edition
+- fixed regression in bed finding code
+
+build 104: modding regression fix
+- added back some ways to iterate over all beds of a colony
+
+build 105:
+- make use of capitals moe consistent in happiness causes menu (Happiness D/disabled)
+- Change luxury item distribution caching to take into account the slider value
+- Send a chat message to everyone in multiplayer if a player died
+- Send a chat message to everyone if a colony loses it last colonist
+- Add a line about the recruitment cost increase % to the recruitment menu
+- Fix cases where you'd get more cycles on the science then possible
+- Rework how the scientist deals with reduced research speed again (shouldn't get 'stuck' on 99% of a cycle anymore)
+
+build 106: MRI scan edition
+- Timeout cached paths after ~35 seconds, to prevent spawning zombies using paths from a night before that may not be valid anymore (due to banner changes etc)
+- Randomize the order in which trading rules are tested, to make sure all rules get some time spent on them
+- Fix succesfully pinging a friends' server not overriding the server data in the server browser (so it kept saying ??? Friend's Game)
+
+build 107:
+- Force EyeAdaptation off upon loading settings if it is not supported
+- Fix "No support for x" text in the version bottom-right trying to be red which isn't supported there
+
+build 108:
+- codey; Added AreaJobTracker.StartCommandToolSelection to allow custom command tool use by server mods
+- Add colony name in the "unemployed colonists" message
+- Reset colony names upon removal (to prevent them matching to commands later)
+- Fix server browser throwing errors on sorting names
+
+build 109: balancing edition
+- Many crafting recipe changes in order to balance happiness items somewhat
+- Especially reduced the amount of barley farmers required, and reduced the needs for (boiled) water buckets
+- In general it looks like it should be a bit easier
+- Removed crossbowbolt research (merged with crossbow research)
+- Removed quarterblock researches (available by default)
+- Removed gunpowder research (merged into the gunsmith shop research)
+- Merged kiln & bloomery research into a "Iron Smelting" research
+- Lock luxurymeal/perpetualstew behind cabbage farming (as they require it)
+- Merged the 12 health sciences into 4, and adjusted their positioning in the tech tree
+- add /debug printhappinessdata, which makes a .csv with balancing data in the install folder
+
+build 110:
+- small modding change; allow json data to be passed when using a server-initiated command tool thingy
+
+build 111:
+- update waterpump description to clarify it's slower than the gatherer
+- change water tooltip to clarify it'll flood everything
+- change tea science to require 10 instead of 25 ricemeals
+- fix recruitment cost % turning white at 1000%
+- fix being able to place partial-colliding-blocks like the quarter blocks inside yourself
+- mostly fix being able to place blocks inside npcs
+- mostly fix being able to place blocks inside other players (untested, probably works though)
+- added 2 splash screens that are skippable upon pressing any key
+
+build 112:
+- fix a semi-memory-leak where ai path lengths would slowly grow if something made long paths
+
+build 113:
+- fix a nullref exception happening in TryRandomWalk (if randomly walking near the edge of loaded areas)
+- Periodically check the monster spawn position cache to remove effective memoryleaks involving (re)moved banners
+- Fix a leak where the monster spawn position cache would keep about many paths due to invalid timeout values
+
+build 114:
+- add fish farmer
+- update quickstart to 0.7.0
+- re-enable quickstart for players updating to 0.7.0
+- update unity (2018.4.0f1 -> 2018.4.4f1)
+
+build 115:
+- fix items typo in quickstart page 1 text 3
+- made fish tanks 1 cm smaller to prevent clipping
+- moved some copper/straw from the starting inventory to the starting stockpile
+- properly align the food submenu buttons in the command tool
+- up default bucket production priority
+- fix item selection pop-up starting at the previous scroll position (always reset it to top)
+- fix the vast majority of cases where you'd spawn underwater (offset the spawn position)
+- change oliver farmers to walk about their field properly (instead of hugging 1 tree)
+
+build 116:
+- updated manual
+- fix siege mode doing anything, and also fix the punishment not being harsh enough
+- add auto-recruitment toggle in the recruitment UI (if you have enough food, 0 unemployment and > -10 happiness, it'll recruit a npc on job placement)
+- align the top-left-stats to be exactly in the corner (had 6 pixels margin, unlike the top-right-stats)
+code things:
+- add byproducts per item to the happy balance csv generation
+- fix lots of SortedList.comparer wrappers being generated for AIData chunks
+- add World.FramesSinceInitialization, to add an easy way to skip the first few server ticks (which may still be part of loading)
+
+build 117:
+- remove a bit of left over logging or autorecruiting colonists
+- fix autorecruit working with < 0 unemployed (should only work at 0 unemployed)
+- make the autorecruit description a bit more specific
+
+build 118:
+- widen ammo text to fit more numbers
+- change autorecruit to also recruit for jobs when it's missing the recruitment item; just don't assign them to the job then
+- further clarify autorecruit description
+- updated fr-FR locale
+- fix autorecruit not working properly with jobs without required items (so most, I only tested guards each time :sweat_smile: )
+- equalize the leadbullet & gunpowderpouch default limits
+code:
+- fixed Stockpile.TryRemove() returning false when trying to remove 0 of some item not contained, or on trying to remove air
+
+build 119:
+- removed beta watermark things to prepare for 0.7.0 release
+
+build 120:
+- added /debug drain {chunkrange} to drain water up chunkrange * 16 blocks
+
+build 121:
+- fix a long lasting bug with bed finding (it really is fixed this time! :smiley: )
+- fix max player count, whitelisting and blacklisting not working for TCP-based connections (did for steam based connections)
+- add disabled entries to the load world menus to indicate unavailable worlds
+- add a timeout to zombies so they'll die in a day if they can't path to a proper goal
+- add default limits to chicken farmer products
+- add colors to outlines for water gatherer / fisherman
+- fix error if two players interact with the glider at once
+- change not-enough-food-to-recruit message to use calories
+- fix /colony addowner and /colony removeowner claiming they didn't work even if they did
+- remove [BETA] from server names
+- fix [To player (player)] type prefix for logging chat messages having player in it twice
+- improve logging of which steamID gets what name
+- remove a surplus line of logging on every login
+- increase load game menu scroll sensitivity
+- update builtinblocks code
+- prepare code for new achievements
+
+build 122:
+- risky last minute change to TCP connection code to hopefully fix a bottleneck in it that created nice networking lag in the test yesterday
+edit: rolled it back :joy: I should've known better
+
+build 123:
+- fixed the issue with build 122
+
+0.7.0.124:
+- bump unity version to 2018.4.5f1
+- fix /sethealth help text
+- fix health regen being able to somewhat heal more than the max regen value
+- clear up glider tooltip
+- fix a multiplayer issue where the server would stop sending requested chunks to semi-random players
+- give all players equal priority on chunk sending
+- give banner area loading equal priority to player loading
+codey;
+- made some black/whitelisting code public
+- add error logging for non-chunk chunk requests from the client
+- handle NAT discovery timeout properly instead of throwing errors
+- deal with & log the case where a null player is added as an owner to a colony
+- fix a possible reason for the server to send more packets then desired
+- add a special case path optimization to processing player requests for chunks
+- fix a possible index out of range error in the forester job
+
+non-build steam fix (should apply over time, possibly on steam restart):
+- probably fixed happiness achievement
+
+0.7.0.125:
+- fix the other-biome-colonies achievements
+- add a /debug void command to help figure out a possible bug
+
+0.7.0.126:
+- Fix a case where finding crates/banners/groceryshops/beds would skip some instances in certain conditions
+- Scale chunk autosave delay a bit with the number of active chunks (prevents overburdening the save thread on slow HDDs with large worlds)
+- Fix /blacklist and /whitelist throwing an exception if not used with an argument
+- Fix the command tool path debugging being inaccurate (it overshot its target on both sides)
+- Fix a case where torches would not properly update shadows
