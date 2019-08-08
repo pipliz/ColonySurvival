@@ -1144,3 +1144,16 @@ non-build steam fix (should apply over time, possibly on steam restart):
 0.7.0.127:
 - Updated es-ES locale from github pull request
 - Require colonists to get the happiness achievement
+- Fix bloomery / healthsize1 / healthregensize4 achievements to use their merged/replaced science
+- Renamed npc shop vendor npc type to grocery shop vendor
+- Add `/worldseed` command
+- Add iron smelting as required to wax tablet research
+- Fixed dedicated server tool standard launch option complaining about a missing file
+- Fix singleplayer/co-op servers not creating logs in ./logs/server/
+- Load the "ingame" scene asynchronously to prevent a potentially large lag spike at the end of the connection screen, which could timeout the client
+- Make first 5 colonists free to make recovery from starvation wipes possible
+- Adjusted starting bread count to compensate for free colonists
+codey:
+- Made PermissionsManager.PermissionGroupsFile public
+- Add PermissionManager.HasExactPermission(player, permission)
+- Add more safety checks around some native buffer disposal
