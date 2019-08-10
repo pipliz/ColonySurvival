@@ -1157,3 +1157,17 @@ codey:
 - Made PermissionsManager.PermissionGroupsFile public
 - Add PermissionManager.HasExactPermission(player, permission)
 - Add more safety checks around some native buffer disposal
+
+0.7.0.128:
+- Fix calories/day not turning orange/red as intended with hungry/starving colonists
+- Add a way to remotely manage colonies to a certain extend
+-- gives access to recruitment/diplomacy/owner-management/settings, and shows relative position & base stats of the colony
+- Fix switching colonies for the first time possibly not updating the colony tab UI
+- Add a way to reset active colony priorities (to go back to the default behaviour of closest banner)
+
+0.7.0.129:
+- Add a warning to deal with science agreements running into invalid science
+- Improve error handling on missing itemtype json files
+- Detach the player from a transport vehicle if the player dies
+- Detach the player from an invalid transport vehicle
+- Detach the player if the distance to the transport vehicle is more then 50 units
