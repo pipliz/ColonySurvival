@@ -1171,3 +1171,9 @@ codey:
 - Detach the player from a transport vehicle if the player dies
 - Detach the player from an invalid transport vehicle
 - Detach the player if the distance to the transport vehicle is more then 50 units
+
+0.7.0.130:
+- Fix a server warning about unsupported collision modes
+- Fix the server not sending any chunks to anyone after an error occured with one chunk request under certain conditions
+- Change chunk sending to reduce chances of long term taking a lock (which could lead to above-mentioned issue)
+- Updated cs-CZ (thanks Ahojten) and ru-RU (thanks KoTeK_57) locales
