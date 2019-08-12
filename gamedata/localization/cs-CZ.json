@@ -1,28 +1,28 @@
 {
-	"coverage" : 87.6910016977929,
+	"coverage" : 99.9158249158249,
 	"hints" : {
 		"0" : "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1" : "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
 		"10" : "3x33 je nejlepší pracovní území pro lesníka.",
-		"11" : "Zmáčkni ' CTRL ' abyste nespadli ze srázů.",
+		"11" : "Zmáčkni ' CTRL ' aby jsi nespadl ze srázů.",
 		"12" : "Pokud zmáčknete ' CTRL ' při rekrutaci, rekrutujete 15 kolonistů najednou.",
 		"13" : "Zmáčkněte ' CTRL ' při označování prostoru pro dělníka/stavaře, abyste automaticky po označení prvního prostoru vytvořili druhý prostor.",
-		"14" : "Existuje několik možných módů pro Colony Survival. Všechny je najdete na Steam Komunitě nebo na našem Discordu!",
+		"14" : "Existuje několik možných módů pro Colony Survival. Všechny je najdete ve Steam Komunitě nebo na našem Discordu!",
 		"15" : "Zkuste si při vyhledávání zakladních věcí v inventáři vyhledat jen 'food' nebo 'ammo'.",
-		"2" : "Určité vrstvy povrch Země obsahují určité rudy. Čím hlouběji půjdete, tím více naleznete.",
-		"3" : "Zmáčkněte ' G ', abyste si rozsvítili pochodeň.",
+		"2" : "Určité vrstvy povrchu obsahují určité rudy. Čím hlouběji půjdete, tím vzácnější naleznete.",
+		"3" : "Zmáčkněte ' G ', abyste si rozsvítili svoji přenosnou pochodeň.",
 		"4" : "Klikněte na bloky, kde se vyrábí vaše věci a upravte jejich množství nebo prioritu.",
 		"5" : "Pro zavření manuálu stiskněte ' F1 '.",
 		"6" : "Vědci často používají věci, ze kterých se vyrábí daná vědecká taška, ovšem lněné tašky se často vrací zpět.",
 		"7" : "Každá zbraň má svůj vlastní dolet, sílu a rychlost přebití, díky čemuž je každý strážce unikátní.",
-		"8" : "Každý táden v pátek vydáváme na Steam Friday Blog. Čtěte si ho, abyste se dozvěděli různé novinky, rozvoj hry a další!",
-		"9" : "Při střelbě z bambitky spotřebuje střelný prach a náboj, ale taška je často zachována."
+		"8" : "Každý týden v pátek vydáváme na Steam Komunitě Friday Blog. Čtěte si ho, abyste se dozvěděli různé novinky, rozvoj hry a další!",
+		"9" : "Střelba z bambitky spotřebuje střelný prach a náboj, ale taška je často zachována."
 	},
 	"sentences" : {
 		"bannerclickedpopup" : {
 			"deletebanner" : "Smazat prapor",
 			"deletecolony" : "Smazat kolonii",
-			"deletecolonydescription" : "Mazáním posledního založeného praporu ztratíte všechny své kolonisty a kolonie již bude nepoužitelná. Pro potvrzení napište ' delete ' do pole níže.",
+			"deletecolonydescription" : "Mazáním posledního založeného praporu ztratíte všechny své kolonisty a kolonie již bude nepoužitelná. Pro potvrzení napište 'delete' do pole níže.",
 			"header" : "Možnosti praporu",
 			"noconfirmationdelete" : "Pokus o smazání kolonie neúspěšný, nenapsali jste požadované slovo.",
 			"placementfail" : "Na toto místo svůj prapor umístit nemůžete."
@@ -58,11 +58,11 @@
 			}
 		},
 		"chat" : {
-			"colonydied" : "_MISSING_All colonists in {0} were killed.",
+			"colonydied" : "Všichni kolonisté v {0} byli zabiti.",
 			"onsciencedone" : "Dokončil jste výzkum {0}!",
-			"onscienceready" : "_MISSING_Science {0} is ready to complete!",
+			"onscienceready" : "Výzkum {0} je připraven k dokončení!",
 			"onsciencetraded" : "Dokončil jste výzkum {0} za pomocí obchodování!",
-			"playerdied" : "_MISSING_Player {0} died."
+			"playerdied" : "Hráč {0} zemřel."
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
@@ -89,20 +89,34 @@
 			"kick" : "Vyhodit z kolonie",
 			"leader" : "Vůdce/i",
 			"leave" : "Opustit kolonii",
+			"managecolonies" : {
+				"location" : {
+					"east" : "{0} bloků východně",
+					"key" : "Poloha: ",
+					"north" : "{0} bloků severně, ",
+					"south" : "{0} bloků jižně, ",
+					"west" : "{0} bloků západně"
+				},
+				"mainbutton" : "Spravovat kolonie",
+				"mainheader" : "Správa kolonií",
+				"selectheader" : "Vyberte kolonii ke spravování.",
+				"siegemode" : "Obléhání:"
+			},
 			"manageheader" : "Spravovat vlastnictví",
 			"manageowners" : "Spravovat vlastníky",
 			"nameedit" : "Upravit jméno kolonie:",
 			"namefield" : "Jméno kolonie:",
-			"recruitauto" : "_MISSING_Auto recruit on job placement",
-			"recruitautorequirements" : "_MISSING_<i>Turning this on will recruit a new colonist when placing a job with at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed</i>",
+			"recruitauto" : "Automatická rekrutace při založení nové práce",
+			"recruitautorequirements" : "<i>Zapínání této funkce vždy najme kolonistu když založíte nové pracovní místo s alespoň -10 spokojenosti, volnými postelemi, příděl kalorií o hodnotě dvou dnů a přesně 0 nezaměstnaných.</i>",
 			"recruitmentamount" : "Počet rekrutovaných kolonistů:",
 			"recruitmentbutton" : "Rekrutovat kolonistu",
 			"recruitmentheader" : "Rekrutace",
-			"recruittext3" : "_MISSING_Colonists require 2000 calories per day and a bed.",
-			"recruittext4" : "_MISSING_Recruiting the next colonist costs {0} calories.",
-			"recruittext5" : "_MISSING_Cost is {0} of normal cost due to happiness",
+			"recruittext3" : "Kolonisté vyžadují 2000 kalorií na den a volnou postel.",
+			"recruittext4" : "Rekrutace nového kolonisty bude stát {0} kalorií.",
+			"recruittext5" : "Cena je zvýšena/snížena o {0} normální ceny díky úrovni spokojenosti.",
 			"recruittofillbeds" : "Najmout do zaplnění všech postelí",
 			"recruittofilljobs" : "Najmout do zaplnění všech prací",
+			"resetcolonypriority" : "Obnovit priority aktivní kolonie",
 			"science" : {
 				"incomingdescription" : "{0} chce s vám sdílet výzkum.",
 				"newagreement" : "Nabídnout sdílení výzkumu",
@@ -133,12 +147,12 @@
 			"switchcolony" : "Změnit na {0}",
 			"trading" : {
 				"completerule" : "Vytvořit obchodní požadavek",
-				"mainheader" : "_MISSING_New trading rule settings",
+				"mainheader" : "Nastavení nového obchodního požadavku",
 				"newrule" : "Nabídnout obchodní požadavek",
 				"ruledescription" : "Obchodníci pošlou {0} z kolonie {1} do kolonie {2}, pokud:",
 				"ruleincomingdescr" : "Dostanete {0} z {1} pokud mají více než they {2}",
 				"ruleminimumthis" : "{0} má více než: ",
-				"ruleoutgoingdescr" : "_Pošlete {0} do {1} pokud máme více než {2}",
+				"ruleoutgoingdescr" : "Pošlete {0} do {1} pokud máme více než {2}",
 				"selectcolony" : "Vyberte kolonii kam chcete poslat požadavek"
 			}
 		},
@@ -185,36 +199,36 @@
 		"firstpersonstats" : {
 			"ammocount" : "Střelivo:",
 			"bedcount" : "Postele:",
-			"caloriestorage" : "_MISSING_Total Calories:",
-			"calorieusage" : "_MISSING_Calorie use/day:",
-			"colonistcount" : "Kolonisti:",
+			"caloriestorage" : "Celkem kalorií:",
+			"calorieusage" : "Spotřeba kalorií/den:",
+			"colonistcount" : "Kolonisté:",
 			"happiness" : "Spokojenost:",
 			"laborercount" : "Nezaměstnaní:"
 		},
 		"general" : {
 			"apply" : "Použít",
-			"back" : "Zpátky",
+			"back" : "Zpět",
 			"close" : "Zavřít",
-			"high" : "Vysoko",
+			"high" : "Vysoký",
 			"inputplaceholder" : "Zadejte text...",
-			"low" : "Nízko",
+			"low" : "Nízký",
 			"next" : "Další",
 			"no" : "Ne",
 			"none" : "Žádný",
 			"normal" : "Normální",
 			"previous" : "Předchozí",
-			"reset" : "Reset",
-			"veryhigh" : "Velmi vysoko",
+			"reset" : "Obnovit",
+			"veryhigh" : "Velmi vysoký",
 			"yes" : "Ano"
 		},
 		"happiness" : {
 			"availablefood" : "{0}% dostupnost pro {1}",
 			"availableluxury" : "{0}% dostupnost pro {1}",
 			"baseamount" : "Přítomnost krále",
-			"calories" : "_MISSING_Rationed calories",
-			"calorieshappy" : "_MISSING_Well fed",
-			"calorieshunger" : "_MISSING_Hunger",
-			"caloriesstarvation" : "_MISSING_Starvation",
+			"calories" : "Příděl kalorií",
+			"calorieshappy" : "Sytost",
+			"calorieshunger" : "Hlad",
+			"caloriesstarvation" : "Hladovění",
 			"colonistcount" : "Zalidnění",
 			"disabledeffect" : "Systém spokojenosti nebyl zapnut.",
 			"recruitmentcost" : "Cena rekrutace: {0:P0} normální ceny",
@@ -265,32 +279,32 @@
 					"name" : "Lukostřelba"
 				},
 				"bannerradius1" : {
-					"description" : "Zvyšuje ochranný rádius na 40 bloků",
-					"name" : "Rádius praporu I"
+					"description" : "Zvyšuje rádius bezpečnosti na 40 bloků.",
+					"name" : "Rádius bezpečnosti I"
 				},
 				"bannerradius2" : {
-					"description" : "_MISSING_Increases the safe radius created to 50 blocks",
-					"name" : "Rádius praporu II"
+					"description" : "Zvyšuje rádius bezpečnosti na 50 bloků.",
+					"name" : "Rádius bezpečnosti II"
 				},
 				"bannerradius3" : {
-					"description" : "_MISSING_Increases the safe radius created to 60 blocks",
-					"name" : "Rádius praporu III"
+					"description" : "Zvyšuje rádius bezpečnosti na 60 bloků.",
+					"name" : "Rádius bezpečnosti III"
 				},
 				"bannerradius4" : {
-					"description" : "_MISSING_Increases the safe radius created to 70 blocks",
-					"name" : "Rádius praporu IV"
+					"description" : "Zvyšuje rádius bezpečnosti na 70 bloků.",
+					"name" : "Rádius bezpečnosti IV"
 				},
 				"bannerradius5" : {
-					"description" : "_MISSING_Increases the safe radius created to 80 blocks",
-					"name" : "Rádius praporu V"
+					"description" : "Zvyšuje rádius bezpečnosti na 80 bloků.",
+					"name" : "Rádius bezpečnosti V"
 				},
 				"bannerradius6" : {
-					"description" : "_MISSING_Increases the safe radius created to 90 blocks",
-					"name" : "_MISSING_Banner Radius VI"
+					"description" : "Zvyšuje rádius bezpečnosti na 90 bloků.",
+					"name" : "Rádius bezpečnosti VI"
 				},
 				"bannerradius7" : {
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
-					"name" : "_MISSING_Banner Radius VII"
+					"description" : "Zvyšuje rádius bezpečnosti na 100 bloků.",
+					"name" : "Rádius bezpečnosti VII"
 				},
 				"barleyfarmer" : {
 					"description" : "Odemyká farmáře ječmene, se kterým můžete nakrmit zvířata chovaná pro maso.",
@@ -301,7 +315,7 @@
 					"name" : "Včelaření"
 				},
 				"bronzeanvil" : {
-					"description" : "Odemyká bronzovou kovadlinu, která umožňuje zpracovávání bronzu",
+					"description" : "Odemyká bronzovou kovadlinu, která umožňuje zpracování bronzu",
 					"name" : "Bronzová kovadlina"
 				},
 				"bronzeminting" : {
@@ -313,8 +327,8 @@
 					"name" : "Farmář zelí"
 				},
 				"cacao" : {
-					"description" : "_MISSING_Unlocks cacao farming",
-					"name" : "_MISSING_Cacao"
+					"description" : "Odemyká možnost farmaření kakaa.",
+					"name" : "Kakao"
 				},
 				"candles" : {
 					"description" : "Odemyká možnost výroby svíček z vosku získaného včelařem.",
@@ -325,8 +339,8 @@
 					"name" : "Faramář slepic"
 				},
 				"chocolate" : {
-					"description" : "_MISSING_Unlocks chocolate production",
-					"name" : "_MISSING_Chocolate"
+					"description" : "Umožňuje výrobu čokolády.",
+					"name" : "Čokoláda"
 				},
 				"coffee" : {
 					"description" : "Odemyká možnost pražení kávových zrnek, ze kterých můžete upražit kávu. Arabica, mňam!",
@@ -337,7 +351,7 @@
 					"name" : "Farmář kávy"
 				},
 				"colonykit" : {
-					"description" : "Umožňuje vytváření balíčků na založení kolonie.",
+					"description" : "Umožňuje vytváření balíčků na založení nových kolonií.",
 					"name" : "Kolonizace"
 				},
 				"constructionbuilder" : {
@@ -397,8 +411,8 @@
 					"name" : "Kuchař"
 				},
 				"cookies" : {
-					"description" : "_MISSING_Unlocks cookies production",
-					"name" : "_MISSING_Cookies"
+					"description" : "Odemyká možnost produkce sušenek.",
+					"name" : "Sušenky"
 				},
 				"cottontowel" : {
 					"description" : "Odemyká možnost výroby bavlněného ručníku, jedné z luxusních věcí. To je tak příjemné!",
@@ -429,7 +443,7 @@
 					"name" : "Farmaření lnu"
 				},
 				"foofoo" : {
-					"description" : "Odemyká možnost vařit kaši.",
+					"description" : "Odemyká možnost vařit kaši z manioku.",
 					"name" : "Kaše"
 				},
 				"fur" : {
@@ -437,8 +451,8 @@
 					"name" : "Zpracovávání srsti"
 				},
 				"glider" : {
-					"description" : "Revolucionářská možnost transportu. Dobré pro objevování nových zemí.",
-					"name" : "Rogalo"
+					"description" : "Revolucionářská možnost transportu. Dobré pro objevování nových oblastí.",
+					"name" : "_MISSING_Glider"
 				},
 				"gunsmithshop" : {
 					"description" : "Odemyká puškaře, který využívá střelný prach a vyrábí bambitky",
@@ -449,28 +463,28 @@
 					"name" : "Farmaření bylin"
 				},
 				"ironsmelting" : {
-					"description" : "_MISSING_Unlocks kiln and bloomery.",
-					"name" : "_MISSING_Iron Smelting"
+					"description" : "Odemyká sušící a nízkou pec.",
+					"name" : "Tavení železa"
 				},
 				"lantern" : {
 					"description" : "Odemyká produkci lucern, které mohou být vyrobeny v kovadlině a můžou být obarveny barvičem",
 					"name" : "Lucerny"
 				},
 				"liferesearch1" : {
-					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
-					"name" : "_MISSING_Health Increase I"
+					"description" : "Zvyšuje maximální zdraví, hodnotu regenerace a rychlost regenerace.",
+					"name" : "Zvýšení zdraví I"
 				},
 				"liferesearch2" : {
-					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
-					"name" : "_MISSING_Health Increase II"
+					"description" : "Zvyšuje maximální zdraví, hodnotu regenerace a rychlost regenerace.",
+					"name" : "Zvýšení zdraví II"
 				},
 				"liferesearch3" : {
-					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
-					"name" : "_MISSING_Health Increase III"
+					"description" : "Zvyšuje maximální zdraví, hodnotu regenerace a rychlost regenerace.",
+					"name" : "Zvýšení zdraví III"
 				},
 				"liferesearch4" : {
-					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
-					"name" : "_MISSING_Health Increase IV"
+					"description" : "Zvyšuje maximální zdraví, hodnotu regenerace a rychlost regenerace.",
+					"name" : "Zvýšení zdraví IV"
 				},
 				"matchlockgun" : {
 					"description" : "Odemyká bambitku, dřívější verzi pistole",
@@ -497,7 +511,7 @@
 					"name" : "Tiskařský lis"
 				},
 				"ricefarmer" : {
-					"description" : "Umožňuje faramření rýže.",
+					"description" : "Umožňuje farmaření rýže.",
 					"name" : "Farmaření rýže"
 				},
 				"sciencebagadvanced" : {
@@ -521,8 +535,8 @@
 					"name" : "Vojenská vědecká taška"
 				},
 				"silkwormfarmer" : {
-					"description" : "Umožňuje chov bource morušového.",
-					"name" : "Chov bource"
+					"description" : "Umožňuje chov bource morušového, ta housenka, co dělá bavlnu.",
+					"name" : "Bourec morušový"
 				},
 				"spinningwheel" : {
 					"fareast" : {
@@ -535,11 +549,11 @@
 					}
 				},
 				"splittingstump" : {
-					"description" : "Odemyká dělící pařez. Používá se k výrobě dřeva na podpal rychleji, než v pracovním stole.",
+					"description" : "Odemyká dělící pařez. Používá se k rychlejší výrobě dřeva na podpal a dřeva, než v pracovním stole.",
 					"name" : "Dělící pařez"
 				},
 				"stonemasonworkbench" : {
-					"description" : "Odemyká kameníka, který vyrábí různé druhy cihel",
+					"description" : "Odemyká kameníka, který vyrábí různé barvy cihel",
 					"name" : "Kameník"
 				},
 				"sugarcane" : {
@@ -547,8 +561,8 @@
 					"name" : "Farmaření cukrové třtiny"
 				},
 				"tailorshop" : {
-					"description" : "Odemyká ševce, který zpracovává len do látky",
-					"name" : "Švec"
+					"description" : "Odemyká krejčího, který zpracovává len do látky",
+					"name" : "Krejčí"
 				},
 				"teafarmer" : {
 					"description" : "Umožňuje farmaření čajových lístků.",
@@ -559,19 +573,19 @@
 					"name" : "Technologista"
 				},
 				"trader" : {
-					"description" : "_MISSING_Unlock trader npcs, which accelerate trading to other colonies",
-					"name" : "_MISSING_Traders"
+					"description" : "Odemyká obchodníky, kteří zrychlují obchodování mezi koloniemi.",
+					"name" : "Obchodníci"
 				},
 				"vanilla" : {
-					"description" : "_MISSING_Unlocks vanilla farming",
-					"name" : "_MISSING_Vanilla"
+					"description" : "Umožňuje farmaření vanilky.",
+					"name" : "Vanilka"
 				},
 				"watergatherer" : {
 					"description" : "Odemyká povolání Naběrač vody, který plní vědra vodou z řeky.",
 					"name" : "Naběrač vosy"
 				},
 				"waterpump" : {
-					"description" : "_MISSING_Unlocks the water pump, allowing water to be gathered anywhere albeit at a slower pace",
+					"description" : "Odemyká vodní pumpu, která umožňuje získávání vody kdekoli za cenu pomalejšího nabírání.",
 					"name" : "Vodní pumpa"
 				},
 				"waxtablet" : {
@@ -605,7 +619,7 @@
 			},
 			"inventory" : {
 				"availableamount" : "Uskladněno: {0}",
-				"calorievalue" : "_MISSING_{0} calories per item",
+				"calorievalue" : "{0} kalorií na jeden kus",
 				"craftingstockpile" : "Vyrábění a zásoby",
 				"distributionhappyperitem" : "Spokojenost/kus: {0}",
 				"distributionpercolonist" : "Denní příděl věci na kolonistu: {0}",
@@ -620,21 +634,21 @@
 				"noactivecolony" : "Nemáte žádnou aktivní kolonii!",
 				"science" : {
 					"available" : "Dostupné",
-					"cancel" : "_MISSING_Cancel",
+					"cancel" : "Zrušit",
 					"completed" : "Dokončené",
-					"completeunlock" : "_MISSING_Complete",
-					"conditioncolonistcount" : "_MISSING_Colonists",
-					"conditioncolonistcountdescription" : "_MISSING_Number of colonists required",
-					"conditionhappiness" : "_MISSING_Happiness requirement",
-					"conditionhappinessdescription" : "_MISSING_Minimum net happiness required",
-					"conditionscientistrequires" : "_MISSING_Requires {0}",
+					"completeunlock" : "Dokončit",
+					"conditioncolonistcount" : "Kolonisté",
+					"conditioncolonistcountdescription" : "Požadovaný počet kolonistů",
+					"conditionhappiness" : "Požadovaná spokojenost",
+					"conditionhappinessdescription" : "Minimální požadovaná celková spokojenost",
+					"conditionscientistrequires" : "Požaduje {0}",
 					"dependencies" : "Potřebné technologie:",
 					"header" : "Věda",
-					"recipeunlocknpcgroup" : "_MISSING_Unlocks the {0}",
-					"recipeunlockoriginjob" : "_MISSING_Made at {0}",
-					"recipeunlockoriginplayer" : "_MISSING_Made by player",
-					"recipeunlocks" : "_MISSING_Recipe unlocks:",
-					"startscience" : "_MISSING_Start Science",
+					"recipeunlocknpcgroup" : "Odemyká {0}",
+					"recipeunlockoriginjob" : "Vyrobeno v {0}",
+					"recipeunlockoriginplayer" : "Vyrobeno hráčem",
+					"recipeunlocks" : "Recept odemyká:",
+					"startscience" : "Začátečnická věda",
 					"unavailable" : "Nedostupné"
 				},
 				"searchfieldplaceholder" : "Zadejte filtr hledání...",
@@ -653,7 +667,7 @@
 				"description" : "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách.",
 				"hoverpriority" : {
 					"a" : "Výrobní priorita",
-					"b" : "Věci s prioritou +++ budou vyrobeny první. Věci s prioritou + budou vyroben poslední."
+					"b" : "Věci s prioritou +++ budou vyrobeny první. Věci s prioritou + budou vyrobeny poslední."
 				},
 				"pipliz" : {
 					"baker" : "Limity pečení",
@@ -670,7 +684,7 @@
 					"merchant" : "Limity nákupu",
 					"metalsmithjob" : "Limity kováře",
 					"minter" : "Limity ražby",
-					"printingpress" : "_MISSING_Printingpress limits",
+					"printingpress" : "Limity tisknutí",
 					"smelter" : "Limity tavení rudy",
 					"stonemason" : "Limity kameníka",
 					"tailor" : "Limity šití",
@@ -729,10 +743,10 @@
 				"cabbagea" : "Nezbytný pro luxusní jídla",
 				"cabbagefarmer" : "Farmář zelí",
 				"cabbagefarmertool" : "Nástroj farmáře zelí",
-				"cacaob" : "_MISSING_Cacao",
-				"cacaofarmer" : "_MISSING_Cacao Farmer",
-				"cacaofarmertool" : "_MISSING_Cacao Farmer Tool",
-				"cassavab" : "Sklízí kořínky tropického stromu, dělá se z nich kaše",
+				"cacaob" : "Kakao",
+				"cacaofarmer" : "Farmář kakaa",
+				"cacaofarmertool" : "Nástroj farmáře kakaa",
+				"cassavab" : "Sklízí kořínky tropického stromu jménem maniok, dělá se z nich kaše",
 				"cassavafarmer" : "Farmář manioku",
 				"cassavatool" : "Nástroj farmáře manioku",
 				"chickenfarmer" : "Farmář slepic",
@@ -767,9 +781,9 @@
 				"fisherman" : "Rybář",
 				"fishermana" : "Bude ti rybařit... ryby",
 				"fishermantool" : "Nástroj rybáře",
-				"fishfarmer" : "_MISSING_Fish Farmer",
-				"fishfarmera" : "_MISSING_Slower than the fisherman, but does not require water nearby.",
-				"fishfarmertool" : "_MISSING_Fish Farmer Tool",
+				"fishfarmer" : "Farmář ryb",
+				"fishfarmera" : "Pomalejší než rybář, ale nepotřebuje ve svém okolí vodní zdroj.",
+				"fishfarmertool" : "Nástroj farmáře ryb",
 				"flaxfarmer" : "Farmář lenu",
 				"flaxfarmertool" : "Nástroj farmáře lenu",
 				"flaxherbfarming" : "Len a byliny",
@@ -847,10 +861,10 @@
 				"tropics" : "Tropy",
 				"tropicsa" : "Práce specifické pro tropický region",
 				"tropicsb" : "Vyzkoumejte ' Kolonizace ' před používáním",
-				"vanillab" : "_MISSING_Vanilla",
-				"vanillafarmer" : "_MISSING_Vanilla Farmer",
-				"vanillafarmertool" : "_MISSING_Vanilla Farmer Tool",
-				"wateradjacent" : "Vyžaduje vodu v blízkém okolí",
+				"vanillab" : "Vanilka",
+				"vanillafarmer" : "Farmář vanilky",
+				"vanillafarmertool" : "Nástroj farmáře vanilky",
+				"wateradjacent" : "Vyžaduje vodní zdroj v blízkém okolí",
 				"watergatherer" : "Naběrač vody",
 				"watergatherera" : "Plní vědra vodou z řeky nebo jiného vodního zdroje.",
 				"watergatherertool" : "Nástroj naběrače vody",
@@ -865,16 +879,16 @@
 				"description" : "Zdravím zvlášť Baxe a ostatní!",
 				"header" : "Základy",
 				"text1" : "Prapor je střed vaší kolonie. Zmáčkněte '2' abyste ho položili. Klikněte pravým tlačítkem na banner pro najmutí kolonisty. Nástroj praporu vyznačuje bezpečnou zónu, monstra se rodí v červené.",
-				"text2" : "Potřebujete jídlo a postele pro rekrutování kolonistů. Kolonisté potřebují jíst aby přežili. Ujistěte se, že máte dostatek jídla nebo budou hladovět!",
-				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
+				"text2" : "Potřebujete jídlo a postele pro rekrutování kolonistů. Kolonisté potřebují jíst aby přežili. Ujistěte se, že máte dostatek jídla nebo budou nebohí kolonisté hladovět!",
+				"text3" : "Zmáčknutím klávesy \"I\" vyrobíte postel. Věci nalevo můžete vyrobit kliknutím na ně. Kolonisté mohou použít pouze věci ve skladu. Do skladu se dostávají pomocí beden.",
 				"text4" : "V noci budou na vaši kolonii útočit monstra! Použijte nástroj pro příkazy pro rekrutování strážce. Zmáčkněte '1' a klikněte pro jejich rekrutaci. Zmáčkněte 'R' abyste otočili směr."
 			},
 			"page2" : {
-				"description" : "_MISSING_Bread and games are essential to grow your colony",
-				"header" : "_MISSING_Food & Happiness",
-				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
-				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
-				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
+				"description" : "Chléb, potraviny a další věci jsou nezbytné pro růst vaší kolonie.",
+				"header" : "Jídlo & Spokojenost",
+				"text1" : "Za každého najmutého kolonistu se celková spokojenost sníží kvůli zalidnění. Distribujte kolonistům věci abyste zvedli spokojenost. Slaďte si příděly v menu spokojenosti (zmáčkněte \"I\" a zvolte \"Spokojenost\") a vyberte věci, které chcete distribuovat.",
+				"text2" : "Změny v přídělu potravin změní i přísun kalorií kolonistům. Méně než 1000 kalorií způsobuje hlad/hladovění; méně než 2000 snižuje spokojenost; více než 2000 spokojenost zvyšuje.",
+				"text3" : "Kolonisté navštíví prodavače (pokud nemáte prodavače, navštíví prapor) jednou denně, kde si vezmou své přidělené věci. Pokud máte velkou kolonii, doporučuji založit několik obchodů, abyste zmenšili uraženou vzdálenost."
 			},
 			"page3" : {
 				"description" : "Braňte svou kolonii před nočními útoky monster!",
@@ -901,16 +915,16 @@
 				"text4" : "Víc vědců zrychluje zkoumání. Položte další laboratoře pro extra rychlost!"
 			},
 			"page6" : {
-				"description" : "_MISSING_Explore the world and start new colonies!",
-				"header" : "_MISSING_Colonization",
-				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
-				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
-				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
+				"description" : "Zahrajte si na Británii a objevujte nové oblasti a zakládejte kolonie!!",
+				"header" : "Kolonizace",
+				"text1" : "Ve hře existují tři odlišné oblasti s odlišnými věcmi. Pamatujte - Slunce vždy vychází na východě. Odemkněte výzkumem rogalo pro rychlejší transport!.",
+				"text2" : "Vyzkoumejte a vyrobte Balíčky na Založení Kolonie pro založení kolonie v novém biomu. Musíte je mít vždy ve svém hotbaru, pokud si chcete založit další kolonii!",
+				"text3" : "Nové biomy vám dovolují vyrábět nové věci. Vyzkoumejte a zaměstnejte obchodníka, pokud chcete vyměnit věci mezi koloniemi."
 			}
 		},
 		"sciencebiome" : {
 			"arctic" : "Arktická oblast",
-			"currentarea" : "Momentální region: {0}",
+			"currentarea" : "Momentální oblast: {0}",
 			"fareast" : "Dálný Východ",
 			"newworld" : "Nový Svět",
 			"noarea" : "Žádná oblast",
@@ -1020,7 +1034,7 @@
 			"serverport" : "Port serveru",
 			"worlddate" : "Datum",
 			"worldname" : "Jméno",
-			"worldname_long" : "_MISSING_World Name",
+			"worldname_long" : "Název světa",
 			"worldseed" : "Semínko světa"
 		}
 	},
@@ -1061,7 +1075,7 @@
 		"bucketwater" : "Vědro s vodou",
 		"cabbage" : "Zelí",
 		"cabbagestage1" : "Semínka zelé",
-		"cacao" : "_MISSING_Cacao",
+		"cacao" : "Kakao",
 		"cake" : "Dort",
 		"candle" : "Svíčka",
 		"carpetblue" : "Modrý koberec",
@@ -1072,10 +1086,10 @@
 		"charcoal" : "Dřevěné uhlí",
 		"cherryblossom" : "Květ třešně",
 		"cherrysapling" : "Sazenice třešně",
-		"cherrysaplingsmall" : "_MISSING_Small Cherry Sapling",
+		"cherrysaplingsmall" : "Malá sazenice třešně",
 		"chickencoop" : "Kurník",
 		"chickenmeat" : "Kuřecí maso",
-		"chocolate" : "_MISSING_Chocolate",
+		"chocolate" : "Čokoláda",
 		"clay" : "Jíl",
 		"coalore" : "Uhlí",
 		"coatedplanks" : "Opracované prkna",
@@ -1091,7 +1105,7 @@
 		"commandtool" : "Nástroj pro příkazy",
 		"constructionjob" : "Konstrukce",
 		"cookedfish" : "Vařená ryba",
-		"cookies" : "_MISSING_Cookies",
+		"cookies" : "Sušenky",
 		"copper" : "Měď",
 		"coppernails" : "Měďené hřebíky",
 		"copperparts" : "Měděné části",
@@ -1106,7 +1120,7 @@
 		"crossbowbolt" : "Kušní šipka",
 		"crystal" : "Krystal",
 		"darkstone" : "Blok temného kamene",
-		"diamond" : "_Diamant",
+		"diamond" : "Diamant",
 		"diamondnecklace" : "Diamantový řetízek",
 		"dirt" : "Hlína",
 		"dyertable" : "Barvičův stůl",
@@ -1116,7 +1130,7 @@
 		"firewood" : "Dřevo na podpal",
 		"fishermanjob" : "Rybář",
 		"fishmeal" : "Rybí pochutina",
-		"fishtank" : "_MISSING_Fish Tank",
+		"fishtank" : "Nádrž s rybami",
 		"flax" : "Len",
 		"flaxstage1" : "Semínka lenu",
 		"flour" : "Mouka",
@@ -1235,8 +1249,8 @@
 		"ricemeal" : "Rýžový pokrm",
 		"salpeter" : "Šalupa",
 		"sand" : "Písek",
-		"saplingfallorange" : "_MISSING_Fall Sapling",
-		"saplingtaiga" : "_MISSING_Taiga Sapling",
+		"saplingfallorange" : "Sazenice podzimního stromu",
+		"saplingtaiga" : "Sazenice stromu tajgy",
 		"sappling" : "Sazenice",
 		"sciencebagadvanced" : "Pokročilá vědecká taška",
 		"sciencebagbasic" : "Základní vědecká taška",
@@ -1266,7 +1280,7 @@
 		"stove" : "Kamna",
 		"straw" : "Sláma",
 		"sugar" : "Cukr",
-		"tailorshop" : "Obchod ševce",
+		"tailorshop" : "Krejčířství",
 		"tea" : "Čaj",
 		"tealeavesprocessed" : "Zpracované čajové lístky",
 		"tealeavesprocesseddried" : "Sušené čajové lístky",
@@ -1277,7 +1291,7 @@
 		"torch" : "Pochodeň",
 		"trader" : "Obchodník",
 		"undershirt" : "Tílko",
-		"vanilla" : "_MISSING_Vanilla",
+		"vanilla" : "Vanilka",
 		"water" : "Voda",
 		"watergathererjob" : "Práce Sběrače Vody",
 		"waterpump" : "Vodní pumpa",
@@ -1294,76 +1308,76 @@
 	"typeuses" : {
 		"adobe" : "Hlína pro bohaté lidi",
 		"alkanet" : "V reálném životě zdroj červeného barviva",
-		"banana" : "_MISSING_As radioactive as three minutes in a uranium mine",
-		"barley" : "_MISSING_Chickens love it",
+		"banana" : "Obsahuje stejnou radioaktivitu jako tři minuty pobytu v uranovém dole.",
+		"barley" : "Slepičky to doslova žerou",
 		"bed" : "Potřebuje slámu, ne šrouby",
-		"beeswax" : "_MISSING_Sticky",
+		"beeswax" : "Lepkavé ",
 		"berry" : "Není to jedovaté",
 		"berrybush" : "Kolonisté tohle mohou využít pro snadné získání jídla",
 		"blackplanks" : "Velice hořlavé",
 		"bloomery" : "Používá dřevěné uhlí jako palivo na tavení galenitu a železa",
-		"boilingwater" : "_MISSING_Keeps boiling eternally, for some reason",
+		"boilingwater" : "Z nějakého důvodu je vařící neustále",
 		"bow" : "Strážci ho potřebují!",
 		"bowstring" : "Plojnk",
 		"bread" : "Chutná dobře, vyléčí tvá zranění",
 		"bricks" : "Je to Holandská hra koneckonců...",
-		"bronzeanvil" : "_MISSING_Not block-shaped any longer!",
-		"bronzearrow" : "Monstra přestanou mít negativní názory. Ačkoli i strážci!",
+		"bronzeanvil" : "Dost bylo krychitému tvaru!",
+		"bronzearrow" : "Monstra si přestanou stěžovat na nekvalitní střelivo. Stejně jako strážci!",
 		"bronzeaxe" : "Lesník potřebuje jednu!",
 		"bronzecoin" : "Ne tak cenné jako zlatá varianta",
 		"bronzeingot" : "Bronz je sylnej",
 		"bronzepickaxe" : "Použij nástroj pro příkazy pro najmutí horníka. Použije krumpáč aby těžil rudy nebo kámen z bloku nekonečně!",
 		"bronzeplate" : "Jako ostatní jídla, sněz to než se to změní v zelené!",
-		"bucketempty" : "_MISSING_Technically a bucket filled with air",
-		"bucketwater" : "_MISSING_No, we won’t allow you to flood your friend’s mine",
-		"cabbage" : "_MISSING_Colonists finally eat their greens",
-		"cacao" : "_MISSING_We hope it's fair trade",
+		"bucketempty" : "Technicky vzato naplněný, jen vzduchem",
+		"bucketwater" : "Ne, opravdu ti nedovolíme s tímhle zaplavit šachtu tvého kamaráda",
+		"cabbage" : "Kolonisti konečně přešli na zdravou stravu. ty bys měl taky, Baxi.",
+		"cacao" : "Doufám že je to férová obchodní věc",
 		"cake" : "Podívejte se na tento koláčový graf",
 		"carpetblue" : "Když si lidi nezaslouží varování červeného koberce",
 		"carpetred" : "Nevadí když rozliješ jahodový džus na tenhle koberec!",
 		"carpetwhite" : "Obarvi ho barvičem",
 		"carpetyellow" : "Je tak načechraný!!!",
-		"cassava" : "_MISSING_Contains cyanide",
+		"cassava" : "Africký plod, ze kterého se dělá kaše",
 		"charcoal" : "Absorbuje kyanid",
 		"cherryblossom" : "Nejrůžovější věc ve hře",
 		"cherrysapling" : "Dekorace. Zaplať 10 peněz pro odemčení",
-		"cherrysaplingsmall" : "_MISSING_Cosmetic item. Pay 5 Colonycoins to unlock",
-		"chickenmeat" : "_MISSING_Animals were harmed in the making of this food",
-		"chocolate" : "_MISSING_Ancient Gods were punished for sharing this with humans",
+		"cherrysaplingsmall" : "Dekorace. Zaplať 5 peněz pro odemčení",
+		"chickenmeat" : "Vegani, nedívejte se",
+		"chocolate" : "Starověcí bohové byli potrestáni za to, že to darovali lidem",
 		"clay" : "Přál bych si aby jste se toho mohl dotknout",
 		"coalore" : "Upozornění: může způsobit změnu klimatu",
 		"coatedplanks" : "Lesklé!",
 		"coffee" : "K užitku když chcete něco stihnout",
-		"coffeebeans" : "_MISSING_Caffeine is a psychoactive drug",
+		"coffeebeans" : "Pozor: Kofein je psychoaktivní droga",
 		"cokes" : "Vytváření a pálení téhle věci je nejspíš úplně bezpečné pro vaše zdraví a okolní prostředí",
 		"colonykit" : "Vyžadována k založení dalších kolonií",
-		"cookedfish" : "_MISSING_Swimming capabilities are dramatically reduced",
-		"cookies" : "_MISSING_Name derives from the Dutch word 'Koekje'",
+		"cookedfish" : "Její plavací schopnosti byly dramaticky sníženy",
+		"cookies" : "Anglické označení \"cookie\" pochází z holandského ´Koekje´",
 		"copper" : "Nepotřebuje být tavena. Jak obvyklé!",
 		"coppernails" : "Inovativní cesta jak sbíjet dřevo dohromady",
 		"copperparts" : "Kov improvuje vše",
 		"coppertools" : "Nemůžeš nakrájet chleba bez nástrojů",
-		"cotton" : "_MISSING_Called “Tree Wool” in German",
-		"cottonraw" : "_MISSING_Needs some processing",
-		"cottonthread" : "_MISSING_You’re going to need a lot of these",
+		"cotton" : "Načechranější než vlna",
+		"cottonraw" : "Ještě to chce trochu zpracování",
+		"cottonthread" : "Tohohle budeš potřebovat hromadu",
 		"crate" : "Pro uložení všeho!",
 		"cratebread" : "Na úschovu nebo darování chleba. Pozor, kolonisté tuto bednu nepoužívají!",
 		"crossbow" : "Menší bratr arbalisty",
 		"crossbowbolt" : "Těžší, lepší, rychlejší, silnější",
 		"crystal" : "Produkován když je vytaven galenit",
-		"diamond" : "_MISSING_“Why so hard!” said to the diamond one day the charcoal",
+		"diamond" : "“Proč tak těžko?!”, řekl jednoho dne diamant uhlí",
 		"dirt" : "Špinavá",
 		"dyertable" : "Legendární malířské dovednosti",
-		"egg" : "_MISSING_Came at least three hundred million years before the chicken",
-		"feather" : "_MISSING_Falls as quickly to the ground as a hammer, on the Moon.",
+		"egg" : "Ano, vejce bylo dříve než slepice",
+		"feather" : "Padá dolů stejně rychle jako kladivo na Měsíci.",
 		"fineryforge" : "Potřebuje koks na vyrábění oceli a zlatých ingotů",
 		"firewood" : "Základní palivo",
-		"fishmeal" : "_MISSING_Great fertilizers for cabbages",
+		"fishmeal" : "Dobré hnojivo pro zelí",
 		"flax" : "Imperiální barva",
 		"flaxstage1" : "Položte to na zem",
 		"flour" : "Kolonista z pecí z tohohle udělá chleba",
-		"foofoo" : "_MISSING_/ fufu / fufuo / foufou",
-		"fur" : "_MISSING_Fluffy",
+		"foofoo" : "Vařila myšička kašičku, na zeleným rendlíčku.",
+		"fur" : "Příjemné!",
 		"furnace" : "Používá dřevo na podpal jako palivo na výrobu bronzových ingotů a cihel",
 		"galenalead" : "Obshuje hodně olova",
 		"galenasilver" : "Obsahuje hodně stříbra",
@@ -1377,21 +1391,21 @@
 		"gunsmithshop" : "Vyrábí bambitky a náboje",
 		"gypsum" : "Dekorace. Může to být mikrotransakce",
 		"hollyhock" : "Projímadlo v realitě. Ne ve hře. Zatím...",
-		"ink" : "_MISSING_Careful, Ned, careful now!",
+		"ink" : "S tímhle psal ještě tvůj prapraděda!",
 		"ironblock" : "Nepokládej to na své nohy",
 		"ironingot" : "Železo je sylnější!",
 		"ironore" : "Vykopáno s železným krumpáčšm, který je z tohoto vyroben",
 		"ironrivet" : "Víc účinnější než izolepa",
 		"ironsword" : "Zapíchni je se špičkou meče!",
 		"ironwrought" : "Tepané neznamená z tepu srdce'",
-		"kaolinite" : "_MISSING_Used for porcelain",
+		"kaolinite" : "Dělá se z něho porcelán",
 		"kiln" : "Předělává prkna na dřevěné uhlí",
 		"lanterncyan" : "Budoucnost je teď",
 		"lanterngreen" : "Dělá vás ekologičtějšími",
 		"lanternorange" : "Extra útulno",
 		"lanternred" : "V Amsterdamu jsou taky populární",
 		"lanternyellow" : "Drahá pochodeň",
-		"lead" : "Spal to a znič civilizaci otravou olovem",
+		"lead" : "Spal to a zničíš civilizaci otravou olovem",
 		"leadbullet" : "Může být vypálen bambitkou",
 		"leavestaiga" : "Cítím se jako na Vánoce",
 		"leavestemperate" : "Zkus do nich skočit z mrakodrapu",
@@ -1402,33 +1416,33 @@
 		"lobsterprepared" : "Tak kdo je teď dominantní?",
 		"logtaiga" : "Ahoj baxi",
 		"logtemperate" : "Jako normální dřevo, ale jiné",
-		"luxurymeal" : "_MISSING_Sign of civilization",
+		"luxurymeal" : "Náznak pokročilé civilizace",
 		"matchlockgun" : "Potřebuje vaky se střelným prachem na sřílení",
 		"mint" : "Není to padělání když král říká, že je to v pořádku",
-		"newworldmeal" : "_MISSING_Forefather of all fast food",
-		"npcshop" : "_MISSING_Colonists visit here once a day to gather food and happiness items",
-		"olive" : "_MISSING_Grow on olive branches",
+		"newworldmeal" : "Prapředek dnešních fastfoodů",
+		"npcshop" : "Kolonisté si do \"koloniálu\" přijdou jednou za den pro jídlo a věci.",
+		"olive" : "Roste na větvích olivovníku",
 		"oven" : "Používá dřevo na podpal jako palivo pro přepečení mouky na chleba",
-		"paperempty" : "_MISSING_So much potential",
-		"papertext" : "_MISSING_Not at the level of Shakespeare yet",
-		"papyrus" : "_MISSING_Future paper",
-		"perpetualstew" : "_MISSING_Truly medieval",
+		"paperempty" : "Tolik potencionálu co sem někdo může dát",
+		"papertext" : "Zatím to je nic moc v porovnání se Shakespearem",
+		"papyrus" : "Budoucí papír",
+		"perpetualstew" : "Tomu říkám středověk",
 		"planks" : "Nyní 4násobně objemnější než dřevo!",
 		"plasterblock" : "Pro moderní vzhled",
-		"porcelainbiscuit" : "_MISSING_Needs to be glazed",
-		"porcelainglazed" : "_MISSING_Done!",
-		"porcelainraw" : "_MISSING_Needs to be fired",
-		"potato" : "_MISSING_Boil ‘em, mash ‘em, stick ‘em in a stew",
-		"printingpress" : "_MISSING_Respect its freedom",
-		"rawbeeswax" : "_MISSING_Looks tasty",
-		"rawfish" : "_MISSING_#organic #hormonefree #grassfed",
+		"porcelainbiscuit" : "Ještě potřebuje být vyglazován",
+		"porcelainglazed" : "Krása!",
+		"porcelainraw" : "Potřebuje být vypálen",
+		"potato" : "Rozžblemcuj to do ragú",
+		"printingpress" : "Respektuj svobodu tisku",
+		"rawbeeswax" : "Vypadá chutně",
+		"rawfish" : "#bio #organic #fresh",
 		"redplanks" : "Nemá to žádnou výživovou hodnotu, ale chutná to skvěle",
-		"rice" : "_MISSING_Provides more than 20% of all calories consumed by humans",
-		"ricemeal" : "_MISSING_Zun’s favorite",
+		"rice" : "Nabízí více než 20% všech kalorií zkontumovaných člověkem",
+		"ricemeal" : "Vývojář Zun ho má rád",
 		"salpeter" : "Nekořeňte si s tím jídlo",
 		"sand" : "S hady se moc dobře nemíchá",
-		"saplingfallorange" : "_MISSING_Orange future tree",
-		"saplingtaiga" : "_MISSING_Slightly different tree",
+		"saplingfallorange" : "Budoucí oranžový strom",
+		"saplingtaiga" : "O trochu tmavší strom",
 		"sappling" : "Budoucí strom",
 		"sciencebagadvanced" : "Potřeba pro pokročilou vědu",
 		"sciencebagbasic" : "Potřeba pro základní výzkum",
@@ -1437,35 +1451,35 @@
 		"sciencebagmilitary" : "Potřeba pro výzkum vztahovaný k boji",
 		"sciencelab" : "Používá se vědcem na odemykání nových věcí. Víc vědců pracuje rychleji!",
 		"shop" : "Pouze nakupování, ne prodávání",
-		"silk" : "_MISSING_So smooth",
-		"silkthread" : "_MISSING_Easy to lose",
-		"silkwormcocoon" : "_MISSING_Very tiny",
+		"silk" : "Tak hladký!",
+		"silkthread" : "Jednoduše ho ztratíš",
+		"silkwormcocoon" : "Velmi maličký",
 		"silveringot" : "Trochu víc dražší než olovo",
 		"sling" : "Bacha, Goliáši",
 		"slingbullet" : "Zatím jen malý kamínek",
-		"snow" : "Wedry nic neví",
+		"snow" : "V Praze se z toho můžou zbláznit",
 		"splittingstump" : "Rychlejší cesta jak vyrobit dřevo na podpal",
 		"steelingot" : "Je silný jako ocel",
 		"steelparts" : "Ingoty jsou tak nepraktické",
-		"stonebricks" : "Bouchněte v případě nouze",
+		"stonebricks" : "Rozbijte v případě nouze",
 		"stonemasonworkbench" : "Padesát odstínů cihel",
-		"stove" : "_MISSING_Used to fill the surrounding area with delicious smells",
+		"stove" : "Naplňuje okolí svůdnými vůněmi jídla",
 		"straw" : "Potřeba pro postele, vedlejší produkt z pšenice",
-		"sugar" : "_MISSING_Can easily cause obesity, diabetes and other health problems",
-		"tailorshop" : "_MISSING_Tailored clothes for everyone!",
+		"sugar" : "V realitě způsobuje cukrovku a obezitu",
+		"tailorshop" : "Oděvy pro všechny!",
 		"technologisttable" : "Vyrábí vědecké tašky",
 		"tin" : "Jen trošku toxický",
-		"tomato" : "_MISSING_Fruit or vegetable?",
+		"tomato" : "Ovoce či zelenina?",
 		"torch" : "Budiž světlo!",
-		"trader" : "_MISSING_Unexpectedly used for trading",
-		"vanilla" : "_MISSING_Delicious taste",
-		"water" : "_MISSING_Will flood everything if let loose",
-		"waterpump" : "_MISSING_Like the water gatherer, but slower and doesn't need open water",
+		"trader" : "Obchoduje. Překvapivě.",
+		"vanilla" : "Chutná příchuť",
+		"water" : "ZASTAV TO NEŽ TI TO ZATOPÍ DŮL!!!",
+		"waterpump" : "Jako normální vodní zdroj, jen trochu pomalejší.",
 		"waxtablet" : "Nejsou to sluchátka",
 		"wheat" : "Kolonista s mlecím kamenem přemění pšenici na mouku",
 		"wheatstage1" : "Budoucí chleba",
 		"wolfsbane" : "Předchází útoku vlků na tvoji kolonii",
 		"workbench" : "Rekrutuj řemeslníka. Bude za tebe vyrábět!",
-		"writerdesk" : "_MISSING_Highly ergonomic"
+		"writerdesk" : "Tady vznikají ty velké romány"
 	}
 }
