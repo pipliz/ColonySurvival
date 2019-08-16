@@ -1179,3 +1179,30 @@ codey:
 - Updated cs-CZ (thanks Ahojten) and ru-RU (thanks KoTeK_57) locales
 - Added ua-UA (thanks Can8270)
 - Updated ja-JP (thanks TAQrinzAN) and it_IT (thanks andre5s) locales
+
+0.7.0.131:
+- Change logging to write directly to files in /gamedata/logs/client/ and /gamedata/logs/server/ instead of copying on quit from unity default paths
+
+0.7.0.132:
+- Fix a server freeze that could happen when there is data queued to be sent to player X in tick Y and more data is queued such that the total exceeds 65535 bytes
+
+0.7.0.133:
+- Add a key shortcut to opening the colony tab (defaults to C)
+- Add a /save command to manually force a save (in addition to the autosaving on quit and every 5 minutes by default)
+- Add a /backup command that'll properly do a /save and zip the resulting data with minimal chance of corruption
+- Fix a small mistake in cs-CZ locale (from Ahojten)
+- Deal with an inconsequential edge case on the client regarding the science UI
+- Fix leaves-destroying-code-distance not being enough to remove all leaves on the savanna tree
+- Detach the player from any transporting mesh before teleporting
+- Fix issues with server popups trying to override the quickstart
+- Fix issue with gliders glitching out when: 1) existing glider was out in the world during a save-load and 2) placed new gliders
+cdoey;
+- Added a warning log when registering an areajobdefinition with an invalid npctype
+- Add current directory to logging
+
+0.7.0.134:
+- Removed a test.txt file that sneaked into 0.7.0.133
+- Removed limitation on /save & /backup that limits them to only work away from autosave moments (by making them adjust the schedule of the autosave)
+- Fix the client not being able to launch the server if the path has a ' in it
+- Include settings_variable.json in the autosaving
+- Some fixes to ru-RU locale

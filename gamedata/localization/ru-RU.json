@@ -66,10 +66,10 @@
 		},
 		"colonymanagement" : {
 			"colonysettings" : {
-				"daymonsters" : "Дневное количество монстров",
+				"daymonsters" : "Количество монсторов днем",
 				"enablehappiness" : "Используйте Счастье",
 				"header" : "Настройки колонии",
-				"nightmonsters" : "Количество Ночных Монстров"
+				"nightmonsters" : "Количество монстров ночью"
 			},
 			"connectedplayers" : "Подключенные игроков",
 			"currentowners" : "Нынешние владельцы",
@@ -200,7 +200,7 @@
 			"ammocount" : "Снарядов:",
 			"bedcount" : "Кроватей:",
 			"caloriestorage" : "Всего калорий:",
-			"calorieusage" : "Потребление калорий / день:",
+			"calorieusage" : "Калорий / день:",
 			"colonistcount" : "Колонистов:",
 			"happiness" : "Счастье:",
 			"laborercount" : "Безработных:"
@@ -242,7 +242,7 @@
 		},
 		"mainmenu" : {
 			"back" : "Назад",
-			"coop" : "Хозяин курятника",
+			"coop" : "Хозяин сервера",
 			"info" : "Информация",
 			"multiplayer" : "Сетевая игра",
 			"quit" : "Выйти",
@@ -601,7 +601,7 @@
 					"name" : "Зимние пальто"
 				},
 				"writer" : {
-					"description" : "Разблокирует писателя, способного производить книги для удовольствия",
+					"description" : "Разблокирует писателя, способного производить книги для счастья",
 					"name" : "Писатель"
 				}
 			}
@@ -634,24 +634,24 @@
 				"noactivecolony" : "Нет активной колонии!",
 				"science" : {
 					"available" : "Доступно",
-					"cancel" : "Отменить",
+					"cancel" : "Отмена",
 					"completed" : "Выполнено",
-					"completeunlock" : "Завершенный",
+					"completeunlock" : "Завершенно",
 					"conditioncolonistcount" : "Колонисты",
 					"conditioncolonistcountdescription" : "Требуется количество колонистов",
 					"conditionhappiness" : "Требование счастья",
 					"conditionhappinessdescription" : "Требуется минимальное чистое счастье",
-					"conditionscientistrequires" : "Требует {0}",
-					"dependencies" : "Требуемые технологии:",
+					"conditionscientistrequires" : "Требуется {0}",
+					"dependencies" : "Технологии необходимы:",
 					"header" : "Наука",
 					"recipeunlocknpcgroup" : "Разблокирует {0}",
 					"recipeunlockoriginjob" : "Сделано в {0}",
 					"recipeunlockoriginplayer" : "Сделано игроком",
-					"recipeunlocks" : "Рецепт разблокировки:",
+					"recipeunlocks" : "Рецепт разблокирует:",
 					"startscience" : "Начните Науку",
 					"unavailable" : "Недоступно"
 				},
-				"searchfieldplaceholder" : "Введите фильтр поиска...",
+				"searchfieldplaceholder" : "Введите фильтр поиска....",
 				"tooltip" : {
 					"and" : "и",
 					"instockpile" : "в запасах",
@@ -664,7 +664,7 @@
 				"header" : "Выбор товара"
 			},
 			"limits" : {
-				"description" : "Колонисты будут работать, пока на Складе не будет указанное кол-во предметов",
+				"description" : "Колонисты будут работать, пока на складе не будет указанное кол-во предметов",
 				"hoverpriority" : {
 					"a" : "Приоритет крафтинга",
 					"b" : "Рецепты с приоритетом +++ создаются первыми.\nРецепты с приоритетом + создаются последними."
@@ -710,7 +710,7 @@
 			},
 			"toolconstruction" : {
 				"builder" : "Стройка",
-				"buildera" : "",
+				"buildera" : "Строитель",
 				"builderb" : "Требуется создать область",
 				"builderc" : "Строит вещи",
 				"description" : "Выберите тип области, которую вы хотите создать.",
@@ -967,7 +967,7 @@
 				"coverage" : "Перевод выполнен на {0:F1}%. Срочно требуется ваша помощь, посетите Github!",
 				"full" : "Настройки языка",
 				"language" : "Язык:",
-				"wiptext" : "Перевод может содержать ошибки и неточности.\nПеревели: Oleg720, WladySpb"
+				"wiptext" : "Перевод может содержать ошибки и неточности.\nПеревели: Oleg720, WladySpb."
 			},
 			"qualitycustom" : "Своё",
 			"qualityhigh" : "Выс.",
@@ -1034,8 +1034,8 @@
 			"serverport" : "Порт сервера",
 			"worlddate" : "Дата",
 			"worldname" : "Имя",
-			"worldname_long" : "Мировое имя",
-			"worldseed" : "Мир семян"
+			"worldname_long" : "Имя мира",
+			"worldseed" : "Код генерации мира"
 		}
 	},
 	"types" : {
