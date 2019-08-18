@@ -74,11 +74,11 @@
 			"connectedplayers" : "接続済みプレイヤー",
 			"currentowners" : "現在のオーナー",
 			"diplomacy" : {
-				"incomingdeals" : "_MISSING_Incoming deals",
+				"incomingdeals" : "物資を受け取る取引",
 				"mainbutton" : "対外交渉",
 				"mainheader" : "対外交渉",
-				"outgoingdeals" : "_MISSING_Outgoing deals",
-				"pendingdeals" : "_MISSING_Pending incoming deals",
+				"outgoingdeals" : "物資を送る取引",
+				"pendingdeals" : "【保留中】物資を受け取る取引",
 				"ruleaccept" : "受諾",
 				"ruleactive" : "アクティブ",
 				"rulepending" : "保留",
@@ -187,9 +187,9 @@
 			"sp_3" : "ステージ 3/{0} - サーバー起動完了、接続を待っています",
 			"sp_alreadyrunning1" : "このインストール向けのサーバーは起動していますが、終了処理中の可能性があります。 あと5秒でリトライします。",
 			"sp_alreadyrunning2" : "サーバーは既に起動中です。 あと5秒でメインメニューに戻ります。",
-			"steam01" : "_MISSING_Stage 1/{0} - Trying to setup TCP connection to {1}",
-			"steam02" : "_MISSING_Stage 2/{0} - Trying to setup steam connection",
-			"steam03" : "_MISSING_Stage 3/{0} - Connection succesful, authenticating",
+			"steam01" : "ステージ 1/{0} - {1} へのTCP接続をセットアップ中",
+			"steam02" : "ステージ 2/{0} - Steam接続をセットアップ中",
+			"steam03" : "ステージ 3/{0} - 接続に成功、認証中",
 			"steamfail" : "接続データの取得に失敗しました。 あと5秒でメインメニューに戻ります。"
 		},
 		"escapemenu" : {
@@ -494,8 +494,8 @@
 					"name" : "火縄銃"
 				},
 				"newworldmeal" : {
-					"description" : "「新世界の料理」をアンロックする",
-					"name" : "新世界の料理"
+					"description" : "「新世界の食事」をアンロックする",
+					"name" : "新世界の食事"
 				},
 				"olivefarmer" : {
 					"description" : "より凝った食事を作るための原料となる「オリーブ」の栽培農家をアンロックする",
@@ -659,7 +659,7 @@
 					"and" : "と",
 					"instockpile" : "（備蓄品内に）",
 					"needs" : "必要: ",
-					"nothing" : "_MISSING_Nothing"
+					"nothing" : "なし"
 				}
 			},
 			"itemselector" : {
@@ -883,15 +883,15 @@
 				"header" : "基本事項",
 				"text1" : "バナーはあなたのコロニーの中心です。 「2」を押して立ててください。 入植者を募集するにはバナーを右クリックします。  バナーツールはモンスターがスポーンするエリアを赤でハイライトします。",
 				"text2" : "入植者を募集するためには、食料とベッドが必要です。 入植者が生き残るには、食事をする必要があります。 十分な食料を用意することを忘れないでください、さもないと彼らは飢えてしまいます！",
-				"text3" : "_MISSING_Press \"I\" to craft a bed. Items on the left can be crafted by clicking on them. Colonists can only use items in your stockpile. They access the stockpile using crates.",
+				"text3" : "ベッドを作るには「I」を押してください。 画面左側のアイテムをクリックすることで、そのアイテムを作成できます。 入植者は備蓄品にあるアイテムのみ使用可能です。 彼らは木箱を使って備蓄品にアクセスします。",
 				"text4" : "夜間には、モンスターがあなたのコロニーを襲ってきます！ コマンドツールを使って、衛兵を配置しましょう。 「1」を押し、クリックして衛兵を選択します。 「R」を押すことで、ブロックを回転できます。"
 			},
 			"page2" : {
-				"description" : "_MISSING_Bread and games are essential to grow your colony",
-				"header" : "_MISSING_Food & Happiness",
-				"text1" : "_MISSING_For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
-				"text2" : "_MISSING_Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
-				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
+				"description" : "パンとお楽しみはあなたのコロニーの発展に必要不可欠です",
+				"header" : "食料＆幸福度",
+				"text1" : "入植者を雇用する度に不幸が増大します。 幸福アイテムを供給し入植者の幸福度を維持しましょう。 どのアイテムを供給したいのか選ぶため、幸福度メニュー（「I」を押す）のスライダーを調節しましょう。",
+				"text2" : "供給する食品アイテムを変更すると、入植者が受け取るカロリー量が変化します。 1000未満のカロリーは飢餓を招き、 2000未満は幸福度を低下させ、 2000超は幸福度を向上させます。",
+				"text3" : "入植者は日々の幸福アイテムを受け取るために、1日1回食料雑貨店かバナーを訪れます。 大規模なコロニーでは、歩く距離を減らすため、複数の食料雑貨店が必要になるでしょう。"
 			},
 			"page3" : {
 				"description" : "夜間に迫り来るモンスターたちからコロニーを防衛せよ！",
@@ -918,11 +918,11 @@
 				"text4" : "複数の科学者が一緒になって作業することで、研究の進行速度を速めることができます。 さらなる科学者を雇うために、もっと研究所を設置しましょう！"
 			},
 			"page6" : {
-				"description" : "_MISSING_Explore the world and start new colonies!",
-				"header" : "_MISSING_Colonization",
-				"text1" : "_MISSING_There are three biomes with unique content to the west, south and east of the central spawn location. The sun rises in the east. Unlock the glider for quicker exploration.",
-				"text2" : "_MISSING_Unlock and craft the Colony Starter Kit to colonize new biomes. You need to carry it with you to be able to start a new colony!",
-				"text3" : "_MISSING_The other biomes allow you to craft new happiness items. Use the trader to exchange items with other colonies."
+				"description" : "世界を探索し、新たなコロニーを立ち上げよ！",
+				"header" : "植民地化",
+				"text1" : "中央のスポーン位置の西・南・東には、固有の要素を含む3つのバイオームがあります。 太陽は東から昇ります。 より素早く探索を進めるため、グライダーをアンロックしましょう。",
+				"text2" : "新しいバイオームに入植するため、コロニースターターキットをアンロックして作成しましょう。 それさえあれば、新しいコロニーを立ち上げることができます！",
+				"text3" : "別のバイオームでは新たな幸福アイテムを作成できます。 交易商を使って他のコロニーとアイテムをやり取りしましょう。"
 			}
 		},
 		"sciencebiome" : {
@@ -1438,7 +1438,7 @@
 		"potato" : "【じゃがいも】\n《Potato》\nシチューの中で、煮て、すりつぶして、つっついて",
 		"printingpress" : "【いんさつき】\n《Printing Press》\n自由を称えよ",
 		"rawbeeswax" : "【みかこうのみつろう】\n《Raw Beeswax》\n美味しそうに見える",
-		"rawfish" : "【なまざかな】\n《Raw Fish》\n#オーガニック #ホルモン無添加 #牧草肥育",
+		"rawfish" : "【なまざかな】\n《Raw Fish》\n#有機栽培 #ホルモン無添加 #牧草肥育",
 		"redplanks" : "【みがいたいた（あか）】\n《Coated Red Planks》\n食料としての価値はないけど、とっても美味しいよ",
 		"rice" : "【こめ】\n《Rice》\n人類が消費する全カロリーの20％以上を供給",
 		"ricemeal" : "【べいはんのしょくじ】\n《Rice Meal》\nZunの好物",
