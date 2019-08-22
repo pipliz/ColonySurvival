@@ -1217,5 +1217,12 @@ cdoey;
 
 0.7.0.137
 - Update to cs-CZ locale
+- Save the state of the npc ID generator, so that in the event of a crash or bad save the following doesn't happen:
+-- A job placed would be saved; the NPC it used would not be saved; then after restart a npc would be recruited to the same ID; then after another restart there are 2 blocks claiming the NPC id
+- Fix a regression throwing an error on quitting the server without loading a world (probably from 0.7.0.134)
+- Disable server UI logging if ran in batchmode
+- Removed transparency on banner/command tools in the hotbar
+- Rework a significant part of the client scene management, in an effort to fix bugs regarding double-loading scenes (like ingame with main menu active, multiple menus overlaying eachother)
+- Fix crash if you force-exit from the server browser menu
 codey:
 - Allow null player to be passed into Chat.Send (to simplify logic)
