@@ -1254,3 +1254,9 @@ codey:
 - Rework diplomacy menu a bit
 -- Show an icon for every relation type
 -- Sort the relations by colony instead of pending/incoming/outgoing
+
+0.7.0.141
+- Updated pl-PL & ja-JP locales
+- Fix a bug regarding size limits with mod based area selection where 3D size would be limited by 2D max size
+- Automatically fallback to the C# implementation if the pip_quick shared library throws on loading
+- Add a log message for when the client or server takes more than 1 second to generate a frame
