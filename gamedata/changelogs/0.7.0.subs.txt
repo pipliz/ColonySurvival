@@ -1226,3 +1226,31 @@ cdoey;
 - Fix crash if you force-exit from the server browser menu
 codey:
 - Allow null player to be passed into Chat.Send (to simplify logic)
+
+0.7.0.138
+- Removed mac dedicated server tool (seperate download through steam) - steam apparently hasn't supported standalone mac SDKs for a while, so it didn't work.
+- Optimized terrain generator a bit (generating ~2.5 million chunks went from 1 min 34 to 1 min 15, taking about 80% of the time it did)
+- Implement a workaround to a linux 64-bit steam SDK issue with the dedicated server tool
+-- the game now auto-copies the SDK from "./linux64/steamclient.so" to "%HOME%/.steam/sdk64/steamclient.so" if that file does not exist, the SDK tries to load it later.
+- Updated gamedata/help/hosting.txt file
+- Turn shadows off fully if either of the settings (distance / quality) are set to off (fixes glitchy shadows with certain combinations on mac)
+- Disabled rendering of the npc collision box when clicking on a npc
+- Added various log messages to things related to disconnecting and reloading to the main menu - hopefully helps investigate the "need to load twice" issue
+- Handle invalid formatted permissions file more gracefully
+- Add exceptions to the white/black listing for the co-op host
+- Add '/blacklist clear' and '/whitelist clear' commands
+internal:
+- Redid game build system to be more friendly to backups and new builds
+- Set up a workflow for creating native code libraries to optimize various math heavy parts
+
+0.7.0.139
+- Fixed a situation where running the game from a slower/busy HDD would cause a timeout issue on loading
+codey:
+- Optimized closest-block-instance-finding a tiny bit (speeds up chunk loading by ~1%)
+- Delay colonist/monster pathing until all near-banner chunks are loaded upon loading a world (depending on world size and computer, this may take a few seconds)
+
+0.7.0.140
+- Fix regression with shadow quality settings not being applied (caused by 0.7.0.138)
+- Rework diplomacy menu a bit
+-- Show an icon for every relation type
+-- Sort the relations by colony instead of pending/incoming/outgoing
