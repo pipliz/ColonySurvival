@@ -1260,3 +1260,13 @@ codey:
 - Fix a bug regarding size limits with mod based area selection where 3D size would be limited by 2D max size
 - Automatically fallback to the C# implementation if the pip_quick shared library throws on loading
 - Add a log message for when the client or server takes more than 1 second to generate a frame
+
+0.7.0.142
+- Fix an error that may break trading if a trade hits its limit
+
+0.7.0.143
+- Actually update the version number ingame
+- Rebuild the pip_quick dll's for windows to not reference the visual c runtime (which may not be installed on windows 7)
+- Change some networking socket handling to better handle timeouts
+- Change default multiplayer network timeout from 5 to 30 seconds (and delete gamedata/savegames/hosting_settings.json on update - it's stored in there)
+- Change default singleplayer network timeout from 5 to 60 seconds
