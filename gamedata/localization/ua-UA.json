@@ -1,5 +1,5 @@
 {
-	"coverage" : 94.7283049472831,
+	"coverage" : 96.2692619626926,
 	"hints" : {
 		"0" : "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1" : "У міру того, як ваша колонія росте, будуть з'являтися нові монстри.",
@@ -88,16 +88,16 @@
 			"leave" : "Покинути колонію",
 			"managecolonies" : {
 				"location" : {
-					"east" : "_MISSING_{0} blocks east",
-					"key" : "_MISSING_Location: ",
-					"north" : "_MISSING_{0} blocks north, ",
-					"south" : "_MISSING_{0} blocks south, ",
-					"west" : "_MISSING_{0} blocks west"
+					"east" : "{0} блоків на схід",
+					"key" : "Розташування: ",
+					"north" : "{0} блоків на північ, ",
+					"south" : "{0} блоків на південь, ",
+					"west" : "{0} блоків на захід"
 				},
-				"mainbutton" : "_MISSING_Manage Colonies",
-				"mainheader" : "_MISSING_Manage Colony",
-				"selectheader" : "_MISSING_Select a colony to manage",
-				"siegemode" : "_MISSING_Siege mode:"
+				"mainbutton" : "Керувати колоніями",
+				"mainheader" : "Керувати колонією",
+				"selectheader" : "вибір колонії дл керування",
+				"siegemode" : "Режим облоги:"
 			},
 			"manageheader" : "Управління власністю",
 			"manageowners" : "Керуйте власниками",
@@ -113,11 +113,11 @@
 			"recruittext5" : "Вартість становить {0} звичайної вартості через щастя",
 			"recruittofillbeds" : "Набір для заповнення всіх ліжок",
 			"recruittofilljobs" : "Набір для заповнення всіх робочих місць",
-			"resetcolonypriority" : "_MISSING_Reset active colony priorities",
+			"resetcolonypriority" : "Скидання пріоритетів активних колоній",
 			"science" : {
-				"incomingdescription2" : "_MISSING_They will share their science with you",
+				"incomingdescription2" : "Вониможутьподілитися своєю наукою з вами",
 				"newagreement" : "Запропонуйте наукову угоду",
-				"outgoingdescription2" : "_MISSING_You provide them with your science",
+				"outgoingdescription2" : "Ви надаєте їм свою науку",
 				"selectcolony" : "Виберіть колонію, до якої слід відправити науку"
 			},
 			"selectcolony" : {
@@ -146,13 +146,13 @@
 				"completerule" : "Створіть правило",
 				"mainheader" : "Нові налаштування правил торгівлі",
 				"newrule" : "Запропонуйте правило торгівлі",
-				"ruledescription" : "_MISSING_Traders will trade {0} from {1} to {2} if both of the following:",
-				"ruledescriptionlimit" : "_MISSING_ {0} items left to trade.",
-				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
-				"rulemaximumgoal" : "_MISSING_{0} has less than: ",
-				"rulemaximumtraded" : "_MISSING_This deal will send up to the following amount of items in total: ",
+				"ruledescription" : "Торговці торгуватимуть {0} з {1} до {2} якщо обидва наведені нижче:",
+				"ruledescriptionlimit" : " {0} предметів, що залишилися для торгівлі.",
+				"ruleincomingdescr2" : "Отримайте {0}, якщо в їх більше за {1}, а у нас менше {2}.",
+				"rulemaximumgoal" : "{0} має менше, ніж: ",
+				"rulemaximumtraded" : "Ця угода надсилатиме до наступної кількості позицій: ",
 				"ruleminimumthis" : "{0} має більше: ",
-				"ruleoutgoingdescr2" : "_MISSING_Send {0} if we have more than {1} and they have less than {2}.",
+				"ruleoutgoingdescr2" : "Відправте {0}, якщо в нас більше за {1}, а в їх менше{2}.",
 				"selectcolony" : "Виберіть колонію для торгівлі"
 			}
 		},
@@ -193,7 +193,7 @@
 			"buttonbrowseworkshop" : "_MISSING_Browse Workshop",
 			"buttoncreateitem" : "_MISSING_Create item",
 			"buttoneditdetails" : "_MISSING_Edit details",
-			"buttonlistsubscribed" : "_MISSING_Subcribed items",
+			"buttonlistsubscribed" : "_MISSING_Subscribed items",
 			"buttonsubmitcontent" : "_MISSING_Submit",
 			"buttonupdatecontent" : "_MISSING_Update content",
 			"changelogplaceholder" : "_MISSING_Enter changelog here...",
@@ -630,7 +630,7 @@
 					"name" : "Восковий планшет"
 				},
 				"wheatfarming" : {
-					"description" : "_MISSING_A more complex method of food production, for advanced colonies only. Unlocks wheat farmers, the grindstone and the oven.",
+					"description" : "Більш складний метод виробництва їжі, лише для передових колоній. Розблоковує пшеничну ферму, жорна та піч.",
 					"name" : "Хлібна продукція"
 				},
 				"wintercoat" : {
@@ -1306,11 +1306,11 @@
 		"saplingtaiga" : "Саджанець тайги",
 		"sappling" : "Саженець дерева",
 		"sciencebagadvanced" : "Розширена дослідницька сумка",
-		"sciencebagbasic" : "Сумка фундаментальної науки",
+		"sciencebagbasic" : "Сумка базової науки",
 		"sciencebagcolony" : "Дослідницька cумка колонії",
 		"sciencebaglife" : "Сумка науки про здоров'я",
 		"sciencebagmilitary" : "Військова наукова сумка",
-		"sciencelab" : "Научна лабораторія",
+		"sciencelab" : "Наукова лабораторія",
 		"shop" : "Магазин",
 		"silk" : "Шовк",
 		"silkpillow" : "Подушка з шовку",
@@ -1498,7 +1498,7 @@
 		"saplingtaiga" : "Трохи інше дерево",
 		"sappling" : "Майбутнє дерево",
 		"sciencebagadvanced" : "Необхідно для більш ширшого дослідження",
-		"sciencebagbasic" : "Необхідно для фундаментальних досліджень",
+		"sciencebagbasic" : "Необхідно для базових досліджень",
 		"sciencebagcolony" : "Необхідно для досліджень для колонії",
 		"sciencebaglife" : "Необхідно для наук охорони здоров'я",
 		"sciencebagmilitary" : "Необхідно для воєнних наук",
