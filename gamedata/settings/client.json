@@ -35,5 +35,37 @@
 		"StartDistance" : 0,
 		"UnderwaterAmbientMultiplier" : 0.3,
 		"UnderwaterSunMultiplier" : 0.1
-	}
+	},
+	"FallbackFonts" : [
+		{
+			"names" : [ "arial.ttf", "Arial.ttf" ], // contains a lot of languages, like russian, vietnamese etc
+			"size" : 512,
+			"points" : 32,
+			"padding" : 3
+		},
+		{
+			"names" : [ "simsun.ttc", "Arial Unicode.ttf" ], // chinese
+			"size" : 512,
+			"points" : 32,
+			"padding" : 3
+		},
+		{
+			"names" : [ "msgothic.ttc", "NotoSansCJK-Regular.ttc" ], // japanese / hanzi
+			"size" : 512,
+			"points" : 32,
+			"padding" : 3
+		},
+		{
+			"names" : [ "malgun.ttf" ], // korean
+			"size" : 512,
+			"points" : 32,
+			"padding" : 3
+		},
+		{
+			"names" : [ "LiberationSans-Regular.ttf" ], // fallback (ukranian on linux?)
+			"size" : 512,
+			"points" : 32,
+			"padding" : 3
+		}
+	]
 }

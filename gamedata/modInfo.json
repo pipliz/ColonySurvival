@@ -1,9 +1,22 @@
 [
 	{
+		"name" : "Flat World",
+		"description" : "Makes the world a pancake",
+		"version" : "1.0.0",
+		"enableddefault" : false,
 		"compatibleversions" : [
-			"0.7.0"
+			"0.7.1"
+		]
+		// source code that deals with this config is in Assembly-CSharp.dll under namespace ExampleMod.FlatWorld in colonyserver_Data/Managed/
+	},
+	{
+		"marksgamemodded" : false,
+		"name" : "Colony Survival",
+		"version" : "0.7.1",
+		"isoptional" : false,
+		"compatibleversions" : [
+			"0.7.1"
 		],
-		"enabled" : true,
 		"jsonFiles" : [
 			{
 				"fileType" : "addOrReplaceNPCRecipes",
@@ -394,18 +407,7 @@
 				],
 				"npcType" : "pipliz.crafter",
 				"relativePath" : "recipes/recipes_crafting.json"
-			}
-		],
-		"marksgamemodded" : false,
-		"name" : "pipliz.basejsons",
-		"version" : "0.6.0"
-	},
-	{
-		"compatibleversions" : [
-			"0.7.0"
-		],
-		"enabled" : true,
-		"jsonFiles" : [
+			},
 			{
 				"contents" : [
 					{
@@ -562,10 +564,77 @@
 				"itemType" : "colonykit",
 				"packType" : "ColonyStarterPackSecondary",
 				"relativePath" : ""
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_east.json"
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_savanna.json"
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_taiga.json"
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_temperate.json"
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_tropic.json"
+			},
+			{
+				"fileType" : "addOrOverrideStructures",
+				"index" : -1000000,
+				"relativePath" : "./settings/foliage_temperate_colors.json"
+			},
+			{
+				"fileType" : "setBiomeStructurePrevalence",
+				"index" : -1000000,
+				"relativePath" : "./settings/biomes.json"
+			},
+			{
+				"fileType" : "setBiomeStructurePrevalence",
+				"index" : -1000000,
+				"relativePath" : "./settings/biomes_center.json"
+			},
+			{
+				"fileType" : "setBiomeStructurePrevalence",
+				"index" : -1000000,
+				"relativePath" : "./settings/biomes_newworld.json"
+			},
+			{
+				"fileType" : "setBiomeStructurePrevalence",
+				"index" : -1000000,
+				"relativePath" : "./settings/biomes_east.json"
+			},
+			{
+				"fileType" : "setBiomeStructurePrevalence",
+				"index" : -1000000,
+				"relativePath" : "./settings/biomes_tropic.json"
+			},
+			{
+				"fileType" : "setTerrainGeneratorSettings",
+				"index" : -1000000,
+				"relativePath" : "./settings/terraingen.json"
+			},
+			{
+				"fileType" : "setMetaBiomeSettings",
+				"index" : -1000000,
+				"relativePath" : "./settings/metabiomes.json"
+			},
+			{
+				"fileType" : "scienceBiomePatches",
+				"index" : -1000000,
+				"relativePath" : "./settings/sciencebiomes.json"
 			}
-		],
-		"marksgamemodded" : false,
-		"name" : "pipliz.starterpacks",
-		"version" : "0.1.0"
+		]
 	}
 ]

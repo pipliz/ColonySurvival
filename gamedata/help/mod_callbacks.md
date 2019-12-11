@@ -10,7 +10,9 @@ CallbackType: `AfterModsLoaded`
 =======  
 Method type: System.Action<System.Collections.Generic.List<ModLoader.ModDescription>>  
 Called after parsing all modinfo files  
-No registered uses  
+Registered callbacks: 2  
+0.	'create_filetable' -> 'ServerManager.AfterModsLoadedCreateFiletable'   
+1.	'examplemod.detect_flat_world' -> 'ExampleMod.FlatWorld.FlatWorld.DetectFlatWorld'   
 
 
 CallbackType: `OnItemTypeRegistered`  
@@ -40,24 +42,15 @@ CallbackType: `OnQuit`
 =======  
 Method type: System.Action  
 Called in the quit method queue  
-Registered callbacks: 9  
+Registered callbacks: 8  
 0.	'pipliz.shared.waitforasyncquitsearly' -> 'Pipliz.Application.WaitForQuits' index: -1000  
 1.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
 2.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
 3.	'pipliz.server.saveplayers' -> 'Players.SavePlayers'   
-4.	'pipliz.server.savetimecycle' -> 'TimeCycle.Save'   
-5.	'pipliz.server.savewater' -> 'BlockEntities.Implementations.Water.Save'   
-6.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
-		 Parent @ 4 : 'pipliz.server.savetimecycle'  
-7.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
-8.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
-
-
-CallbackType: `AfterStartup`  
-=======  
-Method type: System.Action  
-Called somewhere after startup, in the first frame start  
-No registered uses  
+4.	'pipliz.server.savewater' -> 'BlockEntities.Implementations.Water.Save'   
+5.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
+6.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
+7.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
 
 
 CallbackType: `AfterSelectedWorld`  
@@ -92,7 +85,7 @@ CallbackType: `AfterItemTypesDefined`
 =======  
 Method type: System.Action  
 First callback after all item types should be defined, so you can resolve types etc here  
-Registered callbacks: 27  
+Registered callbacks: 26  
 0.	'create_servermanager_trackers' -> 'ServerManager.CreateBlockEntityCallbacks' index: -1000  
 1.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
 		 Parent @ 0 : 'create_servermanager_trackers'  
@@ -119,44 +112,40 @@ Registered callbacks: 27
 		 Parent @ 3 : 'pipliz.server.loadnpctypes'  
 13.	'creategrowabledefinitions' -> 'GrowableBlocks.GrowablePatchHandler.CreateGrowableDefinitions'   
 		 Parent @ 0 : 'create_servermanager_trackers'  
-14.	'register.basegame.blockjobs' -> 'Pipliz.Mods.BaseGame.ModEntries.AfterDefiningNPCTypes'   
-		 Parent @ 0 : 'create_servermanager_trackers'  
-		 Parent @ 3 : 'pipliz.server.loadnpctypes'  
-		 Child @ 18 : 'create_savemanager'  
-15.	'pipliz.endloaddifficulty' -> 'Difficulty.ColonyDifficultySetting.CompleteLoading' index: 1000  
-16.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
+14.	'pipliz.endloaddifficulty' -> 'Difficulty.ColonyDifficultySetting.CompleteLoading' index: 1000  
+15.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
 		 Parent @ 3 : 'pipliz.server.loadnpctypes'  
 		 Parent @ 4 : 'areajobs.insertattributed'  
 		 Parent @ 0 : 'create_servermanager_trackers'  
 		 Parent @ 5 : 'pipliz.server.registerdefaultdifficulty'  
-		 Parent @ 15 : 'pipliz.endloaddifficulty'  
+		 Parent @ 14 : 'pipliz.endloaddifficulty'  
 		 Parent @ 7 : 'pipliz.server.recipeplayerload'  
 		 Parent @ 8 : 'pipliz.server.recipenpcload'  
 		 Parent @ 9 : 'pipliz.server.loadresearchables'  
 		 Parent @ 10 : 'pipliz.server.endloadplayers'  
 		 Parent @ 11 : 'createareajobdefinitions'  
-17.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
-		 Parent @ 16 : 'pipliz.server.endloadcolonies'  
-		 Child @ 18 : 'create_savemanager'  
-18.	'create_savemanager' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
+16.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
+		 Parent @ 15 : 'pipliz.server.endloadcolonies'  
+		 Child @ 17 : 'create_savemanager'  
+17.	'create_savemanager' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
 		 Parent @ 1 : 'blockentitycallback.autoloaders'  
 		 Parent @ 2 : 'chunk_dedupe_initializer'  
-		 Parent @ 16 : 'pipliz.server.endloadcolonies'  
+		 Parent @ 15 : 'pipliz.server.endloadcolonies'  
 		 Parent @ 12 : 'pipliz.blocknpcs.registerjobs'  
 		 Parent @ 13 : 'creategrowabledefinitions'  
-19.	'pipliz.server.registermonstertextures' -> 'NPC.NPCType.RegisterMonsterTextures' index: -100  
+18.	'pipliz.server.registermonstertextures' -> 'NPC.NPCType.RegisterMonsterTextures' index: -100  
 		 Parent @ 3 : 'pipliz.server.loadnpctypes'  
-20.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
-21.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
-22.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
-23.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
-24.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
-		 Parent @ 16 : 'pipliz.server.endloadcolonies'  
-25.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
-		 Parent @ 18 : 'create_savemanager'  
-26.	'set_colony_sciencemask' -> 'Science.ScienceManager.SetScienceMask' index: 1  
-		 Parent @ 25 : 'wait_complete_startup_chunks'  
-		 Parent @ 16 : 'pipliz.server.endloadcolonies'  
+19.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
+20.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
+21.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
+22.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
+23.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
+		 Parent @ 15 : 'pipliz.server.endloadcolonies'  
+24.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
+		 Parent @ 17 : 'create_savemanager'  
+25.	'set_colony_sciencemask' -> 'Science.ScienceManager.SetScienceMask' index: 1  
+		 Parent @ 24 : 'wait_complete_startup_chunks'  
+		 Parent @ 15 : 'pipliz.server.endloadcolonies'  
 		 Parent @ 0 : 'create_servermanager_trackers'  
 
 
@@ -290,7 +279,7 @@ Called inside of OnAddResearchables - allows modifying researches added through 
 Registered callbacks: 3  
 0.	'addbannercallbacks' -> 'Science.Implementations.BannerResearch.AddCallbacks'   
 1.	'addhealthcallbacks' -> 'Science.Implementations.HealthResearch.AddCallbacks'   
-2.	'farmingresults' -> 'Pipliz.Mods.BaseGame.ModEntries.AddFarmingResults'   
+2.	'farmingresults' -> 'Jobs.Implementations.Construction.ConstructionManager.AddFarmingResults'   
 
 
 CallbackType: `OnChangedBlock`  
@@ -448,11 +437,12 @@ CallbackType: `OnAutoSaveWorld`
 =======  
 Method type: System.Action  
 Triggers an autosave every x minutes, to begin autosaving non-block data (jobs, npc's, players)  
-Registered callbacks: 4  
+Registered callbacks: 5  
 0.	'pipliz.server.autosaveplayers' -> 'Players.SavePlayers'   
 1.	'pipliz.server.autosavewater' -> 'BlockEntities.Implementations.Water.Save'   
 2.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
 3.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
+4.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
 
 
 CallbackType: `OnNPCGathered`  
@@ -474,7 +464,7 @@ Periodically triggered for every chunk loaded. Use it to keep chunks loaded - an
 {data.Result} -> bool indicating whether or not to keep this chunk. Defaults to false (set to true to keep it)  
 {data.ChunkLoadedSource} -> source for this callback. If loadedstorage / loadedgenerator, the chunk is already locked for writing. if Updater, it is not locked.  
 Registered callbacks: 3  
-0.	'bannercheck' -> 'ServerManager.CheckKeepChunkLoaded'   
+0.	'bannercheck' -> 'BlockEntities.Implementations.BannerTracker.CheckKeepChunkLoaded'   
 1.	'pipliz.server.playercheck' -> 'Players.ShouldKeepChunkAlive'   
 		 Parent @ 0 : 'bannercheck'  
 2.	'check_blockentities' -> 'ServerManager.KeepBlockEntitiesLoaded'   
@@ -534,7 +524,7 @@ Method type: System.Action<Players.Player, Colony, Colony>
 Registered callbacks: 5  
 0.	'onchange' -> 'ServerManager.OnColonyChange'   
 1.	'resend_areajobs' -> 'AreaJobTracker.OnActiveColonyChange'   
-2.	'sendconstructiondata' -> 'Pipliz.Mods.BaseGame.ModEntries.SendData'   
+2.	'sendconstructiondata' -> 'Jobs.Implementations.Construction.ConstructionManager.SendData'   
 3.	'sendhappiness' -> 'Happiness.HappinessModManager.SendHappy'   
 4.	'sendresearch' -> 'Science.ScienceManager.SendColonyResearch'   
 
@@ -542,48 +532,51 @@ Registered callbacks: 5
 CallbackType: `OnSavingColony`  
 =======  
 Method type: System.Action<Colony, Pipliz.JSON.JSONNode>  
-Registered callbacks: 9  
+Registered callbacks: 10  
 0.	'saveareajobs' -> 'AreaJobTracker.Save'   
 1.	'savedifficulty' -> 'ColonyTracker.SaveDifficulty'   
 2.	'savehappiness' -> 'ColonyTracker.SaveHappiness'   
-3.	'savenpcs' -> 'ColonyTracker.SaveNPCs'   
-4.	'saveowners' -> 'ColonyTracker.SaveOwners'   
-5.	'saverecipesettings' -> 'ColonyTracker.SaveRecipeSettings'   
-6.	'savescience' -> 'ColonyTracker.SaveScience'   
-7.	'savestockpile' -> 'ColonyTracker.SaveStockpile'   
-8.	'savetrading' -> 'ColonyTrading.SaveTrading'   
+3.	'savejobfinder' -> 'Jobs.JobFinder.Save'   
+4.	'savenpcs' -> 'ColonyTracker.SaveNPCs'   
+5.	'saveowners' -> 'ColonyTracker.SaveOwners'   
+6.	'saverecipesettings' -> 'ColonyTracker.SaveRecipeSettings'   
+7.	'savescience' -> 'ColonyTracker.SaveScience'   
+8.	'savestockpile' -> 'ColonyTracker.SaveStockpile'   
+9.	'savetrading' -> 'ColonyTrading.SaveTrading'   
 
 
 CallbackType: `OnLoadingColony`  
 =======  
 Method type: System.Action<Colony, Pipliz.JSON.JSONNode>  
-Registered callbacks: 9  
+Registered callbacks: 10  
 0.	'loadnpcs' -> 'ColonyTracker.LoadNPCs'   
 1.	'loadareajobs' -> 'AreaJobTracker.Load'   
 		 Parent @ 0 : 'loadnpcs'  
 2.	'loaddifficulty' -> 'ColonyTracker.LoadDifficulty'   
 3.	'loadhappiness' -> 'ColonyTracker.LoadHappiness'   
-4.	'loadowners' -> 'ColonyTracker.LoadOwners'   
-5.	'loadrecipesettings' -> 'ColonyTracker.LoadRecipeSettings'   
-6.	'loadstockpile' -> 'ColonyTracker.LoadStockpile'   
-7.	'loadscience' -> 'ColonyTracker.LoadScience'   
+4.	'loadjobfinder' -> 'Jobs.JobFinder.Load'   
+5.	'loadowners' -> 'ColonyTracker.LoadOwners'   
+6.	'loadrecipesettings' -> 'ColonyTracker.LoadRecipeSettings'   
+7.	'loadstockpile' -> 'ColonyTracker.LoadStockpile'   
+8.	'loadscience' -> 'ColonyTracker.LoadScience'   
 		 Parent @ 0 : 'loadnpcs'  
-		 Parent @ 6 : 'loadstockpile'  
-8.	'loadtrading' -> 'ColonyTrading.LoadTrading'   
+		 Parent @ 7 : 'loadstockpile'  
+9.	'loadtrading' -> 'ColonyTrading.LoadTrading'   
 
 
 CallbackType: `OnLoadingTerrainGenerator`  
 =======  
 Method type: System.Action<TerrainGeneration.TerrainGeneratorBase>  
 Called when the default terrain generator is created - during create_servermanager_trackers in AfterItemTypesDefined  
-Registered callbacks: 5  
-0.	'apply_metabiome_patches' -> 'TerrainGeneration.TerrainModManager.ApplyMetaBiomePatches'   
-1.	'apply_sciencebiome_patches' -> 'TerrainGeneration.TerrainModManager.ApplyScienceBiomes'   
-2.	'apply_orelayers' -> 'TerrainGeneration.TerrainModManager.ApplyOreLayers'   
-		 Parent @ 1 : 'apply_sciencebiome_patches'  
-3.	'load_structure_patches' -> 'TerrainGeneration.TerrainModManager.OnLoadStructures'   
-4.	'load_biome_patches' -> 'TerrainGeneration.TerrainModManager.OnLoadBiomes'   
-		 Parent @ 3 : 'load_structure_patches'  
+Registered callbacks: 6  
+0.	'terraingen.setup' -> 'TerrainGeneration.TerrainGenerator.StaticInit' index: -500  
+1.	'apply_metabiome_patches' -> 'TerrainGeneration.TerrainModManager.ApplyMetaBiomePatches'   
+2.	'apply_sciencebiome_patches' -> 'TerrainGeneration.TerrainModManager.ApplyScienceBiomes'   
+3.	'apply_orelayers' -> 'TerrainGeneration.TerrainModManager.ApplyOreLayers'   
+		 Parent @ 2 : 'apply_sciencebiome_patches'  
+4.	'load_structure_patches' -> 'TerrainGeneration.TerrainModManager.OnLoadStructures'   
+5.	'load_biome_patches' -> 'TerrainGeneration.TerrainModManager.OnLoadBiomes'   
+		 Parent @ 4 : 'load_structure_patches'  
 
 
 CallbackType: `OnPlayerEditedNetworkInputfield`  
@@ -606,6 +599,12 @@ CallbackType: `OnConstructColonyOwnerManagementUI`
 Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
 Registered callbacks: 1  
 0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyManagement'   
+
+
+CallbackType: `OnConstructDiplomacyUI`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>  
+No registered uses  
 
 
 CallbackType: `OnConstructInventoryManageColonyUI`  
@@ -656,16 +655,18 @@ CallbackType: `OnSaveWorldMisc`
 =======  
 Method type: System.Action<Newtonsoft.Json.Linq.JObject>  
 called on autosave/quit, node is the json that'll be saved to {world}/world.json  
-Registered callbacks: 1  
+Registered callbacks: 2  
 0.	'save_transports' -> 'Transport.TransportManager.SaveTransports'   
+1.	'savenpcid' -> 'NPC.NPCTracker.OnSaveMisc'   
 
 
 CallbackType: `OnLoadWorldMisc`  
 =======  
 Method type: System.Action<Newtonsoft.Json.Linq.JObject>  
 called in AfterItemTypesDefined, node is the json that was saved aerlier ({world}/world.json)  
-Registered callbacks: 1  
+Registered callbacks: 2  
 0.	'load_gliders' -> 'Transport.Glider.LoadGliders'   
+1.	'loadnpcid' -> 'NPC.NPCTracker.OnLoadMisc'   
 
 
 CallbackType: `OnConstructColonyStartSettingsUI`  
@@ -673,5 +674,19 @@ CallbackType: `OnConstructColonyStartSettingsUI`
 Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
 Registered callbacks: 1  
 0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyStartSettings'   
+
+
+CallbackType: `OnConstructManageColoniesSelectionUI`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Registered callbacks: 1  
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesSelectionUI'   
+
+
+CallbackType: `OnConstructManageColoniesUI`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>  
+Registered callbacks: 1  
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesUI'   
 
 

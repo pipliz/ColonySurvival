@@ -1270,3 +1270,8 @@ codey:
 - Change some networking socket handling to better handle timeouts
 - Change default multiplayer network timeout from 5 to 30 seconds (and delete gamedata/savegames/hosting_settings.json on update - it's stored in there)
 - Change default singleplayer network timeout from 5 to 60 seconds
+
+0.7.0.144
+- Fix the scene changes from 0.7.0.137 causing global illuminaton to be on and impacting performance (despite not changing anything visually; apparently the default for runtime created scenes)
+- Always enable access to the debug menus for development builds even if the config is still set to false
+- Added a button to start/stop profiling with logging to a binary file to the F6 dev menu (requires using the debug branch)

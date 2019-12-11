@@ -4,61 +4,43 @@ Base node is an array, to allow for multiple assembly definitions / parts per mo
 Per definition:
 
 name
--	any string
--	Unique identifier for your mod
+-	unique string identifying your mod (presented in the UI, used for dependencies)
 
-namepretty
--	any string
--	Pretty identifier for your mod, it's the one presented to clients in any mod related menu's
--	If not set, falls back to the name key
-
-marksgamemodded
--	boolean, defaults to true.
--	If set to true and the mod loads succesfully, it'll mark the server as modded and this and similar mods will be shown in the server browser.
+description
+-	some string briefly describing the mod to clarify what it is to players
 
 version
--	string in the format of "0.1.2.3", "0.1.2" or "0.1", where each number is between 0 and 255
--	Presented to users, possibly used for mod dependency checking later one
--	Defaults to "0.0.0" if not set.
+-	string in the format of "0.1.2", where each number is between 0 and 255
+
+dependencies
+-	array of mod dependencies required to enable this mod
+-	each item is of the form { "name" : "some mod", "minversion" : "1.0.0" }
+
+isoptional
+-	boolean, defaults to true -> if true, allows the user to enable/disable this. if false -> enabled is permanently set to enableddefault
+
+enableddefault
+-	boolean, defaults to true -> default state of enabled for worlds that have not previously seen this mod
+
+marksgamemodded
+-	boolean, defaults to true -> if true and the mod loads succesfully, it'll mark the server as modded and be shown in the server browser.
 
 dllpath
--	string in the form of a path relative to the folder that contains the modInfo.json
--	Place to load a managed dll from, if it's a dll-mod.
--	Not needed if it's an override-folders-mod
-
-enabled
--	boolean
--	Whether or not to process this mod for loading
+-	string, optional - relative path to the managed .dll file that'll be loaded
 
 compatibleversions
--	Array of version strings, see version key.
+-	Array of version strings like [ "0.7.0", "0.7.1" ]
 -	Contains game versions this mod is compatible with. If the current game version is not a subversion of a compatible version the mod is not loaded. Some updates may allow loading of earlier version mods.
 
-overrideAlbedoFolder
-overrideEmissiveFolder
-overrideNormalFolder
-overrideMeshesFolder
-overrideIconFolder
-overrideNPCFolder
-overrideWaterFolder
-overrideAudioFolder
--	Specify a string path relative to the modInfo.json indicating a folder to use to search for replacement files of the specified types
--	Use the same filename as the original files in their folders, and they should get replaced.
--	As of time of writing these work for any compatibleversions at & above 0.5.0 (i.e, these break a lot less)
+custom
+-	A json object like { "some_key" :  "...."  } that can be accessed in code directly for custom parsing
 
 jsonFiles
--	An array of descriptions of things to load from files
--	Keys allowed per description/config:
+-	an array of json objects; the core way to load configs for the game
+-	structure per entry:
 |	-	"absolutePath" - the path of the json file relative to the game root folder
 	-	"relativePath" - the path of the json file relative to this modinfo.json file
-	-	"fileType" - the type of contents that file will have. Requires either absolutePath or relativePath to be set
-	|	Accepted fileTypes:
-		-	"addOrOverrideTextureMappingEntries" - Loads the file as a texturemapping file, adding the entries to the internal table and replacing an entry if the key already exists
-		-	"overrideTypeProperties" - Loads the file as a types file. If the type key already exists, it will override any properties set on the new type into the old type. If it doesn't exist, it just adds the type.
-		-	"addNewTypes" - Loads the file as a types file. If the type key does not exist, it adds the type to the internal table.
-		-	"addOrReplacePlayerRecipes" - Loads the file as a recipes file. If the recipe exists, is must have the same isOptional key, and the other settings are copied over. If it doesn't exist, it just adds the recipe.
-		-	"addOrReplaceNPCRecipes" - Loads the file as a recipes file. Requires "npcType" to be set in this description. Rest is same as addOrReplacePlayerRecipes.
-		-	"addOrOverrideLocalization" - Loads the file as a locale file. Name of the file should be en-US.json, pl-PL.json etc. Merges the file if it already exists.
-	-	"limitsUIMapping" - requires "npcType" to be set. Contains an array of block names that will trigger the npcTypes' recipe limits UI when clicked upon. This can be used without setting a path / fileType.
-	-	"npcType" - provides data for "limitsUIMapping" and/or "addOrReplaceNPCRecipes"
+	-	"fileType" - the type of contents that file will have. Requires either absolutePath or relativePath to be set. See jsonfiles.txt
 	-	"index" - Defaults to 0. Changes will be applied in order of their index (lowest first). If the index is the same, order is undefined.
+	
+

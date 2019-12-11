@@ -1,0 +1,23 @@
+0.7.1.7
+
+- Fix co-op menu not working if you have changed mods that require confirmation
+- Fix a loading issue that happens when you returning from the host settings menu / mod-update prompt
+- Change the browse workshop button to go to the workshop home page instead of the items page
+- Fix my subscriptions button to actually go there properly
+- Fix typo in "subcribed items"
+- Fix a loading issue happening due to a missing gamedata/cache/ folder
+- Added a variety of log messages related to the reason why a server is quitting
+
+0.7.1.8
+
+- Fix default settings being day monster medium / night monsters off
+- Fix scenario description not scaling with the amount of text
+
+0.7.1.9
+
+- Fix co-op worlds started from a workshop world ending up being marked as singleplayer worlds
+-- To workaround this for existing worlds, open "settings_readonly.json" from the save folder with some text editor;
+-- Replace the bit that says "WorldType":1 with "WorldType":2 leaving the rest as-is
+-- Then it should be loadable in co-op again
+- Fix a case where some terrain bits would end up in the wrong place upon exiting to main menu, causing purple ghost terrain to stay until restarted
+- Fix the game freezing on load if you have a very large player position (there's still plenty of other problems at a X of 2 billion though)

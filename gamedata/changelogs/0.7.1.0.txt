@@ -1,0 +1,39 @@
+0.7.1.6 (2019-12-06)
+
+- Added support for the steam workshop with mods and savegames
+- Added per-world mod toggling support
+- Added a way to start new worlds based on a workshop world
+- Added a builtin mod for very flat worlds
+
+Modding/misc things
+- Reworked texture/audio downloading & caching from the server on the client
+-- Doesn't create a ton of files anymore
+-- Properly deduplicates files between servers and references now
+-- Doesn't require the server to read all files entirely every launch anymore
+-- Supports streaming the ambient audio files instead of keeping them entirely loaded
+- Only supports .ogg now for audio
+- FileTable related changes:
+-- Changed to be an instance on ServerManager instead of a static class
+-- FileTable.Register is now mostly ServerManager.FileTable.StartLoading(...)
+-- Removed "monster texture" file types, merged into the npc file types
+- ColonyTrading changes
+-- Merged the semi-seperate ScienceAgreements into the trading IRule interface, removing a whole bunch of duplicate code
+-- Added IRule.CanBeAddedTo (trader) - intended to allow science agreements to check for duplicates before being added
+-- Changed IRule.ToJSON() to allow more freedom in save format
+- Merged "BaseGame" mod into the server dll (mostly to the Jobs.Implementations namespace)
+- Moved colonyserverrcon source project to gamedata/help (out of the mods folder)
+- Delayed loading of mods till after a world is selected
+- Removed AfterStartup modcallback (since loading is now delayed)
+- Removed "override*Folder" variants of modinfo entries (there's specific ones for each now)
+- Merged the base game from various parts into one modinfo.json entry
+- Fixed addOrReplaceAudioAmbient jsonFiles entries not actually succesfully overriding ambient audio
+- Changed terrain generator initialization to be inside of OnLoadingTerrainGenerator so you can put a callback before it to alter settings
+- Minor pass of client UI for more consistent buttons (prefab-ized a lot of them)
+- Update unity from 2018.4.5f1 to 2018.4.12f1
+- Added a callback for the creation of the diplomacy menu for editing
+
+Bug fixes vs 0.7.0
+- Fixed cache file corruption if a loading screen was cancelled while a file was partially downloaded
+- Fixed some possible bugs related to duplicate rule IDs between trades
+- Fixed the "server already running" detection not working as intended
+- Fixed a bug with the client not sending the disconnect message in singleplayer upon quitting, causing the server to hang around for a while (or until you quit the client)
