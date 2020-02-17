@@ -21,3 +21,15 @@
 -- Then it should be loadable in co-op again
 - Fix a case where some terrain bits would end up in the wrong place upon exiting to main menu, causing purple ghost terrain to stay until restarted
 - Fix the game freezing on load if you have a very large player position (there's still plenty of other problems at a X of 2 billion though)
+- Added en-GB locale (thanks whitemidget on github)
+- Updated ua-UA, pl-PL locale (also via github)
+
+0.7.1.10
+
+- Changed server to keep open 16 files at a time max when sending files to the client - prevents hitting the default max open file limit on ubuntu when mods are installed (with > 1000 files)
+- Refactored client torch lighting a bit (should make no difference)
+- Fix an error related to the client processing some messages after the world is deleted
+
+0.7.1.11
+
+- Fixed changing state for mods in the server UI not applying on the first load (would work on subsequent tries)

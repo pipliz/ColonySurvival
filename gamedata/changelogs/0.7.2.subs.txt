@@ -1,0 +1,17 @@
+0.7.2.1
+
+- Fix handheld lantern colors not matching the actual lantern color
+- Reset torch color when switching away from lanterns
+
+0.7.2.2
+- Fix a bug in the torch/lantern lighting that caused some minor glitches;
+-- A minor "halo" effect around the outside edges of blocks
+-- In some directions the lighting would be a bit darker than others
+-- Minor offset of the "ambient occlusion" style effect, got stronger the further away from the source.
+
+0.7.2.3
+- Change the personal torch to use the same system as stationary torches
+- Show personal torch use on other players
+- Add a toggle to enable the "dev features" (mostly camera controls in the F2-F10 range), previously already available by manually flipping a true/false in a json file
+- Added F2 key to open a client overlay with the client log file, (and server one if singleplayer), should help debugging in singleplayer without manually opening a server or checking files
+- Fix keymapping menu not allowing returning a key to it's original value
