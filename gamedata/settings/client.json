@@ -2,10 +2,48 @@
 	"AdvancedVideo" : {
 		"AmbientOcclusionIntensity" : 0.5,
 		"BloomIntensity" : 0.1,
-		"ReflectionProbeChunkDistance" : 2,
-		"ReflectionProbeResolution" : 128,
-		"ReflectionProbeShadowDistance" : 100,
-		"UseMeshMerging" : true
+		"UseMeshMerging" : true,
+		"TextureQualities" : [
+			{
+				// max texture setting
+				// order in array is like:
+				// 0 = terrain albedo
+				// 1 = terrain normal
+				// 2 = terrain height
+				// 3 = terrain emissive
+				// 4 = water albedo
+				// 5 = water normal
+				// 6 = water height
+				// 7 = npc texture
+				"FilterModes" : [ "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear" ],
+				"ResolutionPowers" : [ 8, 8, 8, 8, 8, 8, 8, 11 ],
+				"MipMaps" : [ true, true, true, true, true, true, true, true ]
+			},
+			{
+				// high texture setting - half npc quality
+				"FilterModes" : [ "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear" ],
+				"ResolutionPowers" : [ 8, 8, 8, 8, 8, 8, 8, 10 ],
+				"MipMaps" : [ true, true, true, true, true, true, true, true ]
+			},
+			{
+				// medium, half terrain and npc again
+				"FilterModes" : [ "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear", "Trilinear" ],
+				"ResolutionPowers" : [ 7, 7, 7, 7, 7, 7, 7, 9 ],
+				"MipMaps" : [ true, true, true, true, true, true, true, true ]
+			},
+			{
+				// low - half terrain and npc again, lower to Bilinear
+				"FilterModes" : [ "Bilinear", "Bilinear", "Bilinear", "Bilinear", "Bilinear", "Bilinear", "Bilinear", "Point" ],
+				"ResolutionPowers" : [ 6, 6, 6, 6, 6, 6, 6, 8 ],
+				"MipMaps" : [ true, true, true, true, true, true, true, true ]
+			},
+			{
+				// minimum - half it again, lower to point
+				"FilterModes" : [ "Point", "Point", "Point", "Point", "Point", "Point", "Point", "Point" ],
+				"ResolutionPowers" : [ 5, 5, 5, 5, 5, 5, 5, 7 ],
+				"MipMaps" : [ true, true, true, true, true, true, true, true ]
+			}
+		]
 	},
 	"MouseLook" : {
 		"SpecialSensitivityX" : 1,

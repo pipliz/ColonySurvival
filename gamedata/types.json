@@ -81,6 +81,7 @@
 		],
 		"icon" : "./textures/icons/banana.png",
 		"isSolid" : false,
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/bananatree.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
@@ -156,6 +157,7 @@
 			"bees"
 		],
 		"icon" : "./textures/icons/beehive.png",
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/beehive.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -432,6 +434,7 @@
 		],
 		"icon" : "./textures/icons/cacao.png",
 		"isSolid" : false,
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/cacaoplant.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "grassDelete",
@@ -625,6 +628,7 @@
 			"decorative"
 		],
 		"icon" : "./textures/icons/chickencoop.png",
+		"lightingTransparency" : 150,
 		"mesh" : "./meshes/chickencoop.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -1339,6 +1343,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/grindstone.png",
+		"lightingTransparency" : 150,
 		"mesh" : "./meshes/grindstone.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "stonePlace",
@@ -2022,6 +2027,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/npcshop.png",
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/npcshop.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -2323,6 +2329,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/printingpress.png",
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/press.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "woodPlace",
@@ -2641,6 +2648,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/spinningwheel.png",
+		"lightingTransparency" : 200,
 		"mesh" : "./meshes/spinningwheel.ply",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -2749,6 +2757,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/stove.png",
+		"lightingTransparency" : 120,
 		"mesh" : "./meshes/stove.ply",
 		"needsBase" : true,
 		"onPlaceAudio" : "stonePlace",
@@ -2999,6 +3008,7 @@
 			"job"
 		],
 		"icon" : "./textures/icons/trader.png",
+		"lightingTransparency" : 150,
 		"mesh" : "./meshes/trader.ply",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
@@ -3026,7 +3036,8 @@
 	"water" : {
 		"icon" : "./textures/icons/water.png",
 		"isDestructible" : false,
-		"isSolid" : false
+		"isSolid" : false,
+		"lightingTransparency" : 128
 	},
 	"waxtablet" : {
 		"categories" : [

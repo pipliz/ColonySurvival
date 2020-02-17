@@ -63,6 +63,7 @@
 		"baseType" : {
 			"categories" : ["job"],
 			"icon" : "./textures/icons/waterpump.png",
+			"lightingTransparency" : 200,
 			"mesh" : "./meshes/waterpump.ply",
 			"needsBase" : true,
 			"onPlaceAudio" : "woodPlace",
@@ -76,6 +77,7 @@
 		"baseType" : {
 			"categories" : ["job"],
 			"icon" : "./textures/icons/writerdesk.png",
+			"lightingTransparency" : 200,
 			"mesh" : "./meshes/writerdesk.ply",
 			"needsBase" : true,
 			"onPlaceAudio" : "woodPlace",
@@ -89,6 +91,7 @@
 		"baseType" : {
 			"categories" : ["job"],
 			"icon" : "./textures/icons/bronzeanvil.png",
+			"lightingTransparency" : 150,
 			"mesh" : "./meshes/bronzeanvil.ply",
 			"needsBase" : true,
 			"onPlaceAudio" : "stonePlace",
@@ -105,6 +108,7 @@
 			"customData" : {"colors":["#ff0000->#242321"]},
 			"icon" : "./textures/icons/quarterblockblack.png",
 			"isSolid" : false,
+			"lightingTransparency" : 200,
 			"maxStackSize" : 60,
 			"mesh" : "./meshes/quarterblockx+.ply",
 			"needsBase" : true,
@@ -122,6 +126,7 @@
 			"customData" : {"colors":["#ff0000->#332106"]},
 			"icon" : "./textures/icons/quarterblockbrowndark.png",
 			"isSolid" : false,
+			"lightingTransparency" : 200,
 			"maxStackSize" : 60,
 			"mesh" : "./meshes/quarterblockx+.ply",
 			"needsBase" : true,
@@ -139,6 +144,7 @@
 			"customData" : {"colors":["#ff0000->#917451"]},
 			"icon" : "./textures/icons/quarterblockbrownlight.png",
 			"isSolid" : false,
+			"lightingTransparency" : 200,
 			"maxStackSize" : 60,
 			"mesh" : "./meshes/quarterblockx+.ply",
 			"needsBase" : true,
@@ -156,6 +162,7 @@
 			"customData" : {"colors":["#ff0000->#636363"]},
 			"icon" : "./textures/icons/quarterblockgrey.png",
 			"isSolid" : false,
+			"lightingTransparency" : 200,
 			"maxStackSize" : 60,
 			"mesh" : "./meshes/quarterblockx+.ply",
 			"needsBase" : true,
@@ -173,6 +180,7 @@
 			"customData" : {"colors":["#ff0000->#c7c7c7"]},
 			"icon" : "./textures/icons/quarterblockwhite.png",
 			"isSolid" : false,
+			"lightingTransparency" : 200,
 			"maxStackSize" : 60,
 			"mesh" : "./meshes/quarterblockx+.ply",
 			"needsBase" : true,
@@ -219,7 +227,18 @@
 		},
 		"generateType" : "rotateBlock",
 		"litTypeCustomData" : {
-			"torches" : {"a":{"color":"#c3872e","intensity":2.5,"offsetx":0,"offsety":0.55,"offsetz":0,"range":8,"volume":0.3},"b":{"color":"#c3872e","intensity":1,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+			"torches" : {
+				"merged" : {
+					"color" : "#c3872e",
+					"intensity" : 2.5,
+					"range" : 8,
+					"volume" : 0.3,
+					"injectionPoints" : [
+						{ "offsetX" : 1, "startValue" : 7 },
+						{ "offsetY" : 1, "startValue" : 7 }
+					]
+				}
+			}
 		},
 		"sideFrontLit" : "furnacelitfront",
 		"sideFrontUnlit" : "furnaceunlitfront",
@@ -238,7 +257,17 @@
 		},
 		"generateType" : "rotateBlock",
 		"litTypeCustomData" : {
-			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+			"torches" : {
+				"merged" : {
+					"color" : "#c3872e",
+					"intensity" : 2,
+					"range" : 8,
+					"volume" : 0.2,
+					"injectionPoints" : [
+						{ "offsetX" : 1, "startValue" : 7 }
+					]
+				}
+			}
 		},
 		"sideFrontLit" : "ovenlitfront",
 		"sideFrontUnlit" : "ovenunlitfront",
@@ -257,7 +286,17 @@
 		},
 		"generateType" : "rotateBlock",
 		"litTypeCustomData" : {
-			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+			"torches" : {
+				"merged" : {
+					"color" : "#c3872e",
+					"intensity" : 2.5,
+					"range" : 8,
+					"volume" : 0.2,
+					"injectionPoints" : [
+						{ "offsetX" : 1, "startValue" : 7 }
+					]
+				}
+			}
 		},
 		"sideFrontLit" : "bloomerylit",
 		"sideFrontUnlit" : "bloomery",
@@ -276,7 +315,17 @@
 		},
 		"generateType" : "rotateBlock",
 		"litTypeCustomData" : {
-			"torches" : {"a":{"color":"#c3872e","intensity":2,"offsetx":0.55,"offsety":-0.25,"offsetz":0,"range":8,"volume":0.2}}
+			"torches" : {
+				"merged" : {
+					"color" : "#c3872e",
+					"intensity" : 2.5,
+					"range" : 8,
+					"volume" : 0.2,
+					"injectionPoints" : [
+						{ "offsetX" : 1, "startValue" : 7 }
+					]
+				}
+			}
 		},
 		"sideFrontLit" : "fineryforgelit",
 		"sideFrontUnlit" : "fineryforge",

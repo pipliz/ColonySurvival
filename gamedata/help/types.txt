@@ -8,15 +8,14 @@ types in types.json allow the following properties:
 |	If set to true, the client will show the rotation tool
 |	Will read rotated types from "rotatablex+", "rotatablex-", "rotatablez+", "rotatablez-"
 "isSolid"
-|	Defaults to true. Reads from parent if not set
-|	If true:
--	|	The block will be rendered as a solid block
-	|	The block won't be traversable by AI
-	|	The block will cast shadows from torches
-|	If false:
--	|	The block will be rendered using the "mesh" key
-	|	The block will be traversable by AI
-	|	The block won't cast shadows from torches
+|	Defaults to true. Reads from parent if not set.
+|	"blocksPathing" defaults to this value.
+|	Required to be true in order to render as part of terrain
+|	Setting it to true also makes it have a default full-block collider
+|	False makes it fully transparent to lighting effects, true makes it fully opaque (unless overriden)
+"lightingTransparency"
+|	Default to 255 with isSolid false, 0 with isSolid true
+|	Indicates how much light can pass through this block for torchlighting
 "isFertile"
 |	Defaults to false. Reads from parent if not set
 |	If true, the game will allow placement of crops and farmers on top of this block
@@ -36,7 +35,7 @@ types in types.json allow the following properties:
 |	Determines how edible this type is. Used for feeding colonists and healing yourself
 "mesh"
 |	No default. Reads from parent if not set.
-|	The mesh used to render this type. Requires "isSolid" : false in order to be rendered.
+|	The mesh used to render this type.
 |	Formats supported are .obj and .ply. Both have to be triangulated
 |	.obj supports only vertices, triangles and uv
 |	.ply supports vertices, triangles, uv and a color channel.

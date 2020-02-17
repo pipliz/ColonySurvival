@@ -1,0 +1,51 @@
+0.7.2.0 (2020-02-07)
+
+Main items:
+- Big overhaul to calculating shadows & rendering of torch lights
+-- Light should be able to go around corners somewhat now, greatly diminishes the need to place a lot of torches everywhere
+-- Torch light is now applied less "directionally", for a more uniform appearance when applied at shallow angles
+- Added a new system to calculate a sensible ambient light value based on how much sun/sky light you can see (indirectly)
+- Tweaked eye adaptation, bloom, fog, skybox, sun settings, ambient lighting etc to make sense with the above changes.
+- Add texture quality settings (terrain, water, npc all vary)
+- Redid client chat box:
+-- Use the new render method for text (no more blurry text)
+-- Add the ability to scroll, and keep some history
+- Added the ability to scroll to the server interface log, and keep some history there
+- Include active colony name in the topleft corner stats
+- Enable the player light when holding a torch or lantern
+
+Chat commands:
+- Added "/debug printblockhere", prints the block you're standing in (requires cheats on)
+- Added "/debug lightcheck", which spawns all blocks with a mesh set in the area around you (requires cheats on)
+- Added "/debug texturecheck" - spawns all blocks that have no mesh but have a texturemapping set around you (requires cheats on)
+- Added "/debug generateiconmapping {path/to/icons} {path/to/mapping.json}" - generates a types json file filled with overrides for types where the icon file name matches an icon file in the indicated folder (requires cheats on)
+- Added "/debug generateiconmapping {path/to/albedo} {path/to/emissive} {path/to/normal} {path/to/height} {path/to/result_mapping.json}" - generates a texture mapping json file filled with mappings overriding existing ones where the texture files match files in the indicated folders (requires /cheats on)
+- Added "/colony printhere" - prints a list of unique colonies overlapping your position
+- Added "/colony setleader {player} [colony]" - sets the player as the leader of the colony (duh)
+- Added "/teleport player {name}" - teleports you to that player if found (even if offline)
+- Added "/teleport spawn" - teleports you to .. spawn
+- Added "/setspawn" - sets .. spawn
+
+Misc:
+- Automatically load permissiongroups.json from the selected world folder if present
+- Added a per block type "lightingTransparency" setting, intended for custom meshed blocks to indicate how much lighting can pass through them
+- Added a way to combine multiple light sources into one, defining a relative "start point" for each in the main light
+-- Now used for the lit furnace (which had 2 seperate lights, now only 1)
+- JSON files loaded with index 2147483647 are now ignored (used as a magic number to handle some error things)
+- Improved error handling on missing localization files
+- Updated unity to 2018.4.14f1 (from 2018.4.12f1)
+- Changed torch light baking and mesh culling to use unity's job system instead of the C# thread pool or a dedicated thread
+- Fix defaults for texturemapping files not correctly pointing to the error/neutral textures
+- Fix mods not being shown in the server browser if they did not have a dll associated with them
+- Added rotation support for sending positions to the client
+- Added rotation support to spawn position setting
+- Saved player rotation on exit & load it back
+- Fixed trading menu breaking when making a rule with a few added zeroes to the standard billion item limit
+- Vary chatbox transparency based on how it's opened
+- Changed mouseover audio effect
+- Fixed server UI (exit to desktop, stats etc) not appearing if the server is launched via the commandline with a world arg (but without -batchmode -nographics)
+- Added a key shortcut to "/" to open the chatbox with a / in it
+- Don't rebroadcast unknown commands as chat
+- Fix handling of external fullscreen mode changes from pushing alt + enter
+- Change topleft/topright corner stats to use the new font system
+- Remove that chat messages indicating active colony changes
