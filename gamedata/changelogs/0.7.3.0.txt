@@ -21,6 +21,7 @@
 - Added "/time night" cheaty command, to skip to the next sunset
 - Default mods to disabled for new worlds unless the mod opts into default on (was the other way around)
 - Removed berry bush production from berry farmers (only decorative uses by the player, and can be bought from the shop)
+- Updated ru-RU/pl-PL/ja-JP locales via github (to 0.7.2 levels)
 
 Bug fixies:
 - Fix a problem with unremovable blocks if it's a no-longer-registered type with the last registered index
@@ -72,3 +73,4 @@ Fixes to 0.7.3.x features, and when some of the above fixes were introduced;
 - Fixed a situation with siege mode being caused when a colony *can* spawn a monster, but it's blocked by other safe zones when adjusted for sunrise-time-arrival. Ignore the sunrise-time-arrival-adjustment in this case and spawn them anyway.
 - fix "coffebean farmer tool" -> "coffeebean farmer tool"
 - fix "chickenfarmer limits" -> "chicken farmer limits"
+- Updated ru-RU/pl-PL/ja-JP locales via github
