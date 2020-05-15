@@ -1,0 +1,74 @@
+0.7.3 (2020-05-11)
+
+- Add a tab to the inventory displaying statistics for all owned colonies, with the following data
+-- Calories, Happiness, Idle time (ms/s), Stockpile, Inbound Trade, Outbound Trade, misc Colony
+-- 1-, 4- and 24-days worth of data
+
+- Changed search filter for the stockpile (also used for the statistics search field), with these options:
+-- sometext "some text" 'some text' -> match type name
+-- 123 -> match type index
+-- >100 <100 -> match amount above/below a certain amount
+-- cat:food cat:"food" cat:'food' -> match item category
+-- is:food is:luxury -> match item properties
+- Added some prefab filter buttons to the stockpile to showcase above thing
+
+- Taught the client about the existence of multiple colonies in a world;
+-- Adds support for rendering safe zones for all owned colonies at once (before it was only the active colony)
+-- Probably misc fixes related to this
+
+- Added a slight contrast between day & night guard outline block color
+- Added "/time day" cheaty command, to skip to the next sunrise
+- Added "/time night" cheaty command, to skip to the next sunset
+- Default mods to disabled for new worlds unless the mod opts into default on (was the other way around)
+- Removed berry bush production from berry farmers (only decorative uses by the player, and can be bought from the shop)
+
+Bug fixies:
+- Fix a problem with unremovable blocks if it's a no-longer-registered type with the last registered index
+- Fix edge case in disconnecting people in multiplayer that could freeze network communications
+- Fix "failed to find npc ID xyz" warning never resetting (clear the ref and re-save the chunk)
+- Fix auto-recruit on npc death causing an exception
+- Fix a nullref in an edge case for loading miner jobs
+- Fix chatbox not clearing itself properly on closing
+- Removed loading hint about holding ctrl while recruiting (has since been replaced with a more complex menu)
+- Fix typo in "connection succesful"
+- Dieing without banners would not teleport you back to the "/setspawn" position if it was changed
+- Swapped cooked & raw lobster icons
+- Fixed right-clicking with the banner not opening any menu (banner move / banner click / colony tab) in some cases
+- Fixed a situation with siege mode being caused when a colony *can* spawn a monster, but it's blocked by other safe zones when adjusted for sunrise-time-arrival. Ignore the sunrise-time-arrival-adjustment in this case and spawn them anyway.
+- fix "coffebean farmer tool" -> "coffeebean farmer tool"
+- fix "chickenfarmer limits" -> "chicken farmer limits"
+
+Fixes to 0.7.3.x features, and when some of the above fixes were introduced;
+
+0.7.3.1 changes
+- Fix clicking away items in the right-side statistics legend ending up with highlighted disabled entries
+- Fix menu min/max issues when all graphs are disabled
+- Fix entries that are no longer updated (say stockpile items that went to 0) staying stuck on the last sample
+- Remember selected statistics items after closing
+
+0.7.3.2 changes
+- Substantial rewrite of how data is sent to the client, in order to:
+-- Support mods providing data configs & graphs to the statistics menu
+-- Significantly reduce network bandwith used on updating the graph - by only sending the desired time period + data type instead of literally all data every time
+- Change legend to also show items outside of the current selected scale, for more consistent behaviour
+- Clamp the highlighted graph so that pixels off-screen top/bottom are visible at the edge
+- Renamed "calories" category to "daily calories"
+- Reset search field upon closing the statistics menu
+- Include highlighted disabled item in autoscale calculations
+- Capitalized 'Misc causes'
+
+0.7.3.3 changes (did reset stats from saves)
+- Added total calories graphs
+- Added npc count / bed count / unemployed graphs
+- Separate out king's presence from misc happy
+
+0.7.3.4
+- Fixed some cases where a hover-highlight would get stuck in the statistics tab
+- Fixed a 0.7.3 regression where you couldn't move items / craft when outside of a colony
+- Fixed a 0.7.3 regression where the command tool would not update availability as expected when moving between colonies
+- Fixed right-clicking with the banner not opening any menu (banner move / banner click / colony tab) in some cases
+
+0.7.3.5
+- Fixed a situation with siege mode being caused when a colony *can* spawn a monster, but it's blocked by other safe zones when adjusted for sunrise-time-arrival. Ignore the sunrise-time-arrival-adjustment in this case and spawn them anyway.
+- fix "coffebean farmer tool" -> "coffeebean farmer tool"
+- fix "chickenfarmer limits" -> "chicken farmer limits"

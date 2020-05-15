@@ -690,3 +690,27 @@ Registered callbacks: 1
 0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesUI'   
 
 
+CallbackType: `OnSendingStatisticsData`  
+=======  
+Method type: System.Action<ColonyStats.SharedStatisticsGatherer>  
+Called every time the client requests statistics data;  
+include your type definitions every time, so the player can select them  
+if the requested key matches your given key, include your desired data that corresponds with the requested time period  
+Registered callbacks: 6  
+0.	'pipliz.stockpile' -> 'ColonyStats+SharedStatisticsGatherer.InsertStockpileStats' index: -6  
+1.	'pipliz.happiness' -> 'ColonyStats+SharedStatisticsGatherer.InsertHappyStats' index: -5  
+2.	'pipliz.calories' -> 'ColonyStats+SharedStatisticsGatherer.InsertCaloriesStats' index: -4  
+3.	'pipliz.sendidle' -> 'ColonyStats+SharedStatisticsGatherer.InsertIdleStats' index: -3  
+4.	'pipliz.trade-out' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeOutStats' index: -2  
+5.	'pipliz.trade-in' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeInStats' index: -1  
+
+
+CallbackType: `OnGatherStatisticsData`  
+=======  
+Method type: System.Action<Colony, int, int>  
+Called with the colony and stats timeperiod index every time those stats were gathered  
+First integer is the period index; 0, 1 or 2 by default  
+Second integer is the time between updates for this periods (10, 40 or 240 seconds by default)  
+No registered uses  
+
+
