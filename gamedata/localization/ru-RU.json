@@ -27,12 +27,12 @@
 			"placementfail" : "Не удалось разместить баннер в этом месте"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Колония активирована: {0}",
+			"activecolony" : "Активная колония: {0}",
 			"addbanner" : "Добавить баннер",
 			"header" : "Размещение баннера",
 			"movebanner" : "Переместить баннер",
-			"mustbeleader" : "Что бы изменить банер, вы обязаны быть лидером колонии.",
-			"startcolony" : "Начните новую колонию здесь"
+			"mustbeleader" : "Чтобы изменить баннер, вы обязаны быть лидером колонии.",
+			"startcolony" : "Основать новую колонию здесь"
 		},
 		"biome" : {
 			"arctic" : {
@@ -66,7 +66,7 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "Количество монсторов днем",
-				"enablehappiness" : "Используйте Счастье",
+				"enablehappiness" : "Включить Счастье",
 				"header" : "Настройки колонии",
 				"nightmonsters" : "Количество монстров ночью"
 			},
@@ -87,16 +87,16 @@
 			"leave" : "Покинуть колонию",
 			"managecolonies" : {
 				"location" : {
-					"east" : "_MISSING_{0} blocks east",
-					"key" : "_MISSING_Location: ",
-					"north" : "_MISSING_{0} blocks north, ",
-					"south" : "_MISSING_{0} blocks south, ",
-					"west" : "_MISSING_{0} blocks west"
+					"east" : "{0} блоков на восток",
+					"key" : "Расположение: ",
+					"north" : "{0} блоков на север, ",
+					"south" : "{0} блоков на юг, ",
+					"west" : "{0} блоков на запад"
 				},
-				"mainbutton" : "_MISSING_Manage Colonies",
-				"mainheader" : "_MISSING_Manage Colony",
-				"selectheader" : "_MISSING_Select a colony to manage",
-				"siegemode" : "_MISSING_Siege mode:"
+				"mainbutton" : "Управление колониями",
+				"mainheader" : "Управление колонией",
+				"selectheader" : "Выберите колонию для управления",
+				"siegemode" : "Режим осады:"
 			},
 			"manageheader" : "Управление собственностью",
 			"manageowners" : "Управлять собственниками",
@@ -112,11 +112,11 @@
 			"recruittext5" : "Стоимость равна {0} нормальной стоимости из-за счастья",
 			"recruittofillbeds" : "Вербовать до заполнить все кровати",
 			"recruittofilljobs" : "Вербовать до заполнения всех вакансий",
-			"resetcolonypriority" : "_MISSING_Reset active colony priorities",
+			"resetcolonypriority" : "Сброс приоритетов активной колонии",
 			"science" : {
-				"incomingdescription2" : "_MISSING_They will share their science with you",
+				"incomingdescription2" : "Она поделятся с вами своими научными исследованиями",
 				"newagreement" : "Предложить научное соглашение",
-				"outgoingdescription2" : "_MISSING_You provide them with your science",
+				"outgoingdescription2" : "Вы поделитесь с ними своими научными исследованиями",
 				"selectcolony" : "Выберите колонию для отправки науки"
 			},
 			"selectcolony" : {
@@ -146,9 +146,9 @@
 				"mainheader" : "Новые настройки правил торговли",
 				"newrule" : "Предложить правила торговли",
 				"ruledescription" : "_MISSING_Traders will trade {0} from {1} to {2} if both of the following:",
-				"ruledescriptionlimit" : "_MISSING_ {0} items left to trade.",
+				"ruledescriptionlimit" : " {0} предметов осталось для торговли.",
 				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
-				"rulemaximumgoal" : "_MISSING_{0} has less than: ",
+				"rulemaximumgoal" : "{0} имеет менее чем: ",
 				"rulemaximumtraded" : "_MISSING_This deal will send up to the following amount of items in total: ",
 				"ruleminimumthis" : "{0} имеет более чем: ",
 				"ruleoutgoingdescr2" : "_MISSING_Send {0} if we have more than {1} and they have less than {2}.",
@@ -189,34 +189,34 @@
 			"steamfail" : "Не удалось получить данные. Возвращение в главное меню через 5 секунд."
 		},
 		"contentmanager" : {
-			"buttonbrowseworkshop" : "_MISSING_Browse Workshop",
-			"buttoncreateitem" : "_MISSING_Create item",
-			"buttoneditdetails" : "_MISSING_Edit details",
-			"buttonlistsubscribed" : "_MISSING_Subscribed items",
-			"buttonsubmitcontent" : "_MISSING_Submit",
-			"buttonupdatecontent" : "_MISSING_Update content",
-			"changelogplaceholder" : "_MISSING_Enter changelog here...",
-			"contenteditheader" : "_MISSING_Setting/updating content for {0}",
-			"contentpath" : "_MISSING_Content path: {0}",
-			"contenttypelabel" : "_MISSING_Content Type",
+			"buttonbrowseworkshop" : "Мастерская",
+			"buttoncreateitem" : "Создать предмет",
+			"buttoneditdetails" : "Изменить параметры",
+			"buttonlistsubscribed" : "Подписки",
+			"buttonsubmitcontent" : "Отправить",
+			"buttonupdatecontent" : "Обновить контент",
+			"changelogplaceholder" : "Введите здесь изменения...",
+			"contenteditheader" : "Установка/обновления контента для {0}",
+			"contentpath" : "Путь к контенту: {0}",
+			"contenttypelabel" : "Тип контента",
 			"contenttypes" : {
-				"itempack" : "_MISSING_Item Pack",
-				"misc" : "_MISSING_Miscellaneous",
+				"itempack" : "Набор предметов",
+				"misc" : "Разное",
 				"overhaul" : "_MISSING_Complete Overhaul",
-				"texturepack" : "_MISSING_Texture Pack",
-				"unknown" : "_MISSING_Unknown",
-				"utilities" : "_MISSING_Utilities",
-				"world" : "_MISSING_World"
+				"texturepack" : "Пакет текстур",
+				"unknown" : "Неизвестно",
+				"utilities" : "Утилиты",
+				"world" : "Мир"
 			},
-			"nocontentpath" : "_MISSING_No path selected yet",
-			"scenariolabel" : "_MISSING_Scenario name",
-			"statecommittingchanges" : "_MISSING_Committing changes: {0} / {1}",
-			"statepreparingconfig" : "_MISSING_Preparing config: {0} / {1}",
-			"statepreparingcontent" : "_MISSING_Preparing content: {0} / {1}",
-			"stateuploadingcontent" : "_MISSING_Uploading content: {0} / {1}",
-			"stateuploadingpreview" : "_MISSING_Uploading preview: {0} / {1}",
-			"thumbnailpath" : "_MISSING_Thumbnail path:",
-			"yourcontent" : "_MISSING_Your created workshop content"
+			"nocontentpath" : "Путь ещё не выбран",
+			"scenariolabel" : "Имя сценария",
+			"statecommittingchanges" : "Отправка изменений: {0} / {1}",
+			"statepreparingconfig" : "Подготовка конфига: {0} / {1}",
+			"statepreparingcontent" : "Подготовка контента: {0} / {1}",
+			"stateuploadingcontent" : "Отправка контента: {0} / {1}",
+			"stateuploadingpreview" : "Отправка изображения предпросмотра: {0} / {1}",
+			"thumbnailpath" : "Путь к изображения предпросмотра:",
+			"yourcontent" : "Созданный вами контент для Мастерской Steam"
 		},
 		"escapemenu" : {
 			"back" : "Вернуться в игру",
@@ -238,10 +238,10 @@
 			"apply" : "Применить",
 			"back" : "Назад",
 			"close" : "Закрыть",
-			"delete" : "_MISSING_Delete",
-			"description" : "_MISSING_Description",
-			"edit" : "_MISSING_Edit",
-			"enabled" : "_MISSING_Enabled",
+			"delete" : "Удалить",
+			"description" : "Отписаться",
+			"edit" : "Изменить",
+			"enabled" : "Включить",
 			"high" : "Много",
 			"inputplaceholder" : "Введите текст",
 			"low" : "Мало",
@@ -251,8 +251,8 @@
 			"normal" : "Нормально",
 			"previous" : "Пред. стр.",
 			"reset" : "Сбросить",
-			"select" : "_MISSING_Select",
-			"selected" : "_MISSING_Selected",
+			"select" : "Выбрать",
+			"selected" : "Выбрано",
 			"veryhigh" : "Оч. много",
 			"yes" : "Да"
 		},
@@ -277,8 +277,8 @@
 		},
 		"mainmenu" : {
 			"back" : "Назад",
-			"contentmanager" : "_MISSING_Mod Manager",
-			"coop" : "Хозяин сервера",
+			"contentmanager" : "Менеджер модификаций",
+			"coop" : "Создать сервер",
 			"info" : "Информация",
 			"multiplayer" : "Сетевая игра",
 			"quit" : "Выйти",
@@ -416,7 +416,7 @@
 					"name" : "Радиус банера VI"
 				},
 				"bannerradius7" : {
-					"description" : "_MISSING_Increases the safe radius created to 100 blocks",
+					"description" : "Увеличивает безопасный радиус до 100 блоков",
 					"name" : "Радиус банера VII"
 				},
 				"barleyfarmer" : {
@@ -849,7 +849,7 @@
 				"closehelp" : "Нажмите F1, чтобы закрыть/открыть меню помощи",
 				"closetoggle" : "Не показывать снова",
 				"next" : "След. стр.",
-				"openmanual" : "Открыть мануал (PDF)",
+				"openmanual" : "Открыть полное руководство (англ.)",
 				"previous" : "Пред. стр."
 			},
 			"specialblockremoval" : {
@@ -1099,7 +1099,7 @@
 					"resetall" : "Сбросить все"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
+					"devbuttons" : "Включить кнопки разработчика",
 					"invertx" : "Инвертировать ось-X",
 					"inverty" : "Инвертировать ось-Y",
 					"sensitivitylock" : "Заблокировать чувствительность мыши",
@@ -1114,7 +1114,7 @@
 			},
 			"language" : "Язык",
 			"languagemenu" : {
-				"coverage" : "Перевод выполнен на {0:F1}%. Срочно требуется ваша помощь, посетите Github!",
+				"coverage" : "Перевод выполнен на {0:F1}%.\nЕсли желаете помочь, посетите GitHub!",
 				"full" : "Настройки языка",
 				"language" : "Язык:",
 				"wiptext" : "Перевод может содержать ошибки и неточности.\nПеревели: Oleg720, WladySpb."
@@ -1155,7 +1155,7 @@
 				"sunshadowdistance" : "Дистанция теней",
 				"sunshadowquality" : "Качество теней",
 				"taa" : "TAA",
-				"texturequality" : "_MISSING_Texture quality",
+				"texturequality" : "Качество текстур",
 				"vsync" : "Верт. синх.",
 				"vsyncdouble" : "Двойная"
 			}
@@ -1165,31 +1165,31 @@
 			"cancel" : "отменить",
 			"confirmdelete" : "Подтвердить удаление",
 			"confirmdeletedescription" : "Вы собираетесь удалить папку, содержащую этот мир. Что вы хотите сделать?",
-			"confirmload" : "_MISSING_Confirm loading",
+			"confirmload" : "Подтвердить загрузку",
 			"delete" : "Удалить",
 			"hostingoptions" : "Настройки хостинга",
 			"load" : "Загрузить",
 			"loadworld" : "Загрузить мир",
 			"modschanged" : {
-				"added" : "_MISSING_'{0}' is added",
-				"disabled" : "_MISSING_'{0}' is disabled or missing but previously used.",
-				"header" : "_MISSING_Confirm loading world",
-				"main" : "_MISSING_Loading world '{0}' but some mods changed.\nThis may cause problems.",
-				"updated" : "_MISSING_'{0}' is updated from version {1} to {2}."
+				"added" : "'{0}' добавлен",
+				"disabled" : "'{0}' отключён или отсутствует, но ранее использовался.",
+				"header" : "Подтвердить загрузку мира",
+				"main" : "Загружается мир '{0}', но некоторые модификации изменены.\nЭто может вызвать проболемы.",
+				"updated" : "'{0}' обновлён с версии {1} до {2}."
 			},
 			"modslist" : {
-				"disableddependency" : "_MISSING_[Disabled]",
-				"missingdependency" : "_MISSING_[Missing]",
-				"outdateddependency" : "_MISSING_[Outdated]",
-				"requireddependency" : "_MISSING_[Requires]"
+				"disableddependency" : "[Отключен]",
+				"missingdependency" : "[Отсутствует]",
+				"outdateddependency" : "[Устарел]",
+				"requireddependency" : "[Требует]"
 			},
 			"newworld" : "Новый мир",
 			"password" : "пароль",
 			"play" : "Играть",
 			"servername" : "Название сервера",
 			"serverport" : "Порт сервера",
-			"typegenerateworld" : "_MISSING_Generate World",
-			"typeworkshop" : "_MISSING_Workshop World",
+			"typegenerateworld" : "Сгенерировать мир",
+			"typeworkshop" : "Мир из Мастерской",
 			"worlddate" : "Дата",
 			"worldname" : "Имя",
 			"worldname_long" : "Имя мира",
@@ -1578,7 +1578,7 @@
 		"matchlockgun" : "Требует пороховые мешочки для стрельбы свинцовыми пулями",
 		"mint" : "Это не подделка, если король говорит, что все в порядке",
 		"newworldmeal" : "Родоначальник всего фаст-фуда",
-		"npcshop" : "Колонисты посещают здесь один раз в день, чтобы собрать еду и предметы счастья",
+		"npcshop" : "Колонисты посещают его один раз в день, чтобы собрать еду и предметы счастья",
 		"olive" : "Расти на оливковых ветвях",
 		"oven" : "Использует дрова в качестве топлива для выпекания муки в хлеб",
 		"paperempty" : "Такой большой потенциал",
