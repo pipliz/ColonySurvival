@@ -1,5 +1,5 @@
 {
-	"coverage" : 86.9369369369369,
+	"coverage" : 83.3577712609971,
 	"hints" : {
 		"0" : "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
 		"1" : "Más y diferentes monstruos aparecerán si reclutas más colonos.",
@@ -27,7 +27,7 @@
 			"placementfail" : "No se pudo colocar el Estandarte en esta ubicación"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Colonia activa: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "Añadir Estandarte",
 			"header" : "Colocación del Estandarte",
 			"movebanner" : "Mover Estandarte",
@@ -70,21 +70,16 @@
 				"header" : "Ajustes de la Colonia",
 				"nightmonsters" : "Cantidad de monstruos de noche"
 			},
-			"connectedplayers" : "Jugadores conectados",
-			"currentowners" : "Dueños actuales",
 			"diplomacy" : {
 				"mainbutton" : "Diplomacia",
 				"mainheader" : "Diplomacia",
 				"ruleaccept" : "Aceptar",
 				"ruleactive" : "Activar",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "Pendiente",
 				"ruleremove" : "Remover"
 			},
 			"inventoryheader" : "Colonia",
-			"invite" : "Añadir como dueño de la Colonia",
-			"kick" : "Expulsar",
-			"leader" : "Lider",
-			"leave" : "Abandonar colonia",
 			"managecolonies" : {
 				"location" : {
 					"east" : "_MISSING_{0} blocks east",
@@ -93,7 +88,7 @@
 					"south" : "_MISSING_{0} blocks south, ",
 					"west" : "_MISSING_{0} blocks west"
 				},
-				"mainbutton" : "_MISSING_Manage Colonies",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "_MISSING_Manage Colony",
 				"selectheader" : "_MISSING_Select a colony to manage",
 				"siegemode" : "_MISSING_Siege mode:"
@@ -102,17 +97,30 @@
 			"manageowners" : "Gestión de dueños",
 			"nameedit" : "Editar:",
 			"namefield" : "Nombre:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Auto-reclutar en lugares de trabajo",
-			"recruitautorequirements" : "<i>El Reclutamiento automatico requiere al menos -10 de felicidad, Camas de repuesto, 2 dias de comida y 0 desempleados exactos para trabajar</i>",
 			"recruitmentamount" : "Cantidad de colonos a reclutar:",
 			"recruitmentbutton" : "Reclutar",
 			"recruitmentheader" : "Reclutamiento",
 			"recruittext3" : "Los Colonos requieren 2000 calorias por dia y una Cama.",
 			"recruittext4" : "Reclutar un colono cuesta {0} calorias.",
-			"recruittext5" : "El costo es {0} de lo normal por la Felicidad",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Rellenar las camas",
 			"recruittofilljobs" : "Rellenar los trabajos",
-			"resetcolonypriority" : "_MISSING_Reset active colony priorities",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "_MISSING_They will share their science with you",
 				"newagreement" : "Proponer acuerdo de investigación",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Selecciona una colonia para enviar ciencia"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "Colonos",
 				"headercolony" : "Colonia",
 				"headerleader" : "Lider",
 				"headerselect" : "Seleccionar",
 				"nocolonies" : "No hay colonos en la lista",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Seleccionar"
 			},
-			"settoleader" : "Fijar de lider",
 			"start" : {
 				"create" : "Crear Colonia",
 				"defaultkit" : "Primera vez que el Kit de inicio es usado",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Reclutamiento",
 			"startsettings" : "Ajustes de la Colonia",
-			"switchcolony" : "Cambiar a {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "Crear norma",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Nuevos ajustes para normas comerciales",
-				"newrule" : "Proponer norma comercial",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "_MISSING_Traders will trade {0} from {1} to {2} if both of the following:",
 				"ruledescriptionlimit" : "_MISSING_ {0} items left to trade.",
 				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Revivir"
 			},
 			"inventory" : {
-				"availableamount" : "En reserva: {0}",
-				"calorievalue" : "{0} calorias por item",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Artesanía y Reserva",
-				"distributionhappyperitem" : "Felicidad por item: {0}",
-				"distributionpercolonist" : "Item diario por colono: {0}",
-				"distributionplanned" : "Aumento de felicidad: {0}",
-				"distributionreached" : "Distribución: {0}%",
-				"distributiontotal" : "Items totales diarios: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "Valor de felicidad:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "Felicidad"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Aprieta F1 para cerrar o re-abrir este menú",
 				"closetoggle" : "No mostrar esto de nuevo",
 				"next" : "Siguiente",
 				"openmanual" : "Abrir manual (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Mouse y teclado",
 			"gameplaymenu" : {
 				"full" : "Sensibilidad y Teclas rápidas",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Teclado",
 				"keymenu" : {
 					"resetall" : "Restablecer"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "Invertir eje X",
 					"inverty" : "Invertir eje Y",
 					"sensitivitylock" : "Igualar sensibilidad de ambos ejes",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "Confirmar eliminación",
 			"confirmdeletedescription" : "Estas a punto de eliminar la carpeta que contiene este mundo.\n¿Seguro que quieres hacerlo?",
 			"confirmload" : "_MISSING_Confirm loading",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Borrar",
 			"hostingoptions" : "Ajustes de hosting",
 			"load" : "Cargar",
 			"loadworld" : "Cargar mundo",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "_MISSING_'{0}' is added",
 				"disabled" : "_MISSING_'{0}' is disabled or missing but previously used.",
@@ -1177,6 +1209,8 @@
 				"main" : "_MISSING_Loading world '{0}' but some mods changed.\nThis may cause problems.",
 				"updated" : "_MISSING_'{0}' is updated from version {1} to {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "_MISSING_[Disabled]",
 				"missingdependency" : "_MISSING_[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "_MISSING_[Requires]"
 			},
 			"newworld" : "Nuevo mundo",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "Contraseña",
 			"play" : "Jugar",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "Nombre del servidor",
 			"serverport" : "Puerto del servidor",
 			"typegenerateworld" : "_MISSING_Generate World",

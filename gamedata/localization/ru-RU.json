@@ -1,5 +1,5 @@
 {
-	"coverage" : 91.5165165165165,
+	"coverage" : 87.6099706744868,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -27,7 +27,7 @@
 			"placementfail" : "Не удалось разместить баннер в этом месте"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Активная колония: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "Добавить баннер",
 			"header" : "Размещение баннера",
 			"movebanner" : "Переместить баннер",
@@ -70,21 +70,16 @@
 				"header" : "Настройки колонии",
 				"nightmonsters" : "Количество монстров ночью"
 			},
-			"connectedplayers" : "Подключенные игроков",
-			"currentowners" : "Нынешние владельцы",
 			"diplomacy" : {
 				"mainbutton" : "Дипломатия",
 				"mainheader" : "Дипломатичность",
 				"ruleaccept" : "Принять",
 				"ruleactive" : "Активный",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "Ожидает",
 				"ruleremove" : "Удалить"
 			},
 			"inventoryheader" : "Колония",
-			"invite" : "Добавить в качестве владельца колонии",
-			"kick" : "Пинок из колонии",
-			"leader" : "Лидер",
-			"leave" : "Покинуть колонию",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} блоков на восток",
@@ -93,7 +88,7 @@
 					"south" : "{0} блоков на юг, ",
 					"west" : "{0} блоков на запад"
 				},
-				"mainbutton" : "Управление колониями",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "Управление колонией",
 				"selectheader" : "Выберите колонию для управления",
 				"siegemode" : "Режим осады:"
@@ -102,17 +97,30 @@
 			"manageowners" : "Управлять собственниками",
 			"nameedit" : "Изменить название колонии:",
 			"namefield" : "Название колонии:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Автоматический набор на работу",
-			"recruitautorequirements" : "<i>Включение этого приведет к найму нового колониста, при трудоустройстве вы потратите 10 единиц счастья, запасную кровать, еды на 2 дня и ровно 0 безработных.</i>",
 			"recruitmentamount" : "Количество колонистов для набора:",
 			"recruitmentbutton" : "Колонист новобранец",
 			"recruitmentheader" : "Пополнить ряды",
 			"recruittext3" : "Колонисты требуют 2000 калорий в день и кровать.",
 			"recruittext4" : "Вербовка следующего колониста стоит {0} калорий.",
-			"recruittext5" : "Стоимость равна {0} нормальной стоимости из-за счастья",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Вербовать до заполнить все кровати",
 			"recruittofilljobs" : "Вербовать до заполнения всех вакансий",
-			"resetcolonypriority" : "Сброс приоритетов активной колонии",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "Она поделятся с вами своими научными исследованиями",
 				"newagreement" : "Предложить научное соглашение",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Выберите колонию для отправки науки"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "Колонисты",
 				"headercolony" : "Колония",
 				"headerleader" : "Лидер",
 				"headerselect" : "Выбор",
 				"nocolonies" : "Нет колоний в списке",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Выбрать"
 			},
-			"settoleader" : "Выбран лидером",
 			"start" : {
 				"create" : "Создать колонию",
 				"defaultkit" : "Первый стартовый комплект используется",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Вербовка",
 			"startsettings" : "Настройки колонии",
-			"switchcolony" : "Переключиться на {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "Создать правление",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Новые настройки правил торговли",
-				"newrule" : "Предложить правила торговли",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "_MISSING_Traders will trade {0} from {1} to {2} if both of the following:",
 				"ruledescriptionlimit" : " {0} предметов осталось для торговли.",
 				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Возродиться"
 			},
 			"inventory" : {
-				"availableamount" : "В запасе: {0}",
-				"calorievalue" : "{0} калорий на элемент",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Крафт и запасы",
-				"distributionhappyperitem" : "Счастье за единицу: {0}",
-				"distributionpercolonist" : "Ежедневные предметы на одного колониста: {0}",
-				"distributionplanned" : "Планируемое увеличение счастья: {0}",
-				"distributionreached" : "Процент распределен: {0}%",
-				"distributiontotal" : "Ежедневные итоги: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "Значение счастья:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "Счастье"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Нажмите F1, чтобы закрыть/открыть меню помощи",
 				"closetoggle" : "Не показывать снова",
 				"next" : "След. стр.",
 				"openmanual" : "Открыть полное руководство (англ.)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Игра",
 			"gameplaymenu" : {
 				"full" : "Настройки игры",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Клавиши управления",
 				"keymenu" : {
 					"resetall" : "Сбросить все"
 				},
 				"mousemenu" : {
-					"devbuttons" : "Включить кнопки разработчика",
 					"invertx" : "Инвертировать ось-X",
 					"inverty" : "Инвертировать ось-Y",
 					"sensitivitylock" : "Заблокировать чувствительность мыши",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "Подтвердить удаление",
 			"confirmdeletedescription" : "Вы собираетесь удалить папку, содержащую этот мир. Что вы хотите сделать?",
 			"confirmload" : "Подтвердить загрузку",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Удалить",
 			"hostingoptions" : "Настройки хостинга",
 			"load" : "Загрузить",
 			"loadworld" : "Загрузить мир",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "'{0}' добавлен",
 				"disabled" : "'{0}' отключён или отсутствует, но ранее использовался.",
@@ -1177,6 +1209,8 @@
 				"main" : "Загружается мир '{0}', но некоторые модификации изменены.\nЭто может вызвать проболемы.",
 				"updated" : "'{0}' обновлён с версии {1} до {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "[Отключен]",
 				"missingdependency" : "[Отсутствует]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "[Требует]"
 			},
 			"newworld" : "Новый мир",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "пароль",
 			"play" : "Играть",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "Название сервера",
 			"serverport" : "Порт сервера",
 			"typegenerateworld" : "Сгенерировать мир",

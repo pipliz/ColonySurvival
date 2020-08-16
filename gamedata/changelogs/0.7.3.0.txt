@@ -38,6 +38,8 @@ Bug fixies:
 - Fixed a situation with siege mode being caused when a colony *can* spawn a monster, but it's blocked by other safe zones when adjusted for sunrise-time-arrival. Ignore the sunrise-time-arrival-adjustment in this case and spawn them anyway.
 - fix "coffebean farmer tool" -> "coffeebean farmer tool"
 - fix "chickenfarmer limits" -> "chicken farmer limits"
+- fix the happiness menu not updating its sliders from the values of a previous colony when the current colony hasn't got customized values (if you never moved them)
+- fix an edge case where re-used UI elements for the crafting limits popup would not be properly adjusted to the new values
 
 Fixes to 0.7.3.x features, and when some of the above fixes were introduced;
 
@@ -74,3 +76,5 @@ Fixes to 0.7.3.x features, and when some of the above fixes were introduced;
 - fix "coffebean farmer tool" -> "coffeebean farmer tool"
 - fix "chickenfarmer limits" -> "chicken farmer limits"
 - Updated ru-RU/pl-PL/ja-JP locales via github
+- fix an edge case where re-used UI elements for the crafting limits popup would not be properly adjusted to the new values
+- fix the happiness menu not updating its sliders from the values of a previous colony when the current colony hasn't got customized values (if you never moved them)

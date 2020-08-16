@@ -1,5 +1,5 @@
 {
-	"coverage" : 90.8408408408408,
+	"coverage" : 87.0234604105572,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -27,7 +27,7 @@
 			"placementfail" : "この場所にバナーは設置できません"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "アクティブなコロニー: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "バナーを追加",
 			"header" : "バナーの設置",
 			"movebanner" : "バナーを移動",
@@ -70,21 +70,16 @@
 				"header" : "コロニーの設定",
 				"nightmonsters" : "夜のモンスタースポーン量"
 			},
-			"connectedplayers" : "接続済みプレイヤー",
-			"currentowners" : "現在のオーナー",
 			"diplomacy" : {
 				"mainbutton" : "対外交渉",
 				"mainheader" : "対外交渉",
 				"ruleaccept" : "受諾",
 				"ruleactive" : "アクティブ",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "保留",
 				"ruleremove" : "削除"
 			},
 			"inventoryheader" : "コロニー",
-			"invite" : "オーナーとして追加",
-			"kick" : "コロニーから追放",
-			"leader" : "リーダー",
-			"leave" : "コロニーを離脱",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} ブロック東、",
@@ -93,7 +88,7 @@
 					"south" : "{0} ブロック南、",
 					"west" : "{0} ブロック西"
 				},
-				"mainbutton" : "コロニーを管理",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "コロニーを管理",
 				"selectheader" : "管理するコロニーを選んでください",
 				"siegemode" : "シージモード:"
@@ -102,17 +97,30 @@
 			"manageowners" : "オーナーを管理",
 			"nameedit" : "コロニー名を編集:",
 			"namefield" : "コロニー名:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "仕事設定時に自動雇用",
-			"recruitautorequirements" : "<i>この設定をオンにすると、仕事を設置したときに、少なくとも-10の幸福度、空きのベッド、2日分相当の食料があり、失業者皆無の状態だと、新しい入植者を雇用します</i>",
 			"recruitmentamount" : "雇用する入植者の人数:",
 			"recruitmentbutton" : "入植者を雇用",
 			"recruitmentheader" : "雇用",
 			"recruittext3" : "入植者には、1日2000カロリーとベッドが必要です。",
 			"recruittext4" : "次の入植者を雇用するには {0} カロリーが必要です。",
-			"recruittext5" : "雇用コストは幸福度の影響により通常の {0} となっています。",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "空きベッドが埋まるまで雇用",
 			"recruittofilljobs" : "空きの仕事が埋まるまで雇用",
-			"resetcolonypriority" : "アクティブなコロニーの優先度をリセット",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "先方の科学を当方と共有する",
 				"newagreement" : "科学協定を提案",
@@ -120,14 +128,17 @@
 				"selectcolony" : "科学を送る対象のコロニーを選んでください"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "入植者",
 				"headercolony" : "コロニー",
 				"headerleader" : "リーダー",
 				"headerselect" : "選択",
 				"nocolonies" : "リストするコロニーがありません",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "選択"
 			},
-			"settoleader" : "リーダーに設定",
 			"start" : {
 				"create" : "コロニーを建設",
 				"defaultkit" : "初回用スターターキットが使用されます",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "雇用",
 			"startsettings" : "コロニーの設定",
-			"switchcolony" : "{0} に切り替え",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "ルールを作成",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "新しい交易ルールの設定",
-				"newrule" : "交易ルールを提案",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "交易商は以下の双方を満たすとき、{1} から {2} へ {0} を輸送する:",
 				"ruledescriptionlimit" : "残り取引数あと {0}",
 				"ruleincomingdescr2" : "先方の備蓄が {1} より多く、当方の備蓄が {2} より少ないとき、{0} を受け取る",
@@ -731,20 +744,20 @@
 				"respawn" : "リスポーン"
 			},
 			"inventory" : {
-				"availableamount" : "備蓄品内に: {0}",
-				"calorievalue" : "1個あたり {0} カロリー",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "作成 & 備蓄品",
-				"distributionhappyperitem" : "1個あたりの幸福度: {0}",
-				"distributionpercolonist" : "入植者1人あたりの1日必要量: {0}",
-				"distributionplanned" : "想定される幸福度上昇量: {0}",
-				"distributionreached" : "支給率: {0}%",
-				"distributiontotal" : "合計の1日必要量: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "幸福度基準値:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "幸福度"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "F1を押すと、このメニューを開いたり閉じたりできます。",
 				"closetoggle" : "次回から表示しない",
 				"next" : "次へ",
 				"openmanual" : "マニュアルを開く（PDF）",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "ゲームプレイ",
 			"gameplaymenu" : {
 				"full" : "ゲームプレイ設定",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "キー割り当て",
 				"keymenu" : {
 					"resetall" : "全てリセット"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "X軸反転",
 					"inverty" : "Y軸反転",
 					"sensitivitylock" : "両軸の感度を同値に固定",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "削除の確認",
 			"confirmdeletedescription" : "あなたはこのワールドを含むフォルダを削除しようとしています。\nどうしますか？",
 			"confirmload" : "ロードの確認",
+			"convert" : "_MISSING_Convert",
 			"delete" : "削除",
 			"hostingoptions" : "ホスティング設定",
 			"load" : "ロード",
 			"loadworld" : "ワールドをロード",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "'{0}' が追加されました",
 				"disabled" : "'{0}' は以前使われていましたが、無効化または削除されています。",
@@ -1177,6 +1209,8 @@
 				"main" : "一部のmodが変更されているので、ワールド '{0}' のロードには問題が発生するかもしれません。",
 				"updated" : "'{0}' はバージョン {1} から {2} にアップデートされています。"
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "_MISSING_[Disabled]",
 				"missingdependency" : "_MISSING_[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "_MISSING_[Requires]"
 			},
 			"newworld" : "新規ワールド",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "パスワード",
 			"play" : "プレイ",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "サーバー名",
 			"serverport" : "サーバーのポート",
 			"typegenerateworld" : "ワールドの生成",

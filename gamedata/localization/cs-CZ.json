@@ -1,5 +1,5 @@
 {
-	"coverage" : 87.987987987988,
+	"coverage" : 84.2375366568915,
 	"hints" : {
 		"0" : "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1" : "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
@@ -27,7 +27,7 @@
 			"placementfail" : "Na toto místo svůj prapor umístit nemůžete."
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Aktivní kolonie: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "Přidat prapor",
 			"header" : "Položení praporu",
 			"movebanner" : "Přesunout prapor",
@@ -70,21 +70,16 @@
 				"header" : "Nastavené kolonie",
 				"nightmonsters" : "Počet nočních monster"
 			},
-			"connectedplayers" : "Připojení hráči",
-			"currentowners" : "Momentální vlastníci",
 			"diplomacy" : {
 				"mainbutton" : "Diplomacie",
 				"mainheader" : "Diplomacie",
 				"ruleaccept" : "Přijmout",
 				"ruleactive" : "Aktivní",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "Čekající",
 				"ruleremove" : "Odmítnout"
 			},
 			"inventoryheader" : "Správa kolonie",
-			"invite" : "Přidat jako vládce kolonie",
-			"kick" : "Vyhodit z kolonie",
-			"leader" : "Vůdce/i",
-			"leave" : "Opustit kolonii",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} bloků východně",
@@ -93,7 +88,7 @@
 					"south" : "{0} bloků jižně, ",
 					"west" : "{0} bloků západně"
 				},
-				"mainbutton" : "Spravovat kolonie",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "Správa kolonií",
 				"selectheader" : "Vyberte kolonii ke spravování.",
 				"siegemode" : "Obléhání:"
@@ -102,17 +97,30 @@
 			"manageowners" : "Spravovat vlastníky",
 			"nameedit" : "Upravit jméno kolonie:",
 			"namefield" : "Jméno kolonie:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Automatická rekrutace při založení nové práce",
-			"recruitautorequirements" : "<i>Zapínání této funkce vždy najme kolonistu když založíte nové pracovní místo s alespoň -10 spokojenosti, volnými postelemi, příděl kalorií o hodnotě dvou dnů a přesně 0 nezaměstnaných.</i>",
 			"recruitmentamount" : "Počet rekrutovaných kolonistů:",
 			"recruitmentbutton" : "Rekrutovat kolonistu",
 			"recruitmentheader" : "Rekrutace",
 			"recruittext3" : "Kolonisté vyžadují 2000 kalorií na den a volnou postel.",
 			"recruittext4" : "Rekrutace nového kolonisty bude stát {0} kalorií.",
-			"recruittext5" : "Cena je zvýšena/snížena o {0} normální ceny díky úrovni spokojenosti.",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Najmout do zaplnění všech postelí",
 			"recruittofilljobs" : "Najmout do zaplnění všech prací",
-			"resetcolonypriority" : "Obnovit priority aktivní kolonie",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "_MISSING_They will share their science with you",
 				"newagreement" : "Nabídnout sdílení výzkumu",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Vyberte s jakou kolonií chcete výzkum sdílet:"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "Kolonisté",
 				"headercolony" : "Kolonie",
 				"headerleader" : "Vůdce/i",
 				"headerselect" : "Výběr",
 				"nocolonies" : "Žádné kolonie na seznamu.",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Vybrat"
 			},
-			"settoleader" : "Vybrat jako vůdce",
 			"start" : {
 				"create" : "Vytvořit kolonii",
 				"defaultkit" : "Toto je poprvé, kdy jste použili balíček na založení kolonie.",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Rekrutace",
 			"startsettings" : "Nastavení kolonie",
-			"switchcolony" : "Změnit na {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "Vytvořit obchodní požadavek",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Nastavení nového obchodního požadavku",
-				"newrule" : "Nabídnout obchodní požadavek",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "Obchodníci vyobchodují {0} z {1} do {2} pokud obě kolonie:",
 				"ruledescriptionlimit" : "Zbývá vyobchodovat {0} předmětů.",
 				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Oživit"
 			},
 			"inventory" : {
-				"availableamount" : "Uskladněno: {0}",
-				"calorievalue" : "{0} kalorií na jeden kus",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Vyrábění a zásoby",
-				"distributionhappyperitem" : "Spokojenost/kus: {0}",
-				"distributionpercolonist" : "Denní příděl věci na kolonistu: {0}",
-				"distributionplanned" : "Očekávané zvýšení spokojenosti: {0}",
-				"distributionreached" : "Distribuováno: {0}%",
-				"distributiontotal" : "Minimální potřebný počet výroby/den: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "Hodnota spokojenosti:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "Spokojenost"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Stisknětě F1 pro zavření nebo otevření tohoto menu",
 				"closetoggle" : "Nezobrazovat znova",
 				"next" : "Další",
 				"openmanual" : "Otevřít manuál (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Gameplay",
 			"gameplaymenu" : {
 				"full" : "Nastavení Gameplaye",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Nastavení kláves",
 				"keymenu" : {
 					"resetall" : "Resetovat vše"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "Prohodit osu-x",
 					"inverty" : "Prohodit osu-y",
 					"sensitivitylock" : "Společná senzitivita obou os",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "Potvrdit smazání",
 			"confirmdeletedescription" : "Chystáte se smazat adresář obsahující data tohoto světa.\nCo chcete dělat?",
 			"confirmload" : "_MISSING_Confirm loading",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Vymazat",
 			"hostingoptions" : "Nastavení hostování",
 			"load" : "Načíst",
 			"loadworld" : "Načíst svět",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "_MISSING_'{0}' is added",
 				"disabled" : "_MISSING_'{0}' is disabled or missing but previously used.",
@@ -1177,6 +1209,8 @@
 				"main" : "_MISSING_Loading world '{0}' but some mods changed.\nThis may cause problems.",
 				"updated" : "_MISSING_'{0}' is updated from version {1} to {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "_MISSING_[Disabled]",
 				"missingdependency" : "_MISSING_[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "_MISSING_[Requires]"
 			},
 			"newworld" : "Nový svět",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "Heslo",
 			"play" : "Hrát",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "Název serveru",
 			"serverport" : "Port serveru",
 			"typegenerateworld" : "_MISSING_Generate World",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 100.00,
+	"coverage" : 47.9472140762463,
 	"hints" : {
 		"0" : "Je größer die Farm um so mehr wird produziert. Ausgenommen sind Beerensammler.",
 		"1" : "Wenn du mehr Kolonisten rekrutierst, erscheinen auch mehr Monster.",
@@ -70,21 +70,17 @@
 				"header" : "Kolonie Einstellungen",
 				"nightmonsters" : "Monster in der Nacht"
 			},
-			"connectedplayers" : "Spieler verbunden",
-			"currentowners" : "Aktueller Herrscher",
+
 			"diplomacy" : {
 				"mainbutton" : "Diplomatie",
 				"mainheader" : "Diplomatie",
 				"ruleaccept" : "Akzeptieren",
 				"ruleactive" : "Aktiv",
+				"ruleedit" : "Bearbeiten",
 				"rulepending" : "Pendent",
-				"ruleremove" : "Entfernen"
+				"ruleremove" :  "Entfernen"
 			},
 			"inventoryheader" : "Kolonie",
-			"invite" : "Herrscher in Kolonie einladen",
-			"kick" : "Aus Kolonie entfernen",
-			"leader" : "Anführer",
-			"leave" : "Kolonie verlassen",
 			"managecolonies" : {
 				"location" : {
 					"east" : "Blöcke OST",
@@ -93,7 +89,7 @@
 					"south" : "Blöcke SÜD, ",
 					"west" : "Blöcke WEST"
 				},
-				"mainbutton" : "Kolonien verwalten",
+				"mainbutton2" : "Kolonien verwalten",
 				"mainheader" : "Kolonie verwalten",
 				"selectheader" : "Wähle eine Kolonie zum Verwalten",
 				"siegemode" : "Belagerungs-Modus:"
@@ -102,17 +98,30 @@
 			"manageowners" : "Eigentum verwalten",
 			"nameedit" : "Kolonie umbenennen:",
 			"namefield" : "Kolonie Name:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "Spieler verbunden",
+				"currentowners" : "Aktueller Herrscher",
+				"follower" : "_MISSING_Follower",
+				"invite" : "Herrscher in Kolonie einladen",
+				"kick" : "Aus Kolonie entfernen",
+				"leader" : "Anführer",
+				"leave" : "Kolonie verlassen",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Automatische Rekrutierung bei freien Jobs",
-			"recruitautorequirements" : "<i>Wenn aktiv werden solange Kolonisten rekrutiert, bis: Zufriedenheit < -10, alle Betten besetzt sind, Kalorien für weniger als 2 Tage auf Lager, Arbeitslose > -1</i>",
 			"recruitmentamount" : "Anzahl zu rekrutierender Kolonisten:",
 			"recruitmentbutton" : "Kolonist rekrutieren",
 			"recruitmentheader" : "Rekrutierung",
 			"recruittext3" : "Kolonisten verbrauchen 2000 Kalorien pro Tag und benötigen ein Bett.",
 			"recruittext4" : "Der nächste Kolonist kostet {0} Kalorien.",
-			"recruittext5" : "Die Kosten betragen {0} der Grundkosten aufgrund der Zufriedenheit.",
+			"recruittext5_dec" : "Die Kosten betragen {0} der Grundkosten aufgrund der Zufriedenheit.",
+			"recruittext5_inc" : "Die Kosten betragen {0} der Grundkosten aufgrund der Zufriedenheit.",
 			"recruittofillbeds" : "besetze alle Betten",
 			"recruittofilljobs" : "besetze alle Jobs",
-			"resetcolonypriority" : "Kolonie Prioritäten zurücksetzen",
+			"resetcolonypriority2" :"Kolonie Prioritäten zurücksetzen",
 			"science" : {
 				"incomingdescription2" : "Sie wollen ihre Wissenschaft mit uns teilen",
 				"newagreement" : "Forschungsabkommen vorschlagen",
@@ -120,14 +129,17 @@
 				"selectcolony" : "Wähle eine Kolonie um Forschung zu senden"
 			},
 			"selectcolony" : {
+				"currentcolony" : "Aktuelle Kolonie: {0}",
 				"headercolonists" : "Kolonisten",
 				"headercolony" : "Kolonie",
 				"headerleader" : "Herrscher",
 				"headerselect" : "Auswählen",
 				"nocolonies" : "Keine Kolonien in der Liste",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Auswählen"
 			},
-			"settoleader" : "Zum Anführer benennen",
 			"start" : {
 				"create" : "Kolonie gründen",
 				"defaultkit" : "Zur Gründung einer neuen Kolonie wird ein Kolonie-Starter-Kit verbraucht!",
@@ -140,14 +152,16 @@
 			},
 			"startrecruitment" : "Rekrutierung",
 			"startsettings" : "Kolonie Einstellungen",
-			"switchcolony" : "Wecheln zu {0}",
+			"switchcolony2" : "Wecheln zu {0}",
 			"trading" : {
 				"completerule" : "Handels-Regel erstellen",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Neue Einstellungen für Handelsregeln",
-				"newrule" : "Handelsregel vorschlagen",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "Händler werden mit {0} von {1} nach {2} handeln, wenn die beiden folgenden Bedingungen erfüllt sind:",
 				"ruledescriptionlimit" : "{0} zum Handel überlassene Gegenstände.",
-				"ruleincomingdescr2" : "Erhalten Sie {0} wenn sie mehr als {1} haben und wir weniger als {2}.",
+				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
 				"rulemaximumgoal" : " {0} hat weniger als: ",
 				"rulemaximumtraded" : "Dieser Handel wird insgesamt bis zu der folgenden Menge an Gegenständen senden: ",
 				"ruleminimumthis" : " {0} hat mehr als: ",
@@ -731,20 +745,20 @@
 				"respawn" : "Wiederbeleben"
 			},
 			"inventory" : {
-				"availableamount" : "Auf Lager: {0}",
-				"calorievalue" : "{0} Kalorien pro Item",
-				"craftingstockpile" : "Handwerk und Lager",
-				"distributionhappyperitem" : "Zufriedenheit pro Item: {0}",
-				"distributionpercolonist" : "Verbrauch pro Kolonist: {0}/Tag",
-				"distributionplanned" : "Geplante Zufriedenheit: {0}",
-				"distributionreached" : "Anteil: {0}%",
-				"distributiontotal" : "Verbrauch Total: {0}/Tag",
+				"availableamount2" : "Auf Lager: {0}",
+				"calorievalue2" : "{0} Kalorien pro Item",
+				"craftingstockpile" : "Herstellung und Lager",
+				"distributionhappyperitem2" : "Zufriedenheit pro Item: {0}",
+				"distributionpercolonist2" : "Verbrauch pro Kolonist: {0}/Tag",
+				"distributionplanned2" : "Geplante Zufriedenheit: {0}",
+				"distributionreached2" : "Anteil: {0}%",
+				"distributiontotal2" : "Verbrauch Total: {0}/Tag",
 				"filter-calories" : "Kalorien",
 				"filter-combat" : "Kampf",
 				"filter-food" : "Nahrung",
 				"filter-jobs" : "Handwerk",
 				"filter-luxuries" : "Luxus",
-				"happinessvalue" : "Zufriedenheit Wert:",
+				"happinessvalue2" : "Zufriedenheit Wert:",
 				"happy" : {
 					"header" : "Zufriedenheit"
 				},
@@ -846,7 +860,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Drücke F1, um dieses Menü zu öffnen und zu schließen",
 				"closetoggle" : "Nie wieder anzeigen",
 				"next" : "Weiter",
 				"openmanual" : "Handbuch öffnen (PDF)",
@@ -1094,12 +1107,29 @@
 			"gameplay" : "Spiel",
 			"gameplaymenu" : {
 				"full" : "Spieleinstellungen",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Tastaturbelegung",
 				"keymenu" : {
 					"resetall" : "Alles zurücksetzen"
 				},
 				"mousemenu" : {
-					"devbuttons" : "Aktiviere Entwickler Buttons",
 					"invertx" : "X-Achse invertieren",
 					"inverty" : "Y-Achse invertieren",
 					"sensitivitylock" : "Achsen synchronisieren",
@@ -1163,13 +1193,16 @@
 		"singleplayermenu" : {
 			"alreadyexists" : "Welt existiert bereits!",
 			"cancel" : "Abbrechen",
-			"confirmdelete" : "Löschen bestätigen",
+			"confirmdelete" : "Löschen bestätigen"
 			"confirmdeletedescription" : "Du bist dabei den Ordner mit dieser Welt zu löschen\nWas willst du tun?",
 			"confirmload" : "Ladevorgang bestätigt",
+			"convert" : "Konvertieren",
 			"delete" : "Löschen",
 			"hostingoptions" : "Host Einstellungen",
 			"load" : "Laden",
 			"loadworld" : "Welt laden",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "'{0}' ist hinzugefügt",
 				"disabled" : "'{0}' ist deaktiviert oder fehlt, wurde vorher genutzt.",
@@ -1177,6 +1210,8 @@
 				"main" : "Welt geladen '{0}' aber einige Mods haben sich geändert.\nDies kann Probleme verursachen.",
 				"updated" : "'{0}' wurde aktualisiert von Version {1} to {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "[Deaktiviert ]",
 				"missingdependency" : "[Fehlt]",
@@ -1184,9 +1219,11 @@
 				"requireddependency" : "[Erforderlich]"
 			},
 			"newworld" : "Neue Welt",
+			"nosubscribeditems" : "Keine abonnierte Workshop Welt gefunden",
 			"password" : "Passwort",
 			"play" : "Spielen",
-			"servername" : "Server Name",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
+			"servername" : "Server Name"
 			"serverport" : "Server Port",
 			"typegenerateworld" : "Welt generieren",
 			"typeworkshop" : "Workshop Welt",
