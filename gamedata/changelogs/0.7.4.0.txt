@@ -1,0 +1,44 @@
+0.7.4 (2020-**-**)
+
+- Touched up the UI at many, many places
+-- Moved some settings from pop-ups straight into the colony tab of the inventory
+- Added support for UI scaling (100%-400%)
+- Added in-game support for converting worlds from singleplayer to co-op/multiplayer and back
+- Added support for trashing items in the stockpile
+- Added ability to edit rules in the diplomacy menu
+- Removed "press F1 to close" requirement for the quickstart pop-up
+- Allow selecting "non-valid" worlds in the load world menu so they can be deleted in-game
+- Swapped out the "norse" font
+- Updated used version of Unity (the engine) from 2018.4 to 2019.4
+-- Deprecated linux 32-bit support (official minimum system requirements were 64-bit for years)
+-- Updated postprocess effects (required minor tweaks to visuals/settings)
+- Slightly optimized rendering of many meshes (like wheat)
+- Slightly optimized terrain mesh creation (new unity API)
+- Added "select all"/"select none" buttons to the mod list for new worlds
+- Added an option to permanently toggle on the "block highlight" visual
+- Added a changing crosshair based on context
+- Added support for changing the crosshair files
+- Added support for scaling the crosshair (0%-400%)
+
+- Workaround for torch issues on a mac + opengl + intel gpu combination
+
+
+Smaller stuff
+- Split up the setup of trade deals into "finite" and "infinite" ones
+- Swapped some "on-hover" audio triggers for buttons to "on-click" ones, and added those more widely
+- Highlight the active inventory tab more consistently
+- Highlight the currently selected period's button in the statistics menu
+- Increased stack size of plaster to 200
+- Added more precise prompts about missing world names in the new world menu
+
+Fixes
+- Fixed trade deal item selection pop-up not showing the actual items present in the selected colony
+- Fix "hide all" in the statistics menu only hiding currently filtered options
+- Fix a bug with the server when running on a machine that has only 1 cpu thread
+- Fix client only doing LAN discovery on the primary network interface
+- Fix an issue where the client would "finish" loading before it was actually done, the more likely to trigger the lower the bandwidth
+
+
+Internals:
+- Overhauled the system used to programmatically create UI elements - to allow for more visually pleasing results
+- Replaced the Rust based "pip_quick.dll" with unity's Burst system - to allow easier modification of code that is performance sensitive, and future optimization

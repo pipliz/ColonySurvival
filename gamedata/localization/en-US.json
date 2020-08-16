@@ -27,7 +27,7 @@
 			"placementfail" : "Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Active Colony: {0}",
+			"activecolony" : "Active colony: {0}",
 			"addbanner" : "Add Banner",
 			"header" : "Banner Placement",
 			"movebanner" : "Move Banner",
@@ -70,21 +70,16 @@
 				"header" : "Colony Settings",
 				"nightmonsters" : "Night Monster Amount"
 			},
-			"connectedplayers" : "Connected Players",
-			"currentowners" : "Current Owners",
 			"diplomacy" : {
 				"mainbutton" : "Diplomacy",
 				"mainheader" : "Diplomacy",
 				"ruleaccept" : "Accept",
 				"ruleactive" : "Active",
+				"ruleedit" : "Edit",
 				"rulepending" : "Pending",
 				"ruleremove" : "Remove"
 			},
 			"inventoryheader" : "Colony",
-			"invite" : "Add as colony owner",
-			"kick" : "Kick from colony",
-			"leader" : "Leader",
-			"leave" : "Leave colony",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} blocks east",
@@ -93,7 +88,7 @@
 					"south" : "{0} blocks south, ",
 					"west" : "{0} blocks west"
 				},
-				"mainbutton" : "Manage Colonies",
+				"mainbutton2" : "Remote manage colonies",
 				"mainheader" : "Manage Colony",
 				"selectheader" : "Select a colony to manage",
 				"siegemode" : "Siege mode:"
@@ -102,17 +97,30 @@
 			"manageowners" : "Manage Owners",
 			"nameedit" : "Edit Colony Name:",
 			"namefield" : "Colony Name:",
-			"recruitauto" : "Auto recruit on job placement",
-			"recruitautorequirements" : "<i>Turning this on will recruit a new colonist when placing a job with at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed</i>",
+			"ownership" : {
+				"action" : "Action",
+				"connectedplayers" : "Connected Players",
+				"currentowners" : "Current Owners",
+				"follower" : "Follower",
+				"invite" : "Add as colony owner",
+				"kick" : "Kick",
+				"leader" : "Leader",
+				"leave" : "Leave colony",
+				"name" : "Name",
+				"role" : "Role",
+				"settoleader" : "Set to Leader"
+			},
+			"recruitauto" : "Automatic recruit on job placement",
 			"recruitmentamount" : "Amount of colonists to recruit:",
 			"recruitmentbutton" : "Recruit Colonist",
 			"recruitmentheader" : "Recruitment",
 			"recruittext3" : "Colonists require 2000 calories per day and a bed.",
 			"recruittext4" : "Recruiting the next colonist costs {0} calories.",
-			"recruittext5" : "Cost is {0} of normal cost due to happiness",
+			"recruittext5_dec" : "Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
-			"resetcolonypriority" : "Reset active colony priorities",
+			"resetcolonypriority2" : "Reset active colony",
 			"science" : {
 				"incomingdescription2" : "They will share their science with you",
 				"newagreement" : "Propose science agreement",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Select a colony to send science to"
 			},
 			"selectcolony" : {
+				"currentcolony" : "Current Colony: {0}",
 				"headercolonists" : "Colonists",
 				"headercolony" : "Colony",
 				"headerleader" : "Leader",
 				"headerselect" : "Select",
 				"nocolonies" : "No colonies to list",
+				"nocoloniesowned" : "No owned colonies to list",
+				"nocoloniesthird" : "No external colonies to list",
+				"othercolonies" : "Other Colonies",
 				"select" : "Select"
 			},
-			"settoleader" : "Set to leader",
 			"start" : {
 				"create" : "Create Colony",
 				"defaultkit" : "First time starter kit is used",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Recruitment",
 			"startsettings" : "Colony Settings",
-			"switchcolony" : "Switch to {0}",
+			"switchcolony2" : "Switch active colony to:",
 			"trading" : {
 				"completerule" : "Create rule",
+				"completeruleedit" : "Complete rule edit",
 				"mainheader" : "New trading rule settings",
-				"newrule" : "Propose trading rule",
+				"newruleinfinite" : "New infinite trading rule",
+				"newrulelimited" : "New limited trading rule",
 				"ruledescription" : "Traders will trade {0} from {1} to {2} if both of the following:",
 				"ruledescriptionlimit" : " {0} items left to trade.",
 				"ruleincomingdescr2" : "Get {0} if they have more than {1} and we have less than {2}.",
@@ -219,10 +232,10 @@
 			"yourcontent" : "Your created workshop content"
 		},
 		"escapemenu" : {
-			"back" : "Return to game",
+			"back" : "Back",
 			"info" : "Info",
-			"quitdesktop" : "Quit to desktop",
-			"quitmain" : "Quit to main menu",
+			"quitdesktop" : "Desktop",
+			"quitmain" : "Main Menu",
 			"settings" : "Settings"
 		},
 		"firstpersonstats" : {
@@ -731,20 +744,20 @@
 				"respawn" : "Respawn"
 			},
 			"inventory" : {
-				"availableamount" : "In stockpile: {0}",
-				"calorievalue" : "{0} calories per item",
-				"craftingstockpile" : "Crafting & Stockpile",
-				"distributionhappyperitem" : "Happiness per item: {0}",
-				"distributionpercolonist" : "Daily items per colonist: {0}",
-				"distributionplanned" : "Planned happiness increase: {0}",
-				"distributionreached" : "Percentage distributed: {0}%",
-				"distributiontotal" : "Daily total items: {0}",
+				"availableamount2" : "In stockpile",
+				"calorievalue2" : "Calories per item",
+				"craftingstockpile" : "Stockpile",
+				"distributionhappyperitem2" : "Happiness per item",
+				"distributionpercolonist2" : "Daily items per colonist",
+				"distributionplanned2" : "Planned happiness increase",
+				"distributionreached2" : "Percentage distributed",
+				"distributiontotal2" : "Daily total items",
 				"filter-calories" : "Calories",
 				"filter-combat" : "Combat",
 				"filter-food" : "Food related",
 				"filter-jobs" : "Job blocks",
 				"filter-luxuries" : "Luxuries",
-				"happinessvalue" : "Happiness value:",
+				"happinessvalue2" : "Happiness value",
 				"happy" : {
 					"header" : "Happiness"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Press F1 to close or re-open this menu",
 				"closetoggle" : "Do not show this again",
 				"next" : "Next",
 				"openmanual" : "Open Manual (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Gameplay",
 			"gameplaymenu" : {
 				"full" : "Gameplay Settings",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "Adaptive crosshair",
+					"crosshairratio" : "Crosshair scale",
+					"devbuttons" : "Enable developer buttons",
+					"permanenthighlight" : "Permanent block highlight",
+					"ratio0" : "Disabled",
+					"ratio100" : "100%",
+					"ratio150" : "150%",
+					"ratio200" : "200%",
+					"ratio25" : "25%",
+					"ratio250" : "250%",
+					"ratio300" : "300%",
+					"ratio400" : "400%",
+					"ratio50" : "50%",
+					"ratio75" : "75%",
+					"tab" : "General settings",
+					"uiscalingratio" : "UI scale"
+				},
 				"keymapping" : "Key mapping",
 				"keymenu" : {
 					"resetall" : "Reset All"
 				},
 				"mousemenu" : {
-					"devbuttons" : "Enable developer buttons",
 					"invertx" : "Invert x-axis",
 					"inverty" : "Invert y-axis",
 					"sensitivitylock" : "Lock together sensitivity axes",
@@ -1161,15 +1190,18 @@
 			}
 		},
 		"singleplayermenu" : {
-			"alreadyexists" : "World already exists!",
+			"alreadyexists" : "World already exists",
 			"cancel" : "Cancel",
 			"confirmdelete" : "Confirm deleting",
 			"confirmdeletedescription" : "You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"confirmload" : "Confirm loading",
+			"convert" : "Convert",
 			"delete" : "Delete",
 			"hostingoptions" : "Hosting Settings",
 			"load" : "Load",
 			"loadworld" : "Load World",
+			"missingname" : "No world name set",
+			"modconfiguration" : "Mod Configuration",
 			"modschanged" : {
 				"added" : "'{0}' is added",
 				"disabled" : "'{0}' is disabled or missing but previously used.",
@@ -1177,6 +1209,8 @@
 				"main" : "Loading world '{0}' but some mods changed.\nThis may cause problems.",
 				"updated" : "'{0}' is updated from version {1} to {2}."
 			},
+			"modselectall" : "Select all",
+			"modselectnone" : "Select none",
 			"modslist" : {
 				"disableddependency" : "[Disabled]",
 				"missingdependency" : "[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "[Requires]"
 			},
 			"newworld" : "New World",
+			"nosubscribeditems" : "No subscribed workshop worlds found",
 			"password" : "Password",
 			"play" : "Play",
+			"selectedfolder" : "Selected world: {0}",
 			"servername" : "Server Name",
 			"serverport" : "Server Port",
 			"typegenerateworld" : "Generate World",

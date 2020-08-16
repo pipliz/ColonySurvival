@@ -1,5 +1,5 @@
 {
-	"coverage" : 88.3633633633634,
+	"coverage" : 84.6041055718475,
 	"hints" : {
 		"0" : "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1" : "У міру того, як ваша колонія росте, будуть з'являтися нові монстри.",
@@ -27,7 +27,7 @@
 			"placementfail" : "Не вдалося розмістити банер у цьому місці"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Активних колоній: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "Додати банер",
 			"header" : "Розміщення банера",
 			"movebanner" : "Перемістити банер",
@@ -70,21 +70,16 @@
 				"header" : "Налаштування колонії",
 				"nightmonsters" : "Кількість нічних монстрів"
 			},
-			"connectedplayers" : "Підключені гравці",
-			"currentowners" : "Нинішні власники",
 			"diplomacy" : {
 				"mainbutton" : "Дипломатія",
 				"mainheader" : "Дипломатія",
 				"ruleaccept" : "Прийміть",
 				"ruleactive" : "Активний",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "Очікує на розгляд",
 				"ruleremove" : "Видалити"
 			},
 			"inventoryheader" : "Колонія",
-			"invite" : "Додати як власника колонії",
-			"kick" : "Прибрати з колонії",
-			"leader" : "ЛІдер",
-			"leave" : "Покинути колонію",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} блоків на схід",
@@ -93,7 +88,7 @@
 					"south" : "{0} блоків на південь, ",
 					"west" : "{0} блоків на захід"
 				},
-				"mainbutton" : "Керувати колоніями",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "Керувати колонією",
 				"selectheader" : "вибір колонії дл керування",
 				"siegemode" : "Режим облоги:"
@@ -102,17 +97,30 @@
 			"manageowners" : "Керуйте власниками",
 			"nameedit" : "Редагувати назву колонії:",
 			"namefield" : "Назва колонії:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Автоматичний набір на роботу",
-			"recruitautorequirements" : "<i>Якщо ввімкнути це, ви отримаєте нового колоніста для роботи, принаймні -10 щастя, запасних ліжок, їжі на 2 дні та рівно 0 безробітних</i>",
 			"recruitmentamount" : "Набрати колоністів :",
 			"recruitmentbutton" : "Набір колоніста",
 			"recruitmentheader" : "Набір персоналу",
 			"recruittext3" : "Колоністам потрібно 2000 калорій на день та ліжко.",
 			"recruittext4" : "Набір чергового колоніста коштує {0} калорій.",
-			"recruittext5" : "Вартість становить {0} звичайної вартості через щастя",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Набір для заповнення всіх ліжок",
 			"recruittofilljobs" : "Набір для заповнення всіх робочих місць",
-			"resetcolonypriority" : "Скидання пріоритетів активних колоній",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "Вониможутьподілитися своєю наукою з вами",
 				"newagreement" : "Запропонуйте наукову угоду",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Виберіть колонію, до якої слід відправити науку"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "Колоністи",
 				"headercolony" : "Колонія",
 				"headerleader" : "Лідер",
 				"headerselect" : "Виберіть",
 				"nocolonies" : "Колонії для списку немає",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Виберіть"
 			},
-			"settoleader" : "Встановити лідера",
 			"start" : {
 				"create" : "Створити колонію",
 				"defaultkit" : "Перший час застосовується комплект початківця",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Набір персоналу",
 			"startsettings" : "Налаштування колонії",
-			"switchcolony" : "Перейти до {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "Створіть правило",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Нові налаштування правил торгівлі",
-				"newrule" : "Запропонуйте правило торгівлі",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "Торговці торгуватимуть {0} з {1} до {2} якщо обидва наведені нижче:",
 				"ruledescriptionlimit" : " {0} предметів, що залишилися для торгівлі.",
 				"ruleincomingdescr2" : "Отримайте {0}, якщо в їх більше за {1}, а у нас менше {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Відродитися"
 			},
 			"inventory" : {
-				"availableamount" : "На складі: {0}",
-				"calorievalue" : "{0} калорій на предмет",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Крафт і запаси",
-				"distributionhappyperitem" : "Щастя на предмет: {0}",
-				"distributionpercolonist" : "Щоденні предмети на колоніста: {0}",
-				"distributionplanned" : "Планове збільшення щастя: {0}",
-				"distributionreached" : "Відсоток розподілений: {0}%",
-				"distributiontotal" : "Загальна кількість предметів на день: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "Значення щастя:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "Щастя"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Натисніть F1, щоб закрити / відкрити меню допомоги",
 				"closetoggle" : "НЕ показувати знову",
 				"next" : "Наст. стр.",
 				"openmanual" : "Відкрити мануал (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Гра",
 			"gameplaymenu" : {
 				"full" : "Налаштування гри",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Клавіші керування",
 				"keymenu" : {
 					"resetall" : "Скинути все"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "Інвертувати вісь-X",
 					"inverty" : "Інвертувати вісь-Y",
 					"sensitivitylock" : "Заблокувати чутливість миші",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "Підтвердити видалення",
 			"confirmdeletedescription" : "Ви збираєтесь видалити папку, що містить цей світ.\n Що ви хочете робити?",
 			"confirmload" : "_MISSING_Confirm loading",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Видалити",
 			"hostingoptions" : "Налаштування хостингу",
 			"load" : "Завантажити",
 			"loadworld" : "Завантажити світ",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "_MISSING_'{0}' is added",
 				"disabled" : "_MISSING_'{0}' is disabled or missing but previously used.",
@@ -1177,6 +1209,8 @@
 				"main" : "_MISSING_Loading world '{0}' but some mods changed.\nThis may cause problems.",
 				"updated" : "_MISSING_'{0}' is updated from version {1} to {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "_MISSING_[Disabled]",
 				"missingdependency" : "_MISSING_[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "_MISSING_[Requires]"
 			},
 			"newworld" : "Новий світ",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "Пароль",
 			"play" : "Грати",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "Ім'я сервера",
 			"serverport" : "Порт сервера",
 			"typegenerateworld" : "_MISSING_Generate World",

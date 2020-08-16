@@ -1,5 +1,5 @@
 {
-	"coverage" : 40.2402402402402,
+	"coverage" : 39.2228739002933,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -27,7 +27,7 @@
 			"placementfail" : "_MISSING_Couldn't place banner at this location"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "_MISSING_Active Colony: {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "_MISSING_Add Banner",
 			"header" : "_MISSING_Banner Placement",
 			"movebanner" : "_MISSING_Move Banner",
@@ -70,21 +70,16 @@
 				"header" : "_MISSING_Colony Settings",
 				"nightmonsters" : "_MISSING_Night Monster Amount"
 			},
-			"connectedplayers" : "_MISSING_Connected Players",
-			"currentowners" : "_MISSING_Current Owners",
 			"diplomacy" : {
 				"mainbutton" : "_MISSING_Diplomacy",
 				"mainheader" : "_MISSING_Diplomacy",
 				"ruleaccept" : "_MISSING_Accept",
 				"ruleactive" : "_MISSING_Active",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "_MISSING_Pending",
 				"ruleremove" : "_MISSING_Remove"
 			},
 			"inventoryheader" : "_MISSING_Colony",
-			"invite" : "_MISSING_Add as colony owner",
-			"kick" : "_MISSING_Kick from colony",
-			"leader" : "_MISSING_Leader",
-			"leave" : "_MISSING_Leave colony",
 			"managecolonies" : {
 				"location" : {
 					"east" : "_MISSING_{0} blocks east",
@@ -93,7 +88,7 @@
 					"south" : "_MISSING_{0} blocks south, ",
 					"west" : "_MISSING_{0} blocks west"
 				},
-				"mainbutton" : "_MISSING_Manage Colonies",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "_MISSING_Manage Colony",
 				"selectheader" : "_MISSING_Select a colony to manage",
 				"siegemode" : "_MISSING_Siege mode:"
@@ -102,17 +97,30 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
-			"recruitauto" : "_MISSING_Auto recruit on job placement",
-			"recruitautorequirements" : "_MISSING_<i>Turning this on will recruit a new colonist when placing a job with at least -10 happiness, spare beds, 2 days worth of food and exactly 0 unemployed</i>",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
+			"recruitauto" : "_MISSING_Automatic recruit on job placement",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
 			"recruittext3" : "_MISSING_Colonists require 2000 calories per day and a bed.",
 			"recruittext4" : "_MISSING_Recruiting the next colonist costs {0} calories.",
-			"recruittext5" : "_MISSING_Cost is {0} of normal cost due to happiness",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
-			"resetcolonypriority" : "_MISSING_Reset active colony priorities",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "_MISSING_They will share their science with you",
 				"newagreement" : "_MISSING_Propose science agreement",
@@ -120,14 +128,17 @@
 				"selectcolony" : "_MISSING_Select a colony to send science to"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "_MISSING_Colonists",
 				"headercolony" : "_MISSING_Colony",
 				"headerleader" : "_MISSING_Leader",
 				"headerselect" : "_MISSING_Select",
 				"nocolonies" : "_MISSING_No colonies to list",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "_MISSING_Select"
 			},
-			"settoleader" : "_MISSING_Set to leader",
 			"start" : {
 				"create" : "_MISSING_Create Colony",
 				"defaultkit" : "_MISSING_First time starter kit is used",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "_MISSING_Recruitment",
 			"startsettings" : "_MISSING_Colony Settings",
-			"switchcolony" : "_MISSING_Switch to {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "_MISSING_Create rule",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "_MISSING_New trading rule settings",
-				"newrule" : "_MISSING_Propose trading rule",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "_MISSING_Traders will trade {0} from {1} to {2} if both of the following:",
 				"ruledescriptionlimit" : "_MISSING_ {0} items left to trade.",
 				"ruleincomingdescr2" : "_MISSING_Get {0} if they have more than {1} and we have less than {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Renascer"
 			},
 			"inventory" : {
-				"availableamount" : "_MISSING_In stockpile: {0}",
-				"calorievalue" : "_MISSING_{0} calories per item",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Montagem & Estocagem",
-				"distributionhappyperitem" : "_MISSING_Happiness per item: {0}",
-				"distributionpercolonist" : "_MISSING_Daily items per colonist: {0}",
-				"distributionplanned" : "_MISSING_Planned happiness increase: {0}",
-				"distributionreached" : "_MISSING_Percentage distributed: {0}%",
-				"distributiontotal" : "_MISSING_Daily total items: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "_MISSING_Happiness value:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "_MISSING_Happiness"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Pressione F1 para fechar ou abrir este menu",
 				"closetoggle" : "Não mostrar mais isso",
 				"next" : "Próximo",
 				"openmanual" : "Abrir Manual (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Jogabilidade",
 			"gameplaymenu" : {
 				"full" : "Configurações de Jogabilidade",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Mapeamento das Teclas",
 				"keymenu" : {
 					"resetall" : "Resetar Tudo"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "Inverter Eixo X",
 					"inverty" : "Inverter Eixo Y",
 					"sensitivitylock" : "Travar ambos eixos de sensibilidade",
@@ -1161,15 +1190,18 @@
 			}
 		},
 		"singleplayermenu" : {
-			"alreadyexists" : "_MISSING_World already exists!",
+			"alreadyexists" : "_MISSING_World already exists",
 			"cancel" : "_MISSING_Cancel",
 			"confirmdelete" : "_MISSING_Confirm deleting",
 			"confirmdeletedescription" : "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"confirmload" : "_MISSING_Confirm loading",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Deletar",
 			"hostingoptions" : "_MISSING_Hosting Settings",
 			"load" : "Carregar",
 			"loadworld" : "Carregar Mundo",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "_MISSING_'{0}' is added",
 				"disabled" : "_MISSING_'{0}' is disabled or missing but previously used.",
@@ -1177,6 +1209,8 @@
 				"main" : "_MISSING_Loading world '{0}' but some mods changed.\nThis may cause problems.",
 				"updated" : "_MISSING_'{0}' is updated from version {1} to {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "_MISSING_[Disabled]",
 				"missingdependency" : "_MISSING_[Missing]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "_MISSING_[Requires]"
 			},
 			"newworld" : "Novo Mundo",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "_MISSING_Password",
 			"play" : "Jogar",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "_MISSING_Server Name",
 			"serverport" : "_MISSING_Server Port",
 			"typegenerateworld" : "_MISSING_Generate World",

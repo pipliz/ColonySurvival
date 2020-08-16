@@ -1,5 +1,5 @@
 {
-	"coverage" : 91.8168168168168,
+	"coverage" : 87.9765395894428,
 	"hints" : {
 		"0" : "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1" : "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -27,7 +27,7 @@
 			"placementfail" : "Impossible de placer une bannière ici"
 		},
 		"bannerplacementpopup" : {
-			"activecolony" : "Colonie active : {0}",
+			"activecolony" : "_MISSING_Active colony: {0}",
 			"addbanner" : "Ajouter une bannière",
 			"header" : "Placement de bannière",
 			"movebanner" : "Déplacer la bannière",
@@ -70,21 +70,16 @@
 				"header" : "Paramètres du monde",
 				"nightmonsters" : "Quantité de monstres la nuit"
 			},
-			"connectedplayers" : "Joueurs connectés",
-			"currentowners" : "Propriétaires actuels",
 			"diplomacy" : {
 				"mainbutton" : "Diplomatie",
 				"mainheader" : "Diplomatie",
 				"ruleaccept" : "Accepter",
 				"ruleactive" : "Active",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "En attente",
 				"ruleremove" : "Supprimer"
 			},
 			"inventoryheader" : "Colonie",
-			"invite" : "Ajouter comme propiétaire",
-			"kick" : "Expulser de la colonie",
-			"leader" : "Chef",
-			"leave" : "Quitter la colonie",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} blocs à l’est",
@@ -93,7 +88,7 @@
 					"south" : "{0} blocs au sud, ",
 					"west" : "{0} blocs à l’ouest"
 				},
-				"mainbutton" : "Gérer les colonies",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "Gérer la colonie",
 				"selectheader" : "Sélectionner une colonie à gérer",
 				"siegemode" : "Mode « Siège » :"
@@ -102,17 +97,30 @@
 			"manageowners" : "Gérer les propriétaires",
 			"nameedit" : "Modifier le nom de la colonie :",
 			"namefield" : "Nom de la colonie :",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "Recrutement automatique lors du placement de postes",
-			"recruitautorequirements" : "<i>Activer ce paramètre recrutera un nouveau colon lorsque le joueur place un poste de travailleur dans une colonie ayant au moins -10 de bonheur, un lit libre, l’équivalent de 2 jours de nourriture et exactement 0 chômeur.</i>",
 			"recruitmentamount" : "Nombre de colons à recruter :",
 			"recruitmentbutton" : "Recruter un colon",
 			"recruitmentheader" : "Recrutement",
 			"recruittext3" : "Les colons ont besoin de 2000 calories par jour et d'un lit.",
 			"recruittext4" : "Le recrutement du prochain colon coûte {0} calories.",
-			"recruittext5" : "Le coût est à {0} du coût normal, suite au score de bonheur.",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "Recruter jusqu'à attribuer tous les lits",
 			"recruittofilljobs" : "Recruter jusqu'à pourvoir tous les emplois",
-			"resetcolonypriority" : "Réinitialiser les priorités de la colonie active",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "Ils partageront leur science avec vous",
 				"newagreement" : "Proposer un accord scientifique",
@@ -120,14 +128,17 @@
 				"selectcolony" : "Sélectionner une colonie où envoyer la science"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "Colons",
 				"headercolony" : "Colonie",
 				"headerleader" : "Chef",
 				"headerselect" : "Sélection",
 				"nocolonies" : "Aucune colonie",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "Sélectionner"
 			},
-			"settoleader" : "Désigner comme chef",
 			"start" : {
 				"create" : "Créer une colonie",
 				"defaultkit" : "Première utilisation du kit de création de colonie",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "Recrutement",
 			"startsettings" : "Paramètres de la colonie",
-			"switchcolony" : "Basculer vers {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "Créer une règle",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "Paramètres de la nouvelle règle commerciale",
-				"newrule" : "Proposer la règle commerciale",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "Les marchands échangeront des {0} de {1} à {2} si ces deux conditions sont satisfaites :",
 				"ruledescriptionlimit" : " Il reste {0} objets à échanger.",
 				"ruleincomingdescr2" : "Recevoir des {0} s’ils en ont plus que {1} et si nous en avons moins que {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "Réapparaître ?"
 			},
 			"inventory" : {
-				"availableamount" : "En stock : {0}",
-				"calorievalue" : "{0} calories par objet",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Fabrication et stock",
-				"distributionhappyperitem" : "Bonheur par objet : {0}",
-				"distributionpercolonist" : "Objets par jour et par colon : {0}",
-				"distributionplanned" : "Augmentation estimée du bonheur : {0}",
-				"distributionreached" : "Pourcentage distribué : {0} %",
-				"distributiontotal" : "Total d'objets par jour : {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
 				"filter-jobs" : "_MISSING_Job blocks",
 				"filter-luxuries" : "_MISSING_Luxuries",
-				"happinessvalue" : "Points de bonheur :",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "Bonheur"
 				},
@@ -846,7 +859,6 @@
 				}
 			},
 			"quickstart" : {
-				"closehelp" : "Appuyez sur « F1 » pour fermer ou rouvrir ce menu",
 				"closetoggle" : "Ne plus afficher",
 				"next" : "Suivant",
 				"openmanual" : "Ouvrir le guide (PDF)",
@@ -1094,12 +1106,29 @@
 			"gameplay" : "Jouabilité",
 			"gameplaymenu" : {
 				"full" : "Paramètres de jeu",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "Contrôles",
 				"keymenu" : {
 					"resetall" : "Tout réinitialiser"
 				},
 				"mousemenu" : {
-					"devbuttons" : "_MISSING_Enable developer buttons",
 					"invertx" : "Inverser l'axe X",
 					"inverty" : "Inverser l'axe Y",
 					"sensitivitylock" : "Verrouiller les axes de sensibilité",
@@ -1166,10 +1195,13 @@
 			"confirmdelete" : "Confirmer la suppression",
 			"confirmdeletedescription" : "Vous êtes sur le point de supprimer le dossier contenant ce monde.\nQue souhaitez-vous faire ?",
 			"confirmload" : "Confirmer le chargement",
+			"convert" : "_MISSING_Convert",
 			"delete" : "Supprimer",
 			"hostingoptions" : "Paramètres d'hébergement",
 			"load" : "Charger",
 			"loadworld" : "Charger le monde",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "« {0} » est ajouté",
 				"disabled" : "« {0} » est désactivé ou manquant, mais était utilisé précédemment.",
@@ -1177,6 +1209,8 @@
 				"main" : "Chargement du monde « {0} » mais des mods ont étés modifiés.\nCela peut causer des problèmes.",
 				"updated" : "« {0} » est mis à jour de la version {1} à la version {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "[Désactivé]",
 				"missingdependency" : "[Manquant]",
@@ -1184,8 +1218,10 @@
 				"requireddependency" : "[Requiert]"
 			},
 			"newworld" : "Nouveau monde",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "Mot de passe",
 			"play" : "Jouer",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "Nom du serveur",
 			"serverport" : "Port du serveur",
 			"typegenerateworld" : "Générer le monde",
