@@ -42,3 +42,8 @@ Fixes
 Internals:
 - Overhauled the system used to programmatically create UI elements - to allow for more visually pleasing results
 - Replaced the Rust based "pip_quick.dll" with unity's Burst system - to allow easier modification of code that is performance sensitive, and future optimization
+
+0.7.4.1 (2020-08-17)
+
+- Updated de-DE and zh-CN locales (thanks to the respective submitters)
+- Fix colony ownership buttons not working (kick, set to leader, leave)
