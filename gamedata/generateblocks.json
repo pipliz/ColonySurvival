@@ -192,26 +192,53 @@
 		"typeName" : "quarterblockwhite"
 	},
 	{
-		"baseType" : {
-			"categories" : ["essential"],
-			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
-			"customData" : {"colors":["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"]},
-			"icon" : "./textures/icons/bed.png",
-			"isSolid" : false,
-			"mesh" : "./meshes/bedx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
+		"baseType": {
+			"categories": [ "essential" ],
+			"colliders": {
+				"boxes": [
+					{
+						"max": [ 0.5, 0.1, 0.5 ],
+						"min": [ -0.5, -0.5, -0.5 ]
+					},
+					{
+						"max": [ -0.4, 0.5, 0.5 ],
+						"min": [ -0.5, -0.5, -0.5 ]
+					}
+				],
+				"collidePlayer": false
+			},
+			"customData": {
+				"colors": [ "#ff0000->#542909", "#00ff00->#e5e5e6", "#0000ff->#9b7a3f" ],
+				"bedpart": "head"
+			},
+			"icon": "./textures/icons/bed.png",
+			"isSolid": false,
+			"mesh": "./meshes/bedx+.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
 		},
 		"generateType" : "rotateBlock",
 		"typeName" : "bed"
 	},
 	{
-		"baseType" : {
-			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
-			"mesh" : "./meshes/bedendx+.ply",
-			"parentType" : "bed"
+		"baseType": {
+			"colliders": {
+				"boxes": [
+					{
+						"max": [ 0.5, 0.1, 0.5 ],
+						"min": [ -0.5, -0.5, -0.5 ]
+					}
+				],
+				"collidePlayer": false
+			},
+			"customData": {
+				"colors": [ "#ff0000->#542909", "#00ff00->#e5e5e6", "#0000ff->#9b7a3f" ],
+				"bedpart": "foot"
+			},
+			"mesh": "./meshes/bedendx+.ply",
+			"parentType": "bed"
 		},
 		"generateType" : "rotateBlock",
 		"typeName" : "bedend"
