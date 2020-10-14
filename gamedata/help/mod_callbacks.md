@@ -1,8 +1,27 @@
-﻿CallbackType: `OnAssemblyLoaded`  
+﻿CallbackType: `OnConstructInventoryManageColonyUI`  
 =======  
-Method type: System.Action<string>  
-The string arg is the path of the assembly containing the callback's method  
-Called directly upon discovering a method with this attribute, during assembly parsing.  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, System.ValueTuple<NetworkUI.Items.Table, NetworkUI.Items.Table>>  
+Registered callbacks: 1  
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager+CallbackConsumers.OnConstructInventoryManageColonyUI'   
+
+
+CallbackType: `OnConstructColonyRecruitmentUI`  
+=======  
+Method type: System.Action<Players.Player, Pipliz.JSON.JSONNode, System.Collections.Generic.List<NetworkUI.IItem>>  
+Registered callbacks: 1  
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager+CallbackConsumers.OnConstructColonyRecruitmentUI'   
+
+
+CallbackType: `OnConstructColonySettingsUI`  
+=======  
+Method type: System.Action<Players.Player, Pipliz.JSON.JSONNode, System.Collections.Generic.List<NetworkUI.IItem>>  
+Registered callbacks: 1  
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager+CallbackConsumers.OnConstructColonySettingsUI'   
+
+
+CallbackType: `OnRegisteringEntityManagers`  
+=======  
+Method type: System.Action<System.Collections.Generic.List<object>>  
 No registered uses  
 
 
@@ -10,9 +29,10 @@ CallbackType: `AfterModsLoaded`
 =======  
 Method type: System.Action<System.Collections.Generic.List<ModLoader.ModDescription>>  
 Called after parsing all modinfo files  
-Registered callbacks: 2  
+Registered callbacks: 3  
 0.	'create_filetable' -> 'ServerManager.AfterModsLoadedCreateFiletable'   
 1.	'examplemod.detect_flat_world' -> 'ExampleMod.FlatWorld.FlatWorld.DetectFlatWorld'   
+2.	'Init TraversabilityBuffer.BurstFunctions' -> 'AI.NavMeshBaker+BurstFunctions+InitializeCallback.AfterModsLoaded'   
 
 
 CallbackType: `OnItemTypeRegistered`  
@@ -23,62 +43,35 @@ Registered callbacks: 1
 0.	'pipliz.server.itemtypesserver' -> 'ItemTypesServer.OnRegisteredItemType'   
 
 
-CallbackType: `OnLateUpdate`  
-=======  
-Method type: System.Action  
-Called inside unity's LateUpdate method  
-No registered uses  
-
-
 CallbackType: `OnUpdateStart`  
 =======  
 Method type: System.Action  
 Called early on in unity's Update method  
-Registered callbacks: 1  
-0.	'pipliz.server.setsecondsthisframe' -> 'Pipliz.Time.SetThisFrame'   
+Registered callbacks: 2  
+0.	'servertime.startframe' -> 'ServerTime+ServerCallbacks.OnUpdateStart' index: -1000  
+1.	'pipliz.server.setsecondsthisframe' -> 'Pipliz.Time.SetThisFrame'   
 
 
-CallbackType: `OnQuit`  
+CallbackType: `OnUpdate`  
 =======  
 Method type: System.Action  
-Called in the quit method queue  
-Registered callbacks: 8  
-0.	'pipliz.shared.waitforasyncquitsearly' -> 'Pipliz.Application.WaitForQuits' index: -1000  
-1.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
-2.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
-3.	'pipliz.server.saveplayers' -> 'Players.SavePlayers'   
-4.	'pipliz.server.savewater' -> 'BlockEntities.Implementations.Water.Save'   
-5.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
-6.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
-7.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
+In the middle of unity's Update method.  
+Registered callbacks: 6  
+0.	'dotrading' -> 'ColonyTrading.Update'   
+1.	'pipliz.server.chunkupdater' -> 'ChunkUpdating.Update'   
+2.	'pipliz.server.tickscounter' -> 'Chatting.Commands.TicksPerSecond.Update'   
+3.	'pipliz.server.updatetimecycle' -> 'TimeCycle.Update'   
+4.	'update_transports' -> 'Transport.TransportManager.Update'   
+5.	'update_water' -> 'BlockEntities.Implementations.Water.Tick'   
 
 
-CallbackType: `AfterSelectedWorld`  
+CallbackType: `OnLateUpdate`  
 =======  
 Method type: System.Action  
-First callback after the world to load has been determined  
-Registered callbacks: 13  
-0.	'pipliz.server.startloadcolonies' -> 'ServerManager.StartLoadColonies' index: -1000  
-1.	'pipliz.server.startloadplayers' -> 'Players.StartInitializePlayerData' index: -1000  
-2.	'pipliz.server.loadaudiofiles' -> 'AudioManager.LoadAudioFiles' index: -100  
-3.	'pipliz.server.applytexturemappingpatches' -> 'ItemTypesServer.ApplyTextureMappingPatches'   
-4.	'pipliz.server.registertexturemappingtextures' -> 'ItemTypesServer.RegisterTextures' index: -100  
-		 Parent @ 3 : 'pipliz.server.applytexturemappingpatches'  
-5.	'pipliz.server.startloadmiscworld' -> 'ServerManager.StartLoadMiscWorld' index: -100  
-6.	'pipliz.server.startloadwater' -> 'BlockEntities.Implementations.Water.LoadStart' index: -100  
-7.	'pipliz.startloaddifficulty' -> 'Difficulty.ColonyDifficultySetting.StartLoading' index: -100  
-8.	'register_glider_settings' -> 'Transport.Glider.Initialize' index: -100  
-9.	'registernpctextures' -> 'ItemTypesServer.RegisterNPCTextures' index: -100  
-10.	'registerwatertextures' -> 'ItemTypesServer.RegisterWaterTextures' index: -100  
-11.	'pipliz.server.loadtimecycle' -> 'TimeCycle.Initialize'   
-12.	'pipliz.server.startblackandwhitelisting' -> 'BlackAndWhitelisting.StartReload'   
-
-
-CallbackType: `AfterAddingBaseTypes`  
-=======  
-Method type: System.Action<System.Collections.Generic.Dictionary<string, ItemTypesServer.ItemTypeRaw>>  
-Callback after AddItemTypes but before parsing those types; intended usecase is to allow changing the raw json  
-No registered uses  
+Called inside unity's LateUpdate method  
+Registered callbacks: 2  
+0.	'Colony+SendDirtiedColonies.OnLateUpdate' -> 'Colony+SendDirtiedColonies.OnLateUpdate'   
+1.	'servertime.endframe' -> 'ServerTime+ServerCallbacks.OnLateUpdate' index: 1000  
 
 
 CallbackType: `AfterItemTypesDefined`  
@@ -149,6 +142,50 @@ Registered callbacks: 26
 		 Parent @ 0 : 'create_servermanager_trackers'  
 
 
+CallbackType: `OnQuit`  
+=======  
+Method type: System.Action  
+Called in the quit method queue  
+Registered callbacks: 8  
+0.	'pipliz.shared.waitforasyncquitsearly' -> 'Pipliz.Application.WaitForQuits' index: -1000  
+1.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
+2.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
+3.	'pipliz.server.saveplayers' -> 'Players.SavePlayers'   
+4.	'pipliz.server.savewater' -> 'BlockEntities.Implementations.Water.Save'   
+5.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
+6.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
+7.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
+
+
+CallbackType: `AfterSelectedWorld`  
+=======  
+Method type: System.Action  
+First callback after the world to load has been determined  
+Registered callbacks: 14  
+0.	'pipliz.server.startloadcolonies' -> 'ServerManager.StartLoadColonies' index: -1000  
+1.	'pipliz.server.startloadplayers' -> 'Players.StartInitializePlayerData' index: -1000  
+2.	'pipliz.server.loadaudiofiles' -> 'AudioManager.LoadAudioFiles' index: -100  
+3.	'pipliz.server.applytexturemappingpatches' -> 'ItemTypesServer.ApplyTextureMappingPatches'   
+4.	'pipliz.server.registertexturemappingtextures' -> 'ItemTypesServer.RegisterTextures' index: -100  
+		 Parent @ 3 : 'pipliz.server.applytexturemappingpatches'  
+5.	'pipliz.server.startloadmiscworld' -> 'ServerManager.StartLoadMiscWorld' index: -100  
+6.	'pipliz.server.startloadwater' -> 'BlockEntities.Implementations.Water.LoadStart' index: -100  
+7.	'pipliz.startloaddifficulty' -> 'Difficulty.ColonyDifficultySetting.StartLoading' index: -100  
+8.	'register_glider_settings' -> 'Transport.Glider.Initialize' index: -100  
+9.	'registernpctextures' -> 'ItemTypesServer.RegisterNPCTextures' index: -100  
+10.	'registerwatertextures' -> 'ItemTypesServer.RegisterWaterTextures' index: -100  
+11.	'pipliz.imagemanager.loadingimages' -> 'Pipliz.ImageManager.AfterWorldLoad'   
+12.	'pipliz.server.loadtimecycle' -> 'TimeCycle.Initialize'   
+13.	'pipliz.server.startblackandwhitelisting' -> 'BlackAndWhitelisting.StartReload'   
+
+
+CallbackType: `AfterAddingBaseTypes`  
+=======  
+Method type: System.Action<System.Collections.Generic.Dictionary<string, ItemTypesServer.ItemTypeRaw>>  
+Callback after AddItemTypes but before parsing those types; intended usecase is to allow changing the raw json  
+No registered uses  
+
+
 CallbackType: `AfterWorldLoad`  
 =======  
 Method type: System.Action  
@@ -168,19 +205,6 @@ After the networkwrapper clas is ready to send data. Can take a few seconds for 
 No registered uses  
 
 
-CallbackType: `OnUpdate`  
-=======  
-Method type: System.Action  
-In the middle of unity's Update method.  
-Registered callbacks: 6  
-0.	'dotrading' -> 'ColonyTrading.Update'   
-1.	'pipliz.server.chunkupdater' -> 'ChunkUpdating.Update'   
-2.	'pipliz.server.tickscounter' -> 'Chatting.Commands.TicksPerSecond.Update'   
-3.	'pipliz.server.updatetimecycle' -> 'TimeCycle.Update'   
-4.	'update_transports' -> 'Transport.TransportManager.Update'   
-5.	'update_water' -> 'BlockEntities.Implementations.Water.Tick'   
-
-
 CallbackType: `OnUpdateEnd`  
 =======  
 Method type: System.Action  
@@ -195,14 +219,6 @@ Method type: System.Action
 Unity's OnFixedUpdate method. See unity documentation.  
 Registered callbacks: 1  
 0.	'collisionchecker' -> 'Transport.CollisionChecker.FixedUpdate'   
-
-
-CallbackType: `OnConstructWorldSettingsUI`  
-=======  
-Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
-The colony settings menu being made (obsolete naming ftw)  
-Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructWorldSettings'   
 
 
 CallbackType: `OnApplicationFocus`  
@@ -223,9 +239,10 @@ CallbackType: `OnPlayerConnectedEarly`
 =======  
 Method type: System.Action<Players.Player>  
 Early on in the player connection process - the player is probably not ready to receive messages yet  
-Registered callbacks: 2  
-0.	'pipliz.server.sendinitialtime' -> 'TimeCycle.SendHeartBeat'   
-1.	'pipliz.server.start_loadsurroundings' -> 'ChunkQueue.ResetSurroundings'   
+Registered callbacks: 3  
+0.	'pipliz.imagemanager.sendimagesettings' -> 'Pipliz.ImageManager.OnPlayerConnectedEarly'   
+1.	'pipliz.server.sendinitialtime' -> 'TimeCycle.SendHeartBeat'   
+2.	'pipliz.server.start_loadsurroundings' -> 'ChunkQueue.ResetSurroundings'   
 
 
 CallbackType: `OnPlayerDisconnected`  
@@ -594,11 +611,11 @@ Registered callbacks: 1
 0.	'disable_some_science' -> 'Science.ScienceManager.DisableSciences'   
 
 
-CallbackType: `OnConstructColonyOwnerManagementUI`  
+CallbackType: `OnConstructManageColoniesUI`  
 =======  
-Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>  
 Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyManagement'   
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesUI'   
 
 
 CallbackType: `OnConstructDiplomacyUI`  
@@ -607,18 +624,18 @@ Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>
 No registered uses  
 
 
-CallbackType: `OnConstructInventoryManageColonyUI`  
+CallbackType: `OnConstructManageColoniesSelectionUI`  
 =======  
 Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
 Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructInventoryColonyUI'   
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesSelectionUI'   
 
 
-CallbackType: `OnConstructColonyRecruitmentUI`  
+CallbackType: `OnConstructColonyOwnerManagementUI`  
 =======  
 Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
 Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyRecruitment'   
+0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyManagement'   
 
 
 CallbackType: `OnConstructBannerPlacementUI`  
@@ -676,33 +693,21 @@ Registered callbacks: 1
 0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructColonyStartSettings'   
 
 
-CallbackType: `OnConstructManageColoniesSelectionUI`  
-=======  
-Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
-Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesSelectionUI'   
-
-
-CallbackType: `OnConstructManageColoniesUI`  
-=======  
-Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>  
-Registered callbacks: 1  
-0.	'pipliz.buildbase' -> 'NetworkUI.NetworkMenuManager.ConstructManageColoniesUI'   
-
-
 CallbackType: `OnSendingStatisticsData`  
 =======  
 Method type: System.Action<ColonyStats.SharedStatisticsGatherer>  
 Called every time the client requests statistics data;  
 include your type definitions every time, so the player can select them  
 if the requested key matches your given key, include your desired data that corresponds with the requested time period  
-Registered callbacks: 6  
+Registered callbacks: 8  
 0.	'pipliz.stockpile' -> 'ColonyStats+SharedStatisticsGatherer.InsertStockpileStats' index: -6  
 1.	'pipliz.happiness' -> 'ColonyStats+SharedStatisticsGatherer.InsertHappyStats' index: -5  
 2.	'pipliz.calories' -> 'ColonyStats+SharedStatisticsGatherer.InsertCaloriesStats' index: -4  
-3.	'pipliz.sendidle' -> 'ColonyStats+SharedStatisticsGatherer.InsertIdleStats' index: -3  
-4.	'pipliz.trade-out' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeOutStats' index: -2  
-5.	'pipliz.trade-in' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeInStats' index: -1  
+3.	'pipliz.totalfood' -> 'ColonyStats+SharedStatisticsGatherer.InsertTotalFoodStats' index: -3,5  
+4.	'pipliz.npcidle' -> 'ColonyStats+SharedStatisticsGatherer.InsertIdleStats' index: -3  
+5.	'pipliz.colony' -> 'ColonyStats+SharedStatisticsGatherer.InsertColonyStats' index: -2,5  
+6.	'pipliz.trade-out' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeOutStats' index: -2  
+7.	'pipliz.trade-in' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeInStats' index: -1  
 
 
 CallbackType: `OnGatherStatisticsData`  
@@ -712,5 +717,45 @@ Called with the colony and stats timeperiod index every time those stats were ga
 First integer is the period index; 0, 1 or 2 by default  
 Second integer is the time between updates for this periods (10, 40 or 240 seconds by default)  
 No registered uses  
+
+
+CallbackType: `OnLoadModJSONFiles`  
+=======  
+Method type: System.Action<System.Collections.Generic.List<ModLoader.LoadModJSONFileContext>>  
+Registered callbacks: 1  
+0.	'pipliz.jsonfilescallbacks' -> 'ModLoader+LoadModJSONFileCallback.OnLoadModJSONFiles'   
+
+
+CallbackType: `OnPlayerRemovedFromColony`  
+=======  
+Method type: System.Action<Players.Player, Colony>  
+Registered callbacks: 1  
+0.	'ColonyTracker+Callbacks.OnPlayerRemovedFromColony' -> 'ColonyTracker+Callbacks.OnPlayerRemovedFromColony'   
+
+
+CallbackType: `OnPlayerAddedToColony`  
+=======  
+Method type: System.Action<Players.Player, Colony>  
+No registered uses  
+
+
+CallbackType: `OnLoadingImages`  
+=======  
+Method type: System.Action<System.Collections.Generic.Dictionary<string, string>>  
+No registered uses  
+
+
+CallbackType: `OnGetJobGroupByPosition`  
+=======  
+Method type: System.Action<Recipes.RecipeColony.Callbacks.GroupLimitsCallbackContext>  
+Registered callbacks: 1  
+0.	'pipliz.base' -> 'Recipes.RecipeColony+Callbacks.ModLoaderInterfaces.IOnGetJobGroupByPosition.OnGetJobGroupByPosition'   
+
+
+CallbackType: `OnSetJobGroupByPosition`  
+=======  
+Method type: System.Action<Recipes.RecipeColony.Callbacks.GroupLimitsCallbackContext>  
+Registered callbacks: 1  
+0.	'pipliz.base' -> 'Recipes.RecipeColony+Callbacks.ModLoaderInterfaces.IOnSetJobGroupByPosition.OnSetJobGroupByPosition'   
 
 

@@ -1,5 +1,5 @@
 {
-	"coverage" : 44.0690690690691,
+	"coverage" : 95.1965065502183,
 	"hints" : {
 		"0" : "对大多数农场来说，规模越大意味着产量越高。采浆果的人例外.",
 		"1" : "当你招募更多的殖民者时，会有更多不同的怪物诞生.",
@@ -70,21 +70,16 @@
 				"header" : "殖民地设置",
 				"nightmonsters" : "夜晚怪物数量"
 			},
-			"connectedplayers" : "连接玩家",
-			"currentowners" : "当前所有者",
 			"diplomacy" : {
 				"mainbutton" : "外交",
 				"mainheader" : "外交",
 				"ruleaccept" : "允许",
 				"ruleactive" : "激活",
+				"ruleedit" : "_MISSING_Edit",
 				"rulepending" : "等待",
 				"ruleremove" : "移除"
 			},
 			"inventoryheader" : "殖民地",
-			"invite" : "添加为殖民地所有者",
-			"kick" : "从殖民地踢出",
-			"leader" : "领导者",
-			"leave" : "殖民地等级",
 			"managecolonies" : {
 				"location" : {
 					"east" : "{0} 东部街区",
@@ -93,7 +88,7 @@
 					"south" : "{0} 南部街区, ",
 					"west" : "{0} 西部街区"
 				},
-				"mainbutton" : "管理殖民地",
+				"mainbutton2" : "_MISSING_Remote manage colonies",
 				"mainheader" : "殖民地管理",
 				"selectheader" : "选择要管理的殖民地",
 				"siegemode" : "攻城模式:"
@@ -102,17 +97,30 @@
 			"manageowners" : "管理所有者",
 			"nameedit" : "修改殖民地名字:",
 			"namefield" : "殖民地名字:",
+			"ownership" : {
+				"action" : "_MISSING_Action",
+				"connectedplayers" : "_MISSING_Connected Players",
+				"currentowners" : "_MISSING_Current Owners",
+				"follower" : "_MISSING_Follower",
+				"invite" : "_MISSING_Add as colony owner",
+				"kick" : "_MISSING_Kick",
+				"leader" : "_MISSING_Leader",
+				"leave" : "_MISSING_Leave colony",
+				"name" : "_MISSING_Name",
+				"role" : "_MISSING_Role",
+				"settoleader" : "_MISSING_Set to Leader"
+			},
 			"recruitauto" : "自动招聘",
-			"recruitautorequirements" : "<i>开启此功能将招募一个新的殖民者，当安置一份至少有10个幸福感的工作，空闲的床位，2天的食物和0个失业者时</i>",
 			"recruitmentamount" : "要招募的殖民者数量:",
 			"recruitmentbutton" : "招募殖民者",
 			"recruitmentheader" : "招聘",
 			"recruittext3" : "殖民者每天需要2000卡路里和一张床.",
 			"recruittext4" : "招募下一个殖民者的费用 {0} 卡路里.",
-			"recruittext5" : "成本是 {0} 因为快乐而付出的正常代价",
+			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
+			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
 			"recruittofillbeds" : "招满所有床位",
 			"recruittofilljobs" : "招满所有工作",
-			"resetcolonypriority" : "重置殖民地优先级",
+			"resetcolonypriority2" : "_MISSING_Reset active colony",
 			"science" : {
 				"incomingdescription2" : "他们会和你分享他们的科学知识",
 				"newagreement" : "提出科学协议",
@@ -120,14 +128,17 @@
 				"selectcolony" : "选择一个殖民地送科学去"
 			},
 			"selectcolony" : {
+				"currentcolony" : "_MISSING_Current Colony: {0}",
 				"headercolonists" : "殖民者",
 				"headercolony" : "殖民地",
 				"headerleader" : "领导者",
 				"headerselect" : "选择",
 				"nocolonies" : "没有可列出的殖民地",
+				"nocoloniesowned" : "_MISSING_No owned colonies to list",
+				"nocoloniesthird" : "_MISSING_No external colonies to list",
+				"othercolonies" : "_MISSING_Other Colonies",
 				"select" : "选择"
 			},
-			"settoleader" : "设置为领导者",
 			"start" : {
 				"create" : "创造殖民地",
 				"defaultkit" : "首次使用初学者工具包",
@@ -140,11 +151,13 @@
 			},
 			"startrecruitment" : "招聘",
 			"startsettings" : "殖民地设置",
-			"switchcolony" : "选择 {0}",
+			"switchcolony2" : "_MISSING_Switch active colony to:",
 			"trading" : {
 				"completerule" : "创建规则",
+				"completeruleedit" : "_MISSING_Complete rule edit",
 				"mainheader" : "新交易规则设置",
-				"newrule" : "提出交易规则",
+				"newruleinfinite" : "_MISSING_New infinite trading rule",
+				"newrulelimited" : "_MISSING_New limited trading rule",
 				"ruledescription" : "交易员将交易 {0} 来自 {1} 到 {2} 如果双方同意:",
 				"ruledescriptionlimit" : " {0} 剩余交易项目.",
 				"ruleincomingdescr2" : "得到 {0} 如果他们有超过 {1} 而我们只有不到 {2}.",
@@ -731,20 +744,20 @@
 				"respawn" : "重生吧~"
 			},
 			"inventory" : {
-				"availableamount" : "库存: {0}",
-				"calorievalue" : "{0} 每项热量",
+				"availableamount2" : "_MISSING_In stockpile",
+				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "制作和贮存",
-				"distributionhappyperitem" : "每个项目的幸福度: {0}",
-				"distributionpercolonist" : "每位殖民者的日常用品: {0}",
-				"distributionplanned" : "计划中的快乐增长: {0}",
-				"distributionreached" : "分配百分比: {0}%",
-				"distributiontotal" : "每日合计项目: {0}",
+				"distributionhappyperitem2" : "_MISSING_Happiness per item",
+				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
+				"distributionplanned2" : "_MISSING_Planned happiness increase",
+				"distributionreached2" : "_MISSING_Percentage distributed",
+				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "卡路里",
 				"filter-combat" : "战斗",
 				"filter-food" : "食品相关",
 				"filter-jobs" : "作业块",
 				"filter-luxuries" : "奢侈品",
-				"happinessvalue" : "幸福价值:",
+				"happinessvalue2" : "_MISSING_Happiness value",
 				"happy" : {
 					"header" : "幸福度"
 				},
@@ -813,7 +826,11 @@
 				"header" : "项目选择"
 			},
 			"limits" : {
+				"allreset" : "_MISSING_Reset all",
+				"allzero" : "_MISSING_Set all zero",
+				"createnewgroup" : "_MISSING_New group",
 				"description" : "屁民将一直工作到储备量达到为止.",
+				"group" : "_MISSING_Limits group:",
 				"hoverpriority" : {
 					"a" : "制作优先",
 					"b" : "食谱 +++ 优先考虑.\n 食谱 + 优先权最低."
@@ -843,10 +860,12 @@
 					"wheelspinner" : "旋转轮极限",
 					"woodcutter" : "木材限制",
 					"writer" : "写入程序限制"
-				}
+				},
+				"rename" : "_MISSING_Rename",
+				"waitingdata" : "_MISSING_Waiting on data...",
+				"wrongcolony" : "_MISSING_Selected crafting job is part of another colony"
 			},
 			"quickstart" : {
-				"closehelp" : "按F1关闭或重新打开此菜单",
 				"closetoggle" : "不再显示",
 				"next" : "下一页",
 				"openmanual" : "指导手册 (PDF)",
@@ -968,6 +987,7 @@
 				"minera" : "矿山的矿石",
 				"minerb" : "需要：镐\n矿石",
 				"minertool" : "需要划定矿工的工作区域",
+				"missingbiome" : "_MISSING_<color=red>Colony must be in biome '{0}'</color>",
 				"missingscience" : "<color=red>要求 '{0}' 先解锁.</color>",
 				"newworld" : "新世界",
 				"newworlda" : "新世界地区特有的工作",
@@ -1094,12 +1114,29 @@
 			"gameplay" : "游戏",
 			"gameplaymenu" : {
 				"full" : "游戏设置",
+				"gameplaytab" : {
+					"adaptivecrosshair" : "_MISSING_Adaptive crosshair",
+					"crosshairratio" : "_MISSING_Crosshair scale",
+					"devbuttons" : "_MISSING_Enable developer buttons",
+					"permanenthighlight" : "_MISSING_Permanent block highlight",
+					"ratio0" : "_MISSING_Disabled",
+					"ratio100" : "_MISSING_100%",
+					"ratio150" : "_MISSING_150%",
+					"ratio200" : "_MISSING_200%",
+					"ratio25" : "_MISSING_25%",
+					"ratio250" : "_MISSING_250%",
+					"ratio300" : "_MISSING_300%",
+					"ratio400" : "_MISSING_400%",
+					"ratio50" : "_MISSING_50%",
+					"ratio75" : "_MISSING_75%",
+					"tab" : "_MISSING_General settings",
+					"uiscalingratio" : "_MISSING_UI scale"
+				},
 				"keymapping" : "键位设置",
 				"keymenu" : {
 					"resetall" : "重置所有"
 				},
 				"mousemenu" : {
-					"devbuttons" : "启用开发人员按钮",
 					"invertx" : "翻转X轴",
 					"inverty" : "翻转Y轴",
 					"sensitivitylock" : "灵敏度",
@@ -1166,10 +1203,13 @@
 			"confirmdelete" : "确认删除",
 			"confirmdeletedescription" : "您将要删除包含此世界的文件夹。\n你确定要这么做吗",
 			"confirmload" : "确认加载",
+			"convert" : "_MISSING_Convert",
 			"delete" : "删除",
 			"hostingoptions" : "主机设置",
 			"load" : "载入",
 			"loadworld" : "载入世界",
+			"missingname" : "_MISSING_No world name set",
+			"modconfiguration" : "_MISSING_Mod Configuration",
 			"modschanged" : {
 				"added" : "'{0}' 已添加",
 				"disabled" : "'{0}' 已禁用或丢失.",
@@ -1177,6 +1217,8 @@
 				"main" : "加载世界 '{0}' 但是一些MOD内容改变.\n这可能会导致问题.",
 				"updated" : "'{0}' 已经从版本 {1} 升级到 {2}."
 			},
+			"modselectall" : "_MISSING_Select all",
+			"modselectnone" : "_MISSING_Select none",
 			"modslist" : {
 				"disableddependency" : "[禁用]",
 				"missingdependency" : "[丢失]",
@@ -1184,8 +1226,10 @@
 				"requireddependency" : "[依赖]"
 			},
 			"newworld" : "新世界",
+			"nosubscribeditems" : "_MISSING_No subscribed workshop worlds found",
 			"password" : "密码",
 			"play" : "开始",
+			"selectedfolder" : "_MISSING_Selected world: {0}",
 			"servername" : "服务器名称",
 			"serverport" : "服务器端口",
 			"typegenerateworld" : "创造世界",
@@ -1261,6 +1305,7 @@
 		"cokes" : "焦炭",
 		"colonykit" : "殖民地启动礼包",
 		"commandtool" : "命令工具",
+		"compass" : "_MISSING_Compass",
 		"constructionjob" : "建设工作",
 		"cookedfish" : "熟鱼",
 		"cookies" : "曲奇饼",
@@ -1509,6 +1554,7 @@
 		"coffeebeans" : "咖啡因是一种精神药物",
 		"cokes" : "创造和燃烧这东西可能是完全安全的为您的健康和环境",
 		"colonykit" : "需要建立额外的殖民地",
+		"compass" : "_MISSING_Not all those who wander are lost",
 		"cookedfish" : "游泳能力大大降低",
 		"cookies" : "名字来源于荷兰语“Koekje”",
 		"copper" : "不需要熔炼。所以方便！",

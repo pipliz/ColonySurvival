@@ -1,6 +1,39 @@
-0.7.5 (2020-**-**)
+0.7.5 (2020-10-09)
 
+- Crates, npc shops, beds are now searched for taking path distance into account, instead of straight-line-distance.
+-- Should help significantly reduce issues due to npcs going to goals through ceilings/walls
+- Pathfinding takes into account the "complexity" within a chunk better when searching for a path (hard to explain in one line)
+- Added support for "groups" in crafting limits; Now you can have a crafter dedicated to one thing, and another to something else.
+- Added the "compass" item, which will show the banner positions for colonies you're a part of
 - The game simulation now pauses when in the escape menu, when no one is connected and while the server is still loading areas on startup
 - The game simulation will now slow down when the server is overloaded, instead of mostly grinding to a halt
 
 - Added config values for server framerate and maximum simulation time per frame (gamedata/settings/server.json)
+- Added simulation speed shortcuts to numpad 1-5 by default if the "developer buttons" option is enabled
+- Fix not all data being used appropriately with the metadata hashes of files that are used to check for deduplicating / changes
+- Fix a regression presumably added in 0.7.2 regarding lighting not updating correctly in newly-changed-chunks in some situations
+- Optimized itemtype data packet format to reduce the size; mostly fixes the "1 MB packet limit" bug that the settlers mod ran into which broke co-op
+- All mods default to disabled now
+
+Modding/internal:
+- Added a mod callback system based on interfaces, see ModLoaderInterfaces namespace; the game will instantiate any objects implementing these interfaces and register them
+- Moved over various systems from using a float/double/long/int implicit timestamp (mostly of real milliseconds/seconds since start) over to ServerTimeStamp / ServerTime in general - which allows limiting the delta per tick.
+- Added IOnGetJobGroupByPosition, IOnSetJobGroupByPosition, IOnRegisteringEntityManagers, IOnLoadModJSONFiles callback interfaces
+- Significant overhaul of the shadow copy of the world for pathfinding, and the navigation meshes generated from it in order to support the new features
+
+0.7.5.8
+- Fix health not being properly saved and reverting to old values when it was loaded as non-max and saved as max
+- Fix active colony priorities not being saved and reverting when there were some upon loading and none on saving
+0.7.5.7
+- Fix an issue which could cause guards, grocery store operators, scientists and traders to get stuck on a crate when they tried to go to bed and their inventory was not empty (plausible on job switching)
+0.7.5.6
+- Fix multiple issues around the ambient lighting values; old issue present in earlier versions
+0.7.5.5
+- Fix the compass/glider issues more reliaby (0.7.5.2/0.7.5.1 but proper)
+0.7.5.4
+- Fixed an issue where some chunk changes would not be propagated to pathfinding, causing npcs to get stuck
+- Added /debug ownall
+0.7.5.3
+- Fix commandtool being broken in a colony outside of the major biomes
+0.7.5.2/0.7.5.1
+- Fix an issue related to the compass sending data too early sometimes; broke quite a lot when that happened

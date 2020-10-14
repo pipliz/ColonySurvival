@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.6041055718475,
+	"coverage" : 83.9883551673945,
 	"hints" : {
 		"0" : "For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "More and different monsters will spawn as you recruit more colonists.",
@@ -826,7 +826,11 @@
 				"header" : "Item Selection"
 			},
 			"limits" : {
+				"allreset" : "_MISSING_Reset all",
+				"allzero" : "_MISSING_Set all zero",
+				"createnewgroup" : "_MISSING_New group",
 				"description" : "Colonists will work until the set amount is reached in the stockpile.",
+				"group" : "_MISSING_Limits group:",
 				"hoverpriority" : {
 					"a" : "Crafting Priority",
 					"b" : "Recipes with a +++ priority are crafted first.\nRecipes with a + priority are crafted last."
@@ -856,7 +860,10 @@
 					"wheelspinner" : "Spinningwheel Limits",
 					"woodcutter" : "Wood cutting limits",
 					"writer" : "Writer limits"
-				}
+				},
+				"rename" : "_MISSING_Rename",
+				"waitingdata" : "_MISSING_Waiting on data...",
+				"wrongcolony" : "_MISSING_Selected crafting job is part of another colony"
 			},
 			"quickstart" : {
 				"closetoggle" : "Do not show this again",
@@ -980,6 +987,7 @@
 				"minera" : "Mines ores",
 				"minerb" : "Needs: Pickaxe\nDig down and place on top of ores or dark stone",
 				"minertool" : "Miner Tool",
+				"missingbiome" : "_MISSING_<color=red>Colony must be in biome '{0}'</color>",
 				"missingscience" : "<color=red>Requires '{0}' to be unlocked first.</color>",
 				"newworld" : "New World",
 				"newworlda" : "Jobs specific to the New World region",
@@ -1297,6 +1305,7 @@
 		"cokes" : "Cokes",
 		"colonykit" : "Colony Starter Kit",
 		"commandtool" : "Command Tool",
+		"compass" : "_MISSING_Compass",
 		"constructionjob" : "Construction Job",
 		"cookedfish" : "Cooked Fish",
 		"cookies" : "Cookies",
@@ -1545,6 +1554,7 @@
 		"coffeebeans" : "Caffeine is a psychoactive drug",
 		"cokes" : "Creating and burning this stuff is probably totally safe for your health and the environment",
 		"colonykit" : "Required to start additional colonies",
+		"compass" : "_MISSING_Not all those who wander are lost",
 		"cookedfish" : "Swimming capabilities are dramatically reduced",
 		"cookies" : "Name derives from the Dutch word 'Koekje'",
 		"copper" : "Does not need to be smelted. So convenient!",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 87.0234604105572,
+	"coverage" : 86.3901018922853,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -826,7 +826,11 @@
 				"header" : "アイテム選択"
 			},
 			"limits" : {
+				"allreset" : "_MISSING_Reset all",
+				"allzero" : "_MISSING_Set all zero",
+				"createnewgroup" : "_MISSING_New group",
 				"description" : "入植者は備蓄品の中が指定した量になるまで作業を続けます。",
+				"group" : "_MISSING_Limits group:",
 				"hoverpriority" : {
 					"a" : "作成優先度",
 					"b" : "優先度+++のレシピは最初に作成されます。\n優先度+のレシピは最後に作成されます。"
@@ -856,7 +860,10 @@
 					"wheelspinner" : "糸車の上限",
 					"woodcutter" : "製材の上限",
 					"writer" : "作家の上限"
-				}
+				},
+				"rename" : "_MISSING_Rename",
+				"waitingdata" : "_MISSING_Waiting on data...",
+				"wrongcolony" : "_MISSING_Selected crafting job is part of another colony"
 			},
 			"quickstart" : {
 				"closetoggle" : "次回から表示しない",
@@ -980,6 +987,7 @@
 				"minera" : "鉱石を採掘する",
 				"minerb" : "必要: つるはし\n穴を掘り、鉱石か石ブロック（暗色）の上に設置する",
 				"minertool" : "鉱員ツール",
+				"missingbiome" : "_MISSING_<color=red>Colony must be in biome '{0}'</color>",
 				"missingscience" : "<color=red>先に「{0}」をアンロックする必要があります。</color>",
 				"newworld" : "新世界",
 				"newworlda" : "新世界地域に固有の仕事",
@@ -1297,6 +1305,7 @@
 		"cokes" : "コークス",
 		"colonykit" : "コロニースターターキット",
 		"commandtool" : "コマンドツール",
+		"compass" : "_MISSING_Compass",
 		"constructionjob" : "人足",
 		"cookedfish" : "焼き魚",
 		"cookies" : "クッキー",
@@ -1545,6 +1554,7 @@
 		"coffeebeans" : "【コーヒー豆】\n《Coffee Beans》\nカフェインは向精神薬です",
 		"cokes" : "【こーくす】\n《Cokes》\nこれを作って燃やすことが、あなたの健康や環境に悪影響を及ぼすことは全くありません、たぶんね",
 		"colonykit" : "【ころにーすたーたーきっと】\n《Colony Starter Kit》\nさらなるコロニーの建設に必要",
+		"compass" : "_MISSING_Not all those who wander are lost",
 		"cookedfish" : "【やきざかな】\n《Cooked Fish》\n泳力は劇的に低下",
 		"cookies" : "【くっきー】\n《Cookies》\n名前はオランダ語の単語'Koekje'に由来する",
 		"copper" : "【どう】\n《Copper》\n製錬の必要がなくってラクチン！",

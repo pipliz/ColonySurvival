@@ -327,7 +327,10 @@
 		"iterationRequirements" : [
 			{"type":"ricemeal"}
 		],
-		"key" : "pipliz.baseresearch.silkwormfarmer",
+		"key": "pipliz.baseresearch.silkwormfarmer",
+		"unlocksClientHints" : [
+			{"data":"pipliz.silkwormfarmer","type":"NPCType"}
+		],
 		"requiredScienceBiome" : "sciencebiome.fareast",
 		"unlocksRecipeGroups" : [
 			"pipliz.silkwormfarmer"
@@ -378,7 +381,10 @@
 			{"type":"ricemeal"}
 		],
 		"key" : "pipliz.baseresearch.teafarmer",
-		"requiredScienceBiome" : "sciencebiome.fareast",
+		"requiredScienceBiome": "sciencebiome.fareast",
+		"unlocksClientHints" : [
+			{"data":"pipliz.teafarmer","type":"NPCType"}
+		],
 		"unlocksRecipeGroups" : [
 			"pipliz.teafarmer"
 		],
@@ -397,7 +403,10 @@
 		"iterationRequirements" : [
 			{"type":"flax"}
 		],
-		"key" : "pipliz.baseresearch.beekeeper",
+		"key": "pipliz.baseresearch.beekeeper",
+		"unlocksClientHints" : [
+			{"data":"pipliz.beekeeper","type":"NPCType"}
+		],
 		"unlocksRecipeGroups" : [
 			"pipliz.beekeeper"
 		],
@@ -470,7 +479,10 @@
 			{"amount":4,"type":"coppernails"},
 			{"amount":2,"type":"copperparts"}
 		],
-		"key" : "pipliz.baseresearch.watergatherer",
+		"key": "pipliz.baseresearch.watergatherer",
+		"unlocksClientHints" : [
+			{"data":"pipliz.watergatherer","type":"NPCType"}
+		],
 		"unlocksRecipeGroups" : [
 			"pipliz.watergatherer"
 		],
@@ -506,7 +518,17 @@
 		"iterationRequirements" : [
 			{"type":"olive"}
 		],
-		"key" : "pipliz.baseresearch.fisherman",
+		"key": "pipliz.baseresearch.fisherman",
+		"unlocksClientHints" : [
+			{
+				"data": "pipliz.fisherman",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.fishfarmer",
+				"type": "NPCType"
+			}
+		],
 		"unlocksRecipeGroups" : [
 			"pipliz.fisherman",
 			"pipliz.fishfarmer"
@@ -574,7 +596,10 @@
 		"iterationRequirements" : [
 			{"amount":25,"type":"barley"}
 		],
-		"key" : "pipliz.baseresearch.chickenfarmer",
+		"key": "pipliz.baseresearch.chickenfarmer",
+				"unlocksClientHints" : [
+			{"data":"pipliz.chickenfarmer","type":"NPCType"}
+		],
 		"unlocksRecipeGroups" : [
 			"pipliz.chickenfarmer"
 		],
@@ -1230,7 +1255,10 @@
 			{"amount":5,"type":"cobblestonegrey"},
 			{"amount":5,"type":"bricksred"}
 		],
-		"key" : "pipliz.baseresearch.constructionbuilder"
+		"key" : "pipliz.baseresearch.constructionbuilder",
+		"unlocksClientHints" : [
+			{"data":"pipliz.builder","type":"NPCType"}
+		]
 	},
 	{
 		"dependencies" : [
@@ -1306,7 +1334,8 @@
 		],
 		"key" : "pipliz.baseresearch.constructiondigger",
 		"unlocksClientHints" : [
-			{"data":"pipliz.constructor","type":"NPCType"}
+			{"data":"pipliz.constructor","type":"NPCType"},
+			{"data":"pipliz.digger","type":"NPCType"}
 		]
 	},
 	{
@@ -1382,6 +1411,9 @@
 			{"type":"sciencebagbasic"},
 			{"type":"sciencebagadvanced"}
 		],
-		"key" : "pipliz.baseresearch.constructiondiggerspecial"
+		"key" : "pipliz.baseresearch.constructiondiggerspecial",
+		"unlocksClientHints" : [
+			{"data":"pipliz.diggerspecial","type":"NPCType"}
+		]
 	}
 ]

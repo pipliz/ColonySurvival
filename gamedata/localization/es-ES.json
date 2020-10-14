@@ -1,5 +1,5 @@
 {
-	"coverage" : 83.3577712609971,
+	"coverage" : 82.7510917030568,
 	"hints" : {
 		"0" : "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
 		"1" : "Más y diferentes monstruos aparecerán si reclutas más colonos.",
@@ -826,7 +826,11 @@
 				"header" : "Selección de item"
 			},
 			"limits" : {
+				"allreset" : "_MISSING_Reset all",
+				"allzero" : "_MISSING_Set all zero",
+				"createnewgroup" : "_MISSING_New group",
 				"description" : "Los colonos trabajarán hasta alcanzar el limite de la reserva.",
+				"group" : "_MISSING_Limits group:",
 				"hoverpriority" : {
 					"a" : "Prioridad de elaboración",
 					"b" : "Recipientes con un +++ de prioridad son creados primero.\n Recipientes con un + de prioridad es creado al último."
@@ -856,7 +860,10 @@
 					"wheelspinner" : "Límite de hiladora",
 					"woodcutter" : "Límite de leñado",
 					"writer" : "Límite de escritura"
-				}
+				},
+				"rename" : "_MISSING_Rename",
+				"waitingdata" : "_MISSING_Waiting on data...",
+				"wrongcolony" : "_MISSING_Selected crafting job is part of another colony"
 			},
 			"quickstart" : {
 				"closetoggle" : "No mostrar esto de nuevo",
@@ -980,6 +987,7 @@
 				"minera" : "Minar menas",
 				"minerb" : "Necesitas: Pico\nExcava y coloca encima de las menas o piedras oscuras",
 				"minertool" : "Herramienta para Mineros",
+				"missingbiome" : "_MISSING_<color=red>Colony must be in biome '{0}'</color>",
 				"missingscience" : "<color=red>'{0}' no ha sido investigada.</color>",
 				"newworld" : "Nuevo Mundo",
 				"newworlda" : "Trabajos específicos para la región del Nuevo Mundo",
@@ -1297,6 +1305,7 @@
 		"cokes" : "Coque",
 		"colonykit" : "Kit colonial de inicio",
 		"commandtool" : "Tabla de Trabajos",
+		"compass" : "_MISSING_Compass",
 		"constructionjob" : "Trabajo de construcción",
 		"cookedfish" : "Pescado cocinado",
 		"cookies" : "Galletas",
@@ -1545,6 +1554,7 @@
 		"coffeebeans" : "La cafeína es una droga psicoactiva",
 		"cokes" : "Crear y quemar esta cosa es probable que sea seguro totalmente para su salud y el medio ambiente.",
 		"colonykit" : "Se requiere para iniciar colonias adicionales",
+		"compass" : "_MISSING_Not all those who wander are lost",
 		"cookedfish" : "Capacidades de natación reducidas",
 		"cookies" : "El nombre deriva del francés, 'galette'",
 		"copper" : "No necesita ser fundido. ¡Muy conveniente!",

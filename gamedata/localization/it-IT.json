@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.0175953079179,
+	"coverage" : 83.4061135371179,
 	"hints" : {
 		"0" : "Per la maggior parte delle fattorie, maggior grandezza significa più produzione. I raccoglitori di bacche sono un'eccezione alla regola.",
 		"1" : "Con l'aumentare del numero di coloni, aumenteranno il numero e la tipologia di mostri.",
@@ -826,7 +826,11 @@
 				"header" : "Selezione Oggetto"
 			},
 			"limits" : {
+				"allreset" : "_MISSING_Reset all",
+				"allzero" : "_MISSING_Set all zero",
+				"createnewgroup" : "_MISSING_New group",
 				"description" : "I coloni lavoreranno fino a raggiungere la quantità fissata nel magazzino.",
+				"group" : "_MISSING_Limits group:",
 				"hoverpriority" : {
 					"a" : "Priorità di costruzione",
 					"b" : "Gli oggetti con priorità +++ vengono prodotti prima.\nQuelli con priorità + alla fine."
@@ -856,7 +860,10 @@
 					"wheelspinner" : "Limiti Filatoio",
 					"woodcutter" : "Limiti Falegname",
 					"writer" : "Limiti Scrittore"
-				}
+				},
+				"rename" : "_MISSING_Rename",
+				"waitingdata" : "_MISSING_Waiting on data...",
+				"wrongcolony" : "_MISSING_Selected crafting job is part of another colony"
 			},
 			"quickstart" : {
 				"closetoggle" : "Non mostrare di nuovo.",
@@ -980,6 +987,7 @@
 				"minera" : "",
 				"minerb" : "Necessita di: Piccone\nScava in basso e posizionalo sui minerali o la pietra più scura",
 				"minertool" : "Strumento Minatore",
+				"missingbiome" : "_MISSING_<color=red>Colony must be in biome '{0}'</color>",
 				"missingscience" : "<color=red>Richiede '{0}' prima di essere sbloccato.</color>",
 				"newworld" : "Nuovo Mondo",
 				"newworlda" : "Lavoro specifico per la regione del Nuovo Mondo",
@@ -1297,6 +1305,7 @@
 		"cokes" : "Carbone",
 		"colonykit" : "Starter Kit Coloniale",
 		"commandtool" : "Strumento di Comando",
+		"compass" : "_MISSING_Compass",
 		"constructionjob" : "Lavoro di Costruzione",
 		"cookedfish" : "Pesce Cotto",
 		"cookies" : "Biscotti",
@@ -1545,6 +1554,7 @@
 		"coffeebeans" : "La caffeina è una sostanza psicoattiva",
 		"cokes" : "Produrre e bruciare questa roba è totalmente sicuro per la salute e l'ambiente",
 		"colonykit" : "Necessario per incominciare nuove colonie",
+		"compass" : "_MISSING_Not all those who wander are lost",
 		"cookedfish" : "Le capacità di nuotare si riducono drammaticamente",
 		"cookies" : "Il nome deriva dalla parola olandese 'Koekje'",
 		"copper" : "Non ha bisogno di essere fuso. Molto conveniente!",
