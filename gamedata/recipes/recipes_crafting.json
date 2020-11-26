@@ -324,7 +324,7 @@
 		"defaultPriority" : -100,
 		"name" : "pipliz.crafter.coatedplanks",
 		"requires" : [
-			{"amount":3,"type":"woodcoating"},
+			{"amount":3,"type":"beeswax"},
 			{"amount":3,"type":"planks"}
 		],
 		"results" : [
@@ -336,7 +336,7 @@
 		"defaultPriority" : -100,
 		"name" : "pipliz.crafter.adobe",
 		"requires" : [
-			{"type":"woodcoating"},
+			{"type":"beeswax"},
 			{"type":"dirt"}
 		],
 		"results" : [
@@ -505,29 +505,17 @@
 			{"type":"boilingwater"}
 		],
 		"results" : [
-			{"type":"ink"},
+			{"amount":4,"type":"ink"},
 			{"isOptional":true,"type":"bucketempty"}
 		]
-	},
-	{
-		"defaultLimit" : 5,
-		"defaultPriority" : -100,
-		"name" : "pipliz.crafter.woodcoating",
-		"requires" : [
-			{"type":"oliveoil"},
-			{"type":"beeswax"}
-		],
-		"results" : [
-			{"type":"woodcoating"}
-		]
-	},
+	},	
 	{
 		"defaultLimit" : 5,
 		"defaultPriority" : -100,
 		"name" : "pipliz.crafter.waxtablet",
 		"requires" : [
 			{"type":"coatedplanks"},
-			{"amount":2,"type":"ironrivet"},
+			{"amount":5,"type":"ironrivet"},
 			{"amount":5,"type":"beeswax"}
 		],
 		"results" : [

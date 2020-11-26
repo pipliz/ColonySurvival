@@ -1,5 +1,5 @@
 {
-	"coverage" : 37.8457059679767,
+	"coverage" : 36.2204724409449,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "_MISSING_Day Monster Amount",
-				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "_MISSING_Colony Settings",
 				"nightmonsters" : "_MISSING_Night Monster Amount"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "_MISSING_Action",
 				"connectedplayers" : "_MISSING_Connected Players",
@@ -111,13 +111,15 @@
 				"settoleader" : "_MISSING_Set to Leader"
 			},
 			"recruitauto" : "_MISSING_Automatic recruit on job placement",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
-			"recruittext3" : "_MISSING_Colonists require 2000 calories per day and a bed.",
-			"recruittext4" : "_MISSING_Recruiting the next colonist costs {0} calories.",
-			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext3" : "_MISSING_Colonists require a meal per day and a bed.",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "탄약:",
 			"bedcount" : "침대:",
-			"caloriestorage" : "_MISSING_Total Calories:",
-			"calorieusage" : "_MISSING_Calorie use/day:",
 			"colonistcount" : "주민:",
-			"happiness" : "_MISSING_Happiness:",
-			"laborercount" : "실업자:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "실업자:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "적용",
@@ -257,6 +258,7 @@
 			"enabled" : "_MISSING_Enabled",
 			"high" : "_MISSING_High",
 			"inputplaceholder" : "텍스트를 입력하세요...",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "_MISSING_Low",
 			"next" : "다음",
 			"no" : "_MISSING_No",
@@ -330,6 +332,7 @@
 				"beekeeper" : "_MISSING_Beekeeper",
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"bloomeryjob" : "_MISSING_Iron Smelter",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cacaofarmer" : "_MISSING_Cacao Farmer",
 				"cassavafarmer" : "_MISSING_Cassava Farmer",
@@ -339,6 +342,8 @@
 				"cook" : "_MISSING_Cook",
 				"cottonfarmer" : "_MISSING_Cotton Farmer",
 				"crafter" : "_MISSING_Crafter",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "_MISSING_Dyer",
 				"fineryforgejob" : "_MISSING_Steel Smelter",
 				"fisherman" : "_MISSING_Fisherman",
@@ -612,6 +617,10 @@
 					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
 					"name" : "_MISSING_Health Increase IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "초기의 소총, 화승총을 연구합니다.",
 					"name" : "화승총"
@@ -640,21 +649,9 @@
 					"description" : "_MISSING_Unlocks rice farming",
 					"name" : "_MISSING_Rice farming"
 				},
-				"sciencebagadvanced" : {
-					"description" : "고급 연구에 쓰이는 고급 연구팩을 연구합니다.",
-					"name" : "고급 연구팩"
-				},
 				"sciencebagbasic" : {
 					"description" : "기초 연구에 쓰이는 기초 연구팩을 연구합니다.",
 					"name" : "기초 연구팩"
-				},
-				"sciencebagcolony" : {
-					"description" : "마을과 관련된 연구에 쓰이는 마을 연구팩을 연구합니다.",
-					"name" : "마을 연구팩"
-				},
-				"sciencebaglife" : {
-					"description" : "생명과 관련된 연구에 쓰이는 생명 연구팩을 연구합니다. ",
-					"name" : "생명 연구팩"
 				},
 				"sciencebagmilitary" : {
 					"description" : "군사 연구에 쓰이는 군사 연구팩을 연구합니다.",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "_MISSING_In stockpile",
-				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "창고",
-				"distributionhappyperitem2" : "_MISSING_Happiness per item",
-				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
-				"distributionplanned2" : "_MISSING_Planned happiness increase",
-				"distributionreached2" : "_MISSING_Percentage distributed",
-				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "_MISSING_Happiness"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "_MISSING_Made in:",
 				"noactivecolony" : "_MISSING_No active colony!",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "연구 가능",
 					"cancel" : "_MISSING_Cancel",
@@ -770,8 +773,10 @@
 					"completeunlock" : "_MISSING_Complete",
 					"conditioncolonistcount" : "_MISSING_Colonists",
 					"conditioncolonistcountdescription" : "_MISSING_Number of colonists required",
-					"conditionhappiness" : "_MISSING_Happiness requirement",
-					"conditionhappinessdescription" : "_MISSING_Minimum net happiness required",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "_MISSING_Requires {0}",
 					"dependencies" : "선행 연구:",
 					"header" : "과학 연구",
@@ -786,14 +791,9 @@
 				"stats" : {
 					"auto-scale" : "_MISSING_Auto scale",
 					"entry-beds" : "_MISSING_Beds",
-					"entry-crowdedness" : "_MISSING_Crowdedness",
-					"entry-dailycalories" : "_MISSING_Daily calories per colonist",
-					"entry-happytotal" : "_MISSING_Happiness Total",
-					"entry-kingspresence" : "_MISSING_Existential Happiness",
-					"entry-misccauses" : "_MISSING_Misc Causes",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-npccount" : "_MISSING_Colonists",
-					"entry-rationing" : "_MISSING_Rationing",
-					"entry-totalcalories" : "_MISSING_Total Calories",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "_MISSING_Unemployed",
 					"header" : "_MISSING_Statistics",
 					"hide-all" : "_MISSING_Hide all",
@@ -805,12 +805,10 @@
 					"time1day" : "_MISSING_Day",
 					"time24day" : "_MISSING_24-Day",
 					"time4day" : "_MISSING_4-Day",
-					"type-calories" : "_MISSING_Food Intake",
 					"type-colony" : "_MISSING_Colony",
-					"type-happiness" : "_MISSING_Happiness",
 					"type-idle-jobs" : "_MISSING_Idle Job Time",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "_MISSING_Stockpile",
-					"type-totalcalories" : "_MISSING_Total Calories",
 					"type-trade-in" : "_MISSING_Inbound Trade",
 					"type-trade-out" : "_MISSING_Outbound Trade"
 				},
@@ -819,6 +817,22 @@
 					"instockpile" : "재고량",
 					"needs" : "필요 아이템: ",
 					"nothing" : "_MISSING_Nothing"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +852,7 @@
 				"pipliz" : {
 					"baker" : "제빵 목표량",
 					"beekeeper" : "_MISSING_Beekeeper limits",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "제철 목표량",
 					"chickenfarmer" : "_MISSING_Chicken farmer limits",
 					"cook" : "_MISSING_Cook limits",
@@ -1238,6 +1253,36 @@
 			"worldname" : "이름",
 			"worldname_long" : "_MISSING_World Name",
 			"worldseed" : "_MISSING_World seed"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1299,7 @@
 		"beeswax" : "_MISSING_Beeswax",
 		"berry" : "딸기",
 		"berrybush" : "딸기 씨앗",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "검은 널빤지",
 		"bloomery" : "제철 용광로",
 		"boilingwater" : "_MISSING_Boiling Water",
@@ -1261,6 +1307,7 @@
 		"bow" : "활",
 		"bowstring" : "활 시위",
 		"bread" : "빵",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "벽돌",
 		"bricksblack" : "검은 벽돌",
 		"bricksdarkred" : "검붉은 벽돌",
@@ -1332,7 +1379,6 @@
 		"fineryforge" : "강철 제철소",
 		"firewood" : "땔감",
 		"fishermanjob" : "_MISSING_Fisherman Job",
-		"fishmeal" : "_MISSING_Fishmeal",
 		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "아마꽃",
 		"flaxstage1" : "아마꽃 씨앗",
@@ -1455,10 +1501,7 @@
 		"saplingfallorange" : "_MISSING_Fall Sapling",
 		"saplingtaiga" : "_MISSING_Taiga Sapling",
 		"sappling" : "묘목",
-		"sciencebagadvanced" : "고급 연구팩",
 		"sciencebagbasic" : "기초 연구팩",
-		"sciencebagcolony" : "마을 연구팩",
-		"sciencebaglife" : "생명 연구팩",
 		"sciencebagmilitary" : "군사 연구팩",
 		"sciencelab" : "연구소",
 		"shop" : "시장",
@@ -1515,14 +1558,16 @@
 		"barley" : "_MISSING_Chickens love it",
 		"bed" : "흔들리지 않는 편안함.",
 		"beeswax" : "_MISSING_Sticky",
-		"berry" : "안심하세요. 독은 없습니다.",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "쉽게 재배할 수 있는 작물입니다.",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "주의! 불을 피우지 마시오.",
 		"bloomery" : "숯으로 철광석과 방연석을 제련합니다.",
 		"boilingwater" : "_MISSING_Keeps boiling eternally, for some reason",
 		"bow" : "한조 대기중",
 		"bowstring" : "띠용",
-		"bread" : "맛이 엄청 좋아서 체력도 회복됩니다.",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "튼튼해서 늑대 입김에 날아가지 않아요.",
 		"bronzeanvil" : "_MISSING_Not block-shaped any longer!",
 		"bronzearrow" : "상품평에 몬스터들이 계속 싫어요를 누르고 있습니다.",
@@ -1576,7 +1621,6 @@
 		"feather" : "_MISSING_Falls as quickly to the ground as a hammer, on the Moon.",
 		"fineryforge" : "석탄으로 강철과 금괴를 만듭니다.",
 		"firewood" : "기본적인 연료.",
-		"fishmeal" : "_MISSING_Great fertilizers for cabbages",
 		"flax" : "천의 기본 재료.",
 		"flaxstage1" : "땅에 뿌려주세요.",
 		"flour" : "오븐으로 빵을 구울 수 있습니다.",
@@ -1648,10 +1692,7 @@
 		"saplingfallorange" : "_MISSING_Orange future tree",
 		"saplingtaiga" : "_MISSING_Slightly different tree",
 		"sappling" : "될성 부른 나무는 떡잎부터 알아본다!",
-		"sciencebagadvanced" : "고오급 연구에 사용합니다.",
 		"sciencebagbasic" : "기초 연구에 사용합니다.",
-		"sciencebagcolony" : "마을과 관련된 연구에 사용합니다.",
-		"sciencebaglife" : "생명과 관련된 연구에 사용합니다.",
 		"sciencebagmilitary" : "전투와 관련된 연구에 사용합니다.",
 		"sciencelab" : "백지장도 맞들면 낫죠! 많이 설치하세요!",
 		"shop" : "슬프지만 구매전용입니다.",

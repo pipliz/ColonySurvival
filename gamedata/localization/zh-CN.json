@@ -1,5 +1,5 @@
 {
-	"coverage" : 95.1965065502183,
+	"coverage" : 91.2670007158196,
 	"hints" : {
 		"0" : "对大多数农场来说，规模越大意味着产量越高。采浆果的人例外.",
 		"1" : "当你招募更多的殖民者时，会有更多不同的怪物诞生.",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "白天怪物数量",
-				"enablehappiness" : "启用幸福度",
 				"header" : "殖民地设置",
 				"nightmonsters" : "夜晚怪物数量"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "管理所有者",
 			"nameedit" : "修改殖民地名字:",
 			"namefield" : "殖民地名字:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "_MISSING_Action",
 				"connectedplayers" : "_MISSING_Connected Players",
@@ -111,13 +111,15 @@
 				"settoleader" : "_MISSING_Set to Leader"
 			},
 			"recruitauto" : "自动招聘",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "要招募的殖民者数量:",
 			"recruitmentbutton" : "招募殖民者",
 			"recruitmentheader" : "招聘",
 			"recruittext3" : "殖民者每天需要2000卡路里和一张床.",
-			"recruittext4" : "招募下一个殖民者的费用 {0} 卡路里.",
-			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "招满所有床位",
 			"recruittofilljobs" : "招满所有工作",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "弹药:",
 			"bedcount" : "床:",
-			"caloriestorage" : "总卡路里:",
-			"calorieusage" : "热量使用/天:",
 			"colonistcount" : "屁民:",
-			"happiness" : "幸福:",
-			"laborercount" : "失业人数:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "失业人数:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "确定",
@@ -257,6 +258,7 @@
 			"enabled" : "开启",
 			"high" : "高",
 			"inputplaceholder" : "输入文本...",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "低",
 			"next" : "下一页",
 			"no" : "否",
@@ -330,6 +332,7 @@
 				"beekeeper" : "养蜂人",
 				"berryfarmer" : "果农",
 				"bloomeryjob" : "炼铁厂",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "菜农",
 				"cacaofarmer" : "可可农民",
 				"cassavafarmer" : "木薯农",
@@ -339,6 +342,8 @@
 				"cook" : "厨师",
 				"cottonfarmer" : "棉农",
 				"crafter" : "工匠",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "染色机",
 				"fineryforgejob" : "炼钢场",
 				"fisherman" : "渔夫",
@@ -612,6 +617,10 @@
 					"description" : "增加总生命值、再生数量和再生速度",
 					"name" : "健康增加IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "解锁的火绳枪，枪的早期型",
 					"name" : "火枪"
@@ -640,21 +649,9 @@
 					"description" : "解锁水稻种植",
 					"name" : "水稻种植"
 				},
-				"sciencebagadvanced" : {
-					"description" : "解锁高级科学袋，用于高级研究",
-					"name" : "先进的科学袋"
-				},
 				"sciencebagbasic" : {
 					"description" : "解锁基本科学袋，用于基础研究",
 					"name" : "基础科学袋"
-				},
-				"sciencebagcolony" : {
-					"description" : "解锁殖民地科学袋，用于集群的相关研究",
-					"name" : "殖民地科学袋"
-				},
-				"sciencebaglife" : {
-					"description" : "解锁生命科学袋，研究与健康有关的升级",
-					"name" : "生命科学袋"
 				},
 				"sciencebagmilitary" : {
 					"description" : "解锁军事科学袋，用于军事研究",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "_MISSING_In stockpile",
-				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "制作和贮存",
-				"distributionhappyperitem2" : "_MISSING_Happiness per item",
-				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
-				"distributionplanned2" : "_MISSING_Planned happiness increase",
-				"distributionreached2" : "_MISSING_Percentage distributed",
-				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "卡路里",
 				"filter-combat" : "战斗",
 				"filter-food" : "食品相关",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "幸福度"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "制造于:",
 				"noactivecolony" : "没有活跃的殖民地！",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "可用",
 					"cancel" : "取消",
@@ -770,8 +773,10 @@
 					"completeunlock" : "完成解锁",
 					"conditioncolonistcount" : "殖民者",
 					"conditioncolonistcountdescription" : "所需殖民者人数",
-					"conditionhappiness" : "幸福要求",
-					"conditionhappinessdescription" : "最低净幸福要求",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "要求 {0}",
 					"dependencies" : "技术要求:",
 					"header" : "科学类",
@@ -786,14 +791,9 @@
 				"stats" : {
 					"auto-scale" : "自动缩放",
 					"entry-beds" : "床位",
-					"entry-crowdedness" : "拥挤",
-					"entry-dailycalories" : "每位殖民者每日卡路里",
-					"entry-happytotal" : "总幸福度",
-					"entry-kingspresence" : "存在的幸福",
-					"entry-misccauses" : "其他原因",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-npccount" : "殖民者",
-					"entry-rationing" : "配给",
-					"entry-totalcalories" : "卡路里",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "失业的",
 					"header" : "统计",
 					"hide-all" : "全部隐藏",
@@ -805,12 +805,10 @@
 					"time1day" : "1天",
 					"time24day" : "24天",
 					"time4day" : "4天",
-					"type-calories" : "食物摄入量",
 					"type-colony" : "殖民地",
-					"type-happiness" : "幸福",
 					"type-idle-jobs" : "空闲工作时间",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "库存",
-					"type-totalcalories" : "卡路里",
 					"type-trade-in" : "入境贸易",
 					"type-trade-out" : "对外贸易"
 				},
@@ -819,6 +817,22 @@
 					"instockpile" : "在储备",
 					"needs" : "需要: ",
 					"nothing" : "无"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +852,7 @@
 				"pipliz" : {
 					"baker" : "烘焙达到最大",
 					"beekeeper" : "养蜂人限制",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "锻铁炉限制",
 					"chickenfarmer" : "养鸡场限制",
 					"cook" : "烹调限制",
@@ -1238,6 +1253,36 @@
 			"worldname" : "名字",
 			"worldname_long" : "世界名称",
 			"worldseed" : "世界种子"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1299,7 @@
 		"beeswax" : "蜂蜡",
 		"berry" : "浆果",
 		"berrybush" : "浆果种子",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "涂黑色的木板",
 		"bloomery" : "锻铁炉",
 		"boilingwater" : "沸水",
@@ -1261,6 +1307,7 @@
 		"bow" : "弓",
 		"bowstring" : "弓弦",
 		"bread" : "面包",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "砖",
 		"bricksblack" : "黑色的砖",
 		"bricksdarkred" : "暗红色的砖",
@@ -1332,7 +1379,6 @@
 		"fineryforge" : "优雅的服装",
 		"firewood" : "柴",
 		"fishermanjob" : "渔夫工作",
-		"fishmeal" : "鱼粉",
 		"fishtank" : "鱼缸",
 		"flax" : "亚麻",
 		"flaxstage1" : "亚麻种子",
@@ -1455,10 +1501,7 @@
 		"saplingfallorange" : "落叶松",
 		"saplingtaiga" : "太伽树苗",
 		"sappling" : "树苗",
-		"sciencebagadvanced" : "先进的科学袋",
 		"sciencebagbasic" : "基础科学袋",
-		"sciencebagcolony" : "殖民地科学袋",
-		"sciencebaglife" : "生命科学袋",
 		"sciencebagmilitary" : "军事科学袋",
 		"sciencelab" : "科学实验室",
 		"shop" : "商店",
@@ -1515,14 +1558,16 @@
 		"barley" : "小鸡喜欢它",
 		"bed" : "需要稻草，而不是螺丝",
 		"beeswax" : "粘的",
-		"berry" : "真的没有毒哦,来你尝尝~",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "屁民可以种植这些作为临时饱腹的食物。",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "高度易燃,小心火烛",
 		"bloomery" : "用木炭作为燃料来冶炼铁和方铅矿。",
 		"boilingwater" : "不知为什么，一直在沸腾",
 		"bow" : "需要一个警卫!",
 		"bowstring" : "扑通",
-		"bread" : "味道不错，还能治好你的伤口。",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "毕竟这是一块荷兰砖。",
 		"bronzeanvil" : "不再是块状的！",
 		"bronzearrow" : "怪物继续留下负面评论。卫兵们喜欢它！",
@@ -1576,7 +1621,6 @@
 		"feather" : "大白菜肥料在月球上像锤子一样迅速地落在地上.",
 		"fineryforge" : "需要可乐创造钢和金元宝",
 		"firewood" : "基本的燃料",
-		"fishmeal" : "大白菜肥料",
 		"flax" : "皇家的颜色",
 		"flaxstage1" : "把它放在地上",
 		"flour" : "面粉嘛大家懂的~",
@@ -1648,10 +1692,7 @@
 		"saplingfallorange" : "橙色未来树",
 		"saplingtaiga" : "稍有不同的树",
 		"sappling" : "未来的树",
-		"sciencebagadvanced" : "高级科学要求",
 		"sciencebagbasic" : "基础科学研究所需",
-		"sciencebagcolony" : "殖民地相关科学所需",
-		"sciencebaglife" : "需要研究与健康和生命有关的科学",
 		"sciencebagmilitary" : "需要研究与战斗有关的科学",
 		"sciencelab" : "科学家用来解开新技术的。多个科学家可以一起工作！",
 		"shop" : "现在只能买非常贵的亚麻籽了",

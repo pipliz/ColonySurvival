@@ -1,5 +1,5 @@
 {
-	"coverage" : 83.9883551673945,
+	"coverage" : 80.9591982820329,
 	"hints" : {
 		"0" : "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1" : "У міру того, як ваша колонія росте, будуть з'являтися нові монстри.",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "Кількість монстрів за день",
-				"enablehappiness" : "Використовуйте щастя",
 				"header" : "Налаштування колонії",
 				"nightmonsters" : "Кількість нічних монстрів"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "Керуйте власниками",
 			"nameedit" : "Редагувати назву колонії:",
 			"namefield" : "Назва колонії:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "_MISSING_Action",
 				"connectedplayers" : "_MISSING_Connected Players",
@@ -111,13 +111,15 @@
 				"settoleader" : "_MISSING_Set to Leader"
 			},
 			"recruitauto" : "Автоматичний набір на роботу",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "Набрати колоністів :",
 			"recruitmentbutton" : "Набір колоніста",
 			"recruitmentheader" : "Набір персоналу",
 			"recruittext3" : "Колоністам потрібно 2000 калорій на день та ліжко.",
-			"recruittext4" : "Набір чергового колоніста коштує {0} калорій.",
-			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "Набір для заповнення всіх ліжок",
 			"recruittofilljobs" : "Набір для заповнення всіх робочих місць",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "Снарядів:",
 			"bedcount" : "Ліжок:",
-			"caloriestorage" : "Всього калорій:",
-			"calorieusage" : "Вживання калорій / добу:",
 			"colonistcount" : "Колоністів:",
-			"happiness" : "Щастя:",
-			"laborercount" : "Безробітних:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "Безробітних:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "Застосувати",
@@ -257,6 +258,7 @@
 			"enabled" : "_MISSING_Enabled",
 			"high" : "Багато",
 			"inputplaceholder" : "Введіть текст",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "Мало",
 			"next" : "Наст. стр.",
 			"no" : "Ні",
@@ -330,6 +332,7 @@
 				"beekeeper" : "_MISSING_Beekeeper",
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"bloomeryjob" : "_MISSING_Iron Smelter",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cacaofarmer" : "_MISSING_Cacao Farmer",
 				"cassavafarmer" : "_MISSING_Cassava Farmer",
@@ -339,6 +342,8 @@
 				"cook" : "_MISSING_Cook",
 				"cottonfarmer" : "_MISSING_Cotton Farmer",
 				"crafter" : "_MISSING_Crafter",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "_MISSING_Dyer",
 				"fineryforgejob" : "_MISSING_Steel Smelter",
 				"fisherman" : "_MISSING_Fisherman",
@@ -612,6 +617,10 @@
 					"description" : "Підвищує загальний стан здоров'я, кількість регенерації та швидкість регенерації",
 					"name" : "Підвищення здоров'я IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "Розблокує мушкет, один з перших видів вогнепальної зброї.",
 					"name" : "Мушкет"
@@ -640,21 +649,9 @@
 					"description" : "Відкриває рисоводство",
 					"name" : "Рисоводство"
 				},
-				"sciencebagadvanced" : {
-					"description" : "Розблокує Розширену дослідницьку сумку, яка використовується для розширених досліджень",
-					"name" : "Розширена дослідницька сумка"
-				},
 				"sciencebagbasic" : {
 					"description" : "Розблокує Базову дослідницьку сумку, яка використовується для базових досліджень",
 					"name" : "Базова дослідницька сумка"
-				},
-				"sciencebagcolony" : {
-					"description" : "Розблокує Дослідницьку сумку колонії, використовувану для досліджень колонії",
-					"name" : "Дослідницька сумка колонії"
-				},
-				"sciencebaglife" : {
-					"description" : "Розблокує Наукову сумку  здоров'я, яка необхідна для досліджень пов'язаних зі здоров'ям",
-					"name" : "Сумка про здоров'я"
 				},
 				"sciencebagmilitary" : {
 					"description" : "Розблокує Військову дослідницьку сумку, яка використовується для військових досліджень",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "_MISSING_In stockpile",
-				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "Крафт і запаси",
-				"distributionhappyperitem2" : "_MISSING_Happiness per item",
-				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
-				"distributionplanned2" : "_MISSING_Planned happiness increase",
-				"distributionreached2" : "_MISSING_Percentage distributed",
-				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "Щастя"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Робиться в:",
 				"noactivecolony" : "Немає активної колонії!",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "Доступно",
 					"cancel" : "Скасувати",
@@ -770,8 +773,10 @@
 					"completeunlock" : "Виконано",
 					"conditioncolonistcount" : "Колоністи",
 					"conditioncolonistcountdescription" : "Кількість необхідних колоністів",
-					"conditionhappiness" : "Вимога щастя",
-					"conditionhappinessdescription" : "Мінімальне чисте щастя потрібно",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "Вимагає {0}",
 					"dependencies" : "Необхідні технології:",
 					"header" : "Наука",
@@ -786,14 +791,9 @@
 				"stats" : {
 					"auto-scale" : "_MISSING_Auto scale",
 					"entry-beds" : "_MISSING_Beds",
-					"entry-crowdedness" : "_MISSING_Crowdedness",
-					"entry-dailycalories" : "_MISSING_Daily calories per colonist",
-					"entry-happytotal" : "_MISSING_Happiness Total",
-					"entry-kingspresence" : "_MISSING_Existential Happiness",
-					"entry-misccauses" : "_MISSING_Misc Causes",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-npccount" : "_MISSING_Colonists",
-					"entry-rationing" : "_MISSING_Rationing",
-					"entry-totalcalories" : "_MISSING_Total Calories",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "_MISSING_Unemployed",
 					"header" : "_MISSING_Statistics",
 					"hide-all" : "_MISSING_Hide all",
@@ -805,12 +805,10 @@
 					"time1day" : "_MISSING_Day",
 					"time24day" : "_MISSING_24-Day",
 					"time4day" : "_MISSING_4-Day",
-					"type-calories" : "_MISSING_Food Intake",
 					"type-colony" : "_MISSING_Colony",
-					"type-happiness" : "_MISSING_Happiness",
 					"type-idle-jobs" : "_MISSING_Idle Job Time",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "_MISSING_Stockpile",
-					"type-totalcalories" : "_MISSING_Total Calories",
 					"type-trade-in" : "_MISSING_Inbound Trade",
 					"type-trade-out" : "_MISSING_Outbound Trade"
 				},
@@ -819,6 +817,22 @@
 					"instockpile" : "в запасах",
 					"needs" : "Необхідно: ",
 					"nothing" : "Нічого"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +852,7 @@
 				"pipliz" : {
 					"baker" : "Ліміт випічки",
 					"beekeeper" : "Ліміт бджоляра",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "Ліміт сиродутного горна",
 					"chickenfarmer" : "Оьмеження курника",
 					"cook" : "Ліміт готування",
@@ -1238,6 +1253,36 @@
 			"worldname" : "Ім'я",
 			"worldname_long" : "Ім'я світу",
 			"worldseed" : "Насіння Світу"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1299,7 @@
 		"beeswax" : "Бджолиний віск",
 		"berry" : "Ягода",
 		"berrybush" : "Насіння ягід",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "Лаковані чорні дошки",
 		"bloomery" : "Сиродутний горн",
 		"boilingwater" : "Окріп",
@@ -1261,6 +1307,7 @@
 		"bow" : "Лук",
 		"bowstring" : "Тятива",
 		"bread" : "Хліб",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "Цегла",
 		"bricksblack" : "Чорна цегла",
 		"bricksdarkred" : "Темно-червона цегла",
@@ -1332,7 +1379,6 @@
 		"fineryforge" : "Ковальський горн",
 		"firewood" : "Дрова",
 		"fishermanjob" : "Робота рибалки",
-		"fishmeal" : "Рибне борошно",
 		"fishtank" : "Акваріум",
 		"flax" : "Льон",
 		"flaxstage1" : "Насіння льону",
@@ -1455,10 +1501,7 @@
 		"saplingfallorange" : "Падіння саджанців",
 		"saplingtaiga" : "Саджанець тайги",
 		"sappling" : "Саженець дерева",
-		"sciencebagadvanced" : "Розширена дослідницька сумка",
 		"sciencebagbasic" : "Сумка базової науки",
-		"sciencebagcolony" : "Дослідницька cумка колонії",
-		"sciencebaglife" : "Сумка науки про здоров'я",
 		"sciencebagmilitary" : "Військова наукова сумка",
 		"sciencelab" : "Наукова лабораторія",
 		"shop" : "Магазин",
@@ -1515,14 +1558,16 @@
 		"barley" : "Кури люблять це",
 		"bed" : "Потрібно солома, а не гвинти",
 		"beeswax" : "Липкий",
-		"berry" : "Не отруйна",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "Колоністи можуть садити це для отримання їжі",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "Легкозаймисті",
 		"bloomery" : "Використовує деревне вугілля в якості палива, щоб плавити залізну руду і галеніт",
 		"boilingwater" : "Триває кипіння вічно, чомусь",
 		"bow" : "Охоронцям це потрібно!",
 		"bowstring" : "Триньк!",
-		"bread" : "Гарний смак! Вилікує ваші рани!",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "Це голландська гра, в кінці кінців",
 		"bronzeanvil" : "Більше не блокуватої форми!",
 		"bronzearrow" : "Монстри продовжують залишати негативні відгуки. Проте, охоронцям це подобається",
@@ -1576,7 +1621,6 @@
 		"feather" : "Падає так само швидко на землю, як молот, на Місяць.",
 		"fineryforge" : "Вимагає кокс для створення сталевих і золотих злитків",
 		"firewood" : "Базове пальне",
-		"fishmeal" : "Чудові добрива для капусти",
 		"flax" : "Цвіт імперії",
 		"flaxstage1" : "Помістіть це в землю",
 		"flour" : "Колоніст з піччю перетворить це в хліб",
@@ -1648,10 +1692,7 @@
 		"saplingfallorange" : "Майбутнє дерево Апельсин",
 		"saplingtaiga" : "Трохи інше дерево",
 		"sappling" : "Майбутнє дерево",
-		"sciencebagadvanced" : "Необхідно для більш ширшого дослідження",
 		"sciencebagbasic" : "Необхідно для базових досліджень",
-		"sciencebagcolony" : "Необхідно для досліджень для колонії",
-		"sciencebaglife" : "Необхідно для наук охорони здоров'я",
 		"sciencebagmilitary" : "Необхідно для воєнних наук",
 		"sciencelab" : "Використовується колоністами для відкриття нових технологій, можн бути декілька!",
 		"shop" : "Тілки купівля предметів, без можливості продати",

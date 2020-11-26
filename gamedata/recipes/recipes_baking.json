@@ -12,6 +12,18 @@
 		]
 	},
 	{
+		"defaultLimit" : 200,
+		"defaultPriority" : 100,
+		"name" : "pipliz.baker.breadmeal",
+		"requires" : [
+			{"amount":3,"type":"bread"},
+			{"amount":4,"type":"berry"}
+		],
+		"results" : [
+			{"amount":2,"type":"breadmeal"}
+		]
+	},
+	{
 		"defaultLimit" : 15,
 		"name" : "pipliz.baker.beeswax",
 		"requires" : [

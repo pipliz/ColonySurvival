@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "Day Monster Amount",
-				"enablehappiness" : "Use Happiness",
 				"header" : "Colony Settings",
 				"nightmonsters" : "Night Monster Amount"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "Manage Owners",
 			"nameedit" : "Edit Colony Name:",
 			"namefield" : "Colony Name:",
+			"npcstarved" : "NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "Action",
 				"connectedplayers" : "Connected Players",
@@ -111,13 +111,15 @@
 				"settoleader" : "Set to Leader"
 			},
 			"recruitauto" : "Automatic recruit on job placement",
+			"recruitfailedbeds" : "<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "Amount of colonists to recruit:",
 			"recruitmentbutton" : "Recruit Colonist",
 			"recruitmentheader" : "Recruitment",
-			"recruittext3" : "Colonists require 2000 calories per day and a bed.",
-			"recruittext4" : "Recruiting the next colonist costs {0} calories.",
-			"recruittext5_dec" : "Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext3" : "Colonists require a meal per day and a bed.",
+			"recruittext4-2" : "Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
 			"resetcolonypriority2" : "Reset active colony",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "Ammo:",
 			"bedcount" : "Beds:",
-			"caloriestorage" : "Total Calories:",
-			"calorieusage" : "Calorie use/day:",
 			"colonistcount" : "Colonists:",
-			"happiness" : "Happiness:",
-			"laborercount" : "Unemployed:"
+			"colonypoints" : "Points:",
+			"laborercount" : "Unemployed:",
+			"mealstorage" : "Total Meals:"
 		},
 		"general" : {
 			"apply" : "Apply",
@@ -257,6 +258,7 @@
 			"enabled" : "Enabled",
 			"high" : "High",
 			"inputplaceholder" : "Enter text...",
+			"inputplaceholder_search" : "Enter text to search...",
 			"low" : "Low",
 			"next" : "Next",
 			"no" : "No",
@@ -330,6 +332,7 @@
 				"beekeeper" : "Beekeeper",
 				"berryfarmer" : "Berry Farmer",
 				"bloomeryjob" : "Iron Smelter",
+				"builder" : "Builder",
 				"cabbagefarmer" : "Cabbage Farmer",
 				"cacaofarmer" : "Cacao Farmer",
 				"cassavafarmer" : "Cassava Farmer",
@@ -339,6 +342,8 @@
 				"cook" : "Cook",
 				"cottonfarmer" : "Cotton Farmer",
 				"crafter" : "Crafter",
+				"digger" : "Digger",
+				"diggerspecial" : "Special Digger",
 				"dyer" : "Dyer",
 				"fineryforgejob" : "Steel Smelter",
 				"fisherman" : "Fisherman",
@@ -612,6 +617,10 @@
 					"description" : "Increases total health, amount of regeneration and regeneration speed",
 					"name" : "Health Increase IV"
 				},
+				"luxurymeal" : {
+					"description" : "Unlocks the luxury meal",
+					"name" : "Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "Unlocks the Matchlock Gun, an early type of gun",
 					"name" : "Matchlock Gun"
@@ -640,21 +649,9 @@
 					"description" : "Unlocks rice farming",
 					"name" : "Rice farming"
 				},
-				"sciencebagadvanced" : {
-					"description" : "Unlocks the Advanced Science Bag, used for advanced research",
-					"name" : "Advanced Science Bag"
-				},
 				"sciencebagbasic" : {
 					"description" : "Unlocks the Basic Science Bag, used for basic research",
 					"name" : "Basic Science Bag"
-				},
-				"sciencebagcolony" : {
-					"description" : "Unlocks the Colony Science Bag, used for colony related research",
-					"name" : "Colony Science Bag"
-				},
-				"sciencebaglife" : {
-					"description" : "Unlocks the Life Science Bag, necessary to research health related upgrades",
-					"name" : "Life Science Bag"
 				},
 				"sciencebagmilitary" : {
 					"description" : "Unlocks the Military Science Bag, used for military research",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "In stockpile",
-				"calorievalue2" : "Calories per item",
 				"craftingstockpile" : "Stockpile",
-				"distributionhappyperitem2" : "Happiness per item",
-				"distributionpercolonist2" : "Daily items per colonist",
-				"distributionplanned2" : "Planned happiness increase",
-				"distributionreached2" : "Percentage distributed",
-				"distributiontotal2" : "Daily total items",
 				"filter-calories" : "Calories",
 				"filter-combat" : "Combat",
 				"filter-food" : "Food related",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "Happiness"
 				},
+				"hover-colonypointdays" : "Days of use per item",
+				"hover-colonypointsmeal" : "Meal consumption points",
+				"hover-colonypointsperday" : "Colony Points per day of use",
+				"hover-colonypointstotal" : "Total points per item",
 				"madeintooltip" : "Made in:",
 				"noactivecolony" : "No active colony!",
+				"pointfoods" : {
+					"countcurrent" : "Stockpile",
+					"item" : "Item",
+					"itemsperday" : "Max items per day",
+					"points24h" : "Points last day",
+					"pointsmax" : "Max points per day",
+					"toggle" : "Enabled"
+				},
 				"science" : {
 					"available" : "Available",
 					"cancel" : "Cancel",
@@ -770,8 +773,10 @@
 					"completeunlock" : "Complete",
 					"conditioncolonistcount" : "Colonists",
 					"conditioncolonistcountdescription" : "Number of colonists required",
-					"conditionhappiness" : "Happiness requirement",
-					"conditionhappinessdescription" : "Minimum net happiness required",
+					"conditionpointreq" : "Colony Points",
+					"conditionpointreqdescription1" : "Colony Points Requirement",
+					"conditionpointreqdescription2" : "Required: {0}",
+					"conditionpointreqdescription3" : "Available: {0}",
 					"conditionscientistrequires" : "Requires {0}",
 					"dependencies" : "Required technologies:",
 					"header" : "Science",
@@ -786,14 +791,9 @@
 				"stats" : {
 					"auto-scale" : "Auto scale",
 					"entry-beds" : "Beds",
-					"entry-crowdedness" : "Crowdedness",
-					"entry-dailycalories" : "Daily calories per colonist",
-					"entry-happytotal" : "Happiness Total",
-					"entry-kingspresence" : "Existential Happiness",
-					"entry-misccauses" : "Misc Causes",
+					"entry-meals" : "Total Meals",
 					"entry-npccount" : "Colonists",
-					"entry-rationing" : "Rationing",
-					"entry-totalcalories" : "Total Calories",
+					"entry-points" : "Colony Points",
 					"entry-unemployed" : "Unemployed",
 					"header" : "Statistics",
 					"hide-all" : "Hide all",
@@ -805,12 +805,10 @@
 					"time1day" : "Day",
 					"time24day" : "24-Day",
 					"time4day" : "4-Day",
-					"type-calories" : "Food Intake",
 					"type-colony" : "Colony",
-					"type-happiness" : "Happiness",
 					"type-idle-jobs" : "Idle Job Time",
+					"type-itempoints" : "Point Items",
 					"type-stockpile" : "Stockpile",
-					"type-totalcalories" : "Total Calories",
 					"type-trade-in" : "Inbound Trade",
 					"type-trade-out" : "Outbound Trade"
 				},
@@ -819,6 +817,22 @@
 					"instockpile" : "in stockpile",
 					"needs" : "Needs: ",
 					"nothing" : "Nothing"
+				},
+				"upgrades" : {
+					"foods_tab" : "Foods",
+					"header" : "Upgrades",
+					"luxuries_tab" : "Luxuries",
+					"preamble1" : "Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "<i>Current Points / Capacity</i>",
+					"preamble3" : "<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "Cost",
+						"current" : "Current",
+						"levels" : "Levels",
+						"name" : "Upgrade Name",
+						"next" : "Next"
+					},
+					"upgradebutton" : "Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +852,7 @@
 				"pipliz" : {
 					"baker" : "Baking limits",
 					"beekeeper" : "Beekeeper limits",
+					"berryfarmer" : "Berry farmer limits",
 					"bloomeryjob" : "Bloomery limits",
 					"chickenfarmer" : "Chicken farmer limits",
 					"cook" : "Cook limits",
@@ -1238,6 +1253,36 @@
 			"worldname" : "Name",
 			"worldname_long" : "World Name",
 			"worldseed" : "World seed"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "{0} Blocks",
+				"main" : "Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "{0} Colonists",
+				"main" : "Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "{0} Blocks",
+				"main" : "Digger Area Size"
+			},
+			"health" : {
+				"level" : "Level {0} Health",
+				"main" : "Health"
+			},
+			"pointcapacity" : {
+				"level" : "{0} Points",
+				"main" : "Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "{0}% Efficiency",
+				"main" : "Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "{0} Blocks",
+				"main" : "Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1299,7 @@
 		"beeswax" : "Beeswax",
 		"berry" : "Berry",
 		"berrybush" : "Berry Seed",
+		"berrymeal" : "Berry Meal",
 		"blackplanks" : "Coated Black Planks",
 		"bloomery" : "Bloomery",
 		"boilingwater" : "Boiling Water",
@@ -1261,6 +1307,7 @@
 		"bow" : "Bow",
 		"bowstring" : "Bowstring",
 		"bread" : "Bread",
+		"breadmeal" : "Bread Meal",
 		"bricks" : "Bricks",
 		"bricksblack" : "Black Bricks",
 		"bricksdarkred" : "Dark Red Bricks",
@@ -1332,7 +1379,6 @@
 		"fineryforge" : "Finery Forge",
 		"firewood" : "Firewood",
 		"fishermanjob" : "Fisherman Job",
-		"fishmeal" : "Fishmeal",
 		"fishtank" : "Fish Tank",
 		"flax" : "Flax",
 		"flaxstage1" : "Flax seeds",
@@ -1455,10 +1501,7 @@
 		"saplingfallorange" : "Fall Sapling",
 		"saplingtaiga" : "Taiga Sapling",
 		"sappling" : "Temperate Sapling",
-		"sciencebagadvanced" : "Advanced Science Bag",
 		"sciencebagbasic" : "Basic Science Bag",
-		"sciencebagcolony" : "Colony Science Bag",
-		"sciencebaglife" : "Life Science Bag",
 		"sciencebagmilitary" : "Military Science Bag",
 		"sciencelab" : "Science Lab",
 		"shop" : "Shop",
@@ -1515,14 +1558,16 @@
 		"barley" : "Chickens love it",
 		"bed" : "Requires straw, not screws",
 		"beeswax" : "Sticky",
-		"berry" : "Not poisonous",
+		"berry" : "A single berry. Not worth the effort of eating it!",
 		"berrybush" : "Colonists can plant these for easy food",
+		"berrymeal" : "A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "Highly flammable",
 		"bloomery" : "Uses charcoal as fuel to smelt iron and galena",
 		"boilingwater" : "Keeps boiling eternally, for some reason",
 		"bow" : "Guards need one!",
 		"bowstring" : "Ploink",
-		"bread" : "Tastes good, heals your wounds",
+		"bread" : "A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "Bread made tasty with a perfect berry jam",
 		"bricks" : "It's a Dutch game, after all",
 		"bronzeanvil" : "Not block-shaped any longer!",
 		"bronzearrow" : "Monsters keep leaving negative reviews. Guards like it though!",
@@ -1576,7 +1621,6 @@
 		"feather" : "Falls as quickly to the ground as a hammer, on the Moon.",
 		"fineryforge" : "Requires cokes to create steel and gold ingots",
 		"firewood" : "Basic fuel",
-		"fishmeal" : "Great fertilizers for cabbages",
 		"flax" : "The imperial color",
 		"flaxstage1" : "Put it in the ground",
 		"flour" : "A colonist with an oven will bake this into bread",
@@ -1648,10 +1692,7 @@
 		"saplingfallorange" : "Orange future tree",
 		"saplingtaiga" : "Slightly different tree",
 		"sappling" : "Future tree",
-		"sciencebagadvanced" : "Required for advanced science",
 		"sciencebagbasic" : "Required to research basic science",
-		"sciencebagcolony" : "Required for colony-related science",
-		"sciencebaglife" : "Required to research science related to health and life",
 		"sciencebagmilitary" : "Required to research science related to combat",
 		"sciencelab" : "Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
 		"shop" : "Buying only, no selling",

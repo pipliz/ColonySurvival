@@ -1,5 +1,5 @@
 {
-	"coverage" : 16.2299854439592,
+	"coverage" : 15.8196134574087,
 	"hints" : {
 		"0" : "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "_MISSING_More and different monsters will spawn as you recruit more colonists.",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "_MISSING_Day Monster Amount",
-				"enablehappiness" : "_MISSING_Use Happiness",
 				"header" : "_MISSING_Colony Settings",
 				"nightmonsters" : "_MISSING_Night Monster Amount"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "_MISSING_Manage Owners",
 			"nameedit" : "_MISSING_Edit Colony Name:",
 			"namefield" : "_MISSING_Colony Name:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "_MISSING_Action",
 				"connectedplayers" : "_MISSING_Connected Players",
@@ -111,13 +111,15 @@
 				"settoleader" : "_MISSING_Set to Leader"
 			},
 			"recruitauto" : "_MISSING_Automatic recruit on job placement",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "_MISSING_Amount of colonists to recruit:",
 			"recruitmentbutton" : "_MISSING_Recruit Colonist",
 			"recruitmentheader" : "_MISSING_Recruitment",
-			"recruittext3" : "_MISSING_Colonists require 2000 calories per day and a bed.",
-			"recruittext4" : "_MISSING_Recruiting the next colonist costs {0} calories.",
-			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext3" : "_MISSING_Colonists require a meal per day and a bed.",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "_MISSING_Recruit to fill all beds",
 			"recruittofilljobs" : "_MISSING_Recruit to fill all jobs",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "_MISSING_Ammo:",
 			"bedcount" : "Lovos:",
-			"caloriestorage" : "_MISSING_Total Calories:",
-			"calorieusage" : "_MISSING_Calorie use/day:",
 			"colonistcount" : "Kolonistai:",
-			"happiness" : "_MISSING_Happiness:",
-			"laborercount" : "Bedarbiai:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "Bedarbiai:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "Taikyti",
@@ -257,6 +258,7 @@
 			"enabled" : "_MISSING_Enabled",
 			"high" : "_MISSING_High",
 			"inputplaceholder" : "Irašykite tekstą...",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "_MISSING_Low",
 			"next" : "Kitas",
 			"no" : "_MISSING_No",
@@ -330,6 +332,7 @@
 				"beekeeper" : "_MISSING_Beekeeper",
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"bloomeryjob" : "_MISSING_Iron Smelter",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cacaofarmer" : "_MISSING_Cacao Farmer",
 				"cassavafarmer" : "_MISSING_Cassava Farmer",
@@ -339,6 +342,8 @@
 				"cook" : "_MISSING_Cook",
 				"cottonfarmer" : "_MISSING_Cotton Farmer",
 				"crafter" : "_MISSING_Crafter",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "_MISSING_Dyer",
 				"fineryforgejob" : "_MISSING_Steel Smelter",
 				"fisherman" : "_MISSING_Fisherman",
@@ -612,6 +617,10 @@
 					"description" : "_MISSING_Increases total health, amount of regeneration and regeneration speed",
 					"name" : "_MISSING_Health Increase IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "_MISSING_Unlocks the Matchlock Gun, an early type of gun",
 					"name" : "_MISSING_Matchlock Gun"
@@ -640,21 +649,9 @@
 					"description" : "_MISSING_Unlocks rice farming",
 					"name" : "_MISSING_Rice farming"
 				},
-				"sciencebagadvanced" : {
-					"description" : "_MISSING_Unlocks the Advanced Science Bag, used for advanced research",
-					"name" : "_MISSING_Advanced Science Bag"
-				},
 				"sciencebagbasic" : {
 					"description" : "_MISSING_Unlocks the Basic Science Bag, used for basic research",
 					"name" : "_MISSING_Basic Science Bag"
-				},
-				"sciencebagcolony" : {
-					"description" : "_MISSING_Unlocks the Colony Science Bag, used for colony related research",
-					"name" : "_MISSING_Colony Science Bag"
-				},
-				"sciencebaglife" : {
-					"description" : "_MISSING_Unlocks the Life Science Bag, necessary to research health related upgrades",
-					"name" : "_MISSING_Life Science Bag"
 				},
 				"sciencebagmilitary" : {
 					"description" : "_MISSING_Unlocks the Military Science Bag, used for military research",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "_MISSING_In stockpile",
-				"calorievalue2" : "_MISSING_Calories per item",
 				"craftingstockpile" : "_MISSING_Stockpile",
-				"distributionhappyperitem2" : "_MISSING_Happiness per item",
-				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
-				"distributionplanned2" : "_MISSING_Planned happiness increase",
-				"distributionreached2" : "_MISSING_Percentage distributed",
-				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "_MISSING_Calories",
 				"filter-combat" : "_MISSING_Combat",
 				"filter-food" : "_MISSING_Food related",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "_MISSING_Happiness"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "_MISSING_Made in:",
 				"noactivecolony" : "_MISSING_No active colony!",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "_MISSING_Available",
 					"cancel" : "_MISSING_Cancel",
@@ -770,8 +773,10 @@
 					"completeunlock" : "_MISSING_Complete",
 					"conditioncolonistcount" : "_MISSING_Colonists",
 					"conditioncolonistcountdescription" : "_MISSING_Number of colonists required",
-					"conditionhappiness" : "_MISSING_Happiness requirement",
-					"conditionhappinessdescription" : "_MISSING_Minimum net happiness required",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "_MISSING_Requires {0}",
 					"dependencies" : "_MISSING_Required technologies:",
 					"header" : "_MISSING_Science",
@@ -786,14 +791,9 @@
 				"stats" : {
 					"auto-scale" : "_MISSING_Auto scale",
 					"entry-beds" : "_MISSING_Beds",
-					"entry-crowdedness" : "_MISSING_Crowdedness",
-					"entry-dailycalories" : "_MISSING_Daily calories per colonist",
-					"entry-happytotal" : "_MISSING_Happiness Total",
-					"entry-kingspresence" : "_MISSING_Existential Happiness",
-					"entry-misccauses" : "_MISSING_Misc Causes",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-npccount" : "_MISSING_Colonists",
-					"entry-rationing" : "_MISSING_Rationing",
-					"entry-totalcalories" : "_MISSING_Total Calories",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "_MISSING_Unemployed",
 					"header" : "_MISSING_Statistics",
 					"hide-all" : "_MISSING_Hide all",
@@ -805,12 +805,10 @@
 					"time1day" : "_MISSING_Day",
 					"time24day" : "_MISSING_24-Day",
 					"time4day" : "_MISSING_4-Day",
-					"type-calories" : "_MISSING_Food Intake",
 					"type-colony" : "_MISSING_Colony",
-					"type-happiness" : "_MISSING_Happiness",
 					"type-idle-jobs" : "_MISSING_Idle Job Time",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "_MISSING_Stockpile",
-					"type-totalcalories" : "_MISSING_Total Calories",
 					"type-trade-in" : "_MISSING_Inbound Trade",
 					"type-trade-out" : "_MISSING_Outbound Trade"
 				},
@@ -819,6 +817,22 @@
 					"instockpile" : "_MISSING_in stockpile",
 					"needs" : "Poreikiai: ",
 					"nothing" : "_MISSING_Nothing"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +852,7 @@
 				"pipliz" : {
 					"baker" : "Kepimo limitacijos",
 					"beekeeper" : "_MISSING_Beekeeper limits",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "_MISSING_Bloomery limits",
 					"chickenfarmer" : "_MISSING_Chicken farmer limits",
 					"cook" : "_MISSING_Cook limits",
@@ -1238,6 +1253,36 @@
 			"worldname" : "Pavadinimas",
 			"worldname_long" : "_MISSING_World Name",
 			"worldseed" : "_MISSING_World seed"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1299,7 @@
 		"beeswax" : "_MISSING_Beeswax",
 		"berry" : "Uogos",
 		"berrybush" : "Uogų sėklos",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "_MISSING_Coated Black Planks",
 		"bloomery" : "_MISSING_Bloomery",
 		"boilingwater" : "_MISSING_Boiling Water",
@@ -1261,6 +1307,7 @@
 		"bow" : "Lankas",
 		"bowstring" : "_MISSING_Bowstring",
 		"bread" : "Duona",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "Plytos",
 		"bricksblack" : "_MISSING_Black Bricks",
 		"bricksdarkred" : "_MISSING_Dark Red Bricks",
@@ -1332,7 +1379,6 @@
 		"fineryforge" : "_MISSING_Finery Forge",
 		"firewood" : "_MISSING_Firewood",
 		"fishermanjob" : "_MISSING_Fisherman Job",
-		"fishmeal" : "_MISSING_Fishmeal",
 		"fishtank" : "_MISSING_Fish Tank",
 		"flax" : "Linai",
 		"flaxstage1" : "Linų Sėklos",
@@ -1455,10 +1501,7 @@
 		"saplingfallorange" : "_MISSING_Fall Sapling",
 		"saplingtaiga" : "_MISSING_Taiga Sapling",
 		"sappling" : "Sodinukas",
-		"sciencebagadvanced" : "_MISSING_Advanced Science Bag",
 		"sciencebagbasic" : "_MISSING_Basic Science Bag",
-		"sciencebagcolony" : "_MISSING_Colony Science Bag",
-		"sciencebaglife" : "_MISSING_Life Science Bag",
 		"sciencebagmilitary" : "_MISSING_Military Science Bag",
 		"sciencelab" : "_MISSING_Science Lab",
 		"shop" : "Parduotuvė",
@@ -1515,14 +1558,16 @@
 		"barley" : "_MISSING_Chickens love it",
 		"bed" : "_MISSING_Requires straw, not screws",
 		"beeswax" : "_MISSING_Sticky",
-		"berry" : "Nenuodingos",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "Kolonistai gali pasodinti šiuos krūmus, jog lengvai gautų maisto",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "Labai degios",
 		"bloomery" : "_MISSING_Uses charcoal as fuel to smelt iron and galena",
 		"boilingwater" : "_MISSING_Keeps boiling eternally, for some reason",
 		"bow" : "Reikalingas sargybiniams",
 		"bowstring" : "_MISSING_Ploink",
-		"bread" : "Skanu ir šviežia. Padeda gydyti žaiždas.",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "Visgi tai Olandiškas žaidimas",
 		"bronzeanvil" : "_MISSING_Not block-shaped any longer!",
 		"bronzearrow" : "_MISSING_Monsters keep leaving negative reviews. Guards like it though!",
@@ -1576,7 +1621,6 @@
 		"feather" : "_MISSING_Falls as quickly to the ground as a hammer, on the Moon.",
 		"fineryforge" : "_MISSING_Requires cokes to create steel and gold ingots",
 		"firewood" : "_MISSING_Basic fuel",
-		"fishmeal" : "_MISSING_Great fertilizers for cabbages",
 		"flax" : "_MISSING_The imperial color",
 		"flaxstage1" : "Ikiškite į žemę",
 		"flour" : "Kolonistas su orkaitę šiuos miltus pavers į duoną",
@@ -1648,10 +1692,7 @@
 		"saplingfallorange" : "_MISSING_Orange future tree",
 		"saplingtaiga" : "_MISSING_Slightly different tree",
 		"sappling" : "_MISSING_Future tree",
-		"sciencebagadvanced" : "_MISSING_Required for advanced science",
 		"sciencebagbasic" : "_MISSING_Required to research basic science",
-		"sciencebagcolony" : "_MISSING_Required for colony-related science",
-		"sciencebaglife" : "_MISSING_Required to research science related to health and life",
 		"sciencebagmilitary" : "_MISSING_Required to research science related to combat",
 		"sciencelab" : "_MISSING_Used by a Scientist to unlock new technologies. Multiple Scientists can work together!",
 		"shop" : "Tik pirkimas, jokio pardavimo",
