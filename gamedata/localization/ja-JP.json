@@ -1,5 +1,5 @@
 {
-	"coverage" : 86.3901018922853,
+	"coverage" : 83.3214030064424,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "昼のモンスタースポーン量",
-				"enablehappiness" : "幸福度を有効にする",
 				"header" : "コロニーの設定",
 				"nightmonsters" : "夜のモンスタースポーン量"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "オーナーを管理",
 			"nameedit" : "コロニー名を編集:",
 			"namefield" : "コロニー名:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "アクション",
 				"connectedplayers" : "接続済みプレイヤー",
@@ -111,13 +111,15 @@
 				"settoleader" : "リーダーに設定"
 			},
 			"recruitauto" : "仕事設定時に自動雇用",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "雇用する入植者の人数:",
 			"recruitmentbutton" : "入植者を雇用",
 			"recruitmentheader" : "雇用",
 			"recruittext3" : "入植者には、1日2000カロリーとベッドが必要です。",
-			"recruittext4" : "次の入植者を雇用するには {0} カロリーが必要です。",
-			"recruittext5_dec" : "_MISSING_Cost is reduced by <b>{0}%</b> due to happiness",
-			"recruittext5_inc" : "_MISSING_Cost is increased by <b>{0}%</b> due to happiness",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "空きベッドが埋まるまで雇用",
 			"recruittofilljobs" : "空きの仕事が埋まるまで雇用",
 			"resetcolonypriority2" : "アクティブなコロニーをリセット",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "矢弾:",
 			"bedcount" : "ベッド:",
-			"caloriestorage" : "総カロリー量:",
-			"calorieusage" : "カロリー消費/日:",
 			"colonistcount" : "入植者:",
-			"happiness" : "幸福度:",
-			"laborercount" : "失業者:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "失業者:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "適用",
@@ -257,6 +258,7 @@
 			"enabled" : "_MISSING_Enabled",
 			"high" : "高",
 			"inputplaceholder" : "テキストを入力・・・",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "低",
 			"next" : "次へ",
 			"no" : "いいえ",
@@ -330,6 +332,7 @@
 				"beekeeper" : "_MISSING_Beekeeper",
 				"berryfarmer" : "_MISSING_Berry Farmer",
 				"bloomeryjob" : "_MISSING_Iron Smelter",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "_MISSING_Cabbage Farmer",
 				"cacaofarmer" : "_MISSING_Cacao Farmer",
 				"cassavafarmer" : "_MISSING_Cassava Farmer",
@@ -339,6 +342,8 @@
 				"cook" : "_MISSING_Cook",
 				"cottonfarmer" : "_MISSING_Cotton Farmer",
 				"crafter" : "_MISSING_Crafter",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "_MISSING_Dyer",
 				"fineryforgejob" : "_MISSING_Steel Smelter",
 				"fisherman" : "_MISSING_Fisherman",
@@ -612,6 +617,10 @@
 					"description" : "最大ヘルスとヘルス再生量、ヘルス再生速度が向上する",
 					"name" : "ヘルス向上 IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "初期の銃火器である「火縄銃」をアンロックする",
 					"name" : "火縄銃"
@@ -640,21 +649,9 @@
 					"description" : "「米」の栽培をアンロックする",
 					"name" : "米栽培"
 				},
-				"sciencebagadvanced" : {
-					"description" : "高度な研究に用いられる「先進的科学の袋」をアンロックする",
-					"name" : "先進的科学の袋"
-				},
 				"sciencebagbasic" : {
 					"description" : "基礎的な研究に用いられる「基礎的科学の袋」をアンロックする",
 					"name" : "基礎的科学の袋"
-				},
-				"sciencebagcolony" : {
-					"description" : "コロニー関係の研究に用いられる「コロニー科学の袋」をアンロックする",
-					"name" : "コロニー科学の袋"
-				},
-				"sciencebaglife" : {
-					"description" : "ヘルス関係のアップグレードに必要となる「生命科学の袋」をアンロックする",
-					"name" : "生命科学の袋"
 				},
 				"sciencebagmilitary" : {
 					"description" : "軍事研究に用いられる「軍事科学の袋」をアンロックする",
@@ -748,10 +745,6 @@
 				"calorievalue2" : "1個あたりのカロリー",
 				"craftingstockpile" : "作成 & 備蓄品",
 				"distributionhappyperitem2" : "1個あたりの幸福度",
-				"distributionpercolonist2" : "_MISSING_Daily items per colonist",
-				"distributionplanned2" : "_MISSING_Planned happiness increase",
-				"distributionreached2" : "_MISSING_Percentage distributed",
-				"distributiontotal2" : "_MISSING_Daily total items",
 				"filter-calories" : "カロリー",
 				"filter-combat" : "戦闘",
 				"filter-food" : "食料関連",
@@ -761,8 +754,20 @@
 				"happy" : {
 					"header" : "幸福度"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "これで作成:",
 				"noactivecolony" : "アクティブなコロニーがありません！",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "研究可能",
 					"cancel" : "キャンセル",
@@ -770,8 +775,10 @@
 					"completeunlock" : "完了",
 					"conditioncolonistcount" : "入植者",
 					"conditioncolonistcountdescription" : "必要入植者数",
-					"conditionhappiness" : "必要幸福度",
-					"conditionhappinessdescription" : "最低限必要な合計幸福度",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "必要: {0}",
 					"dependencies" : "必要技術:",
 					"header" : "科学",
@@ -786,14 +793,9 @@
 				"stats" : {
 					"auto-scale" : "自動スケール",
 					"entry-beds" : "_MISSING_Beds",
-					"entry-crowdedness" : "_MISSING_Crowdedness",
-					"entry-dailycalories" : "_MISSING_Daily calories per colonist",
-					"entry-happytotal" : "_MISSING_Happiness Total",
-					"entry-kingspresence" : "_MISSING_Existential Happiness",
-					"entry-misccauses" : "_MISSING_Misc Causes",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-npccount" : "_MISSING_Colonists",
-					"entry-rationing" : "_MISSING_Rationing",
-					"entry-totalcalories" : "_MISSING_Total Calories",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "_MISSING_Unemployed",
 					"header" : "統計",
 					"hide-all" : "全て隠す",
@@ -805,12 +807,10 @@
 					"time1day" : "1日",
 					"time24day" : "24日",
 					"time4day" : "4日",
-					"type-calories" : "_MISSING_Food Intake",
 					"type-colony" : "_MISSING_Colony",
-					"type-happiness" : "_MISSING_Happiness",
 					"type-idle-jobs" : "_MISSING_Idle Job Time",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "_MISSING_Stockpile",
-					"type-totalcalories" : "_MISSING_Total Calories",
 					"type-trade-in" : "_MISSING_Inbound Trade",
 					"type-trade-out" : "_MISSING_Outbound Trade"
 				},
@@ -819,6 +819,22 @@
 					"instockpile" : "（備蓄品内に）",
 					"needs" : "必要: ",
 					"nothing" : "なし"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +854,7 @@
 				"pipliz" : {
 					"baker" : "焼成の上限",
 					"beekeeper" : "養蜂家の上限",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "塊鉄炉の上限",
 					"chickenfarmer" : "養鶏農家の上限",
 					"cook" : "料理人の上限",
@@ -1238,6 +1255,36 @@
 			"worldname" : "名称",
 			"worldname_long" : "ワールド名",
 			"worldseed" : "ワールドの種"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1301,7 @@
 		"beeswax" : "蜜蝋",
 		"berry" : "ベリー",
 		"berrybush" : "ベリーの種",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "磨いた板（黒）",
 		"bloomery" : "塊鉄炉",
 		"boilingwater" : "熱湯",
@@ -1261,6 +1309,7 @@
 		"bow" : "弓",
 		"bowstring" : "弓弦",
 		"bread" : "パン",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "焼成レンガ",
 		"bricksblack" : "焼成レンガ（黒）",
 		"bricksdarkred" : "焼成レンガ（暗赤色）",
@@ -1332,7 +1381,6 @@
 		"fineryforge" : "精製炉",
 		"firewood" : "薪",
 		"fishermanjob" : "漁師",
-		"fishmeal" : "魚粉",
 		"fishtank" : "魚用水槽",
 		"flax" : "亜麻",
 		"flaxstage1" : "亜麻仁",
@@ -1455,10 +1503,7 @@
 		"saplingfallorange" : "秋の苗木",
 		"saplingtaiga" : "タイガの苗木",
 		"sappling" : "苗木",
-		"sciencebagadvanced" : "先進的科学の袋",
 		"sciencebagbasic" : "基礎的科学の袋",
-		"sciencebagcolony" : "コロニー科学の袋",
-		"sciencebaglife" : "生命科学の袋",
 		"sciencebagmilitary" : "軍事科学の袋",
 		"sciencelab" : "研究所",
 		"shop" : "店",
@@ -1515,14 +1560,16 @@
 		"barley" : "【おおむぎ】\n《Barley》\n鶏たちは大好き",
 		"bed" : "【べっど】\n《Bed》\nネジ（Screw）ではなく、藁（Straw）が必要",
 		"beeswax" : "【みつろう】\n《Beeswax》\nねばねば",
-		"berry" : "【べりー】\n《Berry》\n毒なんてないよ",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "【べりーのたね】\n《Berry Seed》\n入植者が植えれば、お手軽な食料源に",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "【みがいたいた（くろ）】\n《Coated Black Planks》\nとっても燃えやすい",
 		"bloomery" : "【かいてつろ】\n《Bloomery》\n鉄と方鉛鉱の製錬には木炭を使用",
 		"boilingwater" : "【ねっとう】\n《Boiling Water》\nワケあって沸騰したまま",
 		"bow" : "【ゆみ】\n《Bow》\n衛兵には必要！",
 		"bowstring" : "【ゆづる / ゆみづる】\n《Bowstring》\nピーン",
-		"bread" : "【ぱん】\n《Bread》\n美味しい上に、傷まで治る",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "【しょうせいれんが】\n《Bricks》\n所詮はオランダのゲームさ",
 		"bronzeanvil" : "【せいどうのかなとこ】\n《Bronze Anvil》\nもはやブロック状ではないのだ！",
 		"bronzearrow" : "【せいどうのや】\n《Bronze Arrow》\nモンスターから否定的なレビューが殺到。 衛兵たちは好きだけどね！",
@@ -1576,7 +1623,6 @@
 		"feather" : "【うもう】\n《Feather》\nハンマーと同じくらい速く地面に落ちる、月面上では",
 		"fineryforge" : "【せいせいろ】\n《Finery Forge》\n鋼鉄と金のインゴットを作るには、コークスが必要",
 		"firewood" : "【まき / たきぎ】\n《Firewood》\n基本的な燃料",
-		"fishmeal" : "【ぎょふん】\n《Fishmeal》\nキャベツの肥料に最適",
 		"flax" : "【あま】\n《Flax》\n帝国の色",
 		"flaxstage1" : "【あまに】\n《Flax seeds》\n地面に植えてみよう",
 		"flour" : "【こむぎこ】\n《Flour》\n入植者がオーブンでパンを焼いてくれるよ",
@@ -1648,10 +1694,7 @@
 		"saplingfallorange" : "【あきのなえぎ】\n《Fall Sapling》\nオレンジ色の未来の木",
 		"saplingtaiga" : "【たいがのなえぎ】\n《Taiga Sapling》\n少し違う木",
 		"sappling" : "【なえぎ】\n《Sapling》\nいずれ木になる",
-		"sciencebagadvanced" : "【せんしんてきかがくのふくろ】\n《Advanced Science Bag》\n高度な科学に必要",
 		"sciencebagbasic" : "【きそてきかがくのふくろ】\n《Basic Science Bag》\n基礎的な科学の研究に必要",
-		"sciencebagcolony" : "【ころにーかがくのふくろ】\n《Colony Science Bag》\nコロニー関係の科学に必要",
-		"sciencebaglife" : "【せいめいかがくのふくろ】\n《Life Science Bag》\n健康や生命に関する科学の研究に必要",
 		"sciencebagmilitary" : "【ぐんじかがくのふくろ】\n《Military Science Bag》\n戦闘に関する科学の研究に必要",
 		"sciencelab" : "【けんきゅうじょ】\n《Science Lab》\n科学者が新技術を解禁するのに使う。 複数の科学者が協力して研究することも可能！",
 		"shop" : "【みせ】\n《Shop》\n販売専門、買取はいたしておりません",

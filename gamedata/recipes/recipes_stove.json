@@ -24,9 +24,9 @@
 	{
 		"name" : "cook.chocolate",
 		"requires" : [
-			{"type":"cacao"},
-			{"type":"sugar"},
-			{"type":"vanilla"}
+			{"amount":4,"type":"cacao"},
+			{"amount":2,"type":"sugar"},
+			{"amount":2,"type":"vanilla"}
 		],
 		"results" : [
 			{"type":"chocolate"}
@@ -35,23 +35,23 @@
 	{
 		"name" : "cook.newworldmeal",
 		"requires" : [
-			{"amount":10,"type":"potato"},
-			{"amount":5,"type":"tomato"},
+			{"amount":25,"type":"potato"},
+			{"amount":25,"type":"tomato"},
 			{"type":"chickenmeat"}
 		],
 		"results" : [
-			{"type":"newworldmeal"}
+			{"amount":4,"type":"newworldmeal"}
 		]
 	},
 	{
 		"name" : "cook.ricemeal",
 		"requires" : [
-			{"amount":20,"type":"rice"},
-			{"amount":5,"type":"cabbage"},
+			{"amount":30,"type":"rice"},
+			{"amount":20,"type":"cabbage"},
 			{"type":"chickenmeat"}
 		],
 		"results" : [
-			{"type":"ricemeal"}
+			{"amount":4,"type":"ricemeal"}
 		]
 	},
 	{
@@ -72,7 +72,7 @@
 			{"type":"boilingwater"}
 		],
 		"results" : [
-			{"type":"tea"},
+			{"amount":3,"type":"tea"},
 			{"isOptional":true,"type":"bucketempty"}
 		]
 	},
@@ -84,8 +84,7 @@
 			{"amount":2,"type":"firewood"}
 		],
 		"results" : [
-			{"amount":2,"type":"cookedfish"},
-			{"amount":2,"type":"fishmeal"}
+			{"type":"cookedfish"}
 		]
 	},
 	{
@@ -104,16 +103,14 @@
 		"name" : "cook.perpetualstew",
 		"requires" : [
 			{"amount":2,"type":"boilingwater"},
-			{"amount":4,"type":"rawfish"},
-			{"amount":10,"type":"cabbage"},
+			{"amount":5,"type":"rawfish"},
 			{"amount":5,"type":"berry"},
-			{"amount":3,"type":"honey"},
-			{"amount":1,"type":"oliveoil"},
-			{"amount":2,"type":"bread"},
+			{"amount":2,"type":"oliveoil"},
+			{"amount":3,"type":"bread"},
 			{"amount":2,"type":"firewood"}
 		],
 		"results" : [
-			{"type":"perpetualstew"},
+			{"amount":4,"type":"perpetualstew"},
 			{"amount":2,"isOptional":true,"type":"bucketempty"}
 		]
 	},
@@ -128,7 +125,7 @@
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"cake"},
+			{"amount":5,"type":"cake"},
 			{"isOptional":true,"type":"bucketempty"}
 		]
 	},
@@ -136,17 +133,16 @@
 		"name" : "cook.luxurymeal",
 		"requires" : [
 			{"amount":2,"type":"chickenmeat"},
-			{"amount":5,"type":"cabbage"},
-			{"amount":3,"type":"egg"},
+			{"amount":10,"type":"cabbage"},
+			{"amount":5,"type":"egg"},
 			{"amount":3,"type":"bread"},
-			{"amount":2,"type":"rawfish"},
-			{"amount":3,"type":"oliveoil"},
-			{"amount":2,"type":"honey"},
+			{"amount":2,"type":"oliveoil"},
+			{"amount":4,"type":"honey"},
 			{"amount":2,"type":"boilingwater"},
 			{"type":"firewood"}
 		],
 		"results" : [
-			{"type":"luxurymeal"},
+			{"amount":6,"type":"luxurymeal"},
 			{"amount":2,"isOptional":true,"type":"bucketempty"}
 		]
 	}

@@ -1,5 +1,5 @@
 {
-	"coverage" : 98.2532751091703,
+	"coverage" : 93.7723693629205,
 	"hints" : {
 		"0" : "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1" : "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
@@ -66,7 +66,6 @@
 		"colonymanagement" : {
 			"colonysettings" : {
 				"daymonsters" : "Počet denních monster",
-				"enablehappiness" : "Použít systém spokojenosti",
 				"header" : "Nastavené kolonie",
 				"nightmonsters" : "Počet nočních monster"
 			},
@@ -97,6 +96,7 @@
 			"manageowners" : "Spravovat vlastníky",
 			"nameedit" : "Upravit jméno kolonie:",
 			"namefield" : "Jméno kolonie:",
+			"npcstarved" : "_MISSING_NPC with job {0} at colony {1} has starved to death",
 			"ownership" : {
 				"action" : "Akce",
 				"connectedplayers" : "Připojení hráči",
@@ -111,13 +111,15 @@
 				"settoleader" : "Povýšit na vůdce"
 			},
 			"recruitauto" : "Automatická rekrutace při založení nové práce",
+			"recruitfailedbeds" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap" : "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals" : "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount" : "Počet rekrutovaných kolonistů:",
 			"recruitmentbutton" : "Rekrutovat kolonistu",
 			"recruitmentheader" : "Rekrutace",
 			"recruittext3" : "Kolonisté vyžadují 2000 kalorií na den a volnou postel.",
-			"recruittext4" : "Rekrutace nového kolonisty bude stát {0} kalorií.",
-			"recruittext5_dec" : "Cena se díky spokojenosti snižuje o <b>{0}%</b>",
-			"recruittext5_inc" : "Cena se díky spokojenosti zvyšuje o <b>{0}%</b>",
+			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
+			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
 			"recruittofillbeds" : "Najmout do zaplnění všech postelí",
 			"recruittofilljobs" : "Najmout do zaplnění všech prací",
 			"resetcolonypriority2" : "Obnovit aktivní kolonii",
@@ -241,11 +243,10 @@
 		"firstpersonstats" : {
 			"ammocount" : "Střelivo:",
 			"bedcount" : "Postele:",
-			"caloriestorage" : "Celkem kalorií:",
-			"calorieusage" : "Spotřeba/den:",
 			"colonistcount" : "Kolonisté:",
-			"happiness" : "Spokojenost:",
-			"laborercount" : "Nezaměstnaní:"
+			"colonypoints" : "_MISSING_Points:",
+			"laborercount" : "Nezaměstnaní:",
+			"mealstorage" : "_MISSING_Total Meals:"
 		},
 		"general" : {
 			"apply" : "Použít",
@@ -257,6 +258,7 @@
 			"enabled" : "Povoleno",
 			"high" : "Vysoký",
 			"inputplaceholder" : "Zadejte text...",
+			"inputplaceholder_search" : "_MISSING_Enter text to search...",
 			"low" : "Nízký",
 			"next" : "Další",
 			"no" : "Ne",
@@ -330,6 +332,7 @@
 				"beekeeper" : "Včelař",
 				"berryfarmer" : "Farmář bobulí",
 				"bloomeryjob" : "Železář",
+				"builder" : "_MISSING_Builder",
 				"cabbagefarmer" : "Farmář zelí",
 				"cacaofarmer" : "Farmář kakaa",
 				"cassavafarmer" : "Farmář manioku",
@@ -339,6 +342,8 @@
 				"cook" : "Kuchař",
 				"cottonfarmer" : "Farmář vlny",
 				"crafter" : "Zásobovač",
+				"digger" : "_MISSING_Digger",
+				"diggerspecial" : "_MISSING_Special Digger",
 				"dyer" : "Barvíř",
 				"fineryforgejob" : "Ocelář",
 				"fisherman" : "Rybář",
@@ -612,6 +617,10 @@
 					"description" : "Zvyšuje maximální zdraví, hodnotu regenerace a rychlost regenerace.",
 					"name" : "Zvýšení zdraví IV"
 				},
+				"luxurymeal" : {
+					"description" : "_MISSING_Unlocks the luxury meal",
+					"name" : "_MISSING_Luxury Meal"
+				},
 				"matchlockgun" : {
 					"description" : "Odemyká bambitku, dřívější verzi pistole",
 					"name" : "Bambitka"
@@ -640,21 +649,9 @@
 					"description" : "Umožňuje farmaření rýže.",
 					"name" : "Farmaření rýže"
 				},
-				"sciencebagadvanced" : {
-					"description" : "Odemyká pokročilé vědecké tašky, které se používají k pokročilému výzkumu",
-					"name" : "Pokročilá vědecká taška"
-				},
 				"sciencebagbasic" : {
 					"description" : "Odemyká základní vědeckou tašku, která se používá k základnímu výzkumu",
 					"name" : "Základní vědecká taška"
-				},
-				"sciencebagcolony" : {
-					"description" : "Odemyká kolonistickou vědeckou tašku, která se používá k výzkumu vztahovanému ke kolonii",
-					"name" : "Kolonistická vědecká taška"
-				},
-				"sciencebaglife" : {
-					"description" : "Odemyká vědeckou tašku života, která se používá k výzkumu vztahovanému ke zdraví",
-					"name" : "Vědecká taška života"
 				},
 				"sciencebagmilitary" : {
 					"description" : "Odemyká vojenskou vědeckou tašku, která se používá k výzkumu vztahovanému ke zbraním",
@@ -745,13 +742,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "Na skladě",
-				"calorievalue2" : "Kalorií na kus",
 				"craftingstockpile" : "Vyrábění a zásoby",
-				"distributionhappyperitem2" : "Štěstí na kus",
-				"distributionpercolonist2" : "Denní počet předmětů na kolonistu",
-				"distributionplanned2" : "Plánované zlepšení spokojenosti",
-				"distributionreached2" : "Částečně dodáváno",
-				"distributiontotal2" : "Celkový denní počet předmětů",
 				"filter-calories" : "Kalorie",
 				"filter-combat" : "Souboj",
 				"filter-food" : "Jídlo",
@@ -761,8 +752,20 @@
 				"happy" : {
 					"header" : "Spokojenost"
 				},
+				"hover-colonypointdays" : "_MISSING_Days of use per item",
+				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
+				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Vyrábí se v:",
 				"noactivecolony" : "Nemáte žádnou aktivní kolonii!",
+				"pointfoods" : {
+					"countcurrent" : "_MISSING_Stockpile",
+					"item" : "_MISSING_Item",
+					"itemsperday" : "_MISSING_Max items per day",
+					"points24h" : "_MISSING_Points last day",
+					"pointsmax" : "_MISSING_Max points per day",
+					"toggle" : "_MISSING_Enabled"
+				},
 				"science" : {
 					"available" : "Dostupné",
 					"cancel" : "Zrušit",
@@ -770,8 +773,10 @@
 					"completeunlock" : "Dokončit",
 					"conditioncolonistcount" : "Kolonisté",
 					"conditioncolonistcountdescription" : "Požadovaný počet kolonistů",
-					"conditionhappiness" : "Požadovaná spokojenost",
-					"conditionhappinessdescription" : "Minimální požadovaná celková spokojenost",
+					"conditionpointreq" : "_MISSING_Colony Points",
+					"conditionpointreqdescription1" : "_MISSING_Colony Points Requirement",
+					"conditionpointreqdescription2" : "_MISSING_Required: {0}",
+					"conditionpointreqdescription3" : "_MISSING_Available: {0}",
 					"conditionscientistrequires" : "Požaduje {0}",
 					"dependencies" : "Potřebné technologie:",
 					"header" : "Věda",
@@ -786,14 +791,10 @@
 				"stats" : {
 					"auto-scale" : "Automatická velikost",
 					"entry-beds" : "Postelí",
-					"entry-crowdedness" : "Přeplněnost",
-					"entry-dailycalories" : "Denní počet kalorií na kolonistu",
-					"entry-happytotal" : "Celková spokojenost",
+					"entry-meals" : "_MISSING_Total Meals",
 					"entry-kingspresence" : "Králova přítomnost",
-					"entry-misccauses" : "Různé příčiny",
 					"entry-npccount" : "Kolonistů",
-					"entry-rationing" : "Příděl",
-					"entry-totalcalories" : "Celkový počet kalorií",
+					"entry-points" : "_MISSING_Colony Points",
 					"entry-unemployed" : "Nezaměstaných",
 					"header" : "Statistiky",
 					"hide-all" : "Skrýt vše",
@@ -805,12 +806,10 @@
 					"time1day" : "Den",
 					"time24day" : "24 dní",
 					"time4day" : "4 dny",
-					"type-calories" : "Příjem jídla",
 					"type-colony" : "Kolonie",
-					"type-happiness" : "Spokojenost",
 					"type-idle-jobs" : "Doba nečinnosti",
+					"type-itempoints" : "_MISSING_Point Items",
 					"type-stockpile" : "Sklad",
-					"type-totalcalories" : "Celkově kalorií",
 					"type-trade-in" : "Příchozí směna",
 					"type-trade-out" : "Odchozí směna"
 				},
@@ -819,6 +818,22 @@
 					"instockpile" : "V zásobách",
 					"needs" : "Potřebuje: ",
 					"nothing" : "Nic nenalezeno"
+				},
+				"upgrades" : {
+					"foods_tab" : "_MISSING_Foods",
+					"header" : "_MISSING_Upgrades",
+					"luxuries_tab" : "_MISSING_Luxuries",
+					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
+					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
+					"preamble3" : "_MISSING_<i>Points earned in the past 24 hours</i>",
+					"table" : {
+						"cost" : "_MISSING_Cost",
+						"current" : "_MISSING_Current",
+						"levels" : "_MISSING_Levels",
+						"name" : "_MISSING_Upgrade Name",
+						"next" : "_MISSING_Next"
+					},
+					"upgradebutton" : "_MISSING_Upgrade"
 				}
 			},
 			"itemselector" : {
@@ -838,6 +853,7 @@
 				"pipliz" : {
 					"baker" : "Limity pečení",
 					"beekeeper" : "Limity včelaření",
+					"berryfarmer" : "_MISSING_Berry farmer limits",
 					"bloomeryjob" : "Limity vyrábění paliva",
 					"chickenfarmer" : "Limity chovu slepic",
 					"cook" : "Limity vaření",
@@ -1238,6 +1254,36 @@
 			"worldname" : "Jméno",
 			"worldname_long" : "Název světa",
 			"worldseed" : "Semínko světa"
+		},
+		"upgrades" : {
+			"builder" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Builder Area Size"
+			},
+			"colonistcapacity" : {
+				"level" : "_MISSING_{0} Colonists",
+				"main" : "_MISSING_Colonist Capacity"
+			},
+			"digger" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Digger Area Size"
+			},
+			"health" : {
+				"level" : "_MISSING_Level {0} Health",
+				"main" : "_MISSING_Health"
+			},
+			"pointcapacity" : {
+				"level" : "_MISSING_{0} Points",
+				"main" : "_MISSING_Colony Point Capacity"
+			},
+			"pointmultiplier" : {
+				"level" : "_MISSING_{0}% Efficiency",
+				"main" : "_MISSING_Colony Point Efficiency"
+			},
+			"safezone" : {
+				"level" : "_MISSING_{0} Blocks",
+				"main" : "_MISSING_Banner Safe Zone"
+			}
 		}
 	},
 	"types" : {
@@ -1254,6 +1300,7 @@
 		"beeswax" : "Včelí vosk",
 		"berry" : "Bobule",
 		"berrybush" : "Semínka bobulí",
+		"berrymeal" : "_MISSING_Berry Meal",
 		"blackplanks" : "Opracovaná černá prkna",
 		"bloomery" : "Nízká pec",
 		"boilingwater" : "Vařící voda",
@@ -1261,6 +1308,7 @@
 		"bow" : "Luk",
 		"bowstring" : "Tětiva",
 		"bread" : "Chleba",
+		"breadmeal" : "_MISSING_Bread Meal",
 		"bricks" : "Cihly",
 		"bricksblack" : "Černé cihly",
 		"bricksdarkred" : "Temnočervené cihly",
@@ -1332,7 +1380,6 @@
 		"fineryforge" : "Jemné kování",
 		"firewood" : "Dřevo na podpal",
 		"fishermanjob" : "Rybář",
-		"fishmeal" : "Rybí pochutina",
 		"fishtank" : "Nádrž s rybami",
 		"flax" : "Len",
 		"flaxstage1" : "Semínka lenu",
@@ -1455,10 +1502,7 @@
 		"saplingfallorange" : "Sazenice podzimního stromu",
 		"saplingtaiga" : "Sazenice stromu tajgy",
 		"sappling" : "Sazenice",
-		"sciencebagadvanced" : "Pokročilá vědecká taška",
 		"sciencebagbasic" : "Základní vědecká taška",
-		"sciencebagcolony" : "Kolonistická vědecká taška",
-		"sciencebaglife" : "Vědecká taška života",
 		"sciencebagmilitary" : "Vojenská vědecká taška",
 		"sciencelab" : "Laboratoř",
 		"shop" : "Obchod",
@@ -1515,14 +1559,16 @@
 		"barley" : "Slepičky to doslova žerou",
 		"bed" : "Potřebuje slámu, ne šrouby",
 		"beeswax" : "Lepkavé ",
-		"berry" : "Není to jedovaté",
+		"berry" : "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush" : "Kolonisté tohle mohou využít pro snadné získání jídla",
+		"berrymeal" : "_MISSING_A bunch of berries prepared to form a delicious meal",
 		"blackplanks" : "Velice hořlavé",
 		"bloomery" : "Používá dřevěné uhlí jako palivo na tavení galenitu a železa",
 		"boilingwater" : "Z nějakého důvodu je vařící neustále",
 		"bow" : "Strážci ho potřebují!",
 		"bowstring" : "Plojnk",
-		"bread" : "Chutná dobře, vyléčí tvá zranění",
+		"bread" : "_MISSING_A dry piece of bread without any spread or filling. Bleh",
+		"breadmeal" : "_MISSING_Bread made tasty with a perfect berry jam",
 		"bricks" : "Je to Holandská hra koneckonců...",
 		"bronzeanvil" : "Dost bylo krychitému tvaru!",
 		"bronzearrow" : "Monstra si přestanou stěžovat na nekvalitní střelivo. Stejně jako strážci!",
@@ -1576,7 +1622,6 @@
 		"feather" : "Padá dolů stejně rychle jako kladivo na Měsíci.",
 		"fineryforge" : "Potřebuje koks na vyrábění oceli a zlatých ingotů",
 		"firewood" : "Základní palivo",
-		"fishmeal" : "Dobré hnojivo pro zelí",
 		"flax" : "Imperiální barva",
 		"flaxstage1" : "Položte to na zem",
 		"flour" : "Kolonista z pecí z tohohle udělá chleba",
@@ -1648,10 +1693,7 @@
 		"saplingfallorange" : "Budoucí oranžový strom",
 		"saplingtaiga" : "O trochu tmavší strom",
 		"sappling" : "Budoucí strom",
-		"sciencebagadvanced" : "Potřeba pro pokročilou vědu",
 		"sciencebagbasic" : "Potřeba pro základní výzkum",
-		"sciencebagcolony" : "Potřeba pro výzkum vztahující se ke kolonii",
-		"sciencebaglife" : "Potřeba pro výzkum spojený se zdravím",
 		"sciencebagmilitary" : "Potřeba pro výzkum vztahovaný k boji",
 		"sciencelab" : "Používá se vědcem na odemykání nových věcí. Víc vědců pracuje rychleji!",
 		"shop" : "Pouze nakupování, ne prodávání",

@@ -1,0 +1,30 @@
+0.8.0.0 (2020-xx-xx)
+
+TODO:
+
+- Fix siege mode consuming something
+- Fix stockpile filter buttons
+- Food achievements?
+- Happiness achievmenets?
+- consider 'auto-upgrading' 0.7.5 happiness items json
+- autoselect new limits group (?)
+- Update quickstart
+- adjust berry/bread (non-meal/meal) tooltips
+- check monster flying not adjusting
+- personal digging speed upgrade?
+- colonist cost, first ones free, later ones more expensive
+- check tropics research cycle requirements
+
+Main changes;
+- Removed the old "happiness system", in favor for a "colony points" system
+- Merge/revamp various sciences
+- Move various sciences to the new points upgrade system
+
+Misc;
+- Fix chat lines being slightly out of bounds of the chatbox
+- Fix npc "indicators" not showing up properly in various failure modes
+- Fix npcs not properly adjusting their position when they are floating & searching for a bed/shop/crate
+- Fix statistic graphs that work as a "delta" like the trade/idle ones showing the wrong number in the legend
+- Set initially selected science to the first available one
+- Extended the day & night guard shifts
+- Buffed builder & digger jobs; also moved them to an earlier spot in the tech tree

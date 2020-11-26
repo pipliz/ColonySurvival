@@ -178,9 +178,6 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.5,
-		"foodValue" : 0.12,
-		"happiness" : 10,
 		"icon" : "./textures/icons/berry.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
@@ -196,6 +193,16 @@
 		"onRemoveAudio" : "grassDelete",
 		"requiresFertileBelow" : true,
 		"sideall" : "SELF"
+	},
+	"berrymeal" : {
+		"categories" : [
+			"food",
+			"edible",
+			"meal"
+		],
+		"colonyPointsMeal" : 10,
+		"icon" : "./textures/icons/berry.png",
+		"isPlaceable" : false
 	},
 	"blackplanks" : {
 		"categories" : [
@@ -220,10 +227,10 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 200,
+		"colonyPointsPerDay" : 275,
+		"colonyPointDays" : 20,
 		"icon" : "./textures/icons/book.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 480
+		"isPlaceable" : false
 	},
 	"bow" : {
 		"categories" : [
@@ -246,12 +253,19 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.5,
-		"foodValue" : 0.6,
-		"happiness" : 10,
 		"icon" : "./textures/icons/bread.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 300
+	},
+	"breadmeal" : {
+		"categories" : [
+			"food",
+			"edible",
+			"meal"
+		],
+		"colonyPointsMeal" : 20,
+		"icon" : "./textures/icons/bread.png",
+		"isPlaceable" : false,
 	},
 	"bricks" : {
 		"categories" : [
@@ -447,12 +461,10 @@
 	},
 	"cake" : {
 		"categories" : [
-			"food",
-			"edible"
+			"luxury"
 		],
-		"dailyFoodFractionOptimal" : 0.015,
-		"foodValue" : 0.05,
-		"happiness" : 50,
+		"colonyPointDays" : 1,
+		"colonyPointsPerDay" : 35,
 		"icon" : "./textures/icons/cake.png",
 		"isPlaceable" : false
 	},
@@ -460,10 +472,10 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 35,
+		"colonyPointsPerDay" : 20,
+		"colonyPointDays" : 2,
 		"icon" : "./textures/icons/candle.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 24
+		"isPlaceable" : false
 	},
 	"carpetblue" : {
 		"categories" : [
@@ -648,12 +660,10 @@
 	},
 	"chocolate" : {
 		"categories" : [
-			"food",
-			"edible"
+			"luxury"
 		],
-		"dailyFoodFractionOptimal" : 0.025,
-		"foodValue" : 0.025,
-		"happiness" : 100,
+		"colonyPointDays" : 5,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/chocolate.png",
 		"isPlaceable" : false
 	},
@@ -755,10 +765,10 @@
 			"luxury",
 			"tropics"
 		],
-		"happiness" : 100,
+		"colonyPointDays" : 5,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/coffee.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 24
+		"isPlaceable" : false
 	},
 	"coffeebeans" : {
 		"categories" : [
@@ -793,9 +803,8 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.04,
-		"foodValue" : 0.2,
-		"happiness" : 15,
+		"colonyPointDays" : 2,
+		"colonyPointsPerDay" : 15,
 		"icon" : "./textures/icons/fishcooked.png",
 		"isPlaceable" : false
 	},
@@ -804,9 +813,8 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.05,
-		"foodValue" : 0.05,
-		"happiness" : 100,
+		"colonyPointDays" : 2,
+		"colonyPointsPerDay" : 60,
 		"icon" : "./textures/icons/cookies.png",
 		"isPlaceable" : false
 	},
@@ -903,10 +911,10 @@
 			"new world",
 			"cotton"
 		],
-		"happiness" : 100,
+		"colonyPointDays" : 30,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/cottontowel.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 360
+		"isPlaceable" : false
 	},
 	"crate" : {
 		"categories" : [
@@ -984,10 +992,10 @@
 			"luxury",
 			"tropics"
 		],
-		"happiness" : 100,
+		"colonyPointDays" : 50,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/diamondnecklace.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 720
+		"isPlaceable" : false
 	},
 	"dirt" : {
 		"categories" : [
@@ -1040,14 +1048,6 @@
 			"fuel"
 		],
 		"icon" : "./textures/icons/firewood.png",
-		"isPlaceable" : false
-	},
-	"fishmeal" : {
-		"categories" : [
-			"food",
-			"ingredient"
-		],
-		"icon" : "./textures/icons/fishmeal.png",
 		"isPlaceable" : false
 	},
 	"fishtank" : {
@@ -1129,9 +1129,7 @@
 			"edible",
 			"tropics"
 		],
-		"dailyFoodFractionOptimal" : 0.7,
-		"foodValue" : 0.6,
-		"happiness" : 50,
+		"colonyPointsMeal" : 90,
 		"icon" : "./textures/icons/foofoo.png",
 		"isPlaceable" : false
 	},
@@ -1494,8 +1492,8 @@
 		},
 		"destructionTime" : 1250,
 		"onRemove" : [
-			{"amount":1,"chance":0.02,"type":"diamond"},
-			{"amount":1,"chance":0.98,"type":"stonebricks"}
+			{"amount":1,"chance":0.05,"type":"diamond"},
+			{"amount":1,"chance":0.95,"type":"stonebricks"}
 		],
 		"onRemoveAudio" : "stoneDelete",
 		"sideall" : "infinitediamond"
@@ -1647,10 +1645,10 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 40,
+		"colonyPointDays" : 25,
+		"colonyPointsPerDay" : 30,
 		"icon" : "./textures/icons/jewelry.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 480
+		"isPlaceable" : false
 	},
 	"kaolinite" : {
 		"categories" : [
@@ -1955,9 +1953,8 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.06,
-		"foodValue" : 0.3,
-		"happiness" : 35,
+		"colonyPointDays" : 4,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/lobstercooked.png",
 		"isPlaceable" : false
 	},
@@ -1992,9 +1989,7 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.166667,
-		"foodValue" : 5,
-		"happiness" : 60,
+		"colonyPointsMeal" : 70,
 		"icon" : "./textures/icons/luxurymeal.png",
 		"isPlaceable" : false
 	},
@@ -2027,9 +2022,7 @@
 			"edible",
 			"new world"
 		],
-		"dailyFoodFractionOptimal" : 0.9,
-		"foodValue" : 1.6,
-		"happiness" : 60,
+		"colonyPointsMeal" : 90,
 		"icon" : "./textures/icons/newworldmeal.png",
 		"isPlaceable" : false
 	},
@@ -2163,9 +2156,7 @@
 			"food",
 			"edible"
 		],
-		"dailyFoodFractionOptimal" : 0.5,
-		"foodValue" : 4.2,
-		"happiness" : 75,
+		"colonyPointsMeal" : 40,
 		"icon" : "./textures/icons/perpetualstew.png",
 		"isPlaceable" : false
 	},
@@ -2288,10 +2279,10 @@
 			"luxury",
 			"far east"
 		],
-		"happiness" : 75,
+		"colonyPointDays" : 20,
+		"colonyPointsPerDay" : 60,
 		"icon" : "./textures/icons/porcelainglazed.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 480
+		"isPlaceable" : false
 	},
 	"porcelainraw" : {
 		"categories" : [
@@ -2417,9 +2408,7 @@
 			"edible",
 			"far east"
 		],
-		"dailyFoodFractionOptimal" : 0.9,
-		"foodValue" : 2.2,
-		"happiness" : 60,
+		"colonyPointsMeal" : 90,
 		"icon" : "./textures/icons/ricemeal.png",
 		"isPlaceable" : false,
 		"maxStackSize" : 600
@@ -2540,32 +2529,11 @@
 		"requiresFertileBelow" : true,
 		"sideall" : "neutral"
 	},
-	"sciencebagadvanced" : {
-		"categories" : [
-			"sciencebag"
-		],
-		"icon" : "./textures/icons/sciencebagadvanced.png",
-		"isPlaceable" : false
-	},
 	"sciencebagbasic" : {
 		"categories" : [
 			"sciencebag"
 		],
 		"icon" : "./textures/icons/sciencebagbasic.png",
-		"isPlaceable" : false
-	},
-	"sciencebagcolony" : {
-		"categories" : [
-			"sciencebag"
-		],
-		"icon" : "./textures/icons/sciencebagcolony.png",
-		"isPlaceable" : false
-	},
-	"sciencebaglife" : {
-		"categories" : [
-			"sciencebag"
-		],
-		"icon" : "./textures/icons/sciencebaglife.png",
 		"isPlaceable" : false
 	},
 	"sciencebagmilitary" : {
@@ -2607,10 +2575,10 @@
 			"luxury",
 			"far east"
 		],
-		"happiness" : 200,
+		"colonyPointDays" : 20,
+		"colonyPointsPerDay" : 80,
 		"icon" : "./textures/icons/silkpillow.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 360
+		"isPlaceable" : false
 	},
 	"silkthread" : {
 		"categories" : [
@@ -2848,10 +2816,10 @@
 			"luxury",
 			"far east"
 		],
-		"happiness" : 75,
+		"colonyPointDays" : 1,
+		"colonyPointsPerDay" : 50,
 		"icon" : "./textures/icons/tea.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 24
+		"isPlaceable" : false
 	},
 	"tealeavesprocessed" : {
 		"categories" : [
@@ -3037,10 +3005,10 @@
 			"luxury",
 			"linen"
 		],
-		"happiness" : 35,
+		"colonyPointDays" : 8,
+		"colonyPointsPerDay" : 30,
 		"icon" : "./textures/icons/undershirt.png",
 		"isPlaceable" : false,
-		"luxuryHours" : 240,
 		"maxStackSize" : 25
 	},
 	"vanilla" : {
@@ -3061,10 +3029,10 @@
 		"categories" : [
 			"luxury"
 		],
-		"happiness" : 30,
+		"colonyPointDays" : 10,
+		"colonyPointsPerDay" : 20,
 		"icon" : "./textures/icons/waxtablet.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 168
+		"isPlaceable" : false
 	},
 	"wheat" : {
 		"categories" : [
@@ -3138,10 +3106,10 @@
 			"luxury",
 			"new world"
 		],
-		"happiness" : 150,
+		"colonyPointDays" : 30,
+		"colonyPointsPerDay" : 180,
 		"icon" : "./textures/icons/wintercoat.png",
-		"isPlaceable" : false,
-		"luxuryHours" : 720
+		"isPlaceable" : false
 	},
 	"wolfsbane" : {
 		"categories" : [

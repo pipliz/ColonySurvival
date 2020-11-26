@@ -45,7 +45,8 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.cook"
+			"pipliz.baseresearch.cook",
+			"pipliz.baseresearch.beekeeper"
 		],
 		"icon" : "./textures/icons/trader.png",
 		"iterationCount" : 5,
@@ -60,7 +61,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.watergatherer"
+			"pipliz.baseresearch.wheatfarming"
 		],
 		"icon" : "./textures/icons/foofoo.png",
 		"iterationCount" : 10,
@@ -92,11 +93,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.papyrus",
-			"pipliz.baseresearch.foofoo",
-			"pipliz.baseresearch.sugarcane",
-			"pipliz.baseresearch.diamondprocessing",
-			"pipliz.baseresearch.coffeebeans"
+			"pipliz.baseresearch.diamondprocessing"
 		],
 		"icon" : "./textures/icons/cacao.png",
 		"iterationCount" : 10,
@@ -113,11 +110,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.papyrus",
-			"pipliz.baseresearch.foofoo",
-			"pipliz.baseresearch.sugarcane",
-			"pipliz.baseresearch.diamondprocessing",
-			"pipliz.baseresearch.coffeebeans"
+			"pipliz.baseresearch.diamondprocessing"
 		],
 		"icon" : "./textures/icons/vanilla.png",
 		"iterationCount" : 10,
@@ -258,7 +251,7 @@
 			"pipliz.baseresearch.spinningwheel.newworld"
 		],
 		"icon" : "./textures/icons/cottontowel.png",
-		"iterationCount" : 3,
+		"iterationCount" : 10,
 		"iterationRequirements" : [
 			{"type":"cotton"}
 		],
@@ -301,13 +294,13 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.cabbagefarmer",
+			"pipliz.baseresearch.cook",
 			"pipliz.baseresearch.chickenfarmer"
 		],
 		"icon" : "./textures/icons/rice.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"berry"}
+			{"type":"berrymeal"}
 		],
 		"key" : "pipliz.baseresearch.ricefarmer",
 		"requiredScienceBiome" : "sciencebiome.fareast",
@@ -396,7 +389,8 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.flaxfarming"
+			"pipliz.baseresearch.wheatfarming",
+			"pipliz.baseresearch.tailorshop"
 		],
 		"icon" : "./textures/icons/beehive.png",
 		"iterationCount" : 10,
@@ -404,37 +398,19 @@
 			{"type":"flax"}
 		],
 		"key": "pipliz.baseresearch.beekeeper",
-		"unlocksClientHints" : [
-			{"data":"pipliz.beekeeper","type":"NPCType"}
-		],
 		"unlocksRecipeGroups" : [
 			"pipliz.beekeeper"
 		],
-		"unlocksRecipes" : [
+		"unlocksRecipes": [
 			"pipliz.baker.beeswax",
-			"pipliz.crafter.bowstring"
+			"pipliz.crafter.bowstring",
+			"pipliz.beekeeper.candle",
+			"pipliz.crafter.coatedplanks",
+			"pipliz.crafter.adobe",
 		]
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.beekeeper",
-			"pipliz.baseresearch.tailorshop"
-		],
-		"icon" : "./textures/icons/candle.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"linen"},
-			{"type":"beeswax"}
-		],
-		"key" : "pipliz.baseresearch.candles",
-		"unlocksRecipes" : [
-			"pipliz.beekeeper.candle"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.candles",
-			"pipliz.baseresearch.sciencebagbasic",
 			"pipliz.baseresearch.ironsmelting"
 		],
 		"icon" : "./textures/icons/waxtablet.png",
@@ -451,27 +427,6 @@
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.beekeeper"
-		],
-		"icon" : "./textures/icons/olive.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"rawbeeswax"}
-		],
-		"key" : "pipliz.baseresearch.olivefarmer",
-		"unlocksClientHints" : [
-			{"data":"pipliz.olivefarmer","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"pipliz.grinder.oliveoil",
-			"pipliz.olivefarmer.gatherolive",
-			"pipliz.crafter.woodcoating",
-			"pipliz.crafter.adobe",
-			"pipliz.crafter.coatedplanks"
-		]
-	},
-	{
 		"icon" : "./textures/icons/bucketwater.png",
 		"iterationCount" : 5,
 		"iterationRequirements" : [
@@ -480,9 +435,6 @@
 			{"amount":2,"type":"copperparts"}
 		],
 		"key": "pipliz.baseresearch.watergatherer",
-		"unlocksClientHints" : [
-			{"data":"pipliz.watergatherer","type":"NPCType"}
-		],
 		"unlocksRecipeGroups" : [
 			"pipliz.watergatherer"
 		],
@@ -511,37 +463,31 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.olivefarmer"
+			"pipliz.baseresearch.watergatherer"
 		],
 		"icon" : "./textures/icons/fishcooked.png",
 		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"olive"}
+			{"type":"coppernails"},
+			{"type":"coppertools"},
+			{"type":"planks"},
+			{"type":"bucketwater"}
 		],
 		"key": "pipliz.baseresearch.fisherman",
-		"unlocksClientHints" : [
-			{
-				"data": "pipliz.fisherman",
-				"type": "NPCType"
-			},
-			{
-				"data": "pipliz.fishfarmer",
-				"type": "NPCType"
-			}
-		],
 		"unlocksRecipeGroups" : [
 			"pipliz.fisherman",
 			"pipliz.fishfarmer"
 		]
 	},
 	{
+		"colonyPointRequirement" : 1000,
 		"dependencies" : [
-			"pipliz.baseresearch.fisherman"
+			"pipliz.baseresearch.fisherman",
+			"pipliz.baseresearch.wheatfarming"
 		],
 		"icon" : "./textures/icons/stove.png",
 		"iterationCount" : 20,
 		"iterationRequirements" : [
-			{"type":"oliveoil"},
 			{"type":"rawfish"},
 			{"type":"firewood"}
 		],
@@ -549,58 +495,47 @@
 		"unlocksRecipeGroups" : [
 			"pipliz.cook"
 		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.stove"
+		"unlocksClientHints" : [
+			{"data":"pipliz.cabbagefarmer","type":"NPCType"},
+			{"data":"pipliz.olivefarmer","type":"NPCType"}
+		],
+		"unlocksRecipes": [
+			"pipliz.crafter.stove",
+			"cook.perpetualstew",
+			"pipliz.olivefarmer.gatherolive",
+			"pipliz.grinder.oliveoil"
 		]
 	},
 	{
+		"colonyPointRequirement" : 10000,
 		"dependencies" : [
+			"pipliz.baseresearch.chickenfarmer",
 			"pipliz.baseresearch.cook"
 		],
-		"icon" : "./textures/icons/cabbage.png",
-		"iterationCount" : 10,
+		"icon" : "./textures/icons/luxurymeal.png",
+		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"type":"fishmeal"}
+			{"type":"chickenmeat"},
+			{"type":"oliveoil"},
+			{"type":"honey"},
+			{"type":"boilingwater"}
 		],
-		"key" : "pipliz.baseresearch.cabbagefarmer",
-		"unlocksClientHints" : [
-			{"data":"pipliz.cabbagefarmer","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"cook.luxurymeal",
-			"cook.perpetualstew"
+		"key" : "pipliz.baseresearch.luxurymeal",
+		"unlocksRecipes": [
+			"cook.luxurymeal"
 		]
 	},
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.wheatfarming"
 		],
-		"icon" : "./textures/icons/barley.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"copper"},
-			{"type":"tin"},
-			{"type":"berry"}
-		],
-		"key" : "pipliz.baseresearch.barleyfarmer",
+		"icon" : "./textures/icons/chickencoop.png",
+		"colonyPointRequirement" : 250,
+		"key": "pipliz.baseresearch.chickenfarmer",
 		"unlocksClientHints" : [
 			{"data":"pipliz.barleyfarmer","type":"NPCType"}
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.barleyfarmer"
 		],
-		"icon" : "./textures/icons/chickencoop.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"amount":25,"type":"barley"}
-		],
-		"key": "pipliz.baseresearch.chickenfarmer",
-				"unlocksClientHints" : [
-			{"data":"pipliz.chickenfarmer","type":"NPCType"}
-		],
-		"unlocksRecipeGroups" : [
+		"unlocksRecipeGroups": [
 			"pipliz.chickenfarmer"
 		],
 		"unlocksRecipes" : [
@@ -643,31 +578,22 @@
 		]
 	},
 	{
+		"colonyPointRequirement" : 200000,
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagadvanced",
-			"pipliz.baseresearch.sciencebagcolony"
+			"pipliz.baseresearch.gunsmithshop"
 		],
-		"icon" : "./textures/icons/glider.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagadvanced"},
-			{"type":"sciencebagcolony"}
-		],
+		"icon" : "./textures/icons/glider.png"
 		"key" : "pipliz.baseresearch.glider",
 		"unlocksRecipes" : [
 			"pipliz.player.glider"
 		]
 	},
 	{
+		"colonyPointRequirement" : 400000,
 		"dependencies" : [
 			"pipliz.baseresearch.writer"
 		],
 		"icon" : "./textures/icons/book.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"book"},
-			{"type":"sciencebagadvanced"}
-		],
 		"key" : "pipliz.baseresearch.printingpress",
 		"requiredScienceBiome" : "sciencebiome.oldworld",
 		"unlocksRecipes" : [
@@ -678,7 +604,6 @@
 	{
 		"dependencies" : [
 			"pipliz.baseresearch.bronzeanvil",
-			"pipliz.baseresearch.flaxfarming",
 			"pipliz.baseresearch.chickenfarmer",
 			"pipliz.baseresearch.beekeeper"
 		],
@@ -716,7 +641,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.technologisttable"
 		],
 		"icon" : "./textures/icons/bronzecoin.png",
 		"iterationCount" : 10,
@@ -821,7 +746,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.technologisttable"
 		],
 		"icon" : "./textures/icons/ironwrought.png",
 		"iterationCount" : 10,
@@ -889,77 +814,6 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.gunsmithshop"
-		],
-		"icon" : "./textures/icons/sciencebagadvanced.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"type":"steelparts"},
-			{"type":"gunpowderpouch"},
-			{"type":"silveringot"},
-			{"type":"linenbag"}
-		],
-		"key" : "pipliz.baseresearch.sciencebagadvanced",
-		"unlocksRecipes" : [
-			"pipliz.technologist.sciencebagadvanced"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
-		],
-		"icon" : "./textures/icons/sciencebagbasic.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"linenbag"},
-			{"type":"coppertools"},
-			{"type":"bronzeplate"},
-			{"amount":3,"type":"bricks"}
-		],
-		"key" : "pipliz.baseresearch.sciencebagbasic",
-		"unlocksRecipes" : [
-			"pipliz.technologist.sciencebagbasic"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.matchlockgun"
-		],
-		"icon" : "./textures/icons/sciencebagcolony.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"bronzeanvil"},
-			{"type":"fineryforge"},
-			{"type":"matchlockgun"},
-			{"type":"linenbag"}
-		],
-		"key" : "pipliz.baseresearch.sciencebagcolony",
-		"unlocksRecipes" : [
-			"pipliz.technologist.sciencebagcolony"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable",
-			"pipliz.baseresearch.wheatfarming",
-			"pipliz.baseresearch.herbfarming"
-		],
-		"icon" : "./textures/icons/sciencebaglife.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"flour"},
-			{"amount":5,"type":"berry"},
-			{"type":"undershirt"},
-			{"type":"linenbag"}
-		],
-		"key" : "pipliz.baseresearch.sciencebaglife",
-		"unlocksRecipes" : [
-			"pipliz.technologist.sciencebaglife"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable",
 			"pipliz.baseresearch.ironsmelting",
 			"pipliz.baseresearch.archery"
 		],
@@ -978,7 +832,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.technologisttable"
 		],
 		"icon" : "./textures/icons/splittingstump.png",
 		"iterationCount" : 3,
@@ -999,7 +853,7 @@
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.technologisttable"
 		],
 		"icon" : "./textures/icons/stonemasonworkbench.png",
 		"iterationCount" : 10,
@@ -1036,10 +890,10 @@
 		]
 	},
 	{
+		"colonyPointRequirement" : 1000,
 		"dependencies" : [
-			"pipliz.baseresearch.tailorshop",
 			"pipliz.baseresearch.bronzeanvil",
-			"pipliz.baseresearch.olivefarmer"
+			"pipliz.baseresearch.beekeeper"
 		],
 		"icon" : "./textures/icons/technologisttable.png",
 		"iterationCount" : 3,
@@ -1054,131 +908,15 @@
 		],
 		"unlocksRecipes" : [
 			"pipliz.crafter.technologisttable",
-			"pipliz.player.technologisttable"
+			"pipliz.player.technologisttable",
+			"pipliz.technologist.sciencebagbasic"
 		]
-	},
-	{
-		"colonistCount" : 50,
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius1.png",
-		"key" : "pipliz.baseresearch.bannerradius1"
-	},
-	{
-		"colonistCount" : 100,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius1"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius2.png",
-		"key" : "pipliz.baseresearch.bannerradius2"
-	},
-	{
-		"colonistCount" : 150,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius2"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius3.png",
-		"key" : "pipliz.baseresearch.bannerradius3"
-	},
-	{
-		"colonistCount" : 250,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius3"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius4.png",
-		"key" : "pipliz.baseresearch.bannerradius4"
-	},
-	{
-		"colonistCount" : 400,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius4"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius5.png",
-		"key" : "pipliz.baseresearch.bannerradius5"
-	},
-	{
-		"colonistCount" : 600,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius5"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius6.png",
-		"key" : "pipliz.baseresearch.bannerradius6"
-	},
-	{
-		"colonistCount" : 1000,
-		"dependencies" : [
-			"pipliz.baseresearch.bannerradius6"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/bannerradius7.png",
-		"key" : "pipliz.baseresearch.bannerradius7"
-	},
-	{
-		"colonistCount" : 200,
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebaglife"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/baseresearch_healthsize1.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"sciencebaglife"}
-		],
-		"key" : "pipliz.baseresearch.liferesearch1"
-	},
-	{
-		"colonistCount" : 300,
-		"dependencies" : [
-			"pipliz.baseresearch.liferesearch1",
-			"pipliz.baseresearch.matchlockgun"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/baseresearch_healthsize2.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"sciencebaglife"},
-			{"type":"matchlockgun"}
-		],
-		"key" : "pipliz.baseresearch.liferesearch2"
-	},
-	{
-		"colonistCount" : 500,
-		"dependencies" : [
-			"pipliz.baseresearch.liferesearch2"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/baseresearch_healthsize3.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebaglife"},
-			{"type":"tea"}
-		],
-		"key" : "pipliz.baseresearch.liferesearch3"
-	},
-	{
-		"colonistCount" : 750,
-		"dependencies" : [
-			"pipliz.baseresearch.liferesearch3"
-		],
-		"happinessThreshold" : 0,
-		"icon" : "./textures/icons/baseresearch_healthsize4.png",
-		"iterationCount" : 100,
-		"iterationRequirements" : [
-			{"type":"sciencebaglife"},
-			{"type":"chocolate"},
-			{"type":"cookies"}
-		],
-		"key" : "pipliz.baseresearch.liferesearch4"
 	},
 	{
 		"icon" : "./textures/icons/flax.png",
 		"iterationCount" : 3,
 		"iterationRequirements" : [
-			{"amount":3,"type":"berry"},
+			{"amount":3,"type":"berrymeal"},
 			{"amount":1,"type":"coppernails"}
 		],
 		"key" : "pipliz.baseresearch.flaxfarming",
@@ -1186,15 +924,12 @@
 			{"data":"pipliz.flaxfarmer","type":"NPCType"}
 		],
 		"unlocksRecipes" : [
-			"pipliz.crafter.woodcoating",
-			"pipliz.crafter.coatedplanks",
-			"pipliz.crafter.adobe",
 			"pipliz.crafter.bowstring"
 		]
 	},
 	{
 		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.technologisttable"
 		],
 		"icon" : "./textures/icons/alkanet.png",
 		"iterationCount" : 10,
@@ -1221,7 +956,7 @@
 		"icon" : "./textures/icons/bread.png",
 		"iterationCount" : 5,
 		"iterationRequirements" : [
-			{"amount":10,"type":"berry"},
+			{"amount":10,"type":"berrymeal"},
 			{"amount":2,"type":"copperparts"},
 			{"type":"coppertools"}
 		],
@@ -1243,17 +978,14 @@
 		]
 	},
 	{
+		"colonyPointRequirement" : 2000,
 		"dependencies" : [
-			"pipliz.baseresearch.constructiondigger",
-			"pipliz.baseresearch.stonemasonworkbench"
+			"pipliz.baseresearch.constructiondigger"
 		],
 		"icon" : "./textures/icons/bricksred.png",
-		"iterationCount" : 50,
+		"iterationCount" : 25,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"amount":5,"type":"stoneblock"},
-			{"amount":5,"type":"cobblestonegrey"},
-			{"amount":5,"type":"bricksred"}
+			{"amount":5,"type":"bricks"}
 		],
 		"key" : "pipliz.baseresearch.constructionbuilder",
 		"unlocksClientHints" : [
@@ -1261,75 +993,13 @@
 		]
 	},
 	{
+		"colonyPointRequirement" : 1000,
 		"dependencies" : [
-			"pipliz.baseresearch.constructionbuilder"
-		],
-		"icon" : "./textures/icons/buildersize1.png",
-		"iterationCount" : 30,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"amount":5,"type":"stoneblock"}
-		],
-		"key" : "pipliz.baseresearch.constructionbuildersize1"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize1",
-			"pipliz.baseresearch.sciencebagadvanced"
-		],
-		"icon" : "./textures/icons/buildersize2.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructionbuildersize2"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize2",
-			"pipliz.baseresearch.sciencebagcolony"
-		],
-		"icon" : "./textures/icons/buildersize3.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructionbuildersize3"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize3"
-		],
-		"icon" : "./textures/icons/buildersize4.png",
-		"iterationCount" : 100,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructionbuildersize4"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuildersize4"
-		],
-		"icon" : "./textures/icons/buildersize5.png",
-		"iterationCount" : 250,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructionbuildersize5"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebagbasic"
+			"pipliz.baseresearch.bronzeanvil"
 		],
 		"icon" : "./textures/icons/bronzepickaxe.png",
-		"iterationCount" : 30,
+		"iterationCount" : 10,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
 			{"type":"bronzepickaxe"}
 		],
 		"key" : "pipliz.baseresearch.constructiondigger",
@@ -1339,77 +1009,15 @@
 		]
 	},
 	{
+		"colonyPointRequirement" : 2500,
 		"dependencies" : [
-			"pipliz.baseresearch.constructiondigger"
-		],
-		"icon" : "./textures/icons/diggersize1.png",
-		"iterationCount" : 30,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"amount":5,"type":"stoneblock"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggersize1"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize1",
-			"pipliz.baseresearch.sciencebagadvanced"
-		],
-		"icon" : "./textures/icons/diggersize2.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggersize2"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize2",
-			"pipliz.baseresearch.sciencebagcolony"
-		],
-		"icon" : "./textures/icons/diggersize3.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggersize3"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize3"
-		],
-		"icon" : "./textures/icons/diggersize4.png",
-		"iterationCount" : 100,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggersize4"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondiggersize4"
-		],
-		"icon" : "./textures/icons/diggersize5.png",
-		"iterationCount" : 250,
-		"iterationRequirements" : [
-			{"type":"sciencebagcolony"},
-			{"type":"sciencebagadvanced"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggersize5"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.constructionbuilder",
-			"pipliz.baseresearch.sciencebagadvanced"
+			"pipliz.baseresearch.constructiondigger",
 		],
 		"icon" : "./textures/icons/bronzeaxe.png",
 		"iterationCount" : 50,
 		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"sciencebagadvanced"}
+			{"type":"bronzeplate"},
+			{"type":"coppertools"}
 		],
 		"key" : "pipliz.baseresearch.constructiondiggerspecial",
 		"unlocksClientHints" : [
