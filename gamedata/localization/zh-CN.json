@@ -1,5 +1,5 @@
 {
-	"coverage" : 91.2670007158196,
+	"coverage" : 90.7791279485347,
 	"hints" : {
 		"0" : "对大多数农场来说，规模越大意味着产量越高。采浆果的人例外.",
 		"1" : "当你招募更多的殖民者时，会有更多不同的怪物诞生.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "殖民者每天需要2000卡路里和一张床.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "招满所有床位",
 			"recruittofilljobs" : "招满所有工作",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "幸福度"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "制造于:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "屁民将一直工作到储备量达到为止.",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "怪物会在晚上攻击你的殖民地！使用命令工具放置警卫。按“1”并单击选择。按“r”旋转某些块."
 			},
 			"page2" : {
-				"description" : "面包和幸福对你的殖民地的发展至关重要",
-				"header" : "食物与幸福",
-				"text1" : "你招募的每一个殖民者，都会有不快的情绪。分发快乐物品，让你的殖民者快乐。调整“幸福”菜单中的滑块（按“I”）以选择要分发的项目。",
-				"text2" : "改变你分发的食物会改变你的殖民者所获得的热量。少于1000卡路里会导致饥饿；少于2000卡路里会降低幸福感；多于2000卡路里会增加幸福感.",
-				"text3" : "殖民者每天会去杂货店或横幅店一次，以获得他们每天的快乐物品。大型殖民地需要多个杂货店来减少步行距离."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "晚上怪物可是会攻击你的殖民地的!",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 88.117394416607,
+	"coverage" : 87.6340243030736,
 	"hints" : {
 		"0" : "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1" : "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -120,6 +120,7 @@
 			"recruittext3" : "入植者には、1日2000カロリーとベッドが必要です。",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "空きベッドが埋まるまで雇用",
 			"recruittofilljobs" : "空きの仕事が埋まるまで雇用",
 			"resetcolonypriority2" : "アクティブなコロニーをリセット",
@@ -753,7 +754,7 @@
 					"header" : "幸福度"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "これで作成:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "全てをリセット",
 				"allzero" : "全てを0に設定",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "新規のグループ",
 				"description" : "入植者は備蓄品の中が指定した量になるまで作業を続けます。",
 				"group" : "生産制限グループ:",
@@ -1068,11 +1070,11 @@
 				"text4" : "夜間には、モンスターがあなたのコロニーを襲ってきます！ コマンドツールを使って、衛兵を配置しましょう。 「1」を押し、クリックして衛兵を選択します。 「R」を押すことで、ブロックを回転できます。"
 			},
 			"page2" : {
-				"description" : "パンとお楽しみはあなたのコロニーの発展に必要不可欠です",
-				"header" : "食料＆幸福度",
-				"text1" : "入植者を雇用する度に不幸が増大します。 幸福アイテムを供給し入植者の幸福度を維持しましょう。 どのアイテムを供給したいのか選ぶため、幸福度メニュー（「I」を押す）のスライダーを調節しましょう。",
-				"text2" : "供給する食品アイテムを変更すると、入植者が受け取るカロリー量が変化します。 1000未満のカロリーは飢餓を招き、2000未満は幸福度を低下させ、2000超は幸福度を向上させます。",
-				"text3" : "入植者は日々の幸福アイテムを受け取るために、1日1回食料雑貨店かバナーを訪れます。 大規模なコロニーでは、歩く距離を減らすため、複数の食料雑貨店が必要になるでしょう。"
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "夜間に迫り来るモンスターたちからコロニーを防衛せよ！",

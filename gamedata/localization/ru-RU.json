@@ -1,5 +1,5 @@
 {
-	"coverage" : 83.8940586972083,
+	"coverage" : 83.4167262330236,
 	"hints" : {
 		"0" : "В бодьшинственстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1" : "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "Колонисты требуют 2000 калорий в день и кровать.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Вербовать до заполнить все кровати",
 			"recruittofilljobs" : "Вербовать до заполнения всех вакансий",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Счастье"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Делается в:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "Колонисты будут работать, пока на складе не будет указанное кол-во предметов",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "Монстру атакуют вашу колонию ночью! Используйте Инструмент коммандования для установки защитных устройств. Нажмите '1' и кликните, чтобы выбрать его. Нажмите 'R' для вращения определенных блоков."
 			},
 			"page2" : {
-				"description" : "Хлеб и игры необходимы для развития вашей колонии",
-				"header" : "Еда и Счастье",
-				"text1" : "Для каждого вербованного вами колониста растет полное несчастье. Раздайте предметы счастья, чтобы ваши колонисты были счастливы. Настройте ползунки в меню счастья (нажмите 'I' при зоводских настройках), чтобы выбрать, какие элементы вы хотите распространять.",
-				"text2" : "Изменение продуктов питания, которые вы распределяете, меняет количество калорий, которое получают ваши колонисты. Менее 1000 калорий вызывает голод; меньше 2000 снижает счастье; больше 2000 увеличивает счастье.",
-				"text3" : "Колонисты будут посещать бакалейщика или баннер один раз в день, чтобы получить предметы повседневного счастья. Большие колонии будут нуждаться в нескольких бакалейных лавках, чтобы уменьшить расстояние ходьбы."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Защити свою колонию от монстров ночью!",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 80.9591982820329,
+	"coverage" : 80.4860614724803,
 	"hints" : {
 		"0" : "For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1" : "More and different monsters will spawn as you recruit more colonists.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "Colonists require 2000 calories per day and a bed.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Happiness"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Made in:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "Colonists will work until the set amount is reached in the stockpile.",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "Monsters will attack your colony at night! Use the Command Tool to place guards. Press '1' and click to select it. Press 'R' to rotate certain blocks."
 			},
 			"page2" : {
-				"description" : "Bread and games are essential to grow your colony",
-				"header" : "Food & Happiness",
-				"text1" : "For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
-				"text2" : "Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
-				"text3" : "Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Defend your colony against the monsters of the night!",

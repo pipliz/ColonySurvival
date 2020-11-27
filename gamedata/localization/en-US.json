@@ -120,6 +120,7 @@
 			"recruittext3" : "Colonists require a meal per day and a bed.",
 			"recruittext4-2" : "Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Recruit to fill all beds",
 			"recruittofilljobs" : "Recruit to fill all jobs",
 			"resetcolonypriority2" : "Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Happiness"
 				},
 				"hover-colonypointdays" : "Days of use per item",
-				"hover-colonypointsmeal" : "Meal consumption points",
+				"hover-colonypointsmeal" : "Colony Points when eaten",
 				"hover-colonypointsperday" : "Colony Points per day of use",
 				"hover-colonypointstotal" : "Total points per item",
 				"madeintooltip" : "Made in:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "Foods",
-					"header" : "Upgrades",
+					"header" : "Colony Points",
 					"luxuries_tab" : "Luxuries",
 					"preamble1" : "Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "Reset all",
 				"allzero" : "Set all zero",
+				"confirmdelete" : "Really delete?",
 				"createnewgroup" : "New group",
 				"description" : "Colonists will work until the set amount is reached in the stockpile.",
 				"group" : "Limits group:",
@@ -1069,10 +1071,10 @@
 			},
 			"page2" : {
 				"description" : "Bread and games are essential to grow your colony",
-				"header" : "Food & Happiness",
-				"text1" : "For every colonist you recruit, total unhappiness grows. Distribute happiness items to keep your colonists happy. Adjust the sliders in the happiness menu (press \"I\") to select which items you want to distribute.",
-				"text2" : "Changing the food items you distribute changes the amount of calories your colonists receive. Less than 1000 calories causes starvation; less than 2000 lowers happiness; more than 2000 increases happiness.",
-				"text3" : "Colonists will visit the grocer or banner once a day to get their daily happiness items. Large colonies will need multiple grocers to reduce the walking distance."
+				"header" : "Meals & Luxury Items",
+				"text1" : "Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Defend your colony against the monsters of the night!",

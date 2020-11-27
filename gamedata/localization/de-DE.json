@@ -1,5 +1,5 @@
 {
-	"coverage" : 95.4187544738726,
+	"coverage" : 94.9249463902788,
 	"hints" : {
 		"0" : "Je größer die Farm um so mehr wird produziert. Ausgenommen sind Beerensammler.",
 		"1" : "Wenn du mehr Kolonisten rekrutierst, erscheinen auch mehr Monster.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "Kolonisten verbrauchen 2000 Kalorien pro Tag und benötigen ein Bett.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "besetze alle Betten",
 			"recruittofilljobs" : "besetze alle Jobs",
 			"resetcolonypriority2" : "Kolonie Prioritäten zurücksetzen",
@@ -753,7 +754,7 @@
 					"header" : "Zufriedenheit"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Hergestellt in:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "Alles auf Standard",
 				"allzero" : "Alles auf 0",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "Neues Schema",
 				"description" : "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
 				"group" : "Limit Schema:",
@@ -1068,11 +1070,11 @@
 				"text4" : "Monster werden deine Kolonie nachts angreifen! Verwende das Befehlstool, um Wachen zu platzieren. Drücken sie '1' und wählen sie 'Wächter' aus. Drücke 'R', um Blöcke zu drehen."
 			},
 			"page2" : {
-				"description" : "Brot und Zufriedenheit sind für das Wachstum unverzichtbar",
-				"header" : "Nahrung & Zufriedenheit",
-				"text1" : "Jeder Kolonist reduziert die Zufriedenheit. Verteile höherwertige Güter um die Kolonisten bei Laune zu halten. Steuere die Verteilung der Güter über das Menü Zufriedenheit (drücke \"I\").",
-				"text2" : "Bestimme die Rationen der Lebensmittel. Weniger als 1000 Kalorien verursachen Hunger; weniger als 2000 verringern die Zufriedenheit; mehr als 2000 erhöhen die Zufriedenheit.",
-				"text3" : "Kolonisten besuchen 1x am Tag den Lebensmittelladen oder das Banner um ihre tägliche Ration an Lebensmittel und Luxusgütern zu besorgen. Platziere mehrere Läden im die Gehwege zu verkürzen."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Verteidige deine Kolonie gegen die Monster der Nacht!",

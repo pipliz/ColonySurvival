@@ -1,5 +1,5 @@
 {
-	"coverage" : 80.9591982820329,
+	"coverage" : 80.4860614724803,
 	"hints" : {
 		"0" : "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1" : "У міру того, як ваша колонія росте, будуть з'являтися нові монстри.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "Колоністам потрібно 2000 калорій на день та ліжко.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Набір для заповнення всіх ліжок",
 			"recruittofilljobs" : "Набір для заповнення всіх робочих місць",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Щастя"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Робиться в:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "Колоністи працюватимуть, поки на складах не буде вказана кількість предметів",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "Монстру атакують вашу колонію вночі! Використовуйте Інструмент командування для установки захисних пристроїв. Натисніть '1' і натисніть, щоб вибрати його. Натисніть 'R' для обертання певних блоків."
 			},
 			"page2" : {
-				"description" : "Хліб та ігри необхідні для вирощування вашої колонії",
-				"header" : "Їжа та щастя",
-				"text1" : "З кожним набором колоністів зростає загальне нещастя. Поширюйте речі щастя, щоб зберегти своїх колоністів щасливими. Відрегулюйте повзунки в меню щастя (натисніть 'I'), щоб вибрати елементи, які потрібно розповсюдити.",
-				"text2" : "Зміна харчових продуктів, які ви розповсюджуєте, змінює кількість калорій, які отримують ваші колоністи. Менше 1000 калорій викликає голодування; менше 2000 знижує щастя; більше 2000 збільшує щастя.",
-				"text3" : "Колоністи відвідуватимуть продуктовий магазин або банер раз на день, щоб отримати щоденні товари щастя. Для великих колоній знадобиться кілька бакалійних товарів, щоб зменшити відстань хотьби."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Захисти свою колонію від монстрів вночі!",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 80.386542591267,
+	"coverage" : 79.9142244460329,
 	"hints" : {
 		"0" : "Per la maggior parte delle fattorie, maggior grandezza significa più produzione. I raccoglitori di bacche sono un'eccezione alla regola.",
 		"1" : "Con l'aumentare del numero di coloni, aumenteranno il numero e la tipologia di mostri.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "I coloni necessitano di 2000 calorie al giorno e un letto.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Recluta per occupare tutti i letti",
 			"recruittofilljobs" : "Recluta per occupare tutti i lavori",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Felicità"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Prodotto da:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "I coloni lavoreranno fino a raggiungere la quantità fissata nel magazzino.",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "I mostri attaccheranno la tua colonia di notte! Usa lo Strumento di Comando per posizionare delle guardie. Premi '1' e fai click per selezionarle. Premi 'R' per ruotare alcuni blocchi."
 			},
 			"page2" : {
-				"description" : "Panem et Circenses, cosae essenziali per la crescita della tua colonia",
-				"header" : "Cibo e Felicità",
-				"text1" : "Per ogni colono recrutato, l'infelicità totale cresce. Distribuisci oggetti che forniscono felicità per mantenere felici i tuoi coloni. Regola i cursori nel munu di felicità (premi \"I\") per decidere quali oggetti distribuire.",
-				"text2" : "Cambiando i cibi distribuiti cambia l'ammontare di calorie assunte dai coloni. Sotto le 1000 calorie inizieranno a morire di fame; meno di 2000 diminuirà la felicità; più di 2000 aumenterà la felicità.",
-				"text3" : "I coloni visiteranno lo stendardo o la drogheria una volta al giorno per ricevere i loro oggetti che forniranno felicità. Le grandi colonie avranno bisogno di più drogherie per ridurre le distanze dei tragitti."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Difendi al tua colonia dai mostri della notte!",

@@ -1,5 +1,5 @@
 {
-	"coverage" : 84.3235504652828,
+	"coverage" : 83.8456040028592,
 	"hints" : {
 		"0" : "Dla większości farm, większa powieszchnia oznacza lepszą produkcję. Zbieracze jagód są wyjątkiem od tej zasady.",
 		"1" : "Więcej różnych potworów będzie się pojawiać, wraz z rekrutacją nowych kolonistów.",
@@ -120,6 +120,7 @@
 			"recruittext3" : "Koloniści wymagają 2000 kalorii na dzień i łóżko.",
 			"recruittext4-2" : "_MISSING_Recruiting the next colonist costs {0} meals.",
 			"recruittext5-2" : "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
+			"recruittext6" : "_MISSING_Recruiting the next {0} colonists is free.",
 			"recruittofillbeds" : "Rekrutuj, by zapełnić wszystkie łóżka",
 			"recruittofilljobs" : "Rekrutuj, by zapełnić wszystkie prace",
 			"resetcolonypriority2" : "_MISSING_Reset active colony",
@@ -753,7 +754,7 @@
 					"header" : "Szczęscie"
 				},
 				"hover-colonypointdays" : "_MISSING_Days of use per item",
-				"hover-colonypointsmeal" : "_MISSING_Meal consumption points",
+				"hover-colonypointsmeal" : "_MISSING_Colony Points when eaten",
 				"hover-colonypointsperday" : "_MISSING_Colony Points per day of use",
 				"hover-colonypointstotal" : "_MISSING_Total points per item",
 				"madeintooltip" : "Wyprodukowano w:",
@@ -820,7 +821,7 @@
 				},
 				"upgrades" : {
 					"foods_tab" : "_MISSING_Foods",
-					"header" : "_MISSING_Upgrades",
+					"header" : "_MISSING_Colony Points",
 					"luxuries_tab" : "_MISSING_Luxuries",
 					"preamble1" : "_MISSING_Colony Points can be earned by distributing meals and luxury items to colonists.",
 					"preamble2" : "_MISSING_<i>Current Points / Capacity</i>",
@@ -842,6 +843,7 @@
 			"limits" : {
 				"allreset" : "_MISSING_Reset all",
 				"allzero" : "_MISSING_Set all zero",
+				"confirmdelete" : "_MISSING_Really delete?",
 				"createnewgroup" : "_MISSING_New group",
 				"description" : "Koloniści bedą pracować, dopóki ustawiony limit nie zostanie osiągnięty.",
 				"group" : "_MISSING_Limits group:",
@@ -1068,11 +1070,11 @@
 				"text4" : "Potwory będą nocą atakować Twoją kolonię! Użyj narzędzia dowodzenia aby ustawić strażników. Naciśnij '1' i kliknij aby go użyć. Naciśnij 'R' aby obracać określone bloki."
 			},
 			"page2" : {
-				"description" : "Chleb i gry są podstawowymi potrzebami by rozbudować Twoją kolonię",
-				"header" : "Jedzienie i Szczęście",
-				"text1" : "Dla każdego kolonisty, którego zrekrutujesz, całkowite nieszczęście rośnie. Rozdawaj przedmioty zwiększające szczęście, by koloniści byli szczęśliwi. Dostosuj suwaki ze szczęściem (naciśnij \"I\") by wybrać przedmioty, które chcesz rozdawać.",
-				"text2" : "Zmieniając jedzenie, które rozdajesz, zmienia ilość kalorii, którą otrzymują kolniści. Mniej niż 1000 kalorii powoduje głodowanie; mniej niż 2000 zmniejsza szczęscie; więcej niż 2000 zwiększa szczęscie.",
-				"text3" : "Koloniści raz dziennie odwiedzą sklep spożywczy lub baner, by odebrać ich dzienny zestaw przedmiotów szczęścia. Duże kolonie będą potrzebować kilka sklepów spożywczych, by zmniejszyć dystans, potrzebny do przejścia."
+				"description" : "_MISSING_Bread and games are essential to grow your colony",
+				"header" : "_MISSING_Meals & Luxury Items",
+				"text1" : "_MISSING_Many fundamental upgrades require Colony Points. Earn Colony Points by producing meals and luxury items. When they've entered your stockpile, they will be automatically distributed. The distribution can be disabled per item.",
+				"text2" : "_MISSING_Colonists require one meal per day. There are multiple types of meals, each with varying production requirements and different values in terms of Colony Points.",
+				"text3" : "_MISSING_Colonists will visit the grocer or banner once a day to get their daily meals and luxury items. Large colonies will need multiple grocers to reduce the walking distance."
 			},
 			"page3" : {
 				"description" : "Obroń kolonię przed potworami czyhającymi w nocy!",
