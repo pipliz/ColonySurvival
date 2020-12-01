@@ -28,3 +28,14 @@ Misc;
 - Don't let npcs be stuck if their hunger isn't critical yet but couldn't find food on their grocery visit
 - Rename "Upgrades" tab to "Colony Points"
 - Change ammo counter to divide the different types with a `-` character instead of a `/` to prevent confusion with the "current / capacity" format
+
+0.8.0.2:
+- Fix clicking on the npc shop not opening the points tab correctly
+- Fix the scientist not properly recording all 'idle' situations to the statistics menu
+- Rename "Calories" filter button in the stockpile to "Meals"
+- Removed "woodcoating" item - unused and unreachable
+- Fix error on malformatted commands when it splits into 0 words
+- Fix new items not showing up in the statistics menu when it's set to only show changed values & you added all items in one go
+- Fix typo breaking localization in the remote colony management overview menu
+- Fix tooltip remaining around when you close the builder/special-digger item selection pop-up with the escape key
+- Reset chosen bed if path to that bed is found to be blocked while moving to it
