@@ -78,7 +78,7 @@ CallbackType: `AfterItemTypesDefined`
 =======  
 Method type: System.Action  
 First callback after all item types should be defined, so you can resolve types etc here  
-Registered callbacks: 32  
+Registered callbacks: 33  
 0.	'initialize_upgrademanager' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksA.AfterItemTypesDefined' index: -1001  
 1.	'create_servermanager_trackers' -> 'ServerManager.CreateBlockEntityCallbacks' index: -1000  
 2.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
@@ -143,15 +143,17 @@ Registered callbacks: 32
 		 Parent @ 1 : 'create_servermanager_trackers'  
 25.	'insert_digger_size_legacy_upgrade_check' -> 'Assets.ColonyPointUpgrades.Implementations.DiggerSizeUpgrade+WorldUpgradeCheck.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-26.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
-27.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
-28.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
-29.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
+26.	'insert_science_legacy_upgrade_check' -> 'Science.LegacyUpgrader.AfterItemTypesDefined'   
+		 Parent @ 1 : 'create_servermanager_trackers'  
+27.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
+28.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
+29.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
+30.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
 		 Parent @ 17 : 'pipliz.server.endloadcolonies'  
-30.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
+31.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
 		 Parent @ 19 : 'create_savemanager'  
-31.	'set_colony_sciencemask' -> 'Science.ScienceManager.SetScienceMask' index: 1  
-		 Parent @ 30 : 'wait_complete_startup_chunks'  
+32.	'set_colony_sciencemask' -> 'Science.ScienceManager.SetScienceMask' index: 1  
+		 Parent @ 31 : 'wait_complete_startup_chunks'  
 		 Parent @ 17 : 'pipliz.server.endloadcolonies'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
 
@@ -175,7 +177,7 @@ CallbackType: `AfterSelectedWorld`
 =======  
 Method type: System.Action  
 First callback after the world to load has been determined  
-Registered callbacks: 14  
+Registered callbacks: 15  
 0.	'pipliz.server.startloadcolonies' -> 'ServerManager.StartLoadColonies' index: -1000  
 1.	'pipliz.server.startloadplayers' -> 'Players.StartInitializePlayerData' index: -1000  
 2.	'pipliz.server.loadaudiofiles' -> 'AudioManager.LoadAudioFiles' index: -100  
@@ -188,9 +190,10 @@ Registered callbacks: 14
 8.	'register_glider_settings' -> 'Transport.Glider.Initialize' index: -100  
 9.	'registernpctextures' -> 'ItemTypesServer.RegisterNPCTextures' index: -100  
 10.	'registerwatertextures' -> 'ItemTypesServer.RegisterWaterTextures' index: -100  
-11.	'pipliz.imagemanager.loadingimages' -> 'Pipliz.ImageManager.AfterWorldLoad'   
-12.	'pipliz.server.loadtimecycle' -> 'TimeCycle.Initialize'   
-13.	'pipliz.server.startblackandwhitelisting' -> 'BlackAndWhitelisting.StartReload'   
+11.	'NPC.NPCTypeID+Callbacks.AfterSelectedWorld' -> 'NPC.NPCTypeID+Callbacks.AfterSelectedWorld'   
+12.	'pipliz.imagemanager.loadingimages' -> 'Pipliz.ImageManager.AfterWorldLoad'   
+13.	'pipliz.server.loadtimecycle' -> 'TimeCycle.Initialize'   
+14.	'pipliz.server.startblackandwhitelisting' -> 'BlackAndWhitelisting.StartReload'   
 
 
 CallbackType: `AfterAddingBaseTypes`  
@@ -204,13 +207,14 @@ CallbackType: `AfterWorldLoad`
 =======  
 Method type: System.Action  
 Most things should be initialized by now, does not have to include chunks and pathing data though (those may be ongoing on other threads)  
-Registered callbacks: 6  
+Registered callbacks: 7  
 0.	'start_generator' -> 'TerrainGeneration.TerrainModManager.StartGenerator' index: -1  
 1.	'check_colonies_version_upgradable' -> 'ColonyTracker+Callbacks.AfterWorldLoad'   
-2.	'pipliz.server.localization.convert' -> 'Localization.Convert'   
-3.	'pipliz.server.monsterspawner.fetchnpctypes' -> 'Monsters.MonsterSpawner.Fetch'   
-4.	'pipliz.server.monsterspawner.register' -> 'Monsters.MonsterSpawner.Register'   
-5.	'save_recipemapping' -> 'Recipes.RecipeStorage.SaveMapping'   
+2.	'NPC.NPCTypeID+Callbacks.AfterWorldLoad' -> 'NPC.NPCTypeID+Callbacks.AfterWorldLoad'   
+3.	'pipliz.server.localization.convert' -> 'Localization.Convert'   
+4.	'pipliz.server.monsterspawner.fetchnpctypes' -> 'Monsters.MonsterSpawner.Fetch'   
+5.	'pipliz.server.monsterspawner.register' -> 'Monsters.MonsterSpawner.Register'   
+6.	'save_recipemapping' -> 'Recipes.RecipeStorage.SaveMapping'   
 
 
 CallbackType: `AfterNetworkSetup`  
@@ -423,8 +427,7 @@ No registered uses
 CallbackType: `OnNPCDied`  
 =======  
 Method type: System.Action<NPC.NPCBase>  
-Registered callbacks: 1  
-0.	'pipliz.server.refundrecruitment' -> 'Jobs.JobFinder.OnNPCDiedRefund'   
+No registered uses  
 
 
 CallbackType: `OnNPCSaved`  
@@ -437,7 +440,7 @@ CallbackType: `OnNPCJobChanged`
 =======  
 Method type: System.Action<System.ValueTuple<NPC.NPCBase, Jobs.IJob, Jobs.IJob>>  
 Registered callbacks: 1  
-0.	'pipliz.server.refundrecruitement' -> 'Jobs.JobFinder.OnJobChanged'   
+0.	'pipliz.server.refundrecruitement' -> 'Jobs.JobFinder+Callbacks.OnNPCJobChanged'   
 
 
 CallbackType: `OnNPCHit`  
@@ -468,12 +471,13 @@ CallbackType: `OnAutoSaveWorld`
 =======  
 Method type: System.Action  
 Triggers an autosave every x minutes, to begin autosaving non-block data (jobs, npc's, players)  
-Registered callbacks: 5  
-0.	'pipliz.server.autosaveplayers' -> 'Players.SavePlayers'   
-1.	'pipliz.server.autosavewater' -> 'BlockEntities.Implementations.Water.Save'   
-2.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
-3.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
-4.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
+Registered callbacks: 6  
+0.	'NPC.NPCTypeID+Callbacks.OnAutoSaveWorld' -> 'NPC.NPCTypeID+Callbacks.OnAutoSaveWorld'   
+1.	'pipliz.server.autosaveplayers' -> 'Players.SavePlayers'   
+2.	'pipliz.server.autosavewater' -> 'BlockEntities.Implementations.Water.Save'   
+3.	'pipliz.server.savecolonies' -> 'ServerManager.SaveColonies'   
+4.	'pipliz.server.savemiscworld' -> 'ServerManager.SaveMiscWorld'   
+5.	'pipliz.server.saveworldsettings' -> 'ServerManager.SaveWorldSettings'   
 
 
 CallbackType: `OnNPCGathered`  
@@ -517,16 +521,20 @@ CallbackType: `OnPlayerChangedNetworkUIStorage`
 =======  
 Method type: System.Action<System.ValueTuple<Players.Player, Pipliz.JSON.JSONNode, string>>  
 Called when a player closes a networkmenu while some of its state was changed  
-Registered callbacks: 1  
-0.	'pipliz.parsenetui' -> 'NetworkUI.NetworkMenuManager.ReceiveWorldSettings'   
+Registered callbacks: 3  
+0.	'Assets.UIGeneration.PointsFoods.OnPlayerChangedNetworkUIStorage' -> 'Assets.UIGeneration.PointsFoods.OnPlayerChangedNetworkUIStorage'   
+1.	'Assets.UIGeneration.PointsLuxuries.OnPlayerChangedNetworkUIStorage' -> 'Assets.UIGeneration.PointsLuxuries.OnPlayerChangedNetworkUIStorage'   
+2.	'pipliz.parsenetui' -> 'NetworkUI.NetworkMenuManager.ReceiveWorldSettings'   
 
 
 CallbackType: `OnPlayerPushedNetworkUIButton`  
 =======  
 Method type: System.Action<NetworkUI.ButtonPressCallbackData>  
-Registered callbacks: 2  
-0.	'handle_colony_management' -> 'NetworkUI.NetworkMenuManager.HandleButtons'   
-1.	'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton' -> 'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton'   
+Registered callbacks: 4  
+0.	'Assets.UIGeneration.ColonyManageJobs.OnPlayerPushedNetworkUIButton' -> 'Assets.UIGeneration.ColonyManageJobs.OnPlayerPushedNetworkUIButton'   
+1.	'Assets.UIGeneration.PointsUpgrades.OnPlayerPushedNetworkUIButton' -> 'Assets.UIGeneration.PointsUpgrades.OnPlayerPushedNetworkUIButton'   
+2.	'handle_colony_management' -> 'NetworkUI.NetworkMenuManager.HandleButtons'   
+3.	'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton' -> 'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton'   
 
 
 CallbackType: `OnSendAreaHighlights`  
@@ -553,12 +561,11 @@ Registered callbacks: 1
 CallbackType: `OnActiveColonyChanges`  
 =======  
 Method type: System.Action<Players.Player, Colony, Colony>  
-Registered callbacks: 5  
+Registered callbacks: 4  
 0.	'onchange' -> 'ServerManager.OnColonyChange' index: -1000  
 1.	'resend_areajobs' -> 'AreaJobTracker.OnActiveColonyChange'   
-2.	'send_upgradesconfig' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksA.OnActiveColonyChanges'   
-3.	'sendconstructiondata' -> 'Jobs.Implementations.Construction.ConstructionManager.SendData'   
-4.	'sendresearch' -> 'Science.ScienceManager.SendColonyResearch'   
+2.	'sendconstructiondata' -> 'Jobs.Implementations.Construction.ConstructionManager.SendData'   
+3.	'sendresearch' -> 'Science.ScienceManager.SendColonyResearch'   
 
 
 CallbackType: `OnSavingColony`  
@@ -568,7 +575,7 @@ Registered callbacks: 10
 0.	'save_upgradestate' -> 'Assets.ColonyPointUpgrades.ColonyUpgradeState+Callbacks.OnSavingColony'   
 1.	'saveareajobs' -> 'AreaJobTracker.Save'   
 2.	'savedifficulty' -> 'ColonyTracker.SaveDifficulty'   
-3.	'savejobfinder' -> 'Jobs.JobFinder.Save'   
+3.	'savejobfinder' -> 'Jobs.JobFinder+Callbacks.OnSavingColony'   
 4.	'savenpcs' -> 'ColonyTracker.SaveNPCs'   
 5.	'saveowners' -> 'ColonyTracker.SaveOwners'   
 6.	'saverecipesettings' -> 'ColonyTracker.SaveRecipeSettings'   
@@ -586,7 +593,7 @@ Registered callbacks: 10
 2.	'loadareajobs' -> 'AreaJobTracker.Load'   
 		 Parent @ 1 : 'loadnpcs'  
 3.	'loaddifficulty' -> 'ColonyTracker.LoadDifficulty'   
-4.	'loadjobfinder' -> 'Jobs.JobFinder.Load'   
+4.	'loadjobfinder' -> 'Jobs.JobFinder+Callbacks.OnLoadingColony'   
 5.	'loadowners' -> 'ColonyTracker.LoadOwners'   
 6.	'loadrecipesettings' -> 'ColonyTracker.LoadRecipeSettings'   
 7.	'loadstockpile' -> 'ColonyTracker.LoadStockpile'   
@@ -720,12 +727,13 @@ Method type: System.Action<ColonyStats.SharedStatisticsGatherer>
 Called every time the client requests statistics data;  
 include your type definitions every time, so the player can select them  
 if the requested key matches your given key, include your desired data that corresponds with the requested time period  
-Registered callbacks: 5  
+Registered callbacks: 6  
 0.	'pipliz.stockpile' -> 'ColonyStats+SharedStatisticsGatherer.InsertStockpileStats' index: -6  
-1.	'pipliz.npcidle' -> 'ColonyStats+SharedStatisticsGatherer.InsertIdleStats' index: -3  
-2.	'pipliz.colony' -> 'ColonyStats+SharedStatisticsGatherer.InsertColonyStats' index: -2,5  
-3.	'pipliz.trade-out' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeOutStats' index: -2  
-4.	'pipliz.trade-in' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeInStats' index: -1  
+1.	'pipliz.itempoints' -> 'ColonyStats+SharedStatisticsGatherer.InsertItemPointStats' index: -5  
+2.	'pipliz.npcidle' -> 'ColonyStats+SharedStatisticsGatherer.InsertIdleStats' index: -3  
+3.	'pipliz.colony' -> 'ColonyStats+SharedStatisticsGatherer.InsertColonyStats' index: -2,5  
+4.	'pipliz.trade-out' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeOutStats' index: -2  
+5.	'pipliz.trade-in' -> 'ColonyStats+SharedStatisticsGatherer.InsertTradeInStats' index: -1  
 
 
 CallbackType: `OnGatherStatisticsData`  
@@ -768,6 +776,41 @@ CallbackType: `OnRegisterUpgrades`
 Method type: System.Action<Assets.ColonyPointUpgrades.UpgradesManager>  
 Registered callbacks: 1  
 0.	'register_upgradeautoload' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksA.OnRegisterUpgrades'   
+
+
+CallbackType: `OnConstructPointLuxuriesMenu`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Registered callbacks: 1  
+0.	'Assets.UIGeneration.PointsLuxuries.OnConstructPointLuxuriesMenu' -> 'Assets.UIGeneration.PointsLuxuries.OnConstructPointLuxuriesMenu'   
+
+
+CallbackType: `OnConstructPointFoodsMenu`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Registered callbacks: 1  
+0.	'Assets.UIGeneration.PointsFoods.OnConstructPointFoodsMenu' -> 'Assets.UIGeneration.PointsFoods.OnConstructPointFoodsMenu'   
+
+
+CallbackType: `OnConstructPointUpgradesMenu`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu>  
+Registered callbacks: 1  
+0.	'Assets.UIGeneration.PointsUpgrades.OnConstructPointUpgradesMenu' -> 'Assets.UIGeneration.PointsUpgrades.OnConstructPointUpgradesMenu'   
+
+
+CallbackType: `OnConstructColonyManageJobsUI`  
+=======  
+Method type: System.Action<Players.Player, NetworkUI.NetworkMenu, Colony>  
+Registered callbacks: 1  
+0.	'Assets.UIGeneration.ColonyManageJobs.OnConstructColonyManageJobsUI' -> 'Assets.UIGeneration.ColonyManageJobs.OnConstructColonyManageJobsUI'   
+
+
+CallbackType: `OnPlayerEditedNetworkSliderInt`  
+=======  
+Method type: System.Action<NetworkUI.SliderIntEditCallbackData>  
+Registered callbacks: 1  
+0.	'Assets.UIGeneration.ColonyManageJobs.OnPlayerEditedNetworkSliderInt' -> 'Assets.UIGeneration.ColonyManageJobs.OnPlayerEditedNetworkSliderInt'   
 
 
 CallbackType: `OnGetJobGroupByPosition`  

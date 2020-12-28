@@ -1,0 +1,40 @@
+0.8.1.0
+
+Added the "manage jobs" menu to the colony tab, where you can select how many jobs should be enabled per job type
+Should help significantly with shifting job priorities due to changing circumstances
+
+- Laborers now take a job of the type with least current employment, instead of either order of placement or semi-random ones
+- Rebalanced some luxury items so more can be produced before you hit the "maximum" that can be distributed per day
+- Removed npc's refunding their job 'tool' on death
+
+- Refresh the state of the upgrades tab every 10 secs when it's opened (so things unlock as points are received)
+- Moved trash icon away from the hotbar to be attached to the stockpile menu instead
+- Add bread & breadmeal as visible unlocks from the bread science
+- Added setting to gamedata/settings/server.json to disable server pausing
+- Fix flax farmer tooltip in the command tool menu being fish farmer related
+- Fix world converter not working when the world has no 'permissionusers.json' file
+- Made the upgrades table a bit bigger to fit 1 more element before scrolling
+- Fix hide-all not working for the 'colony' and 'idle-job-time' data types in the statistics tab
+- Fix colonists going to the closest-by-banner of *any* colony for 'idling' and for grocery/crate fallback visits instead of just their own colony
+- Change the item refund from when a type is auto-removed by removing a solid block below it (while it needs a solid block base) to go to the active colony of the player, or the request origin colony, instead of to the nearest banners' colony
+- Fix health not properly loading when it's saved at the max when it's upgraded
+- Stop limits popup appearing while trying to use the command tool on the related blocks
+- Fix tooltips not working in other menu's when there's items being dragged in the stockpile
+- Fix the chatbox in some situations cutting off 1-2 letters at the end (was not properly adding a second line in some situations due to using the wrong width)
+- Fix lighting flickering while simulation is paused (happens during initial loading of the world)
+- Fix 'pause mode' getting stuck on when a player disconnected from a server and reconnected (would be fixed by going into the escape menu and back)
+
+- Fix a case where the "npc path debug" tool would point to 0,0,0 instead of the intended goal
+- Fix error logged when opening the world converter menu (no impact)
+- Disabled kerning everywhere when ru-RU locale is selected, it is adding unexpected newlines when enabled
+- Added an additional system font to the config list, to better support Thai localization
+- Updated Unity3D 2019 LTS version
+- Generate a random seed if none is provided via the JSON-config launch option
+- Automatically fall back to loading a world if the world passed via JSON-config launch exists
+- Enable "Stop NaN propagation" on the camera to hopefully fix a rare case where (presumably) torch updates cause large flashes of brightness
+- Added support for sliders to the networked-UI system
+- Added "colony survival/steamapps/workshop/content/366090/" as a server path that mods are searched in by default - it's the path steamCMD ends up downloading mods to with forced install dir
+- Added "../../workshop/content/366090/" as a server path that mods are searched in by default - it's the default relative path for a default steam / library situation
+- Recreate gamedata/mods/ folder if it disappeared (delete all & verify integrity seems to not create empty folders)
+- Fix chunks with crops being instantly marked for saving on load
+- Added a 2-frame delay to mouse aim working after locking the cursor to the center, hopefully works around an issue where the cursor returning to the center was recorded as mouse movement
