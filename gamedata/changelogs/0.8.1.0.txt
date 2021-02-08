@@ -38,3 +38,33 @@ Should help significantly with shifting job priorities due to changing circumsta
 - Recreate gamedata/mods/ folder if it disappeared (delete all & verify integrity seems to not create empty folders)
 - Fix chunks with crops being instantly marked for saving on load
 - Added a 2-frame delay to mouse aim working after locking the cursor to the center, hopefully works around an issue where the cursor returning to the center was recorded as mouse movement
+
+0.8.1.1
+- Fix the remote colony management overview UI missing the diplomacy button (was off-screen because of the new 'manage jobs' button)
+
+0.8.1.2
+- Potentially fix a case where disabled ipv6 support breaks singleplayer
+
+0.8.1.3
+- Potential improvement on the issue from 0.8.1.2
+
+0.8.1.4
+- Fix a case where the configured amount of jobs would be higher than the existing amount of jobs, and that resulted in an infinite loop freezing the server
+
+0.8.1.5
+- Fix a bug that caused chunks to not properly load server-side on player movement in some situations
+-- Likely fixes the glider getting stuck in the air
+-- Fixes some situations where building high above ground would bug in some chunks
+-- May fix siege mode issues when moving out a colony
+
+0.8.1.6
+- Fix input fields in the content manager not masking out text that scrolls outside their area
+- Fix editing trade rules from a colony that isn't your active colony showing the same colony name twice
+- Fix biome-dependent science automatically completing on loading when the required conditions were met (and also not subtracting colony point requirements if applicable)
+- Fix science trading not completing sciences for which the required conditions were met in the goal colony
+- Fix NPC death not properly triggering an update to some of the shown stats (like the unemployed counter)
+- Fix an exception in the world converter related to buttons not working
+- Don't show "sensitive" data like IP by default, button to opt-in in settings
+- Fix job finder not taking into account job item requirements (like bows for bow guards) when jobs are assigned anywhere but on first placement or loading
+- Fix laborers not showing what item they're missing if they fail to take a job due to missing items (in addition to the bug listed a line above)
+- Updated es-ES & pt-BR locales (thanks for submitting)
