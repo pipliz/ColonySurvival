@@ -103,7 +103,7 @@
 				"header_text" : "<b>{0}</b> nezaměstnaných kolonistů. Povolených prací: <b>{1} / {2}</b>. Naplněno prací: <b>{3} / {1}</b>",
 				"mainheader" : "Spravovat práce",
 				"refresh" : "Obnovit",
-				"set_balanced" : "Nastavit balanc"
+				"set_balanced" : "Vyrovnat"
 			},
 			"manageowners" : "Spravovat vlastníky",
 			"nameedit" : "Upravit jméno kolonie:",
@@ -126,12 +126,12 @@
 			"recruitfailedbeds" : "<color=red>Nemůžete rekrutovat nového kolonistu - nedostatek volných postelí.</color>",
 			"recruitfailedcap" : "<color=red>emůžete rekrutovat nového kolonistu - maximální populace.</color>",
 			"recruitfailednomeals" : "<color=red>emůžete rekrutovat nového kolonistu - nedostatek pokrmů na skladě.</color>",
-			"recruitmentamount" : "Počet rekrutovaných kolonistů:",
+			"recruitmentamount" : "Počet kolonistů k rekrutování:",
 			"recruitmentbutton" : "Rekrutovat kolonistu",
 			"recruitmentheader" : "Rekrutace",
-			"recruittext3" : "Kolonisté vyžadují jídlo na den a volnou postel.",
+			"recruittext3" : "Kolonisté vyžadují pokrmy na den a volnou postel.",
 			"recruittext4-2" : "Rekrutování dalšího kolonisty stojí {0} jídla.",
-			"recruittext5-2" : "Máte {0} volných postelí a můžete rekrutovat {1} dalších kolonistů do dosažení maximální populace",
+			"recruittext5-2" : "Máte {0} volných postelí a můžete rekrutovat {1} dalších kolonistů do dosažení maximální populace.",
 			"recruittext6" : "Rekrutování dalších {0} kolonistů je zdarma.",
 			"recruittofillbeds" : "Najmout do zaplnění všech postelí",
 			"recruittofilljobs" : "Najmout do zaplnění všech prací",
@@ -548,7 +548,7 @@
 				},
 				"constructiondiggerspecial" : {
 					"description" : "Odemyká specializované kopáče, kteří kopou jen určené bloky",
-					"name" : "Zacílený dělník"
+					"name" : "Specializovaný kopáč"
 				},
 				"cook" : {
 					"description" : "Odemyká kuchaře, který může péct, vařit a vyrábět pokrmy pro vaše kolonisty.",
@@ -755,7 +755,7 @@
 			},
 			"inventory" : {
 				"availableamount2" : "Na skladě",
-				"craftingstockpile" : "Vyrábění a zásoby",
+				"craftingstockpile" : "Výroba a sklad",
 				"filter-calories" : "Pokrmy",
 				"filter-combat" : "Souboj",
 				"filter-food" : "Jídlo",
@@ -765,18 +765,18 @@
 				"happy" : {
 					"header" : "Spokojenost"
 				},
-				"hover-colonypointdays" : "Dny použití za předmet",
+				"hover-colonypointdays" : "Dny použití na předmet",
 				"hover-colonypointsmeal" : "Bodů kolonie za snězení",
 				"hover-colonypointsperday" : "Bodů kolonie za den použití",
 				"hover-colonypointstotal" : "Celkem bodů za předmět",
 				"madeintooltip" : "Vyrábí se v:",
 				"noactivecolony" : "Nemáte žádnou aktivní kolonii!",
 				"pointfoods" : {
-					"countcurrent" : "Sklad",
+					"countcurrent" : "Na skladě",
 					"item" : "Předmět",
-					"itemsperday" : "Maximálně předmětů za den",
-					"points24h" : "Bodů včer",
-					"pointsmax" : "Maximálně bodů za den",
+					"itemsperday" : "Maximální počet předmětů za den",
+					"points24h" : "Získané body za včerejší den",
+					"pointsmax" : "Maximální získáné body za den",
 					"toggle" : "Povoleno"
 				},
 				"science" : {
@@ -821,7 +821,7 @@
 					"type-colony" : "Kolonie",
 					"type-idle-jobs" : "Doba nečinnosti",
 					"type-itempoints" : "Bodů za předmět",
-					"type-stockpile" : "Sklad",
+					"type-stockpile" : "Na skladě",
 					"type-trade-in" : "Příchozí směna",
 					"type-trade-out" : "Odchozí směna"
 				},
@@ -832,12 +832,12 @@
 					"nothing" : "Nic nenalezeno"
 				},
 				"upgrades" : {
-					"foods_tab" : "Jídlo",
+					"foods_tab" : "Pokrmy",
 					"header" : "Body kolonie",
-					"luxuries_tab" : "Luxus",
-					"preamble1" : "Body kolonie mohou být získány distribucí jídla a luxusních předmětů kolonistům.",
+					"luxuries_tab" : "Luxusní předměty",
+					"preamble1" : "Body kolonie mohou být získány distribucí pokrmů a luxusních předmětů kolonistům.",
 					"preamble2" : "<i>Aktuálně bodů / Kapacita</i>",
-					"preamble3" : "<i>Ziskané body kolonie během posledních 24 hodin</i>",
+					"preamble3" : "<i>Ziskané body kolonie za posledních 24 hodin</i>",
 					"table" : {
 						"cost" : "Stojí",
 						"current" : "Aktuální",
@@ -1083,10 +1083,10 @@
 			},
 			"page2" : {
 				"description" : "Chleba a hraní je základní stavební kámen pro růst vaší kolonie.",
-				"header" : "Jídlo a luxusní předměty",
-				"text1" : "Mnoho základních vylepšení vyžaduje body kolonie. Získejte body kolonie výrobou jídel a luxusních předmětů. Jakmile je budete mít na skladě, budou automaticky distribuovány. Distribuci lze u jednotlivých položek zakázat.",
-				"text2" : "Kolonisté potřebují jedno jídlo denně. Je zde více typů jídla, každé má jinou produkci a různé hodnoty bodů kolonie.",
-				"text3" : "Kolonisté navštěvují výdejce jídla nebo baner a každý den si brát svůj příděl jídla a luxusních předmětů. Velké kolonie potřebují více výdajců jídla aby se zmenšila jejich cesta."
+				"header" : "Pokrmy a luxusní předměty",
+				"text1" : "Mnoho základních vylepšení vyžaduje body kolonie. Získejte body kolonie výrobou pokrmů a luxusních předmětů. Jakmile je budete mít na skladě, budou automaticky distribuovány. Distribuci lze u jednotlivých položek zakázat.",
+				"text2" : "Kolonisté potřebují pokrm denně. Je zde více typů pokrmů, každé má jinou produkci a různé hodnoty bodů kolonie.",
+				"text3" : "Kolonisté navštěvují výdejce pokrmů nebo baner a každý den si brát svůj příděl pokrmů a luxusních předmětů. Velké kolonie potřebují více výdejců pokrmů aby se zkrátila délka jejich cesty."
 			},
 			"page3" : {
 				"description" : "Braňte svou kolonii před nočními útoky monster!",
@@ -1292,7 +1292,7 @@
 			},
 			"pointmultiplier" : {
 				"level" : "{0}% Efektivita",
-				"main" : "Bodů kolonie efektivity"
+				"main" : "Efektivita"
 			},
 			"safezone" : {
 				"level" : "{0} bloků",
