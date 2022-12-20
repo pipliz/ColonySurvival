@@ -1,0 +1,164 @@
+[
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 1,
+		"name": "pipliz.fletcher.bow",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "planks"
+			},
+			{
+				"amount": 2,
+				"type": "flax"
+			}
+		],
+		"requiresScience": "pipliz.archery",
+		"results": [
+			{
+				"type": "bow"
+			}
+		],
+		"sortWeight": 810
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.fletcher.copperarrow",
+		"requires": [
+			{
+				"type": "copperingot"
+			},
+			{
+				"amount": 2,
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.archery",
+		"results": [
+			{
+				"amount": 10,
+				"type": "copperarrow"
+			}
+		],
+		"sortWeight": 810
+	},
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 0,
+		"name": "pipliz.fletcher.guardbowdayjob",
+		"requires": [
+			{
+				"type": "leather"
+			},
+			{
+				"type": "bow"
+			}
+		],
+		"requiresScience": "pipliz.archery",
+		"results": [
+			{
+				"type": "guardbowdayjob"
+			}
+		],
+		"sortWeight": 810
+	},
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 3,
+		"name": "pipliz.fletcher.guardbownightjob",
+		"requires": [
+			{
+				"type": "leather"
+			},
+			{
+				"type": "bow"
+			}
+		],
+		"requiresScience": "pipliz.archery",
+		"results": [
+			{
+				"type": "guardbownightjob"
+			}
+		],
+		"sortWeight": 810
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 1,
+		"name": "pipliz.fletcher.crossbow",
+		"requires": [
+			{
+				"type": "leather"
+			},
+			{
+				"type": "bow"
+			}
+		],
+		"requiresScience": "pipliz.crossbow",
+		"results": [
+			{
+				"type": "crossbow"
+			}
+		],
+		"sortWeight": 24675
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.fletcher.crossbowbolt",
+		"requires": [
+			{
+				"amount": 4,
+				"type": "copperingot"
+			},
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.crossbow",
+		"results": [
+			{
+				"amount": 10,
+				"type": "crossbowbolt"
+			}
+		],
+		"sortWeight": 24675
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 0,
+		"name": "pipliz.fletcher.guardcrossbowdayjob",
+		"requires": [
+			{
+				"type": "crossbow"
+			}
+		],
+		"requiresScience": "pipliz.crossbow",
+		"results": [
+			{
+				"type": "guardcrossbowdayjob"
+			}
+		],
+		"sortWeight": 24675
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 3,
+		"name": "pipliz.fletcher.guardcrossbownightjob",
+		"requires": [
+			{
+				"type": "crossbow"
+			}
+		],
+		"requiresScience": "pipliz.crossbow",
+		"results": [
+			{
+				"type": "guardcrossbownightjob"
+			}
+		],
+		"sortWeight": 24675
+	}
+]

@@ -1,0 +1,44 @@
+[
+	{
+		"cooldown": 30.0,
+		"defaultLimit": 250,
+		"name": "pipliz.composter.potash",
+		"requires": [
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.glassblower",
+		"results": [
+			{
+				"type": "potash"
+			}
+		],
+		"sortWeight": 111143
+	},
+	{
+		"cooldown": 60.0,
+		"defaultLimit": 10,
+		"name": "pipliz.composter.saltpeter",
+		"requires": [
+			{
+				"type": "chickenpoop"
+			},
+			{
+				"type": "potwater"
+			}
+		],
+		"requiresScience": "pipliz.gunpowder",
+		"results": [
+			{
+				"type": "saltpeter"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 223535
+	}
+]

@@ -1,34 +1,14 @@
 [
 	{
-		"defaultLimit" : 100,
-		"name" : "pipliz.beekeeper.rawbeeswax",
-		"requires" : [
-			
+		"cooldown": 10,
+		"name": "pipliz.beekeeper.candle",
+		"requires": [],
+		"requiresScience": "pipliz.failsafe",
+		"results": [
+			{
+				"type": "candle"
+			}
 		],
-		"results" : [
-			{"amount":2,"type":"rawbeeswax"}
-		]
-	},
-	{
-		"defaultLimit" : 100,
-		"name" : "pipliz.beekeeper.honey",
-		"requires" : [
-			
-		],
-		"results" : [
-			{"type":"honey"}
-		]
-	},
-	{
-		"defaultLimit" : 20,
-		"defaultPriority" : 100,
-		"name" : "pipliz.beekeeper.candle",
-		"requires" : [
-			{"type":"beeswax"},
-			{"type":"linen"}
-		],
-		"results" : [
-			{"type":"candle"}
-		]
+		"sortWeight": 2005
 	}
 ]

@@ -1,0 +1,50 @@
+[
+	{
+		"cooldown": 1000.0,
+		"defaultLimit": 30,
+		"name": "pipliz.glassblower.glasspiece",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "silicasand"
+			},
+			{
+				"type": "potash"
+			},
+			{
+				"amount": 3,
+				"type": "charcoal"
+			}
+		],
+		"requiresScience": "pipliz.glassblower",
+		"results": [
+			{
+				"type": "glasspiece"
+			}
+		],
+		"sortWeight": 111143
+	},
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 20,
+		"name": "pipliz.glassblower.vialempty",
+		"requires": [
+			{
+				"type": "silicasand"
+			},
+			{
+				"type": "potash"
+			},
+			{
+				"type": "charcoal"
+			}
+		],
+		"requiresScience": "pipliz.steel",
+		"results": [
+			{
+				"type": "vialempty"
+			}
+		],
+		"sortWeight": 150963
+	}
+]

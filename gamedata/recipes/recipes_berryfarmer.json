@@ -1,22 +1,30 @@
 [
 	{
-		"name" : "pipliz.berry.gather",
-		"requires" : [
-			
+		"cooldown": 8.5,
+		"name": "pipliz.berry.gather",
+		"requires": [],
+		"results": [
+			{
+				"type": "berry"
+			}
 		],
-		"results" : [
-			{"type":"berry"}
-		]
+		"sortWeight": 0
 	},
 	{
-		"defaultLimit" : 200,
-		"defaultPriority" : 100,
-		"name" : "pipliz.berry.berrymeal",
-		"requires" : [
-			{"amount":8,"type":"berry"}
+		"cooldown": 8.5,
+		"defaultPriority": 100,
+		"name": "pipliz.berry.berrymeal",
+		"requires": [
+			{
+				"amount": 8,
+				"type": "berry"
+			}
 		],
-		"results" : [
-			{"type":"berrymeal"}
-		]
+		"results": [
+			{
+				"type": "berrymeal"
+			}
+		],
+		"sortWeight": 0
 	}
 ]

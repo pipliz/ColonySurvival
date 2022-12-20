@@ -1,12 +1,14 @@
 [
 	{
-		"name" : "pipliz.fisherman.rawfish",
-		"requires" : [
-			
+		"cooldown": 64.0,
+		"name": "pipliz.fisherman.rawfish",
+		"requires": [],
+		"requiresScience": "pipliz.cook",
+		"results": [
+			{
+				"type": "rawfish"
+			}
 		],
-		"results" : [
-			{"chance":0.95,"type":"rawfish"},
-			{"chance":0.05,"type":"lobster"}
-		]
+		"sortWeight": 1332
 	}
 ]

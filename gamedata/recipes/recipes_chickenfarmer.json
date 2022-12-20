@@ -1,23 +1,33 @@
 [
 	{
-		"defaultLimit" : 35,
-		"name" : "chickenfarmer.egg",
-		"requires" : [
-			{"amount":3,"type":"barley"}
+		"cooldown": 30,
+		"defaultLimit": 100,
+		"name": "pipliz.chickenfarmer.chickenraw",
+		"requires": [
+			{
+				"amount": 15,
+				"type": "barley"
+			}
 		],
-		"results" : [
-			{"amount":3,"type":"egg"}
-		]
+		"requiresScience": "pipliz.chickenmeal",
+		"results": [
+			{
+				"type": "chickenraw"
+			}
+		],
+		"sortWeight": 39468
 	},
 	{
-		"defaultLimit" : 35,
-		"name" : "chickenfarmer.chickenmeat",
-		"requires" : [
-			{"amount":15,"type":"barley"}
+		"cooldown": 30,
+		"defaultLimit": 10,
+		"name": "pipliz.chickenfarmer.chickenpoop",
+		"requires": [],
+		"requiresScience": "pipliz.gunpowder",
+		"results": [
+			{
+				"type": "chickenpoop"
+			}
 		],
-		"results" : [
-			{"amount":2,"type":"chickenmeat"},
-			{"amount":25,"type":"feather"}
-		]
+		"sortWeight": 223535
 	}
 ]

@@ -1,9 +1,7 @@
 {
-	"defaults" : {
-		"console" : "god",
-		"localhost" : "localhost",
-		"normal" : "peasant",
-		"permissions" : [
+	"defaults": {
+		"normal": "peasant",
+		"permissions": [
 			"printbiome",
 			"getlimit",
 			"setlimit",
@@ -33,61 +31,63 @@
 			"blacklist.remove"
 		]
 	},
-	"emperor" : {
-		"includes" : [
-			"king"
-		],
-		"permissions" : [
-			"permissions.addgroup.peasant",
-			"permissions.addgroup.king",
-			"permissions.removegroup.peasant",
-			"permissions.removegroup.king",
-			"whitelist.add",
-			"whitelist.remove",
-			"blacklist.add",
-			"blacklist.remove"
-		]
-	},
-	"god" : {
-		"permissions" : [
-			""
-		]
-	},
-	"godemperor" : {
-		"includes" : [
-			"emperor"
-		],
-		"permissions" : [
-			"permissions"
-		]
-	},
-	"king" : {
-		"includes" : [
-			"peasant"
-		],
-		"permissions" : [
-			"loot",
-			"time.add",
-			"teleport.position",
-			"teleport.banner",
-			"health.set",
-			"setflight"
-		]
-	},
-	"localhost" : {
-		"includes" : [
-			"peasant"
-		],
-		"permissions" : [
-			"cheats.enable"
-		]
-	},
-	"peasant" : {
-		"permissions" : [
-			"printbiome",
-			"getlimit",
-			"setlimit",
-			"resetlimit"
-		]
+	"groups": {
+		"emperor": {
+			"includes": [
+				"king"
+			],
+			"permissions": [
+				"permissions.addgroup.peasant",
+				"permissions.addgroup.king",
+				"permissions.removegroup.peasant",
+				"permissions.removegroup.king",
+				"whitelist.add",
+				"whitelist.remove",
+				"blacklist.add",
+				"blacklist.remove"
+			]
+		},
+		"god": {
+			"permissions": [
+				""
+			]
+		},
+		"godemperor": {
+			"includes": [
+				"emperor"
+			],
+			"permissions": [
+				"permissions"
+			]
+		},
+		"king": {
+			"includes": [
+				"peasant"
+			],
+			"permissions": [
+				"loot",
+				"time.add",
+				"teleport.position",
+				"teleport.banner",
+				"health.set",
+				"setflight"
+			]
+		},
+		"localhost": {
+			"includes": [
+				"peasant"
+			],
+			"permissions": [
+				"cheats.enable"
+			]
+		},
+		"peasant": {
+			"permissions": [
+				"printbiome",
+				"getlimit",
+				"setlimit",
+				"resetlimit"
+			]
+		}
 	}
 }

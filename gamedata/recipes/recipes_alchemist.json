@@ -1,0 +1,167 @@
+[
+	{
+		"cooldown": 140,
+		"defaultLimit": 100,
+		"name": "pipliz.alchemist.poisondart",
+		"requires": [
+			{
+				"type": "hempfibre"
+			},
+			{
+				"type": "wisteriaflower"
+			}
+		],
+		"requiresScience": "pipliz.poison",
+		"results": [
+			{
+				"amount": 2,
+				"type": "poisondart"
+			}
+		],
+		"sortWeight": 79068
+	},
+	{
+		"cooldown": 360,
+		"defaultLimit": 10,
+		"name": "pipliz.alchemist.gunpowder",
+		"requires": [
+			{
+				"type": "saltpeter"
+			},
+			{
+				"type": "charcoal"
+			},
+			{
+				"type": "sulfur"
+			}
+		],
+		"requiresScience": "pipliz.gunpowder",
+		"results": [
+			{
+				"type": "gunpowder"
+			}
+		],
+		"sortWeight": 223535
+	},
+	{
+		"cooldown": 480,
+		"defaultLimit": 10,
+		"name": "pipliz.alchemist.vialmineraloil",
+		"requires": [
+			{
+				"type": "coalore"
+			},
+			{
+				"type": "potwater"
+			},
+			{
+				"type": "vialempty"
+			}
+		],
+		"requiresScience": "pipliz.steel",
+		"results": [
+			{
+				"type": "vialmineraloil"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 150963
+	},
+	{
+		"cooldown": 25,
+		"defaultLimit": 10,
+		"name": "pipliz.alchemist.vialsulphuricacid",
+		"requires": [
+			{
+				"type": "sulfur"
+			},
+			{
+				"type": "potwater"
+			},
+			{
+				"type": "vialempty"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.nitro",
+		"results": [
+			{
+				"type": "vialsulphuricacid"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 1363524
+	},
+	{
+		"cooldown": 25,
+		"defaultLimit": 10,
+		"name": "pipliz.alchemist.vialnitricacid",
+		"requires": [
+			{
+				"type": "saltpeter"
+			},
+			{
+				"type": "potwater"
+			},
+			{
+				"type": "vialempty"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.nitro",
+		"results": [
+			{
+				"type": "vialnitricacid"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 1363524
+	},
+	{
+		"cooldown": 20,
+		"defaultLimit": 10,
+		"name": "pipliz.alchemist.nitro",
+		"requires": [
+			{
+				"amount": 5,
+				"type": "cottonfibre"
+			},
+			{
+				"type": "vialnitricacid"
+			},
+			{
+				"type": "vialsulphuricacid"
+			}
+		],
+		"requiresScience": "pipliz.nitro",
+		"results": [
+			{
+				"amount": 50,
+				"type": "nitro"
+			},
+			{
+				"amount": 2,
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "vialempty"
+			}
+		],
+		"sortWeight": 1363524
+	}
+]

@@ -1,642 +1,401 @@
 [
 	{
-		"name" : "Flat World",
-		"description" : "Makes the world a pancake",
-		"version" : "1.0.0",
-		"compatibleversions" : [
-			"0.7.1"
-		]
-		// source code that deals with this config is in Assembly-CSharp.dll under namespace ExampleMod.FlatWorld in colonyserver_Data/Managed/
-	},
-	{
-		"marksgamemodded" : false,
-		"name" : "Colony Survival",
-		"version" : "0.7.1",
-		"isoptional" : false,
-		"compatibleversions" : [
-			"0.7.1"
+		"compatibleversions": [
+			"0.9.0"
 		],
-		"jsonFiles" : [
+		"isoptional": false,
+		"jsonFiles": [
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"waterpumpx+",
-					"waterpumpx-",
-					"waterpumpz+",
-					"waterpumpz-"
-				],
-				"npcType" : "pipliz.waterpump",
-				"relativePath" : "recipes/recipes_waterpump.json"
+				"fileType": "addOrReplacePointRecipes",
+				"index": -1000000,
+				"relativePath": "recipes/recipes_merchant.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.coffeebeanfarmer",
-				"relativePath" : "recipes/recipes_coffeebeanfarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.alchemist",
+				"relativePath": "recipes/recipes_alchemist.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.fishfarmer",
-				"relativePath" : "recipes/recipes_fishfarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.roper",
+				"relativePath": "recipes/recipes_roper.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.cacaofarmer",
-				"relativePath" : "recipes/recipes_cacaofarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.cottonengine",
+				"relativePath": "recipes/recipes_cottonengine.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.vanillafarmer",
-				"relativePath" : "recipes/recipes_vanillafarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.chestmaker",
+				"relativePath": "recipes/recipes_chestmaker.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.berryfarmer",
-				"limitsUIMapping" : [
-					"berrybush"
-				],
-				"relativePath" : "recipes/recipes_berryfarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.metallathe",
+				"relativePath": "recipes/recipes_metallathe.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.bananafarmer",
-				"relativePath" : "recipes/recipes_bananafarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.tabulator",
+				"relativePath": "recipes/recipes_tabulator.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.silkwormfarmer",
-				"relativePath" : "recipes/recipes_silkwormfarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.blastfurnace",
+				"relativePath": "recipes/recipes_blastfurnace.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"spinningwheel"
-				],
-				"npcType" : "pipliz.wheelspinner",
-				"relativePath" : "recipes/recipes_wheelspinner.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.beekeeper",
+				"relativePath": "recipes/recipes_beekeeper.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.teafarmer",
-				"relativePath" : "recipes/recipes_teafarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.dyer",
+				"relativePath": "recipes/recipes_dyer.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.olivefarmer",
-				"relativePath" : "recipes/recipes_olivefarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.chickenfarmer",
+				"relativePath": "recipes/recipes_chickenfarmer.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"beehive"
-				],
-				"npcType" : "pipliz.beekeeper",
-				"relativePath" : "recipes/recipes_beekeeper.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.fletcher",
+				"relativePath": "recipes/recipes_fletcher.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"watergathererjobx+",
-					"watergathererjobx-",
-					"watergathererjobz+",
-					"watergathererjobz-"
-				],
-				"npcType" : "pipliz.watergatherer",
-				"relativePath" : "recipes/recipes_watergatherer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.gunsmith",
+				"relativePath": "recipes/recipes_gunsmith.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"npcType" : "pipliz.fisherman",
-				"relativePath" : "recipes/recipes_fisherman.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.glassblower",
+				"relativePath": "recipes/recipes_glassblower.json"
 			},
 			{
-				"albedo" : "base_npc_albedo.png",
-				"fileType" : "setColonistTextures",
-				"index" : -1000000,
-				"normal" : "base_npc_normal.png",
-				"relativePath" : "textures/materials/npc/",
-				"special" : "base_npc_specu_emiss_smooth_mask.png"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.printingpress",
+				"relativePath": "recipes/recipes_printingpress.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"stove"
-				],
-				"npcType" : "pipliz.cook",
-				"relativePath" : "recipes/recipes_stove.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.sanctifier",
+				"relativePath": "recipes/recipes_sanctifier.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"chickencoop"
-				],
-				"npcType" : "pipliz.chickenfarmer",
-				"relativePath" : "recipes/recipes_chickenfarmer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.fisherman",
+				"relativePath": "recipes/recipes_fisherman.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"writerdeskx+",
-					"writerdeskx-",
-					"writerdeskz+",
-					"writerdeskz-"
-				],
-				"npcType" : "pipliz.writer",
-				"relativePath" : "recipes/recipes_writer.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.potter",
+				"relativePath": "recipes/recipes_potter.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"printingpress"
-				],
-				"npcType" : "pipliz.printingpress",
-				"relativePath" : "recipes/recipes_printingpress.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.scribe",
+				"relativePath": "recipes/recipes_scribe.json"
 			},
 			{
-				"albedo" : "albedo.png",
-				"fileType" : "setWaterTextures",
-				"index" : -1000000,
-				"normal" : "normal.png",
-				"relativePath" : "textures/materials/water/",
-				"special" : "HeightSmoothnessSpecularity.png"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.papermaker",
+				"relativePath": "recipes/recipes_papermaker.json"
 			},
 			{
-				"fileType" : "addOrOverrideAreaJobs",
-				"index" : -1000000,
-				"relativePath" : "areajobs.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.researcher",
+				"relativePath": "recipes/recipes_researcher.json"
 			},
 			{
-				"fileType" : "addOrOverrideGrowableTypes",
-				"index" : -1000000,
-				"relativePath" : "growables.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.watergatherer",
+				"relativePath": "recipes/recipes_watergatherer.json"
 			},
 			{
-				"fileType" : "addScience",
-				"index" : -1000000,
-				"relativePath" : "science.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.waterpump",
+				"relativePath": "recipes/recipes_waterpump.json"
 			},
 			{
-				"fileType" : "addOrReplacePlayerRecipes",
-				"index" : -1000000,
-				"relativePath" : "recipes/crafting.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.stonemason",
+				"relativePath": "recipes/recipes_stonemason.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCTypes",
-				"index" : -1000000,
-				"relativePath" : "npcTypes.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.jeweller",
+				"relativePath": "recipes/recipes_jeweller.json"
 			},
 			{
-				"fileType" : "addNewTypes",
-				"index" : -1000000,
-				"relativePath" : "types.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.engineer",
+				"relativePath": "recipes/recipes_engineer.json"
 			},
 			{
-				"fileType" : "addOrReplaceAudio",
-				"index" : -1000000,
-				"relativePath" : "audio/audioFiles.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.kilnjob",
+				"relativePath": "recipes/recipes_kilnjob.json"
 			},
 			{
-				"fileType" : "addOrReplaceAudioAmbient",
-				"index" : -1000000,
-				"relativePath" : "audio/audioAmbient.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.bloomeryjob",
+				"relativePath": "recipes/recipes_bloomeryjob.json"
 			},
 			{
-				"fileType" : "addOrOverrideTextureMappingEntries",
-				"index" : -1000000,
-				"relativePath" : "texturemapping.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.berryfarmer",
+				"relativePath": "recipes/recipes_berryfarmer.json"
 			},
 			{
-				"fileType" : "addBlockJobs",
-				"index" : -1000000,
-				"relativePath" : "jobblocks.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.jobblockcrafter",
+				"relativePath": "recipes/recipes_jobblockcrafter.json"
 			},
 			{
-				"fileType" : "generateBlocks",
-				"index" : -1000000,
-				"relativePath" : "generateblocks.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.jobblockcrafteradvanced",
+				"relativePath": "recipes/recipes_jobblockcrafteradvanced.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"ovenx+",
-					"ovenx-",
-					"ovenz+",
-					"ovenz-",
-					"ovenlitx+",
-					"ovenlitx-",
-					"ovenlitz+",
-					"ovenlitz-"
-				],
-				"npcType" : "pipliz.baker",
-				"relativePath" : "recipes/recipes_baking.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.composter",
+				"relativePath": "recipes/recipes_composter.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"bloomeryx+",
-					"bloomeryx-",
-					"bloomeryz+",
-					"bloomeryz-",
-					"bloomerylitx+",
-					"bloomerylitx-",
-					"bloomerylitz+",
-					"bloomerylitz-"
-				],
-				"npcType" : "pipliz.bloomeryjob",
-				"relativePath" : "recipes/recipes_bloomery.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.smelter",
+				"relativePath": "recipes/recipes_smelter.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"dyertable"
-				],
-				"npcType" : "pipliz.dyer",
-				"relativePath" : "recipes/recipes_dyeing.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.grinder",
+				"relativePath": "recipes/recipes_grinder.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"fineryforgex+",
-					"fineryforgex-",
-					"fineryforgez+",
-					"fineryforgez-",
-					"fineryforgelitx+",
-					"fineryforgelitx-",
-					"fineryforgelitz+",
-					"fineryforgelitz-"
-				],
-				"npcType" : "pipliz.fineryforgejob",
-				"relativePath" : "recipes/recipes_fineryforge.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.cook",
+				"relativePath": "recipes/recipes_cook.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"furnacex+",
-					"furnacex-",
-					"furnacez+",
-					"furnacez-",
-					"furnacelitx+",
-					"furnacelitx-",
-					"furnacelitz+",
-					"furnacelitz-"
-				],
-				"npcType" : "pipliz.smelter",
-				"relativePath" : "recipes/recipes_smelting.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.writer",
+				"relativePath": "recipes/recipes_writer.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"grindstone"
-				],
-				"npcType" : "pipliz.grinder",
-				"relativePath" : "recipes/recipes_grinding.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.woodcutter",
+				"relativePath": "recipes/recipes_woodcutter.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"gunsmithshop"
-				],
-				"npcType" : "pipliz.gunsmithjob",
-				"relativePath" : "recipes/recipes_gunsmith.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.tanner",
+				"relativePath": "recipes/recipes_tanner.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"kilnx+",
-					"kilnx-",
-					"kilnz+",
-					"kilnz-"
-				],
-				"npcType" : "pipliz.kilnjob",
-				"relativePath" : "recipes/recipes_kiln.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.coppersmith",
+				"relativePath": "recipes/recipes_coppersmith.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"bronzeanvilx+",
-					"bronzeanvilx-",
-					"bronzeanvilz+",
-					"bronzeanvilz-"
-				],
-				"npcType" : "pipliz.metalsmithjob",
-				"relativePath" : "recipes/recipes_metalsmithing.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.firepit",
+				"relativePath": "recipes/recipes_firepit.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"mint"
-				],
-				"npcType" : "pipliz.minter",
-				"relativePath" : "recipes/recipes_minting.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.tinkerer",
+				"relativePath": "recipes/recipes_tinkerer.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"shop"
-				],
-				"npcType" : "pipliz.merchant",
-				"relativePath" : "recipes/recipes_shopping.json"
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.tailor",
+				"relativePath": "recipes/recipes_tailorshop.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"stonemasonworkbench"
-				],
-				"npcType" : "pipliz.stonemason",
-				"relativePath" : "recipes/recipes_stonemasonry.json"
+				"albedo": "base_npc_albedo.png",
+				"fileType": "setColonistTextures",
+				"index": -1000000,
+				"normal": "base_npc_normal.png",
+				"relativePath": "textures/materials/npc/",
+				"special": "base_npc_specu_emiss_smooth_mask.png"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"tailorshop"
-				],
-				"npcType" : "pipliz.tailor",
-				"relativePath" : "recipes/recipes_tailoring.json"
+				"albedo": "albedo.png",
+				"fileType": "setWaterTextures",
+				"index": -1000000,
+				"normal": "normal.png",
+				"relativePath": "textures/materials/water/",
+				"special": "HeightSmoothnessSpecularity.png"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"technologisttable"
-				],
-				"npcType" : "pipliz.technologist",
-				"relativePath" : "recipes/recipes_technologist.json"
+				"fileType": "setToolsets",
+				"index": -1000000,
+				"relativePath": "toolsets.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"splittingstump"
-				],
-				"npcType" : "pipliz.woodcutter",
-				"relativePath" : "recipes/recipes_woodcutting.json"
+				"fileType": "addOrOverrideAreaJobs",
+				"index": -1000000,
+				"relativePath": "areajobs.json"
 			},
 			{
-				"fileType" : "addOrReplaceNPCRecipes",
-				"index" : -1000000,
-				"limitsUIMapping" : [
-					"workbench"
-				],
-				"npcType" : "pipliz.crafter",
-				"relativePath" : "recipes/recipes_crafting.json"
+				"fileType": "addOrOverrideGrowableTypes",
+				"index": -1000000,
+				"relativePath": "growables.json"
 			},
 			{
-				"contents" : [
+				"fileType": "addScience",
+				"index": -1000000,
+				"relativePath": "science.json"
+			},
+			{
+				"fileType": "addOrReplacePlayerRecipes",
+				"index": -1000000,
+				"relativePath": "recipes/crafting.json"
+			},
+			{
+				"fileType": "addOrReplaceNPCTypes",
+				"index": -1000000,
+				"relativePath": "npcTypes.json"
+			},
+			{
+				"fileType": "addNewTypes",
+				"index": -1000000,
+				"relativePath": "types.json"
+			},
+			{
+				"fileType": "addOrReplaceAudio",
+				"index": -1000000,
+				"relativePath": "audio/audioFiles.json"
+			},
+			{
+				"fileType": "addOrReplaceAudioAmbient",
+				"index": -1000000,
+				"relativePath": "audio/audioAmbient.json"
+			},
+			{
+				"fileType": "addOrOverrideTextureMappingEntries",
+				"index": -1000000,
+				"relativePath": "texturemapping.json"
+			},
+			{
+				"fileType": "generateBlocks",
+				"index": -1000000,
+				"relativePath": "generateblocks.json"
+			},
+			{
+				"fileType": "vehiclesettings",
+				"index": -1000000,
+				"relativePath": "vehicles.json"
+			},
+			{
+				"contents": [
 					{
-						"amount" : 1,
-						"type" : "sciencelab"
+						"amount": 200,
+						"type": "planks"
 					},
 					{
-						"amount" : 2,
-						"type" : "sling"
+						"amount": 3,
+						"type": "crate"
 					},
 					{
-						"amount" : 50,
-						"type" : "slingbullet"
+						"amount": 20,
+						"type": "torch"
 					},
 					{
-						"amount" : 35,
-						"type" : "coppernails"
+						"amount": 20,
+						"type": "berrymeal"
 					},
 					{
-						"amount" : 15,
-						"type" : "copper"
-					},
-					{
-						"amount" : 6,
-						"type" : "bronzepickaxe"
-					},
-					{
-						"amount" : 4,
-						"type" : "bronzeaxe"
-					},
-					{
-						"amount" : 50,
-						"type" : "logtemperate"
-					},
-					{
-						"amount" : 150,
-						"type" : "planks"
-					},
-					{
-						"amount" : 50,
-						"type" : "stonebricks"
-					},
-					{
-						"amount" : 30,
-						"type" : "breadmeal"
-					},
-					{
-						"amount" : 25,
-						"type" : "torch"
-					},
-					{
-						"amount" : 101,
-						"type" : "straw"
-					},
-					{
-						"amount" : 50,
-						"type" : "firewood"
+						"amount": 12,
+						"type": "bed"
 					}
 				],
-				"fileType" : "addOrReplaceStarterPack",
-				"index" : -1000000,
-				"packType" : "ColonyStarterPackPrimary"
+				"fileType": "addOrReplaceStarterPack",
+				"index": -1000000,
+				"packType": "ColonyStarterPackPrimary"
 			},
 			{
-				"contents" : [
+				"contents": [
 					{
-						"amount" : 50,
-						"type" : "logtemperate"
-					},
-					{
-						"amount" : 50,
-						"type" : "planks"
+						"amount": 10,
+						"type": "torch"
 					}
 				],
-				"fileType" : "addOrReplaceStarterPack",
-				"index" : -1000000,
-				"packType" : "PlayerStarterPackPrimary"
+				"fileType": "addOrReplaceStarterPack",
+				"index": -1000000,
+				"packType": "PlayerStarterPackPrimary"
 			},
 			{
-				"contents" : [
+				"contents": [
 					{
-						"amount" : 100,
-						"type" : "copperparts"
+						"amount": 20,
+						"type": "torch"
 					},
 					{
-						"amount" : 100,
-						"type" : "coppertools"
+						"amount": 20,
+						"type": "berrymeal"
 					},
 					{
-						"amount" : 500,
-						"type" : "coppernails"
-					},
-					{
-						"amount" : 10,
-						"type" : "sling"
-					},
-					{
-						"amount" : 500,
-						"type" : "slingbullet"
-					},
-					{
-						"amount" : 50,
-						"type" : "ironingot"
-					},
-					{
-						"amount" : 10,
-						"type" : "bow"
-					},
-					{
-						"amount" : 250,
-						"type" : "bronzearrow"
-					},
-					{
-						"amount" : 4,
-						"type" : "sciencelab"
-					},
-					{
-						"amount" : 200,
-						"type" : "copper"
-					},
-					{
-						"amount" : 100,
-						"type" : "logtemperate"
-					},
-					{
-						"amount" : 300,
-						"type" : "planks"
-					},
-					{
-						"amount" : 300,
-						"type" : "stonebricks"
-					},
-					{
-						"amount" : 500,
-						"type" : "breadmeal"
-					},
-					{
-						"amount" : 50,
-						"type" : "torch"
-					},
-					{
-						"amount" : 50,
-						"type" : "bed"
-					},
-					{
-						"amount" : 200,
-						"type" : "firewood"
+						"amount": 7,
+						"type": "bed"
 					}
 				],
-				"createPlayerRecipe" : true,
-				"fileType" : "addOrReplaceStarterPack",
-				"icon" : "./textures/icons/commandtool.png",
-				"index" : -1000000,
-				"itemType" : "colonykit",
-				"packType" : "ColonyStarterPackSecondary",
-				"relativePath" : ""
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_east.json"
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_savanna.json"
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_taiga.json"
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_temperate.json"
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_tropic.json"
-			},
-			{
-				"fileType" : "addOrOverrideStructures",
-				"index" : -1000000,
-				"relativePath" : "./settings/foliage_temperate_colors.json"
-			},
-			{
-				"fileType" : "setBiomeStructurePrevalence",
-				"index" : -1000000,
-				"relativePath" : "./settings/biomes.json"
-			},
-			{
-				"fileType" : "setBiomeStructurePrevalence",
-				"index" : -1000000,
-				"relativePath" : "./settings/biomes_center.json"
-			},
-			{
-				"fileType" : "setBiomeStructurePrevalence",
-				"index" : -1000000,
-				"relativePath" : "./settings/biomes_newworld.json"
-			},
-			{
-				"fileType" : "setBiomeStructurePrevalence",
-				"index" : -1000000,
-				"relativePath" : "./settings/biomes_east.json"
-			},
-			{
-				"fileType" : "setBiomeStructurePrevalence",
-				"index" : -1000000,
-				"relativePath" : "./settings/biomes_tropic.json"
-			},
-			{
-				"fileType" : "setTerrainGeneratorSettings",
-				"index" : -1000000,
-				"relativePath" : "./settings/terraingen.json"
-			},
-			{
-				"fileType" : "setMetaBiomeSettings",
-				"index" : -1000000,
-				"relativePath" : "./settings/metabiomes.json"
-			},
-			{
-				"fileType" : "scienceBiomePatches",
-				"index" : -1000000,
-				"relativePath" : "./settings/sciencebiomes.json"
+				"createPlayerRecipe": false,
+				"fileType": "addOrReplaceStarterPack",
+				"icon": "./textures/icons/commandtool.png",
+				"index": -1000000,
+				"itemType": "colonykit",
+				"packType": "ColonyStarterPackSecondary",
+				"relativePath": ""
 			}
-		]
+		],
+		"marksgamemodded": false,
+		"name": "Colony Survival",
+		"version": "0.9.0"
 	}
 ]

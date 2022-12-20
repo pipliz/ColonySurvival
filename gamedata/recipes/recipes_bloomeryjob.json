@@ -1,0 +1,70 @@
+[
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 100,
+		"name": "pipliz.bloomeryjob.ironbloom",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "ironore"
+			},
+			{
+				"type": "charcoal"
+			}
+		],
+		"requiresScience": "pipliz.iron",
+		"results": [
+			{
+				"type": "ironbloom"
+			}
+		],
+		"sortWeight": 52842
+	},
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 100,
+		"name": "pipliz.bloomeryjob.steelingot",
+		"requires": [
+			{
+				"type": "ironwrought"
+			},
+			{
+				"type": "ironbloom"
+			},
+			{
+				"type": "silicasand"
+			},
+			{
+				"type": "glasspiece"
+			},
+			{
+				"type": "charcoal"
+			}
+		],
+		"requiresScience": "pipliz.steel",
+		"results": [
+			{
+				"type": "steelingot"
+			}
+		],
+		"sortWeight": 150963
+	},
+	{
+		"cooldown": 80.0,
+		"defaultLimit": 7,
+		"name": "pipliz.bloomeryjob.cokes",
+		"requires": [
+			{
+				"type": "coalore"
+			}
+		],
+		"requiresScience": "pipliz.blastfurnace",
+		"results": [
+			{
+				"amount": 3,
+				"type": "cokes"
+			}
+		],
+		"sortWeight": 537880
+	}
+]

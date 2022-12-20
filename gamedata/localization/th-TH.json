@@ -1,0 +1,1619 @@
+{
+	"coverage": 53.0,
+	"hints": {
+		"0": "สำหรับฟาร์มส่วนใหญ่ ขนาดที่ใหญ่ขึ้นหมายถึงการผลิตที่มากขึ้น ผู้รวบรวมผลเบอร์รี่เป็นข้อยกเว้นสำหรับกฎนี้",
+		"1": "สัตว์ประหลาดจำนวนมากขึ้นเรื่อยๆ จะเกิดเมื่อคุณรับสมัครชาวอาณานิคมมากขึ้น",
+		"10": "3x33 เป็นขนาดที่เหมาะสมที่สุดสำหรับผู้พิทักษ์ป่า",
+		"11": "กด 'CTRL' เพื่อหมอบคลานและไม่หลุดออกจากขอบ",
+		"13": "กด 'CTRL' ขณะวางพื้นที่ก่อสร้างเพื่อวางพื้นที่ที่สองด้วยการตั้งค่าเดียวกัน",
+		"14": "มีม็อดหลายตัวสำหรับการอยู่รอดของอาณานิคม ค้นหาได้ในฟอรัม Steam หรือ Discord!",
+		"15": "คุณยังสามารถค้นหาคลังเก็บคำศัพท์ทั่วไปเช่น 'อาหาร' และ 'กระสุน'",
+		"2": "บางชั้นของโลกมีแร่ ขุดลึกลงไปเพื่อค้นหาแร่ต่างๆ",
+		"3": "กด 'G' เพื่อเปิดใช้งานคบเพลิงของคุณ",
+		"4": "คลิกที่ 'งาน' เพื่อดูว่ามีการใช้งานอย่างไรและจัดลำดับความสำคัญของสูตรอาหารบางอย่าง",
+		"5": "กด 'F1' เพื่อเปิดและปิดคู่มือ",
+		"6": "นักวิทยาศาสตร์ใช้สิ่งของในถุงวิทยาศาสตร์ แต่ถุงลินินเองมักจะถูกส่งคืนไปยังคลังเก็บ",
+		"7": "ความแตกต่างของระยะ ความเร็วในการบรรจุกระสุน และความเสียหาย ทำให้การ์ดแต่ละประเภทมีข้อดีและข้อเสียที่ไม่เหมือนใคร",
+		"8": "เราเขียนบล็อกวันศุกร์รายสัปดาห์ ค้นหาได้บนหน้าร้านค้าของเราเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการพัฒนา Colony Survival!",
+		"9": "การยิงปืนคาบศิลากินกระสุนและดินปืน แต่กระเป๋าผ้าลินินที่บรรจุดินปืนมักจะถูกอนุรักษ์ไว้"
+	},
+	"sentences": {
+		"astrolabe": {
+			"bigtree": "_MISSING_Mammoth Tree",
+			"heath": "_MISSING_Heath",
+			"marsh": "_MISSING_Marsh",
+			"mountain": "_MISSING_Mountain"
+		},
+		"bannerclickedpopup": {
+			"deletebanner": "ลบธง",
+			"deletecolony": "ลบอาณานิคม",
+			"deletecolonydescription": "การลบแบนเนอร์สุดท้ายของอาณานิคมจะลบ npcs ทั้งหมดและทำให้กลุ่มนั้นใช้ไม่ได้ เพื่อยืนยันนี่คือสิ่งที่คุณต้องการ พิมพ์ 'delete' ด้านล่าง",
+			"header": "ตัวเลือกธง",
+			"noconfirmationdelete": "ละเว้นคำสั่งการลบไม่ได้รับการยืนยัน",
+			"placementfail": "ไม่สามารถวางแบนเนอร์ที่ตำแหน่งนี้"
+		},
+		"bannerplacementpopup": {
+			"activecolony": "อาณานิคมที่ใช้งานอยู่: {0}",
+			"addbanner": "เพิ่มธง",
+			"header": "ตำแหน่งธง",
+			"missingcolonykit": "_MISSING_Requires a Colony Starter Kit",
+			"missingoutpostbanner": "_MISSING_Requires an Outpost Banner",
+			"movebanner": "ย้ายธง",
+			"mustbeleader": "_MISSING_Must be the colony leader to adjust banners",
+			"opencolonytab": "_MISSING_Manage {0}",
+			"startcolony": "เริ่มอาณานิคมใหม่ที่นี่",
+			"startoutpost": "_MISSING_Start a new outpost",
+			"startoutpostremote": "_MISSING_Start a new outpost"
+		},
+		"category": {
+			"consumables": "_MISSING_Consumables",
+			"decorative": "_MISSING_Building Blocks",
+			"defense": "_MISSING_Defense",
+			"essential": "_MISSING_Essentials",
+			"food": "_MISSING_Food",
+			"ingredient": "_MISSING_Ingredients & Luxury",
+			"job": "_MISSING_Jobblocks",
+			"misc": "_MISSING_Misc",
+			"texres": "_MISSING_Textiles & Research"
+		},
+		"chat": {
+			"colonydied": "ชาวอาณานิคมทั้งหมดใน {0} ถูกสังหาร",
+			"playerdied": "ผู้เล่น {0} เสียชีวิต"
+		},
+		"colonymanagement": {
+			"colonysettings": {
+				"difficulty": "_MISSING_Difficulty",
+				"difficultylocked": "_MISSING_Locked Difficulty",
+				"header": "การตั้งค่าอาณานิคม"
+			},
+			"diplomacy": {
+				"mainbutton": "การทูต",
+				"mainheader": "การทูต",
+				"ruleaccept": "ยอมรับ",
+				"ruleactive": "คล่องแคล่ว",
+				"ruleedit": "แก้ไข",
+				"rulepending": "รอดำเนินการ",
+				"ruleremove": "ลบ"
+			},
+			"inventoryheader": "อาณานิคม",
+			"manageheader": "การจัดการความเป็นเจ้าของ",
+			"managejobs": {
+				"column_enabled": "เปิดใช้งาน",
+				"column_jobtype": "ประเภทงาน",
+				"column_total": "ทั้งหมด",
+				"column_unfilled": "ไม่สำเร็จ",
+				"disable_all": "ปิดการใช้งานทั้งหมด",
+				"enable_all": "เปิดใช้งานทั้งหมด",
+				"header_text": "<b>{0}</b> แรงงานที่ไม่มีงานทำ งานที่เปิดใช้งาน: <b>{1} / {2}</b> งานที่กรอก: <b>{3} / {1}</b>",
+				"mainheader": "จัดการงาน",
+				"refresh": "รีเฟรช",
+				"set_balanced": "ตั้งสมดุล"
+			},
+			"manageowners": "จัดการเจ้าของ",
+			"nameedit": "แก้ไขชื่ออาณานิคม:",
+			"outpost": {
+				"create": "_MISSING_Create Outpost",
+				"createdescription": "_MISSING_Starting an outpost consumes an Outpost Banner from your inventory (or stockpile).",
+				"parentcolony": "_MISSING_Parent Colony:",
+				"popupheader": "_MISSING_Outpost Creation",
+				"selectparent": "_MISSING_Select Main Colony"
+			},
+			"ownership": {
+				"action": "การกระทำ",
+				"connectedplayers": "ผู้เล่นที่เชื่อมต่อ",
+				"currentowners": "เจ้าของปัจจุบัน",
+				"follower": "ผู้ติดตาม",
+				"invite": "เพิ่มเป็นเจ้าของอาณานิคม",
+				"kick": "เตะ",
+				"leader": "ผู้นำ",
+				"leave": "ออกจากอาณานิคม",
+				"name": "ชื่อ",
+				"role": "บทบาท",
+				"settoleader": "ตั้งเป็นผู้นำ"
+			},
+			"recruit": "_MISSING_Recruit",
+			"recruitauto": "รับสมัครตำแหน่งงานอัตโนมัติ",
+			"recruitfailedbeds": "<color=red>ไม่สามารถรับสมัครชาวอาณานิคมใหม่ - มีที่ว่างไม่เพียงพอ</color>",
+			"recruitfailedcap": "<color=red>ไม่สามารถรับสมัครอาณานิคมใหม่ได้ - ครบกำหนดแล้ว</color>",
+			"recruitfailednomeals": "<color=red>ไม่สามารถรับสมัครชาวอาณานิคมใหม่ - มีอาหารไม่เพียงพอในสต็อก</color>",
+			"recruitmentamount": "จำนวนชาวอาณานิคมที่จะรับสมัคร:",
+			"recruitmentbutton": "รับสมัครชาวอาณานิคม",
+			"recruitmentheader": "การรับสมัคร",
+			"recruittext3": "ชาวอาณานิคมต้องการอาหารต่อวันและเตียง",
+			"recruittext4-2": "การเกณฑ์คนในอาณานิคมคนต่อไปต้องเสียค่าอาหาร {0} มื้อ",
+			"recruittext5-2": "มีเตียงสำรอง {0} เตียง และคุณสามารถรับสมัครชาวอาณานิคมเพิ่ม {1} คนก่อนที่จะถึงจำนวนประชากรสูงสุด",
+			"recruittext6": "การรับสมัครผู้ตั้งถิ่นฐาน {0} คนต่อไปนั้นฟรี",
+			"recruittofillbeds": "รับสมัครเติมเต็มทุกเตียง",
+			"recruittofilljobs": "รับสมัครทุกตำแหน่ง",
+			"resetcolonypriority2": "รีเซ็ตอาณานิคมที่ใช้งานอยู่",
+			"science": {
+				"incomingdescription2": "พวกเขาจะแบ่งปันวิทยาศาสตร์กับคุณ",
+				"newagreement": "เสนอข้อตกลงทางวิทยาศาสตร์",
+				"outgoingdescription2": "คุณให้วิทยาศาสตร์ของคุณแก่พวกเขา",
+				"selectcolony": "เลือกอาณานิคมเพื่อส่งวิทยาศาสตร์ไปที่"
+			},
+			"selectcolony": {
+				"currentcolony": "อาณานิคมปัจจุบัน: {0}",
+				"headercolonists": "ชาวอาณานิคม",
+				"headercolony": "อาณานิคม",
+				"headerleader": "ผู้นำ",
+				"headerselect": "เลือก",
+				"nocolonies": "ไม่มีอาณานิคมที่จะแสดงรายการ",
+				"nocoloniesowned": "ไม่มีอาณานิคมที่เป็นเจ้าของในรายการ",
+				"nocoloniesthird": "ไม่มีอาณานิคมภายนอกให้แสดงรายการ",
+				"othercolonies": "อาณานิคมอื่นๆ",
+				"select": "เลือก"
+			},
+			"start": {
+				"create": "สร้างอาณานิคม",
+				"defaultkit": "ใช้ชุดเริ่มต้นครั้งแรก",
+				"kits": "ชุดที่มีให้ใช้",
+				"missingkit": "ขาดชุดเริ่มต้นอาณานิคม",
+				"name": "ชื่ออาณานิคม",
+				"parentcolony": "อาณานิคมผู้ปกครอง",
+				"popupheader": "การสร้างอาณานิคม",
+				"usescienceagreement": "โอนวิทยาศาสตร์"
+			},
+			"startsettings": "การตั้งค่าอาณานิคม",
+			"switchcolony2": "เปลี่ยนอาณานิคมที่ใช้งานอยู่เป็น:",
+			"trading": {
+				"completerule": "สร้างกฎ",
+				"completeruleedit": "แก้ไขกฎให้สมบูรณ์",
+				"mainheader": "การตั้งค่ากฎการซื้อขายใหม่",
+				"newruleinfinite": "กฎการซื้อขายที่ไม่มีที่สิ้นสุดใหม่",
+				"newrulelimited": "กฎการซื้อขายที่ จำกัด ใหม่",
+				"ruledescription": "ผู้ซื้อขายจะซื้อขาย {0} จาก {1} ถึง {2} หากทั้งสองข้อต่อไปนี้:",
+				"ruledescriptionlimit": " เหลือ {0} รายการสำหรับแลกเปลี่ยน",
+				"ruleincomingdescr2": "รับ {0} หากพวกเขามีมากกว่า {1} และเรามีน้อยกว่า {2}",
+				"rulemaximumgoal": "{0} มีน้อยกว่า: ",
+				"rulemaximumtraded": "ข้อเสนอนี้จะส่งสินค้าทั้งหมดไม่เกินจำนวนดังต่อไปนี้: ",
+				"ruleminimumthis": "{0} มีมากกว่า: ",
+				"ruleoutgoingdescr2": "ส่ง {0} หากเรามีมากกว่า {1} และมีน้อยกว่า {2}",
+				"selectcolony": "เลือกอาณานิคมเพื่อแลกเปลี่ยนกับ"
+			}
+		},
+		"connectingscreen": {
+			"general_1": "ด่าน {0}/{1} - ต้องใช้รหัสผ่าน",
+			"general_2": "ด่าน {0}/{1} - ตารางไฟล์เซิร์ฟเวอร์ที่ร้องขอ",
+			"general_3": "ด่าน {0}/{1} - กำลังโหลด {2} ไฟล์",
+			"general_3_downloading": " (กำลังดาวน์โหลด {0} แพ็กเก็ต)",
+			"general_4": "ด่าน {0}/{1} - กำลังสรุป",
+			"general_fail": "การเชื่อมต่อหมดเวลาหลังจาก {0} วินาที กลับไปที่เมนูหลักใน 5 วินาที",
+			"loading": "กำลังโหลด",
+			"localhost_1": "ด่าน 1/{0} - กำลังค้นหาเซิร์ฟเวอร์ผู้เล่นคนเดียวในคอมพิวเตอร์เครื่องนี้",
+			"localhost_2": "ด่าน 2/{0} - กำลังค้นหาเซิร์ฟเวอร์ Steam บนคอมพิวเตอร์เครื่องนี้",
+			"localhost_fail": "ไม่พบเซิร์ฟเวอร์ Steam/ผู้เล่นเดียว ที่ทำงานบนคอมพิวเตอร์เครื่องนี้ รีโหลดไปที่เมนูหลักใน 5 วินาที",
+			"refused": {
+				"blacklisted": "คุณอยู่ในบัญชีดำ",
+				"incompatible": "เซิร์ฟเวอร์มีปัญหาที่ไม่คาดคิด",
+				"invalidpassword": "รหัสผ่านไม่ถูกต้อง",
+				"invalidticket": "ตั๋ว Steam ไม่ถูกต้อง",
+				"maxplayer": "เซิฟเวอร์เต็ม",
+				"misc": "ไม่ทราบสาเหตุ",
+				"notonwhitelist": "คุณไม่ได้รับการอนุญาตพิเศษ",
+				"versionwrongclient": "รุ่นไม่ตรงกันตามเจ้าของ",
+				"versionwrongserver": "เวอร์ชันไม่ตรงกันตามเซิร์ฟเวอร์"
+			},
+			"refused_main": "การเชื่อมต่อถูกปฏิเสธ {0} กลับสู่เมนูหลักใน 5 วินาที",
+			"sp_1": "ด่าน 1/{0} - เริ่มฟังสำหรับเซิร์ฟเวอร์พื้นหลัง",
+			"sp_2": "ด่าน 2/{0} - กำลังเริ่มต้นเซิร์ฟเวอร์พื้นหลัง",
+			"sp_3": "ด่าน 3/{0} - เซิร์ฟเวอร์เริ่มต้น กำลังรอการเชื่อมต่อ",
+			"sp_alreadyrunning1_1": "เซิร์ฟเวอร์สำหรับการติดตั้งนี้กำลังทำงานอยู่แล้ว อาจจะยังเลิกกัน จะลองอีกครั้งใน {0} วินาที",
+			"sp_alreadyrunning2": "เซิร์ฟเวอร์กำลังทำงานอยู่แล้ว กลับไปที่เมนูหลักใน 5 วินาที",
+			"steam05": "_MISSING_Stage 1/{0} - Trying to setup direct connection",
+			"steam06": "_MISSING_Stage 1/{0} - Trying to setup steam relay connection",
+			"steam07": "_MISSING_Stage 2/{0} - Connection successful, authenticating",
+			"steamfail": "ไม่สามารถตั้งค่าการเชื่อมต่อ กลับสู่เมนูหลักใน 5 วินาที"
+		},
+		"contentmanager": {
+			"buttonbrowseworkshop": "เรียกดูเวิร์กชอป",
+			"buttoncreateitem": "สร้างรายการ",
+			"buttoneditdetails": "แก้ไขรายละเอียด",
+			"buttonlistsubscribed": "รายการที่สมัคร",
+			"buttonsubmitcontent": "ส่ง",
+			"buttonupdatecontent": "อัพเดทเนื้อหา",
+			"changelogplaceholder": "เข้าสู่บันทึกการเปลี่ยนแปลงที่นี่...",
+			"contenteditheader": "การตั้งค่า/อัปเดตเนื้อหาสำหรับ {0}",
+			"contentpath": "เส้นทางเนื้อหา: {0}",
+			"contenttypelabel": "ชนิดของเนื้อหา",
+			"contenttypes": {
+				"itempack": "ไอเทมแพ็ค",
+				"misc": "เบ็ดเตล็ด",
+				"overhaul": "ยกเครื่องให้เสร็จสมบูรณ์",
+				"texturepack": "แพ็คพื้นผิว",
+				"unknown": "ไม่รู้จัก",
+				"utilities": "สาธารณูปโภค",
+				"world": "โลก"
+			},
+			"nocontentpath": "ยังไม่ได้เลือกเส้นทาง",
+			"scenariolabel": "ชื่อสถานการณ์",
+			"statecommittingchanges": "การเปลี่ยนแปลงที่กระทำ: {0} / {1}",
+			"statepreparingconfig": "กำลังเตรียมการกำหนดค่า: {0} / {1}",
+			"statepreparingcontent": "กำลังเตรียมเนื้อหา: {0} / {1}",
+			"stateuploadingcontent": "กำลังอัปโหลดเนื้อหา: {0} / {1}",
+			"stateuploadingpreview": "กำลังอัปโหลดตัวอย่าง: {0} / {1}",
+			"thumbnailpath": "เส้นทางรูปย่อ:",
+			"yourcontent": "เนื้อหาเวิร์กชอปที่คุณสร้างขึ้น"
+		},
+		"escapemenu": {
+			"back": "กลับ",
+			"info": "ข้อมูล",
+			"quitdesktop": "ออกจากเกม",
+			"quitmain": "กลับเมนูหลัก",
+			"settings": "การตั้งค่า"
+		},
+		"failsafe": {
+			"current": "_MISSING_Current Sacred Points storage: {0} out of {1}",
+			"damage": "_MISSING_Triggering the Sacred Failsafe will cause {0} damage",
+			"futurewave": "_MISSING_The Failsafe will reduce the total HP of incoming monsters by {0:P0} for the next night",
+			"header": "_MISSING_Failsafe",
+			"nextavailable": "_MISSING_The Failsafe will be available again after the next night",
+			"statusactive": "_MISSING_Status: Sacred Failsafe has been activated",
+			"statusavailable": "_MISSING_Status: Sacred Failsafe is available",
+			"trigger": "_MISSING_Trigger",
+			"wave": "_MISSING_The current threat level is {0} and will spawn monsters with a total HP of {1}",
+			"wavereduced": "_MISSING_The total HP of incoming monsters will be reduced by {0:P0} the next night"
+		},
+		"firstpersonstats": {
+			"ammocount": "กระสุน:",
+			"bedcount": "เตียงนอน:",
+			"colonistcount": "ชาวอาณานิคม:",
+			"colonypoints": "คะแนน:",
+			"laborercount": "ว่างงาน:",
+			"mealstorage": "อาหารทั้งหมด:",
+			"threatlevel": "_MISSING_Threat Level:",
+			"time_day": "_MISSING_Day"
+		},
+		"general": {
+			"apply": "นำมาใช้",
+			"back": "กลับ",
+			"close": "ปิด",
+			"delete": "ลบ",
+			"description": "คำอธิบาย",
+			"edit": "แก้ไข",
+			"enabled": "เปิดใช้งาน",
+			"high": "สูง",
+			"inputplaceholder": "ใส่ข้อความ...",
+			"inputplaceholder_search": "ป้อนข้อความเพื่อค้นหา...",
+			"low": "ต่ำ",
+			"next": "ถัดไป",
+			"no": "ไม่",
+			"none": "ไม่มี",
+			"normal": "ปกติ",
+			"previous": "ก่อนหน้า",
+			"reset": "รีเซ็ต",
+			"select": "เลือก",
+			"selected": "เลือกแล้ว",
+			"veryhigh": "สูงมาก",
+			"yes": "ใช่"
+		},
+		"happiness": {
+			"availablefood": "ความพร้อมใช้งาน {0}% สำหรับ {1}",
+			"availableluxury": "ความพร้อมใช้งาน {0}% สำหรับ {1}",
+			"baseamount": "ความสุขที่มีอยู่",
+			"calories": "แคลอรี่ที่ปันส่วน",
+			"calorieshappy": "อิ่มอร่อย",
+			"calorieshunger": "ความหิว",
+			"caloriesstarvation": "ความอดอยาก",
+			"colonistcount": "ประชากร",
+			"disabledeffect": "ความสุขปิดการใช้งาน",
+			"recruitmentcost": "ค่าใช้จ่ายในการรับสมัคร: {0:P0} ของปกติ",
+			"sciencespeed": "ความเร็ววิทยาศาสตร์: {0:P0} ของปกติ",
+			"totalhappiness": "ความสุขทั้งหมด: {0}"
+		},
+		"infomenu": {
+			"changelog": "บันทึกการเปลี่ยนแปลง",
+			"credits": "เครดิต",
+			"quickstart": "เริ่มต้นอย่างรวดเร็ว"
+		},
+		"mainmenu": {
+			"back": "กลับ",
+			"contentmanager": "จัดการมอด",
+			"continue": "_MISSING_Continue",
+			"coop": "โฮสต์ Co-op",
+			"info": "ข้อมูล",
+			"multiplayer": "ผู้เล่นหลายคน",
+			"quit": "ออก",
+			"settings": "ตั้งค่า",
+			"singleplayer": "ผู้เล่นเดียว"
+		},
+		"multiplayermenu": {
+			"colonistcount": "นับอาณานิคม",
+			"connectlocal": "เชื่อมต่อกับเซิร์ฟเวอร์ท้องถิ่น",
+			"header_friends": "เพื่อน",
+			"header_history": "ประวัติ",
+			"header_internet": "อินเทอร์เน็ต",
+			"header_lan": "แลน",
+			"ipaddress": "ที่อยู่",
+			"join": "เข้าร่วม",
+			"mods": "มอด",
+			"passworded": "รหัสผ่าน",
+			"refresh2": "รีเฟรช",
+			"refreshing": "กำลังรีเฟรช...",
+			"refreshquick": "รีเฟรชด่วน",
+			"selectedserver": "เซิร์ฟเวอร์ที่เลือก",
+			"serverping": "ปิง",
+			"serverplayers": "ผู้เล่น",
+			"servers": "เซิร์ฟเวอร์",
+			"showempty": "แสดงว่าว่าง",
+			"showfull": "แสดงเต็ม",
+			"showincompatible": "แสดงว่าเข้ากันไม่ได้",
+			"version": "เวอร์ชั่น"
+		},
+		"notifications": {
+			"header": "_MISSING_Notifications",
+			"missingplayerammo": "_MISSING_<color=red>Using {0} requires some {1} to be in the inventory!</color>",
+			"npc_died": {
+				"by_banner": "_MISSING_{0} colonists died because a monster is at the banner.",
+				"by_command": "_MISSING_{0} colonists were killed on command.",
+				"by_misc": "_MISSING_{0} colonists died due to miscellaneous causes.",
+				"by_monster": "_MISSING_{0} colonists were killed by monsters.",
+				"by_npc": "_MISSING_{0} colonists wered killed by colonists.",
+				"by_player": "_MISSING_{0} colonists were killed by players.",
+				"by_starving": "_MISSING_{0} colonists starved to death."
+			}
+		},
+		"npcs": {
+			"pipliz": {
+				"alchemist": "_MISSING_Alchemist",
+				"alkanetfarmer": "_MISSING_Alkanet Farmer",
+				"barleyfarmer": "_MISSING_Barley Farmer",
+				"beekeeper": "_MISSING_Beekeeper",
+				"berryfarmer": "ชาวไร่เบอร์รี่",
+				"blastfurnace": "_MISSING_Blast Furnace Operator",
+				"bloomeryjob": "หลอมเหล็ก",
+				"builder": "ช่างก่อสร้าง",
+				"cabbagefarmer": "_MISSING_Cabbage Farmer",
+				"chestmaker": "_MISSING_Chestmaker",
+				"chickenfarmer": "_MISSING_Chicken Farmer",
+				"composter": "_MISSING_Composter",
+				"constructor": "คนงานก่อสร้าง",
+				"cook": "พ่อครัว",
+				"coppersmith": "_MISSING_Copper Smith",
+				"cottonengine": "_MISSING_Cotton Engine Operator",
+				"cottonfarmer": "_MISSING_Cotton Farmer",
+				"digger": "ผู้ขุด",
+				"diggerspecial": "รถขุดพิเศษ",
+				"dyer": "_MISSING_Dyer",
+				"engineer": "_MISSING_Engineer",
+				"firepit": "_MISSING_Primitive Cook",
+				"fisherman": "ชาวประมง",
+				"flaxfarmer": "ชาวไร่ลินิน",
+				"fletcher": "_MISSING_Fletcher",
+				"forester": "คนปลูกไม้า",
+				"glassblower": "_MISSING_Glassblower",
+				"grinder": "เครื่องบด",
+				"guardbowday": "ยามธนูเวลาตอนเช้า",
+				"guardbownight": "ยามธนูเวลากลางคืน",
+				"guardcrossbowday": "ยามหน้าไม้เวลากลางวัน",
+				"guardcrossbownight": "ยามหน้าไม้เวลากลางคืน",
+				"guardgrenadeday": "_MISSING_Day Grenade Launcher Guard",
+				"guardgrenadenight": "_MISSING_Night Grenade Launcher Guard",
+				"guardhandcannonday": "_MISSING_Day Handcannon Guard",
+				"guardhandcannonnight": "_MISSING_Night Handcannon Guard",
+				"guardmatchlockday": "ยามปืนเวลากลางวัน",
+				"guardmatchlocknight": "ยามปืนเวลากลางคืน",
+				"guardmusketday": "_MISSING_Day Musket Guard",
+				"guardmusketnight": "_MISSING_Night Musket Guard",
+				"guardpoison": "_MISSING_Poison Guard",
+				"guardslingerday": "ยามสลิงเกอร์เวลากลางวัน",
+				"guardslingernight": "ยามสลิงเกอร์เวลากลางคืน",
+				"gunsmith": "_MISSING_Gunsmith",
+				"hempfarmer": "_MISSING_Hemp Farmer",
+				"hollyhockfarmer": "_MISSING_Hollyhock Farmer",
+				"jeweller": "_MISSING_Jeweler",
+				"jobblockcrafter": "_MISSING_Job-block Crafter",
+				"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter",
+				"kilnjob": "เตาถ่าน",
+				"laborer": "กรรมกร",
+				"metallathe": "_MISSING_Metal Lathe Operator",
+				"minerjob": "คนขุดแร่",
+				"networkplayer": "ผู้เล่น",
+				"papermaker": "_MISSING_Papermaker",
+				"potter": "_MISSING_Potter",
+				"printingpress": "_MISSING_Printing Press Operator",
+				"researcher": "_MISSING_Researcher",
+				"roper": "_MISSING_Rope Maker",
+				"sanctifier": "_MISSING_Sanctifier",
+				"scribe": "_MISSING_Scribe",
+				"smelter": "โรงหลอม",
+				"stonemason": "ช่างหิน",
+				"tabulator": "_MISSING_Tabulating Machine Operator",
+				"tailor": "ช่างตัดเสื้อ",
+				"tanner": "_MISSING_Tanner",
+				"tinkerer": "_MISSING_Tinkerer",
+				"trader": "เทรดเดอร์",
+				"trapfixer": "_MISSING_Trapfixer",
+				"watergatherer": "คนเก็บน้ำ",
+				"waterpump": "_MISSING_Waterpump Worker",
+				"wheatfarmer": "ชาวนาข้าวสาลี",
+				"wisteriafarmer": "_MISSING_Wisteria Farmer",
+				"wolfsbanefarmer": "_MISSING_Wolfsbane Farmer",
+				"woodcutter": "คนปลูกและตัดต้นไม้",
+				"writer": "นักเขียน"
+			}
+		},
+		"pipliz": {
+			"alarmbell": {
+				"description": "_MISSING_Unlocks the Alarm Bell, which will ring a bell when walked upon by a monster",
+				"name": "_MISSING_Alarm Bell"
+			},
+			"anvil": {
+				"description": "_MISSING_Unlocks the Anvil, an important source of more advanced products like Copper Tools",
+				"name": "_MISSING_Anvil"
+			},
+			"archery": {
+				"description": "_MISSING_Unlocks archers and fletchers, a more effective protection against monsters.",
+				"name": "_MISSING_Archery"
+			},
+			"astrolabe": {
+				"description": "_MISSING_Unlocks the astrolabe; a navigation tool that helps find biomes",
+				"name": "_MISSING_Astrolabe"
+			},
+			"blastfurnace": {
+				"description": "_MISSING_Unlocks a rapid way to smelt advanced metals.",
+				"name": "_MISSING_Blast Furnace"
+			},
+			"brass": {
+				"description": "_MISSING_Unlocks brass, a relatively soft alloy. It’s not suited for weapons or tools, but its malleability makes it perfect for small detailed parts. It requires zinc, which can be purchased or mined below mammoth trees. ",
+				"name": "_MISSING_Brass"
+			},
+			"bread": {
+				"description": "_MISSING_Unlocks the making of bread. Use grindstones to make flour, which can then be used by the cook to make bread.",
+				"name": "_MISSING_Bread"
+			},
+			"bricks": {
+				"description": "_MISSING_Allows baking clay into new types of blocks",
+				"name": "_MISSING_Bricks"
+			},
+			"bronze": {
+				"description": "_MISSING_Unlocks a way to make copper stronger, by mixing it with the rare and valuable tin",
+				"name": "_MISSING_Bronze Age"
+			},
+			"bronzelockbox": {
+				"description": "_MISSING_Unlocks the Bronze Lockbox. Improved version of the Copper Lockbox. More storage, more efficiency, less threatening.",
+				"name": "_MISSING_Bronze Lockbox"
+			},
+			"caltrop": {
+				"description": "_MISSING_Unlocks a trap that once loaded will slow monsters below it",
+				"name": "_MISSING_Caltrops"
+			},
+			"chestluxury": {
+				"description": "_MISSING_Unlocks Luxury Chests, which are necessary to unlock advanced technology.",
+				"name": "_MISSING_Luxury Chest"
+			},
+			"chestprestige": {
+				"description": "_MISSING_Abandon all hope of reward and proportion, ye who enter here! Prestige Chests are necessary for Prestige Science. It’s a stretch goal for enthusiastic colonies.",
+				"name": "_MISSING_Prestige Chest"
+			},
+			"chestresource": {
+				"description": "_MISSING_Unlocks Science Chests, which are necessary to unlock advanced technology",
+				"name": "_MISSING_Science Chest"
+			},
+			"chickenmeal": {
+				"description": "_MISSING_Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
+				"name": "_MISSING_Chicken Meals"
+			},
+			"compass": {
+				"description": "_MISSING_Unlocks the compass; a navigation tool to find back your home",
+				"name": "_MISSING_Compass"
+			},
+			"constructionbuilder": {
+				"description": "_MISSING_Unlock builder areas for the construction worker",
+				"name": "_MISSING_Builder"
+			},
+			"constructiondigger": {
+				"description": "_MISSING_Unlock digger areas for the construction worker",
+				"name": "_MISSING_Digger"
+			},
+			"constructiondiggerspecial": {
+				"description": "_MISSING_Unlock special digger areas for the construction worker",
+				"name": "_MISSING_Special Digger"
+			},
+			"cook": {
+				"description": "_MISSING_Unlocks the cook and the fisherman, new sources of meals for your colonists",
+				"name": "_MISSING_Cook"
+			},
+			"copperlockbox": {
+				"description": "_MISSING_Unlocks the Copper Lockbox. While placed it increases the colony point capacity. Warning: every placed lockbox will lure more monsters to your colony!",
+				"name": "_MISSING_Copper Lockbox"
+			},
+			"cotton": {
+				"description": "_MISSING_Unlocks a source of high quality textiles. Cotton plants only grow in heaths.",
+				"name": "_MISSING_Cotton"
+			},
+			"crossbow": {
+				"description": "_MISSING_More powerful archery",
+				"name": "_MISSING_Crossbows"
+			},
+			"dyeing": {
+				"description": "_MISSING_Learn to grow flowers in swamps, allowing you to add color to your world.",
+				"name": "_MISSING_Dyeing"
+			},
+			"elevator": {
+				"description": "_MISSING_Unlocks elevator production, useful for traversing vertical distances",
+				"name": "_MISSING_Elevator"
+			},
+			"elevatorhorizontal": {
+				"description": "_MISSING_Unlocks horizontal elevator production, useful for traversing horizontal distances",
+				"name": "_MISSING_Horizontal Elevator"
+			},
+			"engineer": {
+				"description": "_MISSING_Unlocks the engineer and the trapfixer. The engineer makes traps and their ammo, which can be used to fight monsters. The trapfixer will load and reload nearby traps.",
+				"name": "_MISSING_Engineer"
+			},
+			"failsafe": {
+				"description": "_MISSING_Unlocks the Sacred Failsafe, an emergency tool that uses Sacred Points to eliminate monsters",
+				"name": "_MISSING_Sacred Failsafe"
+			},
+			"farming": {
+				"description": "_MISSING_Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
+				"name": "_MISSING_Wheat Farming"
+			},
+			"furnace": {
+				"description": "_MISSING_Unlocks the smelter, a worker who processes ores",
+				"name": "_MISSING_Smelter"
+			},
+			"glassblower": {
+				"description": "_MISSING_Unlocks a way to craft glass",
+				"name": "_MISSING_Glassblower"
+			},
+			"glider": {
+				"description": "_MISSING_Unlocks glider production, allowing unpowered flight from higher points",
+				"name": "_MISSING_Glider"
+			},
+			"glidersteel": {
+				"description": "_MISSING_Unlocks a launcher that quickly shoots gliders to tremendous heights.",
+				"name": "_MISSING_Launched Steel Glider"
+			},
+			"goldenstatue": {
+				"description": "_MISSING_Unlocks the Threat Statue, which will attract monsters from other outposts to the one it's placed in.",
+				"name": "_MISSING_Threat Statue"
+			},
+			"grenadelauncher": {
+				"description": "_MISSING_Unlocks a powerful weapon which can eliminate groups of enemies at a distance.",
+				"name": "_MISSING_Grenade Launcher"
+			},
+			"gunpowder": {
+				"description": "_MISSING_Unlocks a powerful new ingredient",
+				"name": "_MISSING_Gunpowder"
+			},
+			"guntrap": {
+				"description": "_MISSING_Unlocks a powerful trap which does enormous amounts of damage.",
+				"name": "_MISSING_Cannon Trap"
+			},
+			"handcannon": {
+				"description": "_MISSING_Unlocks a powerful, short-range weapon",
+				"name": "_MISSING_Handcannon"
+			},
+			"hemp": {
+				"description": "_MISSING_Unlocks the cultivation of hemp plants in marshes as well as purchasing it. Leads towards processing it into ropes and paper.",
+				"name": "_MISSING_Hemp"
+			},
+			"iron": {
+				"description": "_MISSING_A major step forward for your colony, unlocking a new material which is required in many items",
+				"name": "_MISSING_Iron Age"
+			},
+			"jewellery": {
+				"description": "_MISSING_Unlocks the Jeweler, who creates delicate things",
+				"name": "_MISSING_Jeweler"
+			},
+			"jewelry": {
+				"description": "_MISSING_Unlocks jewelry, a good product for trade",
+				"name": "_MISSING_Jewelry"
+			},
+			"lanterns": {
+				"description": "_MISSING_Unlocks lanterns, useful for lighting up places",
+				"name": "_MISSING_Lanterns"
+			},
+			"lathe": {
+				"description": "_MISSING_Unlocks a complex machine which allows colonists to rapidly make detailed metal parts.",
+				"name": "_MISSING_Metal Lathe"
+			},
+			"miner": {
+				"description": "_MISSING_Unlocks the miner. When placed on a dark stone block, a colonist will come to mine that material continuously.",
+				"name": "_MISSING_Miner"
+			},
+			"monocular": {
+				"description": "_MISSING_Unlocks a nifty tool which can be used to observe things in the distance",
+				"name": "_MISSING_Monocular"
+			},
+			"mudbricks": {
+				"description": "_MISSING_Unlocks mudbricks, a cheap and simple building material",
+				"name": "_MISSING_Mudbricks"
+			},
+			"musket": {
+				"description": "_MISSING_Unlocks a new gunpowder weapon. Does less damage than a handcannon but the ammo is cheaper, it has a larger range and it’s quicker to reload.",
+				"name": "_MISSING_Musket"
+			},
+			"nitro": {
+				"description": "_MISSING_Unlocks a highly explosive compound essential for smokeless powder. It’s a lot less messy than traditional gunpowder, allowing for the development of more sophisticated firearms with many moving parts.",
+				"name": "_MISSING_Nitrocellulose"
+			},
+			"npcshop": {
+				"description": "_MISSING_Unlocks the Grocery Shop, a place where colonists can receive their daily meals. If none are found, they'll visit the banner.",
+				"name": "_MISSING_Grocery Shop"
+			},
+			"outposts": {
+				"description": "_MISSING_Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
+				"name": "_MISSING_Outposts"
+			},
+			"papermaking": {
+				"description": "_MISSING_Unlocks making paper from hemp, a key part towards scientific progress",
+				"name": "_MISSING_Paper Production"
+			},
+			"poison": {
+				"description": "_MISSING_Unlocks poison processing, useful for inflicting damage to monsters over time. Wisteria plants can only be grown in heaths. Each wisteria harvester needs 10 wisteria plants nearby to function well.",
+				"name": "_MISSING_Poison"
+			},
+			"porridge": {
+				"description": "_MISSING_Unlocks combining water and wheat into a new meal type",
+				"name": "_MISSING_Porridge"
+			},
+			"pottery": {
+				"description": "_MISSING_Unlocks pottery, used to carry things around, and earthenware that can be sold",
+				"name": "_MISSING_Pottery"
+			},
+			"prestige1": {
+				"description": "_MISSING_A goal to organize and measure the best of our energies and skills!",
+				"name": "_MISSING_Prestige I"
+			},
+			"prestige2": {
+				"description": "_MISSING_It’s not the destination that matters: it’s the journey.",
+				"name": "_MISSING_Prestige II"
+			},
+			"prestige3": {
+				"description": "_MISSING_This place is a place of honor. A highly esteemed deed is commemorated here.",
+				"name": "_MISSING_Prestige III"
+			},
+			"prestige4": {
+				"description": "_MISSING_The last mile is the longest!",
+				"name": "_MISSING_Prestige IV"
+			},
+			"prestige5": {
+				"description": "_MISSING_Congratulations! You successfully completed all stretch goals.",
+				"name": "_MISSING_Prestige V"
+			},
+			"printingpress": {
+				"description": "_MISSING_Unlocks the printing press, a complex machine that allows you to scale up the production of Books of Knowledge. Also unlocks brass precision parts, which are required for a lot of other machines.",
+				"name": "_MISSING_Printing Press"
+			},
+			"projectiletrap": {
+				"description": "_MISSING_Unlocks a trap that once loaded will shoot sideways at strong monsters",
+				"name": "_MISSING_Projectile Trap"
+			},
+			"recursiveknowledge": {
+				"description": "_MISSING_Helps make books by using books so you can make more books",
+				"name": "_MISSING_Recursive Self-Improvement"
+			},
+			"researcher": {
+				"description": "_MISSING_Unlocks the researcher, who will do research using nearby bookcases to progress science",
+				"name": "_MISSING_Researcher"
+			},
+			"ropes": {
+				"description": "_MISSING_Unlocks an ingredient with many uses",
+				"name": "_MISSING_Ropes"
+			},
+			"ropetrap": {
+				"description": "_MISSING_Unlocks a trap that freezes nearby monsters for 10 seconds when one monster passes over it.",
+				"name": "_MISSING_Rope Trap"
+			},
+			"sacredhouse": {
+				"description": "_MISSING_Unlocks the Sacred Point Storage, to extend the amount of Sacred Points which can be used by the Failsafe",
+				"name": "_MISSING_Sacred Point Storage"
+			},
+			"scribe": {
+				"description": "_MISSING_Unlocks the scribe, who studies scrolls to gain new insights. A scribe requires 10 Scrolls Shelves nearby. The scribe empties them, but they automatically fill themselves up again over time.",
+				"name": "_MISSING_Scribe"
+			},
+			"statistics": {
+				"description": "_MISSING_Unlocks the Statistics Board. When placed and used, it gives insights into the activity of your colony.",
+				"name": "_MISSING_Statistics Board"
+			},
+			"steel": {
+				"description": "_MISSING_Unlocks steel, lead and mineral oil. These resources are necessary for the construction of more modern machinery. Lead ore is found in swamps, and coal is located below mammoth trees.",
+				"name": "_MISSING_Steel, Lead and Mineral Oil"
+			},
+			"steellockbox": {
+				"description": "_MISSING_Unlocks a lockbox with more capacity.",
+				"name": "_MISSING_Steel Lockbox"
+			},
+			"steeltools": {
+				"description": "_MISSING_Unlocks a more durable tool which allows colonists to do their work more efficiently.",
+				"name": "_MISSING_Steel Tools"
+			},
+			"stonemason": {
+				"description": "_MISSING_Unlocks the stonemason, useful for adding variety to buildings",
+				"name": "_MISSING_Stonemason"
+			},
+			"tabulator": {
+				"description": "_MISSING_Unlocks a complex machine which processes data and stores it in punched-cards.",
+				"name": "_MISSING_Tabulating Machine"
+			},
+			"tailoring": {
+				"description": "_MISSING_Unlocks the tailor, a worker who can turn flax into linen and other items. Linen is a good source of colony points",
+				"name": "_MISSING_Tailor"
+			},
+			"tanner": {
+				"description": "_MISSING_Unlocks the tanner, a worker who is vital in the production of leather and, later, parchment",
+				"name": "_MISSING_Tanner"
+			},
+			"toolshop": {
+				"description": "_MISSING_Unlocks the Tool Distribution Table, a place where colonists will go to take tools when used. If none are found, they'll go to the banner.",
+				"name": "_MISSING_Tool Distribution"
+			},
+			"trading": {
+				"description": "_MISSING_Unlocks the Merchant's Hub, a place where you can buy and sell items",
+				"name": "_MISSING_Merchant's Hub"
+			},
+			"waterpump": {
+				"description": "_MISSING_Allows gathering water away from water sources",
+				"name": "_MISSING_Water pumping"
+			},
+			"writer": {
+				"description": "_MISSING_Unlocks the writer, parchment and scrolls of knowledge. These are important to complete more advanced science.",
+				"name": "_MISSING_Writer"
+			}
+		},
+		"popup": {
+			"areaselection": {
+				"close": "ปิด",
+				"description": "เลือกว่าต้องการลบพื้นที่ที่นี่หรือไม่",
+				"header": "เมนูพื้นที่",
+				"remove": "ลบพื้นที่"
+			},
+			"death": {
+				"description": "คุณเสียชีวิต.",
+				"respawn": "เกิดใหม่"
+			},
+			"inventory": {
+				"availableamount2": "ในคลังสินค้า",
+				"craftingstockpile": "คลังสินค้า",
+				"happinessvalue2": "ค่าความสุข",
+				"happy": {
+					"header": "ความสุข"
+				},
+				"madeintooltip": "ผลิตใน:",
+				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
+				"noactivecolony": "ไม่มีอาณานิคมที่ใช้งานอยู่!",
+				"science": {
+					"available": "มีอยู่",
+					"completed": "เสร็จสมบูรณ์",
+					"completeunlock": "เสร็จสมบูรณ์",
+					"conditioncolonistcount": "ชาวอาณานิคม",
+					"conditioncolonistcountdescription": "จำนวนอาณานิคมที่ต้องการ",
+					"conditionpointreq": "คะแนนอาณานิคม",
+					"conditionpointreqdescription1": "ข้อกำหนดคะแนนโคโลนี",
+					"conditionpointreqdescription2": "ที่จำเป็น: {0}",
+					"conditionpointreqdescription3": "มีอยู่: {0}",
+					"conditionscientistrequires": "ต้องใช้ {0}",
+					"dependencies": "เทคโนโลยีที่จำเป็น:",
+					"followups": "_MISSING_Followup technologies:",
+					"header": "วิทยาศาสตร์",
+					"recipeunlocknpcgroup": "ปลดล็อค {0}",
+					"recipeunlockoriginjob": "ผลิตที่ {0}",
+					"recipeunlockoriginplayer": "ทำโดยผู้เล่น",
+					"recipeunlocks": "ปลดล็อคสูตร:",
+					"startscience": "เริ่มวิทยาศาสตร์",
+					"threat": "_MISSING_Increases Monster Threat by {0}",
+					"unavailable": "ไม่พร้อมใช้งาน"
+				},
+				"searchfieldplaceholder": "ป้อนตัวกรองการค้นหา...",
+				"stats": {
+					"auto-scale": "มาตราส่วนอัตโนมัติ",
+					"entry-beds": "เตียงนอน",
+					"entry-meals": "มื้ออาหารทั้งหมด",
+					"entry-npccount": "ชาวอาณานิคม",
+					"entry-points": "คะแนนอาณานิคม",
+					"entry-unemployed": "ว่างงาน",
+					"hide-all": "ซ่อนทั้งหมด",
+					"only-changed": "เฉพาะรายการเปลี่ยน",
+					"scale": "มาตราส่วน:",
+					"scale-linear": "เชิงเส้น",
+					"scale-log": "บันทึก",
+					"show-all": "แสดงทั้งหมด",
+					"time1day": "วัน",
+					"time24day": "24 วัน",
+					"time4day": "4 วัน",
+					"type-colony": "อาณานิคม",
+					"type-consumption": "_MISSING_Consumption",
+					"type-idle-jobs": "เวลาว่างงาน",
+					"type-itempoints": "แต้มไอเทม",
+					"type-production": "_MISSING_Production",
+					"type-stockpile": "คลังสินค้า",
+					"type-tooluse": "_MISSING_Tool Use",
+					"type-trade-in": "การค้าขาเข้า",
+					"type-trade-out": "การค้าขาออก"
+				},
+				"tooltip": {
+					"and": "และ",
+					"craftingtime": "_MISSING_Crafting time: {0} seconds",
+					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
+					"instockpile": "ในคลังสินค้า",
+					"needs": "ความต้องการ: ",
+					"nothing": "ไม่มีอะไร"
+				},
+				"upgrades": {
+					"header": "คะแนนอาณานิคม",
+					"preamble2": "<i>คะแนนปัจจุบัน / ความจุ</i>",
+					"table": {
+						"cost": "ค่าใช้จ่าย",
+						"current": "หมุนเวียน",
+						"levels": "ระดับ",
+						"name": "อัพเกรดชื่อ",
+						"next": "ถัดไป"
+					},
+					"upgradebutton": "อัพเกรด"
+				}
+			},
+			"itemselector": {
+				"description": "เลือกประเภทรายการที่จะใช้",
+				"header": "การเลือกรายการ"
+			},
+			"limits": {
+				"allreset": "การตั้งค่าทั้งหมด",
+				"allzero": "ตั้งศูนย์ทั้งหมด",
+				"description": "ชาวอาณานิคมจะทำงานจนกว่าจะถึงจำนวนที่กำหนดไว้ในคลังสินค้า",
+				"group1": "_MISSING_Select Limits Group",
+				"group2": "_MISSING_Select one of multiple groups for this specific worker. Adjusting limits will adjust them for all workers of this type with the same group.",
+				"hoverpriority": {
+					"a": "ลำดับความสำคัญในการประดิษฐ์",
+					"b": "สูตรที่มีลำดับความสำคัญ +++ ถูกสร้างขึ้นก่อน\nสูตรอาหารที่มีลำดับความสำคัญ + จะถูกประดิษฐ์ขึ้นเป็นลำดับสุดท้าย"
+				},
+				"waitingdata": "รอข้อมูล...",
+				"wrongcolony": "งานหัตถกรรมที่เลือกเป็นส่วนหนึ่งของอาณานิคมอื่น"
+			},
+			"merchantui": {
+				"buy": "_MISSING_Purchase",
+				"buy1": "_MISSING_Buy 1",
+				"buy25": "_MISSING_Buy 25",
+				"buy5": "_MISSING_Buy 5",
+				"buytext": "_MISSING_Purchase {0} for {1} points",
+				"buytext2": "_MISSING_Current funds allow for {0} purchase(s)",
+				"currentpoints": "_MISSING_Current Points: {0} / {1}",
+				"description": "_MISSING_Buy/sell items for Points",
+				"header": "_MISSING_Merchant trading",
+				"sell": "_MISSING_Sell",
+				"sell1": "_MISSING_Sell 1",
+				"sell25": "_MISSING_Sell 25",
+				"sell5": "_MISSING_Sell 5",
+				"selltext": "_MISSING_Sell {0} for {1} points",
+				"selltext2": "_MISSING_Current storage allows for {0} sale(s)"
+			},
+			"quickstart": {
+				"closetoggle": "อย่าแสดงสิ่งนี้อีก",
+				"next": "ถัดไป",
+				"openmanual": "เปิดคู่มือ (PDF)",
+				"previous": "ก่อนหน้า"
+			},
+			"specialblockremoval": {
+				"button": "นำออก",
+				"description": "การลบบล็อกประเภท {0} นี้อาจทำให้เกิดปัญหากับอาณานิคม มั่นใจว่าจะทำ?",
+				"header": "การลบบล็อกพิเศษ"
+			},
+			"toolconstruction": {
+				"builder": "ช่างก่อสร้าง",
+				"buildera": "",
+				"builderb": "ต้องการพื้นที่ก่อสร้าง",
+				"builderc": "สร้างสิ่งต่างๆ",
+				"description": "เลือกประเภทของพื้นที่ที่คุณต้องการสร้าง",
+				"destroyer": "ผู้ทำลาย",
+				"destroyera": "",
+				"destroyerb": "ต้องการพื้นที่ทำลสย",
+				"destroyerc": "ทำลายสิ่งของ",
+				"header": "เครื่องมือก่อสร้าง"
+			},
+			"tooljob": {
+				"barleya": "_MISSING_Feed for chickens",
+				"barleyfarmer": "_MISSING_Barley Farmer",
+				"beekeeper": "_MISSING_Beekeeper",
+				"beekeepera": "_MISSING_Keeps bees for candle production",
+				"berrya": "อาหารที่ง่ายและรวดเร็ว เริ่มด้วยสิ่งนี้!",
+				"berryfarmer": "ชาวไร่เบอร์รี่",
+				"berryfarmertool": "เครื่องมือเกษตรกรเบอร์รี่",
+				"buildera": "เติมเต็มพื้นที่ของโลก",
+				"builderarea": "พื้นที่ก่อสร้าง",
+				"builderb": "เปิดเมนูเพื่อเลือกประเภท จากนั้นเลือกพื้นที่ที่จะเติม",
+				"cabbagea": "_MISSING_Cabbage",
+				"cabbagefarmer": "_MISSING_Cabbage Farmer",
+				"chickenfarmer": "_MISSING_Chicken Farmer",
+				"chickenfarmera": "_MISSING_Uses barley to grow chickens",
+				"construction": "การก่อสร้าง",
+				"construction1": "ปล่อยให้พวกเขาทำงาน",
+				"construction2": "ซึ่งจะเป็นการเปิดเมนูอื่นให้เลือกแบบก่อสร้างได้",
+				"constructionjob": "งานก่อสร้าง",
+				"constructionjoba": "รับสมัครคนงานก่อสร้าง",
+				"constructionjobb": "ติดกับพื้นที่ก่อสร้าง",
+				"coversarea": "ครอบคลุมพื้นที่ที่มีอยู่",
+				"description": "เลือกประเภทของพื้นที่ที่คุณต้องการสร้าง",
+				"diggera": "ขุดพื้นที่ของโลก",
+				"diggerarea": "พื้นที่ขุด",
+				"diggerb": "เลือกพื้นที่ขุด",
+				"diggerspecial": "พื้นที่ขุดพิเศษ",
+				"diggerspeciala": "ลบประเภทเฉพาะในพื้นที่",
+				"diggerspecialarea": "พื้นที่ขุดพิเศษ",
+				"diggerspecialb": "เลือกพื้นที่ที่จะลบออกจาก",
+				"dyer1": "_MISSING_Add colors to make life a little less drab",
+				"dyer2": "_MISSING_This will open another menu with multiple farm jobs",
+				"dyers": "_MISSING_Dyeing",
+				"flaxfarmer": "ชาวนาแฟลกซ์",
+				"flaxfarmertool": "เครื่องมือชาวนาแฟลกซ์",
+				"forester": "คนปลูกและตัดต้นไม้",
+				"forestera": "ปลูกและตัดต้นไม้",
+				"foresterb": "ต้องใช้ขวานและดินที่เหมาะแก่การเพาะปลูก",
+				"forestertool": "เครื่องมือป่าไม้",
+				"header": "เครื่องมือคำสั่ง",
+				"hempfarmer": "_MISSING_Hemp Farmer",
+				"insidearea": "วางภายในพื้นที่ไม่ได้",
+				"missingscience": "<color=red>ต้องปลดล็อก '{0}' ก่อน</color>",
+				"noconstructionareanearby": "ไม่มีพื้นที่ก่อสร้างใกล้เคียง",
+				"notarable": "ไม่เหมาะแก่การเพาะปลูก",
+				"notflat": "ไม่แบน",
+				"nowaternearby": "ไม่มีน้ำในบริเวณใกล้เคียง",
+				"occupiedblocks": "ครอบครองโดยบล็อก",
+				"requiresarable": "ต้องการพื้นที่เพาะปลูก",
+				"toolarge": "ใหญ่เกินไป",
+				"toonarrow": "แคบเกินไปสำหรับต้นไม้",
+				"toosmall": "เล็กไป",
+				"wateradjacent": "ต้องใช้น้ำติดกับสถานที่ปฏิบัติงาน",
+				"wheatfarmer": "ชาวนาข้าวสาลี",
+				"wheatfarmertool": "เครื่องมือชาวนาข้าวสาลี"
+			},
+			"toolshop": {
+				"description": "_MISSING_Adjust the minimum required stockpile levels before colonists use specific tools. Allows them to be used for crafting or science.",
+				"header": "_MISSING_Toolshop"
+			}
+		},
+		"quickstart": {
+			"page1_2": {
+				"description": "_MISSING_Welcome to Colony Survival!",
+				"header": "_MISSING_Basics",
+				"text1": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended.",
+				"text2": "_MISSING_The banner is the center of your colony. Place it by clicking on the ground with your Banner Tool selected. Press '2' to select it. The Banner Tool displays a deep shadow wherever monsters will spawn once colonists have been recruited.",
+				"text3": "_MISSING_Place beds to be able to recruit colonists. Press 'i' to open the interface. Drag beds from the stockpile to the hotbar below. With the bed selected, right-click the ground to place a bed.",
+				"text4": "_MISSING_Open the interface and go to the 'Colony' page. Press 'recruit' to recruit a colonist."
+			},
+			"page2_2": {
+				"description": "_MISSING_These are essential for growth and survival",
+				"header": "_MISSING_Food & Beds",
+				"text1": "_MISSING_Colonists require 1 meal per day. They grab these at the banner or a nearby grocery store. Without food, colonists starve. Recruiting new colonists costs multiple meals.",
+				"text2": "_MISSING_The berry farmer is the first food source. Select the Command Tool by pressing '1'. Click to open it and select the berry farmer. Right-click the ground to start defining the berry farm, then right click again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Cut down a tree by left-clicking on it, and dig down to gather stone rubble.",
+				"text4": "_MISSING_Click on the tinkerer’s table icon on the left of the stockpile to craft it. Place it like you placed the bed. Like with the berry farm, unemployed colonists will automatically take this job."
+			},
+			"page3_2": {
+				"description": "_MISSING_The technological side of survival",
+				"header": "_MISSING_Crafting, Science & Mining",
+				"text1": "_MISSING_Workers will go to crates both to gather ingredients from the stockpile and to deliver crafted products to the stockpile. If there aren't any crates yet, the banner will function as one.",
+				"text2": "_MISSING_A lot of jobs can or must use tools. Different tools have different costs, durabilities and production speed bonuses. The tinkerer automatically produces stone tools.",
+				"text3": "_MISSING_Use science to unlock new jobs, items and features. Open the science page in the interface to check the requirements and unlock new technology when it becomes available.",
+				"text4": "_MISSING_When you’ve unlocked the Miner science, the tinkerer will produce “miner jobs”. Dig down and place these on dark stone blocks or ores to have colonists mine them sustainably."
+			},
+			"page4_2": {
+				"description": "_MISSING_Defend your colony against the monsters of the night!",
+				"header": "_MISSING_Colony Defense",
+				"text1": "_MISSING_Unlocking some science will add 'threat'. This is shown in the top-right of the UI. Recruiting extra colonists will add threat at a slow pace after the first 25. As the threat level rises, more and stronger monsters will appear.",
+				"text2": "_MISSING_Build walls and dig moats in the monster-free zone to protect the center of your colony. Feel free to place jobs like farms in the “monster zone” outside of this: colonists will leave this area and go to their beds when the night starts.",
+				"text3": "_MISSING_Your tinkerer will produce the item 'Night Slinger Guard'. Place this in your colony to recruit a slinger who works during the night.",
+				"text4": "_MISSING_Progress in the tech tree to unlock new guards, traps and the Sacred Failsafe."
+			},
+			"page5_2": {
+				"description": "_MISSING_Trade and expand to get access to unique resources",
+				"header": "_MISSING_Colony Points & Colonization",
+				"text1": "_MISSING_Unlock and place the Merchant’s Hub. Right-click it to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
+				"text2": "_MISSING_This world contains multiple regions with unique resources. There are mountaintops covered with snow, heaths covered in purple, swamps and mammoth trees. Unlock and equip the astrolabe to find them easily.",
+				"text3": "_MISSING_Unlock outposts, purchase an Outpost Banner and carry it with you while you explore. Place it to start an Outpost. Its stockpile and scientific progress are shared with the main colony and other outposts. Build outposts in the regions mentioned above to get access to their resources."
+			},
+			"page6_2": {
+				"description": "_MISSING_Create more complex job systems",
+				"header": "_MISSING_'Harvester' and 'Source' Blocks",
+				"text1": "_MISSING_For some jobs, you have to place both the 'harvester' and the 'source' block. Most of the time each harvester block needs about 10 source blocks.",
+				"text2": "_MISSING_A harvester block like the Scribe's Desk recruits a colonist to work there. That colonist will try to visit a nearby source block, in this case a filled Scroll Shelf, before crafting.",
+				"text3": "_MISSING_Harvesters empty their source blocks, but source blocks automatically regenerate over time. The 1 to 10 ratio ensures a sustainable long term balance"
+			}
+		},
+		"settingsmenu": {
+			"audio": "เสียง",
+			"audiomenu": {
+				"ambientvolume": "ระดับเสียงแวดล้อม",
+				"effectsvolume": "ระดับเสียงเอฟเฟกต์",
+				"full": "การตั้งค่าเสียง",
+				"mastervolume": "ปริมาณเสียงหลัก",
+				"menuvolume": "ปริมาณเสียงเมนู",
+				"torchvolume": "ปริมาณเสียงคบเพลิง"
+			},
+			"gameplay": "การเล่นเกม",
+			"gameplaymenu": {
+				"full": "การตั้งค่าการเล่นเกม",
+				"gameplaytab": {
+					"adaptivecrosshair": "ปรับเป้าเล็ง",
+					"crosshairratio": "มาตราส่วนกากบาท",
+					"devbuttons": "เปิดใช้งานปุ่มนักพัฒนา",
+					"permanenthighlight": "ไฮไลท์บล็อกถาวร",
+					"ratio0": "ปิด",
+					"ratio100": "100%",
+					"ratio150": "150%",
+					"ratio200": "200%",
+					"ratio25": "25%",
+					"ratio250": "250%",
+					"ratio300": "300%",
+					"ratio400": "400%",
+					"ratio50": "50%",
+					"ratio75": "75%",
+					"showsensitivedatamode": "แสดงข้อมูลที่ละเอียดอ่อน",
+					"tab": "การตั้งค่าทั่วไป",
+					"uiscalingratio": "มาตราส่วน UI"
+				},
+				"keymapping": "การทำแผนที่สำคัญ",
+				"keymenu": {
+					"resetall": "การตั้งค่าทั้งหมด"
+				},
+				"mousemenu": {
+					"invertx": "กลับแกน x",
+					"inverty": "กลับแกน y",
+					"sensitivitylock": "ล็อคแกนความไวเข้าด้วยกัน",
+					"sensitivityx": "ความไวของเมาส์แกน X",
+					"sensitivityy": "ความไวของเมาส์ แกน Y",
+					"smooth": "การปรับให้เรียบของเมาส์",
+					"smoothlock": "ล็อคแกนปรับให้เรียบ",
+					"smoothx": "การปรับให้เรียบของเมาส์แกน X",
+					"smoothy": "ปรับเมาส์ให้เรียบแกน Y"
+				},
+				"mousesettings": "การตั้งค่าเมาส์"
+			},
+			"language": "ภาษา",
+			"languagemenu": {
+				"coverage": "สถานที่นี้เสร็จสมบูรณ์ {0:F1}% เพื่อช่วยแปลสิ่งนี้ โปรดดูฟอรัมหรือที่เก็บของเราบน github",
+				"full": "ตั้งค่าภาษา",
+				"language": "ภาษา",
+				"wiptext": "อยู่ในระหว่างดำเนินการ เนื้อหานี้ไม่ครอบคลุมข้อความทั้งหมดในเกม และการแปลบางส่วนอาจครอบคลุมน้อยกว่าคำแปลอื่นๆ"
+			},
+			"qualitycustom": "กำหนดเอง",
+			"qualityhigh": "สูง",
+			"qualitylow": "ต่ำ",
+			"qualitymaximum": "สูงสุด",
+			"qualitymedium": "ปานกลาง",
+			"qualityminimum": "ขั้นต่ำ",
+			"qualityoff": "ปิด",
+			"qualityon": "เปิด",
+			"qualityveryhigh": "สูงมาก",
+			"qualityverylow": "ต่ำมาก",
+			"video": "วีดีโอ",
+			"videomenu": {
+				"ambientocclusion": "การบดเคี้ยวรอบข้าง",
+				"anisotropic": "การกรองแบบแอนไอโซทรอปิก x16",
+				"antialiasing": "การลบรอยหยัก",
+				"bloom": "ความสมจริงของไฟ",
+				"depthoffield": "ความชัดลึก",
+				"drawdistance": "วาดระยะทาง (*)",
+				"eyeadaptation": "การปรับสายตา",
+				"fieldofview": "มุมมอง",
+				"full": "การตั้งค่าวิดีโอ",
+				"fullscreen": "เต็มจอ",
+				"lightscattering": "กระเจิงแสง",
+				"particleeffects": "ผลกระทบของอนุภาค",
+				"preset": "ที่ตั้งไว้ล่วงหน้า",
+				"ragdoll": "ปริมาณแร็กดอลล์",
+				"resolution": "ปณิธาน",
+				"restarttoapply": "(*) ต้องเริ่มเกมใหม่เพื่อใช้อย่างเต็มที่",
+				"shaderquality": "คุณภาพเชดเดอร์",
+				"sunshadowcascades": "น้ำตกเงาดวงอาทิตย์",
+				"sunshadowdistance": "ระยะเงา",
+				"sunshadowquality": "คุณภาพของแสงแดด",
+				"texturequality": "คุณภาพพื้นผิว",
+				"torchquality": "_MISSING_Torch quality",
+				"vsync": "VSync",
+				"vsyncdouble": "สองเท่า"
+			}
+		},
+		"singleplayermenu": {
+			"alreadyexists": "โลกมีอยู่แล้ว",
+			"cancel": "ยกเลิก",
+			"confirmdelete": "ยืนยันการลบ",
+			"confirmdeletedescription": "คุณกำลังจะลบโฟลเดอร์ที่มีโลกนี้\nคุณต้องการทำอะไร",
+			"confirmload": "ยืนยันการโหลด",
+			"delete": "ลบ",
+			"hostingoptions": "การตั้งค่าโฮสติ้ง",
+			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"load": "โหลด",
+			"loadworld": "โหลดโลก",
+			"missingname": "ไม่ได้ตั้งชื่อโลก",
+			"modconfiguration": "การกำหนดค่าม็อด",
+			"modschanged": {
+				"added": "'{0}'ถูกเพิ่ม",
+				"disabled": "'{0}' ถูกปิดการใช้งานหรือหายไปแต่ใช้ก่อนหน้านี้.",
+				"header": "ยืนยันการโหลดโลก",
+				"main": "กำลังโหลดโลก '{0}' แต่ม็อดบางตัวเปลี่ยนไป\nสิ่งนี้อาจทำให้เกิดปัญหา",
+				"updated": "'{0}' ได้รับการอัปเดตจากเวอร์ชัน {1} เป็น {2}"
+			},
+			"modselectall": "เลือกทั้งหมด",
+			"modselectnone": "เลือกไม่มี",
+			"modslist": {
+				"disableddependency": "[ปิด]",
+				"missingdependency": "[หายไป]",
+				"outdateddependency": "[เก่า]",
+				"requireddependency": "[ต้องใช้]"
+			},
+			"newworld": "โลกใหม่",
+			"nosubscribeditems": "ไม่พบเวิร์กชอปที่สมัครรับข้อมูล",
+			"password": "รหัสผ่าน",
+			"play_coop": "_MISSING_Play Co-op",
+			"play_solo": "_MISSING_Play Solo",
+			"selectedfolder": "โลกที่เลือก: {0}",
+			"servername": "ชื่อเซิร์ฟเวอร์",
+			"serverport": "พอร์ตเซิร์ฟเวอร์",
+			"typegenerateworld": "สร้างโลก",
+			"typeworkshop": "เวิร์คช็อปของโลก",
+			"worlddate": "วันที่",
+			"worldname": "ชื่อ",
+			"worldname_long": "ชื่อโลก",
+			"worldseed": "เมล็ดพันธุ์โลก"
+		},
+		"tooltip": {
+			"craftingblock": "_MISSING_Orders a colonist to work here as a {0}",
+			"crate": "_MISSING_Colonists will move to one of these blocks to get or deposit items every so often",
+			"failsafe-points": "_MISSING_Adds {0} sacred point capacity (non-stacking)",
+			"failsafe-threat": "_MISSING_Causes {0} threat",
+			"guard-ammo": "_MISSING_Uses {0}",
+			"guard-aoe": "_MISSING_{0} blocks area of effect",
+			"guard-cooldown": "_MISSING_Every {0} seconds",
+			"guard-damage": "_MISSING_Deals {0} damage",
+			"guard-damage-ticks": "_MISSING_Deals {0} damage over {1} seconds",
+			"guard-general": "_MISSING_Orders a colonist to guard this position",
+			"guard-range": "_MISSING_At up to {0} blocks distance",
+			"guard-sleeptype-day": "_MISSING_Sleeps during the day",
+			"guard-sleeptype-night": "_MISSING_Sleeps during the night",
+			"is-edible": "_MISSING_Meal item, colonists will eat one meal every day",
+			"is-sanctified": "_MISSING_Receive {0} sacred points when colonists eat this meal",
+			"lockbox-points": "_MISSING_Adds {0} colony point capacity",
+			"lockbox-threat": "_MISSING_Causes {0} threat",
+			"miner": "_MISSING_Orders a colonist to repeatedly mine the dark stone ore block underneath",
+			"npcshop": "_MISSING_Colonists will visit this or the banner to get their daily meal",
+			"pointtrader": "_MISSING_You can buy and sell things for points here",
+			"provides-fertile": "_MISSING_Counts as fertile ground",
+			"provides-fertile-fen": "_MISSING_Counts as fertile marsh ground",
+			"provides-fertile-heath": "_MISSING_Counts as fertile heath ground",
+			"requires-fen": "_MISSING_Requires fertile marsh below",
+			"requires-fertile": "_MISSING_Requires fertile ground below",
+			"requires-heath": "_MISSING_Requires fertile heath below",
+			"requires-water": "_MISSING_Must be placed next to water to function",
+			"sanctifiedlockbox-points": "_MISSING_Adds {0} sacred point capacity",
+			"sanctifiedlockbox-threat": "_MISSING_Causes {0} threat",
+			"statisticsboard": "_MISSING_Interact with this block to view statistics of your colony",
+			"threatstatue-general": "_MISSING_Pulls threat from other outposts towards the outpost it's placed in, while also causing some threat itself",
+			"threatstatue-threatcaused": "_MISSING_Causes {0} extra threat",
+			"threatstatue-threatweight": "_MISSING_Adds {0} threat weight",
+			"tool-always-usable": "_MISSING_Always available, does not require items",
+			"tool-durability": "_MISSING_{0} seconds of use",
+			"tool-general": "_MISSING_Tools are used by many jobs to accelerate crafting",
+			"tool-multiplier": "_MISSING_{0}x crafting speed",
+			"tool-percentage-left": "_MISSING_Durability % left:",
+			"tool-seconds-left": "_MISSING_Durability seconds left:",
+			"toolshop": "_MISSING_Colonists will visit this or the banner to get new tools when needed",
+			"trap-ammo": "_MISSING_Stores up to {0} {1}",
+			"trap-cooldown": "_MISSING_Every {0} seconds",
+			"trap-damage": "_MISSING_Deals {0} damage",
+			"trap-explosive-range": "_MISSING_Affects an area with radius {0} on hit",
+			"trap-filter-1000hp": "_MISSING_Only triggers on monsters with at least 1000 hp",
+			"trap-filter-unslowed": "_MISSING_Only triggers on monsters not yet slowed",
+			"trapfixer": "_MISSING_Orders a colonist to restock nearby traps during the day",
+			"trap-freezes": "_MISSING_Freezes those hit for {0} seconds",
+			"trap-friendly-fire": "_MISSING_Can affect friendlies when triggered",
+			"trap-general": "_MISSING_Trap item, awaits monsters to pass along and triggers. They will be refilled during the day by Trapfixer colonists",
+			"trap-range": "_MISSING_At up to {0} blocks distance",
+			"trap-slows": "_MISSING_Slows monsters to {0} times their speed",
+			"trap-style-down": "_MISSING_Triggers from monsters below",
+			"trap-style-front": "_MISSING_Triggers from monsters to the front",
+			"trap-style-up": "_MISSING_Triggers from monsters above"
+		},
+		"upgrades": {
+			"builder": {
+				"level": "{0} บล็อก",
+				"main": "ขนาดพื้นที่ก่อสร้าง"
+			},
+			"colonistcapacity": {
+				"level": "{0} ชาวอาณานิคม",
+				"main": "ความจุอาณานิคม"
+			},
+			"digger": {
+				"level": "{0} บล็อก",
+				"main": "ขนาดพื้นที่ขุด"
+			},
+			"health": {
+				"level": "ระดับ {0} พลังชีวิต",
+				"main": "พลังชีวิต"
+			},
+			"safezone": {
+				"level": "{0}บล็อก",
+				"main": "อาณาเขตของธงที่เป็นเซฟโซน"
+			}
+		}
+	},
+	"types": {
+		"alarmbell": "_MISSING_Alarm Bell",
+		"alchemisttable": "_MISSING_Alchemist's Table",
+		"alkanet": "_MISSING_Alkanet",
+		"animalcarcass": "_MISSING_Animal Carcass",
+		"astrolabe": "_MISSING_Astrolabe",
+		"banner": "ธง",
+		"bannertool": "เครื่องมือธง",
+		"barley": "_MISSING_Barley",
+		"bed": "เตียง",
+		"berry": "เบอร์รี่",
+		"berrybush": "เมล็ดเบอร์รี่",
+		"berrymeal": "มื้ออาหารเบอร์รี่",
+		"blastfurnace": "_MISSING_Blast Furnace",
+		"bloomery": "เตาหลอม",
+		"bookcase": "_MISSING_Bookcase (Empty)",
+		"bookcase1": "_MISSING_Bookcase (Mostly Empty)",
+		"bookcase2": "_MISSING_Bookcase (Partially Empty)",
+		"bookcasefilled": "_MISSING_Bookcase",
+		"bookofknowledge": "_MISSING_Book Of Knowledge",
+		"bow": "ธนู",
+		"brassingot": "_MISSING_Brass Ingot",
+		"brassparts": "_MISSING_Brass Precision Parts",
+		"bread": "ขนมปัง",
+		"breadmeal": "มื้อขนมปัง",
+		"bricks": "อิฐ",
+		"bricksblack": "อิฐสีดำ",
+		"bricksdarkred": "อิฐแดงเข้ม",
+		"bricksdarkyellow": "อิฐสีเหลืองเข้ม",
+		"brickslight": "_MISSING_Light Bricks",
+		"bricksred": "อิฐแดง",
+		"bronzeingot": "แท่งทองแดง",
+		"bronzelockbox": "_MISSING_Bronze Lockbox",
+		"bronzetools": "_MISSING_Bronze Tools",
+		"cabbage": "_MISSING_Cabbage",
+		"caltrops": "_MISSING_Caltrops",
+		"caltroptrap": "_MISSING_Caltrops Trap",
+		"candle": "_MISSING_Candle",
+		"carddata": "_MISSING_Punched Card",
+		"cardempty": "_MISSING_Empty Punch Card",
+		"charcoal": "ถ่าน",
+		"cherryblossom": "ดอกเชอร์รี่",
+		"chest": "_MISSING_Chest",
+		"chestluxury": "_MISSING_Luxury Chest",
+		"chestmaker": "_MISSING_Chestmaker's Workshop",
+		"chestprestige": "_MISSING_Prestige Chest",
+		"chestresource": "_MISSING_Science Chest",
+		"chickenmeal": "_MISSING_Chicken Meal",
+		"chickenpoop": "_MISSING_Chicken excrement",
+		"chickenraw": "_MISSING_Chicken (raw)",
+		"clay": "ดินเหนียว",
+		"coalore": "แร่ถ่านหิน",
+		"cokes": "_MISSING_Cokes",
+		"commandtool": "เครื่องมือคำสั่ง",
+		"compass": "เข็มทิศ",
+		"compostingbin": "_MISSING_Composting Bin",
+		"constructionjob": "งานก่อสร้าง",
+		"cookedfish": "ปลาปรุงสุก",
+		"cookedmeat": "_MISSING_Cooked Meat",
+		"copper": "ทองแดง",
+		"copperanvil": "_MISSING_Copper Anvil",
+		"copperarrow": "_MISSING_Copper Arrow",
+		"copperingot": "_MISSING_Copper Ingot",
+		"copperlockbox": "_MISSING_Copper Lockbox",
+		"coppertools": "เครื่องมือทองแดง",
+		"cotton": "_MISSING_Cotton",
+		"cottonengine": "_MISSING_Cotton Engine",
+		"cottonfibre": "_MISSING_Cotton Fibre",
+		"crate": "ลัง",
+		"crossbow": "หน้าไม้",
+		"crossbowbolt": "กลอนหน้าไม้",
+		"darkstone": "บล็อกหินมืด",
+		"dirt": "ดิน",
+		"dirtfen": "_MISSING_Marsh Dirt",
+		"dirtheath": "_MISSING_Heath Dirt",
+		"droppertrap": "_MISSING_Dropper Trap",
+		"droppertrapammo": "_MISSING_Dropper Trap Ammo",
+		"dyertable": "_MISSING_Dyer's Table",
+		"earthenware": "_MISSING_Earthenware",
+		"elevator": "_MISSING_Elevator Station",
+		"elevatorhorizontal": "_MISSING_Horizontal Elevator Station",
+		"elevatorshaft": "_MISSING_Elevator Shaft",
+		"elevatorshafthorizontal": "_MISSING_Horizontal Elevator Rail",
+		"engineerbench": "_MISSING_Engineer's Bench",
+		"eyeglasses": "_MISSING_Eyeglasses",
+		"failsafe": "_MISSING_Sacred Failsafe",
+		"firepit": "_MISSING_Firepit",
+		"firewood": "ฟืน",
+		"fisherman": "_MISSING_Fisherman's Spot",
+		"flax": "แฟลกซ์",
+		"flaxstage1": "เมล็ดแฟลกซ์",
+		"fletcherbench": "_MISSING_Fletcher's Bench",
+		"furnace": "เตา",
+		"glassblower": "_MISSING_Glassblower's Workshop",
+		"glasspiece": "_MISSING_Piece of Glass",
+		"glider": "เครื่องร่อน",
+		"glidersteel": "_MISSING_Launched Steel Glider",
+		"goldenshield": "_MISSING_Golden Shield",
+		"goldenstatue": "_MISSING_Threat Banner",
+		"goldingot": "แท่งทองคำ",
+		"goldjewellery": "_MISSING_Gold Jewelry",
+		"goldore": "แร่ทองคำ",
+		"grassdry": "_MISSING_Grass",
+		"grassfen": "_MISSING_Marsh Grass",
+		"grassheath": "_MISSING_Heath Grass",
+		"grassheathpurple": "_MISSING_Heath Plants",
+		"grassmax": "_MISSING_Grass",
+		"grassmid": "_MISSING_Grass",
+		"grasswet": "_MISSING_Grass",
+		"grenadelauncher": "_MISSING_Grenade Launcher",
+		"grenadelauncherammo": "_MISSING_Grenade Launcher Ammo",
+		"grindstone": "หินเจียร",
+		"guardbowdayjob": "ยามธนูเวลากลางวัน",
+		"guardbownightjob": "ยามธนูเวลากลางคืน",
+		"guardcrossbowdayjob": "ยามหน้าไม้เวลากลางวัน",
+		"guardcrossbownightjob": "ยามหน้าไม้เวลากลางคืน",
+		"guardgrenadedayjob": "_MISSING_Day Grenade Launcher Guard",
+		"guardgrenadenightjob": "_MISSING_Night Grenade Launcher Guard",
+		"guardhandcannondayjob": "_MISSING_Day Handcannon Guard",
+		"guardhandcannonnightjob": "_MISSING_Night Handcannon Guard",
+		"guardmusketdayjob": "_MISSING_Day Musket Guard",
+		"guardmusketnightjob": "_MISSING_Night Musket Guard",
+		"guardpoison": "_MISSING_Poison Guard",
+		"guardslingerdayjob": "ยามสลิงเกอร์เวลากลางวัน",
+		"guardslingernightjob": "ยามสลิงเกอร์เวลากลางคืน",
+		"gunpowder": "ดินปืน",
+		"gunpowdertrap": "_MISSING_Gunpowder Trap",
+		"gunpowdertrapammo": "_MISSING_Gunpowdertrap Ammo",
+		"gunsmith": "_MISSING_Gunsmith's Workbench",
+		"guntrap": "_MISSING_Cannon Trap",
+		"guntrapammo": "_MISSING_Cannon Trap Ammo",
+		"handcannon": "_MISSING_Handcannon",
+		"handcannonammo": "_MISSING_Handcannon Ammo",
+		"hemp": "_MISSING_Hemp",
+		"hempfibre": "_MISSING_Hemp Fibre",
+		"hollyhock": "ฮอลลี่ฮ็อค",
+		"hollyhockstage1": "เมล็ดฮอลลี่ฮ็อค",
+		"ironbloom": "_MISSING_Iron Bloom",
+		"ironore": "แร่เหล็กe",
+		"irontools": "_MISSING_Iron Tools",
+		"ironwrought": "เหล็กดัด",
+		"jewellerbench": "_MISSING_Jeweler's Bench",
+		"jobblockcrafter": "_MISSING_Job-block Crafter’s Workbench",
+		"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter's Workbench",
+		"kiln": "เตาเผา",
+		"lanternblue": "โคมไฟสีน้ำเงิน",
+		"lanterncyan": "โคมไฟสีฟ้า",
+		"lanterngreen": "โคมไฟสีเขียว",
+		"lanternorange": "โคมไฟสีส้ม",
+		"lanternpink": "โคมไฟสีชมพู",
+		"lanternred": "โคมไฟสีแดง",
+		"lanternwhite": "โคมไฟสีขาว",
+		"lanternyellow": "โคมไฟ",
+		"leadingot": "_MISSING_Lead Ingot",
+		"leadore": "_MISSING_Lead Ore",
+		"leather": "_MISSING_Leather",
+		"leavesfallorange": "ใบไม้ส้ม",
+		"leavesfallred": "ใบไม้แดง",
+		"leavesfallyellow": "ใบไม้เหลือง",
+		"leavesgreendark": "ใบไม้สีเข้ม",
+		"leavesgreenlight": "ใบไม้อ่อน",
+		"leavestaiga": "ใบไม้ไทกา",
+		"leavestemperate": "ใบไม้อ่อน",
+		"linen": "ผ้าลินิน",
+		"logtaiga": "ไม้ไทก้า",
+		"logtemperate": "ไม้ธรรมดา",
+		"logwall": "_MISSING_Log Wall",
+		"luxurygarments": "_MISSING_Luxury Garments",
+		"machinetools": "_MISSING_Machine Tools",
+		"manuscript": "_MISSING_Manuscript",
+		"merchanthub": "_MISSING_Merchant's Hub",
+		"metalgear": "_MISSING_Metal Gear",
+		"metallathe": "_MISSING_Metal Lathe",
+		"minerjob": "งานคนงานเหมือง",
+		"monocular": "_MISSING_Monocular",
+		"movabletype": "_MISSING_Movable Type",
+		"mudbricks": "_MISSING_Mud Bricks",
+		"musket": "_MISSING_Musket",
+		"musketammo": "_MISSING_Musket Ammo",
+		"nitro": "_MISSING_Nitrocellulose",
+		"notools": "_MISSING_No Tools",
+		"npcshop": "ร้านขายของชำ",
+		"outpostbanner": "_MISSING_Outpost Banner",
+		"paper": "_MISSING_Paper",
+		"papermakersmould": "_MISSING_Papermaker's Mould",
+		"parchment": "_MISSING_Parchment",
+		"planks": "ไม้กระดาน",
+		"planksblue": "_MISSING_Blue Planks",
+		"planksgreen": "_MISSING_Green Planks",
+		"planksred": "_MISSING_Red Planks",
+		"plaster": "_MISSING_Plaster",
+		"plasterblock": "ปูนปลาสเตอร์",
+		"points": "_MISSING_Points",
+		"poisondart": "_MISSING_Poison Dart",
+		"potash": "_MISSING_Potash",
+		"potempty": "_MISSING_Pot (Empty)",
+		"potflour": "_MISSING_Pot (Flour)",
+		"potterystation": "_MISSING_Pottery Station",
+		"potwater": "_MISSING_Pot (Water)",
+		"printingpress": "แท่นพิมพ์",
+		"projectiletrap": "_MISSING_Projectile Trap",
+		"projectiletrapammo": "_MISSING_Projectile Trap Ammo",
+		"quarterblockblack": "ขั้นบันไดสีดำ",
+		"quarterblockbrowndark": "ขั้นบันไดสีน้ำตาลเข้ม",
+		"quarterblockbrownlight": "ขั้นบันไดสีน้ำตาลอ่อน",
+		"quarterblockgrey": "ขั้นบันไดสีเทา",
+		"quarterblockwhite": "ขั้นบันไดสีขาว",
+		"rawfish": "ปลาดิบ",
+		"rawmeat": "_MISSING_Raw Meat",
+		"researcherdesk": "_MISSING_Researcher's Desk",
+		"rope": "_MISSING_Rope",
+		"ropebench": "_MISSING_Roper's Bench",
+		"ropetrap": "_MISSING_Rope Trap",
+		"ropetrapammo": "_MISSING_Rope Trap Ammo",
+		"saltpeter": "_MISSING_Saltpeter",
+		"sanctifiedbreadmeal": "_MISSING_Sacred Bread Meal",
+		"sanctifiedchickenmeal": "_MISSING_Sacred Chicken Meal",
+		"sanctifiedhouse": "_MISSING_Sacred Storage",
+		"sanctifiedporridge": "_MISSING_Sacred Wheat Porridge",
+		"sanctifiertable": "_MISSING_Sacred Altar",
+		"sand": "ทราย",
+		"sapling": "_MISSING_Sapling",
+		"saplingcherry": "_MISSING_Cherry Sapling",
+		"saplingdark": "_MISSING_Dark Green Sapling",
+		"saplingfallorange": "ต้นกล้าร่วง",
+		"saplingfallred": "_MISSING_Red Sapling",
+		"saplingfallyellow": "_MISSING_Yellow Sapling",
+		"saplinglight": "_MISSING_Light Green Sapling",
+		"saplingtaiga": " ต้นกล้าไทก้า",
+		"saplingtemperate": "_MISSING_Green Sapling",
+		"scientificnote": "_MISSING_Scientific Note",
+		"scribedesk": "_MISSING_Scribe's Desk",
+		"scrollofknowledge": "_MISSING_Scroll Of Knowledge",
+		"scrollshelf": "_MISSING_Scrolls Shelf (Empty)",
+		"scrollshelf1": "_MISSING_Scrolls Shelf (Mostly Empty)",
+		"scrollshelf2": "_MISSING_Scrolls Shelf (Partially Empty)",
+		"scrollshelffilled": "_MISSING_Scrolls Shelf",
+		"silicasand": "_MISSING_Silica Sand",
+		"skin": "_MISSING_Skin",
+		"sling": "สลิง",
+		"slingbullet": "กระสุนสลิง",
+		"snow": "หิมะ",
+		"splittingstump": "ตอไม้แตก",
+		"statisticsboard": "_MISSING_Statistics Board",
+		"steelingot": "_MISSING_Steel Ingot",
+		"steellockbox": "_MISSING_Steel Lockbox",
+		"steelparts": "_MISSING_Steel Parts",
+		"steeltools": "_MISSING_Steel Tools",
+		"stoneblock": "บล็อกหิน",
+		"stonebricks": "_MISSING_Cobblestone",
+		"stonebricksblack": "_MISSING_Black Cobblestone",
+		"stonebricksbrown": "_MISSING_Brown Cobblestone",
+		"stonebricksnew": "_MISSING_Stone Bricks",
+		"stonebrickswhite": "_MISSING_White Cobblestone",
+		"stonemasonworkbench": "โต๊ะช่างหิน",
+		"stonerubble": "_MISSING_Stone Rubble",
+		"stonetools": "_MISSING_Stone Tools",
+		"stove": "เตาทำอาหาร",
+		"straw": "_MISSING_Straw",
+		"sulfur": "_MISSING_Sulfur",
+		"tabletclay": "_MISSING_Clay Tablet",
+		"tabletwisdom": "_MISSING_Tablet Of Ancient Wisdom",
+		"tabulator": "_MISSING_Tabulating Machine",
+		"tailorshop": "ร้านตัดเสื้อ",
+		"tannertable": "_MISSING_Tanner's Table",
+		"tin": "ดีบุก",
+		"tinkerertable": "_MISSING_Tinkerer's Table",
+		"toolshop": "_MISSING_Tool Shop",
+		"torch": "คบเพลิง",
+		"trader": "ค้าขาย",
+		"trapfixer": "_MISSING_Trap Fixer",
+		"vialempty": "_MISSING_Vial (empty)",
+		"vialmineraloil": "_MISSING_Vial (mineral oil)",
+		"vialnitricacid": "_MISSING_Vial of Nitric Acid",
+		"vialsulphuricacid": "_MISSING_Vial of Sulphuric Acid",
+		"water": "น้ำ",
+		"watergatherer": "_MISSING_Water Gatherer",
+		"waterpump": "_MISSING_Waterpump",
+		"wheat": "ข้าวสาลี",
+		"wheatmeal": "_MISSING_Wheat Gruel",
+		"wheatporridge": "_MISSING_Wheat Porridge",
+		"wheatstage1": "เมล็ดข้าวสาลี",
+		"wisteriaflower": "_MISSING_Wisteria Flower",
+		"wisteriajob": "_MISSING_Wisteria Harvester",
+		"wisteriaplant": "_MISSING_Wisteria Plant",
+		"wisteriaplantempty": "_MISSING_Wisteria Plant",
+		"wolfsbane": "อาโคนิตัม",
+		"wolfsbanestage1": "เมล็ดอาโคนิตัม",
+		"woodfloor": "_MISSING_Wood Flooring",
+		"writerdesk": "โต๊ะของนักเขียน",
+		"zinc": "_MISSING_Zinc"
+	},
+	"typeuses": {
+		"alarmbell": "_MISSING_Rings an alarm when it detects monsters walking over it",
+		"alkanet": "ในชีวิตจริงที่มาของสีย้อมสีแดง",
+		"astrolabe": "_MISSING_Points the way to other biomes",
+		"berry": "เบอร์รี่ลูกเดียว ไม่คุ้มกับความพยายามในการกินมัน!",
+		"berrybush": "ชาวอาณานิคมสามารถปลูกสิ่งเหล่านี้เป็นอาหารได้ง่าย",
+		"berrymeal": "พวงของผลเบอร์รี่ที่เตรียมไว้สำหรับทำอาหารอร่อยๆ",
+		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bow": "ยามต้องการหนึ่ง!",
+		"bread": "ขนมปังชิ้นแห้งที่ไม่มีการแพร่กระจายหรือเติมไม่ดี",
+		"breadmeal": "ขนมปังอร่อยกับแยมเบอรี่",
+		"bricks": "มันเป็นเกมดัตช์หลังจากทั้งหมด",
+		"bronzeingot": "บรอนซ์สตรอง",
+		"charcoal": "ดูดซับไซยาไนด์",
+		"cherryblossom": "สีชมพูที่สุดในเกม",
+		"clay": "ขอให้ได้สัมผัส",
+		"coalore": "คำเตือน: อาจทำให้เกิดปัญหาสภาพภูมิอากาศ",
+		"compass": "ไม่ใช่ทุกคนที่หลงทางหายไป",
+		"cookedfish": "ความสามารถในการว่ายน้ำลดลงอย่างมาก",
+		"copper": "_MISSING_Somewhat soft metal, but quite useful",
+		"coppertools": "คุณไม่สามารถตัดขนมปังได้โดยไม่ต้องใช้เครื่องมือ",
+		"crate": "สำหรับทุกความต้องการในการจัดเก็บของคุณ!",
+		"crossbow": "น้องชายคนเล็กของนักเล่นกล",
+		"crossbowbolt": "แข็มแข้งกว่าดีกว่าเร็วกว่าแข็งแรงกว่า",
+		"dirt": "สกปรก",
+		"failsafe": "_MISSING_Emergency defense mechanism using Sacred Points",
+		"firewood": "เชื้อเพลิงพื้นฐาน",
+		"flax": "สีจักรพรรดิ์",
+		"flaxstage1": "วางลงดิน",
+		"furnace": "ใช้ฟืนเป็นเชื้อเพลิงในการผลิตแท่งทองแดงและอิฐ",
+		"glider": "_MISSING_Places a glider launcher; Enter one by right-clicking it and navigate by aiming while holding forward",
+		"goldingot": "ใช้การันตีความคุ้มค่าเงินกระดาษ",
+		"goldore": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"grindstone": "ใช้สำหรับบดข้าวสาลีให้เป็นแป้ง",
+		"gunpowder": "ทําอย่างระมัดระวัง มันเปราะบาง!",
+		"gunpowderpouch": "สามารถใช้ยิงปืนคาบศิลาได้",
+		"gypsum": "รายการเครื่องสำอาง น่าจะเป็นไมโครทรานส์แอคชั่น",
+		"hollyhock": "เป็นยาระบายในชีวิตจริง เเต่ไม่ใช่ในเกมนะ",
+		"ironore": "ขุดด้วยพลั่วเหล็กที่ทำจากแร่เหล็ก",
+		"ironwrought": "Wrought แปลว่า 'ทำงาน''",
+		"kiln": "เปลี่ยนแผ่นไม้ให้เป็นถ่าน",
+		"lanterncyan": "อนาคตคือตอนนี้",
+		"lanterngreen": "ทำให้อาณานิคมของคุณเป็นมิตรกับสิ่งแวดล้อม",
+		"lanternorange": "สะดวกสบายเป็นพิเศษ",
+		"lanternred": "เหล่านี้เป็นที่นิยมในอัมสเตอร์ดัมด้วย",
+		"lanternyellow": "คบเพลิงราคาแพง",
+		"leadore": "_MISSING_Found in swamps.",
+		"leavestaiga": "รู้สึกถึงคริสต์มาสแล้ว",
+		"leavestemperate": "ลองกระโดดลงไปในกองพวกนี้จากหอคอยสูง",
+		"linen": "ชุดชั้นใน หมายถึง ชุดชั้นในที่ทำด้วยผ้าลินิน",
+		"logtaiga": "เย็นขึ้นเล็กน้อย",
+		"logtemperate": "เหมือนบันทึกผลลัพธ์ แต่ต่างกัน",
+		"matchlockgun": "ต้องใช้ซองดินปืนยิงกระสุนตะกั่ว",
+		"monocular": "_MISSING_Allows looking at things more closely while held",
+		"npcshop": "ชาวอาณานิคมมาที่นี่วันละครั้งเพื่อรวบรวมอาหารและความสุข",
+		"papyrus": "กระดาษในอนาคต",
+		"planks": "ขณะนี้มีปริมาณการบันทึก 4 เท่า",
+		"plasterblock": "เพื่อรูปลักษณ์ที่ทันสมัย",
+		"printingpress": "เคารพในอิสรภาพ",
+		"rawfish": "#ออร์แกนิค",
+		"researcherdesk": "_MISSING_Researches require book cases nearby in order to find data for their research!",
+		"sand": "เข้ากันไม่ได้กับงู",
+		"saplingfallorange": "ต้นส้มในอนาคต",
+		"saplingtaiga": "ต้นไม้ที่แตกต่างกันเล็กน้อย",
+		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
+		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"silicasand": "_MISSING_Found below sand in the Heath biome",
+		"sling": "ระวังโกลิอัท",
+		"slingbullet": "แค่หินก้อนเล็กๆ จริงๆ",
+		"snow": "ไม่รู้อะไรเลย",
+		"splittingstump": "วิธีที่รวดเร็วกว่าในการแยกไม้เป็นฟืน",
+		"stonemasonworkbench": "สร้างอิฐห้าสิบเฉด",
+		"stove": "ใช้เติมกลิ่นหอมให้พื้นที่โดยรอบ",
+		"sulfur": "_MISSING_Found deep underground in the Heath biome",
+		"tailorshop": "เสื้อผ้าที่เหมาะกับทุกคน!",
+		"tin": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"torch": "และปล่อยให้มีแสงสว่าง!",
+		"trader": "ใช้ในการซื้อขายโดยไม่คาดคิด",
+		"water": "จะท่วมทุกอย่างถ้าปล่อยวาง",
+		"waterpump": "_MISSING_Allows getting water without being near water",
+		"wheat": "ชาวอาณานิคมที่มีหินลับจะกลายเป็นแป้ง",
+		"wheatstage1": "ขนมปังแห่งอนาคต",
+		"wisteriajob": "_MISSING_One harvester needs 10 wisteria plants nearby. These plants can only be grown in heaths.",
+		"wisteriaplant": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wolfsbane": "ป้องกันไม่ให้หมาป่าโจมตีอาณานิคมของคุณ",
+		"writerdesk": "ถูกหลักสรีรศาสตร์สูง",
+		"zinc": "_MISSING_Can be found directly below mammoth trees."
+	}
+}

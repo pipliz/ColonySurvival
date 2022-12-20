@@ -1,0 +1,40 @@
+[
+	{
+		"cooldown": 45.0,
+		"defaultLimit": 10,
+		"name": "pipliz.tabulator.cardempty",
+		"requires": [
+			{
+				"amount": 10,
+				"type": "paper"
+			}
+		],
+		"requiresScience": "pipliz.tabulator",
+		"results": [
+			{
+				"type": "cardempty"
+			}
+		],
+		"sortWeight": 852654
+	},
+	{
+		"cooldown": 180.0,
+		"defaultLimit": 1000,
+		"name": "pipliz.tabulator.carddata",
+		"requires": [
+			{
+				"type": "cardempty"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"requiresScience": "pipliz.tabulator",
+		"results": [
+			{
+				"type": "carddata"
+			}
+		],
+		"sortWeight": 852654
+	}
+]

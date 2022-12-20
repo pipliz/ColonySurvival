@@ -1,223 +1,142 @@
 [
+	/*
+		options for simpleFarm patchType;
+		- identifier -> unique ID of job type
+		- npcType -> npc takes on this type when working here
+		- shouldTurnArableIntoDirt -> does the ground turn to dirt on creation
+		- maxGathersPerRun -> how many times can they harvest between crate visits
+		- stages -> array of types, the first stage is planted (and spawned from nothing), the last stage is harvested (and results from removal are dumped in stockpile)
+
+		options for blockFarm patchType;
+		- identifier -> unique ID of job type
+		- npcType -> npc takes on this type when working here
+		- blockPlaced -> the block placed on every position (i.e, berry bushes)
+		- maxGatheredBeforeCrate -> how many times can they harvest between crate visits
+		- blockPlaceRequirement -> item required to be able to place the blockPlaced
+		- allowGoalOffset -> allow a NPC to stand off by one block, say next to the berry-bush instead of inside it, to consider it the job location
+	*/
 	{
-		"identifier" : "pipliz.berryfarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.berryfarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "berrybush",
-		"maxGatheredBeforeCrate" : 6
+		"allowGoalOffset": true,
+		"blockPlaced": "berrybush",
+		"identifier": "pipliz.berryfarm",
+		"maxGatheredBeforeCrate": 6,
+		"npcType": "pipliz.berryfarmer",
+		"patchType": "blockFarm"
 	},
 	{
-		"identifier" : "pipliz.fishfarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.fishfarmer",
-		"cooldown" : 11.0,
-		"blockPlaced" : "fishtank",
-		"maxGatheredBeforeCrate" : 6
+		"allowGoalOffset": true,
+		"blockPlaced": "chickencoop",
+		"identifier": "pipliz.chickenfarm",
+		"maxGatheredBeforeCrate": 6,
+		"npcType": "pipliz.chickenfarmer",
+		"patchType": "blockFarm"
 	},
 	{
-		"identifier" : "pipliz.beekeeperfarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.beekeeper",
-		"cooldown" : 8.5,
-		"blockPlaced" : "beehive",
-		"maxGatheredBeforeCrate" : 6
+		"allowGoalOffset": true,
+		"blockPlaced": "beehive",
+		"identifier": "pipliz.beekeeperfarm",
+		"maxGatheredBeforeCrate": 6,
+		"npcType": "pipliz.beekeeper",
+		"patchType": "blockFarm"
 	},
 	{
-		"identifier" : "pipliz.chickenfarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.chickenfarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "chickencoop",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.silkwormfarmer",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.silkwormfarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "leavesgreendark",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.teafarmer",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.teafarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "leavesgreenlight",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.coffeebeanfarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.coffeebeanfarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "leavesgreendark",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.bananafarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.bananafarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "bananatree",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.cacaofarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.cacaofarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "cacaoplant",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.vanillafarm",
-		"patchType" : "blockFarm",
-		"npcType" : "pipliz.vanillafarmer",
-		"cooldown" : 8.5,
-		"blockPlaced" : "leavesgreenlight",
-		"maxGatheredBeforeCrate" : 6
-	},
-	{
-		"identifier" : "pipliz.sugarcanefarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.sugarcanefarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"sugarcanestage1",
-			"sugarcanestage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.papyrusfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.papyrusfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"papyrusstage1",
-			"papyrusstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.cassavafarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.cassavafarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"cassavastage1",
-			"cassavastage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.cottonfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.cottonfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"cottonstage1",
-			"cottonstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.tomatofarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.tomatofarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"tomatostage1",
-			"tomatostage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.potatofarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.potatofarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"potatostage1",
-			"potatostage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.alkanetfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.alkanetfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"alkanetstage1",
-			"alkanetstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.ricefarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.ricefarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"ricestage1",
-			"ricestage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.flaxfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.flaxfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"flaxstage1",
-			"flaxstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.hollyhockfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.hollyhockfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"hollyhockstage1",
-			"hollyhockstage2"
-		]
-	},
-	{
-		"identifier" : "pipliz.wheatfarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.wheatfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
+		"fertileRequirement": 1,
+		"identifier": "pipliz.wheatfarm",
+		"npcType": "pipliz.wheatfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
 			"wheatstage1",
 			"wheatstage2",
 			"wheatstage3"
 		]
 	},
 	{
-		"identifier" : "pipliz.wolfsbanefarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.wolfsbanefarm",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"wolfsbanestage1",
-			"wolfsbanestage2"
+		"fertileRequirement": 1,
+		"identifier": "pipliz.cabbagefarm",
+		"npcType": "pipliz.cabbagefarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"cabbagestage1",
+			"cabbagestage2"
 		]
 	},
 	{
-		"identifier" : "pipliz.barleyfarmer",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.barleyfarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
+		"fertileRequirement": 1,
+		"identifier": "pipliz.barleyfarmer",
+		"npcType": "pipliz.barleyfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
 			"barleystage1",
 			"barleystage2"
 		]
 	},
 	{
-		"identifier" : "pipliz.cabbagefarm",
-		"patchType" : "simpleFarm",
-		"npcType" : "pipliz.cabbagefarmer",
-		"shouldTurnArableIntoDirt" : true,
-		"stages" : [
-			"cabbagestage1",
-			"cabbagestage2"
+		"fertileRequirement": 4,
+		"identifier": "pipliz.cottonfarmer",
+		"npcType": "pipliz.cottonfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"cottonstage1",
+			"cottonstage2"
+		]
+	},
+	{
+		"fertileRequirement": 2,
+		"identifier": "pipliz.hempfarmer",
+		"npcType": "pipliz.hempfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"hempstage1",
+			"hempstage2"
+		]
+	},
+	{
+		"fertileRequirement": 2,
+		"identifier": "pipliz.alkanetfarmer",
+		"npcType": "pipliz.alkanetfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"alkanetstage1",
+			"alkanetstage2"
+		]
+	},
+	{
+		"fertileRequirement": 2,
+		"identifier": "pipliz.wolfsbanefarmer",
+		"npcType": "pipliz.wolfsbanefarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"wolfsbanestage1",
+			"wolfsbanestage2"
+		]
+	},
+	{
+		"fertileRequirement": 2,
+		"identifier": "pipliz.hollyhockfarmer",
+		"npcType": "pipliz.hollyhockfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"hollyhockstage1",
+			"hollyhockstage2"
+		]
+	},
+	{
+		"fertileRequirement": 1,
+		"identifier": "pipliz.flaxfarm",
+		"npcType": "pipliz.flaxfarmer",
+		"patchType": "simpleFarm",
+		"shouldTurnArableIntoDirt": true,
+		"stages": [
+			"flaxstage1",
+			"flaxstage2"
 		]
 	}
 ]

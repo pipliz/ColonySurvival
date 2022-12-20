@@ -1,0 +1,91 @@
+[
+	{
+		"cooldown": 5.0,
+		"name": "pipliz.sanctifier.sanctifiedporridge",
+		"requires": [
+			{
+				"type": "wheatporridge"
+			},
+			{
+				"type": "candle"
+			}
+		],
+		"requiresScience": "pipliz.failsafe",
+		"results": [
+			{
+				"type": "sanctifiedporridge"
+			}
+		],
+		"sortWeight": 2005
+	},
+	{
+		"cooldown": 5.0,
+		"name": "pipliz.sanctifier.sanctifiedbreadmeal",
+		"requires": [
+			{
+				"type": "breadmeal"
+			},
+			{
+				"type": "candle"
+			}
+		],
+		"requiresScience": "pipliz.bread",
+		"results": [
+			{
+				"type": "sanctifiedbreadmeal"
+			}
+		],
+		"sortWeight": 15427
+	},
+	{
+		"cooldown": 7.0,
+		"name": "pipliz.sanctifier.sanctifiedchickenmeal",
+		"requires": [
+			{
+				"type": "chickenmeal"
+			},
+			{
+				"type": "candle"
+			}
+		],
+		"requiresScience": "pipliz.chickenmeal",
+		"results": [
+			{
+				"type": "sanctifiedchickenmeal"
+			}
+		],
+		"sortWeight": 39468
+	},
+	{
+		"cooldown": 180.0,
+		"defaultLimit": 1,
+		"name": "pipliz.sanctifier.sanctifiedhouse",
+		"requires": [
+			{
+				"type": "bronzeingot"
+			},
+			{
+				"type": "goldingot"
+			},
+			{
+				"amount": 10,
+				"type": "candle"
+			},
+			{
+				"amount": 10,
+				"type": "linen"
+			},
+			{
+				"amount": 3,
+				"type": "leather"
+			}
+		],
+		"requiresScience": "pipliz.sacredhouse",
+		"results": [
+			{
+				"type": "sanctifiedhouse"
+			}
+		],
+		"sortWeight": 29517
+	}
+]

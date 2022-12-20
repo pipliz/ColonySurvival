@@ -1,151 +1,324 @@
 {
-	"colonistcapacity" : {
-		"levels" : [
-			{ "capacity" : 35, "cost" : 500 },
-			{ "capacity" : 50, "cost" : 1000 },
-			{ "capacity" : 75, "cost" : 2000 },
-			{ "capacity" : 100, "cost" : 4000 },
-			{ "capacity" : 125, "cost" : 8000 },
-			{ "capacity" : 150, "cost" : 16000 },
-			{ "capacity" : 175, "cost" : 32000 },
-			{ "capacity" : 200, "cost" : 45000 },
-			{ "capacity" : 225, "cost" : 65000 },
-			{ "capacity" : 250, "cost" : 85000 },
-			{ "capacity" : 275, "cost" : 100000 },
-			{ "capacity" : 300, "cost" : 125000 },
-			{ "capacity" : 325, "cost" : 150000 },
-			{ "capacity" : 350, "cost" : 175000 },
-			{ "capacity" : 375, "cost" : 200000 },
-			{ "capacity" : 400, "cost" : 225000 },
-			{ "capacity" : 425, "cost" : 250000 },
-			{ "capacity" : 450, "cost" : 300000 },
-			{ "capacity" : 475, "cost" : 500000 },
-			{ "capacity" : 500, "cost" : 600000 },
-			{ "capacity" : 600, "cost" : 700000 },
-			{ "capacity" : 700, "cost" : 800000 },
-			{ "capacity" : 800, "cost" : 900000 },
-			{ "capacity" : 900, "cost" : 1000000 },
-			{ "capacity" : 1000, "cost" : 1250000 },
-			{ "capacity" : 1500, "cost" : 1500000 },
-			{ "capacity" : 2000, "cost" : 2000000 },
-			{ "capacity" : 2500, "cost" : 2500000 },
-			{ "capacity" : 3000, "cost" : 3000000 },
-			{ "capacity" : 4000, "cost" : 4000000 },
-			{ "capacity" : 5000, "cost" : 5000000 },
-			{ "capacity" : 10000, "cost" : 10000000 },
-			{ "capacity" : 15000, "cost" : 15000000 },
-			{ "capacity" : 25000, "cost" : 20000000 },
-			{ "capacity" : 50000, "cost" : 40000000 }
+	"buildersize": {
+		"levels": [
+			{
+				"capacity": 2500,
+				"cost": 250
+			},
+			{
+				"capacity": 5000,
+				"cost": 500
+			},
+			{
+				"capacity": 10000,
+				"cost": 1000
+			},
+			{
+				"capacity": 20000,
+				"cost": 2000
+			},
+			{
+				"capacity": 40000,
+				"cost": 4000
+			},
+			{
+				"capacity": 80000,
+				"cost": 8000
+			},
+			{
+				"capacity": 160000,
+				"cost": 16000
+			},
+			{
+				"capacity": 320000,
+				"cost": 32000
+			},
+			{
+				"capacity": 640000,
+				"cost": 40000
+			},
+			{
+				"capacity": 1280000,
+				"cost": 50000
+			}
 		]
 	},
-	"health" : {
-		"levels" : [
-			{ "regenmax" : 40 , "regenrate" : 1.5, "maxhealth" : 110, "cost" : 3500 },
-			{ "regenmax" : 50 , "regenrate" : 2.0, "maxhealth" : 125, "cost" : 10000 },
-			{ "regenmax" : 60 , "regenrate" : 2.5, "maxhealth" : 140, "cost" : 25000 },
-			{ "regenmax" : 70 , "regenrate" : 3.0, "maxhealth" : 155, "cost" : 100000 },
-			{ "regenmax" : 80 , "regenrate" : 3.5, "maxhealth" : 170, "cost" : 250000 },
-			{ "regenmax" : 90 , "regenrate" : 4.0, "maxhealth" : 185, "cost" : 500000 },
-			{ "regenmax" : 100, "regenrate" : 5.0, "maxhealth" : 200, "cost" : 1000000 }
+	"colonistcapacity": {
+		"levels": [
+			{
+				"capacity": 150,
+				"cost": 100
+			},
+			{
+				"capacity": 200,
+				"cost": 250
+			},
+			{
+				"capacity": 250,
+				"cost": 350
+			},
+			{
+				"capacity": 300,
+				"cost": 500
+			},
+			{
+				"capacity": 350,
+				"cost": 750
+			},
+			{
+				"capacity": 400,
+				"cost": 1000
+			},
+			{
+				"capacity": 450,
+				"cost": 2000
+			},
+			{
+				"capacity": 500,
+				"cost": 3000
+			},
+			{
+				"capacity": 550,
+				"cost": 4000
+			},
+			{
+				"capacity": 600,
+				"cost": 5000
+			},
+			{
+				"capacity": 650,
+				"cost": 6000
+			},
+			{
+				"capacity": 700,
+				"cost": 7000
+			},
+			{
+				"capacity": 750,
+				"cost": 8000
+			},
+			{
+				"capacity": 800,
+				"cost": 9000
+			},
+			{
+				"capacity": 850,
+				"cost": 10000
+			},
+			{
+				"capacity": 900,
+				"cost": 11000
+			},
+			{
+				"capacity": 950,
+				"cost": 12000
+			},
+			{
+				"capacity": 1000,
+				"cost": 15000
+			},
+			{
+				"capacity": 1100,
+				"cost": 18000
+			},
+			{
+				"capacity": 1200,
+				"cost": 20000
+			},
+			{
+				"capacity": 1300,
+				"cost": 22000
+			},
+			{
+				"capacity": 1500,
+				"cost": 25000
+			},
+			{
+				"capacity": 2000,
+				"cost": 28000
+			},
+			{
+				"capacity": 2500,
+				"cost": 30000
+			},
+			{
+				"capacity": 3000,
+				"cost": 35000
+			},
+			{
+				"capacity": 4000,
+				"cost": 40000
+			},
+			{
+				"capacity": 5000,
+				"cost": 45000
+			},
+			{
+				"capacity": 10000,
+				"cost": 50000
+			},
+			{
+				"capacity": 15000,
+				"cost": 62500
+			},
+			{
+				"capacity": 25000,
+				"cost": 75000
+			},
+			{
+				"capacity": 50000,
+				"cost": 100000
+			}
 		]
 	},
-	"colonypointcapacity" : {
-		"levels" : [
-			{ "capacity" : 3000, "cost" :      1000 },
-			{ "capacity" : 4500, "cost" :      2800 },
-			{ "capacity" : 6000, "cost" :      4000 },
-			{ "capacity" : 8000, "cost" :      6000 },
-			{ "capacity" : 10000, "cost" :     8000 },
-			{ "capacity" : 15000, "cost" :     10000 },
-			{ "capacity" : 25000, "cost" :     15000 },
-			{ "capacity" : 40000, "cost" :     25000 },
-			{ "capacity" : 65000, "cost" :     40000 },
-			{ "capacity" : 100000, "cost" :    65000 },
-			{ "capacity" : 150000, "cost" :    100000 },
-			{ "capacity" : 250000, "cost" :    150000 },
-			{ "capacity" : 400000, "cost" :    250000 },
-			{ "capacity" : 650000, "cost" :    400000 },
-			{ "capacity" : 1000000, "cost" :   650000 },
-			{ "capacity" : 1500000, "cost" :   1000000 },
-			{ "capacity" : 2500000, "cost" :   1500000 },
-			{ "capacity" : 4000000, "cost" :   2500000 },
-			{ "capacity" : 6500000, "cost" :   4000000 },
-			{ "capacity" : 10000000, "cost" :  6500000 },
-			{ "capacity" : 15000000, "cost" :  10000000 },
-			{ "capacity" : 25000000, "cost" :  15000000 },
-			{ "capacity" : 40000000, "cost" :  25000000 },
-			{ "capacity" : 65000000, "cost" :  40000000 },
-			{ "capacity" : 100000000, "cost" : 65000000 }
+	"diggersize": {
+		"levels": [
+			{
+				"capacity": 2500,
+				"cost": 250
+			},
+			{
+				"capacity": 5000,
+				"cost": 500
+			},
+			{
+				"capacity": 10000,
+				"cost": 1000
+			},
+			{
+				"capacity": 20000,
+				"cost": 2000
+			},
+			{
+				"capacity": 40000,
+				"cost": 4000
+			},
+			{
+				"capacity": 80000,
+				"cost": 8000
+			},
+			{
+				"capacity": 160000,
+				"cost": 16000
+			},
+			{
+				"capacity": 320000,
+				"cost": 32000
+			},
+			{
+				"capacity": 640000,
+				"cost": 40000
+			},
+			{
+				"capacity": 1280000,
+				"cost": 50000
+			}
 		]
 	},
-	"safezones" : {
-		"levels" : [
-			{ "capacity" : 35,  "cost" : 1500 },
-			{ "capacity" : 40,  "cost" : 2700 },
-			{ "capacity" : 45,  "cost" : 4800 },
-			{ "capacity" : 50,  "cost" : 8750 },
-			{ "capacity" : 55,  "cost" : 15000 },
-			{ "capacity" : 60,  "cost" : 25000 },
-			{ "capacity" : 65,  "cost" : 50000 },
-			{ "capacity" : 70,  "cost" : 75000 },
-			{ "capacity" : 75,  "cost" : 100000 },
-			{ "capacity" : 80,  "cost" : 200000 },
-			{ "capacity" : 85,  "cost" : 300000 },
-			{ "capacity" : 90,  "cost" : 400000 },
-			{ "capacity" : 95,  "cost" : 500000 },
-			{ "capacity" : 100, "cost" : 1000000 },
+	"health": {
+		"levels": [
+			{
+				"cost": 1000,
+				"maxhealth": 110,
+				"regenmax": 40,
+				"regenrate": 1.5
+			},
+			{
+				"cost": 5000,
+				"maxhealth": 125,
+				"regenmax": 50,
+				"regenrate": 2.0
+			},
+			{
+				"cost": 7500,
+				"maxhealth": 140,
+				"regenmax": 60,
+				"regenrate": 2.5
+			},
+			{
+				"cost": 10000,
+				"maxhealth": 155,
+				"regenmax": 70,
+				"regenrate": 3.0
+			},
+			{
+				"cost": 15000,
+				"maxhealth": 170,
+				"regenmax": 80,
+				"regenrate": 3.5
+			},
+			{
+				"cost": 25000,
+				"maxhealth": 185,
+				"regenmax": 90,
+				"regenrate": 4.0
+			},
+			{
+				"cost": 50000,
+				"maxhealth": 200,
+				"regenmax": 100,
+				"regenrate": 5.0
+			}
 		]
 	},
-	"buildersize" : {
-		"levels" : [
-			{ "capacity" : 2500,  "cost" : 2500 },
-			{ "capacity" : 5000,  "cost" : 4000 },
-			{ "capacity" : 10000,  "cost" : 6000 },
-			{ "capacity" : 20000,  "cost" : 10000 },
-			{ "capacity" : 40000,  "cost" : 15000 },
-			{ "capacity" : 80000,  "cost" : 25000 },
-			{ "capacity" : 160000,  "cost" : 50000 },
-			{ "capacity" : 320000,  "cost" : 100000 },
-			{ "capacity" : 640000,  "cost" : 150000 },
-			{ "capacity" : 1280000,  "cost" : 250000 }
-		]
-	},
-	"diggersize" : {
-		"levels" : [
-			{ "capacity" : 2500,  "cost" : 2500 },
-			{ "capacity" : 5000,  "cost" : 4000 },
-			{ "capacity" : 10000,  "cost" : 6000 },
-			{ "capacity" : 20000,  "cost" : 10000 },
-			{ "capacity" : 40000,  "cost" : 15000 },
-			{ "capacity" : 80000,  "cost" : 25000 },
-			{ "capacity" : 160000,  "cost" : 50000 },
-			{ "capacity" : 320000,  "cost" : 100000 },
-			{ "capacity" : 640000,  "cost" : 150000 },
-			{ "capacity" : 1280000,  "cost" : 250000 }
-		]
-	},
-	"pointmultiplier" : {
-		"levels" : [
-			{ "bonuspercentage" : 10, "cost" : 1500 },
-			{ "bonuspercentage" : 20, "cost" : 2500 },
-			{ "bonuspercentage" : 30, "cost" : 5000 },
-			{ "bonuspercentage" : 40, "cost" : 10000 },
-			{ "bonuspercentage" : 50, "cost" : 15000 },
-			{ "bonuspercentage" : 60, "cost" : 25000 },
-			{ "bonuspercentage" : 70, "cost" : 40000 },
-			{ "bonuspercentage" : 80, "cost" : 65000 },
-			{ "bonuspercentage" : 90, "cost" : 85000 },
-			{ "bonuspercentage" : 100, "cost" : 100000 },
-			{ "bonuspercentage" : 110, "cost" : 120000 },
-			{ "bonuspercentage" : 120, "cost" : 140000 },
-			{ "bonuspercentage" : 130, "cost" : 160000 },
-			{ "bonuspercentage" : 140, "cost" : 180000 },
-			{ "bonuspercentage" : 150, "cost" : 200000 },
-			{ "bonuspercentage" : 160, "cost" : 220000 },
-			{ "bonuspercentage" : 170, "cost" : 250000 },
-			{ "bonuspercentage" : 180, "cost" : 300000 },
-			{ "bonuspercentage" : 190, "cost" : 400000 },
-			{ "bonuspercentage" : 200, "cost" : 500000 }
+	"safezones": {
+		"levels": [
+			{
+				"capacity": 35,
+				"cost": 500
+			},
+			{
+				"capacity": 40,
+				"cost": 1500
+			},
+			{
+				"capacity": 45,
+				"cost": 5000
+			},
+			{
+				"capacity": 50,
+				"cost": 7500
+			},
+			{
+				"capacity": 55,
+				"cost": 10000
+			},
+			{
+				"capacity": 60,
+				"cost": 15000
+			},
+			{
+				"capacity": 65,
+				"cost": 20000
+			},
+			{
+				"capacity": 70,
+				"cost": 25000
+			},
+			{
+				"capacity": 75,
+				"cost": 30000
+			},
+			{
+				"capacity": 80,
+				"cost": 35000
+			},
+			{
+				"capacity": 85,
+				"cost": 40000
+			},
+			{
+				"capacity": 90,
+				"cost": 50000
+			},
+			{
+				"capacity": 95,
+				"cost": 75000
+			},
+			{
+				"capacity": 100,
+				"cost": 100000
+			}
 		]
 	}
 }

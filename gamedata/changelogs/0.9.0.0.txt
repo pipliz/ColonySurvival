@@ -1,0 +1,44 @@
+0.9.0
+
+TODO: hasn't been updated for months
+
+- Changed crafting jobs to support longer crafting times (support going to bed halfway and such)
+- Changed crafting jobs to support per-recipe crafting times, instead of per-job-type times
+- Changed crafting 'limit groups' to be a fixed 1-5 choice, and they're per job type now instead of 'global'
+- Added "tools" system to crafting jobs; consuming items to speed up or do work
+- Workers visit a "toolshop" to restock on tools when running out
+- Reworked/redid/rebalanced most content in the game
+- Many new models, icons, textures and such
+- Added a "day X" time tracker to each colony
+- Added a "point shop" where you can trade produced items for points and buy others
+- Scientist is gone, science just requires the conditions to be completable (items in stockpile, points available) and then pushing 'complete' which consumes the items
+- Difficulty level now scales with science unlocked and placement of some block types as well as colonist count
+- Removed point gain from 'luxury item distribution' and meal distribution
+- The "NPC Shop" meal distribution block isn't a job anymore
+- Monsters now keep existing when reloading/restarting the game
+- Added "traps", blocks that function as a limited guard and require reloading during the day from a nearby worker
+- Added support for traps/guards to slow monsters down after hitting them
+- Added statistics for production/consumption
+- Accessing the statistics now requires clicking on a physical block, removed the tab from the UI
+- Added "outposts"; extra colonies that share stockpile/science/monsterthreat, but have separate jobs/beds/colonists/crates/safe-zone and such
+- Removed "far away biome content" (tropics and such)
+- Removed the menu allowing foods to be removed from distribution
+- Changed most of the jobs that had the "normally invisible square" job block to have an actual mesh as a job block (moving those out of the command tool)
+- Added "elevators", a way to move up/down vertically more easily. Not used by colonists
+- Changed gliders to not be powered anymore; if you want to extend flight range, build outposts with elevators
+- Added people-mover-rails, a way to move horizontally more easily, at the cost of requiring a fixed line of rails
+- Stopped NPCs from walking over a variety of meshed blocks that are not really walkable
+- Merged singleplayer/co-op menu's into one new world / load world menu
+- Added a "continue" button to the main menu, it loads the same world last used
+- Added a somewhat lower quality torch rendering setting; halfs torch performance impact
+- Added a toggle to lock difficulty on world creation
+- Added placable lockboxes to replace the point capacity upgrade
+
+DONE INTERNAL
+- Replaced save format with a SQLite database (scales better, fixes some edge cases, helps prepare for cloud saving)
+- Redid multithreading (better scaling with more colonists / CPU cores; much safer/simpler code than before; less RAM use than before)
+- Updated Unity from 2019 LTS to 2021 LTS
+- Adjusted some network packet formats to reduce bandwidth requirements
+- Moved a bunch of hardcoded / separate file configs into the main jsons via "attachBehaviour" nodes on types
+- Redid NPC rendering, to allow for more animations & different NPC types more easily
+- A massive heap of misc things supporting visible things above
