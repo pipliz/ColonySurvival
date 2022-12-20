@@ -1,5 +1,5 @@
 {
-	"coverage": 49.0,
+	"coverage": 53.0,
 	"hints": {
 		"0": "Pro většinu farem platí velikost = úroda. Sběrači bobulí jsou vyjímkou.",
 		"1": "Víc a víc odlišných monster se bude objevovat s tím, jak si budete najímat kolonisty.",
@@ -78,21 +78,21 @@
 			"inventoryheader": "Správa kolonie",
 			"manageheader": "Spravovat vlastnictví",
 			"managejobs": {
-				"column_enabled" : "Povoleno",
-				"column_jobtype" : "Typ práce",
-				"column_total" : "Dohromady",
-				"column_unfilled" : "Nevyplněno",
-				"disable_all" : "Zakázat všechny",
-				"enable_all" : "Povolit všechny",
-				"header_text" : "<b>{0}</b> Pracantů je bez práce. Povolená práce: <b>{1} / {2}</b>. Zaplněné práce: <b>{3} / {1}</b>",
-				"mainheader" : "Zpravovat práce",
-				"refresh" : "Obnovit",
-				"set_balanced" : "Nastavit vyvážený"
+				"column_enabled": "Povoleno",
+				"column_jobtype": "Typ práce",
+				"column_total": "Dohromady",
+				"column_unfilled": "Nevyplněno",
+				"disable_all": "Zakázat všechny",
+				"enable_all": "Povolit všechny",
+				"header_text": "<b>{0}</b> Pracantů je bez práce. Povolená práce: <b>{1} / {2}</b>. Zaplněné práce: <b>{3} / {1}</b>",
+				"mainheader": "Zpravovat práce",
+				"refresh": "Obnovit",
+				"set_balanced": "Nastavit vyvážený"
 			},
 			"manageowners": "Spravovat vlastníky",
 			"nameedit": "Upravit jméno kolonie:",
 			"outpost": {
-			"npcstarved" : "s prací {0} v kolonii {1} vyhladovělo k smrti",
+				"create": "_MISSING_Create Outpost",
 				"createdescription": "_MISSING_Starting an outpost consumes an Outpost Banner from your inventory (or stockpile).",
 				"parentcolony": "_MISSING_Parent Colony:",
 				"popupheader": "_MISSING_Outpost Creation",
@@ -111,7 +111,7 @@
 				"role": "Role",
 				"settoleader": "Povýšit na vůdce"
 			},
-			"recruitauto" : "Automatické naverbování při založení nové práce",
+			"recruit": "_MISSING_Recruit",
 			"recruitauto": "Automatická rekrutace při založení nové práce",
 			"recruitfailedbeds": "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
 			"recruitfailedcap": "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
@@ -120,9 +120,9 @@
 			"recruitmentbutton": "Rekrutovat kolonistu",
 			"recruitmentheader": "Rekrutace",
 			"recruittext3": "Kolonisté vyžadují 2000 kalorií na den a volnou postel.",
-			"recruittext4-2" : "Naverbovat dalšího kolonistu stojí {0} jídla.",
-			"recruittext5-2" : "Je {0} nezaplněných postelí a můžeš naverbovat ještě {1} než se dostaneš na maximální populaci.",
-			"recruittext6" : "Naverbování dalších {0} kolonistů je zdarma.",
+			"recruittext4-2": "Naverbovat dalšího kolonistu stojí {0} jídla.",
+			"recruittext5-2": "Je {0} nezaplněných postelí a můžeš naverbovat ještě {1} než se dostaneš na maximální populaci.",
+			"recruittext6": "Naverbování dalších {0} kolonistů je zdarma.",
 			"recruittofillbeds": "Najmout do zaplnění všech postelí",
 			"recruittofilljobs": "Najmout do zaplnění všech prací",
 			"resetcolonypriority2": "Obnovit aktivní kolonii",
@@ -154,7 +154,6 @@
 				"popupheader": "Vytváření kolonie",
 				"usescienceagreement": "Přesunout výzkum"
 			},
-			"startrecruitment" : "Naverbování",
 			"startsettings": "Nastavení kolonie",
 			"switchcolony2": "Změnit aktivní kolonii na:",
 			"trading": {
@@ -259,9 +258,9 @@
 			"ammocount": "Střelivo:",
 			"bedcount": "Postele:",
 			"colonistcount": "Kolonisté:",
-			"colonypoints" : "Body:",
+			"colonypoints": "Body:",
 			"laborercount": "Nezaměstnaní:",
-			"mealstorage" : "Jídlo:"
+			"mealstorage": "Jídlo:",
 			"threatlevel": "_MISSING_Threat Level:",
 			"time_day": "_MISSING_Day"
 		},
@@ -275,7 +274,7 @@
 			"enabled": "Povoleno",
 			"high": "Vysoký",
 			"inputplaceholder": "Zadejte text...",
-			"inputplaceholder_search" : "Zadejte text k vyhledání...",
+			"inputplaceholder_search": "Zadejte text k vyhledání...",
 			"low": "Nízký",
 			"next": "Další",
 			"no": "Ne",
@@ -298,7 +297,7 @@
 			"caloriesstarvation": "Hladovění",
 			"colonistcount": "Zalidnění",
 			"disabledeffect": "Systém spokojenosti nebyl zapnut.",
-			"recruitmentcost" : "Cena naverbování: {0:P0} normální ceny",
+			"recruitmentcost": "Cena naverbování: {0:P0} normální ceny",
 			"sciencespeed": "Rychlost výkumu: {0:P0} normální rychlosti",
 			"totalhappiness": "Celková spokojenost: {0}"
 		},
@@ -363,7 +362,7 @@
 				"berryfarmer": "Farmář bobulí",
 				"blastfurnace": "_MISSING_Blast Furnace Operator",
 				"bloomeryjob": "Železář",
-				"builder" : "Stavitel",
+				"builder": "Stavitel",
 				"cabbagefarmer": "_MISSING_Cabbage Farmer",
 				"chestmaker": "_MISSING_Chestmaker",
 				"chickenfarmer": "_MISSING_Chicken Farmer",
@@ -372,8 +371,9 @@
 				"cook": "Kuchař",
 				"coppersmith": "_MISSING_Copper Smith",
 				"cottonengine": "_MISSING_Cotton Engine Operator",
-				"digger" : "Kopač",
-				"diggerspecial" : "Speciální kopač",
+				"cottonfarmer": "_MISSING_Cotton Farmer",
+				"digger": "Kopač",
+				"diggerspecial": "Speciální kopač",
 				"dyer": "_MISSING_Dyer",
 				"engineer": "_MISSING_Engineer",
 				"firepit": "_MISSING_Primitive Cook",
@@ -769,34 +769,23 @@
 			"inventory": {
 				"availableamount2": "Na skladě",
 				"craftingstockpile": "Vyrábění a zásoby",
-				"filter-calories" : "Jídla",
 				"happinessvalue2": "Hodota spokojenosti",
 				"happy": {
 					"header": "Spokojenost"
 				},
-				"hover-colonypointdays" : "Dny používání za položku",
-				"hover-colonypointsmeal" : "Body kolonie po snězení",
-				"hover-colonypointsperday" : "Body kolonie za den používání",
-				"hover-colonypointstotal" : "Body dohromady za položku",
 				"madeintooltip": "Vyrábí se v:",
 				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
 				"noactivecolony": "Nemáte žádnou aktivní kolonii!",
-					"countcurrent" : "Zásoba",
-					"item" : "položka",
-					"itemsperday" : "Maximum položek za den",
-					"points24h" : "Včerejší body",
-					"pointsmax" : "Maximum bodů za den",
-					"toggle" : "Povoleno"
 				"science": {
 					"available": "Dostupné",
 					"completed": "Dokončené",
 					"completeunlock": "Dokončit",
 					"conditioncolonistcount": "Kolonisté",
 					"conditioncolonistcountdescription": "Požadovaný počet kolonistů",
-					"conditionpointreq" : "Body kolonie",
-					"conditionpointreqdescription1" : "Požadavek na body kolonie",
-					"conditionpointreqdescription2" : "Požadováné: {0}",
-					"conditionpointreqdescription3" : "Dostupné: {0}",
+					"conditionpointreq": "Body kolonie",
+					"conditionpointreqdescription1": "Požadavek na body kolonie",
+					"conditionpointreqdescription2": "Požadováné: {0}",
+					"conditionpointreqdescription3": "Dostupné: {0}",
 					"conditionscientistrequires": "Požaduje {0}",
 					"dependencies": "Potřebné technologie:",
 					"followups": "_MISSING_Followup technologies:",
@@ -813,9 +802,9 @@
 				"stats": {
 					"auto-scale": "Automatická velikost",
 					"entry-beds": "Postelí",
-					"entry-meals" : "Všechna jídla",
+					"entry-meals": "Všechna jídla",
 					"entry-npccount": "Kolonistů",
-					"entry-points" : "Body kolonie",
+					"entry-points": "Body kolonie",
 					"entry-unemployed": "Nezaměstaných",
 					"hide-all": "Skrýt vše",
 					"only-changed": "Ukázat pouze změněné",
@@ -829,7 +818,7 @@
 					"type-colony": "Kolonie",
 					"type-consumption": "_MISSING_Consumption",
 					"type-idle-jobs": "Doba nečinnosti",
-					"type-itempoints" : "Body položek",
+					"type-itempoints": "Body položek",
 					"type-production": "_MISSING_Production",
 					"type-stockpile": "Sklad",
 					"type-tooluse": "_MISSING_Tool Use",
@@ -845,20 +834,16 @@
 					"nothing": "Nic nenalezeno"
 				},
 				"upgrades": {
-					"foods_tab" : "Jídla",
-					"header" : "Body kolonie",
-					"luxuries_tab" : "Speciality",
-					"preamble1" : "Body kolonie se získávají distribucí jídla a specialit mezi kolonisty.",
-					"preamble2" : "<i>Aktuální body / Kapacita</i>",
-					"preamble3" : "<i>Body získaná za posledních 24h</i>",
+					"header": "Body kolonie",
+					"preamble2": "<i>Aktuální body / Kapacita</i>",
 					"table": {
-						"cost" : "cena",
-						"current" : "Aktuální",
-						"levels" : "Levely",
-						"name" : "Název vylepšení",
-						"next" : "Další"
+						"cost": "cena",
+						"current": "Aktuální",
+						"levels": "Levely",
+						"name": "Název vylepšení",
+						"next": "Další"
 					},
-					"upgradebutton" : "Vylepšit"
+					"upgradebutton": "Vylepšit"
 				}
 			},
 			"itemselector": {
@@ -868,7 +853,6 @@
 			"limits": {
 				"allreset": "Obnovit vše",
 				"allzero": "Obnovit vše na nulu",
-				"confirmdelete" : "Vážně smazat?",
 				"description": "Kolonisti budou pracovat dokud nebude dosaženo daného počtu v zásobách.",
 				"group1": "_MISSING_Select Limits Group",
 				"group2": "_MISSING_Select one of multiple groups for this specific worker. Adjusting limits will adjust them for all workers of this type with the same group.",
@@ -876,7 +860,6 @@
 					"a": "Výrobní priorita",
 					"b": "Věci s prioritou +++ budou vyrobeny první. Věci s prioritou + budou vyrobeny poslední."
 				},
-					"berryfarmer" : "Limity sbírání bobulí",
 				"waitingdata": "Čekání na data...",
 				"wrongcolony": "Zvolená pracovní pozice je součástí jiné kolonie"
 			},
@@ -900,7 +883,6 @@
 			"quickstart": {
 				"closetoggle": "Nezobrazovat znova",
 				"next": "Další",
-				"openmanual": "Otevřít manuál (PDF)",
 				"previous": "Předchozí"
 			},
 			"specialblockremoval": {
@@ -1026,7 +1008,7 @@
 				"header": "_MISSING_'Harvester' and 'Source' Blocks",
 				"text1": "_MISSING_For some jobs, you have to place both the 'harvester' and the 'source' block. Most of the time each harvester block needs about 10 source blocks.",
 				"text2": "_MISSING_A harvester block like the Scribe's Desk recruits a colonist to work there. That colonist will try to visit a nearby source block, in this case a filled Scroll Shelf, before crafting.",
-				"text3": "_MISSING_Harvesters empty their source blocks, but source blocks automatically regenerate over time. The 1 to 10 ratio ensures a sustainable long term balance"
+				"text3": "_MISSING_Harvesters empty their source blocks, but source blocks automatically regenerate over time. The 1 to 10 ratio ensures a sustainable long term balance."
 			}
 		},
 		"settingsmenu": {
@@ -1057,7 +1039,7 @@
 					"ratio400": "400%",
 					"ratio50": "50%",
 					"ratio75": "75%",
-					"showsensitivedatamode" : "Ukázat citlivá data",
+					"showsensitivedatamode": "Ukázat citlivá data",
 					"tab": "Hlavní nastavení",
 					"uiscalingratio": "Velikost UI"
 				},
@@ -1080,7 +1062,7 @@
 			},
 			"language": "Jazyk",
 			"languagemenu": {
-				"coverage" : "Tato lokalizace je hotová z {0:F1}%. Abyste hru pomohli lokalizovat, naštivte fóra nebo stránku na github.com. Zdravím zvlášť Baxe, Toba a ostatní! Překlad pro vás připravili Jerabinacz ~90% - základ hry, Toboxu ~4% - korekce a LUKISO2 ~6% - budoucí aktulizace.",
+				"coverage": "Tato lokalizace je hotová z {0:F1}%. Abyste hru pomohli lokalizovat, naštivte fóra nebo stránku na github.com. Zdravím zvlášť Baxe, Toba a ostatní! Překlad pro vás připravili Jerabinacz ~90% - základ hry, Toboxu ~4% - korekce a LUKISO2 ~6% - budoucí aktulizace.",
 				"full": "Jazykové nastavení",
 				"language": "Jazyk",
 				"wiptext": "Práce probíhají. Nejedná se o překlad kompletní hry, a některé překlady mohou obsahovat více nedodělků než jiné."
@@ -1104,7 +1086,7 @@
 				"depthoffield": "Hloubka pole",
 				"drawdistance": "Vzdálenost vykreslení (*)",
 				"eyeadaptation": "Oční adaptace",
-				"fieldofview" : "Rozhled",
+				"fieldofview": "Rozhled",
 				"full": "Nastavení grafiky",
 				"fullscreen": "Celá obrazovka",
 				"lightscattering": "Rozptyl světla",
@@ -1225,24 +1207,24 @@
 		},
 		"upgrades": {
 			"builder": {
-				"level" : "{0} Bloků",
-				"main" : "Velikost stavby stavitele"
+				"level": "{0} Bloků",
+				"main": "Velikost stavby stavitele"
 			},
 			"colonistcapacity": {
-				"level" : "{0} Kolonistů",
-				"main" : "Kapacita kolonistů"
+				"level": "{0} Kolonistů",
+				"main": "Kapacita kolonistů"
 			},
 			"digger": {
-				"level" : "´{0} Bloků",
-				"main" : "Velikost kopání kopáče"
+				"level": "´{0} Bloků",
+				"main": "Velikost kopání kopáče"
 			},
 			"health": {
-				"level" : "Level {0} Zdraví",
-				"main" : "Zdraví"
+				"level": "Level {0} Zdraví",
+				"main": "Zdraví"
 			},
 			"safezone": {
-				"level" : "{0} Bloků",
-				"main" : "Bezpečná zóna vlajky"
+				"level": "{0} Bloků",
+				"main": "Bezpečná zóna vlajky"
 			}
 		}
 	},
@@ -1258,7 +1240,7 @@
 		"bed": "Postel",
 		"berry": "Bobule",
 		"berrybush": "Semínka bobulí",
-		"berrymeal" : "Bobulí jídlo",
+		"berrymeal": "Bobulí jídlo",
 		"blastfurnace": "_MISSING_Blast Furnace",
 		"bloomery": "Nízká pec",
 		"bookcase": "_MISSING_Bookcase (Empty)",
@@ -1270,7 +1252,7 @@
 		"brassingot": "_MISSING_Brass Ingot",
 		"brassparts": "_MISSING_Brass Precision Parts",
 		"bread": "Chleba",
-		"breadmeal" : "Clebé jídlo",
+		"breadmeal": "Clebé jídlo",
 		"bricks": "Cihly",
 		"bricksblack": "Černé cihly",
 		"bricksdarkred": "Temnočervené cihly",
@@ -1542,17 +1524,17 @@
 		"alarmbell": "_MISSING_Rings an alarm when it detects monsters walking over it",
 		"alkanet": "V reálném životě zdroj červeného barviva",
 		"astrolabe": "_MISSING_Points the way to other biomes",
-		"berry" : "Jedna bobule. Proč se vůbec namáhat ji jíst!",
+		"berry": "Jedna bobule. Proč se vůbec namáhat ji jíst!",
 		"berrybush": "Kolonisté tohle mohou využít pro snadné získání jídla",
-		"berrymeal" : "Kupa bobulí připravená do dobrého jídla",
+		"berrymeal": "Kupa bobulí připravená do dobrého jídla",
 		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
 		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
 		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
 		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
 		"bow": "Strážci ho potřebují!",
-		"bread" : "Suchý kus chleba s ničím. No fuj",
-		"breadmeal" : "Chleba pomazaný bobulovým džemem",
-		"bricks" : "Je to holandská hra koneckonců...",
+		"bread": "Suchý kus chleba s ničím. No fuj",
+		"breadmeal": "Chleba pomazaný bobulovým džemem",
+		"bricks": "Je to holandská hra koneckonců...",
 		"bronzeingot": "Bronz je stronk",
 		"charcoal": "Absorbuje kyanid",
 		"cherryblossom": "Nejrůžovější věc ve hře",
@@ -1630,7 +1612,7 @@
 		"wisteriaplant": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
 		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
 		"wolfsbane": "Předchází útoku vlků na tvoji kolonii",
-		"workbench" : "Naverbuj řemeslníka. Bude za tebe vyrábět!",
+		"writerdesk": "_MISSING_Highly ergonomic",
 		"zinc": "_MISSING_Can be found directly below mammoth trees."
 	}
 }
