@@ -1,12 +1,19 @@
 [
 	{
-		"defaultLimit" : 30,
-		"name" : "pipliz.watergatherer.waterbucket",
-		"requires" : [
-			{"type":"bucketempty"}
+		"cooldown": 6.0,
+		"defaultLimit": 20,
+		"name": "pipliz.watergatherer.potwater",
+		"requires": [
+			{
+				"type": "potempty"
+			}
 		],
-		"results" : [
-			{"type":"bucketwater"}
-		]
+		"requiresScience": "pipliz.pottery",
+		"results": [
+			{
+				"type": "potwater"
+			}
+		],
+		"sortWeight": 26
 	}
 ]

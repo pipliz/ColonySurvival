@@ -1,34 +1,115 @@
 [
 	{
-		"defaultLimit" : 10,
-		"name" : "writer.paperempty",
-		"requires" : [
-			{"amount":10,"type":"papyrus"}
+		"cooldown": 180.0,
+		"defaultLimit": 50,
+		"name": "pipliz.writer.scrollofknowledge",
+		"requires": [
+			{
+				"type": "parchment"
+			}
 		],
-		"results" : [
-			{"amount":5,"type":"paperempty"}
-		]
+		"requiresScience": "pipliz.writer",
+		"results": [
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"sortWeight": 1147
 	},
 	{
-		"defaultLimit" : 30,
-		"name" : "writer.papertext",
-		"requires" : [
-			{"amount":2,"type":"paperempty"},
-			{"type":"ink"}
+		"cooldown": 100.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.writer.manuscript",
+		"requires": [
+			{
+				"amount": 15,
+				"type": "scientificnote"
+			},
+			{
+				"amount": 5,
+				"type": "tabletwisdom"
+			},
+			{
+				"type": "scrollofknowledge"
+			}
 		],
-		"results" : [
-			{"amount":2,"type":"papertext"}
-		]
+		"requiresScience": "pipliz.printingpress",
+		"results": [
+			{
+				"type": "manuscript"
+			}
+		],
+		"sortWeight": 256662
 	},
 	{
-		"defaultLimit" : 25,
-		"name" : "writer.book",
-		"requires" : [
-			{"amount":40,"type":"papertext"},
-			{"amount":4,"type":"papyrus"}
+		"cooldown": 120.0,
+		"defaultLimit": 4,
+		"name": "pipliz.writer.scrollshelf",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "planks"
+			},
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			}
 		],
-		"results" : [
-			{"type":"book"}
-		]
+		"requiresScience": "pipliz.scribe",
+		"results": [
+			{
+				"type": "scrollshelffilled"
+			}
+		],
+		"sortWeight": 3002
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 3,
+		"name": "pipliz.writer.bookofknowledge",
+		"requires": [
+			{
+				"amount": 12,
+				"type": "scientificnote"
+			}
+		],
+		"requiresScience": "pipliz.researcher",
+		"results": [
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"sortWeight": 85348
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 4,
+		"name": "pipliz.writer.bookcase",
+		"requires": [
+			{
+				"amount": 5,
+				"type": "planks"
+			},
+			{
+				"amount": 2,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 12,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 40,
+				"type": "paper"
+			}
+		],
+		"requiresScience": "pipliz.researcher",
+		"results": [
+			{
+				"type": "bookcasefilled"
+			}
+		],
+		"sortWeight": 85348
 	}
 ]

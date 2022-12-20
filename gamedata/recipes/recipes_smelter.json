@@ -1,0 +1,175 @@
+[
+	{
+		"cooldown": 60.0,
+		"name": "pipliz.smelter.copperingot",
+		"requires": [
+			{
+				"type": "copper"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"type": "copperingot"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 100.0,
+		"name": "pipliz.smelter.goldingot",
+		"requires": [
+			{
+				"type": "goldore"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.trading",
+		"results": [
+			{
+				"type": "goldingot"
+			}
+		],
+		"sortWeight": 173
+	},
+	{
+		"cooldown": 400.0,
+		"name": "pipliz.smelter.bronzeingot",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "copperingot"
+			},
+			{
+				"type": "tin"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.bronze",
+		"results": [
+			{
+				"type": "bronzeingot"
+			}
+		],
+		"sortWeight": 9339
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 25,
+		"name": "pipliz.smelter.brassingot",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "copper"
+			},
+			{
+				"type": "zinc"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.brass",
+		"results": [
+			{
+				"type": "brassingot"
+			}
+		],
+		"sortWeight": 11074
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 25,
+		"name": "pipliz.smelter.leadingot",
+		"requires": [
+			{
+				"type": "leadore"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.steel",
+		"results": [
+			{
+				"type": "leadingot"
+			}
+		],
+		"sortWeight": 150963
+	},
+	{
+		"cooldown": 80.0,
+		"defaultLimit": 20,
+		"defaultPriority": -100,
+		"name": "pipliz.smelter.brickslight",
+		"requires": [
+			{
+				"amount": 4,
+				"type": "clay"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.bricks",
+		"results": [
+			{
+				"amount": 4,
+				"type": "brickslight"
+			}
+		],
+		"sortWeight": 12509
+	},
+	{
+		"cooldown": 80.0,
+		"defaultLimit": 20,
+		"defaultPriority": -100,
+		"name": "pipliz.smelter.bricks",
+		"requires": [
+			{
+				"amount": 4,
+				"type": "clay"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.bricks",
+		"results": [
+			{
+				"amount": 4,
+				"type": "bricks"
+			}
+		],
+		"sortWeight": 12509
+	},
+	{
+		"cooldown": 32.0,
+		"defaultLimit": 25,
+		"defaultPriority": -100,
+		"name": "pipliz.smelter.mudbricks",
+		"requires": [
+			{
+				"type": "clay"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.mudbricks",
+		"results": [
+			{
+				"amount": 4,
+				"type": "mudbricks"
+			}
+		],
+		"sortWeight": 224
+	}
+]

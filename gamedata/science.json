@@ -1,1029 +1,1664 @@
 [
+	/* supported fields for AddScience / AddOrOverrideScience entries
+		requireScienceBiome -> if set, this will autocomplete the science if the colony has a banner in said sciencebiome, bypassing other requirements
+		icon -> icon path relative to this json file
+		colonistCount -> threshold required to be able to complete
+		colonyPointRequirement -> quantity required that'll be consumed on complete
+		itemRequirements -> array of amount/type pairs of items that'll be consumed when completing the science
+		dependencies -> array of other science keys which are required to be completed before this one can be completed
+		unlocksRecipes -> array of recipe keys which will be unlocked when this research is completed. Recipes may require multiple researches to show up.
+		unlocksRecipeGroups -> same as unlocksRecipes, but counts *all* recipes associated with the NPCTypes put in this array
+		unlocksClientHints -> array of "hints", which will be visualized on the client but otherwise do nothing. Presumably some code is added to run on completion that does do something.
+			Example hint format on next lines
+			{
+				"data": "pipliz.diggerspecial",
+				"type": "NPCType"
+			}
+		threatIncrease -> how much the monster threat level increases upon completing this science
+		for AddScienceUnlocks entries, it only supports unlocksRecipes and unlocksRecipeGroups
+		*/
 	{
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 0,
-		"key" : "biome.oldworld",
-		"requiredScienceBiome" : "sciencebiome.oldworld"
-	},
-	{
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 0,
-		"key" : "biome.newworld",
-		"requiredScienceBiome" : "sciencebiome.newworld"
-	},
-	{
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 0,
-		"key" : "biome.fareast",
-		"requiredScienceBiome" : "sciencebiome.fareast"
-	},
-	{
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 0,
-		"key" : "biome.arctic",
-		"requiredScienceBiome" : "sciencebiome.arctic"
-	},
-	{
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 0,
-		"key" : "biome.tropics",
-		"requiredScienceBiome" : "sciencebiome.tropics"
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.glider"
+		"icon": "./textures/icons/wheat.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bed"
+			},
+			{
+				"amount": 50,
+				"type": "planks"
+			},
+			{
+				"amount": 5,
+				"type": "stonetools"
+			}
 		],
-		"icon" : "./textures/icons/commandtool.png",
-		"iterationCount" : 1,
-		"iterationRequirements" : [
-			{"type":"glider"}
-		],
-		"key" : "pipliz.baseresearch.colonykit",
-		"unlocksRecipes" : [
-			"pipliz.player.colonykit"
+		"key": "pipliz.farming",
+		"sortWeight": 493,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.wheatfarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.cook",
-			"pipliz.baseresearch.beekeeper"
+		"icon": "./textures/icons/potempty.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "clay"
+			}
 		],
-		"icon" : "./textures/icons/trader.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"type":"stove"}
+		"key": "pipliz.pottery",
+		"sortWeight": 26
+	},
+	{
+		"dependencies": [
+			"pipliz.scribe"
 		],
-		"key" : "pipliz.baseresearch.trader",
-		"unlocksRecipes" : [
-			"pipliz.player.trader",
-			"pipliz.crafter.trader"
+		"icon": "./textures/icons/jewelry.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "goldingot"
+			},
+			{
+				"amount": 15,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.jewelry",
+		"sortWeight": 4679
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.researcher"
+		],
+		"icon": "./textures/icons/book.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.recursiveknowledge",
+		"sortWeight": 106541
+	},
+	{
+		"dependencies": [
+			"pipliz.pottery",
+			"pipliz.farming",
+			"pipliz.trading"
+		],
+		"icon": "./textures/icons/firepit.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "potempty"
+			}
+		],
+		"key": "pipliz.porridge",
+		"sortWeight": 438,
+		"threatIncrease": 15
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.outposts",
+			"pipliz.astrolabe"
+		],
+		"icon": "./textures/icons/compass.png",
+		"itemRequirements": [
+			{
+				"amount": 75,
+				"type": "tabletwisdom"
+			},
+			{
+				"type": "astrolabe"
+			}
+		],
+		"key": "pipliz.compass",
+		"sortWeight": 66715
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "./textures/icons/astrolabe.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "goldingot"
+			}
+		],
+		"key": "pipliz.astrolabe",
+		"sortWeight": 11506
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.engineer",
+			"pipliz.brass"
+		],
+		"icon": "./textures/icons/alarmbell.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.alarmbell",
+		"sortWeight": 16882
+	},
+	{
+		"colonyPointRequirement": 50,
+		"dependencies": [
+			"pipliz.porridge",
+			"pipliz.anvil"
+		],
+		"icon": "./textures/icons/sanctifiertable.png",
+		"itemRequirements": [
+			{
+				"type": "earthenware"
+			}
+		],
+		"key": "pipliz.failsafe",
+		"sortWeight": 2005,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.beekeeper",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.wheatfarming"
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.failsafe"
 		],
-		"icon" : "./textures/icons/foofoo.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"cassava"},
-			{"type":"banana"},
-			{"type":"bucketwater"}
+		"icon": "./textures/icons/sanctifiedhouse.png",
+		"itemRequirements": [
+			{
+				"type": "bronzeingot"
+			},
+			{
+				"type": "goldingot"
+			}
 		],
-		"key" : "pipliz.baseresearch.foofoo",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksRecipes" : [
-			"pipliz.grinder.foofoo"
+		"key": "pipliz.sacredhouse",
+		"sortWeight": 29517
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bread"
+		],
+		"icon": "./textures/icons/chickenmeat.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.chickenmeal",
+		"sortWeight": 39468,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.chickenfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.barleyfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.cabbagefarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.foofoo"
+		"dependencies": [
+			"pipliz.pottery",
+			"pipliz.trading"
 		],
-		"icon" : "./textures/icons/papyrus.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"foofoo"}
+		"icon": "./textures/icons/waterpump.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			}
 		],
-		"key" : "pipliz.baseresearch.papyrus",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksClientHints" : [
-			{"data":"pipliz.papyrusfarmer","type":"NPCType"}
-		]
+		"key": "pipliz.waterpump",
+		"sortWeight": 309
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.diamondprocessing"
-		],
-		"icon" : "./textures/icons/cacao.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"wintercoat"},
-			{"type":"tomato"},
-			{"type":"potato"}
-		],
-		"key" : "pipliz.baseresearch.cacao",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksClientHints" : [
-			{"data":"pipliz.cacaofarmer","type":"NPCType"}
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.diamondprocessing"
-		],
-		"icon" : "./textures/icons/vanilla.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"wintercoat"},
-			{"type":"tomato"},
-			{"type":"potato"}
-		],
-		"key" : "pipliz.baseresearch.vanilla",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksClientHints" : [
-			{"data":"pipliz.vanillafarmer","type":"NPCType"}
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.vanilla"
-		],
-		"icon" : "./textures/icons/cookies.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"flour"},
-			{"type":"sugar"},
-			{"type":"vanilla"}
-		],
-		"key" : "pipliz.baseresearch.cookies",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksRecipes" : [
-			"cook.cookies"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.cacao"
-		],
-		"icon" : "./textures/icons/chocolate.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"cacao"},
-			{"type":"sugar"},
-			{"type":"vanilla"}
-		],
-		"key" : "pipliz.baseresearch.chocolate",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksRecipes" : [
-			"cook.chocolate"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.foofoo"
-		],
-		"icon" : "./textures/icons/sugarcane.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"foofoo"}
-		],
-		"key" : "pipliz.baseresearch.sugarcane",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksClientHints" : [
-			{"data":"pipliz.sugarcanefarmer","type":"NPCType"}
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.sugarcane",
-			"pipliz.baseresearch.papyrus",
-			"pipliz.baseresearch.coffeebeans"
-		],
-		"icon" : "./textures/icons/diamond.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"coffeebeans"},
-			{"type":"sugar"},
-			{"type":"papyrus"}
-		],
-		"key" : "pipliz.baseresearch.diamondprocessing",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.diamondnecklace"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.foofoo"
-		],
-		"icon" : "./textures/icons/coffeebeans.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"foofoo"}
-		],
-		"key" : "pipliz.baseresearch.coffeebeans",
-		"requiredScienceBiome" : "sciencebiome.tropics",
-		"unlocksClientHints" : [
-			{"data":"pipliz.coffeebeanfarmer","type":"NPCType"}
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.chickenfarmer"
-		],
-		"icon" : "./textures/icons/newworldmeal.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"potato"},
-			{"type":"tomato"},
-			{"type":"chickenmeat"}
-		],
-		"key" : "pipliz.baseresearch.newworldmeal",
-		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksRecipes" : [
-			"cook.newworldmeal"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.tailorshop",
-			"pipliz.baseresearch.newworldmeal"
-		],
-		"icon" : "./textures/icons/spinningwheel.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"newworldmeal"}
-		],
-		"key" : "pipliz.baseresearch.spinningwheel.newworld",
-		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksClientHints" : [
-			{"data":"pipliz.cottonfarmer","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.spinningwheelnewworld",
-			"pipliz.tailor.cotton",
-			"wheelspinner.cottonthread"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.spinningwheel.newworld"
-		],
-		"icon" : "./textures/icons/cottontowel.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"cotton"}
-		],
-		"key" : "pipliz.baseresearch.cottontowel",
-		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksRecipes" : [
-			"pipliz.tailor.cottontowel"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.bronzeminting",
-			"pipliz.baseresearch.fineryforge"
-		],
-		"icon" : "./textures/icons/fur.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"goldcoin"}
-		],
-		"key" : "pipliz.baseresearch.fur",
-		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksRecipes" : [
-			"pipliz.merchant.fur"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.fur"
-		],
-		"icon" : "./textures/icons/wintercoat.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"type":"fur"}
-		],
-		"key" : "pipliz.baseresearch.wintercoat",
-		"requiredScienceBiome" : "sciencebiome.newworld",
-		"unlocksRecipes" : [
-			"pipliz.tailor.wintercoat"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.cook",
-			"pipliz.baseresearch.chickenfarmer"
-		],
-		"icon" : "./textures/icons/rice.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"berrymeal"}
-		],
-		"key" : "pipliz.baseresearch.ricefarmer",
-		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksClientHints" : [
-			{"data":"pipliz.ricefarmer","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"cook.ricemeal"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.ricefarmer"
-		],
-		"icon" : "./textures/icons/silkwormcocoon.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"ricemeal"}
-		],
-		"key": "pipliz.baseresearch.silkwormfarmer",
-		"unlocksClientHints" : [
-			{"data":"pipliz.silkwormfarmer","type":"NPCType"}
-		],
-		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksRecipeGroups" : [
-			"pipliz.silkwormfarmer"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.silkwormfarmer"
-		],
-		"icon" : "./textures/icons/spinningwheel.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"silkwormcocoon"}
-		],
-		"key" : "pipliz.baseresearch.spinningwheel.fareast",
-		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksRecipes" : [
-			"pipliz.tailor.silk",
-			"pipliz.tailor.silkpillow",
-			"pipliz.crafter.spinningwheelfareast",
-			"wheelspinner.silkthread"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.ricefarmer"
-		],
-		"icon" : "./textures/icons/porcelainraw.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"ricemeal"}
-		],
-		"key" : "pipliz.baseresearch.porcelain",
-		"requiredScienceBiome" : "sciencebiome.fareast",
-		"unlocksRecipes" : [
-			"pipliz.stonemason.porcelainraw",
-			"pipliz.kiln.porcelainbiscuit",
-			"pipliz.kiln.porcelainglazed"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.ricefarmer"
-		],
-		"icon" : "./textures/icons/tea.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"ricemeal"}
-		],
-		"key" : "pipliz.baseresearch.teafarmer",
-		"requiredScienceBiome": "sciencebiome.fareast",
-		"unlocksClientHints" : [
-			{"data":"pipliz.teafarmer","type":"NPCType"}
-		],
-		"unlocksRecipeGroups" : [
-			"pipliz.teafarmer"
-		],
-		"unlocksRecipes" : [
-			"pipliz.grinder.tealeavesprocessed",
-			"pipliz.grinder.tealeavesprocesseddried",
-			"cook.tea"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.wheatfarming",
-			"pipliz.baseresearch.tailorshop"
-		],
-		"icon" : "./textures/icons/beehive.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"flax"}
-		],
-		"key": "pipliz.baseresearch.beekeeper",
-		"unlocksRecipeGroups" : [
-			"pipliz.beekeeper"
-		],
-		"unlocksRecipes": [
-			"pipliz.baker.beeswax",
-			"pipliz.crafter.bowstring",
-			"pipliz.beekeeper.candle",
-			"pipliz.crafter.coatedplanks",
-			"pipliz.crafter.adobe",
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.ironsmelting"
-		],
-		"icon" : "./textures/icons/waxtablet.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"coatedplanks"},
-			{"amount":2,"type":"ironrivet"},
-			{"amount":5,"type":"beeswax"}
-		],
-		"key" : "pipliz.baseresearch.waxtablet",
-		"unlocksRecipes" : [
-			"pipliz.crafter.waxtablet"
-		]
-	},
-	{
-		"icon" : "./textures/icons/bucketwater.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"type":"planks"},
-			{"amount":4,"type":"coppernails"},
-			{"amount":2,"type":"copperparts"}
-		],
-		"key": "pipliz.baseresearch.watergatherer",
-		"unlocksRecipeGroups" : [
-			"pipliz.watergatherer"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.bucketempty"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.watergatherer",
-			"pipliz.baseresearch.bronzeanvil"
-		],
-		"icon" : "./textures/icons/waterpump.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"amount":5,"type":"bronzeingot"},
-			{"amount":20,"type":"coppernails"}
-		],
-		"key" : "pipliz.baseresearch.waterpump",
-		"unlocksRecipeGroups" : [
-			"pipliz.waterpump"
-		],
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.waterpump"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.watergatherer"
-		],
-		"icon" : "./textures/icons/fishcooked.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"coppernails"},
-			{"type":"coppertools"},
-			{"type":"planks"},
-			{"type":"bucketwater"}
-		],
-		"key": "pipliz.baseresearch.fisherman",
-		"unlocksRecipeGroups" : [
-			"pipliz.fisherman",
-			"pipliz.fishfarmer"
-		]
-	},
-	{
-		"colonyPointRequirement" : 1000,
-		"dependencies" : [
-			"pipliz.baseresearch.fisherman",
-			"pipliz.baseresearch.wheatfarming"
-		],
-		"icon" : "./textures/icons/stove.png",
-		"iterationCount" : 20,
-		"iterationRequirements" : [
-			{"type":"rawfish"},
-			{"type":"firewood"}
-		],
-		"key" : "pipliz.baseresearch.cook",
-		"unlocksRecipeGroups" : [
-			"pipliz.cook"
-		],
-		"unlocksClientHints" : [
-			{"data":"pipliz.cabbagefarmer","type":"NPCType"},
-			{"data":"pipliz.olivefarmer","type":"NPCType"}
-		],
-		"unlocksRecipes": [
-			"pipliz.crafter.stove",
-			"cook.perpetualstew",
-			"pipliz.olivefarmer.gatherolive",
-			"pipliz.grinder.oliveoil"
-		]
-	},
-	{
-		"colonyPointRequirement" : 10000,
-		"dependencies" : [
-			"pipliz.baseresearch.chickenfarmer",
-			"pipliz.baseresearch.cook"
-		],
-		"icon" : "./textures/icons/luxurymeal.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"chickenmeat"},
-			{"type":"oliveoil"},
-			{"type":"honey"},
-			{"type":"boilingwater"}
-		],
-		"key" : "pipliz.baseresearch.luxurymeal",
-		"unlocksRecipes": [
-			"cook.luxurymeal"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.wheatfarming"
-		],
-		"icon" : "./textures/icons/chickencoop.png",
-		"colonyPointRequirement" : 250,
-		"key": "pipliz.baseresearch.chickenfarmer",
-		"unlocksClientHints" : [
-			{"data":"pipliz.barleyfarmer","type":"NPCType"}
-		],
-		"unlocksRecipeGroups": [
-			"pipliz.chickenfarmer"
-		],
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.bronzearrow"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.colonykit"
-		],
-		"icon" : "./textures/icons/coffee.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"boilingwater"},
-			{"amount":3,"type":"coffeebeans"}
-		],
-		"key" : "pipliz.baseresearch.coffee",
-		"requiredScienceBiome" : "sciencebiome.oldworld",
-		"unlocksRecipes" : [
-			"cook.coffee"
-		]
-	},
-	{
-		"dependencies" : [
-			"pipliz.baseresearch.colonykit"
-		],
-		"icon" : "./textures/icons/writerdesk.png",
-		"iterationCount" : 30,
-		"iterationRequirements" : [
-			{"type":"papyrus"}
-		],
-		"key" : "pipliz.baseresearch.writer",
-		"requiredScienceBiome" : "sciencebiome.oldworld",
-		"unlocksRecipeGroups" : [
+		"dependencies": [
 			"pipliz.writer"
 		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.ink",
-			"pipliz.crafter.writerdesk"
+		"icon": "./textures/icons/scrollshelf.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.scribe",
+		"sortWeight": 3002
+	},
+	{
+		"icon": "./textures/icons/minerjob.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "stonerubble"
+			}
+		],
+		"key": "pipliz.miner",
+		"sortWeight": 13
+	},
+	{
+		"dependencies": [
+			"pipliz.farming",
+			"pipliz.trading"
+		],
+		"icon": "./textures/icons/linen.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "wheat"
+			}
+		],
+		"key": "pipliz.tailoring",
+		"sortWeight": 368,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.flaxfarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"colonyPointRequirement" : 200000,
-		"dependencies" : [
-			"pipliz.baseresearch.gunsmithshop"
+		"dependencies": [
+			"pipliz.furnace"
 		],
-		"icon" : "./textures/icons/glider.png"
-		"key" : "pipliz.baseresearch.glider",
-		"unlocksRecipes" : [
-			"pipliz.player.glider"
+		"icon": "./textures/icons/merchanthub.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.trading",
+		"sortWeight": 173,
+		"threatIncrease": 10
+	},
+	{
+		"colonyPointRequirement": 50,
+		"dependencies": [
+			"pipliz.trading",
+			"pipliz.porridge"
+		],
+		"icon": "./textures/icons/npcshop.png",
+		"key": "pipliz.npcshop",
+		"sortWeight": 1438
+	},
+	{
+		"dependencies": [
+			"pipliz.trading"
+		],
+		"icon": "./textures/icons/tannertable.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "animalcarcass"
+			}
+		],
+		"key": "pipliz.tanner",
+		"sortWeight": 673,
+		"threatIncrease": 10
+	},
+	{
+		"dependencies": [
+			"pipliz.trading"
+		],
+		"icon": "./textures/icons/bronzeanvil.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "leather"
+			},
+			{
+				"amount": 15,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.anvil",
+		"sortWeight": 755,
+		"threatIncrease": 30
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "./textures/icons/toolshop.png",
+		"itemRequirements": [
+			{
+				"type": "coppertools"
+			}
+		],
+		"key": "pipliz.toolshop",
+		"sortWeight": 810
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "./textures/icons/bronzearrow.png",
+		"itemRequirements": [
+			{
+				"type": "coppertools"
+			}
+		],
+		"key": "pipliz.archery",
+		"sortWeight": 810
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "./textures/icons/writerdesk.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "coppertools"
+			},
+			{
+				"amount": 3,
+				"type": "leather"
+			}
+		],
+		"key": "pipliz.writer",
+		"sortWeight": 1147
+	},
+	{
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "./textures/icons/statisticsboard.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.statistics",
+		"sortWeight": 1332
+	},
+	{
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "./textures/icons/stove.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.cook",
+		"sortWeight": 1332
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.cook",
+			"pipliz.scribe"
+		],
+		"icon": "./textures/icons/bread.png",
+		"itemRequirements": [
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bread",
+		"sortWeight": 15427
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.scribe"
+		],
+		"icon": "./textures/icons/bronzetools.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "mudbricks"
+			},
+			{
+				"amount": 15,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bronze",
+		"sortWeight": 9339,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "./textures/icons/copperlockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.copperlockbox",
+		"sortWeight": 2892
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.engineer"
+		],
+		"icon": "./textures/icons/bronzelockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 3,
+				"type": "goldingot"
+			},
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bronzelockbox",
+		"sortWeight": 32299
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "./textures/icons/outpostbanner.png",
+		"itemRequirements": [
+			{
+				"type": "bronzetools"
+			},
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.outposts",
+		"sortWeight": 30444
+	},
+	{
+		"icon": "./textures/icons/copperingot.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "stonetools"
+			},
+			{
+				"amount": 10,
+				"type": "planks"
+			}
+		],
+		"key": "pipliz.furnace",
+		"sortWeight": 105
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bricks"
+		],
+		"icon": "./textures/icons/ironingot.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 250,
+				"type": "bricks"
+			},
+			{
+				"amount": 250,
+				"type": "brickslight"
+			},
+			{
+				"amount": 250,
+				"type": "stonebricks"
+			},
+			{
+				"amount": 250,
+				"type": "stonebricksnew"
+			}
+		],
+		"key": "pipliz.iron",
+		"sortWeight": 52842,
+		"threatIncrease": 100
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "./textures/icons/crossbow.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.crossbow",
+		"sortWeight": 24675
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "./textures/icons/bricks.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.bricks",
+		"sortWeight": 12509
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.ropes",
+			"pipliz.brass"
+		],
+		"icon": "./textures/icons/goldenshield.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.jewellery",
+		"sortWeight": 51462
+	},
+	{
+		"colonyPointRequirement": 750,
+		"dependencies": [
+			"pipliz.jewellery",
+			"pipliz.researcher"
+		],
+		"icon": "./textures/icons/lanternyellow.png",
+		"itemRequirements": [
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.lanterns",
+		"sortWeight": 100746
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.jewellery"
+		],
+		"icon": "./textures/icons/goldenstatue.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			},
+			{
+				"type": "goldenshield"
+			}
+		],
+		"key": "pipliz.goldenstatue",
+		"sortWeight": 86749
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil",
+			"pipliz.tailoring"
+		],
+		"icon": "./textures/icons/stonemasonworkbench.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "linen"
+			},
+			{
+				"amount": 3,
+				"type": "coppertools"
+			},
+			{
+				"amount": 25,
+				"type": "stonerubble"
+			}
+		],
+		"key": "pipliz.stonemason",
+		"sortWeight": 2164
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "./textures/icons/rope.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.ropes",
+		"sortWeight": 33380
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.archery",
+			"pipliz.writer"
+		],
+		"icon": "./textures/icons/trap.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "copperingot"
+			},
+			{
+				"amount": 10,
+				"type": "goldingot"
+			},
+			{
+				"amount": 4,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.engineer",
+		"sortWeight": 4788
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.engineer"
+		],
+		"icon": "./textures/icons/trap.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.projectiletrap",
+		"sortWeight": 22131
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.iron"
+		],
+		"icon": "./textures/icons/caltrops.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			},
+			{
+				"type": "engineerbench"
+			}
+		],
+		"key": "pipliz.caltrop",
+		"sortWeight": 59009
+	},
+	{
+		"dependencies": [
+			"pipliz.furnace"
+		],
+		"icon": "./textures/icons/mudbricks.png",
+		"itemRequirements": [
+			{
+				"amount": 30,
+				"type": "clay"
+			},
+			{
+				"amount": 10,
+				"type": "planks"
+			}
+		],
+		"key": "pipliz.mudbricks",
+		"sortWeight": 224
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.constructiondigger"
+		],
+		"icon": "./textures/icons/bricksred.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.constructionbuilder",
+		"sortWeight": 17260,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.builder",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"colonyPointRequirement" : 400000,
-		"dependencies" : [
-			"pipliz.baseresearch.writer"
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.writer"
 		],
-		"icon" : "./textures/icons/book.png",
-		"key" : "pipliz.baseresearch.printingpress",
-		"requiredScienceBiome" : "sciencebiome.oldworld",
-		"unlocksRecipes" : [
-			"printingpress.papertext",
-			"pipliz.metalsmith.printingpress"
+		"icon": "./textures/icons/bronzepickaxe.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.constructiondigger",
+		"sortWeight": 6703,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.constructor",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.digger",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.bronzeanvil",
-			"pipliz.baseresearch.chickenfarmer",
-			"pipliz.baseresearch.beekeeper"
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.constructiondigger"
 		],
-		"icon" : "./textures/icons/bow.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"amount":3,"type":"bronzearrow"},
-			{"type":"bowstring"}
-		],
-		"key" : "pipliz.baseresearch.archery",
-		"unlocksClientHints" : [
-			{"data":"pipliz.guardbowday","type":"NPCType"},
-			{"data":"pipliz.guardbownight","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.bow"
+		"icon": "./textures/icons/bronzeaxe.png",
+		"key": "pipliz.constructiondiggerspecial",
+		"sortWeight": 26703,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.diggerspecial",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"icon" : "./textures/icons/bronzeanvil.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"bronzeingot"},
-			{"type":"coppertools"},
-			{"type":"coppernails"}
+		"dependencies": [
+			"pipliz.outposts"
 		],
-		"key" : "pipliz.baseresearch.bronzeanvil",
-		"unlocksRecipeGroups" : [
-			"pipliz.metalsmithjob"
+		"icon": "./textures/icons/hemp.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "linen"
+			}
 		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.bronzeanvil",
-			"pipliz.player.bronzeanvil"
+		"key": "pipliz.hemp",
+		"sortWeight": 35157,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.hempfarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
+		"dependencies": [
+			"pipliz.ropes",
+			"pipliz.hemp"
 		],
-		"icon" : "./textures/icons/bronzecoin.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"bronzeingot"}
+		"icon": "./textures/icons/paper.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "hemp"
+			},
+			{
+				"type": "hempfibre"
+			}
 		],
-		"key" : "pipliz.baseresearch.bronzeminting",
-		"unlocksRecipeGroups" : [
-			"pipliz.minter",
-			"pipliz.merchant"
+		"key": "pipliz.papermaking",
+		"sortWeight": 35835
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.papermaking",
+			"pipliz.iron"
 		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.mint",
-			"pipliz.crafter.shop",
-			"pipliz.player.mint",
-			"pipliz.player.shop"
+		"icon": "./textures/icons/glider.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "rope"
+			},
+			{
+				"amount": 40,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 5,
+				"type": "ironwrought"
+			}
+		],
+		"key": "pipliz.glider",
+		"sortWeight": 88051,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.papermaking",
+			"pipliz.iron"
+		],
+		"icon": "./textures/icons/researchersdesk.png",
+		"itemRequirements": [
+			{
+				"amount": 40,
+				"type": "paper"
+			},
+			{
+				"amount": 140,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.researcher",
+		"sortWeight": 85348
+	},
+	{
+		"colonyPointRequirement": 1250,
+		"dependencies": [
+			"pipliz.researcher"
+		],
+		"icon": "./textures/icons/glassblower.png",
+		"itemRequirements": [
+			{
+				"amount": 2,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.glassblower",
+		"sortWeight": 111143
+	},
+	{
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.glassblower"
+		],
+		"icon": "./textures/icons/monocular.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.monocular",
+		"sortWeight": 152336
+	},
+	{
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.iron",
+			"pipliz.hemp"
+		],
+		"icon": "./textures/icons/chestresource.png",
+		"itemRequirements": [
+			{
+				"type": "ironwrought"
+			},
+			{
+				"type": "hempfibre"
+			}
+		],
+		"key": "pipliz.chestresource",
+		"sortWeight": 93049,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.gunpowder"
+		],
+		"icon": "./textures/icons/handcannon.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "gunpowdertrap"
+			}
+		],
+		"key": "pipliz.handcannon",
+		"sortWeight": 317791
+	},
+	{
+		"colonyPointRequirement": 3500,
+		"dependencies": [
+			"pipliz.glassblower",
+			"pipliz.chestresource"
+		],
+		"icon": "./textures/icons/gunpowder.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 12,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "potash"
+			}
+		],
+		"key": "pipliz.gunpowder",
+		"sortWeight": 223535,
+		"threatIncrease": 50
+	},
+	{
+		"colonistThreshold": 200,
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.papermaking"
+		],
+		"icon": "./textures/icons/wisteriaflower.png",
+		"itemRequirements": [
+			{
+				"amount": 40,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.poison",
+		"sortWeight": 79068
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.researcher",
+			"pipliz.glider"
+		],
+		"icon": "./textures/icons/elevatorgateway.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "metalgear"
+			},
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.elevator",
+		"sortWeight": 140385
+	},
+	{
+		"colonyPointRequirement": 1250,
+		"dependencies": [
+			"pipliz.chestresource"
+		],
+		"icon": "./textures/icons/elevatorhorizontalgateway.png",
+		"itemRequirements": [
+			{
+				"amount": 12,
+				"type": "chestresource"
+			},
+			{
+				"amount": 5,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.elevatorhorizontal",
+		"sortWeight": 138077,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.iron",
+			"pipliz.hemp"
+		],
+		"icon": "./textures/icons/dyertable.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "hempfibre"
+			},
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.dyeing",
+		"sortWeight": 58957,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.alkanetfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.hollyhockfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.wolfsbanefarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.sciencebagmilitary"
+		"dependencies": [
+			"pipliz.bronze"
 		],
-		"icon" : "./textures/icons/crossbow.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"sciencebagmilitary"}
+		"icon": "./textures/icons/brassingot.png",
+		"itemRequirements": [
+			{
+				"amount": 20,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 3,
+				"type": "zinc"
+			}
 		],
-		"key" : "pipliz.baseresearch.crossbow",
-		"unlocksClientHints" : [
-			{"data":"pipliz.guardcrossbowday","type":"NPCType"},
-			{"data":"pipliz.guardcrossbownight","type":"NPCType"}
+		"key": "pipliz.brass",
+		"sortWeight": 11074
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestresource"
 		],
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.crossbow",
-			"pipliz.metalsmith.crossbowbolt"
+		"icon": "./textures/icons/steelparts.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "chestresource"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.steel",
+		"sortWeight": 150963
+	},
+	{
+		"colonyPointRequirement": 5000,
+		"dependencies": [
+			"pipliz.steel"
+		],
+		"icon": "./textures/icons/movabletype.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "steelparts"
+			},
+			{
+				"amount": 3,
+				"type": "vialmineraloil"
+			},
+			{
+				"amount": 3,
+				"type": "leadingot"
+			}
+		],
+		"key": "pipliz.printingpress",
+		"sortWeight": 256662,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 7500,
+		"dependencies": [
+			"pipliz.gunpowder",
+			"pipliz.printingpress"
+		],
+		"icon": "./textures/icons/glidersteel.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "brassparts"
+			},
+			{
+				"type": "steelparts"
+			}
+		],
+		"key": "pipliz.glidersteel",
+		"sortWeight": 454717
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.printingpress"
+		],
+		"icon": "./textures/icons/ropetrapammo.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 3,
+				"type": "chestresource"
+			},
+			{
+				"amount": 25,
+				"type": "rope"
+			}
+		],
+		"key": "pipliz.ropetrap",
+		"sortWeight": 289638,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.printingpress",
+			"pipliz.handcannon"
+		],
+		"icon": "./textures/icons/musket.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "leadingot"
+			}
+		],
+		"key": "pipliz.musket",
+		"sortWeight": 565902
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.printingpress",
+			"pipliz.dyeing"
+		],
+		"icon": "./textures/icons/cottonfibre.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "lanternred"
+			},
+			{
+				"type": "lanterngreen"
+			},
+			{
+				"type": "lanternblue"
+			}
+		],
+		"key": "pipliz.cotton",
+		"sortWeight": 313470,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.cottonfarmer",
+				"type": "NPCType"
+			}
 		]
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.herbfarming"
+		"colonyPointRequirement": 5000,
+		"dependencies": [
+			"pipliz.cotton"
 		],
-		"icon" : "./textures/icons/dyertable.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"hollyhock"}
+		"icon": "./textures/icons/chestluxury.png",
+		"itemRequirements": [
+			{
+				"type": "luxurygarments"
+			},
+			{
+				"amount": 3,
+				"type": "goldenshield"
+			},
+			{
+				"amount": 3,
+				"type": "monocular"
+			},
+			{
+				"amount": 10,
+				"type": "earthenware"
+			}
 		],
-		"key" : "pipliz.baseresearch.dyertable",
-		"unlocksRecipeGroups" : [
-			"pipliz.dyer"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.dyertable",
-			"pipliz.player.dyertable"
-		]
+		"key": "pipliz.chestluxury",
+		"sortWeight": 425757
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.ironsmelting"
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.chestluxury"
 		],
-		"icon" : "./textures/icons/fineryforge.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"ironwrought"}
+		"icon": "./textures/icons/metallathe.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
 		],
-		"key" : "pipliz.baseresearch.fineryforge",
-		"unlocksRecipeGroups" : [
-			"pipliz.fineryforgejob"
-		],
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.fineryforge",
-			"pipliz.metalsmith.jewelry",
-			"pipliz.metalsmith.steelparts"
-		]
+		"key": "pipliz.lathe",
+		"sortWeight": 720372,
+		"threatIncrease": 75
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.fineryforge",
-			"pipliz.baseresearch.sciencebagmilitary"
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.chestluxury"
 		],
-		"icon" : "./textures/icons/gunsmithshop.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"lead"},
-			{"type":"sciencebagmilitary"}
+		"icon": "./textures/icons/tabulator.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 25,
+				"type": "steelparts"
+			},
+			{
+				"amount": 25,
+				"type": "brassparts"
+			}
 		],
-		"key" : "pipliz.baseresearch.gunsmithshop",
-		"unlocksRecipeGroups" : [
-			"pipliz.gunsmithjob"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.gunsmithshop",
-			"pipliz.gunsmith.leadbullet",
-			"pipliz.gunsmith.matchlockgun",
-			"pipliz.gunsmith.gunpowder",
-			"pipliz.gunsmith.gunpowderpouch",
-			"pipliz.player.gunsmithshop"
-		]
+		"key": "pipliz.tabulator",
+		"sortWeight": 852654
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestluxury"
 		],
-		"icon" : "./textures/icons/ironwrought.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"}
+		"icon": "./textures/icons/steellockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
 		],
-		"key" : "pipliz.baseresearch.ironsmelting",
-		"unlocksRecipeGroups" : [
-			"pipliz.kilnjob",
-			"pipliz.bloomeryjob"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.kiln",
-			"pipliz.crafter.bloomery",
-			"pipliz.metalsmith.ironrivets",
-			"pipliz.metalsmith.ironwrought",
-			"pipliz.metalsmith.ironsword",
-			"pipliz.metalsmith.ironblock",
-			"pipliz.player.kiln",
-			"pipliz.player.bloomery"
-		]
+		"key": "pipliz.steellockbox",
+		"sortWeight": 537880
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.ironsmelting"
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestluxury"
 		],
-		"icon" : "./textures/icons/lanternyellow.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"amount":5,"type":"sciencebagbasic"},
-			{"type":"ironrivet"},
-			{"type":"crystal"}
+		"icon": "./textures/icons/blastfurnace.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
 		],
-		"key" : "pipliz.baseresearch.lantern",
-		"unlocksRecipes" : [
-			"pipliz.metalsmith.lanternyellow",
-			"pipliz.dyer.lanternwhite",
-			"pipliz.dyer.lanterngreen",
-			"pipliz.dyer.lanternblue",
-			"pipliz.dyer.lanternred",
-			"pipliz.dyer.lanternorange",
-			"pipliz.dyer.lanterncyan",
-			"pipliz.dyer.lanternpink"
-		]
+		"key": "pipliz.blastfurnace",
+		"sortWeight": 537880,
+		"threatIncrease": 25
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.gunsmithshop"
+		"dependencies": [
+			"pipliz.blastfurnace"
 		],
-		"icon" : "./textures/icons/matchlockgun.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"type":"leadbullet"},
-			{"type":"gunpowderpouch"},
-			{"type":"sciencebagmilitary"}
+		"icon": "./textures/icons/steeltools.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 5,
+				"type": "chestluxury"
+			},
+			{
+				"type": "blastfurnace"
+			}
 		],
-		"key" : "pipliz.baseresearch.matchlockgun",
-		"unlocksClientHints" : [
-			{"data":"pipliz.guardmatchlockday","type":"NPCType"},
-			{"data":"pipliz.guardmatchlocknight","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"pipliz.gunsmith.matchlockgun"
-		]
+		"key": "pipliz.steeltools",
+		"sortWeight": 639327
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.ironsmelting",
-			"pipliz.baseresearch.archery"
+		"colonyPointRequirement": 15000,
+		"dependencies": [
+			"pipliz.tabulator"
 		],
-		"icon" : "./textures/icons/sciencebagmilitary.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"ironsword"},
-			{"amount":5,"type":"bronzearrow"},
-			{"type":"bow"},
-			{"type":"linenbag"}
+		"icon": "./textures/icons/nitro.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 12,
+				"type": "carddata"
+			}
 		],
-		"key" : "pipliz.baseresearch.sciencebagmilitary",
-		"unlocksRecipes" : [
-			"pipliz.technologist.sciencebagmilitary"
-		]
+		"key": "pipliz.nitro",
+		"sortWeight": 1363524
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
+		"colonyPointRequirement": 15000,
+		"dependencies": [
+			"pipliz.nitro"
 		],
-		"icon" : "./textures/icons/splittingstump.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"},
-			{"type":"bronzeaxe"}
+		"icon": "./textures/icons/grenadejobnight.png",
+		"itemRequirements": [
+			{
+				"amount": 15,
+				"type": "carddata"
+			},
+			{
+				"type": "nitro"
+			}
 		],
-		"key" : "pipliz.baseresearch.splittingstump",
-		"unlocksRecipeGroups" : [
-			"pipliz.woodcutter"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.splittingstumptemperate",
-			"pipliz.crafter.splittingstumptaiga",
-			"pipliz.player.splittingstumptemperate",
-			"pipliz.player.splittingstumptaiga"
-		]
+		"key": "pipliz.grenadelauncher",
+		"sortWeight": 1678401
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
+		"colonyPointRequirement": 20000,
+		"dependencies": [
+			"pipliz.nitro"
 		],
-		"icon" : "./textures/icons/stonemasonworkbench.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"sciencebagbasic"}
+		"icon": "./textures/icons/guntrapammo.png",
+		"itemRequirements": [
+			{
+				"amount": 15,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 25,
+				"type": "carddata"
+			},
+			{
+				"type": "nitro"
+			}
 		],
-		"key" : "pipliz.baseresearch.stonemasonworkbench",
-		"unlocksRecipeGroups" : [
-			"pipliz.stonemason"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.stonemasonworkbench",
-			"pipliz.player.stonemasonworkbench"
-		]
+		"key": "pipliz.guntrap",
+		"sortWeight": 2049202
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.flaxfarming"
+		"colonyPointRequirement": 25000,
+		"dependencies": [
+			"pipliz.grenadelauncher",
+			"pipliz.steeltools"
 		],
-		"icon" : "./textures/icons/tailorshop.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"planks"},
-			{"type":"flax"},
-			{"type":"coppertools"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 50,
+				"type": "carddata"
+			},
+			{
+				"type": "grenadelauncher"
+			},
+			{
+				"type": "guntrap"
+			},
+			{
+				"type": "tabulator"
+			}
 		],
-		"key" : "pipliz.baseresearch.tailorshop",
-		"unlocksRecipeGroups" : [
-			"pipliz.tailor"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.tailorshop",
-			"pipliz.player.tailorshop"
-		]
+		"key": "pipliz.chestprestige",
+		"sortWeight": 2633552
 	},
 	{
-		"colonyPointRequirement" : 1000,
-		"dependencies" : [
-			"pipliz.baseresearch.bronzeanvil",
-			"pipliz.baseresearch.beekeeper"
+		"colonyPointRequirement": 25000,
+		"dependencies": [
+			"pipliz.chestprestige"
 		],
-		"icon" : "./textures/icons/technologisttable.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"type":"coatedplanks"},
-			{"amount":2,"type":"bronzeplate"},
-			{"type":"coppernails"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 100,
+				"type": "carddata"
+			},
+			{
+				"amount": 10,
+				"type": "chestprestige"
+			}
 		],
-		"key" : "pipliz.baseresearch.technologisttable",
-		"unlocksRecipeGroups" : [
-			"pipliz.technologist"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.technologisttable",
-			"pipliz.player.technologisttable",
-			"pipliz.technologist.sciencebagbasic"
-		]
+		"key": "pipliz.prestige1",
+		"sortWeight": 3814874,
+		"threatIncrease": 100
 	},
 	{
-		"icon" : "./textures/icons/flax.png",
-		"iterationCount" : 3,
-		"iterationRequirements" : [
-			{"amount":3,"type":"berrymeal"},
-			{"amount":1,"type":"coppernails"}
+		"colonyPointRequirement": 30000,
+		"dependencies": [
+			"pipliz.prestige1"
 		],
-		"key" : "pipliz.baseresearch.flaxfarming",
-		"unlocksClientHints" : [
-			{"data":"pipliz.flaxfarmer","type":"NPCType"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 100,
+				"type": "chestresource"
+			},
+			{
+				"amount": 200,
+				"type": "carddata"
+			},
+			{
+				"amount": 25,
+				"type": "chestprestige"
+			}
 		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.bowstring"
-		]
+		"key": "pipliz.prestige2",
+		"sortWeight": 5876328,
+		"threatIncrease": 125
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.technologisttable"
+		"colonyPointRequirement": 35000,
+		"dependencies": [
+			"pipliz.prestige2"
 		],
-		"icon" : "./textures/icons/alkanet.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"amount":1,"type":"sciencebagbasic"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 200,
+				"type": "chestresource"
+			},
+			{
+				"amount": 300,
+				"type": "carddata"
+			},
+			{
+				"amount": 50,
+				"type": "chestprestige"
+			}
 		],
-		"key" : "pipliz.baseresearch.herbfarming",
-		"unlocksClientHints" : [
-			{"data":"pipliz.alkanetfarmer","type":"NPCType"},
-			{"data":"pipliz.hollyhockfarmer","type":"NPCType"},
-			{"data":"pipliz.wolfsbanefarm","type":"NPCType"}
-		],
-		"unlocksRecipes" : [
-			"pipliz.merchant.alkanetseeds",
-			"pipliz.merchant.hollyhockseeds",
-			"pipliz.merchant.wolfsbaneseeds",
-			"pipliz.tailor.undershirt"
-		]
+		"key": "pipliz.prestige3",
+		"sortWeight": 9400258,
+		"threatIncrease": 150
 	},
 	{
-		"dependencies" : [
-			"pipliz.baseresearch.watergatherer"
+		"colonyPointRequirement": 40000,
+		"dependencies": [
+			"pipliz.prestige3"
 		],
-		"icon" : "./textures/icons/bread.png",
-		"iterationCount" : 5,
-		"iterationRequirements" : [
-			{"amount":6,"type":"berrymeal"},
-			{"amount":2,"type":"copperparts"},
-			{"type":"coppertools"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 200,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 300,
+				"type": "chestresource"
+			},
+			{
+				"amount": 500,
+				"type": "carddata"
+			},
+			{
+				"amount": 100,
+				"type": "chestprestige"
+			}
 		],
-		"key" : "pipliz.baseresearch.wheatfarming",
-		"unlocksClientHints" : [
-			{"data":"pipliz.wheatfarmer","type":"NPCType"},
-			{"data":"pipliz.baker.breadmeal","type":"Recipe"},
-			{"data":"pipliz.baker.bread","type":"Recipe"}
-		],
-		"unlocksRecipeGroups" : [
-			"pipliz.baker",
-			"pipliz.grinder"
-		],
-		"unlocksRecipes" : [
-			"pipliz.crafter.oven",
-			"pipliz.crafter.grindstone",
-			"pipliz.crafter.cratebread",
-			"pipliz.player.oven",
-			"pipliz.player.grindstone",
-			"pipliz.player.cratebread"
-		]
+		"key": "pipliz.prestige4",
+		"sortWeight": 15598802,
+		"threatIncrease": 175
 	},
 	{
-		"colonyPointRequirement" : 2000,
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondigger"
+		"colonyPointRequirement": 50000,
+		"dependencies": [
+			"pipliz.prestige4"
 		],
-		"icon" : "./textures/icons/bricksred.png",
-		"iterationCount" : 25,
-		"iterationRequirements" : [
-			{"amount":5,"type":"bricks"}
+		"icon": "./textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 500,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 750,
+				"type": "chestresource"
+			},
+			{
+				"amount": 1000,
+				"type": "carddata"
+			},
+			{
+				"amount": 250,
+				"type": "chestprestige"
+			}
 		],
-		"key" : "pipliz.baseresearch.constructionbuilder",
-		"unlocksClientHints" : [
-			{"data":"pipliz.builder","type":"NPCType"}
-		]
-	},
-	{
-		"colonyPointRequirement" : 1000,
-		"dependencies" : [
-			"pipliz.baseresearch.bronzeanvil"
-		],
-		"icon" : "./textures/icons/bronzepickaxe.png",
-		"iterationCount" : 10,
-		"iterationRequirements" : [
-			{"type":"bronzepickaxe"}
-		],
-		"key" : "pipliz.baseresearch.constructiondigger",
-		"unlocksClientHints" : [
-			{"data":"pipliz.constructor","type":"NPCType"},
-			{"data":"pipliz.digger","type":"NPCType"}
-		]
-	},
-	{
-		"colonyPointRequirement" : 2500,
-		"dependencies" : [
-			"pipliz.baseresearch.constructiondigger",
-		],
-		"icon" : "./textures/icons/bronzeaxe.png",
-		"iterationCount" : 50,
-		"iterationRequirements" : [
-			{"type":"bronzeplate"},
-			{"type":"coppertools"}
-		],
-		"key" : "pipliz.baseresearch.constructiondiggerspecial",
-		"unlocksClientHints" : [
-			{"data":"pipliz.diggerspecial","type":"NPCType"}
-		]
+		"key": "pipliz.prestige5",
+		"sortWeight": 29847720,
+		"threatIncrease": 200
 	}
 ]

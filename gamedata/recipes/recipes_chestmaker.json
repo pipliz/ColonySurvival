@@ -1,0 +1,114 @@
+[
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 3,
+		"defaultPriority": -100,
+		"name": "pipliz.chestmaker.chest",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 3,
+				"type": "hempfibre"
+			}
+		],
+		"requiresScience": "pipliz.chestresource",
+		"results": [
+			{
+				"type": "chest"
+			}
+		],
+		"sortWeight": 93049
+	},
+	{
+		"cooldown": 720.0,
+		"defaultLimit": 5,
+		"name": "pipliz.chestmaker.chestresource",
+		"requires": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			},
+			{
+				"amount": 3,
+				"type": "goldingot"
+			},
+			{
+				"amount": 2,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 2,
+				"type": "ironwrought"
+			},
+			{
+				"type": "chest"
+			}
+		],
+		"requiresScience": "pipliz.chestresource",
+		"results": [
+			{
+				"type": "chestresource"
+			}
+		],
+		"sortWeight": 93049
+	},
+	{
+		"cooldown": 720.0,
+		"defaultLimit": 5,
+		"name": "pipliz.chestmaker.chestluxury",
+		"requires": [
+			{
+				"type": "luxurygarments"
+			},
+			{
+				"amount": 3,
+				"type": "goldenshield"
+			},
+			{
+				"amount": 3,
+				"type": "monocular"
+			},
+			{
+				"amount": 10,
+				"type": "earthenware"
+			}
+		],
+		"requiresScience": "pipliz.chestluxury",
+		"results": [
+			{
+				"type": "chestluxury"
+			}
+		],
+		"sortWeight": 425757
+	},
+	{
+		"cooldown": 720.0,
+		"defaultLimit": 4,
+		"name": "pipliz.chestmaker.chestprestige",
+		"requires": [
+			{
+				"type": "tabulator"
+			},
+			{
+				"type": "guntrap"
+			},
+			{
+				"amount": 25,
+				"type": "nitro"
+			},
+			{
+				"type": "steeltools"
+			}
+		],
+		"requiresScience": "pipliz.chestprestige",
+		"results": [
+			{
+				"type": "chestprestige"
+			}
+		],
+		"sortWeight": 2633552
+	}
+]

@@ -1,46 +1,346 @@
 [
 	{
-		"defaultLimit" : 25,
-		"name" : "pipliz.gunsmith.leadbullet",
-		"requires" : [
-			{"type":"lead"}
+		"cooldown": 1200,
+		"defaultLimit": 3,
+		"name": "pipliz.gunsmith.gunpowdertrap",
+		"requires": [
+			{
+				"amount": 4,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 5,
+				"type": "metalgear"
+			},
+			{
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 2,
+				"type": "rope"
+			}
 		],
-		"results" : [
-			{"amount":3,"type":"leadbullet"}
-		]
+		"requiresScience": "pipliz.gunpowder",
+		"results": [
+			{
+				"type": "gunpowdertrap"
+			}
+		],
+		"sortWeight": 223535
 	},
 	{
-		"defaultLimit" : 25,
-		"name" : "pipliz.gunsmith.gunpowder",
-		"requires" : [
-			{"type":"salpeter"},
-			{"type":"charcoal"}
+		"cooldown": 240,
+		"defaultLimit": 2,
+		"name": "pipliz.gunsmith.gunpowdertrapammo",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 2,
+				"type": "gunpowder"
+			}
 		],
-		"results" : [
-			{"type":"gunpowder"}
-		]
+		"requiresScience": "pipliz.gunpowder",
+		"results": [
+			{
+				"amount": 10,
+				"type": "gunpowdertrapammo"
+			}
+		],
+		"sortWeight": 223535
 	},
 	{
-		"defaultLimit" : 25,
-		"name" : "pipliz.gunsmith.gunpowderpouch",
-		"requires" : [
-			{"type":"gunpowder"},
-			{"amount":3,"type":"linenpouch"}
+		"cooldown": 1000,
+		"defaultLimit": 3,
+		"name": "pipliz.gunsmith.guntrap",
+		"requires": [
+			{
+				"amount": 10,
+				"type": "steelingot"
+			},
+			{
+				"amount": 25,
+				"type": "steelparts"
+			},
+			{
+				"amount": 25,
+				"type": "brassparts"
+			},
+			{
+				"amount": 5,
+				"type": "vialmineraloil"
+			},
+			{
+				"amount": 10,
+				"type": "nitro"
+			}
 		],
-		"results" : [
-			{"amount":3,"type":"gunpowderpouch"}
-		]
+		"requiresScience": "pipliz.guntrap",
+		"results": [
+			{
+				"type": "guntrap"
+			}
+		],
+		"sortWeight": 2049202
 	},
 	{
-		"defaultLimit" : 10,
-		"name" : "pipliz.gunsmith.matchlockgun",
-		"requires" : [
-			{"amount":3,"type":"steelparts"},
-			{"type":"coatedplanks"},
-			{"type":"copperparts"}
+		"cooldown": 120,
+		"defaultLimit": 2,
+		"name": "pipliz.gunsmith.guntrapammo",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "brassparts"
+			},
+			{
+				"amount": 2,
+				"type": "leadingot"
+			},
+			{
+				"amount": 15,
+				"type": "nitro"
+			}
 		],
-		"results" : [
-			{"type":"matchlockgun"}
-		]
+		"requiresScience": "pipliz.guntrap",
+		"results": [
+			{
+				"type": "guntrapammo"
+			}
+		],
+		"sortWeight": 2049202
+	},
+	{
+		"cooldown": 720,
+		"defaultLimit": 2,
+		"name": "pipliz.gunsmith.musket",
+		"requires": [
+			{
+				"type": "steelparts"
+			},
+			{
+				"type": "brassparts"
+			},
+			{
+				"type": "vialmineraloil"
+			}
+		],
+		"requiresScience": "pipliz.musket",
+		"results": [
+			{
+				"type": "musket"
+			}
+		],
+		"sortWeight": 565902
+	},
+	{
+		"cooldown": 160,
+		"defaultLimit": 4,
+		"name": "pipliz.gunsmith.musketammo",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "leadingot"
+			},
+			{
+				"amount": 2,
+				"type": "gunpowder"
+			}
+		],
+		"requiresScience": "pipliz.musket",
+		"results": [
+			{
+				"amount": 25,
+				"type": "musketammo"
+			}
+		],
+		"sortWeight": 565902
+	},
+	{
+		"cooldown": 1000,
+		"defaultLimit": 2,
+		"name": "pipliz.gunsmith.grenadelauncher",
+		"requires": [
+			{
+				"type": "steelingot"
+			},
+			{
+				"amount": 3,
+				"type": "steelparts"
+			},
+			{
+				"amount": 10,
+				"type": "brassparts"
+			},
+			{
+				"type": "vialmineraloil"
+			}
+		],
+		"requiresScience": "pipliz.grenadelauncher",
+		"results": [
+			{
+				"type": "grenadelauncher"
+			}
+		],
+		"sortWeight": 1678401
+	},
+	{
+		"cooldown": 120,
+		"defaultLimit": 25,
+		"name": "pipliz.gunsmith.grenadelauncherammo",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "leadingot"
+			},
+			{
+				"amount": 2,
+				"type": "steelparts"
+			},
+			{
+				"type": "brassparts"
+			},
+			{
+				"amount": 15,
+				"type": "nitro"
+			}
+		],
+		"requiresScience": "pipliz.grenadelauncher",
+		"results": [
+			{
+				"amount": 30,
+				"type": "grenadelauncherammo"
+			}
+		],
+		"sortWeight": 1678401
+	},
+	{
+		"cooldown": 720,
+		"defaultLimit": 3,
+		"name": "pipliz.gunsmith.handcannon",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 2,
+				"type": "metalgear"
+			}
+		],
+		"requiresScience": "pipliz.handcannon",
+		"results": [
+			{
+				"type": "handcannon"
+			}
+		],
+		"sortWeight": 317791
+	},
+	{
+		"cooldown": 120,
+		"defaultLimit": 4,
+		"name": "pipliz.gunsmith.handcannonammo",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "hempfibre"
+			},
+			{
+				"type": "ironwrought"
+			}
+		],
+		"requiresScience": "pipliz.handcannon",
+		"results": [
+			{
+				"amount": 11,
+				"type": "handcannonammo"
+			}
+		],
+		"sortWeight": 317791
+	},
+	{
+		"cooldown": 120,
+		"defaultLimit": 3,
+		"name": "pipliz.gunsmith.guardhandcannonnightjob",
+		"requires": [
+			{
+				"type": "handcannon"
+			},
+			{
+				"amount": 2,
+				"type": "ironwrought"
+			}
+		],
+		"requiresScience": "pipliz.handcannon",
+		"results": [
+			{
+				"type": "guardhandcannonnightjob"
+			}
+		],
+		"sortWeight": 317791
+	},
+	{
+		"cooldown": 120,
+		"defaultLimit": 0,
+		"name": "pipliz.gunsmith.guardhandcannondayjob",
+		"requires": [
+			{
+				"type": "handcannon"
+			},
+			{
+				"amount": 2,
+				"type": "ironwrought"
+			}
+		],
+		"requiresScience": "pipliz.handcannon",
+		"results": [
+			{
+				"type": "guardhandcannondayjob"
+			}
+		],
+		"sortWeight": 317791
+	},
+	{
+		"cooldown": 180,
+		"defaultLimit": 3,
+		"name": "pipliz.gunsmith.guardgrenadenightjob",
+		"requires": [
+			{
+				"type": "grenadelauncher"
+			},
+			{
+				"type": "steelingot"
+			}
+		],
+		"requiresScience": "pipliz.grenadelauncher",
+		"results": [
+			{
+				"type": "guardgrenadenightjob"
+			}
+		],
+		"sortWeight": 1678401
+	},
+	{
+		"cooldown": 180,
+		"defaultLimit": 0,
+		"name": "pipliz.gunsmith.guardgrenadedayjob",
+		"requires": [
+			{
+				"type": "grenadelauncher"
+			},
+			{
+				"type": "steelingot"
+			}
+		],
+		"requiresScience": "pipliz.grenadelauncher",
+		"results": [
+			{
+				"type": "guardgrenadedayjob"
+			}
+		],
+		"sortWeight": 1678401
 	}
 ]

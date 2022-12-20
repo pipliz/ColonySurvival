@@ -1,0 +1,235 @@
+[
+	{
+		"cooldown": 180.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.coppersmith.coppertools",
+		"requires": [
+			{
+				"type": "planks"
+			},
+			{
+				"amount": 2,
+				"type": "copperingot"
+			}
+		],
+		"requiresScience": "pipliz.anvil",
+		"results": [
+			{
+				"type": "coppertools"
+			}
+		],
+		"sortWeight": 755
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 0,
+		"name": "pipliz.coppersmith.goldjewellery",
+		"requires": [
+			{
+				"type": "goldingot"
+			}
+		],
+		"requiresScience": "pipliz.jewelry",
+		"results": [
+			{
+				"type": "goldjewellery"
+			}
+		],
+		"sortWeight": 4679
+	},
+	{
+		"cooldown": 180.0,
+		"defaultLimit": 3,
+		"name": "pipliz.coppersmith.copperlockbox",
+		"requires": [
+			{
+				"amount": 5,
+				"type": "copperingot"
+			},
+			{
+				"amount": 3,
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.copperlockbox",
+		"results": [
+			{
+				"type": "copperlockbox"
+			}
+		],
+		"sortWeight": 2892
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.coppersmith.ironwrought",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "ironbloom"
+			}
+		],
+		"requiresScience": "pipliz.iron",
+		"results": [
+			{
+				"type": "ironwrought"
+			}
+		],
+		"sortWeight": 52842
+	},
+	{
+		"cooldown": 1200.0,
+		"defaultLimit": 20,
+		"name": "pipliz.coppersmith.steelparts",
+		"requires": [
+			{
+				"type": "steelingot"
+			}
+		],
+		"requiresScience": "pipliz.steel",
+		"results": [
+			{
+				"type": "steelparts"
+			}
+		],
+		"sortWeight": 150963
+	},
+	{
+		"cooldown": 1000.0,
+		"defaultLimit": 20,
+		"name": "pipliz.coppersmith.brassparts",
+		"requires": [
+			{
+				"type": "brassingot"
+			}
+		],
+		"requiresScience": "pipliz.printingpress",
+		"results": [
+			{
+				"type": "brassparts"
+			}
+		],
+		"sortWeight": 256662
+	},
+	{
+		"cooldown": 480.0,
+		"defaultLimit": 1,
+		"name": "pipliz.coppersmith.failsafe",
+		"requires": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			},
+			{
+				"amount": 5,
+				"type": "goldingot"
+			}
+		],
+		"requiresScience": "pipliz.failsafe",
+		"results": [
+			{
+				"type": "failsafe"
+			}
+		],
+		"sortWeight": 2005
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 5,
+		"defaultPriority": 100,
+		"name": "pipliz.coppersmith.bronzetools",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 1,
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.bronze",
+		"results": [
+			{
+				"type": "bronzetools"
+			}
+		],
+		"sortWeight": 9339
+	},
+	{
+		"cooldown": 150.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.coppersmith.irontools",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "ironwrought"
+			}
+		],
+		"requiresScience": "pipliz.iron",
+		"results": [
+			{
+				"type": "irontools"
+			}
+		],
+		"sortWeight": 52842
+	},
+	{
+		"cooldown": 480.0,
+		"defaultLimit": 15,
+		"name": "pipliz.coppersmith.steeltools",
+		"requires": [
+			{
+				"type": "steelingot"
+			},
+			{
+				"type": "steelparts"
+			},
+			{
+				"type": "leather"
+			},
+			{
+				"type": "vialmineraloil"
+			}
+		],
+		"requiresScience": "pipliz.steeltools",
+		"results": [
+			{
+				"type": "steeltools"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "vialempty"
+			}
+		],
+		"sortWeight": 639327
+	},
+	{
+		"cooldown": 360.0,
+		"defaultLimit": 10,
+		"defaultPriority": 100,
+		"name": "pipliz.coppersmith.machinetools",
+		"requires": [
+			{
+				"type": "steelparts"
+			},
+			{
+				"type": "brassparts"
+			},
+			{
+				"type": "vialmineraloil"
+			}
+		],
+		"requiresScience": "pipliz.printingpress",
+		"results": [
+			{
+				"type": "machinetools"
+			}
+		],
+		"sortWeight": 256662
+	}
+]

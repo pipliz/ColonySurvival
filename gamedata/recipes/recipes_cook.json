@@ -1,0 +1,113 @@
+[
+	{
+		"cooldown": 26.0,
+		"name": "pipliz.cook.cookedmeat",
+		"requires": [
+			{
+				"type": "rawmeat"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.cook",
+		"results": [
+			{
+				"type": "cookedmeat"
+			}
+		],
+		"sortWeight": 1332
+	},
+	{
+		"cooldown": 60.0,
+		"name": "pipliz.cook.chickenmeal",
+		"requires": [
+			{
+				"type": "chickenraw"
+			},
+			{
+				"type": "firewood"
+			},
+			{
+				"amount": 10,
+				"type": "cabbage"
+			}
+		],
+		"requiresScience": "pipliz.chickenmeal",
+		"results": [
+			{
+				"amount": 3,
+				"type": "chickenmeal"
+			}
+		],
+		"sortWeight": 39468
+	},
+	{
+		"cooldown": 40.0,
+		"name": "pipliz.cook.cookedfish",
+		"requires": [
+			{
+				"type": "rawfish"
+			},
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.cook",
+		"results": [
+			{
+				"type": "cookedfish"
+			}
+		],
+		"sortWeight": 1332
+	},
+	{
+		"cooldown": 20.0,
+		"name": "pipliz.cook.bread",
+		"requires": [
+			{
+				"type": "potflour"
+			},
+			{
+				"type": "firewood"
+			},
+			{
+				"type": "potwater"
+			}
+		],
+		"requiresScience": "pipliz.bread",
+		"results": [
+			{
+				"type": "bread"
+			},
+			{
+				"amount": 2,
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 15427
+	},
+	{
+		"cooldown": 48.0,
+		"defaultPriority": 100,
+		"name": "pipliz.cook.breadmeal",
+		"requires": [
+			{
+				"type": "bread"
+			},
+			{
+				"type": "berrymeal"
+			}
+		],
+		"requiresScience": "pipliz.bread",
+		"results": [
+			{
+				"amount": 3,
+				"type": "breadmeal"
+			}
+		],
+		"sortWeight": 15427
+	}
+]

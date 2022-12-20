@@ -1,12 +1,19 @@
 [
 	{
-		"defaultLimit" : 10,
-		"name" : "pipliz.waterpump.waterbucket",
-		"requires" : [
-			{"type":"bucketempty"}
+		"cooldown": 16.0,
+		"defaultLimit": 20,
+		"name": "pipliz.waterpump.potwater",
+		"requires": [
+			{
+				"type": "potempty"
+			}
 		],
-		"results" : [
-			{"type":"bucketwater"}
-		]
+		"requiresScience": "pipliz.waterpump",
+		"results": [
+			{
+				"type": "potwater"
+			}
+		],
+		"sortWeight": 309
 	}
 ]

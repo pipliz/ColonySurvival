@@ -1,0 +1,49 @@
+[
+	{
+		"cooldown": 48.0,
+		"name": "pipliz.firepit.wheatporridge",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "wheat"
+			},
+			{
+				"type": "potwater"
+			},
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.porridge",
+		"results": [
+			{
+				"type": "wheatporridge"
+			},
+			{
+				"chance": 0.95,
+				"isOptional": true,
+				"type": "potempty"
+			}
+		],
+		"sortWeight": 438
+	},
+	{
+		"cooldown": 35.0,
+		"name": "pipliz.firepit.cookedmeat",
+		"requires": [
+			{
+				"type": "rawmeat"
+			},
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.tanner",
+		"results": [
+			{
+				"type": "cookedmeat"
+			}
+		],
+		"sortWeight": 673
+	}
+]

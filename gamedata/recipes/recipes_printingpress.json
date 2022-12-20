@@ -1,13 +1,45 @@
 [
 	{
-		"defaultLimit" : 100,
-		"name" : "printingpress.papertext",
-		"requires" : [
-			{"amount":6,"type":"paperempty"},
-			{"amount":3,"type":"ink"}
+		"cooldown": 45.0,
+		"defaultLimit": 25,
+		"name": "pipliz.printingpress.movabletype",
+		"requires": [
+			{
+				"type": "leadingot"
+			}
 		],
-		"results" : [
-			{"amount":6,"type":"papertext"}
-		]
+		"requiresScience": "pipliz.printingpress",
+		"results": [
+			{
+				"type": "movabletype"
+			}
+		],
+		"sortWeight": 256662
+	},
+	{
+		"cooldown": 180.0,
+		"defaultLimit": 15,
+		"name": "pipliz.printingpress.bookofknowledge",
+		"requires": [
+			{
+				"amount": 5,
+				"type": "movabletype"
+			},
+			{
+				"type": "manuscript"
+			},
+			{
+				"amount": 30,
+				"type": "paper"
+			}
+		],
+		"requiresScience": "pipliz.printingpress",
+		"results": [
+			{
+				"amount": 10,
+				"type": "bookofknowledge"
+			}
+		],
+		"sortWeight": 256662
 	}
 ]

@@ -1,134 +1,140 @@
 {
-	"Banner" : {
-		"LoadedChunksRadius" : 256,
-		"MaximumZombieSpawnRadius" : 200,
-		"SafeRadiusMaximum" : 100,
-		"SafeRadiusMinimum" : 30
+	"Banner": {
+		"LoadedChunksRadius": 256,
+		"MaximumZombieSpawnRadius": 200,
+		"SafeRadiusMaximum": 100,
+		"SafeRadiusMinimum": 30
 	},
-	"BiomePrinting" : {
-		"BiomeColors" : [
+	"ChunkQueue": {
+		"MaxQueueSize": 3500,
+		"RecalculatePriorityCooldownMS": 750,
+		"TimeoutSeconds": 1
+	},
+	"Colony": {
+		"BuilderLimitStart": 1000,
+		"ColonistCapStart": 100,
+		"ColonyPointsCapStart": 100,
+		"DiggerLimitStart": 1000,
+		"ExclusiveRadius": 200,
+		"HealthMaxStart": 100,
+		"HealthRegenMaxStart": 30,
+		"HealthRegenSpeedStart": 1,
+		"TradingBaseStacksPerSecond": 0.02,
+		"TradingCooldownMS": 4000,
+		"TradingNPCCooldown": 3.5,
+		"TradingNPCStacksPerSecond": 0.05
+	},
+	"DifficultyOptions": {
+		"Default": "2",
+		"Presets": [
+			/*
+				Key is just some string that's persisted to find it back between updates/changes and such
+				LocaleKey is the localization entry shown to the user
+				NoThreatColonists is the amount of colonists allowed before threat starts incrementing
+				ThreatPerColonist; should be clear
+				Before 0.9.0, one colonist would count as approximately one threat level
+			*/
 			{
-				"color" : "#888888ff",
-				"type" : "stoneblock"
+				"Key": "0",
+				"LocaleKey": "general.none",
+				"MonsterScaling": 0.0,
+				"NoThreatColonists": 10000,
+				"ThreatPerColonist": 0.0
 			},
 			{
-				"color" : "#c2b280ff",
-				"type" : "sand"
+				"Key": "1",
+				"LocaleKey": "general.low",
+				"MonsterScaling": 0.65,
+				"NoThreatColonists": 25,
+				"ThreatPerColonist": 0.3
 			},
 			{
-				"color" : "#256d7bff",
-				"type" : "water"
+				"Key": "2",
+				"LocaleKey": "general.normal",
+				"MonsterScaling": 1.0,
+				"NoThreatColonists": 25,
+				"ThreatPerColonist": 0.3
 			},
 			{
-				"color" : "#ebe9f4ff",
-				"type" : "snow"
+				"Key": "3",
+				"LocaleKey": "general.high",
+				"MonsterScaling": 1.4,
+				"NoThreatColonists": 25,
+				"ThreatPerColonist": 0.3
 			},
 			{
-				"color" : "#e5953fff",
-				"type" : "grasstundradry"
-			},
-			{
-				"color" : "#9f1a26ff",
-				"type" : "grasstundrawet"
-			},
-			{
-				"color" : "#8ea63cff",
-				"type" : "grasstaigawet"
-			},
-			{
-				"color" : "#b6d65fff",
-				"type" : "grasscolddry"
-			},
-			{
-				"color" : "#7dbe3dff",
-				"type" : "grasscoldmid"
-			},
-			{
-				"color" : "#5b9f23ff",
-				"type" : "grasscoldwet"
-			},
-			{
-				"color" : "#d1cd5eff",
-				"type" : "grasshotdriest"
-			},
-			{
-				"color" : "#78b034ff",
-				"type" : "grasshotdry"
-			},
-			{
-				"color" : "#4c9a1dff",
-				"type" : "grasshotmid"
-			},
-			{
-				"color" : "#307f0eff",
-				"type" : "grasshotwet"
-			},
-			{
-				"color" : "#d6ce5dff",
-				"type" : "grasstaigadry"
-			},
-			{
-				"color" : "#f9bf5cff",
-				"type" : "grasstropicdriest"
-			},
-			{
-				"color" : "#bfb64eff",
-				"type" : "grasstropicdry"
-			},
-			{
-				"color" : "#82a135ff",
-				"type" : "grasstropicmid"
-			},
-			{
-				"color" : "#335f0fff",
-				"type" : "grasstropicwet"
+				"Key": "4",
+				"LocaleKey": "general.veryhigh",
+				"MonsterScaling": 2.0,
+				"NoThreatColonists": 25,
+				"ThreatPerColonist": 0.3
 			}
-		],
-		"OffsetX" : -6000,
-		"OffsetZ" : -6000,
-		"Path" : "./",
-		"PixelsSize" : 1500,
-		"VoxelsPerPixelX" : 8,
-		"VoxelsPerPixelZ" : 8
+		]
 	},
-	"ChunkQueue" : {
-		"MaxQueueSize" : 5000,
-		"RecalculatePriorityCooldownMS" : 750,
-		"TimeoutSeconds" : 1
+	"EnableUPnPForwarding": true,
+	"Leaves": {
+		"MaxDistanceToLog": 4,
+		"MaxDistanceToLogCheck": 9
 	},
-	"Colony" : {
-		"BaseHappiness" : 25,
-		"ExclusiveRadius" : 200,
-		"TradingBaseStacksPerSecond" : 0.02,
-		"TradingCooldownMS" : 4000,
-		"TradingNPCCooldown" : 3.5,
-		"TradingNPCStacksPerSecond" : 0.05
+	"ListenDirectConnections": true,
+	"ListenLANDiscoveryRequests": true,
+	"ListenLANDiscoveryRequestsLoopbackOnly": false,
+	"MaxWorkerThreads": -1,
+	"NPCs": {
+		"BuilderCooldownMultiplierSeconds": 1,
+		"DiggerCooldownMultiplierSeconds": 1,
+		"FreeNPCs": 10,
+		"ReconsiderDecisionTimeMaximum": 6000,
+		"ReconsiderDecisionTimeMinimum": 3500,
+		"RecruitmentCost": 4
 	},
-	"Leaves" : {
-		"MaxDistanceToLog" : 4,
-		"MaxDistanceToLogCheck" : 9
+	"PathfindingParallelJobs": 0,
+	"Player": {
+		"HealthAudioThreshold": 10,
+		"HealthRegenerateMax": 30,
+		"HealthRegenerationSpeed": 1,
+		"HealthUpdateTimerMS": 2000,
+		"StartingHealth": 100
 	},
-	"NPCs" : {
-		"BuilderCooldownMultiplierSeconds" : 1,
-		"DiggerCooldownMultiplierSeconds" : 1,
-		"InitialFoodCarriedHours" : 24,
-		"MaxFoodCarriedHours" : 48,
-		"ReconsiderDecisionTimeMaximum" : 6000,
-		"ReconsiderDecisionTimeMinimum" : 3500,
-		"RecruitmentCost" : 8,
-		"FreeNPCs" : 10
-	},
-	"PathfindingParallelJobs" : 0,
-	"Player" : {
-		"HealthAudioThreshold" : 10,
-		"HealthRegenerateMax" : 30,
-		"HealthRegenerationSpeed" : 1,
-		"HealthUpdateTimerMS" : 2000,
-		"StartingHealth" : 100
-	},
-	"PriorityBlockIndices" : [
-		"alkanetstage1",
-		"alkanetstage2",
+	"PriorityBlockIndices": [
+		"water",
+		"darkstone",
+		"stoneblock",
+		"dirt",
+		"sand",
+		"dirtfen",
+		"dirtheath",
+		"grassdry",
+		"grassfen",
+		"grassheath",
+		"grassheathpurple",
+		"grassmax",
+		"grassmid",
+		"grasswet",
+		"snow",
+		"leavesfallorange",
+		"leavesfallred",
+		"leavesfallyellow",
+		"leavesgreendark",
+		"leavesgreenlight",
+		"leavestaiga",
+		"leavestemperate",
+		"infiniteclay",
+		"infinitecoal",
+		"infinitecopper",
+		"infinitegold",
+		"infiniteiron",
+		"infinitestone",
+		"infinitetin",
+		"logtaiga",
+		"logtemperate",
+		"berrybush",
+		"planks",
+		"flaxstage1",
+		"flaxstage2",
+		"wheatstage1",
+		"wheatstage2",
+		"wheatstage3",
 		"bedendx+",
 		"bedendx-",
 		"bedendz+",
@@ -137,90 +143,48 @@
 		"bedx-",
 		"bedz+",
 		"bedz-",
-		"berrybush",
-		"cherryblossom",
-		"crate",
-		"darkstone",
-		"dirt",
-		"flaxstage1",
-		"flaxstage2",
-		"grasscolddry",
-		"grasscoldmid",
-		"grasscoldwet",
-		"grasshotdriest",
-		"grasshotdry",
-		"grasshotmid",
-		"grasshotwet",
-		"grasstaigadry",
-		"grasstaigawet",
-		"grasstropicdriest",
-		"grasstropicdry",
-		"grasstropicmid",
-		"grasstropicwet",
-		"grasstundradry",
-		"grasstundrawet",
-		"infiniteclay",
-		"infinitecoal",
-		"infinitecopper",
-		"infinitegalena",
-		"infinitegold",
-		"infinitegypsum",
-		"infiniteiron",
-		"infinitesalpeter",
-		"infinitestone",
-		"infinitetin",
-		"leavesfallorange",
-		"leavesfallred",
-		"leavesfallyellow",
-		"leavesgreendark",
-		"leavesgreenlight",
-		"leavestaiga",
-		"leavestemperate",
-		"logtaiga",
-		"logtemperate",
-		"planks",
-		"sand",
-		"stoneblock",
-		"water",
-		"wheatstage1",
-		"wheatstage2",
-		"wheatstage3",
-		"wolfsbanestage1",
-		"wolfsbanestage2"
+		"hempstage1",
+		"hempstage2",
+		"torchx+",
+		"torchx-",
+		"torchz+",
+		"torchz-",
+		"crate"
 	],
-	"Saving" : {
-		"FreeChunksBatchMaxDelayMilliseconds" : 31000,
-		"FreeChunksBatchSizeMax" : 250,
-		"MillisecondsBeforeAutosaveChunk" : 30000,
-		"MillisecondsBeforeAutosaveChunkMax" : 300000,
-		"MillisecondsBetweenDirtyChunkChecks" : 8000,
-		"SecondsBetweenManualSaves" : 30,
-		"SecondsBetweenMiscAutoSaving" : 300
+	"Saving": {
+		"FreeChunksBatchSizeMax": 250,
+		"MillisecondsBeforeAutosaveChunk": 30000,
+		"MillisecondsBeforeAutosaveChunkMax": 300000,
+		"MillisecondsBetweenDirtyChunkChecks": 8000,
+		"SecondsBetweenManualSaves": 30,
+		"SecondsBetweenMiscAutoSaving": 300
 	},
-	"Time" : {
-		"DayTimeEnd" : 19.83,
-		"DayTimeStart" : 4.22,
-		"GameTimeScale" : 120,
-		"GuardShiftDayEnd" : 19.0,
-		"GuardShiftDayStart" : 4.0,
-		"GuardShiftNightEnd" : 8.0,
-		"GuardShiftNightStart" : 17.0,
-		"ServerTickRate" : 30,
-		"ServerTimeMillisecondsPerTickMax" : 50,
-		"SleepTimeEnd" : 4.5,
-		"SleepTimeStart" : 19.3,
-		"StartTicks" : 288000000000,
-		"UseServerPausing" : true
+	"Time": {
+		"DayTimeEnd": 19.5,
+		"DayTimeStart": 4.5,
+		"GameTimeScale": 120,
+		"GuardShiftDayEnd": 19.0,
+		"GuardShiftDayStart": 4.0,
+		"GuardShiftNightEnd": 8.0,
+		"GuardShiftNightStart": 17.0,
+		"ServerTickRate": 30,
+		"ServerTimeMillisecondsPerTickMax": 50,
+		"SleepTimeEnd": 4.5,
+		"SleepTimeStart": 19.3,
+		"StartTicks": 288000000000,
+		"UseServerPausing": true
 	},
-	"Water" : {
-		"MaxUpdatesPerTick" : 1000,
-		"TickTimeMilliSeconds" : 1000
+	"UPnPEntryTimeout": 7200,
+	"Water": {
+		"MaxUpdatesPerTick": 1000,
+		"TickTimeMilliSeconds": 1000
 	},
-	"Zombies" : {
-		"PunchForce" : 6,
-		"PunchHeight" : 0.25,
-		"ReconsiderDecisionTimeMaximum" : 6500,
-		"ReconsiderDecisionTimeMinimum" : 4500,
-		"SiegeModeThreshold" : 50
+	"Zombies": {
+		"PunchForce": 6,
+		"PunchHeight": 0.25,
+		"ReconsiderDecisionTimeMaximum": 6500,
+		"ReconsiderDecisionTimeMinimum": 4500,
+		"SiegeModeThreshold": 50,
+		"SpawnPathingJobs": -1
 	}
 }

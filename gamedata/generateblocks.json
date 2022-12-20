@@ -1,356 +1,4654 @@
 [
 	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#2a2aac",
-		"typeName" : "minerjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#8cc066",
-		"typeName" : "watergathererjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#4264d4",
-		"typeName" : "fishermanjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#7a7a7a",
-		"typeName" : "guardslingerdayjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#474747",
-		"typeName" : "guardslingernightjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#db6d1e",
-		"typeName" : "guardbowdayjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#a85317",
-		"typeName" : "guardbownightjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#a5b3d3",
-		"typeName" : "guardcrossbowdayjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#7d87a0",
-		"typeName" : "guardcrossbownightjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#e5e960",
-		"typeName" : "guardmatchlockdayjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#b1b54a",
-		"typeName" : "guardmatchlocknightjob"
-	},
-	{
-		"generateType" : "jobOutline",
-		"outlineColor" : "#911616",
-		"typeName" : "constructionjob"
-	},
-	{
-		"baseType" : {
-			"categories" : ["job"],
-			"icon" : "./textures/icons/waterpump.png",
-			"lightingTransparency" : 200,
-			"mesh" : "./meshes/waterpump.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "waterpump"
-	},
-	{
-		"baseType" : {
-			"categories" : ["job"],
-			"icon" : "./textures/icons/writerdesk.png",
-			"lightingTransparency" : 200,
-			"mesh" : "./meshes/writerdesk.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "writerdesk"
-	},
-	{
-		"baseType" : {
-			"categories" : ["job"],
-			"icon" : "./textures/icons/bronzeanvil.png",
-			"lightingTransparency" : 150,
-			"mesh" : "./meshes/bronzeanvil.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "stonePlace",
-			"onRemoveAudio" : "stoneDelete",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "bronzeanvil"
-	},
-	{
-		"baseType" : {
-			"categories" : ["decorative","stairs"],
-			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
-			"customData" : {"colors":["#ff0000->#242321"]},
-			"icon" : "./textures/icons/quarterblockblack.png",
-			"isSolid" : false,
-			"lightingTransparency" : 200,
-			"maxStackSize" : 60,
-			"mesh" : "./meshes/quarterblockx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "quarterblockblack"
-	},
-	{
-		"baseType" : {
-			"categories" : ["decorative","stairs"],
-			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
-			"customData" : {"colors":["#ff0000->#332106"]},
-			"icon" : "./textures/icons/quarterblockbrowndark.png",
-			"isSolid" : false,
-			"lightingTransparency" : 200,
-			"maxStackSize" : 60,
-			"mesh" : "./meshes/quarterblockx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "quarterblockbrowndark"
-	},
-	{
-		"baseType" : {
-			"categories" : ["decorative","stairs"],
-			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
-			"customData" : {"colors":["#ff0000->#917451"]},
-			"icon" : "./textures/icons/quarterblockbrownlight.png",
-			"isSolid" : false,
-			"lightingTransparency" : 200,
-			"maxStackSize" : 60,
-			"mesh" : "./meshes/quarterblockx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "quarterblockbrownlight"
-	},
-	{
-		"baseType" : {
-			"categories" : ["decorative","stairs"],
-			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
-			"customData" : {"colors":["#ff0000->#636363"]},
-			"icon" : "./textures/icons/quarterblockgrey.png",
-			"isSolid" : false,
-			"lightingTransparency" : 200,
-			"maxStackSize" : 60,
-			"mesh" : "./meshes/quarterblockx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "quarterblockgrey"
-	},
-	{
-		"baseType" : {
-			"categories" : ["decorative","stairs"],
-			"colliders" : {"boxes":[{"max":[0.5,0,0.5],"min":[0,-0.5,-0.5]}]},
-			"customData" : {"colors":["#ff0000->#c7c7c7"]},
-			"icon" : "./textures/icons/quarterblockwhite.png",
-			"isSolid" : false,
-			"lightingTransparency" : 200,
-			"maxStackSize" : 60,
-			"mesh" : "./meshes/quarterblockx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "quarterblockwhite"
-	},
-	{
-		"baseType" : {
-			"categories" : ["essential"],
-			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]},{"max":[-0.4,0.5,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
-			"customData" : {
-				"colors":["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"],
-				"bedpart" : "head"
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"icon": "./textures/icons/glider.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/gliderlauncher.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
 			},
-			"icon" : "./textures/icons/bed.png",
-			"isSolid" : false,
-			"mesh" : "./meshes/bedx+.ply",
-			"needsBase" : true,
-			"onPlaceAudio" : "woodPlace",
-			"onRemoveAudio" : "woodDeleteLight",
-			"sideall" : "neutral"
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
 		},
-		"generateType" : "rotateBlock",
-		"typeName" : "bed"
-	},
-	{
-		"baseType" : {
-			"colliders" : {"boxes":[{"max":[0.5,0.1,0.5],"min":[-0.5,-0.5,-0.5]}],"collidePlayer":false},
-			"customData" : {
-				"colors":["#ff0000->#542909","#00ff00->#e5e5e6","#0000ff->#9b7a3f"],
-				"bedpart" : "foot"
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 1,
+							"y": 0.1,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 15,
+							"y": 3,
+							"z": 0
+						}
+					}
+				]
 			},
-			"mesh" : "./meshes/bedendx+.ply",
-			"parentType" : "bed"
-		},
-		"generateType" : "rotateBlock",
-		"typeName" : "bedend"
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": -1,
+							"y": 0.1,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": -15,
+							"y": 3,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.1,
+							"z": 1
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 0,
+							"y": 3,
+							"z": 15
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.1,
+							"z": -1
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 0,
+							"y": 3,
+							"z": -15
+						}
+					}
+				]
+			}
+		],
+		"typeName": "glider"
 	},
 	{
-		"baseType" : {
-			"categories" : ["job"],
-			"destructionTime" : 800,
-			"icon" : "gamedata/textures/icons/furnace.png",
-			"onPlaceAudio" : "stonePlace",
-			"onRemoveAudio" : "stoneDelete",
-			"sideall" : "furnaceside"
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"icon": "./textures/icons/glidersteel.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/glidersteellauncher.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
 		},
-		"generateType" : "rotateBlock",
-		"litTypeCustomData" : {
-			"torches" : {
-				"merged" : {
-					"color" : "#c3872e",
-					"intensity" : 2.5,
-					"range" : 8,
-					"volume" : 0.3,
-					"injectionPoints" : [
-						{ "offsetX" : 1, "startValue" : 7 },
-						{ "offsetY" : 1, "startValue" : 7 }
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0.6,
+							"y": 0.6,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 35,
+							"y": 35,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": -0.6,
+							"y": 0.6,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": -35,
+							"y": 35,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.6,
+							"z": 0.6
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 0,
+							"y": 35,
+							"z": 35
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.6,
+							"z": -0.6
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 0,
+							"y": 35,
+							"z": -35
+						}
+					}
+				]
+			}
+		],
+		"typeName": "glidersteel"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "droppertrapammo",
+			"audio": "dropper",
+			"damage": 500,
+			"filter": "Any",
+			"hitForce": 30,
+			"range": 8,
+			"reload": 10,
+			"style": "Down"
+		},
+		"trapName": "droppertrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 1,
+			"ammoType": "gunpowdertrapammo",
+			"audio": "gunpowdertrap",
+			"damage": 750,
+			"explosiveFriendlyFire": true,
+			"filter": "Any",
+			"hitForce": 35,
+			"rangeExplosive": 3,
+			"reload": 10,
+			"style": "Up"
+		},
+		"trapName": "gunpowdertrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply"
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply"
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply"
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trapSideways",
+		"trapConfig": {
+			"ammoMax": 10,
+			"ammoType": "projectiletrapammo",
+			"audio": "projectiletrap",
+			"damage": 2500,
+			"filter": "Atleast1000hp",
+			"hitForce": 30,
+			"range": 12,
+			"reload": 10
+		},
+		"trapName": "projectiletrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trapSideways",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "guntrapammo",
+			"audio": "projectiletrap",
+			"damage": 12500,
+			"filter": "Atleast1000hp",
+			"hitForce": 30,
+			"range": 20,
+			"reload": 5
+		},
+		"trapName": "guntrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				/* collider indices matter and are duplicated in the vehicles.json settings (related to the triggers set in the attachBehaviour) */
+				/* floor collider*/
+				{
+					"max": [
+						0.45,
+						-0.48,
+						0.45
+					],
+					"min": [
+						-0.25,
+						-0.5,
+						-0.45
 					]
+				}
+				/* roof collider*/,
+				{
+					"max": [
+						0.45,
+						1.5,
+						0.45
+					],
+					"min": [
+						-0.25,
+						1.48,
+						-0.45
+					]
+				}
+				/* top selection*/,
+				{
+					"max": [
+						-0.2,
+						1.45,
+						0.2
+					],
+					"min": [
+						-0.35,
+						1.05,
+						-0.2
+					]
+				}
+				/* bottom selection*/,
+				{
+					"max": [
+						-0.2,
+						1.05,
+						0.2
+					],
+					"min": [
+						-0.35,
+						-0.45,
+						-0.2
+					]
+				}
+				/* next 3 are the shaft around it*/,
+				{
+					"max": [
+						-0.4,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						0.4
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						-0.4
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/elevatorgateway.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/elevatorgateway.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					/* gatewayFilter is the group of other gateway types that it'll connect to*/
+					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
+					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
+					{
+						"gatewayFilter": "mainGatewaysX+",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							180,
+							0
+						],
+						"shaftFilter": "mainShaftX+",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysX-",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							0,
+							0
+						],
+						"shaftFilter": "mainShaftX-",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysZ+",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							90,
+							0
+						],
+						"shaftFilter": "mainShaftZ+",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysZ-",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							270,
+							0
+						],
+						"shaftFilter": "mainShaftZ-",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			}
+		],
+		"typeName": "elevator"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				{
+					"max": [
+						-0.4,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						0.4
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						-0.4
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/elevatorshaft.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/elevatorshaft.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftX+",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftX-",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftZ+",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftZ-",
+						"type": "shaft"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshaft"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				/* collider indices here matter as they're checked against the triggers defined in the elevator attachBehaviour of the itemtypes spawning elevators */
+				/* bottom collider */
+				{
+					"max": [
+						0.4,
+						-0.4,
+						0.4
+					],
+					"min": [
+						-0.4,
+						-0.45,
+						-0.4
+					]
+				}
+				/* side colliders (front/back) */,
+				{
+					"max": [
+						0.5,
+						0.6165,
+						0.4
+					],
+					"min": [
+						0.45,
+						-0.5,
+						-0.4
+					]
+				},
+				{
+					"max": [
+						-0.45,
+						0.6165,
+						0.4
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.4
+					]
+				}
+			],
+			"icon": "./textures/icons/elevatorhorizontalgateway.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/elevatorhorizontalgateway.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					/* gatewayFilter is the group of other gateway types that it'll connect to*/
+					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
+					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
+					{
+						"gatewayFilter": "horizontalGatewaysX",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							0,
+							0
+						],
+						"shaftFilter": "horizontalShaftX",
+						"triggers": [
+							{
+								"colliderIndex": 0,
+								"type": "Exit"
+							},
+							{
+								"colliderIndex": 1,
+								"type": "DirectionXForward"
+							},
+							{
+								"colliderIndex": 2,
+								"type": "DirectionXBack"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGatewaysX",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							180,
+							0
+						],
+						"shaftFilter": "horizontalShaftX",
+						"triggers": [
+							{
+								"colliderIndex": 0,
+								"type": "Exit"
+							},
+							{
+								"colliderIndex": 1,
+								"type": "DirectionXBack"
+							},
+							{
+								"colliderIndex": 2,
+								"type": "DirectionXForward"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGatewaysZ",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							270,
+							0
+						],
+						"shaftFilter": "horizontalShaftZ",
+						"triggers": [
+							{
+								"colliderIndex": 0,
+								"type": "Exit"
+							},
+							{
+								"colliderIndex": 1,
+								"type": "DirectionZForward"
+							},
+							{
+								"colliderIndex": 2,
+								"type": "DirectionZBack"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGatewaysZ",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							90,
+							0
+						],
+						"shaftFilter": "horizontalShaftZ",
+						"triggers": [
+							{
+								"colliderIndex": 0,
+								"type": "Exit"
+							},
+							{
+								"colliderIndex": 1,
+								"type": "DirectionZBack"
+							},
+							{
+								"colliderIndex": 2,
+								"type": "DirectionZForward"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			}
+		],
+		"typeName": "elevatorhorizontal"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.45,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.12,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						0.45
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.12,
+						-0.45
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/elevatorhorizontalshaft.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/elevatorhorizontalshaft.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "horizontalShaftX",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "horizontalShaftX",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "horizontalShaftZ",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "horizontalShaftZ",
+						"type": "shaft"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshafthorizontal"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "threatstatue",
+					"threatcaused": 10,
+					"threatweight": 150
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"icon": "./textures/icons/goldenstatue.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/goldenstatue.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "goldenstatue"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"decorative",
+				"stair"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0,
+						0.5
+					],
+					"min": [
+						0,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"colors": [
+					"#ff0000->#636363"
+				]
+			},
+			"icon": "./textures/icons/quarterblockgrey.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/quarterblockx+.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "quarterblockgrey"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"decorative",
+				"stair"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0,
+						0.5
+					],
+					"min": [
+						0,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"colors": [
+					"#ff0000->#332106"
+				]
+			},
+			"icon": "./textures/icons/quarterblockbrowndark.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/quarterblockx+.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "quarterblockbrowndark"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"decorative",
+				"stair"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0,
+						0.5
+					],
+					"min": [
+						0,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"colors": [
+					"#ff0000->#917451"
+				]
+			},
+			"icon": "./textures/icons/quarterblockbrownlight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/quarterblockx+.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "quarterblockbrownlight"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "caltrops",
+			"audio": "caltrops",
+			"filter": "Unslowed",
+			"hitSpeedMultiplier": 0.6,
+			"range": 4,
+			"rangeExplosive": 3,
+			"reload": 10,
+			"style": "Down"
+		},
+		"trapName": "caltroptrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "./textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "ropetrapammo",
+			"audio": "caltrops",
+			"filter": "Unslowed",
+			"freezeTime": 10,
+			"range": 4,
+			"rangeExplosive": 4,
+			"reload": 45,
+			"style": "Down"
+		},
+		"trapName": "ropetrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "./textures/icons/trap.png",
+			"mesh": "./meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "./meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "./meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "minerjob",
+					"onMineAudio": "stoneDelete",
+					"toolSet": "default"
+				},
+				"client_requireminable"
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.1,
+						-0.15
+					],
+					"min": [
+						0.15,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/minerjob.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"mesh": "./meshes/minerjob.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "minerjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.tinkerer",
+					"onCraftedAudio": "tinkerer",
+					"timeBetweenHauls": 40,
+					"toolset": "stonemax"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.65,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/workbench.png",
+			"isSolid": false,
+			"lightingTransparency": 120,
+			"mesh": "./meshes/workbench.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "tinkerertable"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.sanctifier",
+					"timeBetweenHauls": 40,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.6,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/sanctifiertable.png",
+			"isSolid": false,
+			"lightingTransparency": 120,
+			"mesh": "./meshes/sanctifiertable.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "sanctifiertable"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"clip": "alarmbell",
+					"cooldown": 30,
+					"id": "alarmbell"
+				}
+			],
+			"categories": [
+				"defense"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.4,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/alarmbell.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/alarmbell.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "alarmbell"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.tailor",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/tailorshop.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "./meshes/tailorshop.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "tailorshop"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.cook",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.65,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/stove.png",
+			"isSolid": false,
+			"lightingTransparency": 120,
+			"mesh": "./meshes/stove.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "stove"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.stonemason",
+					"onCraftedAudio": "stonemason",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						0.45,
+						0.4
+					],
+					"min": [
+						-0.4,
+						-0.5,
+						-0.4
+					]
+				}
+			],
+			"icon": "./textures/icons/stonemasonworkbench.png",
+			"isSolid": false,
+			"lightingTransparency": 180,
+			"mesh": "./meshes/stonemasonworkbench.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "stonemasonworkbench"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.woodcutter",
+					"onCraftedAudio": "woodCut",
+					"timeBetweenHauls": 20
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/splittingstump.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "./meshes/splittingstump.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteHeavy",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "splittingstump"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.roper",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/ropebench.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/ropemakersworkbench.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "ropebench"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.engineer",
+					"onCraftedAudio": "engineer",
+					"timeBetweenHauls": 40,
+					"toolset": "coppermin"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/engineerbench.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/engineerbench.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "engineerbench"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.potter",
+					"timeBetweenHauls": 30,
+					"toolset": "coppermax"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.9,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/potterystation.png",
+			"isSolid": false,
+			"lightingTransparency": 30,
+			"mesh": "./meshes/potterystation.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "potterystation"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.waterpump",
+					"timeBetweenHauls": 30,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"icon": "./textures/icons/waterpump.png",
+			"isSolid": false,
+			"lightingTransparency": 210,
+			"mesh": "./meshes/waterpump.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "waterpump"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.grinder",
+					"onCraftedAudio": "grinder",
+					"timeBetweenHauls": 30,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/grindstone.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "./meshes/grindstone.ply",
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "grindstone"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.firepit",
+					"timeBetweenHauls": 40,
+					"toolset": "coppermax"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.1,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/firepit.png",
+			"isSolid": false,
+			"lightingTransparency": 210,
+			"mesh": "./meshes/firepit.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "firepit"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.papermaker",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.1,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/papermakersmould.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "./meshes/papermakersmould.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "papermakersmould"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.alchemist",
+					"timeBetweenHauls": 40,
+					"toolset": "bronzemin"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.1,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/alchemisttable.png",
+			"isSolid": false,
+			"lightingTransparency": 60,
+			"mesh": "./meshes/alchemisttable.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "alchemisttable"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"bookCaseLandmarkType": "scrollshelf",
+					"id": "craftingblockresearcher",
+					"missingBookCaseIndicatorType": "scrollshelf",
+					"npcType": "pipliz.scribe",
+					"onCraftedAudio": "paper",
+					"toolset": "glasses"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/scribedesk.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "./meshes/scribedesk.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scribedesk"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/scrollshelf0.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfx+"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1x+"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2x+"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledx+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfx-"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1x-"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2x-"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledx-"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfz+"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1z+"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2z+"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledz+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfz-"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1z-"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2z-"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledz-"
+							}
+						]
+					}
+				]
+			}
+		],
+		"typeName": "scrollshelf"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/scrollshelf3.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelffilled"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/scrollshelf1.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelf1"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/scrollshelf2.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelf2"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"bookCaseLandmarkType": "paperbookcases",
+					"id": "craftingblockresearcher",
+					"missingBookCaseIndicatorType": "bookcase",
+					"npcType": "pipliz.researcher",
+					"onCraftedAudio": "paper",
+					"toolset": "glasses"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.6,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/researchersdesk.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "./meshes/researcherworkdesk.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "researcherdesk"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 130,
+			"mesh": "./meshes/bookcase0.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasex+"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1x+"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2x+"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledx+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasex-"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1x-"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2x-"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledx-"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasez+"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1z+"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2z+"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledz+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasez-"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1z-"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2z-"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledz-"
+							}
+						]
+					}
+				]
+			}
+		],
+		"typeName": "bookcase"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/bookcase3.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcasefilled"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/bookcase1.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcase1"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/bookcase2.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcase2"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.chestmaker",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/chestmaker.png",
+			"isSolid": false,
+			"lightingTransparency": 60,
+			"mesh": "./meshes/chestmaker.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "chestmaker"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.gunsmith",
+					"onCraftedAudio": "gunsmith",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.7,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/gunsmith.png",
+			"isSolid": false,
+			"lightingTransparency": 50,
+			"mesh": "./meshes/gunsmith.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "gunsmith"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.glassblower",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.2,
+						1.5,
+						0.2
+					],
+					"min": [
+						-0.2,
+						0.4,
+						-0.2
+					]
+				}
+			],
+			"icon": "./textures/icons/glassblower.png",
+			"isSolid": false,
+			"lightingTransparency": 140,
+			"mesh": "./meshes/glassblower.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "glassblower"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.jobblockcrafter",
+					"onCraftedAudio": "tinkerer",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.33,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						-0.4,
+						0.45,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/jobblockcrafter.png",
+			"isSolid": false,
+			"lightingTransparency": 160,
+			"mesh": "./meshes/jobblockcrafter.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "jobblockcrafter"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.jobblockcrafteradvanced",
+					"onCraftedAudio": "tinkerer",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/jobblockcrafteradvanced.png",
+			"isSolid": false,
+			"lightingTransparency": 130,
+			"mesh": "./meshes/jobblockcrafteradvanced.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "jobblockcrafteradvanced"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.printingpress",
+					"timeBetweenHauls": 40,
+					"toolset": "machinetools"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/printingpress.png",
+			"isSolid": false,
+			"lightingTransparency": 140,
+			"mesh": "./meshes/printingpress.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "printingpress"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.dyer",
+					"timeBetweenHauls": 40,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"icon": "./textures/icons/dyertable.png",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "coatedplanks",
+			"sidey+": "dyertable"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "dyertable"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.cottonengine",
+					"timeBetweenHauls": 40,
+					"toolset": "machinetools"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/cottonengine.png",
+			"isSolid": false,
+			"lightingTransparency": 60,
+			"mesh": "./meshes/cottonengine.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "cottonengine"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.metallathe",
+					"timeBetweenHauls": 40,
+					"toolset": "machinetools"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/metallathe.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "./meshes/metallathe.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "metallathe"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.tabulator",
+					"timeBetweenHauls": 40,
+					"toolset": "machinetools"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/tabulator.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "./meshes/tabulator.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "tabulator"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"islit": true,
+					"npcType": "pipliz.blastfurnace",
+					"timeBetweenHauls": 40,
+					"toolset": "machinetools"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/blastfurnace.png",
+			"isSolid": false,
+			"lightingTransparency": 110,
+			"mesh": "./meshes/blastfurnace.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"litTypeCustomData": {
+			"torches": {
+				"merged": {
+					"color": "#c3872e",
+					"injectionPoints": [
+						{
+							"offsetX": 1,
+							"startValue": 7
+						},
+						{
+							"offsetY": 1,
+							"startValue": 7
+						},
+						{
+							"injectEvenIfOpaque": true,
+							"preventSpread": true,
+							"startValue": 8
+						}
+					],
+					"intensity": 12.5,
+					"range": 8,
+					"volume": 0.3
 				}
 			}
 		},
-		"sideFrontLit" : "furnacelitfront",
-		"sideFrontUnlit" : "furnaceunlitfront",
-		"sideTopLit" : "furnacelittop",
-		"sideTopUnlit" : "furnaceunlittop",
-		"typeName" : "furnace"
+		"sideAllLit": "furnace",
+		"typeName": "blastfurnace"
 	},
 	{
-		"baseType" : {
-			"categories" : ["job"],
-			"destructionTime" : 800,
-			"icon" : "gamedata/textures/icons/oven.png",
-			"onPlaceAudio" : "stonePlace",
-			"onRemoveAudio" : "stoneDelete",
-			"sideall" : "stonebricks"
-		},
-		"generateType" : "rotateBlock",
-		"litTypeCustomData" : {
-			"torches" : {
-				"merged" : {
-					"color" : "#c3872e",
-					"intensity" : 2,
-					"range" : 8,
-					"volume" : 0.2,
-					"injectionPoints" : [
-						{ "offsetX" : 1, "startValue" : 7 }
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.composter",
+					"timeBetweenHauls": 40,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
 					]
+				}
+			],
+			"icon": "./textures/icons/compostingbin.png",
+			"isSolid": false,
+			"lightingTransparency": 60,
+			"mesh": "./meshes/compostingbin.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "compostingbin"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "pointstorage",
+					"points": 50,
+					"threat": 3
+				}
+			],
+			"canBuildUpon": true,
+			"categories": [
+				"essential",
+				"pointstorage"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/copperlockbox.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "./meshes/copperlockbox.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "copperlockbox"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "sanctifiedpointstorage",
+					"points": 1000,
+					"threat": 1
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/sanctifiedhouse.png",
+			"isSolid": false,
+			"lightingTransparency": 180,
+			"mesh": "./meshes/sanctifiedhouse.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "sanctifiedhouse"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"wisteriafarmer"
+			],
+			"categories": [
+				"job"
+			],
+			"icon": "./textures/icons/wisteriajob.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/wisteriajob.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "wisteriajob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"trapfixer"
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/trapfixer.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/trapfixer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "trapfixer"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "pointstorage",
+					"points": 500,
+					"threat": 10
+				}
+			],
+			"canBuildUpon": true,
+			"categories": [
+				"essential",
+				"pointstorage"
+			],
+			"icon": "./textures/icons/bronzelockbox.png",
+			"lightingTransparency": 30,
+			"mesh": "./meshes/bronzelockbox.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bronzelockbox"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "pointstorage",
+					"points": 2500,
+					"threat": 25
+				}
+			],
+			"canBuildUpon": true,
+			"categories": [
+				"essential",
+				"pointstorage"
+			],
+			"icon": "./textures/icons/steellockbox.png",
+			"lightingTransparency": 30,
+			"mesh": "./meshes/steellockbox.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "steellockbox"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"statisticsboard"
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.05,
+						1.4,
+						0.48
+					],
+					"min": [
+						-0.05,
+						-0.5,
+						-0.48
+					]
+				},
+				{
+					"max": [
+						0.35,
+						1.41,
+						0.5
+					],
+					"min": [
+						-0.35,
+						1.215,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/statisticsboard.png",
+			"isSolid": false,
+			"lightingTransparency": 180,
+			"mesh": "./meshes/statisticsboard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "statisticsboard"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"client_requirenearwater",
+				{
+					"id": "craftingblock",
+					"nearwater": true,
+					"npcType": "pipliz.watergatherer",
+					"onCraftedAudio": "watergatherer",
+					"timeBetweenHauls": 40,
+					"toolset": "notool"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.25,
+						0.5
+					],
+					"min": [
+						0.2,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/watergatherer.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/watergatherer.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "watergatherer"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"client_requirenearwater",
+				{
+					"id": "craftingblock",
+					"nearwater": true,
+					"npcType": "pipliz.fisherman",
+					"onCraftedAudio": "fisherman",
+					"timeBetweenHauls": 40,
+					"toolset": "stonemax"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.25,
+						-0.3
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/fisherman.png",
+			"isSolid": false,
+			"lightingTransparency": 210,
+			"mesh": "./meshes/fisherman.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "fisherman"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.jeweller",
+					"onCraftedAudio": "jeweller",
+					"timeBetweenHauls": 40
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/jewellerbench.png",
+			"isSolid": false,
+			"lightingTransparency": 170,
+			"mesh": "./meshes/jewellerbench.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "jewellerbench"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.tanner",
+					"timeBetweenHauls": 30
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/tannertable.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/tannersbench.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "tannertable"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.fletcher",
+					"onCraftedAudio": "fletcher",
+					"timeBetweenHauls": 30
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/fletcherbench.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/fletcherbench.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "fletcherbench"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"npcshop"
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/npcshop.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "./meshes/npcshop.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					"npcshop"
+				]
+			},
+			{
+				"attachBehaviour": [
+					"npcshop"
+				]
+			},
+			{
+				"attachBehaviour": [
+					"npcshop"
+				]
+			},
+			{
+				"attachBehaviour": [
+					"npcshop"
+				]
+			}
+		],
+		"typeName": "npcshop"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 3,
+					"damage": 25,
+					"hitForce": 7,
+					"id": "guard",
+					"npcType": "pipliz.guardslingerday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 12,
+					"shootRequirements": [
+						{
+							"type": "slingbullet"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.1,
+						0.15
+					],
+					"min": [
+						0.2,
+						-0.5,
+						-0.15
+					]
+				}
+			],
+			"icon": "./textures/icons/slingday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/slinger.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardslingerdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 3,
+					"damage": 25,
+					"hitForce": 7,
+					"id": "guard",
+					"npcType": "pipliz.guardslingernight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 12,
+					"shootRequirements": [
+						{
+							"type": "slingbullet"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.1,
+						0.15
+					],
+					"min": [
+						0.2,
+						-0.5,
+						-0.15
+					]
+				}
+			],
+			"icon": "./textures/icons/slingnight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/slinger.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardslingernightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 0,
+					"damageTicks": {
+						"damage": 120,
+						"tickDelay": 3,
+						"ticks": 15
+					},
+					"filterType": "UnpoisonedAtleast1000hp",
+					"id": "guard",
+					"npcType": "pipliz.guardpoison",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "poisondart"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.3,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/poisonguard.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/poisonguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardpoison"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 5,
+					"damage": 75,
+					"hitForce": 10,
+					"id": "guard",
+					"npcType": "pipliz.guardbowday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "copperarrow"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.1
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.1
+					]
+				}
+			],
+			"icon": "./textures/icons/archerday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/archer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardbowdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 5,
+					"damage": 75,
+					"hitForce": 10,
+					"id": "guard",
+					"npcType": "pipliz.guardbownight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "copperarrow"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.1
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.1
+					]
+				}
+			],
+			"icon": "./textures/icons/archernight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/archer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardbownightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 8,
+					"damage": 200,
+					"hitForce": 13,
+					"id": "guard",
+					"npcType": "pipliz.guardcrossbowday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 25,
+					"shootRequirements": [
+						{
+							"type": "crossbowbolt"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.3
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.3
+					]
+				}
+			],
+			"icon": "./textures/icons/crossbowday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/crossbow.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardcrossbowdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 8,
+					"damage": 200,
+					"hitForce": 13,
+					"id": "guard",
+					"npcType": "pipliz.guardcrossbownight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 25,
+					"shootRequirements": [
+						{
+							"type": "crossbowbolt"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.3
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.3
+					]
+				}
+			],
+			"icon": "./textures/icons/crossbownight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "./meshes/crossbow.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardcrossbownightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 10,
+					"damage": 1300,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardhandcannonday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "handcannonammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/guardhandcannondayjob.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/guardhandcannon.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardhandcannondayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 10,
+					"damage": 1300,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardhandcannonnight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "handcannonammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/guardhandcannonnightjob.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/guardhandcannon.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardhandcannonnightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 7,
+					"damage": 500,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardmusketday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 30,
+					"shootRequirements": [
+						{
+							"type": "musketammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/musketjobday.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/guardmusket.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardmusketdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 7,
+					"damage": 500,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardmusketnight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 30,
+					"shootRequirements": [
+						{
+							"type": "musketammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/musketjobnight.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/guardmusket.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardmusketnightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 250,
+					"damageRadius": 3,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardgrenadeday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "grenadelauncherammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/grenadejobday.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/grenadelauncherguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardgrenadedayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 250,
+					"damageRadius": 3,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardgrenadeday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "grenadelauncherammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "./textures/icons/grenadejobnight.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "./meshes/grenadelauncherguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardgrenadenightjob"
+	},
+	{
+		"generateType": "jobOutline",
+		"outlineColor": "#911616",
+		"typeName": "constructionjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"islit": true,
+					"npcType": "pipliz.bloomeryjob",
+					"timeBetweenHauls": 30
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"destructionTime": 800,
+			"icon": "gamedata/textures/icons/bloomery.png",
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "bricks"
+		},
+		"generateType": "rotateBlock",
+		"litTypeCustomData": {
+			"torches": {
+				"merged": {
+					"color": "#c3872e",
+					"injectionPoints": [
+						{
+							"offsetX": 1,
+							"startValue": 7
+						}
+					],
+					"intensity": 2.5,
+					"range": 8,
+					"volume": 0.2
 				}
 			}
 		},
-		"sideFrontLit" : "ovenlitfront",
-		"sideFrontUnlit" : "ovenunlitfront",
-		"sideTopLit" : "stonebricks",
-		"sideTopUnlit" : "stonebricks",
-		"typeName" : "oven"
+		"sideFrontLit": "bloomerylit",
+		"sideFrontUnlit": "bloomery",
+		"sideTopLit": "bricks",
+		"sideTopUnlit": "bricks",
+		"typeName": "bloomery"
 	},
 	{
-		"baseType" : {
-			"categories" : ["job"],
-			"destructionTime" : 800,
-			"icon" : "gamedata/textures/icons/bloomery.png",
-			"onPlaceAudio" : "stonePlace",
-			"onRemoveAudio" : "stoneDelete",
-			"sideall" : "bricks"
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.kilnjob",
+					"timeBetweenHauls": 30
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"destructionTime": 800,
+			"icon": "gamedata/textures/icons/kiln.png",
+			"needsBase": true,
+			"onPlaceAudio": "dirtPlace",
+			"onRemoveAudio": "grassDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "dirt"
 		},
-		"generateType" : "rotateBlock",
-		"litTypeCustomData" : {
-			"torches" : {
-				"merged" : {
-					"color" : "#c3872e",
-					"intensity" : 2.5,
-					"range" : 8,
-					"volume" : 0.2,
-					"injectionPoints" : [
-						{ "offsetX" : 1, "startValue" : 7 }
+		"generateType": "rotateBlock",
+		"sideFrontUnlit": "kiln",
+		"typeName": "kiln"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"islit": true,
+					"npcType": "pipliz.smelter",
+					"timeBetweenHauls": 30
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						1.0,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
 					]
+				}
+			],
+			"destructionTime": 800,
+			"icon": "gamedata/textures/icons/furnace.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "gamedata/meshes/furnace.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"litTypeCustomData": {
+			"torches": {
+				"merged": {
+					"color": "#c3872e",
+					"injectionPoints": [
+						{
+							"offsetX": 1,
+							"startValue": 7
+						},
+						{
+							"offsetY": 1,
+							"startValue": 7
+						},
+						{
+							"injectEvenIfOpaque": true,
+							"preventSpread": true,
+							"startValue": 8
+						}
+					],
+					"intensity": 12.5,
+					"range": 8,
+					"volume": 0.3
 				}
 			}
 		},
-		"sideFrontLit" : "bloomerylit",
-		"sideFrontUnlit" : "bloomery",
-		"sideTopLit" : "bricks",
-		"sideTopUnlit" : "bricks",
-		"typeName" : "bloomery"
+		"sideAllLit": "furnace",
+		"typeName": "furnace"
 	},
 	{
-		"baseType" : {
-			"categories" : ["job"],
-			"destructionTime" : 1500,
-			"icon" : "gamedata/textures/icons/fineryforge.png",
-			"onPlaceAudio" : "stonePlace",
-			"onRemoveAudio" : "stoneDelete",
-			"sideall" : "ironblock"
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.writer",
+					"onCraftedAudio": "paper",
+					"timeBetweenHauls": 30,
+					"toolset": "glasses"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"icon": "./textures/icons/writerdesk.png",
+			"lightingTransparency": 200,
+			"mesh": "./meshes/writerdesk.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
 		},
-		"generateType" : "rotateBlock",
-		"litTypeCustomData" : {
-			"torches" : {
-				"merged" : {
-					"color" : "#c3872e",
-					"intensity" : 2.5,
-					"range" : 8,
-					"volume" : 0.2,
-					"injectionPoints" : [
-						{ "offsetX" : 1, "startValue" : 7 }
+		"generateType": "rotateBlock",
+		"typeName": "writerdesk"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "craftingblock",
+					"npcType": "pipliz.coppersmith",
+					"timeBetweenHauls": 30,
+					"toolset": "stonemin"
+				}
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
 					]
 				}
-			}
+			],
+			"icon": "./textures/icons/bronzeanvil.png",
+			"isSolid": false,
+			"lightingTransparency": 185,
+			"mesh": "./meshes/bronzeanvil.ply",
+			"needsBase": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
 		},
-		"sideFrontLit" : "fineryforgelit",
-		"sideFrontUnlit" : "fineryforge",
-		"sideTopLit" : "ironblock",
-		"sideTopUnlit" : "ironblock",
-		"typeName" : "fineryforge"
+		"generateType": "rotateBlock",
+		"typeName": "copperanvil"
 	},
 	{
-		"baseType" : {
-			"categories" : ["job"],
-			"destructionTime" : 800,
-			"icon" : "gamedata/textures/icons/kiln.png",
-			"onPlaceAudio" : "dirtPlace",
-			"onRemoveAudio" : "grassDelete",
-			"sideall" : "dirt"
+		"baseType": {
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						0.1,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"impactsPhysics": false,
+					"max": [
+						-0.4,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"bedpart": "head",
+				"colors": [
+					"#ff0000->#542909",
+					"#00ff00->#e5e5e6",
+					"#0000ff->#9b7a3f"
+				]
+			},
+			"icon": "./textures/icons/bed.png",
+			"isSolid": false,
+			"lightingTransparency": 160,
+			"mesh": "./meshes/bedx+.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
 		},
-		"generateType" : "rotateBlock",
-		"sideFrontUnlit" : "kiln",
-		"typeName" : "kiln"
+		"generateType": "rotateBlock",
+		"typeName": "bed"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						0.1,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"bedpart": "foot",
+				"colors": [
+					"#ff0000->#542909",
+					"#00ff00->#e5e5e6",
+					"#0000ff->#9b7a3f"
+				]
+			},
+			"isSolid": false,
+			"lightingTransparency": 160,
+			"mesh": "./meshes/bedendx+.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"parentType": "bed"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bedend"
+	},
+	{
+		"color": "ba762c",
+		"generateType": "sapling",
+		"leavesType": "leavesfallorange",
+		"logType": "logtemperate",
+		"typeName": "saplingfallorange"
+	},
+	{
+		"color": "601728",
+		"generateType": "sapling",
+		"leavesType": "leavesfallred",
+		"logType": "logtemperate",
+		"typeName": "saplingfallred"
+	},
+	{
+		"color": "cbd441",
+		"generateType": "sapling",
+		"leavesType": "leavesfallyellow",
+		"logType": "logtemperate",
+		"typeName": "saplingfallyellow"
+	},
+	{
+		"color": "4b771c",
+		"generateType": "sapling",
+		"leavesType": "leavesgreendark",
+		"logType": "logtemperate",
+		"typeName": "saplingdark"
+	},
+	{
+		"color": "9bd34b",
+		"generateType": "sapling",
+		"leavesType": "leavesgreenlight",
+		"logType": "logtemperate",
+		"typeName": "saplinglight"
+	},
+	{
+		"color": "0a4f04",
+		"generateType": "sapling",
+		"leavesType": "leavestaiga",
+		"logType": "logtaiga",
+		"typeName": "saplingtaiga"
+	},
+	{
+		"color": "0e6306",
+		"generateType": "sapling",
+		"leavesType": "leavestemperate",
+		"logType": "logtemperate",
+		"typeName": "saplingtemperate"
+	},
+	{
+		"color": "c974a7",
+		"generateType": "sapling",
+		"leavesType": "cherryblossom",
+		"logType": "logtemperate",
+		"typeName": "saplingcherry"
 	}
 ]

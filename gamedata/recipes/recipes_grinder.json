@@ -1,0 +1,27 @@
+[
+	{
+		"cooldown": 12.5,
+		"defaultLimit": 20,
+		"name": "pipliz.grinder.potflour",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "wheat"
+			},
+			{
+				"type": "potempty"
+			}
+		],
+		"requiresScience": "pipliz.bread",
+		"results": [
+			{
+				"type": "potflour"
+			},
+			{
+				"isOptional": true,
+				"type": "straw"
+			}
+		],
+		"sortWeight": 15427
+	}
+]

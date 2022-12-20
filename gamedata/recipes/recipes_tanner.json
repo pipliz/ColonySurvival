@@ -1,0 +1,58 @@
+[
+	{
+		"cooldown": 240,
+		"defaultPriority": -100,
+		"name": "pipliz.tanner.process",
+		"requires": [
+			{
+				"type": "animalcarcass"
+			}
+		],
+		"requiresScience": "pipliz.tanner",
+		"results": [
+			{
+				"amount": 3,
+				"type": "skin"
+			},
+			{
+				"type": "rawmeat"
+			}
+		],
+		"sortWeight": 673
+	},
+	{
+		"cooldown": 240,
+		"defaultLimit": 10,
+		"name": "pipliz.tanner.leather",
+		"requires": [
+			{
+				"type": "skin"
+			}
+		],
+		"requiresScience": "pipliz.tanner",
+		"results": [
+			{
+				"type": "leather"
+			}
+		],
+		"sortWeight": 673
+	},
+	{
+		"cooldown": 240.0,
+		"defaultLimit": 6,
+		"name": "pipliz.tanner.parchment",
+		"requires": [
+			{
+				"type": "skin"
+			}
+		],
+		"requiresScience": "pipliz.writer",
+		"results": [
+			{
+				"amount": 3,
+				"type": "parchment"
+			}
+		],
+		"sortWeight": 1147
+	}
+]
