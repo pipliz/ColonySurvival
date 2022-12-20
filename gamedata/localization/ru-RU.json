@@ -1,5 +1,5 @@
 {
-	"coverage": 96.0,
+	"coverage": 94.0,
 	"hints": {
 		"0": "В большинстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1": "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -341,16 +341,30 @@
 			"version": "Версия"
 		},
 		"notifications": {
+			"delete": "_MISSING_Delete notification",
 			"header": "Уведомления",
 			"missingplayerammo": "<color=red>Использование {0} требует наличия некоторого количества {1} в инвентаре!</color>",
 			"npc_died": {
-				"by_banner": "{0} колонистов погибли, потому что монстр находится у знамени.",
-				"by_command": "{0} колонистов были убиты по команде.",
-				"by_misc": "{0} колонистов умерли по разным причинам.",
-				"by_monster": "{0} колонистов были убиты монстрами.",
-				"by_npc": "{0} колонистов были убиты колонистами.",
-				"by_player": "{0} колонистов были убиты игроками.",
-				"by_starving": "{0} колонистов умерло из-за голода."
+				"banner": "_MISSING_A monster at the banner",
+				"command": "_MISSING_Command usage",
+				"excess": "_MISSING_And {0} more died since, anonymously.",
+				"individual": "_MISSING_{0}: A colonist with job {1} died from: {2}",
+				"main": "_MISSING_{0} colonists died in outpost {1}!",
+				"misc": "_MISSING_Unkown reasons",
+				"monster": "_MISSING_A monster",
+				"npc": "_MISSING_A colonist",
+				"player": "_MISSING_A player",
+				"starving": "_MISSING_Starvation",
+				"trap": "_MISSING_A Trap"
+			},
+			"science": {
+				"entry": "_MISSING_{0}: Completed {1}",
+				"main": "_MISSING_Science completed!"
+			},
+			"siegemode": {
+				"disabled": "_MISSING_{0}: Exited siege mode",
+				"enabled": "_MISSING_{0}: Entered siege mode",
+				"main": "_MISSING_Siege mode triggered in outpost {0}!"
 			}
 		},
 		"npcs": {
@@ -437,6 +451,10 @@
 			"alarmbell": {
 				"description": "Разблокирует тревожный звонок, который зазвенит, когда на него наступит монстр",
 				"name": "Тревожный звонок"
+			},
+			"animalcarcass": {
+				"description": "_MISSING_Provides a source for animal carcasses",
+				"name": "_MISSING_Local Animal Carcass"
 			},
 			"anvil": {
 				"description": "Разблокирует наковальню, для производства инструментов",
@@ -569,6 +587,10 @@
 			"goldenstatue": {
 				"description": "Разблокирует знамя угрозы, которое привлечет монстров с других аванпостов к тому, на котором оно установлено.",
 				"name": "Знамя угрозы"
+			},
+			"grassdirt": {
+				"description": "_MISSING_Provides a source for grass and dirt",
+				"name": "_MISSING_Grass & Dirt Production"
 			},
 			"grenadelauncher": {
 				"description": "Разблокирует гранатометы и сами гранаты. (без взрывов)",

@@ -225,6 +225,24 @@
 		]
 	},
 	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.chickenmeal",
+			"pipliz.researcher"
+		],
+		"icon": "./textures/icons/animalcarcass.png",
+		"itemRequirements": [
+			{
+				"type": "chickenmeal"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.animalcarcass",
+		"sortWeight": 105792
+	},
+	{
 		"dependencies": [
 			"pipliz.pottery",
 			"pipliz.trading"
@@ -762,6 +780,26 @@
 		],
 		"key": "pipliz.mudbricks",
 		"sortWeight": 224
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.glassblower"
+		],
+		"icon": "./textures/icons/dirt.png",
+		"itemRequirements": [
+			{
+				"type": "potash"
+			},
+			{
+				"type": "silicasand"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.grassdirt",
+		"sortWeight": 131623
 	},
 	{
 		"colonyPointRequirement": 500,
@@ -1546,7 +1584,7 @@
 			}
 		],
 		"key": "pipliz.prestige1",
-		"sortWeight": 3814874,
+		"sortWeight": 3814875,
 		"threatIncrease": 100
 	},
 	{
@@ -1630,7 +1668,7 @@
 			}
 		],
 		"key": "pipliz.prestige4",
-		"sortWeight": 15598802,
+		"sortWeight": 15598803,
 		"threatIncrease": 175
 	},
 	{
@@ -1658,7 +1696,7 @@
 			}
 		],
 		"key": "pipliz.prestige5",
-		"sortWeight": 29847720,
+		"sortWeight": 29847722,
 		"threatIncrease": 200
 	}
 ]

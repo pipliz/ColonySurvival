@@ -54,5 +54,24 @@
 			}
 		],
 		"sortWeight": 1147
+	},
+	{
+		"cooldown": 60.0,
+		"defaultLimit": 3,
+		"defaultPriority": -100,
+		"name": "pipliz.tanner.animalcarcass",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "chickenraw"
+			}
+		],
+		"requiresScience": "pipliz.animalcarcass",
+		"results": [
+			{
+				"type": "animalcarcass"
+			}
+		],
+		"sortWeight": 105792
 	}
 ]

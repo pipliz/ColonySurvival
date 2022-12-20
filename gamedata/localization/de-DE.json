@@ -341,16 +341,30 @@
 			"version": "Version"
 		},
 		"notifications": {
+			"delete": "_MISSING_Delete notification",
 			"header": "_MISSING_Notifications",
 			"missingplayerammo": "_MISSING_<color=red>Using {0} requires some {1} to be in the inventory!</color>",
 			"npc_died": {
-				"by_banner": "_MISSING_{0} colonists died because a monster is at the banner.",
-				"by_command": "_MISSING_{0} colonists were killed on command.",
-				"by_misc": "_MISSING_{0} colonists died due to miscellaneous causes.",
-				"by_monster": "_MISSING_{0} colonists were killed by monsters.",
-				"by_npc": "_MISSING_{0} colonists wered killed by colonists.",
-				"by_player": "_MISSING_{0} colonists were killed by players.",
-				"by_starving": "_MISSING_{0} colonists starved to death."
+				"banner": "_MISSING_A monster at the banner",
+				"command": "_MISSING_Command usage",
+				"excess": "_MISSING_And {0} more died since, anonymously.",
+				"individual": "_MISSING_{0}: A colonist with job {1} died from: {2}",
+				"main": "_MISSING_{0} colonists died in outpost {1}!",
+				"misc": "_MISSING_Unkown reasons",
+				"monster": "_MISSING_A monster",
+				"npc": "_MISSING_A colonist",
+				"player": "_MISSING_A player",
+				"starving": "_MISSING_Starvation",
+				"trap": "_MISSING_A Trap"
+			},
+			"science": {
+				"entry": "_MISSING_{0}: Completed {1}",
+				"main": "_MISSING_Science completed!"
+			},
+			"siegemode": {
+				"disabled": "_MISSING_{0}: Exited siege mode",
+				"enabled": "_MISSING_{0}: Entered siege mode",
+				"main": "_MISSING_Siege mode triggered in outpost {0}!"
 			}
 		},
 		"npcs": {
@@ -437,6 +451,10 @@
 			"alarmbell": {
 				"description": "_MISSING_Unlocks the Alarm Bell, which will ring a bell when walked upon by a monster",
 				"name": "_MISSING_Alarm Bell"
+			},
+			"animalcarcass": {
+				"description": "_MISSING_Provides a source for animal carcasses",
+				"name": "_MISSING_Local Animal Carcass"
 			},
 			"anvil": {
 				"description": "_MISSING_Unlocks the Anvil, an important source of more advanced products like Copper Tools",
@@ -569,6 +587,10 @@
 			"goldenstatue": {
 				"description": "_MISSING_Unlocks the Threat Statue, which will attract monsters from other outposts to the one it's placed in.",
 				"name": "_MISSING_Threat Statue"
+			},
+			"grassdirt": {
+				"description": "_MISSING_Provides a source for grass and dirt",
+				"name": "_MISSING_Grass & Dirt Production"
 			},
 			"grenadelauncher": {
 				"description": "_MISSING_Unlocks a powerful weapon which can eliminate groups of enemies at a distance.",

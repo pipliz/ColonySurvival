@@ -40,5 +40,110 @@
 			}
 		],
 		"sortWeight": 223535
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.composter.dirt",
+		"requires": [
+			{
+				"type": "straw"
+			},
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.grassdirt",
+		"results": [
+			{
+				"type": "dirt"
+			}
+		],
+		"sortWeight": 131623
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.composter.grassdry",
+		"requires": [
+			{
+				"type": "straw"
+			},
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.grassdirt",
+		"results": [
+			{
+				"type": "grassdry"
+			}
+		],
+		"sortWeight": 131623
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.composter.grassmid",
+		"requires": [
+			{
+				"type": "straw"
+			},
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.grassdirt",
+		"results": [
+			{
+				"type": "grassmid"
+			}
+		],
+		"sortWeight": 131623
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.composter.grasswet",
+		"requires": [
+			{
+				"type": "straw"
+			},
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.grassdirt",
+		"results": [
+			{
+				"type": "grasswet"
+			}
+		],
+		"sortWeight": 131623
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.composter.grassmax",
+		"requires": [
+			{
+				"type": "straw"
+			},
+			{
+				"type": "leavestemperate"
+			}
+		],
+		"requiresScience": "pipliz.grassdirt",
+		"results": [
+			{
+				"type": "grassmax"
+			}
+		],
+		"sortWeight": 131623
 	}
 ]

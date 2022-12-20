@@ -552,7 +552,7 @@
 						"id": "elevator",
 						"meshRotation": [
 							0,
-							180,
+							0,
 							0
 						],
 						"shaftFilter": "mainShaftX+",
@@ -579,7 +579,7 @@
 						"id": "elevator",
 						"meshRotation": [
 							0,
-							0,
+							180,
 							0
 						],
 						"shaftFilter": "mainShaftX-",
@@ -606,7 +606,7 @@
 						"id": "elevator",
 						"meshRotation": [
 							0,
-							90,
+							290,
 							0
 						],
 						"shaftFilter": "mainShaftZ+",
@@ -633,7 +633,7 @@
 						"id": "elevator",
 						"meshRotation": [
 							0,
-							270,
+							90,
 							0
 						],
 						"shaftFilter": "mainShaftZ-",
@@ -2883,6 +2883,7 @@
 				{
 					"id": "craftingblock",
 					"npcType": "pipliz.metallathe",
+					"onCraftedAudio": "lathe",
 					"timeBetweenHauls": 40,
 					"toolset": "machinetools"
 				}
@@ -2923,6 +2924,7 @@
 				{
 					"id": "craftingblock",
 					"npcType": "pipliz.tabulator",
+					"onCraftedAudio": "tabulator",
 					"timeBetweenHauls": 40,
 					"toolset": "machinetools"
 				}
@@ -4186,7 +4188,7 @@
 					"cooldownShot": 12,
 					"damage": 250,
 					"damageRadius": 3,
-					"hitForce": 25,
+					"hitForce": 35,
 					"id": "guard",
 					"npcType": "pipliz.guardgrenadeday",
 					"onHitAudio": "fleshHit",
@@ -4238,7 +4240,7 @@
 					"cooldownShot": 12,
 					"damage": 250,
 					"damageRadius": 3,
-					"hitForce": 25,
+					"hitForce": 35,
 					"id": "guard",
 					"npcType": "pipliz.guardgrenadeday",
 					"onHitAudio": "fleshHit",
