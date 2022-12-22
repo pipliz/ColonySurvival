@@ -1,63 +1,23 @@
 {
 	"defaults": {
-		"normal": "peasant",
-		"permissions": [
-			"printbiome",
-			"getlimit",
-			"setlimit",
-			"resetlimit",
-			"loot",
-			"reloadvariablesserver",
-			"teleport",
-			"teleport.position",
-			"teleport.banner",
-			"time",
-			"time.add",
-			"permissions",
-			"permissions.setgroup",
-			"permissions.addgroup",
-			"permissions.addpermission",
-			"permissions.removegroup",
-			"permissions.removepermission",
-			"permissions.reload",
-			"health.set",
-			"setflight",
-			"deusvult.self",
-			"deusvult.other",
-			"cheats.enable",
-			"whitelist.add",
-			"blacklist.add",
-			"whitelist.remove",
-			"blacklist.remove"
-		]
+		"normal": "peasant"
 	},
 	"groups": {
-		"emperor": {
+		"god": {
 			"includes": [
 				"king"
 			],
 			"permissions": [
-				"permissions.addgroup.peasant",
-				"permissions.addgroup.king",
-				"permissions.removegroup.peasant",
-				"permissions.removegroup.king",
+			// "" is a catch-all, rest is there just for documentation
+				"",
+				"permissions.addpermission",
+				"permissions.removepermission",
+				"whitelist.clear",
 				"whitelist.add",
 				"whitelist.remove",
+				"blacklist.clear",
 				"blacklist.add",
 				"blacklist.remove"
-			]
-		},
-		"god": {
-			"permissions": [
-				""
-			]
-		},
-		"godemperor": {
-			"includes": [
-				"emperor"
-			],
-			"permissions": [
-				"permissions"
 			]
 		},
 		"king": {
@@ -65,28 +25,50 @@
 				"peasant"
 			],
 			"permissions": [
-				"loot",
-				"time.add",
-				"teleport.position",
-				"teleport.banner",
+				"server.stop",
+				"server.backup",
+				"server.save",
+				"achievements.disable",
+				"deusvult.self",
+				"colony.setleader.override",
+				"colony.addowner.other",
+				"colony.removeowner.other",
+				"deusvult.other",
+				"debug.wand",
+				"debug.points",
+				"debug.ownall",
+				"debug.lagspike",
+				"debug.simspeed",
+				"debug.logging",
+				"debug.researchall",
+				"debug.debugstructures",
+				"debug.blockedit",
+				"debug.killnpcs",
+				"debug.spawnbanner",
+				"debug.clearinventory",
+				"debug.clearstockpile",
+				"debug.drain",
+				"debug.resetresearch",
+				"debug.simplewave",
+				"debug.resetstats",
+				"debug.resetspawn",
 				"health.set",
-				"setflight"
-			]
-		},
-		"localhost": {
-			"includes": [
-				"peasant"
-			],
-			"permissions": [
-				"cheats.enable"
+				"loot.self",
+				"loot.other",
+				"loot.all",
+				"permissions.reload",
+				"spawn.set",
+				"teleport.self",
+				"teleport.other",
+				"time.add",
+				"time.day",
+				"time.night",
+				"flight"
 			]
 		},
 		"peasant": {
 			"permissions": [
-				"printbiome",
-				"getlimit",
-				"setlimit",
-				"resetlimit"
+				
 			]
 		}
 	}
