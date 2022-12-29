@@ -248,10 +248,10 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/berrybush.png",
+		"maxStackSize": 200,
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"pathingImpact": "AsUntouchableSolid",
-		"maxStackSize": 200,
 		"requiredFertilityBelow": 1,
 		"sideall": "SELF"
 	},
@@ -536,6 +536,7 @@
 		],
 		"destructionTime": 200,
 		"icon": "./textures/icons/cherryblossom.png",
+		"maxStackSize": 200,
 		"onPlaceAudio": "dirtPlace",
 		"onRemove": [
 			{
@@ -547,7 +548,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
 	},
@@ -597,8 +597,8 @@
 		"icon": "./textures/icons/chickencoop.png",
 		"isSolid": false,
 		"lightingTransparency": 180,
-		"mesh": "./meshes/chickencoop.ply",
 		"maxStackSize": 200,
+		"mesh": "./meshes/chickencoop.ply",
 		"needsBase": true,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAmount": 0,
@@ -1813,6 +1813,7 @@
 		],
 		"color": "#ba762c",
 		"icon": "./textures/icons/leavesfallorange.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1825,7 +1826,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves"
 	},
 	"leavesfallred": {
@@ -1838,6 +1838,7 @@
 		],
 		"color": "#601728",
 		"icon": "./textures/icons/leavesfallred.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1850,7 +1851,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves"
 	},
 	"leavesfallyellow": {
@@ -1863,6 +1863,7 @@
 		],
 		"color": "#cbd441",
 		"icon": "./textures/icons/leavesfallyellow.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1875,7 +1876,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves"
 	},
 	"leavesgreendark": {
@@ -1888,6 +1888,7 @@
 		],
 		"color": "#4b771c",
 		"icon": "./textures/icons/leavesgreendark.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1900,7 +1901,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves"
 	},
 	"leavesgreenlight": {
@@ -1913,6 +1913,7 @@
 		],
 		"color": "#9bd34b",
 		"icon": "./textures/icons/leavesgreenlight.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1925,7 +1926,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves"
 	},
 	"leavestaiga": {
@@ -1937,6 +1937,7 @@
 			"leaves"
 		],
 		"icon": "./textures/icons/leavestaiga.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1949,7 +1950,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves",
 		"sideall": "SELF"
 	},
@@ -1962,6 +1962,7 @@
 			"leaves"
 		],
 		"icon": "./textures/icons/leavestemperate.png",
+		"maxStackSize": 200,
 		"onRemove": [
 			{
 				"amount": 1,
@@ -1974,7 +1975,6 @@
 				"type": "sapling"
 			}
 		],
-		"maxStackSize": 200,
 		"parentType": "leaves",
 		"sideall": "SELF"
 	},
@@ -1993,8 +1993,8 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/logtaiga.png",
-		"onPlaceAudio": "woodPlace",
 		"maxStackSize": 200,
+		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
 	},
@@ -2006,8 +2006,8 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/logtemperate.png",
-		"onPlaceAudio": "woodPlace",
 		"maxStackSize": 200,
+		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
 	},
@@ -2016,8 +2016,8 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/logwall.png",
-		"onPlaceAudio": "woodPlace",
 		"maxStackSize": 200,
+		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
 	},
@@ -2453,8 +2453,8 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/sand.png",
-		"onPlaceAudio": "dirtPlace",
 		"maxStackSize": 200,
+		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
 	},
@@ -2486,9 +2486,9 @@
 		},
 		"icon": "./textures/icons/sapling.png",
 		"isSolid": false,
+		"maxStackSize": 200,
 		"mesh": "./meshes/sapling.ply",
 		"needsBase": true,
-		"maxStackSize": 200,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "grassDelete",
 		"requiredFertilityBelow": 1,
@@ -2711,8 +2711,8 @@
 		"categories": [
 			"decorative"
 		],
-		"maxStackSize": 200,
 		"icon": "./textures/icons/straw.png",
+		"maxStackSize": 200,
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
@@ -3299,8 +3299,8 @@
 			"decorative"
 		],
 		"icon": "./textures/icons/woodfloor.png",
-		"onPlaceAudio": "woodPlace",
 		"maxStackSize": 200,
+		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
 	},
