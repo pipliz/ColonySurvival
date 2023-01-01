@@ -1,5 +1,5 @@
 {
-	"coverage": 44.0,
+	"coverage": 99.0,
 	"hints": {
 		"0": "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1": "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
@@ -7,9 +7,9 @@
 		"11": "“CTRL”を押してかがむと、ブロックの縁からの落下を防げるぞ。",
 		"13": "土木建築エリアを設置する際に“CTRL”を押すと、直前のエリアと同じ設定で新たなエリアを設置できる。",
 		"14": "Colony Survivalには複数のModが存在する。 SteamフォーラムやDiscordで探してみよう！",
-		"15": "備蓄品内の検索は、‘food’や‘ammo’のような大まかな意味の用語を使うことも可能だ。",
+		"15": "備蓄品内の検索は、‘食料’や‘弾薬’のような大まかな意味の用語を使うことも可能だ。",
 		"2": "鉱石はそれぞれ地下の特定の層に存在する。 別種のものを探すなら、さらに深く掘り下げよう。",
-		"3": "“G”を押して、自分の周囲を松明で照らそう。",
+		"3": "“G”キーを押すと自分の周りを明るくします。",
 		"4": "‘仕事ブロック’をクリックすると、どのように使われているか確認したり、各レシピの優先順位を決めたりできる。",
 		"5": "“F1”を押すと、マニュアルを開いたり閉じたりできる。",
 		"6": "科学者がサイエンスバッグ内のアイテムを使用しても、リネンの袋自体は多くの場合備蓄品に戻る。",
@@ -19,42 +19,42 @@
 	},
 	"sentences": {
 		"astrolabe": {
-			"bigtree": "_MISSING_Mammoth Tree",
-			"heath": "_MISSING_Heath",
-			"marsh": "_MISSING_Marsh",
-			"mountain": "_MISSING_Mountain"
+			"bigtree": "巨大な木",
+			"heath": "ヒース(荒野)",
+			"marsh": "湿地",
+			"mountain": "山"
 		},
 		"bannerclickedpopup": {
 			"deletebanner": "バナーを削除",
 			"deletecolony": "コロニーを削除",
-			"deletecolonydescription": "コロニー最後のバナーを削除すると、全てのNPCが消滅しコロニーは機能しなくなります。 この操作を確定するには、下に'delete'とタイプして下さい。",
+			"deletecolonydescription": "コロニーのバナーを削除すると、全てのNPCが消滅しコロニーは機能しなくなります。 \nこの操作を実行するには、'delete'と入力して下さい。",
 			"header": "バナーオプション",
-			"noconfirmationdelete": "削除コマンドは無効です、確認入力がありません",
+			"noconfirmationdelete": "削除コマンドは無効です。入力確認がありません",
 			"placementfail": "この場所にバナーは設置できません"
 		},
 		"bannerplacementpopup": {
 			"activecolony": "アクティブなコロニー: {0}",
 			"addbanner": "バナーを追加",
 			"header": "バナーの設置",
-			"missingcolonykit": "_MISSING_Requires a Colony Starter Kit",
-			"missingoutpostbanner": "_MISSING_Requires an Outpost Banner",
+			"missingcolonykit": "コロニースターターキットが必要です",
+			"missingoutpostbanner": "前哨基地が必要です",
 			"movebanner": "バナーを移動",
-			"mustbeleader": "_MISSING_Must be the colony leader to adjust banners",
-			"opencolonytab": "_MISSING_Manage {0}",
+			"mustbeleader": "バナーを調整するには、コロニーリーダーである必要があります",
+			"opencolonytab": "管理 {0}",
 			"startcolony": "ここで新しいコロニーを開始",
-			"startoutpost": "_MISSING_Start a new outpost",
-			"startoutpostremote": "_MISSING_Start a new outpost"
+			"startoutpost": "新しい前哨基地を開始",
+			"startoutpostremote": "新しい前哨基地を開始"
 		},
 		"category": {
-			"consumables": "_MISSING_Consumables",
-			"decorative": "_MISSING_Building Blocks",
-			"defense": "_MISSING_Defense",
-			"essential": "_MISSING_Essentials",
-			"food": "_MISSING_Food",
-			"ingredient": "_MISSING_Ingredients & Luxury",
-			"job": "_MISSING_Jobblocks",
-			"misc": "_MISSING_Misc",
-			"texres": "_MISSING_Textiles & Research"
+			"consumables": "消耗品",
+			"decorative": "建築ブロック",
+			"defense": "防衛",
+			"essential": "必需品",
+			"food": "食べ物",
+			"ingredient": "材料と贅沢",
+			"job": "職業ブロック",
+			"misc": "その他",
+			"texres": "織物と研究"
 		},
 		"chat": {
 			"colonydied": "{0} の入植者全員が死亡しました",
@@ -62,8 +62,8 @@
 		},
 		"colonymanagement": {
 			"colonysettings": {
-				"difficulty": "_MISSING_Difficulty",
-				"difficultylocked": "_MISSING_Locked Difficulty",
+				"difficulty": "難易度",
+				"difficultylocked": "難易度ロック",
 				"header": "コロニーの設定"
 			},
 			"diplomacy": {
@@ -78,25 +78,25 @@
 			"inventoryheader": "コロニー",
 			"manageheader": "オーナー権限の管理",
 			"managejobs": {
-				"column_enabled": "_MISSING_Enabled",
-				"column_jobtype": "_MISSING_Job Type",
-				"column_total": "_MISSING_Total",
-				"column_unfilled": "_MISSING_Unfilled",
-				"disable_all": "_MISSING_Disable All",
-				"enable_all": "_MISSING_Enable All",
-				"header_text": "_MISSING_<b>{0}</b> Laborers without a job. Enabled jobs: <b>{1} / {2}</b>. Filled jobs: <b>{3} / {1}</b>",
-				"mainheader": "_MISSING_Manage Jobs",
-				"refresh": "_MISSING_Refresh",
-				"set_balanced": "_MISSING_Set Balanced"
+				"column_enabled": "割り当て",
+				"column_jobtype": "職業タイプ",
+				"column_total": "合計人数",
+				"column_unfilled": "未割り当て",
+				"disable_all": "全て無効",
+				"enable_all": "全て有効",
+				"header_text": "仕事がない労働者：<b> {0} </b> 有効な職業数：<b> {1} / {2} </b>割り振られた職業数：<b> {3} / {1} </b>",
+				"mainheader": "職業管理システム",
+				"refresh": "再読み込み",
+				"set_balanced": "バランス配置"
 			},
 			"manageowners": "オーナーを管理",
 			"nameedit": "コロニー名を編集:",
 			"outpost": {
-				"create": "_MISSING_Create Outpost",
-				"createdescription": "_MISSING_Starting an outpost consumes an Outpost Banner from your inventory (or stockpile).",
-				"parentcolony": "_MISSING_Parent Colony:",
-				"popupheader": "_MISSING_Outpost Creation",
-				"selectparent": "_MISSING_Select Main Colony"
+				"create": "前哨基地を作成します",
+				"createdescription": "前哨基地を起動すると、在庫（または備蓄）から前哨基地バナーが消費されます。",
+				"parentcolony": "親植民地：",
+				"popupheader": "前哨基地の作成",
+				"selectparent": "メインコロニーを選択します"
 			},
 			"ownership": {
 				"action": "アクション",
@@ -111,18 +111,18 @@
 				"role": "役割",
 				"settoleader": "リーダーに設定"
 			},
-			"recruit": "_MISSING_Recruit",
+			"recruit": "雇用する",
 			"recruitauto": "仕事設定時に自動雇用",
-			"recruitfailedbeds": "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
-			"recruitfailedcap": "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
-			"recruitfailednomeals": "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
+			"recruitfailedbeds": "<color=red>新しい入植者を募集することはできませんでした。  十分な予備のベッドはありません。</color>",
+			"recruitfailedcap": "<color=red>新しい入植者を募集できませんでした。  上限に達しました。</color>",
+			"recruitfailednomeals": "<color=red>新しい入植者を募集することはできませんでした。  備蓄に十分な食料がありません。</color>",
 			"recruitmentamount": "雇用する入植者の人数:",
 			"recruitmentbutton": "入植者を雇用",
 			"recruitmentheader": "雇用",
 			"recruittext3": "入植者には、1日2000カロリーとベッドが必要です。",
-			"recruittext4-2": "_MISSING_Recruiting the next colonist costs {0} meals.",
-			"recruittext5-2": "_MISSING_There are {0} spare beds and you can recruit {1} more colonists before reaching max population.",
-			"recruittext6": "_MISSING_Recruiting the next {0} colonists is free.",
+			"recruittext4-2": "次の入植者の採用コスト{0}食料",
+			"recruittext5-2": "{0}予備のベッドがあり、最大人口に到達する前に{1}より多くのコロニストを募集することができます。",
+			"recruittext6": "次の{0}入植者を募集することは無料です。",
 			"recruittofillbeds": "空きベッドが埋まるまで雇用",
 			"recruittofilljobs": "空きの仕事が埋まるまで雇用",
 			"resetcolonypriority2": "アクティブなコロニーをリセット",
@@ -160,9 +160,9 @@
 				"completerule": "ルールを作成",
 				"completeruleedit": "ルールの編集を完了",
 				"mainheader": "新しい交易ルールの設定",
-				"newruleinfinite": "新規の無制限交易ルール",
-				"newrulelimited": "新規の数量制限あり交易ルール",
-				"ruledescription": "交易商は以下の双方を満たすとき、{1} から {2} へ {0} を輸送する:",
+				"newruleinfinite": "新規無制限交易ルール",
+				"newrulelimited": "新規数量制限あり交易ルール",
+				"ruledescription": "交易商は以下の条件を満たすとき、{1} から {2} へ {0} を輸送する:",
 				"ruledescriptionlimit": "残り取引数あと {0}",
 				"ruleincomingdescr2": "先方の備蓄が {1} より多く、当方の備蓄が {2} より少ないとき、{0} を受け取る",
 				"rulemaximumgoal": "{0} の備蓄が以下の数を下回るとき: ",
@@ -173,20 +173,20 @@
 			}
 		},
 		"commands": {
-			"disableachievements": "_MISSING_Achievements have been disabled for this world due to interacting with cheat options",
-			"disableachievementsfirst": "_MISSING_To do that, you must first disable achievements by using the '/disableachievements' command",
-			"nopermission": "_MISSING_You do not have the permission '{0}' to do that."
+			"disableachievements": "チートオプションの設定が有効になりこの世界では実績が無効になっています。",
+			"disableachievementsfirst": "そのためには、まず「/disableachievements」コマンドで実績を無効化する必要があります。",
+			"nopermission": "そのための権限 {0} を持っていません。"
 		},
 		"connectingscreen": {
-			"general_1": "ステージ {0}/{1} - パスワードを要求",
-			"general_2": "ステージ {0}/{1} - サーバーファイルの一覧を参照",
-			"general_3": "ステージ {0}/{1} - {2}個のファイルをロード中",
+			"general_1": "ステージ {0}/{1} パスワードを要求",
+			"general_2": "ステージ {0}/{1} サーバーファイルの一覧を参照",
+			"general_3": "ステージ {0}/{1} {2}個のファイルをロード中",
 			"general_3_downloading": "({0}パケットをダウンロード中)",
-			"general_4": "ステージ {0}/{1} - 最終処理中",
+			"general_4": "ステージ {0}/{1} 最終処理中",
 			"general_fail": "接続が{0}秒経過後にタイムアウトしました。 あと5秒でメインメニューに戻ります。",
 			"loading": "ロード中",
-			"localhost_1": "ステージ 1/{0} - コンピュータ上のシングルプレイヤーサーバーを検索中",
-			"localhost_2": "ステージ 2/{0} - コンピュータ上のSteamサーバーを検索中",
+			"localhost_1": "ステージ 1/{0} コンピュータ上のシングルプレイヤーサーバーを検索中",
+			"localhost_2": "ステージ 2/{0} コンピュータ上のSteamサーバーを検索中",
 			"localhost_fail": "コンピュータ上で起動中のSteam/シングルプレイヤーサーバーが見つかりません。 あと5秒でメインメニューをリロードします。",
 			"refused": {
 				"blacklisted": "あなたはブラックリストに入っています",
@@ -200,14 +200,14 @@
 				"versionwrongserver": "サーバーに起因するバージョン不適合"
 			},
 			"refused_main": "接続を中断、 {0}。 あと5秒でメインメニューに戻ります。",
-			"sp_1": "ステージ 1/{0} - バックグラウンドサーバーの待機を開始",
-			"sp_2": "ステージ 2/{0} - バックグラウンドサーバーの起動中",
-			"sp_3": "ステージ 3/{0} - サーバー起動完了、接続を待っています",
+			"sp_1": "ステージ 1/{0} バックグラウンドサーバーの待機を開始",
+			"sp_2": "ステージ 2/{0} バックグラウンドサーバーの起動中",
+			"sp_3": "ステージ 3/{0} サーバー起動完了、接続を待っています",
 			"sp_alreadyrunning1_1": "このインストール向けのサーバーは起動していますが、終了処理中の可能性があります。 あと5秒でリトライします。",
 			"sp_alreadyrunning2": "サーバーは既に起動中です。 あと5秒でメインメニューに戻ります。",
-			"steam05": "_MISSING_Stage 1/{0} - Trying to setup direct connection",
-			"steam06": "_MISSING_Stage 1/{0} - Trying to setup steam relay connection",
-			"steam07": "_MISSING_Stage 2/{0} - Connection successful, authenticating",
+			"steam05": "ステージ1/{0} 直接接続をセットアップしようとしています",
+			"steam06": "ステージ1/{0} Steamリレー接続をセットアップしようとしています",
+			"steam07": "ステージ2/{0} 接続成功、認証",
 			"steamfail": "接続データの取得に失敗しました。 あと5秒でメインメニューに戻ります。"
 		},
 		"contentmanager": {
@@ -232,11 +232,11 @@
 			},
 			"nocontentpath": "パスが指定されていません",
 			"scenariolabel": "シナリオ名",
-			"statecommittingchanges": "_MISSING_Committing changes: {0} / {1}",
-			"statepreparingconfig": "_MISSING_Preparing config: {0} / {1}",
-			"statepreparingcontent": "_MISSING_Preparing content: {0} / {1}",
-			"stateuploadingcontent": "_MISSING_Uploading content: {0} / {1}",
-			"stateuploadingpreview": "_MISSING_Uploading preview: {0} / {1}",
+			"statecommittingchanges": "変更のコミット：{0}/{1}",
+			"statepreparingconfig": "設定の準備：{0}/{1}",
+			"statepreparingcontent": "コンテンツの準備：{0}/{1}",
+			"stateuploadingcontent": "コンテンツのアップロード：{0}/{1}",
+			"stateuploadingpreview": "アップロードプレビュー：{0}/{1}",
 			"thumbnailpath": "サムネイルのパス:",
 			"yourcontent": "自作のワークショップコンテンツ"
 		},
@@ -248,26 +248,26 @@
 			"settings": "設定"
 		},
 		"failsafe": {
-			"current": "_MISSING_Current Sacred Points storage: {0} out of {1}",
-			"damage": "_MISSING_Triggering the Sacred Failsafe will cause {0} damage",
-			"futurewave": "_MISSING_The Failsafe will reduce the total HP of incoming monsters by {0:P0} for the next night",
-			"header": "_MISSING_Failsafe",
-			"nextavailable": "_MISSING_The Failsafe will be available again after the next night",
-			"statusactive": "_MISSING_Status: Sacred Failsafe has been activated",
-			"statusavailable": "_MISSING_Status: Sacred Failsafe is available",
-			"trigger": "_MISSING_Trigger",
-			"wave": "_MISSING_The current threat level is {0} and will spawn monsters with a total HP of {1}",
-			"wavereduced": "_MISSING_The total HP of incoming monsters will be reduced by {0:P0} the next night"
+			"current": "現在の神聖なポイントストレージ：{0} {1}",
+			"damage": "聖なるフェイルセーフを作動すると、{0}ダメージが発生します",
+			"futurewave": "フェイルセーフは、次の夜に{0:P0}で入ってくるモンスターの総HPを減らします",
+			"header": "フェイルセーフ",
+			"nextavailable": "フェイルセーフは次の夜の後に再び利用可能になります",
+			"statusactive": "ステータス:聖なるフェイルセーフが活性化されました",
+			"statusavailable": "ステータス:聖なるフェイルセーフが利用可能です",
+			"trigger": "引き金",
+			"wave": "現在の脅威レベルは{0}であり、{1}の合計HPでモンスターを生成します",
+			"wavereduced": "入ってくるモンスターの総HPは、次の夜に{0:p0}によって削減されます"
 		},
 		"firstpersonstats": {
 			"ammocount": "矢弾:",
 			"bedcount": "ベッド:",
 			"colonistcount": "入植者:",
-			"colonypoints": "_MISSING_Points:",
+			"colonypoints": "ポイント:",
 			"laborercount": "失業者:",
-			"mealstorage": "_MISSING_Total Meals:",
-			"threatlevel": "_MISSING_Threat Level:",
-			"time_day": "_MISSING_Day"
+			"mealstorage": "食料備蓄：",
+			"threatlevel": "脅威レベル:",
+			"time_day": "Day"
 		},
 		"general": {
 			"apply": "適用",
@@ -276,10 +276,10 @@
 			"delete": "削除",
 			"description": "説明文",
 			"edit": "編集",
-			"enabled": "_MISSING_Enabled",
+			"enabled": "有効",
 			"high": "高",
 			"inputplaceholder": "テキストを入力・・・",
-			"inputplaceholder_search": "_MISSING_Enter text to search...",
+			"inputplaceholder_search": "検索するテキストを入力...",
 			"low": "低",
 			"next": "次へ",
 			"no": "いいえ",
@@ -287,9 +287,9 @@
 			"normal": "標準",
 			"previous": "前へ",
 			"reset": "リセット",
-			"select": "_MISSING_Select",
-			"selected": "_MISSING_Selected",
-			"veryhigh": "かなり高",
+			"select": "選択",
+			"selected": "選択",
+			"veryhigh": "とても高い",
 			"yes": "はい"
 		},
 		"happiness": {
@@ -314,7 +314,7 @@
 		"mainmenu": {
 			"back": "戻る",
 			"contentmanager": "Modマネージャー",
-			"continue": "_MISSING_Continue",
+			"continue": "コンテニュー",
 			"coop": "Co-opをホスト",
 			"info": "情報",
 			"multiplayer": "マルチプレイヤー",
@@ -346,460 +346,460 @@
 			"version": "バージョン"
 		},
 		"notifications": {
-			"delete": "_MISSING_Delete notification",
-			"header": "_MISSING_Notifications",
-			"missingplayerammo": "_MISSING_<color=red>Using {0} requires some {1} to be in the inventory!</color>",
+			"delete": "通知を削除します",
+			"header": "通知",
+			"missingplayerammo": "<color=red>{0}を使用するには、{1}がインベントリにある必要があります！</color>",
 			"npc_died": {
-				"banner": "_MISSING_A monster at the banner",
-				"command": "_MISSING_Command usage",
-				"excess": "_MISSING_And {0} more died since, anonymously.",
-				"individual": "_MISSING_{0}: A colonist with job {1} died from: {2}",
-				"main": "_MISSING_{0} colonists died in outpost {1}!",
-				"misc": "_MISSING_Unkown reasons",
-				"monster": "_MISSING_A monster",
-				"npc": "_MISSING_A colonist",
-				"player": "_MISSING_A player",
-				"starving": "_MISSING_Starvation",
-				"trap": "_MISSING_A Trap"
+				"banner": "バナーのモンスター",
+				"command": "コマンドの使用",
+				"excess": "{0}は匿名で死にました。",
+				"individual": "{0}：仕事を持つ入植者{1}が死亡した：{2}",
+				"main": "{0}入植者は前哨で亡くなりました{1}！",
+				"misc": "原因不明",
+				"monster": "モンスター",
+				"npc": "入植者",
+				"player": "プレイヤー",
+				"starving": "飢餓",
+				"trap": "トラップ"
 			},
 			"science": {
-				"entry": "_MISSING_{0}: Completed {1}",
-				"main": "_MISSING_Science completed!"
+				"entry": "{0}：完了{1}",
+				"main": "研究が完成しました！"
 			},
 			"siegemode": {
-				"disabled": "_MISSING_{0}: Exited siege mode",
-				"enabled": "_MISSING_{0}: Entered siege mode",
-				"main": "_MISSING_Siege mode triggered in outpost {0}!"
+				"disabled": "{0}：攻城戦モードを終了しました！",
+				"enabled": "{0}：攻城戦モードに入りました！",
+				"main": "前哨基地{0}で攻城戦モードが発生しました！"
 			}
 		},
 		"npcs": {
 			"pipliz": {
-				"alchemist": "_MISSING_Alchemist",
-				"alkanetfarmer": "_MISSING_Alkanet Farmer",
-				"barleyfarmer": "_MISSING_Barley Farmer",
-				"beekeeper": "_MISSING_Beekeeper",
-				"berryfarmer": "_MISSING_Berry Farmer",
-				"blastfurnace": "_MISSING_Blast Furnace Operator",
-				"bloomeryjob": "_MISSING_Forger",
-				"builder": "_MISSING_Builder",
-				"cabbagefarmer": "_MISSING_Cabbage Farmer",
-				"chestmaker": "_MISSING_Chestmaker",
-				"chickenfarmer": "_MISSING_Chicken Farmer",
-				"composter": "_MISSING_Composter",
-				"constructor": "_MISSING_Construction Worker",
-				"cook": "_MISSING_Cook",
-				"coppersmith": "_MISSING_Copper Smith",
-				"cottonengine": "_MISSING_Cotton Engine Operator",
-				"cottonfarmer": "_MISSING_Cotton Farmer",
-				"digger": "_MISSING_Digger",
-				"diggerspecial": "_MISSING_Special Digger",
-				"dyer": "_MISSING_Dyer",
-				"engineer": "_MISSING_Engineer",
-				"firepit": "_MISSING_Primitive Cook",
-				"fisherman": "_MISSING_Fisherman",
-				"flaxfarmer": "_MISSING_Flax Farmer",
-				"fletcher": "_MISSING_Fletcher",
-				"forester": "_MISSING_Forester",
-				"glassblower": "_MISSING_Glassblower",
-				"grinder": "_MISSING_Grinder",
-				"guardbowday": "_MISSING_Day Bow Guard",
-				"guardbownight": "_MISSING_Night Bow Guard",
-				"guardcrossbowday": "_MISSING_Day Crossbow Guard",
-				"guardcrossbownight": "_MISSING_Night Crossbow Guard",
-				"guardgrenadeday": "_MISSING_Day Grenade Launcher Guard",
-				"guardgrenadenight": "_MISSING_Night Grenade Launcher Guard",
-				"guardhandcannonday": "_MISSING_Day Handcannon Guard",
-				"guardhandcannonnight": "_MISSING_Night Handcannon Guard",
-				"guardmusketday": "_MISSING_Day Musket Guard",
-				"guardmusketnight": "_MISSING_Night Musket Guard",
-				"guardpoison": "_MISSING_Poison Guard",
-				"guardslingerday": "_MISSING_Day Slinger Guard",
-				"guardslingernight": "_MISSING_Night Slinger Guard",
-				"gunsmith": "_MISSING_Gunsmith",
-				"hempfarmer": "_MISSING_Hemp Farmer",
-				"hollyhockfarmer": "_MISSING_Hollyhock Farmer",
-				"jeweller": "_MISSING_Jeweler",
-				"jobblockcrafter": "_MISSING_Job-block Crafter",
-				"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter",
-				"kilnjob": "_MISSING_Burner",
-				"laborer": "_MISSING_Laborer",
-				"metallathe": "_MISSING_Metal Lathe Operator",
-				"minerjob": "_MISSING_Miner",
-				"networkplayer": "_MISSING_Player",
-				"papermaker": "_MISSING_Papermaker",
-				"potter": "_MISSING_Potter",
-				"printingpress": "_MISSING_Printing Press Operator",
-				"researcher": "_MISSING_Researcher",
-				"roper": "_MISSING_Rope Maker",
-				"sanctifier": "_MISSING_Sanctifier",
-				"scribe": "_MISSING_Scribe",
-				"smelter": "_MISSING_Smelter",
-				"stonemason": "_MISSING_Stonemason",
-				"tabulator": "_MISSING_Tabulating Machine Operator",
-				"tailor": "_MISSING_Tailor",
-				"tanner": "_MISSING_Tanner",
-				"tinkerer": "_MISSING_Tinkerer",
-				"trader": "_MISSING_Trader",
-				"trapfixer": "_MISSING_Trapfixer",
-				"watergatherer": "_MISSING_Water Gatherer",
-				"waterpump": "_MISSING_Waterpump Worker",
-				"wheatfarmer": "_MISSING_Wheat Farmer",
-				"wisteriafarmer": "_MISSING_Wisteria Farmer",
-				"wolfsbanefarmer": "_MISSING_Wolfsbane Farmer",
-				"woodcutter": "_MISSING_Woodcutter",
-				"writer": "_MISSING_Writer"
+				"alchemist": "錬金術師",
+				"alkanetfarmer": "アルカンズ農家",
+				"barleyfarmer": "大麦農家",
+				"beekeeper": "養蜂家",
+				"berryfarmer": "ベリー農家",
+				"blastfurnace": "溶鉱炉オペレーター",
+				"bloomeryjob": "鍛冶屋",
+				"builder": "ビルダー",
+				"cabbagefarmer": "キャベツ農家",
+				"chestmaker": "チェストメーカー",
+				"chickenfarmer": "養鶏",
+				"composter": "堆肥",
+				"constructor": "建設労働者",
+				"cook": "料理",
+				"coppersmith": "銅細工人",
+				"cottonengine": "綿エンジンオペレーター",
+				"cottonfarmer": "綿の農家",
+				"digger": "掘削",
+				"diggerspecial": "特殊掘削",
+				"dyer": "ダイアー",
+				"engineer": "エンジニア",
+				"firepit": "原始時代の料理",
+				"fisherman": "漁師",
+				"flaxfarmer": "亜麻農家",
+				"fletcher": "矢細工",
+				"forester": "森林官",
+				"glassblower": "ガラス工芸家",
+				"grinder": "グラインダー",
+				"guardbowday": "昼間ボウガード",
+				"guardbownight": "夜間ボウガード",
+				"guardcrossbowday": "昼間クロスボウガード",
+				"guardcrossbownight": "夜間クロスボウガード",
+				"guardgrenadeday": "昼間グレネードランチャーガード",
+				"guardgrenadenight": "夜間グレネードランチャーガード",
+				"guardhandcannonday": "昼間ハンドキャノンガード",
+				"guardhandcannonnight": "夜間ハンドキャノンガード",
+				"guardmusketday": "昼間マスケットガード",
+				"guardmusketnight": "夜間マスケットガード",
+				"guardpoison": "ポイズンガード",
+				"guardslingerday": "昼間スリンガーガード",
+				"guardslingernight": "夜間スリンガーガード",
+				"gunsmith": "砲術師",
+				"hempfarmer": "麻の農家",
+				"hollyhockfarmer": "タチアオイ農家",
+				"jeweller": "宝石商",
+				"jobblockcrafter": "職業ブロッククラフター",
+				"jobblockcrafteradvanced": "高度な職業ブロッククラフター",
+				"kilnjob": "焼成炉",
+				"laborer": "労働者",
+				"metallathe": "金属旋盤オペレーター",
+				"minerjob": "採掘者",
+				"networkplayer": "プレーヤー",
+				"papermaker": "製紙工",
+				"potter": "陶芸家",
+				"printingpress": "印刷機オペレーター",
+				"researcher": "研究者",
+				"roper": "ロープメーカー",
+				"sanctifier": "聖化",
+				"scribe": "筆記者",
+				"smelter": "製錬所",
+				"stonemason": "石工",
+				"tabulator": "マシンオペレーターの集計",
+				"tailor": "仕立て屋",
+				"tanner": "皮革屋",
+				"tinkerer": "鋳掛屋",
+				"trader": "貿易商",
+				"trapfixer": "トラップフィクサー",
+				"watergatherer": "集水器",
+				"waterpump": "水ポンプ作業者",
+				"wheatfarmer": "小麦の農家",
+				"wisteriafarmer": "藤の農家",
+				"wolfsbanefarmer": "トリカブトの農家",
+				"woodcutter": "木こり",
+				"writer": "作家"
 			}
 		},
 		"pipliz": {
 			"alarmbell": {
-				"description": "_MISSING_Unlocks the Alarm Bell, which will ring a bell when walked upon by a monster",
-				"name": "_MISSING_Alarm Bell"
+				"description": "アラームベルをアンロックします。これは、モンスターのそばに歩いたときにベルを鳴らします",
+				"name": "アラームベル"
 			},
 			"animalcarcass": {
-				"description": "_MISSING_Provides a source for animal carcasses",
-				"name": "_MISSING_Local Animal Carcass"
+				"description": "動物の死体の供給源を提供します",
+				"name": "地元の動物の死体"
 			},
 			"anvil": {
-				"description": "_MISSING_Unlocks the Anvil, an important source of more advanced products like Copper Tools",
-				"name": "_MISSING_Anvil"
+				"description": "銅工具のようなより高度な製品の重要なソースである鉄床をアンロックします。",
+				"name": "鉄床"
 			},
 			"archery": {
-				"description": "_MISSING_Unlocks archers and fletchers, a more effective protection against monsters.",
-				"name": "_MISSING_Archery"
+				"description": "モンスターに対するより効果的な保護である射手とフレッチャーをアンロックします。",
+				"name": "アーチェリー"
 			},
 			"astrolabe": {
-				"description": "_MISSING_Unlocks the astrolabe; a navigation tool that helps find biomes",
-				"name": "_MISSING_Astrolabe"
+				"description": "バイオームを見つけるのに役立つナビゲーションツール",
+				"name": "アストロラーベ"
 			},
 			"blastfurnace": {
-				"description": "_MISSING_Unlocks a rapid way to smelt advanced metals.",
-				"name": "_MISSING_Blast Furnace"
+				"description": "高度な金属をアンロックします。",
+				"name": "溶鉱炉"
 			},
 			"brass": {
-				"description": "_MISSING_Unlocks brass, a relatively soft alloy. It’s not suited for weapons or tools, but its malleability makes it perfect for small detailed parts. It requires zinc, which can be purchased or mined below mammoth trees. ",
-				"name": "_MISSING_Brass"
+				"description": "比較的柔らかい合金である真鍮をアンロックします。武器やツールには適していませんが、その柔軟性により、小さな詳細な部品に最適です。マンモスの木の下で採掘また購入できる亜鉛が必要です。",
+				"name": "真鍮"
 			},
 			"bread": {
-				"description": "_MISSING_Unlocks the making of bread. Use grindstones to make flour, which can then be used by the cook to make bread.",
-				"name": "_MISSING_Bread"
+				"description": "パンの製造をアンロックします。石臼を使用して小麦粉を作ります。これは、料理人がパンを作るために使用できます。",
+				"name": "パン"
 			},
 			"bricks": {
-				"description": "_MISSING_Allows baking clay into new types of blocks",
-				"name": "_MISSING_Bricks"
+				"description": "粘土を新しいタイプのブロックに焼くことができます",
+				"name": "レンガ"
 			},
 			"bronze": {
-				"description": "_MISSING_Unlocks a way to make copper stronger, by mixing it with the rare and valuable tin",
-				"name": "_MISSING_Bronze Age"
+				"description": "銅を強くする方法を解き放ち、希少で貴重な缶と混合することで銅を強くする",
+				"name": "青銅器時代"
 			},
 			"bronzelockbox": {
-				"description": "_MISSING_Unlocks the Bronze Lockbox. Improved version of the Copper Lockbox. More storage, more efficiency, less threatening.",
-				"name": "_MISSING_Bronze Lockbox"
+				"description": "銅ロックボックスの改良バージョン。より多くのストレージ、より多くの効率、脅迫が少ない。",
+				"name": "銅ロックボックス"
 			},
 			"caltrop": {
-				"description": "_MISSING_Unlocks a trap that once loaded will slow monsters below it",
-				"name": "_MISSING_Caltrops"
+				"description": "モンスターの移動が遅くなるトラップをアンロックします。",
+				"name": "鉄菱"
 			},
 			"chestluxury": {
-				"description": "_MISSING_Unlocks Luxury Chests, which are necessary to unlock advanced technology.",
-				"name": "_MISSING_Luxury Chest"
+				"description": "高度な技術をアンロックするために必要な研究です。",
+				"name": "豪華なチェスト"
 			},
 			"chestprestige": {
-				"description": "_MISSING_Abandon all hope of reward and proportion, ye who enter here! Prestige Chests are necessary for Prestige Science. It’s a stretch goal for enthusiastic colonies.",
-				"name": "_MISSING_Prestige Chest"
+				"description": "ここに入ると、報酬と比例のすべての希望を放棄してください！名声の科学には豪華なチェストが必要です。熱狂的な植民地にとってはストレッチの目標です。",
+				"name": "プレステージチェスト"
 			},
 			"chestresource": {
-				"description": "_MISSING_Unlocks Science Chests, which are necessary to unlock advanced technology",
-				"name": "_MISSING_Science Chest"
+				"description": "高度なテクノロジーのロックを解除するために必要な科学チェストをアンロックします。",
+				"name": "科学チェスト"
 			},
 			"chickenmeal": {
-				"description": "_MISSING_Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
-				"name": "_MISSING_Chicken Meals"
+				"description": "入植者によって消費されるとより多くの神聖なポイントをもたらす、より複雑な食事をアンロックします。",
+				"name": "鶏肉"
 			},
 			"compass": {
-				"description": "_MISSING_Unlocks the compass; a navigation tool to find back your home",
-				"name": "_MISSING_Compass"
+				"description": "あなたの家を見つけるためのナビゲーションツール",
+				"name": "コンパス"
 			},
 			"constructionbuilder": {
-				"description": "_MISSING_Unlock builder areas for the construction worker",
-				"name": "_MISSING_Builder"
+				"description": "建設労働者のビルダーエリアをアンロックします。",
+				"name": "ビルダー"
 			},
 			"constructiondigger": {
-				"description": "_MISSING_Unlock digger areas for the construction worker",
-				"name": "_MISSING_Digger"
+				"description": "建設労働者の掘りエリアをアンロックします。",
+				"name": "採掘"
 			},
 			"constructiondiggerspecial": {
-				"description": "_MISSING_Unlock special digger areas for the construction worker",
-				"name": "_MISSING_Special Digger"
+				"description": "建設労働者のための特殊な掘削エリアをアンロックします。",
+				"name": "特殊建設"
 			},
 			"cook": {
-				"description": "_MISSING_Unlocks the cook and the fisherman, new sources of meals for your colonists",
-				"name": "_MISSING_Cook"
+				"description": "料理人と漁師をアンロックします。入植者のための新しい食料源です。",
+				"name": "料理"
 			},
 			"copperlockbox": {
-				"description": "_MISSING_Unlocks the Copper Lockbox. While placed it increases the colony point capacity. Warning: every placed lockbox will lure more monsters to your colony!",
-				"name": "_MISSING_Copper Lockbox"
+				"description": "銅のロックボックスをアンロックします。配置されている間、コロニーポイント容量が増加します。警告：配置されたすべてのロックボックスは、コロニーにより多くのモンスターを誘います！",
+				"name": "銅ロックボックス"
 			},
 			"cotton": {
-				"description": "_MISSING_Unlocks a source of high quality textiles. Cotton plants only grow in heaths.",
-				"name": "_MISSING_Cotton"
+				"description": "高品質のテキスタイルのソースをアンロックします。綿植物はヒースブロックでのみ栽培できます",
+				"name": "コットン"
 			},
 			"crossbow": {
-				"description": "_MISSING_More powerful archery",
-				"name": "_MISSING_Crossbows"
+				"description": "より強力なアーチェリー",
+				"name": "クロスボウ"
 			},
 			"dyeing": {
-				"description": "_MISSING_Learn to grow flowers in swamps, allowing you to add color to your world.",
-				"name": "_MISSING_Dyeing"
+				"description": "沼地で花を育てることを学び、あなたの世界に色を加えることができます。",
+				"name": "染色"
 			},
 			"elevator": {
-				"description": "_MISSING_Unlocks elevator production, useful for traversing vertical distances",
-				"name": "_MISSING_Elevator"
+				"description": "上下移動するのに役立つエレベーター生産をアンロックします。",
+				"name": "エレベーター"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks horizontal elevator production, useful for traversing horizontal distances",
-				"name": "_MISSING_Horizontal Elevator"
+				"description": "左右移動するのに役立つ水平エレベーター生産をアンロックします。",
+				"name": "水平エレベーター"
 			},
 			"engineer": {
-				"description": "_MISSING_Unlocks the engineer and the trapfixer. The engineer makes traps and their ammo, which can be used to fight monsters. The trapfixer will load and reload nearby traps.",
-				"name": "_MISSING_Engineer"
+				"description": "エンジニアとトラップフィクサーをアンロックします。エンジニアはトラップと弾薬を作ります。これはモンスターと戦うために使用できます。トラップフィクサーは、近くのトラップをロードしてリロードします。",
+				"name": "エンジニア"
 			},
 			"failsafe": {
-				"description": "_MISSING_Unlocks the Sacred Failsafe, an emergency tool that uses Sacred Points to eliminate monsters",
-				"name": "_MISSING_Sacred Failsafe"
+				"description": "神聖なポイントを使用してモンスターを排除する緊急ツールである神聖なフェールセーフをアンロックします。",
+				"name": "聖なるフェイルセーフ"
 			},
 			"farming": {
-				"description": "_MISSING_Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
-				"name": "_MISSING_Wheat Farming"
+				"description": "小麦の農家をアンロックします。小麦は時間の経過とともに食物として重要になります。",
+				"name": "小麦農業"
 			},
 			"furnace": {
-				"description": "_MISSING_Unlocks the smelter, a worker who processes ores",
-				"name": "_MISSING_Smelter"
+				"description": "鉱石を処理する労働者である製錬所をアンロックします。",
+				"name": "製錬所"
 			},
 			"glassblower": {
-				"description": "_MISSING_Unlocks a way to craft glass",
-				"name": "_MISSING_Glassblower"
+				"description": "ガラスを作成する方法をアンロックします。",
+				"name": "ガラス工芸家"
 			},
 			"glider": {
-				"description": "_MISSING_Unlocks glider production, allowing unpowered flight from higher points",
-				"name": "_MISSING_Glider"
+				"description": "グライダーの生産のロックを解除し、より高いポイントからの無力飛行を許可します",
+				"name": "グライダー"
 			},
 			"glidersteel": {
-				"description": "_MISSING_Unlocks a launcher that quickly shoots gliders to tremendous heights.",
-				"name": "_MISSING_Launched Steel Glider"
+				"description": "グライダーをすばやく途方もない高さに撃つランチャーをアンロックします。",
+				"name": "スチールグライダー"
 			},
 			"goldenstatue": {
-				"description": "_MISSING_Unlocks the Threat Statue, which will attract monsters from other outposts to the one it's placed in.",
-				"name": "_MISSING_Threat Statue"
+				"description": "脅威バナーをアンロックします。これは、他の前哨基地からそれが置かれた前哨基地にモンスターを引き付けます。",
+				"name": "脅威バナー"
 			},
 			"grassdirt": {
-				"description": "_MISSING_Provides a source for grass and dirt",
-				"name": "_MISSING_Grass & Dirt Production"
+				"description": "草や汚れのソースを提供します",
+				"name": "草と汚れの生産"
 			},
 			"grenadelauncher": {
-				"description": "_MISSING_Unlocks a powerful weapon which can eliminate groups of enemies at a distance.",
-				"name": "_MISSING_Grenade Launcher"
+				"description": "遠くで敵のグループを排除できる強力な武器をアンロックします。",
+				"name": "グレネードランチャー"
 			},
 			"gunpowder": {
-				"description": "_MISSING_Unlocks a powerful new ingredient",
-				"name": "_MISSING_Gunpowder"
+				"description": "強力な新しい成分をアンロックします。",
+				"name": "火薬"
 			},
 			"guntrap": {
-				"description": "_MISSING_Unlocks a powerful trap which does enormous amounts of damage.",
-				"name": "_MISSING_Cannon Trap"
+				"description": "大きなダメージを与える強力なトラップをアンロックします。",
+				"name": "キャノントラップ"
 			},
 			"handcannon": {
-				"description": "_MISSING_Unlocks a powerful, short-range weapon",
-				"name": "_MISSING_Handcannon"
+				"description": "強力な短距離武器をアンロックします。",
+				"name": "ハンドキャノン"
 			},
 			"hemp": {
-				"description": "_MISSING_Unlocks the cultivation of hemp plants in marshes as well as purchasing it. Leads towards processing it into ropes and paper.",
-				"name": "_MISSING_Hemp"
+				"description": "湿地における麻植物の栽培のアンロックし、それを購入します。それをロープと紙に加工することにつながります。",
+				"name": "麻"
 			},
 			"iron": {
-				"description": "_MISSING_A major step forward for your colony, unlocking a new material which is required in many items",
-				"name": "_MISSING_Iron Age"
+				"description": "多くのアイテムで必要な新しい素材のロックを解除する、コロニーにとって大きな前進です",
+				"name": "鉄器時代"
 			},
 			"jewellery": {
-				"description": "_MISSING_Unlocks the Jeweler, who creates delicate things",
-				"name": "_MISSING_Jeweler"
+				"description": "繊細なものを作成する宝石商",
+				"name": "宝石商"
 			},
 			"jewelry": {
-				"description": "_MISSING_Unlocks jewelry, a good product for trade",
-				"name": "_MISSING_Jewelry"
+				"description": "貿易に適した製品であるジュエリーをアンロックします。",
+				"name": "ジュエリー"
 			},
 			"lanterns": {
-				"description": "_MISSING_Unlocks lanterns, useful for lighting up places",
-				"name": "_MISSING_Lanterns"
+				"description": "ランタンをアンロックします。ランタンは、場所を照らすのに役立ちます",
+				"name": "ランタン"
 			},
 			"lathe": {
-				"description": "_MISSING_Unlocks a complex machine which allows colonists to rapidly make detailed metal parts.",
-				"name": "_MISSING_Metal Lathe"
+				"description": "入植者が詳細な金属部品を迅速に作成できる複雑なマシンをアンロックします。",
+				"name": "金属旋盤"
 			},
 			"miner": {
-				"description": "_MISSING_Unlocks the miner. When placed on a dark stone block, a colonist will come to mine that material continuously.",
-				"name": "_MISSING_Miner"
+				"description": "採掘をアンロックします。暗い石のブロックに置かれると、入植者がその素材を継続的に採掘するようになります。",
+				"name": "採掘"
 			},
 			"monocular": {
-				"description": "_MISSING_Unlocks a nifty tool which can be used to observe things in the distance",
-				"name": "_MISSING_Monocular"
+				"description": "片方の目を使って細部や遠くを見る望遠鏡をアンロックします。",
+				"name": "単眼鏡"
 			},
 			"mudbricks": {
-				"description": "_MISSING_Unlocks mudbricks, a cheap and simple building material",
-				"name": "_MISSING_Mudbricks"
+				"description": "安価でシンプルな建築材料",
+				"name": "泥レンガ"
 			},
 			"musket": {
-				"description": "_MISSING_Unlocks a new gunpowder weapon. Does less damage than a handcannon but the ammo is cheaper, it has a larger range and it’s quicker to reload.",
-				"name": "_MISSING_Musket"
+				"description": "新しい火薬武器をアンロックします。ハンドキャノンよりもダメージが少なくなりますが、弾薬は安価で、範囲が広く、リロードが速くなります。",
+				"name": "マスケット銃"
 			},
 			"nitro": {
-				"description": "_MISSING_Unlocks a highly explosive compound essential for smokeless powder. It’s a lot less messy than traditional gunpowder, allowing for the development of more sophisticated firearms with many moving parts.",
-				"name": "_MISSING_Nitrocellulose"
+				"description": "無煙パウダーに不可欠な高度に爆発的な化合物をアンロックします。従来の火薬よりもはるかに厄介で、多くの可動部品を備えたより洗練された銃器の開発が可能です。",
+				"name": "ニトロセルロース"
 			},
 			"npcshop": {
-				"description": "_MISSING_Unlocks the Grocery Shop, a place where colonists can receive their daily meals. If none are found, they'll visit the banner.",
-				"name": "_MISSING_Grocery Shop"
+				"description": "入植者が毎日の食事を受け取ることができる場所である食料品店をアンロックします。何も見つからない場合、バナーから食事を取ります。",
+				"name": "食料品店"
 			},
 			"outposts": {
-				"description": "_MISSING_Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
-				"name": "_MISSING_Outposts"
+				"description": "前哨基地をアンロックします。それらは、近くとさらに遠くの両方でコロニーを拡張するために配置できます。",
+				"name": "前哨基地"
 			},
 			"papermaking": {
-				"description": "_MISSING_Unlocks making paper from hemp, a key part towards scientific progress",
-				"name": "_MISSING_Paper Production"
+				"description": "麻から紙を作成する作業をアンロックします。科学的進歩に向けた重要な部分である。",
+				"name": "紙製作"
 			},
 			"poison": {
-				"description": "_MISSING_Unlocks poison processing, useful for inflicting damage to monsters over time. Wisteria plants can only be grown in heaths. Each wisteria harvester needs 10 wisteria plants nearby to function well.",
-				"name": "_MISSING_Poison"
+				"description": "モンスターに時間経過でダメージを与えます。藤の植物は、ヒースブロックでのみ栽培できます。各藤の収穫機がうまく機能するには、近くに10本の藤が必要です",
+				"name": "毒"
 			},
 			"porridge": {
-				"description": "_MISSING_Unlocks combining water and wheat into a new meal type",
-				"name": "_MISSING_Porridge"
+				"description": "水と小麦を新しい食事タイプに組み合わせる",
+				"name": "おかゆ"
 			},
 			"pottery": {
-				"description": "_MISSING_Unlocks pottery, used to carry things around, and earthenware that can be sold",
-				"name": "_MISSING_Pottery"
+				"description": "陶器のロックを解除し、物を持ち歩くために使用され、販売できる土材",
+				"name": "陶器"
 			},
 			"prestige1": {
-				"description": "_MISSING_A goal to organize and measure the best of our energies and skills!",
-				"name": "_MISSING_Prestige I"
+				"description": "私たちのエネルギーとスキルの最高の整理と測定の目標！",
+				"name": "プレステージi"
 			},
 			"prestige2": {
-				"description": "_MISSING_It’s not the destination that matters: it’s the journey.",
-				"name": "_MISSING_Prestige II"
+				"description": "重要なのは目的地ではありません。それは旅です。",
+				"name": "プレステージII"
 			},
 			"prestige3": {
-				"description": "_MISSING_This place is a place of honor. A highly esteemed deed is commemorated here.",
-				"name": "_MISSING_Prestige III"
+				"description": "この場所は名誉の場所です。ここでは高く評価されている行為が記念されています。",
+				"name": "プレステージIII"
 			},
 			"prestige4": {
-				"description": "_MISSING_The last mile is the longest!",
-				"name": "_MISSING_Prestige IV"
+				"description": "最後のマイルは最長です！",
+				"name": "プレステージIV"
 			},
 			"prestige5": {
-				"description": "_MISSING_Congratulations! You successfully completed all stretch goals.",
-				"name": "_MISSING_Prestige V"
+				"description": "おめでとう！すべてのストレッチゴールを正常に完了しました。",
+				"name": "プレステージv"
 			},
 			"printingpress": {
-				"description": "_MISSING_Unlocks the printing press, a complex machine that allows you to scale up the production of Books of Knowledge. Also unlocks brass precision parts, which are required for a lot of other machines.",
-				"name": "_MISSING_Printing Press"
+				"description": "印刷機をアンロックします。これは、知識の本の制作を拡大できる複雑なマシンです。また、他の多くのマシンに必要な真鍮精度部品をアンロックします。",
+				"name": "印刷機"
 			},
 			"projectiletrap": {
-				"description": "_MISSING_Unlocks a trap that once loaded will shoot sideways at strong monsters",
-				"name": "_MISSING_Projectile Trap"
+				"description": "一度装填すると強力なモンスターを横に撃つトラップをアンロックします。",
+				"name": "発射体トラップ"
 			},
 			"recursiveknowledge": {
-				"description": "_MISSING_Helps make books by using books so you can make more books",
-				"name": "_MISSING_Recursive Self-Improvement"
+				"description": "あなたがより多くの本を作ることができるように本を使って本を作るのに役立ちます。",
+				"name": "再帰的自己改善"
 			},
 			"researcher": {
-				"description": "_MISSING_Unlocks the researcher, who will do research using nearby bookcases to progress science",
-				"name": "_MISSING_Researcher"
+				"description": "科学を進歩させるために近くの本棚を使用して研究を行う研究者をアンロックします。",
+				"name": "研究者"
 			},
 			"ropes": {
-				"description": "_MISSING_Unlocks an ingredient with many uses",
-				"name": "_MISSING_Ropes"
+				"description": "様々な用途に使える素材をアンロックします。",
+				"name": "ロープ"
 			},
 			"ropetrap": {
-				"description": "_MISSING_Unlocks a trap that freezes nearby monsters for 10 seconds when one monster passes over it.",
-				"name": "_MISSING_Rope Trap"
+				"description": "一人のモンスターが通過すると、近くのモンスターを10秒間フリーズするトラップをアンロックします。",
+				"name": "ロープトラップ"
 			},
 			"sacredhouse": {
-				"description": "_MISSING_Unlocks the Sacred Point Storage, to extend the amount of Sacred Points which can be used by the Failsafe",
-				"name": "_MISSING_Sacred Point Storage"
+				"description": "聖なるフェイルセーフで使用できる神聖なポイントの量を拡張するために、神聖なポイントストレージのをアンロックします。",
+				"name": "神聖なポイントストレージ"
 			},
 			"scribe": {
-				"description": "_MISSING_Unlocks the scribe, who studies scrolls to gain new insights. A scribe requires 10 Scrolls Shelves nearby. The scribe empties them, but they automatically fill themselves up again over time.",
-				"name": "_MISSING_Scribe"
+				"description": "筆記者が巻き声を上げて新しい洞察を得るために筆記をアンロックします。スクライブには、近くの10個の巻物の棚が必要です。筆記者はそれらを空にしますが、彼らは時間の経過とともに自動的に再び自分自身を満たします。",
+				"name": "筆記者"
 			},
 			"statistics": {
-				"description": "_MISSING_Unlocks the Statistics Board. When placed and used, it gives insights into the activity of your colony.",
-				"name": "_MISSING_Statistics Board"
+				"description": "統計委員会をアンロックします。配置されて使用すると、コロニーの活動に関する洞察が得られます。",
+				"name": "統計委員会"
 			},
 			"steel": {
-				"description": "_MISSING_Unlocks steel, lead and mineral oil. These resources are necessary for the construction of more modern machinery. Lead ore is found in swamps, and coal is located below mammoth trees.",
-				"name": "_MISSING_Steel, Lead and Mineral Oil"
+				"description": "鋼、鉛、鉱油をアンロックします。これらのリソースは、より近代的な機械の建設に必要です。鉛鉱石は沼地にあり、石炭は巨大な木の下にあります。",
+				"name": "鋼、鉛、鉱油"
 			},
 			"steellockbox": {
-				"description": "_MISSING_Unlocks a lockbox with more capacity.",
-				"name": "_MISSING_Steel Lockbox"
+				"description": "より多くの容量でロックボックスをアンロックします。",
+				"name": "スチールロックボックス"
 			},
 			"steeltools": {
-				"description": "_MISSING_Unlocks a more durable tool which allows colonists to do their work more efficiently.",
-				"name": "_MISSING_Steel Tools"
+				"description": "入植者がより効率的に仕事をすることができるより耐久性のあるツールをアンロックします。",
+				"name": "スチールツール"
 			},
 			"stonemason": {
-				"description": "_MISSING_Unlocks the stonemason, useful for adding variety to buildings",
-				"name": "_MISSING_Stonemason"
+				"description": "石工をアンロックします。これは、建物に多様性を追加するのに役立ちます",
+				"name": "石工"
 			},
 			"tabulator": {
-				"description": "_MISSING_Unlocks a complex machine which processes data and stores it in punched-cards.",
-				"name": "_MISSING_Tabulating Machine"
+				"description": "データを処理し、パンチカードに保存する複雑なマシンをアンロックします。",
+				"name": "集計機"
 			},
 			"tailoring": {
-				"description": "_MISSING_Unlocks the tailor, a worker who can turn flax into linen and other items. Linen is a good source of colony points",
-				"name": "_MISSING_Tailor"
+				"description": "亜麻をリネンやその他のアイテムに変えることができる労働者であるテーラーをアンロックします。リネンはコロニーポイントの良い源です",
+				"name": "仕立て屋"
 			},
 			"tanner": {
-				"description": "_MISSING_Unlocks the tanner, a worker who is vital in the production of leather and, later, parchment",
-				"name": "_MISSING_Tanner"
+				"description": "革の生産に不可欠な労働者であり、後に羊皮紙の皮革屋のロックを解除する",
+				"name": "皮革"
 			},
 			"toolshop": {
-				"description": "_MISSING_Unlocks the Tool Distribution Table, a place where colonists will go to take tools when used. If none are found, they'll go to the banner.",
-				"name": "_MISSING_Tool Distribution"
+				"description": "ツールディストリビューションテーブルをアンロックします。これは、入植者が使用するとツールを撮影する場所です。何も見つからない場合、彼らはバナーに行きます。",
+				"name": "ツール分布"
 			},
 			"trading": {
-				"description": "_MISSING_Unlocks the Merchant's Hub, a place where you can buy and sell items",
-				"name": "_MISSING_Merchant's Hub"
+				"description": "商人のハブをアンロックします。アイテムを売買できる場所",
+				"name": "商人のハブ"
 			},
 			"waterpump": {
-				"description": "_MISSING_Allows gathering water away from water sources",
-				"name": "_MISSING_Water pumping"
+				"description": "水源から水を集めることができます",
+				"name": "水ポンプ"
 			},
 			"writer": {
-				"description": "_MISSING_Unlocks the writer, parchment and scrolls of knowledge. These are important to complete more advanced science.",
-				"name": "_MISSING_Writer"
+				"description": "ライター、羊皮紙、知識の巻物をアンロックします。これらは、より高度な科学を完了するために重要です。",
+				"name": "作家"
 			}
 		},
 		"popup": {
 			"areaselection": {
 				"close": "閉じる",
-				"description": "このエリアを解除するかどうか選んでください。",
+				"description": "このエリアを削除するかどうか選んでください。",
 				"header": "エリアメニュー",
-				"remove": "エリアを解除"
+				"remove": "エリアを削除"
 			},
 			"death": {
 				"description": "あなたは死にました",
 				"respawn": "リスポーン"
 			},
 			"inventory": {
-				"availableamount2": "備蓄品内に",
+				"availableamount2": "備蓄:",
 				"craftingstockpile": "作成 & 備蓄品",
 				"happinessvalue2": "幸福度基準値",
 				"happy": {
 					"header": "幸福度"
 				},
 				"madeintooltip": "これで作成:",
-				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
+				"madeintooltippurchasable": "{0}ポイントでマーチャントハブで購入可能",
 				"noactivecolony": "アクティブなコロニーがありません！",
 				"science": {
 					"available": "研究可能",
@@ -807,78 +807,68 @@
 					"completeunlock": "完了",
 					"conditioncolonistcount": "入植者",
 					"conditioncolonistcountdescription": "必要入植者数",
-					"conditionpointreq": "_MISSING_Colony Points",
-					"conditionpointreqdescription1": "_MISSING_Colony Points Requirement",
-					"conditionpointreqdescription2": "_MISSING_Required: {0}",
-					"conditionpointreqdescription3": "_MISSING_Available: {0}",
+					"conditionpointreq": "コロニーポイント",
+					"conditionpointreqdescription1": "コロニーポイント要件",
+					"conditionpointreqdescription2": "必須：{0}",
+					"conditionpointreqdescription3": "利用可能：{0}",
 					"conditionscientistrequires": "必要: {0}",
 					"dependencies": "必要技術:",
-					"followups": "_MISSING_Followup technologies:",
+					"followups": "フォローアップテクノロジー：",
 					"header": "科学",
 					"recipeunlocknpcgroup": "{0} をアンロック",
 					"recipeunlockoriginjob": "{0} にて作成",
 					"recipeunlockoriginplayer": "プレイヤーにより作成",
 					"recipeunlocks": "このレシピによってアンロック:",
 					"startscience": "研究を開始",
-					"threat": "_MISSING_Increases Monster Threat by {0}",
-					"unavailable": "研究不可能"
+					"threat": "{0}によってモンスターの脅威を増やす",
+					"unavailable": "研究不可"
 				},
 				"searchfieldplaceholder": "検索フィルタを入力・・・",
 				"stats": {
 					"auto-scale": "自動スケール",
-					"entry-beds": "_MISSING_Beds",
-					"entry-meals": "_MISSING_Total Meals",
-					"entry-npccount": "_MISSING_Colonists",
-					"entry-points": "_MISSING_Colony Points",
-					"entry-sanctified": "_MISSING_Sacred Points",
-					"entry-unemployed": "_MISSING_Unemployed",
+					"entry-beds": "ベッド",
+					"entry-meals": "総食事",
+					"entry-npccount": "入植者",
+					"entry-points": "コロニーポイント",
+					"entry-unemployed": "失業者",
 					"hide-all": "全て隠す",
-					"only-changed": "_MISSING_Only show changed",
+					"only-changed": "変更されたもののみ表示",
 					"scale": "スケール:",
-					"scale-linear": "_MISSING_Linear",
-					"scale-log": "_MISSING_Log",
+					"scale-linear": "線形",
+					"scale-log": "ログ",
 					"show-all": "全て表示",
 					"time1day": "1日",
 					"time24day": "24日",
 					"time4day": "4日",
-					"type-colony": "_MISSING_Colony",
-					"type-consumption": "_MISSING_Consumption",
-					"type-consumption-col": "_MISSING_Consumption (Colony)",
-					"type-consumption-out": "_MISSING_Consumption (Outpost)",
-					"type-idle-jobs": "_MISSING_Idle Job Time",
-					"type-idle-jobs-col": "_MISSING_Idle Job Time (Colony)",
-					"type-idle-jobs-out": "_MISSING_Idle Job Time (Outpost)",
-					"type-itempoints": "_MISSING_Point Items",
-					"type-outpost": "_MISSING_Outpost",
-					"type-production": "_MISSING_Production",
-					"type-production-col": "_MISSING_Production (Colony)",
-					"type-production-out": "_MISSING_Production (Outpost)",
-					"type-stockpile": "_MISSING_Stockpile",
-					"type-tooluse": "_MISSING_Tool Use",
-					"type-tooluse-col": "_MISSING_Tool Use (Colony)",
-					"type-tooluse-out": "_MISSING_Tool Use (Outpost)",
-					"type-trade-in": "_MISSING_Inbound Trade",
-					"type-trade-out": "_MISSING_Outbound Trade"
+					"type-colony": "コロニー",
+					"type-consumption": "消費",
+					"type-idle-jobs": "アイドル職業タイム",
+					"type-itempoints": "ポイントアイテム",
+					"type-production": "製造",
+					"type-stockpile": "備蓄",
+					"type-tooluse": "ツールの使用",
+					"type-trade-in": "インバウンド貿易",
+					"type-trade-out": "アウトバウンド貿易"
 				},
 				"tooltip": {
 					"and": "と",
-					"craftingtime": "_MISSING_Crafting time: {0} seconds",
-					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
-					"instockpile": "（備蓄品内に）",
+					"craftingtime": "クラフト時間：{0}秒",
+					"craftingtimetooled": "{0}でのクラフト時間：{1}秒",
+					"instockpile": "（備蓄品）",
 					"needs": "必要: ",
 					"nothing": "なし"
 				},
 				"upgrades": {
-					"header": "_MISSING_Colony Points",
-					"preamble2": "_MISSING_<i>Current Points / Capacity</i>",
+					"header": "コロニーポイント",
+					"preamble2": "<i>現在のポイント/最大ポイント</i>",
 					"table": {
-						"cost": "_MISSING_Cost",
-						"current": "_MISSING_Current",
-						"levels": "_MISSING_Levels",
-						"name": "_MISSING_Upgrade Name",
-						"next": "_MISSING_Next"
+						"cost": "コスト",
+						"current": "現在",
+						"levels": "レベル",
+						"name": "アップグレード名",
+						"next": "次のアップグレード"
 					},
-					"upgradebutton": "_MISSING_Upgrade"
+					"upgradebutton": "アップグレード"
 				}
 			},
 			"itemselector": {
@@ -889,35 +879,35 @@
 				"allreset": "全てをリセット",
 				"allzero": "全てを0に設定",
 				"description": "入植者は備蓄品の中が指定した量になるまで作業を続けます。",
-				"group1": "_MISSING_Select Limits Group",
-				"group2": "_MISSING_Select one of multiple groups for this specific worker. Adjusting limits will adjust them for all workers of this type with the same group.",
+				"group1": "制限グループを選択します",
+				"group2": "この特定の労働者の複数のグループのいずれかを選択します。調整制限は、同じグループでこのタイプのすべての労働者に対してそれらを調整します。",
 				"hoverpriority": {
 					"a": "作成優先度",
 					"b": "優先度+++のレシピは最初に作成されます。\n優先度+のレシピは最後に作成されます。"
 				},
-				"waitingdata": "_MISSING_Waiting on data...",
+				"waitingdata": "データを待っています...",
 				"wrongcolony": "選択中の生産職は他のコロニーに属しています"
 			},
 			"merchantui": {
-				"buy": "_MISSING_Purchase",
-				"buy1": "_MISSING_Buy 1",
-				"buy25": "_MISSING_Buy 25",
-				"buy5": "_MISSING_Buy 5",
-				"buytext": "_MISSING_Purchase {0} for {1} points",
-				"buytext2": "_MISSING_Current funds allow for {0} purchase(s)",
-				"currentpoints": "_MISSING_Current Points: {0} / {1}",
-				"description": "_MISSING_Buy/sell items for Points",
-				"header": "_MISSING_Merchant trading",
-				"sell": "_MISSING_Sell",
-				"sell1": "_MISSING_Sell 1",
-				"sell25": "_MISSING_Sell 25",
-				"sell5": "_MISSING_Sell 5",
-				"selltext": "_MISSING_Sell {0} for {1} points",
-				"selltext2": "_MISSING_Current storage allows for {0} sale(s)"
+				"buy": "購入",
+				"buy1": "購入1",
+				"buy25": "25を購入します",
+				"buy5": "購入5",
+				"buytext": "{1}ポイントで{0}を購入します",
+				"buytext2": "現在の資金は{0}購入を許可します",
+				"currentpoints": "現在のポイント：{0} / {1}",
+				"description": "ポイントのアイテムを購入/販売します",
+				"header": "商人取引",
+				"sell": "売る",
+				"sell1": "販売1",
+				"sell25": "25を売る",
+				"sell5": "販売5",
+				"selltext": "{1}ポイントで{0}を販売します",
+				"selltext2": "現在のストレージにより{0}販売が可能になります"
 			},
 			"quickstart": {
 				"closetoggle": "次回から表示しない",
-				"f1": "_MISSING_Press 'F1' to toggle this menu",
+				"f1": "「F1」を押して、このメニューを切り替えます",
 				"next": "次へ",
 				"previous": "前へ"
 			},
@@ -928,31 +918,31 @@
 			},
 			"toolconstruction": {
 				"builder": "ビルダー",
-				"buildera": "",
+				"buildera": "ビルダー",
 				"builderb": "建築エリアが必要",
 				"builderc": "何かを建築する",
 				"description": "作成したいエリアの種類を選んでください。",
 				"destroyer": "デストロイヤー",
-				"destroyera": "",
+				"destroyera": "デストロイヤー",
 				"destroyerb": "撤去エリアが必要",
 				"destroyerc": "何かを撤去する",
 				"header": "建設ツール"
 			},
 			"tooljob": {
-				"barleya": "_MISSING_Feed for chickens",
-				"barleyfarmer": "_MISSING_Barley Farmer",
-				"beekeeper": "_MISSING_Beekeeper",
-				"beekeepera": "_MISSING_Keeps bees for candle production",
+				"barleya": "鶏用の餌",
+				"barleyfarmer": "大麦農家",
+				"beekeeper": "養蜂家",
+				"beekeepera": "ろうそくの生産のためにミツバチを保持します",
 				"berrya": "素早く簡単な食料源、まずはこれ！",
 				"berryfarmer": "ベリー農家",
 				"berryfarmertool": "ベリー農家ツール",
 				"buildera": "指定したエリアをブロックで埋める",
 				"builderarea": "建設人足作業エリア",
 				"builderb": "ブロックの種類を選択するメニューが開いた後、そのブロックで埋めるエリアを指定します",
-				"cabbagea": "_MISSING_Cabbage",
-				"cabbagefarmer": "_MISSING_Cabbage Farmer",
-				"chickenfarmer": "_MISSING_Chicken Farmer",
-				"chickenfarmera": "_MISSING_Uses barley to grow chickens",
+				"cabbagea": "キャベツ",
+				"cabbagefarmer": "キャベツ農家",
+				"chickenfarmer": "養鶏",
+				"chickenfarmera": "大麦を使って鶏を育てます",
 				"construction": "土木建築",
 				"construction1": "人足たちを作業に従事させよう",
 				"construction2": "作業の種類を選択するための別メニューが開きます",
@@ -968,9 +958,9 @@
 				"diggerspeciala": "エリア内の特定のブロックのみを撤去する",
 				"diggerspecialarea": "特殊掘削人足作業エリア",
 				"diggerspecialb": "選択したブロックを撤去するエリアを指定してください",
-				"dyer1": "_MISSING_Add colors to make life a little less drab",
-				"dyer2": "_MISSING_This will open another menu with multiple farm jobs",
-				"dyers": "_MISSING_Dyeing",
+				"dyer1": "色を追加して、人生を少しずつ単調にします",
+				"dyer2": "これにより、複数の農場の仕事がある別のメニューが開きます",
+				"dyers": "染色",
 				"flaxfarmer": "亜麻農家",
 				"flaxfarmertool": "亜麻農家ツール",
 				"forester": "林業者",
@@ -978,7 +968,7 @@
 				"foresterb": "必要: 苗木と斧\n草か土の上に設置する",
 				"forestertool": "林業者ツール",
 				"header": "コマンドツール",
-				"hempfarmer": "_MISSING_Hemp Farmer",
+				"hempfarmer": "麻の農家",
 				"insidearea": "エリア内には設置不可能",
 				"missingscience": "<color=red>先に「{0}」をアンロックする必要があります。</color>",
 				"noconstructionareanearby": "付近に土木建築エリアがない",
@@ -995,56 +985,56 @@
 				"wheatfarmertool": "小麦農家ツール"
 			},
 			"toolshop": {
-				"description": "_MISSING_Adjust the minimum required stockpile levels before colonists use specific tools. Allows them to be used for crafting or science.",
-				"header": "_MISSING_Toolshop"
+				"description": "入植者が特定のツールを使用する前に、必要な最小備蓄レベルを調整します。クラフトや科学に使用できるようにします。",
+				"header": "ツールショップ"
 			}
 		},
 		"quickstart": {
 			"page1_2": {
-				"description": "_MISSING_Welcome to Colony Survival!",
-				"header": "_MISSING_Basics",
-				"text1": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended.",
-				"text2": "_MISSING_The banner is the center of your colony. Place it by clicking on the ground with your Banner Tool selected. Press '2' to select it. The Banner Tool displays a deep shadow wherever monsters will spawn once colonists have been recruited.",
-				"text3": "_MISSING_Place beds to be able to recruit colonists. Press 'i' to open the interface. Drag beds from the stockpile to the hotbar below. With the bed selected, right-click the ground to place a bed.",
-				"text4": "_MISSING_Open the interface and go to the 'Colony' page. Press 'recruit' to recruit a colonist."
+				"description": "コロニーサバイバルへようこそ！",
+				"header": "基本",
+				"text1": "最初のコロニーに適した場所を見つけることから始めます。近くに農業のための水と平らな畑があることをお勧めします。",
+				"text2": "バナーはあなたのコロニーの中心です。選択したバナーツールで地面をクリックして配置します。「2」を押して選択します。バナーツールは、入植者が募集されるとモンスターが出現する場所に深い影を表示します。",
+				"text3": "入植者を募集できるようにベッドを置きます。「I」を押してインターフェイスを開きます。備蓄から下のホットバーにベッドをドラッグします。ベッドを選択した状態で、地面を右クリックしてベッドを置きます。",
+				"text4": "インターフェイスを開き、「コロニー」ページに移動します。「雇用」を押して、入植者を募集します。"
 			},
 			"page2_2": {
-				"description": "_MISSING_These are essential for growth and survival",
-				"header": "_MISSING_Food & Beds",
-				"text1": "_MISSING_Colonists require 1 meal per day. They grab these at the banner or a nearby grocery store. Without food, colonists starve. Recruiting new colonists costs multiple meals.",
-				"text2": "_MISSING_The berry farmer is the first food source. Select the Command Tool by pressing '1'. Click to open it and select the berry farmer. Right-click the ground to start defining the berry farm, then right click again elsewhere to finish. You’ll need quite a lot of these!",
-				"text3": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Cut down a tree by left-clicking on it, and dig down to gather stone rubble.",
-				"text4": "_MISSING_Click on the tinkerer’s table icon on the left of the stockpile to craft it. Place it like you placed the bed. Like with the berry farm, unemployed colonists will automatically take this job."
+				"description": "これらは成長と生存に不可欠です",
+				"header": "食料とベッド",
+				"text1": "入植者は1日に1食を必要とします。彼らはこれらをバナーや近くの食料品店でつかみます。食べ物がなければ、入植者は飢えています。新しい入植者を募集するには、食事がかかります。",
+				"text2": "ベリー農家は最初の食料源です。「1」を押してコマンドツールを選択します。クリックして開き、ベリー農家を選択します。地面を右クリックしてベリー農家を開始し、他の場所でもう一度右クリックして終了します。これらはかなり必要です！",
+				"text3": "ベッドの生産を開始するには、ティンカーのテーブルを作成する必要があります。左クリックして木を切り倒し、掘り下げて石の瓦礫を集めます。",
+				"text4": "備蓄の左側にあるティンカーのテーブルアイコンをクリックして、作成します。あなたがベッドを置いたようにそれを置きます。ベリー農場と同様に、失業者の入植者は自動的にこの仕事を引き受けます。"
 			},
 			"page3_2": {
-				"description": "_MISSING_The technological side of survival",
-				"header": "_MISSING_Crafting, Science & Mining",
-				"text1": "_MISSING_Workers will go to crates both to gather ingredients from the stockpile and to deliver crafted products to the stockpile. If there aren't any crates yet, the banner will function as one.",
-				"text2": "_MISSING_A lot of jobs can or must use tools. Different tools have different costs, durabilities and production speed bonuses. The tinkerer automatically produces stone tools.",
-				"text3": "_MISSING_Use science to unlock new jobs, items and features. Open the science page in the interface to check the requirements and unlock new technology when it becomes available.",
-				"text4": "_MISSING_When you’ve unlocked the Miner science, the tinkerer will produce “miner jobs”. Dig down and place these on dark stone blocks or ores to have colonists mine them sustainably."
+				"description": "生存の技術的側面",
+				"header": "クラフト、科学、鉱業",
+				"text1": "労働者は、備蓄から材料を集め、作られた製品を備蓄に配達するために、クレートに行きます。まだ箱がない場合、バナーは1つとして機能します。",
+				"text2": "多くの仕事はツールを使用するか、使用する必要があります。ツールが異なると、コスト、耐久性、生産速度ボーナスが異なります。Tinkererは自動的に石器を生産します。",
+				"text3": "科学を使用して、新しい仕事、アイテム、機能をアンロックします。インターフェイスで科学ページを開き、要件を確認し、利用可能になったら新しいテクノロジーをアンロックします。",
+				"text4": "鉱山科学のロックを解除すると、ティンカーは「採掘者」を生み出します。掘り下げて、これらを暗い石のブロックまたは鉱石に置いて、入植者に持続的に採掘させます。"
 			},
 			"page4_2": {
-				"description": "_MISSING_Defend your colony against the monsters of the night!",
-				"header": "_MISSING_Colony Defense",
-				"text1": "_MISSING_Unlocking some science will add 'threat'. This is shown in the top-right of the UI. Recruiting extra colonists will add threat at a slow pace after the first 25. As the threat level rises, more and stronger monsters will appear.",
-				"text2": "_MISSING_Build walls and dig moats in the monster-free zone to protect the center of your colony. Feel free to place jobs like farms in the “monster zone” outside of this: colonists will leave this area and go to their beds when the night starts.",
-				"text3": "_MISSING_Your tinkerer will produce the item 'Night Slinger Guard'. Place this in your colony to recruit a slinger who works during the night.",
-				"text4": "_MISSING_Progress in the tech tree to unlock new guards, traps and the Sacred Failsafe."
+				"description": "あなたの植民地を夜のモンスターから守ってください！",
+				"header": "コロニー防衛",
+				"text1": "一部の科学のロックを解除すると、「脅威」が追加されます。これは、UIの最前線に表示されます。余分な入植者を募集することは、最初の25歳の後、ゆっくりとしたペースで脅威を追加します。脅威レベルが上昇するにつれて、より強力なモンスターが現れます。",
+				"text2": "壁を建設し、モンスターのないゾーンで堀を掘ってコロニーの中心を保護します。「モンスターゾーン」の農場のような仕事をこれの外に自由に配置してください。入植者はこのエリアを離れ、夜が始まるときにベッドに行きます。",
+				"text3": "ティンカーは、アイテム「夜間スリンガーガード」を生成します。これを植民地に入れて、夜中に働くスリンガーを募集してください。",
+				"text4": "テクノロジーツリーの進歩は、ニューガード、トラップ、聖なるフェイルセーフをアンロックします。"
 			},
 			"page5_2": {
-				"description": "_MISSING_Trade and expand to get access to unique resources",
-				"header": "_MISSING_Colony Points & Colonization",
-				"text1": "_MISSING_Unlock and place the Merchant’s Hub. Right-click it to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
-				"text2": "_MISSING_This world contains multiple regions with unique resources. There are mountaintops covered with snow, heaths covered in purple, swamps and mammoth trees. Unlock and equip the astrolabe to find them easily.",
-				"text3": "_MISSING_Unlock outposts, purchase an Outpost Banner and carry it with you while you explore. Place it to start an Outpost. Its stockpile and scientific progress are shared with the main colony and other outposts. Build outposts in the regions mentioned above to get access to their resources."
+				"description": "ユニークなリソースへのアクセスを得るために、取引および拡大します",
+				"header": "コロニーポイントと植民地化",
+				"text1": "ロックを解除して、商人のハブを配置します。右クリックしてインターフェイスを開きます。コロニーポイントを獲得するためにアイテムを販売します。とりわけ、コロニーポイントページの入植者の制限などのアップグレードにポイントを費やすことができます。",
+				"text2": "この世界には、一意のリソースを備えた複数の地域が含まれています。雪に覆われた山頂、紫色、沼地、マンモスの木で覆われたヒースがあります。アストロラーベのロックを解除して装備して、簡単に見つけることができます。",
+				"text3": "前哨基地のロックを解除し、前哨基地基本バナーを購入し、探索している間に持ち運びます。前哨基地を開始するために配置します。その備蓄と科学的進歩は、メインコロニーやその他の前哨基地と共有されています。上記の地域にアウトポストを構築して、リソースにアクセスします。"
 			},
 			"page6_2": {
-				"description": "_MISSING_Create more complex job systems",
-				"header": "_MISSING_'Harvester' and 'Source' Blocks",
-				"text1": "_MISSING_For some jobs, you have to place both the 'harvester' and the 'source' block. Most of the time each harvester block needs about 10 source blocks.",
-				"text2": "_MISSING_A harvester block like the Scribe's Desk recruits a colonist to work there. That colonist will try to visit a nearby source block, in this case a filled Scroll Shelf, before crafting.",
-				"text3": "_MISSING_Harvesters empty their source blocks, but source blocks automatically regenerate over time. The 1 to 10 ratio ensures a sustainable long term balance."
+				"description": "より複雑な職業システムを作成します",
+				"header": "「ハーベスター」と「ソース」ブロック",
+				"text1": "一部の職業では、「ハーベスター」と「ソース」ブロックの両方を配置する必要があります。ほとんどの場合、各ハーベスターブロックには約10のソースブロックが必要です。",
+				"text2": "スクライブの机のようなハーベスターブロックは、そこで働くために入植者を募集します。その入植者は、クラフトする前に、近くのソースブロック、この場合は満たされた巻物棚を訪問しようとします。",
+				"text3": "収穫者はソースブロックを空にしますが、ソースブロックは時間とともに自動的に再生します。1〜10の比率により、持続可能な長期バランスが保証されます。"
 			}
 		},
 		"settingsmenu": {
@@ -1063,7 +1053,7 @@
 				"gameplaytab": {
 					"adaptivecrosshair": "適応型クロスヘア",
 					"crosshairratio": "クロスヘアのスケール",
-					"devbuttons": "_MISSING_Enable developer buttons",
+					"devbuttons": "開発者ボタンを有効にします",
 					"permanenthighlight": "恒常的なブロックハイライト",
 					"ratio0": "無効",
 					"ratio100": "100%",
@@ -1075,7 +1065,7 @@
 					"ratio400": "400%",
 					"ratio50": "50%",
 					"ratio75": "75%",
-					"showsensitivedatamode": "_MISSING_Show sensitive data",
+					"showsensitivedatamode": "機密データを表示します",
 					"tab": "全般的な設定",
 					"uiscalingratio": "UIのスケール"
 				},
@@ -1111,8 +1101,8 @@
 			"qualityminimum": "最低品質",
 			"qualityoff": "Off",
 			"qualityon": "On",
-			"qualityveryhigh": "かなり高品質",
-			"qualityverylow": "かなり低品質",
+			"qualityveryhigh": "非常に高い",
+			"qualityverylow": "非常に低い",
 			"video": "ビデオ",
 			"videomenu": {
 				"ambientocclusion": "アンビエントオクルージョン",
@@ -1121,7 +1111,7 @@
 				"bloom": "ブルーム",
 				"depthoffield": "被写界深度",
 				"drawdistance": "描画距離 (*)",
-				"eyeadaptation": "目の適応",
+				"eyeadaptation": "自動露出",
 				"fieldofview": "視野角",
 				"full": "ビデオ設定",
 				"fullscreen": "フルスクリーン",
@@ -1134,9 +1124,9 @@
 				"shaderquality": "シェーダー品質",
 				"sunshadowcascades": "シャドウカスケード",
 				"sunshadowdistance": "影の距離",
-				"sunshadowquality": "影品質",
+				"sunshadowquality": "日影の品質",
 				"texturequality": "テクスチャの品質",
-				"torchquality": "_MISSING_Torch quality",
+				"torchquality": "松明の品質",
 				"vsync": "VSync",
 				"vsyncdouble": "2倍"
 			}
@@ -1145,16 +1135,16 @@
 			"alreadyexists": "ワールドは既に存在します！",
 			"cancel": "キャンセル",
 			"confirmdelete": "削除の確認",
-			"confirmdeletedescription": "あなたはこのワールドを含むフォルダを削除しようとしています。\nどうしますか？",
+			"confirmdeletedescription": "ワールドを削除しますか？ \nこの操作は一度実行すると戻すことはできません。",
 			"confirmload": "ロードの確認",
 			"delete": "削除",
 			"hostingoptions": "ホスティング設定",
-			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "古いワールドデータを選択しました。これをロードするには、過去のバージョンのゲームを実行する必要があります。ゲームのプロパティに入り、ベータ版のタブで過去バージョンを選択して、過去バージョンをダウンロードするようにSteamで設定できます。",
 			"load": "ロード",
 			"loadworld": "ワールドをロード",
 			"missingname": "ワールド名が設定されていません",
 			"modconfiguration": "Mod設定",
-			"modoutdated": "_MISSING_[Outdated]",
+			"modoutdated": "[旧式]",
 			"modschanged": {
 				"added": "'{0}' が追加されました",
 				"disabled": "'{0}' は以前使われていましたが、無効化または削除されています。",
@@ -1165,17 +1155,17 @@
 			"modselectall": "全て選択",
 			"modselectnone": "全て解除",
 			"modslist": {
-				"disableddependency": "_MISSING_[Disabled]",
-				"missingdependency": "_MISSING_[Missing]",
-				"outdateddependency": "_MISSING_[Outdated]",
-				"requireddependency": "_MISSING_[Requires]"
+				"disableddependency": "[無効]",
+				"missingdependency": "[ない]",
+				"outdateddependency": "[旧式]",
+				"requireddependency": "[必要]"
 			},
 			"newworld": "新規ワールド",
 			"nosubscribeditems": "サブスクライブ中のワークショップワールドはありません",
-			"outdated": "_MISSING_World outdated",
+			"outdated": "旧式の世界",
 			"password": "パスワード",
-			"play_coop": "_MISSING_Play Co-op",
-			"play_solo": "_MISSING_Play Solo",
+			"play_coop": "Co-opプレイ",
+			"play_solo": "シングルプレイ",
 			"selectedfolder": "選択中のワールド: {0}",
 			"servername": "サーバー名",
 			"serverport": "サーバーのポート",
@@ -1183,233 +1173,233 @@
 			"typeworkshop": "ワークショップワールド",
 			"worlddate": "日付",
 			"worldname": "名称",
-			"worldname_long": "ワールド名",
-			"worldseed": "ワールドの種"
+			"worldname_long": "World名",
+			"worldseed": "Worldシード値"
 		},
 		"tooltip": {
-			"craftingblock": "_MISSING_Orders a colonist to work here as a {0}",
-			"crate": "_MISSING_Colonists will move to one of these blocks to get or deposit items every so often",
-			"failsafe-points": "_MISSING_Adds {0} sacred point capacity (non-stacking)",
-			"failsafe-threat": "_MISSING_Causes {0} threat",
-			"guard-ammo": "_MISSING_Uses {0}",
-			"guard-aoe": "_MISSING_{0} blocks area of effect",
-			"guard-cooldown": "_MISSING_Every {0} seconds",
-			"guard-damage": "_MISSING_Deals {0} damage",
-			"guard-damage-ticks": "_MISSING_Deals {0} damage over {1} seconds",
-			"guard-general": "_MISSING_Orders a colonist to guard this position",
-			"guard-range": "_MISSING_At up to {0} blocks distance",
-			"guard-sleeptype-day": "_MISSING_Sleeps during the day",
-			"guard-sleeptype-night": "_MISSING_Sleeps during the night",
-			"is-edible": "_MISSING_Meal item, colonists will eat one meal every day",
-			"is-sanctified": "_MISSING_Receive {0} sacred points when colonists eat this meal",
-			"lockbox-points": "_MISSING_Adds {0} colony point capacity",
-			"lockbox-threat": "_MISSING_Causes {0} threat",
-			"miner": "_MISSING_Orders a colonist to repeatedly mine the dark stone ore block underneath",
-			"npcshop": "_MISSING_Colonists will visit this or the banner to get their daily meal",
-			"pointtrader": "_MISSING_You can buy and sell things for points here",
-			"provides-fertile": "_MISSING_Counts as fertile ground",
-			"provides-fertile-fen": "_MISSING_Counts as fertile marsh ground",
-			"provides-fertile-heath": "_MISSING_Counts as fertile heath ground",
-			"requires-fen": "_MISSING_Requires fertile marsh below",
-			"requires-fertile": "_MISSING_Requires fertile ground below",
-			"requires-heath": "_MISSING_Requires fertile heath below",
-			"requires-water": "_MISSING_Must be placed next to water to function",
-			"sanctifiedlockbox-points": "_MISSING_Adds {0} sacred point capacity",
-			"sanctifiedlockbox-threat": "_MISSING_Causes {0} threat",
-			"statisticsboard": "_MISSING_Interact with this block to view statistics of your colony",
-			"threatstatue-general": "_MISSING_Pulls threat from other outposts towards the outpost it's placed in, while also causing some threat itself",
-			"threatstatue-threatcaused": "_MISSING_Causes {0} extra threat",
-			"threatstatue-threatweight": "_MISSING_Adds {0} threat weight",
-			"tool-always-usable": "_MISSING_Always available, does not require items",
-			"tool-durability": "_MISSING_{0} seconds of use",
-			"tool-general": "_MISSING_Tools are used by many jobs to accelerate crafting",
-			"tool-multiplier": "_MISSING_{0}x crafting speed",
-			"tool-percentage-left": "_MISSING_Durability % left:",
-			"tool-seconds-left": "_MISSING_Durability seconds left:",
-			"toolshop": "_MISSING_Colonists will visit this or the banner to get new tools when needed",
-			"trap-ammo": "_MISSING_Stores up to {0} {1}",
-			"trap-cooldown": "_MISSING_Every {0} seconds",
-			"trap-damage": "_MISSING_Deals {0} damage",
-			"trap-explosive-range": "_MISSING_Affects an area with radius {0} on hit",
-			"trap-filter-1000hp": "_MISSING_Only triggers on monsters with at least 1000 hp",
-			"trap-filter-unslowed": "_MISSING_Only triggers on monsters not yet slowed",
-			"trapfixer": "_MISSING_Orders a colonist to restock nearby traps during the day",
-			"trap-freezes": "_MISSING_Freezes those hit for {0} seconds",
-			"trap-friendly-fire": "_MISSING_Can affect friendlies when triggered",
-			"trap-general": "_MISSING_Trap item, awaits monsters to pass along and triggers. They will be refilled during the day by Trapfixer colonists",
-			"trap-range": "_MISSING_At up to {0} blocks distance",
-			"trap-slows": "_MISSING_Slows monsters to {0} times their speed",
-			"trap-style-down": "_MISSING_Triggers from monsters below",
-			"trap-style-front": "_MISSING_Triggers from monsters to the front",
-			"trap-style-up": "_MISSING_Triggers from monsters above"
+			"craftingblock": "入植者に{0}としてここで働くように命じます",
+			"crate": "入植者はこれらのブロックの1つに移動して、頻繁にアイテムを取得または入金します",
+			"failsafe-points": "{0}神聖なポイント容量（非スタッキング）を追加",
+			"failsafe-threat": "脅威{0}を増加します",
+			"guard-ammo": "{0}を使用します",
+			"guard-aoe": "{0}効果の領域をブロックします",
+			"guard-cooldown": "クールダウン{0}秒",
+			"guard-damage": "{0}ダメージ",
+			"guard-damage-ticks": "{0}ダメージ{1}秒以上",
+			"guard-general": "入植者にこの立場を防衛するように命じます",
+			"guard-range": "{0}ブロックまでの距離を防衛",
+			"guard-sleeptype-day": "日中は眠ります",
+			"guard-sleeptype-night": "夜は眠ります",
+			"is-edible": "食事のアイテム、入植者は毎日1回の食事を食べます",
+			"is-sanctified": "入植者がこの食事を食べるときに{0}神聖なポイントを受け取る",
+			"lockbox-points": "コロニーポイント{0}容量を増やします。",
+			"lockbox-threat": "脅威{0}を増加します",
+			"miner": "入植者に繰り返し下に暗い石の鉱石ブロックを採掘するように命じます",
+			"npcshop": "入植者はこれまたはバナーを訪れて毎日の食事を手に入れます",
+			"pointtrader": "ここでポイントのために物を売買することができます",
+			"provides-fertile": "肥沃な地面としてカウントされます",
+			"provides-fertile-fen": "肥沃な湿地地としてカウントされます",
+			"provides-fertile-heath": "肥沃なヒースグラウンドとしてカウントされます",
+			"requires-fen": "以下の肥沃な沼地が必要です",
+			"requires-fertile": "以下の肥沃な地面が必要です",
+			"requires-heath": "以下の肥沃なヒースが必要です",
+			"requires-water": "機能するには、水の隣に配置する必要があります",
+			"sanctifiedlockbox-points": "{0}神聖なポイント容量を追加します",
+			"sanctifiedlockbox-threat": "{0}脅威を増加します",
+			"statisticsboard": "このブロックと対話して、コロニーの統計を表示します",
+			"threatstatue-general": "他の前哨基地からそれが置かれている前哨基地に向かって脅威を引き出すと同時に、いくつかの脅威自体も増加します",
+			"threatstatue-threatcaused": "{0}余分な脅威を増加します",
+			"threatstatue-threatweight": "{0}脅威の重みを追加します",
+			"tool-always-usable": "常に利用可能で、アイテムは必要ありません",
+			"tool-durability": "{0}秒の使用",
+			"tool-general": "ツールは、物を作成する製作速度を高速化するために多くの職業で使用します",
+			"tool-multiplier": "{0} x製作速度",
+			"tool-percentage-left": "耐久値：",
+			"tool-seconds-left": "残り耐久値(秒)：",
+			"toolshop": "入植者はこれまたはバナーにアクセスして、必要に応じて新しいツールを入手します",
+			"trap-ammo": "{0} {1}までのストア",
+			"trap-cooldown": "すべての{0}秒",
+			"trap-damage": "{0}ダメージ",
+			"trap-explosive-range": "ヒット時に半径 {0}があるエリアに影響を与えます",
+			"trap-filter-1000hp": "少なくとも1000HPのモンスターのみで作動します",
+			"trap-filter-unslowed": "まだ遅くなっていないモンスターを作動するだけです",
+			"trapfixer": "入植者に日中に近くのトラップを補充するように命じます",
+			"trap-freezes": "{0}秒間ヒットをフリーズします",
+			"trap-friendly-fire": "作動されたときに友情に影響を与える可能性があります",
+			"trap-general": "モンスターを待って渡して作動します。トラップフィクサーの入植者によって日中に補充されます",
+			"trap-range": "{0}まで距離をブロックします",
+			"trap-slows": "モンスターを{0}倍の速度に遅らせます",
+			"trap-style-down": "以下のモンスターから作動",
+			"trap-style-front": "モンスターから正面まで作動します",
+			"trap-style-up": "上記のモンスターから作動"
 		},
 		"upgrades": {
 			"builder": {
-				"level": "_MISSING_{0} Blocks",
-				"main": "_MISSING_Builder Area Size"
+				"level": "{0}ブロック",
+				"main": "建築エリアサイズ"
 			},
 			"colonistcapacity": {
-				"level": "_MISSING_{0} Colonists",
-				"main": "_MISSING_Colonist Capacity"
+				"level": "{0}コロニスト(人)",
+				"main": "入植者の最大人口"
 			},
 			"digger": {
-				"level": "_MISSING_{0} Blocks",
-				"main": "_MISSING_Digger Area Size"
+				"level": "{0}ブロック",
+				"main": "採掘エリアサイズ"
 			},
 			"health": {
-				"level": "_MISSING_Level {0} Health",
-				"main": "_MISSING_Health"
+				"level": "体力レベル{0}",
+				"main": "体力"
 			},
 			"safezone": {
-				"level": "_MISSING_{0} Blocks",
-				"main": "_MISSING_Banner Safe Zone"
+				"level": "{0}ブロック",
+				"main": "バナーセーフゾーン"
 			}
 		}
 	},
 	"types": {
-		"alarmbell": "_MISSING_Alarm Bell",
-		"alchemisttable": "_MISSING_Alchemist's Table",
-		"alkanet": "_MISSING_Alkanet",
-		"animalcarcass": "_MISSING_Animal Carcass",
-		"astrolabe": "_MISSING_Astrolabe",
+		"alarmbell": "アラームベル",
+		"alchemisttable": "錬金術師のテーブル",
+		"alkanet": "アルカン",
+		"animalcarcass": "動物の死体",
+		"astrolabe": "アストロラーベ",
 		"banner": "バナー",
 		"bannertool": "バナーツール",
-		"barley": "_MISSING_Barley",
+		"barley": "大麦",
 		"bed": "ベッド",
 		"berry": "ベリー",
 		"berrybush": "ベリーの種",
-		"berrymeal": "_MISSING_Berry Meal",
-		"blastfurnace": "_MISSING_Blast Furnace",
+		"berrymeal": "ベリーの食事",
+		"blastfurnace": "溶鉱炉",
 		"bloomery": "塊鉄炉",
-		"bookcase": "_MISSING_Bookcase (Empty)",
-		"bookcase1": "_MISSING_Bookcase (Mostly Empty)",
-		"bookcase2": "_MISSING_Bookcase (Partially Empty)",
-		"bookcasefilled": "_MISSING_Bookcase",
-		"bookofknowledge": "_MISSING_Book Of Knowledge",
+		"bookcase": "本棚（空）",
+		"bookcase1": "本棚（ほとんど空）",
+		"bookcase2": "本棚（部分的に空）",
+		"bookcasefilled": "本棚",
+		"bookofknowledge": "知識の本",
 		"bow": "弓",
-		"brassingot": "_MISSING_Brass Ingot",
-		"brassparts": "_MISSING_Brass Precision Parts",
+		"brassingot": "真鍮のインゴット",
+		"brassparts": "真鍮精度部品",
 		"bread": "パン",
-		"breadmeal": "_MISSING_Bread Meal",
+		"breadmeal": "パンの食事",
 		"bricks": "焼成レンガ",
 		"bricksblack": "焼成レンガ（黒）",
 		"bricksdarkred": "焼成レンガ（暗赤色）",
 		"bricksdarkyellow": "焼成レンガ（暗黄色）",
-		"brickslight": "_MISSING_Light Bricks",
+		"brickslight": "軽いレンガ",
 		"bricksred": "焼成レンガ（赤）",
 		"bronzeingot": "青銅インゴット",
-		"bronzelockbox": "_MISSING_Bronze Lockbox",
-		"bronzetools": "_MISSING_Bronze Tools",
-		"cabbage": "_MISSING_Cabbage",
-		"caltrops": "_MISSING_Caltrops",
-		"caltroptrap": "_MISSING_Caltrops Trap",
-		"candle": "_MISSING_Candle",
-		"carddata": "_MISSING_Punched Card",
-		"cardempty": "_MISSING_Empty Punch Card",
+		"bronzelockbox": "ブロンズロックボックス",
+		"bronzetools": "ブロンズツール",
+		"cabbage": "キャベツ",
+		"caltrops": "カルトロップ",
+		"caltroptrap": "カルトロップトラップ",
+		"candle": "キャンドル",
+		"carddata": "パンチカード",
+		"cardempty": "空のパンチカード",
 		"charcoal": "木炭",
 		"cherryblossom": "桜の花",
-		"chest": "_MISSING_Chest",
-		"chestluxury": "_MISSING_Luxury Chest",
-		"chestmaker": "_MISSING_Chestmaker's Workshop",
-		"chestprestige": "_MISSING_Prestige Chest",
-		"chestresource": "_MISSING_Science Chest",
-		"chickenmeal": "_MISSING_Chicken Meal",
-		"chickenpoop": "_MISSING_Chicken excrement",
-		"chickenraw": "_MISSING_Chicken (raw)",
+		"chest": "チェスト",
+		"chestluxury": "豪華なチェスト",
+		"chestmaker": "チェストメーカーのワークショップ",
+		"chestprestige": "プレステージチェスト",
+		"chestresource": "サイエンスチェスト",
+		"chickenmeal": "鶏肉",
+		"chickenpoop": "鶏の排泄物",
+		"chickenraw": "鶏肉（生）",
 		"clay": "粘土",
 		"coalore": "石炭",
-		"cokes": "_MISSING_Cokes",
-		"colonykit": "_MISSING_Colony Kit",
+		"cokes": "コークス",
+		"colonykit": "コロニーキット",
 		"commandtool": "コマンドツール",
 		"compass": "コンパス",
-		"compostingbin": "_MISSING_Composting Bin",
+		"compostingbin": "堆肥化ビン",
 		"constructionjob": "人足",
 		"cookedfish": "焼き魚",
-		"cookedmeat": "_MISSING_Cooked Meat",
+		"cookedmeat": "調理済みの肉",
 		"copper": "銅",
-		"copperanvil": "_MISSING_Copper Anvil",
-		"copperarrow": "_MISSING_Copper Arrow",
-		"copperingot": "_MISSING_Copper Ingot",
-		"copperlockbox": "_MISSING_Copper Lockbox",
+		"copperanvil": "銅の金床",
+		"copperarrow": "銅の矢印",
+		"copperingot": "銅インゴット",
+		"copperlockbox": "銅ロックボックス",
 		"coppertools": "銅のツール",
-		"cotton": "_MISSING_Cotton",
-		"cottonengine": "_MISSING_Cotton Engine",
-		"cottonfibre": "_MISSING_Cotton Fibre",
+		"cotton": "コットン",
+		"cottonengine": "綿エンジン",
+		"cottonfibre": "綿繊維",
 		"crate": "木箱",
 		"crossbow": "クロスボウ",
 		"crossbowbolt": "クロスボウのボルト",
 		"darkstone": "石ブロック（暗色）",
 		"dirt": "土",
-		"dirtfen": "_MISSING_Marsh Dirt",
-		"dirtheath": "_MISSING_Heath Dirt",
-		"droppertrap": "_MISSING_Dropper Trap",
-		"droppertrapammo": "_MISSING_Dropper Trap Ammo",
-		"dyertable": "_MISSING_Dyer's Table",
-		"earthenware": "_MISSING_Earthenware",
-		"elevator": "_MISSING_Elevator Station",
-		"elevatorhorizontal": "_MISSING_Horizontal Elevator Station",
-		"elevatorshaft": "_MISSING_Elevator Shaft",
-		"elevatorshafthorizontal": "_MISSING_Horizontal Elevator Rail",
-		"engineerbench": "_MISSING_Engineer's Bench",
-		"eyeglasses": "_MISSING_Eyeglasses",
-		"failsafe": "_MISSING_Sacred Failsafe",
-		"firepit": "_MISSING_Firepit",
+		"dirtfen": "湿地の汚れ",
+		"dirtheath": "ヒースの汚れ",
+		"droppertrap": "ドロッパートラップ",
+		"droppertrapammo": "ドロッパートラップ弾薬",
+		"dyertable": "ダイアーのテーブル",
+		"earthenware": "土器",
+		"elevator": "エレベーターステーション",
+		"elevatorhorizontal": "水平エレベーターステーション",
+		"elevatorshaft": "エレベーターシャフト",
+		"elevatorshafthorizontal": "水平エレベーターレール",
+		"engineerbench": "エンジニアのベンチ",
+		"eyeglasses": "眼鏡",
+		"failsafe": "聖なるフェイルセーフ",
+		"firepit": "炉",
 		"firewood": "薪",
-		"fisherman": "_MISSING_Fisherman's Spot",
+		"fisherman": "漁師のスポット",
 		"flax": "亜麻",
 		"flaxstage1": "亜麻仁",
-		"fletcherbench": "_MISSING_Fletcher's Bench",
+		"fletcherbench": "フレッチャーのベンチ",
 		"furnace": "炉",
-		"glassblower": "_MISSING_Glassblower's Workshop",
-		"glasspiece": "_MISSING_Piece of Glass",
+		"glassblower": "ガラス工房",
+		"glasspiece": "ガラス破片",
 		"glider": "グライダー",
-		"glidersteel": "_MISSING_Launched Steel Glider",
-		"goldenshield": "_MISSING_Golden Shield",
-		"goldenstatue": "_MISSING_Threat Banner",
+		"glidersteel": "スチールグライダーを起動しました",
+		"goldenshield": "ゴールデンシールド",
+		"goldenstatue": "脅威バナー",
 		"goldingot": "金インゴット",
-		"goldjewellery": "_MISSING_Gold Jewelry",
+		"goldjewellery": "ゴールドジュエリー",
 		"goldore": "金鉱石",
-		"grassdry": "_MISSING_Grass",
-		"grassfen": "_MISSING_Marsh Grass",
-		"grassheath": "_MISSING_Heath Grass",
-		"grassheathpurple": "_MISSING_Heath Plants",
-		"grassmax": "_MISSING_Grass",
-		"grassmid": "_MISSING_Grass",
-		"grasswet": "_MISSING_Grass",
-		"grenadelauncher": "_MISSING_Grenade Launcher",
-		"grenadelauncherammo": "_MISSING_Grenade Launcher Ammo",
+		"grassdry": "草",
+		"grassfen": "沼地の草",
+		"grassheath": "ヒースグラス",
+		"grassheathpurple": "ヒース植物",
+		"grassmax": "草",
+		"grassmid": "草",
+		"grasswet": "草",
+		"grenadelauncher": "グレネードランチャー",
+		"grenadelauncherammo": "グレネードランチャー弾薬",
 		"grindstone": "石臼",
 		"guardbowdayjob": "昼間担当弓兵",
 		"guardbownightjob": "夜間担当弓兵",
 		"guardcrossbowdayjob": "昼間担当クロスボウ兵",
 		"guardcrossbownightjob": "夜間担当クロスボウ兵",
-		"guardgrenadedayjob": "_MISSING_Day Grenade Launcher Guard",
-		"guardgrenadenightjob": "_MISSING_Night Grenade Launcher Guard",
-		"guardhandcannondayjob": "_MISSING_Day Handcannon Guard",
-		"guardhandcannonnightjob": "_MISSING_Night Handcannon Guard",
-		"guardmusketdayjob": "_MISSING_Day Musket Guard",
-		"guardmusketnightjob": "_MISSING_Night Musket Guard",
-		"guardpoison": "_MISSING_Poison Guard",
+		"guardgrenadedayjob": "昼間グレネードランチャーガード",
+		"guardgrenadenightjob": "夜間グレネードランチャーガード",
+		"guardhandcannondayjob": "昼間ハンドキャノンガード",
+		"guardhandcannonnightjob": "夜間ハンドキャノンガード",
+		"guardmusketdayjob": "昼間マスケットガード",
+		"guardmusketnightjob": "夜間マスケットガード",
+		"guardpoison": "ポイズンガード",
 		"guardslingerdayjob": "昼間担当スリング兵",
 		"guardslingernightjob": "夜間担当スリング兵",
 		"gunpowder": "火薬",
-		"gunpowdertrap": "_MISSING_Gunpowder Trap",
-		"gunpowdertrapammo": "_MISSING_Gunpowdertrap Ammo",
-		"gunsmith": "_MISSING_Gunsmith's Workbench",
-		"guntrap": "_MISSING_Cannon Trap",
-		"guntrapammo": "_MISSING_Cannon Trap Ammo",
-		"handcannon": "_MISSING_Handcannon",
-		"handcannonammo": "_MISSING_Handcannon Ammo",
-		"hemp": "_MISSING_Hemp",
-		"hempfibre": "_MISSING_Hemp Fibre",
+		"gunpowdertrap": "火薬トラップ",
+		"gunpowdertrapammo": "火薬弾薬弾薬",
+		"gunsmith": "ガンスミスの作業台",
+		"guntrap": "キャノントラップ",
+		"guntrapammo": "キャノントラップ弾薬",
+		"handcannon": "ハンドキャノン",
+		"handcannonammo": "ハンドキャノン弾薬",
+		"hemp": "麻",
+		"hempfibre": "麻繊維",
 		"hollyhock": "タチアオイ",
-		"ironbloom": "_MISSING_Iron Bloom",
+		"ironbloom": "鉄の花",
 		"ironore": "鉄鉱石",
-		"irontools": "_MISSING_Iron Tools",
+		"irontools": "鉄の道具",
 		"ironwrought": "鍛鉄",
-		"jewellerbench": "_MISSING_Jeweler's Bench",
-		"jobblockcrafter": "_MISSING_Job-block Crafter’s Workbench",
-		"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter's Workbench",
+		"jewellerbench": "宝石商のベンチ",
+		"jobblockcrafter": "職業ブロッククラフターの作業台",
+		"jobblockcrafteradvanced": "高度な職業ブロッククラフターの作業台",
 		"kiln": "焼成窯",
 		"lanternblue": "ランタン（青）",
 		"lanterncyan": "ランタン（シアン）",
@@ -1419,9 +1409,9 @@
 		"lanternred": "ランタン（赤）",
 		"lanternwhite": "ランタン（白）",
 		"lanternyellow": "ランタン",
-		"leadingot": "_MISSING_Lead Ingot",
-		"leadore": "_MISSING_Lead Ore",
-		"leather": "_MISSING_Leather",
+		"leadingot": "鉛インゴット",
+		"leadore": "鉛鉱石",
+		"leather": "皮革",
 		"leavesfallorange": "葉（橙）",
 		"leavesfallred": "葉（赤）",
 		"leavesfallyellow": "葉（黄）",
@@ -1432,167 +1422,167 @@
 		"linen": "リネン",
 		"logtaiga": "丸太（タイガ）",
 		"logtemperate": "丸太（温帯）",
-		"logwall": "_MISSING_Log Wall",
-		"luxurygarments": "_MISSING_Luxury Garments",
-		"machinetools": "_MISSING_Machine Tools",
-		"manuscript": "_MISSING_Manuscript",
-		"merchanthub": "_MISSING_Merchant's Hub",
-		"metalgear": "_MISSING_Metal Gear",
-		"metallathe": "_MISSING_Metal Lathe",
+		"logwall": "丸太の壁",
+		"luxurygarments": "豪華な衣服",
+		"machinetools": "工作機械",
+		"manuscript": "原稿",
+		"merchanthub": "商人のハブ",
+		"metalgear": "メタルギア",
+		"metallathe": "金属旋盤",
 		"minerjob": "鉱員",
-		"monocular": "_MISSING_Monocular",
-		"movabletype": "_MISSING_Movable Type",
-		"mudbricks": "_MISSING_Mud Bricks",
-		"musket": "_MISSING_Musket",
-		"musketammo": "_MISSING_Musket Ammo",
-		"nitro": "_MISSING_Nitrocellulose",
-		"notools": "_MISSING_No Tools",
+		"monocular": "単眼鏡",
+		"movabletype": "組み替​​え可能な活字",
+		"mudbricks": "泥レンガ",
+		"musket": "マスケット銃",
+		"musketammo": "マスケット弾薬",
+		"nitro": "ニトロセルロース",
+		"notools": "ツールはありません",
 		"npcshop": "食料雑貨店",
-		"outpostbanner": "_MISSING_Outpost Banner",
-		"paper": "_MISSING_Paper",
-		"papermakersmould": "_MISSING_Papermaker's Mould",
-		"parchment": "_MISSING_Parchment",
+		"outpostbanner": "前哨基本バナー",
+		"paper": "論文",
+		"papermakersmould": "ペーパーメーカーの型",
+		"parchment": "羊皮紙",
 		"planks": "板",
-		"planksblue": "_MISSING_Blue Planks",
-		"planksgreen": "_MISSING_Green Planks",
-		"planksred": "_MISSING_Red Planks",
-		"points": "_MISSING_Points",
-		"poisondart": "_MISSING_Poison Dart",
-		"potash": "_MISSING_Potash",
-		"potempty": "_MISSING_Pot (Empty)",
-		"potflour": "_MISSING_Pot (Flour)",
-		"potterystation": "_MISSING_Pottery Station",
-		"potwater": "_MISSING_Pot (Water)",
+		"planksblue": "青い板",
+		"planksgreen": "緑の板",
+		"planksred": "赤い板",
+		"points": "ポイント",
+		"poisondart": "毒ダーツ",
+		"potash": "カリ",
+		"potempty": "ポット（空）",
+		"potflour": "ポット（小麦粉）",
+		"potterystation": "陶器",
+		"potwater": "ポット（水）",
 		"printingpress": "印刷機",
-		"projectiletrap": "_MISSING_Projectile Trap",
-		"projectiletrapammo": "_MISSING_Projectile Trap Ammo",
+		"projectiletrap": "発射体トラップ",
+		"projectiletrapammo": "発射体トラップ弾薬",
 		"quarterblockbrowndark": "クォーターブロック（焦茶色）",
 		"quarterblockbrownlight": "クォーターブロック（薄茶色）",
 		"quarterblockgrey": "クォーターブロック（灰色）",
 		"rawfish": "生魚",
-		"rawmeat": "_MISSING_Raw Meat",
-		"researcherdesk": "_MISSING_Researcher's Desk",
-		"rope": "_MISSING_Rope",
-		"ropebench": "_MISSING_Roper's Bench",
-		"ropetrap": "_MISSING_Rope Trap",
-		"ropetrapammo": "_MISSING_Rope Trap Ammo",
-		"saltpeter": "_MISSING_Saltpeter",
-		"sanctifiedbreadmeal": "_MISSING_Sacred Bread Meal",
-		"sanctifiedchickenmeal": "_MISSING_Sacred Chicken Meal",
-		"sanctifiedhouse": "_MISSING_Sacred Storage",
-		"sanctifiedporridge": "_MISSING_Sacred Wheat Porridge",
-		"sanctifiertable": "_MISSING_Sacred Altar",
+		"rawmeat": "生肉",
+		"researcherdesk": "研究者の机",
+		"rope": "ロープ",
+		"ropebench": "ロープのベンチ",
+		"ropetrap": "ロープトラップ",
+		"ropetrapammo": "ロープトラップ弾薬",
+		"saltpeter": "硝石",
+		"sanctifiedbreadmeal": "神聖なパンの食事",
+		"sanctifiedchickenmeal": "神聖な鶏肉の食事",
+		"sanctifiedhouse": "神聖な保管",
+		"sanctifiedporridge": "神聖なお粥",
+		"sanctifiertable": "神聖な祭壇",
 		"sand": "砂",
-		"sapling": "_MISSING_Sapling",
-		"saplingcherry": "_MISSING_Cherry Sapling",
-		"saplingdark": "_MISSING_Dark Green Sapling",
+		"sapling": "苗木",
+		"saplingcherry": "チェリーの苗木",
+		"saplingdark": "濃い緑の苗木",
 		"saplingfallorange": "秋の苗木",
-		"saplingfallred": "_MISSING_Red Sapling",
-		"saplingfallyellow": "_MISSING_Yellow Sapling",
-		"saplinglight": "_MISSING_Light Green Sapling",
+		"saplingfallred": "赤い苗木",
+		"saplingfallyellow": "黄色の苗木",
+		"saplinglight": "薄緑色の苗木",
 		"saplingtaiga": "タイガの苗木",
-		"saplingtemperate": "_MISSING_Green Sapling",
-		"scientificnote": "_MISSING_Scientific Note",
-		"scribedesk": "_MISSING_Scribe's Desk",
-		"scrollofknowledge": "_MISSING_Scroll Of Knowledge",
-		"scrollshelf": "_MISSING_Scrolls Shelf (Empty)",
-		"scrollshelf1": "_MISSING_Scrolls Shelf (Mostly Empty)",
-		"scrollshelf2": "_MISSING_Scrolls Shelf (Partially Empty)",
-		"scrollshelffilled": "_MISSING_Scrolls Shelf",
-		"silicasand": "_MISSING_Silica Sand",
-		"skin": "_MISSING_Skin",
+		"saplingtemperate": "緑の苗木",
+		"scientificnote": "科学的メモ",
+		"scribedesk": "筆記者の机",
+		"scrollofknowledge": "知識の巻物",
+		"scrollshelf": "巻物棚（空）",
+		"scrollshelf1": "巻物棚（ほとんど空）",
+		"scrollshelf2": "巻物棚（部分的に空）",
+		"scrollshelffilled": "棚を巻物します",
+		"silicasand": "ケイ砂",
+		"skin": "皮革",
 		"sling": "スリング",
 		"slingbullet": "スリングの石弾",
 		"snow": "雪",
 		"splittingstump": "薪割り台",
-		"statisticsboard": "_MISSING_Statistics Board",
-		"steelingot": "_MISSING_Steel Ingot",
-		"steellockbox": "_MISSING_Steel Lockbox",
-		"steelparts": "_MISSING_Steel Parts",
-		"steeltools": "_MISSING_Steel Tools",
+		"statisticsboard": "統計委員会",
+		"steelingot": "スチールインゴット",
+		"steellockbox": "スチールロックボックス",
+		"steelparts": "鋼部品",
+		"steeltools": "スチールツール",
 		"stoneblock": "石ブロック",
-		"stonebricks": "_MISSING_Cobblestone",
-		"stonebricksblack": "_MISSING_Black Cobblestone",
-		"stonebricksbrown": "_MISSING_Brown Cobblestone",
-		"stonebricksnew": "_MISSING_Stone Bricks",
-		"stonebrickswhite": "_MISSING_White Cobblestone",
+		"stonebricks": "石畳",
+		"stonebricksblack": "黒い石畳",
+		"stonebricksbrown": "茶色の石畳",
+		"stonebricksnew": "石レンガ",
+		"stonebrickswhite": "白い石畳",
 		"stonemasonworkbench": "石工の作業台",
-		"stonerubble": "_MISSING_Stone Rubble",
-		"stonetools": "_MISSING_Stone Tools",
+		"stonerubble": "石の瓦礫",
+		"stonetools": "石の道具",
 		"stove": "コンロ",
-		"straw": "_MISSING_Straw",
-		"sulfur": "_MISSING_Sulfur",
-		"tabletclay": "_MISSING_Clay Tablet",
-		"tabletwisdom": "_MISSING_Tablet Of Ancient Wisdom",
-		"tabulator": "_MISSING_Tabulating Machine",
+		"straw": "ストロー",
+		"sulfur": "硫黄",
+		"tabletclay": "粘土タブレット",
+		"tabletwisdom": "古代の知恵のタブレット",
+		"tabulator": "集計機",
 		"tailorshop": "仕立て屋",
-		"tannertable": "_MISSING_Tanner's Table",
+		"tannertable": "皮革のテーブル",
 		"tin": "錫",
-		"tinkerertable": "_MISSING_Tinkerer's Table",
-		"toolshop": "_MISSING_Tool Shop",
+		"tinkerertable": "ティンカーのテーブル",
+		"toolshop": "ツールショップ",
 		"torch": "松明",
 		"trader": "交易商",
-		"trapfixer": "_MISSING_Trap Fixer",
-		"vialempty": "_MISSING_Vial (empty)",
-		"vialmineraloil": "_MISSING_Vial (mineral oil)",
-		"vialnitricacid": "_MISSING_Vial of Nitric Acid",
-		"vialsulphuricacid": "_MISSING_Vial of Sulphuric Acid",
+		"trapfixer": "トラップフィクサー",
+		"vialempty": "バイアル（空）",
+		"vialmineraloil": "バイアル（鉱油）",
+		"vialnitricacid": "硝酸のバイアル",
+		"vialsulphuricacid": "硫酸のバイアル",
 		"water": "水",
-		"watergatherer": "_MISSING_Water Gatherer",
-		"waterpump": "_MISSING_Waterpump",
+		"watergatherer": "集水器",
+		"waterpump": "水ポンプ",
 		"wheat": "小麦",
-		"wheatmeal": "_MISSING_Wheat Gruel",
-		"wheatporridge": "_MISSING_Wheat Porridge",
+		"wheatmeal": "麦粥",
+		"wheatporridge": "小麦粥",
 		"wheatstage1": "小麦の種",
-		"wisteriaflower": "_MISSING_Wisteria Flower",
-		"wisteriajob": "_MISSING_Wisteria Harvester",
-		"wisteriaplant": "_MISSING_Wisteria Plant",
-		"wisteriaplantempty": "_MISSING_Wisteria Plant",
+		"wisteriaflower": "藤の花",
+		"wisteriajob": "藤ハーベスター",
+		"wisteriaplant": "藤植物",
+		"wisteriaplantempty": "藤植物",
 		"wolfsbane": "トリカブト",
-		"woodfloor": "_MISSING_Wood Flooring",
+		"woodfloor": "ウッドフローリング",
 		"writerdesk": "作家の机",
-		"zinc": "_MISSING_Zinc"
+		"zinc": "亜鉛"
 	},
 	"typeuses": {
-		"alarmbell": "_MISSING_Rings an alarm when it detects monsters walking over it",
+		"alarmbell": "【アラームベル】\nモンスターを検出したときにアラームを鳴らします",
 		"alkanet": "【あるかねっと】\n《Alkanet》\nリアルでは、赤い染料の原料",
-		"astrolabe": "_MISSING_Equip in the hotbar to see the way to special biomes",
-		"berry": "_MISSING_A single berry. Not worth the effort of eating it!",
+		"astrolabe": "特別なバイオームへの道を見るためにホットバーに装備",
+		"berry": "シングルベリー。それを食べる努力の価値はありません！",
 		"berrybush": "【べりーのたね】\n《Berry Seed》\n入植者が植えれば、お手軽な食料源に",
-		"berrymeal": "_MISSING_A bunch of berries prepared to form a delicious meal",
-		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"berrymeal": "おいしい食事を作るために用意されたベリーの束",
+		"bookcase": "これらは研究者によって「収穫」され、自動的にコンテンツを再生します。すべての研究者にそれらの10を配置すると、長期的なバランスが保証されます。",
+		"bookcase1": "これらは研究者によって「収穫」され、自動的にコンテンツを再生します。すべての研究者にそれらの10を配置すると、長期的なバランスが保証されます。",
+		"bookcase2": "これらは研究者によって「収穫」され、自動的にコンテンツを再生します。すべての研究者にそれらの10を配置すると、長期的なバランスが保証されます。",
+		"bookcasefilled": "これらは研究者によって「収穫」され、自動的にコンテンツを再生します。すべての研究者にそれらの10を配置すると、長期的なバランスが保証されます。",
 		"bow": "【ゆみ】\n《Bow》\n衛兵には必要！",
-		"bread": "_MISSING_A dry piece of bread without any spread or filling. Bleh",
-		"breadmeal": "_MISSING_Bread made tasty with a perfect berry jam",
+		"bread": "広がりや詰め物のないパンの乾いた部分。",
+		"breadmeal": "パンは完璧なベリージャムでおいしいものになりました",
 		"bricks": "【しょうせいれんが】\n《Bricks》\n所詮はオランダのゲームさ",
 		"bronzeingot": "【せいどういんごっと】\n《Bronze Ingot》\nぶろんずちゅよい",
 		"charcoal": "【もくたん】\n《Charcoal》\nシアン化物を吸収",
 		"cherryblossom": "【さくらのはな】\n《Cherry Blossom》\nゲーム中で一番ピンク色",
 		"clay": "【ねんど】\n《Clay》\n触ってごらん",
 		"coalore": "【せきたん】\n《Coal Ore》\n警告: 気候変動を引き起こすかも",
-		"compass": "_MISSING_Equip in the hotbar to see the way to colonies and outposts",
+		"compass": "ホットバーに装備して、植民地や前哨基地への道を確認する",
 		"cookedfish": "【やきざかな】\n《Cooked Fish》\n泳力は劇的に低下",
-		"copper": "_MISSING_Somewhat soft metal, but quite useful",
+		"copper": "やや柔らかい金属ですが、非常に便利です",
 		"coppertools": "【どうのつーる】\n《Copper Tools》\n道具がなけりゃパンだって切れないよ",
 		"crate": "【きばこ】\n《Crate》\n倉庫が必要ならコレだ！",
 		"crossbow": "【くろすぼう】\n《Crossbow》\n強力石弓の弟分",
 		"crossbowbolt": "【くろすぼうのぼると】\n《Crossbow Bolt》\nより丈夫で、より良く、より速く、より強い",
 		"dirt": "【つち】\n《Dirt》\n泥んこ！",
-		"failsafe": "_MISSING_Emergency defense mechanism using Sacred Points",
+		"failsafe": "神聖なポイントを使用した緊急防衛メカニズム",
 		"firewood": "【まき / たきぎ】\n《Firewood》\n基本的な燃料",
 		"flax": "【あま】\n《Flax》\n帝国の色",
 		"flaxstage1": "【あまに】\n《Flax seeds》\n地面に植えてみよう",
 		"furnace": "【ろ】\n《Furnace》\n青銅インゴットとレンガを作るには、薪を燃料として使う",
-		"glider": "_MISSING_Places a glider launcher; Enter one by right-clicking it and navigate by aiming while holding forward",
-		"glidersteel": "_MISSING_Like the regular glider launcher, but this one launches you much higher into the air",
+		"glider": "グライダーランチャーを配置します。右クリックで乗車し、前進しながら照準を合わせてナビゲートします",
+		"glidersteel": "通常のグライダーランチャーと見た目は同じですが、空高く打ち上げてくれます。",
 		"goldingot": "【きんいんごっと】\n《Gold Ingot》\nかつては紙幣の価値を担保するのに使われた",
-		"goldore": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"goldore": "雪の山の下の鉱石にもあります",
 		"grindstone": "【いしうす】\n《Grindstone》\n小麦を挽いて小麦粉にするのに使う",
 		"gunpowder": "【かやく】\n《Gunpowder》\n取り扱い注意！",
-		"hollyhock": "【たちあおい】\n《Hollyhock》\nリアルでは便秘薬になる。 ゲームではそうじゃないけど。 今はね。",
+		"hollyhock": "【たちあおい】\n《Hollyhock》\nリアルでは便秘薬になる。 ",
 		"ironore": "【てっこうせき】\n《Iron Ore》\n鉄鉱石でできた鉄のつるはしで掘り出される",
 		"ironwrought": "【たんてつ】\n《Wrought Iron》\n「鍛えられた」ってのは「加工された」ってことさ",
 		"kiln": "【しょうせいがま】\n《Kiln》\n木の板を木炭に変える",
@@ -1601,47 +1591,47 @@
 		"lanternorange": "【らんたん（だいだい）】\n《Orange Lantern》\nとっても暖かみがある",
 		"lanternred": "【らんたん（あか）】\n《Red Lantern》\nアムステルダムでもよく見かける",
 		"lanternyellow": "【らんたん】\n《Lantern》\n高価な松明",
-		"leadore": "_MISSING_Found in swamps.",
+		"leadore": "沼地で見つかりました。",
 		"leavestaiga": "【は（たいが）】\n《Leaves Taiga》\nすっかりクリスマス気分さ",
 		"leavestemperate": "【は（おんたい）】\n《Leaves Temperate》\n高い塔からこれの山に飛び込んでみて",
 		"linen": "【りねん】\n《Linen》\nランジェリーとはリネンで作られた下着のことです",
 		"logtaiga": "【まるた（たいが）】\n《Log Taiga》\nこっちの方がちょっと寒いね",
 		"logtemperate": "【まるた（おんたい）】\n《Log Temperate》\n出力ログみたいだけど違うよ",
-		"monocular": "_MISSING_Equip in the hotbar to take a closer look at the world",
+		"monocular": "ホットバーに装備して、世界を詳しく見る",
 		"npcshop": "【しょくりょうざっかてん】\n《Grocery Store》\n入植者は食料と幸福アイテムを求めて1日1回ここを訪ねる",
 		"planks": "【いた】\n《Planks》\n体積が丸太のときの4倍になったよ！",
 		"printingpress": "【いんさつき】\n《Printing Press》\n自由を称えよ",
 		"rawfish": "【なまざかな】\n《Raw Fish》\n#有機栽培 #ホルモン無添加 #牧草肥育",
-		"researcherdesk": "_MISSING_Researches require book cases nearby in order to find data for their research!",
+		"researcherdesk": "研究では、彼らの研究のためのデータを見つけるために近くの本のケースが必要です！",
 		"sand": "【すな】\n《Sand》\nヘビとはあまりよく混ざりません",
 		"saplingfallorange": "【あきのなえぎ】\n《Fall Sapling》\nオレンジ色の未来の木",
 		"saplingtaiga": "【たいがのなえぎ】\n《Taiga Sapling》\n少し違う木",
-		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"silicasand": "_MISSING_Found below sand in the Heath biome",
+		"scribedesk": "スクライブには、研究のためのデータを見つけるために、近くの10個の巻物棚が必要です！",
+		"scrollshelf": "これらは筆記者によって「収穫」され、コンテンツを自動的に再生します。すべての筆記者にそれらの10を配置することで、長期的なバランスが保証されます。",
+		"scrollshelf1": "これらは筆記者によって「収穫」され、コンテンツを自動的に再生します。すべての筆記者にそれらの10を配置することで、長期的なバランスが保証されます。",
+		"scrollshelf2": "これらは筆記者によって「収穫」され、コンテンツを自動的に再生します。すべての筆記者にそれらの10を配置することで、長期的なバランスが保証されます。",
+		"scrollshelffilled": "これらは筆記者によって「収穫」され、コンテンツを自動的に再生します。すべての筆記者にそれらの10を配置することで、長期的なバランスが保証されます。",
+		"silicasand": "ヒースバイオームの砂の下にあります",
 		"sling": "【すりんぐ】\n《Sling》\n気をつけろ、ゴリアテよ",
 		"slingbullet": "【すりんぐのせきだん】\n《Sling Bullet》\n単なる小さな石、ホントに",
 		"snow": "【ゆき】\n《Snow》\n何も知らない",
 		"splittingstump": "【まきわりだい】\n《Splitting Stump》\nより素早く薪割りをする手段",
 		"stonemasonworkbench": "【いしくのさぎょうだい】\n《Stonemason's Workbench》\n50種類のレンガを作る",
 		"stove": "【こんろ】\n《Stove》\n辺り一帯を美味しそうな匂いで満たすのに使用",
-		"sulfur": "_MISSING_Found deep underground in the Heath biome",
+		"sulfur": "ヒースバイオームで深い地下で発見されました",
 		"tailorshop": "【したてや】\n《Tailor Shop》\n全ての人に仕立て服を！",
-		"tin": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"tin": "雪の山の下の鉱石にもあります",
 		"torch": "【たいまつ】\n《Torch》\n光あれ！",
 		"trader": "【こうえきしょう】\n《Trader》\n意外なことに交易に関わっている",
 		"water": "【みず】\n《Water》\n撒いたら全てが水浸しに",
-		"waterpump": "_MISSING_Allows getting water without being near water",
+		"waterpump": "水の近くに水を入れることができます",
 		"wheat": "【こむぎ】\n《Wheat》\n入植者が石臼を使って小麦粉に変える",
 		"wheatstage1": "【こむぎのたね】\n《Wheat Seeds》\n未来のパン",
-		"wisteriajob": "_MISSING_One harvester needs 10 wisteria plants nearby. These plants can only be grown in heaths.",
-		"wisteriaplant": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
-		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wisteriajob": "1人のハーベスターには、近くに10個のウィステリア植物が必要です。これらの植物は、ヒースブロックでのみ栽培できます",
+		"wisteriaplant": "藤の植物これらを10個を配置すると、長期的なバランスが確保されます。",
+		"wisteriaplantempty": "藤の植物これらを10個を配置すると、長期的なバランスが確保されます。",
 		"wolfsbane": "【とりかぶと】\n《Wolfsbane》\nオオカミがコロニーを襲うのを防ぐ",
 		"writerdesk": "【さっかのつくえ】\n《Writer's Desk》\n極めて人間工学的",
-		"zinc": "_MISSING_Can be found directly below mammoth trees."
+		"zinc": "マンモス木の真下で見つけることができます。"
 	}
 }
