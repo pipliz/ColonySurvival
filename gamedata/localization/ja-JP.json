@@ -20,7 +20,7 @@
 	"sentences": {
 		"astrolabe": {
 			"bigtree": "巨大な木",
-			"heath": "ヒース",
+			"heath": "ヒース(荒れ地)",
 			"marsh": "湿地帯",
 			"mountain": "山"
 		},
@@ -248,16 +248,16 @@
 			"settings": "設定"
 		},
 		"failsafe": {
-			"current": "現在の神聖なポイントストレージ：{0} {1}",
-			"damage": "聖なるフェイルセーフを作動すると、{0}ダメージが発生します",
-			"futurewave": "フェイルセーフは、次の夜に{0:P0}で入ってくるモンスターの総HPを減らします",
+			"current": "現在の聖なるポイントストレージ：{0}のうち{1}を使用",
+			"damage": "聖なるフェイルセーフを発動すると、{0}ダメージが発生します。",
+			"futurewave": "フェイルセーフは、次の夜に{0:P0}で入ってくるモンスターの総HPを減らします。",
 			"header": "フェイルセーフ",
-			"nextavailable": "フェイルセーフは次の夜の後に再び利用可能になります",
-			"statusactive": "ステータス:聖なるフェイルセーフが活性化されました",
-			"statusavailable": "ステータス:聖なるフェイルセーフが利用可能です",
-			"trigger": "引き金",
-			"wave": "現在の脅威レベルは{0}であり、{1}の合計HPでモンスターを生成します",
-			"wavereduced": "入ってくるモンスターの総HPは、次の夜に{0:p0}によって削減されます"
+			"nextavailable": "フェイルセーフは次の夜以降に再び利用できるようになります。",
+			"statusactive": "ステータス:セイクリッドフェールセーフが作動しました。",
+			"statusavailable": "ステータス:聖なるフェイルセーフが利用可能です。",
+			"trigger": "発動",
+			"wave": "現在の脅威レベルは{0}で、合計HPが{1}のモンスターをスポーンさせます。",
+			"wavereduced": "次の夜、襲来したモンスターのHPの合計が{0:P0}減少します。"
 		},
 		"firstpersonstats": {
 			"ammocount": "矢弾:",
@@ -289,7 +289,7 @@
 			"reset": "リセット",
 			"select": "選択",
 			"selected": "選択",
-			"veryhigh": "とても高い",
+			"veryhigh": "非常に高い",
 			"yes": "はい"
 		},
 		"happiness": {
@@ -353,7 +353,7 @@
 				"banner": "バナーのモンスター",
 				"command": "コマンドの使用",
 				"excess": "{0}は匿名で死にました。",
-				"individual": "{0}：仕事を持つ入植者{1}が死亡した：{2}",
+				"individual": "{0}：職業{1}を持つ入植者の死亡原因：{2}.",
 				"main": "{0}入植者は前哨で亡くなりました{1}！",
 				"misc": "原因不明",
 				"monster": "モンスター",
@@ -456,7 +456,7 @@
 				"name": "アラームベル"
 			},
 			"animalcarcass": {
-				"description": "動物の死体の供給源を提供します",
+				"description": "動物の死体のソースを提供します",
 				"name": "地元の動物の死体"
 			},
 			"anvil": {
@@ -476,7 +476,7 @@
 				"name": "溶鉱炉"
 			},
 			"brass": {
-				"description": "比較的柔らかい合金である真鍮をアンロックします。武器やツールには適していませんが、その柔軟性により、小さな詳細な部品に最適です。マンモスの木の下で採掘また購入できる亜鉛が必要です。",
+				"description": "比較的柔らかい合金である真鍮をアンロックします。武器やツールには適していませんが、その柔軟性により、小さな詳細な部品に最適です。巨大なの木の下で採掘また購入できる亜鉛が必要です。",
 				"name": "真鍮"
 			},
 			"bread": {
@@ -592,8 +592,8 @@
 				"name": "脅威バナー"
 			},
 			"grassdirt": {
-				"description": "草や汚れのソースを提供します",
-				"name": "草と汚れの生産"
+				"description": "草や土のソースを提供します",
+				"name": "草と土の生産"
 			},
 			"grenadelauncher": {
 				"description": "遠くから敵のグループを排除できる強力な武器をアンロックします。",
@@ -668,8 +668,8 @@
 				"name": "紙製作"
 			},
 			"poison": {
-				"description": "モンスターに時間経過でダメージを与えます。藤の植物は、ヒースブロックでのみ栽培できます。各藤の収穫機がうまく機能するには、近くに10本の藤が必要です",
-				"name": "毒"
+				"description": "ポイズンはモンスターに時間経過でダメージを与えます。藤の植物は、ヒースブロックでのみで栽培できます。各藤の収穫機がうまく機能するには、近くに10本の藤が必要です",
+				"name": "ポイズン"
 			},
 			"porridge": {
 				"description": "水と小麦を新しい食事タイプに組み合わせる",
@@ -764,12 +764,12 @@
 				"name": "皮革"
 			},
 			"toolshop": {
-				"description": "道具を使用した際に、入植者が道具を取りに行く場所「ツール分布」をアンロックします。道具がない場合は、バナーから取りに行きます。",
-				"name": "ツール分布"
+				"description": "道具を使用した際に、入植者が道具を取りに行く場所「ツール配布」をアンロックします。道具がない場合は、バナーから取りに行きます。",
+				"name": "ツール配布"
 			},
 			"trading": {
-				"description": "商人のハブをアンロックします。アイテムを売買できる場所",
-				"name": "商人のハブ"
+				"description": "アンロックするとアイテムを売買できるようになります",
+				"name": "商人ハブ"
 			},
 			"waterpump": {
 				"description": "水源から水を集めることができます",
@@ -799,7 +799,7 @@
 					"header": "幸福度"
 				},
 				"madeintooltip": "これで作成:",
-				"madeintooltippurchasable": "{0}ポイントでマーチャントハブで購入可能",
+				"madeintooltippurchasable": "{0}ポイントで商人ハブで購入可能",
 				"noactivecolony": "アクティブなコロニーがありません！",
 				"science": {
 					"available": "研究可能",
@@ -820,7 +820,7 @@
 					"recipeunlockoriginplayer": "プレイヤーにより作成",
 					"recipeunlocks": "このレシピによってアンロック:",
 					"startscience": "研究を開始",
-					"threat": "{0}によってモンスターの脅威を増やす",
+					"threat": "モンスターの脅威{0}増加",
 					"unavailable": "研究不可"
 				},
 				"searchfieldplaceholder": "検索フィルタを入力・・・",
@@ -870,7 +870,7 @@
 				},
 				"upgrades": {
 					"header": "コロニーポイント",
-					"preamble2": "<i>現在のポイント/最大ポイント</i>",
+					"preamble2": "<i>所持ポイント/最大ポイント</i>",
 					"table": {
 						"cost": "コスト",
 						"current": "現在",
@@ -900,20 +900,20 @@
 			},
 			"merchantui": {
 				"buy": "購入",
-				"buy1": "購入1",
-				"buy25": "25を購入します",
-				"buy5": "購入5",
-				"buytext": "{1}ポイントで{0}を購入します",
-				"buytext2": "現在の資金は{0}購入を許可します",
+				"buy1": "1個購入",
+				"buy25": "25個購入",
+				"buy5": "5個購入",
+				"buytext": "{1}ポイントで{0}を購入",
+				"buytext2": "現在の資金で{0}個購入可能",
 				"currentpoints": "現在のポイント：{0} / {1}",
 				"description": "ポイントのアイテムを購入/販売します",
 				"header": "商人取引",
 				"sell": "売る",
-				"sell1": "販売1",
-				"sell25": "25を売る",
-				"sell5": "販売5",
-				"selltext": "{1}ポイントで{0}を販売します",
-				"selltext2": "現在のストレージにより{0}販売が可能になります"
+				"sell1": "1個売却",
+				"sell25": "25個売却",
+				"sell5": "5個売却",
+				"selltext": "{0}を{1}ポイントで売る",
+				"selltext2": "現在のストレージでは{0}個の販売が可能"
 			},
 			"quickstart": {
 				"closetoggle": "次回から表示しない",
@@ -1207,16 +1207,16 @@
 			"miner": "入植者に繰り返し下に暗い石の鉱石ブロックを採掘するように命じます",
 			"npcshop": "入植者はこれまたはバナーを訪れて毎日の食事を手に入れます",
 			"pointtrader": "ここでポイントのために物を売買することができます",
-			"provides-fertile": "肥沃な地面としてカウントされます",
-			"provides-fertile-fen": "肥沃な湿地地としてカウントされます",
-			"provides-fertile-heath": "肥沃なヒースグラウンドとしてカウントされます",
-			"requires-fen": "以下の肥沃な沼地が必要です",
-			"requires-fertile": "以下の肥沃な地面が必要です",
-			"requires-heath": "以下の肥沃なヒースが必要です",
-			"requires-water": "機能するには、水の隣に配置する必要があります",
+			"provides-fertile": "肥沃な土地としてカウントされます",
+			"provides-fertile-fen": "肥沃な湿地土地としてカウントされます",
+			"provides-fertile-heath": "肥沃なヒース土地としてカウントされます",
+			"requires-fen": "植えるには肥沃な湿地ブロックが必要です",
+			"requires-fertile": "植えるには肥沃な草ブロックが必要です",
+			"requires-heath": "植えるには肥沃なヒースブロックが必要です",
+			"requires-water": "設置するには、水の隣に配置する必要があります",
 			"sanctifiedlockbox-points": "{0}神聖なポイント容量を追加します",
 			"sanctifiedlockbox-threat": "{0}脅威を増加します",
-			"statisticsboard": "このブロックと対話して、コロニーの統計を表示します",
+			"statisticsboard": "このブロックを操作して、コロニーの統計を表示します",
 			"threatstatue-general": "他の前哨基地からそれが置かれている前哨基地に向かって脅威を引き出すと同時に、いくつかの脅威自体も増加します",
 			"threatstatue-threatcaused": "{0}余分な脅威を増加します",
 			"threatstatue-threatweight": "{0}脅威の重みを追加します",
@@ -1225,23 +1225,23 @@
 			"tool-general": "ツールは、物を作成する製作速度を高速化するために多くの職業で使用します",
 			"tool-multiplier": "{0} x製作速度",
 			"tool-percentage-left": "耐久値：",
-			"tool-seconds-left": "残り耐久値(秒)：",
+			"tool-seconds-left": "残りの耐久値(秒)：",
 			"toolshop": "入植者はこれまたはバナーにアクセスして、必要に応じて新しいツールを入手します",
-			"trap-ammo": "{0} {1}までのストア",
-			"trap-cooldown": "すべての{0}秒",
+			"trap-ammo": "{0} {1}まで収納",
+			"trap-cooldown": "クールダウン{0}秒",
 			"trap-damage": "{0}ダメージ",
 			"trap-explosive-range": "ヒット時に半径 {0}があるエリアに影響を与えます",
-			"trap-filter-1000hp": "少なくとも1000HPのモンスターのみで作動します",
-			"trap-filter-unslowed": "まだ遅くなっていないモンスターを作動するだけです",
+			"trap-filter-1000hp": "HP1000以上のモンスターのみ発動",
+			"trap-filter-unslowed": "まだ速度が低下していないモンスターにのみ発動",
 			"trapfixer": "入植者に日中に近くのトラップを補充するように命令します",
 			"trap-freezes": "{0}秒間ヒットをフリーズします",
-			"trap-friendly-fire": "作動されたときに友情に影響を与える可能性があります",
-			"trap-general": "モンスターを待って作動します。トラップフィクサーの入植者によって日中に補充されます",
+			"trap-friendly-fire": "発動されたときに友情に影響を与える可能性があります",
+			"trap-general": "モンスターを待って発動します。トラップフィクサーの入植者によって日中に補充されます",
 			"trap-range": "{0}まで距離をブロックします",
 			"trap-slows": "モンスターを{0}倍の速度に遅らせます",
-			"trap-style-down": "以下のモンスターから作動",
-			"trap-style-front": "モンスターから正面まで作動します",
-			"trap-style-up": "上記のモンスターから作動"
+			"trap-style-down": "以下のモンスターから発動",
+			"trap-style-front": "モンスターから正面まで発動します",
+			"trap-style-up": "上記のモンスターから発動"
 		},
 		"upgrades": {
 			"builder": {
@@ -1340,8 +1340,8 @@
 		"crossbowbolt": "クロスボウのボルト",
 		"darkstone": "石ブロック（暗色）",
 		"dirt": "土",
-		"dirtfen": "湿地の汚れ",
-		"dirtheath": "ヒースの汚れ",
+		"dirtfen": "湿地の土",
+		"dirtheath": "ヒースの土",
 		"droppertrap": "ドロッパートラップ",
 		"droppertrapammo": "ドロッパートラップ弾薬",
 		"dyertable": "ダイアーのテーブル",
@@ -1371,7 +1371,7 @@
 		"goldore": "金鉱石",
 		"grassdry": "草",
 		"grassfen": "沼地の草",
-		"grassheath": "ヒースグラス",
+		"grassheath": "ヒースの土",
 		"grassheathpurple": "ヒース植物",
 		"grassmax": "草",
 		"grassmid": "草",
@@ -1446,7 +1446,7 @@
 		"musket": "マスケット銃",
 		"musketammo": "マスケット弾薬",
 		"nitro": "ニトロセルロース",
-		"notools": "ツールはありません",
+		"notools": "ツールなし",
 		"npcshop": "食料雑貨店",
 		"outpostbanner": "前哨基本バナー",
 		"paper": "論文",
@@ -1457,7 +1457,7 @@
 		"planksgreen": "緑の板",
 		"planksred": "赤い板",
 		"points": "ポイント",
-		"poisondart": "毒ダーツ",
+		"poisondart": "ポイズンダーツ",
 		"potash": "カリ",
 		"potempty": "ポット（空）",
 		"potflour": "ポット（小麦粉）",
@@ -1484,7 +1484,7 @@
 		"sanctifiertable": "神聖な祭壇",
 		"sand": "砂",
 		"sapling": "苗木",
-		"saplingcherry": "チェリーの苗木",
+		"saplingcherry": "桜の苗木",
 		"saplingdark": "濃い緑の苗木",
 		"saplingfallorange": "秋の苗木",
 		"saplingfallred": "赤い苗木",
@@ -1637,11 +1637,11 @@
 		"waterpump": "水の近くに水を入れることができます",
 		"wheat": "【こむぎ】\n《Wheat》\n入植者が石臼を使って小麦粉に変える",
 		"wheatstage1": "【こむぎのたね】\n《Wheat Seeds》\n未来のパン",
-		"wisteriajob": "1人のハーベスターには、近くに10個のウィステリア植物が必要です。これらの植物は、ヒースブロックでのみ栽培できます",
+		"wisteriajob": "1人のハーベスターには、近くに10個のウィステリア植物が必要です。これらの植物は、ヒースでのみ栽培できます",
 		"wisteriaplant": "藤の植物これらを10個を配置すると、長期的なバランスが確保されます。",
 		"wisteriaplantempty": "藤の植物これらを10個を配置すると、長期的なバランスが確保されます。",
 		"wolfsbane": "【とりかぶと】\n《Wolfsbane》\nオオカミがコロニーを襲うのを防ぐ",
 		"writerdesk": "【さっかのつくえ】\n《Writer's Desk》\n極めて人間工学的",
-		"zinc": "マンモス木の真下で見つけることができます。"
+		"zinc": "巨大な木の真下で見つけることができます。"
 	}
 }
