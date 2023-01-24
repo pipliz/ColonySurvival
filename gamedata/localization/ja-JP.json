@@ -4,14 +4,14 @@
 		"0": "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1": "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
 		"10": "林業者にとって最も効率的なサイズは3x33だ。",
-		"11": "“CTRL”を押してかがむと、ブロックの縁からの落下を防げるぞ。",
+		"11": "“CTRL”キーを押してかがむと、ブロックの縁からの落下を防げるぞ。",
 		"13": "土木建築エリアを設置する際に“CTRL”を押すと、直前のエリアと同じ設定で新たなエリアを設置できる。",
 		"14": "Colony Survivalには複数のModが存在する。 SteamフォーラムやDiscordで探してみよう！",
 		"15": "備蓄品内の検索は、‘食料’や‘弾薬’のような大まかな意味の用語を使うことも可能だ。",
 		"2": "鉱石はそれぞれ地下の特定の層に存在する。 別種のものを探すなら、さらに深く掘り下げよう。",
 		"3": "“G”キーを押すと自分の周りを明るくします。",
 		"4": "職業ブロックをクリックすると、どのように使われているか確認したり、各レシピの優先順位を決めたりできる。",
-		"5": "“F1”を押すと、マニュアルを開いたり閉じたりできる。",
+		"5": "“F1キー”を押すと、マニュアルを開いたり閉じたりできる。",
 		"6": "科学者が科学バッグ内のアイテムを使用しても、リネンの袋自体は多くの場合備蓄品に戻る。",
 		"7": "射程とリロード速度、ダメージの違いによって、衛兵はタイプ毎に固有の長所と短所を持っている。",
 		"8": "私達は毎週Friday Blogを公開している。 ストアページから訪ねてColony Survivalの開発に関する情報をもっと知ろう！",
@@ -94,7 +94,7 @@
 			"outpost": {
 				"create": "前哨基地を作成します",
 				"createdescription": "前哨基地を起動すると、在庫（または備蓄）から前哨基地バナーが消費されます。",
-				"parentcolony": "親植民地：",
+				"parentcolony": "親コロニー：",
 				"popupheader": "前哨基地の作成",
 				"selectparent": "メインコロニーを選択します"
 			},
@@ -141,7 +141,7 @@
 				"nocolonies": "リストするコロニーがありません",
 				"nocoloniesowned": "リストする所有コロニーがありません",
 				"nocoloniesthird": "リストする外部のコロニーがありません",
-				"othercolonies": "他のコロニー",
+				"othercolonies": "その他のコロニー",
 				"select": "選択"
 			},
 			"start": {
@@ -249,8 +249,8 @@
 		},
 		"failsafe": {
 			"current": "現在の聖なるポイント容量：{0}のうち{1}を使用",
-			"damage": "聖なるフェイルセーフを発動すると、{0}ダメージが発生します。",
-			"futurewave": "フェイルセーフは、次の夜に{0:P0}で入ってくるモンスターの総HPを減らします。",
+			"damage": "フェイルセーフを発動すると、{0}ダメージをモンスターに与えます。",
+			"futurewave": "フェイルセーフは、次の夜に{0:P0}で入ってくるモンスターの最大HPを減らします。",
 			"header": "フェイルセーフ",
 			"nextavailable": "フェイルセーフは次の夜以降に再び利用できるようになります。",
 			"statusactive": "ステータス:聖なるフェールセーフが発動しました。",
@@ -379,7 +379,7 @@
 				"barleyfarmer": "大麦農家",
 				"beekeeper": "養蜂家",
 				"berryfarmer": "ベリー農家",
-				"blastfurnace": "溶鉱炉オペレーター",
+				"blastfurnace": "溶鉱炉",
 				"bloomeryjob": "鍛冶屋",
 				"builder": "ビルダー",
 				"cabbagefarmer": "キャベツ農家",
@@ -389,7 +389,7 @@
 				"constructor": "建設労働者",
 				"cook": "料理",
 				"coppersmith": "銅細工人",
-				"cottonengine": "綿エンジンオペレーター",
+				"cottonengine": "綿繰り機",
 				"cottonfarmer": "綿の農家",
 				"digger": "掘削",
 				"diggerspecial": "特殊掘削",
@@ -423,12 +423,12 @@
 				"jobblockcrafteradvanced": "高度な職業ブロッククラフター",
 				"kilnjob": "焼成炉",
 				"laborer": "労働者",
-				"metallathe": "金属旋盤オペレーター",
+				"metallathe": "金属旋盤",
 				"minerjob": "採掘者",
 				"networkplayer": "プレーヤー",
 				"papermaker": "製紙工",
 				"potter": "陶芸家",
-				"printingpress": "印刷機オペレーター",
+				"printingpress": "印刷機",
 				"researcher": "研究者",
 				"roper": "ロープメーカー",
 				"sanctifier": "聖化",
@@ -504,7 +504,7 @@
 				"name": "豪華なチェスト"
 			},
 			"chestprestige": {
-				"description": "ここに入ると、報酬と比例のすべての希望を放棄してください！名声の科学には豪華なチェストが必要です。熱狂的な植民地にとってはストレッチの目標です。",
+				"description": "ここに入ると、報酬と比例のすべての希望を放棄してください！名声の科学には豪華なチェストが必要です。熱狂的なコロニーにとってはストレッチの目標です。",
 				"name": "プレステージチェスト"
 			},
 			"chestresource": {
@@ -668,7 +668,7 @@
 				"name": "紙製作"
 			},
 			"poison": {
-				"description": "ポイズンはモンスターに時間経過でダメージを与えます。藤の植物は、ヒースブロックでのみで栽培できます。各藤の収穫機がうまく機能するには、近くに10本の藤が必要です",
+				"description": "ポイズンはモンスターに時間経過でダメージを与えます。藤の植物は、ヒースブロックでのみで栽培できます。藤の収穫機を使用するには、近くに10本の藤の植物を設置する必要があります。",
 				"name": "ポイズン"
 			},
 			"porridge": {
@@ -708,7 +708,7 @@
 				"name": "投射物トラップ"
 			},
 			"recursiveknowledge": {
-				"description": "あなたがより多くの本を作ることができるよう本を作るのに役立ちます。",
+				"description": "より多くの本を作ることができるように、本を使って本を作るのを助けます",
 				"name": "再帰的自己改善"
 			},
 			"researcher": {
@@ -720,7 +720,7 @@
 				"name": "ロープ"
 			},
 			"ropetrap": {
-				"description": "一人のモンスターが通過すると、近くのモンスターを10秒間フリーズするトラップをアンロックします。",
+				"description": "一人のモンスターが通過すると、近くのモンスターを10秒間動きを止めるトラップをアンロックします。",
 				"name": "ロープトラップ"
 			},
 			"sacredhouse": {
@@ -732,8 +732,8 @@
 				"name": "筆記者"
 			},
 			"statistics": {
-				"description": "統計委員会をアンロックします。配置されて使用すると、コロニーの活動に関する洞察が得られます。",
-				"name": "統計委員会"
+				"description": "統計局をアンロックします。配置して使用すると、コロニーの活動に関する記録が見れます。",
+				"name": "統計局"
 			},
 			"steel": {
 				"description": "鋼、鉛、鉱油をアンロックします。これらは、より近代的な機械の建設に必要です。鉛鉱石は湿地帯にあり、石炭は巨大な木の下にあります。",
@@ -768,8 +768,8 @@
 				"name": "ツール配布"
 			},
 			"trader": {
-				"description": "_MISSING_Used to accelerate trade deals between colonies. Not used for trading with outposts; intended for multiplayer.",
-				"name": "_MISSING_Trader"
+				"description": "コロニー間の貿易取引をスムーズに行うために使用される。前哨基地との交易には使用せず、マルチプレイで使用することを想定している。",
+				"name": "商人"
 			},
 			"trading": {
 				"description": "アンロックするとアイテムを売買できるようになります",
@@ -932,12 +932,12 @@
 			},
 			"toolconstruction": {
 				"builder": "ビルダー",
-				"buildera": "ビルダー",
+				"buildera": "",
 				"builderb": "建築エリアが必要",
 				"builderc": "何かを建築する",
 				"description": "作成したいエリアの種類を選んでください。",
 				"destroyer": "デストロイヤー",
-				"destroyera": "デストロイヤー",
+				"destroyera": "",
 				"destroyerb": "撤去エリアが必要",
 				"destroyerc": "何かを撤去する",
 				"header": "建設ツール"
@@ -1033,12 +1033,12 @@
 				"header": "コロニー防衛",
 				"text1": "一部の科学のロックを解除すると脅威が追加されます。脅威はUIの右上に表示されます。\n追加の入植者を募集すると、最初の25人以降はゆっくりとしたペースで脅威が追加されます。脅威レベルが上がるにつれて、より多くの強力なモンスターが出現します。",
 				"text2": "コロニーの中心を守るために、モンスターのいないゾーンに壁を構築し、堀を掘ります。これ以外の「モンスターゾーン」に農場などの仕事を自由に配置してください。入植者はこのエリアを離れ、夜になるとベッドに向かいます。",
-				"text3": "ティンカーは、アイテム「夜間スリンガーガード」を生成します。\nこれを植民地に入れて、夜中に働くスリンガーを雇用してください。",
+				"text3": "ティンカーは、アイテム「夜間スリンガーガード」を生成します。\nこれをコロニーに入れて、夜中に働くスリンガーを雇用してください。",
 				"text4": "技術ツリーを進めて、新しいガードやトラップ、聖なるフェイルセーフをアンロックしてください。"
 			},
 			"page5_2": {
 				"description": "貿易と拡張で、ユニークな資源を手に入れる",
-				"header": "コロニーポイントと植民地化",
+				"header": "コロニーポイントとコロニー",
 				"text1": "ロックを解除して、商人のハブを配置します。右クリックしてインターフェイスを開きます。\nコロニーポイントを獲得するためにアイテムを販売します。コロニーポイントページの入植者の制限などのアップグレードにポイントを費やすことができます。",
 				"text2": "この世界には、ユニークな資源を持つ地域が複数存在します。雪に覆われた山頂、紫に覆われたヒース、湿地帯、巨大な木などがあります。\nアストロラーベをアンロックして装備すれば、簡単に見つけることができます。",
 				"text3": "前哨基地のロックを解除し、前哨基地基本バナーを購入し、探索している間に持ち運びます。前哨基地を開始するために配置します。\nその備蓄と科学的進歩は、メインコロニーやその他の前哨基地と共有されています。上記の地域に前哨基地を構築して、リソースにアクセスします。"
@@ -1142,7 +1142,7 @@
 				"shaderquality": "シェーダー品質",
 				"sunshadowcascades": "シャドウカスケード",
 				"sunshadowdistance": "影の距離",
-				"sunshadowquality": "日影の品質",
+				"sunshadowquality": "影の品質",
 				"texturequality": "テクスチャの品質",
 				"torchquality": "松明の品質",
 				"vsync": "VSync",
@@ -1180,7 +1180,7 @@
 			},
 			"newworld": "新規ワールド",
 			"nosubscribeditems": "サブスクライブ中のワークショップワールドはありません",
-			"outdated": "旧式の世界",
+			"outdated": "古いの世界",
 			"password": "パスワード",
 			"play_coop": "Co-opプレイ",
 			"play_solo": "シングルプレイ",
@@ -1240,7 +1240,7 @@
 			"trap-damage": "{0}ダメージ",
 			"trap-explosive-range": "ヒット時に半径 {0}があるエリアに影響を与えます",
 			"trap-filter-1000hp": "HP1000以上のモンスターのみ発動",
-			"trap-filter-unslowed": "まだ移動速度が遅くなっていないモンスターのみ発動",
+			"trap-filter-unslowed": "移動速度が遅くなっていないモンスターのみ発動",
 			"trapfixer": "入植者に日中に近くのトラップを補充するように命令します",
 			"trap-freezes": "{0}秒間ヒットをフリーズします",
 			"trap-friendly-fire": "発動されたときに味方にダメージを与える可能性があります",
@@ -1313,12 +1313,12 @@
 		"caltroptrap": "カルトロップトラップ",
 		"candle": "キャンドル",
 		"carddata": "パンチカード",
-		"cardempty": "空のパンチカード",
+		"cardempty": "パンチカード（空）",
 		"charcoal": "木炭",
 		"cherryblossom": "桜の花",
 		"chest": "チェスト",
 		"chestluxury": "豪華なチェスト",
-		"chestmaker": "チェストメーカーのワークショップ",
+		"chestmaker": "チェストメーカー工房",
 		"chestprestige": "プレステージチェスト",
 		"chestresource": "科学チェスト",
 		"chickenmeal": "鶏肉",
@@ -1341,7 +1341,7 @@
 		"copperlockbox": "銅ロックボックス",
 		"coppertools": "銅のツール",
 		"cotton": "綿",
-		"cottonengine": "綿エンジン",
+		"cottonengine": "綿繰り機",
 		"cottonfibre": "綿繊維",
 		"crate": "木箱",
 		"crossbow": "クロスボウ",
@@ -1380,7 +1380,7 @@
 		"grassdry": "草",
 		"grassfen": "湿地帯の草",
 		"grassheath": "ヒースの土",
-		"grassheathpurple": "ヒース植物",
+		"grassheathpurple": "ヒースの植物",
 		"grassmax": "草",
 		"grassmid": "草",
 		"grasswet": "草",
@@ -1402,7 +1402,7 @@
 		"guardslingernightjob": "夜間担当スリング兵",
 		"gunpowder": "火薬",
 		"gunpowdertrap": "火薬トラップ",
-		"gunpowdertrapammo": "火薬弾薬弾薬",
+		"gunpowdertrapammo": "火薬弾薬",
 		"gunsmith": "ガンスミスの作業台",
 		"guntrap": "キャノントラップ",
 		"guntrapammo": "キャノントラップ弾薬",
@@ -1457,8 +1457,8 @@
 		"notools": "ツールなし",
 		"npcshop": "食料雑貨店",
 		"outpostbanner": "前哨基本バナー",
-		"paper": "論文",
-		"papermakersmould": "ペーパーメーカーの型",
+		"paper": "紙",
+		"papermakersmould": "製紙用金型",
 		"parchment": "羊皮紙",
 		"planks": "板",
 		"planksblue": "青い板",
@@ -1513,7 +1513,7 @@
 		"slingbullet": "スリングの石弾",
 		"snow": "雪",
 		"splittingstump": "薪割り台",
-		"statisticsboard": "統計委員会",
+		"statisticsboard": "統計局",
 		"steelingot": "スチールインゴット",
 		"steellockbox": "スチールロックボックス",
 		"steelparts": "鋼部品",
@@ -1530,8 +1530,8 @@
 		"stove": "コンロ",
 		"straw": "藁",
 		"sulfur": "硫黄",
-		"tabletclay": "粘土タブレット",
-		"tabletwisdom": "古代の知恵のタブレット",
+		"tabletclay": "粘土板",
+		"tabletwisdom": "古代の知恵の板",
 		"tabulator": "集計機",
 		"tailorshop": "仕立て屋",
 		"tannertable": "皮革のテーブル",
@@ -1546,23 +1546,23 @@
 		"vialnitricacid": "硝酸のバイアル",
 		"vialsulphuricacid": "硫酸のバイアル",
 		"water": "水",
-		"watergatherer": "集水器",
+		"watergatherer": "水汲み屋",
 		"waterpump": "水ポンプ",
 		"wheat": "小麦",
-		"wheatmeal": "麦粥",
+		"wheatmeal": "小麦粉",
 		"wheatporridge": "小麦粥",
 		"wheatstage1": "小麦の種",
 		"wisteriaflower": "藤の花",
 		"wisteriajob": "藤の収穫機",
 		"wisteriaplant": "藤植物",
-		"wisteriaplantempty": "藤植物",
+		"wisteriaplantempty": "藤植物（空）",
 		"wolfsbane": "トリカブト",
 		"woodfloor": "ウッドフローリング",
 		"writerdesk": "作家の机",
 		"zinc": "亜鉛"
 	},
 	"typeuses": {
-		"alarmbell": "【あらーむべる】\nモンスターを検出したときにアラームを鳴らします",
+		"alarmbell": "【あらーむべる】\nモンスターがこの上を通過するとベルを鳴らします",
 		"alkanet": "【あるかねっと】\n《Alkanet》\nリアルでは、赤い染料の原料",
 		"astrolabe": "【あすとろらーべ】\n《Astrolabe》\nホットバーに装備するとバイオームを探すのに便利です",
 		"berry": "【べりー】\n《Berry》\nシングルベリー。それを食べる努力の価値はありません！",
@@ -1581,7 +1581,7 @@
 		"cherryblossom": "【さくらのはな】\n《Cherry Blossom》\nゲーム中で一番ピンク色",
 		"clay": "【ねんど】\n《Clay》\n触ってごらん",
 		"coalore": "【せきたん】\n《Coal Ore》\n警告: 気候変動を引き起こすかも",
-		"compass": "【こんぱす】\n《Compass》\nホットバーに装備して、植民地や前哨基地の場所をを表示する",
+		"compass": "【こんぱす】\n《Compass》\nホットバーに装備して、コロニーや前哨基地の場所をを表示する",
 		"cookedfish": "【やきざかな】\n《Cooked Fish》\n泳力は劇的に低下",
 		"copper": "【どう】\n《Copper》\nやや柔らかい金属ですが、非常に便利です",
 		"coppertools": "【どうのつーる】\n《Copper Tools》\n道具がなけりゃパンだって切れないよ",
@@ -1645,7 +1645,7 @@
 		"waterpump": "【みずぽんぷ】\n《Water Pump》\n水辺の近くで水を入れることができます",
 		"wheat": "【こむぎ】\n《Wheat》\n入植者が石臼を使って小麦粉に変える",
 		"wheatstage1": "【こむぎのたね】\n《Wheat Seeds》\n未来のパン",
-		"wisteriajob": "1人の収穫機には、近くに10個の藤の植物が必要です。これらの植物は、ヒースでのみ栽培できます",
+		"wisteriajob": "藤の収獲機が稼働するには一人につき10個の藤の植物が必要です。\n藤の植物は、ヒースブロックでのみ栽培できます",
 		"wisteriaplant": "【ぶじのしょくぶつ】\n《Wister》\nこれらを10個を配置すると、長期的なバランスが確保されます。",
 		"wisteriaplantempty": "【ぶじのしょくぶつ（から）】\n《Wisterempty》\nこれらを10個を配置すると、長期的なバランスが確保されます。",
 		"wolfsbane": "【とりかぶと】\n《Wolfsbane》\nオオカミがコロニーを襲うのを防ぐ",
