@@ -62,3 +62,21 @@ Finding out what these are is left as an exercise to the reader.
 - Reduced built-in glider offset, so people are more likely to go speedy when they're aiming where they want to go, instead of going slowly
 - Fix steel glider being a bit 'dirty'
 - Fix gliders having a tiny gap between some parts
+
+0.9.0.41 (2023-01-08)
+- Boosted regular glider initial velocity a bit
+- Adjusted glider stalling mechanic to only take control of pitch
+- Adjusted glider stalling to work based on forward velocity instead of total velocity
+- Adjusted "automatic pitch compensation" glider mechanic to be dynamic based on speed;
+-- So full speed should have you going 'straight', while low speed aims you down a bit due to gravity
+- Automatically place the elevator shaft that is one block up from the elevator station, when placing the station.
+-- Convenience feature as it's easy to miss that it's required there
+- Resized merchant UI buy/sell lists a little so the default items fit in both
+
+0.9.0.42 (2023-01-24)
+- Fix /backup command not working properly
+- Optimised navigation precalculation work a little, reducing time spent on it by about 20% (happens on loading world / editing blocks)
+- Fix th-TH locale not working ingame
+- Removed some unused debug files from the normal build
+- Added 62%, 87%, 125% and 175% UI scaling options
+- Stop kicking players off gliders in cases of network desync
