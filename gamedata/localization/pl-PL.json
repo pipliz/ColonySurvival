@@ -2,7 +2,7 @@
 	"coverage": 52.0,
 	"hints": {
 		"0": "Dla większości farm, większa powieszchnia oznacza lepszą produkcję. Zbieracze jagód są wyjątkiem od tej zasady.",
-		"1": "Więcej różnych potworów będzie się pojawiać, wraz z rekrutacją nowych kolonistów.",
+		"1": "Wraz z rekrutacją nowych kolonistów, nocą będzie się pojawiać więcej różnych potworów.",
 		"10": "3x3 jest optymalną wielkością dla leśniczego.",
 		"11": "Naciśnij 'CTRL' żeby kucnąć i nie spaść z krawędzi.",
 		"13": "Naciśnij 'CTRL' kiedy umieszczasz strefę budowlaną, by umieścić drugą strefę z tymi samymi ustawieniami.",
@@ -27,7 +27,7 @@
 		"bannerclickedpopup": {
 			"deletebanner": "Usuń sztandar",
 			"deletecolony": "Usuń kolonię",
-			"deletecolonydescription": "Usunięcie ostatniego sztandaru kolonii spowoduje usunięcie wszystkich npc i uczyni kolonię bezużyteczną. Aby potwierdzić, że to jest to, czego chcesz, wpisz 'delete' poniżej.",
+			"deletecolonydescription": "Usunięcie ostatniego sztandaru kolonii spowoduje usunięcie wszystkich kolonistów i uczyni kolonię bezużyteczną. Aby potwierdzić, że to jest to, czego chcesz, wpisz 'delete' poniżej.",
 			"header": "Opcje sztandaru",
 			"noconfirmationdelete": "Ignorowanie próby usunięcia sztandaru, nie uzyskano potwierdzenia",
 			"placementfail": "Nie można umieścić sztandaru w tym miejscu"
@@ -279,7 +279,7 @@
 			"enabled": "Włączone",
 			"high": "Wysoki",
 			"inputplaceholder": "Wprowadź tekst...",
-			"inputplaceholder_search": "Wprowadź tekst, aby wyszkuać...",
+			"inputplaceholder_search": "Szukaj...",
 			"low": "Niski",
 			"next": "Następny",
 			"no": "Nie",
@@ -1008,31 +1008,31 @@
 				"description": "Witamy w Colony Survival!",
 				"header": "Podstawy",
 				"text1": "Zacznij od znalezienia dobrego miejsca na swoją pierwszą kolonię. Zalecane jest posiadanie w pobliżu wody i płaskich pól uprawnych.",
-				"text2": "Sztandar stanowi centrum Twojej kolonii. Umieść go klikając na ziemi z wybranym narzędziem Sztandar. Naciśnij '2', aby go wybrać. Narzędzie sztandaru wyświetla głęboki cień w miejscu, gdzie będą pojawiać się potwory po zrekrutowaniu kolonistów.",
-				"text3": "Umieść łóżka, aby móc rekrutować kolonistów. Naciśnij 'i', aby otworzyć interfejs. Przeciągnij łóżka ze stosu na pasek szybkiego wyboru poniżej. Mając wybrane łóżko, kliknij prawym przyciskiem myszy na ziemi, aby umieścić łóżko.",
-				"text4": "Otwórz interfejs i przejdź do strony 'Kolonia'. Naciśnij 'Zrekrutuj', aby zwerbować kolonistę."
+				"text2": "Sztandar stanowi centrum Twojej kolonii. Umieść go klikając na ziemi z wybranym Narzędziem Sztandaru. Naciśnij '2', aby go wybrać. Narzędzie Sztandaru wyświetla głęboki cień w miejscu, gdzie będą pojawiać się potwory po zrekrutowaniu kolonistów.",
+				"text3": "Umieść łóżka, aby móc rekrutować kolonistów. Naciśnij 'i', aby otworzyć interfejs. Przeciągnij łóżka z ekwipunku na pasek szybkiego wyboru poniżej. Mając wybrane łóżko, kliknij prawym przyciskiem myszy na ziemi, aby je umieścić.",
+				"text4": "Otwórz interfejs i przejdź do zakładki 'Kolonia'. Naciśnij 'Zrekrutuj', aby zwerbować kolonistę."
 			},
 			"page2_2": {
 				"description": "Są one niezbędne do rozwoju i przetrwania",
 				"header": "Jedzenie i łóżka",
 				"text1": "Koloniści potrzebują 1 posiłku dziennie. Zabierają je ze sztandaru lub z pobliskiego sklepu spożywczego. Bez jedzenia koloniści zaczną głodować. Do rekrutacji nowych kolonistów potrzebujesz większej ilości jedzenia.",
 				"text2": "Zbieracz jagód jest pierwszym źródłem pożywienia. Wybierz Narzędzie Dowodzenia, wciskając '1'. Kliknij, aby je otworzyć i wybierz zbieracza jagód. Kliknij prawym przyciskiem myszy na ziemi, aby rozpocząć konstrukcję farmy jagód, a następnie kliknij ponownie prawym przyciskiem myszy w innym miejscu, aby zakończyć. Będziesz potrzebować ich całkiem sporo!",
-				"text3": "Aby rozpocząć produkcję łóżek, będziesz musiał wykonać stół majsterkowicza. Zetnij drzewo, przytrzymując na nim lewy przycisk myszy, i wykop dół, aby zebrać kamienny gruz.",
+				"text3": "Aby rozpocząć produkcję łóżek, będziesz musiał wykonać stół majsterkowicza. Zetnij drzewo, przytrzymując lewy przycisk myszy, i wykop dół, aby zebrać kamienny gruz.",
 				"text4": "Kliknij na ikonę stołu majsterkowicza po lewej stronie ekwipunku, aby go wykonać. Umieść go tak jak łóżko. Podobnie jak w przypadku farmy jagód, bezrobotni koloniści automatycznie podejmą się tej pracy."
 			},
 			"page3_2": {
 				"description": "Technologiczna strona przetrwania",
 				"header": "Rzemiosło, nauka i górnictwo",
-				"text1": "Robotnicy będą podchodzić do skrzyń zarówno po to, aby zebrać składniki z magazynu, jak i po to, aby dostarczyć do nich zebrane/wytworzone produkty. Jeśli nie ma jeszcze żadnych skrzyń, sztandar będzie funkcjonował jako magazyn.",
-				"text2": "Na stanowiskach pracy można lub trzeba używać narzędzi. Każdy rodzaj narzędzi ma różne koszty, trwałość i bonusy do prędkości produkcji. Majsterkowicz automatycznie produkuje kamienne narzędzia.",
+				"text1": "Robotnicy będą podchodzić do skrzyń zarówno po to, aby zabrać potrzebne im rzeczy, jak i po to, aby dostarczać do nich zebrane/wytworzone przedmioty. Jeśli nie ma jeszcze żadnych skrzyń, sztandar będzie funkcjonował jako magazyn.",
+				"text2": "Koloniści do pracy mogą potrzebować narzędzi. Każdy rodzaj narzędzi ma różne koszty, trwałość i bonusy do prędkości produkcji. Majsterkowicz automatycznie produkuje kamienne narzędzia.",
 				"text3": "Korzystaj z nauki, aby odblokować nowe stanowiska pracy, przedmioty i funkcje. Otwórz zakładkę nauki w interfejsie, aby sprawdzić wymagania i odblokować nowe technologie, gdy będzie to możliwe.",
-				"text4": "Po odblokowaniu nauki 'Górnik', majsterkowicz będzie produkował 'stanowiska górnicze'. Wkop się i  umieść je na ciemnych kamiennych blokach lub rudach, aby koloniści mogli je wydobywać."
+				"text4": "Po odblokowaniu nauki 'Górnik', majsterkowicz będzie produkował 'stanowiska górnicze'. Wkop się i umieść je na ciemnych kamiennych blokach lub rudach, aby koloniści mogli je wydobywać."
 			},
 			"page4_2": {
 				"description": "Obroń swoją kolonię przed potworami nocy!",
 				"header": "Obrona kolonii",
 				"text1": "Odblokowanie niektórych technologii spowoduje podniesienie zagrożenia. Jest to widoczne w prawym górnym rogu. Będzie ono powoli wzrastać po zrekrutowaniu pierwszych 25 kolonistów. Wraz ze wzrostem zagrożenia, pojawia się coraz więcej potworów które rosną w siłę.",
-				"text2": "Buduj mury i kop fosy w strefie wolnej od potworów, aby chronić centrum swojej kolonii. Nie bój się umieszczać miejsc pracy takich jak farmy w 'strefie wolnej od potworów' poza nią; koloniści opuszczą ten obszar i udadzą się do swoich łóżek, gdy rozpocznie się noc.",
+				"text2": "Buduj mury i kop fosy w strefie wolnej od potworów, aby chronić centrum swojej kolonii. Nie bój się umieszczać miejsc pracy takich jak farmy w 'strefie wolnej od potworów' poza nią; koloniści opuszczą ten obszar i udadzą się do swoich łóżek, gdy zapadnie noc.",
 				"text3": "Kiedy majsterkowicz wytworzy przedmiot 'Procarz (Noc)', umieść go w swojej kolonii, aby zwerbować procarza, który będzie bronił twoich kolonistów nocą.",
 				"text4": "Rób postępy w drzewie technologicznym, aby odblokować nowych strażników, pułapki i Świętego Strażnika."
 			},
@@ -1283,7 +1283,7 @@
 		"banner": "Sztandar",
 		"bannertool": "Narzędzie Sztandaru",
 		"barley": "Jęczmień",
-		"bed": "Łózko",
+		"bed": "Łóżko",
 		"berry": "Jagoda",
 		"berrybush": "Nasiona jagód",
 		"berrymeal": "Posiłek z jagód",
