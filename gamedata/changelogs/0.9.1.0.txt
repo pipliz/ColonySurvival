@@ -1,0 +1,19 @@
+0.9.1.0 (2023-03-17)
+
+- Overhaul pathfinding a bit. Paths should be a little more accurate.
+- Monster spawning should work consistently with long paths (mazes), and it should run quicker when spawning many monsters.
+- Siege mode should now trigger during the day as well, and has chat messages again (until the notifications menu is implemented properly in a later update)
+- Siege mode penalty now scales with the outposts' threat instead of with the outposts' colonist count
+- Boosted elevator (both kinds) speeds significantly, but reduce their starting speed a little. Default to accelerating to max speed if forward/back are not held.
+
+- Fix some debug commands requiring disabling of achievements despite not being beneficial (like /debug resetresearch)
+- Fix an issue with server simulation time auto adjustment, slowing down more than was needed for the server to maintain it's tick rate
+- Fix a minor memory leak on the server
+- Fix an issue with editing/removing diplomacy rules in multiplayer
+- Fix a secondary issue with diplomacy rules potentially re-using an existing ID
+- Fix colonists starting out by grabbing a meal (they start out fed now)
+- Fix clay not being usable with the builder
+
+Optimisations
+- Optimised code around ragdolls, projectiles a little
+- Limit the search distance of monsters looking for alternative goals when they have a current one that's quite far away

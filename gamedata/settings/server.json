@@ -3,7 +3,8 @@
 		"LoadedChunksRadius": 256,
 		"MaximumZombieSpawnRadius": 200,
 		"SafeRadiusMaximum": 100,
-		"SafeRadiusMinimum": 30
+		"SafeRadiusMinimum": 30,
+		"MonsterPathingRadius": 220
 	},
 	"ChunkQueue": {
 		"MaxQueueSize": 3500,
@@ -153,6 +154,7 @@
 	],
 	"Saving": {
 		"FreeChunksBatchSizeMax": 250,
+		"LogAutosaves": false,
 		"MillisecondsBeforeAutosaveChunk": 30000,
 		"MillisecondsBeforeAutosaveChunkMax": 300000,
 		"MillisecondsBetweenDirtyChunkChecks": 8000,
@@ -184,7 +186,6 @@
 		"PunchHeight": 0.25,
 		"ReconsiderDecisionTimeMaximum": 6500,
 		"ReconsiderDecisionTimeMinimum": 4500,
-		"SiegeModeThreshold": 50,
 		"SpawnPathingJobs": -1
 	}
 }

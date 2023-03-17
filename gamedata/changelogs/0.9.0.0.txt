@@ -80,3 +80,14 @@ Finding out what these are is left as an exercise to the reader.
 - Removed some unused debug files from the normal build
 - Added 62%, 87%, 125% and 175% UI scaling options
 - Stop kicking players off gliders in cases of network desync
+- Minor additions to es-ES & jp-JP locales via github
+
+0.9.0.43 (2023-01-26)
+- Optimised line of sight checks, reducing time spent on them by over 60%
+- Optimised guard target selection performance; reducing time spent on it by over 90% when there's a really large amount of monsters close to them (stacks with the above optimisation)
+- Add a slight random factor to guard reload timing to prevent them all shooting at the same intervals as a group after game reloads
+
+0.9.0.44 (2023-01-31)
+- Fix a player ID allocation problem, re-using a special case 'internal' ID as a player ID, causing connection issues in multiplayer servers
+- Possibly fix a 'random' crash issue on exiting to main menu; Delaying audioclip destruction to try to workaround a Unity3D bug with disposing streaming audioclips
+
