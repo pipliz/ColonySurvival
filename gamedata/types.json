@@ -2051,36 +2051,6 @@
 		"icon": "./textures/icons/manuscript.png",
 		"isPlaceable": false
 	},
-	"merchanthub": {
-		"attachBehaviour": [
-			"pointtrader"
-		],
-		"categories": [
-			"essential"
-		],
-		"colliders": [
-			{
-				"max": [
-					0.5,
-					0.3,
-					0.5
-				],
-				"min": [
-					-0.5,
-					-0.5,
-					-0.5
-				]
-			}
-		],
-		"icon": "./textures/icons/merchanthub.png",
-		"isSolid": false,
-		"lightingTransparency": 150,
-		"mesh": "./meshes/merchanthub.ply",
-		"onPlaceAudio": "woodPlace",
-		"onRemoveAudio": "woodDeleteLight",
-		"pathingImpact": "AsUntouchableSolid",
-		"sideall": "neutral"
-	},
 	"metalgear": {
 		"categories": [
 			"ingredient"

@@ -1776,6 +1776,20 @@
 			"categories": [
 				"job"
 			],
+			"colliders": [
+				{
+					"max": [
+						0.45,
+						0.45,
+						0.25
+					],
+					"min": [
+						-0.45,
+						-0.5,
+						-0.25
+					]
+				}
+			],
 			"icon": "./textures/icons/waterpump.png",
 			"isSolid": false,
 			"lightingTransparency": 210,
@@ -3313,6 +3327,40 @@
 		},
 		"generateType": "rotateBlock",
 		"typeName": "statisticsboard"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"pointtrader"
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "./textures/icons/merchanthub.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "./meshes/merchanthub.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "merchanthub"
 	},
 	{
 		"baseType": {

@@ -17,3 +17,42 @@
 Optimisations
 - Optimised code around ragdolls, projectiles a little
 - Limit the search distance of monsters looking for alternative goals when they have a current one that's quite far away
+
+0.9.1.1 (2023-03-17)
+- Hotfix for an issue related to 1000+ long paths into colonies exposing a fresh bug that caused monsters to spawn in your safe area
+
+0.9.1.2 (2023-03-18)
+- Improve jobs searching for nearby-blocks-of-type-x (trapfixer, scribes, etc) to be more consistent in finding those blocks closer to their max range
+
+0.9.1.3 (2023-03-18)
+- Fix an out-of-bounds error mostly occuring on world load (causing siege mode)
+- Fix siege mode triggering for colonies that won't have monster spawns
+- Reverted unity from 2021.3.20 to 2021.3.14 because of a macOS regression
+
+0.9.1.4 (2023-03-21)
+- Fix an edge case for pathfinding related to certain path shapes next to other shapes (vague, I know, it's complicated). Should fix multiple cases of bad performance and/or siege mode in 'normal' situations.
+- Fix a case where pathfinding would get stuck on the edge of the spawn area
+- Fix monsters despawning 20 ingame hours into their path to the banner
+- Fix colonists getting stuck doing nothing if your colony is enclosed and has no foodshops/crates/toolshops
+
+0.9.1.5 (2023-03-21)
+- Fix ingame changelog not including 0.9.1
+- Fix siege mode cost continueing while paused
+
+0.9.1.6 (2023-03-22)
+- Improve spawn position selection when a lot of the unsafe zone is inaccessible with an accessible path through it, reducing chance of "siege mode flickering"
+
+0.9.1.7 (2023-03-23)
+- Fix issues with grocery/tool-shop searching when the backup case of going to the banner is still far away
+
+0.9.1.8 (2023-03-23)
+- Fix an issue with scribes not using stocked scrollshelves close to them (within 5-10 blocks)
+
+0.9.1.9 (2023-03-27)
+- Prevent siege mode from effectively creating a 'negative meals' situation
+- Made the Merchant's Hub rotatable
+- Fix waterpump blocks not having a collider
+- "Gameplay" settings menu opens to general/gameplay settings tab instead of mouse settings
+- Using the F1 quickstart menu now also pauses the game, just like the escape menu
+- Don't show trap reload speed when it only holds 1 ammo
+- Rename "Gunpowdertrap Ammo" to "Gunpowder Trap Ammo" for consistency sake
