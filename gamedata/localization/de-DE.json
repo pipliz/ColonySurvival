@@ -93,7 +93,7 @@
 			"nameedit": "Kolonie umbenennen:",
 			"outpost": {
 				"create": "Außenposten erstellen",
-				"createdescription": "Wenn du einen Außenposten errichtest, wird ein Außenpostenbanner aus deinem Inventar (oder Vorrat) verbraucht.",
+				"createdescription": "Wenn du einen Außenposten errichtest, wird ein Außenpostenbanner aus deinem Inventar (oder Lager) verbraucht.",
 				"parentcolony": "Elternkolonie",
 				"popupheader": "Erstellung eines Außenpostens",
 				"selectparent": "Hauptkolonie auswählen"
@@ -115,7 +115,7 @@
 			"recruitauto": "Automatische Rekrutierung bei freien Jobs",
 			"recruitfailedbeds": "<color=red>Konnte keinen neuen Kolonisten rekrutieren - nicht genug freie Betten.</color>",
 			"recruitfailedcap": "<color=red>Konnte keinen neuen Kolonisten rekrutieren - Kolonistenlimit erreicht.</color>",
-			"recruitfailednomeals": "<color=red>Konnte keinen neuen Kolonisten rekrutieren - nicht genug Mahlzeiten im Vorrat.</color>",
+			"recruitfailednomeals": "<color=red>Konnte keinen neuen Kolonisten rekrutieren - nicht genug Mahlzeiten im Lager.</color>",
 			"recruitmentamount": "Anzahl zu rekrutierender Kolonisten:",
 			"recruitmentbutton": "Kolonist rekrutieren",
 			"recruitmentheader": "Rekrutierung",
@@ -150,7 +150,7 @@
 				"kits": "Verfügbare Kits",
 				"missingkit": "Kein Kolonie-Starter-Kit verfügbar!",
 				"name": "Name der Kolonie",
-				"parentcolony": "Mutterkolonie",
+				"parentcolony": "Hauptkolonie",
 				"popupheader": "Kolonie Gründung",
 				"usescienceagreement": "Forschung teilen"
 			},
@@ -206,9 +206,9 @@
 			"sp_alreadyrunning1_1": "Es läuft bereits ein Server. Möglicherweise wird er noch beendet. Erneuter Versuch in {0} Sekunden.",
 			"sp_alreadyrunning2": "Es läuft bereits ein Server. Du wirst in 5 Sekunden automatisch zum Hauptmenü zurückgebracht.",
 			"steam05": "Stufe 1/{0} - Versuche, eine direkte Verbindung herzustellen",
-			"steam06": "Stufe 1/{0} - Versuche, eine Steam-Relay-Verbindung aufzubauen",
+			"steam06": "Stufe 1/{0} - Versuche, eine Steam-Relay-Verbindung herzustellen",
 			"steam07": "Stufe 2/{0} - Verbindung erfolgreich, Authentifizierung",
-			"steamfail": "Verbindung konnte nicht hergestellt werden. Kehre zum Hauptmenü zurück in 5 Sekunden."
+			"steamfail": "Verbindung konnte nicht hergestellt werden. Kehre in 5 Sekunden zum Hauptmenü zurück."
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Workshop",
@@ -222,10 +222,10 @@
 			"contentpath": "Pfad zum Inhalt: {0}",
 			"contenttypelabel": "Inhalts Typ",
 			"contenttypes": {
-				"itempack": "Gegenstandspaket?",
+				"itempack": "Item Pack",
 				"misc": "Verschiedenes",
 				"overhaul": "Komplette Überarbeitung",
-				"texturepack": "Texturepack",
+				"texturepack": "Texture Pack",
 				"unknown": "Unbekannt",
 				"utilities": "Hilfsmittel",
 				"world": "Welt"
@@ -249,13 +249,13 @@
 		},
 		"failsafe": {
 			"current": "Aktuelles Heilige Punkte Lager: {0} aus {1}",
-			"damage": "Das Auslösen des heiligen Notfall-Verteidigungssystems verursacht {0} Schaden",
+			"damage": "Das Aktivieren des heiligen Notfall-Verteidigungssystems verursacht {0} Schaden",
 			"futurewave": "Das Notfall-Verteidigungssystem reduziert die Gesamtlebenspunkte der ankommenden Monster für die nächste Nacht um {0:P0}.",
 			"header": "Notfall-Verteidigungssystem",
 			"nextavailable": "Das Notfall-Verteidigungssystem wird nach der nächsten Nacht wieder verfügbar sein",
 			"statusactive": "Status: Notfall-Verteidigungssystem wurde aktiviert",
 			"statusavailable": "Status: Notfall-Verteidigungssystem ist verfügbar",
-			"trigger": "Auslösen",
+			"trigger": "Aktivieren",
 			"wave": "Die aktuelle Bedrohungsstufe ist {0} und wird Monster mit den Gesamtlebenspunkten von {1} spawnen.",
 			"wavereduced": "Die Gesamtlebenspunkte der ankommenden Monster werden in der nächsten Nacht um {0:P0} reduziert."
 		},
@@ -267,7 +267,7 @@
 			"laborercount": "Arbeitslos:",
 			"mealstorage": "Mahlzeiten insgesamt:",
 			"threatlevel": "Bedrohungsstufe:",
-			"time_day": "Tag"
+			"time_day": "Tag:"
 		},
 		"general": {
 			"apply": "Anwenden",
@@ -1018,7 +1018,7 @@
 				"text1": "Kolonisten benötigen 1 Mahlzeit pro Tag. Diese holen sie sich am Banner oder in einem nahe gelegenen Lebensmitteltisch. Ohne Nahrung verhungern die Kolonisten. Die Rekrutierung neuer Kolonisten kostet mehrere Mahlzeiten.",
 				"text2": "Der Beerensammler ist die erste Nahrungsquelle. Wähle das Befehlswerkzeug, indem du '1' drückst. Klicke, um es zu öffnen und wähle den Beerensammler. Klicke mit der rechten Maustaste auf den Boden, um mit der Erstellung des Beerenfelds zu beginnen und klicke dann an anderer Stelle erneut mit der rechten Maustaste, um es zu beenden. Du wirst eine ganze Menge davon brauchen!",
 				"text3": "Um mit der Herstellung von Betten zu beginnen, musst du einen Tüftlertisch herstellen. Fälle einen Baum mit einem Linksklick und grabt dann nach unten, um Bruchsteine zu sammeln.",
-				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Vorrat, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen arbeitslose Kolonisten diese Arbeit automatisch an."
+				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Lager, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen arbeitslose Kolonisten diese Arbeit automatisch an."
 			},
 			"page3_2": {
 				"description": "Die technische Seite des Überlebens",
