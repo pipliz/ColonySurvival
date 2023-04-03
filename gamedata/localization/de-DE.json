@@ -15,12 +15,12 @@
 		"6": "Forscher nutzen die Inhalte der Wissenschaftsbeutel, der Leinenbeutel selbst wird oft ins Inventar zurückgelegt.",
 		"7": "Unterschiede in Reichweite, Nachladegeschwindigkeit und Schaden geben jedem Wachentyp unterschiedliche Vor- und Nachteile.",
 		"8": "Wir schreiben Freitags einen wöchentlichen Blog. Du kannst ihn auf unserer Steam Seite finden, um mehr über die Entwicklung von Colony Survival zu erfahren!",
-		"9": "Eine Muskete verbraucht bei jedem Schuss eine Kugel und Schiesspulver, aber das Leinensäckchen kann meist wiederverwendet werden."
+		"9": "Eine Muskete verbraucht bei jedem Schuss eine Kugel und Schwarzpulver, aber das Leinensäckchen kann meist wiederverwendet werden."
 	},
 	"sentences": {
 		"astrolabe": {
 			"bigtree": "Mammutbaum",
-			"heath": "Heideland",
+			"heath": "Heidebiom",
 			"marsh": "Sumpfland",
 			"mountain": "Berge"
 		},
@@ -265,7 +265,7 @@
 			"colonistcount": "Kolonisten:",
 			"colonypoints": "Punkte:",
 			"laborercount": "Arbeitslos:",
-			"mealstorage": "Mahlzeiten insgesamt:",
+			"mealstorage": "Mahlzeiten gesamt:",
 			"threatlevel": "Bedrohungsstufe:",
 			"time_day": "Tag:"
 		},
@@ -348,7 +348,7 @@
 		"notifications": {
 			"delete": "Benachrichtigung löschen",
 			"header": "Benachrichtigungen",
-			"missingplayerammo": "<color=red>Die Verwendung von {0} setzt voraus, dass sich {1} im Inventar befindet!</color>",
+			"missingplayerammo": "<color=red>Die Verwendung von {0} setzt voraus, dass sich {1} in der Hotbar befindet!</color>",
 			"npc_died": {
 				"banner": "Ein Monster am Banner!",
 				"command": "Verwendung von Befehlen",
@@ -381,7 +381,7 @@
 				"berryfarmer": "Beerensammler",
 				"blastfurnace": "Hochofenarbeiter",
 				"bloomeryjob": "Schmied",
-				"builder": "Bauherr",
+				"builder": "Bauarbeiter",
 				"cabbagefarmer": "Weißkohlbauer",
 				"chestmaker": "Kistenmacher",
 				"chickenfarmer": "Hühnerzüchter",
@@ -408,8 +408,8 @@
 				"guardcrossbownight": "Armbrustschütze (Nacht)",
 				"guardgrenadeday": "Granatwerferschütze (Tag)",
 				"guardgrenadenight": "Granatwerferschütze (Nacht)",
-				"guardhandcannonday": "Handfeuerwaffenschütze (Tag)",
-				"guardhandcannonnight": "Handfeuerwaffenschütze (Nacht)",
+				"guardhandcannonday": "Handkanonenschütze (Tag)",
+				"guardhandcannonnight": "Handkanonenschütze (Nacht)",
 				"guardmusketday": "Musketenschütze (Tag)",
 				"guardmusketnight": "Musketenschütze (Nacht)",
 				"guardpoison": "Giftschütze",
@@ -443,7 +443,7 @@
 				"trapfixer": "Fallensteller",
 				"watergatherer": "Wasserträger",
 				"waterpump": "Wasserpumpenarbeiter",
-				"wheatfarmer": "Getreidebauer",
+				"wheatfarmer": "Weizenbauer",
 				"wisteriafarmer": "Blauregenbauer",
 				"wolfsbanefarmer": "Eisenhutbauer",
 				"woodcutter": "Holzfäller",
@@ -460,7 +460,7 @@
 				"name": "Lokale Tierkadaver"
 			},
 			"anvil": {
-				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeuge",
+				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeug",
 				"name": "Amboss"
 			},
 			"archery": {
@@ -513,7 +513,7 @@
 			},
 			"chickenmeal": {
 				"description": "Schaltet eine komplexere Mahlzeit frei, die beim Verzehr durch Kolonisten mehr heilige Punkte einbringt",
-				"name": "Hähnchen-Mahlzeiten"
+				"name": "Hähnchenmahlzeiten"
 			},
 			"compass": {
 				"description": "Schaltet den Kompass frei, ein Navigationsinstrument, um nach Hause zu finden",
@@ -540,11 +540,11 @@
 				"name": "Kupferschließfach"
 			},
 			"cotton": {
-				"description": "Erschließt eine Quelle für hochwertige Textilien. Baumwollpflanzen wachsen nur in Heidelandschaften",
+				"description": "Erschließt eine Quelle für hochwertige Textilien. Baumwollpflanzen wachsen nur in Heidebiom",
 				"name": "Baumwolle"
 			},
 			"crossbow": {
-				"description": "Stärkere Bogenschützen",
+				"description": "Stärk aber auch langsamer als Bogenschützen",
 				"name": "Armbrüste"
 			},
 			"dyeing": {
@@ -552,12 +552,12 @@
 				"name": "Färben"
 			},
 			"elevator": {
-				"description": "Schaltet die Aufzugsproduktion frei, nützlich für die Überwindung vertikaler Distanzen",
+				"description": "Schaltet die Aufzugsproduktion frei, nützlich für die Überwindung vertikaler Strecken",
 				"name": "Aufzüge"
 			},
 			"elevatorhorizontal": {
-				"description": "Schaltet die Produktion von horizontalen Aufzügen frei, die für die Überwindung von horizontalen Entfernungen nützlich sind",
-				"name": "horizontale Aufzüge"
+				"description": "Schaltet die Produktion von horizontalen Aufzügen frei, die für die Überwindung von horizontalen Strecken nützlich sind",
+				"name": "Horizontale Aufzüge"
 			},
 			"engineer": {
 				"description": "Schaltet den Ingenieur und den Fallensteller frei. Der Ingenieur stellt Fallen und deren Munition her, die zur Bekämpfung von Monstern verwendet werden können. Der Fallensteller lädt Fallen in der Nähe wieder auf",
@@ -609,14 +609,14 @@
 			},
 			"handcannon": {
 				"description": "Schaltet eine mächtige Waffe mit kurzer Reichweite frei",
-				"name": "Handfeuerwaffe"
+				"name": "Handkanone"
 			},
 			"hemp": {
 				"description": "Ermöglicht den Anbau von Hanfpflanzen in Sumpfgebieten und den Kauf von Hanf. Führt zur Verarbeitung von Hanf zu Seilen und Papier.",
 				"name": "Hanf"
 			},
 			"iron": {
-				"description": "Ein großer Schritt nach vorn für Ihre Kolonie, der ein neues Material freischaltet, das für viele Gegenstände benötigt wird",
+				"description": "Ein großer Schritt nach vorn für deine Kolonie, der ein neues Material freischaltet, das für viele Gegenstände benötigt wird",
 				"name": "Eisenzeitalter"
 			},
 			"jewellery": {
@@ -648,11 +648,11 @@
 				"name": "Lehmziegel"
 			},
 			"musket": {
-				"description": "Schaltet eine neue Schießpulverwaffe frei. Macht weniger Schaden als eine Handfeuerwaffe, aber die Munition ist billiger, die Reichweite ist größer und das Nachladen geht schneller.",
+				"description": "Schaltet eine neue Schwarzpulverwaffe frei. Macht weniger Schaden als eine Handkanone, aber die Munition ist billiger, die Reichweite ist größer und das Nachladen geht schneller.",
 				"name": "Muskete"
 			},
 			"nitro": {
-				"description": "Schaltet eine hochexplosive Verbindung frei, die für rauchloses Pulver unerlässlich ist. Es ist viel weniger problematisch als herkömmliches Schießpulver und ermöglicht die Entwicklung anspruchsvollerer Feuerwaffen mit vielen beweglichen Teilen.",
+				"description": "Schaltet eine hochexplosive Verbindung frei, die für rauchloses Pulver unerlässlich ist. Es ist viel weniger problematisch als herkömmliches Schwarzpulver und ermöglicht die Entwicklung anspruchsvollerer Feuerwaffen mit vielen beweglichen Teilen.",
 				"name": "Nitrozellulose"
 			},
 			"npcshop": {
@@ -668,12 +668,12 @@
 				"name": "Papierproduktion"
 			},
 			"poison": {
-				"description": "Schaltet die Giftverarbeitung frei, die nützlich ist, um Monster über Zeit Schaden zuzufügen. Blauregen kann nur in Heidelandschaften angebaut werden. Jeder Blauregenbauer benötigt 10 Blauregenpflanzen in der Umgebung, um gut zu funktionieren.",
+				"description": "Schaltet die Giftverarbeitung frei, die nützlich ist, um Monster über Zeit Schaden zuzufügen. Blauregen kann nur in Heidebiom angebaut werden. Jeder Blauregenbauer benötigt 10 Blauregenpflanzen in der Umgebung, um gut zu funktionieren.",
 				"name": "Gift"
 			},
 			"porridge": {
 				"description": "Schaltet die Kombination von Wasser und Weizen zu einem neuen Mahlzeitentyp frei",
-				"name": "Weizenbrei"
+				"name": "Haferbrei"
 			},
 			"pottery": {
 				"description": "Schaltet Töpferwaren frei, die zum Tragen von Gegenständen verwendet werden, und Töpferwaren, die verkauft werden können",
@@ -745,7 +745,7 @@
 			},
 			"steeltools": {
 				"description": "Schaltet ein haltbareres Werkzeug frei, mit dem die Kolonisten ihre Arbeit effizienter erledigen können.",
-				"name": "Stahlwerkzeuge"
+				"name": "Stahlwerkzeug"
 			},
 			"stonemason": {
 				"description": "Schaltet den Steinmetz frei, der nützlich ist, um Gebäuden mehr Vielfalt zu verleihen",
@@ -768,11 +768,11 @@
 				"name": "Werkzeugtisch"
 			},
 			"trader": {
-				"description": "Dient der Beschleunigung von Handelsgeschäften zwischen Kolonien. Wird nicht für den Handel mit Außenposten verwendet; für Multiplayer gedacht",
+				"description": "Wird verwendet, um Handelsgeschäfte zwischen Kolonien zu erleichtern. Wird nicht für den Handel mit Außenposten verwendet; für Multiplayer gedacht",
 				"name": "Händler"
 			},
 			"trading": {
-				"description": "Schaltet das Handelsplatz frei, einen Ort, an dem du Gegenstände kaufen und verkaufen kannst",
+				"description": "Schaltet den Handelsplatz frei, einen Ort, an dem du Gegenstände kaufen und verkaufen kannst",
 				"name": "Handelsplatz"
 			},
 			"waterpump": {
@@ -831,7 +831,7 @@
 				"stats": {
 					"auto-scale": "Auto. Skala",
 					"entry-beds": "Betten",
-					"entry-meals": "Mahlzeiten insgesamt",
+					"entry-meals": "Mahlzeiten gesamt",
 					"entry-npccount": "Kolonisten",
 					"entry-points": "Koloniepunkte",
 					"entry-sanctified": "Heilige Punkte",
@@ -858,9 +858,9 @@
 					"type-production-col": "Produktion (Kolonie)",
 					"type-production-out": "Produktion (Außenposten)",
 					"type-stockpile": "Lagerbestand",
-					"type-tooluse": "Werkzeuge benutzt",
-					"type-tooluse-col": "Werkzeuge benutzt (Kolonie)",
-					"type-tooluse-out": "Werkzeuge benutzt (Außenposten)",
+					"type-tooluse": "Werkzeug benutzt",
+					"type-tooluse-col": "Werkzeug benutzt (Kolonie)",
+					"type-tooluse-out": "Werkzeug benutzt (Außenposten)",
 					"type-trade-in": "Eingehender Handel",
 					"type-trade-out": "Ausgehender Handel"
 				},
@@ -906,7 +906,7 @@
 				"buy": "Einkaufen",
 				"buy1": "Kaufe 1",
 				"buy25": "Kaufe 25",
-				"buy5": "Kaufen 5",
+				"buy5": "Kaufe 5",
 				"buytext": "Kaufe {0} für {1} Punkte",
 				"buytext2": "Die aktuellen Mittel ermöglichen {0} Käufe",
 				"currentpoints": "Aktuelle Punkte: {0} / {1}",
@@ -933,7 +933,7 @@
 			"toolconstruction": {
 				"builder": "Bauarbeiter",
 				"buildera": "",
-				"builderb": "Benötigt: Baugebiet",
+				"builderb": "Benötigt Baugebiet",
 				"builderc": "Baut Dinge",
 				"description": "Wähle den Gebietstyp aus, den du zuweisen willst.",
 				"destroyer": "Zerstörer",
@@ -995,8 +995,8 @@
 				"toonarrow": "Zu schmal für Bäume",
 				"toosmall": "Zu klein",
 				"wateradjacent": "Benötigt offenes Gewässer in der Nähe",
-				"wheatfarmer": "Getreidebauer",
-				"wheatfarmertool": "Getreidebauerwerkzeug"
+				"wheatfarmer": "Weizenbauer",
+				"wheatfarmertool": "Weizenbauerwerkzeug"
 			},
 			"toolshop": {
 				"description": "Passe die Mindestvorräte an, die Kolonisten benötigen, um bestimmte Werkzeuge zu benutzen. Erlaubt die Verwendung von Werkzeugen für Handwerk oder Wissenschaft.",
@@ -1008,7 +1008,7 @@
 				"description": "Willkommen in Colony Survival!",
 				"header": "Grundlagen",
 				"text1": "Beginne damit, einen guten Platz für deine erste Kolonie zu finden. Es empfiehlt sich, Wasser und flache Flächen für die Landwirtschaft in der Nähe zu haben.",
-				"text2": "Das Banner ist das Zentrum deiner Kolonie. Platziere es, indem du mit dem ausgewählten Banner-Werkzeug auf den Boden klickst. Drücke '2', um es auszuwählen. Das Banner-Werkzeug zeigt einen tiefen Schatten dort an, wo Monster spawnen werden, sobald Kolonisten rekrutiert worden sind.",
+				"text2": "Das Banner ist das Zentrum deiner Kolonie. Platziere es, indem du mit dem ausgewählten Banner-Werkzeug auf den Boden klickst. Drücke '2', um es auszuwählen. Das Banner-Werkzeug zeigt einen dunklen Schatten dort an, wo Monster spawnen werden, sobald Kolonisten rekrutiert worden sind.",
 				"text3": "Stelle Betten auf, um Kolonisten anwerben zu können. Drücke 'i', um das Interface zu öffnen. Ziehe Betten vom Inventar auf die Hotbar darunter. Wenn das Bett ausgewählt ist, klicke mit der rechten Maustaste auf den Boden, um ein Bett zu platzieren.",
 				"text4": "Öffne das Interface und gehe auf die Seite 'Kolonie'. Drücke 'Rekrutieren', um einen Kolonisten zu rekrutieren."
 			},
@@ -1025,7 +1025,7 @@
 				"header": "Handwerk, Wissenschaft & Bergbau",
 				"text1": "Die Arbeiter gehen zu den Kisten, um Zutaten aus dem Lager zu holen und um die hergestellten Produkte an das Lager zu liefern. Wenn es noch keine Kisten gibt, fungiert das Banner als eine Kiste.",
 				"text2": "Bei vielen Arbeiten können oder müssen Werkzeuge eingesetzt werden. Verschiedene Werkzeuge haben unterschiedliche Kosten, Haltbarkeiten und Boni auf die Produktionsgeschwindigkeit. Der Tüftler stellt automatisch Steinwerkzeuge her.",
-				"text3": "Nutze die Wissenschaft, um neue Jobs, Gegenstände und Funktionen freizuschalten. Öffne die Wissenschaftsseite in der Benutzeroberfläche, um die Anforderungen zu überprüfen und neue Technologien freizuschalten, sobald sie verfügbar sind.",
+				"text3": "Nutze die Wissenschaft, um neue Jobs, Gegenstände und Funktionen freizuschalten. Öffne den Reiter Wissenschaft in der Benutzeroberfläche, um die Anforderungen zu überprüfen und neue Technologien freizuschalten, sobald sie verfügbar sind.",
 				"text4": "Wenn du die Bergbauwissenschaft freigeschaltet hast, produziert der Tüftler 'Bergbauaufträge'. Grabe nach unten und platziere sie auf dunklen Steinblöcken oder Erzen, damit die Kolonisten sie dauerhaft abbauen können."
 			},
 			"page4_2": {
@@ -1040,7 +1040,7 @@
 				"description": "Handle und expandiere, um Zugang zu einzigartigen Ressourcen zu erhalten",
 				"header": "Koloniepunkte & Kolonisierung",
 				"text1": "Schalte den Handelsplatz frei und platziere ihn. Rechtsklicke darauf, um das Interface zu öffnen. Verkaufe Gegenstände, um Koloniepunkte zu verdienen. Die Punkte können unter anderem für Verbesserungen wie das Kolonistenlimit auf der Koloniepunkte-Seite ausgegeben werden.",
-				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heideflächen, Sumpfgebiete und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
+				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heidebiome, Sumpfgebiete und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
 				"text3": "Schalte Außenposten frei, kaufe ein Außenpostenbanner und trage es bei deiner Erkundung mit dir. Platziere es, um einen Außenposten zu gründen. Seine Vorräte und wissenschaftlichen Fortschritte werden mit der Hauptkolonie und anderen Außenposten geteilt. Errichte Außenposten in den oben genannten Regionen, um Zugang zu deren Ressourcen zu erhalten."
 			},
 			"page6_2": {
@@ -1220,7 +1220,7 @@
 			"provides-fertile-heath": "Zählt als fruchtbarer Heideboden",
 			"requires-fen": "Benötigt fruchtbaren Sumpfboden",
 			"requires-fertile": "Benötigt fruchtbaren Boden darunter",
-			"requires-heath": "Benötigt fruchtbare Heidelandschaft darunter",
+			"requires-heath": "Benötigt fruchtbares Heidebiom darunter",
 			"requires-water": "Muss in der Nähe von Wasser platziert werden, um zu funktionieren",
 			"sanctifiedlockbox-points": "Fügt {0} heilige Punktkapazität hinzu",
 			"sanctifiedlockbox-threat": "Verursacht {0} Bedrohung",
@@ -1254,7 +1254,7 @@
 		"upgrades": {
 			"builder": {
 				"level": "{0} Blöcke",
-				"main": "Bauherr Fläche Größe"
+				"main": "Bauarbeiter Fläche Größe"
 			},
 			"colonistcapacity": {
 				"level": "{0} Kolonisten",
@@ -1307,7 +1307,7 @@
 		"bricksred": "Rote Ziegel",
 		"bronzeingot": "Bronzebarren",
 		"bronzelockbox": "Bronzeschließfach",
-		"bronzetools": "Bronzewerkzeuge",
+		"bronzetools": "Bronzewerkzeug",
 		"cabbage": "Weißkohl",
 		"caltrops": "Krähenfüße",
 		"caltroptrap": "Krähenfußfalle",
@@ -1332,14 +1332,14 @@
 		"compass": "Kompass",
 		"compostingbin": "Komposthaufen",
 		"constructionjob": "Bauarbeiter",
-		"cookedfish": "Gekochter Fisch",
+		"cookedfish": "Gebratener Fisch",
 		"cookedmeat": "Gekochtes Fleisch",
 		"copper": "Kupfer",
 		"copperanvil": "Kupferamboss",
 		"copperarrow": "Kupferpfeil",
 		"copperingot": "Kupferbarren",
 		"copperlockbox": "Kupferschließfach",
-		"coppertools": "Kupferwerkzeuge",
+		"coppertools": "Kupferwerkzeug",
 		"cotton": "Baumwolle",
 		"cottonengine": "Baumwollmotor",
 		"cottonfibre": "Baumwollfasern",
@@ -1386,28 +1386,28 @@
 		"grasswet": "Gras",
 		"grenadelauncher": "Granatwerfer",
 		"grenadelauncherammo": "Granatwerfermunition",
-		"grindstone": "Mühlstein",
+		"grindstone": "Mahlstein",
 		"guardbowdayjob": "Bogenschütze (Tag)",
 		"guardbownightjob": "Bogenschütze (Nacht)",
 		"guardcrossbowdayjob": "Armbrustschütze (Tag)",
 		"guardcrossbownightjob": "Armbrustschütze (Nacht)",
 		"guardgrenadedayjob": "Granatwerferschütze (Tag)",
 		"guardgrenadenightjob": "Granatwerferschütze (Nacht)",
-		"guardhandcannondayjob": "Handfeuerwaffenschütze (Tag)",
-		"guardhandcannonnightjob": "Handfeuerwaffenschütze (Nacht)",
+		"guardhandcannondayjob": "Handkanonenschütze (Tag)",
+		"guardhandcannonnightjob": "Handkanonenschütze (Nacht)",
 		"guardmusketdayjob": "Musketenschütze (Nacht)",
 		"guardmusketnightjob": "Musketenschütze (Nacht)",
 		"guardpoison": "Giftwache",
 		"guardslingerdayjob": "Schleuderer (Tag)",
 		"guardslingernightjob": "Schleuderer (Nacht)",
-		"gunpowder": "Schießpulver",
-		"gunpowdertrap": "Schießpulverfalle",
-		"gunpowdertrapammo": "Munition für Schießpulverfalle",
+		"gunpowder": "Schwarzpulver",
+		"gunpowdertrap": "Schwarzpulverfalle",
+		"gunpowdertrapammo": "Munition für Schwarzpulverfalle",
 		"gunsmith": "Waffenschmiedetisch",
 		"guntrap": "Kanonenfalle",
 		"guntrapammo": "Munition für Kanonenfalle",
-		"handcannon": "Handfeuerwaffe",
-		"handcannonammo": "Munition für Handfeuerwaffe",
+		"handcannon": "Handkanone",
+		"handcannonammo": "Munition für Handkanone",
 		"hemp": "Hanf",
 		"hempfibre": "Hanffasern",
 		"hollyhock": "Stockrosen",
@@ -1488,7 +1488,7 @@
 		"sanctifiedbreadmeal": "Heilige Brotmahlzeit",
 		"sanctifiedchickenmeal": "Heilige Hähnchenmahlzeit",
 		"sanctifiedhouse": "Heiliger Speicher",
-		"sanctifiedporridge": "Heiliger Weizenbrei",
+		"sanctifiedporridge": "Heiliger Haferbrei",
 		"sanctifiertable": "Heiliger Altar",
 		"sand": "Sand",
 		"sapling": "Setzling",
@@ -1517,7 +1517,7 @@
 		"steelingot": "Stahlbarren",
 		"steellockbox": "Stahlschließfach",
 		"steelparts": "Stahlteile",
-		"steeltools": "Stahlwerkzeuge",
+		"steeltools": "Stahlwerkzeug",
 		"stoneblock": "Steinblock",
 		"stonebricks": "Pflasterstein",
 		"stonebricksblack": "Schwarzer Pflasterstein",
@@ -1526,7 +1526,7 @@
 		"stonebrickswhite": "Weißer Pflasterstein",
 		"stonemasonworkbench": "Steinmetztisch",
 		"stonerubble": "Steine",
-		"stonetools": "Steinwerkzeuge",
+		"stonetools": "Steinwerkzeug",
 		"stove": "Herd",
 		"straw": "Stroh",
 		"sulfur": "Schwefel",
@@ -1548,10 +1548,10 @@
 		"water": "Wasser",
 		"watergatherer": "Wasserholer",
 		"waterpump": "Wasserpumpe",
-		"wheat": "Getreide",
-		"wheatmeal": "Weizengrütze",
-		"wheatporridge": "Weizenbrei",
-		"wheatstage1": "Getreidesamen",
+		"wheat": "Weizen",
+		"wheatmeal": "Weizenmehl",
+		"wheatporridge": "Haferbrei",
+		"wheatstage1": "Weizensamen",
 		"wisteriaflower": "Blauregen",
 		"wisteriajob": "Blauregenbauer",
 		"wisteriaplant": "Blauregenpflanze",
@@ -1598,7 +1598,7 @@
 		"glidersteel": "Wie der normale Gleitschirmwerfer, aber dieser lässt dich viel höher in die Luft steigen",
 		"goldingot": "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
 		"goldore": "Kann auch in Erzen unter verschneiten Bergen gefunden werden",
-		"grindstone": "Mahlt Getreide zu Mehl.",
+		"grindstone": "Mahlt Weizen zu Mehl.",
 		"gunpowder": "Gib acht!",
 		"hollyhock": "Ein Abführmittel im wirklichen Leben. Nicht aber im Spiel. Noch nicht...",
 		"ironore": "Abgebaut mit einer Eisenspitzhacke aus Eisen.",
@@ -1629,23 +1629,23 @@
 		"scrollshelf1": "Werden von Forschern 'geerntet' und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Forscher sorgt für ein langfristiges Gleichgewicht.",
 		"scrollshelf2": "Werden von Forschern 'geerntet' und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Forscher sorgt für ein langfristiges Gleichgewicht.",
 		"scrollshelffilled": "Werden von Forschern 'geerntet' und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Forscher sorgt für ein langfristiges Gleichgewicht.",
-		"silicasand": "Unter Sand im Heide-Biom gefunden",
+		"silicasand": "Unter Sand im Heidebiom gefunden",
 		"sling": "Sei bloß vorsichtig damit",
 		"slingbullet": "Eigentlich nur ein kleiner Stein",
 		"snow": "Weis(s) nichts...",
 		"splittingstump": "Eine schnellere Art, Holz in Brennholz zu verwandeln",
 		"stonemasonworkbench": "viele viele Steine",
 		"stove": "Wird verwendet, um die Umgebung mit köstlichen Gerüchen zu erfüllen",
-		"sulfur": "Tief unter der Erde im Heide-Biom zu finden",
+		"sulfur": "Tief unter der Erde im Heidebiom zu finden",
 		"tailorshop": "Maßkleidung für Jeden!",
 		"tin": "Kann auch in Erzen unter verschneiten Bergen gefunden werden",
 		"torch": "Brings Licht ins Dunkle",
 		"trader": "Unerwarteter Nutzen für den Handel",
 		"water": "Wird alles überfluten",
 		"waterpump": "Ermöglicht die Wasserentnahme, ohne in der Nähe von Wasser zu sein",
-		"wheat": "Wird im Mühlstein zu Mehl.",
+		"wheat": "Wird im Mahlstein zu Mehl.",
 		"wheatstage1": "Wird im Backofen zu Brot.",
-		"wisteriajob": "Ein Blauregenbauer benötigt 10 Blauregenpflanzen in der Nähe. Diese Pflanzen können nur in Heidelandschaften angebaut werden.",
+		"wisteriajob": "Ein Blauregenbauer benötigt 10 Blauregenpflanzen in der Nähe. Diese Pflanzen können nur im Heidebiom angebaut werden.",
 		"wisteriaplant": "Wenn man für jeden Blauregenbauer 10 dieser Pflanzen einsetzt, ist ein langfristiges Gleichgewicht gewährleistet.",
 		"wisteriaplantempty": "Wenn man für jeden Blauregenbauer 10 dieser Pflanzen einsetzt, ist ein langfristiges Gleichgewicht gewährleistet.",
 		"wolfsbane": "Es ist giftig für Wölfe. Oder hast du schon mal welche hier gesehen?",
