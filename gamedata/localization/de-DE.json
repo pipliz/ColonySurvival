@@ -1,17 +1,17 @@
 {
-	"coverage": 47.0,
+	"coverage": 100.0,
 	"hints": {
 		"0": "Je größer die Farm um so mehr wird produziert. Ausgenommen sind Beerensammler.",
-		"1": "Wenn du mehr Kolonisten rekrutierst, erscheinen auch mehr Monster.",
+		"1": "Je mehr Kolonisten du rekrutierst, desto mehr und unterschiedliche Monster werden erscheinen.",
 		"10": "3x33 ist die perfekte Größe für den Förster.",
 		"11": "Wenn du 'STRG' gedrückt hältst, kannst du kriechen und fällst nicht von Kanten.",
 		"13": "Halte beim Platzieren einer Baufläche STRG gedrückt, um danach eine Fläche mit gleichen Einstellungen zu platzieren.",
 		"14": "Es gibt viele Mods für Colony Survival. Du findest Sie in den Steam Foren oder auf Discord!",
-		"15": "Du kannst im Kolonieinventar auch nach Kategorien wie \"Essen\" oder \"Munition\" suchen.",
+		"15": "Du kannst im Lager bzw. Inventar auch nach Kategorien wie 'Essen' oder 'Munition' suchen.",
 		"2": "In bestimmten Schichten der Erde gibt es Erze. Grabe tiefer, um unterschiedliche Erze zu finden.",
 		"3": "Drücke 'G' um Deine Fackel einzuschalten.",
 		"4": "Wähle die Werktische aus, um zu sehen was sie herstellen und Prioritäten einzustellen.",
-		"5": "Drücke 'F1' um das Handbuch zu öffnen und zu schliessen.",
+		"5": "Drücke 'F1' um das Handbuch zu öffnen und zu schließen.",
 		"6": "Forscher nutzen die Inhalte der Wissenschaftsbeutel, der Leinenbeutel selbst wird oft ins Inventar zurückgelegt.",
 		"7": "Unterschiede in Reichweite, Nachladegeschwindigkeit und Schaden geben jedem Wachentyp unterschiedliche Vor- und Nachteile.",
 		"8": "Wir schreiben Freitags einen wöchentlichen Blog. Du kannst ihn auf unserer Steam Seite finden, um mehr über die Entwicklung von Colony Survival zu erfahren!",
@@ -26,15 +26,15 @@
 		},
 		"bannerclickedpopup": {
 			"deletebanner": "Banner entfernen",
-			"deletecolony": "Kolonie auflösen",
+			"deletecolony": "Kolonie löschen",
 			"deletecolonydescription": "Das Löschen des letzten Banners einer Kolonie entfernt alle NPCs und macht die Kolonie unbrauchbar. Gib 'delete' ein um das letzte Banner zu löschen.",
 			"header": "Banner Optionen",
-			"noconfirmationdelete": "Löschen abgebrochen! Bestätigung fehlt.",
+			"noconfirmationdelete": "Löschen abgebrochen, Bestätigung fehlt.",
 			"placementfail": "Banner kann hier nicht platziert werden!"
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Aktuelle Kolonie: {0}",
-			"addbanner": "weiteres Banner platzieren",
+			"addbanner": "Weiteres Banner platzieren",
 			"header": "Banner Platzierung",
 			"missingcolonykit": "Erfordert ein Kolonie-Starter-Kit",
 			"missingoutpostbanner": "Erfordert ein Außenpostenbanner",
@@ -93,8 +93,8 @@
 			"nameedit": "Kolonie umbenennen:",
 			"outpost": {
 				"create": "Außenposten erstellen",
-				"createdescription": "Wenn du einen Außenposten errichtest, wird ein Außenpostenbanner aus deinem Inventar (oder Lager) verbraucht.",
-				"parentcolony": "Elternkolonie",
+				"createdescription": "Wenn du einen Außenposten errichtest, wird ein Außenpostenbanner aus deiner Hotbar (oder Inventar) verbraucht.",
+				"parentcolony": "Hauptkolonie",
 				"popupheader": "Erstellung eines Außenpostens",
 				"selectparent": "Hauptkolonie auswählen"
 			},
@@ -121,7 +121,7 @@
 			"recruitmentheader": "Rekrutierung",
 			"recruittext3": "Die Kolonisten benötigen eine Mahlzeit pro Tag und ein Bett.",
 			"recruittext4-2": "Die Rekrutierung des nächsten Kolonisten kostet {0} Mahlzeiten.",
-			"recruittext5-2": "Es gibt {0} freie Betten und du kannst {1} weitere Kolonisten rekrutieren, bevor die maximale Bevölkerungszahl erreicht ist.",
+			"recruittext5-2": "Es gibt {0} freie Betten und du kannst {1} weitere Kolonisten rekrutieren, bevor die maximale Bevölkerungskapazität erreicht ist.",
 			"recruittext6": "Die Rekrutierung der nächsten {0} Kolonisten ist kostenlos.",
 			"recruittofillbeds": "besetze alle Betten",
 			"recruittofilljobs": "besetze alle Jobs",
@@ -330,19 +330,19 @@
 			"header_internet": "Internet",
 			"header_lan": "LAN",
 			"ipaddress": "Adresse",
-			"join": "Verbinden",
+			"join": "Beitreten",
 			"mods": "Mods",
 			"passworded": "Passwortgeschützt",
 			"refresh2": "Aktualisieren",
-			"refreshing": "Aktualisiert...",
-			"refreshquick": "Schnell Aktualisieren",
+			"refreshing": "Aktualisiere ...",
+			"refreshquick": "Schnell aktualisieren",
 			"selectedserver": "Gewählter Server",
 			"serverping": "Ping",
 			"serverplayers": "Spieler",
 			"servers": "Server",
-			"showempty": "Zeige Leere",
-			"showfull": "Zeige Volle",
-			"showincompatible": "Zeige Inkompatible",
+			"showempty": "Zeige leere",
+			"showfull": "Zeige volle",
+			"showincompatible": "Zeige inkompatible",
 			"version": "Version"
 		},
 		"notifications": {
@@ -386,7 +386,7 @@
 				"chestmaker": "Kistenmacher",
 				"chickenfarmer": "Hühnerzüchter",
 				"composter": "Kompostierer",
-				"constructor": "Bauarbeiter",
+				"constructor": "Baumeister",
 				"cook": "Koch",
 				"coppersmith": "Kupferschmied",
 				"cottonengine": "Baumwollspinner",
@@ -417,11 +417,11 @@
 				"guardslingernight": "Schleuderer (Nacht)",
 				"gunsmith": "Waffenschmied",
 				"hempfarmer": "Hanfbauer",
-				"hollyhockfarmer": "Stockrosenbauer",
+				"hollyhockfarmer": "Malvenbauer",
 				"jeweller": "Juwelier",
 				"jobblockcrafter": "Job-Block Handwerker",
 				"jobblockcrafteradvanced": "Erweiterter Job-Block Handwerker",
-				"kilnjob": "Köhler",
+				"kilnjob": "Brenner",
 				"laborer": "Hilfsarbeiter",
 				"metallathe": "Metalldreher",
 				"minerjob": "Bergmann",
@@ -432,7 +432,7 @@
 				"researcher": "Forscher",
 				"roper": "Seilhersteller",
 				"sanctifier": "Heiligmacher",
-				"scribe": "Schreiber",
+				"scribe": "Schriftsteller",
 				"smelter": "Schmelzer",
 				"stonemason": "Steinmetz",
 				"tabulator": "Tabelliermaschinenbediener",
@@ -513,15 +513,15 @@
 			},
 			"chickenmeal": {
 				"description": "Schaltet eine komplexere Mahlzeit frei, die beim Verzehr durch Kolonisten mehr heilige Punkte einbringt",
-				"name": "Hähnchenmahlzeiten"
+				"name": "Hähnchenmahlzeit"
 			},
 			"compass": {
 				"description": "Schaltet den Kompass frei, ein Navigationsinstrument, um nach Hause zu finden",
 				"name": "Kompass"
 			},
 			"constructionbuilder": {
-				"description": "Schaltet den Baubereich für den Bauarbeiter frei",
-				"name": "Bauarbeiter"
+				"description": "Schaltet den Baubereich für den Baumeister frei",
+				"name": "Baumeister"
 			},
 			"constructiondigger": {
 				"description": "Schaltet Grabbereiche für den Bergmann frei",
@@ -593,7 +593,7 @@
 			},
 			"grassdirt": {
 				"description": "Bietet eine Quelle für Gras und Erde",
-				"name": "Gras und Erde Produktion"
+				"name": "Produktion von Gras und Erde"
 			},
 			"grenadelauncher": {
 				"description": "Schaltet eine mächtige Waffe frei, die Gruppen von Feinden aus der Ferne ausschalten kann.",
@@ -617,7 +617,7 @@
 			},
 			"iron": {
 				"description": "Ein großer Schritt nach vorn für deine Kolonie, der ein neues Material freischaltet, das für viele Gegenstände benötigt wird",
-				"name": "Eisenzeitalter"
+				"name": "Eisenzeit"
 			},
 			"jewellery": {
 				"description": "Schaltet den Juwelier frei, der kunstvolle Dinge herstellt",
@@ -636,7 +636,7 @@
 				"name": "Metalldrehmaschine"
 			},
 			"miner": {
-				"description": "Schaltet den Bergmann frei. Wenn er auf einem dunklen Steinblock platziert wird, kommt ein Kolonist, um dieses Material kontinuierlich abzubauen",
+				"description": "Schaltet den Bergmann frei. Wenn er auf einem dunklen Steinblock oder Erz platziert wird, wird ein Kolonist dieses Material wiederholt abbauen",
 				"name": "Bergmann"
 			},
 			"monocular": {
@@ -728,12 +728,12 @@
 				"name": "Heilige Punkte Speicher"
 			},
 			"scribe": {
-				"description": "Schaltet den Schriftgelehrten frei, der Schriftrollen studiert, um neue Erkenntnisse zu gewinnen. Ein Schriftgelehrter benötigt 10 Schriftrollenregale in der Nähe. Der Schreiber leert sie, aber sie füllen sich mit der Zeit automatisch wieder auf.",
+				"description": "Schaltet den Schriftgelehrten frei, der Schriftrollen studiert, um neue Erkenntnisse zu gewinnen. Ein Schriftgelehrter benötigt 10 Schriftrollenregale in der Nähe. Der Schriftgelehrte leert sie, aber sie füllen sich mit der Zeit automatisch wieder auf.",
 				"name": "Schriftgelehrter"
 			},
 			"statistics": {
-				"description": "Schaltet die Statistik-Tafel frei. Wenn sie platziert und verwendet wird, gibt sie Einblicke in die Aktivitäten deiner Kolonie",
-				"name": "Statistik-Tafel"
+				"description": "Schaltet die Statistiktafel frei. Wenn sie platziert und verwendet wird, gibt sie Einblicke in die Aktivitäten deiner Kolonie",
+				"name": "Statistiktafel"
 			},
 			"steel": {
 				"description": "Schaltet Stahl, Blei und Erdöl frei. Diese Ressourcen werden für den Bau modernerer Maschinen benötigt. Bleierz wird in Sümpfen gefunden, Kohle befindet sich unter Mammutbäumen",
@@ -780,8 +780,8 @@
 				"name": "Wasserpumpe"
 			},
 			"writer": {
-				"description": "Schaltet den Schreiber, das Pergament und die Schriftrollen des Wissens frei. Diese sind wichtig, um fortgeschrittene Wissenschaft abzuschließen",
-				"name": "Schreiber"
+				"description": "Schaltet den Schriftsteller, das Pergament und die Schriftrollen des Wissens frei. Diese sind wichtig, um fortgeschrittene Wissenschaft abzuschließen",
+				"name": "Schriftsteller"
 			}
 		},
 		"popup": {
@@ -798,7 +798,7 @@
 			"inventory": {
 				"availableamount2": "Im Lager:",
 				"craftingstockpile": "Herstellung und Lager",
-				"happinessvalue2": "Zufriedenheit Wert:",
+				"happinessvalue2": "Zufriedenheitswert:",
 				"happy": {
 					"header": "Zufriedenheit"
 				},
@@ -813,7 +813,7 @@
 					"conditioncolonistcountdescription": "Anzahl der erforderlichen Kolonisten",
 					"conditionpointreq": "Koloniepunkte",
 					"conditionpointreqdescription1": "Benötigte Koloniepunkte",
-					"conditionpointreqdescription2": "Bedarf: {0}",
+					"conditionpointreqdescription2": "Benötigt: {0}",
 					"conditionpointreqdescription3": "Verfügbar: {0}",
 					"conditionscientistrequires": "Benötigt {0}",
 					"dependencies": "Benötigte Technologien:",
@@ -837,7 +837,7 @@
 					"entry-sanctified": "Heilige Punkte",
 					"entry-unemployed": "Arbeitslose",
 					"hide-all": "Alles AUS",
-					"only-changed": "Nur Änderungen anzeigen",
+					"only-changed": "Nur geänderte anzeigen",
 					"scale": "Skala",
 					"scale-linear": "Linear",
 					"scale-log": "Log",
@@ -868,7 +868,7 @@
 					"and": "und",
 					"craftingtime": "Herstellungszeit: {0} Sekunden",
 					"craftingtimetooled": "Herstellungszeit mit {0}: {1} Sekunden",
-					"instockpile": "im Lager",
+					"instockpile": "Im Lager",
 					"needs": "Benötigt: ",
 					"nothing": "Nichts"
 				},
@@ -920,7 +920,7 @@
 				"selltext2": "Aktuelles Lager erlaubt {0} Verkäufe"
 			},
 			"quickstart": {
-				"closetoggle": "Nie wieder anzeigen",
+				"closetoggle": "Nicht mehr anzeigen",
 				"f1": "Drücke 'F1' um dieses Menü aufzurufen",
 				"next": "Weiter",
 				"previous": "Zurück"
@@ -947,11 +947,11 @@
 				"barleyfarmer": "Gerstebauer",
 				"beekeeper": "Imker",
 				"beekeepera": "Hält Bienen für die Kerzenproduktion",
-				"berrya": "Schnelles und einfaches Essen, starte hiermit!",
+				"berrya": "Schnelles und einfaches Essen, starte damit!",
 				"berryfarmer": "Beerensammler",
 				"berryfarmertool": "Beerensammler Werkzeug\nPlatzieren mit Rechtsklick",
-				"buildera": "Fülle einen Bereich mit Blöcken",
-				"builderarea": "Bauarbeiter Fläche",
+				"buildera": "Fülle einen Bereich der Welt",
+				"builderarea": "Bauarbeiterfläche",
 				"builderb": "Öffnet ein Menü um den Typ auszuwählen, danach die zu füllende Fläche bestimmen",
 				"cabbagea": "Weißkohl",
 				"cabbagefarmer": "Weißkohlbauer",
@@ -960,25 +960,25 @@
 				"construction": "Konstruktion",
 				"construction1": "Lass sie die Arbeit machen",
 				"construction2": "Dies öffnet ein zweites Menü um den Bautyp auszuwählen",
-				"constructionjob": "Bauarbeiter Job",
-				"constructionjoba": "Bestimmt einen Kolonisten zum Bauarbeiter",
+				"constructionjob": "Baumeister Job",
+				"constructionjoba": "Stellt einen Kolonisten als Baumeister ein",
 				"constructionjobb": "Platziere es neben einer Baufläche",
-				"coversarea": "Bedeckt Gebiet",
-				"description": "Wähle den Gebietstyp aus, den du zuweisen willst.",
-				"diggera": "Grab einen Bereich der Welt aus",
-				"diggerarea": "Grabbereich",
-				"diggerb": "Wähle eine Fläche zum Ausgraben aus",
-				"diggerspecial": "Spezieller Ausgräber",
+				"coversarea": "Bedeckt ein bestehendes Gebiet",
+				"description": "Wähle den Blocktyp aus, den du zuweisen willst.",
+				"diggera": "Baue einen Bereich der Welt ab",
+				"diggerarea": "Abbaubereich",
+				"diggerb": "Wähle eine Fläche zum Abbauen aus",
+				"diggerspecial": "Spezielle Abbaufläche",
 				"diggerspeciala": "Baut nur einen bestimmten Block in einem Bereich ab",
-				"diggerspecialarea": "Spezielle Grabfläche",
-				"diggerspecialb": "Wähle die Fläche zum Ausgraben aus",
+				"diggerspecialarea": "Spezielle Abbaufläche",
+				"diggerspecialb": "Wähle die Fläche zum Abbauen aus",
 				"dyer1": "Fügt Farben hinzu, um das Leben etwas weniger eintönig zu machen",
-				"dyer2": "Dies öffnet ein weiteres Menü mit mehreren Farmaufträgen",
+				"dyer2": "Dies öffnet ein Menü mit weiteren Anbauarten",
 				"dyers": "Färben",
 				"flaxfarmer": "Flachsbauer",
 				"flaxfarmertool": "Flachsbauerwerkzeug",
 				"forester": "Förster",
-				"forestera": "Bäume pflanzen - Bäume fällen",
+				"forestera": "Pflanzt und fällt Bäume",
 				"foresterb": "Benötigt Setzlinge und eine Axt\nmuss auf Gras oder Erde platziert werden",
 				"forestertool": "Förster Werkzeug\nPlatzieren mit Rechtsklick",
 				"header": "Befehlswerkzeug",
@@ -986,15 +986,15 @@
 				"insidearea": "Kann nicht innerhalb eines Bereichs platziert werden",
 				"missingscience": "<color=red>Benötigt '{0}', um zuerst freigeschaltet zu werden.</color>",
 				"noconstructionareanearby": "Kein Baubereich in der Nähe",
-				"notarable": "Unfruchtbar!",
-				"notflat": "Nicht flach genug!",
+				"notarable": "Unfruchtbar",
+				"notflat": "Nicht flach genug",
 				"nowaternearby": "Kein Wasser in der Nähe",
 				"occupiedblocks": "Blöcke sind im Weg",
 				"requiresarable": "Benötigt fruchtbaren Boden",
 				"toolarge": "Zu groß",
 				"toonarrow": "Zu schmal für Bäume",
 				"toosmall": "Zu klein",
-				"wateradjacent": "Benötigt offenes Gewässer in der Nähe",
+				"wateradjacent": "Benötigt Wasser in der Nähe des Arbeitsortes",
 				"wheatfarmer": "Weizenbauer",
 				"wheatfarmertool": "Weizenbauerwerkzeug"
 			},
@@ -1008,8 +1008,8 @@
 				"description": "Willkommen in Colony Survival!",
 				"header": "Grundlagen",
 				"text1": "Beginne damit, einen guten Platz für deine erste Kolonie zu finden. Es empfiehlt sich, Wasser und flache Flächen für die Landwirtschaft in der Nähe zu haben.",
-				"text2": "Das Banner ist das Zentrum deiner Kolonie. Platziere es, indem du mit dem ausgewählten Banner-Werkzeug auf den Boden klickst. Drücke '2', um es auszuwählen. Das Banner-Werkzeug zeigt einen dunklen Schatten dort an, wo Monster spawnen werden, sobald Kolonisten rekrutiert worden sind.",
-				"text3": "Stelle Betten auf, um Kolonisten anwerben zu können. Drücke 'i', um das Interface zu öffnen. Ziehe Betten vom Inventar auf die Hotbar darunter. Wenn das Bett ausgewählt ist, klicke mit der rechten Maustaste auf den Boden, um ein Bett zu platzieren.",
+				"text2": "Das Banner ist das Zentrum deiner Kolonie. Platziere es, indem du mit dem ausgewählten Bannerwerkzeug auf den Boden klickst. Drücke '2', um es auszuwählen. Das Bannerwerkzeug zeigt einen dunklen Schatten dort an, wo Monster spawnen werden, sobald Kolonisten rekrutiert worden sind.",
+				"text3": "Stelle Betten auf, um Kolonisten rekrutieren zu können. Drücke 'i', um das Interface zu öffnen. Ziehe Betten vom Inventar auf die Hotbar darunter. Wenn das Bett ausgewählt ist, klicke mit der rechten Maustaste auf den Boden, um ein Bett zu platzieren.",
 				"text4": "Öffne das Interface und gehe auf die Seite 'Kolonie'. Drücke 'Rekrutieren', um einen Kolonisten zu rekrutieren."
 			},
 			"page2_2": {
@@ -1018,7 +1018,7 @@
 				"text1": "Kolonisten benötigen 1 Mahlzeit pro Tag. Diese holen sie sich am Banner oder in einem nahe gelegenen Lebensmitteltisch. Ohne Nahrung verhungern die Kolonisten. Die Rekrutierung neuer Kolonisten kostet mehrere Mahlzeiten.",
 				"text2": "Der Beerensammler ist die erste Nahrungsquelle. Wähle das Befehlswerkzeug, indem du '1' drückst. Klicke, um es zu öffnen und wähle den Beerensammler. Klicke mit der rechten Maustaste auf den Boden, um mit der Erstellung des Beerenfelds zu beginnen und klicke dann an anderer Stelle erneut mit der rechten Maustaste, um es zu beenden. Du wirst eine ganze Menge davon brauchen!",
 				"text3": "Um mit der Herstellung von Betten zu beginnen, musst du einen Tüftlertisch herstellen. Fälle einen Baum mit einem Linksklick und grabt dann nach unten, um Bruchsteine zu sammeln.",
-				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Lager, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen arbeitslose Kolonisten diese Arbeit automatisch an."
+				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Inventar, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen arbeitslose Kolonisten diese Arbeit automatisch an."
 			},
 			"page3_2": {
 				"description": "Die technische Seite des Überlebens",
@@ -1047,12 +1047,12 @@
 				"description": "Erschaffe komplexere Jobsysteme",
 				"header": "'Ernte-' und 'Quell'-Blöcke",
 				"text1": "Bei einigen Aufträgen musst du sowohl den Ernte- als auch den Quellblock platzieren. Meistens benötigt jeder Ernteblock etwa 10 Quellblöcke.",
-				"text2": "Ein Ernteblock wie der Schreibtisch des Schreibers beschäftigt einen Kolonisten, der dort arbeitet. Dieser Kolonist wird versuchen einen nahegelegenen Quellblock, in diesem Fall ein gefülltes Schriftrollenregal, zu besuchen, bevor er seine Arbeit aufnimmt.",
+				"text2": "Ein Ernteblock wie der Schreibtisch des Schriftstellers beschäftigt einen Kolonisten, der dort arbeitet. Dieser Kolonist wird versuchen einen nahegelegenen Quellblock, in diesem Fall ein gefülltes Schriftrollenregal, zu besuchen, bevor er seine Arbeit aufnimmt.",
 				"text3": "Erntehelfer leeren ihre Quellblöcke, aber Quellblöcke regenerieren sich mit der Zeit automatisch. Das Verhältnis 1 zu 10 sorgt für ein nachhaltiges, langfristiges Gleichgewicht."
 			}
 		},
 		"settingsmenu": {
-			"audio": "Ton",
+			"audio": "Audio",
 			"audiomenu": {
 				"ambientvolume": "Umgebungslautstärke",
 				"effectsvolume": "Effektlautstärke",
@@ -1115,7 +1115,7 @@
 			"qualityhigh": "Hoch",
 			"qualitylow": "Niedrig",
 			"qualitymaximum": "Maximum",
-			"qualitymedium": "Mittemäßig",
+			"qualitymedium": "Mittel",
 			"qualityminimum": "Minimum",
 			"qualityoff": "Aus",
 			"qualityon": "An",
@@ -1130,20 +1130,20 @@
 				"depthoffield": "Tiefenunschärfe",
 				"drawdistance": "Entfernung(*)",
 				"eyeadaptation": "Augenanpassung",
-				"fieldofview": "Sichtfeld",
+				"fieldofview": "Sichtfeld (FoV)",
 				"full": "Bildeinstellungen",
 				"fullscreen": "Vollbild",
 				"lightscattering": "Lichtbrechung",
 				"particleeffects": "Partikeleffekte",
 				"preset": "Voreinstellung",
-				"ragdoll": "Gliederpuppe Anzahl",
+				"ragdoll": "Ragdoll Menge",
 				"resolution": "Auflösung",
-				"restarttoapply": "(*) Benötigt Neustart des Spiels",
+				"restarttoapply": "(*) Benötigt einen Neustart des Spiels",
 				"shaderquality": "Shader Qualität",
-				"sunshadowcascades": "Sonnenschatten-Kaskaden",
+				"sunshadowcascades": "Sonnenschattenkaskaden",
 				"sunshadowdistance": "Schattenentfernung",
-				"sunshadowquality": "Sonnenschatten-Qualität",
-				"texturequality": "Textur Qualität",
+				"sunshadowquality": "Sonnenschattenqualität",
+				"texturequality": "Texturqualität",
 				"torchquality": "Fackelqualität",
 				"vsync": "VSync",
 				"vsyncdouble": "Doppel"
@@ -1157,15 +1157,15 @@
 			"confirmload": "Ladevorgang bestätigt",
 			"delete": "Löschen",
 			"hostingoptions": "Host Einstellungen",
-			"legacyworldhint": "Du hast eine Legacy-Welt ausgewählt. Um diese zu laden, musst du eine ältere Version von Colony Survival ausführen. Du kannst Steam so einstellen, dass alte Versionen heruntergeladen werden, indem du in die Spieleigenschaften gehst und dort auf der Registerkarte der Beta eine ältere Version auswählst.",
+			"legacyworldhint": "Du hast eine Legacy-Welt ausgewählt. Um diese zu laden, musst du eine ältere Version von Colony Survival ausführen. Du kannst Steam so einstellen, dass alte Versionen heruntergeladen werden, indem du in die Spieleigenschaften gehst und dort auf der Registerkarte Beta eine ältere Version auswählst.",
 			"load": "Laden",
 			"loadworld": "Welt laden",
-			"missingname": "Bitte Welt Name eingeben",
+			"missingname": "Kein Weltname festgelegt",
 			"modconfiguration": "Mod Einstellungen",
-			"modoutdated": "Veraltet",
+			"modoutdated": "[Veraltet]",
 			"modschanged": {
-				"added": "'{0}' ist hinzugefügt",
-				"disabled": "'{0}' ist deaktiviert oder fehlt, wurde vorher genutzt.",
+				"added": "'{0}' wurde hinzugefügt",
+				"disabled": "'{0}' ist deaktiviert oder fehlt, wurde aber vorher benutzt.",
 				"header": "Laden der Welt bestätigt",
 				"main": "Welt geladen '{0}' aber einige Mods haben sich geändert.\nDies kann Probleme verursachen.",
 				"updated": "'{0}' wurde aktualisiert von Version {1} to {2}."
@@ -1173,7 +1173,7 @@
 			"modselectall": "Alle auswählen",
 			"modselectnone": "Keine auswählen",
 			"modslist": {
-				"disableddependency": "[Deaktiviert ]",
+				"disableddependency": "[Deaktiviert]",
 				"missingdependency": "[Fehlt]",
 				"outdateddependency": "[Veraltet]",
 				"requireddependency": "[Erforderlich]"
@@ -1191,8 +1191,8 @@
 			"typeworkshop": "Workshop Welt",
 			"worlddate": "Datum",
 			"worldname": "Name",
-			"worldname_long": "Welt Name",
-			"worldseed": "Welt Nummer"
+			"worldname_long": "Name der Welt",
+			"worldseed": "Seed der Welt"
 		},
 		"tooltip": {
 			"craftingblock": "Beauftragt einen Kolonisten, hier als {0} zu arbeiten",
@@ -1200,19 +1200,19 @@
 			"failsafe-points": "Fügt {0} heilige Punktkapazität hinzu (nicht stapelbar)",
 			"failsafe-threat": "Verursacht {0} Bedrohung",
 			"guard-ammo": "Benutzt {0}",
-			"guard-aoe": "{0} blockiert den Wirkungsbereich",
+			"guard-aoe": "{0} Blöcke Wirkungsbereich",
 			"guard-cooldown": "Alle {0} Sekunden",
 			"guard-damage": "Verursacht {0} Schaden",
 			"guard-damage-ticks": "Verursacht {0} Schaden über {1} Sekunden",
-			"guard-general": "Befiehlt einem Kolonisten, diese Position zu bewachen",
+			"guard-general": "Beauftragt einen Kolonisten, diese Position zu bewachen",
 			"guard-range": "Bei bis zu {0} Blöcken Abstand",
 			"guard-sleeptype-day": "Schläft tagsüber",
 			"guard-sleeptype-night": "Schläft nachts",
-			"is-edible": "Nahrungsmittel, die Kolonisten werden jeden Tag eine Mahlzeit zu sich nehmen",
+			"is-edible": "Nahrungsmittel, Kolonisten werden jeden Tag eine Mahlzeit zu sich nehmen",
 			"is-sanctified": "Erhalte {0} heilige Punkte, wenn Kolonisten diese Mahlzeit essen",
 			"lockbox-points": "Fügt {0} Koloniepunktkapazität hinzu",
 			"lockbox-threat": "Verursacht {0} Bedrohung",
-			"miner": "Befiehlt einem Kolonisten, den dunklen Steinblock darunter wiederholt abzubauen",
+			"miner": "Beauftragt einen Kolonisten, den Erzblock aus dunklem Stein darunter wiederholt abzubauen",
 			"npcshop": "Die Kolonisten werden diesen oder das Banner besuchen, um ihre tägliche Mahlzeit zu erhalten.",
 			"pointtrader": "Hier kannst du Dinge für Punkte kaufen und verkaufen",
 			"provides-fertile": "Zählt als fruchtbarer Boden",
@@ -1225,7 +1225,7 @@
 			"sanctifiedlockbox-points": "Fügt {0} heilige Punktkapazität hinzu",
 			"sanctifiedlockbox-threat": "Verursacht {0} Bedrohung",
 			"statisticsboard": "Interagiere damit, um Statistiken über deine Kolonie und Außenposten anzuzeigen",
-			"threatstatue-general": "Zieht die Bedrohung von anderen Außenposten auf den Außenposten, auf dem er platziert ist, und verursacht gleichzeitig selbst eine gewisse Bedrohung",
+			"threatstatue-general": "Zieht die Bedrohung von anderen Außenposten auf den Außenposten, auf dem er platziert wird und verursacht gleichzeitig selbst eine gewisse Bedrohung",
 			"threatstatue-threatcaused": "Verursacht {0} zusätzliche Bedrohung",
 			"threatstatue-threatweight": "Fügt {0} Bedrohungsgewicht hinzu",
 			"tool-always-usable": "Immer verfügbar, benötigt keine Gegenstände",
@@ -1243,7 +1243,7 @@
 			"trap-filter-unslowed": "Wird nur bei noch nicht verlangsamten Monstern ausgelöst",
 			"trapfixer": "Beauftragt einen Kolonisten, tagsüber Fallen in der Nähe aufzufüllen",
 			"trap-freezes": "Friert Getroffene für {0} Sekunden ein",
-			"trap-friendly-fire": "Kann bei Auslösung befreundete Spieler beeinflussen",
+			"trap-friendly-fire": "Kann beim Auslösen befreundete Spieler schaden",
 			"trap-general": "Falle, wartet darauf, dass Monster vorbeikommen und sie auslöst. Wird im Laufe des Tages von Fallenstellern aufgefüllt.",
 			"trap-range": "Bei bis zu {0} Blöcken Abstand",
 			"trap-slows": "Verlangsamt Monster auf das {0}-fache ihrer Geschwindigkeit",
@@ -1254,15 +1254,15 @@
 		"upgrades": {
 			"builder": {
 				"level": "{0} Blöcke",
-				"main": "Bauarbeiter Fläche Größe"
+				"main": "Größe der Baufläche"
 			},
 			"colonistcapacity": {
 				"level": "{0} Kolonisten",
-				"main": "Kolonistenkapazität"
+				"main": "Bevölkerungskapazität"
 			},
 			"digger": {
 				"level": "{0} Blöcke",
-				"main": "Ausgräber Fläche Größe"
+				"main": "Größe der Abbaufläche"
 			},
 			"health": {
 				"level": "Stufe {0} Heilung",
@@ -1270,7 +1270,7 @@
 			},
 			"safezone": {
 				"level": "{0} Blöcke",
-				"main": "Banner sichere Zone"
+				"main": "Sichere Zone des Banners"
 			}
 		}
 	},
@@ -1281,7 +1281,7 @@
 		"animalcarcass": "Tierkadaver",
 		"astrolabe": "Astrolabium",
 		"banner": "Banner",
-		"bannertool": "Banner-Werkzeug",
+		"bannertool": "Bannerwerkzeug",
 		"barley": "Gerste",
 		"bed": "Bett",
 		"berry": "Beeren",
@@ -1323,7 +1323,7 @@
 		"chestresource": "Wissenschaftskiste",
 		"chickenmeal": "Hähnchenmahlzeit",
 		"chickenpoop": "Hühnerkot",
-		"chickenraw": "Huhn (roh)",
+		"chickenraw": "Hühnchen (roh)",
 		"clay": "Lehm",
 		"coalore": "Kohle",
 		"cokes": "Koks",
@@ -1331,7 +1331,7 @@
 		"commandtool": "Befehlswerkzeug",
 		"compass": "Kompass",
 		"compostingbin": "Komposthaufen",
-		"constructionjob": "Bauarbeiter",
+		"constructionjob": "Baumeister",
 		"cookedfish": "Gebratener Fisch",
 		"cookedmeat": "Gekochtes Fleisch",
 		"copper": "Kupfer",
@@ -1351,12 +1351,12 @@
 		"dirtfen": "Sumpferde",
 		"dirtheath": "Heideerde",
 		"droppertrap": "Klappfalle",
-		"droppertrapammo": "Klappfallen Munition",
+		"droppertrapammo": "Klappfallenmunition",
 		"dyertable": "Färbertisch",
 		"earthenware": "Töpferwaren",
 		"elevator": "Aufzugstation",
 		"elevatorhorizontal": "Horizontale Aufzugstation",
-		"elevatorshaft": "Aufzugsschacht",
+		"elevatorshaft": "Aufzugschacht",
 		"elevatorshafthorizontal": "Horizontale Aufzugschiene",
 		"engineerbench": "Ingenieurtisch",
 		"eyeglasses": "Brillen",
@@ -1370,7 +1370,7 @@
 		"furnace": "Schmelze",
 		"glassblower": "Glasbläsertisch",
 		"glasspiece": "Glasstück",
-		"glider": "Gleiter",
+		"glider": "Gleiterwerfer",
 		"glidersteel": "Raketengleiter",
 		"goldenshield": "Goldenes Schild",
 		"goldenstatue": "Bedrohungsbanner",
@@ -1410,8 +1410,8 @@
 		"handcannonammo": "Munition für Handkanone",
 		"hemp": "Hanf",
 		"hempfibre": "Hanffasern",
-		"hollyhock": "Stockrosen",
-		"ironbloom": "_MISSING_Iron Bloom",
+		"hollyhock": "Malven",
+		"ironbloom": "Eisenblüte",
 		"ironore": "Eisenerz",
 		"irontools": "Eisenwerkzeug",
 		"ironwrought": "Schmiedeeisen",
@@ -1453,7 +1453,7 @@
 		"mudbricks": "Lehmziegel",
 		"musket": "Muskete",
 		"musketammo": "Musketenmunition",
-		"nitro": "Nitrocellulose",
+		"nitro": "Nitrozellulose",
 		"notools": "Keine Werkzeuge",
 		"npcshop": "Lebensmitteltisch",
 		"outpostbanner": "Außenpostenbanner",
@@ -1461,9 +1461,9 @@
 		"papermakersmould": "Papiermacherform",
 		"parchment": "Pergament",
 		"planks": "Bretter",
-		"planksblue": "Blaue Dielen",
-		"planksgreen": "Grüne Dielen",
-		"planksred": "Rote Dielen",
+		"planksblue": "Blaue Bretter",
+		"planksgreen": "Grüne Bretter",
+		"planksred": "Rote Bretter",
 		"points": "Punkte",
 		"poisondart": "Giftpfeil",
 		"potash": "Pottasche",
@@ -1489,19 +1489,19 @@
 		"sanctifiedchickenmeal": "Heilige Hähnchenmahlzeit",
 		"sanctifiedhouse": "Heiliger Speicher",
 		"sanctifiedporridge": "Heiliger Haferbrei",
-		"sanctifiertable": "Heiliger Altar",
+		"sanctifiertable": "Heiligmachertisch",
 		"sand": "Sand",
 		"sapling": "Setzling",
 		"saplingcherry": "Kirschsetzling",
 		"saplingdark": "Dunkelgrüner Setzling",
-		"saplingfallorange": "Herbst-Sprössling",
+		"saplingfallorange": "Herbstsetzling",
 		"saplingfallred": "Roter Setzling",
 		"saplingfallyellow": "Gelber Setzling",
 		"saplinglight": "Hellgrüner Setzling",
-		"saplingtaiga": "Taiga-Sprössling",
+		"saplingtaiga": "Taigasetzling",
 		"saplingtemperate": "Grüner Setzling",
 		"scientificnote": "Wissenschaftliche Anmerkung",
-		"scribedesk": "Schreibertisch",
+		"scribedesk": "Schreibtisch",
 		"scrollofknowledge": "Schriftrolle des Wissens",
 		"scrollshelf": "Schriftrollenregal (leer)",
 		"scrollshelf1": "Schriftrollenregal (fast leer)",
@@ -1509,7 +1509,7 @@
 		"scrollshelffilled": "Schriftrollenregal",
 		"silicasand": "Quarzsand",
 		"skin": "Haut",
-		"sling": "Steinschleuder",
+		"sling": "Schleuder",
 		"slingbullet": "Geschoss",
 		"snow": "Schnee",
 		"splittingstump": "Spaltstumpf",
@@ -1540,9 +1540,9 @@
 		"toolshop": "Werkzeugtisch",
 		"torch": "Fackel",
 		"trader": "Händler",
-		"trapfixer": "repariert Fallen",
+		"trapfixer": "Fallensteller",
 		"vialempty": "Fläschchen (leer)",
-		"vialmineraloil": "Fläschchen (Erdöl)",
+		"vialmineraloil": "Fläschchen mit Erdöl",
 		"vialnitricacid": "Fläschchen mit Salpetersäure",
 		"vialsulphuricacid": "Fläschchen mit Schwefelsäure",
 		"water": "Wasser",
@@ -1594,15 +1594,15 @@
 		"flax": "Die kaiserliche Farbe",
 		"flaxstage1": "Jetzt mach bloß keine Flachsen... ähm, Faxen!",
 		"furnace": "Verwendet Brennholz als Brennstoff, um Bronzebarren herzustellen",
-		"glider": "Platziert einen Gleiter-Werfer; betrete ihn durch Rechtsklick und navigiere, indem du zielst, während du die Taste nach vorne gedrückt hältst",
-		"glidersteel": "Wie der normale Gleitschirmwerfer, aber dieser lässt dich viel höher in die Luft steigen",
+		"glider": "Platziert einen Gleiterwerfer; betrete ihn durch Rechtsklick und navigiere, indem du zielst, während du die Taste nach vorne gedrückt hältst",
+		"glidersteel": "Wie der normale Gleiterwerfer, aber dieser lässt dich viel höher in die Luft steigen",
 		"goldingot": "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
 		"goldore": "Kann auch in Erzen unter verschneiten Bergen gefunden werden",
 		"grindstone": "Mahlt Weizen zu Mehl.",
-		"gunpowder": "Gib acht!",
+		"gunpowder": "Gib Acht!",
 		"hollyhock": "Ein Abführmittel im wirklichen Leben. Nicht aber im Spiel. Noch nicht...",
 		"ironore": "Abgebaut mit einer Eisenspitzhacke aus Eisen.",
-		"ironwrought": "Schmiede bedeutet nur 'gearbeitet'",
+		"ironwrought": "Geschmiedet bedeutet einfach 'bearbeitet'.",
 		"kiln": "Verwandelt Holzbretter in Holzkohle",
 		"lanterncyan": "Die Zukunft ist da",
 		"lanterngreen": "Macht Ihre Kolonie umweltfreundlich",
@@ -1610,7 +1610,7 @@
 		"lanternred": "Diese sind auch in Hamburg sehr beliebt..",
 		"lanternyellow": "Große Taschenlampe",
 		"leadore": "In Sumpfgebieten zu finden",
-		"leavestaiga": "es kommt ein Weihnachtsgefühl auf",
+		"leavestaiga": "Es kommt ein Weihnachtsgefühl auf",
 		"leavestemperate": "Versuche mal, von einem hohen Turm in einen Haufen davon zu springen.",
 		"linen": "Dessous sind Unterwäsche aus Leinen.",
 		"logtaiga": "Etwas kälter",
