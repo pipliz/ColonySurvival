@@ -6,10 +6,10 @@
 		"10": "3x33 ist die perfekte Größe für den Förster.",
 		"11": "Wenn du 'STRG' gedrückt hältst, kannst du kriechen und fällst nicht von Kanten.",
 		"13": "Halte beim Platzieren einer Baufläche STRG gedrückt, um danach eine Fläche mit gleichen Einstellungen zu platzieren.",
-		"14": "Es gibt viele Mods für Colony Survival. Du findest Sie in den Steam Foren oder auf Discord!",
+		"14": "Es gibt viele Mods für Colony Survival. Du findest sie in den Steam Foren oder auf Discord!",
 		"15": "Du kannst im Lager bzw. Inventar auch nach Kategorien wie 'Essen' oder 'Munition' suchen.",
 		"2": "In bestimmten Schichten der Erde gibt es Erze. Grabe tiefer, um unterschiedliche Erze zu finden.",
-		"3": "Drücke 'G' um Deine Fackel einzuschalten.",
+		"3": "Drücke 'G' um deine Fackel einzuschalten.",
 		"4": "Wähle die Werktische aus, um zu sehen was sie herstellen und Prioritäten einzustellen.",
 		"5": "Drücke 'F1' um das Handbuch zu öffnen und zu schließen.",
 		"6": "Forscher nutzen die Inhalte der Wissenschaftsbeutel, der Leinenbeutel selbst wird oft ins Inventar zurückgelegt.",
@@ -42,8 +42,8 @@
 			"mustbeleader": "Du musst der Anführer der Kolonie sein, um das Banner einzustellen",
 			"opencolonytab": "Verwalte {0}",
 			"startcolony": "Neue Kolonie hier gründen",
-			"startoutpost": "Einen neuen Außenposten gründen",
-			"startoutpostremote": "Einen neuen Außenposten gründen"
+			"startoutpost": "Neuen Außenposten hier gründen",
+			"startoutpostremote": "Neuen Außenposten hier gründen"
 		},
 		"category": {
 			"consumables": "Verbrauchsgüter",
@@ -93,7 +93,7 @@
 			"nameedit": "Kolonie umbenennen:",
 			"outpost": {
 				"create": "Außenposten erstellen",
-				"createdescription": "Wenn du einen Außenposten errichtest, wird ein Außenpostenbanner aus deiner Hotbar (oder Inventar) verbraucht.",
+				"createdescription": "Wenn du einen Außenposten gründest, wird ein Außenpostenbanner aus deiner Hotbar (oder Inventar) verbraucht.",
 				"parentcolony": "Hauptkolonie",
 				"popupheader": "Erstellung eines Außenpostens",
 				"selectparent": "Hauptkolonie auswählen"
@@ -128,9 +128,9 @@
 			"resetcolonypriority2": "Kolonie Prioritäten zurücksetzen",
 			"science": {
 				"incomingdescription2": "Sie wollen ihre Wissenschaft mit uns teilen",
-				"newagreement": "Forschungsabkommen vorschlagen",
-				"outgoingdescription2": "Du stellst ihnen deine Forschung zur Verfügung",
-				"selectcolony": "Wähle eine Kolonie um Forschung zu senden"
+				"newagreement": "Vorschlagen, die Wissenschaft zu teilen",
+				"outgoingdescription2": "Du stellst ihnen deine Wissenschaft zur Verfügung",
+				"selectcolony": "Wähle eine Kolonie um deine Wissenschaft zu senden"
 			},
 			"selectcolony": {
 				"currentcolony": "Aktuelle Kolonie: {0}",
@@ -152,7 +152,7 @@
 				"name": "Name der Kolonie",
 				"parentcolony": "Hauptkolonie",
 				"popupheader": "Kolonie Gründung",
-				"usescienceagreement": "Forschung teilen"
+				"usescienceagreement": "Wissenschaft teilen"
 			},
 			"startsettings": "Kolonie Einstellungen",
 			"switchcolony2": "Wechseln zu {0}",
@@ -173,7 +173,7 @@
 			}
 		},
 		"commands": {
-			"disableachievements": "Errungenschaften wurden für diese Welt aufgrund der Nutzung von Cheats deaktiviert!",
+			"disableachievements": "Errungenschaften wurden für dich aufgrund der Nutzung von Cheats deaktiviert!",
 			"disableachievementsfirst": "Um dies zu tun, musst du zuerst die Errungenschaften deaktivieren, indem du den Befehl '/disableachievements' verwendest",
 			"nopermission": "Du hast nicht die Berechtigung '{0}', dies zu tun."
 		},
@@ -185,9 +185,9 @@
 			"general_4": "Stufe {0}/{1} - Fertigstellen",
 			"general_fail": "Verbindung wegen Zeitüberschreitung nach {0} Sekunden verloren. Du wirst in 5 Sekunden automatisch zum Hauptmenü zurückgebracht.",
 			"loading": "Wird geladen",
-			"localhost_1": "Stufe 1/{0} - Suche nach dem Einzelspieler Server auf diesem Computer",
+			"localhost_1": "Stufe 1/{0} - Suche nach Einzelspieler Server auf diesem Computer",
 			"localhost_2": "Stufe 2/{0} - Suche nach Steam Servern auf diesem Computer",
-			"localhost_fail": "Keinen Steam oder Einzelspielerserver auf diesem Computer gefunden. Du wirst in 5 Sekunden automatisch zum Hauptmenü zurückgebracht.",
+			"localhost_fail": "Keinen Steam- oder Einzelspieler Server auf diesem Computer gefunden. Du wirst in 5 Sekunden automatisch zum Hauptmenü zurückgebracht.",
 			"refused": {
 				"blacklisted": "Du bist verbannt!",
 				"incompatible": "Der Server hatte ein unerwartetes Problem",
@@ -212,9 +212,9 @@
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Workshop",
-			"buttoncreateitem": "Erstelle Gegenstand",
+			"buttoncreateitem": "Erstelle Inhalte",
 			"buttoneditdetails": "Details editieren",
-			"buttonlistsubscribed": "Abonnierte Objekte",
+			"buttonlistsubscribed": "Abonnierte Inhalte",
 			"buttonsubmitcontent": "Anwenden",
 			"buttonupdatecontent": "Inhalt updaten",
 			"changelogplaceholder": "Changelog hier einfügen...",
@@ -248,7 +248,7 @@
 			"settings": "Einstellungen"
 		},
 		"failsafe": {
-			"current": "Aktuelles Heilige Punkte Lager: {0} aus {1}",
+			"current": "Aktuelles heilige Punkte Lager: {0} aus {1}",
 			"damage": "Das Aktivieren des heiligen Notfall-Verteidigungssystems verursacht {0} Schaden",
 			"futurewave": "Das Notfall-Verteidigungssystem reduziert die Gesamtlebenspunkte der ankommenden Monster für die nächste Nacht um {0:P0}.",
 			"header": "Notfall-Verteidigungssystem",
@@ -353,14 +353,14 @@
 				"banner": "Ein Monster am Banner!",
 				"command": "Verwendung von Befehlen",
 				"excess": "Und {0} weitere starben seitdem, anonym.",
-				"individual": "{0}: Ein Kolonist mit dem Job {1} ist gestorben: {2}",
+				"individual": "{0}: Ein Kolonist mit dem Job {1} ist durch {2} gestorben",
 				"main": "{0} Kolonisten starben im Außenposten {1}!",
-				"misc": "Unbekannte Gründe",
+				"misc": "unbekannte Gründe",
 				"monster": "ein Monster",
-				"npc": "Ein Kolonist",
-				"player": "Ein Spieler",
+				"npc": "ein Kolonist",
+				"player": "ein Spieler",
 				"starving": "Verhungern",
-				"trap": "Eine Falle"
+				"trap": "eine Falle"
 			},
 			"science": {
 				"entry": "{0}: abgeschlossen {1}",
@@ -452,27 +452,27 @@
 		},
 		"pipliz": {
 			"alarmbell": {
-				"description": "Schaltet die Alarmglocke frei, die läutet, wenn sie von einem Monster betreten wird.",
+				"description": "Schaltet die Alarmglocke frei, die läutet, wenn sie von einem Monster überquert wird.",
 				"name": "Alarmglocke"
 			},
 			"animalcarcass": {
-				"description": "Bietet eine Quelle für Tierkadaver",
+				"description": "Bietet eine Quelle für Tierkadaver.",
 				"name": "Lokale Tierkadaver"
 			},
 			"anvil": {
-				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeug",
+				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeug.",
 				"name": "Amboss"
 			},
 			"archery": {
-				"description": "Schaltet Bogenschützen und Pfeilmacher frei, ein effektiverer Schutz gegen Monster",
+				"description": "Schaltet Bogenschützen und Pfeilmacher frei, ein effektiverer Schutz gegen Monster.",
 				"name": "Bogenschießen"
 			},
 			"astrolabe": {
-				"description": "Schaltet das Astrolabium frei, ein Navigationsinstrument, das hilft, Biome zu finden",
+				"description": "Schaltet das Astrolabium frei, ein Navigationsinstrument, das hilft, Biome zu finden.",
 				"name": "Astrolabium"
 			},
 			"blastfurnace": {
-				"description": "Schaltet einen schnellen Weg zum Schmelzen fortgeschrittener Metalle frei",
+				"description": "Schaltet einen schnellen Weg zum Schmelzen fortgeschrittener Metalle frei.",
 				"name": "Hochofen"
 			},
 			"brass": {
@@ -484,55 +484,55 @@
 				"name": "Brot"
 			},
 			"bricks": {
-				"description": "Ermöglicht das Brennen von Ton zu neuen Arten von Blöcken",
+				"description": "Ermöglicht das Brennen von Ton zu neuen Arten von Blöcken.",
 				"name": "Ziegelsteine"
 			},
 			"bronze": {
-				"description": "Schaltet einen Weg frei, Kupfer stärker zu machen, indem es mit dem seltenen und wertvollen Zinn gemischt wird",
+				"description": "Schaltet einen Weg frei, Kupfer stärker zu machen, indem es mit dem seltenen und wertvollen Zinn gemischt wird.",
 				"name": "Bronzezeit"
 			},
 			"bronzelockbox": {
-				"description": "Schaltet das Bronzeschließfach frei. Verbesserte Version des Kupferschließfachs. Mehr Speicherplatz, mehr Effizienz, weniger bedrohlich",
+				"description": "Schaltet das Bronzeschließfach frei. Verbesserte Version des Kupferschließfachs. Mehr Speicherplatz, mehr Effizienz, weniger bedrohlich.",
 				"name": "Bronzeschließfach"
 			},
 			"caltrop": {
-				"description": "Schaltet eine Falle frei, die, sobald sie geladen ist, Monster unter ihr verlangsamt",
+				"description": "Schaltet eine Falle frei, die, sobald sie geladen ist, Monster darunter verlangsamt.",
 				"name": "Krähenfüße"
 			},
 			"chestluxury": {
-				"description": "Schaltet Luxustruhen frei, die notwendig sind, um fortschrittliche Technologie freizuschalten",
+				"description": "Schaltet Luxustruhen frei, die notwendig sind, um fortschrittliche Technologie freizuschalten.",
 				"name": "Luxustruhen"
 			},
 			"chestprestige": {
-				"description": "Gebt alle Hoffnung auf Belohnung und Anteil auf, ihr, die ihr hier eintretet! Prestigetruhen sind für die Prestige-Wissenschaft notwendig. Es ist ein Ziel für begeisterte Kolonien",
+				"description": "Gebt alle Hoffnung auf Belohnung und Anteil auf, ihr, die ihr hier eintretet! Prestigetruhen sind für die Prestige-Wissenschaft notwendig. Es ist ein Ziel für begeisterte Kolonien.",
 				"name": "Prestigetruhen"
 			},
 			"chestresource": {
-				"description": "Schaltet Wissenschaftstruhen frei, die notwendig sind, um fortschrittliche Technologie freizuschalten",
+				"description": "Schaltet Wissenschaftstruhen frei, die notwendig sind, um fortschrittliche Technologie freizuschalten.",
 				"name": "Wissenschaftstruhen"
 			},
 			"chickenmeal": {
-				"description": "Schaltet eine komplexere Mahlzeit frei, die beim Verzehr durch Kolonisten mehr heilige Punkte einbringt",
+				"description": "Schaltet eine komplexere Mahlzeit frei, die beim Verzehr durch Kolonisten mehr heilige Punkte einbringt.",
 				"name": "Hähnchenmahlzeit"
 			},
 			"compass": {
-				"description": "Schaltet den Kompass frei, ein Navigationsinstrument, um nach Hause zu finden",
+				"description": "Schaltet den Kompass frei, ein Navigationsinstrument, um nach Hause zu finden.",
 				"name": "Kompass"
 			},
 			"constructionbuilder": {
-				"description": "Schaltet den Baubereich für den Baumeister frei",
-				"name": "Baumeister"
+				"description": "Schaltet den Baubereich für den Baumeister frei.",
+				"name": "Baubereiche"
 			},
 			"constructiondigger": {
-				"description": "Schaltet Abbaubereiche für den Bergmann frei",
-				"name": "Bergmann"
+				"description": "Schaltet den Abbaubereich für den Baumeister frei.",
+				"name": "Abbaubereiche"
 			},
 			"constructiondiggerspecial": {
-				"description": "Schaltet den speziellen Abbaubereich für den Bergmann frei",
-				"name": "Spezieller Bergmann"
+				"description": "Schaltet spezielle Abbaubereiche für den Baumeister frei.",
+				"name": "Spezieller Baumeister"
 			},
 			"cook": {
-				"description": "Schaltet den Koch und den Fischer frei, neue Nahrungsquellen für deine Kolonisten",
+				"description": "Schaltet den Koch und den Fischer frei, neue Nahrungsquellen für deine Kolonisten.",
 				"name": "Koch"
 			},
 			"copperlockbox": {
@@ -540,7 +540,7 @@
 				"name": "Kupferschließfach"
 			},
 			"cotton": {
-				"description": "Erschließt eine Quelle für hochwertige Textilien. Baumwollpflanzen wachsen nur in Heidebiom",
+				"description": "Erschließt eine Quelle für hochwertige Textilien. Baumwollpflanzen wachsen nur in Heidebiom.",
 				"name": "Baumwolle"
 			},
 			"crossbow": {
@@ -548,19 +548,19 @@
 				"name": "Armbrüste"
 			},
 			"dyeing": {
-				"description": "Lerne, Blumen in Sumpfgebieten zu züchten und bring so Farbe in deine Welt",
+				"description": "Lerne, Blumen in Sumpfgebieten zu züchten und bring so Farbe in deine Welt.",
 				"name": "Färben"
 			},
 			"elevator": {
-				"description": "Schaltet die Aufzugsproduktion frei, nützlich für die Überwindung vertikaler Strecken",
+				"description": "Schaltet die Aufzugsproduktion frei, nützlich für die Überwindung vertikaler Strecken.",
 				"name": "Aufzüge"
 			},
 			"elevatorhorizontal": {
-				"description": "Schaltet die Produktion von horizontalen Aufzügen frei, die für die Überwindung von horizontalen Strecken nützlich sind",
+				"description": "Schaltet die Produktion von horizontalen Aufzügen frei, die für die Überwindung von horizontalen Strecken nützlich sind.",
 				"name": "Horizontale Aufzüge"
 			},
 			"engineer": {
-				"description": "Schaltet den Ingenieur und den Fallensteller frei. Der Ingenieur stellt Fallen und deren Munition her, die zur Bekämpfung von Monstern verwendet werden können. Der Fallensteller lädt Fallen in der Nähe wieder auf",
+				"description": "Schaltet den Ingenieur und den Fallensteller frei. Der Ingenieur stellt Fallen und deren Munition her, die zur Bekämpfung von Monstern verwendet werden können. Der Fallensteller lädt Fallen in der Nähe wieder auf.",
 				"name": "Ingenieur"
 			},
 			"failsafe": {
@@ -568,19 +568,19 @@
 				"name": "Heiliges Notfall-Verteidigungssystem"
 			},
 			"farming": {
-				"description": "Schaltet den Weizenbauern frei. Weizen wird im Laufe der Zeit als Nahrungsmittel an Bedeutung gewinnen",
+				"description": "Schaltet den Weizenbauern frei. Weizen wird im Laufe der Zeit als Nahrungsmittel an Bedeutung gewinnen.",
 				"name": "Weizenbauer"
 			},
 			"furnace": {
-				"description": "Schaltet den Schmelzer frei, einen Arbeiter, der Erze verarbeitet",
+				"description": "Schaltet den Schmelzer frei, einen Arbeiter, der Erze verarbeitet.",
 				"name": "Schmelzer"
 			},
 			"glassblower": {
-				"description": "Schaltet einen Weg zur Herstellung von Glas frei",
+				"description": "Schaltet einen Weg zur Herstellung von Glas frei.",
 				"name": "Glasbläser"
 			},
 			"glider": {
-				"description": "Schaltet die Produktion von Gleitern frei, die einen unmotorisierten Flug von höheren Punkten aus ermöglichen",
+				"description": "Schaltet die Produktion von Gleitern frei, die einen unmotorisierten Flug von höheren Punkten aus ermöglichen.",
 				"name": "Gleiter"
 			},
 			"glidersteel": {
@@ -604,7 +604,7 @@
 				"name": "Schwarzpulver"
 			},
 			"guntrap": {
-				"description": "Schaltet eine mächtige Falle frei, die enormen Schaden anrichtet",
+				"description": "Schaltet eine mächtige Falle frei, die enormen Schaden anrichtet.",
 				"name": "Kanonenfalle"
 			},
 			"handcannon": {
@@ -616,7 +616,7 @@
 				"name": "Hanf"
 			},
 			"iron": {
-				"description": "Ein großer Schritt nach vorn für deine Kolonie, der ein neues Material freischaltet, das für viele Gegenstände benötigt wird",
+				"description": "Ein großer Schritt nach vorn für deine Kolonie, der ein neues Material freischaltet, das für viele Gegenstände benötigt wird.",
 				"name": "Eisenzeit"
 			},
 			"jewellery": {
@@ -632,19 +632,19 @@
 				"name": "Laternen"
 			},
 			"lathe": {
-				"description": "Schaltet eine komplexe Maschine frei, mit der Kolonisten schnell detaillierte Metallteile herstellen können",
+				"description": "Schaltet eine komplexe Maschine frei, mit der Kolonisten schnell detaillierte Metallteile herstellen können.",
 				"name": "Metalldrehmaschine"
 			},
 			"miner": {
-				"description": "Schaltet den Bergmann frei. Wenn er auf einem dunklen Steinblock oder Erz platziert wird, wird ein Kolonist dieses Material wiederholt abbauen",
+				"description": "Schaltet den Bergmann frei. Wenn er auf einem dunklen Steinblock oder Erz platziert wird, wird ein Kolonist dieses Material wiederholt abbauen.",
 				"name": "Bergmann"
 			},
 			"monocular": {
-				"description": "Schaltet ein raffiniertes Werkzeug frei, mit dem man Dinge in der Ferne beobachten kann",
+				"description": "Schaltet ein raffiniertes Werkzeug frei, mit dem man Dinge in der Ferne beobachten kann.",
 				"name": "Fernglas"
 			},
 			"mudbricks": {
-				"description": "Schaltet Lehmziegel frei, ein billiges und einfaches Baumaterial",
+				"description": "Schaltet Lehmziegel frei, ein billiges und einfaches Baumaterial.",
 				"name": "Lehmziegel"
 			},
 			"musket": {
@@ -664,7 +664,7 @@
 				"name": "Außenposten"
 			},
 			"papermaking": {
-				"description": "Ermöglicht die Herstellung von Papier aus Hanf, ein wichtiger Schritt auf dem Weg zum wissenschaftlichen Fortschritt",
+				"description": "Ermöglicht die Herstellung von Papier aus Hanf, ein wichtiger Schritt auf dem Weg zum wissenschaftlichen Fortschritt.",
 				"name": "Papierproduktion"
 			},
 			"poison": {
@@ -672,11 +672,11 @@
 				"name": "Gift"
 			},
 			"porridge": {
-				"description": "Schaltet die Kombination von Wasser und Weizen zu einem neuen Mahlzeitentyp frei",
+				"description": "Schaltet die Kombination von Wasser und Weizen zu einem neuen Mahlzeitentyp frei.",
 				"name": "Haferbrei"
 			},
 			"pottery": {
-				"description": "Schaltet Gefäße frei, die zum Tragen von Gegenständen verwendet werden, und Töpferwaren, die verkauft werden können",
+				"description": "Schaltet Gefäße frei, die zum Tragen von Gegenständen verwendet werden, und Töpferwaren, die verkauft werden können.",
 				"name": "Töpferei"
 			},
 			"prestige1": {
@@ -704,19 +704,19 @@
 				"name": "Druckerpresse"
 			},
 			"projectiletrap": {
-				"description": "Schaltet eine Falle frei, die, sobald sie geladen ist, seitwärts auf starke Monster schießt",
+				"description": "Schaltet eine Falle frei, die, sobald sie geladen ist, seitwärts auf starke Monster schießt.",
 				"name": "Geschossfalle"
 			},
 			"recursiveknowledge": {
-				"description": "Hilft bei der Herstellung von Büchern durch die Verwendung von Büchern, damit du mehr Bücher herstellen kannst",
+				"description": "Hilft bei der Herstellung von Büchern durch die Verwendung von Büchern, damit du mehr Bücher herstellen kannst.",
 				"name": "Rekursive Selbstverbesserung"
 			},
 			"researcher": {
-				"description": "Schaltet den Forscher frei, der in den nahegelegenen Bücherregalen forscht, um die Wissenschaft voranzubringen",
+				"description": "Schaltet den Forscher frei, der in den nahegelegenen Bücherregalen forscht, um die Wissenschaft voranzubringen.",
 				"name": "Forscher"
 			},
 			"ropes": {
-				"description": "Schaltet eine Zutat mit vielen Verwendungsmöglichkeiten frei",
+				"description": "Schaltet eine Zutat mit vielen Verwendungsmöglichkeiten frei.",
 				"name": "Seile"
 			},
 			"ropetrap": {
@@ -732,11 +732,11 @@
 				"name": "Schriftgelehrter"
 			},
 			"statistics": {
-				"description": "Schaltet die Statistiktafel frei. Wenn sie platziert und verwendet wird, gibt sie Einblicke in die Aktivitäten deiner Kolonie",
+				"description": "Schaltet die Statistiktafel frei. Wenn sie platziert und verwendet wird, gibt sie Einblicke in die Aktivitäten deiner Kolonie.",
 				"name": "Statistiktafel"
 			},
 			"steel": {
-				"description": "Schaltet Stahl, Blei und Erdöl frei. Diese Ressourcen werden für den Bau modernerer Maschinen benötigt. Bleierz wird in Sümpfen gefunden, Kohle befindet sich unter Mammutbäumen",
+				"description": "Schaltet Stahl, Blei und Erdöl frei. Diese Ressourcen werden für den Bau modernerer Maschinen benötigt. Bleierz wird in Sümpfen gefunden, Kohle befindet sich unter Mammutbäumen.",
 				"name": "Stahl, Blei und Erdöl"
 			},
 			"steellockbox": {
@@ -748,7 +748,7 @@
 				"name": "Stahlwerkzeug"
 			},
 			"stonemason": {
-				"description": "Schaltet den Steinmetz frei, der nützlich ist, um Gebäuden mehr Vielfalt zu verleihen",
+				"description": "Schaltet den Steinmetz frei, der nützlich ist, um Gebäuden mehr Vielfalt zu verleihen.",
 				"name": "Steinmetz"
 			},
 			"tabulator": {
@@ -756,19 +756,19 @@
 				"name": "Tabelliermaschine"
 			},
 			"tailoring": {
-				"description": "Schaltet den Schneider frei, einen Arbeiter, der Flachs zu Leinen und anderen Gegenständen verarbeiten kann. Leinen ist eine gute Quelle für Koloniepunkte",
+				"description": "Schaltet den Schneider frei, einen Arbeiter, der Flachs zu Leinen und anderen Gegenständen verarbeiten kann. Leinen ist eine gute Quelle für Koloniepunkte.",
 				"name": "Schneider"
 			},
 			"tanner": {
-				"description": "Schaltet den Gerber frei, einen Arbeiter, der für die Herstellung von Leder und später von Pergament unerlässlich ist",
+				"description": "Schaltet den Gerber frei, einen Arbeiter, der für die Herstellung von Leder und später von Pergament unerlässlich ist.",
 				"name": "Gerber"
 			},
 			"toolshop": {
-				"description": "Schaltet den Werkzeugtisch frei, einen Ort, an den Kolonisten gehen, um Werkzeuge mitzunehmen, wenn sie gebraucht werden. Wenn keine gefunden werden, gehen sie zum Banner",
+				"description": "Schaltet den Werkzeugtisch frei, einen Ort, an den Kolonisten gehen, um Werkzeuge mitzunehmen, wenn sie gebraucht werden. Wenn keine gefunden werden, gehen sie zum Banner.",
 				"name": "Werkzeugtisch"
 			},
 			"trader": {
-				"description": "Wird verwendet, um Handelsgeschäfte zwischen Kolonien zu erleichtern. Wird nicht für den Handel mit Außenposten verwendet; für Multiplayer gedacht",
+				"description": "Wird verwendet, um Handelsgeschäfte zwischen Kolonien zu erleichtern. Wird nicht für den Handel mit Außenposten verwendet; für Multiplayer gedacht.",
 				"name": "Händler"
 			},
 			"trading": {
@@ -780,7 +780,7 @@
 				"name": "Wasserpumpe"
 			},
 			"writer": {
-				"description": "Schaltet den Schriftsteller, das Pergament und die Schriftrollen des Wissens frei. Diese sind wichtig, um fortgeschrittene Wissenschaft abzuschließen",
+				"description": "Schaltet den Schriftsteller, das Pergament und die Schriftrollen des Wissens frei. Diese sind wichtig, um fortgeschrittene Wissenschaft abzuschließen.",
 				"name": "Schriftsteller"
 			}
 		},
@@ -899,7 +899,7 @@
 					"a": "Herstellungs-Priorität",
 					"b": "Rezepte mit einer Priorität von +++ werden zuerst bearbeitet.\nRezepte mit einer Priorität von + werden zuletzt bearbeitet."
 				},
-				"waitingdata": "Warten auf Daten...",
+				"waitingdata": "Warte auf Daten ...",
 				"wrongcolony": "Ausgewählter Handwerksberuf ist Teil einer anderen Kolonie"
 			},
 			"merchantui": {
@@ -928,7 +928,7 @@
 			"specialblockremoval": {
 				"button": "Entfernen",
 				"description": "Diesen Block des Typs {0} zu entfernen könnte Probleme für eine Kolonie bedeuten. Was möchtest du tun?",
-				"header": "Spezielle Blockentfernung"
+				"header": "Spezielle Abbaufläche"
 			},
 			"toolconstruction": {
 				"builder": "Bauarbeiter",
@@ -947,12 +947,12 @@
 				"barleyfarmer": "Gerstebauer",
 				"beekeeper": "Imker",
 				"beekeepera": "Hält Bienen für die Kerzenproduktion",
-				"berrya": "Schnelles und einfaches Essen, starte damit!",
+				"berrya": "Schnelles und einfaches Essen, starte hiermit!",
 				"berryfarmer": "Beerensammler",
 				"berryfarmertool": "Beerensammler Werkzeug\nPlatzieren mit Rechtsklick",
 				"buildera": "Fülle einen Bereich der Welt",
 				"builderarea": "Bauarbeiterfläche",
-				"builderb": "Öffnet ein Menü um den Typ auszuwählen, danach die zu füllende Fläche bestimmen",
+				"builderb": "Öffnet ein Menü um den Typ auszuwählen, danach die zu füllende Fläche auswählen",
 				"cabbagea": "Weißkohl",
 				"cabbagefarmer": "Weißkohlbauer",
 				"chickenfarmer": "Hühnerzüchter",
