@@ -87,20 +87,20 @@
 				"header_text": "<b>{0}</b> Arbeitskräfte ohne Jobs. Aktivierte Jobs: <b>{1} / {2}</b>. Besetzte Jobs: <b>{3} / {1}</b>",
 				"mainheader": "Jobs verwalten",
 				"refresh": "Aktualisieren",
-				"set_balanced": "Ausgeglichen"
+				"set_balanced": "Ausgewogen einstellen"
 			},
 			"manageowners": "Eigentum verwalten",
 			"nameedit": "Kolonie umbenennen:",
 			"outpost": {
 				"create": "Außenposten erstellen",
 				"createdescription": "Wenn du einen Außenposten gründest, wird ein Außenpostenbanner aus deiner Hotbar (oder Inventar) verbraucht.",
-				"parentcolony": "Hauptkolonie",
+				"parentcolony": "Hauptkolonie:",
 				"popupheader": "Erstellung eines Außenpostens",
 				"selectparent": "Hauptkolonie auswählen"
 			},
 			"ownership": {
 				"action": "Aktionen",
-				"connectedplayers": "Spieler verbunden",
+				"connectedplayers": "Verbundene Spieler",
 				"currentowners": "Aktuelle Besitzer",
 				"follower": "Anhänger",
 				"invite": "Als Besitzer hinzufügen",
@@ -125,9 +125,9 @@
 			"recruittext6": "Die Rekrutierung der nächsten {0} Kolonisten ist kostenlos.",
 			"recruittofillbeds": "Besetze alle Betten",
 			"recruittofilljobs": "Besetze alle Jobs",
-			"resetcolonypriority2": "Kolonie Prioritäten zurücksetzen",
+			"resetcolonypriority2": "Aktive Kolonie zurücksetzen",
 			"science": {
-				"incomingdescription2": "Sie wollen ihre Wissenschaft mit uns teilen",
+				"incomingdescription2": "Sie wollen ihre Wissenschaft mit dir teilen",
 				"newagreement": "Vorschlagen, die Wissenschaft zu teilen",
 				"outgoingdescription2": "Du stellst ihnen deine Wissenschaft zur Verfügung",
 				"selectcolony": "Wähle eine Kolonie um deine Wissenschaft zu senden"
@@ -139,8 +139,8 @@
 				"headerleader": "Anführer",
 				"headerselect": "Auswählen",
 				"nocolonies": "Keine Kolonien in der Liste",
-				"nocoloniesowned": "Keine eigenen Kolonien gefunden",
-				"nocoloniesthird": "Keine fremden Kolonien gefunden",
+				"nocoloniesowned": "Keine eigenen Kolonien aufzulisten",
+				"nocoloniesthird": "Keine fremden Kolonien aufzulisten",
 				"othercolonies": "Andere Kolonien",
 				"select": "Auswählen"
 			},
@@ -151,15 +151,15 @@
 				"missingkit": "Kein Kolonie-Starter-Kit verfügbar!",
 				"name": "Name der Kolonie",
 				"parentcolony": "Hauptkolonie",
-				"popupheader": "Kolonie Gründung",
+				"popupheader": "Gründung einer Kolonie",
 				"usescienceagreement": "Wissenschaft teilen"
 			},
 			"startsettings": "Kolonie Einstellungen",
-			"switchcolony2": "Wechseln zu",
+			"switchcolony2": "Aktive Kolonie wechseln zu:",
 			"trading": {
-				"completerule": "Handelsregeln erstellen",
-				"completeruleedit": "Handelsregel übernehmen",
-				"mainheader": "Neue Einstellungen für Handelsregeln",
+				"completerule": "Handelsregel erstellen",
+				"completeruleedit": "Handelsregel überarbeiten",
+				"mainheader": "Neue Einstellungen für Handelsregel",
 				"newruleinfinite": "Neuer endloser Handel",
 				"newrulelimited": "Neuer begrenzter Handel",
 				"ruledescription": "Händler werden mit {0} von {1} nach {2} handeln, wenn die beiden folgenden Bedingungen erfüllt sind:",
@@ -212,7 +212,7 @@
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Workshop",
-			"buttoncreateitem": "Erstelle Inhalte",
+			"buttoncreateitem": "Erstelle Inhalt",
 			"buttoneditdetails": "Details editieren",
 			"buttonlistsubscribed": "Abonnierte Inhalte",
 			"buttonsubmitcontent": "Anwenden",
@@ -250,7 +250,7 @@
 		"failsafe": {
 			"current": "Aktuelles heilige Punkte Lager: {0} aus {1}",
 			"damage": "Das Aktivieren des heiligen Notfall-Verteidigungssystems verursacht {0} Schaden",
-			"futurewave": "Das Notfall-Verteidigungssystem reduziert die Gesamtlebenspunkte der ankommenden Monster für die nächste Nacht um {0:P0}.",
+			"futurewave": "Das Notfall-Verteidigungssystem reduziert die Gesamtlebenspunkte der ankommenden Monster um {0:P0} für die nächste Nacht.",
 			"header": "Notfall-Verteidigungssystem",
 			"nextavailable": "Das Notfall-Verteidigungssystem wird nach der nächsten Nacht wieder verfügbar sein",
 			"statusactive": "Status: Notfall-Verteidigungssystem wurde aktiviert",
@@ -460,7 +460,7 @@
 				"name": "Lokale Tierkadaver"
 			},
 			"anvil": {
-				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeug.",
+				"description": "Schaltet den Amboss frei, eine wichtige Quelle für fortschrittlichere Produkte wie Kupferwerkzeuge.",
 				"name": "Amboss"
 			},
 			"archery": {
@@ -544,7 +544,7 @@
 				"name": "Baumwolle"
 			},
 			"crossbow": {
-				"description": "Stärk aber auch langsamer als Bogenschützen",
+				"description": "Stärker als Bogenschützen",
 				"name": "Armbrüste"
 			},
 			"dyeing": {
@@ -552,7 +552,7 @@
 				"name": "Färben"
 			},
 			"elevator": {
-				"description": "Schaltet die Aufzugsproduktion frei, nützlich für die Überwindung vertikaler Strecken.",
+				"description": "Schaltet die Aufzugproduktion frei, nützlich für die Überwindung vertikaler Strecken.",
 				"name": "Aufzüge"
 			},
 			"elevatorhorizontal": {
@@ -745,7 +745,7 @@
 			},
 			"steeltools": {
 				"description": "Schaltet ein haltbareres Werkzeug frei, mit dem die Kolonisten ihre Arbeit effizienter erledigen können.",
-				"name": "Stahlwerkzeug"
+				"name": "Stahlwerkzeuge"
 			},
 			"stonemason": {
 				"description": "Schaltet den Steinmetz frei, der nützlich ist, um Gebäuden mehr Vielfalt zu verleihen.",
@@ -835,7 +835,7 @@
 					"entry-npccount": "Kolonisten",
 					"entry-points": "Koloniepunkte",
 					"entry-sanctified": "Heilige Punkte",
-					"entry-unemployed": "Arbeitslose",
+					"entry-unemployed": "Arbeitslos",
 					"hide-all": "Alles AUS",
 					"only-changed": "Nur geänderte anzeigen",
 					"scale": "Skala",
@@ -852,15 +852,15 @@
 					"type-idle-jobs": "Leerlauf-Arbeitszeit",
 					"type-idle-jobs-col": "Leerlauf-Arbeitszeit (Kolonie)",
 					"type-idle-jobs-out": "Leerlauf-Arbeitszeit (Außenposten)",
-					"type-itempoints": "Punkte Positionen?",
+					"type-itempoints": "Punkte-Gegenstände",
 					"type-outpost": "Außenposten",
 					"type-production": "Produktion",
 					"type-production-col": "Produktion (Kolonie)",
 					"type-production-out": "Produktion (Außenposten)",
 					"type-stockpile": "Lagerbestand",
-					"type-tooluse": "Werkzeug benutzt",
-					"type-tooluse-col": "Werkzeug benutzt (Kolonie)",
-					"type-tooluse-out": "Werkzeug benutzt (Außenposten)",
+					"type-tooluse": "Werkzeuge benutzt",
+					"type-tooluse-col": "Werkzeuge benutzt (Kolonie)",
+					"type-tooluse-out": "Werkzeuge benutzt (Außenposten)",
 					"type-trade-in": "Eingehender Handel",
 					"type-trade-out": "Ausgehender Handel"
 				},
@@ -890,9 +890,9 @@
 				"header": "Gegenstand Auswahl"
 			},
 			"limits": {
-				"allreset": "Alles auf Standard",
+				"allreset": "Alles zurücksetzen",
 				"allzero": "Alles auf 0",
-				"description": "Kolonisten werden solange arbeiten, bis die Limitierungen erreicht sind.",
+				"description": "Die Kolonisten arbeiten so lange, bis die festgelegte Menge im Lager erreicht ist.",
 				"group1": "Grenzwerte der Gruppe auswählen",
 				"group2": "Wähle eine von mehreren Gruppen für diesen spezifischen Arbeiter aus. Die Anpassung der Grenzwerte gilt für alle Arbeiter dieses Typs mit der gleichen Gruppe.",
 				"hoverpriority": {
@@ -962,7 +962,7 @@
 				"construction2": "Dies öffnet ein zweites Menü um den Bautyp auszuwählen",
 				"constructionjob": "Baumeister Job",
 				"constructionjoba": "Stellt einen Kolonisten als Baumeister ein",
-				"constructionjobb": "Platziere es neben einer Baufläche",
+				"constructionjobb": "Platziere es an einer Bau- oder Abbaufläche",
 				"coversarea": "Bedeckt ein bestehendes Gebiet",
 				"description": "Wähle den Blocktyp aus, den du zuweisen willst.",
 				"diggera": "Baue einen Bereich der Welt ab",
@@ -1041,7 +1041,7 @@
 				"header": "Koloniepunkte & Kolonisierung",
 				"text1": "Schalte den Handelsplatz frei und platziere ihn. Rechtsklicke darauf, um das Interface zu öffnen. Verkaufe Gegenstände, um Koloniepunkte zu verdienen. Die Punkte können unter anderem für Verbesserungen wie das Kolonistenlimit auf der Koloniepunkte-Seite ausgegeben werden.",
 				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heidebiome, Sumpfgebiete und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
-				"text3": "Schalte Außenposten frei, kaufe ein Außenpostenbanner und trage es bei deiner Erkundung mit dir. Platziere es, um einen Außenposten zu gründen. Seine Vorräte und wissenschaftlichen Fortschritte werden mit der Hauptkolonie und anderen Außenposten geteilt. Errichte Außenposten in den oben genannten Regionen, um Zugang zu deren Ressourcen zu erhalten."
+				"text3": "Schalte Außenposten frei, kaufe ein Außenpostenbanner und trage es bei deiner Erkundung mit dir. Platziere es, um einen Außenposten zu gründen. Die Vorräte und wissenschaftlichen Fortschritte werden mit der Hauptkolonie und anderen Außenposten geteilt. Errichte Außenposten in den oben genannten Regionen, um Zugang zu deren Ressourcen zu erhalten."
 			},
 			"page6_2": {
 				"description": "Erschaffe komplexere Jobsysteme",
@@ -1307,7 +1307,7 @@
 		"bricksred": "Rote Ziegel",
 		"bronzeingot": "Bronzebarren",
 		"bronzelockbox": "Bronzeschließfach",
-		"bronzetools": "Bronzewerkzeug",
+		"bronzetools": "Bronzewerkzeuge",
 		"cabbage": "Weißkohl",
 		"caltrops": "Krähenfüße",
 		"caltroptrap": "Krähenfußfalle",
@@ -1339,7 +1339,7 @@
 		"copperarrow": "Kupferpfeil",
 		"copperingot": "Kupferbarren",
 		"copperlockbox": "Kupferschließfach",
-		"coppertools": "Kupferwerkzeug",
+		"coppertools": "Kupferwerkzeuge",
 		"cotton": "Baumwolle",
 		"cottonengine": "Baumwollmotor",
 		"cottonfibre": "Baumwollfasern",
@@ -1354,8 +1354,8 @@
 		"droppertrapammo": "Klappfallenmunition",
 		"dyertable": "Färbertisch",
 		"earthenware": "Töpferwaren",
-		"elevator": "Aufzugstation",
-		"elevatorhorizontal": "Horizontale Aufzugstation",
+		"elevator": "Aufzug",
+		"elevatorhorizontal": "Horizontaler Aufzug",
 		"elevatorshaft": "Aufzugschacht",
 		"elevatorshafthorizontal": "Horizontale Aufzugschiene",
 		"engineerbench": "Ingenieurtisch",
@@ -1369,7 +1369,7 @@
 		"fletcherbench": "Pfeilmachertisch",
 		"furnace": "Schmelze",
 		"glassblower": "Glasbläsertisch",
-		"glasspiece": "Glasstück",
+		"glasspiece": "Glasscherbe",
 		"glider": "Gleiterwerfer",
 		"glidersteel": "Raketengleiter",
 		"goldenshield": "Goldenes Schild",
@@ -1413,7 +1413,7 @@
 		"hollyhock": "Malven",
 		"ironbloom": "Eisenvorblock",
 		"ironore": "Eisenerz",
-		"irontools": "Eisenwerkzeug",
+		"irontools": "Eisenwerkzeuge",
 		"ironwrought": "Schmiedeeisen",
 		"jewellerbench": "Juweliertisch",
 		"jobblockcrafter": "Arbeitstische herstellen",
@@ -1517,7 +1517,7 @@
 		"steelingot": "Stahlbarren",
 		"steellockbox": "Stahlschließfach",
 		"steelparts": "Stahlteile",
-		"steeltools": "Stahlwerkzeug",
+		"steeltools": "Stahlwerkzeuge",
 		"stoneblock": "Steinblock",
 		"stonebricks": "Pflasterstein",
 		"stonebricksblack": "Schwarzer Pflasterstein",
@@ -1526,7 +1526,7 @@
 		"stonebrickswhite": "Weißer Pflasterstein",
 		"stonemasonworkbench": "Steinmetztisch",
 		"stonerubble": "Steine",
-		"stonetools": "Steinwerkzeug",
+		"stonetools": "Steinwerkzeuge",
 		"stove": "Herd",
 		"straw": "Stroh",
 		"sulfur": "Schwefel",
