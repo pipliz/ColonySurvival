@@ -1,5 +1,5 @@
 {
-	"coverage": 43.0,
+	"coverage": 41.0,
 	"hints": {
 		"0": "对大多数农场来说，规模越大意味着产量越高。采浆果的人例外.",
 		"1": "当你招募更多的殖民者时，会有更多不同的怪物诞生.",
@@ -178,15 +178,7 @@
 			"nopermission": "_MISSING_You do not have the permission '{0}' to do that."
 		},
 		"connectingscreen": {
-			"general_1": "状态 {0}/{1} - 需要密码",
-			"general_2": "状态 {0}/{1} - 请求的服务器文件表",
-			"general_3": "状态 {0}/{1} - 载入 {2} 文件",
-			"general_3_downloading": " (下载 {0} 文件)",
-			"general_4": "状态 {0}/{1} - 效验",
-			"general_fail": "连接超时 {0} 秒. 5秒后返回主菜单.",
 			"loading": "载入中...",
-			"localhost_1": "状态 1/{0} - 正在搜索单人游戏服务器",
-			"localhost_2": "状态 2/{0} - 正在搜索STEAM游戏服务器",
 			"localhost_fail": "找不到单人或STEAM服务器，将在5秒后返回主菜单",
 			"refused": {
 				"blacklisted": "你被列入黑名单了",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "根据服务器，版本不匹配"
 			},
 			"refused_main": "连接被拒绝, {0}. 将在5秒后返回主菜单.",
-			"sp_1": "状态 1/{0} - 开始监测后台服务器",
-			"sp_2": "状态 2/{0} - 启动后台服务器",
-			"sp_3": "状态 3/{0} - 已启动服务器，正在等待连接",
-			"sp_alreadyrunning1_1": "此安装的服务器已在运行。可能正在退出. 将在 {0} 秒后重试.",
 			"sp_alreadyrunning2": "服务器已在运行. 将在5秒后返回主菜单.",
-			"steam05": "_MISSING_Stage 1/{0} - Trying to setup direct connection",
-			"steam06": "_MISSING_Stage 1/{0} - Trying to setup steam relay connection",
-			"steam07": "_MISSING_Stage 2/{0} - Connection successful, authenticating",
-			"steamfail": "无法建立连接. 将在5秒后返回主菜单."
+			"stages": {
+				"1": "_MISSING_Requested server files table",
+				"connectionmade": "_MISSING_Connection made",
+				"downloading": "_MISSING_(downloading {0} packets)",
+				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
+				"final": "_MISSING_Finalizing",
+				"loading": "_MISSING_Loading {0} files",
+				"local1": "_MISSING_Searching for singleplayer server on this computer",
+				"local2": "_MISSING_Searching for online server on this computer",
+				"password": "_MISSING_Password required",
+				"steamdirect": "_MISSING_Trying to setup direct connection",
+				"steamp2p": "_MISSING_Trying to setup p2p connection",
+				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "_MISSING_Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "浏览创意工坊",
@@ -277,6 +276,7 @@
 			"description": "说明",
 			"edit": "编辑",
 			"enabled": "开启",
+			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
 			"high": "高",
 			"inputplaceholder": "输入文本...",
 			"inputplaceholder_search": "_MISSING_Enter text to search...",
@@ -376,6 +376,7 @@
 			"pipliz": {
 				"alchemist": "_MISSING_Alchemist",
 				"alkanetfarmer": "_MISSING_Alkanet Farmer",
+				"artist": "_MISSING_Artist",
 				"barleyfarmer": "_MISSING_Barley Farmer",
 				"beekeeper": "_MISSING_Beekeeper",
 				"berryfarmer": "果农",
@@ -467,6 +468,10 @@
 				"description": "_MISSING_Unlocks archers and fletchers, a more effective protection against monsters.",
 				"name": "_MISSING_Archery"
 			},
+			"artist": {
+				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
+				"name": "_MISSING_Artist"
+			},
 			"astrolabe": {
 				"description": "_MISSING_Unlocks the astrolabe; a navigation tool that helps find biomes",
 				"name": "_MISSING_Astrolabe"
@@ -514,6 +519,10 @@
 			"chickenmeal": {
 				"description": "_MISSING_Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
 				"name": "_MISSING_Chicken Meals"
+			},
+			"classical": {
+				"description": "_MISSING_Revive the way the ancients built",
+				"name": "_MISSING_Classical Architecture"
 			},
 			"compass": {
 				"description": "_MISSING_Unlocks the compass; a navigation tool to find back your home",
@@ -570,6 +579,14 @@
 			"farming": {
 				"description": "_MISSING_Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
 				"name": "_MISSING_Wheat Farming"
+			},
+			"fence": {
+				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
+				"name": "_MISSING_Fence"
+			},
+			"flowerbox": {
+				"description": "_MISSING_Spread some permanent cheer",
+				"name": "_MISSING_Flower Box"
 			},
 			"furnace": {
 				"description": "_MISSING_Unlocks the smelter, a worker who processes ores",
@@ -663,6 +680,10 @@
 				"description": "_MISSING_Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
 				"name": "_MISSING_Outposts"
 			},
+			"paint": {
+				"description": "_MISSING_Recolor some aesthetics",
+				"name": "_MISSING_Paint"
+			},
 			"papermaking": {
 				"description": "_MISSING_Unlocks making paper from hemp, a key part towards scientific progress",
 				"name": "_MISSING_Paper Production"
@@ -715,6 +736,10 @@
 				"description": "_MISSING_Unlocks the researcher, who will do research using nearby bookcases to progress science",
 				"name": "_MISSING_Researcher"
 			},
+			"roofs": {
+				"description": "_MISSING_An attractive way to cover your buildings",
+				"name": "_MISSING_Tiled Roofs"
+			},
 			"ropes": {
 				"description": "_MISSING_Unlocks an ingredient with many uses",
 				"name": "_MISSING_Ropes"
@@ -750,6 +775,10 @@
 			"stonemason": {
 				"description": "_MISSING_Unlocks the stonemason, useful for adding variety to buildings",
 				"name": "_MISSING_Stonemason"
+			},
+			"streetlight": {
+				"description": "_MISSING_Much fancier than torches",
+				"name": "_MISSING_Streetlights"
 			},
 			"tabulator": {
 				"description": "_MISSING_Unlocks a complex machine which processes data and stores it in punched-cards.",
@@ -925,6 +954,11 @@
 				"next": "下一页",
 				"previous": "上一页"
 			},
+			"signs": {
+				"apply": "_MISSING_Apply",
+				"edit": "_MISSING_Edit",
+				"header": "_MISSING_Sign"
+			},
 			"specialblockremoval": {
 				"button": "清除",
 				"description": "删除此块类型 {0} 可能给殖民地带来麻烦。你确定？",
@@ -1087,22 +1121,16 @@
 					"tab": "_MISSING_General settings",
 					"uiscalingratio": "_MISSING_UI scale"
 				},
-				"keymapping": "键位设置",
-				"keymenu": {
-					"resetall": "重置所有"
-				},
 				"mousemenu": {
-					"invertx": "翻转X轴",
 					"inverty": "翻转Y轴",
-					"sensitivitylock": "灵敏度",
-					"sensitivityx": "鼠标灵敏度X轴",
-					"sensitivityy": "鼠标灵敏度Y轴",
-					"smooth": "锁定鼠标平滑",
-					"smoothlock": "锁定鼠标平滑",
-					"smoothx": "鼠标平滑X轴",
-					"smoothy": "鼠标平滑Y轴"
+					"sensitivity": "_MISSING_Mouse sensitivity",
+					"smooth": "锁定鼠标平滑"
 				},
-				"mousesettings": "鼠标设置"
+				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "_MISSING_Gamepad",
+					"sensitivity": "_MISSING_Aim sensitivity"
+				}
 			},
 			"language": "语言",
 			"languagemenu": {
@@ -1189,6 +1217,8 @@
 			"serverport": "服务器端口",
 			"typegenerateworld": "创造世界",
 			"typeworkshop": "创意工坊世界",
+			"world_folder": "_MISSING_Folder",
+			"world_outdated": "_MISSING_Requires older version",
 			"worlddate": "日期",
 			"worldname": "名字",
 			"worldname_long": "世界名称",
@@ -1214,6 +1244,7 @@
 			"lockbox-threat": "_MISSING_Causes {0} threat",
 			"miner": "_MISSING_Orders a colonist to repeatedly mine the dark stone ore block underneath",
 			"npcshop": "_MISSING_Colonists will visit this or the banner to get their daily meal",
+			"paintable": "_MISSING_Item can be altered using: ",
 			"pointtrader": "_MISSING_You can buy and sell things for points here",
 			"provides-fertile": "_MISSING_Counts as fertile ground",
 			"provides-fertile-fen": "_MISSING_Counts as fertile marsh ground",
@@ -1279,6 +1310,8 @@
 		"alchemisttable": "_MISSING_Alchemist's Table",
 		"alkanet": "_MISSING_Alkanet",
 		"animalcarcass": "_MISSING_Animal Carcass",
+		"architrave": "_MISSING_Architrave",
+		"artisttable": "_MISSING_Artist's Workbench",
 		"astrolabe": "_MISSING_Astrolabe",
 		"banner": "旗帜",
 		"bannertool": "旗帜的工具",
@@ -1340,6 +1373,7 @@
 		"copperingot": "_MISSING_Copper Ingot",
 		"copperlockbox": "_MISSING_Copper Lockbox",
 		"coppertools": "铜工具",
+		"corbel": "_MISSING_Corbel",
 		"cotton": "_MISSING_Cotton",
 		"cottonengine": "_MISSING_Cotton Engine",
 		"cottonfibre": "_MISSING_Cotton Fibre",
@@ -1350,23 +1384,26 @@
 		"dirt": "泥土",
 		"dirtfen": "_MISSING_Marsh Dirt",
 		"dirtheath": "_MISSING_Heath Dirt",
+		"doorclosed": "_MISSING_Door",
 		"droppertrap": "_MISSING_Dropper Trap",
 		"droppertrapammo": "_MISSING_Dropper Trap Ammo",
 		"dyertable": "_MISSING_Dyer's Table",
 		"earthenware": "_MISSING_Earthenware",
 		"elevator": "_MISSING_Elevator Station",
-		"elevatorhorizontal": "_MISSING_Horizontal Elevator Station",
+		"elevatorhorizontal": "_MISSING_Rail Station",
 		"elevatorshaft": "_MISSING_Elevator Shaft",
-		"elevatorshafthorizontal": "_MISSING_Horizontal Elevator Rail",
+		"elevatorshafthorizontal": "_MISSING_Rails",
 		"engineerbench": "_MISSING_Engineer's Bench",
 		"eyeglasses": "_MISSING_Eyeglasses",
 		"failsafe": "_MISSING_Sacred Failsafe",
+		"fence": "_MISSING_Fence",
 		"firepit": "_MISSING_Firepit",
 		"firewood": "柴",
 		"fisherman": "_MISSING_Fisherman's Spot",
 		"flax": "亚麻",
 		"flaxstage1": "亚麻种子",
 		"fletcherbench": "_MISSING_Fletcher's Bench",
+		"flowerboxitem": "_MISSING_Flower Box",
 		"furnace": "火炉",
 		"glassblower": "_MISSING_Glassblower's Workshop",
 		"glasspiece": "_MISSING_Piece of Glass",
@@ -1402,7 +1439,7 @@
 		"guardslingernightjob": "夜间环卫队",
 		"gunpowder": "火药",
 		"gunpowdertrap": "_MISSING_Gunpowder Trap",
-		"gunpowdertrapammo": "_MISSING_Gunpowdertrap Ammo",
+		"gunpowdertrapammo": "_MISSING_Gunpowder Trap Ammo",
 		"gunsmith": "_MISSING_Gunsmith's Workbench",
 		"guntrap": "_MISSING_Cannon Trap",
 		"guntrapammo": "_MISSING_Cannon Trap Ammo",
@@ -1422,6 +1459,7 @@
 		"lanternblue": "蓝色灯笼",
 		"lanterncyan": "青色的灯笼",
 		"lanterngreen": "绿色灯笼",
+		"lanternitem": "_MISSING_Streetlight",
 		"lanternorange": "橙色灯笼",
 		"lanternpink": "粉色灯笼",
 		"lanternred": "红色灯笼",
@@ -1449,6 +1487,7 @@
 		"metallathe": "_MISSING_Metal Lathe",
 		"minerjob": "矿工的工作",
 		"monocular": "_MISSING_Monocular",
+		"mouldingitem": "_MISSING_Crown Moulding",
 		"movabletype": "_MISSING_Movable Type",
 		"mudbricks": "_MISSING_Mud Bricks",
 		"musket": "_MISSING_Musket",
@@ -1457,9 +1496,15 @@
 		"notools": "_MISSING_No Tools",
 		"npcshop": "食杂店",
 		"outpostbanner": "_MISSING_Outpost Banner",
+		"paintblue": "_MISSING_Blue Paint",
+		"paintgreen": "_MISSING_Green Paint",
+		"paintred": "_MISSING_Red Paint",
+		"paintstripped": "_MISSING_Paint Stripper",
+		"paintwhite": "_MISSING_White Paint",
 		"paper": "_MISSING_Paper",
 		"papermakersmould": "_MISSING_Papermaker's Mould",
 		"parchment": "_MISSING_Parchment",
+		"pillar": "_MISSING_Pillar",
 		"planks": "木板",
 		"planksblue": "_MISSING_Blue Planks",
 		"planksgreen": "_MISSING_Green Planks",
@@ -1477,9 +1522,12 @@
 		"quarterblockbrowndark": "茶褐色块",
 		"quarterblockbrownlight": "浅棕色块",
 		"quarterblockgrey": "灰色的块",
+		"railitem": "_MISSING_Rails",
 		"rawfish": "生鱼",
 		"rawmeat": "_MISSING_Raw Meat",
 		"researcherdesk": "_MISSING_Researcher's Desk",
+		"rooftool": "_MISSING_Tiled Roof",
+		"rooftoolblue": "_MISSING_Blue Tiled Roof",
 		"rope": "_MISSING_Rope",
 		"ropebench": "_MISSING_Roper's Bench",
 		"ropetrap": "_MISSING_Rope Trap",
@@ -1526,6 +1574,7 @@
 		"stonebrickswhite": "_MISSING_White Cobblestone",
 		"stonemasonworkbench": "石匠的工作台",
 		"stonerubble": "_MISSING_Stone Rubble",
+		"stonestair": "_MISSING_Stone Stair",
 		"stonetools": "_MISSING_Stone Tools",
 		"stove": "炉子",
 		"straw": "_MISSING_Straw",
@@ -1552,12 +1601,14 @@
 		"wheatmeal": "_MISSING_Wheat Gruel",
 		"wheatporridge": "_MISSING_Wheat Porridge",
 		"wheatstage1": "小麦种子",
+		"window": "_MISSING_Window",
 		"wisteriaflower": "_MISSING_Wisteria Flower",
 		"wisteriajob": "_MISSING_Wisteria Harvester",
 		"wisteriaplant": "_MISSING_Wisteria Plant",
 		"wisteriaplantempty": "_MISSING_Wisteria Plant",
 		"wolfsbane": "附子草",
 		"woodfloor": "_MISSING_Wood Flooring",
+		"woodstair": "_MISSING_Wooden Stair",
 		"writerdesk": "写字台",
 		"zinc": "_MISSING_Zinc"
 	},

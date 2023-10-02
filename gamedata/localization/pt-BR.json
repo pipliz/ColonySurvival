@@ -1,5 +1,5 @@
 {
-	"coverage": 38.0,
+	"coverage": 35.0,
 	"hints": {
 		"0": "Para a maioria das fazendas, tamanho maior significa mais produção. Coletores de frutas vermelhas são uma exceção a esta regra.",
 		"1": "Mais e diferentes monstros aparecerão conforme você recruta mais colonos.",
@@ -178,15 +178,7 @@
 			"nopermission": "_MISSING_You do not have the permission '{0}' to do that."
 		},
 		"connectingscreen": {
-			"general_1": "Stage {0}/{1} - Senha necessária",
-			"general_2": "Status: {0}/{1} - Solicitando a tabela de arquivos do servidor",
-			"general_3": "Status: {0}/{1} - Carregando {2} arquivos",
-			"general_3_downloading": " (baixando {0} pacotes)",
-			"general_4": "Status: {0}/{1} - Finalizando",
-			"general_fail": "A conexão expirou após {0} segundos. Retornando ao menu principal em 5 segundos.",
 			"loading": "Carregando",
-			"localhost_1": "Status 1/{0} - Procurando por um servidor de jogador único neste computador",
-			"localhost_2": "Status 2/{0} - Procurando servidor Steam neste computador",
 			"localhost_fail": "Falha ao encontrar o servidor Steam / singleplayer em execução neste computador. Recarregando para o menu principal em 5 segundos.",
 			"refused": {
 				"blacklisted": "você está na lista negra",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "versão incompatível de acordo com o servidor"
 			},
 			"refused_main": "Conexão recusada, {0}. Retornando ao menu principal em 5 segundos.",
-			"sp_1": "Status 1/{0} - Iniciando servidor em segundo plano",
-			"sp_2": "Status 2/{0} - Iniciando portas de servidor",
-			"sp_3": "Status 3/{0} - Servidor iniciado, aguardando conexão",
-			"sp_alreadyrunning1_1": "Um servidor já está em execução. Ele ainda pode estar parando. Tentaremos novamente em {0} segundos.",
 			"sp_alreadyrunning2": "Um servidor já está em execução. Retornando ao menu principal em 5 segundos.",
-			"steam05": "_MISSING_Stage 1/{0} - Trying to setup direct connection",
-			"steam06": "_MISSING_Stage 1/{0} - Trying to setup steam relay connection",
-			"steam07": "_MISSING_Stage 2/{0} - Connection successful, authenticating",
-			"steamfail": "Falha ao configurar uma conexão. Retornando ao menu principal em 5 segundos."
+			"stages": {
+				"1": "_MISSING_Requested server files table",
+				"connectionmade": "_MISSING_Connection made",
+				"downloading": "_MISSING_(downloading {0} packets)",
+				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
+				"final": "_MISSING_Finalizing",
+				"loading": "_MISSING_Loading {0} files",
+				"local1": "_MISSING_Searching for singleplayer server on this computer",
+				"local2": "_MISSING_Searching for online server on this computer",
+				"password": "_MISSING_Password required",
+				"steamdirect": "_MISSING_Trying to setup direct connection",
+				"steamp2p": "_MISSING_Trying to setup p2p connection",
+				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "_MISSING_Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Navegar na oficina",
@@ -277,6 +276,7 @@
 			"description": "Descrição",
 			"edit": "Editar",
 			"enabled": "Ativado",
+			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
 			"high": "Alto",
 			"inputplaceholder": "Digite aqui",
 			"inputplaceholder_search": "Digite o texto para pesquisar...",
@@ -376,6 +376,7 @@
 			"pipliz": {
 				"alchemist": "_MISSING_Alchemist",
 				"alkanetfarmer": "_MISSING_Alkanet Farmer",
+				"artist": "_MISSING_Artist",
 				"barleyfarmer": "_MISSING_Barley Farmer",
 				"beekeeper": "_MISSING_Beekeeper",
 				"berryfarmer": "Fazendeiro de frutos",
@@ -467,6 +468,10 @@
 				"description": "_MISSING_Unlocks archers and fletchers, a more effective protection against monsters.",
 				"name": "_MISSING_Archery"
 			},
+			"artist": {
+				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
+				"name": "_MISSING_Artist"
+			},
 			"astrolabe": {
 				"description": "_MISSING_Unlocks the astrolabe; a navigation tool that helps find biomes",
 				"name": "_MISSING_Astrolabe"
@@ -514,6 +519,10 @@
 			"chickenmeal": {
 				"description": "_MISSING_Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
 				"name": "_MISSING_Chicken Meals"
+			},
+			"classical": {
+				"description": "_MISSING_Revive the way the ancients built",
+				"name": "_MISSING_Classical Architecture"
 			},
 			"compass": {
 				"description": "_MISSING_Unlocks the compass; a navigation tool to find back your home",
@@ -570,6 +579,14 @@
 			"farming": {
 				"description": "_MISSING_Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
 				"name": "_MISSING_Wheat Farming"
+			},
+			"fence": {
+				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
+				"name": "_MISSING_Fence"
+			},
+			"flowerbox": {
+				"description": "_MISSING_Spread some permanent cheer",
+				"name": "_MISSING_Flower Box"
 			},
 			"furnace": {
 				"description": "_MISSING_Unlocks the smelter, a worker who processes ores",
@@ -663,6 +680,10 @@
 				"description": "_MISSING_Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
 				"name": "_MISSING_Outposts"
 			},
+			"paint": {
+				"description": "_MISSING_Recolor some aesthetics",
+				"name": "_MISSING_Paint"
+			},
 			"papermaking": {
 				"description": "_MISSING_Unlocks making paper from hemp, a key part towards scientific progress",
 				"name": "_MISSING_Paper Production"
@@ -715,6 +736,10 @@
 				"description": "_MISSING_Unlocks the researcher, who will do research using nearby bookcases to progress science",
 				"name": "_MISSING_Researcher"
 			},
+			"roofs": {
+				"description": "_MISSING_An attractive way to cover your buildings",
+				"name": "_MISSING_Tiled Roofs"
+			},
 			"ropes": {
 				"description": "_MISSING_Unlocks an ingredient with many uses",
 				"name": "_MISSING_Ropes"
@@ -750,6 +775,10 @@
 			"stonemason": {
 				"description": "_MISSING_Unlocks the stonemason, useful for adding variety to buildings",
 				"name": "_MISSING_Stonemason"
+			},
+			"streetlight": {
+				"description": "_MISSING_Much fancier than torches",
+				"name": "_MISSING_Streetlights"
 			},
 			"tabulator": {
 				"description": "_MISSING_Unlocks a complex machine which processes data and stores it in punched-cards.",
@@ -925,6 +954,11 @@
 				"next": "Próximo",
 				"previous": "Anterior"
 			},
+			"signs": {
+				"apply": "_MISSING_Apply",
+				"edit": "_MISSING_Edit",
+				"header": "_MISSING_Sign"
+			},
 			"specialblockremoval": {
 				"button": "Remover",
 				"description": "Removendo o bloco do tipo {0} ira causar problemas para a colônia. O que você deseja fazer?",
@@ -1087,22 +1121,16 @@
 					"tab": "_MISSING_General settings",
 					"uiscalingratio": "_MISSING_UI scale"
 				},
-				"keymapping": "Mapeamento das Teclas",
-				"keymenu": {
-					"resetall": "Resetar Tudo"
-				},
 				"mousemenu": {
-					"invertx": "Inverter Eixo X",
 					"inverty": "Inverter Eixo Y",
-					"sensitivitylock": "Travar ambos eixos de sensibilidade",
-					"sensitivityx": "Sensibilidade do Mouse no Eixo X",
-					"sensitivityy": "Sensibilidade do Mouse no Eixo Y",
-					"smooth": "Suavização do Mouse",
-					"smoothlock": "Travar ambos eixos de suavização",
-					"smoothx": "Suavização do Mouse no Eixo X",
-					"smoothy": "Suavização do Mouse no Eixo Y"
+					"sensitivity": "_MISSING_Mouse sensitivity",
+					"smooth": "Suavização do Mouse"
 				},
-				"mousesettings": "Configurações do Mouse"
+				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "_MISSING_Gamepad",
+					"sensitivity": "_MISSING_Aim sensitivity"
+				}
 			},
 			"language": "Idioma",
 			"languagemenu": {
@@ -1189,6 +1217,8 @@
 			"serverport": "_MISSING_Server Port",
 			"typegenerateworld": "_MISSING_Generate World",
 			"typeworkshop": "_MISSING_Workshop World",
+			"world_folder": "_MISSING_Folder",
+			"world_outdated": "_MISSING_Requires older version",
 			"worlddate": "Data",
 			"worldname": "Nome",
 			"worldname_long": "_MISSING_World Name",
@@ -1214,6 +1244,7 @@
 			"lockbox-threat": "_MISSING_Causes {0} threat",
 			"miner": "_MISSING_Orders a colonist to repeatedly mine the dark stone ore block underneath",
 			"npcshop": "_MISSING_Colonists will visit this or the banner to get their daily meal",
+			"paintable": "_MISSING_Item can be altered using: ",
 			"pointtrader": "_MISSING_You can buy and sell things for points here",
 			"provides-fertile": "_MISSING_Counts as fertile ground",
 			"provides-fertile-fen": "_MISSING_Counts as fertile marsh ground",
@@ -1279,6 +1310,8 @@
 		"alchemisttable": "_MISSING_Alchemist's Table",
 		"alkanet": "_MISSING_Alkanet",
 		"animalcarcass": "_MISSING_Animal Carcass",
+		"architrave": "_MISSING_Architrave",
+		"artisttable": "_MISSING_Artist's Workbench",
 		"astrolabe": "_MISSING_Astrolabe",
 		"banner": "Bandeira",
 		"bannertool": "Ferramenta da bandeira",
@@ -1340,6 +1373,7 @@
 		"copperingot": "_MISSING_Copper Ingot",
 		"copperlockbox": "_MISSING_Copper Lockbox",
 		"coppertools": "Ferramentas de cobre",
+		"corbel": "_MISSING_Corbel",
 		"cotton": "_MISSING_Cotton",
 		"cottonengine": "_MISSING_Cotton Engine",
 		"cottonfibre": "_MISSING_Cotton Fibre",
@@ -1350,23 +1384,26 @@
 		"dirt": "Terra",
 		"dirtfen": "_MISSING_Marsh Dirt",
 		"dirtheath": "_MISSING_Heath Dirt",
+		"doorclosed": "_MISSING_Door",
 		"droppertrap": "_MISSING_Dropper Trap",
 		"droppertrapammo": "_MISSING_Dropper Trap Ammo",
 		"dyertable": "_MISSING_Dyer's Table",
 		"earthenware": "_MISSING_Earthenware",
 		"elevator": "_MISSING_Elevator Station",
-		"elevatorhorizontal": "_MISSING_Horizontal Elevator Station",
+		"elevatorhorizontal": "_MISSING_Rail Station",
 		"elevatorshaft": "_MISSING_Elevator Shaft",
-		"elevatorshafthorizontal": "_MISSING_Horizontal Elevator Rail",
+		"elevatorshafthorizontal": "_MISSING_Rails",
 		"engineerbench": "_MISSING_Engineer's Bench",
 		"eyeglasses": "_MISSING_Eyeglasses",
 		"failsafe": "_MISSING_Sacred Failsafe",
+		"fence": "_MISSING_Fence",
 		"firepit": "_MISSING_Firepit",
 		"firewood": "Lenha",
 		"fisherman": "_MISSING_Fisherman's Spot",
 		"flax": "Linhaça",
 		"flaxstage1": "Sementes de Linhaça",
 		"fletcherbench": "_MISSING_Fletcher's Bench",
+		"flowerboxitem": "_MISSING_Flower Box",
 		"furnace": "Fornalha",
 		"glassblower": "_MISSING_Glassblower's Workshop",
 		"glasspiece": "_MISSING_Piece of Glass",
@@ -1402,7 +1439,7 @@
 		"guardslingernightjob": "Fundibulário Noturno",
 		"gunpowder": "Pólvora",
 		"gunpowdertrap": "_MISSING_Gunpowder Trap",
-		"gunpowdertrapammo": "_MISSING_Gunpowdertrap Ammo",
+		"gunpowdertrapammo": "_MISSING_Gunpowder Trap Ammo",
 		"gunsmith": "_MISSING_Gunsmith's Workbench",
 		"guntrap": "_MISSING_Cannon Trap",
 		"guntrapammo": "_MISSING_Cannon Trap Ammo",
@@ -1422,6 +1459,7 @@
 		"lanternblue": "Lanterna Azul",
 		"lanterncyan": "Lanterna Cyano",
 		"lanterngreen": "Lantera Verde",
+		"lanternitem": "_MISSING_Streetlight",
 		"lanternorange": "Lanterna Laranja",
 		"lanternpink": "Lanterna Rosa",
 		"lanternred": "Lanterna Vermelha",
@@ -1449,6 +1487,7 @@
 		"metallathe": "_MISSING_Metal Lathe",
 		"minerjob": "Trabalho de Minerador",
 		"monocular": "_MISSING_Monocular",
+		"mouldingitem": "_MISSING_Crown Moulding",
 		"movabletype": "_MISSING_Movable Type",
 		"mudbricks": "_MISSING_Mud Bricks",
 		"musket": "_MISSING_Musket",
@@ -1457,9 +1496,15 @@
 		"notools": "_MISSING_No Tools",
 		"npcshop": "_MISSING_Grocery Store",
 		"outpostbanner": "_MISSING_Outpost Banner",
+		"paintblue": "_MISSING_Blue Paint",
+		"paintgreen": "_MISSING_Green Paint",
+		"paintred": "_MISSING_Red Paint",
+		"paintstripped": "_MISSING_Paint Stripper",
+		"paintwhite": "_MISSING_White Paint",
 		"paper": "_MISSING_Paper",
 		"papermakersmould": "_MISSING_Papermaker's Mould",
 		"parchment": "_MISSING_Parchment",
+		"pillar": "_MISSING_Pillar",
 		"planks": "Tábuas",
 		"planksblue": "_MISSING_Blue Planks",
 		"planksgreen": "_MISSING_Green Planks",
@@ -1477,9 +1522,12 @@
 		"quarterblockbrowndark": "Quarto de Bloco Marrom Escuro",
 		"quarterblockbrownlight": "Quarto de Bloco Marrom Claro",
 		"quarterblockgrey": "Quarto de Bloco Cinza",
+		"railitem": "_MISSING_Rails",
 		"rawfish": "_MISSING_Raw Fish",
 		"rawmeat": "_MISSING_Raw Meat",
 		"researcherdesk": "_MISSING_Researcher's Desk",
+		"rooftool": "_MISSING_Tiled Roof",
+		"rooftoolblue": "_MISSING_Blue Tiled Roof",
 		"rope": "_MISSING_Rope",
 		"ropebench": "_MISSING_Roper's Bench",
 		"ropetrap": "_MISSING_Rope Trap",
@@ -1526,6 +1574,7 @@
 		"stonebrickswhite": "_MISSING_White Cobblestone",
 		"stonemasonworkbench": "Mesa de Pedreiro",
 		"stonerubble": "_MISSING_Stone Rubble",
+		"stonestair": "_MISSING_Stone Stair",
 		"stonetools": "_MISSING_Stone Tools",
 		"stove": "_MISSING_Stove",
 		"straw": "_MISSING_Straw",
@@ -1552,12 +1601,14 @@
 		"wheatmeal": "_MISSING_Wheat Gruel",
 		"wheatporridge": "_MISSING_Wheat Porridge",
 		"wheatstage1": "Sementes de Trigo",
+		"window": "_MISSING_Window",
 		"wisteriaflower": "_MISSING_Wisteria Flower",
 		"wisteriajob": "_MISSING_Wisteria Harvester",
 		"wisteriaplant": "_MISSING_Wisteria Plant",
 		"wisteriaplantempty": "_MISSING_Wisteria Plant",
 		"wolfsbane": "Aconitum",
 		"woodfloor": "_MISSING_Wood Flooring",
+		"woodstair": "_MISSING_Wooden Stair",
 		"writerdesk": "_MISSING_Writer's Desk",
 		"zinc": "_MISSING_Zinc"
 	},

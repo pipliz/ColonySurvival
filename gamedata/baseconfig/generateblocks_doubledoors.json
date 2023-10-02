@@ -1,0 +1,694 @@
+[
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedleft",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						-0.30
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordouble/doordoubleopenleft.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenleft"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedright",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						0.45
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						0.3
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordouble/doordoubleopenright.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenright"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordouble/doordoubleclosedleft.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedleft"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordouble/doordoubleclosedright.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedright"
+	},
+	
+	
+	
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedleftred",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						-0.30
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublered/doordoubleopenleft.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenleftred"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedrightred",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						0.45
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						0.3
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublered/doordoubleopenright.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenrightred"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublered/doordoubleclosedleft.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedleftred"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublered/doordoubleclosedright.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedrightred"
+	},
+	
+	
+	
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedleftblue",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						-0.30
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoubleblue/doordoubleopenleft.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenleftblue"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedrightblue",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						0.45
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						0.3
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoubleblue/doordoubleopenright.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenrightblue"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoubleblue/doordoubleclosedleft.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedleftblue"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoubleblue/doordoubleclosedright.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedrightblue"
+	},
+	
+	
+	
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedleftwhite",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						-0.30
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublewhite/doordoubleopenleft.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenleftwhite"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedrightwhite",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						0.45
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						0.3
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublewhite/doordoubleopenright.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenrightwhite"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublewhite/doordoubleclosedleft.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedleftwhite"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublewhite/doordoubleclosedright.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedrightwhite"
+	},
+	
+	
+	
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedleftgreen",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						-0.30
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublegreen/doordoubleopenleft.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenleftgreen"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "doordoubleclosedrightgreen",
+					"npcUsable": true,
+					"autoclose": 30
+				}
+			],
+			"colliders": [
+				{
+					"max": [
+						0.35,
+						1.4,
+						0.45
+					],
+					"min": [
+						-0.6,
+						-0.5,
+						0.3
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublegreen/doordoubleopenright.ply",
+			"needsBase": true,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleopenrightgreen"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublegreen/doordoubleclosedleft.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedleftgreen"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.4,
+						1.5,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 230,
+			"mesh": "../meshes/meshes_doordoublegreen/doordoubleclosedright.ply",
+			"needsBase": true,
+			"isSolid": true,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "doorclosed",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "doordoubleclosedrightgreen"
+	}
+]

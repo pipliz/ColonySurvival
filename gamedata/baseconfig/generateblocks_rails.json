@@ -1,0 +1,466 @@
+[
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.35,
+						0.7,
+						0.35
+					],
+					"min": [
+						-0.35,
+						-0.5,
+						-0.35
+					]
+				}
+			],
+			"icon": "../textures/icons/railstation.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalgateway.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					/* gatewayFilter is the group of other gateway types that it'll connect to*/
+					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
+					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
+					{
+						"gatewayFilter": "horizontalGateways",
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"direction": "XForward",
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGateways",
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"direction": "XBack",
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGateways",
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"direction": "ZForward",
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "horizontalGateways",
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"direction": "ZBack",
+						"type": "gateway",
+						"vehicleSettingsID": "horizontal_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			}
+		],
+		"typeName": "elevatorhorizontal"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/rails.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaft.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "railitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshafthorizontal"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/rails.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaft90.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "railitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, ZForward"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XBack, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XBack, ZForward"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshafthorizontal90"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/rails.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaft3way.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "railitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZForward"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XBack, ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, ZForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshafthorizontal3way"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/rails.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaft4way.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "railitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack, ZForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshafthorizontal4way"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						0,
+						0,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/rails.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontaldiagonal.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "railitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exitsUp": "XForward",
+						"exits": "XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exitsUp": "XBack",
+						"exits": "XForward"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exitsUp": "ZForward",
+						"exits": "ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exitsUp": "ZBack",
+						"exits": "ZForward"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshaftdiagonal"
+	}
+]

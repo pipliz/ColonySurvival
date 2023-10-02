@@ -4,7 +4,7 @@
 		"fileList": [
 			{
 				"audioGroup": "AmbientLoop",
-				"fileType": "OggCompressedStreamed",
+				"fileType": "OggStreamed",
 				"isThreeD": false,
 				"path": "./ambientForest.ogg"
 			}
@@ -15,7 +15,7 @@
 		"fileList": [
 			{
 				"audioGroup": "AmbientLoop",
-				"fileType": "OggCompressedStreamed",
+				"fileType": "OggStreamed",
 				"isThreeD": false,
 				"path": "./ambientForestNight.ogg",
 				"volume": 0.3
@@ -131,6 +131,28 @@
 			{
 				"audioGroup": "Effects",
 				"path": "./fletcher.ogg"
+			}
+		],
+		"range": 16
+	},
+	{
+		"clipCollectionName": "doorclose",
+		"fileList": [
+			{
+				"audioGroup": "Effects",
+				"path": "./closedoor.ogg",
+				"volume": 1
+			}
+		],
+		"range": 16
+	},
+	{
+		"clipCollectionName": "dooropen",
+		"fileList": [
+			{
+				"audioGroup": "Effects",
+				"path": "./opendoor.ogg",
+				"volume": 1
 			}
 		],
 		"range": 16
@@ -502,7 +524,7 @@
 		"fileList": [
 			{
 				"audioGroup": "Effects",
-				"fileType": "OggCompressedStreamed",
+				"fileType": "OggStreamed",
 				"isThreeD": false,
 				"path": "./siegeModeActive.ogg",
 				"volume": 0.05

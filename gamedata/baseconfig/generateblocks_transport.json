@@ -1,0 +1,561 @@
+[
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"icon": "../textures/icons/glider.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/gliderlauncher.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 1,
+							"y": 0.1,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 20,
+							"y": 3,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": -1,
+							"y": 0.1,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": -20,
+							"y": 3,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.1,
+							"z": 1
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 0,
+							"y": 3,
+							"z": 20
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.1,
+							"z": -1
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "main_glider",
+						"velocity": {
+							"x": 0,
+							"y": 3,
+							"z": -20
+						}
+					}
+				]
+			}
+		],
+		"typeName": "glider"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"icon": "../textures/icons/glidersteel.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/glidersteellauncher.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0.6,
+							"y": 0.6,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 35,
+							"y": 35,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": -0.6,
+							"y": 0.6,
+							"z": 0
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": -35,
+							"y": 35,
+							"z": 0
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.6,
+							"z": 0.6
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 0,
+							"y": 35,
+							"z": 35
+						}
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					"client_reservesecondaryhiton",
+					{
+						"direction": {
+							"x": 0,
+							"y": 0.6,
+							"z": -0.6
+						},
+						"id": "gliderlauncher",
+						"offset": {
+							"x": 0,
+							"y": 1,
+							"z": 0
+						},
+						"vehicleType": "steel_glider",
+						"velocity": {
+							"x": 0,
+							"y": 35,
+							"z": -35
+						}
+					}
+				]
+			}
+		],
+		"typeName": "glidersteel"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				/* collider indices matter and are duplicated in the vehicles.json settings (related to the triggers set in the attachBehaviour) */
+				/* floor collider*/
+				{
+					"max": [
+						0.45,
+						-0.48,
+						0.45
+					],
+					"min": [
+						-0.25,
+						-0.5,
+						-0.45
+					]
+				}
+				/* roof collider*/,
+				{
+					"max": [
+						0.45,
+						1.5,
+						0.45
+					],
+					"min": [
+						-0.25,
+						1.48,
+						-0.45
+					]
+				}
+				/* top selection*/,
+				{
+					"max": [
+						-0.2,
+						1.45,
+						0.2
+					],
+					"min": [
+						-0.35,
+						1.05,
+						-0.2
+					]
+				}
+				/* bottom selection*/,
+				{
+					"max": [
+						-0.2,
+						1.05,
+						0.2
+					],
+					"min": [
+						-0.35,
+						-0.45,
+						-0.2
+					]
+				}
+				/* next 3 are the shaft around it*/,
+				{
+					"max": [
+						-0.4,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						0.4
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						-0.4
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/elevatorgateway.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorgateway.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					/* gatewayFilter is the group of other gateway types that it'll connect to*/
+					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
+					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
+					{
+						"gatewayFilter": "mainGatewaysX+",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							0,
+							0
+						],
+						"shaftFilter": "mainShaftX+",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysX-",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							180,
+							0
+						],
+						"shaftFilter": "mainShaftX-",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysZ+",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							270,
+							0
+						],
+						"shaftFilter": "mainShaftZ+",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"gatewayFilter": "mainGatewaysZ-",
+						"id": "elevator",
+						"meshRotation": [
+							0,
+							90,
+							0
+						],
+						"shaftFilter": "mainShaftZ-",
+						"triggers": [
+							{
+								"colliderIndex": 2,
+								"type": "DirectionUp"
+							},
+							{
+								"colliderIndex": 3,
+								"type": "DirectionDown"
+							}
+						],
+						"type": "gateway",
+						"vehicleSettingsID": "vertical_elevator"
+					},
+					"client_reservesecondaryhiton"
+				]
+			}
+		],
+		"typeName": "elevator"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				{
+					"max": [
+						-0.4,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						0.4
+					]
+				},
+				{
+					"max": [
+						0.5,
+						0.5,
+						-0.4
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/elevatorshaft.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorshaft.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftX+",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftX-",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftZ+",
+						"type": "shaft"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "elevator",
+						"shaftFilter": "mainShaftZ-",
+						"type": "shaft"
+					}
+				]
+			}
+		],
+		"typeName": "elevatorshaft"
+	}
+]

@@ -26,31 +26,32 @@ Registered callbacks: 3
 CallbackType: `OnUpdate`  
 =======  
 Method type: System.Action  
-Registered callbacks: 21  
+Registered callbacks: 23  
 0.	'network.receivepackets' -> 'ClientWrapper+Callbacks.OnUpdate' index: -1000  
-1.	'controlledmeshes.update' -> 'Client.ControlledMeshes.ControlledMeshes+Callbacks.OnUpdate'   
+1.	'process-unity-inputs' -> 'InputBehaviour+ModCallbacks.OnUpdate' index: -500  
+2.	'controlledmeshes.update' -> 'Client.ControlledMeshes.ControlledMeshes+Callbacks.OnUpdate'   
 		 Child @ 3 : 'controller.updatestatic'  
-2.	'input.process' -> 'InputManager+Callbacks.OnUpdate' index: -500  
-		 Parent @ 1 : 'controlledmeshes.update'  
 3.	'controller.updatestatic' -> 'PlayerController+Callbacks.OnUpdate' index: -350  
 4.	'playerbody.updatestatic' -> 'PlayerBody+Callbacks.OnUpdate' index: -300  
 5.	'controller.updateoffset' -> 'PlayerController+Callbacks2.OnUpdate' index: -250  
 6.	'world.checkorigin' -> 'World+Callbacks.OnUpdate' index: -200  
-7.	'AudioManager+Callbacks.OnUpdate' -> 'AudioManager+Callbacks.OnUpdate'   
-8.	'update_receiveratetracker' -> 'ChunkRequests+Callbacks2.OnUpdate'   
-9.	'ChunkManager+Callbacks.OnUpdate' -> 'ChunkManager+Callbacks.OnUpdate'   
-		 Parent @ 8 : 'update_receiveratetracker'  
-10.	'ChunkRequests+Callbacks.OnUpdate' -> 'ChunkRequests+Callbacks.OnUpdate'   
-11.	'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnUpdate' -> 'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnUpdate'   
-12.	'CursorWrapper+Callbacks.OnUpdate' -> 'CursorWrapper+Callbacks.OnUpdate'   
-13.	'draw_on_npc_debug' -> 'Pipliz.Tools.ToolJobs.OnNPCUpdate'   
-14.	'heartbeattracker.update' -> 'CongestionTracker+Callbacks.OnUpdate'   
-15.	'NPC.NPCManager+Callbacks.OnUpdate' -> 'NPC.NPCManager+Callbacks.OnUpdate'   
-16.	'pipliz.client.ragdollupdate' -> 'ColonySurvival.Client.RagdollTracker.Update'   
-17.	'Pipliz.Tools.HoverCheck.OnUpdate' -> 'Pipliz.Tools.HoverCheck.OnUpdate'   
-18.	'pipliz.updateparticles' -> 'ParticleManager.UpdateParticles'   
-19.	'SteamManager+Callbacks.OnUpdate' -> 'SteamManager+Callbacks.OnUpdate'   
-20.	'WorldContext+Callbacks.OnUpdate' -> 'WorldContext+Callbacks.OnUpdate'   
+7.	'Assets.Scripts.UI.ScrollrectAutoscroll.OnUpdate' -> 'Assets.Scripts.UI.ScrollrectAutoscroll.OnUpdate'   
+8.	'AudioManager+Callbacks.OnUpdate' -> 'AudioManager+Callbacks.OnUpdate'   
+9.	'update_receiveratetracker' -> 'ChunkRequests+Callbacks2.OnUpdate'   
+10.	'ChunkManager+Callbacks.OnUpdate' -> 'ChunkManager+Callbacks.OnUpdate'   
+		 Parent @ 9 : 'update_receiveratetracker'  
+11.	'ChunkRequests+Callbacks.OnUpdate' -> 'ChunkRequests+Callbacks.OnUpdate'   
+12.	'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnUpdate' -> 'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnUpdate'   
+13.	'CursorWrapper+Callbacks.OnUpdate' -> 'CursorWrapper+Callbacks.OnUpdate'   
+14.	'draw_on_npc_debug' -> 'Pipliz.Tools.ToolJobs.OnNPCUpdate'   
+15.	'heartbeattracker.update' -> 'CongestionTracker+Callbacks.OnUpdate'   
+16.	'NPC.NPCManager+Callbacks.OnUpdate' -> 'NPC.NPCManager+Callbacks.OnUpdate'   
+17.	'pipliz.client.ragdollupdate' -> 'ColonySurvival.Client.RagdollTracker.Update'   
+18.	'Pipliz.Tools.HoverCheck.OnUpdate' -> 'Pipliz.Tools.HoverCheck.OnUpdate'   
+19.	'pipliz.updateparticles' -> 'ParticleManager.UpdateParticles'   
+20.	'SteamManager+Callbacks.OnUpdate' -> 'SteamManager+Callbacks.OnUpdate'   
+21.	'WorldContext+Callbacks.OnUpdate' -> 'WorldContext+Callbacks.OnUpdate'   
+22.	'update_networkbody' -> 'NetworkBody.AllInterpolate' index: 100  
 
 
 CallbackType: `OnUpdateEnd`  
@@ -67,38 +68,41 @@ CallbackType: `OnLateUpdate`
 =======  
 Method type: System.Action  
 Called inside unity's LateUpdate method  
-Registered callbacks: 3  
+Registered callbacks: 2  
 0.	'flush_controlledmesh_input' -> 'Client.ControlledMeshes.ControlledMeshes.UpdateInput'   
 1.	'render_areas' -> 'Pipliz.AI.Areas.AreaTracker+AreasRenderer.Render'   
-2.	'update_networkbody' -> 'NetworkBody.AllInterpolate'   
 
 
 CallbackType: `AfterItemTypesDefined`  
 =======  
 Method type: System.Action  
-Registered callbacks: 1  
+Registered callbacks: 4  
 0.	'create_lut_texture' -> 'Rendering.CreateLUTTexture'   
+1.	'GameAction+Callbacks.AfterItemTypesDefined' -> 'GameAction+Callbacks.AfterItemTypesDefined'   
+2.	'InventoryStatistics+Callbacks.AfterItemTypesDefined' -> 'InventoryStatistics+Callbacks.AfterItemTypesDefined'   
+3.	'register_smart_placement' -> 'SmartPlacement.AfterItemTypesDefined'   
 
 
 CallbackType: `OnQuit`  
 =======  
 Method type: System.Action  
 Called in the quit method queue  
-Registered callbacks: 14  
+Registered callbacks: 15  
 0.	'pipliz.shared.waitforasyncquitsearly' -> 'Pipliz.Application.WaitForQuits' index: -1000  
 1.	'ChunkManager+Callbacks.OnQuit' -> 'ChunkManager+Callbacks.OnQuit'   
 2.	'ChunkRequests+Callbacks.OnQuit' -> 'ChunkRequests+Callbacks.OnQuit'   
 3.	'Clear temp file cache' -> 'GameManager.ClearCache'   
-4.	'dispose colorbuffers' -> 'PipBurst+ColorBuffer.DisposePool'   
-5.	'dispose gamemanager' -> 'GameManager.Dispose'   
-6.	'ItemTypesClient+Callbacks.OnQuit' -> 'ItemTypesClient+Callbacks.OnQuit'   
-7.	'Rendering+Callbacks.OnQuit' -> 'Rendering+Callbacks.OnQuit'   
-8.	'VoxelPhysics+Callbacks.OnQuit' -> 'VoxelPhysics+Callbacks.OnQuit'   
-9.	'WorldRenderer+Callbacks.OnQuit' -> 'WorldRenderer+Callbacks.OnQuit'   
-10.	'steamnetworking.close' -> 'Pipliz.Networking.SteamNetworking+ModRegistering.OnQuit' index: 1  
-11.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
-12.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
-13.	'LZ4DecoderFreeing' -> 'Pipliz.LZ4.LZ4Codec+Callbacks.OnQuit' index: 10000  
+4.	'ColonySurvival.Client.Physics.ColliderGeneration+Callbacks.OnQuit' -> 'ColonySurvival.Client.Physics.ColliderGeneration+Callbacks.OnQuit'   
+5.	'dispose colorbuffers' -> 'PipBurst+ColorBuffer.DisposePool'   
+6.	'dispose gamemanager' -> 'GameManager.Dispose'   
+7.	'ItemTypesClient+Callbacks.OnQuit' -> 'ItemTypesClient+Callbacks.OnQuit'   
+8.	'Rendering+Callbacks.OnQuit' -> 'Rendering+Callbacks.OnQuit'   
+9.	'VoxelPhysics+Callbacks.OnQuit' -> 'VoxelPhysics+Callbacks.OnQuit'   
+10.	'WorldRenderer+Callbacks.OnQuit' -> 'WorldRenderer+Callbacks.OnQuit'   
+11.	'steamnetworking.close' -> 'Pipliz.Networking.SteamNetworking+ModRegistering.OnQuit' index: 1  
+12.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
+13.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
+14.	'LZ4DecoderFreeing' -> 'Pipliz.LZ4.LZ4Codec+Callbacks.OnQuit' index: 10000  
 
 
 CallbackType: `OnConnectionScreenDone`  
@@ -110,7 +114,7 @@ No registered uses
 CallbackType: `OnMainMenuLoaded`  
 =======  
 Method type: System.Action  
-Registered callbacks: 26  
+Registered callbacks: 32  
 0.	'ChunkManager+Callbacks.OnMainMenuLoaded' -> 'ChunkManager+Callbacks.OnMainMenuLoaded'   
 1.	'ChunkRequests+Callbacks.OnMainMenuLoaded' -> 'ChunkRequests+Callbacks.OnMainMenuLoaded'   
 2.	'clear_label_cache' -> 'colonyclient.Assets.Scripts.UI.Ingame.UIGeneration.UILabel.ClearCache'   
@@ -118,25 +122,31 @@ Registered callbacks: 26
 4.	'clear_uiimage_cache' -> 'colonyclient.Assets.Scripts.UI.Ingame.UIGeneration.UIImage.ClearCache'   
 5.	'clear_worldmarker_cache' -> 'colonyclient.Assets.Scripts.UI.Ingame.UIGeneration.WorldMarker.ClearCache'   
 6.	'collidergen.reset' -> 'ColonySurvival.Client.Physics.ColliderGeneration.Reset'   
-7.	'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnMainMenuLoaded' -> 'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnMainMenuLoaded'   
-8.	'heartbeattracker.reset' -> 'CongestionTracker+Callbacks.OnMainMenuLoaded'   
-9.	'pipliz.client.clearactionqueue' -> 'Shared.ItemManagementAction+ActionQueue.Clear'   
-10.	'pipliz.client.clearaudiomanager' -> 'AudioManager.Clear'   
-11.	'pipliz.client.clearnpcmaterial' -> 'NPCMaterial.ClearNPCMaterial'   
-12.	'pipliz.client.clearterrainmaterial' -> 'TerrainMaterial.ClearTerrainMaterial'   
-13.	'pipliz.client.clearwatermaterial' -> 'WaterMaterial.ClearMaterial'   
-14.	'pipliz.client.gamemanagerclear' -> 'GameManager.OnMainMenuLoaded'   
-15.	'pipliz.client.refreshlocale' -> 'GameManager.RefreshLocale'   
-16.	'pipliz.client.resetareatracker' -> 'Pipliz.AI.Areas.AreaTracker+FilledAreaRenderer.Reset'   
-17.	'pipliz.client.resetbanners' -> 'Client.Rendering.BannerRenderer.Reset'   
-18.	'pipliz.client.resetinventory' -> 'Inventory.Release'   
-19.	'pipliz.client.resetprojectiles' -> 'Projectile.Clear'   
-20.	'pipliz.client.servercontrolledmeshes.resetsettingstable' -> 'Client.ControlledMeshes.MeshTypeSettings.OnReloaded'   
-21.	'pipliz.resetparticlemanager' -> 'ParticleManager.Reset'   
-22.	'reset_controlledmeshes' -> 'Client.ControlledMeshes.ControlledMeshes.Reset'   
-23.	'reset_npc_debug' -> 'Pipliz.Tools.ToolJobs.OnNPCReset'   
-24.	'resetcrafting' -> 'Crafting.Reset'   
-25.	'VoxelPhysics+Callbacks.OnMainMenuLoaded' -> 'VoxelPhysics+Callbacks.OnMainMenuLoaded'   
+7.	'ColonySurvival.Client.Physics.ColliderGeneration+Callbacks.OnMainMenuLoaded' -> 'ColonySurvival.Client.Physics.ColliderGeneration+Callbacks.OnMainMenuLoaded'   
+8.	'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnMainMenuLoaded' -> 'ColonySurvival.Client.UI.Ingame.NPCIndicator+Callbacks.OnMainMenuLoaded'   
+9.	'GameAction+Callbacks.OnMainMenuLoaded' -> 'GameAction+Callbacks.OnMainMenuLoaded'   
+10.	'heartbeattracker.reset' -> 'CongestionTracker+Callbacks.OnMainMenuLoaded'   
+11.	'InventoryStatistics+Callbacks.OnMainMenuLoaded' -> 'InventoryStatistics+Callbacks.OnMainMenuLoaded'   
+12.	'NPC.NPCBase+Callbacks.OnMainMenuLoaded' -> 'NPC.NPCBase+Callbacks.OnMainMenuLoaded'   
+13.	'pipliz.client.clearactionqueue' -> 'Shared.ItemManagementAction+ActionQueue.Clear'   
+14.	'pipliz.client.clearaudiomanager' -> 'AudioManager.Clear'   
+15.	'pipliz.client.clearnpcmaterial' -> 'NPCMaterial.ClearNPCMaterial'   
+16.	'pipliz.client.clearterrainmaterial' -> 'TerrainMaterial.ClearTerrainMaterial'   
+17.	'pipliz.client.clearwatermaterial' -> 'WaterMaterial.ClearMaterial'   
+18.	'pipliz.client.gamemanagerclear' -> 'GameManager.OnMainMenuLoaded'   
+19.	'pipliz.client.refreshlocale' -> 'GameManager.RefreshLocale'   
+20.	'pipliz.client.resetareatracker' -> 'Pipliz.AI.Areas.AreaTracker+FilledAreaRenderer.Reset'   
+21.	'pipliz.client.resetbanners' -> 'Client.Rendering.BannerRenderer.Reset'   
+22.	'pipliz.client.resetinventory' -> 'Inventory.Release'   
+23.	'pipliz.client.resetprojectiles' -> 'Projectile.Clear'   
+24.	'pipliz.client.servercontrolledmeshes.resetsettingstable' -> 'Client.ControlledMeshes.MeshTypeSettings.OnReloaded'   
+25.	'pipliz.resetparticlemanager' -> 'ParticleManager.Reset'   
+26.	'reset_controlledmeshes' -> 'Client.ControlledMeshes.ControlledMeshes.Reset'   
+27.	'reset_npc_debug' -> 'Pipliz.Tools.ToolJobs.OnNPCReset'   
+28.	'resetcrafting' -> 'Crafting.Reset'   
+29.	'SteamManager+StatsManager+Callbacks.OnMainMenuLoaded' -> 'SteamManager+StatsManager+Callbacks.OnMainMenuLoaded'   
+30.	'VoxelPhysics+Callbacks.OnMainMenuLoaded' -> 'VoxelPhysics+Callbacks.OnMainMenuLoaded'   
+31.	'WorldContext+Callbacks.OnMainMenuLoaded' -> 'WorldContext+Callbacks.OnMainMenuLoaded'   
 
 
 CallbackType: `OnOriginShift`  
@@ -177,10 +187,11 @@ Registered callbacks: 2
 CallbackType: `OnStartReadOnly`  
 =======  
 Method type: System.Action  
-Registered callbacks: 3  
-0.	'Lighting.LightingManager+Callbacks.OnStartReadOnly' -> 'Lighting.LightingManager+Callbacks.OnStartReadOnly'   
-1.	'WorldRenderer+Callbacks.OnStartReadOnly' -> 'WorldRenderer+Callbacks.OnStartReadOnly'   
+Registered callbacks: 4  
+0.	'start_instanced_render' -> 'WorldRenderer+Callbacks.OnStartReadOnly' index: -1000  
+1.	'Lighting.LightingManager+Callbacks.OnStartReadOnly' -> 'Lighting.LightingManager+Callbacks.OnStartReadOnly'   
 2.	'mesher.startjobs' -> 'ChunkManager+Callbacks.OnStartReadOnly' index: 100  
+3.	'finish_instanced_render' -> 'WorldRenderer+Callbacks.FinishRenderLater' index: 1000  
 
 
 CallbackType: `OnStartMainthread`  

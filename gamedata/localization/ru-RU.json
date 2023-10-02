@@ -1,5 +1,5 @@
 {
-	"coverage": 99.0,
+	"coverage": 94.0,
 	"hints": {
 		"0": "В большинстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1": "По мере того, как ваша колония растёт, будут появляться новые монстры.",
@@ -178,15 +178,7 @@
 			"nopermission": "У вас нет разрешения на '{0}'."
 		},
 		"connectingscreen": {
-			"general_1": "Этап{0}/{1} - Требуется пароль",
-			"general_2": "Этап {0}/{1} - Требуется таблица данных сервера",
-			"general_3": "Этап {0}/{1} - Загрузка {2} файлов",
-			"general_3_downloading": " (Загрузка {0} пакетов)",
-			"general_4": "Этап {0}/{1} - Инициализация",
-			"general_fail": "Тайм аут соединения после {0} секунд. Возвращение в главное меню через 5 секунд.",
 			"loading": "Загрузка",
-			"localhost_1": "Этап 1/{0} - Поиск одиночного сервера на этом компьютере",
-			"localhost_2": "Этап 2/{0} - Поиск Steam сервера на этом компьютере",
 			"localhost_fail": "Не нейден Steam/одиночный сервер, запущенный на этом компьютере. Возвращение в главное меню через 5 секунд.",
 			"refused": {
 				"blacklisted": "вы в чёрном списке",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "несоответствие версий (сервер)"
 			},
 			"refused_main": "В соеденении отказано, {0}. Возвращение в главное меню через 5 секунд.",
-			"sp_1": "Этап 1/{0} - Начинается поиск фонового сервера",
-			"sp_2": "Этап 2/{0} - Запуск фонового сервера",
-			"sp_3": "Этап 3/{0} - Сервер запущен, ожидание подключений",
-			"sp_alreadyrunning1_1": "Сервер для этой установки уже запущен. Возможно, он всё ещё закрывается. Повтор попытки через {0} секунд.",
 			"sp_alreadyrunning2": "Сервер уже запущен. Возвращение в главное меню через 5 секунд.",
-			"steam05": "Этап 1/{0} - Попытка настроить прямое подключение",
-			"steam06": "Этап 1/{0} - Попытка настроить подключение Steam",
-			"steam07": "Этап 2/{0} - Подключение выполнено успешно, аутентификация",
-			"steamfail": "Не удалось получить данные. Возвращение в главное меню через 5 секунд."
+			"stages": {
+				"1": "_MISSING_Requested server files table",
+				"connectionmade": "_MISSING_Connection made",
+				"downloading": "_MISSING_(downloading {0} packets)",
+				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
+				"final": "_MISSING_Finalizing",
+				"loading": "_MISSING_Loading {0} files",
+				"local1": "_MISSING_Searching for singleplayer server on this computer",
+				"local2": "_MISSING_Searching for online server on this computer",
+				"password": "_MISSING_Password required",
+				"steamdirect": "_MISSING_Trying to setup direct connection",
+				"steamp2p": "_MISSING_Trying to setup p2p connection",
+				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "_MISSING_Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Мастерская",
@@ -277,6 +276,7 @@
 			"description": "Отписаться",
 			"edit": "Изменить",
 			"enabled": "Включить",
+			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
 			"high": "Много",
 			"inputplaceholder": "Введите текст",
 			"inputplaceholder_search": "Введите текст для поиска...",
@@ -376,6 +376,7 @@
 			"pipliz": {
 				"alchemist": "Алхимик",
 				"alkanetfarmer": "Фермер алканета",
+				"artist": "_MISSING_Artist",
 				"barleyfarmer": "Фермер ячменя",
 				"beekeeper": "Пчеловод",
 				"berryfarmer": "Ягодный фермер",
@@ -467,6 +468,10 @@
 				"description": "Разблокирует лучников, более эффективную защиту от монстров.",
 				"name": "Лучник"
 			},
+			"artist": {
+				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
+				"name": "_MISSING_Artist"
+			},
 			"astrolabe": {
 				"description": "Разблокирует астролябию; навигационный инструмент, который помогает находить биомы",
 				"name": "Астролябия"
@@ -514,6 +519,10 @@
 			"chickenmeal": {
 				"description": "Разблокирует более сложное блюдо, которое дает больше святости при употреблении колонистами",
 				"name": "Блюда из курицы"
+			},
+			"classical": {
+				"description": "_MISSING_Revive the way the ancients built",
+				"name": "_MISSING_Classical Architecture"
 			},
 			"compass": {
 				"description": "Разблокирует компас; навигационный инструмент, позволяющий найти свой дом",
@@ -570,6 +579,14 @@
 			"farming": {
 				"description": "Разблокирует фермера, выращивающего пшеницу.",
 				"name": "Выращивание пшеницы"
+			},
+			"fence": {
+				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
+				"name": "_MISSING_Fence"
+			},
+			"flowerbox": {
+				"description": "_MISSING_Spread some permanent cheer",
+				"name": "_MISSING_Flower Box"
 			},
 			"furnace": {
 				"description": "Разблокирует печь для переплавки металлов и расколотый пень для обработки дерева",
@@ -663,6 +680,10 @@
 				"description": "Разблокирует баннеры Аванпоста. Их можно размещать для расширения колонии, как близко, так и дальше.",
 				"name": "Аванпосты"
 			},
+			"paint": {
+				"description": "_MISSING_Recolor some aesthetics",
+				"name": "_MISSING_Paint"
+			},
 			"papermaking": {
 				"description": "Разблокирует путь к изготовлению бумаги из конопли, ключевой составляющей научного прогресса",
 				"name": "Производство бумаги"
@@ -715,6 +736,10 @@
 				"description": "Разблокирует исследователя, который будет проводить исследования, используя близлежащие книжные шкафы для продвижения науки",
 				"name": "Книги"
 			},
+			"roofs": {
+				"description": "_MISSING_An attractive way to cover your buildings",
+				"name": "_MISSING_Tiled Roofs"
+			},
 			"ropes": {
 				"description": "Разблокирует верёвку",
 				"name": "Верёвка"
@@ -750,6 +775,10 @@
 			"stonemason": {
 				"description": "Разблокирует каменщика, полезного для добавления разнообразия в здания",
 				"name": "Каменщик"
+			},
+			"streetlight": {
+				"description": "_MISSING_Much fancier than torches",
+				"name": "_MISSING_Streetlights"
 			},
 			"tabulator": {
 				"description": "Разблокирует счетную машину и перфокарты для нее.",
@@ -925,6 +954,11 @@
 				"next": "След. стр.",
 				"previous": "Пред. стр."
 			},
+			"signs": {
+				"apply": "_MISSING_Apply",
+				"edit": "_MISSING_Edit",
+				"header": "_MISSING_Sign"
+			},
 			"specialblockremoval": {
 				"button": "Удалить",
 				"description": "Удаление блока типа {0} может вызвать проблемы для вашей колонии. Всё ещё хотите удалить?",
@@ -1087,22 +1121,16 @@
 					"tab": "Главные настройки",
 					"uiscalingratio": "Масштабирование интерфейса"
 				},
-				"keymapping": "Клавиши управления",
-				"keymenu": {
-					"resetall": "Сбросить все"
-				},
 				"mousemenu": {
-					"invertx": "Инвертировать ось-X",
 					"inverty": "Инвертировать ось-Y",
-					"sensitivitylock": "Заблокировать чувствительность мыши",
-					"sensitivityx": "Чувствительность мыши по оси-X",
-					"sensitivityy": "Чувствительность мыши по оси-Y",
-					"smooth": "Сглаживание мыши",
-					"smoothlock": "Заблокировать сглаживание мыши",
-					"smoothx": "Сглаживание мыши по оси-X",
-					"smoothy": "Сглаживание мыши по оси-Y"
+					"sensitivity": "_MISSING_Mouse sensitivity",
+					"smooth": "Сглаживание мыши"
 				},
-				"mousesettings": "Настройки мыши"
+				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "_MISSING_Gamepad",
+					"sensitivity": "_MISSING_Aim sensitivity"
+				}
 			},
 			"language": "Язык",
 			"languagemenu": {
@@ -1189,6 +1217,8 @@
 			"serverport": "Порт сервера",
 			"typegenerateworld": "Сгенерировать мир",
 			"typeworkshop": "Мир из Мастерской",
+			"world_folder": "_MISSING_Folder",
+			"world_outdated": "_MISSING_Requires older version",
 			"worlddate": "Дата",
 			"worldname": "Имя",
 			"worldname_long": "Имя мира",
@@ -1214,6 +1244,7 @@
 			"lockbox-threat": "Повышает угрозу на {0}",
 			"miner": "Колонист будет копать только тёмный камень и руды",
 			"npcshop": "Колонисты будут посещать это место что-бы по есть.",
+			"paintable": "_MISSING_Item can be altered using: ",
 			"pointtrader": "Здесь можно покупать и продавать вещи за очки",
 			"provides-fertile": "Считается плодородной почвой",
 			"provides-fertile-fen": "Считается плодородной болотной почвой",
@@ -1279,6 +1310,8 @@
 		"alchemisttable": "Стол алхимика",
 		"alkanet": "Алканет",
 		"animalcarcass": "Туша животного",
+		"architrave": "_MISSING_Architrave",
+		"artisttable": "_MISSING_Artist's Workbench",
 		"astrolabe": "Астролябия",
 		"banner": "Баннер",
 		"bannertool": "Управление баннером",
@@ -1340,6 +1373,7 @@
 		"copperingot": "Медный слиток",
 		"copperlockbox": "Медный ящик",
 		"coppertools": "Медные инструменты",
+		"corbel": "_MISSING_Corbel",
 		"cotton": "Хлопок",
 		"cottonengine": "Хлопковая машина",
 		"cottonfibre": "Хлопковое волокно",
@@ -1350,23 +1384,26 @@
 		"dirt": "Грязь",
 		"dirtfen": "Болотная грязь",
 		"dirtheath": "Вересковая грязь",
+		"doorclosed": "_MISSING_Door",
 		"droppertrap": "Стреляющая ловушка",
 		"droppertrapammo": "Снаряд для стреляющей ловушки",
 		"dyertable": "Стол красок",
 		"earthenware": "Фаянс",
 		"elevator": "Станция с лифтом",
-		"elevatorhorizontal": "Станция с вагонеткой",
+		"elevatorhorizontal": "_MISSING_Rail Station",
 		"elevatorshaft": "Шахта лифта",
-		"elevatorshafthorizontal": "Рельсы для вагонетки",
+		"elevatorshafthorizontal": "_MISSING_Rails",
 		"engineerbench": "Мастерская инженера",
 		"eyeglasses": "Очки",
 		"failsafe": "Священный предохранитель",
+		"fence": "_MISSING_Fence",
 		"firepit": "Костер",
 		"firewood": "Дрова",
 		"fisherman": "Место рыбака",
 		"flax": "Лен",
 		"flaxstage1": "Семена льна",
 		"fletcherbench": "Мастерская флетчера",
+		"flowerboxitem": "_MISSING_Flower Box",
 		"furnace": "Горн",
 		"glassblower": "Мастерская стеклодува",
 		"glasspiece": "Стеклянная линза",
@@ -1422,6 +1459,7 @@
 		"lanternblue": "Синий светильник",
 		"lanterncyan": "Бирюзовый светильник",
 		"lanterngreen": "Зелёный светильник",
+		"lanternitem": "_MISSING_Streetlight",
 		"lanternorange": "Оранжевый светильник",
 		"lanternpink": "Розовый светильник",
 		"lanternred": "Красный светильник",
@@ -1449,6 +1487,7 @@
 		"metallathe": "Токарный станок по металлу",
 		"minerjob": "Работа шахтера",
 		"monocular": "Монокуляр",
+		"mouldingitem": "_MISSING_Crown Moulding",
 		"movabletype": "Литеры",
 		"mudbricks": "Глинобитные кирпичи",
 		"musket": "Мушкет",
@@ -1457,9 +1496,15 @@
 		"notools": "Без инструментов",
 		"npcshop": "Продуктовый магазин",
 		"outpostbanner": "Знамя аванпоста",
+		"paintblue": "_MISSING_Blue Paint",
+		"paintgreen": "_MISSING_Green Paint",
+		"paintred": "_MISSING_Red Paint",
+		"paintstripped": "_MISSING_Paint Stripper",
+		"paintwhite": "_MISSING_White Paint",
 		"paper": "Бумага",
 		"papermakersmould": "Форма для изготовления бумаги",
 		"parchment": "Пергамент",
+		"pillar": "_MISSING_Pillar",
 		"planks": "Доски",
 		"planksblue": "Синие доски",
 		"planksgreen": "Зелёные доски",
@@ -1477,9 +1522,12 @@
 		"quarterblockbrowndark": "Четверть тёмно-коричневого блока",
 		"quarterblockbrownlight": "Четверть светло-коричневого блока",
 		"quarterblockgrey": "Четверть серого блока",
+		"railitem": "_MISSING_Rails",
 		"rawfish": "Сырая рыба",
 		"rawmeat": "Сырое мясо",
 		"researcherdesk": "Стол исследователя",
+		"rooftool": "_MISSING_Tiled Roof",
+		"rooftoolblue": "_MISSING_Blue Tiled Roof",
 		"rope": "Веревка",
 		"ropebench": "Верстак веревщика",
 		"ropetrap": "Связывающая ловушка",
@@ -1526,6 +1574,7 @@
 		"stonebrickswhite": "Белый булыжник",
 		"stonemasonworkbench": "Камнерезная мастерская",
 		"stonerubble": "Каменный щебень",
+		"stonestair": "_MISSING_Stone Stair",
 		"stonetools": "Каменные инструменты",
 		"stove": "Плита",
 		"straw": "Солома",
@@ -1552,12 +1601,14 @@
 		"wheatmeal": "Пшеничные хлопья",
 		"wheatporridge": "Пшеничная каша",
 		"wheatstage1": "Семена пшеницы",
+		"window": "_MISSING_Window",
 		"wisteriaflower": "цветок глицинии",
 		"wisteriajob": "Сборщик глициний",
 		"wisteriaplant": "Растение глициний",
 		"wisteriaplantempty": "Растение глициний",
 		"wolfsbane": "Аконит",
 		"woodfloor": "Деревянный настил",
+		"woodstair": "_MISSING_Wooden Stair",
 		"writerdesk": "Письменный стол",
 		"zinc": "Цинк"
 	},

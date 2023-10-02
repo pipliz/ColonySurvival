@@ -218,6 +218,7 @@
 			"size": 512
 		}
 	],
+	"LeakDetectionMode": "Disabled",
 	"MaxWorkerThreads": -1,
 	"MouseLook": {
 		"SpecialSensitivityX": 1,
@@ -226,8 +227,8 @@
 		"SpecialSmoothingY": 2
 	},
 	"NetworkSettings": {
-		"AllowDirectTCP": true,
-		"TCPConnectingTimeoutMS": 3500
+		"AllowDirectConnectionLocal": true,
+		"AllowDirectConnectionOnline": true
 	},
 	"Screenshots": {
 		"CaptureInterface": false,

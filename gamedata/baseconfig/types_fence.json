@@ -1,0 +1,290 @@
+{
+	"fence": {
+		"categories": [
+			"essential"
+		],
+		"attachBehaviour": [
+			{
+				"id": "smart_placement",
+				"apply_client": true,
+				"apply_server": true,
+				"options": [
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(0, 0, 1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddlex"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddletx+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, 1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddletx-"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')",
+							"HasBehaviour(0, 0, 1, 'fence')"
+						],
+						"resultType": "fencemiddletz-"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')",
+							"HasBehaviour(0, 0, 1, 'fence')"
+						],
+						"resultType": "fencemiddletz+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddlecornerz+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddlecornerx-"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, 1, 'fence')",
+							"HasBehaviour(-1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddlecornerx+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, 1, 'fence')",
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddlecornerz-"
+					},
+					{
+						"conditions": [
+							"| (& HasBehaviour(0, 0, -1, 'fence') (| HasBehaviour(0, 0, 1, 'fence') IsSolid(0, 0, 1))) (& HasBehaviour(0, 0, 1, 'fence') (| HasBehaviour(0, 0, -1, 'fence') IsSolid(0, 0, -1)))"
+						],
+						"resultType": "fencemiddlemiddlez+"
+					},
+					{
+						"conditions": [
+							"| (& HasBehaviour(-1, 0, 0, 'fence') (| HasBehaviour(1, 0, 0, 'fence') IsSolid(1, 0, 0))) (& HasBehaviour(1, 0, 0, 'fence') (| HasBehaviour(-1, 0, 0, 'fence') IsSolid(-1, 0, 0)))"
+						],
+						"resultType": "fencemiddlemiddlex+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, -1, 'fence')"
+						],
+						"resultType": "fencemiddleendz+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 0, 1, 'fence')"
+						],
+						"resultType": "fencemiddleendz-"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(-1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddleendx+"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(1, 0, 0, 'fence')"
+						],
+						"resultType": "fencemiddleendx-"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 1, 0, 'fence')",
+							"HasBehaviour(0, -1, 0, 'fence')"
+						],
+						"resultType": "fencesolomiddle"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, 1, 0, 'fence')"
+						],
+						"resultType": "fencesolobottom"
+					},
+					{
+						"conditions": [
+							"HasBehaviour(0, -1, 0, 'fence')"
+						],
+						"resultType": "fencesolotop"
+					},
+					{
+						"resultType": "fencemiddlei"
+					}
+				]
+			}
+		],
+		"icon": "../textures/icons/fence.png",
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"pathingImpact": "AsSolid",
+		"sideall": "neutral"
+	},
+	"fencemiddlei": {
+		"attachBehaviour": [ "fence" ],
+		"canBuildUpon": true,
+		"colliders": [
+			{
+				"max": [
+					0.2,
+					0.5,
+					0.2
+				],
+				"min": [
+					-0.2,
+					-0.5,
+					-0.2
+				]
+			}
+		],
+		"lightingTransparency": 190,
+		"mesh": "../meshes/meshes_fence/fencemiddlei.ply",
+		"isSolid": false,
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"onRemoveType": "fence",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"fencesolotop": {
+		"attachBehaviour": [ "fence" ],
+		"canBuildUpon": true,
+		"colliders": [
+			{
+				"max": [
+					0.2,
+					0.5,
+					0.2
+				],
+				"min": [
+					-0.2,
+					-0.5,
+					-0.2
+				]
+			}
+		],
+		"lightingTransparency": 190,
+		"mesh": "../meshes/meshes_fence/fencesolotop.ply",
+		"isSolid": false,
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"onRemoveType": "fence",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"fencesolobottom": {
+		"attachBehaviour": [ "fence" ],
+		"canBuildUpon": true,
+		"colliders": [
+			{
+				"max": [
+					0.2,
+					0.5,
+					0.2
+				],
+				"min": [
+					-0.2,
+					-0.5,
+					-0.2
+				]
+			}
+		],
+		"lightingTransparency": 190,
+		"mesh": "../meshes/meshes_fence/fencesolobottom.ply",
+		"isSolid": false,
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"onRemoveType": "fence",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"fencesolomiddle": {
+		"attachBehaviour": [ "fence" ],
+		"canBuildUpon": true,
+		"colliders": [
+			{
+				"max": [
+					0.2,
+					0.5,
+					0.2
+				],
+				"min": [
+					-0.2,
+					-0.5,
+					-0.2
+				]
+			}
+		],
+		"lightingTransparency": 190,
+		"mesh": "../meshes/meshes_fence/fencesolomiddle.ply",
+		"isSolid": false,
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"onRemoveType": "fence",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"fencemiddlex": {
+		"attachBehaviour": [ "fence" ],
+		"canBuildUpon": true,
+		"colliders": [
+			{
+				"max": [
+					0.2,
+					0.5,
+					0.5
+				],
+				"min": [
+					-0.2,
+					-0.5,
+					-0.5
+				]
+			},
+			{
+				"max": [
+					0.5,
+					0.5,
+					0.2
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.2
+				]
+			}
+		],
+		"lightingTransparency": 190,
+		"mesh": "../meshes/meshes_fence/fencemiddlex.ply",
+		"isSolid": false,
+		"onPlaceAudio": "stonePlace",
+		"onRemoveAudio": "stoneDelete",
+		"onRemoveType": "fence",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	}
+}

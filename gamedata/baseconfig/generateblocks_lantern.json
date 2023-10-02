@@ -1,0 +1,33 @@
+[
+	{
+		"baseType": {
+			"customData": {
+				"torches": {
+					"merged": {
+						"color": "#c3872e",
+						"intensity": 12.5,
+						"offsety": -0.1,
+						"range": 16,
+						"volume": 0.25
+					}
+				}
+			},
+			"icon": "../textures/icons/lantern.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/lanternside.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "lanternitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "torch"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "lanternside"
+	}
+]

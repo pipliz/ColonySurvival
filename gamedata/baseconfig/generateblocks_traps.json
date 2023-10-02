@@ -1,0 +1,332 @@
+[
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "droppertrapammo",
+			"audio": "dropper",
+			"damage": 500,
+			"filter": "Any",
+			"hitForce": 30,
+			"range": 8,
+			"reload": 10,
+			"style": "Down"
+		},
+		"trapName": "droppertrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 1,
+			"ammoType": "gunpowdertrapammo",
+			"audio": "gunpowdertrap",
+			"damage": 750,
+			"explosiveFriendlyFire": true,
+			"filter": "Any",
+			"hitForce": 35,
+			"rangeExplosive": 3,
+			"reload": 10,
+			"style": "Up"
+		},
+		"trapName": "gunpowdertrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply"
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply"
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply"
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trapSideways",
+		"trapConfig": {
+			"ammoMax": 10,
+			"ammoType": "projectiletrapammo",
+			"audio": "projectiletrap",
+			"damage": 2500,
+			"filter": "Atleast1000hp",
+			"hitForce": 30,
+			"range": 12,
+			"reload": 10
+		},
+		"trapName": "projectiletrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trapSideways",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "guntrapammo",
+			"audio": "projectiletrap",
+			"damage": 12500,
+			"filter": "Atleast1000hp",
+			"hitForce": 30,
+			"range": 20,
+			"reload": 5
+		},
+		"trapName": "guntrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 90,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "caltrops",
+			"audio": "caltrops",
+			"filter": "Unslowed",
+			"hitSpeedMultiplier": 0.6,
+			"range": 4,
+			"rangeExplosive": 3,
+			"reload": 10,
+			"style": "Down"
+		},
+		"trapName": "caltroptrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"icon": "../textures/icons/error.png",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "trap",
+		"trapConfig": {
+			"ammoMax": 3,
+			"ammoType": "ropetrapammo",
+			"audio": "caltrops",
+			"filter": "Unslowed",
+			"freezeTime": 10,
+			"range": 4,
+			"rangeExplosive": 4,
+			"reload": 45,
+			"style": "Down"
+		},
+		"trapName": "ropetrap",
+		"typeEmpty": {
+			"categories": [
+				"defense",
+				"trap"
+			],
+			"icon": "../textures/icons/trap.png",
+			"mesh": "../meshes/trapunloaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typeLoaded": {
+			"mesh": "../meshes/traploaded.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		},
+		"typePartial": {
+			"mesh": "../meshes/traploading.ply",
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 0,
+				"z": 0
+			}
+		}
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"trapfixer"
+			],
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/trapfixer.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/trapfixer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "trapfixer"
+	}
+]

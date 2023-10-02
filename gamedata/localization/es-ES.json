@@ -1,5 +1,5 @@
 {
-	"coverage": 100.0,
+	"coverage": 95.0,
 	"hints": {
 		"0": "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
 		"1": "Más y diferentes monstruos aparecerán si reclutas más colonos.",
@@ -178,15 +178,7 @@
 			"nopermission": "Usted no tiene el permiso '{0}' para hacer eso."
 		},
 		"connectingscreen": {
-			"general_1": "Etapa {0}/{1} - Contraseña requerida",
-			"general_2": "Etapa {0}/{1} - Tabla de archivos del servidor requeridos",
-			"general_3": "Etapa {0}/{1} - Cargando {2} archivos",
-			"general_3_downloading": " (Descargando {0} paquetes)",
-			"general_4": "Etapa {0}/{1} - Finalizando",
-			"general_fail": "El tiempo de conexión se agoto después de {0} segundos. Regresando al menú principal en 5 segundos.",
 			"loading": "Cargando",
-			"localhost_1": "Etapa 1/{0} - Buscando servidor de un solo jugador en este computador",
-			"localhost_2": "Etapa 2/{0} - Buscando servidor de Steam en este computador",
 			"localhost_fail": "Fallo la búsqueda de servidor de Steam/Un solo jugador corriendo en este computador. Recargando el menú principal en 5 segundos.",
 			"refused": {
 				"blacklisted": "Estás en la lista negra",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "La versión no concuerda con el servidor"
 			},
 			"refused_main": "Conexión denegada, {0}. Regresando al menú principal en 5 segundos.",
-			"sp_1": "Etapa 1/{0} - Comienza la escucha del servidor en segundo plano",
-			"sp_2": "Etapa 2/{0} - Iniciando el servidor en segundo plano",
-			"sp_3": "Etapa 3/{0} - Servidor iniciado, Esperando conexión",
-			"sp_alreadyrunning1_1": "Un servidor ya está ejecutandose. Puede que todavía no se este apagado. Se reintentará en {0} segundos.",
 			"sp_alreadyrunning2": "Un servidor ya está ejecutandose. Regresando al menú principal en 5 segundos.",
-			"steam05": "Etapa 1/{0} - Intentando establecer conexión directa",
-			"steam06": "Etapa 1/{0} - Intentando establecer una conexión de transmisión de vapor",
-			"steam07": "Etapa 2/{0} - Conexión correcta, autentificándose",
-			"steamfail": "Error al recibir datos de la conexión. Regresando al menú principal en 5 segundos."
+			"stages": {
+				"1": "_MISSING_Requested server files table",
+				"connectionmade": "_MISSING_Connection made",
+				"downloading": "_MISSING_(downloading {0} packets)",
+				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
+				"final": "_MISSING_Finalizing",
+				"loading": "_MISSING_Loading {0} files",
+				"local1": "_MISSING_Searching for singleplayer server on this computer",
+				"local2": "_MISSING_Searching for online server on this computer",
+				"password": "_MISSING_Password required",
+				"steamdirect": "_MISSING_Trying to setup direct connection",
+				"steamp2p": "_MISSING_Trying to setup p2p connection",
+				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "_MISSING_Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Explorar Workshop",
@@ -277,6 +276,7 @@
 			"description": "Descripción",
 			"edit": "Editar",
 			"enabled": "Habilitado",
+			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
 			"high": "Alto",
 			"inputplaceholder": "Escribir nombre...",
 			"inputplaceholder_search": "Escribir texto para buscar...",
@@ -376,6 +376,7 @@
 			"pipliz": {
 				"alchemist": "Alquimista",
 				"alkanetfarmer": "Agricultor de Alkanet",
+				"artist": "_MISSING_Artist",
 				"barleyfarmer": "Agricultor de cebada",
 				"beekeeper": "Apicultor",
 				"berryfarmer": "Agricultor de bayas",
@@ -467,6 +468,10 @@
 				"description": "Desbloquea arqueros y fabricador de flechas, una protección más eficaz contra los monstruos.",
 				"name": "Arquería"
 			},
+			"artist": {
+				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
+				"name": "_MISSING_Artist"
+			},
 			"astrolabe": {
 				"description": "Desbloquea el astrolabio; una herramienta de navegación que ayuda a encontrar biomas.",
 				"name": "Astrolabio"
@@ -514,6 +519,10 @@
 			"chickenmeal": {
 				"description": "Desbloquea una comida más compleja que proporciona más puntos sagrados cuando la consumen los colonos.",
 				"name": "Comidas de Pollo"
+			},
+			"classical": {
+				"description": "_MISSING_Revive the way the ancients built",
+				"name": "_MISSING_Classical Architecture"
 			},
 			"compass": {
 				"description": "Desbloquea la brújula, una herramienta de navegación para volver a casa",
@@ -570,6 +579,14 @@
 			"farming": {
 				"description": "Desbloquea al agricultor de trigo. El trigo ganará importancia como alimento con el tiempo.",
 				"name": "Agricultura del trigo"
+			},
+			"fence": {
+				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
+				"name": "_MISSING_Fence"
+			},
+			"flowerbox": {
+				"description": "_MISSING_Spread some permanent cheer",
+				"name": "_MISSING_Flower Box"
 			},
 			"furnace": {
 				"description": "Desbloquea el trabajador Fundidor, que procesa minerales.",
@@ -663,6 +680,10 @@
 				"description": "Desbloquea los estandartes de los puestos avanzados. Se pueden colocar para expandir la colonia, tanto cerca como lejos.",
 				"name": "Puestos Avanzados"
 			},
+			"paint": {
+				"description": "_MISSING_Recolor some aesthetics",
+				"name": "_MISSING_Paint"
+			},
 			"papermaking": {
 				"description": "La fabricación de papel a partir del cáñamo, clave para el progreso científico",
 				"name": "Producción de papel"
@@ -715,6 +736,10 @@
 				"description": "Desbloquea al investigador, que investigará utilizando las estanterías cercanas para avanzar en la ciencia",
 				"name": "Investigador"
 			},
+			"roofs": {
+				"description": "_MISSING_An attractive way to cover your buildings",
+				"name": "_MISSING_Tiled Roofs"
+			},
 			"ropes": {
 				"description": "Desbloquea un ingrediente con muchos usos",
 				"name": "Cuerdas"
@@ -751,6 +776,10 @@
 				"description": "Desbloquea el cantero, útil para añadir variedad a los edificios.",
 				"name": "Cantero"
 			},
+			"streetlight": {
+				"description": "_MISSING_Much fancier than torches",
+				"name": "_MISSING_Streetlights"
+			},
 			"tabulator": {
 				"description": "Desbloquea una compleja máquina que procesa datos y los almacena en tarjetas perforadas.",
 				"name": "Máquina tabuladora"
@@ -768,8 +797,8 @@
 				"name": "Distribución de Herramientas"
 			},
 			"trader": {
-				"description": "_MISSING_Used to accelerate trade deals between colonies. Not used for trading with outposts; intended for multiplayer.",
-				"name": "_MISSING_Trader"
+				"description": "Acelera el comercio entre colonias. No se utiliza para el intercambio con puestos avanzados, es para multijugador.",
+				"name": "Mercader"
 			},
 			"trading": {
 				"description": "Desbloquea el Centro de Mercaderes, un lugar donde puedes comprar y vender objetos.",
@@ -925,6 +954,11 @@
 				"next": "Siguiente",
 				"previous": "Anterior"
 			},
+			"signs": {
+				"apply": "_MISSING_Apply",
+				"edit": "_MISSING_Edit",
+				"header": "_MISSING_Sign"
+			},
 			"specialblockremoval": {
 				"button": "Elmiminar",
 				"description": "Elmiminar este bloque tipo {0} puede causar problemas para la colonia.¿Qué quieres hacer?",
@@ -1071,38 +1105,32 @@
 					"permanenthighlight": "Destacar los bloques permanentes",
 					"ratio0": "Deshabilitado",
 					"ratio100": "100%",
-					"ratio125": "_MISSING_125%",
+					"ratio125": "125%",
 					"ratio150": "150%",
-					"ratio175": "_MISSING_175%",
+					"ratio175": "175%",
 					"ratio200": "200%",
 					"ratio25": "25%",
 					"ratio250": "250%",
 					"ratio300": "300%",
 					"ratio400": "400%",
 					"ratio50": "50%",
-					"ratio62": "_MISSING_62%",
+					"ratio62": "62%",
 					"ratio75": "75%",
-					"ratio87": "_MISSING_87%",
+					"ratio87": "87%",
 					"showsensitivedatamode": "Mostrar datos confidenciales",
 					"tab": "Configuración General",
 					"uiscalingratio": "Escala de la IU"
 				},
-				"keymapping": "Teclado",
-				"keymenu": {
-					"resetall": "Restablecer"
-				},
 				"mousemenu": {
-					"invertx": "Invertir eje X",
 					"inverty": "Invertir eje Y",
-					"sensitivitylock": "Igualar sensibilidad de ambos ejes",
-					"sensitivityx": "Sensibilidad del eje X",
-					"sensitivityy": "Sensibilidad del eje Y",
-					"smooth": "Suavizado de ratón",
-					"smoothlock": "Igualar suavizado de ambos ejes",
-					"smoothx": "Suavizado del eje X",
-					"smoothy": "Suavizado del eje Y"
+					"sensitivity": "_MISSING_Mouse sensitivity",
+					"smooth": "Suavizado de ratón"
 				},
-				"mousesettings": "Mouse"
+				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "_MISSING_Gamepad",
+					"sensitivity": "_MISSING_Aim sensitivity"
+				}
 			},
 			"language": "Idioma",
 			"languagemenu": {
@@ -1189,6 +1217,8 @@
 			"serverport": "Puerto del servidor",
 			"typegenerateworld": "Generar mundo",
 			"typeworkshop": "Mundo de Workshop",
+			"world_folder": "_MISSING_Folder",
+			"world_outdated": "_MISSING_Requires older version",
 			"worlddate": "Fecha",
 			"worldname": "Nombre",
 			"worldname_long": "Nombre del mundo",
@@ -1214,6 +1244,7 @@
 			"lockbox-threat": "Causa {0} de amenazas",
 			"miner": "Ordena a un colono que extraiga repetidamente el bloque de mineral de piedra oscura que hay debajo",
 			"npcshop": "Los colonos visitarán este o el estandarte para conseguir su comida diaria",
+			"paintable": "_MISSING_Item can be altered using: ",
 			"pointtrader": "Aquí puedes comprar y vender cosas por puntos",
 			"provides-fertile": "Cuenta como tierra fértil",
 			"provides-fertile-fen": "Cuenta como suelo fértil de pantano",
@@ -1279,6 +1310,8 @@
 		"alchemisttable": "Mesa del alquimista",
 		"alkanet": "Alkanet",
 		"animalcarcass": "Cadáveres de animales",
+		"architrave": "_MISSING_Architrave",
+		"artisttable": "_MISSING_Artist's Workbench",
 		"astrolabe": "Astrolabio",
 		"banner": "Estandarte",
 		"bannertool": "Herramienta del estandarte",
@@ -1340,6 +1373,7 @@
 		"copperingot": "Lingote de cobre",
 		"copperlockbox": "Cofre de cobre",
 		"coppertools": "Herramientas de cobre",
+		"corbel": "_MISSING_Corbel",
 		"cotton": "Algodón",
 		"cottonengine": "Maquina de algodón",
 		"cottonfibre": "Fibra de algodón",
@@ -1350,23 +1384,26 @@
 		"dirt": "Barro",
 		"dirtfen": "Suciedad del pantano",
 		"dirtheath": "Suciedad del brezo",
+		"doorclosed": "_MISSING_Door",
 		"droppertrap": "Trampa de caída",
 		"droppertrapammo": "Munición para trampas de caída",
 		"dyertable": "Mesa de Tintorería",
 		"earthenware": "Cerámica",
 		"elevator": "Cabina del ascensor",
-		"elevatorhorizontal": "Estación Horizontal",
+		"elevatorhorizontal": "_MISSING_Rail Station",
 		"elevatorshaft": "Hueco del ascensor",
-		"elevatorshafthorizontal": "Raíl Horizontal para Ascensores",
+		"elevatorshafthorizontal": "_MISSING_Rails",
 		"engineerbench": "Banco de ingenieros",
 		"eyeglasses": "Gafas",
 		"failsafe": "Seguridad Sagrada",
+		"fence": "_MISSING_Fence",
 		"firepit": "Hoguera",
 		"firewood": "Leña",
 		"fisherman": "Punto de pesca",
 		"flax": "Planta de lino",
 		"flaxstage1": "Semillas de lino",
 		"fletcherbench": "Banco de Flechas",
+		"flowerboxitem": "_MISSING_Flower Box",
 		"furnace": "Fundición",
 		"glassblower": "Taller de soplado de vidrio",
 		"glasspiece": "Trozo de cristal",
@@ -1422,6 +1459,7 @@
 		"lanternblue": "Farol Azul",
 		"lanterncyan": "Farol Cian",
 		"lanterngreen": "Farol Verde",
+		"lanternitem": "_MISSING_Streetlight",
 		"lanternorange": "Farol Naranja",
 		"lanternpink": "Farol Rosa",
 		"lanternred": "Farol Roja",
@@ -1449,6 +1487,7 @@
 		"metallathe": "Torno de metal",
 		"minerjob": "Minero",
 		"monocular": "Monocular",
+		"mouldingitem": "_MISSING_Crown Moulding",
 		"movabletype": "Tipo movible",
 		"mudbricks": "Ladrillos de adobe",
 		"musket": "Mosquete",
@@ -1457,9 +1496,15 @@
 		"notools": "Sin Herramientas",
 		"npcshop": "Tienda de comestibles",
 		"outpostbanner": "Estandarte del Puesto Avanzado",
+		"paintblue": "_MISSING_Blue Paint",
+		"paintgreen": "_MISSING_Green Paint",
+		"paintred": "_MISSING_Red Paint",
+		"paintstripped": "_MISSING_Paint Stripper",
+		"paintwhite": "_MISSING_White Paint",
 		"paper": "Papel",
 		"papermakersmould": "Molde de papel",
 		"parchment": "Pergamino",
+		"pillar": "_MISSING_Pillar",
 		"planks": "Tablas",
 		"planksblue": "Tablones azules",
 		"planksgreen": "Tablones verdes",
@@ -1477,9 +1522,12 @@
 		"quarterblockbrowndark": "Escalón marrón oscuro",
 		"quarterblockbrownlight": "Escalón marrón claro",
 		"quarterblockgrey": "Escalón gris",
+		"railitem": "_MISSING_Rails",
 		"rawfish": "Pez crudo",
 		"rawmeat": "Carne cruda",
 		"researcherdesk": "Escritorio del investigador",
+		"rooftool": "_MISSING_Tiled Roof",
+		"rooftoolblue": "_MISSING_Blue Tiled Roof",
 		"rope": "Cuerda",
 		"ropebench": "Banco de Cuerda",
 		"ropetrap": "Trampa de cuerda",
@@ -1526,6 +1574,7 @@
 		"stonebrickswhite": "Adoquín blanco",
 		"stonemasonworkbench": "Banco de trabajo del Cantero",
 		"stonerubble": "Restos de piedra",
+		"stonestair": "_MISSING_Stone Stair",
 		"stonetools": "Herramientas de piedra",
 		"stove": "Cocina",
 		"straw": "Paja",
@@ -1552,12 +1601,14 @@
 		"wheatmeal": "Gachas de trigo",
 		"wheatporridge": "Papilla de trigo",
 		"wheatstage1": "Semillas de trigo",
+		"window": "_MISSING_Window",
 		"wisteriaflower": "Flor de glicina",
 		"wisteriajob": "Cosechador de glicinas",
 		"wisteriaplant": "Planta de glicinas",
 		"wisteriaplantempty": "Planta de glicinas",
 		"wolfsbane": "Aconitum",
 		"woodfloor": "Suelos de madera",
+		"woodstair": "_MISSING_Wooden Stair",
 		"writerdesk": "Escritorio",
 		"zinc": "Zinc"
 	},
@@ -1636,7 +1687,7 @@
 		"splittingstump": "Una método rápido para dividir la madera en leña.",
 		"stonemasonworkbench": "Crea cincuenta tonos de ladrillos.",
 		"stove": "Para perfumar con comida deliciosa sus alrededores",
-		"sulfur": "Se encuentra en el subsuelo del bioma Heath",
+		"sulfur": "Se encuentra en el subsuelo del bioma Brezo",
 		"tailorshop": "¡Ropa a medida para todos!",
 		"tin": "También puede encontrarse en minerales bajo las montañas nevadas",
 		"torch": "¡Y se hizo la luz!",

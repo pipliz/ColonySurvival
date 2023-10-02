@@ -1,0 +1,1855 @@
+[
+	/* supported fields for AddScience / AddOrOverrideScience entries
+		requireScienceBiome -> if set, this will autocomplete the science if the colony has a banner in said sciencebiome, bypassing other requirements
+		icon -> icon path relative to this json file
+		colonistCount -> threshold required to be able to complete
+		colonyPointRequirement -> quantity required that'll be consumed on complete
+		itemRequirements -> array of amount/type pairs of items that'll be consumed when completing the science
+		dependencies -> array of other science keys which are required to be completed before this one can be completed
+		unlocksRecipes -> array of recipe keys which will be unlocked when this research is completed. Recipes may require multiple researches to show up.
+		unlocksRecipeGroups -> same as unlocksRecipes, but counts *all* recipes associated with the NPCTypes put in this array
+		unlocksClientHints -> array of "hints", which will be visualized on the client but otherwise do nothing. Presumably some code is added to run on completion that does do something.
+			Example hint format on next lines
+			{
+				"data": "pipliz.diggerspecial",
+				"type": "NPCType"
+			}
+		threatIncrease -> how much the monster threat level increases upon completing this science
+		for AddScienceUnlocks entries, it only supports unlocksRecipes and unlocksRecipeGroups
+		*/
+	{
+		"icon": "../textures/icons/wheat.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bed"
+			},
+			{
+				"amount": 50,
+				"type": "planks"
+			},
+			{
+				"amount": 5,
+				"type": "stonetools"
+			}
+		],
+		"key": "pipliz.farming",
+		"sortWeight": 493,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.wheatfarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"icon": "../textures/icons/potempty.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "clay"
+			}
+		],
+		"key": "pipliz.pottery",
+		"sortWeight": 26
+	},
+	{
+		"dependencies": [
+			"pipliz.scribe"
+		],
+		"icon": "../textures/icons/jewelry.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "goldingot"
+			},
+			{
+				"amount": 15,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.jewelry",
+		"sortWeight": 4679
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.researcher"
+		],
+		"icon": "../textures/icons/book.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.recursiveknowledge",
+		"sortWeight": 106541
+	},
+	{
+		"dependencies": [
+			"pipliz.pottery",
+			"pipliz.farming",
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/firepit.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "potempty"
+			}
+		],
+		"key": "pipliz.porridge",
+		"sortWeight": 438,
+		"threatIncrease": 15
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.outposts",
+			"pipliz.astrolabe"
+		],
+		"icon": "../textures/icons/compass.png",
+		"itemRequirements": [
+			{
+				"amount": 75,
+				"type": "tabletwisdom"
+			},
+			{
+				"type": "astrolabe"
+			}
+		],
+		"key": "pipliz.compass",
+		"sortWeight": 66715
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.outposts"
+		],
+		"icon": "../textures/icons/trader.png",
+		"key": "pipliz.trader",
+		"sortWeight": 40444
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/astrolabe.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "goldingot"
+			}
+		],
+		"key": "pipliz.astrolabe",
+		"sortWeight": 11506
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.engineer",
+			"pipliz.brass"
+		],
+		"icon": "../textures/icons/alarmbell.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.alarmbell",
+		"sortWeight": 16882
+	},
+	{
+		"colonyPointRequirement": 50,
+		"dependencies": [
+			"pipliz.porridge",
+			"pipliz.anvil"
+		],
+		"icon": "../textures/icons/sanctifiertable.png",
+		"itemRequirements": [
+			{
+				"type": "earthenware"
+			}
+		],
+		"key": "pipliz.failsafe",
+		"sortWeight": 2005,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.beekeeper",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.failsafe"
+		],
+		"icon": "../textures/icons/sanctifiedhouse.png",
+		"itemRequirements": [
+			{
+				"type": "bronzeingot"
+			},
+			{
+				"type": "goldingot"
+			}
+		],
+		"key": "pipliz.sacredhouse",
+		"sortWeight": 29517
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bread"
+		],
+		"icon": "../textures/icons/chickenmeat.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.chickenmeal",
+		"sortWeight": 39468,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.chickenfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.barleyfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.cabbagefarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.chickenmeal",
+			"pipliz.researcher"
+		],
+		"icon": "../textures/icons/animalcarcass.png",
+		"itemRequirements": [
+			{
+				"type": "chickenmeal"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.animalcarcass",
+		"sortWeight": 105792
+	},
+	{
+		"dependencies": [
+			"pipliz.pottery",
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/waterpump.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.waterpump",
+		"sortWeight": 309
+	},
+	{
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/scrollshelf.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.scribe",
+		"sortWeight": 3002
+	},
+	{
+		"icon": "../textures/icons/minerjob.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "stonerubble"
+			}
+		],
+		"key": "pipliz.miner",
+		"sortWeight": 13
+	},
+	{
+		"dependencies": [
+			"pipliz.farming",
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/linen.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "wheat"
+			}
+		],
+		"key": "pipliz.tailoring",
+		"sortWeight": 368,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.flaxfarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"dependencies": [
+			"pipliz.furnace"
+		],
+		"icon": "../textures/icons/merchanthub.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.trading",
+		"sortWeight": 173,
+		"threatIncrease": 10
+	},
+	{
+		"colonyPointRequirement": 50,
+		"dependencies": [
+			"pipliz.trading",
+			"pipliz.porridge"
+		],
+		"icon": "../textures/icons/npcshop.png",
+		"key": "pipliz.npcshop",
+		"sortWeight": 1438
+	},
+	{
+		"dependencies": [
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/tannertable.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "animalcarcass"
+			}
+		],
+		"key": "pipliz.tanner",
+		"sortWeight": 673,
+		"threatIncrease": 10
+	},
+	{
+		"dependencies": [
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/bronzeanvil.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "leather"
+			},
+			{
+				"amount": 15,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.anvil",
+		"sortWeight": 755,
+		"threatIncrease": 30
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "../textures/icons/toolshop.png",
+		"itemRequirements": [
+			{
+				"type": "coppertools"
+			}
+		],
+		"key": "pipliz.toolshop",
+		"sortWeight": 810
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "../textures/icons/bronzearrow.png",
+		"itemRequirements": [
+			{
+				"type": "coppertools"
+			}
+		],
+		"key": "pipliz.archery",
+		"sortWeight": 810
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "../textures/icons/writerdesk.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "coppertools"
+			},
+			{
+				"amount": 3,
+				"type": "leather"
+			}
+		],
+		"key": "pipliz.writer",
+		"sortWeight": 1147
+	},
+	{
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/statisticsboard.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.statistics",
+		"sortWeight": 1332
+	},
+	{
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/stove.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.cook",
+		"sortWeight": 1332
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.cook",
+			"pipliz.scribe"
+		],
+		"icon": "../textures/icons/bread.png",
+		"itemRequirements": [
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bread",
+		"sortWeight": 15427
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.scribe"
+		],
+		"icon": "../textures/icons/bronzetools.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "mudbricks"
+			},
+			{
+				"amount": 15,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bronze",
+		"sortWeight": 9339,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.anvil"
+		],
+		"icon": "../textures/icons/copperlockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "copperingot"
+			}
+		],
+		"key": "pipliz.copperlockbox",
+		"sortWeight": 2892
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.engineer"
+		],
+		"icon": "../textures/icons/bronzelockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 3,
+				"type": "goldingot"
+			},
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.bronzelockbox",
+		"sortWeight": 32299
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/outpostbanner.png",
+		"itemRequirements": [
+			{
+				"type": "bronzetools"
+			},
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.outposts",
+		"sortWeight": 30444
+	},
+	{
+		"icon": "../textures/icons/copperingot.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "stonetools"
+			},
+			{
+				"amount": 10,
+				"type": "planks"
+			}
+		],
+		"key": "pipliz.furnace",
+		"sortWeight": 105
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bricks"
+		],
+		"icon": "../textures/icons/ironingot.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 250,
+				"type": "bricks"
+			},
+			{
+				"amount": 250,
+				"type": "brickslight"
+			},
+			{
+				"amount": 250,
+				"type": "stonebricks"
+			},
+			{
+				"amount": 250,
+				"type": "stonebricksnew"
+			}
+		],
+		"key": "pipliz.iron",
+		"sortWeight": 52842,
+		"threatIncrease": 100
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/crossbow.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.crossbow",
+		"sortWeight": 24675
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/bricks.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.bricks",
+		"sortWeight": 12509
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.ropes",
+			"pipliz.brass"
+		],
+		"icon": "../textures/icons/goldenshield.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.jewellery",
+		"sortWeight": 51462
+	},
+	{
+		"colonyPointRequirement": 750,
+		"dependencies": [
+			"pipliz.jewellery",
+			"pipliz.researcher"
+		],
+		"icon": "../textures/icons/lanternyellow.png",
+		"itemRequirements": [
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.lanterns",
+		"sortWeight": 100746
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.jewellery"
+		],
+		"icon": "../textures/icons/goldenstatue.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			},
+			{
+				"type": "goldenshield"
+			}
+		],
+		"key": "pipliz.goldenstatue",
+		"sortWeight": 86749
+	},
+	{
+		"dependencies": [
+			"pipliz.anvil",
+			"pipliz.tailoring"
+		],
+		"icon": "../textures/icons/stonemasonworkbench.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "linen"
+			},
+			{
+				"amount": 3,
+				"type": "coppertools"
+			},
+			{
+				"amount": 25,
+				"type": "stonerubble"
+			}
+		],
+		"key": "pipliz.stonemason",
+		"sortWeight": 2164
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/rope.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.ropes",
+		"sortWeight": 33380
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.archery",
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/trap.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "copperingot"
+			},
+			{
+				"amount": 10,
+				"type": "goldingot"
+			},
+			{
+				"amount": 4,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.engineer",
+		"sortWeight": 4788
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.engineer"
+		],
+		"icon": "../textures/icons/trap.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bronzeingot"
+			},
+			{
+				"amount": 30,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.projectiletrap",
+		"sortWeight": 22131
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.iron"
+		],
+		"icon": "../textures/icons/caltrops.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			},
+			{
+				"type": "engineerbench"
+			}
+		],
+		"key": "pipliz.caltrop",
+		"sortWeight": 59009
+	},
+	{
+		"dependencies": [
+			"pipliz.furnace"
+		],
+		"icon": "../textures/icons/mudbricks.png",
+		"itemRequirements": [
+			{
+				"amount": 30,
+				"type": "clay"
+			},
+			{
+				"amount": 10,
+				"type": "planks"
+			}
+		],
+		"key": "pipliz.mudbricks",
+		"sortWeight": 224
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.glassblower"
+		],
+		"icon": "../textures/icons/dirt.png",
+		"itemRequirements": [
+			{
+				"type": "potash"
+			},
+			{
+				"type": "silicasand"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.grassdirt",
+		"sortWeight": 131623
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.constructiondigger"
+		],
+		"icon": "../textures/icons/bricksred.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.constructionbuilder",
+		"sortWeight": 17260,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.builder",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/bronzepickaxe.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.constructiondigger",
+		"sortWeight": 6703,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.constructor",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.digger",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.constructiondigger"
+		],
+		"icon": "../textures/icons/bronzeaxe.png",
+		"key": "pipliz.constructiondiggerspecial",
+		"sortWeight": 26703,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.diggerspecial",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"dependencies": [
+			"pipliz.outposts"
+		],
+		"icon": "../textures/icons/hemp.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "linen"
+			}
+		],
+		"key": "pipliz.hemp",
+		"sortWeight": 35157,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.hempfarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"dependencies": [
+			"pipliz.ropes",
+			"pipliz.hemp"
+		],
+		"icon": "../textures/icons/paper.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "hemp"
+			},
+			{
+				"type": "hempfibre"
+			}
+		],
+		"key": "pipliz.papermaking",
+		"sortWeight": 35835
+	},
+	{
+		"colonyPointRequirement": 1500,
+		"dependencies": [
+			"pipliz.papermaking",
+			"pipliz.iron"
+		],
+		"icon": "../textures/icons/glider.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "rope"
+			},
+			{
+				"amount": 40,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 5,
+				"type": "ironwrought"
+			}
+		],
+		"key": "pipliz.glider",
+		"sortWeight": 88051,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.papermaking",
+			"pipliz.iron"
+		],
+		"icon": "../textures/icons/researchersdesk.png",
+		"itemRequirements": [
+			{
+				"amount": 40,
+				"type": "paper"
+			},
+			{
+				"amount": 140,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.researcher",
+		"sortWeight": 85348
+	},
+	{
+		"colonyPointRequirement": 1250,
+		"dependencies": [
+			"pipliz.researcher"
+		],
+		"icon": "../textures/icons/glassblower.png",
+		"itemRequirements": [
+			{
+				"amount": 2,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.glassblower",
+		"sortWeight": 111143
+	},
+	{
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.glassblower"
+		],
+		"icon": "../textures/icons/monocular.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.monocular",
+		"sortWeight": 152336
+	},
+	{
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.iron",
+			"pipliz.hemp"
+		],
+		"icon": "../textures/icons/chestresource.png",
+		"itemRequirements": [
+			{
+				"type": "ironwrought"
+			},
+			{
+				"type": "hempfibre"
+			}
+		],
+		"key": "pipliz.chestresource",
+		"sortWeight": 93049,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.gunpowder"
+		],
+		"icon": "../textures/icons/handcannon.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "gunpowdertrap"
+			}
+		],
+		"key": "pipliz.handcannon",
+		"sortWeight": 317791
+	},
+	{
+		"colonyPointRequirement": 3500,
+		"dependencies": [
+			"pipliz.glassblower",
+			"pipliz.chestresource"
+		],
+		"icon": "../textures/icons/gunpowder.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 12,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "potash"
+			}
+		],
+		"key": "pipliz.gunpowder",
+		"sortWeight": 223535,
+		"threatIncrease": 50
+	},
+	{
+		"colonistThreshold": 200,
+		"colonyPointRequirement": 2000,
+		"dependencies": [
+			"pipliz.papermaking"
+		],
+		"icon": "../textures/icons/wisteriaflower.png",
+		"itemRequirements": [
+			{
+				"amount": 40,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.poison",
+		"sortWeight": 79068
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.researcher",
+			"pipliz.glider"
+		],
+		"icon": "../textures/icons/elevatorgateway.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "metalgear"
+			},
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.elevator",
+		"sortWeight": 140385
+	},
+	{
+		"colonyPointRequirement": 1250,
+		"dependencies": [
+			"pipliz.chestresource"
+		],
+		"icon": "../textures/icons/railstation.png",
+		"itemRequirements": [
+			{
+				"amount": 12,
+				"type": "chestresource"
+			},
+			{
+				"amount": 5,
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.elevatorhorizontal",
+		"sortWeight": 138077,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.iron",
+			"pipliz.hemp"
+		],
+		"icon": "../textures/icons/dyertable.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "hempfibre"
+			},
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.dyeing",
+		"sortWeight": 58957,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.alkanetfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.hollyhockfarmer",
+				"type": "NPCType"
+			},
+			{
+				"data": "pipliz.wolfsbanefarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"dependencies": [
+			"pipliz.bronze"
+		],
+		"icon": "../textures/icons/brassingot.png",
+		"itemRequirements": [
+			{
+				"amount": 20,
+				"type": "tabletwisdom"
+			},
+			{
+				"amount": 3,
+				"type": "zinc"
+			}
+		],
+		"key": "pipliz.brass",
+		"sortWeight": 11074
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestresource"
+		],
+		"icon": "../textures/icons/steelparts.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "chestresource"
+			},
+			{
+				"type": "bookofknowledge"
+			}
+		],
+		"key": "pipliz.steel",
+		"sortWeight": 150963
+	},
+	{
+		"colonyPointRequirement": 5000,
+		"dependencies": [
+			"pipliz.steel"
+		],
+		"icon": "../textures/icons/movabletype.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 5,
+				"type": "steelparts"
+			},
+			{
+				"amount": 3,
+				"type": "vialmineraloil"
+			},
+			{
+				"amount": 3,
+				"type": "leadingot"
+			}
+		],
+		"key": "pipliz.printingpress",
+		"sortWeight": 256662,
+		"threatIncrease": 50
+	},
+	{
+		"colonyPointRequirement": 7500,
+		"dependencies": [
+			"pipliz.gunpowder",
+			"pipliz.printingpress"
+		],
+		"icon": "../textures/icons/glidersteel.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "brassparts"
+			},
+			{
+				"type": "steelparts"
+			}
+		],
+		"key": "pipliz.glidersteel",
+		"sortWeight": 454717
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.printingpress"
+		],
+		"icon": "../textures/icons/ropetrapammo.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 3,
+				"type": "chestresource"
+			},
+			{
+				"amount": 25,
+				"type": "rope"
+			}
+		],
+		"key": "pipliz.ropetrap",
+		"sortWeight": 289638,
+		"threatIncrease": 25
+	},
+	{
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.printingpress",
+			"pipliz.handcannon"
+		],
+		"icon": "../textures/icons/musket.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "leadingot"
+			}
+		],
+		"key": "pipliz.musket",
+		"sortWeight": 565902
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.printingpress",
+			"pipliz.dyeing"
+		],
+		"icon": "../textures/icons/cottonfibre.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "bookofknowledge"
+			},
+			{
+				"type": "lanternred"
+			},
+			{
+				"type": "lanterngreen"
+			},
+			{
+				"type": "lanternblue"
+			}
+		],
+		"key": "pipliz.cotton",
+		"sortWeight": 313470,
+		"unlocksClientHints": [
+			{
+				"data": "pipliz.cottonfarmer",
+				"type": "NPCType"
+			}
+		]
+	},
+	{
+		"colonyPointRequirement": 5000,
+		"dependencies": [
+			"pipliz.cotton"
+		],
+		"icon": "../textures/icons/chestluxury.png",
+		"itemRequirements": [
+			{
+				"type": "luxurygarments"
+			},
+			{
+				"amount": 3,
+				"type": "goldenshield"
+			},
+			{
+				"amount": 3,
+				"type": "monocular"
+			},
+			{
+				"amount": 10,
+				"type": "earthenware"
+			}
+		],
+		"key": "pipliz.chestluxury",
+		"sortWeight": 425757
+	},
+	{
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.chestluxury"
+		],
+		"icon": "../textures/icons/metallathe.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 25,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
+		],
+		"key": "pipliz.lathe",
+		"sortWeight": 720372,
+		"threatIncrease": 75
+	},
+	{
+		"colonyPointRequirement": 10000,
+		"dependencies": [
+			"pipliz.chestluxury"
+		],
+		"icon": "../textures/icons/tabulator.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 25,
+				"type": "steelparts"
+			},
+			{
+				"amount": 25,
+				"type": "brassparts"
+			}
+		],
+		"key": "pipliz.tabulator",
+		"sortWeight": 852654
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestluxury"
+		],
+		"icon": "../textures/icons/steellockbox.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
+		],
+		"key": "pipliz.steellockbox",
+		"sortWeight": 537880
+	},
+	{
+		"colonyPointRequirement": 2500,
+		"dependencies": [
+			"pipliz.chestluxury"
+		],
+		"icon": "../textures/icons/blastfurnace.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 3,
+				"type": "chestluxury"
+			}
+		],
+		"key": "pipliz.blastfurnace",
+		"sortWeight": 537880,
+		"threatIncrease": 25
+	},
+	{
+		"dependencies": [
+			"pipliz.blastfurnace"
+		],
+		"icon": "../textures/icons/steeltools.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "bookofknowledge"
+			},
+			{
+				"amount": 10,
+				"type": "chestresource"
+			},
+			{
+				"amount": 5,
+				"type": "chestluxury"
+			},
+			{
+				"type": "blastfurnace"
+			}
+		],
+		"key": "pipliz.steeltools",
+		"sortWeight": 639327
+	},
+	{
+		"colonyPointRequirement": 15000,
+		"dependencies": [
+			"pipliz.tabulator"
+		],
+		"icon": "../textures/icons/nitro.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 10,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 12,
+				"type": "carddata"
+			}
+		],
+		"key": "pipliz.nitro",
+		"sortWeight": 1363524
+	},
+	{
+		"colonyPointRequirement": 15000,
+		"dependencies": [
+			"pipliz.nitro"
+		],
+		"icon": "../textures/icons/grenadejobnight.png",
+		"itemRequirements": [
+			{
+				"amount": 15,
+				"type": "carddata"
+			},
+			{
+				"type": "nitro"
+			}
+		],
+		"key": "pipliz.grenadelauncher",
+		"sortWeight": 1678401
+	},
+	{
+		"colonyPointRequirement": 20000,
+		"dependencies": [
+			"pipliz.nitro"
+		],
+		"icon": "../textures/icons/guntrapammo.png",
+		"itemRequirements": [
+			{
+				"amount": 15,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 25,
+				"type": "carddata"
+			},
+			{
+				"type": "nitro"
+			}
+		],
+		"key": "pipliz.guntrap",
+		"sortWeight": 2049202
+	},
+	{
+		"colonyPointRequirement": 25000,
+		"dependencies": [
+			"pipliz.grenadelauncher",
+			"pipliz.steeltools"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 50,
+				"type": "carddata"
+			},
+			{
+				"type": "grenadelauncher"
+			},
+			{
+				"type": "guntrap"
+			},
+			{
+				"type": "tabulator"
+			}
+		],
+		"key": "pipliz.chestprestige",
+		"sortWeight": 2633552
+	},
+	{
+		"colonyPointRequirement": 25000,
+		"dependencies": [
+			"pipliz.chestprestige"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 25,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 50,
+				"type": "chestresource"
+			},
+			{
+				"amount": 250,
+				"type": "carddata"
+			},
+			{
+				"amount": 25,
+				"type": "chestprestige"
+			}
+		],
+		"key": "pipliz.prestige1",
+		"sortWeight": 4259768,
+		"threatIncrease": 250
+	},
+	{
+		"colonyPointRequirement": 30000,
+		"dependencies": [
+			"pipliz.prestige1"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 50,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 100,
+				"type": "chestresource"
+			},
+			{
+				"amount": 350,
+				"type": "carddata"
+			},
+			{
+				"amount": 50,
+				"type": "chestprestige"
+			}
+		],
+		"key": "pipliz.prestige2",
+		"sortWeight": 6963734,
+		"threatIncrease": 350
+	},
+	{
+		"colonyPointRequirement": 35000,
+		"dependencies": [
+			"pipliz.prestige2"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 100,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 200,
+				"type": "chestresource"
+			},
+			{
+				"amount": 500,
+				"type": "carddata"
+			},
+			{
+				"amount": 100,
+				"type": "chestprestige"
+			}
+		],
+		"key": "pipliz.prestige3",
+		"sortWeight": 11673709,
+		"threatIncrease": 500
+	},
+	{
+		"colonyPointRequirement": 40000,
+		"dependencies": [
+			"pipliz.prestige3"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 200,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 300,
+				"type": "chestresource"
+			},
+			{
+				"amount": 1000,
+				"type": "carddata"
+			},
+			{
+				"amount": 200,
+				"type": "chestprestige"
+			}
+		],
+		"key": "pipliz.prestige4",
+		"sortWeight": 20343324,
+		"threatIncrease": 750
+	},
+	{
+		"colonyPointRequirement": 50000,
+		"dependencies": [
+			"pipliz.prestige4"
+		],
+		"icon": "../textures/icons/chestprestige.png",
+		"itemRequirements": [
+			{
+				"amount": 500,
+				"type": "chestluxury"
+			},
+			{
+				"amount": 750,
+				"type": "chestresource"
+			},
+			{
+				"amount": 2500,
+				"type": "carddata"
+			},
+			{
+				"amount": 500,
+				"type": "chestprestige"
+			}
+		],
+		"key": "pipliz.prestige5",
+		"sortWeight": 41017356,
+		"threatIncrease": 1000
+	},
+	{
+		"colonyPointRequirement": 25,
+		"dependencies": [
+			"pipliz.trading"
+		],
+		"icon": "../textures/icons/fence.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "logwall"
+			},
+			{
+				"amount": 10,
+				"type": "woodfloor"
+			}
+		],
+		"key": "pipliz.fence",
+		"sortWeight": 786
+	},
+	{
+		"dependencies": [
+			"pipliz.stonemason"
+		],
+		"icon": "../textures/icons/roof.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "earthenware"
+			},
+			{
+				"amount": 10,
+				"type": "stonebricks"
+			}
+		],
+		"key": "pipliz.roofs",
+		"sortWeight": 3097
+	},
+	{
+		"dependencies": [
+			"pipliz.roofs"
+		],
+		"icon": "../textures/icons/paintred.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "rooftool"
+			},
+			{
+				"amount": 10,
+				"type": "rooftoolblue"
+			}
+		],
+		"key": "pipliz.artist",
+		"sortWeight": 4106
+	},
+	{
+		"dependencies": [
+			"pipliz.bronze",
+			"pipliz.artist"
+		],
+		"colonyPointRequirement": 250,
+		"icon": "../textures/icons/pillar.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "doorclosed"
+			},
+			{
+				"amount": 10,
+				"type": "window"
+			},
+			{
+				"amount": 25,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.classical",
+		"sortWeight": 16904
+	},
+	{
+		"dependencies": [
+			"pipliz.dyeing",
+			"pipliz.artist",
+			"pipliz.poison"
+		],
+		"icon": "../textures/icons/flowerbox.png",
+		"itemRequirements": [
+			{
+				"type": "hemp"
+			},
+			{
+				"type": "wisteriaflower"
+			},
+			{
+				"type": "alkanet"
+			},
+			{
+				"type": "wolfsbane"
+			},
+			{
+				"type": "hollyhock"
+			}
+		],
+		"key": "pipliz.flowerbox",
+		"sortWeight": 79102
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.glassblower"
+		],
+		"icon": "../textures/icons/lantern.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "silicasand"
+			},
+			{
+				"type": "glasspiece"
+			}
+		],
+		"key": "pipliz.streetlight",
+		"sortWeight": 131994
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.dyeing"
+		],
+		"icon": "../textures/icons/paintgreen.png",
+		"itemRequirements": [
+			{
+				"type": "hollyhock"
+			},
+			{
+				"type": "alkanet"
+			},
+			{
+				"type": "wolfsbane"
+			}
+		],
+		"key": "pipliz.paint",
+		"sortWeight": 78968
+	}
+]

@@ -1,0 +1,692 @@
+[
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 3,
+					"damage": 25,
+					"hitForce": 7,
+					"id": "guard",
+					"npcType": "pipliz.guardslingerday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 12,
+					"shootRequirements": [
+						{
+							"type": "slingbullet"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.1,
+						0.15
+					],
+					"min": [
+						0.2,
+						-0.5,
+						-0.15
+					]
+				}
+			],
+			"icon": "../textures/icons/slingday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/slinger.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardslingerdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 3,
+					"damage": 25,
+					"hitForce": 7,
+					"id": "guard",
+					"npcType": "pipliz.guardslingernight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 12,
+					"shootRequirements": [
+						{
+							"type": "slingbullet"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						-0.1,
+						0.15
+					],
+					"min": [
+						0.2,
+						-0.5,
+						-0.15
+					]
+				}
+			],
+			"icon": "../textures/icons/slingnight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/slinger.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardslingernightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 0,
+					"damageTicks": {
+						"damage": 120,
+						"tickDelay": 3,
+						"ticks": 15
+					},
+					"filterType": "UnpoisonedAtleast1000hp",
+					"id": "guard",
+					"npcType": "pipliz.guardpoison",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "sling",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "poisondart"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.3,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/poisonguard.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/poisonguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardpoison"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 5,
+					"damage": 75,
+					"hitForce": 10,
+					"id": "guard",
+					"npcType": "pipliz.guardbowday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "copperarrow"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.1
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.1
+					]
+				}
+			],
+			"icon": "../textures/icons/archerday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/archer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardbowdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 5,
+					"damage": 75,
+					"hitForce": 10,
+					"id": "guard",
+					"npcType": "pipliz.guardbownight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "copperarrow"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.1
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.1
+					]
+				}
+			],
+			"icon": "../textures/icons/archernight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/archer.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardbownightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 8,
+					"damage": 200,
+					"hitForce": 13,
+					"id": "guard",
+					"npcType": "pipliz.guardcrossbowday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 25,
+					"shootRequirements": [
+						{
+							"type": "crossbowbolt"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.3
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.3
+					]
+				}
+			],
+			"icon": "../textures/icons/crossbowday.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/crossbow.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardcrossbowdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 8,
+					"damage": 200,
+					"hitForce": 13,
+					"id": "guard",
+					"npcType": "pipliz.guardcrossbownight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "bowShoot",
+					"range": 25,
+					"shootRequirements": [
+						{
+							"type": "crossbowbolt"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.4,
+						0.3
+					],
+					"min": [
+						0.3,
+						-0.5,
+						-0.3
+					]
+				}
+			],
+			"icon": "../textures/icons/crossbownight.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"maxStackSize": 60,
+			"mesh": "../meshes/crossbow.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardcrossbownightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 10,
+					"damage": 1300,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardhandcannonday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "handcannonammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/guardhandcannondayjob.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/guardhandcannon.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardhandcannondayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 10,
+					"damage": 1300,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardhandcannonnight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 10,
+					"shootRequirements": [
+						{
+							"type": "handcannonammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/guardhandcannonnightjob.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/guardhandcannon.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardhandcannonnightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 7,
+					"damage": 500,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardmusketday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 30,
+					"shootRequirements": [
+						{
+							"type": "musketammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/musketjobday.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/guardmusket.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardmusketdayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 7,
+					"damage": 500,
+					"hitForce": 25,
+					"id": "guard",
+					"npcType": "pipliz.guardmusketnight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 30,
+					"shootRequirements": [
+						{
+							"type": "musketammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/musketjobnight.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/guardmusket.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardmusketnightjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 250,
+					"damageRadius": 3,
+					"hitForce": 35,
+					"id": "guard",
+					"npcType": "pipliz.guardgrenadeday",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "grenadelauncherammo"
+						}
+					],
+					"sleepType": "Night"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/grenadejobday.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/grenadelauncherguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardgrenadedayjob"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"cooldownShot": 12,
+					"damage": 250,
+					"damageRadius": 3,
+					"hitForce": 35,
+					"id": "guard",
+					"npcType": "pipliz.guardgrenadenight",
+					"onHitAudio": "fleshHit",
+					"onShootAudio": "handcannon",
+					"range": 18,
+					"shootRequirements": [
+						{
+							"type": "grenadelauncherammo"
+						}
+					],
+					"sleepType": "Day"
+				}
+			],
+			"categories": [
+				"defense",
+				"guard"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.75,
+						-0.15
+					],
+					"min": [
+						0.25,
+						-0.5,
+						-0.45
+					]
+				}
+			],
+			"icon": "../textures/icons/grenadejobnight.png",
+			"isSolid": false,
+			"lightingTransparency": 220,
+			"maxStackSize": 60,
+			"mesh": "../meshes/grenadelauncherguard.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "guardgrenadenightjob"
+	}
+]

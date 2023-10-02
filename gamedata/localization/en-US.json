@@ -178,15 +178,7 @@
 			"nopermission": "You do not have the permission '{0}' to do that."
 		},
 		"connectingscreen": {
-			"general_1": "Stage {0}/{1} - Password required",
-			"general_2": "Stage {0}/{1} - Requested server files table",
-			"general_3": "Stage {0}/{1} - Loading {2} files",
-			"general_3_downloading": " (downloading {0} packets)",
-			"general_4": "Stage {0}/{1} - Finalizing",
-			"general_fail": "Connecting timed out after {0} seconds. Returning to main menu in 5 seconds.",
 			"loading": "Loading",
-			"localhost_1": "Stage 1/{0} - Searching for singleplayer server on this computer",
-			"localhost_2": "Stage 2/{0} - Searching for steam server on this computer",
 			"localhost_fail": "Failed to find steam/singleplayer server running on this computer. Reloading to main menu in 5 seconds.",
 			"refused": {
 				"blacklisted": "you are blacklisted",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "version mismatch according to the server"
 			},
 			"refused_main": "Connection refused, {0}. Returning to main menu in 5 seconds.",
-			"sp_1": "Stage 1/{0} - Start listening for background server",
-			"sp_2": "Stage 2/{0} - Starting background server",
-			"sp_3": "Stage 3/{0} - Started server, awaiting connection",
-			"sp_alreadyrunning1_1": "A server for this install is already running. It may still be quitting. Will retry in {0} seconds.",
 			"sp_alreadyrunning2": "A server is already running. Returning to the main menu in 5 seconds.",
-			"steam05": "Stage 1/{0} - Trying to setup direct connection",
-			"steam06": "Stage 1/{0} - Trying to setup steam relay connection",
-			"steam07": "Stage 2/{0} - Connection successful, authenticating",
-			"steamfail": "Failed to setup a connection. Returning to main menu in 5 seconds."
+			"stages": {
+				"1": "Requested server files table",
+				"connectionmade": "Connection made",
+				"downloading": "(downloading {0} packets)",
+				"fail": "Loading failed, returning to main menu in 5 seconds",
+				"final": "Finalizing",
+				"loading": "Loading {0} files",
+				"local1": "Searching for singleplayer server on this computer",
+				"local2": "Searching for online server on this computer",
+				"password": "Password required",
+				"steamdirect": "Trying to setup direct connection",
+				"steamp2p": "Trying to setup p2p connection",
+				"timeout": "Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Browse Workshop",
@@ -277,6 +276,7 @@
 			"description": "Description",
 			"edit": "Edit",
 			"enabled": "Enabled",
+			"gamepadtextinputalphanumeric": "Only alphabet letters and numbers are accepted.",
 			"high": "High",
 			"inputplaceholder": "Enter text...",
 			"inputplaceholder_search": "Enter text to search...",
@@ -376,6 +376,7 @@
 			"pipliz": {
 				"alchemist": "Alchemist",
 				"alkanetfarmer": "Alkanet Farmer",
+				"artist": "Artist",
 				"barleyfarmer": "Barley Farmer",
 				"beekeeper": "Beekeeper",
 				"berryfarmer": "Berry Farmer",
@@ -467,6 +468,10 @@
 				"description": "Unlocks archers and fletchers, a more effective protection against monsters.",
 				"name": "Archery"
 			},
+			"artist": {
+				"description": "Unlocks a new job that is completely dedicated to aesthetics",
+				"name": "Artist"
+			},
 			"astrolabe": {
 				"description": "Unlocks the astrolabe; a navigation tool that helps find biomes",
 				"name": "Astrolabe"
@@ -514,6 +519,10 @@
 			"chickenmeal": {
 				"description": "Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
 				"name": "Chicken Meals"
+			},
+			"classical": {
+				"description": "Revive the way the ancients built",
+				"name": "Classical Architecture"
 			},
 			"compass": {
 				"description": "Unlocks the compass; a navigation tool to find back your home",
@@ -570,6 +579,14 @@
 			"farming": {
 				"description": "Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
 				"name": "Wheat Farming"
+			},
+			"fence": {
+				"description": "Could be very practical, but is mostly aesthetic.",
+				"name": "Fence"
+			},
+			"flowerbox": {
+				"description": "Spread some permanent cheer",
+				"name": "Flower Box"
 			},
 			"furnace": {
 				"description": "Unlocks the smelter, a worker who processes ores",
@@ -663,6 +680,10 @@
 				"description": "Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
 				"name": "Outposts"
 			},
+			"paint": {
+				"description": "Recolor some aesthetics",
+				"name": "Paint"
+			},
 			"papermaking": {
 				"description": "Unlocks making paper from hemp, a key part towards scientific progress",
 				"name": "Paper Production"
@@ -715,6 +736,10 @@
 				"description": "Unlocks the researcher, who will do research using nearby bookcases to progress science",
 				"name": "Researcher"
 			},
+			"roofs": {
+				"description": "An attractive way to cover your buildings",
+				"name": "Tiled Roofs"
+			},
 			"ropes": {
 				"description": "Unlocks an ingredient with many uses",
 				"name": "Ropes"
@@ -750,6 +775,10 @@
 			"stonemason": {
 				"description": "Unlocks the stonemason, useful for adding variety to buildings",
 				"name": "Stonemason"
+			},
+			"streetlight": {
+				"description": "Much fancier than torches",
+				"name": "Streetlights"
 			},
 			"tabulator": {
 				"description": "Unlocks a complex machine which processes data and stores it in punched-cards.",
@@ -925,6 +954,11 @@
 				"next": "Next",
 				"previous": "Previous"
 			},
+			"signs": {
+				"apply": "Apply",
+				"edit": "Edit",
+				"header": "Sign"
+			},
 			"specialblockremoval": {
 				"button": "Remove",
 				"description": "Removing this block of type {0} may cause problems for a colony. What do you want to do?",
@@ -1087,22 +1121,16 @@
 					"tab": "General settings",
 					"uiscalingratio": "UI scale"
 				},
-				"keymapping": "Key mapping",
-				"keymenu": {
-					"resetall": "Reset All"
-				},
 				"mousemenu": {
-					"invertx": "Invert x-axis",
 					"inverty": "Invert y-axis",
-					"sensitivitylock": "Lock together sensitivity axes",
-					"sensitivityx": "Mouse sensitivity X-axis",
-					"sensitivityy": "Mouse sensitivity Y-axis",
-					"smooth": "Mouse smoothing",
-					"smoothlock": "Lock together smoothing axes",
-					"smoothx": "Mouse smoothing X-axis",
-					"smoothy": "Mouse smoothing Y-axis"
+					"sensitivity": "Mouse sensitivity",
+					"smooth": "Mouse smoothing"
 				},
-				"mousesettings": "Mouse settings"
+				"mousesettings2": "Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "Gamepad",
+					"sensitivity": "Aim sensitivity"
+				}
 			},
 			"language": "Language",
 			"languagemenu": {
@@ -1189,6 +1217,8 @@
 			"serverport": "Server Port",
 			"typegenerateworld": "Generate World",
 			"typeworkshop": "Workshop World",
+			"world_folder": "Folder",
+			"world_outdated": "Requires older version",
 			"worlddate": "Date",
 			"worldname": "Name",
 			"worldname_long": "World Name",
@@ -1214,6 +1244,7 @@
 			"lockbox-threat": "Causes {0} threat",
 			"miner": "Orders a colonist to repeatedly mine the dark stone ore block underneath",
 			"npcshop": "Colonists will visit this or the banner to get their daily meal",
+			"paintable": "Item can be altered using: ",
 			"pointtrader": "You can buy and sell things for points here",
 			"provides-fertile": "Counts as fertile ground",
 			"provides-fertile-fen": "Counts as fertile marsh ground",
@@ -1279,6 +1310,8 @@
 		"alchemisttable": "Alchemist's Table",
 		"alkanet": "Alkanet",
 		"animalcarcass": "Animal Carcass",
+		"architrave": "Architrave",
+		"artisttable": "Artist's Workbench",
 		"astrolabe": "Astrolabe",
 		"banner": "Banner",
 		"bannertool": "Banner Tool",
@@ -1340,6 +1373,7 @@
 		"copperingot": "Copper Ingot",
 		"copperlockbox": "Copper Lockbox",
 		"coppertools": "Copper Tools",
+		"corbel": "Corbel",
 		"cotton": "Cotton",
 		"cottonengine": "Cotton Engine",
 		"cottonfibre": "Cotton Fibre",
@@ -1350,23 +1384,26 @@
 		"dirt": "Dirt",
 		"dirtfen": "Marsh Dirt",
 		"dirtheath": "Heath Dirt",
+		"doorclosed": "Door",
 		"droppertrap": "Dropper Trap",
 		"droppertrapammo": "Dropper Trap Ammo",
 		"dyertable": "Dyer's Table",
 		"earthenware": "Earthenware",
 		"elevator": "Elevator Station",
-		"elevatorhorizontal": "Horizontal Elevator Station",
+		"elevatorhorizontal": "Rail Station",
 		"elevatorshaft": "Elevator Shaft",
-		"elevatorshafthorizontal": "Horizontal Elevator Rail",
+		"elevatorshafthorizontal": "Rails",
 		"engineerbench": "Engineer's Bench",
 		"eyeglasses": "Eyeglasses",
 		"failsafe": "Sacred Failsafe",
+		"fence": "Fence",
 		"firepit": "Firepit",
 		"firewood": "Firewood",
 		"fisherman": "Fisherman's Spot",
 		"flax": "Flax",
 		"flaxstage1": "Flax seeds",
 		"fletcherbench": "Fletcher's Bench",
+		"flowerboxitem": "Flower Box",
 		"furnace": "Furnace",
 		"glassblower": "Glassblower's Workshop",
 		"glasspiece": "Piece of Glass",
@@ -1422,6 +1459,7 @@
 		"lanternblue": "Blue Lantern",
 		"lanterncyan": "Cyan Lantern",
 		"lanterngreen": "Green Lantern",
+		"lanternitem": "Streetlight",
 		"lanternorange": "Orange Lantern",
 		"lanternpink": "Pink Lantern",
 		"lanternred": "Red Lantern",
@@ -1449,6 +1487,7 @@
 		"metallathe": "Metal Lathe",
 		"minerjob": "Miner Job",
 		"monocular": "Monocular",
+		"mouldingitem": "Crown Moulding",
 		"movabletype": "Movable Type",
 		"mudbricks": "Mud Bricks",
 		"musket": "Musket",
@@ -1457,9 +1496,15 @@
 		"notools": "No Tools",
 		"npcshop": "Grocery Store",
 		"outpostbanner": "Outpost Banner",
+		"paintblue": "Blue Paint",
+		"paintgreen": "Green Paint",
+		"paintred": "Red Paint",
+		"paintstripped": "Paint Stripper",
+		"paintwhite": "White Paint",
 		"paper": "Paper",
 		"papermakersmould": "Papermaker's Mould",
 		"parchment": "Parchment",
+		"pillar": "Pillar",
 		"planks": "Planks",
 		"planksblue": "Blue Planks",
 		"planksgreen": "Green Planks",
@@ -1477,9 +1522,12 @@
 		"quarterblockbrowndark": "Dark Brown Quarter Block",
 		"quarterblockbrownlight": "Light Brown Quarter Block",
 		"quarterblockgrey": "Grey Quarter Block",
+		"railitem": "Rails",
 		"rawfish": "Raw Fish",
 		"rawmeat": "Raw Meat",
 		"researcherdesk": "Researcher's Desk",
+		"rooftool": "Tiled Roof",
+		"rooftoolblue": "Blue Tiled Roof",
 		"rope": "Rope",
 		"ropebench": "Roper's Bench",
 		"ropetrap": "Rope Trap",
@@ -1526,6 +1574,7 @@
 		"stonebrickswhite": "White Cobblestone",
 		"stonemasonworkbench": "Stonemason's Workbench",
 		"stonerubble": "Stone Rubble",
+		"stonestair": "Stone Stair",
 		"stonetools": "Stone Tools",
 		"stove": "Stove",
 		"straw": "Straw",
@@ -1552,12 +1601,14 @@
 		"wheatmeal": "Wheat Gruel",
 		"wheatporridge": "Wheat Porridge",
 		"wheatstage1": "Wheat Seeds",
+		"window": "Window",
 		"wisteriaflower": "Wisteria Flower",
 		"wisteriajob": "Wisteria Harvester",
 		"wisteriaplant": "Wisteria Plant",
 		"wisteriaplantempty": "Wisteria Plant",
 		"wolfsbane": "Wolfsbane",
 		"woodfloor": "Wood Flooring",
+		"woodstair": "Wooden Stair",
 		"writerdesk": "Writer's Desk",
 		"zinc": "Zinc"
 	},

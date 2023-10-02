@@ -1,0 +1,567 @@
+[
+	{
+		"baseType": {
+			"attachBehaviour": [
+			{
+				"id": "window_smart",
+				"group": "default",
+				"typefull": "windowfull",
+				"typewindowonegapleft" : "windowonegapleft",
+				"typewindowonegapright" : "windowonegapright",
+				"typewindowonegapdown" : "windowonegapdown",
+				"typewindowonegapup" : "windowonegapup",
+				"typewindowtwogap180" : "windowtwogap180",
+				"typewindowtwogap180horizontal" : "windowtwogap180horizontal",
+				"typewindowtwogap90downright" : "windowtwogap90downright",
+				"typewindowtwogap90upright" : "windowtwogap90upright",
+				"typewindowtwogap90downleft" : "windowtwogap90downleft",
+				"typewindowtwogap90upleft" : "windowtwogap90upleft",
+				"typewindowthreegapright" : "windowthreegapright",
+				"typewindowthreegapleft" : "windowthreegapleft",
+				"typewindowthreegapup" : "windowthreegapup",
+				"typewindowthreegapdown" : "windowthreegapdown",
+				"typewindowfourgap" : "windowfourgap"
+			}],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowfull.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"onRemoveType": "window",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowfull"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowonegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "window",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowonegapup"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowonegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "window",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowonegapdown"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowonegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "window",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowonegapleft"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowonegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 270,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "window",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowonegapright"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap180.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap180"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap180.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap180horizontal"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap90.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap90upleft"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap90.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 270,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap90upright"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap90.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap90downleft"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowtwogap90.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowtwogap90downright"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowthreegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowthreegapleft"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowthreegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 270,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowthreegapup"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowthreegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 180,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowthreegapright"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowthreegap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveType": "window",
+			"onRemoveAudio": "stoneDelete",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowthreegapdown"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [
+						0.44,
+						0.5,
+						0.5
+					],
+					"min": [
+						0.31,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_window/windowfourgap.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "window",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "windowfourgap"
+	}
+]

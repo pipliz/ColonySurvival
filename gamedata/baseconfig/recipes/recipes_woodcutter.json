@@ -1,0 +1,170 @@
+[
+	{
+		"cooldown": 100.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"requiresScience": "pipliz.fence",
+		"name": "pipliz.woodcutter.fence",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "planks"
+			}
+		],
+		"results": [
+			{
+				"type": "fence"
+			}
+		],
+		"sortWeight": 786
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 50,
+		"name": "pipliz.woodcutter.planks",
+		"requires": [
+			{
+				"type": "logtemperate"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 4,
+				"type": "planks"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 50,
+		"name": "pipliz.woodcutter.plankstaiga",
+		"requires": [
+			{
+				"type": "logtaiga"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 4,
+				"type": "planks"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 25,
+		"name": "pipliz.woodcutter.firewood",
+		"requires": [
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 3,
+				"type": "firewood"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 20.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.woodcutter.torch",
+		"requires": [
+			{
+				"type": "firewood"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"type": "torch"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 5,
+		"defaultPriority": -100,
+		"name": "pipliz.woodcutter.woodfloor",
+		"requires": [
+			{
+				"amount": 2,
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 4,
+				"type": "woodfloor"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 5,
+		"defaultPriority": -100,
+		"name": "pipliz.woodcutter.logwall",
+		"requires": [
+			{
+				"type": "logtemperate"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 3,
+				"type": "logwall"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.woodcutter.quarterblockbrowndark",
+		"requires": [
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 4,
+				"type": "quarterblockbrowndark"
+			}
+		],
+		"sortWeight": 105
+	},
+	{
+		"cooldown": 10.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.woodcutter.quarterblockbrownlight",
+		"requires": [
+			{
+				"type": "planks"
+			}
+		],
+		"requiresScience": "pipliz.furnace",
+		"results": [
+			{
+				"amount": 4,
+				"type": "quarterblockbrownlight"
+			}
+		],
+		"sortWeight": 105
+	}
+]

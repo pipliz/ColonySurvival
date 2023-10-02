@@ -1,5 +1,5 @@
 {
-	"coverage": 52.0,
+	"coverage": 100.0,
 	"hints": {
 		"0": "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1": "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
@@ -19,10 +19,10 @@
 	},
 	"sentences": {
 		"astrolabe": {
-			"bigtree": "_MISSING_Mammoth Tree",
-			"heath": "_MISSING_Heath",
-			"marsh": "_MISSING_Marsh",
-			"mountain": "_MISSING_Mountain"
+			"bigtree": "Arbre mammouth",
+			"heath": "Lande",
+			"marsh": "Marai",
+			"mountain": "Montagne"
 		},
 		"bannerclickedpopup": {
 			"deletebanner": "Supprimer la bannière",
@@ -36,25 +36,25 @@
 			"activecolony": "Colonie active : {0}",
 			"addbanner": "Ajouter une bannière",
 			"header": "Placement de bannière",
-			"missingcolonykit": "_MISSING_Requires a Colony Starter Kit",
-			"missingoutpostbanner": "_MISSING_Requires an Outpost Banner",
+			"missingcolonykit": "Kit de démarage de colonie nessesaire",
+			"missingoutpostbanner": "Banière d'avant-poste requi",
 			"movebanner": "Déplacer la bannière",
-			"mustbeleader": "_MISSING_Must be the colony leader to adjust banners",
-			"opencolonytab": "_MISSING_Manage {0}",
+			"mustbeleader": "Seul le chef de la colony peut ajouter des banières",
+			"opencolonytab": "Gérer {0}",
 			"startcolony": "Fonder une nouvelle colonie ici",
-			"startoutpost": "_MISSING_Start a new outpost",
-			"startoutpostremote": "_MISSING_Start a new outpost"
+			"startoutpost": "Démarée un nouvelle avant-poste",
+			"startoutpostremote": "Démarée un nouvelle avant-poste"
 		},
 		"category": {
-			"consumables": "_MISSING_Consumables",
-			"decorative": "_MISSING_Building Blocks",
-			"defense": "_MISSING_Defense",
-			"essential": "_MISSING_Essentials",
-			"food": "_MISSING_Food",
-			"ingredient": "_MISSING_Ingredients & Luxury",
-			"job": "_MISSING_Jobblocks",
-			"misc": "_MISSING_Misc",
-			"texres": "_MISSING_Textiles & Research"
+			"consumables": "Consommable",
+			"decorative": "Blocs de Construction",
+			"defense": "Défense",
+			"essential": "Essentiel",
+			"food": "Nouriture",
+			"ingredient": "Ingrédients et Luxe",
+			"job": "Blocs métiers",
+			"misc": "Divers",
+			"texres": "Textile et Recherche"
 		},
 		"chat": {
 			"colonydied": "Tous les colons de {0} ont été tués.",
@@ -62,8 +62,8 @@
 		},
 		"colonymanagement": {
 			"colonysettings": {
-				"difficulty": "_MISSING_Difficulty",
-				"difficultylocked": "_MISSING_Locked Difficulty",
+				"difficulty": "Difficulté",
+				"difficultylocked": "Difficulté verrouillé ",
 				"header": "Paramètres du monde"
 			},
 			"diplomacy": {
@@ -92,11 +92,11 @@
 			"manageowners": "Gérer les propriétaires",
 			"nameedit": "Modifier le nom de la colonie :",
 			"outpost": {
-				"create": "_MISSING_Create Outpost",
-				"createdescription": "_MISSING_Starting an outpost consumes an Outpost Banner from your inventory (or stockpile).",
-				"parentcolony": "_MISSING_Parent Colony:",
-				"popupheader": "_MISSING_Outpost Creation",
-				"selectparent": "_MISSING_Select Main Colony"
+				"create": "Crée un avant-poste",
+				"createdescription": "Le démarrage d'un avant-poste consomme une bannière d'avant-poste de votre inventaire (ou réserve).",
+				"parentcolony": "Colonie parent :",
+				"popupheader": "Création d'avant-poste",
+				"selectparent": "Sélectionnez la colonie principale"
 			},
 			"ownership": {
 				"action": "Action",
@@ -111,7 +111,7 @@
 				"role": "Rôle",
 				"settoleader": "Définir comme chef"
 			},
-			"recruit": "_MISSING_Recruit",
+			"recruit": "Recruter",
 			"recruitauto": "Recrutement automatique lors du placement de postes",
 			"recruitfailedbeds": "<color=red>Impossible de recruter un nouveau colon - pas assez de lits libres.</color>",
 			"recruitfailedcap": "<color=red>Impossible de recruter un nouveau colon - capacité atteinte.</color>",
@@ -173,20 +173,12 @@
 			}
 		},
 		"commands": {
-			"disableachievements": "_MISSING_Achievements have been disabled for this world due to interacting with cheat options",
-			"disableachievementsfirst": "_MISSING_To do that, you must first disable achievements by using the '/disableachievements' command",
-			"nopermission": "_MISSING_You do not have the permission '{0}' to do that."
+			"disableachievements": "Les avancements ont été désactivées pour ce monde en raison de l'interaction avec les options de triche",
+			"disableachievementsfirst": "Pour faire ça, vous devez d'abord désactiver les avancements avec la commande '/disableachievements' ",
+			"nopermission": "Vous n'avez pas la permission de faire ça '{0}' ."
 		},
 		"connectingscreen": {
-			"general_1": "Étape {0}/{1} – Mot de passe nécessaire",
-			"general_2": "Étape {0}/{1} – Table de fichiers de serveur demandée",
-			"general_3": "Étape {0}/{1} – Chargement de {2} fichiers",
-			"general_3_downloading": " (téléchargement de {0} paquets)",
-			"general_4": "Étape {0}/{1} – Finalisation",
-			"general_fail": "La connexion a échoué après {0} secondes. Retour au menu principal dans 5 secondes.",
 			"loading": "Chargement",
-			"localhost_1": "Étape 1/{0} – Recherche d'un serveur solo sur cet ordinateur",
-			"localhost_2": "Étape 2/{0} – Recherche d'un serveur Steam sur cet ordinateur",
 			"localhost_fail": "Impossible de trouver un serveur solo ou Steam en fonctionnement sur cet ordinateur. Retour au menu principal dans 5 secondes.",
 			"refused": {
 				"blacklisted": "vous figurez sur la liste noire",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "version incompatible selon le serveur"
 			},
 			"refused_main": "Connexion refusée, {0}. Retour au menu principal dans 5 secondes.",
-			"sp_1": "Étape 1/{0} – Recherche de serveur en arrière-plan",
-			"sp_2": "Étape 2/{0} – Lancement du serveur en arrière-plan",
-			"sp_3": "Étape 3/{0} – Serveur lancé, en attente de connexion",
-			"sp_alreadyrunning1_1": "Un serveur pour cette installation est déjà en cours d’exécution. Il peut toujours être abandonné. Nouvelle tentative dans {0} secondes.",
 			"sp_alreadyrunning2": "Un serveur est déjà lancé. Retour au menu principal dans 5 secondes.",
-			"steam05": "_MISSING_Stage 1/{0} - Trying to setup direct connection",
-			"steam06": "_MISSING_Stage 1/{0} - Trying to setup steam relay connection",
-			"steam07": "_MISSING_Stage 2/{0} - Connection successful, authenticating",
-			"steamfail": "Impossible de recevoir les données de connexion. Retour au menu principal dans 5 secondes."
+			"stages": {
+				"1": "Tableau des fichiers du serveur nécessaire",
+				"connectionmade": "Connexion établie",
+				"downloading": "(Téléchargement de {0} paquets)",
+				"fail": "Échec du chargement, retour au menu principal dans 5 secondes",
+				"final": "Finalisation",
+				"loading": "Chargement de {0} fichiers",
+				"local1": "Recherche d'un serveur solo sur cet ordinateur",
+				"local2": "Recherche d'un serveur en ligne sur cet ordinateur",
+				"password": "Mot de passe requis",
+				"steamdirect": "Essayer de configurer une connexion directe",
+				"steamp2p": "Essayer de configurer une connexion p2p",
+				"timeout": "La connexion a expiré. Retour au menu principal dans 5 secondes",
+				"waitingserver": "Démarrage du serveur en arrière-plan"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "Parcourir le Workshop",
@@ -248,16 +247,16 @@
 			"settings": "Paramètres"
 		},
 		"failsafe": {
-			"current": "_MISSING_Current Sacred Points storage: {0} out of {1}",
-			"damage": "_MISSING_Triggering the Sacred Failsafe will cause {0} damage",
-			"futurewave": "_MISSING_The Failsafe will reduce the total HP of incoming monsters by {0:P0} for the next night",
-			"header": "_MISSING_Failsafe",
-			"nextavailable": "_MISSING_The Failsafe will be available again after the next night",
-			"statusactive": "_MISSING_Status: Sacred Failsafe has been activated",
-			"statusavailable": "_MISSING_Status: Sacred Failsafe is available",
-			"trigger": "_MISSING_Trigger",
-			"wave": "_MISSING_The current threat level is {0} and will spawn monsters with a total HP of {1}",
-			"wavereduced": "_MISSING_The total HP of incoming monsters will be reduced by {0:P0} the next night"
+			"current": "Stockage actuel de points sacrés : {0} sur {1}",
+			"damage": "Le déclenchement de la Sécurité sacrés causera {0} dégâts",
+			"futurewave": "La Sécurité sacrés réduira le total de HP des monstres entrants de {0:P0} pour la nuit suivante",
+			"header": "Sécurité sacrés",
+			"nextavailable": "La Sécurité sacrés ne sera disponnible que après la prochaine nuit",
+			"statusactive": "Statut: La Sécurité sacrés a été activée",
+			"statusavailable": "Statut: La Sécurité sacrés est disponible",
+			"trigger": "Déclencher",
+			"wave": "Le niveau de menace actuel est de {0} et fera apparaître des monstres avec un HP total de {1}",
+			"wavereduced": "Le total d'HP des monstre qui arrive sera réduite de {0:P0} la nuit prochaine"
 		},
 		"firstpersonstats": {
 			"ammocount": "Munitions :",
@@ -266,8 +265,8 @@
 			"colonypoints": "Points :",
 			"laborercount": "Sans emploi :",
 			"mealstorage": "Total des repas :",
-			"threatlevel": "_MISSING_Threat Level:",
-			"time_day": "_MISSING_Day"
+			"threatlevel": "Niveau de menace:",
+			"time_day": "Jour:"
 		},
 		"general": {
 			"apply": "Appliquer",
@@ -277,6 +276,7 @@
 			"description": "Description",
 			"edit": "Modifier",
 			"enabled": "Activé",
+			"gamepadtextinputalphanumeric": "Seuls les chiffres et les lettres de l'alphabet sont acceptés.",
 			"high": "Élevé",
 			"inputplaceholder": "Saisir du texte…",
 			"inputplaceholder_search": "Entrez le texte à rechercher...",
@@ -314,7 +314,7 @@
 		"mainmenu": {
 			"back": "Retour",
 			"contentmanager": "Gestionnaire de Mods",
-			"continue": "_MISSING_Continue",
+			"continue": "Continuer",
 			"coop": "Héberger une coopération",
 			"info": "Informations",
 			"multiplayer": "Multijoueur",
@@ -346,442 +346,471 @@
 			"version": "Version"
 		},
 		"notifications": {
-			"delete": "_MISSING_Delete notification",
-			"header": "_MISSING_Notifications",
-			"missingplayerammo": "_MISSING_<color=red>Using {0} requires some {1} to be in the inventory!</color>",
+			"delete": "Supprimée les notifications",
+			"header": "Notifications",
+			"missingplayerammo": "<color=red>Utiliser {0} demande {1} d'être dans votre inventaire!</color>",
 			"npc_died": {
-				"banner": "_MISSING_A monster at the banner",
-				"command": "_MISSING_Command usage",
-				"excess": "_MISSING_And {0} more died since, anonymously.",
-				"individual": "_MISSING_{0}: A colonist with job {1} died from: {2}",
-				"main": "_MISSING_{0} colonists died in outpost {1}!",
-				"misc": "_MISSING_Unkown reasons",
-				"monster": "_MISSING_A monster",
-				"npc": "_MISSING_A colonist",
-				"player": "_MISSING_A player",
-				"starving": "_MISSING_Starvation",
-				"trap": "_MISSING_A Trap"
+				"banner": "Un monstre est à la bannière",
+				"command": "Usage de commande",
+				"excess": "Et {0} colon sont mort depuis, de manière anonyme. ",
+				"individual": "{0}: Un colon avec le métier de {1} est mort de: {2}",
+				"main": "{0} colon mort à un avant-poste: {1}!",
+				"misc": "Raison inconnue",
+				"monster": "Un monstre",
+				"npc": "Un colon",
+				"player": "Un joueur",
+				"starving": "Famine",
+				"trap": "Un piége"
 			},
 			"science": {
-				"entry": "_MISSING_{0}: Completed {1}",
-				"main": "_MISSING_Science completed!"
+				"entry": "{0}: Completer {1}",
+				"main": "Science Completé"
 			},
 			"siegemode": {
-				"disabled": "_MISSING_{0}: Exited siege mode",
-				"enabled": "_MISSING_{0}: Entered siege mode",
-				"main": "_MISSING_Siege mode triggered in outpost {0}!"
+				"disabled": "{0}: Quitte le mode siège",
+				"enabled": "{0}: Entre en mode siège",
+				"main": "Le mod siège a été déclancher dans l'avant-poste {0}!"
 			}
 		},
 		"npcs": {
 			"pipliz": {
-				"alchemist": "_MISSING_Alchemist",
+				"alchemist": "Alchimiste",
 				"alkanetfarmer": "Cultivateur d'Orcanette",
+				"artist": "Artiste",
 				"barleyfarmer": "Cultivateur d'orge",
 				"beekeeper": "Apiculteur",
 				"berryfarmer": "Cultivateur de baies",
-				"blastfurnace": "_MISSING_Blast Furnace Operator",
+				"blastfurnace": "Opérateur de haut fournaux",
 				"bloomeryjob": "Fondeur de fer",
 				"builder": "Constructeur",
 				"cabbagefarmer": "Cultivateur de choux",
-				"chestmaker": "_MISSING_Chestmaker",
+				"chestmaker": "Coffreur",
 				"chickenfarmer": "Éleveur de poulets",
-				"composter": "_MISSING_Composter",
-				"constructor": "Ouvrier",
+				"composter": "Composteur",
+				"constructor": "Constructeur",
 				"cook": "Cuisinier",
-				"coppersmith": "_MISSING_Copper Smith",
-				"cottonengine": "_MISSING_Cotton Engine Operator",
+				"coppersmith": "Forgeron de cuivre",
+				"cottonengine": "Opérateur de machine à coton",
 				"cottonfarmer": "Cultivateur de coton",
 				"digger": "Creuseur",
 				"diggerspecial": "Creuseur spécial",
 				"dyer": "Teinturier",
-				"engineer": "_MISSING_Engineer",
-				"firepit": "_MISSING_Primitive Cook",
+				"engineer": "Ingénieur",
+				"firepit": "Nouriture Primitive",
 				"fisherman": "Pêcheur",
 				"flaxfarmer": "Cultivateur de lin",
-				"fletcher": "_MISSING_Fletcher",
+				"fletcher": "Fabricant de flèches",
 				"forester": "Forestier",
-				"glassblower": "_MISSING_Glassblower",
-				"grinder": "Broyeur",
+				"glassblower": "Souffleur de verre",
+				"grinder": "Meule",
 				"guardbowday": "Archer de jour",
 				"guardbownight": "Archer de nuit",
 				"guardcrossbowday": "Arbalétrier de jour",
 				"guardcrossbownight": "Arbalétrier de nuit",
-				"guardgrenadeday": "_MISSING_Day Grenade Launcher Guard",
-				"guardgrenadenight": "_MISSING_Night Grenade Launcher Guard",
-				"guardhandcannonday": "_MISSING_Day Handcannon Guard",
-				"guardhandcannonnight": "_MISSING_Night Handcannon Guard",
-				"guardmusketday": "_MISSING_Day Musket Guard",
-				"guardmusketnight": "_MISSING_Night Musket Guard",
-				"guardpoison": "_MISSING_Poison Guard",
+				"guardgrenadeday": "Garde lance grenade de jour",
+				"guardgrenadenight": "Garde lance grenade de n",
+				"guardhandcannonday": "Garde de canon ee jour",
+				"guardhandcannonnight": "Garde de canon de nuit",
+				"guardmusketday": "Mousquetaire de jour",
+				"guardmusketnight": "Mousquetaire de nuit",
+				"guardpoison": "Garde avec poison",
 				"guardslingerday": "Frondeur de jour",
 				"guardslingernight": "Frondeur de nuit",
-				"gunsmith": "_MISSING_Gunsmith",
-				"hempfarmer": "_MISSING_Hemp Farmer",
+				"gunsmith": "Armurier",
+				"hempfarmer": "Producteur de chanvre",
 				"hollyhockfarmer": "Cultivateur de roses trémières",
-				"jeweller": "_MISSING_Jeweler",
-				"jobblockcrafter": "_MISSING_Job-block Crafter",
-				"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter",
+				"jeweller": "Bijoutier",
+				"jobblockcrafter": "Fabricateur de bloc métier",
+				"jobblockcrafteradvanced": "Fabricateur de bloc métier avancée",
 				"kilnjob": "Brûleur de charbon de bois",
 				"laborer": "Travailleur",
-				"metallathe": "_MISSING_Metal Lathe Operator",
+				"metallathe": "Opérateur de tour à métaux",
 				"minerjob": "Mineur",
 				"networkplayer": "Joueur",
-				"papermaker": "_MISSING_Papermaker",
-				"potter": "_MISSING_Potter",
+				"papermaker": "Fabricant de papier",
+				"potter": "Potier",
 				"printingpress": "Imprimeur",
-				"researcher": "_MISSING_Researcher",
-				"roper": "_MISSING_Rope Maker",
-				"sanctifier": "_MISSING_Sanctifier",
-				"scribe": "_MISSING_Scribe",
+				"researcher": "Chercheur",
+				"roper": "Cordelier",
+				"sanctifier": "Sanctificateur",
+				"scribe": "Écrivain",
 				"smelter": "Fondeur",
 				"stonemason": "Tailleur de pierre",
-				"tabulator": "_MISSING_Tabulating Machine Operator",
+				"tabulator": "Opérateur de machine à tabuler",
 				"tailor": "Tailleur",
-				"tanner": "_MISSING_Tanner",
-				"tinkerer": "_MISSING_Tinkerer",
+				"tanner": "Tanneur",
+				"tinkerer": "Bricoleur",
 				"trader": "Trader",
-				"trapfixer": "_MISSING_Trapfixer",
+				"trapfixer": "Fixeur de pièges",
 				"watergatherer": "Collecteur d'eau",
-				"waterpump": "Travailleur de pompe à eau",
+				"waterpump": "Pompe à eau",
 				"wheatfarmer": "Cultivateur de blé",
-				"wisteriafarmer": "_MISSING_Wisteria Farmer",
-				"wolfsbanefarmer": "_MISSING_Wolfsbane Farmer",
-				"woodcutter": "Bûcheron",
+				"wisteriafarmer": " Cultivateur de Glycine",
+				"wolfsbanefarmer": " Cultivateur d'aconi",
+				"woodcutter": "Billot",
 				"writer": "Écrivain"
 			}
 		},
 		"pipliz": {
 			"alarmbell": {
-				"description": "_MISSING_Unlocks the Alarm Bell, which will ring a bell when walked upon by a monster",
-				"name": "_MISSING_Alarm Bell"
+				"description": "Débloquer Sonnette d'alarme, qui sonnera quand un monstre marchera deçu",
+				"name": "Sonnette d'alarme"
 			},
 			"animalcarcass": {
-				"description": "_MISSING_Provides a source for animal carcasses",
-				"name": "_MISSING_Local Animal Carcass"
+				"description": "Fournit une source pour les carcasses d'animaux",
+				"name": "Carcasses local d'animaux"
 			},
 			"anvil": {
-				"description": "_MISSING_Unlocks the Anvil, an important source of more advanced products like Copper Tools",
-				"name": "_MISSING_Anvil"
+				"description": "Débloquer l'enclume, un source importante pour plus de production avancé comme les cutils en cuivre",
+				"name": "Enclume"
 			},
 			"archery": {
-				"description": "_MISSING_Unlocks archers and fletchers, a more effective protection against monsters.",
-				"name": "_MISSING_Archery"
+				"description": "Débloquer l'archer et le fabricant de flèches, une protection plus efficace contre les monstres.",
+				"name": "Archerie"
+			},
+			"artist": {
+				"description": "Débloque un nouveau métier entièrement dédié à l'esthétique",
+				"name": "Artiste"
 			},
 			"astrolabe": {
-				"description": "_MISSING_Unlocks the astrolabe; a navigation tool that helps find biomes",
-				"name": "_MISSING_Astrolabe"
+				"description": "Débloquer l'astrolabe; un outils de navigation qui vous aide à trouver des biomes",
+				"name": "Astrolabe"
 			},
 			"blastfurnace": {
-				"description": "_MISSING_Unlocks a rapid way to smelt advanced metals.",
-				"name": "_MISSING_Blast Furnace"
+				"description": "Débloquer un moyen rapide de fondre des métaux avancés.",
+				"name": "Haut fourneau"
 			},
 			"brass": {
-				"description": "_MISSING_Unlocks brass, a relatively soft alloy. It’s not suited for weapons or tools, but its malleability makes it perfect for small detailed parts. It requires zinc, which can be purchased or mined below mammoth trees. ",
-				"name": "_MISSING_Brass"
+				"description": "Débloquer le Laiton, un alliage relativement mou. Il n'est pas adapté aux armes ou aux outils, mais sa malléabilité le rend parfait pour les petites pièces détaillées. Il nécessite du zinc, qui peut être acheté ou extrait sous les arbres mammouths.",
+				"name": "Laiton"
 			},
 			"bread": {
-				"description": "_MISSING_Unlocks the making of bread. Use grindstones to make flour, which can then be used by the cook to make bread.",
-				"name": "_MISSING_Bread"
+				"description": "Débloquer la fabrication de pain. Utiliser la meule pour faire de la farine, qui peut être utiliser dans la cuisine pour faire du pain.",
+				"name": "Pain"
 			},
 			"bricks": {
-				"description": "_MISSING_Allows baking clay into new types of blocks",
-				"name": "_MISSING_Bricks"
+				"description": "Permet de cuire l'argile dans de nouveaux types de blocs",
+				"name": "Brique"
 			},
 			"bronze": {
-				"description": "_MISSING_Unlocks a way to make copper stronger, by mixing it with the rare and valuable tin",
-				"name": "_MISSING_Bronze Age"
+				"description": "Débloquer un moyen de rendre le cuivre plus fort, en le mélangeant avec l'Étain rare et précieux",
+				"name": "Age du Bronze"
 			},
 			"bronzelockbox": {
-				"description": "_MISSING_Unlocks the Bronze Lockbox. Improved version of the Copper Lockbox. More storage, more efficiency, less threatening.",
-				"name": "_MISSING_Bronze Lockbox"
+				"description": "Débloquer le coffre-fort en bronze. Version améliorée du Coffre-fort en cuivre. Plus de stockage, plus d'efficacité, moins menaçant.",
+				"name": "Coffre-fort en Bronze"
 			},
 			"caltrop": {
-				"description": "_MISSING_Unlocks a trap that once loaded will slow monsters below it",
-				"name": "_MISSING_Caltrops"
+				"description": "Débloquer un piège qui, une fois chargé, ralentira les monstres en dessous",
+				"name": "Piège à Chausse-trape"
 			},
 			"chestluxury": {
-				"description": "_MISSING_Unlocks Luxury Chests, which are necessary to unlock advanced technology.",
-				"name": "_MISSING_Luxury Chest"
+				"description": "Débloquer Les Coffre de Luxe, qui sont nécessaires pour déverrouiller la technologie de pointe.",
+				"name": "Coffres de Luxe"
 			},
 			"chestprestige": {
-				"description": "_MISSING_Abandon all hope of reward and proportion, ye who enter here! Prestige Chests are necessary for Prestige Science. It’s a stretch goal for enthusiastic colonies.",
-				"name": "_MISSING_Prestige Chest"
+				"description": "Abandonnez tout espoir de récompense et de proportion, vous qui entrez ici ! Les coffres de prestige sont nécessaires pour la Science de Préstige. C'est un objectif ambitieux pour les colonies enthousiastes.",
+				"name": "Coffre de Préstigue"
 			},
 			"chestresource": {
-				"description": "_MISSING_Unlocks Science Chests, which are necessary to unlock advanced technology",
-				"name": "_MISSING_Science Chest"
+				"description": "Débloquer le coffre scientifique, qui est nesessaire pour débloquer des technologie avancée",
+				"name": "Coffre Scientifique"
 			},
 			"chickenmeal": {
-				"description": "_MISSING_Unlocks a more complex meal which yields more Sacred Points when consumed by colonists",
-				"name": "_MISSING_Chicken Meals"
+				"description": "Débloquer un repas plus complexe qui rapporte plus de points sacrés lorsqu'il est consommé par les colons",
+				"name": "Repas de Poulet "
+			},
+			"classical": {
+				"description": "Faites revivre la façon dont les anciens construisaient",
+				"name": "Architecture classique"
 			},
 			"compass": {
-				"description": "_MISSING_Unlocks the compass; a navigation tool to find back your home",
-				"name": "_MISSING_Compass"
+				"description": "Débloquer la Boussole; un outils de navigation qui permet de retrouver votre maison",
+				"name": "Boussole"
 			},
 			"constructionbuilder": {
-				"description": "_MISSING_Unlock builder areas for the construction worker",
-				"name": "_MISSING_Builder"
+				"description": "Débloquer la zone de construction pour les ouvriers du batiment",
+				"name": "Zone de Construction"
 			},
 			"constructiondigger": {
-				"description": "_MISSING_Unlock digger areas for the construction worker",
-				"name": "_MISSING_Digger"
+				"description": "Débloquer la zone de creusage pour les ouvriers du batiment",
+				"name": "Zone de Creusage"
 			},
 			"constructiondiggerspecial": {
-				"description": "_MISSING_Unlock special digger areas for the construction worker",
-				"name": "_MISSING_Special Digger"
+				"description": "Débloquer la zone de creusage spécial pour les ouvriers du batiment",
+				"name": "Zone de Creusage Spécial"
 			},
 			"cook": {
-				"description": "_MISSING_Unlocks the cook and the fisherman, new sources of meals for your colonists",
-				"name": "_MISSING_Cook"
+				"description": "Débloquer le cuisinier et le pêcheur, de nouvelles sources de repas pour vos colons",
+				"name": "Cuisine"
 			},
 			"copperlockbox": {
-				"description": "_MISSING_Unlocks the Copper Lockbox. While placed it increases the colony point capacity. Warning: every placed lockbox will lure more monsters to your colony!",
-				"name": "_MISSING_Copper Lockbox"
+				"description": "Débloquer le coffre-fort en cuivre. Lorsqu'il est placé, il augmente la capacité en points de colonie. Attention : chaque coffre-fort placé attirera plus de monstres dans votre colonie !",
+				"name": "Coffre-fort en Cuivre"
 			},
 			"cotton": {
-				"description": "_MISSING_Unlocks a source of high quality textiles. Cotton plants only grow in heaths.",
-				"name": "_MISSING_Cotton"
+				"description": "Débloquer une source de textiles de haute qualité. Les cotonniers ne poussent que dans les landes.",
+				"name": "Coton"
 			},
 			"crossbow": {
-				"description": "_MISSING_More powerful archery",
-				"name": "_MISSING_Crossbows"
+				"description": "Tir à l'arc plus puissant",
+				"name": "Arbalètes"
 			},
 			"dyeing": {
-				"description": "_MISSING_Learn to grow flowers in marshes, allowing you to add color to your world.",
-				"name": "_MISSING_Dyeing"
+				"description": "Apprenez à faire pousser des fleurs dans les marais, ce qui vous permettra d'ajouter de la couleur à votre monde.",
+				"name": "Teinture"
 			},
 			"elevator": {
-				"description": "_MISSING_Unlocks elevator production, useful for traversing vertical distances",
-				"name": "_MISSING_Elevator"
+				"description": "Débloquer la production d'ascenseurs, utile pour parcourir des distances verticales",
+				"name": "Ascenseurs"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks horizontal elevator production, useful for traversing horizontal distances",
-				"name": "_MISSING_Horizontal Elevator"
+				"description": "Débloquer la production d'ascenseurs horizontaux, utile pour parcourir des distances horizontales",
+				"name": "Ascenseur horizontal"
 			},
 			"engineer": {
-				"description": "_MISSING_Unlocks the engineer and the trapfixer. The engineer makes traps and their ammo, which can be used to fight monsters. The trapfixer will load and reload nearby traps.",
-				"name": "_MISSING_Engineer"
+				"description": "Débloquer l'ingénieur et le fixeur de pièges. L'ingénieur fabrique des pièges et leurs munitions, qui peuvent être utilisés pour combattre des monstres. Le fixeur de pièges chargera et rechargera les pièges à proximité.",
+				"name": "Ingénieur "
 			},
 			"failsafe": {
-				"description": "_MISSING_Unlocks the Sacred Failsafe, an emergency tool that uses Sacred Points to eliminate monsters",
-				"name": "_MISSING_Sacred Failsafe"
+				"description": "Débloquer la Sécurité sacrée, un outil d'urgence qui utilise des points sacrés pour éliminer les monstres",
+				"name": "Sécurité Sacrée"
 			},
 			"farming": {
-				"description": "_MISSING_Unlocks the wheat farmer. Wheat will grow in importance as food over time.",
-				"name": "_MISSING_Wheat Farming"
+				"description": "Débloquer le cultivateur de blé. Le blé prendra de l'importance en tant qu'aliment au fil du temps.",
+				"name": "Cultivateur de blé"
+			},
+			"fence": {
+				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
+				"name": "Barrière"
+			},
+			"flowerbox": {
+				"description": "Répandez une joie permanente",
+				"name": "Pot de fleur"
 			},
 			"furnace": {
-				"description": "_MISSING_Unlocks the smelter, a worker who processes ores",
-				"name": "_MISSING_Smelter"
+				"description": "Débloquer la fonderie, un ouvrier qui traite les minerais",
+				"name": "Fonderie"
 			},
 			"glassblower": {
-				"description": "_MISSING_Unlocks a way to craft glass",
-				"name": "_MISSING_Glassblower"
+				"description": "Débloquer un moyen de fabriquer du verre",
+				"name": "Souffleur de verre"
 			},
 			"glider": {
-				"description": "_MISSING_Unlocks glider production, allowing unpowered flight from higher points",
-				"name": "_MISSING_Glider"
+				"description": "Débloquer la production de planeurs, permettant un vol sans moteur à partir de points plus élevés",
+				"name": "Planeurs"
 			},
 			"glidersteel": {
-				"description": "_MISSING_Unlocks a launcher that quickly shoots gliders to tremendous heights.",
-				"name": "_MISSING_Launched Steel Glider"
+				"description": "Débloquer un lanceur qui tire rapidement des planeurs à des hauteurs énormes.",
+				"name": "Lanceur de Planeurs"
 			},
 			"goldenstatue": {
-				"description": "_MISSING_Unlocks the Threat Banner, which will attract monsters from other outposts to the one it's placed in.",
-				"name": "_MISSING_Threat Banner"
+				"description": "Débloquer la bannière de menace, qui attirera les monstres d'autres avant-postes vers celui dans lequel elle est placée.",
+				"name": "Bannière de Menace"
 			},
 			"grassdirt": {
-				"description": "_MISSING_Provides a source for grass and dirt",
-				"name": "_MISSING_Grass & Dirt Production"
+				"description": "Fournit une source pour l'herbe et la terre",
+				"name": "Production d'herbe et de terre"
 			},
 			"grenadelauncher": {
-				"description": "_MISSING_Unlocks a powerful weapon which can eliminate groups of enemies at a distance.",
-				"name": "_MISSING_Grenade Launcher"
+				"description": "Débloquer une arme puissante qui peut éliminer des groupes d'ennemis à distance.",
+				"name": "Lanceur de Grenade"
 			},
 			"gunpowder": {
-				"description": "_MISSING_Unlocks a powerful new ingredient",
-				"name": "_MISSING_Gunpowder"
+				"description": "Débloquer un nouvel ingrédient puissant",
+				"name": "Poudre à Canon"
 			},
 			"guntrap": {
-				"description": "_MISSING_Unlocks a powerful trap which does enormous amounts of damage.",
-				"name": "_MISSING_Cannon Trap"
+				"description": "Débloquer un piège puissant qui inflige d'énormes dégâts.",
+				"name": "Piège à canon"
 			},
 			"handcannon": {
-				"description": "_MISSING_Unlocks a powerful, short-range weapon",
-				"name": "_MISSING_Handcannon"
+				"description": "Débloquer une arme puissante à courte portée",
+				"name": "Pistolet"
 			},
 			"hemp": {
-				"description": "_MISSING_Unlocks the cultivation of hemp plants in marshes as well as purchasing it. Leads towards processing it into ropes and paper.",
-				"name": "_MISSING_Hemp"
+				"description": "Débloquer la culture de plantes de chanvre dans les marais ainsi que son achat. Conduit à le transformer en cordes et en papier.",
+				"name": "Chanvre"
 			},
 			"iron": {
-				"description": "_MISSING_A major step forward for your colony, unlocking a new material which is required in many items",
-				"name": "_MISSING_Iron Age"
+				"description": "Une avancée majeure pour votre colonie, déverrouillant un nouveau matériau qui est requis dans de nombreux objets",
+				"name": "Age du Fer"
 			},
 			"jewellery": {
-				"description": "_MISSING_Unlocks the Jeweler, who creates delicate things",
-				"name": "_MISSING_Jeweler"
+				"description": "Débloquer le bijoutier, qui crée des choses délicates",
+				"name": "Bijoutier"
 			},
 			"jewelry": {
-				"description": "_MISSING_Unlocks jewelry, a good product for trade",
-				"name": "_MISSING_Jewelry"
+				"description": "Débloquer les bijoux, un bon produit pour le commerce",
+				"name": "Bijoux"
 			},
 			"lanterns": {
-				"description": "_MISSING_Unlocks lanterns, useful for lighting up places",
-				"name": "_MISSING_Lanterns"
+				"description": "Débloquer les lanternes, utiles pour éclairer les lieux",
+				"name": "Lanterne"
 			},
 			"lathe": {
-				"description": "_MISSING_Unlocks a complex machine which allows colonists to rapidly make detailed metal parts.",
-				"name": "_MISSING_Metal Lathe"
+				"description": "Débloquer une machine complexe qui permet aux colons de fabriquer rapidement des pièces métalliques détaillées.",
+				"name": "Tour à métaux"
 			},
 			"miner": {
-				"description": "_MISSING_Unlocks the miner. When placed on a dark stone block, a colonist will come to mine that material continuously.",
-				"name": "_MISSING_Miner"
+				"description": "Débloquer le mineur. Lorsqu'il est placé sur un bloc de pierre sombre, un colon viendra extraire ce matériau en continue.",
+				"name": "Mineur"
 			},
 			"monocular": {
-				"description": "_MISSING_Unlocks a nifty tool which can be used to observe things in the distance",
-				"name": "_MISSING_Monocular"
+				"description": "Débloquer un outil astucieux qui peut être utilisé pour observer les choses au loin",
+				"name": "Longue vue"
 			},
 			"mudbricks": {
-				"description": "_MISSING_Unlocks mudbricks, a cheap and simple building material",
-				"name": "_MISSING_Mudbricks"
+				"description": "Débloquer les briques de boue, un matériau de construction simple et bon marché",
+				"name": "Brique de Boue"
 			},
 			"musket": {
-				"description": "_MISSING_Unlocks a new gunpowder weapon. Does less damage than a handcannon but the ammo is cheaper, it has a larger range and it’s quicker to reload.",
-				"name": "_MISSING_Musket"
+				"description": "Débloquer une nouvelle arme à feu. Fait moins de dégâts qu'un pistolet mais les munitions sont moins chères, elles ont une plus grande portée et elles sont plus rapides à recharger.",
+				"name": "Mousquet"
 			},
 			"nitro": {
-				"description": "_MISSING_Unlocks a highly explosive compound essential for smokeless powder. It’s a lot less messy than traditional gunpowder, allowing for the development of more sophisticated firearms with many moving parts.",
-				"name": "_MISSING_Nitrocellulose"
+				"description": "Débloquer un composé hautement explosif essentiel pour la poudre sans fumée. C'est beaucoup moins salissant que la poudre à canon traditionnelle, ce qui permet le développement d'armes à feu plus sophistiquées avec de nombreuses pièces mobiles.",
+				"name": "Nitrocellulose"
 			},
 			"npcshop": {
-				"description": "_MISSING_Unlocks the Grocery Shop, a place where colonists can receive their daily meals. If none are found, they'll visit the banner.",
-				"name": "_MISSING_Grocery Shop"
+				"description": "Débloquer l'épicerie, un endroit où les colons peuvent recevoir leurs repas quotidiens. Si aucun n'est trouvé, ils visiteront la bannière.",
+				"name": "Épicerie"
 			},
 			"outposts": {
-				"description": "_MISSING_Unlocks Outpost Banners. They can be placed to expand the colony, both close and further away.",
-				"name": "_MISSING_Outposts"
+				"description": "Débloquer les bannières d'avant-poste. Ils peuvent être placés pour étendre la colonie, à la fois proche et éloignée.",
+				"name": "Avant-Poste"
+			},
+			"paint": {
+				"description": "Recolorer avec une certaine esthétique",
+				"name": "Painture"
 			},
 			"papermaking": {
-				"description": "_MISSING_Unlocks making paper from hemp, a key part towards scientific progress",
-				"name": "_MISSING_Paper Production"
+				"description": "Débloquer la fabrication de papier à partir de chanvre, un élément clé du progrès scientifique",
+				"name": "Production de Papier"
 			},
 			"poison": {
-				"description": "_MISSING_Unlocks poison processing, useful for inflicting damage to monsters over time. Wisteria plants can only be grown in heaths. Each wisteria harvester needs 10 wisteria plants nearby to function well.",
-				"name": "_MISSING_Poison"
+				"description": "Débloquer le traitement du poison, utile pour infliger des dégâts aux monstres au fil du temps. Les plantes de glycine ne peuvent être cultivées que dans les landes. Chaque récolteuse de glycines a besoin de 10 plants de glycines à proximité pour bien fonctionner.",
+				"name": "Poison"
 			},
 			"porridge": {
-				"description": "_MISSING_Unlocks combining water and wheat into a new meal type",
-				"name": "_MISSING_Porridge"
+				"description": "Débloquer la combinaison d'eau et de blé dans un nouveau type de repas",
+				"name": "Porridge"
 			},
 			"pottery": {
-				"description": "_MISSING_Unlocks pottery, used to carry things around, and earthenware that can be sold",
-				"name": "_MISSING_Pottery"
+				"description": "Débloquer la poterie, utilisée pour transporter des choses, et la faïence qui peut être vendue",
+				"name": "Poterie"
 			},
 			"prestige1": {
-				"description": "_MISSING_A goal to organize and measure the best of our energies and skills!",
-				"name": "_MISSING_Prestige I"
+				"description": "Un objectif pour organiser et mesurer le meilleur de nos énergies et de nos compétences !",
+				"name": "Prestige I"
 			},
 			"prestige2": {
-				"description": "_MISSING_It’s not the destination that matters: it’s the journey.",
-				"name": "_MISSING_Prestige II"
+				"description": "Ce n'est pas la destination qui compte : c'est le voyage.",
+				"name": "Prestige II"
 			},
 			"prestige3": {
-				"description": "_MISSING_This place is a place of honor. A highly esteemed deed is commemorated here.",
-				"name": "_MISSING_Prestige III"
+				"description": "Cet endroit est une place d'honneur. Un acte hautement estimé est commémoré ici.",
+				"name": "Prestige III"
 			},
 			"prestige4": {
-				"description": "_MISSING_The last mile is the longest!",
-				"name": "_MISSING_Prestige IV"
+				"description": "Le dernier kilomètre est le plus long !",
+				"name": "Prestige IV"
 			},
 			"prestige5": {
-				"description": "_MISSING_Congratulations! You successfully completed all stretch goals.",
-				"name": "_MISSING_Prestige V"
+				"description": "Toutes nos félicitations! Vous avez atteint avec succès tous les objectifs étendus.",
+				"name": "Prestige V"
 			},
 			"printingpress": {
-				"description": "_MISSING_Unlocks the printing press, a complex machine that allows you to scale up the production of Books of Knowledge. Also unlocks brass precision parts, which are required for a lot of other machines.",
-				"name": "_MISSING_Printing Press"
+				"description": "Débloquer la presse à imprimer, une machine complexe qui vous permet d'augmenter la production de livres de connaissances. Débloque également les pièces de précision en laiton, qui sont nécessaires pour de nombreuses autres machines.",
+				"name": "Presse d'imprimerie"
 			},
 			"projectiletrap": {
-				"description": "_MISSING_Unlocks a trap that once loaded will shoot sideways at strong monsters",
-				"name": "_MISSING_Projectile Trap"
+				"description": "Débloquer un piège qui, une fois chargé, tirera latéralement sur des monstres puissants",
+				"name": "Piège de Projectile"
 			},
 			"recursiveknowledge": {
-				"description": "_MISSING_Helps make books by using books so you can make more books",
-				"name": "_MISSING_Recursive Self-Improvement"
+				"description": "Une aide pour créer des livres en utilisant des livres afin que vous puissiez créer plus de livres",
+				"name": "Auto-amélioration récursive"
 			},
 			"researcher": {
-				"description": "_MISSING_Unlocks the researcher, who will do research using nearby bookcases to progress science",
-				"name": "_MISSING_Researcher"
+				"description": "Débloquer le chercheur, qui fera des recherches en utilisant des bibliothèques à proximité pour faire progresser la science",
+				"name": "Chercheur"
+			},
+			"roofs": {
+				"description": "Une façon attrayante de couvrir vos bâtiments",
+				"name": "Toits en tuiles"
 			},
 			"ropes": {
-				"description": "_MISSING_Unlocks an ingredient with many uses",
-				"name": "_MISSING_Ropes"
+				"description": "Débloquer un ingrédient aux multiples usages",
+				"name": "Corde"
 			},
 			"ropetrap": {
-				"description": "_MISSING_Unlocks a trap that freezes nearby monsters for 10 seconds when one monster passes over it.",
-				"name": "_MISSING_Rope Trap"
+				"description": "Débloquer un piège qui gèle les monstres proches pendant 10 secondes lorsqu'un monstre passe dessus.",
+				"name": "Piège à Corde"
 			},
 			"sacredhouse": {
-				"description": "_MISSING_Unlocks the Sacred Point Storage, to extend the amount of Sacred Points which can be used by the Failsafe",
-				"name": "_MISSING_Sacred Point Storage"
+				"description": "Débloquer le stockage de points sacrés, pour augmenter la quantité de points sacrés pouvant être utilisés par le Failsafe",
+				"name": "Stockage de point Sacrés"
 			},
 			"scribe": {
-				"description": "_MISSING_Unlocks the scribe, who studies scrolls to gain new insights. A scribe requires 10 Scrolls Shelves nearby. The scribe empties them, but they automatically fill themselves up again over time.",
-				"name": "_MISSING_Scribe"
+				"description": "Débloquer le scribe, qui étudie les parchemins pour acquérir de nouvelles connaissances. Un scribe a besoin de 10 étagères à parchemins à proximité. Le scribe les vide, mais ils se remplissent automatiquement avec le temps.",
+				"name": "Scribe"
 			},
 			"statistics": {
-				"description": "_MISSING_Unlocks the Statistics Board. When placed and used, it gives insights into the activity of your colony.",
-				"name": "_MISSING_Statistics Board"
+				"description": "Débloquer le tableau de statistiques. Lorsqu'il est placé et utilisé, il donne un aperçu de l'activité de votre colonie.",
+				"name": "Tableau de Statistiques"
 			},
 			"steel": {
-				"description": "_MISSING_Unlocks steel, lead and mineral oil. These resources are necessary for the construction of more modern machinery. Lead ore is found in marshes, and coal is located below mammoth trees.",
-				"name": "_MISSING_Steel, Lead and Mineral Oil"
+				"description": "Débloquer l'acier, le plomb et l'huile minérale. Ces ressources sont nécessaires à la construction de machines plus modernes. Le minerai de plomb se trouve dans les marais et le charbon se trouve sous les arbres mammouths.",
+				"name": "Acier, plomb et huile minérale"
 			},
 			"steellockbox": {
-				"description": "_MISSING_Unlocks a lockbox with more capacity.",
-				"name": "_MISSING_Steel Lockbox"
+				"description": "Débloquer un coffre-fort avec plus de capacité..",
+				"name": "Coffre-fort en Acier"
 			},
 			"steeltools": {
-				"description": "_MISSING_Unlocks a more durable tool which allows colonists to do their work more efficiently.",
-				"name": "_MISSING_Steel Tools"
+				"description": "Débloquer un outil plus durable qui permet aux colons de faire leur travail plus efficacement.",
+				"name": "Outils en Acier"
 			},
 			"stonemason": {
-				"description": "_MISSING_Unlocks the stonemason, useful for adding variety to buildings",
-				"name": "_MISSING_Stonemason"
+				"description": "Débloquer le tailleur de pierre, utile pour ajouter de la variété aux bâtiments",
+				"name": "Tailleur de pierre"
+			},
+			"streetlight": {
+				"description": "Bien plus chic que les torches",
+				"name": "Lampadaires"
 			},
 			"tabulator": {
-				"description": "_MISSING_Unlocks a complex machine which processes data and stores it in punched-cards.",
-				"name": "_MISSING_Tabulating Machine"
+				"description": "Débloquer une machine complexe qui traite les données et les stocke dans des cartes perforées.",
+				"name": "Machine à tabuler"
 			},
 			"tailoring": {
-				"description": "_MISSING_Unlocks the tailor, a worker who can turn flax into linen and other items. Linen is a good source of colony points",
-				"name": "_MISSING_Tailor"
+				"description": "Débloquer le tailleur, un ouvrier qui peut transformer le lin en linge et autres articles. Le lin est une bonne source de points de colonie",
+				"name": "Tailleur"
 			},
 			"tanner": {
-				"description": "_MISSING_Unlocks the tanner, a worker who is vital in the production of leather and, later, parchment",
-				"name": "_MISSING_Tanner"
+				"description": "Débloquer le tanneur, un ouvrier indispensable à la production de cuir et, plus tard, de parchemin",
+				"name": "Tanneur"
 			},
 			"toolshop": {
-				"description": "_MISSING_Unlocks the Tool Distribution Table, a place where colonists will go to take tools when used. If none are found, they'll go to the banner.",
-				"name": "_MISSING_Tool Distribution"
+				"description": "Débloquer la table de distribution d'outils, un endroit où les colons iront prendre des outils lorsqu'ils seront utilisés. Si aucun n'est trouvé, ils iront à la bannière.",
+				"name": "Distribution d'outils"
 			},
 			"trader": {
-				"description": "_MISSING_Used to accelerate trade deals between colonies. Not used for trading with outposts; intended for multiplayer.",
-				"name": "_MISSING_Trader"
+				"description": "Utilisé pour accélérer les accords commerciaux entre les colonies. Non utilisé pour le commerce avec les avant-postes ; destiné au multijoueur.",
+				"name": "Marchand"
 			},
 			"trading": {
-				"description": "_MISSING_Unlocks the Merchant's Hub, a place where you can buy and sell items",
-				"name": "_MISSING_Merchant's Hub"
+				"description": "Débloquer le Hub des Marchands, un endroit où vous pouvez acheter et vendre des objets",
+				"name": "Hub des Marchands"
 			},
 			"waterpump": {
-				"description": "_MISSING_Allows gathering water away from water sources",
-				"name": "_MISSING_Water pumping"
+				"description": "Permet de recueillir l'eau loin des sources d'eau",
+				"name": "Pompage de l'eau"
 			},
 			"writer": {
-				"description": "_MISSING_Unlocks the writer, parchment and scrolls of knowledge. These are important to complete more advanced science.",
-				"name": "_MISSING_Writer"
+				"description": "Débloquer l'écrivain, le parchemin et les parchemins de connaissance. Ceux-ci sont importants pour compléter une science plus avancée.",
+				"name": "Écrivain"
 			}
 		},
 		"popup": {
@@ -803,7 +832,7 @@
 					"header": "Bonheur"
 				},
 				"madeintooltip": "Fabriqué(e) dans :",
-				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
+				"madeintooltippurchasable": "Achetable au Hub des Marchands pour {0} points",
 				"noactivecolony": "Aucune colonie active !",
 				"science": {
 					"available": "Disponible",
@@ -817,14 +846,14 @@
 					"conditionpointreqdescription3": "Disponible : {0}",
 					"conditionscientistrequires": "Nécessite {0}",
 					"dependencies": "Technologie(s) requise(s) :",
-					"followups": "_MISSING_Followup technologies:",
+					"followups": "Technologies de suivante:",
 					"header": "Science",
 					"recipeunlocknpcgroup": "Débloque ceci : {0}",
 					"recipeunlockoriginjob": "Fabriqué(e) dans : {0}",
 					"recipeunlockoriginplayer": "Fabriqué(e) par le joueur",
 					"recipeunlocks": "Cela débloquera :",
 					"startscience": "Rechercher",
-					"threat": "_MISSING_Increases Monster Threat by {0}",
+					"threat": "Augmente la menace des monstres de {0}",
 					"unavailable": "Non disponible"
 				},
 				"searchfieldplaceholder": "Saisir un filtre de recherche...",
@@ -834,7 +863,7 @@
 					"entry-meals": "Total des repas",
 					"entry-npccount": "Colons",
 					"entry-points": "Points de colonie",
-					"entry-sanctified": "_MISSING_Sacred Points",
+					"entry-sanctified": "Point Sacrés",
 					"entry-unemployed": "Sans emploi",
 					"hide-all": "Tout cacher",
 					"only-changed": "Afficher uniquement les changements",
@@ -846,28 +875,28 @@
 					"time24day": "24 jours",
 					"time4day": "4 jours",
 					"type-colony": "Colonie",
-					"type-consumption": "_MISSING_Consumption",
-					"type-consumption-col": "_MISSING_Consumption (Colony)",
-					"type-consumption-out": "_MISSING_Consumption (Outpost)",
+					"type-consumption": "Consomation",
+					"type-consumption-col": "Consomation (Colonie)",
+					"type-consumption-out": "Consomation (Avant-poste)",
 					"type-idle-jobs": "Temps d'inactivité",
-					"type-idle-jobs-col": "_MISSING_Idle Job Time (Colony)",
-					"type-idle-jobs-out": "_MISSING_Idle Job Time (Outpost)",
+					"type-idle-jobs-col": "Temps d'inactivité (Colonie)",
+					"type-idle-jobs-out": "Temps d'inactivité (Avant-poste)",
 					"type-itempoints": "Points",
-					"type-outpost": "_MISSING_Outpost",
-					"type-production": "_MISSING_Production",
-					"type-production-col": "_MISSING_Production (Colony)",
-					"type-production-out": "_MISSING_Production (Outpost)",
+					"type-outpost": "Avant-poste",
+					"type-production": "Production",
+					"type-production-col": "Production (Colonie)",
+					"type-production-out": "Production (Avant-poste)",
 					"type-stockpile": "Stock",
-					"type-tooluse": "_MISSING_Tool Use",
-					"type-tooluse-col": "_MISSING_Tool Use (Colony)",
-					"type-tooluse-out": "_MISSING_Tool Use (Outpost)",
+					"type-tooluse": "Outils Utilisé",
+					"type-tooluse-col": "Outils Utilisé (Colonie)",
+					"type-tooluse-out": "Outils Utilisé (Avant-poste)",
 					"type-trade-in": "Commerce entrant",
 					"type-trade-out": "Commerce extérieur"
 				},
 				"tooltip": {
 					"and": "et",
-					"craftingtime": "_MISSING_Crafting time: {0} seconds",
-					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
+					"craftingtime": "Temps de fabrication: {0} secondes",
+					"craftingtimetooled": "Temps de fabrication avec {0}: {1} secondes",
 					"instockpile": "en stock",
 					"needs": "Requiert : ",
 					"nothing": "Rien"
@@ -877,7 +906,7 @@
 					"preamble2": "<i>Points actuels / Capacité</i>",
 					"table": {
 						"cost": "Coût",
-						"current": "Actuek",
+						"current": "Actuel",
 						"levels": "Niveaux",
 						"name": "Nom de l'amélioration",
 						"next": "Suivant"
@@ -893,8 +922,8 @@
 				"allreset": "Tout réinitialiser",
 				"allzero": "Remettre tout à zéro",
 				"description": "Les colons travailleront jusqu'à ce que la quantité fixée soit atteinte dans le stock.",
-				"group1": "_MISSING_Select Limits Group",
-				"group2": "_MISSING_Select one of multiple groups for this specific worker. Adjusting limits will adjust them for all workers of this type with the same group.",
+				"group1": "Sélectionner le groupe de limites",
+				"group2": "Sélectionnez l'un des nombreux groupes pour ce travailleur spécifique. L'ajustement des limites les ajusteras pour tous les travailleurs de ce type avec le même groupe.",
 				"hoverpriority": {
 					"a": "Priorité de fabrication",
 					"b": "Les recettes avec une priorité +++ dont fabriquées en premier.\nLes recettes avec une priorité + sont fabriquées en dernier."
@@ -903,27 +932,32 @@
 				"wrongcolony": "L'activité artisanale sélectionnée fait partie d'une autre colonie."
 			},
 			"merchantui": {
-				"buy": "_MISSING_Purchase",
-				"buy1": "_MISSING_Buy 1",
-				"buy25": "_MISSING_Buy 25",
-				"buy5": "_MISSING_Buy 5",
-				"buytext": "_MISSING_Purchase {0} for {1} points",
-				"buytext2": "_MISSING_Current funds allow for {0} purchase(s)",
-				"currentpoints": "_MISSING_Current Points: {0} / {1}",
-				"description": "_MISSING_Buy/sell items for Points",
-				"header": "_MISSING_Merchant trading",
-				"sell": "_MISSING_Sell",
-				"sell1": "_MISSING_Sell 1",
-				"sell25": "_MISSING_Sell 25",
-				"sell5": "_MISSING_Sell 5",
-				"selltext": "_MISSING_Sell {0} for {1} points",
-				"selltext2": "_MISSING_Current storage allows for {0} sale(s)"
+				"buy": "Acheter",
+				"buy1": "Acheter 1",
+				"buy25": "Acheter 25",
+				"buy5": "Acheter 5",
+				"buytext": "Acheter {0} pour {1} points",
+				"buytext2": "Les fonds actuels permettent {0} achat(s)",
+				"currentpoints": "Points actuels: {0} / {1}",
+				"description": "Acheter/Vendre pour des points",
+				"header": "Hub des marchand",
+				"sell": "Vendre",
+				"sell1": "Vendre 1",
+				"sell25": "Vendre 25",
+				"sell5": "Vendre 5",
+				"selltext": "Vendre {0} pour {1} points",
+				"selltext2": "L'espace de stockage actuel permet {0} vente(s)"
 			},
 			"quickstart": {
 				"closetoggle": "Ne plus afficher",
-				"f1": "_MISSING_Press 'F1' to toggle this menu",
+				"f1": "Appuyez sur 'F1' pour basculer ce menu",
 				"next": "Suivant",
 				"previous": "Précédent"
+			},
+			"signs": {
+				"apply": "_MISSING_Apply",
+				"edit": "_MISSING_Edit",
+				"header": "_MISSING_Sign"
 			},
 			"specialblockremoval": {
 				"button": "Supprimer",
@@ -943,20 +977,20 @@
 				"header": "Outil de construction"
 			},
 			"tooljob": {
-				"barleya": "_MISSING_Feed for chickens",
-				"barleyfarmer": "_MISSING_Barley Farmer",
-				"beekeeper": "_MISSING_Beekeeper",
-				"beekeepera": "_MISSING_Keeps bees for candle production",
+				"barleya": "Nouriture pour Poulets",
+				"barleyfarmer": "Cultivateur d'orge",
+				"beekeeper": "Apiculteur",
+				"beekeepera": "Garde des abeilles pour la production de bougies",
 				"berrya": "De la nourriture rapide et facile, commencez par cela !",
 				"berryfarmer": "Cultivateur de baies",
 				"berryfarmertool": "Outil de cultivateur de baies",
 				"buildera": "Construit dans une zone du monde",
 				"builderarea": "Zone de construction",
 				"builderb": "Choisissez le bloc à placer, puis sélectionnez la zone à construire",
-				"cabbagea": "_MISSING_Cabbage",
-				"cabbagefarmer": "_MISSING_Cabbage Farmer",
-				"chickenfarmer": "_MISSING_Chicken Farmer",
-				"chickenfarmera": "_MISSING_Uses barley to grow chickens",
+				"cabbagea": "Chou",
+				"cabbagefarmer": "cultivateur de Chou",
+				"chickenfarmer": "Éleveur de Volailles",
+				"chickenfarmera": "Utilise l'orge pour élever des poulets",
 				"construction": "Chantier",
 				"construction1": "Laissez-les construire à votre place",
 				"construction2": "Cela ouvre un menu dans lequel vous pourrez choisir le type de chantier",
@@ -972,9 +1006,9 @@
 				"diggerspeciala": "Déblaie les blocs spécifiés dans une zone",
 				"diggerspecialarea": "Zone d'excavation sélective",
 				"diggerspecialb": "Sélectionnez la zone à déblayer",
-				"dyer1": "_MISSING_Add colors to make life a little less drab",
-				"dyer2": "_MISSING_This will open another menu with multiple farm jobs",
-				"dyers": "_MISSING_Dyeing",
+				"dyer1": "Ajoutez des couleurs pour rendre la vie un peu moins terne",
+				"dyer2": "Cela ouvrira un autre menu avec plusieurs travaux agricoles",
+				"dyers": "Teinture",
 				"flaxfarmer": "Cultivateur de lin",
 				"flaxfarmertool": "Outil de cultivateur de lin",
 				"forester": "Bûcheron",
@@ -982,7 +1016,7 @@
 				"foresterb": "Requiert : des pousses et une hache\nÀ placer sur de l'herbe ou de la terre",
 				"forestertool": "Outil de bûcheron",
 				"header": "Outil de commande",
-				"hempfarmer": "_MISSING_Hemp Farmer",
+				"hempfarmer": "Cultivateur de Chanvre",
 				"insidearea": "Placement impossible à l'intérieur d'une zone",
 				"missingscience": "<color=red>La technologie « {0} » doit d'abord avoir été débloquée.</color>",
 				"noconstructionareanearby": "Aucun chantier à proximité",
@@ -999,56 +1033,56 @@
 				"wheatfarmertool": "Outil de cultivateur de blé"
 			},
 			"toolshop": {
-				"description": "_MISSING_Adjust the minimum required stockpile levels before colonists use specific tools. Allows them to be used for crafting or science.",
-				"header": "_MISSING_Toolshop"
+				"description": "Ajustez les niveaux de stockage minimum requis avant que les colons n'utilisent des outils spécifiques. Permet de les utiliser pour l'artisanat ou la science.",
+				"header": "Magasin d'outils"
 			}
 		},
 		"quickstart": {
 			"page1_2": {
-				"description": "_MISSING_Welcome to Colony Survival!",
-				"header": "_MISSING_Basics",
-				"text1": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended.",
-				"text2": "_MISSING_The banner is the center of your colony. Place it by clicking on the ground with your Banner Tool selected. Press '2' to select it. The Banner Tool displays a deep shadow wherever monsters will spawn once colonists have been recruited.",
-				"text3": "_MISSING_Place beds to be able to recruit colonists. Press 'i' to open the interface. Drag beds from the stockpile to the hotbar below. With the bed selected, right-click the ground to place a bed.",
-				"text4": "_MISSING_Open the interface and go to the 'Colony' page. Press 'recruit' to recruit a colonist."
+				"description": "Bienvenue dans Colony Survival!",
+				"header": "Bases",
+				"text1": "Commencez par trouver un bon endroit pour votre première colonie. Il est recommandé d'avoir de l'eau et des champs plats pour l'agriculture à proximité.",
+				"text2": "La bannière est le centre de votre colonie. Placez-le en cliquant sur le sol avec votre outil bannière sélectionné. Appuyez sur '2' pour le sélectionner. L'outil Bannière affiche une ombre profonde partout où les monstres apparaîtront une fois les colons recrutés.",
+				"text3": "Placez des lits pour pouvoir recruter des colons. Appuyez sur 'i' pour ouvrir l'interface. Faites glisser les lits de la réserve vers la barre de raccourcis ci-dessous. Avec le lit sélectionné, faites un clic droit sur le sol pour placer un lit.",
+				"text4": "Ouvrez l'interface et allez sur la page 'Colonie'. Appuyez sur 'recruter' pour recruter un colon."
 			},
 			"page2_2": {
-				"description": "_MISSING_These are essential for growth and survival",
-				"header": "_MISSING_Food & Beds",
-				"text1": "_MISSING_Colonists require 1 meal per day. They grab these at the banner or a nearby grocery store. Without food, colonists starve. Recruiting new colonists costs multiple meals.",
-				"text2": "_MISSING_The berry farmer is the first food source. Select the Command Tool by pressing '1'. Click to open it and select the berry farmer. Right-click the ground to start defining the berry farm, then right click again elsewhere to finish. You’ll need quite a lot of these!",
-				"text3": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Cut down a tree by left-clicking on it, and dig down to gather stone rubble.",
-				"text4": "_MISSING_Click on the tinkerer’s table icon on the left of the stockpile to craft it. Place it like you placed the bed. Like with the berry farm, unemployed colonists will automatically take this job."
+				"description": "Ceux-ci sont essentiels à la croissance et à la survie",
+				"header": "Nouriture et lit",
+				"text1": "Les colons ont besoin d'un repas par jour. Ils les attrapent à la bannière ou dans une épicerie à proximité. Sans nourriture, les colons meurent de faim. Recruter de nouveaux colons coûte plusieurs repas.",
+				"text2": "Le producteur de baies est la première source de nourriture. Sélectionnez l'outil de commande en appuyant sur '1'. Cliquez pour l'ouvrir et sélectionnez le producteur de baies. Faites un clic droit sur le sol pour commencer à définir la ferme de baies, puis cliquez à nouveau avec le bouton droit ailleurs pour terminer. Vous en aurez besoin de beaucoup!",
+				"text3": "Pour commencer à produire des lits, vous devrez fabriquer une table de bricoleur. Abattez un arbre en cliquant dessus avec le bouton gauche de la souris et creusez pour ramasser des gravats de pierre.",
+				"text4": "Cliquez sur l'icône de la table du bricoleur à gauche de la réserve pour la fabriquer. Placez-le comme vous avez placé le lit. Comme avec la ferme de baies, les colons au chômage prendront automatiquement ce travail."
 			},
 			"page3_2": {
-				"description": "_MISSING_The technological side of survival",
-				"header": "_MISSING_Crafting, Science & Mining",
-				"text1": "_MISSING_Workers will go to crates both to gather ingredients from the stockpile and to deliver crafted products to the stockpile. If there aren't any crates yet, the banner will function as one.",
-				"text2": "_MISSING_A lot of jobs can or must use tools. Different tools have different costs, durabilities and production speed bonuses. The tinkerer automatically produces stone tools.",
-				"text3": "_MISSING_Use science to unlock new jobs, items and features. Open the science page in the interface to check the requirements and unlock new technology when it becomes available.",
-				"text4": "_MISSING_When you’ve unlocked the Miner science, the tinkerer will produce “miner jobs”. Dig down and place these on dark stone blocks or ores to have colonists mine them sustainably."
+				"description": "Le côté technologique de la survie",
+				"header": "Artisanat, science et exploitation minière",
+				"text1": "Les travailleurs iront dans des caisses à la fois pour rassembler les ingrédients du stock et pour livrer les produits artisanaux au stock. S'il n'y a pas encore de caisses, la bannière fonctionnera comme une seule.",
+				"text2": "De nombreux métiers peuvent ou doivent utiliser des outils. Différents outils ont des coûts, des durabilités et des bonus de vitesse de production différents. Le bricoleur produit automatiquement des outils en pierre.",
+				"text3": "Utilisez la science pour débloquer de nouveaux emplois, objets et fonctionnalités. Ouvrez la page scientifique dans l'interface pour vérifier les exigences et débloquer de nouvelles technologies lorsqu'elles seront disponibles.",
+				"text4": "Lorsque vous avez déverrouillé la science Miner, le bricoleur produira des 'tâches de mineur'. Creusez et placez-les sur des blocs de pierre sombre ou des minerais pour que les colons les exploitent de manière durable."
 			},
 			"page4_2": {
-				"description": "_MISSING_Defend your colony against the monsters of the night!",
-				"header": "_MISSING_Colony Defense",
-				"text1": "_MISSING_Unlocking some science will add 'threat'. This is shown in the top-right of the UI. Recruiting extra colonists will add threat at a slow pace after the first 25. As the threat level rises, more and stronger monsters will appear.",
-				"text2": "_MISSING_Build walls and dig moats in the monster-free zone to protect the center of your colony. Feel free to place jobs like farms in the “monster zone” outside of this: colonists will leave this area and go to their beds when the night starts.",
-				"text3": "_MISSING_Your tinkerer will produce the item 'Night Slinger Guard'. Place this in your colony to recruit a slinger who works during the night.",
-				"text4": "_MISSING_Progress in the tech tree to unlock new guards, traps and the Sacred Failsafe."
+				"description": "Défendez votre colonie contre les monstres la nuit!",
+				"header": "Défence de colonie",
+				"text1": "Déverrouiller un peu de science ajoutera une 'menace'. Ceci est affiché en haut à droite de l'interface utilisateur. Recruter des colons supplémentaires ajoutera de la menace à un rythme lent après les 25 premiers. Au fur et à mesure que le niveau de menace augmente, des monstres de plus en plus puissants apparaîtront.",
+				"text2": "Construisez des murs et creusez des douves dans la zone sans monstres pour protéger le centre de votre colonie. N'hésitez pas à placer des emplois comme des fermes dans la 'zone des monstres' en dehors de celle-ci : les colons quitteront cette zone et iront se coucher quand la nuit commencera.",
+				"text3": "Votre bricoleur produira l'objet 'Frondeur de nuit'. Placez ceci dans votre colonie pour recruter un frondeur qui travaille la nuit.",
+				"text4": "Progressez dans l'arbre technologique pour débloquer de nouveaux gardes, des pièges et le Sacred Failsafe"
 			},
 			"page5_2": {
-				"description": "_MISSING_Trade and expand to get access to unique resources",
-				"header": "_MISSING_Colony Points & Colonization",
-				"text1": "_MISSING_Unlock and place the Merchant’s Hub. Right-click it to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
-				"text2": "_MISSING_This world contains multiple regions with unique resources. There are mountaintops covered with snow, heaths covered in purple, marshes and mammoth trees. Unlock and equip the astrolabe to find them easily.",
-				"text3": "_MISSING_Unlock outposts, purchase an Outpost Banner and carry it with you while you explore. Place it to start an Outpost. Its stockpile and scientific progress are shared with the main colony and other outposts. Build outposts in the regions mentioned above to get access to their resources."
+				"description": "Échangez et développez pour accéder à des ressources uniques",
+				"header": "Points de colonie et colonisation",
+				"text1": "Déverrouillez et placez le hub du marchand. Faites un clic droit dessus pour ouvrir son interface. Vendez des objets pour gagner des points de colonie. Entre autres, les points peuvent être dépensés pour des améliorations comme la limite de colons sur la page Points de Colony.",
+				"text2": "Ce monde contient plusieurs régions avec des ressources uniques. Il y a des sommets couverts de neige, des landes couvertes de pourpre, des marais et des arbres mammouths. Déverrouillez et équipez l'astrolabe pour les retrouver facilement.",
+				"text3": "Débloquez des avant-postes, achetez une bannière d'avant-poste et emportez-la avec vous pendant que vous explorez. Placez-le pour démarrer un avant-poste. Son stock et ses progrès scientifiques sont partagés avec la colonie principale et d'autres avant-postes. Construisez des avant-postes dans les régions mentionnées ci-dessus pour accéder à leurs ressources."
 			},
 			"page6_2": {
-				"description": "_MISSING_Create more complex job systems",
-				"header": "_MISSING_'Harvester' and 'Source' Blocks",
-				"text1": "_MISSING_For some jobs, you have to place both the 'harvester' and the 'source' block. Most of the time each harvester block needs about 10 source blocks.",
-				"text2": "_MISSING_A harvester block like the Scribe's Desk recruits a colonist to work there. That colonist will try to visit a nearby source block, in this case a filled Scroll Shelf, before crafting.",
-				"text3": "_MISSING_Harvesters empty their source blocks, but source blocks automatically regenerate over time. The 1 to 10 ratio ensures a sustainable long term balance."
+				"description": "Créer des systèmes de travail plus complexes",
+				"header": "Blocs 'Moissonneur' et 'Source'",
+				"text1": "Pour certains travaux, vous devez placer à la fois le bloc 'moissonneur' et le bloc 'source'. La plupart du temps, chaque bloc moissonneur a besoin d'environ 10 blocs source.",
+				"text2": "Un bloc moissonneur comme le Scribe's Desk recrute un colon pour y travailler. Ce colon essaiera de visiter un bloc source à proximité, dans ce cas une étagère à parchemins remplie, avant de fabriquer.",
+				"text3": "Les moissonneurs vident leurs blocs source, mais les blocs source se régénèrent automatiquement au fil du temps. Le ratio de 1 à 10 assure un équilibre durable à long terme."
 			}
 		},
 		"settingsmenu": {
@@ -1071,38 +1105,32 @@
 					"permanenthighlight": "Mise en évidence permanente du bloc",
 					"ratio0": "Désactivé",
 					"ratio100": "100%",
-					"ratio125": "_MISSING_125%",
+					"ratio125": "125%",
 					"ratio150": "150%",
-					"ratio175": "_MISSING_175%",
+					"ratio175": "175%",
 					"ratio200": "200%",
 					"ratio25": "25%",
 					"ratio250": "250%",
 					"ratio300": "300%",
 					"ratio400": "400%",
 					"ratio50": "50%",
-					"ratio62": "_MISSING_62%",
+					"ratio62": "62%",
 					"ratio75": "75%",
-					"ratio87": "_MISSING_87%",
+					"ratio87": "87%",
 					"showsensitivedatamode": "Afficher des données sensibles",
 					"tab": "Paramètres généraux",
 					"uiscalingratio": "Échelle de l'interface utilisateur"
 				},
-				"keymapping": "Contrôles",
-				"keymenu": {
-					"resetall": "Tout réinitialiser"
-				},
 				"mousemenu": {
-					"invertx": "Inverser l'axe X",
 					"inverty": "Inverser l'axe Y",
-					"sensitivitylock": "Verrouiller les axes de sensibilité",
-					"sensitivityx": "Sensibilité de la souris Axe X",
-					"sensitivityy": "Sensibilité de la souris Axe Y",
-					"smooth": "Lissage de la souris",
-					"smoothlock": "Verrouiller les axes de lissage",
-					"smoothx": "Lissage de la souris Axe X",
-					"smoothy": "Lissage de la souris Axe Y"
+					"sensitivity": "Sensibilité de la souris",
+					"smooth": "Lissage de la souris"
 				},
-				"mousesettings": "Paramètres de la souris"
+				"mousesettings2": "Souris et clavier",
+				"padmenu": {
+					"mainbutton": "Manette de jeu",
+					"sensitivity": "Sensibilité de la visée"
+				}
 			},
 			"language": "Langue",
 			"languagemenu": {
@@ -1144,7 +1172,7 @@
 				"sunshadowdistance": "Distance de l'ombre",
 				"sunshadowquality": "Qualité de l'ombre",
 				"texturequality": "Qualité des textures",
-				"torchquality": "_MISSING_Torch quality",
+				"torchquality": "Qualité des torches",
 				"vsync": "VSync",
 				"vsyncdouble": "Double"
 			}
@@ -1157,12 +1185,12 @@
 			"confirmload": "Confirmer le chargement",
 			"delete": "Supprimer",
 			"hostingoptions": "Paramètres d'hébergement",
-			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "Vous avez sélectionné un monde hérité. Pour le charger, vous devrez exécuter une ancienne version de Colony Survival. Vous pouvez configurer Steam pour télécharger les anciennes versions en accédant aux propriétés des jeux et en sélectionnant une ancienne version dans l'onglet de la version bêta..",
 			"load": "Charger",
 			"loadworld": "Charger le monde",
 			"missingname": "Aucun nom de monde défini",
 			"modconfiguration": "Configuration des mods",
-			"modoutdated": "_MISSING_[Outdated]",
+			"modoutdated": "[Dépassé]",
 			"modschanged": {
 				"added": "« {0} » est ajouté",
 				"disabled": "« {0} » est désactivé ou manquant, mais était utilisé précédemment.",
@@ -1180,76 +1208,79 @@
 			},
 			"newworld": "Nouveau monde",
 			"nosubscribeditems": "Aucun monde d'atelier souscrit n'a été trouvé",
-			"outdated": "_MISSING_World outdated",
+			"outdated": "Monde obsolète",
 			"password": "Mot de passe",
-			"play_coop": "_MISSING_Play Co-op",
-			"play_solo": "_MISSING_Play Solo",
-			"selectedfolder": "_MISSING_Selected world: {0}",
+			"play_coop": "Jouer en Co-op",
+			"play_solo": "jouer en Solo",
+			"selectedfolder": "Monde sélectionné: {0}",
 			"servername": "Nom du serveur",
 			"serverport": "Port du serveur",
 			"typegenerateworld": "Générer le monde",
 			"typeworkshop": "Monde Workshop",
+			"world_folder": "Dossier",
+			"world_outdated": "Nécessite une ancienne version",
 			"worlddate": "Date",
 			"worldname": "Nom",
 			"worldname_long": "Nom du monde",
 			"worldseed": "Graine du monde"
 		},
 		"tooltip": {
-			"craftingblock": "_MISSING_Orders a colonist to work here as a {0}",
-			"crate": "_MISSING_Colonists will move to one of these blocks to get or deposit items every so often",
-			"failsafe-points": "_MISSING_Adds {0} sacred point capacity (non-stacking)",
-			"failsafe-threat": "_MISSING_Causes {0} threat",
-			"guard-ammo": "_MISSING_Uses {0}",
-			"guard-aoe": "_MISSING_{0} blocks area of effect",
-			"guard-cooldown": "_MISSING_Every {0} seconds",
-			"guard-damage": "_MISSING_Deals {0} damage",
-			"guard-damage-ticks": "_MISSING_Deals {0} damage over {1} seconds",
-			"guard-general": "_MISSING_Orders a colonist to guard this position",
-			"guard-range": "_MISSING_At up to {0} blocks distance",
-			"guard-sleeptype-day": "_MISSING_Sleeps during the day",
-			"guard-sleeptype-night": "_MISSING_Sleeps during the night",
-			"is-edible": "_MISSING_Meal item, colonists will eat one meal every day",
-			"is-sanctified": "_MISSING_Receive {0} sacred points when colonists eat this meal",
-			"lockbox-points": "_MISSING_Adds {0} colony point capacity",
-			"lockbox-threat": "_MISSING_Causes {0} threat",
-			"miner": "_MISSING_Orders a colonist to repeatedly mine the dark stone ore block underneath",
-			"npcshop": "_MISSING_Colonists will visit this or the banner to get their daily meal",
-			"pointtrader": "_MISSING_You can buy and sell things for points here",
-			"provides-fertile": "_MISSING_Counts as fertile ground",
-			"provides-fertile-fen": "_MISSING_Counts as fertile marsh ground",
-			"provides-fertile-heath": "_MISSING_Counts as fertile heath ground",
-			"requires-fen": "_MISSING_Requires fertile marsh below",
-			"requires-fertile": "_MISSING_Requires fertile ground below",
-			"requires-heath": "_MISSING_Requires fertile heath below",
-			"requires-water": "_MISSING_Must be placed next to water to function",
-			"sanctifiedlockbox-points": "_MISSING_Adds {0} sacred point capacity",
-			"sanctifiedlockbox-threat": "_MISSING_Causes {0} threat",
-			"statisticsboard": "_MISSING_Interact with this block to view statistics of your colony",
-			"threatstatue-general": "_MISSING_Pulls threat from other outposts towards the outpost it's placed in, while also causing some threat itself",
-			"threatstatue-threatcaused": "_MISSING_Causes {0} extra threat",
-			"threatstatue-threatweight": "_MISSING_Adds {0} threat weight",
-			"tool-always-usable": "_MISSING_Always available, does not require items",
-			"tool-durability": "_MISSING_{0} seconds of use",
-			"tool-general": "_MISSING_Tools are used by many jobs to accelerate crafting",
-			"tool-multiplier": "_MISSING_{0}x crafting speed",
-			"tool-percentage-left": "_MISSING_Durability % left:",
-			"tool-seconds-left": "_MISSING_Durability seconds left:",
-			"toolshop": "_MISSING_Colonists will visit this or the banner to get new tools when needed",
-			"trap-ammo": "_MISSING_Stores up to {0} {1}",
-			"trap-cooldown": "_MISSING_Every {0} seconds",
-			"trap-damage": "_MISSING_Deals {0} damage",
-			"trap-explosive-range": "_MISSING_Affects an area with radius {0} on hit",
-			"trap-filter-1000hp": "_MISSING_Only triggers on monsters with at least 1000 hp",
-			"trap-filter-unslowed": "_MISSING_Only triggers on monsters not yet slowed",
-			"trapfixer": "_MISSING_Orders a colonist to restock nearby traps during the day",
-			"trap-freezes": "_MISSING_Freezes those hit for {0} seconds",
-			"trap-friendly-fire": "_MISSING_Can affect friendlies when triggered",
-			"trap-general": "_MISSING_Trap item, awaits monsters to pass along and triggers. They will be refilled during the day by Trapfixer colonists",
-			"trap-range": "_MISSING_At up to {0} blocks distance",
-			"trap-slows": "_MISSING_Slows monsters to {0} times their speed",
-			"trap-style-down": "_MISSING_Triggers from monsters below",
-			"trap-style-front": "_MISSING_Triggers from monsters to the front",
-			"trap-style-up": "_MISSING_Triggers from monsters above"
+			"craftingblock": "Ordonne à un colon de travailler ici comme {0}",
+			"crate": "Les colons se déplaceront vers l'un de ces blocs pour obtenir ou déposer des objets de temps en temps",
+			"failsafe-points": "Ajoute {0} capacité en points sacrés (non cumulable)",
+			"failsafe-threat": "Cause {0} menace",
+			"guard-ammo": "Utilise {0}",
+			"guard-aoe": "{0} bloque la zone d'effet",
+			"guard-cooldown": "Toutes les {0} secondes",
+			"guard-damage": "Inflige {0} dégâts",
+			"guard-damage-ticks": "Inflige {0} dégâts en {1} secondes",
+			"guard-general": "Ordonne à un colon de garder cette position",
+			"guard-range": "Jusqu'à {0} blocs de distance",
+			"guard-sleeptype-day": "Dort pendant la journée",
+			"guard-sleeptype-night": "Dort pendant la nuit",
+			"is-edible": "Article de repas, les colons mangeront un repas par jour",
+			"is-sanctified": "Recevez {0} points sacrés lorsque les colons mangent ce repas",
+			"lockbox-points": "Ajoute {0} capacité de points de colonie",
+			"lockbox-threat": "Cause {0} menace",
+			"miner": "Ordonne à un colon d'exploiter à plusieurs reprises le bloc de minerai de pierre sombre en dessous",
+			"npcshop": "Les colons visiteront ceci ou la bannière pour obtenir leur repas quotidien",
+			"paintable": "L'article peut être modifié en utilisant: ",
+			"pointtrader": "Vous pouvez acheter et vendre des choses pour des points ici",
+			"provides-fertile": "Compte comme terrain fertile",
+			"provides-fertile-fen": "Compte comme terrain marécageux fertile",
+			"provides-fertile-heath": "Compte comme terre de lande fertile",
+			"requires-fen": "Nécessite terre de marais fertile en dessous",
+			"requires-fertile": "Nécessite un sol fertile en dessous",
+			"requires-heath": "Nécessite un sol de lande fertile dessous",
+			"requires-water": "Doit être placé à côté de l'eau pour fonctionner",
+			"sanctifiedlockbox-points": "Ajoute {0} capacité en points sacrés",
+			"sanctifiedlockbox-threat": "Cause {0} menace",
+			"statisticsboard": "Interagissez avec ce bloc pour afficher les statistiques de votre colonie",
+			"threatstatue-general": "Tire la menace d'autres avant-postes vers l'avant-poste dans lequel il est placé, tout en provoquant une menace elle-même",
+			"threatstatue-threatcaused": "Provoque {0} menace supplémentaire",
+			"threatstatue-threatweight": "Ajoute {0} poids de menace",
+			"tool-always-usable": "Toujours disponible, ne nécessite pas d'articles",
+			"tool-durability": "{0} secondes d'utilisation",
+			"tool-general": "Les outils sont utilisés par de nombreux travaux pour accélérer l'artisanat",
+			"tool-multiplier": "{0}x vitesse de fabrication",
+			"tool-percentage-left": "% de durabilité restant :",
+			"tool-seconds-left": "Secondes de durabilité restantes :",
+			"toolshop": "Les colons visiteront ceci ou la bannière pour obtenir de nouveaux outils en cas de besoin",
+			"trap-ammo": "Stocke jusqu'à {0} {1}",
+			"trap-cooldown": "Toutes les {0} secondes",
+			"trap-damage": "Inflige {0} dégâts",
+			"trap-explosive-range": "Affecte une zone avec un rayon {0} lors d'un coup",
+			"trap-filter-1000hp": "Ne se déclenche que sur les monstres avec au moins 1000 HP",
+			"trap-filter-unslowed": "Ne se déclenche que sur les monstres pas encore ralentis",
+			"trapfixer": "Ordonne à un colon de réapprovisionner les pièges à proximité pendant la journée",
+			"trap-freezes": "Gèle ceux touchés pendant {0} secondes",
+			"trap-friendly-fire": "Peut affecter les allier lorsqu'il est déclencher",
+			"trap-general": "Objet piège, attend que les monstres passent et se déclenche. Ils seront remplis dans la journée par les colons fixeur de pièges",
+			"trap-range": "Jusqu'à {0} blocs de distance",
+			"trap-slows": "Ralentit les monstres à {0} fois leur vitesse",
+			"trap-style-down": "Déclenché par les monstres dessous",
+			"trap-style-front": "Déclenché par les monstres devant",
+			"trap-style-up": "Déclenché par les monstres dessus"
 		},
 		"upgrades": {
 			"builder": {
@@ -1275,161 +1306,168 @@
 		}
 	},
 	"types": {
-		"alarmbell": "_MISSING_Alarm Bell",
-		"alchemisttable": "_MISSING_Alchemist's Table",
-		"alkanet": "_MISSING_Alkanet",
-		"animalcarcass": "_MISSING_Animal Carcass",
-		"astrolabe": "_MISSING_Astrolabe",
+		"alarmbell": "Sonnette d'alarme",
+		"alchemisttable": "Table d'alchimiste",
+		"alkanet": "Alcanet",
+		"animalcarcass": "Carcasse d'animaux",
+		"architrave": "Architrave",
+		"artisttable": "Établi d'artiste",
+		"astrolabe": "Astrolabe",
 		"banner": "Bannière",
 		"bannertool": "Outil de bannière",
-		"barley": "_MISSING_Barley",
+		"barley": "Orge",
 		"bed": "Lit",
 		"berry": "Baies",
 		"berrybush": "Graines de baies",
 		"berrymeal": "Repas de baies",
-		"blastfurnace": "_MISSING_Blast Furnace",
+		"blastfurnace": "Haut fourneau",
 		"bloomery": "Bas fourneau",
-		"bookcase": "_MISSING_Bookcase (Empty)",
-		"bookcase1": "_MISSING_Bookcase (Mostly Empty)",
-		"bookcase2": "_MISSING_Bookcase (Partially Empty)",
-		"bookcasefilled": "_MISSING_Bookcase",
-		"bookofknowledge": "_MISSING_Book Of Knowledge",
+		"bookcase": "Bibliothèque (vide)",
+		"bookcase1": "Bookcase (principalement vide)",
+		"bookcase2": "Bibliothèque (vide)",
+		"bookcasefilled": "Bibliothèque",
+		"bookofknowledge": "Livre de connaissances",
 		"bow": "Arc",
-		"brassingot": "_MISSING_Brass Ingot",
-		"brassparts": "_MISSING_Brass Precision Parts",
+		"brassingot": "Lingot de laiton",
+		"brassparts": "Pièces de précision en laiton",
 		"bread": "Pain",
 		"breadmeal": "Repas de pain",
 		"bricks": "Briques",
-		"bricksblack": "Briques noires",
+		"bricksblack": "Briques noire",
 		"bricksdarkred": "Briques rouge foncé",
 		"bricksdarkyellow": "Briques jaune foncé",
-		"brickslight": "_MISSING_Light Bricks",
+		"brickslight": "Briques légères",
 		"bricksred": "Briques rouges",
 		"bronzeingot": "Lingot de bronze",
-		"bronzelockbox": "_MISSING_Bronze Lockbox",
-		"bronzetools": "_MISSING_Bronze Tools",
-		"cabbage": "_MISSING_Cabbage",
-		"caltrops": "_MISSING_Caltrops",
-		"caltroptrap": "_MISSING_Caltrops Trap",
-		"candle": "_MISSING_Candle",
-		"carddata": "_MISSING_Punched Card",
-		"cardempty": "_MISSING_Empty Punch Card",
+		"bronzelockbox": "Coffre-fort et Bronze",
+		"bronzetools": "Outils en Bronze",
+		"cabbage": "Choux",
+		"caltrops": "Chausse-trape",
+		"caltroptrap": "Piège à Chausse-trape",
+		"candle": "Bougies",
+		"carddata": "Carte perforée",
+		"cardempty": "Carte perforée vide",
 		"charcoal": "Charbon de bois",
 		"cherryblossom": "Feuilles de cerisier en fleur",
-		"chest": "_MISSING_Chest",
-		"chestluxury": "_MISSING_Luxury Chest",
-		"chestmaker": "_MISSING_Chestmaker's Workshop",
-		"chestprestige": "_MISSING_Prestige Chest",
-		"chestresource": "_MISSING_Science Chest",
-		"chickenmeal": "_MISSING_Chicken Meal",
-		"chickenpoop": "_MISSING_Chicken excrement",
-		"chickenraw": "_MISSING_Chicken (raw)",
+		"chest": "Coffre",
+		"chestluxury": "Coffre de luxe",
+		"chestmaker": "Atelier du coffreur",
+		"chestprestige": "Coffre de prestige",
+		"chestresource": "Coffre scientifique",
+		"chickenmeal": "Viande de poulet",
+		"chickenpoop": "Excréments de poulet",
+		"chickenraw": "Poulet (cru)",
 		"clay": "Argile",
 		"coalore": "Minerai de charbon",
-		"cokes": "_MISSING_Cokes",
-		"colonykit": "_MISSING_Colony Kit",
+		"cokes": "Charbon",
+		"colonykit": "Kit de Colonie",
 		"commandtool": "Outil de commande",
-		"compass": "Compas",
-		"compostingbin": "_MISSING_Composting Bin",
+		"compass": "Boussole",
+		"compostingbin": "Composteur",
 		"constructionjob": "Ouvrier de construction",
 		"cookedfish": "Poisson cuit",
-		"cookedmeat": "_MISSING_Cooked Meat",
+		"cookedmeat": "Viande cuite",
 		"copper": "Cuivre",
-		"copperanvil": "_MISSING_Copper Anvil",
-		"copperarrow": "_MISSING_Copper Arrow",
-		"copperingot": "_MISSING_Copper Ingot",
-		"copperlockbox": "_MISSING_Copper Lockbox",
+		"copperanvil": "Enclume en Cuivre",
+		"copperarrow": "Flèche en cuivre",
+		"copperingot": "L'ingot de cuivre",
+		"copperlockbox": "Coffre-fort en Cuivre",
 		"coppertools": "Outils en cuivre",
-		"cotton": "_MISSING_Cotton",
-		"cottonengine": "_MISSING_Cotton Engine",
-		"cottonfibre": "_MISSING_Cotton Fibre",
+		"corbel": "Corbeau",
+		"cotton": "Coton",
+		"cottonengine": "Égreneuse de coton",
+		"cottonfibre": "Fibre de coton",
 		"crate": "Caisse",
 		"crossbow": "Arbalète",
 		"crossbowbolt": "Carreau d'arbalète",
 		"darkstone": "Bloc de roche sombre",
 		"dirt": "Terre",
-		"dirtfen": "_MISSING_Marsh Dirt",
-		"dirtheath": "_MISSING_Heath Dirt",
-		"droppertrap": "_MISSING_Dropper Trap",
-		"droppertrapammo": "_MISSING_Dropper Trap Ammo",
-		"dyertable": "_MISSING_Dyer's Table",
-		"earthenware": "_MISSING_Earthenware",
-		"elevator": "_MISSING_Elevator Station",
-		"elevatorhorizontal": "_MISSING_Horizontal Elevator Station",
-		"elevatorshaft": "_MISSING_Elevator Shaft",
-		"elevatorshafthorizontal": "_MISSING_Horizontal Elevator Rail",
-		"engineerbench": "_MISSING_Engineer's Bench",
-		"eyeglasses": "_MISSING_Eyeglasses",
-		"failsafe": "_MISSING_Sacred Failsafe",
-		"firepit": "_MISSING_Firepit",
+		"dirtfen": "Terre de marais",
+		"dirtheath": "Terre de lande",
+		"doorclosed": "Porte",
+		"droppertrap": "Piège compte-gouttes",
+		"droppertrapammo": "Munitions de piège compte-gouttes",
+		"dyertable": "Table de teinturier",
+		"earthenware": "Faïence",
+		"elevator": "Station d'ascenseur",
+		"elevatorhorizontal": "Station de train",
+		"elevatorshaft": "Cage d'ascenseur",
+		"elevatorshafthorizontal": "Rails",
+		"engineerbench": "Établi d'ingénieur",
+		"eyeglasses": "Lunettes",
+		"failsafe": "Sécurité sacrée",
+		"fence": "Barrière",
+		"firepit": "Foyer",
 		"firewood": "Bois de coupe",
-		"fisherman": "_MISSING_Fisherman's Spot",
+		"fisherman": "Coin de pêcheur",
 		"flax": "Lin cultivé",
 		"flaxstage1": "Graines de lin",
-		"fletcherbench": "_MISSING_Fletcher's Bench",
-		"furnace": "Haut fourneau",
-		"glassblower": "_MISSING_Glassblower's Workshop",
-		"glasspiece": "_MISSING_Piece of Glass",
+		"fletcherbench": "Établi de Fabricant de flèches",
+		"flowerboxitem": "Pot de fleur",
+		"furnace": "Fourneau",
+		"glassblower": "Atelier du souffleur de verre",
+		"glasspiece": "Morceau de verre",
 		"glider": "Planeur",
-		"glidersteel": "_MISSING_Launched Steel Glider",
-		"goldenshield": "_MISSING_Golden Shield",
-		"goldenstatue": "_MISSING_Threat Banner",
+		"glidersteel": "Lanceur de Planeurs en Acier",
+		"goldenshield": "Bouclier en Or",
+		"goldenstatue": "Bannière de menace",
 		"goldingot": "Lingot d'or",
-		"goldjewellery": "_MISSING_Gold Jewelry",
+		"goldjewellery": "Bijoux en or",
 		"goldore": "Minerai d'or",
-		"grassdry": "_MISSING_Grass",
-		"grassfen": "_MISSING_Marsh Grass",
-		"grassheath": "_MISSING_Heath Grass",
-		"grassheathpurple": "_MISSING_Heath Plants",
-		"grassmax": "_MISSING_Grass",
-		"grassmid": "_MISSING_Grass",
-		"grasswet": "_MISSING_Grass",
-		"grenadelauncher": "_MISSING_Grenade Launcher",
-		"grenadelauncherammo": "_MISSING_Grenade Launcher Ammo",
+		"grassdry": "Herbe",
+		"grassfen": "Herbe de marais",
+		"grassheath": "Herbe de lande",
+		"grassheathpurple": "Plantes de lande",
+		"grassmax": "Herbe",
+		"grassmid": "Herbe",
+		"grasswet": "Herbe",
+		"grenadelauncher": "Lance-grenades",
+		"grenadelauncherammo": "Munitions pour lance-grenades",
 		"grindstone": "Meule",
 		"guardbowdayjob": "Archer de jour",
 		"guardbownightjob": "Archer de nuit",
 		"guardcrossbowdayjob": "Arbalétrier de jour",
 		"guardcrossbownightjob": "Arbalétrier de nuit",
-		"guardgrenadedayjob": "_MISSING_Day Grenade Launcher Guard",
-		"guardgrenadenightjob": "_MISSING_Night Grenade Launcher Guard",
-		"guardhandcannondayjob": "_MISSING_Day Handcannon Guard",
-		"guardhandcannonnightjob": "_MISSING_Night Handcannon Guard",
-		"guardmusketdayjob": "_MISSING_Day Musket Guard",
-		"guardmusketnightjob": "_MISSING_Night Musket Guard",
-		"guardpoison": "_MISSING_Poison Guard",
+		"guardgrenadedayjob": "Garde de jour au lance-grenades",
+		"guardgrenadenightjob": "Garde de nuit au lance-grenades",
+		"guardhandcannondayjob": "Garde au cannon à main de jour",
+		"guardhandcannonnightjob": "Garde au cannon à main de nuit",
+		"guardmusketdayjob": "Mousquetaire de jour",
+		"guardmusketnightjob": "Mousquetaire de nuit",
+		"guardpoison": "Garde avec poison",
 		"guardslingerdayjob": "Frondeur de jour",
 		"guardslingernightjob": "Frondeur de nuit",
 		"gunpowder": "Poudre à canon",
-		"gunpowdertrap": "_MISSING_Gunpowder Trap",
-		"gunpowdertrapammo": "_MISSING_Gunpowdertrap Ammo",
-		"gunsmith": "_MISSING_Gunsmith's Workbench",
-		"guntrap": "_MISSING_Cannon Trap",
-		"guntrapammo": "_MISSING_Cannon Trap Ammo",
-		"handcannon": "_MISSING_Handcannon",
-		"handcannonammo": "_MISSING_Handcannon Ammo",
-		"hemp": "_MISSING_Hemp",
-		"hempfibre": "_MISSING_Hemp Fibre",
+		"gunpowdertrap": "Piège à poudre à canon",
+		"gunpowdertrapammo": "Munitions de piège à poudre à canon",
+		"gunsmith": "Établi d'armurier",
+		"guntrap": "Piège à canon",
+		"guntrapammo": "Munitions de piège à canon",
+		"handcannon": "Cnnon à main",
+		"handcannonammo": "Munition de Cannon à main",
+		"hemp": "Chanvre",
+		"hempfibre": "Fibre de Chanvre",
 		"hollyhock": "Rose trémière",
-		"ironbloom": "_MISSING_Iron Bloom",
+		"ironbloom": "Fleur de fer",
 		"ironore": "Minerai de fer",
-		"irontools": "_MISSING_Iron Tools",
+		"irontools": "Outils en Fer",
 		"ironwrought": "Fer forgé",
-		"jewellerbench": "_MISSING_Jeweler's Bench",
-		"jobblockcrafter": "_MISSING_Job-block Crafter’s Workbench",
-		"jobblockcrafteradvanced": "_MISSING_Advanced Job-block Crafter's Workbench",
+		"jewellerbench": "Établi de bijoutier",
+		"jobblockcrafter": "Établi du fabricateur de block métier",
+		"jobblockcrafteradvanced": "Établi de création de bloc métier avancé",
 		"kiln": "Touraille",
 		"lanternblue": "Lanterne bleue",
 		"lanterncyan": "Lanterne turquoise",
 		"lanterngreen": "Lanterne verte",
+		"lanternitem": "Lampadaire",
 		"lanternorange": "Lanterne orange",
 		"lanternpink": "Lanterne rose",
 		"lanternred": "Lanterne rouge",
-		"lanternwhite": "Lanterne blanche",
+		"lanternwhite": "Lanterne Blanche",
 		"lanternyellow": "Lanterne",
-		"leadingot": "_MISSING_Lead Ingot",
-		"leadore": "_MISSING_Lead Ore",
-		"leather": "_MISSING_Leather",
+		"leadingot": "Lingot de plomb",
+		"leadore": "Minerai de plomb",
+		"leather": "Cuir",
 		"leavesfallorange": "Feuilles orange",
 		"leavesfallred": "Feuilles rouges",
 		"leavesfallyellow": "Feuilles jaunes",
@@ -1440,138 +1478,151 @@
 		"linen": "Toile de lin",
 		"logtaiga": "Bûche de taïga",
 		"logtemperate": "Bûche tempérée",
-		"logwall": "_MISSING_Log Wall",
-		"luxurygarments": "_MISSING_Luxury Garments",
-		"machinetools": "_MISSING_Machine Tools",
-		"manuscript": "_MISSING_Manuscript",
-		"merchanthub": "_MISSING_Merchant's Hub",
-		"metalgear": "_MISSING_Metal Gear",
-		"metallathe": "_MISSING_Metal Lathe",
+		"logwall": "Mur de rondins",
+		"luxurygarments": "Vêtements de luxe",
+		"machinetools": "Machines à outils",
+		"manuscript": "Manuscrit",
+		"merchanthub": "Hub des marchands",
+		"metalgear": "Engrenage métallique",
+		"metallathe": "Tour à métaux",
 		"minerjob": "Mineur",
-		"monocular": "_MISSING_Monocular",
-		"movabletype": "_MISSING_Movable Type",
-		"mudbricks": "_MISSING_Mud Bricks",
-		"musket": "_MISSING_Musket",
-		"musketammo": "_MISSING_Musket Ammo",
-		"nitro": "_MISSING_Nitrocellulose",
-		"notools": "_MISSING_No Tools",
+		"monocular": "Longue vue",
+		"mouldingitem": "Moulure de couronne",
+		"movabletype": "Type Mobile",
+		"mudbricks": "Briques de Boue",
+		"musket": "Mousquet",
+		"musketammo": "Munitions de mousquet",
+		"nitro": "Nitrocellulose",
+		"notools": "Pas d'Outils",
 		"npcshop": "Épicerie",
-		"outpostbanner": "_MISSING_Outpost Banner",
-		"paper": "_MISSING_Paper",
-		"papermakersmould": "_MISSING_Papermaker's Mould",
-		"parchment": "_MISSING_Parchment",
+		"outpostbanner": "Bannière d'avant-poste",
+		"paintblue": "Painture Bleu",
+		"paintgreen": "Painture Verte",
+		"paintred": "Painture Rouge",
+		"paintstripped": "Décapant à peinture",
+		"paintwhite": "Painture blanche",
+		"paper": "Papier",
+		"papermakersmould": "Moule de papetier",
+		"parchment": "Parchemin",
+		"pillar": "Pilier",
 		"planks": "Planches",
-		"planksblue": "_MISSING_Blue Planks",
-		"planksgreen": "_MISSING_Green Planks",
-		"planksred": "_MISSING_Red Planks",
-		"points": "_MISSING_Points",
-		"poisondart": "_MISSING_Poison Dart",
-		"potash": "_MISSING_Potash",
-		"potempty": "_MISSING_Pot (Empty)",
-		"potflour": "_MISSING_Pot (Flour)",
-		"potterystation": "_MISSING_Pottery Station",
-		"potwater": "_MISSING_Pot (Water)",
+		"planksblue": "Planches bleue",
+		"planksgreen": "Planches verte",
+		"planksred": "Planches rouge",
+		"points": "Points",
+		"poisondart": "Dard empoisonné",
+		"potash": "Potasse",
+		"potempty": "Pot (Vide)",
+		"potflour": "Pot (Farine)",
+		"potterystation": "Poste de poterie",
+		"potwater": "Pot (Eau)",
 		"printingpress": "Presse typographique",
-		"projectiletrap": "_MISSING_Projectile Trap",
-		"projectiletrapammo": "_MISSING_Projectile Trap Ammo",
+		"projectiletrap": "Piège à projectiles",
+		"projectiletrapammo": "Munition de piège à projectiles",
 		"quarterblockbrowndark": "Quart de bloc brun",
 		"quarterblockbrownlight": "Quart de bloc beige",
 		"quarterblockgrey": "Quart de bloc gris",
+		"railitem": "Rails",
 		"rawfish": "Poisson cru",
-		"rawmeat": "_MISSING_Raw Meat",
-		"researcherdesk": "_MISSING_Researcher's Desk",
-		"rope": "_MISSING_Rope",
-		"ropebench": "_MISSING_Roper's Bench",
-		"ropetrap": "_MISSING_Rope Trap",
-		"ropetrapammo": "_MISSING_Rope Trap Ammo",
-		"saltpeter": "_MISSING_Saltpeter",
-		"sanctifiedbreadmeal": "_MISSING_Sacred Bread Meal",
-		"sanctifiedchickenmeal": "_MISSING_Sacred Chicken Meal",
-		"sanctifiedhouse": "_MISSING_Sacred Storage",
-		"sanctifiedporridge": "_MISSING_Sacred Wheat Porridge",
-		"sanctifiertable": "_MISSING_Sacred Altar",
+		"rawmeat": "Viande crue",
+		"researcherdesk": "Bureau du chercheur",
+		"rooftool": "Toit en tuiles",
+		"rooftoolblue": "Toit en tuiles Bleu",
+		"rope": "Corde",
+		"ropebench": "Établi de Cordelier",
+		"ropetrap": "Piège à corde",
+		"ropetrapammo": "Munitions de piège à corde",
+		"saltpeter": "Salpêtre",
+		"sanctifiedbreadmeal": "Repas de Pain Sacré",
+		"sanctifiedchickenmeal": "Repas de Poulet Sacré",
+		"sanctifiedhouse": "Stockage de point sacré",
+		"sanctifiedporridge": "Bouillie de blé sacré",
+		"sanctifiertable": "Autel sacré",
 		"sand": "Sable",
-		"sapling": "_MISSING_Sapling",
-		"saplingcherry": "_MISSING_Cherry Sapling",
-		"saplingdark": "_MISSING_Dark Green Sapling",
+		"sapling": "Pousse d'arbre",
+		"saplingcherry": "Pousse de Cerisier",
+		"saplingdark": "Pousse d'arbre vert foncé",
 		"saplingfallorange": "Pousse d'automne",
-		"saplingfallred": "_MISSING_Red Sapling",
-		"saplingfallyellow": "_MISSING_Yellow Sapling",
-		"saplinglight": "_MISSING_Light Green Sapling",
+		"saplingfallred": "Pousse d'arbre rouge",
+		"saplingfallyellow": "Pousse d'arbre Jaune",
+		"saplinglight": "Pousse d'arbre vert clair",
 		"saplingtaiga": "Pousse de taïga",
-		"saplingtemperate": "_MISSING_Green Sapling",
-		"scientificnote": "_MISSING_Scientific Note",
-		"scribedesk": "_MISSING_Scribe's Desk",
-		"scrollofknowledge": "_MISSING_Scroll Of Knowledge",
-		"scrollshelf": "_MISSING_Scrolls Shelf (Empty)",
-		"scrollshelf1": "_MISSING_Scrolls Shelf (Mostly Empty)",
-		"scrollshelf2": "_MISSING_Scrolls Shelf (Partially Empty)",
-		"scrollshelffilled": "_MISSING_Scrolls Shelf",
-		"silicasand": "_MISSING_Silica Sand",
-		"skin": "_MISSING_Skin",
+		"saplingtemperate": "Pousse d'arbre vert",
+		"scientificnote": "Note scientifique",
+		"scribedesk": "Bureau de Scribe",
+		"scrollofknowledge": "Parchemin de connaissances",
+		"scrollshelf": "Étagère à parchemin (vide)",
+		"scrollshelf1": "Étagère à parchemin (La plupart du temps vide)",
+		"scrollshelf2": "Étagère à parchemin (Partiellement vide)",
+		"scrollshelffilled": "Étagère à parchemin",
+		"silicasand": "Sable de silice",
+		"skin": "Peau",
 		"sling": "Fronde",
 		"slingbullet": "Projectile pour fronde",
 		"snow": "Neige",
 		"splittingstump": "Billot",
-		"statisticsboard": "_MISSING_Statistics Board",
-		"steelingot": "_MISSING_Steel Ingot",
-		"steellockbox": "_MISSING_Steel Lockbox",
-		"steelparts": "_MISSING_Steel Parts",
-		"steeltools": "_MISSING_Steel Tools",
+		"statisticsboard": "Tableau de statistiques",
+		"steelingot": "L'ingot d'acier",
+		"steellockbox": "Coffre-fort en Acier",
+		"steelparts": "Pièces en acier",
+		"steeltools": "Outils en Acier",
 		"stoneblock": "Bloc de pierre",
-		"stonebricks": "_MISSING_Cobblestone",
-		"stonebricksblack": "_MISSING_Black Cobblestone",
-		"stonebricksbrown": "_MISSING_Brown Cobblestone",
-		"stonebricksnew": "_MISSING_Stone Bricks",
-		"stonebrickswhite": "_MISSING_White Cobblestone",
+		"stonebricks": "Pierre",
+		"stonebricksblack": "Pierre noir",
+		"stonebricksbrown": "Pierre marron",
+		"stonebricksnew": "Briques de pierre",
+		"stonebrickswhite": "Pierre blanche",
 		"stonemasonworkbench": "Atelier du tailleur de pierres",
-		"stonerubble": "_MISSING_Stone Rubble",
-		"stonetools": "_MISSING_Stone Tools",
+		"stonerubble": "Moellons de pierre",
+		"stonestair": "escalier en Pierre",
+		"stonetools": "Outils en pierre",
 		"stove": "Cuisinière",
-		"straw": "_MISSING_Straw",
-		"sulfur": "_MISSING_Sulfur",
-		"tabletclay": "_MISSING_Clay Tablet",
-		"tabletwisdom": "_MISSING_Tablet Of Ancient Wisdom",
-		"tabulator": "_MISSING_Tabulating Machine",
+		"straw": "Paille",
+		"sulfur": "Soufre",
+		"tabletclay": "Tablette d'argile",
+		"tabletwisdom": "Tablette de la sagesse antique",
+		"tabulator": "Machine à tabuler",
 		"tailorshop": "Atelier de couture",
-		"tannertable": "_MISSING_Tanner's Table",
+		"tannertable": "Table du tanneur",
 		"tin": "Étain",
-		"tinkerertable": "_MISSING_Tinkerer's Table",
-		"toolshop": "_MISSING_Tool Shop",
+		"tinkerertable": "Table de bricoleur",
+		"toolshop": "Marchand d'outils",
 		"torch": "Torche",
 		"trader": "Marchand",
-		"trapfixer": "_MISSING_Trap Fixer",
-		"vialempty": "_MISSING_Vial (empty)",
-		"vialmineraloil": "_MISSING_Vial (mineral oil)",
-		"vialnitricacid": "_MISSING_Vial of Nitric Acid",
-		"vialsulphuricacid": "_MISSING_Vial of Sulphuric Acid",
+		"trapfixer": "Fixeur de piège",
+		"vialempty": "Flacon (vide)",
+		"vialmineraloil": "Flacon (huile minérale)",
+		"vialnitricacid": "Flacon d'acide nitrique",
+		"vialsulphuricacid": "Flacon d'acide sulfurique",
 		"water": "Eau",
-		"watergatherer": "_MISSING_Water Gatherer",
-		"waterpump": "_MISSING_Waterpump",
+		"watergatherer": "Collecteur d'eau",
+		"waterpump": "Pompe à eau",
 		"wheat": "Blé",
-		"wheatmeal": "_MISSING_Wheat Gruel",
-		"wheatporridge": "_MISSING_Wheat Porridge",
+		"wheatmeal": "Gruau de blé",
+		"wheatporridge": "Bouillie de blé",
 		"wheatstage1": "Graines de blé",
-		"wisteriaflower": "_MISSING_Wisteria Flower",
-		"wisteriajob": "_MISSING_Wisteria Harvester",
-		"wisteriaplant": "_MISSING_Wisteria Plant",
-		"wisteriaplantempty": "_MISSING_Wisteria Plant",
-		"wolfsbane": "Gaude",
-		"woodfloor": "_MISSING_Wood Flooring",
+		"window": "Fenêtre",
+		"wisteriaflower": "Fleur de glycine",
+		"wisteriajob": "Récolteuse de glycines",
+		"wisteriaplant": "Plante de glycine",
+		"wisteriaplantempty": "Plante de glycine",
+		"wolfsbane": "Aconit",
+		"woodfloor": "Parquet",
+		"woodstair": "Escalier en bois",
 		"writerdesk": "Bureau d'écrivain",
-		"zinc": "_MISSING_Zinc"
+		"zinc": "Zinc"
 	},
 	"typeuses": {
-		"alarmbell": "_MISSING_Rings an alarm when it detects monsters walking over it",
+		"alarmbell": "Sonne une alarme lorsqu'il détecte des monstres marchant dessus",
 		"alkanet": "Dans la vraie vie, c'est une source de teinture rouge.",
-		"astrolabe": "_MISSING_Equip in the hotbar to see the way to special biomes",
+		"astrolabe": "Équipez-vous dans la barre de raccourcis pour voir le chemin vers des biomes spéciaux",
 		"berry": "Une seule baie. Ça ne vaut pas la peine de la manger !",
 		"berrybush": "Les colons peuvent les planter pour de la nourriture rapide et facile.",
 		"berrymeal": "Une grappe de baies préparée pour former un délicieux repas.",
-		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase": "Celles-ci sont « récoltées » par les chercheurs et régénèrent automatiquement leur contenu. En placer 10 pour chaque chercheur assure un équilibre à long terme.",
+		"bookcase1": "Celles-ci sont « récoltées » par les chercheurs et régénèrent automatiquement leur contenu. En placer 10 pour chaque chercheur assure un équilibre à long terme.",
+		"bookcase2": "Celles-ci sont « récoltées » par les chercheurs et régénèrent automatiquement leur contenu. En placer 10 pour chaque chercheur assure un équilibre à long terme.",
+		"bookcasefilled": "Celles-ci sont « récoltées » par les chercheurs et régénèrent automatiquement leur contenu. En placer 10 pour chaque chercheur assure un équilibre à long terme.",
 		"bow": "Les archers en ont besoin !",
 		"bread": "Un morceau de pain sec sans tartine ni garniture. Bleh.",
 		"breadmeal": "Un pain rendu savoureux par une confiture de baies parfaite.",
@@ -1581,23 +1632,23 @@
 		"cherryblossom": "Ce qu'il y a de plus rose dans le jeu",
 		"clay": "J'aimerais que vous puissiez la toucher",
 		"coalore": "Attention ! Peut créer des problèmes climatiques.",
-		"compass": "_MISSING_Equip in the hotbar to see the way to colonies and outposts",
+		"compass": "Équipez-vous dans la barre de raccourcis pour voir le chemin vers les colonies et les avant-postes",
 		"cookedfish": "Capacités de natation fortement réduites",
-		"copper": "_MISSING_Somewhat soft metal, but quite useful",
+		"copper": "Métal un peu mou, mais assez utile",
 		"coppertools": "On ne peut même pas couper du pain sans outils",
 		"crate": "Pour tous vos besoins de stockage !",
 		"crossbow": "Petite sœur de la baliste",
 		"crossbowbolt": "Plus rapide, plus dur, plus fort",
 		"dirt": "C'est sale",
-		"failsafe": "_MISSING_Emergency defense mechanism using Sacred Points",
+		"failsafe": "Mécanisme de défense d'urgence utilisant des points sacrés",
 		"firewood": "Combustible de base",
 		"flax": "La couleur impériale",
 		"flaxstage1": "Mettez-la dans le sol pour qu'elle pousse.",
 		"furnace": "Utilise du bois de coupe comme combustible pour fabriquer des lingots de bronze et des briques",
-		"glider": "_MISSING_Places a glider launcher; Enter one by right-clicking it and navigate by aiming while holding forward",
-		"glidersteel": "_MISSING_Like the regular glider launcher, but this one launches you much higher into the air",
+		"glider": "Place un lanceur de planeur ; Entrez-en un en cliquant dessus avec le bouton droit de la souris et naviguez en visant tout en maintenant la pression vers l'avant",
+		"glidersteel": "Comme le lanceur de planeur ordinaire, mais celui-ci vous propulse beaucoup plus haut dans les airs",
 		"goldingot": "Utile pour garantir la valeur du papier-monnaie",
-		"goldore": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"goldore": "Peut également être trouvé dans le minerai sous les montagnes enneigées",
 		"grindstone": "Utilisée pour broyer le blé en farine",
 		"gunpowder": "À manipulier avec précaution !",
 		"hollyhock": "Dans la vraie vie, possède des propriétés laxatives. Pas dans le jeu. Pour l'instant.",
@@ -1609,47 +1660,47 @@
 		"lanternorange": "Ambiance douce",
 		"lanternred": "Très populaire à Amsterdam",
 		"lanternyellow": "Comme une torche, mais coûte plus cher",
-		"leadore": "_MISSING_Found in marshes.",
+		"leadore": "Trouvé dans les marais.",
 		"leavestaiga": "C'est bientôt Noël ?",
 		"leavestemperate": "Essayez de sauter dans un tas de feuilles depuis une haute tour",
 		"linen": "Linge",
 		"logtaiga": "Légèrement plus froid",
 		"logtemperate": "C'est comme une bûche, mais différente !",
-		"monocular": "_MISSING_Equip in the hotbar to take a closer look at the world",
+		"monocular": "Équipez-vous dans la barre de raccourcis pour regarder de plus près le monde",
 		"npcshop": "Les colons s'y rendent une fois par jour pour s'approvisionner en nourriture et en objets de bonheur",
 		"planks": "Maintenant avec 4 fois le volume de bûches !",
 		"printingpress": "Respectons sa liberté",
 		"rawfish": "#Bio #ProduitLocal #ÉlevéEnPleinAir",
-		"researcherdesk": "_MISSING_Researches require bookcases nearby in order to find data for their research!",
+		"researcherdesk": "Les recherches nécessitent des bibliothèques à proximité afin de trouver des données pour leurs recherches!",
 		"sand": "Ne se mélange pas bien avec les serpents",
 		"saplingfallorange": "Deviendra un arbre orange",
 		"saplingtaiga": "Un arbre un légèrement différent",
-		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"silicasand": "_MISSING_Found below sand in the Heath biome",
+		"scribedesk": "Les scribes ont besoin de 10 étagères à parchemins à proximité afin de trouver des données pour leurs recherches!",
+		"scrollshelf": "Ceux-ci sont 'récoltés' par les scribes et régénèrent automatiquement leur contenu. Placer 10 d'entre eux pour chaque scribe assure un équilibre à long terme.",
+		"scrollshelf1": "Ceux-ci sont 'récoltés' par les scribes et régénèrent automatiquement leur contenu. Placer 10 d'entre eux pour chaque scribe assure un équilibre à long terme.",
+		"scrollshelf2": "Ceux-ci sont 'récoltés' par les scribes et régénèrent automatiquement leur contenu. Placer 10 d'entre eux pour chaque scribe assure un équilibre à long terme.",
+		"scrollshelffilled": "Ceux-ci sont 'récoltés' par les scribes et régénèrent automatiquement leur contenu. Placer 10 d'entre eux pour chaque scribe assure un équilibre à long terme.",
+		"silicasand": "Trouvé sous le sable dans le biome lande",
 		"sling": "Gare à toi, Goliath",
 		"slingbullet": "C'est juste un petit caillou, en fait",
 		"snow": "Plus blanc que blanc",
 		"splittingstump": "Un moyen plus rapide d'obtenir du bois de coupe",
 		"stonemasonworkbench": "Crée 50 nuances de briques",
 		"stove": "Permet de diffuser des odeurs délicieuses aux alentours",
-		"sulfur": "_MISSING_Found deep underground in the Heath biome",
+		"sulfur": "Trouvé profondément sous terre dans le biome lande",
 		"tailorshop": "Du sur-mesure pour tous !",
-		"tin": "_MISSING_Can also be found in ore beneath snowy mountains",
+		"tin": "Peut également être trouvé dans le minerai sous les montagnes enneigées",
 		"torch": "Et la lumière fut !",
 		"trader": "Fait marcher le commerce",
 		"water": "Inondera tout si elle est libérée",
-		"waterpump": "_MISSING_Allows getting water without being near water",
+		"waterpump": "Permet d'avoir de l'eau sans être à proximité de l'eau",
 		"wheat": "Un colon avec une meule transformera le blé en farine",
 		"wheatstage1": "Futur pain",
-		"wisteriajob": "_MISSING_One harvester needs 10 wisteria plants nearby. These plants can only be grown in heaths.",
-		"wisteriaplant": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
-		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wisteriajob": "Un cultivateur de a besoin de 10 plants de glycines à proximité. Ces plants ne peuvent être cultivées que dans les landes",
+		"wisteriaplant": "En placer 10 pour chaque récolteur de glycines garantit un équilibre à long terme.",
+		"wisteriaplantempty": "En placer 10 pour chaque récolteur de glycines garantit un équilibre à long terme.",
 		"wolfsbane": "On l'appelle aussi réséda dans le milieu",
 		"writerdesk": "Incroyablement ergonomique",
-		"zinc": "_MISSING_Can be found directly below mammoth trees."
+		"zinc": "Peut être trouvé directement sous les arbres mammouths."
 	}
 }

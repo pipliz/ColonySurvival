@@ -1,4 +1,5 @@
 {
+	"AllowVACBanPlayers": false,
 	"Banner": {
 		"LoadedChunksRadius": 256,
 		"MaximumZombieSpawnRadius": 200,
@@ -73,13 +74,17 @@
 		]
 	},
 	"EnableUPnPForwarding": true,
+	"LeakDetectionMode": "Disabled",
 	"Leaves": {
 		"MaxDistanceToLog": 4,
 		"MaxDistanceToLogCheck": 9
 	},
-	"ListenDirectConnections": true,
+	"ListenDirectConnectionsTCP": true,
+	"ListenDirectConnectionsUDP": true,
 	"ListenLANDiscoveryRequests": true,
 	"ListenLANDiscoveryRequestsLoopbackOnly": false,
+	"ListenSteamRelayedConnections": true,
+	"LogHistoryUICapacity": 512,
 	"MaxWorkerThreads": -1,
 	"NPCs": {
 		"BuilderCooldownMultiplierSeconds": 1,
@@ -161,6 +166,7 @@
 		"SecondsBetweenManualSaves": 30,
 		"SecondsBetweenMiscAutoSaving": 300
 	},
+	"SteamNetworkingLogLevel": 0,
 	"Time": {
 		"DayTimeEnd": 19.5,
 		"DayTimeStart": 4.5,

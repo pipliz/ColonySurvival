@@ -1,0 +1,463 @@
+[
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"lightingTransparency": 200,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledblue"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftileddiagonal.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluediagonal"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				},
+				{
+					"max": [ 0.5, 0.5, 0.5],
+					"min": [-0.5, 0  , 0]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledinsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledblueinsidecornera"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0],
+					"min": [-0.5,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledinsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledblueinsidecornerb"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,0]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledoutsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledblueoutsidecornera"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0],
+					"min": [0,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledoutsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledblueoutsidecornerb"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftileddiagonalflip.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluediagonalflip"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftileddiagonalmid.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluediagonalmid"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftileddiagonalboth.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluediagonalboth"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledvsolo.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluevsolo"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluevfront"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluevback"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledvmid.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluevmid"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledvboth.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluevboth"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv270.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluev270"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv90.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluev90a"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv90.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluev90b"
+	},
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofblue/rooftiledv360.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolblue",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "rooftiledbluev360"
+	}
+]
