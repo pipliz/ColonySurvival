@@ -1,5 +1,5 @@
 {
-	"coverage": 100.0,
+	"coverage": 96.0,
 	"hints": {
 		"0": "대부분의 농장에서는 규모가 커질수록 더 많은 자원을 생산하지만 배리 농장에서는 그렇지 않습니다.",
 		"1": "거주민들을 더 많이 모집할수록 더욱 더 많고 다양한 몬스터들이 스폰 됩니다.",
@@ -178,15 +178,7 @@
 			"nopermission": "해당 작업을 수행할 권한 '{0}'이(가) 없습니다"
 		},
 		"connectingscreen": {
-			"general_1": "단계 {0}/{1} - 비밀번호 필요",
-			"general_2": "단계 {0}/{1} - 서버 파일 목록 요청",
-			"general_3": "단계 {0}/{1} - {2}개의 파일을 불러오는 중",
-			"general_3_downloading": " ({0} 패킷을 다운로드 중)",
-			"general_4": "단계 {0}/{1} - 마무리 작업 중",
-			"general_fail": "연결 시간이 {0}초 초과하여 메인 메뉴로 5초 후 이동합니다.",
 			"loading": "불러오는 중",
-			"localhost_1": "단계 1/{0} - 이 기기에서 싱글플레이어 서버를 검색하고 있습니다",
-			"localhost_2": "단계 2/{0} - 이 기기에서 Steam 서버를 검색 중입니다.",
 			"localhost_fail": "이 기기에서 실행 중인 Steam/싱글플레이어 서버를 찾을 수 없습니다. 5초 후에 메인 메뉴로 다시 로드합니다.",
 			"refused": {
 				"blacklisted": "블랙리스트에 등록되었습니다",
@@ -200,15 +192,22 @@
 				"versionwrongserver": "서버 요청에 따르면 클라이언트 버전 불일치가 있었습니다"
 			},
 			"refused_main": "서버와의 연결이 거부되었습니다, {0}. 5초 후에 메인 메뉴로 다시 로드합니다.",
-			"sp_1": "단계 1/{0} - 백그라운드 서버가 실행될 준비를 위해 대기 중입니다",
-			"sp_2": "단계 2/{0} - 백그라운드 서버가 실행되고 있습니다",
-			"sp_3": "단계 3/{0} - 서버가 실행되어 연결을 기다리는 중입니다",
-			"sp_alreadyrunning1_1": "이미 설치가 진행되고 있습니다. 5초 후에 다시 시도합니다.",
 			"sp_alreadyrunning2": "이미 서버가 실행 중입니다. 5초 후에 메인 메뉴로 돌아갑니다.",
-			"steam05": "단계 1/{0} - 직접 연결 설정을 시도 중입니다",
-			"steam06": "단계 1/{0} - 스팀 릴레이 연결 설정을 시도 중입니다",
-			"steam07": "단계 2/{0} - 서버와의 연결에 성공하였습니다, 인증 완료",
-			"steamfail": "연결 설정에 실패했습니다. 5초 후에 메인 메뉴로 돌아갑니다."
+			"stages": {
+				"1": "_MISSING_Requested server files table",
+				"connectionmade": "_MISSING_Connection made",
+				"downloading": "_MISSING_(downloading {0} packets)",
+				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
+				"final": "_MISSING_Finalizing",
+				"loading": "_MISSING_Loading {0} files",
+				"local1": "_MISSING_Searching for singleplayer server on this computer",
+				"local2": "_MISSING_Searching for online server on this computer",
+				"password": "_MISSING_Password required",
+				"steamdirect": "_MISSING_Trying to setup direct connection",
+				"steamp2p": "_MISSING_Trying to setup p2p connection",
+				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
+				"waitingserver": "_MISSING_Starting server in the background"
+			}
 		},
 		"contentmanager": {
 			"buttonbrowseworkshop": "창작 마당",
@@ -347,32 +346,32 @@
 			"version": "버전"
 		},
 		"notifications": {
-            "delete": "알림 삭제",
-            "header": "알림",
-            "missingplayerammo": "<color=red>{0}을(를) 사용하려면 인벤토리에 {1}이(가) 있어야 합니다!</color>",
-            "npc_died": {
-                "banner": "깃발에 몬스터가 있습니다",
-                "command": "명령어 사용법",
-                "excess": "거주민 수가 초과되어 {0}명이 사망하였습니다.",
-                "individual": "{0}: {1} 일자리를 가진 거주민이 {2}로 인해 사망하였습니다",
-                "main": "{1} 전초기지에서 {0}명의 거주민이 사망했습니다!",
-                "misc": "알 수 없는 이유",
-                "monster": "몬스터",
-                "npc": "거주민",
-                "player": "플레이어",
-                "starving": "굶주림",
-                "trap": "함정"
-            },
-            "science": {
-                "entry": "{0}: 완료됨 {1}",
-                "main": "연구 완료!"
-            },
-            "siegemode": {
-                "disabled": "{0}: 공성 모드 비활성화",
-                "enabled": "{0}: 공성 모드 활성화",
-                "main": "{0} 전초기지에서 공성 모드가 활성화되었습니다!"
-            }
-        },
+			"delete": "알림 삭제",
+			"header": "알림",
+			"missingplayerammo": "<color=red>{0}을(를) 사용하려면 인벤토리에 {1}이(가) 있어야 합니다!</color>",
+			"npc_died": {
+				"banner": "깃발에 몬스터가 있습니다",
+				"command": "명령어 사용법",
+				"excess": "거주민 수가 초과되어 {0}명이 사망하였습니다.",
+				"individual": "{0}: {1} 일자리를 가진 거주민이 {2}로 인해 사망하였습니다",
+				"main": "{1} 전초기지에서 {0}명의 거주민이 사망했습니다!",
+				"misc": "알 수 없는 이유",
+				"monster": "몬스터",
+				"npc": "거주민",
+				"player": "플레이어",
+				"starving": "굶주림",
+				"trap": "함정"
+			},
+			"science": {
+				"entry": "{0}: 완료됨 {1}",
+				"main": "연구 완료!"
+			},
+			"siegemode": {
+				"disabled": "{0}: 공성 모드 비활성화",
+				"enabled": "{0}: 공성 모드 활성화",
+				"main": "{0} 전초기지에서 공성 모드가 활성화되었습니다!"
+			}
+		},
 		"npcs": {
 			"pipliz": {
 				"alchemist": "연금술사",
@@ -1122,22 +1121,16 @@
 					"tab": "일반",
 					"uiscalingratio": "UI 크기"
 				},
-				"keymapping": "키",
-				"keymenu": {
-					"resetall": "모두 재설정"
-				},
 				"mousemenu": {
-					"invertx": "X축 마우스 반전",
 					"inverty": "Y축 마우스 반전",
-					"sensitivitylock": "축 감도 고정",
-					"sensitivityx": "마우스 감도 X축",
-					"sensitivityy": "마우스 감도 Y축",
-					"smooth": "부드러운 마우스 감도",
-					"smoothlock": "축 감도 고정",
-					"smoothx": "부드러운 마우스 감도 X축",
-					"smoothy": "부드러운 마우스 감도 Y축"
+					"sensitivity": "_MISSING_Mouse sensitivity",
+					"smooth": "부드러운 마우스 감도"
 				},
-				"mousesettings": "마우스"
+				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"padmenu": {
+					"mainbutton": "_MISSING_Gamepad",
+					"sensitivity": "_MISSING_Aim sensitivity"
+				}
 			},
 			"language": "언어",
 			"languagemenu": {
@@ -1403,6 +1396,7 @@
 		"engineerbench": "기술 연구대",
 		"eyeglasses": "안경",
 		"failsafe": "안전장치",
+		"fence": "_MISSING_Fence",
 		"firepit": "화덕",
 		"firewood": "장작",
 		"fisherman": "낚시터",
