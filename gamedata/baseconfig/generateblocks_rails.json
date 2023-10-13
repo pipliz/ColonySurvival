@@ -24,6 +24,7 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalgateway.ply",
+			"pathingImpact": "AsUntouchableSolid",
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"sideall": "neutral"
@@ -90,6 +91,176 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "door",
+					"onOpenClip": "dooropen",
+					"onCloseClip": "doorclose",
+					"closedType": "railgate",
+					"npcUsable": false,
+					"playerUsable": false,
+					"autoclose": 2
+				}
+			],
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/railgate.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaftgateopen.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveType": "railgate",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "railgateopen"
+	},
+	{
+		"baseType": {
+			"categories": [
+				"essential",
+				"transport"
+			],
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				},
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.1,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/railgate.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/elevatorhorizontalshaftgate.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "XForward, XBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			},
+			{
+				"attachBehaviour": [
+					{
+						"id": "rail",
+						"shaftFilter": "horizontalShaft",
+						"type": "shaft",
+						"exits": "ZForward, ZBack"
+					}
+				]
+			}
+		],
+		"typeName": "railgate"
+	},
+	{
+		"baseType": {
 			"colliders": [
 				{
 					"impactsPhysics": false,
@@ -112,7 +283,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
-			"pathingImpact": "AsUntouchableSolid",
+			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
@@ -184,7 +355,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
-			"pathingImpact": "AsUntouchableSolid",
+			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
@@ -256,7 +427,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
-			"pathingImpact": "AsUntouchableSolid",
+			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
@@ -328,7 +499,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
-			"pathingImpact": "AsUntouchableSolid",
+			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
@@ -411,7 +582,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
-			"pathingImpact": "AsUntouchableSolid",
+			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",

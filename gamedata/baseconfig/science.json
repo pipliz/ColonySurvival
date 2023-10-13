@@ -1090,11 +1090,44 @@
 		"sortWeight": 140385
 	},
 	{
+		"dependencies": [
+			"pipliz.artist"
+		],
+		"icon": "../textures/icons/sign.png",
+		"itemRequirements": [
+			{
+				"amount": 10,
+				"type": "mouldingitem"
+			},
+			{
+				"amount": 10,
+				"type": "tabletwisdom"
+			}
+		],
+		"key": "pipliz.signs",
+		"sortWeight": 5086
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.engineer"
+		],
+		"icon": "../textures/icons/watersponge.png",
+		"itemRequirements": [
+			{
+				"amount": 5,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.watersponge",
+		"sortWeight": 7716
+	},
+	{
 		"colonyPointRequirement": 1250,
 		"dependencies": [
 			"pipliz.chestresource"
 		],
-		"icon": "../textures/icons/railstation.png",
+		"icon": "../textures/icons/rails.png",
 		"itemRequirements": [
 			{
 				"amount": 12,
@@ -1749,7 +1782,7 @@
 		"dependencies": [
 			"pipliz.roofs"
 		],
-		"icon": "../textures/icons/paintred.png",
+		"icon": "../textures/icons/door.png",
 		"itemRequirements": [
 			{
 				"amount": 10,

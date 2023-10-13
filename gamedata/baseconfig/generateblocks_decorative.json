@@ -1,6 +1,41 @@
 [
 	{
 		"baseType": {
+			"attachBehaviour": [ "watersponge" ],
+			"categories": [
+				"decorative"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "../textures/icons/watersponge.png",
+			"isSolid": false,
+			"lightingTransparency": 180,
+			"mesh": "../meshes/watersponge.ply",
+			"meshFlipX": false,
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveAmount": 0,
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "watersponge"
+	},
+	{
+		"baseType": {
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -38,6 +73,49 @@
 		},
 		"generateType": "rotateBlock",
 		"typeName": "artisttable"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.1,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"icon": "gamedata/textures/icons/error.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/signroof.ply",
+			"isSolid": false,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "signitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "signroof",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [ { "id": "sign", "offsetx": 0.03, "offsety": -0.185, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+			},
+			{
+				"attachBehaviour": [ { "id": "sign", "offsetx": -0.03, "offsety": -0.185, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+			},
+			{
+				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": 0.03, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
+			},
+			{
+				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": -0.03, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
+			}
+		]
 	},
 	{
 		"baseType": {
@@ -293,6 +371,142 @@
 		},
 		"generateType": "rotateBlock",
 		"typeName": "wallflowerbox"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.4
+					],
+					"min": [
+						0.1,
+						0.2,
+						-0.4
+					]
+				}
+			],
+			"icon": "../textures/icons/flowerbox.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/wallflowerboxred.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "flowerboxitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "wallflowerboxred"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.4
+					],
+					"min": [
+						0.1,
+						0.2,
+						-0.4
+					]
+				}
+			],
+			"icon": "../textures/icons/flowerbox.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/wallflowerboxgreen.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "flowerboxitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "wallflowerboxgreen"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.4
+					],
+					"min": [
+						0.1,
+						0.2,
+						-0.4
+					]
+				}
+			],
+			"icon": "../textures/icons/flowerbox.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/wallflowerboxblue.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "flowerboxitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "wallflowerboxblue"
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"max": [
+						0.5,
+						0.5,
+						0.4
+					],
+					"min": [
+						0.1,
+						0.2,
+						-0.4
+					]
+				}
+			],
+			"icon": "../textures/icons/flowerbox.png",
+			"lightingTransparency": 200,
+			"mesh": "../meshes/wallflowerboxwhite.ply",
+			"isSolid": false,
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 180,
+				"z": 0
+			},
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "flowerboxitem",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "wallflowerboxwhite"
 	},
 	{
 		"baseType": {

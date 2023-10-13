@@ -565,8 +565,8 @@
 				"name": "Elevator"
 			},
 			"elevatorhorizontal": {
-				"description": "Unlocks horizontal elevator production, useful for traversing horizontal distances",
-				"name": "Horizontal Elevator"
+				"description": "Unlocks rail production, useful for traversing horizontal distances",
+				"name": "Rails"
 			},
 			"engineer": {
 				"description": "Unlocks the engineer and the trapfixer. The engineer makes traps and their ammo, which can be used to fight monsters. The trapfixer will load and reload nearby traps.",
@@ -756,6 +756,10 @@
 				"description": "Unlocks the scribe, who studies scrolls to gain new insights. A scribe requires 10 Scrolls Shelves nearby. The scribe empties them, but they automatically fill themselves up again over time.",
 				"name": "Scribe"
 			},
+			"signs": {
+				"name": "Signs",
+				"description": "Time to put your name on things"
+			},
 			"statistics": {
 				"description": "Unlocks the Statistics Board. When placed and used, it gives insights into the activity of your colony.",
 				"name": "Statistics Board"
@@ -807,6 +811,10 @@
 			"waterpump": {
 				"description": "Allows gathering water away from water sources",
 				"name": "Water pumping"
+			},
+			"watersponge": {
+				"description": "Removes water in its local area in a deeply realistic way",
+				"name": "Archimedean Screw"
 			},
 			"writer": {
 				"description": "Unlocks the writer, parchment and scrolls of knowledge. These are important to complete more advanced science.",
@@ -1522,6 +1530,7 @@
 		"quarterblockbrowndark": "Dark Brown Quarter Block",
 		"quarterblockbrownlight": "Light Brown Quarter Block",
 		"quarterblockgrey": "Grey Quarter Block",
+		"railgate": "Rail Gate",
 		"railitem": "Rails",
 		"rawfish": "Raw Fish",
 		"rawmeat": "Raw Meat",
@@ -1555,6 +1564,7 @@
 		"scrollshelf1": "Scrolls Shelf (Mostly Empty)",
 		"scrollshelf2": "Scrolls Shelf (Partially Empty)",
 		"scrollshelffilled": "Scrolls Shelf",
+		"signitem": "Sign",
 		"silicasand": "Silica Sand",
 		"skin": "Skin",
 		"sling": "Sling",
@@ -1597,6 +1607,7 @@
 		"water": "Water",
 		"watergatherer": "Water Gatherer",
 		"waterpump": "Waterpump",
+		"watersponge": "Archimedean Screw",
 		"wheat": "Wheat",
 		"wheatmeal": "Wheat Gruel",
 		"wheatporridge": "Wheat Porridge",
@@ -1670,6 +1681,7 @@
 		"npcshop": "Colonists visit here once a day to gather food and happiness items",
 		"planks": "Now with 4 times the volume of logs!",
 		"printingpress": "Respect its freedom",
+		"railgate": "Allows rail travel while blocking travel by foot",
 		"rawfish": "#organic #hormonefree #grassfed",
 		"researcherdesk": "Researches require bookcases nearby in order to find data for their research!",
 		"sand": "Does not mix well with snakes",
@@ -1694,6 +1706,7 @@
 		"trader": "Unexpectedly used for trading",
 		"water": "Will flood everything if let loose",
 		"waterpump": "Allows getting water without being near water",
+		"watersponge": "Removes water in its local area in a deeply realistic way",
 		"wheat": "A colonist with a grindstone will turn this into flour",
 		"wheatstage1": "Future bread",
 		"wisteriajob": "One harvester needs 10 wisteria plants nearby. These plants can only be grown in heaths.",

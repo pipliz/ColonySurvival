@@ -1,0 +1,51 @@
+0.10.0.0 (2023-10-13)
+
+Welcome to  Update 0.10.0: Rails, Roofs and the Rest! This update adds a lot of decorative content like doors and window frames, a paint system, proper rails, Archimidean screws, new recipes/science/a job to access all this new content, and much more. Have fun, and let us know on Discord (discord.gg/colonysurvival) or the Steam Forum if you encounter any new issues! 
+
+- Added "proper" rails: corners, slopes, intersections and gates to prevent NPC walking into your base over the rail tracks
+- Added pillars
+- Added the Archimedean Screw, that removes water adjacent to it and stops spread of water near it.
+- Added signs (ground, wall, roof variants)
+- Added fences (can't be walked over by NPCs)
+- Added doors (also used by monsters, single door & double door variants)
+- Added diagonal roof blocks
+- Added flowerbox (ground, window versions)
+- Added windows (no translucent effect, just a frame)
+- Added street lanterns (ground, side, roof versions)
+- Added paint system/items - works on multiple of the new items to create color variants
+- Added 'corbels' (support block)
+- Added stone/wood stair blocks
+- Added crown moulding
+- Added the Artist (job that produces many of the new items)
+- Added science entries related to the new items (of course)
+- Added a mesh for the dyer's job block
+
+- Majorly updated Korean, French, German and Ukrainian localisation, and minor updates for various others (thanks to your submissions!) 
+
+- Updated networking from an older (deprecated) steam P2P API to the newer steam networking API
+-- This allowed chunk sending to be changed to be throttled much more accurately. Should lead to more stable server connections when moving about.
+- Reworked the input system & UI to better support controllers. This is a work in progress - various parts do not yet work (notably, the stockpile inventory, science tab etc)
+- Introduced a limit on the amount of non-block items being rendered in one frame. Currently set to +-100k blocks. This should help performance significantly when colonies are in view with a huge amount of farms and such.
+
+- Reduced fishing efficiency
+- Fix a backwards compatibility issue, where a fresh install of 0.9.0+ will cause a black screen on reverting to 0.8.1 due to changes to gamedata/savegames/clientversion.json
+- Fix accuracy of the slider used for science conditions (it was cut off a bit)
+- Fix night grenade launcher guard being listed as day grenade launcher guard
+- Fix a simulation speed bug, where it would slow down when not needed
+- Fix a bug where a client could obtain the water item by doing rapid block edits around water that's actively spreading (ping/desync related)
+- Fix NPCs rendering beyond the draw distance when set to lower settings
+- Fix alarmbell block not requiring a solid block below
+- Fix `/time add` command being able to move the time to negative values
+- Fixed typo in the log message of the /backup command
+- Optimised NPC movement on the server
+- Optimised client lit block rendering logic a bit
+- Optimised rendering of non-block items to take advantage of multiple threads
+- Optimised NPC networking logic to reduce network data sent when moving in a straight line
+- Optimised NPC networking logic to do less work when there are no players nearby
+- Optimised NPC logic updates - they now indicate when they want to be updated, instead of being polled for updates every frame
+- Updated steam API version
+- Updated Unity version
+- Reorganised the json config files a bit, they're now in Colony Survival/gamedata/baseconfig/, and they're split into various parts.
+- Added support for the "color" tag on meshed blocks (applies uniform vertex colors if the mesh has none)
+- Added a system where mesh UV coordinates below -8 on both X & Y will ignore the texture and return a neutral texture instead
+-- This means you can re-use textures of existing blocks for partial texturing a block without having to include a white bit in the texture

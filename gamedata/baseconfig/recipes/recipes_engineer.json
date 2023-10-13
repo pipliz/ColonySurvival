@@ -549,5 +549,50 @@
 			}
 		],
 		"sortWeight": 138077
+	},
+	{
+		"cooldown": 180,
+		"defaultLimit": 2,
+		"defaultPriority": -100,
+		"name": "pipliz.engineer.railgate",
+		"requires": [
+			{
+				"amount": 4,
+				"type": "ironwrought"
+			},
+			{
+				"amount": 8,
+				"type": "metalgear"
+			}
+		],
+		"requiresScience": "pipliz.elevatorhorizontal",
+		"results": [
+			{
+				"type": "railgate"
+			}
+		],
+		"sortWeight": 138077
+	},
+	{
+		"cooldown": 480,
+		"defaultLimit": 2,
+		"name": "pipliz.engineer.watersponge",
+		"requires": [
+			{
+				"amount": 10,
+				"type": "planks"
+			},
+			{
+				"amount": 5,
+				"type": "copperingot"
+			}
+		],
+		"requiresScience": "pipliz.watersponge",
+		"results": [
+			{
+				"type": "watersponge"
+			}
+		],
+		"sortWeight": 7716
 	}
 ]

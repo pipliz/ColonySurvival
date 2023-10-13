@@ -30,6 +30,7 @@
 			"essential",
 			"transport"
 		],
+		"maxStackSize": 200,
 		"icon": "../textures/icons/rails.png",
 		"isRotatable": true,
 		"isPlaceable": false,
@@ -37,11 +38,16 @@
 	},
 	"flowerboxitem": {
 		"attachBehaviour": [
-		{
-			"id": "smart_flowerbox",
-			"side_type": "wallflowerbox",
-			"bottom_type": "groundflowerbox"
-		}],
+			{
+				"id": "smart_flowerbox",
+				"side_type": "wallflowerbox",
+				"bottom_type": "groundflowerbox"
+			},		
+			{
+				"id": "hint_paintable",
+				"types": [ "paintstripped", "paintwhite", "paintred", "paintgreen", "paintblue" ]
+			}
+		],
 		"categories": [
 			"decorative",
 			"decorative_mesh"
@@ -56,15 +62,15 @@
 		{
 			"id": "smart_sign",
 			"side_type": "signwall",
-			"bottom_type": "signground"
+			"bottom_type": "signground",
+			"top_type": "signroof"
 		}],
 		"categories": [
 			"essential"
 		],
-		"icon": "../textures/icons/statisticsboard.png",
+		"icon": "../textures/icons/sign.png",
 		"isRotatable": true,
-		"isPlaceable": false,
-		"needsBase": true
+		"isPlaceable": false
 	},
 	"lanternitem": {
 		"attachBehaviour": [
@@ -138,6 +144,7 @@
 			"decorative_mesh"
 		],
 		"icon": "../textures/icons/window.png",
+		"maxStackSize": 200,
 		"isRotatable": true,
 		"rotatablex+": "windowfullx+",
 		"rotatablex-": "windowfullx-",
@@ -181,6 +188,7 @@
 			"decorative",
 			"decorative_mesh"
 		],
+		"maxStackSize": 200,
 		"needsBase": true,
 		"icon": "../textures/icons/roof.png",
 		"isRotatable": true,
@@ -226,6 +234,7 @@
 			"decorative",
 			"decorative_mesh"
 		],
+		"maxStackSize": 200,
 		"needsBase": true,
 		"icon": "../textures/icons/roofblue.png",
 		"isRotatable": true,
