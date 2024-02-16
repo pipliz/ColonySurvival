@@ -1,21 +1,29 @@
 {
-	"coverage": 95.0,
+	"coverage": 90.0,
 	"hints": {
 		"0": "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1": "Зі збільшенням кількості колоністів - збільшується кількість монстрів.",
 		"10": "3x33 - оптимальний розмір для лісника",
 		"11": "Натисніть 'CTRL' щоб крастися і не падати з країв.",
 		"13": "Натисніть 'CTRL' під час розміщення області побудови, щоб розмістити другу область з тими самими налаштуваннями",
-		"14": "Існує безліч модів для Colony Survival. Знайдіть їх на Форумі Steam або в Discord!",
-		"15": "Ви так само можете шукати ресурс по групах, таким як 'їжа' або 'боєприпаси'.",
+		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
+		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
+		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
+		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
 		"2": "Руди перебувають на різних шарах землі, копайте глибше, щоб знайти щось нове.",
+		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
+		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
+		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
+		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
+		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
+		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
+		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
+		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
+		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
 		"3": "Натисніть 'G', щоб активувати ваш факел.",
 		"4": "Натисніть на 'робочі' блоки, щоб подивитися, як вони використовуються, і визначити пріоритети різних рецептів.",
 		"5": "Натисніть 'F1', щоб відкрити керівництво (англ.).",
-		"6": "Науковці користуються предметами з наукової сумки, але саму лляну сумку часто повертають на склад.",
-		"7": "Відмінності в діапазоні, швидкості перезарядки і пошкодження дають кожному типу зброї унікальні переваги і недоліки.",
-		"8": "Ми публікуємо щотижневий П'ятничний блог. Знайдіть його на нашій сторінці в Steam, і дізнайтеся більше про розвиток Colony Survival!",
-		"9": "Стрільба з мушкета потребує кулю і порох, але лляний мішочок, в якому міститься порох, часто зберігається."
+		"7": "Відмінності в діапазоні, швидкості перезарядки і пошкодження дають кожному типу зброї унікальні переваги і недоліки."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "Рекрут",
 			"recruitauto": "Автоматичний набір на роботу",
-			"recruitfailedbeds": "_MISSING_<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
-			"recruitfailedcap": "_MISSING_<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
-			"recruitfailednomeals": "_MISSING_<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
+			"recruitfailedbeds": "_MISSING_<color=#ff2323>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap": "_MISSING_<color=#ff2323>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals": "_MISSING_<color=#ff2323>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount": "Кількість колоністів для набору:",
 			"recruitmentbutton": "Рекрут-колоніст",
 			"recruitmentheader": "Поповнити ряди",
@@ -239,6 +247,57 @@
 			"thumbnailpath": "Шлях до зображення попереднього перегляду:",
 			"yourcontent": "Створений вами контент для Майстерні Steam"
 		},
+		"controls": {
+			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
+			"fireprimary": "_MISSING_Primary Action",
+			"firesecondary": "_MISSING_Secondary Action",
+			"flydown": "_MISSING_Fly down (cheat)",
+			"holdcrouch": "_MISSING_Crouch (Held)",
+			"hotbardown": "_MISSING_Next hotbar spot",
+			"hotbarup": "_MISSING_Previous hotbar spot",
+			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
+			"inventory0": "_MISSING_Hotbar 10",
+			"inventory1": "_MISSING_Hotbar 1",
+			"inventory2": "_MISSING_Hotbar 2",
+			"inventory3": "_MISSING_Hotbar 3",
+			"inventory4": "_MISSING_Hotbar 4",
+			"inventory5": "_MISSING_Hotbar 5",
+			"inventory6": "_MISSING_Hotbar 6",
+			"inventory7": "_MISSING_Hotbar 7",
+			"inventory8": "_MISSING_Hotbar 8",
+			"inventory9": "_MISSING_Hotbar 9",
+			"jump": "_MISSING_Jump",
+			"jumpgamepadtap": "_MISSING_Jump",
+			"look": "_MISSING_Aim",
+			"movekeyboard": {
+				"down": "_MISSING_Move Back",
+				"left": "_MISSING_Move Left",
+				"right": "_MISSING_Move Right",
+				"up": "_MISSING_Move Forward"
+			},
+			"movepad": "_MISSING_Movement",
+			"opencolonytab": "_MISSING_Open Colony Tab",
+			"openquickstart": "_MISSING_Open Help Menu",
+			"placemultipleareas": "_MISSING_Chain-place construction areas",
+			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
+			"rotateobjectleft": "_MISSING_Rotate Left",
+			"rotateobjectright": "_MISSING_Rotate Right",
+			"sprint": "_MISSING_Sprint",
+			"sprintgamepadheld": "_MISSING_Sprint",
+			"takescreenshot": "_MISSING_Take Screenshot",
+			"toggleautofocus": "_MISSING_Toggle autofocus (cheat)",
+			"togglechat": "_MISSING_Toggle Chat",
+			"togglecrouch": "_MISSING_Crouch (Toggle)",
+			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
+			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
+			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
+			"togglefly": "_MISSING_Toggle Flying (cheat)",
+			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
+			"toggleinterface": "_MISSING_Toggle Interface",
+			"toggleinventory": "_MISSING_Toggle Inventory",
+			"togglestats": "_MISSING_Toggle Statistics view",
+			"toggletorch": "_MISSING_Toggle Torch"
+		},
 		"escapemenu": {
 			"back": "Повернутися до гри",
 			"info": "Інформація",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "Видалити звіт",
 			"header": "Звіти",
-			"missingplayerammo": "<color=red>Використання {0} вимагає наявності певної кількості {1} в інвентарі!</color>",
+			"missingplayerammo": "<color=#ff2323>Використання {0} вимагає наявності певної кількості {1} в інвентарі!</color>",
 			"npc_died": {
 				"banner": "Монстр біля банера",
 				"command": "Використання команди",
@@ -756,6 +815,10 @@
 				"description": "Розблоковує писаря, який вивчає сувої, щоб отримати нові знання. Писареві потрібно мати поруч 10 полиць для сувоїв. Переписувач спустошує їх, але з часом вони автоматично заповнюються знову.",
 				"name": "Писар"
 			},
+			"signs": {
+				"description": "_MISSING_Time to put your name on things",
+				"name": "_MISSING_Signs"
+			},
 			"statistics": {
 				"description": "Розблоковує дошку статистики. Після розміщення та використання вона дає уявлення про діяльність вашої колонії.",
 				"name": "Статистика"
@@ -954,7 +1017,7 @@
 			},
 			"quickstart": {
 				"closetoggle": "Не показувати знову",
-				"f1": "Натисніть 'F1', щоб переключити це меню",
+				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Наст. стр.",
 				"previous": "Попр. стр."
 			},
@@ -1022,7 +1085,7 @@
 				"header": "Інструмент командування",
 				"hempfarmer": "Конопляний фермер",
 				"insidearea": "Не можна розміщувати всередині області",
-				"missingscience": "<color=red>Потрібно '{0}' для розблокування.</color>",
+				"missingscience": "<color=#ff2323>Потрібно '{0}' для розблокування.</color>",
 				"noconstructionareanearby": "Поруч немає зони будівництва",
 				"notarable": "Не проорюється",
 				"notflat": "Не плоска область",
@@ -1128,7 +1191,8 @@
 				"mousemenu": {
 					"inverty": "Інвертувати вісь-Y",
 					"sensitivity": "_MISSING_Mouse sensitivity",
-					"smooth": "Згладжування миші"
+					"smooth": "Згладжування миші",
+					"swapprimsec": "_MISSING_Invert left/right click"
 				},
 				"mousesettings2": "_MISSING_Mouse & Keyboard",
 				"padmenu": {
@@ -1161,11 +1225,10 @@
 				"bloom": "Відблиски",
 				"depthoffield": "Глибина різкості",
 				"drawdistance": "Дальність промальовування (*)",
-				"eyeadaptation": "Адаптація для очей",
 				"fieldofview": "Поле зору",
+				"fog": "_MISSING_Fog",
 				"full": "Налаштування відео",
 				"fullscreen": "Повноекранний режим",
-				"lightscattering": "Розсіювання світла",
 				"particleeffects": "Ефекти частинок",
 				"preset": "Пресет",
 				"ragdoll": "Якість Ragdoll-фізики",

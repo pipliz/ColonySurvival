@@ -1,0 +1,33 @@
+Each row is 50 pixels wide
+
+For most of the rows, if not noted otherwise:
+pixels on the left are used when the sun/moon is 90 degrees up, directly overhead
+pixels on the right are used when the sun/moon is directly at the horizon
+practically the sun/moon does not reach directly overhead
+
+Every time 2 rows together form first the alpha value and then the color value (for easier editing)
+Not every value type may use the alpha row
+
+0:  Night Ambient Color -> Ambient light color, alpha multiplies strength. Unused (the main ambient is based on sampling the skybox)
+2:  Night Fog Color -> Color of fog, alpha multiplies strength. Unused as fog is set to 0
+4:  Night Cloud Color -> Color of the clouds, alpha multiplies strength
+6:  Night Sky Color -> Color of the light that hits the atmosphere. RGB applies to moon halo color, alpha multiplies strength
+8:  Night Ray Color -> Unused, no god rays
+10: Night Light Color -> Color of the light that hits the ground. Alpha used for moon-visibility-ambient-lighting, multiplies strength
+12: Night Moon Color -> Color of the moon mesh, alpha multiplies strength
+
+same uses as night above
+14: Day Ambient Color
+16: Day Fog Color
+18: Day Cloud Color
+20: Day Sky Color
+22: Day Ray Color;
+24: Day Light Color
+26: Day Sun Color
+
+28: Atmosphere RayleighMultiplierGradient -> sun angle based, makes the sky blue at noon and red at sunset
+30 - Height Fog Strength, left = 0.0, right = 24.0, day night cycle. Only color R channel is read
+
+Not all of them may be actively used, but hey they're there
+Currently this is client-side and not server-side
+

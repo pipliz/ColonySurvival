@@ -3,7 +3,7 @@
 		"baseType": {
 			"attachBehaviour": [ "watersponge" ],
 			"categories": [
-				"decorative"
+				"essential"
 			],
 			"colliders": [
 				{
@@ -44,6 +44,17 @@
 					"toolset": "default"
 				}
 			],
+			"attachmentProviders": [
+			{
+				"min": [ -0.47, -0.5, -0.392 ],
+				"max": [ 0.305 , 0.46 , 0.375 ]
+			}],
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.47, -0.51, -0.392],
+				"max": [ 0.305,  -0.49, 0.375]
+			}],
 			"categories": [
 				"job"
 			],
@@ -76,6 +87,21 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, 1, 0 ],
+				"min": [ -0.07, 0.49, 0.24 ],
+				"max": [ 0.07,  0.51, 0.35 ]
+			},{
+				"offset": [ 0, 1, 0 ],
+				"min": [ -0.07, 0.49, -0.35 ],
+				"max": [ 0.07,  0.51, -0.24 ]
+			}],
+			"attachmentProviders": [
+			{
+				"min": [ -0.04, -0.51, -0.44 ],
+				"max": [ 0.04, -0.45 , 0.44 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -104,21 +130,32 @@
 		"typeName": "signroof",
 		"rotatedTypeJSON": [
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0.03, "offsety": -0.185, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0.03, "offsety": -0.185, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": -0.03, "offsety": -0.185, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": -0.03, "offsety": -0.185, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": 0.03, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": 0.03, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": -0.03, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": -0.185, "offsetz": -0.03, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
 			}
 		]
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.09, 0.43, -0.127 ],
+				"max": [ 0.09, 0.5 , 0.127 ]
+			}],
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.09, -0.51, -0.09],
+				"max": [ 0.09,  -0.49, 0.09]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -148,21 +185,27 @@
 		"typeName": "signground",
 		"rotatedTypeJSON": [
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0.06, "offsety": 0, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0.06, "offsety": 0, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": -0.06, "offsety": 0, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": -0.06, "offsety": 0, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": 0.06, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": 0.06, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": -0.06, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": -0.06, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
 			}
 		]
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ -1, 0, 0 ],
+				"min": [ -0.51, -0.2, -0.2],
+				"max": [ -0.46, 0.2, 0.2]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -191,21 +234,27 @@
 		"typeName": "signwall",
 		"rotatedTypeJSON": [
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": -0.445, "offsety": 0, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": -0.445, "offsety": 0, "offsetz": 0, "dirx": 1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0.445, "offsety": 0, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0.445, "offsety": 0, "offsetz": 0, "dirx": -1, "diry": 0, "dirz": 0, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": -0.445, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": -0.445, "dirx": 0, "diry": 0, "dirz": 1, "height": 0.55, "width": 0.78} ]
 			},
 			{
-				"attachBehaviour": [ { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": 0.445, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
+				"attachBehaviour": [ "client_reservesecondaryhiton", { "id": "sign", "offsetx": 0, "offsety": 0, "offsetz": 0.445, "dirx": 0, "diry": 0, "dirz": -1, "height": 0.55, "width": 0.78} ]
 			}
 		]
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.15, -0.51, -0.15 ],
+				"max": [ 0.15, -0.49, 0.15 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -270,6 +319,16 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 1, 0, 0 ],
+				"min": [ 0.49, 0.2, -0.49 ],
+				"max": [ 0.51, 0.5, 0.49 ]
+			},{
+				"offset": [ 0, 0, 1 ],
+				"min": [ -0.49, 0.2, 0.49 ],
+				"max": [ 0.49, 0.5, 0.51 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -303,6 +362,7 @@
 			"onPlaceAudio": "stonePlace",
 			"onRemoveAudio": "stoneDelete",
 			"onRemoveType": "mouldingitem",
+			"onRemoveAmount": 2,
 			"pathingImpact": "AsAir",
 			"sideall": "neutral"
 		},
@@ -311,6 +371,12 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 1, 0, 0 ],
+				"min": [ 0.49, 0.2, -0.49 ],
+				"max": [ 0.51, 0.5, 0.49 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -340,6 +406,12 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 1, 0, 0 ],
+				"min": [ 0.49, 0.25, -0.3 ],
+				"max": [ 0.51, 0.4, 0.3 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -510,6 +582,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.44, 0.43, -0.22 ],
+				"max": [ 0.5, 0.5 , 0.22 ]
+			},{
+				"min": [ 0.36, -0.41, -0.16 ],
+				"max": [ 0.5, 0.5 , 0.16 ]
+			}],
 			"categories": [
 				"decorative",
 				"decorative_mesh"
@@ -648,6 +728,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.17538, 0.45274, -0.17538 ],
+				"max": [ 0.17538, 0.5, 0.17538 ]
+			},{
+				"min": [ -0.13261, -0.5, -0.13261 ],
+				"max": [ 0.13261, -0.42914, 0.13261 ]
+			}],
 			"canBuildUpon": true,
 			"colliders": [
 				{
@@ -678,8 +766,8 @@
 			"lightingTransparency": 190,
 			"mesh": "../meshes/meshes_fence/fencemiddlecorner.ply",
 			"isSolid": false,
-			"onPlaceAudio": "stonePlace",
-			"onRemoveAudio": "stoneDelete",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "fence",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"
@@ -703,6 +791,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.17538, 0.45274, -0.17538 ],
+				"max": [ 0.17538, 0.5, 0.17538 ]
+			},{
+				"min": [ -0.13261, -0.5, -0.13261 ],
+				"max": [ 0.13261, -0.42914, 0.13261 ]
+			}],
 			"canBuildUpon": true,
 			"colliders": [
 				{
@@ -738,8 +834,8 @@
 				"z": 0
 			},
 			"isSolid": false,
-			"onPlaceAudio": "stonePlace",
-			"onRemoveAudio": "stoneDelete",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "fence",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"
@@ -763,6 +859,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.17538, 0.45274, -0.17538 ],
+				"max": [ 0.17538, 0.5, 0.17538 ]
+			},{
+				"min": [ -0.13261, -0.5, -0.13261 ],
+				"max": [ 0.13261, -0.42914, 0.13261 ]
+			}],
 			"canBuildUpon": true,
 			"colliders": [
 				{
@@ -786,8 +890,8 @@
 				"z": 0
 			},
 			"isSolid": false,
-			"onPlaceAudio": "stonePlace",
-			"onRemoveAudio": "stoneDelete",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "fence",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"
@@ -811,6 +915,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.17538, 0.45274, -0.17538 ],
+				"max": [ 0.17538, 0.5, 0.17538 ]
+			},{
+				"min": [ -0.13261, -0.5, -0.13261 ],
+				"max": [ 0.13261, -0.42914, 0.13261 ]
+			}],
 			"canBuildUpon": true,
 			"colliders": [
 				{
@@ -834,8 +946,8 @@
 				"z": 0
 			},
 			"isSolid": false,
-			"onPlaceAudio": "stonePlace",
-			"onRemoveAudio": "stoneDelete",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "fence",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"

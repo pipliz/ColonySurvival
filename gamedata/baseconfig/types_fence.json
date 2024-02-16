@@ -140,14 +140,22 @@
 			}
 		],
 		"icon": "../textures/icons/fence.png",
-		"onPlaceAudio": "stonePlace",
+		"onPlaceAudio": "woodPlace",
 		"maxStackSize": 200,
-		"onRemoveAudio": "stoneDelete",
+		"onRemoveAudio": "woodDeleteLight",
 		"pathingImpact": "AsSolid",
 		"sideall": "neutral"
 	},
 	"fencemiddlei": {
 		"attachBehaviour": [ "fence" ],
+		"attachmentProviders": [
+		{
+			"min": [ -0.17538, 0.45274, -0.17538 ],
+			"max": [ 0.17538, 0.5, 0.17538 ]
+		},{
+			"min": [ -0.13261, -0.5, -0.13261 ],
+			"max": [ 0.13261, -0.42914, 0.13261 ]
+		}],
 		"canBuildUpon": true,
 		"colliders": [
 			{
@@ -166,14 +174,19 @@
 		"lightingTransparency": 190,
 		"mesh": "../meshes/meshes_fence/fencemiddlei.ply",
 		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
 		"onRemoveType": "fence",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
 	},
 	"fencesolotop": {
 		"attachBehaviour": [ "fence" ],
+		"attachmentProviders": [
+		{
+			"min": [ -0.17538, 0.45274, -0.17538 ],
+			"max": [ 0.17538, 0.5, 0.17538 ]
+		}],
 		"canBuildUpon": true,
 		"colliders": [
 			{
@@ -192,14 +205,18 @@
 		"lightingTransparency": 190,
 		"mesh": "../meshes/meshes_fence/fencesolotop.ply",
 		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
 		"onRemoveType": "fence",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
 	},
 	"fencesolobottom": {
 		"attachBehaviour": [ "fence" ],
+		"attachmentProviders": [{
+			"min": [ -0.13261, -0.5, -0.13261 ],
+			"max": [ 0.13261, -0.42914, 0.13261 ]
+		}],
 		"canBuildUpon": true,
 		"colliders": [
 			{
@@ -218,8 +235,8 @@
 		"lightingTransparency": 190,
 		"mesh": "../meshes/meshes_fence/fencesolobottom.ply",
 		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
 		"onRemoveType": "fence",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
@@ -244,14 +261,22 @@
 		"lightingTransparency": 190,
 		"mesh": "../meshes/meshes_fence/fencesolomiddle.ply",
 		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
 		"onRemoveType": "fence",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
 	},
 	"fencemiddlex": {
 		"attachBehaviour": [ "fence" ],
+		"attachmentProviders": [
+		{
+			"min": [ -0.17538, 0.45274, -0.17538 ],
+			"max": [ 0.17538, 0.5, 0.17538 ]
+		},{
+			"min": [ -0.13261, -0.5, -0.13261 ],
+			"max": [ 0.13261, -0.42914, 0.13261 ]
+		}],
 		"canBuildUpon": true,
 		"colliders": [
 			{
@@ -282,8 +307,8 @@
 		"lightingTransparency": 190,
 		"mesh": "../meshes/meshes_fence/fencemiddlex.ply",
 		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
 		"onRemoveType": "fence",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"

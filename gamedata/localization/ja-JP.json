@@ -1,21 +1,29 @@
 {
-	"coverage": 95.0,
+	"coverage": 90.0,
 	"hints": {
 		"0": "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1": "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
 		"10": "林業者にとって最も効率的なサイズは3x33だ。",
 		"11": "“CTRL”キーを押してかがむと、ブロックの縁からの落下を防げるぞ。",
 		"13": "土木建築エリアを設置する際に“CTRL”を押すと、直前のエリアと同じ設定で新たなエリアを設置できる。",
-		"14": "Colony Survivalには複数のModが存在する。 SteamフォーラムやDiscordで探してみよう！",
-		"15": "備蓄品内の検索は、‘食料’や‘弾薬’のような大まかな意味の用語を使うことも可能だ。",
+		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
+		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
+		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
+		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
 		"2": "鉱石はそれぞれ地下の特定の層に存在する。 別種のものを探すなら、さらに深く掘り下げよう。",
+		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
+		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
+		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
+		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
+		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
+		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
+		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
+		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
+		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
 		"3": "“G”キーを押すと自分の周りを明るくします。",
 		"4": "職業ブロックをクリックすると、どのように使われているか確認したり、各レシピの優先順位を決めたりできる。",
 		"5": "“F1キー”を押すと、マニュアルを開いたり閉じたりできる。",
-		"6": "科学者が科学バッグ内のアイテムを使用しても、リネンの袋自体は多くの場合備蓄品に戻る。",
-		"7": "射程とリロード速度、ダメージの違いによって、衛兵はタイプ毎に固有の長所と短所を持っている。",
-		"8": "私達は毎週Friday Blogを公開している。 ストアページから訪ねてColony Survivalの開発に関する情報をもっと知ろう！",
-		"9": "マスケット銃を撃つと弾丸と火薬を消費するが、火薬が入ったリネンの小袋は多くの場合消費しない。"
+		"7": "射程とリロード速度、ダメージの違いによって、衛兵はタイプ毎に固有の長所と短所を持っている。"
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "雇用する",
 			"recruitauto": "仕事設定時に自動雇用",
-			"recruitfailedbeds": "<color=red>新しい入植者を雇用できません。十分な予備のベッドはありません。</color>",
-			"recruitfailedcap": "<color=red>新しい入植者を雇用できません。 上限に達しました。</color>",
-			"recruitfailednomeals": "<color=red>新しい入植者を雇用できません。備蓄に十分な食料がありません。</color>",
+			"recruitfailedbeds": "<color=#ff2323>新しい入植者を雇用できません。十分な予備のベッドはありません。</color>",
+			"recruitfailedcap": "<color=#ff2323>新しい入植者を雇用できません。 上限に達しました。</color>",
+			"recruitfailednomeals": "<color=#ff2323>新しい入植者を雇用できません。備蓄に十分な食料がありません。</color>",
 			"recruitmentamount": "雇用する入植者の人数:",
 			"recruitmentbutton": "入植者を雇用",
 			"recruitmentheader": "雇用",
@@ -239,6 +247,57 @@
 			"thumbnailpath": "サムネイルのパス:",
 			"yourcontent": "自作のワークショップコンテンツ"
 		},
+		"controls": {
+			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
+			"fireprimary": "_MISSING_Primary Action",
+			"firesecondary": "_MISSING_Secondary Action",
+			"flydown": "_MISSING_Fly down (cheat)",
+			"holdcrouch": "_MISSING_Crouch (Held)",
+			"hotbardown": "_MISSING_Next hotbar spot",
+			"hotbarup": "_MISSING_Previous hotbar spot",
+			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
+			"inventory0": "_MISSING_Hotbar 10",
+			"inventory1": "_MISSING_Hotbar 1",
+			"inventory2": "_MISSING_Hotbar 2",
+			"inventory3": "_MISSING_Hotbar 3",
+			"inventory4": "_MISSING_Hotbar 4",
+			"inventory5": "_MISSING_Hotbar 5",
+			"inventory6": "_MISSING_Hotbar 6",
+			"inventory7": "_MISSING_Hotbar 7",
+			"inventory8": "_MISSING_Hotbar 8",
+			"inventory9": "_MISSING_Hotbar 9",
+			"jump": "_MISSING_Jump",
+			"jumpgamepadtap": "_MISSING_Jump",
+			"look": "_MISSING_Aim",
+			"movekeyboard": {
+				"down": "_MISSING_Move Back",
+				"left": "_MISSING_Move Left",
+				"right": "_MISSING_Move Right",
+				"up": "_MISSING_Move Forward"
+			},
+			"movepad": "_MISSING_Movement",
+			"opencolonytab": "_MISSING_Open Colony Tab",
+			"openquickstart": "_MISSING_Open Help Menu",
+			"placemultipleareas": "_MISSING_Chain-place construction areas",
+			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
+			"rotateobjectleft": "_MISSING_Rotate Left",
+			"rotateobjectright": "_MISSING_Rotate Right",
+			"sprint": "_MISSING_Sprint",
+			"sprintgamepadheld": "_MISSING_Sprint",
+			"takescreenshot": "_MISSING_Take Screenshot",
+			"toggleautofocus": "_MISSING_Toggle autofocus (cheat)",
+			"togglechat": "_MISSING_Toggle Chat",
+			"togglecrouch": "_MISSING_Crouch (Toggle)",
+			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
+			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
+			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
+			"togglefly": "_MISSING_Toggle Flying (cheat)",
+			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
+			"toggleinterface": "_MISSING_Toggle Interface",
+			"toggleinventory": "_MISSING_Toggle Inventory",
+			"togglestats": "_MISSING_Toggle Statistics view",
+			"toggletorch": "_MISSING_Toggle Torch"
+		},
 		"escapemenu": {
 			"back": "ゲームに戻る",
 			"info": "情報",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "通知を削除します",
 			"header": "通知",
-			"missingplayerammo": "<color=red>{0}を使用するには、{1}がインベントリにある必要があります！</color>",
+			"missingplayerammo": "<color=#ff2323>{0}を使用するには、{1}がインベントリにある必要があります！</color>",
 			"npc_died": {
 				"banner": "バナーのモンスター",
 				"command": "コマンドの使用",
@@ -756,6 +815,10 @@
 				"description": "筆記者が巻き声を上げて新しい洞察を得るために筆記をアンロックします。筆記者には近くに巻物棚を10個必要とします。筆記者は棚を空にしますが、時間が経つと自動的に満杯になります。",
 				"name": "筆記者"
 			},
+			"signs": {
+				"description": "_MISSING_Time to put your name on things",
+				"name": "_MISSING_Signs"
+			},
 			"statistics": {
 				"description": "統計局をアンロックします。配置して使用すると、コロニーの活動に関する記録が見れます。",
 				"name": "統計局"
@@ -954,7 +1017,7 @@
 			},
 			"quickstart": {
 				"closetoggle": "次回から表示しない",
-				"f1": "F1キーを押してメニューを切り替える",
+				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "次へ",
 				"previous": "前へ"
 			},
@@ -1022,7 +1085,7 @@
 				"header": "コマンドツール",
 				"hempfarmer": "麻の農家",
 				"insidearea": "エリア内には設置不可能",
-				"missingscience": "<color=red>先に「{0}」をアンロックする必要があります。</color>",
+				"missingscience": "<color=#ff2323>先に「{0}」をアンロックする必要があります。</color>",
 				"noconstructionareanearby": "付近に土木建築エリアがない",
 				"notarable": "耕作に適していない",
 				"notflat": "平らではない",
@@ -1128,7 +1191,8 @@
 				"mousemenu": {
 					"inverty": "Y軸反転",
 					"sensitivity": "_MISSING_Mouse sensitivity",
-					"smooth": "マウススムージング"
+					"smooth": "マウススムージング",
+					"swapprimsec": "_MISSING_Invert left/right click"
 				},
 				"mousesettings2": "_MISSING_Mouse & Keyboard",
 				"padmenu": {
@@ -1161,11 +1225,10 @@
 				"bloom": "ブルーム",
 				"depthoffield": "被写界深度",
 				"drawdistance": "描画距離 (*)",
-				"eyeadaptation": "自動露出",
 				"fieldofview": "視野角",
+				"fog": "_MISSING_Fog",
 				"full": "ビデオ設定",
 				"fullscreen": "フルスクリーン",
-				"lightscattering": "光散乱",
 				"particleeffects": "パーティクルエフェクト",
 				"preset": "プリセット",
 				"ragdoll": "ラグドールの表示量",

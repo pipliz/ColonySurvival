@@ -88,6 +88,26 @@
 		"isPlaceable": false
 	},
 	"lanternfloor": {
+		"attachmentRequirements": [
+		{
+			"offset": [ 0, -1, 0 ],
+			"min": [ -0.07, -0.6, -0.07 ],
+			"max": [ 0.07, -0.485, 0.07 ]
+		}],
+		"colliders": [
+			{
+				"max": [
+					0.25,
+					0.4,
+					0.25
+				],
+				"min": [
+					-0.25,
+					-0.5,
+					-0.25
+				]
+			}
+		],
 		"customData": {
 			"torches": {
 				"merged": {
@@ -111,6 +131,31 @@
 		"sideall": "torch"
 	},
 	"lanternroof": {
+		"attachmentRequirements": [
+		{
+			"offset": [ 0, 1, 0 ],
+			"min": [ -0.04, 0.47, -0.04 ],
+			"max": [ 0.04, 0.6, 0.04 ]
+		}],
+		"attachmentProviders": [
+		{
+			"min": [ -0.1, -0.5, -0.1 ],
+			"max": [ 0.1, -0.48 , 0.1 ]
+		}],
+		"colliders": [
+			{
+				"max": [
+					0.25,
+					0.5,
+					0.25
+				],
+				"min": [
+					-0.25,
+					-0.5,
+					-0.25
+				]
+			}
+		],
 		"customData": {
 			"torches": {
 				"merged": {
@@ -300,6 +345,11 @@
 		"sideall": "neutral"
 	},
 	"pillartopbottom": {
+		"attachmentProviders": [
+		{
+			"min": [ -0.5, 0.4, -0.5 ],
+			"max": [ 0.5, 0.5 , 0.5 ]
+		}],
 		"colliders": [
 			{
 				"max": [
@@ -326,6 +376,11 @@
 		"sideall": "neutral"
 	},
 	"pillartop": {
+		"attachmentProviders": [
+		{
+			"min": [ -0.5, 0.4, -0.5 ],
+			"max": [ 0.5, 0.5 , 0.5 ]
+		}],
 		"colliders": [
 			{
 				"max": [
@@ -430,16 +485,12 @@
 	"architrave": {
 		"colliders": [
 			{
-				"max": [
-					0.65,
-					0.50,
-					0.65
-				],
-				"min": [
-					-0.65,
-					-0.5,
-					-0.65
-				]
+				"max": [ 0.5, 0.464, 0.5],
+				"min": [ -0.5, -0.5, -0.5 ]
+			},
+			{
+				"max": [ 0.65, 0.50, 0.65 ],
+				"min": [ -0.65, 0.464, -0.65]
 			}
 		],
 		"categories": [

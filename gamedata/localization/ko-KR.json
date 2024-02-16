@@ -1,21 +1,29 @@
 {
-	"coverage": 95.0,
+	"coverage": 91.0,
 	"hints": {
 		"0": "대부분의 농장에서는 규모가 커질수록 더 많은 자원을 생산하지만 배리 농장에서는 그렇지 않습니다.",
 		"1": "거주민들을 더 많이 모집할수록 더욱 더 많고 다양한 몬스터들이 스폰 됩니다.",
 		"10": "3x33 크기는 나무꾼에게 가장 적합한 크기입니다.",
 		"11": "블록 가장자리에 서거나 이동하려 할 때 떨어지지 않으려면 'Ctrl'키를 눌러 앉으세요.",
 		"13": "건축 구역을 배치할 때 'Ctrl'키를 누르면 동일한 설정 값으로 두 번째 구역을 배치할 수 있습니다.",
-		"14": "콜로니 서바이벌에는 흥미로운 수 많은 여러 모드들이 있습니다. Steam 포럼이나 디스코드에서 찾아보세요!",
-		"15": "창고에서 '식량'이나 '탄약'과 같은 간단하고 일반적인 용어로 아이템들을 검색할 수 있습니다.",
+		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
+		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
+		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
+		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
 		"2": "세계의 특정 지층에서는 광석들이 있습니다. 더 깊이 파고 들어가면 더 다양한 광석들을 발견할 수 있습니다.",
+		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
+		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
+		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
+		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
+		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
+		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
+		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
+		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
+		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
 		"3": "횃불을 사용하려면 'G' 키를 누르세요.",
 		"4": "작업대를 클릭하여 가이드를 참고하고 특정 제작법에 대한 우선순위를 지정할 수도 있습니다.",
 		"5": "매뉴얼을 열고 닫으려면 'F1' 키를 누르세요.",
-		"6": "과학자들은 연구 가방 안의 아이템들을 사용하지만, 종종 아이템이 들어있던 가방 자체는 보관함으로 돌아갑니다.",
-		"7": "경비병 유형에 따라 사거리, 재장전 속도, 데미지 등의 차이로 인해 고유한 장단점을 가지고 있습니다.",
-		"8": "저희는 매주 금요일마다 블로그를 작성하고 있습니다. 스토어 페이지에 방문하여 콜로니 서바이벌 개발에 대한 더 많은 정보를 알아보세요!",
-		"9": "화승총을 발사하면 총알과 화약이 소모되지만 화약이 들어 있는 주머니는 그대로 보존됩니다."
+		"7": "경비병 유형에 따라 사거리, 재장전 속도, 데미지 등의 차이로 인해 고유한 장단점을 가지고 있습니다."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "모집",
 			"recruitauto": "일자리 배치 시 거주민을 자동으로 고용",
-			"recruitfailedbeds": "<color=red>새 거주민을 모집할 수 없습니다 - 빈 침대가 충분하지 않습니다.</color>",
-			"recruitfailedcap": "<color=red>새 거주민을 모집할 수 없습니다 - 수용 가능한 거주민 수가 가득 찼습니다.</color>",
-			"recruitfailednomeals": "<color=red>새 거주민을 모집할 수 없습니다 - 비축 식량이 충분하지 않습니다.</color>",
+			"recruitfailedbeds": "<color=#ff2323>새 거주민을 모집할 수 없습니다 - 빈 침대가 충분하지 않습니다.</color>",
+			"recruitfailedcap": "<color=#ff2323>새 거주민을 모집할 수 없습니다 - 수용 가능한 거주민 수가 가득 찼습니다.</color>",
+			"recruitfailednomeals": "<color=#ff2323>새 거주민을 모집할 수 없습니다 - 비축 식량이 충분하지 않습니다.</color>",
 			"recruitmentamount": "모집할 거주민 수:",
 			"recruitmentbutton": "거주민 모집",
 			"recruitmentheader": "새 거주민 모집",
@@ -239,6 +247,57 @@
 			"thumbnailpath": "썸네일 경로:",
 			"yourcontent": "나의 창작 마당 콘텐츠"
 		},
+		"controls": {
+			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
+			"fireprimary": "_MISSING_Primary Action",
+			"firesecondary": "_MISSING_Secondary Action",
+			"flydown": "_MISSING_Fly down (cheat)",
+			"holdcrouch": "_MISSING_Crouch (Held)",
+			"hotbardown": "_MISSING_Next hotbar spot",
+			"hotbarup": "_MISSING_Previous hotbar spot",
+			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
+			"inventory0": "_MISSING_Hotbar 10",
+			"inventory1": "_MISSING_Hotbar 1",
+			"inventory2": "_MISSING_Hotbar 2",
+			"inventory3": "_MISSING_Hotbar 3",
+			"inventory4": "_MISSING_Hotbar 4",
+			"inventory5": "_MISSING_Hotbar 5",
+			"inventory6": "_MISSING_Hotbar 6",
+			"inventory7": "_MISSING_Hotbar 7",
+			"inventory8": "_MISSING_Hotbar 8",
+			"inventory9": "_MISSING_Hotbar 9",
+			"jump": "_MISSING_Jump",
+			"jumpgamepadtap": "_MISSING_Jump",
+			"look": "_MISSING_Aim",
+			"movekeyboard": {
+				"down": "_MISSING_Move Back",
+				"left": "_MISSING_Move Left",
+				"right": "_MISSING_Move Right",
+				"up": "_MISSING_Move Forward"
+			},
+			"movepad": "_MISSING_Movement",
+			"opencolonytab": "_MISSING_Open Colony Tab",
+			"openquickstart": "_MISSING_Open Help Menu",
+			"placemultipleareas": "_MISSING_Chain-place construction areas",
+			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
+			"rotateobjectleft": "_MISSING_Rotate Left",
+			"rotateobjectright": "_MISSING_Rotate Right",
+			"sprint": "_MISSING_Sprint",
+			"sprintgamepadheld": "_MISSING_Sprint",
+			"takescreenshot": "_MISSING_Take Screenshot",
+			"toggleautofocus": "_MISSING_Toggle autofocus (cheat)",
+			"togglechat": "_MISSING_Toggle Chat",
+			"togglecrouch": "_MISSING_Crouch (Toggle)",
+			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
+			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
+			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
+			"togglefly": "_MISSING_Toggle Flying (cheat)",
+			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
+			"toggleinterface": "_MISSING_Toggle Interface",
+			"toggleinventory": "_MISSING_Toggle Inventory",
+			"togglestats": "_MISSING_Toggle Statistics view",
+			"toggletorch": "_MISSING_Toggle Torch"
+		},
 		"escapemenu": {
 			"back": "뒤로가기",
 			"info": "정보",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "알림 삭제",
 			"header": "알림",
-			"missingplayerammo": "<color=red>{0}을(를) 사용하려면 인벤토리에 {1}이(가) 있어야 합니다!</color>",
+			"missingplayerammo": "<color=#ff2323>{0}을(를) 사용하려면 인벤토리에 {1}이(가) 있어야 합니다!</color>",
 			"npc_died": {
 				"banner": "깃발에 몬스터가 있습니다",
 				"command": "명령어 사용법",
@@ -756,6 +815,10 @@
 				"description": "두루마리를 연구하여 새로운 통찰력을 얻는 서기사을 잠금 해제합니다. 서기사은 근처에 두루마리 선반 10개가 필요합니다. 서기사가 선반에 있는 두루마리를 비워도 시간이 지나면 자동으로 다시 채워집니다.",
 				"name": "서기사"
 			},
+			"signs": {
+				"description": "_MISSING_Time to put your name on things",
+				"name": "_MISSING_Signs"
+			},
 			"statistics": {
 				"description": "통계판을 잠금 해제합니다. 배치하고 이를 사용하면 식민지 활동에 대한 통찰력을 얻을 수 있습니다.",
 				"name": "통계판"
@@ -954,7 +1017,7 @@
 			},
 			"quickstart": {
 				"closetoggle": "다시 표시하지 않기",
-				"f1": "'F1'을 눌러 이 메뉴로 전환합니다.",
+				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "다음",
 				"previous": "이전"
 			},
@@ -1022,7 +1085,7 @@
 				"header": "명령 도구",
 				"hempfarmer": "대마 농부",
 				"insidearea": "해당 구역 안에 배치할 수 없습니다.",
-				"missingscience": "<color=red>먼저 '{0}'을(를) 잠금 해제해야 합니다.</color>",
+				"missingscience": "<color=#ff2323>먼저 '{0}'을(를) 잠금 해제해야 합니다.</color>",
 				"noconstructionareanearby": "근처에 건설 구역이 없습니다.",
 				"notarable": "경작할 수 없습니다.",
 				"notflat": "땅이 평평하지 않습니다.",
@@ -1128,7 +1191,8 @@
 				"mousemenu": {
 					"inverty": "Y축 마우스 반전",
 					"sensitivity": "_MISSING_Mouse sensitivity",
-					"smooth": "부드러운 마우스 감도"
+					"smooth": "부드러운 마우스 감도",
+					"swapprimsec": "_MISSING_Invert left/right click"
 				},
 				"mousesettings2": "_MISSING_Mouse & Keyboard",
 				"padmenu": {
@@ -1161,11 +1225,10 @@
 				"bloom": "반짝임",
 				"depthoffield": "피사계 심도",
 				"drawdistance": "거리 보기",
-				"eyeadaptation": "눈부심",
 				"fieldofview": "시야각",
+				"fog": "_MISSING_Fog",
 				"full": "비디오 설정",
 				"fullscreen": "전체화면",
-				"lightscattering": "빛반사",
 				"particleeffects": "입자 효과",
 				"preset": "프리셋",
 				"ragdoll": "레그돌 품질",

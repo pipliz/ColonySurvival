@@ -6,16 +6,24 @@
 		"10": "3x33 is the optimal size for a forester.",
 		"11": "Press 'CTRL' to crouch and not fall off edges.",
 		"13": "Press 'CTRL' while placing a construction area to place a second area with the same settings.",
-		"14": "There are multiple mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"15": "You can also search the stockpile for general terms like 'food' and 'ammo'.",
+		"16": "Use the compass to find your way towards different colonies and outposts.",
+		"17": "Use the astrolabe to find the different regions with unique resources.",
+		"18": "Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
+		"19": "Place the Sacred Storage to store more Sacred Points",
 		"2": "Certain layers of the world contain ores. Dig deeper to find different ores.",
+		"20": "Use blue, green, red and white paint to colour items like doors and windows",
+		"21": "Use paint stripper to remove the colours you've added to items.",
+		"22": "Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
+		"23": "Build rails and rail stations to quickly move from A to B.",
+		"24": "Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
+		"25": "Place the statistics board to get detailed information on your colony.",
+		"26": "Place the Archimedean Screw to remove all nearby water.",
+		"27": "We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
+		"28": "There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
 		"3": "Press 'G' to activate your torch.",
 		"4": "Click on 'job blocks' to see how they're used and to prioritize certain recipes.",
 		"5": "Press 'F1' to open and close the manual.",
-		"6": "Scientists use the items in a Science Bag, but the linen bag itself is often returned to the stockpile.",
-		"7": "Differences in range, reloading speed and damage give every type of guard unique benefits and drawbacks.",
-		"8": "We write a weekly Friday Blog. Find it on our storepage to learn more about the development of Colony Survival!",
-		"9": "Firing a musket consumes a bullet and gunpowder, but the linen pouch that contained the gunpowder is often conserved."
+		"7": "Differences in range, reloading speed and damage give every type of guard unique benefits and drawbacks."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "Recruit",
 			"recruitauto": "Automatic recruit on job placement",
-			"recruitfailedbeds": "<color=red>Couldn't recruit a new colonist - not enough free beds.</color>",
-			"recruitfailedcap": "<color=red>Couldn't recruit a new colonist - reached capacity.</color>",
-			"recruitfailednomeals": "<color=red>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
+			"recruitfailedbeds": "<color=#ff2323>Couldn't recruit a new colonist - not enough free beds.</color>",
+			"recruitfailedcap": "<color=#ff2323>Couldn't recruit a new colonist - reached capacity.</color>",
+			"recruitfailednomeals": "<color=#ff2323>Couldn't recruit a new colonist - not enough meals in stockpile.</color>",
 			"recruitmentamount": "Amount of colonists to recruit:",
 			"recruitmentbutton": "Recruit Colonist",
 			"recruitmentheader": "Recruitment",
@@ -239,6 +247,57 @@
 			"thumbnailpath": "Thumbnail path:",
 			"yourcontent": "Your created workshop content"
 		},
+		"controls": {
+			"decreasefieldofview": "Decrease field of view (cheat)",
+			"fireprimary": "Primary Action",
+			"firesecondary": "Secondary Action",
+			"flydown": "Fly down (cheat)",
+			"holdcrouch": "Crouch (Held)",
+			"hotbardown": "Next hotbar spot",
+			"hotbarup": "Previous hotbar spot",
+			"increasefieldofview": "Increase field of view (cheat)",
+			"inventory0": "Hotbar 10",
+			"inventory1": "Hotbar 1",
+			"inventory2": "Hotbar 2",
+			"inventory3": "Hotbar 3",
+			"inventory4": "Hotbar 4",
+			"inventory5": "Hotbar 5",
+			"inventory6": "Hotbar 6",
+			"inventory7": "Hotbar 7",
+			"inventory8": "Hotbar 8",
+			"inventory9": "Hotbar 9",
+			"jump": "Jump",
+			"jumpgamepadtap": "Jump",
+			"look": "Aim",
+			"movekeyboard": {
+				"down": "Move Back",
+				"left": "Move Left",
+				"right": "Move Right",
+				"up": "Move Forward"
+			},
+			"movepad": "Movement",
+			"opencolonytab": "Open Colony Tab",
+			"openquickstart": "Open Help Menu",
+			"placemultipleareas": "Chain-place construction areas",
+			"resetfieldofview": "Reset field of view (cheat)",
+			"rotateobjectleft": "Rotate Left",
+			"rotateobjectright": "Rotate Right",
+			"sprint": "Sprint",
+			"sprintgamepadheld": "Sprint",
+			"takescreenshot": "Take Screenshot",
+			"toggleautofocus": "Toggle autofocus (cheat)",
+			"togglechat": "Toggle Chat",
+			"togglecrouch": "Crouch (Toggle)",
+			"toggledevconsole": "Toggle Dev Log (cheat)",
+			"toggledevmenu": "Toggle Dev Menu (cheat)",
+			"toggleextrasmooth": "Toggle smoothed aim (cheat)",
+			"togglefly": "Toggle Flying (cheat)",
+			"togglefocuspoint": "Toggle locked aim (cheat)",
+			"toggleinterface": "Toggle Interface",
+			"toggleinventory": "Toggle Inventory",
+			"togglestats": "Toggle Statistics view",
+			"toggletorch": "Toggle Torch"
+		},
 		"escapemenu": {
 			"back": "Back",
 			"info": "Info",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "Delete notification",
 			"header": "Notifications",
-			"missingplayerammo": "<color=red>Using {0} requires some {1} to be in the inventory!</color>",
+			"missingplayerammo": "<color=#ff2323>Using {0} requires some {1} to be in the inventory!</color>",
 			"npc_died": {
 				"banner": "A monster at the banner",
 				"command": "Command usage",
@@ -757,8 +816,8 @@
 				"name": "Scribe"
 			},
 			"signs": {
-				"name": "Signs",
-				"description": "Time to put your name on things"
+				"description": "Time to put your name on things",
+				"name": "Signs"
 			},
 			"statistics": {
 				"description": "Unlocks the Statistics Board. When placed and used, it gives insights into the activity of your colony.",
@@ -958,7 +1017,7 @@
 			},
 			"quickstart": {
 				"closetoggle": "Do not show this again",
-				"f1": "Press 'F1' to toggle this menu",
+				"f1_2": "Press 'F1' to re-open this menu",
 				"next": "Next",
 				"previous": "Previous"
 			},
@@ -1026,7 +1085,7 @@
 				"header": "Command tool",
 				"hempfarmer": "Hemp Farmer",
 				"insidearea": "Can't place inside an area",
-				"missingscience": "<color=red>Requires '{0}' to be unlocked first.</color>",
+				"missingscience": "<color=#ff2323>Requires '{0}' to be unlocked first.</color>",
 				"noconstructionareanearby": "No construction area nearby",
 				"notarable": "Not arable",
 				"notflat": "Not flat",
@@ -1132,7 +1191,8 @@
 				"mousemenu": {
 					"inverty": "Invert y-axis",
 					"sensitivity": "Mouse sensitivity",
-					"smooth": "Mouse smoothing"
+					"smooth": "Mouse smoothing",
+					"swapprimsec": "Invert left/right click"
 				},
 				"mousesettings2": "Mouse & Keyboard",
 				"padmenu": {
@@ -1165,11 +1225,10 @@
 				"bloom": "Bloom",
 				"depthoffield": "Depth of field",
 				"drawdistance": "Draw distance (*)",
-				"eyeadaptation": "Eye adaptation",
 				"fieldofview": "Field of view",
+				"fog": "Fog",
 				"full": "Video Settings",
 				"fullscreen": "Fullscreen",
-				"lightscattering": "Light scattering",
 				"particleeffects": "Particle effects",
 				"preset": "Preset",
 				"ragdoll": "Ragdoll quantity",

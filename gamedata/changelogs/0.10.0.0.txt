@@ -49,3 +49,81 @@ Welcome to  Update 0.10.0: Rails, Roofs and the Rest! This update adds a lot of 
 - Added support for the "color" tag on meshed blocks (applies uniform vertex colors if the mesh has none)
 - Added a system where mesh UV coordinates below -8 on both X & Y will ignore the texture and return a neutral texture instead
 -- This means you can re-use textures of existing blocks for partial texturing a block without having to include a white bit in the texture
+
+0.10.0.1 (2023-10-13)
+- fix inventory toggle button not exiting the inventory when in it
+- fix confirm delete world button not working
+
+0.10.0.2 (2023-10-13)
+- fix an issue loading older per-world permission files, causing them to reset on changing permissions
+
+0.10.0.4 (2023-10-14)
+think I skipped either .2 or .3, whatever
+- Prevent rebindings keys to the left/right mouse button, to prevent breaking UI navigation
+- Moved rebinding storage from "unity playerpref" (stored in the registry) to gamedata/savegames/controls.json. Should gracefully load & move existing rebindings
+- Localised the action descriptions in the key rebinding UI
+
+0.10.0.5 (2023-10-15)
+sunday edition
+- Added an invert left/right mouse toggle option to the controls menu
+
+0.10.0.6 (2023-10-16)
+- Fix starving colonists not actually starving but getting stuck trying to starve
+- Fix log errors in the main menu when pressing buttons assigned to ingame actions
+- Fix pressing the key bound to the inventory tab while typing in the filter in the statistics menu changing the tab to the inventory
+- Fix 'colony tab' key not working when the UI is open (to close it or to switch to it)
+- Allow crouching while in a menu, fixes getting uncrouched when you open a menu in a railcart
+- Pressing jump now untoggles crouch if it's toggled
+noted issue with 0.10.0:
+Binding left-ctrl to toggle-crouch works, until you reload the config. It unbinds hold-crouch from the same left-ctrl, but on reloading this gets reset for some reason. Future me problem.
+
+0.10.0.7 (2023-10-18)
+- Fix rail going directly from a station into a downward slope not working
+- Moved Archimedean screw thingy to essentials category
+- Fix a regression causing the game to freeze if it tries to render meshes that haven't got vertex colors and also no type color defined (mod problem)
+- Improved error logging when the client has problems loading meshes
+
+0.10.0.8 (2023-11-07)
+After much delay, head scratching, learning and discovery
+Fully reworked the logic around roof selection/placement.
+Should work more consistently, especially with funny shapes.
+There's still setups that won't work because there's a limit to the amount of different roof shapes that are in the game.
+Hopefully the next updates are quicker
+
+0.10.0.9 (2023-11-07)
+- Fix a chance for npcs to freeze upon switching jobs
+- Change fences to use the wood placement/removal audio instead of the stone ones
+- Change windows to use the wood place/delete audio instead of stone ones
+- cs-CZ locale update
+- fr-FR locale update
+- Made the fisherman 4x as quick, and make the recipe to cook fish require 4 rawfish instead. Workaround for the fisherman not supporting interrupted crafting, and staying to finish at sunset.
+- The automatically added outside corner for crown moulding now gets automatically removed on adjacent moulding removal
+- Slightly reduced the red-ness of the red texts at various places of the UI
+- Fix the client getting stuck in the connection screen when joining servers over the internet and using the wrong password
+
+0.10.0.10 (2023-11-09)
+- Fix an issue where the menu would navigate by itself after opening if you previously closed it while holding WASD
+- Added some stick deadzone to the gamepad controls
+- Fixed the workshop content uploader not showing multiplayer worlds for uploading
+- Add back the "chain-placing construction jobs" held button (see control settings ingame)
+
+0.10.0.11 (2023-11-14)
+- Changed roof corner shapes to consider matching with solid blocks to their "back" side
+- Fix visual glitches on overlapping architrave block tops
+- Fix glitchy results when builders were used to place pillars
+
+0.10.0.12 (2023-11-24)
+- Fix a possible bug with archimedes screw entity loading
+- Fix monster spawning being 3% too low when you have quite high threat at one outpost
+- Optimise some meshing code to reduce duplicate work (basically was meshing the world twice on load)
+- Updated some missed red texts to be a bit less red for readability reasons
+- Another update to the architrave mesh in an attempt to make it less glitchy :)
+- Fix banner safe radius visualisation error; blocks up were shown as safe 1 too (top block of a high stair)
+
+0.10.0.13 (2024-01-03)
+Update should be backwards/forwards compatible with 0.10.0.12 server/client mixes; but both should be updated to get the full benefits.
+- Add an "block attachment system", and make many non-cube blocks use it.
+- This allows placement of lanterns, torches, signs etc on top of fences & many more interactions like this
+- Crouching now stops the crafting limits UI from opening when you click on job blocks
+- Fix slight misaligment in pillar meshes (bottom / top / middle parts)
+- Inside corner crown moulding now drops 2 items on removal, as it requires placing 2 to be made

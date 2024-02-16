@@ -1,6 +1,12 @@
 [
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.2, -0.65, -0.05 ],
+				"max": [ -0.1, -0.2, 0.05 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "threatstatue",
@@ -244,6 +250,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.2, 0.4, -0.2 ],
+				"max": [ 0.2, 0.54 , 0.2 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -291,6 +302,12 @@
 					"id": "alarmbell"
 				}
 			],
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.4, -0.51, -0.4],
+				"max": [ 0.4,  -0.49, 0.4]
+			}],
 			"categories": [
 				"defense"
 			],
@@ -495,6 +512,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.41 ],
+				"max": [ 0.5 , 0.5 , -0.39 ]
+			},{
+				"min": [ -0.5, -0.5, 0.39 ],
+				"max": [ 0.5, 0.5, 0.41 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -575,6 +600,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.35 , 0.5 ]
+			},{
+				"min": [ 0.4, -0.5, -0.5 ],
+				"max": [ 0.5, 0.35 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.35 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.35 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -665,6 +704,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.28 , 0.5 ]
+			},{
+				"min": [ 0.4, -0.5, -0.5 ],
+				"max": [ 0.5, 0.28 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.28 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.28 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -798,6 +851,23 @@
 					"toolset": "bronzemin"
 				}
 			],
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5 , 0.5 , -0.46 ]
+			},{
+				"min": [ -0.5, -0.5, 0.46 ],
+				"max": [ 0.5, 0.5, 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.46, 1.1, 0.5 ]
+			}],
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.49, -0.51, -0.45],
+				"max": [ 0.49,  -0.49, 0.49]
+			}],
 			"categories": [
 				"job"
 			],
@@ -835,6 +905,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.488 ],
+				"max": [ 0.5 , 0.5 , -0.448 ]
+			},{
+				"min": [ -0.5, -0.5, 0.448 ],
+				"max": [ 0.5, 0.5, 0.488 ]
+			}],
 			"attachBehaviour": [
 				{
 					"bookCaseLandmarkType": "scrollshelf",
@@ -877,6 +955,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, -0.45 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1020,6 +1112,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, -0.45 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1057,6 +1163,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, -0.45 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1094,6 +1214,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, -0.45 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1131,6 +1265,17 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5 , 0.5 , -0.46 ]
+			},{
+				"min": [ -0.5, -0.5, 0.46 ],
+				"max": [ 0.5, 0.5, 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.46, 0.7, 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"bookCaseLandmarkType": "paperbookcases",
@@ -1173,6 +1318,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1311,6 +1461,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1343,6 +1498,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1375,6 +1535,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
 			"canBuildUpon": true,
 			"categories": [
 				"job"
@@ -1407,6 +1572,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ -0.4, 0.15 , 0.45 ]
+			},{
+				"min": [ 0.4, -0.5, -0.45 ],
+				"max": [ 0.45, 0.15 , 0.45 ]
+			},{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ 0.45, 0.4 , -0.4 ]
+			},{
+				"min": [ -0.45, -0.5, 0.4 ],
+				"max": [ 0.45, 0.4 , 0.45 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1446,6 +1625,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.5 , 0.5 ]
+			},{
+				"min": [ 0.4, -0.5, -0.3 ],
+				"max": [ 0.5, 0.7 , 0.3 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1599,6 +1792,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ -0.4, 0.5 , 0.45 ]
+			},{
+				"min": [ 0.4, -0.5, -0.45 ],
+				"max": [ 0.45, 0.5 , 0.45 ]
+			},{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ 0.45, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.45, -0.5, 0.4 ],
+				"max": [ 0.45, 0.5 , 0.45 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1628,11 +1835,6 @@
 			"isSolid": false,
 			"lightingTransparency": 130,
 			"mesh": "../meshes/jobblockcrafteradvanced.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -1684,6 +1886,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ -0.4, 0.35, 0.45 ]
+			},{
+				"min": [ 0.4, -0.5, -0.45 ],
+				"max": [ 0.45, 0.35, 0.45 ]
+			},{
+				"min": [ -0.45, -0.5, -0.45 ],
+				"max": [ 0.45, 0.35, -0.4 ]
+			},{
+				"min": [ -0.45, -0.5, 0.4 ],
+				"max": [ 0.45, 0.35, 0.45 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1723,6 +1939,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.5 , 0.5 ]
+			},{
+				"min": [ 0.4, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1763,6 +1993,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.15, -0.5, -0.5 ],
+				"max": [ 0.15, 0.15 , -0.4 ]
+			},{
+				"min": [ -0.15, -0.5, 0.4 ],
+				"max": [ 0.15, 0.15 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1804,6 +2042,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.49, -0.5, -0.48 ],
+				"max": [ 0, 1.27 , 0.48 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1912,6 +2155,20 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.5 , 0.5 ]
+			},{
+				"min": [ 0.4, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -1957,6 +2214,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.48, -0.5, -0.48 ],
+				"max": [ 0.48, 0.2 , 0.48 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "pointstorage",
@@ -1973,7 +2235,7 @@
 				{
 					"max": [
 						0.5,
-						0.3,
+						0.2,
 						0.5
 					],
 					"min": [
@@ -2093,6 +2355,23 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.5, -0.4 , 0.5 ]
+			},{
+				"min": [ -0.5, 0.4, -0.5 ],
+				"max": [ 0.5, 0.5 , 0.5 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "pointstorage",
@@ -2106,9 +2385,9 @@
 				"pointstorage"
 			],
 			"icon": "../textures/icons/steellockbox.png",
+			"isSolid": true,
 			"lightingTransparency": 30,
 			"mesh": "../meshes/steellockbox.ply",
-			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"pathingImpact": "AsUntouchableSolid",
@@ -2119,6 +2398,16 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.04, -0.51, -0.46],
+				"max": [ 0.04,  -0.49, 0.40]
+			},{
+				"offset": [ 0, -1, 0 ],
+				"min": [ -0.04, -0.51, 0.4],
+				"max": [ 0.04,  -0.49, 0.46]
+			}],
 			"attachBehaviour": [
 				"statisticsboard"
 			],
@@ -2294,6 +2583,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.192, 0.31, -0.45 ],
+				"max": [ 0.005, 0.35, 0.193 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -2323,11 +2617,6 @@
 			"isSolid": false,
 			"lightingTransparency": 170,
 			"mesh": "../meshes/jewellerbench.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 90,
-				"z": 0
-			},
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -2657,6 +2946,11 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.0807, 0.414, -0.137 ],
+				"max": [ 0.074, 0.5, 0.413 ]
+			}],
 			"attachBehaviour": [
 				{
 					"id": "craftingblock",
@@ -2697,6 +2991,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.4, -0.5 ],
+				"max": [ 0.5, -0.05, 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.5, 0.5 ]
+			}],
 			"categories": [
 				"essential"
 			],
@@ -2755,6 +3057,14 @@
 	},
 	{
 		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.4, -0.5 ],
+				"max": [ 0.5, -0.05, 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ -0.4, 0.1, 0.5 ]
+			}],
 			"colliders": [
 				{
 					"impactsPhysics": false,

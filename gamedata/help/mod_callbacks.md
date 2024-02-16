@@ -78,88 +78,94 @@ CallbackType: `AfterItemTypesDefined`
 =======  
 Method type: System.Action  
 First callback after all item types should be defined, so you can resolve types etc here  
-Registered callbacks: 37  
+Registered callbacks: 41  
 0.	'initialize_upgrademanager' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksA.AfterItemTypesDefined' index: -1001  
 1.	'create_servermanager_trackers' -> 'ServerManager.CreateBlockEntityCallbacks' index: -1000  
-2.	'register_smart_placement' -> 'BlockEntities.SmartPlacement.AfterItemTypesDefined'   
-		 Child @ 3 : 'blockentitycallback.autoloaders'  
-3.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
+2.	'process_smart_moulding' -> 'BlockEntities.Implementations.MouldingPlacement.AfterItemTypesDefined'   
+		 Child @ 4 : 'blockentitycallback.autoloaders'  
+3.	'register_smart_placement' -> 'BlockEntities.SmartPlacement.AfterItemTypesDefined'   
+		 Child @ 4 : 'blockentitycallback.autoloaders'  
+4.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-4.	'chunk_dedupe_initializer' -> 'Chunk+ChunkDataDeduplicator.Initialize'   
-5.	'pipliz.server.loadnpctypes' -> 'NPC.NPCType.LoadNPCTypes'   
-6.	'areajobs.insertattributed' -> 'AreaJobTracker.RegisterAutoDefs'   
-		 Parent @ 5 : 'pipliz.server.loadnpctypes'  
-7.	'parse_starterpack_patches_afteritemtype' -> 'StarterPacks.Loader.ParsePacks'   
-		 Child @ 8 : 'pipliz.server.recipeload'  
-8.	'pipliz.server.recipeload' -> 'Recipes.RecipeStorage+Callbacks.AfterItemTypesDefined'   
+5.	'chunk_dedupe_initializer' -> 'Chunk+ChunkDataDeduplicator.Initialize'   
+6.	'pipliz.server.loadnpctypes' -> 'NPC.NPCType.LoadNPCTypes'   
+7.	'areajobs.insertattributed' -> 'AreaJobTracker.RegisterAutoDefs'   
+		 Parent @ 6 : 'pipliz.server.loadnpctypes'  
+8.	'parse_starterpack_patches_afteritemtype' -> 'StarterPacks.Loader.ParsePacks'   
+		 Child @ 9 : 'pipliz.server.recipeload'  
+9.	'pipliz.server.recipeload' -> 'Recipes.RecipeStorage+Callbacks.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-9.	'pipliz.server.loadresearchables' -> 'ServerManager.LoadResearchables'   
-		 Parent @ 5 : 'pipliz.server.loadnpctypes'  
+10.	'pipliz.server.loadresearchables' -> 'ServerManager.LoadResearchables'   
+		 Parent @ 6 : 'pipliz.server.loadnpctypes'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 8 : 'pipliz.server.recipeload'  
-10.	'pipliz.server.endloadplayers' -> 'Players.EndInitializePlayerData'   
-11.	'createareajobdefinitions' -> 'AreaJobTracker+AreaJobPatches.CreateAreaJobDefinitions'   
-		 Parent @ 5 : 'pipliz.server.loadnpctypes'  
-12.	'bookcase_registers' -> 'BlockEntities.Implementations.Bookcases+Callbacks.AfterItemTypesDefined'   
+		 Parent @ 9 : 'pipliz.server.recipeload'  
+11.	'pipliz.server.endloadplayers' -> 'Players.EndInitializePlayerData'   
+12.	'createareajobdefinitions' -> 'AreaJobTracker+AreaJobPatches.CreateAreaJobDefinitions'   
+		 Parent @ 6 : 'pipliz.server.loadnpctypes'  
+13.	'bookcase_registers' -> 'BlockEntities.Implementations.Bookcases+Callbacks.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Child @ 14 : 'pipliz.blocknpcs.registerjobs'  
-13.	'wisteriatree_register' -> 'BlockEntities.Implementations.WisteriaTreeRegistration.AfterItemTypesDefined'   
+		 Child @ 15 : 'pipliz.blocknpcs.registerjobs'  
+14.	'wisteriatree_register' -> 'BlockEntities.Implementations.WisteriaTreeRegistration.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Child @ 14 : 'pipliz.blocknpcs.registerjobs'  
-14.	'pipliz.blocknpcs.registerjobs' -> 'Jobs.BlockJobLoader.AfterDefiningNPCTypes'   
+		 Child @ 15 : 'pipliz.blocknpcs.registerjobs'  
+15.	'pipliz.blocknpcs.registerjobs' -> 'Jobs.BlockJobLoader.AfterDefiningNPCTypes'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 5 : 'pipliz.server.loadnpctypes'  
-		 Parent @ 3 : 'blockentitycallback.autoloaders'  
-15.	'creategrowabledefinitions' -> 'GrowableBlocks.GrowablePatchHandler.CreateGrowableDefinitions'   
+		 Parent @ 6 : 'pipliz.server.loadnpctypes'  
+		 Parent @ 4 : 'blockentitycallback.autoloaders'  
+16.	'creategrowabledefinitions' -> 'GrowableBlocks.GrowablePatchHandler.CreateGrowableDefinitions'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-16.	'parse_elevatortypes' -> 'Transport.Elevator.ElevatorManager.AfterItemTypesDefined'   
-		 Child @ 20 : 'pipliz.server.completeloadmiscworld'  
-17.	'register_upgrades' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksB.AfterItemTypesDefined' index: 10  
+17.	'parse_elevatortypes' -> 'Transport.Elevator.ElevatorManager.AfterItemTypesDefined'   
+		 Child @ 22 : 'pipliz.server.completeloadmiscworld'  
+18.	'parse_railtypes' -> 'Transport.Rail.RailManager.AfterItemTypesDefined'   
+		 Child @ 22 : 'pipliz.server.completeloadmiscworld'  
+19.	'register_upgrades' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksB.AfterItemTypesDefined' index: 10  
 		 Parent @ 0 : 'initialize_upgrademanager'  
-		 Parent @ 9 : 'pipliz.server.loadresearchables'  
-		 Child @ 18 : 'pipliz.server.endloadcolonies'  
-18.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
-		 Parent @ 5 : 'pipliz.server.loadnpctypes'  
-		 Parent @ 6 : 'areajobs.insertattributed'  
+		 Parent @ 10 : 'pipliz.server.loadresearchables'  
+		 Child @ 20 : 'pipliz.server.endloadcolonies'  
+20.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
+		 Parent @ 6 : 'pipliz.server.loadnpctypes'  
+		 Parent @ 7 : 'areajobs.insertattributed'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 8 : 'pipliz.server.recipeload'  
-		 Parent @ 9 : 'pipliz.server.loadresearchables'  
-		 Parent @ 10 : 'pipliz.server.endloadplayers'  
-		 Parent @ 11 : 'createareajobdefinitions'  
-19.	'load_notifications' -> 'Notifications.NotificationCallbacks.AfterItemTypesDefined'   
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
-		 Child @ 20 : 'pipliz.server.completeloadmiscworld'  
-20.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
-		 Child @ 21 : 'start_load_startup_chunks'  
-21.	'start_load_startup_chunks' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
-		 Parent @ 3 : 'blockentitycallback.autoloaders'  
-		 Parent @ 4 : 'chunk_dedupe_initializer'  
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
-		 Parent @ 14 : 'pipliz.blocknpcs.registerjobs'  
-		 Parent @ 15 : 'creategrowabledefinitions'  
-22.	'monstertracker.load' -> 'Monsters.MonsterTracker+Callbacks.AfterItemTypesDefined'   
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
-23.	'effectstracker_load' -> 'EffectsTracker.AfterItemTypesDefined'   
+		 Parent @ 9 : 'pipliz.server.recipeload'  
+		 Parent @ 10 : 'pipliz.server.loadresearchables'  
+		 Parent @ 11 : 'pipliz.server.endloadplayers'  
+		 Parent @ 12 : 'createareajobdefinitions'  
+21.	'load_notifications' -> 'Notifications.NotificationCallbacks.AfterItemTypesDefined'   
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
+		 Child @ 22 : 'pipliz.server.completeloadmiscworld'  
+22.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
+		 Child @ 23 : 'start_load_startup_chunks'  
+23.	'start_load_startup_chunks' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
+		 Parent @ 4 : 'blockentitycallback.autoloaders'  
+		 Parent @ 5 : 'chunk_dedupe_initializer'  
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
+		 Parent @ 15 : 'pipliz.blocknpcs.registerjobs'  
+		 Parent @ 16 : 'creategrowabledefinitions'  
+24.	'monstertracker.load' -> 'Monsters.MonsterTracker+Callbacks.AfterItemTypesDefined'   
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
+25.	'effectstracker_load' -> 'EffectsTracker.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 22 : 'monstertracker.load'  
-24.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
-25.	'GrowableBlocks.SaplingHandler.AfterItemTypesDefined' -> 'GrowableBlocks.SaplingHandler.AfterItemTypesDefined'   
-26.	'Jobs.ToolSetManager.AfterItemTypesDefined' -> 'Jobs.ToolSetManager.AfterItemTypesDefined'   
-27.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
-28.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
-29.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
-30.	'pipliz.server.loadnpcmeshes' -> 'NPC.NPCType.LoadNPCMeshes'   
-31.	'process_paintables' -> 'BlockEntities.Implementations.Paint.Paintables.AfterItemTypesDefined'   
-32.	'process_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.AfterItemTypesDefined'   
-33.	'process_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.AfterItemTypesDefined'   
-34.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
-35.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
-		 Parent @ 21 : 'start_load_startup_chunks'  
-36.	'set_colony_sciencemask' -> 'Science.ScienceManager+Callbacks.AfterItemTypesDefined' index: 1  
-		 Parent @ 35 : 'wait_complete_startup_chunks'  
-		 Parent @ 18 : 'pipliz.server.endloadcolonies'  
+		 Parent @ 24 : 'monstertracker.load'  
+26.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
+27.	'GrowableBlocks.SaplingHandler.AfterItemTypesDefined' -> 'GrowableBlocks.SaplingHandler.AfterItemTypesDefined'   
+28.	'Jobs.ToolSetManager.AfterItemTypesDefined' -> 'Jobs.ToolSetManager.AfterItemTypesDefined'   
+29.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
+30.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
+31.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
+32.	'pipliz.server.loadnpcmeshes' -> 'NPC.NPCType.LoadNPCMeshes'   
+33.	'process_paintables' -> 'BlockEntities.Implementations.Paint.Paintables.AfterItemTypesDefined'   
+34.	'process_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.AfterItemTypesDefined'   
+35.	'process_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.AfterItemTypesDefined'   
+36.	'process_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.AfterItemTypesDefined'   
+37.	'process_smart_signs' -> 'BlockEntities.Implementations.SignPlacement.AfterItemTypesDefined'   
+38.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
+39.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
+		 Parent @ 23 : 'start_load_startup_chunks'  
+40.	'set_colony_sciencemask' -> 'Science.ScienceManager+Callbacks.AfterItemTypesDefined' index: 1  
+		 Parent @ 39 : 'wait_complete_startup_chunks'  
+		 Parent @ 20 : 'pipliz.server.endloadcolonies'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
 
 
@@ -262,8 +268,9 @@ Registered callbacks: 2
 CallbackType: `OnPlayerDisconnected`  
 =======  
 Method type: System.Action<Players.Player>  
-Registered callbacks: 1  
+Registered callbacks: 2  
 0.	'BlockEntities.Implementations.Astrolabe+Callbacks.OnPlayerDisconnected' -> 'BlockEntities.Implementations.Astrolabe+Callbacks.OnPlayerDisconnected'   
+1.	'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerDisconnected' -> 'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerDisconnected'   
 
 
 CallbackType: `OnSavingPlayer`  
@@ -296,8 +303,9 @@ CallbackType: `OnPlayerMoved`
 =======  
 Method type: System.Action<Players.Player, UnityEngine.Vector3>  
 Probably called about 6/second/player. New data is on the player already.  
-Registered callbacks: 1  
-0.	'pipliz.server.loadsurroundings' -> 'ChunkQueue+Callbacks.OnPlayerMoved'   
+Registered callbacks: 2  
+0.	'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerMoved' -> 'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerMoved'   
+1.	'pipliz.server.loadsurroundings' -> 'ChunkQueue+Callbacks.OnPlayerMoved'   
 
 
 CallbackType: `OnModifyResearchables`  
@@ -331,13 +339,14 @@ CallbackType: `OnPlayerConnectedLate`
 =======  
 Method type: System.Action<Players.Player>  
 Messages send here will work unlike with OnPlayerConnectedEarly. May be delayed till after the client is done loading.  
-Registered callbacks: 5  
+Registered callbacks: 6  
 0.	'pipliz.imagemanager.sendimagesettings' -> 'Pipliz.ImageManager.OnPlayerConnectedEarly' index: -1000  
-1.	'pipliz.server.meshedobjects.sendtable' -> 'MeshedObjects.MeshedObjectType.OnPlayerConnectedLate'   
-2.	'pipliz.server.sendcheatstate' -> 'Chatting.Commands.DisableAchievements+Callbacks.OnPlayerConnectedLate'   
-3.	'pipliz.server.sendnpctypes' -> 'NPC.NPCType.SendNPCTypes'   
-4.	'send_attached_mesh' -> 'MeshedObjects.MeshedObjectManager.SendAttachedMesh'   
-		 Parent @ 1 : 'pipliz.server.meshedobjects.sendtable'  
+1.	'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerConnectedLate' -> 'BlockEntities.Implementations.Sign.SignTracker+SignSender.OnPlayerConnectedLate'   
+2.	'pipliz.server.meshedobjects.sendtable' -> 'MeshedObjects.MeshedObjectType.OnPlayerConnectedLate'   
+3.	'pipliz.server.sendcheatstate' -> 'Chatting.Commands.DisableAchievements+Callbacks.OnPlayerConnectedLate'   
+4.	'pipliz.server.sendnpctypes' -> 'NPC.NPCType.SendNPCTypes'   
+5.	'send_attached_mesh' -> 'MeshedObjects.MeshedObjectManager.SendAttachedMesh'   
+		 Parent @ 2 : 'pipliz.server.meshedobjects.sendtable'  
 
 
 CallbackType: `OnAddResearchables`  
@@ -431,20 +440,25 @@ No registered uses
 CallbackType: `OnPlayerClicked`  
 =======  
 Method type: System.Action<Players.Player, Shared.PlayerClickedData>  
-Registered callbacks: 12  
+Registered callbacks: 17  
 0.	'BlockEntities.Implementations.AlarmbellTracker+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.AlarmbellTracker+Callbacks.OnPlayerClicked'   
 1.	'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnPlayerClicked'   
 2.	'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerClicked'   
-3.	'check_banner_click' -> 'NetworkUI.NetworkMenuManager.CheckBannerClick'   
-4.	'clicked_glider' -> 'Transport.Glider+Callbacks.OnPlayerClicked'   
-		 Child @ 5 : 'clicked_transport'  
-5.	'clicked_transport' -> 'Transport.TransportManager+Callbacks.OnPlayerClicked'   
-6.	'Jobs.CommandToolManager.OnPlayerClicked' -> 'Jobs.CommandToolManager.OnPlayerClicked'   
-7.	'pipliz.server.players.hitnpc' -> 'Players.OnPlayerClicked'   
-8.	'Transport.Elevator.ElevatorManager.OnPlayerClicked' -> 'Transport.Elevator.ElevatorManager.OnPlayerClicked'   
-9.	'use_paint' -> 'BlockEntities.Implementations.Paint.Paintables.OnPlayerClicked'   
-10.	'use_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.OnPlayerClicked'   
-11.	'use_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.OnPlayerClicked'   
+3.	'BlockEntities.Implementations.Sign.SignTracker+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.Sign.SignTracker+Callbacks.OnPlayerClicked'   
+4.	'check_banner_click' -> 'NetworkUI.NetworkMenuManager.CheckBannerClick'   
+5.	'clicked_glider' -> 'Transport.Glider+Callbacks.OnPlayerClicked'   
+		 Child @ 6 : 'clicked_transport'  
+6.	'clicked_transport' -> 'Transport.TransportManager+Callbacks.OnPlayerClicked'   
+7.	'Jobs.CommandToolManager.OnPlayerClicked' -> 'Jobs.CommandToolManager.OnPlayerClicked'   
+8.	'pipliz.server.players.hitnpc' -> 'Players.OnPlayerClicked'   
+9.	'Transport.Elevator.ElevatorManager.OnPlayerClicked' -> 'Transport.Elevator.ElevatorManager.OnPlayerClicked'   
+10.	'Transport.Rail.RailManager.OnPlayerClicked' -> 'Transport.Rail.RailManager.OnPlayerClicked'   
+11.	'use_paint' -> 'BlockEntities.Implementations.Paint.Paintables.OnPlayerClicked'   
+12.	'use_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.OnPlayerClicked'   
+13.	'use_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.OnPlayerClicked'   
+14.	'use_smart_moulding' -> 'BlockEntities.Implementations.MouldingPlacement.OnPlayerClicked'   
+15.	'use_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.OnPlayerClicked'   
+16.	'use_smart_sign' -> 'BlockEntities.Implementations.SignPlacement.OnPlayerClicked'   
 
 
 CallbackType: `OnPlayerHit`  
@@ -524,14 +538,15 @@ Registered callbacks: 1
 CallbackType: `OnPlayerPushedNetworkUIButton`  
 =======  
 Method type: System.Action<NetworkUI.ButtonPressCallbackData>  
-Registered callbacks: 7  
+Registered callbacks: 8  
 0.	'Assets.UIGeneration.ColonyManageJobs.OnPlayerPushedNetworkUIButton' -> 'Assets.UIGeneration.ColonyManageJobs.OnPlayerPushedNetworkUIButton'   
 1.	'Assets.UIGeneration.PointsUpgrades.OnPlayerPushedNetworkUIButton' -> 'Assets.UIGeneration.PointsUpgrades.OnPlayerPushedNetworkUIButton'   
 2.	'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerPushedNetworkUIButton' -> 'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerPushedNetworkUIButton'   
-3.	'button_opencolonytab' -> 'NetworkUI.NetworkMenuManager+BannerPlacementCallbacks.OnPlayerPushedNetworkUIButton'   
-4.	'handle_colony_management' -> 'NetworkUI.NetworkMenuManager.HandleButtons'   
-5.	'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton' -> 'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton'   
-6.	'NetworkUI.NetworkMenuManager+ToolshopCallbacks.OnPlayerPushedNetworkUIButton' -> 'NetworkUI.NetworkMenuManager+ToolshopCallbacks.OnPlayerPushedNetworkUIButton'   
+3.	'BlockEntities.Implementations.Sign.SignTracker+Callbacks.OnPlayerPushedNetworkUIButton' -> 'BlockEntities.Implementations.Sign.SignTracker+Callbacks.OnPlayerPushedNetworkUIButton'   
+4.	'button_opencolonytab' -> 'NetworkUI.NetworkMenuManager+BannerPlacementCallbacks.OnPlayerPushedNetworkUIButton'   
+5.	'handle_colony_management' -> 'NetworkUI.NetworkMenuManager.HandleButtons'   
+6.	'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton' -> 'Jobs.CommandToolManager.OnPlayerPushedNetworkUIButton'   
+7.	'NetworkUI.NetworkMenuManager+ToolshopCallbacks.OnPlayerPushedNetworkUIButton' -> 'NetworkUI.NetworkMenuManager+ToolshopCallbacks.OnPlayerPushedNetworkUIButton'   
 
 
 CallbackType: `OnSendAreaHighlights`  
@@ -683,10 +698,11 @@ CallbackType: `OnLoadWorldMisc`
 =======  
 Method type: System.Action<Newtonsoft.Json.Linq.JObject>  
 called in AfterItemTypesDefined, node is the json that was saved aerlier ({world}/world.json)  
-Registered callbacks: 3  
+Registered callbacks: 4  
 0.	'load_elevators' -> 'Transport.Elevator.ElevatorTransport+Callbacks.OnLoadWorldMisc'   
 1.	'load_gliders' -> 'Transport.Glider+Callbacks.OnLoadWorldMisc'   
-2.	'loadnpcid' -> 'NPC.NPCTracker+Callbacks.OnLoadWorldMisc'   
+2.	'load_rails' -> 'Transport.Rail.RailTransport+Callbacks.OnLoadWorldMisc'   
+3.	'loadnpcid' -> 'NPC.NPCTracker+Callbacks.OnLoadWorldMisc'   
 
 
 CallbackType: `OnConstructColonyStartSettingsUI`  

@@ -1,0 +1,52 @@
+0.10.1.0 (2024-02-02)
+
+Cosmetic Water Update: transparency, no longer looks like meringues
+Also adjusted water effect volumes and swimming mechanics a bit
+
+Other changes;
+- Added a "low" and "medium" Torch Quality setting. These render the torch lighting at reduced resolution; should help a lot with minimum-spec gaming.
+- Minor tweak to day cycle lighting (and moved some of the config into a .png in gamedata/textures/materials/lighting.png)
+- Fix ambient lighting disappearing entirely just after sunset and before sunrise for ~30 seconds each
+
+0.10.1.1 & 0.10.1.2 (2024-02-02)
+
+Quick fix to a performance/rendering issue caused by lacking GPU support for a certain texture format
+
+0.10.1.3 (2024-02-08)
+
+- Fix some (older) items requiring a solid base block below not being auto-removed when the block below is removed
+- Fix lantern being glow-in-the-dark for the non-emissive parts
+- Add lantern (roof, side, floor) colliders
+- Removed eye adaptation setting (it has done very little for a while now)
+- Further tweaked some lighting settings
+- Minor french locale changes
+- Allow placing blocks against the elevator shaft blocks
+- Fix the elevator clipping you into the ground if you take it going down directly into the ground from a station
+- Fix going forward/back not working anymore with the F9 point-focus-orbiting dev tool
+- Fix being unable to place the alchemist table in one of the directions
+- Fix monsters missing ambient lighting (?? how long has this been a thing)
+- Fix banner safe zone visualisation marking a safe block as unsafe when that area is above the banner
+
+0.10.1.4 (2024-02-13)
+
+- Holding the jump button while in an evator or on rail will make it skip stations
+- Actually apply some of the lighting changes intended for 0.10.1.3, and make more tweaks
+- More fr-FR localisation work by sixtienn on the discord
+- Fix seeing the sun through water after sunset / before sunrise
+- Remove/update some outdated loading screen hints & add some new ones
+- Fix F1 key not working to open the quickstart
+- Fix F11 screenshot key not working (the one that writes to Colony Survival/gamedata/screenshots/)
+
+0.10.1.5 (2024-02-14)
+
+- Fix a logic bug where NPC position updates could sometimes be double queued (should have no visible difference)
+- Fix a logic bug where NPC logic updates would sometimes not queue; they would freeze when they wanted to recalculate their path
+- Punching unemployed colonists idling around the banner will make them move most of the time (should help when they are in the way)
+- Mods: send sprint & crouch input states to server-based transport (like the rail, elevator, glider)
+
+0.10.1.6 (2024-02-xx)
+
+- Add a feature that dims torches a little when outside in daylight
+- Add/tweak height based fog, mostly around sunrise
+- Rename light scattering to fog in the video settings menu for clarity
+- French, Spanish localisation update

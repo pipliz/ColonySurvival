@@ -1,21 +1,29 @@
 {
-	"coverage": 95.0,
+	"coverage": 99.0,
 	"hints": {
 		"0": "U většiny farem platí velikost = úroda. Sběrači bobulí jsou však výjimkou.",
 		"1": "Více a odlišnějších monster se bude objevovat s rostoucí úrovní hrozby.",
 		"10": "3x33 je nejlepší území pro lesníka.",
 		"11": "Stiskni 'CTRL' abys nespadl ze srázů.",
 		"13": "Stiskni 'CTRL' při označování prostoru dělníka (kopáče/stavitele), abys automaticky po označení prvního prostoru vytvořil druhý prostor.",
-		"14": "Existuje mnoho módů pro Colony Survival. Všechny je najdeš ve Steam workshopu nebo na našem Discordu!",
-		"15": "Zkus si při vyhledávání základních věcí v inventáři vyhledat 'food' nebo 'ammo'.",
+		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
+		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
+		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
+		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
 		"2": "Určité vrstvy povrchu obsahují určité rudy. Čím hlouběji se dostaneš, tím vzácnější najdeš.",
+		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
+		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
+		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
+		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
+		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
+		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
+		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
+		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
+		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
 		"3": "Stiskni 'G', abys rozsvítil svou přenosnou pochodeň.",
 		"4": "Klikni na blok, kde se vyrábí předměty, a uprav jejich množství nebo prioritu.",
 		"5": "Stiskni 'F1' pro otevření manuálu.",
-		"6": "Výzkumníci často používají předměty, ze kterých se vyrábí daná vědecká taška. Lněné tašky se pak často vrací zpět.",
-		"7": "Každá zbraň má svůj vlastní dolet, sílu a rychlost přebití, díky čemuž je každý strážce unikátní.",
-		"8": "Každý týden v pátek vydáváme na Steam komunitě Friday blog. Čtením získáš přehled o novinkách, vývoji hry a mnohém dalším!",
-		"9": "Střelba z bambitky spotřebuje střelný prach a náboj, ale taška je často zachována."
+		"7": "Každá zbraň má svůj vlastní dolet, sílu a rychlost přebití, díky čemuž je každý strážce unikátní."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "Rekrutovat",
 			"recruitauto": "Automatické rekrutování při založení nové pracovní pozice",
-			"recruitfailedbeds": "<color=red>Nelze rekrutovat dalšího kolonistu - nedostatek volných postelí.</color>",
-			"recruitfailedcap": "<color=red>Nelze rekrutovat dalšího kolonistu - dosažena maximální kapacita.</color>",
-			"recruitfailednomeals": "<color=red>Nelze rekrutovat dalšího kolonistu - nedostatek jídla na skladě.</color>",
+			"recruitfailedbeds": "<color=#ff2323>Nelze rekrutovat dalšího kolonistu - nedostatek volných postelí.</color>",
+			"recruitfailedcap": "<color=#ff2323>Nelze rekrutovat dalšího kolonistu - dosažena maximální kapacita.</color>",
+			"recruitfailednomeals": "<color=#ff2323>Nelze rekrutovat dalšího kolonistu - nedostatek jídla na skladě.</color>",
 			"recruitmentamount": "Počet kolonistů k rekrutování",
 			"recruitmentbutton": "Rekrutovat kolonistu",
 			"recruitmentheader": "Rekrutování",
@@ -194,19 +202,19 @@
 			"refused_main": "Připojení zamítnuto, {0}. Návrat do menu za 5 vteřin...",
 			"sp_alreadyrunning2": "Server již běží. Návrat do menu za 5 vteřin ...",
 			"stages": {
-				"1": "_MISSING_Requested server files table",
-				"connectionmade": "_MISSING_Connection made",
-				"downloading": "_MISSING_(downloading {0} packets)",
-				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
-				"final": "_MISSING_Finalizing",
-				"loading": "_MISSING_Loading {0} files",
-				"local1": "_MISSING_Searching for singleplayer server on this computer",
-				"local2": "_MISSING_Searching for online server on this computer",
-				"password": "_MISSING_Password required",
-				"steamdirect": "_MISSING_Trying to setup direct connection",
-				"steamp2p": "_MISSING_Trying to setup p2p connection",
-				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
-				"waitingserver": "_MISSING_Starting server in the background"
+				"1": "Požadovaná tabulka souborů serveru",
+				"connectionmade": "Spojení provedeno",
+				"downloading": "(Stahování {0} balíčků)",
+				"fail": "Načítání se nezdařilo, návrat do hlavní nabídky za 5 sekund",
+				"final": "Dokončování",
+				"loading": "Načítání {0} souborů",
+				"local1": "Hledání serveru pro jednoho hráče na tomto počítači",
+				"local2": "Hledání online serveru na tomto počítači",
+				"password": "Je vyžadováno heslo",
+				"steamdirect": "Pokus o nastavení přímého připojení",
+				"steamp2p": "Pokus o nastavení p2p připojení",
+				"timeout": "Připojování vypršelo. Návrat do hlavního menu za 5 sekund",
+				"waitingserver": "Spouštění serveru na pozadí"
 			}
 		},
 		"contentmanager": {
@@ -238,6 +246,57 @@
 			"stateuploadingpreview": "Nahrávání náhledu: {0} / {1}",
 			"thumbnailpath": "Stručná cesta:",
 			"yourcontent": "Tvůj vytvořený obsah ve workshopu"
+		},
+		"controls": {
+			"decreasefieldofview": "Zmenšit rozhled (cheat)",
+			"fireprimary": "Primární akce",
+			"firesecondary": "Sekundární akce",
+			"flydown": "Let dolů (cheat)",
+			"holdcrouch": "Krčení (Držení)",
+			"hotbardown": "Další hotbar místo",
+			"hotbarup": "Předchozí hotbar místo",
+			"increasefieldofview": "Zvětšit rozhled (cheat)",
+			"inventory0": "Hotbar 10",
+			"inventory1": "Hotbar 1",
+			"inventory2": "Hotbar 2",
+			"inventory3": "Hotbar 3",
+			"inventory4": "Hotbar 4",
+			"inventory5": "Hotbar 5",
+			"inventory6": "Hotbar 6",
+			"inventory7": "Hotbar 7",
+			"inventory8": "Hotbar 8",
+			"inventory9": "Hotbar 9",
+			"jump": "Skok",
+			"jumpgamepadtap": "Skok",
+			"look": "Míření",
+			"movekeyboard": {
+				"down": "Pohyb dozadu",
+				"left": "Pohyb doleva",
+				"right": "Pohyb doprava",
+				"up": "Pohyb dopředu"
+			},
+			"movepad": "Pohyb",
+			"opencolonytab": "Otevřít menu správce kolonie",
+			"openquickstart": "_MISSING_Open Help Menu",
+			"placemultipleareas": "_MISSING_Chain-place construction areas",
+			"resetfieldofview": "Reset Rozhled (field of view, cheat)",
+			"rotateobjectleft": "Otočit doleva",
+			"rotateobjectright": "Otočit doprava",
+			"sprint": "Sprint",
+			"sprintgamepadheld": "Sprint",
+			"takescreenshot": "_MISSING_Take Screenshot",
+			"toggleautofocus": "Přepnout automatické ostření (cheat)",
+			"togglechat": "Přepnout chat",
+			"togglecrouch": "Krčení (Držení)",
+			"toggledevconsole": "Přepnout Dev Log (cheat)",
+			"toggledevmenu": "Přepnout nabídku vývojáře (Dev Menu, cheat)",
+			"toggleextrasmooth": "Přepnout vyhlazený cíl, Aim (cheat)",
+			"togglefly": "Přepnout létání (cheat)",
+			"togglefocuspoint": "Přepnout zamčený cíl, Aim (cheat)",
+			"toggleinterface": "Přepnout rozhraní",
+			"toggleinventory": "Přepnout inventář",
+			"togglestats": "Přepnout zobrazení statistik",
+			"toggletorch": "Přepnout pochodeň"
 		},
 		"escapemenu": {
 			"back": "Vrátit se do hry",
@@ -276,7 +335,7 @@
 			"description": "Popis",
 			"edit": "Změnit",
 			"enabled": "Povoleno",
-			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
+			"gamepadtextinputalphanumeric": "Jsou přijímána pouze číslice a písmena abecedy.",
 			"high": "Vysoký",
 			"inputplaceholder": "Zadej text...",
 			"inputplaceholder_search": "Zadej text pro hledání...",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "Smazat upozornění",
 			"header": "Upozornění",
-			"missingplayerammo": "<color=red>Použití {0} vyžaduje, aby v inventáři bylo {1}!</color>",
+			"missingplayerammo": "<color=#ff2323>Použití {0} vyžaduje, aby v inventáři bylo {1}!</color>",
 			"npc_died": {
 				"banner": "byl zabit monstrem u praporu",
 				"command": "zemřel kvůli příkazu z příkazové řádky",
@@ -376,7 +435,7 @@
 			"pipliz": {
 				"alchemist": "Alchymista",
 				"alkanetfarmer": "Farmář alkany",
-				"artist": "_MISSING_Artist",
+				"artist": "Umělec",
 				"barleyfarmer": "Farmář ječmene",
 				"beekeeper": "Včelař",
 				"berryfarmer": "Farmář bobulí",
@@ -469,8 +528,8 @@
 				"name": "Lučištnictví"
 			},
 			"artist": {
-				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
-				"name": "_MISSING_Artist"
+				"description": "Odemyká novou práci, která se zcela věnuje estetice",
+				"name": "Umělec"
 			},
 			"astrolabe": {
 				"description": "Odemyká astroláb, navigační nástroj pro hledání biomů.",
@@ -521,8 +580,8 @@
 				"name": "Kuřecí jídlo"
 			},
 			"classical": {
-				"description": "_MISSING_Revive the way the ancients built",
-				"name": "_MISSING_Classical Architecture"
+				"description": "Oživte způsob, jakým stará civilizace stavěla",
+				"name": "Klasická architektura"
 			},
 			"compass": {
 				"description": "Odemyká kompas, navigační nástroj pro nalezení cesty zpátky domů.",
@@ -565,8 +624,8 @@
 				"name": "Výtah"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks rail production, useful for traversing horizontal distances",
-				"name": "_MISSING_Rails"
+				"description": "Odemkněte výrobu kolejnic, užitečné pro přejíždění vodorovných vzdáleností.",
+				"name": "Kolejnice"
 			},
 			"engineer": {
 				"description": "Odemyká inženýra a pastičkáře. Inženýr vyrábí pasti a náboje do nich a pastičkář pasti doplňuje. Pasti lze použít na zabíjení monster.",
@@ -581,12 +640,12 @@
 				"name": "Farmaření pšenice"
 			},
 			"fence": {
-				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
-				"name": "_MISSING_Fence"
+				"description": "Může být velmi praktický, ale hlavně estetický.",
+				"name": "Plot"
 			},
 			"flowerbox": {
-				"description": "_MISSING_Spread some permanent cheer",
-				"name": "_MISSING_Flower Box"
+				"description": "Rozdejte nějakou trvalou náladu",
+				"name": "Květinová krabice"
 			},
 			"furnace": {
 				"description": "Odemyká hutníka, pracovníka, který zpracovává rudy.",
@@ -681,8 +740,8 @@
 				"name": "Základny"
 			},
 			"paint": {
-				"description": "_MISSING_Recolor some aesthetics",
-				"name": "_MISSING_Paint"
+				"description": "Přebarvit některé estetiky",
+				"name": "Barva"
 			},
 			"papermaking": {
 				"description": "Odemyká výrobu papíru z konopí, klíčový prvek ve vědeckém výzkumu.",
@@ -737,8 +796,8 @@
 				"name": "Výzkumník"
 			},
 			"roofs": {
-				"description": "_MISSING_An attractive way to cover your buildings",
-				"name": "_MISSING_Tiled Roofs"
+				"description": "Atraktivní způsob, jak zakrýt své budovy",
+				"name": "taškové střechy"
 			},
 			"ropes": {
 				"description": "Odemyká předmět pro mnoho využití.",
@@ -755,6 +814,10 @@
 			"scribe": {
 				"description": "Odemyká písaře, který studuje svitky, aby získal nové poznatky. Písař potřebuje 10 poliček se svitky v okolí. Písař je vyprázdní, ale časem se opět automaticky naplní.",
 				"name": "Písař"
+			},
+			"signs": {
+				"description": "Čas dát na věci své jméno",
+				"name": "Cedule"
 			},
 			"statistics": {
 				"description": "Odemyká nástěnku statistik. Můžeš se zde podívat na aktivitu vaší kolonie.",
@@ -777,8 +840,8 @@
 				"name": "Kamenictví"
 			},
 			"streetlight": {
-				"description": "_MISSING_Much fancier than torches",
-				"name": "_MISSING_Streetlights"
+				"description": "Mnohem vkusnější než pochodně",
+				"name": "Pouliční osvětlení"
 			},
 			"tabulator": {
 				"description": "Odemyká komplexní stroj, který dokáže zpracovat data a zaznamenat je na děrný štítek.",
@@ -809,8 +872,8 @@
 				"name": "Vodní pumpa"
 			},
 			"watersponge": {
-				"description": "_MISSING_Removes water in its local area in a deeply realistic way",
-				"name": "_MISSING_Archimedean Screw"
+				"description": "Odstraňuje vodu ve své lokální oblasti hluboce realistickým způsobem",
+				"name": "Archimédův šroub"
 			},
 			"writer": {
 				"description": "Odemyká spisovatele. Svitky a vědění jsou důležité pro pokročilý výzkum.",
@@ -954,14 +1017,14 @@
 			},
 			"quickstart": {
 				"closetoggle": "Znovu nezobrazovat",
-				"f1": "Stiskni 'F1' pro zavření",
+				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Další",
 				"previous": "Předchozí"
 			},
 			"signs": {
-				"apply": "_MISSING_Apply",
-				"edit": "_MISSING_Edit",
-				"header": "_MISSING_Sign"
+				"apply": "Použít",
+				"edit": "Upravit",
+				"header": "Cedule"
 			},
 			"specialblockremoval": {
 				"button": "Odstranit",
@@ -1022,7 +1085,7 @@
 				"header": "Nástroj pro oblasti",
 				"hempfarmer": "Farmář konopí",
 				"insidearea": "Nemůžete dát další prostor do prostoru",
-				"missingscience": "<color=red>Vyžaduje vyzkoumanou technologii '{0}'</color>",
+				"missingscience": "<color=#ff2323>Vyžaduje vyzkoumanou technologii '{0}'</color>",
 				"noconstructionareanearby": "Žádná konstrukce blízko",
 				"notarable": "Nejedná se o úrodnou půdu",
 				"notflat": "Nerovná oblast",
@@ -1127,13 +1190,14 @@
 				},
 				"mousemenu": {
 					"inverty": "Prohodit osu-y",
-					"sensitivity": "_MISSING_Mouse sensitivity",
-					"smooth": "Vyhlazení pohybu myši"
+					"sensitivity": "Citlivost myši",
+					"smooth": "Vyhlazení pohybu myši",
+					"swapprimsec": "Prohodit levé/pravé kliknutí na myši"
 				},
-				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"mousesettings2": "Myš & Klávesnice",
 				"padmenu": {
-					"mainbutton": "_MISSING_Gamepad",
-					"sensitivity": "_MISSING_Aim sensitivity"
+					"mainbutton": "Gamepad (controller)",
+					"sensitivity": "Citlivost míření (cíle)"
 				}
 			},
 			"language": "Jazyk",
@@ -1161,11 +1225,10 @@
 				"bloom": "Bloom",
 				"depthoffield": "Hloubka pole",
 				"drawdistance": "Vzdálenost vykreslení (*)",
-				"eyeadaptation": "Oční adaptace",
 				"fieldofview": "Rozhled",
+				"fog": "_MISSING_Fog",
 				"full": "Nastavení grafiky",
 				"fullscreen": "Celá obrazovka",
-				"lightscattering": "Rozptyl světla",
 				"particleeffects": "Efekty částic",
 				"preset": "Přednastavení",
 				"ragdoll": "Kvantita",
@@ -1221,8 +1284,8 @@
 			"serverport": "Port serveru",
 			"typegenerateworld": "Vytvořit svět",
 			"typeworkshop": "Svět z workshopu",
-			"world_folder": "_MISSING_Folder",
-			"world_outdated": "_MISSING_Requires older version",
+			"world_folder": "Složka",
+			"world_outdated": "Vyžaduje starší verzi",
 			"worlddate": "Datum",
 			"worldname": "Jméno",
 			"worldname_long": "Název světa",
@@ -1248,7 +1311,7 @@
 			"lockbox-threat": "Zvyšuje úrovně hrozby o {0}.",
 			"miner": "Nařídí kolonistovi, aby těžil blok kamene či jiné rudy pod ním.",
 			"npcshop": "Kolonisté navštíví koloniál nebo prapor pro vyzvednutí jejich denního jídla.",
-			"paintable": "_MISSING_Item can be altered using: ",
+			"paintable": "Lze změnit pomocí : ",
 			"pointtrader": "Můžeš zde prodávat a nakupovat předměty za body kolonie.",
 			"provides-fertile": "Počítá se jako úrodná půda.",
 			"provides-fertile-fen": "Počítá se jako úrodná půda z bažin.",
@@ -1314,8 +1377,8 @@
 		"alchemisttable": "Alchymistův stůl",
 		"alkanet": "Alkana",
 		"animalcarcass": "Mršina zvířete",
-		"architrave": "_MISSING_Architrave",
-		"artisttable": "_MISSING_Artist's Workbench",
+		"architrave": "Architráv",
+		"artisttable": "Umělecký pracovní stůl",
 		"astrolabe": "Astroláb",
 		"banner": "Prapor",
 		"bannertool": "Nástroj praporu",
@@ -1377,7 +1440,7 @@
 		"copperingot": "Měděný ingot",
 		"copperlockbox": "Měděná skříňka",
 		"coppertools": "Měděné nástroje",
-		"corbel": "_MISSING_Corbel",
+		"corbel": "Krakorec",
 		"cotton": "Bavlna",
 		"cottonengine": "Kolovrátek",
 		"cottonfibre": "Bavlněná vlákna",
@@ -1388,26 +1451,26 @@
 		"dirt": "Hlína",
 		"dirtfen": "Hlína z bažin",
 		"dirtheath": "Hlína z vřesoviště",
-		"doorclosed": "_MISSING_Door",
+		"doorclosed": "Dveře",
 		"droppertrap": "Vystřelovací past",
 		"droppertrapammo": "Náboj do vystřelovací pasti",
 		"dyertable": "Barvičův stůl",
 		"earthenware": "Číše",
 		"elevator": "Stanice výtahu",
-		"elevatorhorizontal": "_MISSING_Rail Station",
+		"elevatorhorizontal": "Železniční stanice",
 		"elevatorshaft": "Šachta výtahu",
-		"elevatorshafthorizontal": "_MISSING_Rails",
+		"elevatorshafthorizontal": "kolejnice",
 		"engineerbench": "Inženýrský stůl",
 		"eyeglasses": "Brýle",
 		"failsafe": "Posvátný oltář",
-		"fence": "_MISSING_Fence",
+		"fence": "Plot",
 		"firepit": "Ohniště",
 		"firewood": "Dřevo na podpal",
 		"fisherman": "Rybářský prut",
 		"flax": "Len",
 		"flaxstage1": "Semínka lenu",
 		"fletcherbench": "Lukařův stůl",
-		"flowerboxitem": "_MISSING_Flower Box",
+		"flowerboxitem": "Květinová krabice",
 		"furnace": "Huť",
 		"glassblower": "Sklářská pec",
 		"glasspiece": "Kus skla",
@@ -1463,7 +1526,7 @@
 		"lanternblue": "Modrá lucerna",
 		"lanterncyan": "Tyrkysová lucerna",
 		"lanterngreen": "Zelená lucerna",
-		"lanternitem": "_MISSING_Streetlight",
+		"lanternitem": "Pouliční osvětlení",
 		"lanternorange": "Oranžová lucerna",
 		"lanternpink": "Růžová lucerna",
 		"lanternred": "Červená lucerna",
@@ -1491,7 +1554,7 @@
 		"metallathe": "Kovový soustruh",
 		"minerjob": "Horník",
 		"monocular": "Dalekohled",
-		"mouldingitem": "_MISSING_Crown Moulding",
+		"mouldingitem": "korunní římsa",
 		"movabletype": "Tiskařské součástky",
 		"mudbricks": "Nepálená cihla",
 		"musket": "Mušketa",
@@ -1500,15 +1563,15 @@
 		"notools": "Žádné nástroje",
 		"npcshop": "Koloniál",
 		"outpostbanner": "Prapor základny",
-		"paintblue": "_MISSING_Blue Paint",
-		"paintgreen": "_MISSING_Green Paint",
-		"paintred": "_MISSING_Red Paint",
-		"paintstripped": "_MISSING_Paint Stripper",
-		"paintwhite": "_MISSING_White Paint",
+		"paintblue": "Modrá barva",
+		"paintgreen": "Zelená barva",
+		"paintred": "Červená barva",
+		"paintstripped": "Odstraňovač nátěrů",
+		"paintwhite": "Bílá barva",
 		"paper": "Papír",
 		"papermakersmould": "Forma pro výrobu papíru",
 		"parchment": "Pergamen",
-		"pillar": "_MISSING_Pillar",
+		"pillar": "Pilíř",
 		"planks": "Prkna",
 		"planksblue": "Modrá prkna",
 		"planksgreen": "Zelená prkna",
@@ -1526,13 +1589,13 @@
 		"quarterblockbrowndark": "Tmavě hnědý čtvrtblok",
 		"quarterblockbrownlight": "Světlehnědý čtvrtblok",
 		"quarterblockgrey": "Šedý čtvrtblok",
-		"railgate": "_MISSING_Rail Gate",
-		"railitem": "_MISSING_Rails",
+		"railgate": "Železniční brána",
+		"railitem": "Kolejnice",
 		"rawfish": "Syrová ryba",
 		"rawmeat": "Syrové maso",
 		"researcherdesk": "Výzkumný stůl",
-		"rooftool": "_MISSING_Tiled Roof",
-		"rooftoolblue": "_MISSING_Blue Tiled Roof",
+		"rooftool": "Tašková střecha",
+		"rooftoolblue": "Modrá tašková střecha",
 		"rope": "Lano",
 		"ropebench": "Lanařův stůl",
 		"ropetrap": "Lanová past",
@@ -1560,7 +1623,7 @@
 		"scrollshelf1": "Téměř prázdná police na svitky",
 		"scrollshelf2": "Částečně prázdná police na svitky",
 		"scrollshelffilled": "Police na svitky",
-		"signitem": "_MISSING_Sign",
+		"signitem": "Cedule",
 		"silicasand": "Křemičitý písek",
 		"skin": "Neopracovaná kůže",
 		"sling": "Prak",
@@ -1580,7 +1643,7 @@
 		"stonebrickswhite": "Bílé kamenné cihly",
 		"stonemasonworkbench": "Kameníkův stůl",
 		"stonerubble": "Kamenná suť",
-		"stonestair": "_MISSING_Stone Stair",
+		"stonestair": "Kamenné schodiště",
 		"stonetools": "Kamenné nástroje",
 		"stove": "Kamna",
 		"straw": "Sláma",
@@ -1603,19 +1666,19 @@
 		"water": "Voda",
 		"watergatherer": "Naběrač vody",
 		"waterpump": "Vodní pumpa",
-		"watersponge": "_MISSING_Archimedean Screw",
+		"watersponge": "Archimédův šroub",
 		"wheat": "Pšenice",
 		"wheatmeal": "Ovesná kaše",
 		"wheatporridge": "Hustá ovesná kaše",
 		"wheatstage1": "Semínko pšenice",
-		"window": "_MISSING_Window",
+		"window": "Okno",
 		"wisteriaflower": "Květ Vistárie",
 		"wisteriajob": "Farmář Vistárie",
 		"wisteriaplant": "Vistárie",
 		"wisteriaplantempty": "Prázdná Vistárie",
 		"wolfsbane": "Oměj",
 		"woodfloor": "Dřevěná podlaha",
-		"woodstair": "_MISSING_Wooden Stair",
+		"woodstair": "Dřevěné schodiště",
 		"writerdesk": "Spisovatelův stůl",
 		"zinc": "Zinek"
 	},
@@ -1677,7 +1740,7 @@
 		"npcshop": "Kolonisté si do 'koloniálu' nebo k praporu přijdou pro své denní jídlo",
 		"planks": "Nyní čtyřnásobně objemnější než dřevo!",
 		"printingpress": "Respektuj svobodu tisku",
-		"railgate": "_MISSING_Allows rail travel while blocking travel by foot",
+		"railgate": "Umožňuje jízdu po železnici a zároveň blokuje průchod pěšky",
 		"rawfish": "#bio #organic #fresh",
 		"researcherdesk": "Výzkumníci potřebují pracovat v blízkosti knihoven, aby mohli hledat informace pro jejich výzkum!",
 		"sand": "S hady se moc dobře nemíchá",
@@ -1702,7 +1765,7 @@
 		"trader": "Obchoduje. Překvapivě.",
 		"water": "ZASTAV TO NEŽ TI TO ZATOPÍ DŮL!!!",
 		"waterpump": "Jako normální vodní zdroj, jen trochu pomalejší.",
-		"watersponge": "_MISSING_Removes water in its local area in a deeply realistic way",
+		"watersponge": "Odstraňuje vodu ve své lokální oblasti hluboce realistickým způsobem",
 		"wheat": "Kolonista s mlecím kamenem přemění pšenici na mouku.",
 		"wheatstage1": "Budoucí chleba",
 		"wisteriajob": "Farmář Vistárie potřebuje v okolí 10 vistárií. Tyto rostliny mohou být pěstovány pouze v bažinách.",

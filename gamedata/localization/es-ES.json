@@ -1,21 +1,29 @@
 {
-	"coverage": 95.0,
+	"coverage": 97.0,
 	"hints": {
 		"0": "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
 		"1": "Más y diferentes monstruos aparecerán si reclutas más colonos.",
 		"10": "3x33 es el tamaño óptimo para un forestal.",
 		"11": "Presiona 'CTRL' para agacharse y no caer de las orillas.",
 		"13": "Presiona 'CTRL' mientras colocas un área de construcción para colocar una segunda área con los mismos ajustes.",
-		"14": "Existen múltiples mods para Colony Survival. ¡Encuéntralos en los foros de Steam o Discord!",
-		"15": "También puedes buscar en la reserva por términos generales como 'Comida' o 'Munición'.",
+		"16": "Usa el compás para encontrar dónde se encuentran tus distintas colonias y puestos de avanzada.",
+		"17": "Usa el Astrolabio para encontrad distintos biomas que tienen recursos únicos.",
+		"18": "Costruye la Seguridad Sagrada y usa Puntos Sagrados para salvar la colonia cuando es atacada por monstruos.",
+		"19": "Construye el Almacén Sagrado para almacenar más Puntos Sagrados",
 		"2": "Ciertas capas del mundo contienen diferentes minerales. Excava más hondo para encontrar diferentes minerales.",
+		"20": "Usa pintura blanca, roja, verde y azul para darle color a objetos como puertas y ventanas.",
+		"21": "Utiliza el Eliminador de pintura para quitar la pintura a los objetos que has pintado.",
+		"22": "Los ascensores no pueden ser usados por los colonos pero son una forma rápida para moverse entre pisos.",
+		"23": "Construye estaciones de tren y vías para moverte rápidamente de A a B (no puede ser usado por colonos).",
+		"24": "Las Puertas de vía impiden el paso de colonos y muestros pero permite el paso de trenes.",
+		"25": "Construye el Tablón de estadísticas para obtener información detallada sobre las estadísticas de tu colonia.",
+		"26": "Construye un Tornillo de Arquímedes para eliminar agua alrededor. (Elimina un area de 8x8x8)",
+		"27": "Casi todos los viernes escribiemos noticias en Steam sobre el desarrollo de Colony Survival.",
+		"28": "Hay mods y mundos muy interesantes en el Workshop de Colony Survival. (Recomiendo el mod de Chisel).",
 		"3": "Presiona 'G' para activar tu antorcha.",
 		"4": "Has clic en los 'bancos o mesas de trabajo' para ver como están siendo usados y priorizar ciertas recetas.",
 		"5": "Presiona 'F1' para abrir y cerrar el manual.",
-		"6": "Los científicos usan los ítem en una bolsa de ciencia, pero la bolsa de sastre se devuelve a menudo a la reserva.",
-		"7": "Diferencias en rango, tiempos de recarga y daño dan a cada tipo de guardia beneficios únicos y desventajas.",
-		"8": "Escribimos un Blog semanal los viernes. ¡Búscala en nuestra pagina de la tienda para aprender más acerca del desarrollo de Colony Survival!",
-		"9": "Disparar un mosquete consume una bala y pólvora, pero la bolsa de lino que contenía la pólvora a menudo se devuelve a la reserva."
+		"7": "Diferencias en rango, tiempos de recarga y daño dan a cada tipo de guardia beneficios únicos y desventajas."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -113,9 +121,9 @@
 			},
 			"recruit": "Reclutar",
 			"recruitauto": "Auto-reclutar en puesto de trabajo",
-			"recruitfailedbeds": "<color=red>No hay suficientes camas libres para reclutar un colono.</color>",
-			"recruitfailedcap": "<color=red>Debes incrementar la cantidad máxima de colonos para poder recrutar un nuevo colono.</color>",
-			"recruitfailednomeals": "<color=red>No hay suficiente comida para reclutar un colono.</color>",
+			"recruitfailedbeds": "<color=#ff2323>No hay suficientes camas libres para reclutar un colono.</color>",
+			"recruitfailedcap": "<color=#ff2323>Debes incrementar la cantidad máxima de colonos para poder recrutar un nuevo colono.</color>",
+			"recruitfailednomeals": "<color=#ff2323>No hay suficiente comida para reclutar un colono.</color>",
 			"recruitmentamount": "Cantidad de colonos a reclutar:",
 			"recruitmentbutton": "Reclutar",
 			"recruitmentheader": "Reclutamiento",
@@ -239,6 +247,57 @@
 			"thumbnailpath": "Localización de la imagen del contenido:",
 			"yourcontent": "Has creado un contenido en el workshop"
 		},
+		"controls": {
+			"decreasefieldofview": "Disminuir distancia de visión(cheat)",
+			"fireprimary": "_MISSING_Primary Action",
+			"firesecondary": "_MISSING_Secondary Action",
+			"flydown": "Volar hacia abajo (cheat)",
+			"holdcrouch": "Agacharse (Mantener)",
+			"hotbardown": "_MISSING_Next hotbar spot",
+			"hotbarup": "_MISSING_Previous hotbar spot",
+			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
+			"inventory0": "_MISSING_Hotbar 10",
+			"inventory1": "_MISSING_Hotbar 1",
+			"inventory2": "_MISSING_Hotbar 2",
+			"inventory3": "_MISSING_Hotbar 3",
+			"inventory4": "_MISSING_Hotbar 4",
+			"inventory5": "_MISSING_Hotbar 5",
+			"inventory6": "_MISSING_Hotbar 6",
+			"inventory7": "_MISSING_Hotbar 7",
+			"inventory8": "_MISSING_Hotbar 8",
+			"inventory9": "_MISSING_Hotbar 9",
+			"jump": "Saltar",
+			"jumpgamepadtap": "Saltar",
+			"look": "Mirar",
+			"movekeyboard": {
+				"down": "Mover abajo",
+				"left": "Mover izquierda",
+				"right": "Mover derecha",
+				"up": "Mover hacia delante"
+			},
+			"movepad": "Movimiento",
+			"opencolonytab": "Abrir pestaña de Colonia",
+			"openquickstart": "Abrir menú de ayuda",
+			"placemultipleareas": "_MISSING_Chain-place construction areas",
+			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
+			"rotateobjectleft": "_MISSING_Rotate Left",
+			"rotateobjectright": "_MISSING_Rotate Right",
+			"sprint": "Correr",
+			"sprintgamepadheld": "Correr",
+			"takescreenshot": "Tomar foto",
+			"toggleautofocus": "Auto apuntar(cheat)",
+			"togglechat": "_MISSING_Toggle Chat",
+			"togglecrouch": "_MISSING_Crouch (Toggle)",
+			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
+			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
+			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
+			"togglefly": "_MISSING_Toggle Flying (cheat)",
+			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
+			"toggleinterface": "_MISSING_Toggle Interface",
+			"toggleinventory": "_MISSING_Toggle Inventory",
+			"togglestats": "_MISSING_Toggle Statistics view",
+			"toggletorch": "_MISSING_Toggle Torch"
+		},
 		"escapemenu": {
 			"back": "Volver al Juego",
 			"info": "Información",
@@ -276,7 +335,7 @@
 			"description": "Descripción",
 			"edit": "Editar",
 			"enabled": "Habilitado",
-			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
+			"gamepadtextinputalphanumeric": "Solo se permiten letras alfanuméricas y números.",
 			"high": "Alto",
 			"inputplaceholder": "Escribir nombre...",
 			"inputplaceholder_search": "Escribir texto para buscar...",
@@ -348,7 +407,7 @@
 		"notifications": {
 			"delete": "Eliminar Notificación",
 			"header": "Notificaciones",
-			"missingplayerammo": "<color=red>¡Usar {0} requiere que tengas {1} en el inventario!</color>",
+			"missingplayerammo": "<color=#ff2323>¡Usar {0} requiere que tengas {1} en el inventario!</color>",
 			"npc_died": {
 				"banner": "Un monstruo en el estandarte",
 				"command": "Uso de comandos",
@@ -376,7 +435,7 @@
 			"pipliz": {
 				"alchemist": "Alquimista",
 				"alkanetfarmer": "Agricultor de Alkanet",
-				"artist": "_MISSING_Artist",
+				"artist": "Artista",
 				"barleyfarmer": "Agricultor de cebada",
 				"beekeeper": "Apicultor",
 				"berryfarmer": "Agricultor de bayas",
@@ -469,8 +528,8 @@
 				"name": "Arquería"
 			},
 			"artist": {
-				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
-				"name": "_MISSING_Artist"
+				"description": "Desbloquea un nuevo trabajo enfocado principalmente a la decoración",
+				"name": "Atista"
 			},
 			"astrolabe": {
 				"description": "Desbloquea el astrolabio; una herramienta de navegación que ayuda a encontrar biomas.",
@@ -521,8 +580,8 @@
 				"name": "Comidas de Pollo"
 			},
 			"classical": {
-				"description": "_MISSING_Revive the way the ancients built",
-				"name": "_MISSING_Classical Architecture"
+				"description": "Revive las decoraciones usadas por nuestros antecesores.",
+				"name": "Arquitectura clásica"
 			},
 			"compass": {
 				"description": "Desbloquea la brújula, una herramienta de navegación para volver a casa",
@@ -565,8 +624,8 @@
 				"name": "Ascensor"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks rail production, useful for traversing horizontal distances",
-				"name": "_MISSING_Rails"
+				"description": "Desbloquea la producción de vías muy útil para viajar rápidamente de un lugar a otro (no puede ser usado por colonos)",
+				"name": "Trenes"
 			},
 			"engineer": {
 				"description": "Desbloquea al ingeniero y al trampero. El ingeniero fabrica trampas y su munición, que pueden usarse para luchar contra monstruos. El trampero carga y recarga las trampas cercanas.",
@@ -581,12 +640,12 @@
 				"name": "Agricultura del trigo"
 			},
 			"fence": {
-				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
-				"name": "_MISSING_Fence"
+				"description": "Puede ser muy práctico, pero es principalmente decoración.",
+				"name": "Valla"
 			},
 			"flowerbox": {
-				"description": "_MISSING_Spread some permanent cheer",
-				"name": "_MISSING_Flower Box"
+				"description": "Podrás flores en macetas para adornar tus edificios.",
+				"name": "Maceta con flores"
 			},
 			"furnace": {
 				"description": "Desbloquea el trabajador Fundidor, que procesa minerales.",
@@ -681,8 +740,8 @@
 				"name": "Puestos Avanzados"
 			},
 			"paint": {
-				"description": "_MISSING_Recolor some aesthetics",
-				"name": "_MISSING_Paint"
+				"description": "Con esto podrás cambiar el color de tu mundo",
+				"name": "Pintura"
 			},
 			"papermaking": {
 				"description": "La fabricación de papel a partir del cáñamo, clave para el progreso científico",
@@ -737,8 +796,8 @@
 				"name": "Investigador"
 			},
 			"roofs": {
-				"description": "_MISSING_An attractive way to cover your buildings",
-				"name": "_MISSING_Tiled Roofs"
+				"description": "Una forma atractiva de cubrir los edificios, además, evita mojarse cuando llueve",
+				"name": "Tejas"
 			},
 			"ropes": {
 				"description": "Desbloquea un ingrediente con muchos usos",
@@ -755,6 +814,10 @@
 			"scribe": {
 				"description": "Desbloquea al escriba, que estudia los pergaminos para obtener nuevos conocimientos. Un escriba necesita 10 estantes de pergaminos cerca. El escriba los vacía, pero se vuelven a llenar automáticamente con el tiempo.",
 				"name": "Escriba"
+			},
+			"signs": {
+				"description": "Ya es hora de ponerle nombres a las cosas",
+				"name": "Carteles"
 			},
 			"statistics": {
 				"description": "Desbloquea el tablón de estadísticas. Cuando se coloca y se utiliza, ofrece información sobre la actividad de tu colonia.",
@@ -777,8 +840,8 @@
 				"name": "Cantero"
 			},
 			"streetlight": {
-				"description": "_MISSING_Much fancier than torches",
-				"name": "_MISSING_Streetlights"
+				"description": "Más chulo que usar antorchas",
+				"name": "Farola"
 			},
 			"tabulator": {
 				"description": "Desbloquea una compleja máquina que procesa datos y los almacena en tarjetas perforadas.",
@@ -805,12 +868,12 @@
 				"name": "Centro de Comercio"
 			},
 			"waterpump": {
-				"description": "Permite recoger agua lejos de las fuentes",
+				"description": "Permite recoger agua lejos de las fuentes.",
 				"name": "Bombeo de agua"
 			},
 			"watersponge": {
-				"description": "_MISSING_Removes water in its local area in a deeply realistic way",
-				"name": "_MISSING_Archimedean Screw"
+				"description": "Permite eliminar agua de una forma realística.",
+				"name": "Tornillo de Arquímedes"
 			},
 			"writer": {
 				"description": "Desbloquea el escritor, el pergamino y los pergaminos del conocimiento. Son importantes para completar la ciencia más avanzada.",
@@ -954,14 +1017,14 @@
 			},
 			"quickstart": {
 				"closetoggle": "No mostrar más",
-				"f1": "Pulse 'F1' para activar este menú",
+				"f1_2": "Pulsa 'F1' para reabrir este menú",
 				"next": "Siguiente",
 				"previous": "Anterior"
 			},
 			"signs": {
-				"apply": "_MISSING_Apply",
-				"edit": "_MISSING_Edit",
-				"header": "_MISSING_Sign"
+				"apply": "Aplicar",
+				"edit": "Editar",
+				"header": "Cartel"
 			},
 			"specialblockremoval": {
 				"button": "Elmiminar",
@@ -1022,7 +1085,7 @@
 				"header": "Trabajos",
 				"hempfarmer": "Agricultor de cáñamo",
 				"insidearea": "No se puede colocar dentro del área",
-				"missingscience": "<color=red>'{0}' no ha sido investigada.</color>",
+				"missingscience": "<color=#ff2323>'{0}' no ha sido investigada.</color>",
 				"noconstructionareanearby": "No hay área de construcción cerca",
 				"notarable": "No es arable",
 				"notflat": "No es plano",
@@ -1127,13 +1190,14 @@
 				},
 				"mousemenu": {
 					"inverty": "Invertir eje Y",
-					"sensitivity": "_MISSING_Mouse sensitivity",
-					"smooth": "Suavizado de ratón"
+					"sensitivity": "Sensibilidad del ratón",
+					"smooth": "Suavizado de ratón",
+					"swapprimsec": "Invertir click izquierdo y derecho"
 				},
-				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"mousesettings2": "Ratón & Teclado",
 				"padmenu": {
-					"mainbutton": "_MISSING_Gamepad",
-					"sensitivity": "_MISSING_Aim sensitivity"
+					"mainbutton": "Mando",
+					"sensitivity": "Sensibilidad de apuntando"
 				}
 			},
 			"language": "Idioma",
@@ -1161,11 +1225,10 @@
 				"bloom": "Bloom",
 				"depthoffield": "Profundidad de campo",
 				"drawdistance": "Distancia de dibujado (*)",
-				"eyeadaptation": "Adaptación de ojo",
 				"fieldofview": "Campo de visión",
+				"fog": "_MISSING_Fog",
 				"full": "Calidad de gráficos",
 				"fullscreen": "Pantalla completa",
-				"lightscattering": "Dispersión de la luz",
 				"particleeffects": "Efectos de partículas",
 				"preset": "Preset",
 				"ragdoll": "Cantidad de cadáveres",
@@ -1221,8 +1284,8 @@
 			"serverport": "Puerto del servidor",
 			"typegenerateworld": "Generar mundo",
 			"typeworkshop": "Mundo de Workshop",
-			"world_folder": "_MISSING_Folder",
-			"world_outdated": "_MISSING_Requires older version",
+			"world_folder": "Carpeta",
+			"world_outdated": "Requiere una versión más antigua",
 			"worlddate": "Fecha",
 			"worldname": "Nombre",
 			"worldname_long": "Nombre del mundo",
@@ -1248,7 +1311,7 @@
 			"lockbox-threat": "Causa {0} de amenazas",
 			"miner": "Ordena a un colono que extraiga repetidamente el bloque de mineral de piedra oscura que hay debajo",
 			"npcshop": "Los colonos visitarán este o el estandarte para conseguir su comida diaria",
-			"paintable": "_MISSING_Item can be altered using: ",
+			"paintable": "El objeto puede ser modificado utilizando: ",
 			"pointtrader": "Aquí puedes comprar y vender cosas por puntos",
 			"provides-fertile": "Cuenta como tierra fértil",
 			"provides-fertile-fen": "Cuenta como suelo fértil de pantano",
@@ -1315,7 +1378,7 @@
 		"alkanet": "Alkanet",
 		"animalcarcass": "Cadáveres de animales",
 		"architrave": "_MISSING_Architrave",
-		"artisttable": "_MISSING_Artist's Workbench",
+		"artisttable": "Mesa de trabajo del artista",
 		"astrolabe": "Astrolabio",
 		"banner": "Estandarte",
 		"bannertool": "Herramienta del estandarte",
@@ -1388,26 +1451,26 @@
 		"dirt": "Barro",
 		"dirtfen": "Suciedad del pantano",
 		"dirtheath": "Suciedad del brezo",
-		"doorclosed": "_MISSING_Door",
+		"doorclosed": "Puerta",
 		"droppertrap": "Trampa de caída",
 		"droppertrapammo": "Munición para trampas de caída",
 		"dyertable": "Mesa de Tintorería",
 		"earthenware": "Cerámica",
 		"elevator": "Cabina del ascensor",
-		"elevatorhorizontal": "_MISSING_Rail Station",
+		"elevatorhorizontal": "Estación de tren",
 		"elevatorshaft": "Hueco del ascensor",
-		"elevatorshafthorizontal": "_MISSING_Rails",
+		"elevatorshafthorizontal": "Vía",
 		"engineerbench": "Banco de ingenieros",
 		"eyeglasses": "Gafas",
 		"failsafe": "Seguridad Sagrada",
-		"fence": "_MISSING_Fence",
+		"fence": "Valla",
 		"firepit": "Hoguera",
 		"firewood": "Leña",
 		"fisherman": "Punto de pesca",
 		"flax": "Planta de lino",
 		"flaxstage1": "Semillas de lino",
 		"fletcherbench": "Banco de Flechas",
-		"flowerboxitem": "_MISSING_Flower Box",
+		"flowerboxitem": "Maceta con flores",
 		"furnace": "Fundición",
 		"glassblower": "Taller de soplado de vidrio",
 		"glasspiece": "Trozo de cristal",
@@ -1463,7 +1526,7 @@
 		"lanternblue": "Farol Azul",
 		"lanterncyan": "Farol Cian",
 		"lanterngreen": "Farol Verde",
-		"lanternitem": "_MISSING_Streetlight",
+		"lanternitem": "Farola",
 		"lanternorange": "Farol Naranja",
 		"lanternpink": "Farol Rosa",
 		"lanternred": "Farol Roja",
@@ -1500,15 +1563,15 @@
 		"notools": "Sin Herramientas",
 		"npcshop": "Tienda de comestibles",
 		"outpostbanner": "Estandarte del Puesto Avanzado",
-		"paintblue": "_MISSING_Blue Paint",
-		"paintgreen": "_MISSING_Green Paint",
-		"paintred": "_MISSING_Red Paint",
-		"paintstripped": "_MISSING_Paint Stripper",
-		"paintwhite": "_MISSING_White Paint",
+		"paintblue": "Pintura azul",
+		"paintgreen": "Pintura verde",
+		"paintred": "Pintura roja",
+		"paintstripped": "Eliminador de pintura",
+		"paintwhite": "Pintura blanca",
 		"paper": "Papel",
 		"papermakersmould": "Molde de papel",
 		"parchment": "Pergamino",
-		"pillar": "_MISSING_Pillar",
+		"pillar": "Pilar",
 		"planks": "Tablas",
 		"planksblue": "Tablones azules",
 		"planksgreen": "Tablones verdes",
@@ -1526,13 +1589,13 @@
 		"quarterblockbrowndark": "Escalón marrón oscuro",
 		"quarterblockbrownlight": "Escalón marrón claro",
 		"quarterblockgrey": "Escalón gris",
-		"railgate": "_MISSING_Rail Gate",
-		"railitem": "_MISSING_Rails",
+		"railgate": "Puerta de vía",
+		"railitem": "Vía",
 		"rawfish": "Pez crudo",
 		"rawmeat": "Carne cruda",
 		"researcherdesk": "Escritorio del investigador",
-		"rooftool": "_MISSING_Tiled Roof",
-		"rooftoolblue": "_MISSING_Blue Tiled Roof",
+		"rooftool": "Tejado rojo",
+		"rooftoolblue": "Tejado azul",
 		"rope": "Cuerda",
 		"ropebench": "Banco de Cuerda",
 		"ropetrap": "Trampa de cuerda",
@@ -1560,7 +1623,7 @@
 		"scrollshelf1": "Estantería de pergaminos (casi vacío))",
 		"scrollshelf2": "Estante de pergaminos (parcialmente vacío)",
 		"scrollshelffilled": "Estantería Pergaminos",
-		"signitem": "_MISSING_Sign",
+		"signitem": "Cartel",
 		"silicasand": "Arena de sílice",
 		"skin": "Piel",
 		"sling": "Honda",
@@ -1580,7 +1643,7 @@
 		"stonebrickswhite": "Adoquín blanco",
 		"stonemasonworkbench": "Banco de trabajo del Cantero",
 		"stonerubble": "Restos de piedra",
-		"stonestair": "_MISSING_Stone Stair",
+		"stonestair": "Escalera de piedra",
 		"stonetools": "Herramientas de piedra",
 		"stove": "Cocina",
 		"straw": "Paja",
@@ -1603,19 +1666,19 @@
 		"water": "Agua",
 		"watergatherer": "Recolector de agua",
 		"waterpump": "Bomba de agua",
-		"watersponge": "_MISSING_Archimedean Screw",
+		"watersponge": "Tornillo de Arquímedes",
 		"wheat": "Trigo",
 		"wheatmeal": "Gachas de trigo",
 		"wheatporridge": "Papilla de trigo",
 		"wheatstage1": "Semillas de trigo",
-		"window": "_MISSING_Window",
+		"window": "Ventana",
 		"wisteriaflower": "Flor de glicina",
 		"wisteriajob": "Cosechador de glicinas",
 		"wisteriaplant": "Planta de glicinas",
 		"wisteriaplantempty": "Planta de glicinas",
 		"wolfsbane": "Aconitum",
 		"woodfloor": "Suelos de madera",
-		"woodstair": "_MISSING_Wooden Stair",
+		"woodstair": "Escalera de madera",
 		"writerdesk": "Escritorio",
 		"zinc": "Zinc"
 	},
@@ -1677,7 +1740,7 @@
 		"npcshop": "Los colonos la visitan una vez al día para recoger el almuerzo y sus items de lujo",
 		"planks": "¡Ahora con 4 veces el volumen de un tronco!",
 		"printingpress": "Respeta su libertad",
-		"railgate": "_MISSING_Allows rail travel while blocking travel by foot",
+		"railgate": "Permite pasar el tren pero bloquea el paso a pie",
 		"rawfish": "#Ecológico #Sin Hormonas #Alimentado con Pasto",
 		"researcherdesk": "Los investigadores necesitan tener cerca estanterías con libros para encontrar datos para sus investigaciones.",
 		"sand": "No se mezcla bien con las serpientes.",

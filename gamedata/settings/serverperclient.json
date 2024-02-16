@@ -8,11 +8,31 @@
 	"FlySpeedBase": 8,
 	"FlySpeedBoost": 12,
 	"FlySpeedSlower": 0.33,
+	"FogZeroLevel": 200.0,
 	"FootStepCooldown": 1.6,
 	"Gravity": 20,
 	"JumpCooldown": 0.4,
 	"JumpPower": 6.5,
 	"MovePower": 5,
 	"MovePowerCrouch": 2,
-	"MovePowerSprint": 7
+	"MovePowerSprint": 7,
+	"Water": {
+		"FoamAmount": 0.82,
+		"DeepWater": 6,
+		"FoamSpeed": 0.48,
+		"FoamScale": 7.37,
+		"FoamCutoff": 0.22,
+		"FoamColor": [0.3924, 0.4705, 0.566, 1],
+		"RippleSpeed": 0.9,
+		"RippleScale": 7.29,
+		"RippleDissolve": 7.48,
+		"RippleSpecular": [1, 1, 1, 1],
+		"RippleColor": [0.448, 0.506, 0.657, 1],
+		"WaterColor": [0.373, 0.439, 0.49, 1],
+		"WaterAlphaStart": 0.02,
+		"WaterSpecularColor":[0.9, 0.9, 0.9, 1],
+		"WaterOneMinusReflectivity": 0.3,
+		"WaterSmoothness": 0.3,
+		"DeepWaterColor": [0.227, 0.301, 0.411, 1]
+	}
 }
