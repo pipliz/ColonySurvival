@@ -5,25 +5,25 @@
 		"1": "По мере того, как ваша колония растёт, будут появляться новые монстры.",
 		"10": "3x33 - оптимальный размер для лесника",
 		"11": "Нажмите 'CTRL' чтобы красться и не падать с краёв.",
-		"13": "Некоторые материалы можно получить только путешествуя по миру.",
-		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
-		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
-		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
-		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
+		"13": "Нажмите 'CTRL' при размещении области строительства, чтобы разместить вторую область с теми же настройками.",
+		"16": "Используйте компас, чтобы найти путь к различным колониям и аванпостам.",
+		"17": "Используйте астролябию, чтобы находить различные биомы с уникальными ресурсами.",
+		"18": "Постройте Священный предохранитель и потратьте очки святости, чтобы спасти колонию, когда на неё нападают монстры.",
+		"19": "Постройте Проскинитарий, чтобы хранить больше святости.",
 		"2": "Руды можно найти не только под землей, но и в горах.",
-		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
-		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
-		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
-		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
-		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
-		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
-		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
-		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
-		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
+		"20": "Используйте синюю, зеленую, красную и белую краску для окрашивания таких предметов, как двери и окна.",
+		"21": "Используйте средство для снятия краски, чтобы удалить краску с окрашенных вами предметов.",
+		"22": "Колонисты не могут использовать лифты, но для игроков они являются быстрым способом перемещения вверх и вниз.",
+		"23": "Стройте рельсы и железнодорожные станции, чтобы быстро перемещаться из пункта А в пункт Б.",
+		"24": "Используйте железнодорожные ворота, чтобы создать непроницаемый барьер для монстров, не останавливая вагонетки",
+		"25": "Разместите доску статистики, чтобы получить подробную информацию о вашей колонии.",
+		"26": "Установите Архимедов винт, чтобы удалить всю близлежащую воду. (Удаляет область 8x8x8)",
+		"27": "Мы периодически пишем пятничный блог. Найдите его в Steam, чтобы узнать больше о разработке Colony Survival!",
+		"28": "Существуют моды для Colony Survival. Найдите их на Steam Forums или Discord!",
 		"3": "Нажмите 'G', чтобы активировать ваш факел.",
 		"4": "Нажмите на 'рабочие' блоки, чтобы посмотреть, как они используются, и определить приоритеты различных рецептов.",
-		"5": "Нажмите 'F1', чтобы открыть руководство (англ.).",
-		"7": "Различия в диапазоне, скорости перезарядки и повреждения дают каждому типу оружия уникальные преимущества и недостатки."
+		"5": "Нажмите 'F1', чтобы открыть и закрыть руководство.",
+		"7": "Различия в дальности, скорости перезарядки и уроне дают каждому типу оружия уникальные преимущества и недостатки."
 	},
 	"sentences": {
 		"astrolabe": {
@@ -187,7 +187,7 @@
 		},
 		"connectingscreen": {
 			"loading": "Загрузка",
-			"localhost_fail": "Не нейден Steam/одиночный сервер, запущенный на этом компьютере. Возвращение в главное меню через 5 секунд.",
+			"localhost_fail": "Не найден Steam/одиночный сервер, запущенный на этом компьютере. Возвращение в главное меню через 5 секунд.",
 			"refused": {
 				"blacklisted": "вы в чёрном списке",
 				"incompatible": "неожиданная ошибка сервера",
@@ -199,7 +199,7 @@
 				"versionwrongclient": "несоответствие версий (клиент)",
 				"versionwrongserver": "несоответствие версий (сервер)"
 			},
-			"refused_main": "В соеденении отказано, {0}. Возвращение в главное меню через 5 секунд.",
+			"refused_main": "В соединении отказано, {0}. Возвращение в главное меню через 5 секунд.",
 			"sp_alreadyrunning2": "Сервер уже запущен. Возвращение в главное меню через 5 секунд.",
 			"stages": {
 				"1": "_MISSING_Requested server files table",
@@ -308,9 +308,9 @@
 		"failsafe": {
 			"current": "Текущее хранилище святости: {0} из {1}",
 			"damage": "Срабатывание Священного предохранителя приведет к повреждению на {0}",
-			"futurewave": "Предохранитель уменьшит общее количество HP входящих монстров на {0: P0} на следующую ночь",
+			"futurewave": "Предохранитель уменьшит общее количество HP входящих монстров на {0: P0} следующей ночью",
 			"header": "Предохранитель",
-			"nextavailable": "Предохранитель снова будет доступна после следующей ночи",
+			"nextavailable": "Предохранитель снова будет доступен после следующей ночи",
 			"statusactive": "Статус: Священная защита от сбоев активирована",
 			"statusavailable": "Статус: Священный предохранитель доступен",
 			"trigger": "Спусковой крючок",
@@ -335,7 +335,7 @@
 			"description": "Отписаться",
 			"edit": "Изменить",
 			"enabled": "Включить",
-			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
+			"gamepadtextinputalphanumeric": "Разрешены только буквы алфавита и цифры.",
 			"high": "Много",
 			"inputplaceholder": "Введите текст",
 			"inputplaceholder_search": "Введите текст для поиска...",
@@ -435,7 +435,7 @@
 			"pipliz": {
 				"alchemist": "Алхимик",
 				"alkanetfarmer": "Фермер алканета",
-				"artist": "_MISSING_Artist",
+				"artist": "Артист",
 				"barleyfarmer": "Фермер ячменя",
 				"beekeeper": "Пчеловод",
 				"berryfarmer": "Ягодный фермер",
@@ -528,8 +528,8 @@
 				"name": "Лучник"
 			},
 			"artist": {
-				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
-				"name": "_MISSING_Artist"
+				"description": "Разблокирует новую работу, полностью посвященную эстетике",
+				"name": "Артист"
 			},
 			"astrolabe": {
 				"description": "Разблокирует астролябию; навигационный инструмент, который помогает находить биомы",
@@ -580,8 +580,8 @@
 				"name": "Блюда из курицы"
 			},
 			"classical": {
-				"description": "_MISSING_Revive the way the ancients built",
-				"name": "_MISSING_Classical Architecture"
+				"description": "Возродите то, как строили наши предки",
+				"name": "Классическая архитектура"
 			},
 			"compass": {
 				"description": "Разблокирует компас; навигационный инструмент, позволяющий найти свой дом",
@@ -624,8 +624,8 @@
 				"name": "Лифт"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks rail production, useful for traversing horizontal distances",
-				"name": "_MISSING_Rails"
+				"description": "Разблокирует производство рельсов, что полезно для быстрого перемещения из одного места в другое",
+				"name": "Рельсы"
 			},
 			"engineer": {
 				"description": "Разблокирует инженера и перезаряжающего ловушек. Инженер создает ловушки и боеприпасы к ним, которые можно использовать для борьбы с монстрами. перезаряжающего ловушек будет перезаряжать близлежащие ловушки в течении дня.",
@@ -640,12 +640,12 @@
 				"name": "Выращивание пшеницы"
 			},
 			"fence": {
-				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
-				"name": "_MISSING_Fence"
+				"description": "Может быть очень практично, но в основном эстетично.",
+				"name": "Забор"
 			},
 			"flowerbox": {
-				"description": "_MISSING_Spread some permanent cheer",
-				"name": "_MISSING_Flower Box"
+				"description": "Распространите немного постоянного настроения",
+				"name": "Горшок с цветами"
 			},
 			"furnace": {
 				"description": "Разблокирует печь для переплавки металлов и расколотый пень для обработки дерева",
@@ -740,8 +740,8 @@
 				"name": "Аванпосты"
 			},
 			"paint": {
-				"description": "_MISSING_Recolor some aesthetics",
-				"name": "_MISSING_Paint"
+				"description": "Перекрасьте некоторые эстетические элементы",
+				"name": "Краска"
 			},
 			"papermaking": {
 				"description": "Разблокирует путь к изготовлению бумаги из конопли, ключевой составляющей научного прогресса",
@@ -796,8 +796,8 @@
 				"name": "Книги"
 			},
 			"roofs": {
-				"description": "_MISSING_An attractive way to cover your buildings",
-				"name": "_MISSING_Tiled Roofs"
+				"description": "Привлекательный способ покрытия ваших зданий",
+				"name": "Черепичные крыши"
 			},
 			"ropes": {
 				"description": "Разблокирует верёвку",
@@ -808,7 +808,7 @@
 				"name": "Связывающая ловушка"
 			},
 			"sacredhouse": {
-				"description": "Разблокирует проскинитарий увеличивающий количество хронимой святости, которая может быть использованна Священными предохранителями",
+				"description": "Разблокирует проскинитарий увеличивающий количество хранимой святости, которая может быть использованна Священными предохранителями",
 				"name": "Проскинитарий"
 			},
 			"scribe": {
@@ -816,8 +816,8 @@
 				"name": "Писец"
 			},
 			"signs": {
-				"description": "_MISSING_Time to put your name on things",
-				"name": "_MISSING_Signs"
+				"description": "Пришло время поставить своё имя на вещах",
+				"name": "Таблички"
 			},
 			"statistics": {
 				"description": "Разблокирует панель статистики. При размещении и использовании он дает представление о деятельности вашей колонии.",
@@ -840,8 +840,8 @@
 				"name": "Каменщик"
 			},
 			"streetlight": {
-				"description": "_MISSING_Much fancier than torches",
-				"name": "_MISSING_Streetlights"
+				"description": "Гораздо красивее, чем факелы",
+				"name": "Уличные фонари"
 			},
 			"tabulator": {
 				"description": "Разблокирует счетную машину и перфокарты для нее.",
@@ -872,8 +872,8 @@
 				"name": "Качка воды"
 			},
 			"watersponge": {
-				"description": "_MISSING_Removes water in its local area in a deeply realistic way",
-				"name": "_MISSING_Archimedean Screw"
+				"description": "Удаляет воду в своей зоне глубоко реалистичным образом",
+				"name": "Архимедов винт"
 			},
 			"writer": {
 				"description": "Разблокирует писателя, пергамент и свитки знаний. Это важно для завершения более продвинутой науки.",
@@ -930,7 +930,7 @@
 					"entry-meals": "Всего еды",
 					"entry-npccount": "Колонистов",
 					"entry-points": "Очки колонии",
-					"entry-sanctified": "_MISSING_Sacred Points",
+					"entry-sanctified": "Очки святости",
 					"entry-unemployed": "Безработные",
 					"hide-all": "Скрыть всё",
 					"only-changed": "Только изменения",
@@ -1017,14 +1017,14 @@
 			},
 			"quickstart": {
 				"closetoggle": "Не показывать снова",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
+				"f1_2": "Нажмите 'F1' чтобы снова открыть это меню",
 				"next": "След. стр.",
 				"previous": "Пред. стр."
 			},
 			"signs": {
-				"apply": "_MISSING_Apply",
-				"edit": "_MISSING_Edit",
-				"header": "_MISSING_Sign"
+				"apply": "Применить",
+				"edit": "Изменить",
+				"header": "Табличка"
 			},
 			"specialblockremoval": {
 				"button": "Удалить",
@@ -1172,32 +1172,32 @@
 					"permanenthighlight": "Постоянное выделение блока",
 					"ratio0": "Откл.",
 					"ratio100": "100%",
-					"ratio125": "_MISSING_125%",
+					"ratio125": "125%",
 					"ratio150": "150%",
-					"ratio175": "_MISSING_175%",
+					"ratio175": "175%",
 					"ratio200": "200%",
 					"ratio25": "25%",
 					"ratio250": "250%",
 					"ratio300": "300%",
 					"ratio400": "400%",
 					"ratio50": "50%",
-					"ratio62": "_MISSING_62%",
+					"ratio62": "62%",
 					"ratio75": "75%",
-					"ratio87": "_MISSING_87%",
+					"ratio87": "87%",
 					"showsensitivedatamode": "Показывать конфиденциальные данные",
 					"tab": "Главные настройки",
 					"uiscalingratio": "Масштабирование интерфейса"
 				},
 				"mousemenu": {
 					"inverty": "Инвертировать ось-Y",
-					"sensitivity": "_MISSING_Mouse sensitivity",
+					"sensitivity": "Чувствительность мыши",
 					"smooth": "Сглаживание мыши",
-					"swapprimsec": "_MISSING_Invert left/right click"
+					"swapprimsec": "Инвертировать левый/правый клик"
 				},
-				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"mousesettings2": "Мышь & Клавиатура",
 				"padmenu": {
-					"mainbutton": "_MISSING_Gamepad",
-					"sensitivity": "_MISSING_Aim sensitivity"
+					"mainbutton": "Геймпад",
+					"sensitivity": "Чувствительность прицеливания"
 				}
 			},
 			"language": "Язык",
@@ -1226,7 +1226,7 @@
 				"depthoffield": "Глубина резкости",
 				"drawdistance": "Дальность прорисовки (*)",
 				"fieldofview": "Дальность обзора",
-				"fog": "_MISSING_Fog",
+				"fog": "Туман",
 				"full": "Настройки видео",
 				"fullscreen": "Полноэкранный режим",
 				"particleeffects": "Эффекты частиц",
@@ -1284,8 +1284,8 @@
 			"serverport": "Порт сервера",
 			"typegenerateworld": "Сгенерировать мир",
 			"typeworkshop": "Мир из Мастерской",
-			"world_folder": "_MISSING_Folder",
-			"world_outdated": "_MISSING_Requires older version",
+			"world_folder": "Папка",
+			"world_outdated": "Требуется более старая версия",
 			"worlddate": "Дата",
 			"worldname": "Имя",
 			"worldname_long": "Имя мира",
@@ -1311,7 +1311,7 @@
 			"lockbox-threat": "Повышает угрозу на {0}",
 			"miner": "Колонист будет копать только тёмный камень и руды",
 			"npcshop": "Колонисты будут посещать это место что-бы по есть.",
-			"paintable": "_MISSING_Item can be altered using: ",
+			"paintable": "Предмет можно изменить, используя: ",
 			"pointtrader": "Здесь можно покупать и продавать вещи за очки",
 			"provides-fertile": "Считается плодородной почвой",
 			"provides-fertile-fen": "Считается плодородной болотной почвой",
@@ -1377,8 +1377,8 @@
 		"alchemisttable": "Стол алхимика",
 		"alkanet": "Алканет",
 		"animalcarcass": "Туша животного",
-		"architrave": "_MISSING_Architrave",
-		"artisttable": "_MISSING_Artist's Workbench",
+		"architrave": "Архитрав",
+		"artisttable": "Верстак артиста",
 		"astrolabe": "Астролябия",
 		"banner": "Баннер",
 		"bannertool": "Управление баннером",
@@ -1440,7 +1440,7 @@
 		"copperingot": "Медный слиток",
 		"copperlockbox": "Медный ящик",
 		"coppertools": "Медные инструменты",
-		"corbel": "_MISSING_Corbel",
+		"corbel": "Карниз",
 		"cotton": "Хлопок",
 		"cottonengine": "Хлопковая машина",
 		"cottonfibre": "Хлопковое волокно",
@@ -1451,26 +1451,26 @@
 		"dirt": "Грязь",
 		"dirtfen": "Болотная грязь",
 		"dirtheath": "Вересковая грязь",
-		"doorclosed": "_MISSING_Door",
+		"doorclosed": "Дверь",
 		"droppertrap": "Стреляющая ловушка",
 		"droppertrapammo": "Снаряд для стреляющей ловушки",
 		"dyertable": "Стол красок",
 		"earthenware": "Фаянс",
 		"elevator": "Станция с лифтом",
-		"elevatorhorizontal": "_MISSING_Rail Station",
+		"elevatorhorizontal": "Железнодорожная станция",
 		"elevatorshaft": "Шахта лифта",
-		"elevatorshafthorizontal": "_MISSING_Rails",
+		"elevatorshafthorizontal": "Рельсы",
 		"engineerbench": "Мастерская инженера",
 		"eyeglasses": "Очки",
 		"failsafe": "Священный предохранитель",
-		"fence": "_MISSING_Fence",
+		"fence": "Забор",
 		"firepit": "Костер",
 		"firewood": "Дрова",
 		"fisherman": "Место рыбака",
 		"flax": "Лен",
 		"flaxstage1": "Семена льна",
 		"fletcherbench": "Мастерская флетчера",
-		"flowerboxitem": "_MISSING_Flower Box",
+		"flowerboxitem": "Горшок с цветами",
 		"furnace": "Горн",
 		"glassblower": "Мастерская стеклодува",
 		"glasspiece": "Стеклянная линза",
@@ -1526,7 +1526,7 @@
 		"lanternblue": "Синий светильник",
 		"lanterncyan": "Бирюзовый светильник",
 		"lanterngreen": "Зелёный светильник",
-		"lanternitem": "_MISSING_Streetlight",
+		"lanternitem": "Уличный фонарь",
 		"lanternorange": "Оранжевый светильник",
 		"lanternpink": "Розовый светильник",
 		"lanternred": "Красный светильник",
@@ -1563,15 +1563,15 @@
 		"notools": "Без инструментов",
 		"npcshop": "Продуктовый магазин",
 		"outpostbanner": "Знамя аванпоста",
-		"paintblue": "_MISSING_Blue Paint",
-		"paintgreen": "_MISSING_Green Paint",
-		"paintred": "_MISSING_Red Paint",
-		"paintstripped": "_MISSING_Paint Stripper",
-		"paintwhite": "_MISSING_White Paint",
+		"paintblue": "Синяя краска",
+		"paintgreen": "Зеленая краска",
+		"paintred": "Красная краска",
+		"paintstripped": "Средство для снятия краски",
+		"paintwhite": "Белая краска",
 		"paper": "Бумага",
 		"papermakersmould": "Форма для изготовления бумаги",
 		"parchment": "Пергамент",
-		"pillar": "_MISSING_Pillar",
+		"pillar": "Колонна",
 		"planks": "Доски",
 		"planksblue": "Синие доски",
 		"planksgreen": "Зелёные доски",
@@ -1589,13 +1589,13 @@
 		"quarterblockbrowndark": "Четверть тёмно-коричневого блока",
 		"quarterblockbrownlight": "Четверть светло-коричневого блока",
 		"quarterblockgrey": "Четверть серого блока",
-		"railgate": "_MISSING_Rail Gate",
-		"railitem": "_MISSING_Rails",
+		"railgate": "Железнодорожные ворота",
+		"railitem": "Рельсы",
 		"rawfish": "Сырая рыба",
 		"rawmeat": "Сырое мясо",
 		"researcherdesk": "Стол исследователя",
-		"rooftool": "_MISSING_Tiled Roof",
-		"rooftoolblue": "_MISSING_Blue Tiled Roof",
+		"rooftool": "Черепичная крыша",
+		"rooftoolblue": "Синяя черепичная крыша",
 		"rope": "Веревка",
 		"ropebench": "Верстак веревщика",
 		"ropetrap": "Связывающая ловушка",
@@ -1623,7 +1623,7 @@
 		"scrollshelf1": "Полка для свитков (в основном пустая)",
 		"scrollshelf2": "Полка для свитков (частично пустая)",
 		"scrollshelffilled": "Полка для свитков",
-		"signitem": "_MISSING_Sign",
+		"signitem": "Табличка",
 		"silicasand": "Кварцевый песок",
 		"skin": "Кожа",
 		"sling": "Рогатка",
@@ -1636,14 +1636,14 @@
 		"steelparts": "Стальные детали",
 		"steeltools": "Стальные инструменты",
 		"stoneblock": "Каменный блок",
-		"stonebricks": "булыжник",
+		"stonebricks": "Булыжник",
 		"stonebricksblack": "Черный булыжник",
 		"stonebricksbrown": "Коричневый булыжник",
 		"stonebricksnew": "Каменные кирпичи",
 		"stonebrickswhite": "Белый булыжник",
 		"stonemasonworkbench": "Камнерезная мастерская",
 		"stonerubble": "Каменный щебень",
-		"stonestair": "_MISSING_Stone Stair",
+		"stonestair": "Каменные ступени",
 		"stonetools": "Каменные инструменты",
 		"stove": "Плита",
 		"straw": "Солома",
@@ -1666,33 +1666,33 @@
 		"water": "Вода",
 		"watergatherer": "Сборщик воды",
 		"waterpump": "Водокачка",
-		"watersponge": "_MISSING_Archimedean Screw",
+		"watersponge": "Архимедов винт",
 		"wheat": "Пшеница",
 		"wheatmeal": "Пшеничные хлопья",
 		"wheatporridge": "Пшеничная каша",
 		"wheatstage1": "Семена пшеницы",
-		"window": "_MISSING_Window",
-		"wisteriaflower": "цветок глицинии",
+		"window": "Окно",
+		"wisteriaflower": "Цветок глицинии",
 		"wisteriajob": "Сборщик глициний",
 		"wisteriaplant": "Растение глициний",
 		"wisteriaplantempty": "Растение глициний",
 		"wolfsbane": "Аконит",
 		"woodfloor": "Деревянный настил",
-		"woodstair": "_MISSING_Wooden Stair",
+		"woodstair": "Деревянная лестница",
 		"writerdesk": "Письменный стол",
 		"zinc": "Цинк"
 	},
 	"typeuses": {
 		"alarmbell": "Звенит как старый церковный колокол (если по нему пройдут монстры его слышно за 150м)",
 		"alkanet": "В реальной жизни, источник красной краски",
-		"astrolabe": "Древнегречиский навигатор но без Алисы",
+		"astrolabe": "Экипируйтесь на панели быстрого доступа, чтобы увидеть путь к особым биомам",
 		"berry": "Одна ягода. Не стоит её есть!",
 		"berrybush": "Колонисты могут сажать это для получения пищи",
 		"berrymeal": "Гроздь ягод, приготовленных для вкусного обеда",
 		"bookcase": "Когда книги помещены и оставлены в покое, они снова появятся для использования исследователем.",
 		"bookcase1": "Когда книги помещены и оставлены в покое, они снова появятся для использования исследователем.",
 		"bookcase2": "Когда книги помещены и оставлены в покое, они снова появятся для использования исследователем.",
-		"bookcasefilled": "Исследователи будут искать это место поблизости, чтобы собрать исследовательские данные.",
+		"bookcasefilled": "Исследователи будут искать это поблизости, чтобы собрать исследовательские данные. Размещение 10 из них на каждого исследователя обеспечивает долгосрочный баланс.",
 		"bow": "Охранникам это нужно!",
 		"bread": "Сухой кусок хлеба, на который даже ничего не намазано. Буээ",
 		"breadmeal": "Вкусный хлеб с идеальным ягодным джемом",
@@ -1701,8 +1701,8 @@
 		"charcoal": "Абсорбирует цианид",
 		"cherryblossom": "Самая розовая вещь в мире!",
 		"clay": "Хотелось бы, чтобы вы прикоснулись к этому",
-		"coalore": "Внимание: может вызвать проблемы с климатом",
-		"compass": "Не все те, кто бродят теряются",
+		"coalore": "Внимание: может вызвать проблемы с климатом. Можно найти прямо под мамонтовыми деревьями.",
+		"compass": "Экипируйте на панели быстрого доступа, чтобы увидеть путь к колониям и аванпостам.",
 		"cookedfish": "Плавательные возможности резко снижены",
 		"copper": "Несколько мягкий металл, но вполне полезный",
 		"coppertools": "Вы даже не можете отрезать хлеб без инструментов",
@@ -1714,11 +1714,11 @@
 		"firewood": "Базовое топливо",
 		"flax": "Цвет империи",
 		"flaxstage1": "Поместите это в землю",
-		"furnace": "Пока плавится металл можно приготовить еды на верхней части",
-		"glider": "Улетай на крыльях ветра",
-		"glidersteel": "Гул движков медленно стихает и из диспетчерсокй раздается. Что за хрень без двигателей тут встала?!",
+		"furnace": "Использует дрова в качестве топлива для изготовления бронзовых слитков и кирпичей.",
+		"glider": "Размещает пусковую установку планера; Войдите в него, щелкнув правой кнопкой мыши, и перемещайтесь, прицеливаясь, удерживая вперед.",
+		"glidersteel": "Как и обычная пусковая установка для планера, но эта запускает вас гораздо выше в воздух",
 		"goldingot": "Использовался когда-то, для гарантии стоимости бумажных денег.",
-		"goldore": "Также можно найти в горах под снегом.",
+		"goldore": "Также можно найти под заснеженными горами.",
 		"grindstone": "Используется для измельчения пшеницы в муку",
 		"gunpowder": "Обращайтесь с осторожностью!",
 		"hollyhock": "Слабительное в реальной жизни. Не в игре. Пока.",
@@ -1740,7 +1740,7 @@
 		"npcshop": "Что вы делаете в моем холодильнике? Вы хотите кушац?",
 		"planks": "Четырехкратный объем бревна",
 		"printingpress": "Уважай его свободу",
-		"railgate": "_MISSING_Allows rail travel while blocking travel by foot",
+		"railgate": "Пропускает вагонетку, но блокирует проход пешком.",
 		"rawfish": "#органический #без гормонов #травка",
 		"researcherdesk": "Исследования требуют книжных шкафов поблизости, чтобы найти данные для своих исследований!",
 		"sand": "Не смешивается со змеями",
@@ -1750,7 +1750,7 @@
 		"scrollshelf": "Когда их помещают и оставляют в покое, свитки снова появляются для использования писцом.",
 		"scrollshelf1": "Когда их помещают и оставляют в покое, свитки снова появляются для использования писцом.",
 		"scrollshelf2": "Когда их помещают и оставляют в покое, свитки снова появляются для использования писцом.",
-		"scrollshelffilled": "Писцы будут искать это рядом, чтобы собрать исследовательские данные.",
+		"scrollshelffilled": "Писцы будут искать это рядом, чтобы собрать исследовательские данные. Размещение 10 из них на каждого писца обеспечивает долгосрочный баланс.",
 		"silicasand": "Найден под песком в биоме Вереск.",
 		"sling": "Будьте осторожны, Голиаф",
 		"slingbullet": "На самом деле, просто маленький камень",
@@ -1765,14 +1765,14 @@
 		"trader": "Неожиданно используется для бартера",
 		"water": "Затопит все, если выпустить",
 		"waterpump": "Позволяет получить воду, даже в пустыне",
-		"watersponge": "_MISSING_Removes water in its local area in a deeply realistic way",
+		"watersponge": "Удаляет воду в своей зоне глубоко реалистичным образом",
 		"wheat": "Колонист с жерновом превратит это в муку",
 		"wheatstage1": "Будущий хлеб",
-		"wisteriajob": "Гробовая тишина...",
-		"wisteriaplant": "Немного пахнет смертью",
-		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wisteriajob": "Одному сборщику нужно 10 растений глицинии поблизости. Эти растения можно выращивать только в пустошах.",
+		"wisteriaplant": "Размещение 10 таких растений на каждого сборщика глициний обеспечивает долгосрочный баланс.",
+		"wisteriaplantempty": "Размещение 10 таких растений на каждого сборщика глициний обеспечивает долгосрочный баланс.",
 		"wolfsbane": "Предотвращает нападение волков на вашу колонию",
 		"writerdesk": "Высоко эргономичный",
-		"zinc": "Синий?"
+		"zinc": "Его можно найти прямо под мамонтовыми деревьями"
 	}
 }
