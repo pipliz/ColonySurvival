@@ -1,11 +1,9 @@
 {
-	"coverage": 91.0,
+	"coverage": 88.0,
 	"hints": {
 		"0": "Je größer die Farm um so mehr wird produziert. Ausgenommen sind Beerensammler.",
 		"1": "Je mehr Kolonisten du rekrutierst, desto mehr und unterschiedliche Monster werden erscheinen.",
 		"10": "3x33 ist die perfekte Größe für den Förster.",
-		"11": "Wenn du 'STRG' gedrückt hältst, kannst du kriechen und fällst nicht von Kanten.",
-		"13": "Halte beim Platzieren einer Baufläche STRG gedrückt, um danach eine Fläche mit gleichen Einstellungen zu platzieren.",
 		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
 		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
 		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
 		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "Drücke 'G' um deine Fackel einzuschalten.",
+		"29": "_MISSING_Crouching prevents falling off edges.",
+		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "Wähle die Werktische aus, um zu sehen was sie herstellen und Prioritäten einzustellen.",
-		"5": "Drücke 'F1' um das Handbuch zu öffnen und zu schließen.",
 		"7": "Unterschiede in Reichweite, Nachladegeschwindigkeit und Schaden geben jedem Wachentyp unterschiedliche Vor- und Nachteile."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Schwierigkeitsgrad",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "Gesperrter Schwierigkeitsgrad",
 				"header": "Kolonie Einstellungen"
 			},
@@ -345,6 +344,7 @@
 			"none": "Keine",
 			"normal": "Normal",
 			"previous": "Vorherige",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Zurücksetzen",
 			"select": "Auswählen",
 			"selected": "Ausgewählt",
@@ -442,6 +442,7 @@
 				"blastfurnace": "Hochofenarbeiter",
 				"bloomeryjob": "Schmied",
 				"builder": "Bauarbeiter",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "Weißkohlbauer",
 				"chestmaker": "Kistenmacher",
 				"chickenfarmer": "Hühnerzüchter",
@@ -452,7 +453,7 @@
 				"cottonengine": "Baumwollspinner",
 				"cottonfarmer": "Baumwollbauer",
 				"digger": "Bergmann",
-				"diggerspecial": "Spezieller Bergmann",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "Färber",
 				"engineer": "Ingenieur",
 				"firepit": "Primitiver Koch",
@@ -596,8 +597,8 @@
 				"name": "Abbaubereiche"
 			},
 			"constructiondiggerspecial": {
-				"description": "Schaltet spezielle Abbaubereiche für den Baumeister frei.",
-				"name": "Spezieller Baumeister"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "Schaltet den Koch und den Fischer frei, neue Nahrungsquellen für deine Kolonisten.",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Schließen",
-				"description": "Wähle aus, ob du das Gebiet entfernen willst oder nicht.",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Gebietsmenü",
-				"remove": "Gebiet entfernen"
+				"remove": "Gebiet entfernen",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Du bist gestorben.",
@@ -968,6 +971,7 @@
 					"needs": "Benötigt: ",
 					"nothing": "Nichts"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "Koloniepunkte",
 					"preamble2": "<i>Aktuelle Punkte / Kapazität</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "Verkaufe {0} für {1} Punkte",
 				"selltext2": "Aktuelles Lager erlaubt {0} Verkäufe"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Nicht mehr anzeigen",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Weiter",
 				"previous": "Zurück"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "Spezielle Abbaufläche"
 			},
 			"toolconstruction": {
-				"builder": "Bauarbeiter",
-				"buildera": "",
-				"builderb": "Benötigt Baugebiet",
-				"builderc": "Baut Dinge",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Wähle den Gebietstyp aus, den du zuweisen willst.",
-				"destroyer": "Zerstörer",
-				"destroyera": "",
-				"destroyerb": "Benötigt Räumbereich",
-				"destroyerc": "Räumt auf",
-				"header": "Bauwerkzeug"
+				"header": "Bauwerkzeug",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Futter für Hühner",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Beerensammler",
 				"berryfarmertool": "Beerensammler Werkzeug\nPlatzieren mit Rechtsklick",
 				"buildera": "Fülle einen Bereich der Welt",
-				"builderarea": "Bauarbeiterfläche",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "Öffnet ein Menü um den Typ und danach die zu füllende Fläche auswählen",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "Weißkohl",
 				"cabbagefarmer": "Weißkohlbauer",
 				"chickenfarmer": "Hühnerzüchter",
@@ -1061,17 +1076,16 @@
 				"construction": "Konstruktion",
 				"construction1": "Lass sie die Arbeit machen",
 				"construction2": "Dies öffnet ein zweites Menü um den Bautyp auszuwählen",
-				"constructionjob": "Baumeister Job",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "Stellt einen Kolonisten als Baumeister ein",
 				"constructionjobb": "Platziere es an einer Bau- oder Abbaufläche",
 				"coversarea": "Bedeckt ein bestehendes Gebiet",
 				"description": "Wähle den Blocktyp aus, den du zuweisen willst.",
 				"diggera": "Baue einen Bereich der Welt ab",
-				"diggerarea": "Abbaubereich",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "Wähle eine Fläche zum Abbauen aus",
-				"diggerspecial": "Spezielle Abbaufläche",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "Baut nur einen bestimmten Block in einem Bereich ab",
-				"diggerspecialarea": "Spezielle Abbaufläche",
 				"diggerspecialb": "Wähle die Fläche zum Abbauen aus",
 				"dyer1": "Fügt Farben hinzu, um das Leben etwas weniger eintönig zu machen",
 				"dyer2": "Dies öffnet ein Menü mit weiteren Anbauarten",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Förster Werkzeug\nPlatzieren mit Rechtsklick",
 				"header": "Befehlswerkzeug",
 				"hempfarmer": "Hanfbauer",
-				"insidearea": "Kann nicht innerhalb eines Bereichs platziert werden",
 				"missingscience": "<color=#ff2323>Benötigt '{0}', um zuerst freigeschaltet zu werden.</color>",
 				"noconstructionareanearby": "Kein Baubereich in der Nähe",
-				"notarable": "Unfruchtbar",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Nicht flach genug",
 				"nowaternearby": "Kein Wasser in der Nähe",
 				"occupiedblocks": "Blöcke sind im Weg",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "Willkommen in Colony Survival!",
 				"header": "Grundlagen",
-				"text1": "Beginne damit, einen guten Platz für deine erste Kolonie zu finden. Es empfiehlt sich, Wasser und flache Flächen für die Landwirtschaft in der Nähe zu haben.",
-				"text2": "Das Banner ist das Zentrum deiner Kolonie. Platziere es, indem du mit dem ausgewählten Bannerwerkzeug auf den Boden klickst. Drücke '2', um es auszuwählen. Das Bannerwerkzeug zeigt einen dunklen Schatten dort an, wo Monster spawnen werden, sobald Kolonisten rekrutiert worden sind.",
-				"text3": "Stelle Betten auf, um Kolonisten rekrutieren zu können. Drücke 'i', um das Interface zu öffnen. Ziehe Betten vom Inventar auf die Hotbar darunter. Wenn das Bett ausgewählt ist, klicke mit der rechten Maustaste auf den Boden, um ein Bett zu platzieren.",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "Öffne das Interface und gehe auf die Seite 'Kolonie'. Drücke 'Rekrutieren', um einen Kolonisten zu rekrutieren."
 			},
 			"page2_2": {
 				"description": "Diese sind für Wachstum und Überleben unerlässlich",
 				"header": "Essen & Betten",
 				"text1": "Kolonisten benötigen 1 Mahlzeit pro Tag. Diese holen sie sich am Banner oder in einem nahe gelegenen Lebensmitteltisch. Ohne Nahrung verhungern die Kolonisten. Die Rekrutierung neuer Kolonisten kostet mehrere Mahlzeiten.",
-				"text2": "Der Beerensammler ist die erste Nahrungsquelle. Wähle das Befehlswerkzeug, indem du '1' drückst. Klicke, um es zu öffnen und wähle den Beerensammler. Klicke mit der rechten Maustaste auf den Boden, um mit der Erstellung des Beerenfelds zu beginnen und klicke dann an anderer Stelle erneut mit der rechten Maustaste, um es zu beenden. Du wirst eine ganze Menge davon brauchen!",
-				"text3": "Um mit der Herstellung von Betten zu beginnen, musst du einen Tüftlertisch herstellen. Fälle einen Baum mit einem Linksklick und grabt dann nach unten, um Steine zu sammeln.",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Inventar, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen arbeitslose Kolonisten diese Arbeit automatisch an."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "Handle und expandiere, um Zugang zu einzigartigen Ressourcen zu erhalten",
 				"header": "Koloniepunkte & Kolonisierung",
-				"text1": "Schalte den Handelsplatz frei und platziere ihn. Rechtsklicke darauf, um das Interface zu öffnen. Verkaufe Gegenstände, um Koloniepunkte zu verdienen. Die Punkte können unter anderem für Verbesserungen wie das Kolonistenlimit auf der Koloniepunkte-Seite ausgegeben werden.",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heidebiome, Sumpfgebiete und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
 				"text3": "Schalte Außenposten frei, kaufe ein Außenpostenbanner und trage es bei deiner Erkundung mit dir. Platziere es, um einen Außenposten zu gründen. Die Vorräte und wissenschaftlichen Fortschritte werden mit der Hauptkolonie und anderen Außenposten geteilt. Errichte Außenposten in den oben genannten Regionen, um Zugang zu deren Ressourcen zu erhalten."
 			},
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Sonnenschattenkaskaden",
 				"sunshadowdistance": "Schattenentfernung",
 				"sunshadowquality": "Sonnenschattenqualität",
-				"texturequality": "Texturqualität",
+				"texturequality": "Texturqualität (*)",
 				"torchquality": "Fackelqualität",
 				"vsync": "VSync",
 				"vsyncdouble": "Doppel"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "Welt existiert bereits!",
 			"cancel": "Abbrechen",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "Löschen bestätigen",
 			"confirmdeletedescription": "Du bist dabei den Ordner mit dieser Welt zu löschen\nWas willst du tun?",
 			"confirmload": "Ladevorgang bestätigt",
@@ -1715,7 +1733,7 @@
 		"flax": "Die kaiserliche Farbe",
 		"flaxstage1": "Jetzt mach bloß keine Flachsen... ähm, Faxen!",
 		"furnace": "Verwendet Brennholz als Brennstoff, um Bronzebarren herzustellen",
-		"glider": "Platziert einen Gleiterwerfer; betrete ihn durch Rechtsklick und navigiere, indem du zielst, während du die Taste nach vorne gedrückt hältst",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "Wie der normale Gleiterwerfer, aber dieser lässt dich viel höher in die Luft steigen",
 		"goldingot": "Wurde einst genutzt, um des Wert des Papiergeldes zu garantieren.",
 		"goldore": "Kann auch unter verschneiten Bergen gefunden werden",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "Ein Abführmittel im wirklichen Leben. Nicht aber im Spiel. Noch nicht...",
 		"ironore": "Abgebaut mit einer Eisenspitzhacke aus Eisen.",
 		"ironwrought": "Geschmiedet bedeutet einfach 'bearbeitet'.",
-		"kiln": "Verwandelt Holzbretter in Holzkohle",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "Die Zukunft ist da",
 		"lanterngreen": "Macht Ihre Kolonie umweltfreundlich",
 		"lanternorange": "Besonders gemütlich",

@@ -1,0 +1,40 @@
+0.11.0.0 (2024-05-31)
+
+- Added colonist names
+- Added per job colonist models
+- Added a menu to the NPCs when clicked on with the command tool, allowing to expel them, change their name, visualise their last goal & job positiond
+- Saplings placed by the player may now grow taller
+- Sapling type selection now better matches the natural tree types by allowing a randomised choice between taiga and temperate in mixed areas
+- Grass now spreads to nearby dirt after some ingame hours
+- Simplified the way to access the crafting limits UI for the berry farmer, beekeeper and chicken farmer - just right click their blocks, crouch-click to bypass the popup.
+
+Construction jobs:
+- Construction areas can now overlap with eachother and with job areas; but job areas can't overlap eachother
+- Added shape settings to the construction areas: Full Box, Hollow Box, Walls, Cylindrical Walls, Solid Cylinder
+- Added replacement builder; it replaces blocks of one type by another type within the area
+- Builders can now properly build rotated blocks; they copy the rotation of their job position. Fixes building roofs/windows
+- Added the following items to the builder options list: crates, fences, lockboxes, elevator shaft, rail, bookcase, scrollshelf, traps, beds
+- Construction areas can now extend outside a colony's radius of influence properly (but the worker job should still be on the inside)
+- Special diggers now prompt for type selection after indicating the area - and the prompt will list types in the area instead of the stockpile
+- Expanded the range of construction jobs to find construction areas mildly, so they can complete areas above their heads and such
+- Construction jobs can now be placed inside areas
+
+- Searching in the stockpile & statistics window now supports searching diacritics without writing them
+- Fixed the problematic behaviour around typing in numbers in the crafting limits UI. The crafting limits system now works with "amount of items of the primary result" instead of "amount of times to craft the recipe"
+- Fixed a failure to load a world when using many mods (the config is now divided up into packets like with texture files, bonus point is that it's now also cached on the client)
+- Fixed active damage over time effects applied to monsters sometimes not applying properly after a reload
+- Fixed alarmbell sometimes not working for a period of time after reloading a world after using one
+- Fixed the lower half of a bed being allowed to float in the air (required for it to be builder-supported)
+- Added the anvil audio effect to the copper smith (no idea why this wasn't there)
+- Removed legacy water texture files/code
+- Added "track other player" and "track aim point" camera modes to the dev menu for recording uses
+- Fixed "tool use (outpost)" showing combined outpost output instead of single outpost
+- Improved the "not arable" message on placing area jobs to detail the type of ground missing (heath/marsh/normal)
+- Fix an issue with "expanded tooltips" being applied late when the tooltip has moved on to showing something else
+- Fix kiln tooltip saying it uses wooden planks, when it in fact uses charcoal
+- Texture quality setting now correctly has the (*) to indicate it needs a reload to apply
+- Fix builders filling in the top half of doors
+- Fix statistics window search function not working for 'colony' and 'idle job time' data types
+- Renamed difficulty "None" to "Peaceful"
+- Improved stability of ingame player character movement
+- Player characters now tilt their head with up/down aim in multiplayer

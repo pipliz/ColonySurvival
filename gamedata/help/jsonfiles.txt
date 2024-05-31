@@ -3,26 +3,37 @@ fileType options for jsonFiles entries of modInfo.json;
 addOrReplaceNPCTypes
 addOrReplaceAudio
 addOrReplaceAudioAmbient
-addOrOverrideStructures
-setBiomeStructurePrevalence
 addOrOverrideLocalization
-setTerrainGeneratorSettings
-setMetaBiomeSettings
-scienceBiomePatches
 addOrOverrideAreaJobs
 addOrOverrideGrowableTypes
-addScience
-addOrReplacePlayerRecipes
-addOrOverrideScience
-addOrReplaceNPCRecipes
-addScienceUnlocks
 addOrOverrideTextureMappingEntries
 addOrReplaceStarterPack
+
+addScience
+addOrOverrideScience
+addScienceUnlocks
+
+addOrReplacePlayerRecipes
+addOrReplaceNPCRecipes
+addOrReplacePointRecipes
+
 addBlockJobs
 overrideTypeProperties
 addNewTypes
-setColonistTextures
-setWaterTextures
 generateBlocks
 
+setColonistTextures
+	legacy, doesn't do anything with default npcs as they use vertex paint based models now
+
+setToolsets
+	sets the toolsets table entries that jobs reference by name
+addNames
+	add firstnames/surnames lists 
+overrideNames
+	same as addNames, but clears the names registered before this
+setPaintables
+	table of item types, one column per paint type, for mapping between them using the paints
+vehiclesettings
+	loads vehicle settings, referenced by the vehicle defining itemtypes
+	
 Check their respective enties in the gamedata/modInfo.json file for examples of what details are expected per type.
