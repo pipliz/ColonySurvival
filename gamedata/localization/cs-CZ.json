@@ -1,28 +1,24 @@
 {
-	"coverage": 99.0,
+	"coverage": 97.0,
 	"hints": {
 		"0": "U většiny farem platí velikost = úroda. Sběrači bobulí jsou však výjimkou.",
 		"1": "Více a odlišnějších monster se bude objevovat s rostoucí úrovní hrozby.",
-		"10": "3x33 je nejlepší velikost pro uzemí s lesníkem.",
-		"11": "Stiskni 'CTRL' abys nespadl z bloků.",
-		"13": "Stiskni 'CTRL' při označování prostoru dělníka (kopáče/stavitele), abys automaticky po označení prvního prostoru vytvořil druhý prostor.",
-		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
-		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
-		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
-		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
-		"2": "V podemí můžeš najít kámen obsahující určitou rudu. Čím hlouběji se dostaneš, tím vzácnější najdeš.",
-		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
-		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
-		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
-		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
-		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
-		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
-		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
-		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
-		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "Stiskni 'G', abys rozsvítil svou přenosnou pochodeň.",
+		"10": "3x33 je nejlepší velikost pro uzemí lesníka.",
+		"16": "Použij kompas, aby jsi našel kolonie a outposty.",
+		"17": "Použij astrolabu, aby jsi našel další biomy se specialnímy itemy.",
+		"18": "Postav Posvátný Failsafe, aby jsi použil svoje Posvátné Peníze kdzž je tvoje kolonie v nesnázích.",
+		"19": "Postav Posvátný Sklad aby jsi mohl uskladnit více Posvátných Peněz.",
+		"2": "V podzemí můžeš najít kámení, obsahující určitou rudu. Čím hlouběji se dostaneš, tím vzácnější rudy najdeš.",
+		"20": "Použij červenou, zelenou nebo modrou barvou, aby jsi přemaloval dveře, nebo zábradlí.",
+		"21": "Použij Odstraňovač nátěrů, aby jsi smazal barvy z itemů.",
+		"22": "Kolonisti nemůžeou používat výtahy.",
+		"23": "Postav Koleje, a Stanice pro rychlou cestu od A do B.",
+		"24": "Použij Bránu Kolejí, aby jsi zastavil zombíky, bez toho aniž by jsi zastavil Vlaky.",
+		"25": "Postav Statistickou Nástěnku, aby jsi dostal lepší statistiky o tvojí kolonii.",
+		"26": "Postav Archimédův šroub, aby jsi vysál blízkou vodu.",
+		"27": "Píšeme skoro každý týden Páteční Blog (Friday Blog) na Steamu!",
+		"28": "Existujou módy pro Colony Survival, můžeš je najít na Workshopu v Steamu, nebo na našem Discordu!",
 		"4": "Klikni na blok kde se vyrábí předměty, s pravým tlačítkem na myšce , a uprav jejich množství nebo prioritu.",
-		"5": "Stiskni 'F1' pro otevření manuálu.",
 		"7": "Každá zbraň má svůj vlastní dolet, sílu a rychlost přebití, díky čemuž je každý strážce unikátní."
 	},
 	"sentences": {
@@ -71,6 +67,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Obtížnost",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "Uzamknout obtížnost",
 				"header": "Nastavení kolonie"
 			},
@@ -158,7 +155,7 @@
 				"kits": "Dostupné balíčky",
 				"missingkit": "Je vyžadován balíček na založení kolonie.",
 				"name": "Jméno kolonie",
-				"parentcolony": "Mateřská kolonie",
+				"parentcolony": "Hlavní kolonie",
 				"popupheader": "Založení kolonie",
 				"usescienceagreement": "Přesunout výzkum"
 			},
@@ -166,7 +163,7 @@
 			"switchcolony2": "Změnit aktivní kolonii na:",
 			"trading": {
 				"completerule": "Vytvořit obchodní požadavek",
-				"completeruleedit": "Kompletní změna pravidel",
+				"completeruleedit": "Změna pravidel",
 				"mainheader": "Nastavení nového obchodního požadavku",
 				"newruleinfinite": "Nové neomezené obchodní pravidla",
 				"newrulelimited": "Nové limitované obchodní pravidlo",
@@ -181,7 +178,7 @@
 			}
 		},
 		"commands": {
-			"disableachievements": "Achievmenty byly na tomto světě vypnuty, nyní můžete využívat cheatovací možnosti.",
+			"disableachievements": "Achievmenty byly na tomto světě vypnuty, nyní můžete využívat podváděcí možnosti (cheaty).",
 			"disableachievementsfirst": "Abys tak mohl učinit, musíš nejdříve na tomto světě vypnout achievmenty použitím příkazu '/disableachievements'",
 			"nopermission": "Nemáš povolení '{0}', abys tak mohl konat."
 		},
@@ -189,7 +186,7 @@
 			"loading": "Načítání",
 			"localhost_fail": "Nenalezen žádný singleplayer/Steam server. Návrat do menu za 5 vteřin ...",
 			"refused": {
-				"blacklisted": "Jsi na černé listině.",
+				"blacklisted": "Jsi na černé listině, takže se nemůžeš připojit.",
 				"incompatible": "Server zažívá neočekávaný problém.",
 				"invalidpassword": "Nesprávné heslo.",
 				"invalidticket": "Neplatný Steam Ticket.",
@@ -205,7 +202,7 @@
 				"1": "Požadovaná tabulka souborů serveru",
 				"connectionmade": "Spojení provedeno",
 				"downloading": "(Stahování {0} balíčků)",
-				"fail": "Načítání se nezdařilo, návrat do hlavní nabídky za 5 sekund",
+				"fail": "Načítání se nezdařilo, návrat do menu za 5 sekund",
 				"final": "Dokončování",
 				"loading": "Načítání {0} souborů",
 				"local1": "Hledání serveru pro jednoho hráče na tomto počítači",
@@ -218,44 +215,44 @@
 			}
 		},
 		"contentmanager": {
-			"buttonbrowseworkshop": "Procházet workshop",
-			"buttoncreateitem": "Vytvořit předmět",
+			"buttonbrowseworkshop": "Procházet Workshop",
+			"buttoncreateitem": "Vytvořit kontent",
 			"buttoneditdetails": "Změnit detaily",
-			"buttonlistsubscribed": "Odebírané předměty",
+			"buttonlistsubscribed": "Odebíraný kontent",
 			"buttonsubmitcontent": "Potvrdit",
-			"buttonupdatecontent": "Aktualizovat obsah",
+			"buttonupdatecontent": "Aktualizovat kontent",
 			"changelogplaceholder": "Sem zadej seznam změn...",
-			"contenteditheader": "Nastavení/aktualizace obsahu pro {0}",
-			"contentpath": "Cesta k obsahu: {0}",
-			"contenttypelabel": "Typ obsahu",
+			"contenteditheader": "Nastavení/aktualizace kontentu pro {0}",
+			"contentpath": "Cesta ke kontentu: {0}",
+			"contenttypelabel": "Typ kontentu",
 			"contenttypes": {
-				"itempack": "Item Pack",
+				"itempack": "Balíček Itemů",
 				"misc": "Různé",
-				"overhaul": "Dokončete generální opravu",
-				"texturepack": "Texture Pack",
+				"overhaul": "Overhaul",
+				"texturepack": "Balíček Textur",
 				"unknown": "Neznámé",
-				"utilities": "Užitečné",
+				"utilities": "Nástroje",
 				"world": "Svět"
 			},
 			"nocontentpath": "Zatím nebyla zvolena cesta",
 			"scenariolabel": "Název scénáře",
 			"statecommittingchanges": "Provádění změn: {0} / {1}",
 			"statepreparingconfig": "Připravování konfigurace: {0} / {1}",
-			"statepreparingcontent": "Připravování obsahu: {0} / {1}",
-			"stateuploadingcontent": "Nahrávání obsahu: {0} / {1}",
+			"statepreparingcontent": "Připravování kontentu: {0} / {1}",
+			"stateuploadingcontent": "Nahrávání kontentu: {0} / {1}",
 			"stateuploadingpreview": "Nahrávání náhledu: {0} / {1}",
 			"thumbnailpath": "Stručná cesta:",
-			"yourcontent": "Tvůj vytvořený obsah ve workshopu"
+			"yourcontent": "Tvůj vytvořený kontent ve workshopu"
 		},
 		"controls": {
-			"decreasefieldofview": "Zmenšit rozhled (cheat)",
+			"decreasefieldofview": "Zmenšit zorné pole (cheat)",
 			"fireprimary": "Primární akce",
 			"firesecondary": "Sekundární akce",
 			"flydown": "Let dolů (cheat)",
 			"holdcrouch": "Krčení (Držení)",
-			"hotbardown": "Další hotbar místo",
-			"hotbarup": "Předchozí hotbar místo",
-			"increasefieldofview": "Zvětšit rozhled (cheat)",
+			"hotbardown": "Další místo v hotbaru",
+			"hotbarup": "Předchozí místo v hotbaru",
+			"increasefieldofview": "Zvětšit zorné pole (cheat)",
 			"inventory0": "Hotbar 10",
 			"inventory1": "Hotbar 1",
 			"inventory2": "Hotbar 2",
@@ -277,26 +274,26 @@
 			},
 			"movepad": "Pohyb",
 			"opencolonytab": "Otevřít menu správce kolonie",
-			"openquickstart": "_MISSING_Open Help Menu",
-			"placemultipleareas": "_MISSING_Chain-place construction areas",
-			"resetfieldofview": "Reset Rozhled (field of view, cheat)",
+			"openquickstart": "Rychle zapnout",
+			"placemultipleareas": "Postavit konstrukní arei za sebou",
+			"resetfieldofview": "Reset zorné pole (cheat)",
 			"rotateobjectleft": "Otočit doleva",
 			"rotateobjectright": "Otočit doprava",
-			"sprint": "Sprint",
-			"sprintgamepadheld": "Sprint",
-			"takescreenshot": "_MISSING_Take Screenshot",
+			"sprint": "Bežet",
+			"sprintgamepadheld": "Bežet",
+			"takescreenshot": "Udělat snímek obrazovky",
 			"toggleautofocus": "Přepnout automatické ostření (cheat)",
-			"togglechat": "Přepnout chat",
-			"togglecrouch": "Krčení (Držení)",
-			"toggledevconsole": "Přepnout Dev Log (cheat)",
-			"toggledevmenu": "Přepnout nabídku vývojáře (Dev Menu, cheat)",
+			"togglechat": "Otevřít chat",
+			"togglecrouch": "Skrčit se (Držení)",
+			"toggledevconsole": "Otevřít Developerskou Konzoli (cheat)",
+			"toggledevmenu": "Otevřít nabídku vývojáře (Dev Menu, cheat)",
 			"toggleextrasmooth": "Přepnout vyhlazený cíl, Aim (cheat)",
 			"togglefly": "Přepnout létání (cheat)",
 			"togglefocuspoint": "Přepnout zamčený cíl, Aim (cheat)",
 			"toggleinterface": "Přepnout rozhraní",
-			"toggleinventory": "Přepnout inventář",
-			"togglestats": "Přepnout zobrazení statistik",
-			"toggletorch": "Přepnout pochodeň"
+			"toggleinventory": "Otevřít inventář",
+			"togglestats": "Otevřít zobrazení statistik",
+			"toggletorch": "Zapnout/Vypnout pochodeň"
 		},
 		"escapemenu": {
 			"back": "Vrátit se do hry",
@@ -345,6 +342,7 @@
 			"none": "Žádný",
 			"normal": "Normální",
 			"previous": "Předchozí",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Obnovit",
 			"select": "Zvolit",
 			"selected": "Zvoleno",
@@ -442,6 +440,7 @@
 				"blastfurnace": "Obsluha vysoké pece",
 				"bloomeryjob": "Železář",
 				"builder": "Stavitel",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "Farmář zelí",
 				"chestmaker": "Truhlář",
 				"chickenfarmer": "Farmář slepic",
@@ -452,7 +451,7 @@
 				"cottonengine": "Obluha kolovrátku",
 				"cottonfarmer": "Farmář vlny",
 				"digger": "Kopáč",
-				"diggerspecial": "Zaměřený kopáč",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "Barvíř",
 				"engineer": "Inženýr",
 				"firepit": "Kuchtík",
@@ -596,8 +595,8 @@
 				"name": "Kopáč"
 			},
 			"constructiondiggerspecial": {
-				"description": "Odemyká oblast pro zaměřeného kopáče.",
-				"name": "Zaměřený kopáč"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "Odemyká kuchaře a rybáře, kteří poskytují nový zdroj jídla pro kolonisty.",
@@ -632,8 +631,8 @@
 				"name": "Inženýř"
 			},
 			"failsafe": {
-				"description": "Odemyká posvátnou záchranu, obranný prvek využívající posvátné body pro oslabení monster.",
-				"name": "Posvátná záchrana"
+				"description": "Odemyká posvátnou záchranu, obranný prvek využívající posvátné body pro oslabení zombíků.",
+				"name": "Posvátný Failsafe"
 			},
 			"farming": {
 				"description": "Odemyká farmáře pšenice. Význam pšenice v souvislosti s jídlem s časem poroste.",
@@ -883,9 +882,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Zavřít",
-				"description": "Zvol, jestli chceš tuto oblast odstranit nebo ne.",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Menu oblasti",
-				"remove": "Odstranit oblast"
+				"remove": "Odstranit oblast",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Zemřel jsi.",
@@ -968,6 +969,7 @@
 					"needs": "Potřebuje: ",
 					"nothing": "Nic nenalezeno"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "Body kolonie",
 					"preamble2": "<i>Aktuálně bodů / kapacita</i>",
@@ -1015,9 +1017,16 @@
 				"selltext": "Prodat {0} za {1} bodů",
 				"selltext2": "Aktuální zásoby umožnují prodej {0}"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Znovu nezobrazovat",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Další",
 				"previous": "Předchozí"
 			},
@@ -1032,16 +1041,17 @@
 				"header": "Odstranění speciálního bloku"
 			},
 			"toolconstruction": {
-				"builder": "Stavitel",
-				"buildera": "",
-				"builderb": "Potřebuje oblast pro stavění",
-				"builderc": "Staví věci",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Vyber typ oblasti, kterou chceš vytvořit.",
-				"destroyer": "Ničitel",
-				"destroyera": "",
-				"destroyerb": "Potřebuje oblast pro níčení",
-				"destroyerc": "Níčí věci",
-				"header": "Nástroj pro konstrukce"
+				"header": "Nástroj pro konstrukce",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Určeno pro chov na maso",
@@ -1052,8 +1062,11 @@
 				"berryfarmer": "Sběrač bobulí",
 				"berryfarmertool": "Nástroj sběrače bobulí",
 				"buildera": "Zacpi díry ve světě",
-				"builderarea": "Stavitelův prostor",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "Otevře další menu, kde určíš, ze kterého materiálu bude stavitel stavět",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "Nezbytný pro luxusní jídla",
 				"cabbagefarmer": "Farmář zelí",
 				"chickenfarmer": "Farmář slepic",
@@ -1061,17 +1074,16 @@
 				"construction": "Konstrukce",
 				"construction1": "Nech je stavět a kopat za vás",
 				"construction2": "Otevře další menu s různými typy konstrukcí",
-				"constructionjob": "Zaměstnat stavitele",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "Zaměstná kolonistu jako stavitele",
 				"constructionjobb": "Polož blízko prostoru konstruktéra",
 				"coversarea": "Překrývá se s existující oblastí",
 				"description": "Vyber typ oblasti, kterou chceš vytvořit.",
 				"diggera": "Udělej díru do světa",
-				"diggerarea": "Prostor kopáče",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "Vyber prostor, který chceš vykopat",
-				"diggerspecial": "Zaměřený kopáč",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "Odstraňte specifické bloky",
-				"diggerspecialarea": "Prostor zaměřeného kopáče",
 				"diggerspecialb": "Vyberte prostor, kde bude zaměřený kopáč kopat",
 				"dyer1": "Obarvi to a udělej svět zase trochu méně černobílým",
 				"dyer2": "Otevře další menu s různými typy farem",
@@ -1084,10 +1096,11 @@
 				"forestertool": "Nástroj dřevorubce",
 				"header": "Nástroj pro oblasti",
 				"hempfarmer": "Farmář konopí",
-				"insidearea": "Nemůžete dát další prostor do prostoru",
 				"missingscience": "<color=#ff2323>Vyžaduje vyzkoumanou technologii '{0}'</color>",
 				"noconstructionareanearby": "Žádná konstrukce blízko",
-				"notarable": "Nejedná se o úrodnou půdu",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Nerovná oblast",
 				"nowaternearby": "Žádný blízký zdroj vody",
 				"occupiedblocks": "Obsazeno bloky",
@@ -1108,17 +1121,19 @@
 			"page1_2": {
 				"description": "Vítej v Colony Survival!",
 				"header": "Základy",
-				"text1": "Začni nalezením dobrého místa pro tvou první kolonii. Doporučujeme místo u vody s rovnou zemí pro farmaření.",
-				"text2": "Prapor je středem kolonie. Stiskni '2' pro zvolení nástroje praporu a umísti prapor stiskem pravého tlačítka na zem. Nástroj praporu ukazuje tmavou oblast tam, kde se mohou objevovat monstra, až budeš mít určitou úroveň hrozby.",
-				"text3": "Umísti postele abys mohl rekrutovat kolonisty. Stiskni 'i' pro otevření menu, přetáhni postele ze zásob kolonie do svého inventáře, zvol je a stiskem pravého tlačítka je umísti na zem.",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "Otevři menu a rekrutuj své první kolonisty."
 			},
 			"page2_2": {
 				"description": "Nezbytnosti pro růst a přežití",
 				"header": "Jídlo a postele",
 				"text1": "Kolonisté potřebují jedno jídlo denně. Berou si ho z praporu nebo z nejbližšího koloniálu. Bez jídla kolonisté vyhladoví. Rekrutování nových kolonistů stojí také trochu jídla.",
-				"text2": "Sběr bobulí je prvním zdrojem jídla. Zvol nástroj pro oblasti stiskem '1'. Stiskni tlačítko myši pro otevření menu a zvol sběrače bobulí. Poté pravým tlačítkem myši urči velikost sběračovy oblasti. Ze začátku jich budeš pár potřebovat!",
-				"text3": "Pro výrobu dalších postelí je potřeba vyrobit kutilův stůl. Pokácej stromy a vykopej trochu kamenné sutě z podzemí.",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "Klikni na ikonu kutilova stolu vlevo nahoře v zásobách, abys jeden vyrobil a umísti jej stejně jako postel. Obdobně jako u sběrače bobulí, si nezaměstnaní kolonisté automaticky zaberou volnou pracovní pozici."
 			},
 			"page3_2": {
@@ -1140,7 +1155,7 @@
 			"page5_2": {
 				"description": "Obchoduj a expanduj pro jedinečné zdroje",
 				"header": "Body kolonie a kolonizace",
-				"text1": "Odemkni a umísti obchodní stůl a kliknutím na něj pravým tlačítka ho otevři. Můžeš zde prodávat předměty pro získání bodů kolonie. Ty mimo jiné můžou být použity na vylepšení limitu kolonistů, životů nebo zvětšení bezpečné zóny praporu.",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "Svět obsahuje několik biomů s unikátními zdroji. Jsou zde hory pokryté sněhem, fialové vřesoviště, bažiny či mamutí stromy. Odemkni a použij astroláb na jejich jednoduché nalezení.",
 				"text3": "Odemkni základny, kup prapor základny a nos ho s sebou při průzkumu. Až najdeš ideální místo, můžeš založit novou základnu jeho umístěním. Její zásoby a věda budou sdíleny s hlavní kolonií a všemi ostatními základnami. Stav základny v jiným biomech pro přístupu k unikátním zdrojů, které jiné biomy nenabízí."
 			},
@@ -1238,7 +1253,7 @@
 				"sunshadowcascades": "Kaskádové stíny slunce",
 				"sunshadowdistance": "Vzdálenost stínů",
 				"sunshadowquality": "Kvalita stínů slunce",
-				"texturequality": "Kvalita textur",
+				"texturequality": "Kvalita textur (*)",
 				"torchquality": "Kvalita světla",
 				"vsync": "VSync",
 				"vsyncdouble": "Dvojitý"
@@ -1247,6 +1262,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "Svět již existuje!",
 			"cancel": "Zrušit",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "Potvrdit smazání",
 			"confirmdeletedescription": "Chystáš se smazat adresář obsahující data tohoto světa.\nCo chceš dělat?",
 			"confirmload": "Potvrzování načítání",
@@ -1715,7 +1731,7 @@
 		"flax": "Imperiální barva",
 		"flaxstage1": "Položte to na zem",
 		"furnace": "Používá dřevo na podpal jako palivo na výrobu bronzových ingotů a cihel",
-		"glider": "Mezerníkem vzletíš nahoru, pravým tlačítkem vystoupíš!",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "Jako klasické rogalo, ale tohle tě donese mnohem výš.",
 		"goldingot": "Jednou byl použit jako bankovka",
 		"goldore": "Neztrať to",
@@ -1724,7 +1740,7 @@
 		"hollyhock": "Projímadlo v realitě. Ne ve hře. Zatím...",
 		"ironore": "Vykopáno s železným krumpáčem, který je z tohoto vyroben",
 		"ironwrought": "Tepané neznamená z tepu srdce'",
-		"kiln": "Předělává prkna na dřevěné uhlí",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "Budoucnost je teď",
 		"lanterngreen": "Dělá vás ekologičtějšími",
 		"lanternorange": "Extra útulno",
