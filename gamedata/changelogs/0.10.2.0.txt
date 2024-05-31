@@ -1,0 +1,25 @@
+0.10.2.0 (2024-02-23)
+
+Added support for steam cloud sync of saves
+Existing worlds require it to be enabled via a checkbox in the world list before being uploaded
+
+- Add Steam Cloud Sync setting for new & existing worlds
+- Fix colonists' shadows flickering
+- Updated cs-CZ locale
+
+0.10.2.1 (2024-02-26)
+
+- Updated unity engine version
+- Fix water not showing up in the F11 screenshots
+- Fix "delete world" menu not working
+- Fix an error thrown by trap downwards target detection when range is set to 32 or higher
+- Fix escape not working to cancel the loading/connecting screen
+
+0.10.2.2 (2024-02-29)
+
+- Non-blocky-terrain objects now properly cast shadows when off-screen
+- Non-blocky terrain object shadowing distance now scales with the Sun Shadow Distance video setting
+- Moved detail draw count max to a config setting in savegames/client.json (no video settings option yet)
+- Added an error on the server when a packet is being sent that's over 491 KiB or so in multiplayer.
+This is unsupported, and only happens when you have a lot of mods that combined increase the game config by quite a lot.
+- Fix a potential client crash issue with player physics interacting with unloaded chunks
