@@ -1,0 +1,68 @@
+0.10.3.0 (2024-03-14)
+
+Gamepad improvements/changes;
+- Hide mouse cursor when using gamepad in UI
+- Item tooltips show up when navigating the stockpile menu
+- Navigation is d-pad only; removed left-stick menu navigation
+- Add some more gamepad keys usable to skip the splash screen
+- Add a button to swap selection between the inventory and stockpile, and automatically do so when picking up an item
+- Make the stockpile properly remember where the selection was before it closed, and re-use that
+- Disabled stockpile scrollbars for gamepad navigation use
+- Fix an issue where moving selection left/right in the hotbar with a gamepad could swap selection to the stockpile
+- Fix an issue where moving selection from the hotbar to the stockpile would start selecting/scrolling to halfvisible or unvisible stockpile entries
+- Made player crafting UI work with gamepad use
+- Add left/right shoulder actions to cycle between inventory tabs on gamepads - disable their buttons for gamepad navigation
+- Moved inventory trash icon to a more navigable location; added tooltip to explain what it is
+- Made science tab of inventory usable with the gamepad
+- Added secondary-action (take half stack, drop 1 item, etc) for gamepads in the stockpile UI
+- Keep selection focus where it is when using a button in the colony tab (this reloads the page)
+- Changed gamepad scrollview scrolling logic
+- Changed NPC crafting recipe limit / priority menu to be gamepad compatible
+- Improved gamepad handling of sliders
+- Made merchant UI work with gamepad
+
+General/misc:
+- Narrowed player crafting menu to 1 item wide instead of 3 (there's only 4 player craftable recipes in the base game); Use the space for the stockpile instead
+- Fix a potential crash-on-exit for the client due to a missing dependency in cleanup order calculations
+- Added automatic UI scaling with resolution on initial load (may also run when updating the game); so 4K doesn't load with an absolutely tiny UI
+- Fix a bug in UI Scale not being appropriately lowered when reducing resolution (resulting in higher scales than allowed for the resolution)
+- Increasing resolution now also increases UI scale (to also prevent really tiny UI when you go from 1080p to 4K & such)
+- Moved the UI Scale setting from gameplay settings to video setting
+- Reduced default torch quality from "Max" to "High"
+- Don't show 0 seconds recipe cooldowns in tooltips (merchant recipe tooltips in science unlocks)
+- Fix tooltips not respecting screen edges correctly when using UI scaling
+- Doors now also work outside of active colonies
+- Fishermen can now fish in water 1 or 2 blocks lower than them
+- Lengthened the fishing rod by a bit now that water is transparent (and they can fish from higher)
+- Allow use of the buy/sell 5/25 buttons in the merchant UI when conditions only allow less than 5/25; just buy/sell till 0 / point cap
+- Swapped unavailable & completed order in the science UI (navigating to/from completed when interacting with gamepads was annoying)
+
+0.10.3.1 (2024-03-18)
+
+- Change to priority options of crafting limits UI to make it more visible (regression fix)
+- Improved the .ply mesh importer to support alternative ordering of vertex color and UV data (so blender 4.x exports work out of the box)
+- Replaced night ambient audio loop
+- Fix science tab sliders being effectively invisible till selected
+- Stop showing tooltips when the application is not focused
+
+0.10.3.2 (2024-03-26)
+
+- Replaced day ambient audio loop (copyright related)
+- Replaced several mentions of clicking and key bindings etc in the text with the actual active key bindings (gamepad aware)
+- Improved gamepad selection navigation flow for the science tab - should be more intuitive to get to the "Complete" button
+- Improved logic for selecting the next navigable element when navigation the UI with a dpad
+- Swapped out the sprite set for keys
+- Fix a case where gamepad navigation would get stuck in the stockpile without an active selected entry
+
+0.10.3.3 (2024-03-27)
+
+- Hotfix a fresh bug from 0.10.3.2 where clouds were 100% covering the entire sky 24/7 due to a missing file
+
+0.10.3.4 (2024-04-04)
+
+- Updated the following menus to work with gamepad navigation;
+-- Main menu multiplayer / server browser
+-- Statistics menu
+-- Item type selection pop-up for builders / special diggers
+- Fix a navigation issue where going left of the "complete" button in the science tab wouldn't work
+- Disabled a few scrollbars in various places when using gamepad navigation

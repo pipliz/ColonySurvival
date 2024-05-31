@@ -1,11 +1,9 @@
 {
-	"coverage": 95.0,
+	"coverage": 92.0,
 	"hints": {
 		"0": "일반적으로 규모가 커질수록 더 많은 자원을 생산하지만 배리 농장에서는 그렇지 않습니다.",
 		"1": "거주민들을 더 많이 모집할수록 몬스터들의 스폰 수가 늘어나고 종류도 다양해집니다.",
 		"10": "임업지대는 3x33 크기로 조성하는 것이 가장 좋습니다.",
-		"11": "블록 가장자리에 서거나 이동하려 할 때 떨어지지 않으려면 'Ctrl'키를 눌러 앉으세요.",
-		"13": "건축 구역을 배치할 때 'Ctrl'키를 누르면 동일한 설정 값으로 두 번째 구역을 배치할 수 있습니다.",
 		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
 		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
 		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
 		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "횃불을 사용하려면 'G' 키를 누르세요.",
+		"29": "_MISSING_Crouching prevents falling off edges.",
+		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "작업대를 클릭하여 가이드를 참고하고 특정 제작법에 대한 우선순위를 지정할 수도 있습니다.",
-		"5": "매뉴얼을 열고 닫으려면 'F1' 키를 누르세요.",
 		"7": "경비병 유형에 따라 사거리, 재장전 속도, 데미지 등의 차이로 인해 고유한 장단점을 가지고 있습니다."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "난이도",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "난이도 고정",
 				"header": "식민지 설정"
 			},
@@ -345,6 +344,7 @@
 			"none": "없음",
 			"normal": "보통",
 			"previous": "이전",
+			"randomize": "_MISSING_Randomize",
 			"reset": "재설정",
 			"select": "선택",
 			"selected": "선택 됨",
@@ -442,6 +442,7 @@
 				"blastfurnace": "용광로 작업자",
 				"bloomeryjob": "철 제련사",
 				"builder": "건축가",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "양배추 농부",
 				"chestmaker": "상자 제작자",
 				"chickenfarmer": "닭 농부",
@@ -452,7 +453,7 @@
 				"cottonengine": "목화 기계 조작원",
 				"cottonfarmer": "목화 농부",
 				"digger": "채굴꾼",
-				"diggerspecial": "특수 채굴꾼",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "염색사",
 				"engineer": "기술자",
 				"firepit": "원시 요리사",
@@ -596,8 +597,8 @@
 				"name": "채굴꾼"
 			},
 			"constructiondiggerspecial": {
-				"description": "특수 채굴 기술을 잠금 해제합니다.",
-				"name": "특수 채굴꾼"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "더욱 질 좋은 식량 공급을 위해 요리사와 어부를 잠금 해제합니다.",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "닫기",
-				"description": "여기에서 해당 지역을 제거할지 여부를 선택하십시오.",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "구역 메뉴",
-				"remove": "구역 제거"
+				"remove": "구역 제거",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "당신은 죽었습니다.",
@@ -968,6 +971,7 @@
 					"needs": "필요한 재료: ",
 					"nothing": "아무것도 없음"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "포인트",
 					"preamble2": "<i>현재 포인트 / 수용량</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "{1} 포인트에 {0}개 판매",
 				"selltext2": "현재 자원을 기준으로 {0}개 판매할 수 있습니다"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "다시 표시하지 않기",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "다음",
 				"previous": "이전"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "특수 블록 제거"
 			},
 			"toolconstruction": {
-				"builder": "건축가",
-				"buildera": "",
-				"builderb": "건축 구역이 필요합니다.",
-				"builderc": "건물을 짓습니다.",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "구역의 유형을 선택하세요.",
-				"destroyer": "디스트로이어",
-				"destroyera": "",
-				"destroyerb": "디스트로이어 구역이 필요합니다.",
-				"destroyerc": "파괴하기",
-				"header": "건축 도구"
+				"header": "건축 도구",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "닭의 사료가 됩니다.",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "베리 농부",
 				"berryfarmertool": "베리 농사 도구",
 				"buildera": "Fill an area of the world",
-				"builderarea": "건축 구역",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "메뉴를 열어 유형을 선택한 다음 채울 구역을 선택합니다.",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "양배추",
 				"cabbagefarmer": "양배추 농부",
 				"chickenfarmer": "닭 사육자",
@@ -1061,17 +1076,16 @@
 				"construction": "건축가",
 				"construction1": "철저한 설계를 기반으로 건축물을 건설합니다.",
 				"construction2": "이 유형을 선택한다면 건축물의 유형을 선택할 수 있는 또 다른 메뉴가 열리게 됩니다.",
-				"constructionjob": "고용",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "건축가 고용",
 				"constructionjobb": "건축 구역 옆에 배치하세요.",
 				"coversarea": "기존의 구역까지 덮습니다.",
 				"description": "만들려는 구역 유형을 선택합니다.",
 				"diggera": "지정된 구역 안에 있는 블록들을 채굴하기",
-				"diggerarea": "채굴 구역",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "채굴할 구역을 선택하세요.",
-				"diggerspecial": "특정 블록만 채굴하기",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "지정된 구역 안에 있는 특정 블록만을 채굴합니다.",
-				"diggerspecialarea": "특수 채굴 구역",
 				"diggerspecialb": "채굴할 구역을 선택하세요.",
 				"dyer1": "색상을 추가하여 자신의 세계를 조금 덜 칙칙하게 만들어 보세요.",
 				"dyer2": "이 유형을 선택한다면 농장과 관련된 여러 일자리들을 선택할 수 있는 다른 메뉴가 열립니다.",
@@ -1084,10 +1098,11 @@
 				"forestertool": "나무꾼 도구",
 				"header": "명령 도구",
 				"hempfarmer": "대마 농부",
-				"insidearea": "해당 구역 안에 배치할 수 없습니다.",
 				"missingscience": "<color=#ff2323>먼저 '{0}'을(를) 잠금 해제해야 합니다.</color>",
 				"noconstructionareanearby": "근처에 건설 구역이 없습니다.",
-				"notarable": "경작할 수 없습니다.",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "땅이 평평하지 않습니다.",
 				"nowaternearby": "근처에 물이 없습니다.",
 				"occupiedblocks": "Occupied by blocks",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "콜로니 서바이벌에 오신 것을 환영합니다!",
 				"header": "기본 사항",
-				"text1": "첫 번째 식민지를 건설하기 위한 적합한 장소를 찾는 것부터 시작하세요. 근처에 농사를 지을 수 있는 물과 평평한 밭이 있는 것이 좋습니다.",
-				"text2": "깃발은 식민지의 중심입니다. '2'를 눌러 깃발 도구를 선택한 상태에서 땅을 클릭하여 깃발을 배치할 수 있습니다. 깃발 도구가 선택된 상태에서는 몬스터가 출몰한 위치에 어두운 그림자로 표시됩니다.",
-				"text3": "거주민들을 모집하려면 우선 휴식처인 침대를 배치해야 합니다. 'i'를 눌러 인벤토리를 열고 창고에서 침대를 선택하여 아래 인벤토리 바에 드래그하세요 그리고 아이템을 들고 바닥에 우클릭하여 침대를 배치할 수 있습니다.",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "인벤토리를 열고 식민지 페이지로 이 동합니다 그런 다음 모집 버튼을 눌러 거주민들을 모집하세요."
 			},
 			"page2_2": {
 				"description": "성장과 생존에 필수적인 요소입니다",
 				"header": "음식 및 침대",
 				"text1": "거주민들은 하루에 한 끼를 먹어야 합니다. 거주민들은 깃발이나 근처 식료품 상점에서 식량을 가져갑니다 또한 식량이 없다면 거주민들이 굶주리게 됩니다. 따라서 새로운 거주민들을 모집하려면 이를 고려하여 전체 식민지의 식량의 생산량을 조정해야합니다.",
-				"text2": "베리 농사가 우리의 첫 번째 식량 공급원입니다. '1'을 눌러 명령 도구를 선택합니다. 명령 도구를 사용하여 베리 농사를 선택합니다. 원하는 땅을 마우스 오른쪽 버튼으로 클릭하여 베리 농장의 시작 구역을 정의하고 그 다음 마지막 구역을 아까와 같은 방식으로 정의하여 농장 구역을 설정합니다.",
-				"text3": "침대를 제작하려면 물품 제작대를 만들어야 합니다. 마우스 왼쪽 버튼으로 클릭하여 나무를 캐고 땅을 파서 돌을 모으면 됩니다.",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "보관함을 열고 왼쪽에 있는 물품 제작대 아이콘을 클릭해 제작하세요. 침대를 놓을 때와 같이 배치할 수 있습니다. 실직자인 거주민은 자동으로 이 일자리에서 일합니다."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "거래 및 영토 확장을 통해 다양한 자원들을 만나보세요!",
 				"header": "거래 포인트 및 개척",
-				"text1": "상인들의 중심지를 잠금 해제하고 배치하세요. 마우스 오른쪽 버튼으로 클릭하여 인터페이스를 엽니다. 아이템을 판매해 거래 포인트를 획득하세요. 포인트는 인벤토리에 있는 거래 포인트 페이지에서 업그레이드할 수 있습니다.",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "이 세계에는 독특한 자원을 가진 여러 지역들이 있습니다. 눈 덮인 산, 보라색깔로 뒤덮인 황무지, 늪지, 거대한 나무 등이 있습니다. 성반을 잠금 해제하고 핫바에 장착한다면 이러한 지역들을 더욱 쉽게 찾을 수 있습니다.",
 				"text3": "전초기지를 잠금 해제하고 전초기지 깃발을 구입해 여러분들이 탐험하는 동안 가지고 다니세요. 전초기지를 건설하려면 전초기지 깃발을 배치하세요. 전초기지의 자원량과 연구 진행 상황 등은 식민지 및 다른 전초기지들과 공유됩니다. 위에 언급된 지역에 전초기지를 건설해 자원을 활용할 수 있습니다."
 			},
@@ -1224,7 +1241,7 @@
 				"antialiasing": "안티 앨리어싱",
 				"bloom": "반짝임",
 				"depthoffield": "피사계 심도",
-				"drawdistance": "거리 보기",
+				"drawdistance": "거리 보기 (*)",
 				"fieldofview": "시야각",
 				"fog": "_MISSING_Fog",
 				"full": "비디오 설정",
@@ -1233,12 +1250,12 @@
 				"preset": "프리셋",
 				"ragdoll": "레그돌 품질",
 				"resolution": "해상도",
-				"restarttoapply": "설정을 완전히 적용하려면 게임을 재시작해야 합니다.",
+				"restarttoapply": "(*): 설정을 완전히 적용하려면 게임을 재시작해야 합니다.",
 				"shaderquality": "쉐이더 품질",
 				"sunshadowcascades": "태양 그림자 계단현상 처리",
 				"sunshadowdistance": "그림자 거리",
 				"sunshadowquality": "태양 그림자 품질",
-				"texturequality": "텍스처 품질",
+				"texturequality": "텍스처 품질 (*)",
 				"torchquality": "횃불 품질",
 				"vsync": "수직 동기화",
 				"vsyncdouble": "이중 버퍼링"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "이미 세계가 존재합니다",
 			"cancel": "취소",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "삭제 확인",
 			"confirmdeletedescription": "선택한 세계를 삭제하려고 합니다.\n정말로 삭제 하시겠습니까?",
 			"confirmload": "불러오기 확인",
@@ -1715,7 +1733,7 @@
 		"flax": "황실 색상",
 		"flaxstage1": "땅속에 묻으세요!",
 		"furnace": "장작을 연료로 사용하여 청동 주괴와 벽돌을 제작합니다.",
-		"glider": "글라이더를 배치하고 전진키를 누른 채로 조종하며 비행하세요.",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "일반적인 글라이더와 비슷하지만, 이 글라이더는 훨씬 더 높이 날아갈 수 있습니다.",
 		"goldingot": "예전에는 종이 화폐의 가치를 보장하기 위해 사용되곤 했었습니다.",
 		"goldore": "눈 덮인 산 아래의 광석에서도 발견됩니다.",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "현실에서는 변비약, 게임에서는 아닙니다. 아직은요.",
 		"ironore": "철 곡괭이로 채굴한 철광석",
 		"ironwrought": "연철은 사람 이름이 아닙니다.",
-		"kiln": "나무 판자를 숯으로 바꿔버립니다.",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "지금이 바로 미래다.",
 		"lanterngreen": "식민지의 분위기를 친환경적으로 만들 수 있습니다.",
 		"lanternorange": "온화하고 아늑한 공간을 만들 수 있습니다.",

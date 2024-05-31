@@ -1,11 +1,9 @@
 {
-	"coverage": 90.0,
+	"coverage": 87.0,
 	"hints": {
 		"0": "ほとんどの農場において、生産量は畑の大きさに比例する。 だが、ベリー採集はこの法則の例外だ。",
 		"1": "入植者の数が増えると、より多くのモンスターや別種のモンスターが出現するぞ。",
 		"10": "林業者にとって最も効率的なサイズは3x33だ。",
-		"11": "“CTRL”キーを押してかがむと、ブロックの縁からの落下を防げるぞ。",
-		"13": "土木建築エリアを設置する際に“CTRL”を押すと、直前のエリアと同じ設定で新たなエリアを設置できる。",
 		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
 		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
 		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
 		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "“G”キーを押すと自分の周りを明るくします。",
+		"29": "_MISSING_Crouching prevents falling off edges.",
+		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "職業ブロックをクリックすると、どのように使われているか確認したり、各レシピの優先順位を決めたりできる。",
-		"5": "“F1キー”を押すと、マニュアルを開いたり閉じたりできる。",
 		"7": "射程とリロード速度、ダメージの違いによって、衛兵はタイプ毎に固有の長所と短所を持っている。"
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "難易度",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "難易度ロック",
 				"header": "コロニーの設定"
 			},
@@ -345,6 +344,7 @@
 			"none": "なし",
 			"normal": "標準",
 			"previous": "前へ",
+			"randomize": "_MISSING_Randomize",
 			"reset": "リセット",
 			"select": "選択",
 			"selected": "選択",
@@ -442,6 +442,7 @@
 				"blastfurnace": "溶鉱炉",
 				"bloomeryjob": "鍛冶屋",
 				"builder": "ビルダー",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "キャベツ農家",
 				"chestmaker": "チェストメーカー",
 				"chickenfarmer": "養鶏業者",
@@ -452,7 +453,7 @@
 				"cottonengine": "綿繰り機",
 				"cottonfarmer": "綿の農家",
 				"digger": "掘削業者",
-				"diggerspecial": "特殊掘削",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "染色職人",
 				"engineer": "エンジニア",
 				"firepit": "原始時代の料理人",
@@ -596,8 +597,8 @@
 				"name": "採掘"
 			},
 			"constructiondiggerspecial": {
-				"description": "建設労働者のための特殊な掘削エリアをアンロックします。",
-				"name": "特殊建設"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "料理人と漁師をアンロックします。入植者のための新しい食料源です。",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "閉じる",
-				"description": "このエリアを削除するか選択してください。",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "エリアメニュー",
-				"remove": "エリアを削除"
+				"remove": "エリアを削除",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "あなたは死にました",
@@ -968,6 +971,7 @@
 					"needs": "必要: ",
 					"nothing": "なし"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "コロニーポイント",
 					"preamble2": "<i>所持ポイント/最大ポイント</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "{0}を{1}ポイントで売る",
 				"selltext2": "現在の容量では{0}個の販売が可能"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "次回から表示しない",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "次へ",
 				"previous": "前へ"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "特殊ブロックの撤去"
 			},
 			"toolconstruction": {
-				"builder": "ビルダー",
-				"buildera": "",
-				"builderb": "建築エリアが必要",
-				"builderc": "何かを建築する",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "作成したいエリアの種類を選んでください。",
-				"destroyer": "デストロイヤー",
-				"destroyera": "",
-				"destroyerb": "撤去エリアが必要",
-				"destroyerc": "何かを撤去する",
-				"header": "建設ツール"
+				"header": "建設ツール",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "鶏用の餌",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "ベリー農家",
 				"berryfarmertool": "ベリー農家ツール",
 				"buildera": "指定したエリアをブロックで埋める",
-				"builderarea": "建設人足作業エリア",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "ブロックの種類を選択するメニューが開いた後、そのブロックで埋めるエリアを指定します",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "キャベツ",
 				"cabbagefarmer": "キャベツ農家",
 				"chickenfarmer": "養鶏",
@@ -1061,17 +1076,16 @@
 				"construction": "土木建築",
 				"construction1": "人足たちを作業に従事させよう",
 				"construction2": "作業の種類を選択するための別メニューが開きます",
-				"constructionjob": "人足",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "人足を雇う",
 				"constructionjobb": "土木建築エリアに隣接して設置してください",
 				"coversarea": "既にあるエリアと重なる",
 				"description": "作成したいエリアの種類を選んでください。",
 				"diggera": "指定したエリアを掘削する",
-				"diggerarea": "掘削人足作業エリア",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "掘削するエリアを指定してください",
-				"diggerspecial": "特殊掘削人足作業エリア",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "エリア内の特定のブロックのみを撤去する",
-				"diggerspecialarea": "特殊掘削人足作業エリア",
 				"diggerspecialb": "選択したブロックを撤去するエリアを指定してください",
 				"dyer1": "色を追加して、人生を少しずつ単調にします",
 				"dyer2": "複数の農場の仕事がある別のメニューが開きます",
@@ -1084,10 +1098,11 @@
 				"forestertool": "林業者ツール",
 				"header": "コマンドツール",
 				"hempfarmer": "麻の農家",
-				"insidearea": "エリア内には設置不可能",
 				"missingscience": "<color=#ff2323>先に「{0}」をアンロックする必要があります。</color>",
 				"noconstructionareanearby": "付近に土木建築エリアがない",
-				"notarable": "耕作に適していない",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "平らではない",
 				"nowaternearby": "付近に水場がない",
 				"occupiedblocks": "ブロックが既に存在している",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "コロニーサバイバルへようこそ！",
 				"header": "基本",
-				"text1": "最初のコロニーに適した場所を見つけることから始めます。\n近くに農業のための水と平らな畑があることをお勧めします。",
-				"text2": "バナーはあなたのコロニーの中心です。選択したバナーツールで地面をクリックして配置します。\n2キー押して選択します。バナーツールは、入植者が募集されるとモンスターが出現する場所に深い影を表示します。",
-				"text3": "入植者を雇用できるようにベッドを置きます。「I」を押してインターフェイスを開きます。\n備蓄から下のホットバーにベッドをドラッグします。ベッドを選択した状態で、地面を右クリックしてベッドを置きます。",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "インターフェイスを開き、「コロニー」ページに移動します。\n「雇用」を押して、入植者を募集します。"
 			},
 			"page2_2": {
 				"description": "これらは成長と生存に不可欠です",
 				"header": "食料とベッド",
 				"text1": "入植者は1日に1食を必要とします。彼らはバナーや近くの食料品店で食事をとります。\n食べ物がなければ、入植者は飢えています。新しい入植者を募集するには、食料がかかります。",
-				"text2": "ベリー農家は最初の食料源です。「1」を押してコマンドツールを選択します。\nクリックして開き、ベリー農家を選択します。地面を右クリックしてベリー農家を開始し、他の場所でもう一度右クリックして終了します。これらはかなり必要です！",
-				"text3": "ベッドの生産を開始するには、ティンカーのテーブルを作成する必要があります。\n左クリックして木を切り倒し、地面を掘り下げて石の瓦礫を集めます。",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "備蓄の左側にあるティンカーのテーブルアイコンをクリックして、作成します。\nあなたがベッドを置いたようにそれを置きます。ベリー農場と同様に、失業者の入植者は自動的にこの仕事を引き受けます。"
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "貿易と拡張で、ユニークな資源を手に入れる",
 				"header": "コロニーポイントとコロニー",
-				"text1": "ロックを解除して、商人のハブを配置します。右クリックしてインターフェイスを開きます。\nコロニーポイントを獲得するためにアイテムを販売します。コロニーポイントページの入植者の制限などのアップグレードにポイントを費やすことができます。",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "この世界には、ユニークな資源を持つ地域が複数存在します。雪に覆われた山頂、紫に覆われたヒース、湿地帯、巨大な木などがあります。\nアストロラーベをアンロックして装備すれば、簡単に見つけることができます。",
 				"text3": "前哨基地のロックを解除し、前哨基地基本バナーを購入し、探索している間に持ち運びます。前哨基地を開始するために配置します。\nその備蓄と科学的進歩は、メインコロニーやその他の前哨基地と共有されています。上記の地域に前哨基地を構築して、リソースにアクセスします。"
 			},
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "シャドウカスケード",
 				"sunshadowdistance": "影の距離",
 				"sunshadowquality": "影の品質",
-				"texturequality": "テクスチャの品質",
+				"texturequality": "テクスチャの品質 (*)",
 				"torchquality": "松明の品質",
 				"vsync": "VSync",
 				"vsyncdouble": "2倍"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "ワールドは既に存在します！",
 			"cancel": "キャンセル",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "削除の確認",
 			"confirmdeletedescription": "ワールドを削除しますか？ \nこの操作は一度実行すると戻すことはできません。",
 			"confirmload": "ロードの確認",
@@ -1715,7 +1733,7 @@
 		"flax": "【あま】\n《Flax》\n帝国の色",
 		"flaxstage1": "【あまに】\n《Flax seeds》\n地面に植えてみよう",
 		"furnace": "【ろ】\n《Furnace》\n青銅インゴットとレンガを作るには、薪を燃料として使う",
-		"glider": "【ぐらいだー】\n《Glider》\nグライダーランチャーを配置します。右クリックで乗車し、前進しながら照準を合わせてナビゲートします",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "【すちーるぐらいだー】\n《Glider Steel》\n通常のグライダーランチャーと見た目は同じですが、空高く打ち上げてくれます。",
 		"goldingot": "【きんいんごっと】\n《Gold Ingot》\nかつては紙幣の価値を担保するのに使われた",
 		"goldore": "【きんこうせき】\n《Gold Ore》\n雪の山の下の鉱石にもあります",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "【たちあおい】\n《Hollyhock》\nリアルでは便秘薬になる。 ",
 		"ironore": "【てっこうせき】\n《Iron Ore》\n鉄鉱石でできた鉄のつるはしで掘り出される",
 		"ironwrought": "【たんてつ】\n《Wrought Iron》\n「鍛えられた」ってのは「加工された」ってことさ",
-		"kiln": "【しょうせいがま】\n《Kiln》\n木の板を木炭に変える",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "【らんたん（しあん）】\n《Cyan Lantern》\n未来は今ここに",
 		"lanterngreen": "【らんたん（みどり）】\n《Green Lantern》\nコロニーをエコフレンドリーにする",
 		"lanternorange": "【らんたん（だいだい）】\n《Orange Lantern》\nとっても暖かみがある",

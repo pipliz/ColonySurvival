@@ -1,11 +1,9 @@
 {
-	"coverage": 90.0,
+	"coverage": 87.0,
 	"hints": {
 		"0": "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1": "Зі збільшенням кількості колоністів - збільшується кількість монстрів.",
 		"10": "3x33 - оптимальний розмір для лісника",
-		"11": "Натисніть 'CTRL' щоб крастися і не падати з країв.",
-		"13": "Натисніть 'CTRL' під час розміщення області побудови, щоб розмістити другу область з тими самими налаштуваннями",
 		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
 		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
 		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
 		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "Натисніть 'G', щоб активувати ваш факел.",
+		"29": "_MISSING_Crouching prevents falling off edges.",
+		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "Натисніть на 'робочі' блоки, щоб подивитися, як вони використовуються, і визначити пріоритети різних рецептів.",
-		"5": "Натисніть 'F1', щоб відкрити керівництво (англ.).",
 		"7": "Відмінності в діапазоні, швидкості перезарядки і пошкодження дають кожному типу зброї унікальні переваги і недоліки."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Складність",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "Заблокувати складність",
 				"header": "Налаштування колонії"
 			},
@@ -345,6 +344,7 @@
 			"none": "Відкл.",
 			"normal": "Нормально",
 			"previous": "Поп. стр.",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Скинути",
 			"select": "Вибрати",
 			"selected": "Обрано",
@@ -442,6 +442,7 @@
 				"blastfurnace": "Оператор доменної печі",
 				"bloomeryjob": "Оператор сиродутного горна",
 				"builder": "Будівельник",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "Капустяний фермер",
 				"chestmaker": "Скриняр",
 				"chickenfarmer": "Курячий фермер",
@@ -452,7 +453,7 @@
 				"cottonengine": "Оператор бавовняної машини",
 				"cottonfarmer": "Бавовняник",
 				"digger": "Копач",
-				"diggerspecial": "Спеціальний копач",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "Фарбувальник",
 				"engineer": "Інженер",
 				"firepit": "Примітивний кухар",
@@ -596,8 +597,8 @@
 				"name": "Розкопки"
 			},
 			"constructiondiggerspecial": {
-				"description": "Розблокує спеціальну область розкопок",
-				"name": "Спеціальні розкопки"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "Відкриває кухаря та рибалку, нові джерела їжі для ваших колоністів",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Закрити",
-				"description": "Ви хочете видалити цю область?",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Меню області",
-				"remove": "Видалити область"
+				"remove": "Видалити область",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Ви померли.",
@@ -968,6 +971,7 @@
 					"needs": "Необхідно: ",
 					"nothing": "Нічого"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "Бали колонії",
 					"preamble2": "_MISSING_<i>Current Points / Capacity</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "Продати {0} за {1} балів",
 				"selltext2": "Поточне сховище дає змогу здійснити {0} Продаж(у)"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Не показувати знову",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Наст. стр.",
 				"previous": "Попр. стр."
 			},
@@ -1032,16 +1043,17 @@
 				"header": "Видалення спец. блоку"
 			},
 			"toolconstruction": {
-				"builder": "Будівництво",
-				"buildera": "Будівельник",
-				"builderb": "Необхідно створити область",
-				"builderc": "Будує речі",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Виберіть тип області, яку ви хочете створити.",
-				"destroyer": "Руйнування",
-				"destroyera": "",
-				"destroyerb": "Потрібна область руйнування",
-				"destroyerc": "Руйнує речі",
-				"header": "Інструмент будівельника"
+				"header": "Інструмент будівельника",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Ячмінь для курчат",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Ягідне поле",
 				"berryfarmertool": "Інструмент Ягідного Фермера",
 				"buildera": "Виділіть область світу",
-				"builderarea": "Будівельна зона",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "Відкрийте меню для вибору типу області, а потім виберіть область світу для заповнення",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "Капуста",
 				"cabbagefarmer": "Капустяний фермер",
 				"chickenfarmer": "Куряча ферма",
@@ -1061,17 +1076,16 @@
 				"construction": "Конструкція",
 				"construction1": "Дозвольте їм виконувати роботу",
 				"construction2": "Це відкриє інше меню, в якому ви можете вибрати тип конструкції",
-				"constructionjob": "Будівельна робота",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "Наймає будівельника",
 				"constructionjobb": "Розміщення поруч із зоною будівництва",
 				"coversarea": "Чіпляє існуючу область",
 				"description": "Виберіть тип області, яку ви хочете створити.",
 				"diggera": "Викопайте область світу",
-				"diggerarea": "Зона копання",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "Виберіть ділянку для викопування",
-				"diggerspecial": "Спеціальна зона для викопування",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "Виділіть область",
-				"diggerspecialarea": "Спеціальна зона копання",
 				"diggerspecialb": "Виділіть зону для видалення",
 				"dyer1": "Додайте фарб, щоб зробити життя трохи менш сірим",
 				"dyer2": "Відкриється ще одне меню з кількома завданнями на фермі",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Інструмент Лісника",
 				"header": "Інструмент командування",
 				"hempfarmer": "Конопляний фермер",
-				"insidearea": "Не можна розміщувати всередині області",
 				"missingscience": "<color=#ff2323>Потрібно '{0}' для розблокування.</color>",
 				"noconstructionareanearby": "Поруч немає зони будівництва",
-				"notarable": "Не проорюється",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Не плоска область",
 				"nowaternearby": "Поблизу немає води",
 				"occupiedblocks": "Зайнято блоками",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "Ласкаво просимо до Colony Survival!",
 				"header": "Основи",
-				"text1": "Почніть з пошуку гарного місця для першої колонії. Бажано, щоб поблизу була вода та плоска земля для землеробства.",
-				"text2": "Банер - це центр вашої колонії. Розмістіть його, натиснувши на землю, вибравши інструмент 'Банер'. Натисніть '2', щоб вибрати його. Інструмент 'Банер' відображає глибоку тінь там, де з'являтимуться монстри після набору колоністів.",
-				"text3": "Розміщуйте ліжка, щоб мати можливість наймати колоністів. Натисніть 'i', щоб відкрити інтерфейс. Перетягніть ліжка зі сховища на панель швидкого доступу нижче. Вибравши ліжко, натисніть ПКМ по землі, щоб розмістити ліжко.",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "Відкрийте інтерфейс і перейдіть на сторінку 'Колонія'. Натисніть 'найняти', щоб найняти колоніста. Колоністи автоматично наймаються на вільну роботу якщо така є."
 			},
 			"page2_2": {
 				"description": "Вони необхідні для росту та виживання",
 				"header": "Їжа та ліжка",
 				"text1": "Колоністам потрібен 1 прийом їжі на день. Вони беруть їжу біля банера або в найближчому продуктовому магазині. Без їжі колоністи голодують. Вербування нових колоністів коштує кілька разів поїсти.",
-				"text2": "Ягідний фермер - це перше джерело їжі. Викличте Командну панель, натиснувши '1'. Клацніть, щоб відкрити його, і виберіть ягідного фермера. Клацніть правою кнопкою миші на землі, щоб почати визначення ягідної ферми, а потім клацніть правою кнопкою миші в іншому місці, щоб завершити. Вам знадобиться досить багато!",
-				"text3": "Щоб почати виробництво ліжок вам потрібно буде виготовити стіл ремісника. Зрубайте дерево, затиснувши по ньому ЛКМ, і копайте вниз, щоб зібрати кам'яний щебінь.",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "Клацніть на іконку столу ремісника зліва від складу, щоб створити його. Розмістіть його так само, як ви розмістили ліжко. Як і у випадку з ягідною фермою, безробітні колоністи автоматично візьмуться за цю роботу."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "Торгуйте та розширюйтеся, щоб отримати доступ до унікальних ресурсів",
 				"header": "Бали колонії та колонізація",
-				"text1": "Розблокуйте та розмістіть Торговельний стіл. Клацніть ПКМ, щоб відкрити його інтерфейс. Продавайте товари, щоб заробити бали колонії. Серед іншого, бали можна витратити на поліпшення, наприклад, на ліміт колоністів на сторінці «Бали колонії».",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "Цей світ містить безліч регіонів з унікальними ресурсами. Тут є засніжені вершини гір, пурпурові пустки, болота і мамонтові дерева. Розблокуйте та обладнайте астролябію, щоб легко їх знаходити.",
 				"text3": "Розблокуйте аванпости, придбайте банер аванпосту і носіть його з собою під час дослідження. Встановіть його, щоб заснувати аванпост. Його запаси та науковий прогрес поділяються з головною колонією та іншими аванпостами. Побудуйте аванпости у вищезгаданих регіонах, щоб отримати доступ до їхніх ресурсів."
 			},
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Каскади сонячних тіней",
 				"sunshadowdistance": "Дистанція тіней",
 				"sunshadowquality": "Якість тіней",
-				"texturequality": "Якість текстур",
+				"texturequality": "Якість текстур (*)",
 				"torchquality": "Якість факела",
 				"vsync": "(VSync)Верт. синх.",
 				"vsyncdouble": "Подвійна"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "Світ вже існує!",
 			"cancel": "Скасувати",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "Підтвердити видалення",
 			"confirmdeletedescription": "Ви збираєтеся видалити теку з цим світом.\nЩо ви хочете зробити?",
 			"confirmload": "Підтвердити завантаження",
@@ -1715,7 +1733,7 @@
 		"flax": "Колір імперії",
 		"flaxstage1": "Помістіть це в землю",
 		"furnace": "Використовує дрова в якості палива, для створення бронзових злитків і цегли",
-		"glider": "Розміщує пускову установку для планера; введіть її, клацнувши правою кнопкою миші, і переміщайтеся, цілячись, тримаючи курсор уперед",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "Як і звичайна пускова установка для планерів, але ця запускає вас набагато вище в повітря",
 		"goldingot": "Колись використовувався для гарантування вартості паперових грошей.",
 		"goldore": "Також можна знайти в горах під снігом",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "Проносне в реальному житті, а не в грі. Поки що...",
 		"ironore": "Видобувається залізним кайлом, виготовленим із залізної руди",
 		"ironwrought": "Дуже коване",
-		"kiln": "Перетворює дошки на деревне вугілля",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "Майбутнє сьогодні",
 		"lanterngreen": "Робить вашу колонію більш екологічної",
 		"lanternorange": "Надзвичайно затишно",
