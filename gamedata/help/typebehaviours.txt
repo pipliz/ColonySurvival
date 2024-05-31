@@ -1,0 +1,60 @@
+possible entries for attachBehaviour on types
+search them in files for example uses, this is just a reference thing to know what to search for
+the client_ ones mostly dont have a server-side effect, but indicate something to the client that it doesn't know about
+
+alarmbell
+astrolabe
+autosapling // forester type trees
+banner
+bookcase // usable by bookcase job
+builder_usable
+client_arealimitspopup // needs to be checked for block-areas like berry farms to popup crafting limits
+client_fieldofview_selected // adjust FoV when holding this
+client_requiremineable
+client_requirenearwater
+client_requirenearwater
+client_reserveprimaryclickwith
+client_reservesecondaryhiton
+client_weapon
+craftingblock
+craftingblockresearcher // bookcase style job
+crate
+dirtconversion // use to change to dirt on area placement
+door // the actual door item
+door_smart // the door inventory item with placement logic
+elevator
+failsafe
+gliderlauncher
+grassspread // grass spread logic (types configurable)
+guard
+hint_paintable // tooltip says it's paintable
+leaves // leaves-removal related
+log // leaves-removal related
+minerjob
+npcshop
+paintitem // applies painting logic when used
+playersapling // spawns terraingen type trees
+pointstorage
+pointtrader
+rail
+roof_smart // roof placement logic
+sanctifiedpointstorage
+showNPCNames // show names when holding this
+sign
+smart_flowerbox // flowerbox placement logic
+smart_lantern // latnern placement logic
+smart_moulding // moulding placement logic
+smart_placement
+smart_placement // generic placement logic, used for pillars, fences?
+smart_rail_placement // rail placement logic
+smart_sign // sign placement logic
+statisticsboard
+threatstatue
+tool
+toolshop
+trap
+trapfixer
+watersponge
+window_smart // window placement logic
+wisteriafarmer
+wisteriatree // blocks usable by wisteriafarmer
