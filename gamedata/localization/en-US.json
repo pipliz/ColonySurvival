@@ -4,8 +4,6 @@
 		"0": "For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1": "More and different monsters will spawn as you recruit more colonists.",
 		"10": "3x33 is the optimal size for a forester.",
-		"11": "Press 'CTRL' to crouch and not fall off edges.",
-		"13": "Press 'CTRL' while placing a construction area to place a second area with the same settings.",
 		"16": "Use the compass to find your way towards different colonies and outposts.",
 		"17": "Use the astrolabe to find the different regions with unique resources.",
 		"18": "Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "Place the Archimedean Screw to remove all nearby water.",
 		"27": "We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "Press 'G' to activate your torch.",
+		"29": "Crouching prevents falling off edges.",
+		"30": "Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "Click on 'job blocks' to see how they're used and to prioritize certain recipes.",
-		"5": "Press 'F1' to open and close the manual.",
 		"7": "Differences in range, reloading speed and damage give every type of guard unique benefits and drawbacks."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Difficulty",
+				"difficulty_peaceful": "Peaceful",
 				"difficultylocked": "Locked Difficulty",
 				"header": "Colony Settings"
 			},
@@ -345,6 +344,7 @@
 			"none": "None",
 			"normal": "Normal",
 			"previous": "Previous",
+			"randomize": "Randomize",
 			"reset": "Reset",
 			"select": "Select",
 			"selected": "Selected",
@@ -442,6 +442,7 @@
 				"blastfurnace": "Blast Furnace Operator",
 				"bloomeryjob": "Forger",
 				"builder": "Builder",
+				"builderreplacer": "Replace Builder",
 				"cabbagefarmer": "Cabbage Farmer",
 				"chestmaker": "Chestmaker",
 				"chickenfarmer": "Chicken Farmer",
@@ -452,7 +453,7 @@
 				"cottonengine": "Cotton Engine Operator",
 				"cottonfarmer": "Cotton Farmer",
 				"digger": "Digger",
-				"diggerspecial": "Special Digger",
+				"diggerspecial": "Specific Digger",
 				"dyer": "Dyer",
 				"engineer": "Engineer",
 				"firepit": "Primitive Cook",
@@ -596,8 +597,8 @@
 				"name": "Digger"
 			},
 			"constructiondiggerspecial": {
-				"description": "Unlock special digger areas for the construction worker",
-				"name": "Special Digger"
+				"description": "Unlock advanced construction areas",
+				"name": "Advanced Construction"
 			},
 			"cook": {
 				"description": "Unlocks the cook and the fisherman, new sources of meals for your colonists",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Close",
-				"description": "Choose whether or not you want to remove the area here.",
+				"descriptionshort": "Remove this area?",
 				"header": "Area menu",
-				"remove": "Remove area"
+				"remove": "Remove area",
+				"size": "Area size: <b>{0}</b>",
+				"workertype": "Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "You died.",
@@ -968,6 +971,7 @@
 					"needs": "Needs: ",
 					"nothing": "Nothing"
 				},
+				"trashicon": "Drop items here to trash them",
 				"upgrades": {
 					"header": "Colony Points",
 					"preamble2": "<i>Current Points / Capacity</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "Sell {0} for {1} points",
 				"selltext2": "Current storage allows for {0} sale(s)"
 			},
+			"npccontext": {
+				"colony": "Colony:",
+				"fire": "Expel",
+				"header": "Colonist Info",
+				"job": "Job:",
+				"name": "Name:",
+				"showgoal": "Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Do not show this again",
-				"f1_2": "Press 'F1' to re-open this menu",
 				"next": "Next",
 				"previous": "Previous"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "Special Block removal"
 			},
 			"toolconstruction": {
-				"builder": "Builder",
-				"buildera": "",
-				"builderb": "Needs a building area",
-				"builderc": "Builds things",
+				"currentshape": "<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Select the type of area you want to create.",
-				"destroyer": "Destroyer",
-				"destroyera": "",
-				"destroyerb": "Needs a destroyer area",
-				"destroyerc": "Destroys things",
-				"header": "Construction tool"
+				"header": "Construction tool",
+				"shapemenudescription": "Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "Solid Box",
+					"HollowBox": "Hollow Box",
+					"SolidCylinder": "Solid Cylinder",
+					"Walls": "Walls",
+					"WallsCylinder": "Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Feed for chickens",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Berry Farmer",
 				"berryfarmertool": "Berry Farmer Tool",
 				"buildera": "Fill an area of the world",
-				"builderarea": "Builder Area",
+				"builderarea": "Build All",
 				"builderb": "Opens a menu to select the type, then select the area to fill",
+				"builderreplacer": "Replace Specific",
+				"builderreplacera": "Replace one type with another",
+				"builderreplacerb": "Select an area in which to replace one type of block with another",
 				"cabbagea": "Cabbage",
 				"cabbagefarmer": "Cabbage Farmer",
 				"chickenfarmer": "Chicken Farmer",
@@ -1061,17 +1076,16 @@
 				"construction": "Construction",
 				"construction1": "Let them do the work",
 				"construction2": "This will open another menu where you can select the construction type",
-				"constructionjob": "Construction Job",
+				"constructionjob": "Job Spot",
 				"constructionjoba": "Hires a construction worker",
 				"constructionjobb": "Place next to a construction area",
 				"coversarea": "Covers existing area",
 				"description": "Select the type of area you want to create.",
 				"diggera": "Dig out an area of the world",
-				"diggerarea": "Digger Area",
+				"diggerarea": "Remove All",
 				"diggerb": "Select the area to dig out",
-				"diggerspecial": "Special Digger Area",
+				"diggerspecial": "Remove Specific",
 				"diggerspeciala": "Remove a specific type in an area",
-				"diggerspecialarea": "Special Digger Area",
 				"diggerspecialb": "Select the area to remove it from",
 				"dyer1": "Add colors to make life a little less drab",
 				"dyer2": "This will open another menu with multiple farm jobs",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Forester Tool",
 				"header": "Command tool",
 				"hempfarmer": "Hemp Farmer",
-				"insidearea": "Can't place inside an area",
 				"missingscience": "<color=#ff2323>Requires '{0}' to be unlocked first.</color>",
 				"noconstructionareanearby": "No construction area nearby",
-				"notarable": "Not arable",
+				"notarablefen": "Requires arable marshland below",
+				"notarableheath": "Requires arable heath below",
+				"notarablenormal": "Requires arable ground below",
 				"notflat": "Not flat",
 				"nowaternearby": "No water nearby",
 				"occupiedblocks": "Occupied by blocks",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "Welcome to Colony Survival!",
 				"header": "Basics",
-				"text1": "Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended.",
-				"text2": "The banner is the center of your colony. Place it by clicking on the ground with your Banner Tool selected. Press '2' to select it. The Banner Tool displays a deep shadow wherever monsters will spawn once colonists have been recruited.",
-				"text3": "Place beds to be able to recruit colonists. Press 'i' to open the interface. Drag beds from the stockpile to the hotbar below. With the bed selected, right-click the ground to place a bed.",
+				"text1_2": "Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "Open the interface and go to the 'Colony' page. Press 'recruit' to recruit a colonist."
 			},
 			"page2_2": {
 				"description": "These are essential for growth and survival",
 				"header": "Food & Beds",
 				"text1": "Colonists require 1 meal per day. They grab these at the banner or a nearby grocery store. Without food, colonists starve. Recruiting new colonists costs multiple meals.",
-				"text2": "The berry farmer is the first food source. Select the Command Tool by pressing '1'. Click to open it and select the berry farmer. Right-click the ground to start defining the berry farm, then right click again elsewhere to finish. You’ll need quite a lot of these!",
-				"text3": "To start producing beds, you’ll have to craft a tinkerer’s table. Cut down a tree by left-clicking on it, and dig down to gather stone rubble.",
+				"text2_2gamepad": "The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "Click on the tinkerer’s table icon on the left of the stockpile to craft it. Place it like you placed the bed. Like with the berry farm, unemployed colonists will automatically take this job."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "Trade and expand to get access to unique resources",
 				"header": "Colony Points & Colonization",
-				"text1": "Unlock and place the Merchant’s Hub. Right-click it to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
+				"text1_2": "Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "This world contains multiple regions with unique resources. There are mountaintops covered with snow, heaths covered in purple, marshes and mammoth trees. Unlock and equip the astrolabe to find them easily.",
 				"text3": "Unlock outposts, purchase an Outpost Banner and carry it with you while you explore. Place it to start an Outpost. Its stockpile and scientific progress are shared with the main colony and other outposts. Build outposts in the regions mentioned above to get access to their resources."
 			},
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Sun shadow cascades",
 				"sunshadowdistance": "Shadow distance",
 				"sunshadowquality": "Sun shadow quality",
-				"texturequality": "Texture quality",
+				"texturequality": "Texture quality (*)",
 				"torchquality": "Torch quality",
 				"vsync": "VSync",
 				"vsyncdouble": "Double"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "World already exists",
 			"cancel": "Cancel",
+			"cloudsync": "Use Steam Cloud Sync",
 			"confirmdelete": "Confirm deleting",
 			"confirmdeletedescription": "You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"confirmload": "Confirm loading",
@@ -1715,7 +1733,7 @@
 		"flax": "The imperial color",
 		"flaxstage1": "Put it in the ground",
 		"furnace": "Uses firewood as fuel to craft bronze ingots and bricks",
-		"glider": "Places a glider launcher; Enter one by right-clicking it and navigate by aiming while holding forward",
+		"glider": "Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "Like the regular glider launcher, but this one launches you much higher into the air",
 		"goldingot": "Was once used to guarantee the value of paper money",
 		"goldore": "Can also be found in ore beneath snowy mountains",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "A laxative in real life. Not in-game. Yet.",
 		"ironore": "Mined with an iron pickaxe that's made of iron ore",
 		"ironwrought": "Wrought just means 'worked'",
-		"kiln": "Turns wooden planks into charcoal",
+		"kiln": "Turns firewood into charcoal",
 		"lanterncyan": "The future is now",
 		"lanterngreen": "Makes your colony eco-friendly",
 		"lanternorange": "Extra cozy",

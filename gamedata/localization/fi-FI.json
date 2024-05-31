@@ -4,8 +4,6 @@
 		"0": "_MISSING_For most farms, larger size means more production. Berry gatherers are an exception to this rule.",
 		"1": "_MISSING_More and different monsters will spawn as you recruit more colonists.",
 		"10": "_MISSING_3x33 is the optimal size for a forester.",
-		"11": "_MISSING_Press 'CTRL' to crouch and not fall off edges.",
-		"13": "_MISSING_Press 'CTRL' while placing a construction area to place a second area with the same settings.",
 		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
 		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
 		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
@@ -20,9 +18,9 @@
 		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
 		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
 		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "_MISSING_Press 'G' to activate your torch.",
+		"29": "_MISSING_Crouching prevents falling off edges.",
+		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
 		"4": "_MISSING_Click on 'job blocks' to see how they're used and to prioritize certain recipes.",
-		"5": "_MISSING_Press 'F1' to open and close the manual.",
 		"7": "_MISSING_Differences in range, reloading speed and damage give every type of guard unique benefits and drawbacks."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "_MISSING_Difficulty",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "_MISSING_Locked Difficulty",
 				"header": "_MISSING_Colony Settings"
 			},
@@ -345,6 +344,7 @@
 			"none": "Tyhjä",
 			"normal": "_MISSING_Normal",
 			"previous": "Edellinen",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Palauta",
 			"select": "_MISSING_Select",
 			"selected": "_MISSING_Selected",
@@ -442,6 +442,7 @@
 				"blastfurnace": "_MISSING_Blast Furnace Operator",
 				"bloomeryjob": "_MISSING_Forger",
 				"builder": "_MISSING_Builder",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "_MISSING_Cabbage Farmer",
 				"chestmaker": "_MISSING_Chestmaker",
 				"chickenfarmer": "_MISSING_Chicken Farmer",
@@ -452,7 +453,7 @@
 				"cottonengine": "_MISSING_Cotton Engine Operator",
 				"cottonfarmer": "_MISSING_Cotton Farmer",
 				"digger": "_MISSING_Digger",
-				"diggerspecial": "_MISSING_Special Digger",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "_MISSING_Dyer",
 				"engineer": "_MISSING_Engineer",
 				"firepit": "_MISSING_Primitive Cook",
@@ -596,8 +597,8 @@
 				"name": "_MISSING_Digger"
 			},
 			"constructiondiggerspecial": {
-				"description": "_MISSING_Unlock special digger areas for the construction worker",
-				"name": "_MISSING_Special Digger"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "_MISSING_Unlocks the cook and the fisherman, new sources of meals for your colonists",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Sulje",
-				"description": "Valitse, haluatko poistaa tämän alueen.",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Aluevalikko",
-				"remove": "Poista alue"
+				"remove": "Poista alue",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Kuolit. Hyvää työtä.",
@@ -968,6 +971,7 @@
 					"needs": "Vaatii: ",
 					"nothing": "_MISSING_Nothing"
 				},
+				"trashicon": "_MISSING_Drop items here to trash them",
 				"upgrades": {
 					"header": "_MISSING_Colony Points",
 					"preamble2": "_MISSING_<i>Current Points / Capacity</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "_MISSING_Sell {0} for {1} points",
 				"selltext2": "_MISSING_Current storage allows for {0} sale(s)"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Älä näytä tätä enää",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "Seuraava",
 				"previous": "Edellinen"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "_MISSING_Special Block removal"
 			},
 			"toolconstruction": {
-				"builder": "Rakentaja",
-				"buildera": "",
-				"builderb": "Tarvitsee rakennusalueen",
-				"builderc": "Rakentaa asioita",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Valitse aluetyyppi, jonka haluat luoda.",
-				"destroyer": "Tuhoaja",
-				"destroyera": "",
-				"destroyerb": "Tarvitsee tuhoamisalueen",
-				"destroyerc": "Tuhoaa asioita",
-				"header": "Rakennustyökalu"
+				"header": "Rakennustyökalu",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "_MISSING_Feed for chickens",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Marjankasvattaja",
 				"berryfarmertool": "Marjankasvattajatyökalu",
 				"buildera": "_MISSING_Fill an area of the world",
-				"builderarea": "_MISSING_Builder Area",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "_MISSING_Opens a menu to select the type, then select the area to fill",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "_MISSING_Cabbage",
 				"cabbagefarmer": "_MISSING_Cabbage Farmer",
 				"chickenfarmer": "_MISSING_Chicken Farmer",
@@ -1061,17 +1076,16 @@
 				"construction": "_MISSING_Construction",
 				"construction1": "_MISSING_Let them do the work",
 				"construction2": "_MISSING_This will open another menu where you can select the construction type",
-				"constructionjob": "_MISSING_Construction Job",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "_MISSING_Hires a construction worker",
 				"constructionjobb": "_MISSING_Place next to a construction area",
 				"coversarea": "Peittää olemassaolevaa aluetta",
 				"description": "Valitse, minkätyyppisen työalueen haluat luoda.",
 				"diggera": "_MISSING_Dig out an area of the world",
-				"diggerarea": "_MISSING_Digger Area",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "_MISSING_Select the area to dig out",
-				"diggerspecial": "_MISSING_Special Digger Area",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "_MISSING_Remove a specific type in an area",
-				"diggerspecialarea": "_MISSING_Special Digger Area",
 				"diggerspecialb": "_MISSING_Select the area to remove it from",
 				"dyer1": "_MISSING_Add colors to make life a little less drab",
 				"dyer2": "_MISSING_This will open another menu with multiple farm jobs",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Metsurityökalu",
 				"header": "Komentotyökalu",
 				"hempfarmer": "_MISSING_Hemp Farmer",
-				"insidearea": "_MISSING_Can't place inside an area",
 				"missingscience": "_MISSING_<color=#ff2323>Requires '{0}' to be unlocked first.</color>",
 				"noconstructionareanearby": "_MISSING_No construction area nearby",
-				"notarable": "Ei viljelyskelpoinen",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Epätasainen",
 				"nowaternearby": "_MISSING_No water nearby",
 				"occupiedblocks": "Palikoiden täyttämä",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "_MISSING_Welcome to Colony Survival!",
 				"header": "_MISSING_Basics",
-				"text1": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended.",
-				"text2": "_MISSING_The banner is the center of your colony. Place it by clicking on the ground with your Banner Tool selected. Press '2' to select it. The Banner Tool displays a deep shadow wherever monsters will spawn once colonists have been recruited.",
-				"text3": "_MISSING_Place beds to be able to recruit colonists. Press 'i' to open the interface. Drag beds from the stockpile to the hotbar below. With the bed selected, right-click the ground to place a bed.",
+				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
+				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "_MISSING_Open the interface and go to the 'Colony' page. Press 'recruit' to recruit a colonist."
 			},
 			"page2_2": {
 				"description": "_MISSING_These are essential for growth and survival",
 				"header": "_MISSING_Food & Beds",
 				"text1": "_MISSING_Colonists require 1 meal per day. They grab these at the banner or a nearby grocery store. Without food, colonists starve. Recruiting new colonists costs multiple meals.",
-				"text2": "_MISSING_The berry farmer is the first food source. Select the Command Tool by pressing '1'. Click to open it and select the berry farmer. Right-click the ground to start defining the berry farm, then right click again elsewhere to finish. You’ll need quite a lot of these!",
-				"text3": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Cut down a tree by left-clicking on it, and dig down to gather stone rubble.",
+				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "_MISSING_Click on the tinkerer’s table icon on the left of the stockpile to craft it. Place it like you placed the bed. Like with the berry farm, unemployed colonists will automatically take this job."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "_MISSING_Trade and expand to get access to unique resources",
 				"header": "_MISSING_Colony Points & Colonization",
-				"text1": "_MISSING_Unlock and place the Merchant’s Hub. Right-click it to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
+				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
 				"text2": "_MISSING_This world contains multiple regions with unique resources. There are mountaintops covered with snow, heaths covered in purple, marshes and mammoth trees. Unlock and equip the astrolabe to find them easily.",
 				"text3": "_MISSING_Unlock outposts, purchase an Outpost Banner and carry it with you while you explore. Place it to start an Outpost. Its stockpile and scientific progress are shared with the main colony and other outposts. Build outposts in the regions mentioned above to get access to their resources."
 			},
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Auringonvarjojen levittäytyminen",
 				"sunshadowdistance": "Varjojen etäisyys",
 				"sunshadowquality": "Auringonvarjojen laatu",
-				"texturequality": "_MISSING_Texture quality",
+				"texturequality": "_MISSING_Texture quality (*)",
 				"torchquality": "_MISSING_Torch quality",
 				"vsync": "VSync",
 				"vsyncdouble": "Tupla"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "_MISSING_World already exists",
 			"cancel": "_MISSING_Cancel",
+			"cloudsync": "_MISSING_Use Steam Cloud Sync",
 			"confirmdelete": "_MISSING_Confirm deleting",
 			"confirmdeletedescription": "_MISSING_You're about to delete the folder containing this world.\nWhat do you want to do?",
 			"confirmload": "_MISSING_Confirm loading",
@@ -1715,7 +1733,7 @@
 		"flax": "_MISSING_The imperial color",
 		"flaxstage1": "Työnnä maahan",
 		"furnace": "_MISSING_Uses firewood as fuel to craft bronze ingots and bricks",
-		"glider": "_MISSING_Places a glider launcher; Enter one by right-clicking it and navigate by aiming while holding forward",
+		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
 		"glidersteel": "_MISSING_Like the regular glider launcher, but this one launches you much higher into the air",
 		"goldingot": "_MISSING_Was once used to guarantee the value of paper money",
 		"goldore": "_MISSING_Can also be found in ore beneath snowy mountains",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "_MISSING_A laxative in real life. Not in-game. Yet.",
 		"ironore": "_MISSING_Mined with an iron pickaxe that's made of iron ore",
 		"ironwrought": "_MISSING_Wrought just means 'worked'",
-		"kiln": "_MISSING_Turns wooden planks into charcoal",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "_MISSING_The future is now",
 		"lanterngreen": "_MISSING_Makes your colony eco-friendly",
 		"lanternorange": "_MISSING_Extra cozy",

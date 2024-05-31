@@ -1112,6 +1112,10 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [{
+				"id": "builder_usable",
+				"mirrorResult": true,
+			}],
 			"attachmentProviders": [
 			{
 				"min": [ -0.5, 0.45, -0.5 ],
@@ -1461,6 +1465,11 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ 
+			{
+				"id": "builder_usable",
+				"mirrorResult": true,
+			}],
 			"attachmentProviders": [
 			{
 				"min": [ -0.5, -0.5, -0.5 ],
@@ -2220,6 +2229,7 @@
 				"max": [ 0.48, 0.2 , 0.48 ]
 			}],
 			"attachBehaviour": [
+				"builder_usable",
 				{
 					"id": "pointstorage",
 					"points": 50,
@@ -2325,6 +2335,7 @@
 	{
 		"baseType": {
 			"attachBehaviour": [
+				"builder_usable",
 				{
 					"id": "pointstorage",
 					"points": 500,
@@ -2373,6 +2384,7 @@
 				"max": [ 0.5, 0.5 , 0.5 ]
 			}],
 			"attachBehaviour": [
+				"builder_usable",
 				{
 					"id": "pointstorage",
 					"points": 2500,
@@ -2537,10 +2549,14 @@
 	{
 		"baseType": {
 			"attachBehaviour": [
-				"client_requirenearwater",
+				{
+					"id": "client_requirenearwater",
+					"waterDistanceBelow": 3
+				},
 				{
 					"id": "craftingblock",
 					"nearwater": true,
+					"waterDistanceBelow": 3,
 					"npcType": "pipliz.fisherman",
 					"onCraftedAudio": "fisherman",
 					"timeBetweenHauls": 40,
@@ -2955,6 +2971,7 @@
 				{
 					"id": "craftingblock",
 					"npcType": "pipliz.coppersmith",
+					"onCraftedAudio": "anvil",
 					"timeBetweenHauls": 30,
 					"toolset": "stonemin"
 				}
@@ -2991,6 +3008,7 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ "builder_usable" ],
 			"attachmentProviders": [
 			{
 				"min": [ -0.5, -0.4, -0.5 ],
@@ -3096,6 +3114,7 @@
 				"y": 180,
 				"z": 0
 			},
+			"needsBase": true,
 			"parentType": "bed"
 		},
 		"generateType": "rotateBlock",
@@ -3156,5 +3175,86 @@
 		"leavesType": "cherryblossom",
 		"logType": "logtemperate",
 		"typeName": "saplingcherry"
+	},
+	
+	{
+		"color": "ba762c",
+		"generateType": "playersapling",
+		"leavesType": "leavesfallorange",
+		"typeName": "psaplingfallorange",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "601728",
+		"generateType": "playersapling",
+		"leavesType": "leavesfallred",
+		"typeName": "psaplingfallred",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "cbd441",
+		"generateType": "playersapling",
+		"leavesType": "leavesfallyellow",
+		"typeName": "psaplingfallyellow",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "4b771c",
+		"generateType": "playersapling",
+		"leavesType": "leavesgreendark",
+		"typeName": "psaplingdark",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "9bd34b",
+		"generateType": "playersapling",
+		"leavesType": "leavesgreenlight",
+		"typeName": "psaplinglight",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "0a4f04",
+		"generateType": "playersapling",
+		"leavesType": "leavestaiga",
+		"typeName": "psaplingtaiga",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "0e6306",
+		"generateType": "playersapling",
+		"leavesType": "leavestemperate",
+		"typeName": "psaplingtemperate",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
+	},
+	{
+		"color": "c974a7",
+		"generateType": "playersapling",
+		"typeName": "psaplingcherry",
+		"leavesType": "cherryblossom",
+		"growthMin": 18,
+		"growthMax": 23,
+		"heightMin": 4.5,
+		"heightMax": 12.0
 	}
 ]

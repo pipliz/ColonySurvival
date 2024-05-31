@@ -44,9 +44,15 @@ Quick fix to a performance/rendering issue caused by lacking GPU support for a c
 - Punching unemployed colonists idling around the banner will make them move most of the time (should help when they are in the way)
 - Mods: send sprint & crouch input states to server-based transport (like the rail, elevator, glider)
 
-0.10.1.6 (2024-02-xx)
+0.10.1.6 (2024-02-16)
 
 - Add a feature that dims torches a little when outside in daylight
 - Add/tweak height based fog, mostly around sunrise
+- Added support for casting shadows to the NPCs
 - Rename light scattering to fog in the video settings menu for clarity
-- French, Spanish localisation update
+- French, Spanish, Czech, Korean localisation update
+
+0.10.1.7 (2024-02-18)
+
+Hotfix for .6
+- Add a limit to the height-based fog so that it doesn't go extremely dense when you're 100 meters below the surface

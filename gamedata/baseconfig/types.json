@@ -211,6 +211,12 @@
 		"sideall": "neutral"
 	},
 	"beehive": {
+		"attachBehaviour": [
+			{
+				"id": "client_arealimitspopup",
+				"jobtype": "pipliz.beekeeper"
+			}
+		],
 		"colliders": [
 			{
 				"max": [
@@ -244,6 +250,12 @@
 		"isPlaceable": false
 	},
 	"berrybush": {
+		"attachBehaviour": [
+			{
+				"id": "client_arealimitspopup",
+				"jobtype": "pipliz.berryfarmer"
+			}
+		],
 		"categories": [
 			"decorative"
 		],
@@ -580,6 +592,12 @@
 		"isPlaceable": false
 	},
 	"chickencoop": {
+		"attachBehaviour": [
+			{
+				"id": "client_arealimitspopup",
+				"jobtype": "pipliz.chickenfarmer"
+			}
+		],
 		"colliders": [
 			{
 				"max": [
@@ -652,6 +670,7 @@
 		"isPlaceable": false
 	},
 	"commandtool": {
+		"attachBehaviour": [ "showNPCNames" ],
 		"icon": "../textures/icons/commandtool.png",
 		"isPlaceable": false
 	},
@@ -781,7 +800,8 @@
 	},
 	"crate": {
 		"attachBehaviour": [
-			"crate"
+			"crate",
+			"builder_usable"
 		],
 		"categories": [
 			"essential"
@@ -908,6 +928,10 @@
 	},
 	"erroridle": {
 		"icon": "../textures/icons/errorIdle.png",
+		"parentType": "missingerror"
+	},
+	"errorpath": {
+		"icon": "../textures/icons/errorPath.png",
 		"parentType": "missingerror"
 	},
 	"errornopath": {
@@ -1087,6 +1111,16 @@
 	"grassdry": {
 		"attachBehaviour": [
 			{
+				"id": "grassspread",
+				"targetTypes": [ "dirt" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
+			{
 				"id": "dirtconversion",
 				"type": "dirt"
 			}
@@ -1103,6 +1137,16 @@
 	},
 	"grassfen": {
 		"attachBehaviour": [
+			{
+				"id": "grassspread",
+				"targetTypes": [ "dirtfen" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
 			{
 				"id": "dirtconversion",
 				"type": "dirtfen"
@@ -1121,6 +1165,16 @@
 	"grassheath": {
 		"attachBehaviour": [
 			{
+				"id": "grassspread",
+				"targetTypes": [ "dirtheath" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
+			{
 				"id": "dirtconversion",
 				"type": "dirtheath"
 			}
@@ -1137,6 +1191,16 @@
 	},
 	"grassheathpurple": {
 		"attachBehaviour": [
+			{
+				"id": "grassspread",
+				"targetTypes": [ "dirtheath" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
 			{
 				"id": "dirtconversion",
 				"type": "dirtheath"
@@ -1155,6 +1219,16 @@
 	"grassmax": {
 		"attachBehaviour": [
 			{
+				"id": "grassspread",
+				"targetTypes": [ "dirt" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
+			{
 				"id": "dirtconversion",
 				"type": "dirt"
 			}
@@ -1172,6 +1246,16 @@
 	"grassmid": {
 		"attachBehaviour": [
 			{
+				"id": "grassspread",
+				"targetTypes": [ "dirt" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
+			{
 				"id": "dirtconversion",
 				"type": "dirt"
 			}
@@ -1188,6 +1272,16 @@
 	},
 	"grasswet": {
 		"attachBehaviour": [
+			{
+				"id": "grassspread",
+				"targetTypes": [ "dirt" ],
+				"delayGameHours": 3,
+				"spreadUp": true,
+				"spreadDown": true,
+				"spreadStraight": true,
+				"requireAirAbove" : true,
+				"spreadInDirtFarm": false
+			},
 			{
 				"id": "dirtconversion",
 				"type": "dirt"
@@ -2424,6 +2518,30 @@
 		"sideall": "SELF"
 	},
 	"sapling": {
+		"attachBehaviour": [
+		{
+			"id": "autosapling",
+			"mappingnpc": {
+				"leavesfallorange": "saplingfallorange",
+				"leavesfallred": "saplingfallred",
+				"leavesfallyellow": "saplingfallyellow",
+				"leavesgreendark": "saplingdark",
+				"leavesgreenlight": "saplinglight",
+				"leavestaiga": "saplingtaiga",
+				"leavestemperate": "saplingtemperate",
+				"cherryblossom": "saplingcherry"
+			},
+			"mappingplayer": {
+				"leavesfallorange": "psaplingfallorange",
+				"leavesfallred": "psaplingfallred",
+				"leavesfallyellow": "psaplingfallyellow",
+				"leavesgreendark": "psaplingdark",
+				"leavesgreenlight": "psaplinglight",
+				"leavestaiga": "psaplingtaiga",
+				"leavestemperate": "psaplingtemperate",
+				"cherryblossom": "psaplingcherry"
+			}
+		}],
 		"categories": [
 			"decorative",
 			"sapling"

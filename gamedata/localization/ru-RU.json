@@ -1,28 +1,26 @@
 {
-	"coverage": 89.0,
+	"coverage": 98.0,
 	"hints": {
 		"0": "В большинстве случаев большой размер фермы обозначает больше производства. Ягодное поле исключение из этого правила.",
 		"1": "По мере того, как ваша колония растёт, будут появляться новые монстры.",
 		"10": "3x33 - оптимальный размер для лесника",
-		"11": "Нажмите 'CTRL' чтобы красться и не падать с краёв.",
-		"13": "Некоторые материалы можно получить только путешествуя по миру.",
-		"16": "_MISSING_Use the compass to find your way towards different colonies and outposts.",
-		"17": "_MISSING_Use the astrolabe to find the different regions with unique resources.",
-		"18": "_MISSING_Build the Sacred Failsafe and spend Sacred Points to save your colony when it is getting overrun by monster",
-		"19": "_MISSING_Place the Sacred Storage to store more Sacred Points",
+		"16": "Используйте компас, чтобы найти путь к различным колониям и аванпостам.",
+		"17": "Используйте астролябию, чтобы найти различные регионы с уникальными ресурсами.",
+		"18": "Постройте Священное хранилище и потратьте «веру» чтобы спасти свою колонию когда ее захватят монстры.",
+		"19": "Разместите Священное Хранилище, чтобы хранить больше «веры».",
 		"2": "Руды можно найти не только под землей, но и в горах.",
-		"20": "_MISSING_Use blue, green, red and white paint to colour items like doors and windows",
-		"21": "_MISSING_Use paint stripper to remove the colours you've added to items.",
-		"22": "_MISSING_Elevators can't be used by colonists, but they are a quick way of moving up and down for players.",
-		"23": "_MISSING_Build rails and rail stations to quickly move from A to B.",
-		"24": "_MISSING_Use rail gates to make an impenetrable barrier for monsters, without stopping rail carts",
-		"25": "_MISSING_Place the statistics board to get detailed information on your colony.",
-		"26": "_MISSING_Place the Archimedean Screw to remove all nearby water.",
-		"27": "_MISSING_We write a periodic Friday Blog. Find it on steam to learn more about the development of Colony Survival!",
-		"28": "_MISSING_There are mods for Colony Survival. Find them on the Steam Forums or Discord!",
-		"3": "Нажмите 'G', чтобы активировать ваш факел.",
-		"4": "Нажмите на 'рабочие' блоки, чтобы посмотреть, как они используются, и определить приоритеты различных рецептов.",
-		"5": "Нажмите 'F1', чтобы открыть руководство (англ.).",
+		"20": "Используйте разную краску чтобы раскрасить такие предметы как двери и окна.",
+		"21": "Используйте средство для снятия краски чтобы удалить цвета которые вы добавили к предметам.",
+		"22": "Колонисты не могут использовать лифты, но они позволяют игрокам быстро перемещаться вверх и вниз.",
+		"23": "Стройте рельсы и железнодорожные станции, чтобы быстро перемещаться из точки А в точку Б.",
+		"24": "Используйте железнодорожные ворота чтобы создать непреодолимый барьер для монстров, но не для вагонетки.",
+		"25": "Разместите доску статистики, чтобы получить подробную информацию о вашей колонии.",
+		"26": "Постройте винт Архимеда, чтобы удалить всю близлежащую воду.",
+		"27": "Мы пишем периодический блок по пятницам. Найдите его в Steam, чтобы узнать больше о разработке Colony Survival!",
+		"28": "Для Colony Survival есть моды. Найдите их на форумах Steam и Discord!",
+		"29": "Приседание предотвращает отваливание краев.",
+		"30": "Нажмите <style=Player/ToggleTorch>, чтобы активировать свой фонарик.",
+		"4": "Нажмите на 'рабочие' блоки, чтобы посмотреть как они используются и определить приоритеты различных рецептов.",
 		"7": "Различия в диапазоне, скорости перезарядки и повреждения дают каждому типу оружия уникальные преимущества и недостатки."
 	},
 	"sentences": {
@@ -47,7 +45,7 @@
 			"missingcolonykit": "Требуется стартовый набор для колонии",
 			"missingoutpostbanner": "Требуется баннер аванпоста",
 			"movebanner": "Переместить баннер",
-			"mustbeleader": "Вы должны быть лидером колонии, чтобы настраивать знамёна.",
+			"mustbeleader": "Вы должны быть лидером колонии чтобы настраивать знамёна.",
 			"opencolonytab": "Управлять {0}",
 			"startcolony": "Основать новую колонию здесь",
 			"startoutpost": "Основать новый аванпост",
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Сложность",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "Заблокированная сложность",
 				"header": "Настройки колонии"
 			},
@@ -92,7 +91,7 @@
 				"column_unfilled": "Не хватает",
 				"disable_all": "Отключить все",
 				"enable_all": "Включить все",
-				"header_text": "Рабочие без работы <b>{0}</b>. Разрешенные задания: <b>{1} / {2}</b>. Заполненные вакансии: <b>{3} / {1}</b>",
+				"header_text": "Рабочие без работы <b>{0}</b>. Разрешенные задания: <b>{1} / {2}</b>. Занятые вакансии: <b>{3} / {1}</b>",
 				"mainheader": "Менаджер вакансий",
 				"refresh": "Обновить",
 				"set_balanced": "Сбалансировать"
@@ -202,19 +201,19 @@
 			"refused_main": "В соеденении отказано, {0}. Возвращение в главное меню через 5 секунд.",
 			"sp_alreadyrunning2": "Сервер уже запущен. Возвращение в главное меню через 5 секунд.",
 			"stages": {
-				"1": "_MISSING_Requested server files table",
-				"connectionmade": "_MISSING_Connection made",
-				"downloading": "_MISSING_(downloading {0} packets)",
-				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
-				"final": "_MISSING_Finalizing",
-				"loading": "_MISSING_Loading {0} files",
-				"local1": "_MISSING_Searching for singleplayer server on this computer",
-				"local2": "_MISSING_Searching for online server on this computer",
-				"password": "_MISSING_Password required",
-				"steamdirect": "_MISSING_Trying to setup direct connection",
-				"steamp2p": "_MISSING_Trying to setup p2p connection",
-				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
-				"waitingserver": "_MISSING_Starting server in the background"
+				"1": "Таблица запрошенных файлов сервера",
+				"connectionmade": "Соединение выполнено",
+				"downloading": "(Загрузка пакетов {0})",
+				"fail": "Загрузка не удалась, возврат в главное меню через 5 секунд.",
+				"final": "Завершено",
+				"loading": "Загрузка файлов {0} ",
+				"local1": "Поиск одиночного сервера на этом компьютере.",
+				"local2": "Поиск онлайн-сервера на этом компьютере.",
+				"password": "Требуется пароль",
+				"steamdirect": "Попытка настроить прямое соединение",
+				"steamp2p": "Попытка настроить p2p-соединение",
+				"timeout": "Время подключения истекло. Возврат в главное меню через 5 секунд",
+				"waitingserver": "Запуск сервера в фоновом режиме"
 			}
 		},
 		"contentmanager": {
@@ -248,55 +247,55 @@
 			"yourcontent": "Созданный вами контент для Мастерской Steam"
 		},
 		"controls": {
-			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
-			"fireprimary": "_MISSING_Primary Action",
-			"firesecondary": "_MISSING_Secondary Action",
-			"flydown": "_MISSING_Fly down (cheat)",
-			"holdcrouch": "_MISSING_Crouch (Held)",
-			"hotbardown": "_MISSING_Next hotbar spot",
-			"hotbarup": "_MISSING_Previous hotbar spot",
-			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
-			"inventory0": "_MISSING_Hotbar 10",
-			"inventory1": "_MISSING_Hotbar 1",
-			"inventory2": "_MISSING_Hotbar 2",
-			"inventory3": "_MISSING_Hotbar 3",
-			"inventory4": "_MISSING_Hotbar 4",
-			"inventory5": "_MISSING_Hotbar 5",
-			"inventory6": "_MISSING_Hotbar 6",
-			"inventory7": "_MISSING_Hotbar 7",
-			"inventory8": "_MISSING_Hotbar 8",
-			"inventory9": "_MISSING_Hotbar 9",
-			"jump": "_MISSING_Jump",
-			"jumpgamepadtap": "_MISSING_Jump",
-			"look": "_MISSING_Aim",
+			"decreasefieldofview": "Уменьшить поле зрения (чит)",
+			"fireprimary": "Основное действие",
+			"firesecondary": "Вторичное действие",
+			"flydown": "Лететь вниз (чит)",
+			"holdcrouch": "Присесть (удерживать)",
+			"hotbardown": "След. слот инвентаря",
+			"hotbarup": "Пред. слот инвентаря",
+			"increasefieldofview": "Увеличить поле зрения (чит)",
+			"inventory0": "Слот 10",
+			"inventory1": "Слот 1",
+			"inventory2": "Слот 2",
+			"inventory3": "Слот 3",
+			"inventory4": "Слот 4",
+			"inventory5": "Слот 5",
+			"inventory6": "Слот 6",
+			"inventory7": "Слот 7",
+			"inventory8": "Слот 8",
+			"inventory9": "Слот 9",
+			"jump": "Прыжок",
+			"jumpgamepadtap": "Прыжок",
+			"look": "Цель",
 			"movekeyboard": {
-				"down": "_MISSING_Move Back",
-				"left": "_MISSING_Move Left",
-				"right": "_MISSING_Move Right",
-				"up": "_MISSING_Move Forward"
+				"down": "Идти назад",
+				"left": "Идти налево",
+				"right": "Идти направо",
+				"up": "Идти вперед"
 			},
-			"movepad": "_MISSING_Movement",
-			"opencolonytab": "_MISSING_Open Colony Tab",
-			"openquickstart": "_MISSING_Open Help Menu",
-			"placemultipleareas": "_MISSING_Chain-place construction areas",
-			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
-			"rotateobjectleft": "_MISSING_Rotate Left",
-			"rotateobjectright": "_MISSING_Rotate Right",
-			"sprint": "_MISSING_Sprint",
-			"sprintgamepadheld": "_MISSING_Sprint",
-			"takescreenshot": "_MISSING_Take Screenshot",
-			"toggleautofocus": "_MISSING_Toggle autofocus (cheat)",
-			"togglechat": "_MISSING_Toggle Chat",
-			"togglecrouch": "_MISSING_Crouch (Toggle)",
-			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
-			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
-			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
-			"togglefly": "_MISSING_Toggle Flying (cheat)",
-			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
-			"toggleinterface": "_MISSING_Toggle Interface",
-			"toggleinventory": "_MISSING_Toggle Inventory",
-			"togglestats": "_MISSING_Toggle Statistics view",
-			"toggletorch": "_MISSING_Toggle Torch"
+			"movepad": "Передаижение",
+			"opencolonytab": "Открыть меню колонии",
+			"openquickstart": "Open Help Menu",
+			"placemultipleareas": "Цепное строительство площадок",
+			"resetfieldofview": "Сбросить поле зрения (чит)",
+			"rotateobjectleft": "Повернуть налево",
+			"rotateobjectright": "Повернуть направо",
+			"sprint": "Бег",
+			"sprintgamepadheld": "Бег",
+			"takescreenshot": "Сделать скриншот",
+			"toggleautofocus": "Переключить автофокус (чит)",
+			"togglechat": "Открыть чат",
+			"togglecrouch": "Присесть (переключить)",
+			"toggledevconsole": "Показать логи (чит)",
+			"toggledevmenu": "Показать меню разработчика (чит)",
+			"toggleextrasmooth": "Переключить сглаженное прицеливание (чит)",
+			"togglefly": "Переключить полет (чит)",
+			"togglefocuspoint": "Переключить lock-aim (чит)",
+			"toggleinterface": "Показать интерфейс",
+			"toggleinventory": "Показать инвенарь",
+			"togglestats": "Показать информацию отладки",
+			"toggletorch": "Зажечь факел"
 		},
 		"escapemenu": {
 			"back": "Вернуться в игру",
@@ -306,15 +305,15 @@
 			"settings": "Настройки"
 		},
 		"failsafe": {
-			"current": "Текущее хранилище святости: {0} из {1}",
+			"current": "Текущее хранилище «веры»: {0} из {1}",
 			"damage": "Срабатывание Священного предохранителя приведет к повреждению на {0}",
 			"futurewave": "Предохранитель уменьшит общее количество HP входящих монстров на {0: P0} на следующую ночь",
 			"header": "Предохранитель",
 			"nextavailable": "Предохранитель снова будет доступна после следующей ночи",
-			"statusactive": "Статус: Священная защита от сбоев активирована",
+			"statusactive": "Статус: Священная защита активирована",
 			"statusavailable": "Статус: Священный предохранитель доступен",
-			"trigger": "Спусковой крючок",
-			"wave": "Текущий уровень угрозы равен {0} и будет порождать монстров с общим количеством HP {1}",
+			"trigger": "Активировать",
+			"wave": "Текущий уровень угрозы равен {0} будет порождать монстров с общим количеством HP {1}",
 			"wavereduced": "Общее количество HP входящих монстров будет уменьшено на {0:P0} следующей ночью"
 		},
 		"firstpersonstats": {
@@ -335,7 +334,7 @@
 			"description": "Отписаться",
 			"edit": "Изменить",
 			"enabled": "Включить",
-			"gamepadtextinputalphanumeric": "_MISSING_Only alphabet letters and numbers are accepted.",
+			"gamepadtextinputalphanumeric": "Принимаются только буквы алфавита и цифры.",
 			"high": "Много",
 			"inputplaceholder": "Введите текст",
 			"inputplaceholder_search": "Введите текст для поиска...",
@@ -345,6 +344,7 @@
 			"none": "Откл.",
 			"normal": "Нормально",
 			"previous": "Пред. стр.",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Сбросить",
 			"select": "Выбрать",
 			"selected": "Выбрано",
@@ -435,13 +435,14 @@
 			"pipliz": {
 				"alchemist": "Алхимик",
 				"alkanetfarmer": "Фермер алканета",
-				"artist": "_MISSING_Artist",
+				"artist": "Художник",
 				"barleyfarmer": "Фермер ячменя",
 				"beekeeper": "Пчеловод",
 				"berryfarmer": "Ягодный фермер",
 				"blastfurnace": "Оператор доменной печи",
 				"bloomeryjob": "Оператор сыродутного горна",
 				"builder": "Строитель",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "Капустный фермер",
 				"chestmaker": "Конструктор сундуков",
 				"chickenfarmer": "Куриный фермер",
@@ -452,7 +453,7 @@
 				"cottonengine": "Оператор хлопковой машины",
 				"cottonfarmer": "Хлопковый фермер",
 				"digger": "Копатель",
-				"diggerspecial": "Особый копатель",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "Красильщик",
 				"engineer": "Инженер",
 				"firepit": "Примитивный повар",
@@ -528,8 +529,8 @@
 				"name": "Лучник"
 			},
 			"artist": {
-				"description": "_MISSING_Unlocks a new job that is completely dedicated to aesthetics",
-				"name": "_MISSING_Artist"
+				"description": "Открывает новую профессию, полностью посвященную эстетике.",
+				"name": "Художник"
 			},
 			"astrolabe": {
 				"description": "Разблокирует астролябию; навигационный инструмент, который помогает находить биомы",
@@ -576,12 +577,12 @@
 				"name": "Научный сундук"
 			},
 			"chickenmeal": {
-				"description": "Разблокирует более сложное блюдо, которое дает больше святости при употреблении колонистами",
+				"description": "Разблокирует более сложное блюдо, которое дает больше «веры» при употреблении колонистами",
 				"name": "Блюда из курицы"
 			},
 			"classical": {
-				"description": "_MISSING_Revive the way the ancients built",
-				"name": "_MISSING_Classical Architecture"
+				"description": "Возродите способ, которым строили в древности",
+				"name": "Классическая Архитектура"
 			},
 			"compass": {
 				"description": "Разблокирует компас; навигационный инструмент, позволяющий найти свой дом",
@@ -596,8 +597,8 @@
 				"name": "Раскопки"
 			},
 			"constructiondiggerspecial": {
-				"description": "Разблокирует специальную область раскопок",
-				"name": "Специальные раскопки"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "Разблокирует плиту и повара, который может приготовить более вкусную еду для ваших колонистов",
@@ -624,8 +625,8 @@
 				"name": "Лифт"
 			},
 			"elevatorhorizontal": {
-				"description": "_MISSING_Unlocks rail production, useful for traversing horizontal distances",
-				"name": "_MISSING_Rails"
+				"description": "Открывает производство рельс, что полезно для преодоления горизонтальных расстояний.",
+				"name": "Рельсы"
 			},
 			"engineer": {
 				"description": "Разблокирует инженера и перезаряжающего ловушек. Инженер создает ловушки и боеприпасы к ним, которые можно использовать для борьбы с монстрами. перезаряжающего ловушек будет перезаряжать близлежащие ловушки в течении дня.",
@@ -640,12 +641,12 @@
 				"name": "Выращивание пшеницы"
 			},
 			"fence": {
-				"description": "_MISSING_Could be very practical, but is mostly aesthetic.",
-				"name": "_MISSING_Fence"
+				"description": "Может быть очень практично, но в основном эстетично.",
+				"name": "Изгородь"
 			},
 			"flowerbox": {
-				"description": "_MISSING_Spread some permanent cheer",
-				"name": "_MISSING_Flower Box"
+				"description": "Декоративный объект которым можно украсить ваш дом",
+				"name": "Цветочный горшок"
 			},
 			"furnace": {
 				"description": "Разблокирует печь для переплавки металлов и расколотый пень для обработки дерева",
@@ -740,8 +741,8 @@
 				"name": "Аванпосты"
 			},
 			"paint": {
-				"description": "_MISSING_Recolor some aesthetics",
-				"name": "_MISSING_Paint"
+				"description": "Перекрасить некоторую эстетику",
+				"name": "Краски"
 			},
 			"papermaking": {
 				"description": "Разблокирует путь к изготовлению бумаги из конопли, ключевой составляющей научного прогресса",
@@ -796,8 +797,8 @@
 				"name": "Книги"
 			},
 			"roofs": {
-				"description": "_MISSING_An attractive way to cover your buildings",
-				"name": "_MISSING_Tiled Roofs"
+				"description": "Простой способ украсить ваши здания",
+				"name": "Черепичные крыши"
 			},
 			"ropes": {
 				"description": "Разблокирует верёвку",
@@ -808,7 +809,7 @@
 				"name": "Связывающая ловушка"
 			},
 			"sacredhouse": {
-				"description": "Разблокирует проскинитарий увеличивающий количество хронимой святости, которая может быть использованна Священными предохранителями",
+				"description": "Разблокирует проскинитарий увеличивающий количество хронимой «веры» в бога, которая может быть использованна Священными предохранителями",
 				"name": "Проскинитарий"
 			},
 			"scribe": {
@@ -816,8 +817,8 @@
 				"name": "Писец"
 			},
 			"signs": {
-				"description": "_MISSING_Time to put your name on things",
-				"name": "_MISSING_Signs"
+				"description": "Время подписать свои предприятия",
+				"name": "Таблички"
 			},
 			"statistics": {
 				"description": "Разблокирует панель статистики. При размещении и использовании он дает представление о деятельности вашей колонии.",
@@ -840,8 +841,8 @@
 				"name": "Каменщик"
 			},
 			"streetlight": {
-				"description": "_MISSING_Much fancier than torches",
-				"name": "_MISSING_Streetlights"
+				"description": "Освети ими дорогу",
+				"name": "Уличные фонари"
 			},
 			"tabulator": {
 				"description": "Разблокирует счетную машину и перфокарты для нее.",
@@ -860,8 +861,8 @@
 				"name": "Распределение инструментов"
 			},
 			"trader": {
-				"description": "_MISSING_Used to accelerate trade deals between colonies. Not used for trading with outposts; intended for multiplayer.",
-				"name": "_MISSING_Trader"
+				"description": "Используется для ускорения торговых сделок между колониями. Не используется для торговли с аванпостами; (предназначен для мультиплеера)",
+				"name": "Торговец"
 			},
 			"trading": {
 				"description": "Разблокирует торговый стол, место, где вы можете покупать и продавать товары",
@@ -872,8 +873,8 @@
 				"name": "Качка воды"
 			},
 			"watersponge": {
-				"description": "_MISSING_Removes water in its local area in a deeply realistic way",
-				"name": "_MISSING_Archimedean Screw"
+				"description": "Удаляет воду вокруг себя в кубе 9 на 9 на 9.",
+				"name": "Архимедов винт"
 			},
 			"writer": {
 				"description": "Разблокирует писателя, пергамент и свитки знаний. Это важно для завершения более продвинутой науки.",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Закрыть",
-				"description": "Вы хотите удалить эту область?",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Меню области",
-				"remove": "Удалить область"
+				"remove": "Удалить область",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Вы умерли.",
@@ -930,7 +933,7 @@
 					"entry-meals": "Всего еды",
 					"entry-npccount": "Колонистов",
 					"entry-points": "Очки колонии",
-					"entry-sanctified": "_MISSING_Sacred Points",
+					"entry-sanctified": "«вера»",
 					"entry-unemployed": "Безработные",
 					"hide-all": "Скрыть всё",
 					"only-changed": "Только изменения",
@@ -943,20 +946,20 @@
 					"time4day": "За 4 дня",
 					"type-colony": "Колония",
 					"type-consumption": "Потребление",
-					"type-consumption-col": "_MISSING_Consumption (Colony)",
-					"type-consumption-out": "_MISSING_Consumption (Outpost)",
+					"type-consumption-col": "Потребление (Колония)",
+					"type-consumption-out": "Потребление (Аванпост)",
 					"type-idle-jobs": "Время ожидания работы",
-					"type-idle-jobs-col": "_MISSING_Idle Job Time (Colony)",
-					"type-idle-jobs-out": "_MISSING_Idle Job Time (Outpost)",
-					"type-itempoints": "Point Items",
-					"type-outpost": "_MISSING_Outpost",
+					"type-idle-jobs-col": "Время простоя (Колония)",
+					"type-idle-jobs-out": "Время простоя (Аванпост)",
+					"type-itempoints": "Предметы",
+					"type-outpost": "Аванпост",
 					"type-production": "Производство",
-					"type-production-col": "_MISSING_Production (Colony)",
-					"type-production-out": "_MISSING_Production (Outpost)",
+					"type-production-col": "Производство (Колония)",
+					"type-production-out": "Производство (Аванпост)",
 					"type-stockpile": "Склад",
 					"type-tooluse": "Использование инструментов",
-					"type-tooluse-col": "_MISSING_Tool Use (Colony)",
-					"type-tooluse-out": "_MISSING_Tool Use (Outpost)",
+					"type-tooluse-col": "Использование инструментов (Колония)",
+					"type-tooluse-out": "Использование инструментов (Аванпост)",
 					"type-trade-in": "Входащая торговля",
 					"type-trade-out": "Исходящая торговля"
 				},
@@ -968,6 +971,7 @@
 					"needs": "Требуется: ",
 					"nothing": "только время"
 				},
+				"trashicon": "Бросайте предметы сюда, чтобы выбросить их в мусорное ведро",
 				"upgrades": {
 					"header": "Улучшения",
 					"preamble2": "<i>Очков сейчас / максимум</i>",
@@ -1015,16 +1019,23 @@
 				"selltext": "Продать {0} за {1} очко(в)",
 				"selltext2": "Текущее хранилище позволяют совершить {0} Продаж(у)"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Не показывать снова",
-				"f1_2": "_MISSING_Press 'F1' to re-open this menu",
 				"next": "След. стр.",
 				"previous": "Пред. стр."
 			},
 			"signs": {
-				"apply": "_MISSING_Apply",
-				"edit": "_MISSING_Edit",
-				"header": "_MISSING_Sign"
+				"apply": "Применить",
+				"edit": "Изменить",
+				"header": "Табличка"
 			},
 			"specialblockremoval": {
 				"button": "Удалить",
@@ -1032,16 +1043,17 @@
 				"header": "Удаление спец. блока"
 			},
 			"toolconstruction": {
-				"builder": "Стройка",
-				"buildera": "Строитель",
-				"builderb": "Требуется создать область",
-				"builderc": "Строит вещи",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Выберите тип области, которую вы хотите создать.",
-				"destroyer": "Разрушение",
-				"destroyera": "",
-				"destroyerb": "Нужна разрушаемая область",
-				"destroyerc": "Разрушает вещи",
-				"header": "Инструмент Строителя"
+				"header": "Инструмент Строителя",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Ячмень для цыплят",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Ягодное поле",
 				"berryfarmertool": "Инструмент Ягодного Фермера",
 				"buildera": "Выделите область",
-				"builderarea": "Область строительства",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "Выберите материал и создайте область где будут ставиться блоки",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "Выращивает капусту",
 				"cabbagefarmer": "Капустный фермер",
 				"chickenfarmer": "Куриный фермер",
@@ -1061,17 +1076,16 @@
 				"construction": "Конструкция",
 				"construction1": "Пусть они выполняют работу",
 				"construction2": "Это откроет другое меню, в котором вы можете выбрать тип работ",
-				"constructionjob": "Работа строителя",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "Нанимает строителя",
 				"constructionjobb": "Место рядом со строительством или раскопками",
 				"coversarea": "Цепляет существующую область",
 				"description": "Выберите тип области, которую вы хотите создать.",
 				"diggera": "Выделите область",
-				"diggerarea": "Область копания",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "Добывает все блоки в выделенной области",
-				"diggerspecial": "Специальная область раскопок",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "Выделите область",
-				"diggerspecialarea": "Специальная зона шахтера",
 				"diggerspecialb": "Выберите материал который будет добывать рабочий и создайте область",
 				"dyer1": "Добавьте красок, чтобы сделать жизнь менее серой",
 				"dyer2": "Это откроет другое меню с несколькими заданиями на ферме.",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Инструмент Лесника",
 				"header": "Инструмент командования",
 				"hempfarmer": "Фермер конопли",
-				"insidearea": "Нельзя размещать внутри области",
 				"missingscience": "<color=#ff2323>Требуется '{0}' для разблокировки.</color>",
 				"noconstructionareanearby": "Рядом нет зоны строительства",
-				"notarable": "Не пропахиваемый",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Не плоская область",
 				"nowaternearby": "Нет воды поблизости",
 				"occupiedblocks": "Место занято блоками",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "Добро пожаловать в Colony Survival!",
 				"header": "Основы",
-				"text1": "Начните с поиска хорошего места. Для вашей первой колонии рекомендуется иметь поблизости воду и ровные поля для ведения сельского хозяйства.",
-				"text2": "Знамя колонии — это центр вашей колонии, поместите его нажав на землю инструментом баннера (слот инвентаря «2»). Инструмент «Баннер» отображает глубокую тень везде где появляются монстры после найма колонистов.",
-				"text3": "Разместите кровати чтобы иметь возможность нанимать колонистов. Нажмите «i», чтобы открыть интерфейс. Перетащите кровати со склада на панель быстрого доступа ниже. Выбрав кровать, щелкните ПКМ на землю, чтобы поставить кровать.",
+				"text1_2": "Начните с поиска хорошего места для вашей первой колонии. Наличие воды и ровных полей для земледелия поблизости рекомендуется. Знамя будет центром вашей колонии.",
+				"text2_2gamepad": "Выберите инструмент Знамя в инвентаре ниже, используя <style=Player/HotBarUp> и <style=Player/HotBarDown>. Установите его, нажав <style=Player/FireSecondary>, нацелившись на землю с выбранным инструментом Знамя. После того как вы окажетесь в Колонии, инструмент Знамя будет отображать глубокую тень там, где позже могут появиться монстры.",
+				"text2_2keyboard": "Выберите инструмент Знамя в инвентаре ниже, используя <style=Player/Inventory1>. Установите его, нажав <style=Player/FireSecondary>, нацелившись на землю с выбранным инструментом Знамя. После того как вы окажетесь в Колонии, инструмент Знамя будет отображать глубокую тень там, где позже могут появиться монстры.",
+				"text3_2": "Разместите кровати, чтобы иметь возможность нанимать колонистов. Нажмите <style=Player/ToggleInventory>, чтобы открыть интерфейс. Переместите кровати из запасов в панель инструментов ниже. Выберите кровать и используйте <style=Player/FireSecondary>, целясь в землю, чтобы разместить кровать.",
 				"text4": "Откройте интерфейс и перейдите на страницу «Колония». Нажмите «Вербовать», чтобы завербовать нового колониста. Колонисты автоматически нанимаются на свободную работу если такая есть."
 			},
 			"page2_2": {
 				"description": "Они необходимы для роста и выживания",
 				"header": "Еда и кровати",
 				"text1": "Колонистам требуется 1 прием пищи в день. Они берут еду у баннера или в ближайшем продуктовом магазине. Без еды колонисты голодают и могут погибнуть. Вербовка новых колонистов стоит нескольких приемов пищи.",
-				"text2": "Ягодный фермер - первый источник пищи. Выберите «Инструмент командывания» нажав «1». Нажмите ЛКМ или ПКМ чтобы открыть его и выберите ягодное поле. Щелкните ПКМ на землю чтобы начать определение размера ягодного поля, затем после того как выберите размер поля, щелкните ПКМ ещё раз чтобы установить поле. Вам понадобится их довольно много!",
-				"text3": "Чтобы начать производство кроватей вам нужно будет изготовить стол ремесленника. Срубите дерево, зажав по нему ЛКМ, и копайте вниз, чтобы собрать каменный щебень.",
+				"text2_2gamepad": "Первым источником пищи будет ягодный фермер. Выберите инструмент Команд (первый слот инвентаря). Нажмите <style=Player/FirePrimary>, чтобы открыть его, и выберите ягодного фермера. Нажмите <style=Player/FireSecondary>, чтобы начать определение ягодной фермы, затем снова <style=Player/FireSecondary> в другом месте, чтобы завершить. Вам потребуется довольно много из них!",
+				"text2_2keyboard": "Первым источником пищи будет ягодный фермер. Выберите инструмент Команд (<style=Player/Inventory0>). Нажмите <style=Player/FirePrimary>, чтобы открыть его, и выберите ягодного фермера. Нажмите <style=Player/FireSecondary>, чтобы начать определение ягодной фермы, затем снова <style=Player/FireSecondary> в другом месте, чтобы завершить. Вам потребуется довольно много из них!",
+				"text3_2": "Для начала производства кроватей вам придется скрафтить стол инженера. Удерживая <style=Player/FirePrimary>, целясь в блоки, вы сможете копать вниз, чтобы добыть необходимые каменные обломки.",
 				"text4": "Откройте инвентарь и нажмите на значок стола ремесленника слева от склада, чтобы создать его. Расположите его так что-бы со стороны куда смотрит стрелка не было других блококов, иначе колонист не сможет подойти к столу."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "Торгуйте и расширяйтесь, чтобы получить доступ к уникальным ресурсам",
 				"header": "Очки колонии и колонизация",
-				"text1": "Разблокируйте и разместите торговый стол. Щелкните на него ПКМ чтобы открыть его интерфейс. Продавайте предметы, чтобы заработать очки колонии. Помимо прочего, очки можно потратить на улучшения, таких как лимит колонистов на странице «Уулчшения».",
+				"text1_2": "Разблокируйте и разместите Торговый Центр. Используйте <style=Player/FireSecondary>, чтобы открыть его интерфейс. Продавайте предметы, чтобы заработать очки Колонии. Среди прочего, очки можно потратить на улучшения, такие как лимит колонистов, на странице очков Колонии.",
 				"text2": "Этот мир содержит несколько регионов с уникальными ресурсами. Есть горные вершины покрытые снегом, пустоши покрытые пурпуром, болота и мамонтовые деревья. Разблокируйте и оборудуйте астролябию, чтобы легко их найти.",
 				"text3": "Разблокируйте аванпосты, купите знамя аванпоста и носите его с собой пока исследуете мир. Поместите его чтобы основать аванпост. Его запасы и научный прогресс используются совместно с основной колонией и другими аванпостами. Стройте аванпосты в регионах упомянутых выше, чтобы получить доступ к их ресурсам."
 			},
@@ -1172,32 +1189,32 @@
 					"permanenthighlight": "Постоянное выделение блока",
 					"ratio0": "Откл.",
 					"ratio100": "100%",
-					"ratio125": "_MISSING_125%",
+					"ratio125": "125%",
 					"ratio150": "150%",
-					"ratio175": "_MISSING_175%",
+					"ratio175": "175%",
 					"ratio200": "200%",
 					"ratio25": "25%",
 					"ratio250": "250%",
 					"ratio300": "300%",
 					"ratio400": "400%",
 					"ratio50": "50%",
-					"ratio62": "_MISSING_62%",
+					"ratio62": "62%",
 					"ratio75": "75%",
-					"ratio87": "_MISSING_87%",
-					"showsensitivedatamode": "Показывать конфиденциальные данные",
+					"ratio87": "87%",
+					"showsensitivedatamode": "отображение конфиденциальных данных",
 					"tab": "Главные настройки",
 					"uiscalingratio": "Масштабирование интерфейса"
 				},
 				"mousemenu": {
 					"inverty": "Инвертировать ось-Y",
-					"sensitivity": "_MISSING_Mouse sensitivity",
+					"sensitivity": "Чувствительность мыши",
 					"smooth": "Сглаживание мыши",
-					"swapprimsec": "_MISSING_Invert left/right click"
+					"swapprimsec": "Инвертировать ЛКМ/ПКМ"
 				},
-				"mousesettings2": "_MISSING_Mouse & Keyboard",
+				"mousesettings2": "Мышь и клавиши",
 				"padmenu": {
-					"mainbutton": "_MISSING_Gamepad",
-					"sensitivity": "_MISSING_Aim sensitivity"
+					"mainbutton": "Джостик",
+					"sensitivity": "Чувствительность прицела"
 				}
 			},
 			"language": "Язык",
@@ -1226,7 +1243,7 @@
 				"depthoffield": "Глубина резкости",
 				"drawdistance": "Дальность прорисовки (*)",
 				"fieldofview": "Дальность обзора",
-				"fog": "_MISSING_Fog",
+				"fog": "Туман",
 				"full": "Настройки видео",
 				"fullscreen": "Полноэкранный режим",
 				"particleeffects": "Эффекты частиц",
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Солнечные тени каскадов",
 				"sunshadowdistance": "Дистанция теней",
 				"sunshadowquality": "Качество теней",
-				"texturequality": "Качество текстур",
+				"texturequality": "Качество текстур (*)",
 				"torchquality": "Качество факелов",
 				"vsync": "Верт. синх.",
 				"vsyncdouble": "Двойная"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "Мир уже существует!",
 			"cancel": "Отмена",
+			"cloudsync": "Синхронизация Steam Cloud",
 			"confirmdelete": "Подтвердить удаление",
 			"confirmdeletedescription": "Вы собираетесь удалить папку, содержащую этот мир. Что вы хотите сделать?",
 			"confirmload": "Подтвердить загрузку",
@@ -1284,8 +1302,8 @@
 			"serverport": "Порт сервера",
 			"typegenerateworld": "Сгенерировать мир",
 			"typeworkshop": "Мир из Мастерской",
-			"world_folder": "_MISSING_Folder",
-			"world_outdated": "_MISSING_Requires older version",
+			"world_folder": "Папка",
+			"world_outdated": "Требуется более старая версия",
 			"worlddate": "Дата",
 			"worldname": "Имя",
 			"worldname_long": "Имя мира",
@@ -1294,7 +1312,7 @@
 		"tooltip": {
 			"craftingblock": "Колонист будет работать здесь как {0}",
 			"crate": "Колонисты будут брать и ложить предметы в этот ящик",
-			"failsafe-points": "Добавляет вместимость на {0} святости",
+			"failsafe-points": "Добавляет вместимость на {0} Веры",
 			"failsafe-threat": "Повышает угрозу на {0}",
 			"guard-ammo": "Использует {0}",
 			"guard-aoe": "{0} блокирует область действия",
@@ -1306,12 +1324,12 @@
 			"guard-sleeptype-day": "Спит днем",
 			"guard-sleeptype-night": "Спит ночью",
 			"is-edible": "Еда, колонисты будут есть один раз в день",
-			"is-sanctified": "Вы получите {0} святости, когда колонисты съедят это блюдо.",
+			"is-sanctified": "Вы получите {0} Веры, когда колонисты съедят это блюдо.",
 			"lockbox-points": "Добавляет вместимость на {0} очков",
 			"lockbox-threat": "Повышает угрозу на {0}",
 			"miner": "Колонист будет копать только тёмный камень и руды",
 			"npcshop": "Колонисты будут посещать это место что-бы по есть.",
-			"paintable": "_MISSING_Item can be altered using: ",
+			"paintable": "Элемент можно изменить с помощью: ",
 			"pointtrader": "Здесь можно покупать и продавать вещи за очки",
 			"provides-fertile": "Считается плодородной почвой",
 			"provides-fertile-fen": "Считается плодородной болотной почвой",
@@ -1320,7 +1338,7 @@
 			"requires-fertile": "Требуется плодородная почва",
 			"requires-heath": "Требуется плодородная вересковая почва",
 			"requires-water": "Должен находится рядом с водой",
-			"sanctifiedlockbox-points": "Добавляет вместимость святости на {0}",
+			"sanctifiedlockbox-points": "Добавляет вместимость веры на {0}",
 			"sanctifiedlockbox-threat": "Повышает угрозу на {0}",
 			"statisticsboard": "Показывает статистику вашей колонии при взаимодействии.",
 			"threatstatue-general": "Притягивает угрозу от других аванпостов к аванпосту в котором он находится, а также сам создает некоторую угрозу",
@@ -1377,8 +1395,8 @@
 		"alchemisttable": "Стол алхимика",
 		"alkanet": "Алканет",
 		"animalcarcass": "Туша животного",
-		"architrave": "_MISSING_Architrave",
-		"artisttable": "_MISSING_Artist's Workbench",
+		"architrave": "Архитрав",
+		"artisttable": "Верстак художника",
 		"astrolabe": "Астролябия",
 		"banner": "Баннер",
 		"bannertool": "Управление баннером",
@@ -1440,7 +1458,7 @@
 		"copperingot": "Медный слиток",
 		"copperlockbox": "Медный ящик",
 		"coppertools": "Медные инструменты",
-		"corbel": "_MISSING_Corbel",
+		"corbel": "Корбель",
 		"cotton": "Хлопок",
 		"cottonengine": "Хлопковая машина",
 		"cottonfibre": "Хлопковое волокно",
@@ -1451,26 +1469,26 @@
 		"dirt": "Грязь",
 		"dirtfen": "Болотная грязь",
 		"dirtheath": "Вересковая грязь",
-		"doorclosed": "_MISSING_Door",
+		"doorclosed": "Дверь",
 		"droppertrap": "Стреляющая ловушка",
 		"droppertrapammo": "Снаряд для стреляющей ловушки",
 		"dyertable": "Стол красок",
 		"earthenware": "Фаянс",
 		"elevator": "Станция с лифтом",
-		"elevatorhorizontal": "_MISSING_Rail Station",
+		"elevatorhorizontal": "ЖД станция",
 		"elevatorshaft": "Шахта лифта",
-		"elevatorshafthorizontal": "_MISSING_Rails",
+		"elevatorshafthorizontal": "Рельсы",
 		"engineerbench": "Мастерская инженера",
 		"eyeglasses": "Очки",
 		"failsafe": "Священный предохранитель",
-		"fence": "_MISSING_Fence",
+		"fence": "Изгородь",
 		"firepit": "Костер",
 		"firewood": "Дрова",
 		"fisherman": "Место рыбака",
 		"flax": "Лен",
 		"flaxstage1": "Семена льна",
 		"fletcherbench": "Мастерская флетчера",
-		"flowerboxitem": "_MISSING_Flower Box",
+		"flowerboxitem": "Цветочный горшок",
 		"furnace": "Горн",
 		"glassblower": "Мастерская стеклодува",
 		"glasspiece": "Стеклянная линза",
@@ -1526,7 +1544,7 @@
 		"lanternblue": "Синий светильник",
 		"lanterncyan": "Бирюзовый светильник",
 		"lanterngreen": "Зелёный светильник",
-		"lanternitem": "_MISSING_Streetlight",
+		"lanternitem": "Уличный фонарь",
 		"lanternorange": "Оранжевый светильник",
 		"lanternpink": "Розовый светильник",
 		"lanternred": "Красный светильник",
@@ -1554,7 +1572,7 @@
 		"metallathe": "Токарный станок по металлу",
 		"minerjob": "Работа шахтера",
 		"monocular": "Монокуляр",
-		"mouldingitem": "_MISSING_Crown Moulding",
+		"mouldingitem": "потолочный плинтус",
 		"movabletype": "Литеры",
 		"mudbricks": "Глинобитные кирпичи",
 		"musket": "Мушкет",
@@ -1563,15 +1581,15 @@
 		"notools": "Без инструментов",
 		"npcshop": "Продуктовый магазин",
 		"outpostbanner": "Знамя аванпоста",
-		"paintblue": "_MISSING_Blue Paint",
-		"paintgreen": "_MISSING_Green Paint",
-		"paintred": "_MISSING_Red Paint",
-		"paintstripped": "_MISSING_Paint Stripper",
-		"paintwhite": "_MISSING_White Paint",
+		"paintblue": "Синяя краска",
+		"paintgreen": "Зеленая краска",
+		"paintred": "Красная краска",
+		"paintstripped": "Сниматель краски",
+		"paintwhite": "Белая краска",
 		"paper": "Бумага",
 		"papermakersmould": "Форма для изготовления бумаги",
 		"parchment": "Пергамент",
-		"pillar": "_MISSING_Pillar",
+		"pillar": "Колонна",
 		"planks": "Доски",
 		"planksblue": "Синие доски",
 		"planksgreen": "Зелёные доски",
@@ -1589,13 +1607,13 @@
 		"quarterblockbrowndark": "Четверть тёмно-коричневого блока",
 		"quarterblockbrownlight": "Четверть светло-коричневого блока",
 		"quarterblockgrey": "Четверть серого блока",
-		"railgate": "_MISSING_Rail Gate",
-		"railitem": "_MISSING_Rails",
+		"railgate": "ЖД ворота",
+		"railitem": "ЖД Рельсы",
 		"rawfish": "Сырая рыба",
 		"rawmeat": "Сырое мясо",
 		"researcherdesk": "Стол исследователя",
-		"rooftool": "_MISSING_Tiled Roof",
-		"rooftoolblue": "_MISSING_Blue Tiled Roof",
+		"rooftool": "Черепичная крыша",
+		"rooftoolblue": "Синяя черепичная крыша",
 		"rope": "Веревка",
 		"ropebench": "Верстак веревщика",
 		"ropetrap": "Связывающая ловушка",
@@ -1623,7 +1641,7 @@
 		"scrollshelf1": "Полка для свитков (в основном пустая)",
 		"scrollshelf2": "Полка для свитков (частично пустая)",
 		"scrollshelffilled": "Полка для свитков",
-		"signitem": "_MISSING_Sign",
+		"signitem": "Табличка",
 		"silicasand": "Кварцевый песок",
 		"skin": "Кожа",
 		"sling": "Рогатка",
@@ -1643,7 +1661,7 @@
 		"stonebrickswhite": "Белый булыжник",
 		"stonemasonworkbench": "Камнерезная мастерская",
 		"stonerubble": "Каменный щебень",
-		"stonestair": "_MISSING_Stone Stair",
+		"stonestair": "Каменная лестница",
 		"stonetools": "Каменные инструменты",
 		"stove": "Плита",
 		"straw": "Солома",
@@ -1666,19 +1684,19 @@
 		"water": "Вода",
 		"watergatherer": "Сборщик воды",
 		"waterpump": "Водокачка",
-		"watersponge": "_MISSING_Archimedean Screw",
+		"watersponge": "Архимедов винт",
 		"wheat": "Пшеница",
 		"wheatmeal": "Пшеничные хлопья",
 		"wheatporridge": "Пшеничная каша",
 		"wheatstage1": "Семена пшеницы",
-		"window": "_MISSING_Window",
+		"window": "Окно",
 		"wisteriaflower": "цветок глицинии",
 		"wisteriajob": "Сборщик глициний",
 		"wisteriaplant": "Растение глициний",
 		"wisteriaplantempty": "Растение глициний",
 		"wolfsbane": "Аконит",
 		"woodfloor": "Деревянный настил",
-		"woodstair": "_MISSING_Wooden Stair",
+		"woodstair": "Деревянная лестница",
 		"writerdesk": "Письменный стол",
 		"zinc": "Цинк"
 	},
@@ -1710,12 +1728,12 @@
 		"crossbow": "Младший брат аркбалисты",
 		"crossbowbolt": "Сложнее, быстрее, лучше, сильнее",
 		"dirt": "Грязная",
-		"failsafe": "Механизм экстренной защиты с использованием... Святости?",
+		"failsafe": "Механизм экстренной защиты с использованием... «веры» в бога?",
 		"firewood": "Базовое топливо",
 		"flax": "Цвет империи",
 		"flaxstage1": "Поместите это в землю",
 		"furnace": "Пока плавится металл можно приготовить еды на верхней части",
-		"glider": "Улетай на крыльях ветра",
+		"glider": "Устанавливает запускатель планера; Войдите в него, нажав <style=Player/FireSecondary>, и управляйте, направляясь вперед.",
 		"glidersteel": "Гул движков медленно стихает и из диспетчерсокй раздается. Что за хрень без двигателей тут встала?!",
 		"goldingot": "Использовался когда-то, для гарантии стоимости бумажных денег.",
 		"goldore": "Также можно найти в горах под снегом.",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "Слабительное в реальной жизни. Не в игре. Пока.",
 		"ironore": "Добывается железной киркой, сделанной из железной руды",
 		"ironwrought": "Очень кованое",
-		"kiln": "Превращает доски в древесный уголь",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "Чистое небо",
 		"lanterngreen": "Главное самому не начать светиться",
 		"lanternorange": "Дополнительный уют",
@@ -1740,7 +1758,7 @@
 		"npcshop": "Что вы делаете в моем холодильнике? Вы хотите кушац?",
 		"planks": "Четырехкратный объем бревна",
 		"printingpress": "Уважай его свободу",
-		"railgate": "_MISSING_Allows rail travel while blocking travel by foot",
+		"railgate": "Позволяет путешествовать по железной дороге",
 		"rawfish": "#органический #без гормонов #травка",
 		"researcherdesk": "Исследования требуют книжных шкафов поблизости, чтобы найти данные для своих исследований!",
 		"sand": "Не смешивается со змеями",
@@ -1765,12 +1783,12 @@
 		"trader": "Неожиданно используется для бартера",
 		"water": "Затопит все, если выпустить",
 		"waterpump": "Позволяет получить воду, даже в пустыне",
-		"watersponge": "_MISSING_Removes water in its local area in a deeply realistic way",
+		"watersponge": "Удаляет воду вокруг себя в кубе 9 на 9 на 9.",
 		"wheat": "Колонист с жерновом превратит это в муку",
 		"wheatstage1": "Будущий хлеб",
 		"wisteriajob": "Гробовая тишина...",
 		"wisteriaplant": "Немного пахнет смертью",
-		"wisteriaplantempty": "_MISSING_Placing 10 of these for every wisteria harvester ensures a long term balance.",
+		"wisteriaplantempty": "Размещение 10 таких устройств на каждом сборщике глицинии обеспечивает, бесперебойную работу.",
 		"wolfsbane": "Предотвращает нападение волков на вашу колонию",
 		"writerdesk": "Высоко эргономичный",
 		"zinc": "Синий?"
