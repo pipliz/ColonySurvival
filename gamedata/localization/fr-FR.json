@@ -1,11 +1,9 @@
 {
-	"coverage": 100.0,
+	"coverage": 98.0,
 	"hints": {
 		"0": "Pour la plupart des cultures, une vaste surface est synonyme de production élevée. La cueillette des baies est une exception.",
 		"1": "En recrutant plus de colons, des monstres différents et plus nombreux apparaîtront.",
 		"10": "La taille optimale pour le bûcheron est une zone de 3×33.",
-		"11": "Maintenir « Ctrl » pour s'accroupir et ne pas tomber des rebords.",
-		"13": "Maintenir « Ctrl » en plaçant une zone de chantier permet de placer une seconde zone avec les mêmes paramètres.",
 		"16": "Utilisez la boussole pour vous orienter vers différentes colonies et avant-postes.",
 		"17": "Utilisez l'astrolabe pour trouver les différentes régions aux ressources uniques.",
 		"18": "Construisez la sécurité sacré et dépensez des points sacrés pour sauver votre colonie lorsqu'elle est envahie par des monstres.",
@@ -20,9 +18,9 @@
 		"26": "Placez la vis d'archimède pour éliminer toute l'eau à proximité.",
 		"27": "Nous écrivons un blog périodique du vendredi. Retrouvez-le sur Steam pour en savoir plus sur le développement de Colony Survival !",
 		"28": "Il existe des mods pour Colony Survival. Retrouvez-les sur les forums Steam ou Discord !",
-		"3": "Appuyer sur « G » pour activer la lampe torche.",
+		"29": "S'accroupir empêche de tomber des bords des blocs.",
+		"30": "Appuyez sur <style=Player/ToggleTorch> pour activer votre torche.",
 		"4": "Cliquer sur les « blocs de travail » pour voir comment ils sont utilisés et pour prioriser certaines recettes.",
-		"5": "Appuyer sur « F1 » pour ouvrir ou fermer le guide.",
 		"7": "Les différences de portée, de vitesse de rechargement et de dégâts infligés procurent à chaque type de garde des avantages et des inconvénients."
 	},
 	"sentences": {
@@ -71,6 +69,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Difficulté",
+				"difficulty_peaceful": "_MISSING_Peaceful",
 				"difficultylocked": "Difficulté verrouillé ",
 				"header": "Paramètres du monde"
 			},
@@ -345,6 +344,7 @@
 			"none": "Aucun",
 			"normal": "Normal",
 			"previous": "Précédent",
+			"randomize": "_MISSING_Randomize",
 			"reset": "Réinitialiser",
 			"select": "Sélectionner",
 			"selected": "Sélectionné",
@@ -442,6 +442,7 @@
 				"blastfurnace": "Opérateur de haut fournaux",
 				"bloomeryjob": "Fondeur de fer",
 				"builder": "Constructeur",
+				"builderreplacer": "_MISSING_Replace Builder",
 				"cabbagefarmer": "Cultivateur de choux",
 				"chestmaker": "Coffreur",
 				"chickenfarmer": "Éleveur de poulets",
@@ -452,7 +453,7 @@
 				"cottonengine": "Opérateur de machine à coton",
 				"cottonfarmer": "Cultivateur de coton",
 				"digger": "Excavateur",
-				"diggerspecial": "Excavateur spécial",
+				"diggerspecial": "_MISSING_Specific Digger",
 				"dyer": "Teinturier",
 				"engineer": "Ingénieur",
 				"firepit": "Cuisinier primitif",
@@ -596,8 +597,8 @@
 				"name": "Zone de terrassement"
 			},
 			"constructiondiggerspecial": {
-				"description": "Débloquer la zone d'excavation spécial pour les ouvriers du batiment",
-				"name": "Zone de terrassement spécial"
+				"description": "_MISSING_Unlock advanced construction areas",
+				"name": "_MISSING_Advanced Construction"
 			},
 			"cook": {
 				"description": "Débloquer le cuisinier et le pêcheur, de nouvelles sources de repas pour vos colons",
@@ -883,9 +884,11 @@
 		"popup": {
 			"areaselection": {
 				"close": "Fermer",
-				"description": "Choisissez si vous souhaitez ou non supprimer cette zone",
+				"descriptionshort": "_MISSING_Remove this area?",
 				"header": "Menu de zone",
-				"remove": "Supprimer la zone"
+				"remove": "Supprimer la zone",
+				"size": "_MISSING_Area size: <b>{0}</b>",
+				"workertype": "_MISSING_Worker type: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Vous êtes mort(e).",
@@ -968,6 +971,7 @@
 					"needs": "Requiert : ",
 					"nothing": "Rien"
 				},
+				"trashicon": "Déposez les éléments ici pour les jeter",
 				"upgrades": {
 					"header": "Points de colonie",
 					"preamble2": "<i>Points actuels / Capacité</i>",
@@ -1015,9 +1019,16 @@
 				"selltext": "Vendre {0} pour {1} points",
 				"selltext2": "L'espace de stockage actuel permet {0} vente(s)"
 			},
+			"npccontext": {
+				"colony": "_MISSING_Colony:",
+				"fire": "_MISSING_Expel",
+				"header": "_MISSING_Colonist Info",
+				"job": "_MISSING_Job:",
+				"name": "_MISSING_Name:",
+				"showgoal": "_MISSING_Mark goals"
+			},
 			"quickstart": {
 				"closetoggle": "Ne plus afficher",
-				"f1_2": "Appuyer sur 'F1' pour réouvrir se menu",
 				"next": "Suivant",
 				"previous": "Précédent"
 			},
@@ -1032,16 +1043,17 @@
 				"header": "Supression d'un bloc spécial"
 			},
 			"toolconstruction": {
-				"builder": "Constructeur",
-				"buildera": "",
-				"builderb": "Requiert un espace de construction",
-				"builderc": "Construit des choses",
+				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
 				"description": "Sélectionnez le type de zone que vous souhaitez créer",
-				"destroyer": "Destructeur",
-				"destroyera": "",
-				"destroyerb": "Requiert une zone à détruire",
-				"destroyerc": "Détruit des choses",
-				"header": "Outil de construction"
+				"header": "Outil de construction",
+				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapes": {
+					"FullBox": "_MISSING_Solid Box",
+					"HollowBox": "_MISSING_Hollow Box",
+					"SolidCylinder": "_MISSING_Solid Cylinder",
+					"Walls": "_MISSING_Walls",
+					"WallsCylinder": "_MISSING_Cylindrical Walls"
+				}
 			},
 			"tooljob": {
 				"barleya": "Nourriture pour poulets",
@@ -1052,8 +1064,11 @@
 				"berryfarmer": "Cultivateur de baies",
 				"berryfarmertool": "Outil de cultivateur de baies",
 				"buildera": "Construit dans une zone du monde",
-				"builderarea": "Zone de construction",
+				"builderarea": "_MISSING_Build All",
 				"builderb": "Choisissez le bloc à placer, puis sélectionnez la zone à construire",
+				"builderreplacer": "_MISSING_Replace Specific",
+				"builderreplacera": "_MISSING_Replace one type with another",
+				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
 				"cabbagea": "Choux",
 				"cabbagefarmer": "Cultivateur de choux",
 				"chickenfarmer": "Éleveur de volailles",
@@ -1061,17 +1076,16 @@
 				"construction": "Chantier",
 				"construction1": "Laissez-les construires à votre place",
 				"construction2": "Cela ouvre un menu dans lequel vous pourrez choisir le type de chantier",
-				"constructionjob": "Ouvrier de chantier",
+				"constructionjob": "_MISSING_Job Spot",
 				"constructionjoba": "Recrute un ouvrier de chantier",
 				"constructionjobb": "Doit être adjacent à une zone de chantier",
 				"coversarea": "Recouvre une zone déjà existante",
 				"description": "Sélectionnez le type de zone que vous souhaitez créer",
 				"diggera": "Terrasse une zone du monde",
-				"diggerarea": "Zone d'excavation",
+				"diggerarea": "_MISSING_Remove All",
 				"diggerb": "Sélectionnez la zone à creuser",
-				"diggerspecial": "Zone d'excavation sélective",
+				"diggerspecial": "_MISSING_Remove Specific",
 				"diggerspeciala": "Déblaie les blocs spécifiés dans une zone",
-				"diggerspecialarea": "Zone d'excavation sélective",
 				"diggerspecialb": "Sélectionnez la zone à déblayer",
 				"dyer1": "Ajoutez des couleurs pour rendre la vie un peu moins terne",
 				"dyer2": "Cela ouvrira un autre menu avec plusieurs travaux agricoles",
@@ -1084,10 +1098,11 @@
 				"forestertool": "Outil de bûcheron",
 				"header": "Outil de commande",
 				"hempfarmer": "Cultivateur de Chanvre",
-				"insidearea": "Placement impossible à l'intérieur d'une zone",
 				"missingscience": "<color=#ff2323>La technologie « {0} » doit d'abord avoir été débloquée.</color>",
 				"noconstructionareanearby": "Aucun chantier à proximité",
-				"notarable": "Non cultivable",
+				"notarablefen": "_MISSING_Requires arable marshland below",
+				"notarableheath": "_MISSING_Requires arable heath below",
+				"notarablenormal": "_MISSING_Requires arable ground below",
 				"notflat": "Le terrain n'est pas plat",
 				"nowaternearby": "Pas d'eau aux alentours",
 				"occupiedblocks": "Occupé par des blocs",
@@ -1108,17 +1123,19 @@
 			"page1_2": {
 				"description": "Bienvenue dans Colony Survival!",
 				"header": "Bases",
-				"text1": "Commencez par trouver un bon endroit pour votre première colonie. Il est recommandé d'avoir de l'eau et des champs plats pour l'agriculture à proximité.",
-				"text2": "La bannière est le centre de votre colonie. Placez-le en cliquant sur le sol avec votre outil bannière sélectionné. Appuyez sur '2' pour le sélectionner. L'outil Bannière affiche une ombre profonde partout où les monstres apparaîtront une fois les colons recrutés.",
-				"text3": "Placez des lits pour pouvoir recruter des colons. Appuyez sur 'i' pour ouvrir l'interface. Faites glisser les lits de la réserve vers la barre de raccourcis ci-dessous. Avec le lit sélectionné, faites un clic droit sur le sol pour placer un lit.",
+				"text1_2": "Commencez par trouver un bon endroit pour votre première colonie. Il est recommandé d'avoir de l'eau et des champs plats pour l'agriculture à proximité. Une bannière sera le centre de votre colonie.",
+				"text2_2gamepad": "Sélectionnez l'outil Bannière dans l'inventaire ci-dessous en utilisant <style=Player/HotBarUp> et <style=Player/HotBarDown>. Placez-le avec <style=Player/FireSecondary> tout en visant le sol avec l'outil Bannière sélectionné. Une fois dans une colonie, l'outil Bannière affiche une ombre profonde partout où des monstres peuvent apparaître plus tard.",
+				"text2_2keyboard": "Sélectionnez l'outil Bannière dans l'inventaire ci-dessous en utilisant <style=Player/Inventory1>. Placez-le avec <style=Player/FireSecondary> tout en visant le sol avec l'outil Bannière sélectionné. Une fois dans une colonie, l'outil Bannière affiche une ombre profonde partout où des monstres peuvent apparaître plus tard.",
+				"text3_2": "Placez des lits pour pouvoir recruter des colons. Appuyez sur <style=Player/ToggleInventory> pour ouvrir l'interface. Déplacez les lits de la réserve vers la barre de raccourcis ci-dessous. Avec le lit sélectionné, utilisez <style=Player/FireSecondary> tout en visant le sol pour placer un lit.",
 				"text4": "Ouvrez l'interface et allez sur la page 'Colonie'. Appuyez sur 'recruter' pour recruter un colon."
 			},
 			"page2_2": {
 				"description": "Ceux-ci sont essentiels à la croissance et à la survie",
 				"header": "Nourriture et lit",
 				"text1": "Les colons ont besoin d'un repas par jour. Ils les attrapent à la bannière ou dans une épicerie à proximité. Sans nourriture, les colons meurent de faim. Recruter de nouveaux colons coûte plusieurs repas.",
-				"text2": "Le producteur de baies est la première source de nourriture. Sélectionnez l'outil de commande en appuyant sur '1'. Cliquez pour l'ouvrir et sélectionnez le producteur de baies. Faites un clic droit sur le sol pour commencer à définir la ferme de baies, puis cliquez à nouveau avec le bouton droit ailleurs pour terminer. Vous en aurez besoin de beaucoup!",
-				"text3": "Pour commencer à produire des lits, vous devrez fabriquer une table de bricoleur. Abattez un arbre en cliquant dessus avec le bouton gauche de la souris et creusez pour ramasser des gravats de pierre.",
+				"text2_2gamepad": "Le producteur de baies est la première source de nourriture. Sélectionnez l'outil de commande (le premier emplacement d'inventaire). <style=Player/FirePrimary> pour l'ouvrir et sélectionner le producteur de baies. <style=Player/FireSecondary> pour commencer à définir la ferme de baies, puis <style=Player/FireSecondary> à nouveau ailleurs pour terminer. Vous en aurez besoin de beaucoup !",
+				"text2_2keyboard": "Le producteur de baies est la première source de nourriture. Sélectionnez l'outil de commande (<style=Player/Inventory0>). <style=Player/FirePrimary> pour l'ouvrir et sélectionner le producteur de baies. <style=Player/FireSecondary> pour commencer à définir la ferme de baies, puis <style=Player/FireSecondary> à nouveau ailleurs pour terminer. Vous en aurez besoin de beaucoup !",
+				"text3_2": "Pour commencer à produire des lits, vous devrez fabriquer une table de bricoleur. Tenir <style=Player/FirePrimary> tout en visant des blocs vous permettra de creuser pour rassembler les moellons de pierre requis.",
 				"text4": "Cliquez sur l'icône de la table du bricoleur à gauche de la réserve pour la fabriquer. Placez-le comme vous avez placé le lit. Comme avec la ferme de baies, les colons au chômage prendront automatiquement ce travail."
 			},
 			"page3_2": {
@@ -1140,7 +1157,7 @@
 			"page5_2": {
 				"description": "Échangez et développez pour accéder à des ressources uniques",
 				"header": "Points de colonie et colonisation",
-				"text1": "Déverrouillez et placez le hub des marchands. Faites un clic droit dessus pour ouvrir son interface. Vendez des objets pour gagner des points de colonie. Entre autres, les points peuvent être dépensés pour des améliorations comme la limite de colons sur la page Points de Colony.",
+				"text1_2": "Déverrouillez et placez le hub des marchands. Utilisez <style=Player/FireSecondary> pour ouvrir son interface. Vendez des objets pour gagner des points de colonie. Entre autres, les points peuvent être dépensés pour des améliorations comme la limite de colons sur la page Colony Points.",
 				"text2": "Ce monde contient plusieurs régions avec des ressources uniques. Il y a des sommets couverts de neige, des landes couvertes de pourpre, des marais et des arbres mammouths. Déverrouillez et équipez l'astrolabe pour les retrouver facilement.",
 				"text3": "Débloquez des avant-postes, achetez une bannière d'avant-poste et emportez-la avec vous pendant que vous explorez. Placez-le pour démarrer un avant-poste. Son stock et ses progrès scientifiques sont partagés avec la colonie principale et d'autres avant-postes. Construisez des avant-postes dans les régions mentionnées ci-dessus pour accéder à leurs ressources."
 			},
@@ -1226,7 +1243,7 @@
 				"depthoffield": "Profondeur de champ",
 				"drawdistance": "Distance d'affichage (*)",
 				"fieldofview": "Champ de vision",
-				"fog": "_MISSING_Fog",
+				"fog": "Brouillard",
 				"full": "Paramètres vidéo",
 				"fullscreen": "Plein écran",
 				"particleeffects": "Effets de particules",
@@ -1238,7 +1255,7 @@
 				"sunshadowcascades": "Cascades de l'ombre du soleil",
 				"sunshadowdistance": "Distance de l'ombre",
 				"sunshadowquality": "Qualité de l'ombre",
-				"texturequality": "Qualité des textures",
+				"texturequality": "Qualité des textures (*)",
 				"torchquality": "Qualité des torches",
 				"vsync": "VSync",
 				"vsyncdouble": "Double"
@@ -1247,6 +1264,7 @@
 		"singleplayermenu": {
 			"alreadyexists": "Le monde existe déjà !",
 			"cancel": "Annuler",
+			"cloudsync": "Utiliser la synchronisation Steam Cloud",
 			"confirmdelete": "Confirmer la suppression",
 			"confirmdeletedescription": "Vous êtes sur le point de supprimer le dossier contenant ce monde.\nQue souhaitez-vous faire ?",
 			"confirmload": "Confirmer le chargement",
@@ -1715,7 +1733,7 @@
 		"flax": "La couleur impériale.",
 		"flaxstage1": "Mettez-la dans le sol pour qu'elle pousse.",
 		"furnace": "Utilise du bois de coupe comme combustible pour fabriquer des lingots de bronze et des briques.",
-		"glider": "Place un lanceur de planeur ; Entrez-en un en cliquant dessus avec le bouton droit de la souris et naviguez en visant tout en maintenant la pression vers l'avant.",
+		"glider": "Place un lanceur de planeur ; Entrez-y en utilisant <style=Player/FireSecondary> et naviguez en visant tout en maintenant le doigt vers l'avant.",
 		"glidersteel": "Comme le lanceur de planeur ordinaire, mais celui-ci vous propulse beaucoup plus haut dans les airs.",
 		"goldingot": "Utile pour garantir la valeur du billet de banque.",
 		"goldore": "Peut également être trouvé dans le minerai sous les montagnes enneigées.",
@@ -1724,7 +1742,7 @@
 		"hollyhock": "Dans la vraie vie, possède des propriétés laxatives. Pas dans le jeu. Pour l'instant.",
 		"ironore": "Miné avec une pioche en fer.",
 		"ironwrought": "Version améliorée du fer.",
-		"kiln": "Transforme les planches en charbon de bois.",
+		"kiln": "_MISSING_Turns firewood into charcoal",
 		"lanterncyan": "Futuriste.",
 		"lanterngreen": "Rend la colonie écolo.",
 		"lanternorange": "Ambiance douce.",
