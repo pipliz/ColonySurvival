@@ -1,1796 +1,1796 @@
 {
-	"coverage": 93.0,
-	"hints": {
-		"0": "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
-		"1": "Más y diferentes monstruos aparecerán si reclutas más colonos.",
-		"10": "3x33 es el tamaño óptimo para un forestal.",
-		"16": "Usa el compás para encontrar dónde se encuentran tus distintas colonias y puestos de avanzada.",
-		"17": "Usa el Astrolabio para encontrad distintos biomas que tienen recursos únicos.",
-		"18": "Costruye la Seguridad Sagrada y usa Puntos Sagrados para salvar la colonia cuando es atacada por monstruos.",
-		"19": "Construye el Almacén Sagrado para almacenar más Puntos Sagrados",
-		"2": "Ciertas capas del mundo contienen diferentes minerales. Excava más hondo para encontrar diferentes minerales.",
-		"20": "Usa pintura blanca, roja, verde y azul para darle color a objetos como puertas y ventanas.",
-		"21": "Utiliza el Eliminador de pintura para quitar la pintura a los objetos que has pintado.",
-		"22": "Los ascensores no pueden ser usados por los colonos pero son una forma rápida para moverse entre pisos.",
-		"23": "Construye estaciones de tren y vías para moverte rápidamente de A a B (no puede ser usado por colonos).",
-		"24": "Las Puertas de vía impiden el paso de colonos y muestros pero permite el paso de trenes.",
-		"25": "Construye el Tablón de estadísticas para obtener información detallada sobre las estadísticas de tu colonia.",
-		"26": "Construye un Tornillo de Arquímedes para eliminar agua alrededor. (Elimina un area de 8x8x8)",
-		"27": "Casi todos los viernes escribiemos noticias en Steam sobre el desarrollo de Colony Survival.",
-		"28": "Hay mods y mundos muy interesantes en el Workshop de Colony Survival. (Recomiendo el mod de Chisel).",
-		"29": "_MISSING_Crouching prevents falling off edges.",
-		"30": "_MISSING_Press <style=Player/ToggleTorch> to activate your torch.",
-		"4": "Has clic en los 'bancos o mesas de trabajo' para ver como están siendo usados y priorizar ciertas recetas.",
-		"7": "Diferencias en rango, tiempos de recarga y daño dan a cada tipo de guardia beneficios únicos y desventajas."
-	},
-	"sentences": {
-		"astrolabe": {
-			"bigtree": "Árboles gigantes",
-			"heath": "Brezo",
-			"marsh": "Pantano",
-			"mountain": "Montaña"
-		},
-		"bannerclickedpopup": {
-			"deletebanner": "Borrar Estandarte",
-			"deletecolony": "Borrar Colonia",
-			"deletecolonydescription": "Borrar el último Estandarte de la Colonia eliminará todos los npcs y hará inusable la Colonia. Si deseas continuar, escribe 'delete' abajo.",
-			"header": "Opciones del Estandarte",
-			"noconfirmationdelete": "Ignorando el comando de eliminación, ya que no hubo confirmación.",
-			"placementfail": "No se pudo colocar el Estandarte en esta ubicación"
-		},
-		"bannerplacementpopup": {
-			"activecolony": "Colonia activa: {0}",
-			"addbanner": "Añadir Estandarte",
-			"header": "Colocación del Estandarte",
-			"missingcolonykit": "Requiere un kit de inicio de colonia",
-			"missingoutpostbanner": "Requiere un estandarte de avanzada",
-			"movebanner": "Mover Estandarte",
-			"mustbeleader": "Debe ser el líder de la colonia para ajustar los estandartes",
-			"opencolonytab": "Administrador {0}",
-			"startcolony": "Fundar una nueva Colonia",
-			"startoutpost": "Crear un nuevo puesto avanzado",
-			"startoutpostremote": "Crear un nuevo puesto avanzado"
-		},
-		"category": {
-			"consumables": "Consumibles",
-			"decorative": "Bloques de construcción",
-			"defense": "Defensa",
-			"essential": "Esenciales",
-			"food": "Comida",
-			"ingredient": "Ingredientes y Lujo",
-			"job": "Bancos de trabajos",
-			"misc": "Varios",
-			"texres": "Textiles e Investigación"
-		},
-		"chat": {
-			"colonydied": "Todos los colonos en {0} fueron asesinados.",
-			"playerdied": "Jugador {0} murió."
-		},
-		"colonymanagement": {
-			"colonysettings": {
-				"difficulty": "Dificultad",
-				"difficulty_peaceful": "_MISSING_Peaceful",
-				"difficultylocked": "Bloquear Dificultad",
-				"header": "Ajustes de la Colonia"
-			},
-			"diplomacy": {
-				"mainbutton": "Diplomacia",
-				"mainheader": "Diplomacia",
-				"ruleaccept": "Aceptar",
-				"ruleactive": "Activar",
-				"ruleedit": "Editar",
-				"rulepending": "Pendiente",
-				"ruleremove": "Elmiminar"
-			},
-			"inventoryheader": "Colonia",
-			"manageheader": "Colonia",
-			"managejobs": {
-				"column_enabled": "Activo",
-				"column_jobtype": "Trabajo",
-				"column_total": "Total",
-				"column_unfilled": "Vacio",
-				"disable_all": "Deshabilitar todos",
-				"enable_all": "Habilitar todos",
-				"header_text": "Hay <b>{0}</b> trabajadores inactivos. Trabajos activos: <b>{1} / {2}</b>. Trabajos llenos: <b>{3} / {1}</b>",
-				"mainheader": "Gestionar trabajos",
-				"refresh": "Actualizar",
-				"set_balanced": "Balancear"
-			},
-			"manageowners": "Gestión de dueños",
-			"nameedit": "Editar :",
-			"outpost": {
-				"create": "Crear puesto avanzado",
-				"createdescription": "Iniciar un puesto avanzada consume un Estandarte de Puesto Avanzada de tu inventario (o reserva).",
-				"parentcolony": "Colonia Principal:",
-				"popupheader": "Creación de puestos avanzados",
-				"selectparent": "Seleccionar colonia principal"
-			},
-			"ownership": {
-				"action": "Acción",
-				"connectedplayers": "Jugadores conectados",
-				"currentowners": "Propietarios actuales",
-				"follower": "Seguidor",
-				"invite": "Añadir como propietario de la colonia",
-				"kick": "Expulsar",
-				"leader": "Líder",
-				"leave": "Abandonar colonia",
-				"name": "Nombre",
-				"role": "Rol",
-				"settoleader": "Promover a lider"
-			},
-			"recruit": "Reclutar",
-			"recruitauto": "Auto-reclutar en puesto de trabajo",
-			"recruitfailedbeds": "<color=#ff2323>No hay suficientes camas libres para reclutar un colono.</color>",
-			"recruitfailedcap": "<color=#ff2323>Debes incrementar la cantidad máxima de colonos para poder recrutar un nuevo colono.</color>",
-			"recruitfailednomeals": "<color=#ff2323>No hay suficiente comida para reclutar un colono.</color>",
-			"recruitmentamount": "Cantidad de colonos a reclutar:",
-			"recruitmentbutton": "Reclutar",
-			"recruitmentheader": "Reclutamiento",
-			"recruittext3": "Los Colonos requieren 2000 calorias por dia y una Cama.",
-			"recruittext4-2": "El reclutamiento del próximo colono cuesta {0} comidas.",
-			"recruittext5-2": "Hay {0} camas vacias y puedes reclutar {1}  más colonos antes de alcanzar la cantidad máxima de colonos.",
-			"recruittext6": "El reclutamiento de los siguientes {0} colonos es gratuito.",
-			"recruittofillbeds": "Rellenar las camas",
-			"recruittofilljobs": "Rellenar los trabajos",
-			"resetcolonypriority2": "Reiniciar la colonia activa",
-			"science": {
-				"incomingdescription2": "Te proveen ciencia",
-				"newagreement": "Proponer acuerdo de investigación",
-				"outgoingdescription2": "Les provees ciencia",
-				"selectcolony": "Selecciona una colonia para enviar ciencia"
-			},
-			"selectcolony": {
-				"currentcolony": "Colonia actual: {0}",
-				"headercolonists": "Colonos",
-				"headercolony": "Colonia",
-				"headerleader": "Lider",
-				"headerselect": "Seleccionar",
-				"nocolonies": "No hay colonos en la lista",
-				"nocoloniesowned": "No hay colonias que poseas en la lista",
-				"nocoloniesthird": "No hay colonias externas en la lista",
-				"othercolonies": "Otras colonias",
-				"select": "Seleccionar"
-			},
-			"start": {
-				"create": "Crear Colonia",
-				"defaultkit": "Primera vez que el Kit de inicio es usado",
-				"kits": "Equipos disponibles",
-				"missingkit": "Falta un Kit colonial de inicio",
-				"name": "Nombre de la Colonia",
-				"parentcolony": "Colonia progenitora",
-				"popupheader": "Creación de Colonia",
-				"usescienceagreement": "Transferir Ciencia"
-			},
-			"startsettings": "Ajustes de la Colonia",
-			"switchcolony2": "Cambiar colonia activa a:",
-			"trading": {
-				"completerule": "Crear norma",
-				"completeruleedit": "Completar edición de la regla",
-				"mainheader": "Nuevos ajustes para normas comerciales",
-				"newruleinfinite": "Nueva regla de comercio infinita",
-				"newrulelimited": "Nueva regla de comercio limitada",
-				"ruledescription": "Los comerciantes comerciarán {0} de {1} a {2} de acuerdo a:",
-				"ruledescriptionlimit": "Faltan {0} objetos por comerciar.",
-				"ruleincomingdescr2": "Obtener {0} si ellos tienen más de {1} y nosotros tenemos menos de {2}.",
-				"rulemaximumgoal": "{0} tiene menos de: ",
-				"rulemaximumtraded": "Este acuerdo enviará la siguiente cantidad de objetos en total: ",
-				"ruleminimumthis": "{0} tiene más de: ",
-				"ruleoutgoingdescr2": "Enviar {0} si tenemos más de {1} y ellos tienene menos de {2}.",
-				"selectcolony": "Selecciona una colonia para negociar"
-			}
-		},
-		"commands": {
-			"disableachievements": "Los logros se han desactivado para este mundo debido a la interacción con las opciones de trucos",
-			"disableachievementsfirst": "Para ello, primero debes desactivar los logros mediante el comando '/disableachievements'.",
-			"nopermission": "Usted no tiene el permiso '{0}' para hacer eso."
-		},
-		"connectingscreen": {
-			"loading": "Cargando",
-			"localhost_fail": "Fallo la búsqueda de servidor de Steam/Un solo jugador corriendo en este computador. Recargando el menú principal en 5 segundos.",
-			"refused": {
-				"blacklisted": "Estás en la lista negra",
-				"incompatible": "El servidor tuvo un problema inesperado",
-				"invalidpassword": "Contraseña invalida",
-				"invalidticket": "Ticket de Steam invalido",
-				"maxplayer": "Servidor lleno",
-				"misc": "Razón desconocida",
-				"notonwhitelist": "No estás en la lista blanca",
-				"versionwrongclient": "La versión no concuerda con el cliente",
-				"versionwrongserver": "La versión no concuerda con el servidor"
-			},
-			"refused_main": "Conexión denegada, {0}. Regresando al menú principal en 5 segundos.",
-			"sp_alreadyrunning2": "Un servidor ya está ejecutandose. Regresando al menú principal en 5 segundos.",
-			"stages": {
-				"1": "_MISSING_Requested server files table",
-				"connectionmade": "_MISSING_Connection made",
-				"downloading": "_MISSING_(downloading {0} packets)",
-				"fail": "_MISSING_Loading failed, returning to main menu in 5 seconds",
-				"final": "_MISSING_Finalizing",
-				"loading": "_MISSING_Loading {0} files",
-				"local1": "_MISSING_Searching for singleplayer server on this computer",
-				"local2": "_MISSING_Searching for online server on this computer",
-				"password": "_MISSING_Password required",
-				"steamdirect": "_MISSING_Trying to setup direct connection",
-				"steamp2p": "_MISSING_Trying to setup p2p connection",
-				"timeout": "_MISSING_Connecting timed out. Returning to main menu in 5 seconds",
-				"waitingserver": "_MISSING_Starting server in the background"
-			}
-		},
-		"contentmanager": {
-			"buttonbrowseworkshop": "Explorar Workshop",
-			"buttoncreateitem": "Crear contenido",
-			"buttoneditdetails": "Editar detalles",
-			"buttonlistsubscribed": "Contenidos subscritos",
-			"buttonsubmitcontent": "Enviar",
-			"buttonupdatecontent": "Actualizar contenido",
-			"changelogplaceholder": "Escribir el registro de cambios aquí...",
-			"contenteditheader": "Configurar/actualizar el contenido de {0}",
-			"contentpath": "Localización del contenido: {0}",
-			"contenttypelabel": "Tipo de contenido",
-			"contenttypes": {
-				"itempack": "Paquete de artículos",
-				"misc": "Varios",
-				"overhaul": "Revisión completa",
-				"texturepack": "Paquete de texturas",
-				"unknown": "Desconocido",
-				"utilities": "Utilidades",
-				"world": "Mundo"
-			},
-			"nocontentpath": "No se ha seleccionado la localización del contenido",
-			"scenariolabel": "Nombre del escenario",
-			"statecommittingchanges": "Confirmando cambios: {0} / {1}",
-			"statepreparingconfig": "Preparando configuraciones: {0} / {1}",
-			"statepreparingcontent": "Preparando contenido: {0} / {1}",
-			"stateuploadingcontent": "Subiendo contenido: {0} / {1}",
-			"stateuploadingpreview": "Subiendo vista previa: {0} / {1}",
-			"thumbnailpath": "Localización de la imagen del contenido:",
-			"yourcontent": "Has creado un contenido en el workshop"
-		},
-		"controls": {
-			"decreasefieldofview": "Disminuir distancia de visión(cheat)",
-			"fireprimary": "_MISSING_Primary Action",
-			"firesecondary": "_MISSING_Secondary Action",
-			"flydown": "Volar hacia abajo (cheat)",
-			"holdcrouch": "Agacharse (Mantener)",
-			"hotbardown": "_MISSING_Next hotbar spot",
-			"hotbarup": "_MISSING_Previous hotbar spot",
-			"increasefieldofview": "_MISSING_Increase field of view (cheat)",
-			"inventory0": "_MISSING_Hotbar 10",
-			"inventory1": "_MISSING_Hotbar 1",
-			"inventory2": "_MISSING_Hotbar 2",
-			"inventory3": "_MISSING_Hotbar 3",
-			"inventory4": "_MISSING_Hotbar 4",
-			"inventory5": "_MISSING_Hotbar 5",
-			"inventory6": "_MISSING_Hotbar 6",
-			"inventory7": "_MISSING_Hotbar 7",
-			"inventory8": "_MISSING_Hotbar 8",
-			"inventory9": "_MISSING_Hotbar 9",
-			"jump": "Saltar",
-			"jumpgamepadtap": "Saltar",
-			"look": "Mirar",
-			"movekeyboard": {
-				"down": "Mover abajo",
-				"left": "Mover izquierda",
-				"right": "Mover derecha",
-				"up": "Mover hacia delante"
-			},
-			"movepad": "Movimiento",
-			"opencolonytab": "Abrir pestaña de Colonia",
-			"openquickstart": "Abrir menú de ayuda",
-			"placemultipleareas": "_MISSING_Chain-place construction areas",
-			"resetfieldofview": "_MISSING_Reset field of view (cheat)",
-			"rotateobjectleft": "_MISSING_Rotate Left",
-			"rotateobjectright": "_MISSING_Rotate Right",
-			"sprint": "Correr",
-			"sprintgamepadheld": "Correr",
-			"takescreenshot": "Tomar foto",
-			"toggleautofocus": "Auto apuntar(cheat)",
-			"togglechat": "_MISSING_Toggle Chat",
-			"togglecrouch": "_MISSING_Crouch (Toggle)",
-			"toggledevconsole": "_MISSING_Toggle Dev Log (cheat)",
-			"toggledevmenu": "_MISSING_Toggle Dev Menu (cheat)",
-			"toggleextrasmooth": "_MISSING_Toggle smoothed aim (cheat)",
-			"togglefly": "_MISSING_Toggle Flying (cheat)",
-			"togglefocuspoint": "_MISSING_Toggle locked aim (cheat)",
-			"toggleinterface": "_MISSING_Toggle Interface",
-			"toggleinventory": "_MISSING_Toggle Inventory",
-			"togglestats": "_MISSING_Toggle Statistics view",
-			"toggletorch": "_MISSING_Toggle Torch"
-		},
-		"escapemenu": {
-			"back": "Volver al Juego",
-			"info": "Información",
-			"quitdesktop": "Salir al escritorio",
-			"quitmain": "Menú Principal",
-			"settings": "Ajustes"
-		},
-		"failsafe": {
-			"current": "Almacenamiento actual de Puntos Sagrados: {0} de {1}",
-			"damage": "Activar el Seguro Sagrado causará {0} de daño.",
-			"futurewave": "El Seguro reducirá el total de puntos de vida de los monstruos entrantes en {0:P0} durante la noche.",
-			"header": "Seguro",
-			"nextavailable": "El seguro contra fallos volverá a estar disponible la próxima noche",
-			"statusactive": "Estado: Seguridad Sagrada ha sido activada",
-			"statusavailable": "Estado: Seguridad Sagrada está disponible",
-			"trigger": "Desencadenar",
-			"wave": "El nivel de amenaza actual es {0} y engendrará monstruos con un total de HP (Puntos de vida) de {1}",
-			"wavereduced": "El total de HP (Puntos de vida) de los monstruos entrantes se reducirá en {0:P0} la siguiente noche"
-		},
-		"firstpersonstats": {
-			"ammocount": "Munición:",
-			"bedcount": "Camas :",
-			"colonistcount": "Colonos :",
-			"colonypoints": "Puntos :",
-			"laborercount": "Desempleados :",
-			"mealstorage": "Comida total :",
-			"threatlevel": "Nivel de amenaza :",
-			"time_day": "Día"
-		},
-		"general": {
-			"apply": "Aplicar",
-			"back": "Atrás",
-			"close": "Cerrar",
-			"delete": "Eliminar",
-			"description": "Descripción",
-			"edit": "Editar",
-			"enabled": "Habilitado",
-			"gamepadtextinputalphanumeric": "Solo se permiten letras alfanuméricas y números.",
-			"high": "Alto",
-			"inputplaceholder": "Escribir nombre...",
-			"inputplaceholder_search": "Escribir texto para buscar...",
-			"low": "Bajo",
-			"next": "Siguiente",
-			"no": "No",
-			"none": "Nada",
-			"normal": "Normal",
-			"previous": "Anterior",
-			"randomize": "_MISSING_Randomize",
-			"reset": "Restablecer",
-			"select": "Seleccionar",
-			"selected": "Seleccionado",
-			"veryhigh": "Muy alto",
-			"yes": "Sí"
-		},
-		"happiness": {
-			"availablefood": "{0}% disponible para {1}",
-			"availableluxury": "{0}% disponible para {1}",
-			"baseamount": "Felicidad existente",
-			"calories": "Calorias racionadas",
-			"calorieshappy": "Bien alimentado",
-			"calorieshunger": "Hambriento",
-			"caloriesstarvation": "Inanición",
-			"colonistcount": "Población",
-			"disabledeffect": "Felicidad desactivada",
-			"recruitmentcost": "Coste de reclutaje: {0:P0} de lo normal",
-			"sciencespeed": "Vel. de investigación: {0:P0} de lo normal",
-			"totalhappiness": "Felicidad total: {0}"
-		},
-		"infomenu": {
-			"changelog": "Lista de cambios",
-			"credits": "Créditos",
-			"quickstart": "Inicio rápido"
-		},
-		"mainmenu": {
-			"back": "Atras",
-			"contentmanager": "Gestor de mods",
-			"continue": "Continuar",
-			"coop": "Cooperativo",
-			"info": "Información",
-			"multiplayer": "Multijugador",
-			"quit": "Salir",
-			"settings": "Ajustes",
-			"singleplayer": "Un jugador"
-		},
-		"multiplayermenu": {
-			"colonistcount": "Cantidad de colonos",
-			"connectlocal": "Conectar al servidor local",
-			"header_friends": "Amigos",
-			"header_history": "Historial",
-			"header_internet": "Internet",
-			"header_lan": "LAN",
-			"ipaddress": "Dirección",
-			"join": "Unirse",
-			"mods": "Mods",
-			"passworded": "Con contraseña",
-			"refresh2": "Refrescar",
-			"refreshing": "Actualizando...",
-			"refreshquick": "Refresco rápido",
-			"selectedserver": "Seleccionar servidor",
-			"serverping": "Ping",
-			"serverplayers": "Jugadores",
-			"servers": "Servidores",
-			"showempty": "Mostrar vacíos",
-			"showfull": "Mostrar completos",
-			"showincompatible": "Mostrar incompatibles",
-			"version": "Versión"
-		},
-		"notifications": {
-			"delete": "Eliminar Notificación",
-			"header": "Notificaciones",
-			"missingplayerammo": "<color=#ff2323>¡Usar {0} requiere que tengas {1} en el inventario!</color>",
-			"npc_died": {
-				"banner": "Un monstruo en el estandarte",
-				"command": "Uso de comandos",
-				"excess": "Y {0} más murieron desde entonces, anónimamente.",
-				"individual": "{0}: Un colono con trabajo {1} murió de: {2}",
-				"main": "{0} colonos murieron en el puesto {1}!",
-				"misc": "Por motivos desconocidos",
-				"monster": "Un monstruo",
-				"npc": "Un colono",
-				"player": "Un jugador",
-				"starving": "Hambre",
-				"trap": "Una trampa"
-			},
-			"science": {
-				"entry": "{0}: Completado {1}",
-				"main": "¡Ciencia completada!"
-			},
-			"siegemode": {
-				"disabled": "{0}: Salió del modo de asedio",
-				"enabled": "{0}: Entró en modo de asedio",
-				"main": "¡Modo de asedio activado en el puesto {0}!"
-			}
-		},
-		"npcs": {
-			"pipliz": {
-				"alchemist": "Alquimista",
-				"alkanetfarmer": "Agricultor de Alkanet",
-				"artist": "Artista",
-				"barleyfarmer": "Agricultor de cebada",
-				"beekeeper": "Apicultor",
-				"berryfarmer": "Agricultor de bayas",
-				"blastfurnace": "Operario de alto horno",
-				"bloomeryjob": "Herrero",
-				"builder": "Constructor",
-				"builderreplacer": "_MISSING_Replace Builder",
-				"cabbagefarmer": "Agricultor de coles",
-				"chestmaker": "Fabricante de Cofres",
-				"chickenfarmer": "Granjero de pollos",
-				"composter": "Compostador",
-				"constructor": "Constructor",
-				"cook": "Cocinero",
-				"coppersmith": "Herrero del cobre",
-				"cottonengine": "Operador de máquinas de algodón",
-				"cottonfarmer": "Agricultor de algodón",
-				"digger": "Excavador",
-				"diggerspecial": "_MISSING_Specific Digger",
-				"dyer": "Tintorero",
-				"engineer": "Ingeniero",
-				"firepit": "Cocinero Básico",
-				"fisherman": "Pescador",
-				"flaxfarmer": "Agricultor de lino",
-				"fletcher": "Banco de Flechas",
-				"forester": "Forestal",
-				"glassblower": "Soplador de vidrio",
-				"grinder": "Molinero",
-				"guardbowday": "Arquero Diurno",
-				"guardbownight": "Arquero Nocturno",
-				"guardcrossbowday": "Ballestero Diurno",
-				"guardcrossbownight": "Ballestero Nocturno",
-				"guardgrenadeday": "Guardia Lanzagranadas Diurno",
-				"guardgrenadenight": "Guardia Lanzagranadas Nocturno",
-				"guardhandcannonday": "Guardia de cañón de mano Diurno",
-				"guardhandcannonnight": "Guardia de cañón de mano Nocturno",
-				"guardmusketday": "Guardia de mosquete Diurno",
-				"guardmusketnight": "Guardia de mosquete dNocturno",
-				"guardpoison": "Guardia del veneno",
-				"guardslingerday": "Hondero Diurno",
-				"guardslingernight": "Hondero Nocturno",
-				"gunsmith": "Armero",
-				"hempfarmer": "Agricultor de cáñamo",
-				"hollyhockfarmer": "Agricultor de malvarrosa",
-				"jeweller": "Joyero",
-				"jobblockcrafter": "Artesano de Banco de Trabajo",
-				"jobblockcrafteradvanced": "Artesano Avanzado de Banco Trabajo",
-				"kilnjob": "Quemador",
-				"laborer": "Obrero",
-				"metallathe": "Torno de metales",
-				"minerjob": "Minero",
-				"networkplayer": "Jugador",
-				"papermaker": "Fabricante de papel",
-				"potter": "Alfarero",
-				"printingpress": "Operador de imprenta",
-				"researcher": "Investigador",
-				"roper": "Fabricante de cuerdas",
-				"sanctifier": "Santificador",
-				"scribe": "Escribano",
-				"smelter": "Fundición",
-				"stonemason": "Cantero",
-				"tabulator": "Operador de máquinas tabuladoras",
-				"tailor": "Sastre",
-				"tanner": "Curtidor",
-				"tinkerer": "Artesano",
-				"trader": "Comerciante",
-				"trapfixer": "Fijador de Trampas",
-				"watergatherer": "Recolector de agua",
-				"waterpump": "Trabajador de bombas de agua",
-				"wheatfarmer": "Agriculto de trigo",
-				"wisteriafarmer": "Agricultor de Glicinas",
-				"wolfsbanefarmer": "Agricultor Aconitum",
-				"woodcutter": "Leñador",
-				"writer": "Escritor"
-			}
-		},
-		"pipliz": {
-			"alarmbell": {
-				"description": "Desbloquea la Campana de alarma, que hará sonar una campana al ser pisada por un monstruo.",
-				"name": "Campana de alarma"
-			},
-			"animalcarcass": {
-				"description": "Proporciona una fuente de cadáveres de animales",
-				"name": "Cadáveres de animales de la zona"
-			},
-			"anvil": {
-				"description": "Desbloquea el Yunque, una fuente importante de productos más avanzados como las Herramientas de Cobre.",
-				"name": "Yunque"
-			},
-			"archery": {
-				"description": "Desbloquea arqueros y fabricador de flechas, una protección más eficaz contra los monstruos.",
-				"name": "Arquería"
-			},
-			"artist": {
-				"description": "Desbloquea un nuevo trabajo enfocado principalmente a la decoración",
-				"name": "Atista"
-			},
-			"astrolabe": {
-				"description": "Desbloquea el astrolabio; una herramienta de navegación que ayuda a encontrar biomas.",
-				"name": "Astrolabio"
-			},
-			"blastfurnace": {
-				"description": "Desbloquea una forma rápida de fundir metales avanzados",
-				"name": "Alto horno"
-			},
-			"brass": {
-				"description": "Desbloquea el latón, una aleación relativamente blanda. No es adecuada para armas o herramientas, pero su maleabilidad la hace perfecta para pequeñas piezas detalladas. Requiere zinc, que puede comprarse o extraerse bajo los árboles de gigantes.",
-				"name": "Bronce"
-			},
-			"bread": {
-				"description": "Desbloquea la fabricación de pan. Utiliza piedras de moler para hacer harina, que luego el cocinero podrá usar para hacer pan.",
-				"name": "Pan"
-			},
-			"bricks": {
-				"description": "Permite hornear la arcilla en nuevos tipos de bloques",
-				"name": "Ladrillos"
-			},
-			"bronze": {
-				"description": "Desbloquea una forma de hacer más fuerte el cobre, mezclándolo con el raro y valioso estaño.",
-				"name": "Edad de Bronce"
-			},
-			"bronzelockbox": {
-				"description": "Desbloquea el Cofre de Bronce. Versión mejorada del Cofre de Cobre. Más almacenamiento, más eficiencia, menos amenazadora.",
-				"name": "Cofre de Bronce"
-			},
-			"caltrop": {
-				"description": "Desbloquea una trampa que, una vez cargada, ralentizará a los monstruos que se encuentren bajo ella.",
-				"name": "Abrojos"
-			},
-			"chestluxury": {
-				"description": "Desbloquea los cofres de lujo, necesarios para desbloquear tecnología avanzada.",
-				"name": "Cofre de lujo"
-			},
-			"chestprestige": {
-				"description": "¡Abandonad toda esperanza de recompensa y provecho, los que entráis aquí! Los Cofres de Prestigio son necesarios para la Ciencia de Prestigio. Es un objetivo para las colonias entusiastas.",
-				"name": "Cofre Prestige"
-			},
-			"chestresource": {
-				"description": "Desbloquea los cofres científicos, necesarios para desbloquear tecnología avanzada.",
-				"name": "Cofre de la Ciencia"
-			},
-			"chickenmeal": {
-				"description": "Desbloquea una comida más compleja que proporciona más puntos sagrados cuando la consumen los colonos.",
-				"name": "Comidas de Pollo"
-			},
-			"classical": {
-				"description": "Revive las decoraciones usadas por nuestros antecesores.",
-				"name": "Arquitectura clásica"
-			},
-			"compass": {
-				"description": "Desbloquea la brújula, una herramienta de navegación para volver a casa",
-				"name": "Brújula"
-			},
-			"constructionbuilder": {
-				"description": "Desbloquear áreas de construcción para el trabajador de la construcción",
-				"name": "Constructor"
-			},
-			"constructiondigger": {
-				"description": "Desbloquear zonas de excavadoras para el trabajador de la construcción",
-				"name": "Excavadora"
-			},
-			"constructiondiggerspecial": {
-				"description": "_MISSING_Unlock advanced construction areas",
-				"name": "_MISSING_Advanced Construction"
-			},
-			"cook": {
-				"description": "Desbloquea al cocinero y al pescador, nuevas fuentes de comida para tus colonos.",
-				"name": "Cocina"
-			},
-			"copperlockbox": {
-				"description": "Desbloquea el Cofre de Cobre. Mientras está colocada aumenta la capacidad de puntos de la colonia. Advertencia: ¡cada cofre de seguridad que coloques atraerá más monstruos a tu colonia!",
-				"name": "Cofre de cobre"
-			},
-			"cotton": {
-				"description": "Desbloquea una fuente de textiles de alta calidad. El algodón sólo crece en los brezales.",
-				"name": "Algodón"
-			},
-			"crossbow": {
-				"description": "Arco más potente",
-				"name": "Ballestas"
-			},
-			"dyeing": {
-				"description": "Aprende a cultivar flores en los pantanos, lo que te permitirá añadir color a tu mundo.",
-				"name": "Tinte"
-			},
-			"elevator": {
-				"description": "Desbloquea la producción de ascensores, útil para recorrer distancias verticales.",
-				"name": "Ascensor"
-			},
-			"elevatorhorizontal": {
-				"description": "Desbloquea la producción de vías muy útil para viajar rápidamente de un lugar a otro (no puede ser usado por colonos)",
-				"name": "Trenes"
-			},
-			"engineer": {
-				"description": "Desbloquea al ingeniero y al trampero. El ingeniero fabrica trampas y su munición, que pueden usarse para luchar contra monstruos. El trampero carga y recarga las trampas cercanas.",
-				"name": "Ingeniero"
-			},
-			"failsafe": {
-				"description": "Desbloquea la seguridad Sagrada, una herramienta de emergencia que utiliza Puntos Sagrados para eliminar monstruos.",
-				"name": "Seguridad Sagrada"
-			},
-			"farming": {
-				"description": "Desbloquea al agricultor de trigo. El trigo ganará importancia como alimento con el tiempo.",
-				"name": "Agricultura del trigo"
-			},
-			"fence": {
-				"description": "Puede ser muy práctico, pero es principalmente decoración.",
-				"name": "Valla"
-			},
-			"flowerbox": {
-				"description": "Podrás flores en macetas para adornar tus edificios.",
-				"name": "Maceta con flores"
-			},
-			"furnace": {
-				"description": "Desbloquea el trabajador Fundidor, que procesa minerales.",
-				"name": "Fundición"
-			},
-			"glassblower": {
-				"description": "Desbloquea una forma de fabricar vidrio",
-				"name": "Soplador de vidrio"
-			},
-			"glider": {
-				"description": "Desbloquea la producción de planeadores, permitiendo el vuelo sin motor desde puntos más altos.",
-				"name": "Planeador"
-			},
-			"glidersteel": {
-				"description": "Desbloquea un lanzador que dispara rápidamente planeadores a enormes alturas.",
-				"name": "Planeador de acero lanzador"
-			},
-			"goldenstatue": {
-				"description": "Desbloquea el Estandarte de la Amenaza, que atraerá monstruos de otros puestos avanzados al que esté colocada.",
-				"name": "Estandarte de la Amenaza"
-			},
-			"grassdirt": {
-				"description": "Proporciona una fuente de hierba y tierra",
-				"name": "Producción de Hierba y Tierra"
-			},
-			"grenadelauncher": {
-				"description": "Desbloquea un arma poderosa que puede eliminar grupos de enemigos a distancia.",
-				"name": "Lanzagranadas"
-			},
-			"gunpowder": {
-				"description": "Desbloquea un nuevo y poderoso ingrediente",
-				"name": "Pólvora"
-			},
-			"guntrap": {
-				"description": "Desbloquea una poderosa trampa que inflige enormes cantidades de daño.",
-				"name": "Cañón trampa"
-			},
-			"handcannon": {
-				"description": "Desbloquea una poderosa arma de corto alcance",
-				"name": "Cañón de mano"
-			},
-			"hemp": {
-				"description": "Desbloquea el cultivo de plantas de cáñamo en pantanos, así como su compra. Permite transformarlo en cuerdas y en papel.",
-				"name": "Cáñamo"
-			},
-			"iron": {
-				"description": "Un gran paso adelante para su colonia, desbloqueando un nuevo material que se requiere en muchos artículos.",
-				"name": "Edad del Hierro"
-			},
-			"jewellery": {
-				"description": "Desbloquea al Joyero, que crea cosas delicadas",
-				"name": "Joyería"
-			},
-			"jewelry": {
-				"description": "Desbloquea joyas, un buen producto para el comercio",
-				"name": "Joyería"
-			},
-			"lanterns": {
-				"description": "Desbloquea los faroles, útiles para iluminar lugares",
-				"name": "Farol"
-			},
-			"lathe": {
-				"description": "Desbloquea una máquina compleja que permite a los colonos fabricar rápidamente piezas metálicas de gran precisión.",
-				"name": "Torno de metal"
-			},
-			"miner": {
-				"description": "Desbloquea al minero. Cuando se coloca sobre un bloque de piedra oscura, un colono vendrá a extraer ese material continuamente.",
-				"name": "Minero"
-			},
-			"monocular": {
-				"description": "Desbloquea una ingeniosa herramienta que puede utilizarse para observar cosas en la distancia.",
-				"name": "Monocular"
-			},
-			"mudbricks": {
-				"description": "Desbloquea los adobes, un material de construcción barato y sencillo.",
-				"name": "Ladrillos de adobe"
-			},
-			"musket": {
-				"description": "Desbloquea una nueva arma de pólvora. Hace menos daño que un cañón de mano, pero la munición es más barata, tiene mayor alcance y se recarga más rápido.",
-				"name": "Mosquete"
-			},
-			"nitro": {
-				"description": "Desbloquea un compuesto altamente explosivo esencial para la pólvora sin humo. Es mucho menos sucio que la pólvora tradicional, lo que permite desarrollar armas de fuego más sofisticadas con muchas piezas móviles.",
-				"name": "Nitrocelulosa"
-			},
-			"npcshop": {
-				"description": "Desbloquea la Tienda de Comestibles, un lugar donde los colonos pueden recibir sus comidas diarias. Si no se encuentra ninguno, visitarán el estandarte.",
-				"name": "Tienda de comestibles"
-			},
-			"outposts": {
-				"description": "Desbloquea los estandartes de los puestos avanzados. Se pueden colocar para expandir la colonia, tanto cerca como lejos.",
-				"name": "Puestos Avanzados"
-			},
-			"paint": {
-				"description": "Con esto podrás cambiar el color de tu mundo",
-				"name": "Pintura"
-			},
-			"papermaking": {
-				"description": "La fabricación de papel a partir del cáñamo, clave para el progreso científico",
-				"name": "Producción de papel"
-			},
-			"poison": {
-				"description": "Desbloquea la elaboración de veneno, útil para infligir daño a los monstruos a lo largo del tiempo. Las plantas de glicinia sólo se pueden cultivar en brezales. Cada cosechador de glicinas necesita 10 plantas de glicinas cerca para funcionar bien.",
-				"name": "Envenenamiento"
-			},
-			"porridge": {
-				"description": "Desbloquea la combinación de agua y trigo en un nuevo tipo de comida",
-				"name": "Gachas"
-			},
-			"pottery": {
-				"description": "Desbloquea la cerámica, utilizada para transportar cosas, y la vajilla de barro que se puede vender",
-				"name": "Alfarería"
-			},
-			"prestige1": {
-				"description": "¡Un objetivo para organizar y medir lo mejor de nuestras energías y habilidades!",
-				"name": "Prestigio I"
-			},
-			"prestige2": {
-				"description": "Lo importante no es el viaje, sino el destino.",
-				"name": "Prestigio II"
-			},
-			"prestige3": {
-				"description": "Este lugar es un lugar de honor. Aquí se conmemora un acto de gran prestigio.",
-				"name": "Prestigio III"
-			},
-			"prestige4": {
-				"description": "¡El último kilómetro es el más largo!",
-				"name": "Prestigio IV"
-			},
-			"prestige5": {
-				"description": "Enhorabuena. Has completado con éxito todos los objetivos.",
-				"name": "Prestigio V"
-			},
-			"printingpress": {
-				"description": "Desbloquea la imprenta, una máquina compleja que te permite aumentar la producción de Libros del Conocimiento. También desbloquea piezas de precisión de latón, necesarias para muchas otras máquinas.",
-				"name": "Imprenta"
-			},
-			"projectiletrap": {
-				"description": "Desbloquea una trampa que una vez cargada disparará de forma lateral a los monstruos fuertes",
-				"name": "Trampa de proyectiles"
-			},
-			"recursiveknowledge": {
-				"description": "Ayuda a hacer libros utilizando libros para que puedas hacer más libros",
-				"name": "Superación personal recursiva"
-			},
-			"researcher": {
-				"description": "Desbloquea al investigador, que investigará utilizando las estanterías cercanas para avanzar en la ciencia",
-				"name": "Investigador"
-			},
-			"roofs": {
-				"description": "Una forma atractiva de cubrir los edificios, además, evita mojarse cuando llueve",
-				"name": "Tejas"
-			},
-			"ropes": {
-				"description": "Desbloquea un ingrediente con muchos usos",
-				"name": "Cuerdas"
-			},
-			"ropetrap": {
-				"description": "Desbloquea una trampa que congela a los monstruos cercanos durante 10 segundos, cuando un monstruo pasa sobre ella.",
-				"name": "Trampa de cuerda"
-			},
-			"sacredhouse": {
-				"description": "Desbloquea el Almacenamiento de Puntos Sagrados, para ampliar la cantidad de Puntos Sagrados que puede utilizar la Seguridad Sagrada.",
-				"name": "Almacén de Puntos Sagrados"
-			},
-			"scribe": {
-				"description": "Desbloquea al escriba, que estudia los pergaminos para obtener nuevos conocimientos. Un escriba necesita 10 estantes de pergaminos cerca. El escriba los vacía, pero se vuelven a llenar automáticamente con el tiempo.",
-				"name": "Escriba"
-			},
-			"signs": {
-				"description": "Ya es hora de ponerle nombres a las cosas",
-				"name": "Carteles"
-			},
-			"statistics": {
-				"description": "Desbloquea el tablón de estadísticas. Cuando se coloca y se utiliza, ofrece información sobre la actividad de tu colonia.",
-				"name": "Tablón de estadísticas"
-			},
-			"steel": {
-				"description": "Desbloquea acero, plomo y aceite mineral. Estos recursos son necesarios para la construcción de maquinaria más moderna. El mineral de plomo se encuentra en los pantanos, y el carbón bajo los árboles de gigantes.",
-				"name": "Acero, plomo y aceite mineral"
-			},
-			"steellockbox": {
-				"description": "Desbloquea un cofre de seguridad con más capacidad.",
-				"name": "Cofre de Acero"
-			},
-			"steeltools": {
-				"description": "Desbloquea una herramienta más duradera que permite a los colonos realizar su trabajo con mayor eficacia.",
-				"name": "Herramientas de acero"
-			},
-			"stonemason": {
-				"description": "Desbloquea el cantero, útil para añadir variedad a los edificios.",
-				"name": "Cantero"
-			},
-			"streetlight": {
-				"description": "Más chulo que usar antorchas",
-				"name": "Farola"
-			},
-			"tabulator": {
-				"description": "Desbloquea una compleja máquina que procesa datos y los almacena en tarjetas perforadas.",
-				"name": "Máquina tabuladora"
-			},
-			"tailoring": {
-				"description": "Desbloquea al sastre, un trabajador que puede convertir el lino en ropa y otros artículos. El lino es una buena fuente de puntos de colonia.",
-				"name": "Sastre"
-			},
-			"tanner": {
-				"description": "Desbloquea al curtidor, trabajador vital en la producción del cuero y, más tarde, del pergamino.",
-				"name": "Curtidor"
-			},
-			"toolshop": {
-				"description": "Desbloquea la Mesa de Distribución de Herramientas, un lugar donde los colonos irán a coger herramientas cuando las usen. Si no encuentran ninguna, irán al estandarte.",
-				"name": "Distribución de Herramientas"
-			},
-			"trader": {
-				"description": "Acelera el comercio entre colonias. No se utiliza para el intercambio con puestos avanzados, es para multijugador.",
-				"name": "Mercader"
-			},
-			"trading": {
-				"description": "Desbloquea el Centro de Mercaderes, un lugar donde puedes comprar y vender objetos.",
-				"name": "Centro de Comercio"
-			},
-			"waterpump": {
-				"description": "Permite recoger agua lejos de las fuentes.",
-				"name": "Bombeo de agua"
-			},
-			"watersponge": {
-				"description": "Permite eliminar agua de una forma realística.",
-				"name": "Tornillo de Arquímedes"
-			},
-			"writer": {
-				"description": "Desbloquea el escritor, el pergamino y los pergaminos del conocimiento. Son importantes para completar la ciencia más avanzada.",
-				"name": "Escritor"
-			}
-		},
-		"popup": {
-			"areaselection": {
-				"close": "Cerrar",
-				"descriptionshort": "_MISSING_Remove this area?",
-				"header": "Menú del área",
-				"remove": "Elmiminar área",
-				"size": "_MISSING_Area size: <b>{0}</b>",
-				"workertype": "_MISSING_Worker type: <b>{0}</b>"
-			},
-			"death": {
-				"description": "Has muerto.",
-				"respawn": "Revivir"
-			},
-			"inventory": {
-				"availableamount2": "En reserva",
-				"craftingstockpile": "Artesanía y Reserva",
-				"happinessvalue2": "Valor de la felicidad",
-				"happy": {
-					"header": "Felicidad"
-				},
-				"madeintooltip": "Hecho en:",
-				"madeintooltippurchasable": "Se adquiere en el Centro de Mercaderes por {0} puntos.",
-				"noactivecolony": "¡Colonias inactivas!",
-				"science": {
-					"available": "Disponible",
-					"completed": "Finalizado",
-					"completeunlock": "Completar",
-					"conditioncolonistcount": "Colonos",
-					"conditioncolonistcountdescription": "Colonos requeridos",
-					"conditionpointreq": "Puntos de la colonia",
-					"conditionpointreqdescription1": "Puntos de colonia requeridos",
-					"conditionpointreqdescription2": "Requiere: {0}",
-					"conditionpointreqdescription3": "Disponible: {0}",
-					"conditionscientistrequires": "Requiere {0}",
-					"dependencies": "Requiere Investigar:",
-					"followups": "Tecnologías de seguimiento:",
-					"header": "Ciencia",
-					"recipeunlocknpcgroup": "Desbloquea {0}",
-					"recipeunlockoriginjob": "Hecho en {0}",
-					"recipeunlockoriginplayer": "Hecho por el jugador",
-					"recipeunlocks": "Recetas Desbloqueadas:",
-					"startscience": "Investigar",
-					"threat": "Incrementa la amenaza de los monstruos en {0}",
-					"unavailable": "No disponible"
-				},
-				"searchfieldplaceholder": "Escribe el filtro de búsqueda...",
-				"stats": {
-					"auto-scale": "Auto escalar",
-					"entry-beds": "Camas",
-					"entry-meals": "Comida total",
-					"entry-npccount": "Colonos",
-					"entry-points": "Puntos de la colonia",
-					"entry-sanctified": "Puntos Sagrados",
-					"entry-unemployed": "Desempleados",
-					"hide-all": "Ocultar todo",
-					"only-changed": "Solo mostrar cambios",
-					"scale": "Escala :",
-					"scale-linear": "Lineal",
-					"scale-log": "Registro",
-					"show-all": "Mostrar todo",
-					"time1day": "1 día",
-					"time24day": "24 días",
-					"time4day": "4 días",
-					"type-colony": "Colonia",
-					"type-consumption": "Consumo",
-					"type-consumption-col": "Consumo (Colonia)",
-					"type-consumption-out": "Consumo (Puesto Avanzado)",
-					"type-idle-jobs": "Trabajos Inactivos",
-					"type-idle-jobs-col": "T. Inactividad (Colonia)",
-					"type-idle-jobs-out": "Trabajo Inactivo (Puesto Avanz.)",
-					"type-itempoints": "Puntos de Objecto",
-					"type-outpost": "Puesto Avanzado",
-					"type-production": "Producción",
-					"type-production-col": "Producción (Colonia)",
-					"type-production-out": "Producción (Puesto Avanz.)",
-					"type-stockpile": "Reserva",
-					"type-tooluse": "Uso Herram.",
-					"type-tooluse-col": "Uso de Herram. (Colonia)",
-					"type-tooluse-out": "Uso Herram. (Puesto Avanz.)",
-					"type-trade-in": "Comercio Entrada",
-					"type-trade-out": "Comercio Salida"
-				},
-				"tooltip": {
-					"and": "y",
-					"craftingtime": "Tiempo de elaboración: {0} segundos",
-					"craftingtimetooled": "Tiempo de elaboración con {0}: {1} segundos",
-					"instockpile": "En la reserva",
-					"needs": "Necesitas: ",
-					"nothing": "Nada"
-				},
-				"trashicon": "_MISSING_Drop items here to trash them",
-				"upgrades": {
-					"header": "Puntos Colonia",
-					"preamble2": "<i>Puntos actuales / Capacidad</i>",
-					"table": {
-						"cost": "Coste",
-						"current": "Actual",
-						"levels": "Niveles",
-						"name": "Nombre de la mejora",
-						"next": "Siguiente"
-					},
-					"upgradebutton": "Mejorar"
-				}
-			},
-			"itemselector": {
-				"description": "Selecciona un tipo de item para usar",
-				"header": "Selección de item"
-			},
-			"limits": {
-				"allreset": "Reiniciar todo",
-				"allzero": "Poner todo a cero",
-				"description": "Los colonos trabajarán hasta alcanzar el limite de la reserva.",
-				"group1": "Seleccionar un grupo de límites",
-				"group2": "Seleccione uno de los múltiples grupos para este trabajador específico. El ajuste de los límites los ajustará para todos los trabajadores de este tipo con el mismo grupo.",
-				"hoverpriority": {
-					"a": "Prioridad de elaboración",
-					"b": "Recipientes con un +++ de prioridad son creados primero.\n Recipientes con un + de prioridad son creados los últimos."
-				},
-				"waitingdata": "Esperando datos...",
-				"wrongcolony": "El trabajo seleccionado pertenece a otra colonia"
-			},
-			"merchantui": {
-				"buy": "Comprar",
-				"buy1": "Comprar 1",
-				"buy25": "Comprar 25",
-				"buy5": "Comprar 5",
-				"buytext": "Compra {0} por {1} puntos",
-				"buytext2": "Los fondos actuales permiten comprar {0}",
-				"currentpoints": "Puntos actuales: {0} / {1}",
-				"description": "Comprar/vender objetos por puntos",
-				"header": "Comercio",
-				"sell": "Vender",
-				"sell1": "Vender 1",
-				"sell25": "Vender 25",
-				"sell5": "Vender 5",
-				"selltext": "Vende {0} por {1} puntos",
-				"selltext2": "El almacenamiento actual permite {0} venta(s)"
-			},
-			"npccontext": {
-				"colony": "_MISSING_Colony:",
-				"fire": "_MISSING_Expel",
-				"header": "_MISSING_Colonist Info",
-				"job": "_MISSING_Job:",
-				"name": "_MISSING_Name:",
-				"showgoal": "_MISSING_Mark goals"
-			},
-			"quickstart": {
-				"closetoggle": "No mostrar más",
-				"next": "Siguiente",
-				"previous": "Anterior"
-			},
-			"signs": {
-				"apply": "Aplicar",
-				"edit": "Editar",
-				"header": "Cartel"
-			},
-			"specialblockremoval": {
-				"button": "Elmiminar",
-				"description": "Elmiminar este bloque tipo {0} puede causar problemas para la colonia.¿Qué quieres hacer?",
-				"header": "Removedor de bloques especiales"
-			},
-			"toolconstruction": {
-				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
-				"description": "Selecciona el tipo de área que deseas crear.",
-				"header": "Herramienta de construcción",
-				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
-				"shapes": {
-					"FullBox": "_MISSING_Solid Box",
-					"HollowBox": "_MISSING_Hollow Box",
-					"SolidCylinder": "_MISSING_Solid Cylinder",
-					"Walls": "_MISSING_Walls",
-					"WallsCylinder": "_MISSING_Cylindrical Walls"
-				}
-			},
-			"tooljob": {
-				"barleya": "Piensos para pollos",
-				"barleyfarmer": "Agricultor de cebada",
-				"beekeeper": "Apicultor",
-				"beekeepera": "Cría de abejas para la producción de velas",
-				"berrya": "Comida rápida y fácil, ¡inicia con ella!",
-				"berryfarmer": "Agricultor de bayas",
-				"berryfarmertool": "Herramienta para Agricultores de bayas",
-				"buildera": "Rellena un área del mundo",
-				"builderarea": "_MISSING_Build All",
-				"builderb": "Abre el menú para seleccionar el tipo, después selecciona el área a rellenar",
-				"builderreplacer": "_MISSING_Replace Specific",
-				"builderreplacera": "_MISSING_Replace one type with another",
-				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
-				"cabbagea": "Coles",
-				"cabbagefarmer": "Agricultor de coles",
-				"chickenfarmer": "Granjero de pollos",
-				"chickenfarmera": "Utiliza cebada para criar pollos",
-				"construction": "Construcción",
-				"construction1": "Déjalos hacer el trabajo",
-				"construction2": "Esto abrirá otro menú, donde tú puedes seleccionar el tipo de construcción",
-				"constructionjob": "_MISSING_Job Spot",
-				"constructionjoba": "Contrata un obrero",
-				"constructionjobb": "Colocar después un área de construcción",
-				"coversarea": "Cubrir el área existente",
-				"description": "Selecciona el tipo de área que deseas crear.",
-				"diggera": "Excava un área del mundo",
-				"diggerarea": "_MISSING_Remove All",
-				"diggerb": "Selecciona el área a excavar",
-				"diggerspecial": "_MISSING_Remove Specific",
-				"diggerspeciala": "Elimina un tipo especifico en un área",
-				"diggerspecialb": "Selecciona desde el área a eliminar",
-				"dyer1": "Añade colores para hacer la vida un poco menos monótona",
-				"dyer2": "Se abrirá otro menú con varios trabajos agrícolas",
-				"dyers": "Tintorería",
-				"flaxfarmer": "Agricultor de lino",
-				"flaxfarmertool": "Herramienta para Agricultores de lino",
-				"forester": "Forestal",
-				"forestera": "Plantas y árboles",
-				"foresterb": "Necesitas: semillas y una hacha\nColócala sobre el césped o barro",
-				"forestertool": "Herramienta para Forestales",
-				"header": "Trabajos",
-				"hempfarmer": "Agricultor de cáñamo",
-				"missingscience": "<color=#ff2323>'{0}' no ha sido investigada.</color>",
-				"noconstructionareanearby": "No hay área de construcción cerca",
-				"notarablefen": "_MISSING_Requires arable marshland below",
-				"notarableheath": "_MISSING_Requires arable heath below",
-				"notarablenormal": "_MISSING_Requires arable ground below",
-				"notflat": "No es plano",
-				"nowaternearby": "No hay agua cerca",
-				"occupiedblocks": "Ocupado por bloques",
-				"requiresarable": "Requiere tierra arable",
-				"toolarge": "Muy grande",
-				"toonarrow": "Muy estrecho para los árboles",
-				"toosmall": "Muy pequeño",
-				"wateradjacent": "Requiere agua adyacente en su lugar de trabajo",
-				"wheatfarmer": "Agricultor de trigo",
-				"wheatfarmertool": "Herramienta de Agricultor de trigo"
-			},
-			"toolshop": {
-				"description": "Ajusta los niveles mínimos de existencias requeridos antes de que los colonos utilicen herramientas específicas. Permite utilizarlas para la artesanía o la ciencia.",
-				"header": "Taller de herramientas"
-			}
-		},
-		"quickstart": {
-			"page1_2": {
-				"description": "!Bienvenido a Colony Survival!",
-				"header": "Conceptos Básicos",
-				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
-				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
-				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
-				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
-				"text4": "Abre la interfaz y ve a la página 'Colonia'. Pulsa 'Reclutar' para reclutar a un colono."
-			},
-			"page2_2": {
-				"description": "Son esenciales para el crecimiento y la supervivencia",
-				"header": "Comida y Camas",
-				"text1": "Los colonos necesitan 1 comida al día. Las toman en el estandarte o en una tienda de comestibles cercana. Sin comida, los colonos se mueren de hambre. Reclutar nuevos colonos cuesta varias comidas.",
-				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
-				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
-				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
-				"text4": "Haz clic en el icono de la mesa del artesano a la izquierda de la pila para fabricarla. Colócala igual que colocaste la cama. Al igual que con la granja de bayas, los colonos desempleados se encargarán automáticamente de este trabajo."
-			},
-			"page3_2": {
-				"description": "El lado tecnológico de la supervivencia",
-				"header": "Artesanía, ciencia y minería",
-				"text1": "Los trabajadores irán a las cajas tanto para recoger ingredientes de la reserva como para entregar productos artesanales a la reserva. Si aún no hay cajas, el estandarte funcionará como una.",
-				"text2": "Muchos trabajos pueden o deben utilizar herramientas. Las diferentes herramientas tienen diferentes costes, durabilidades y bonificaciones a la velocidad de producción. El artesano produce automáticamente herramientas de piedra.",
-				"text3": "Utiliza la ciencia para desbloquear nuevos trabajos, objetos y características. Abre la página de ciencia en la interfaz para comprobar los requisitos y desbloquear nuevas tecnologías cuando estén disponibles.",
-				"text4": "Cuando hayas desbloqueado la ciencia Minero, el minero producirá 'trabajos de minería'. Excava y colócalas en bloques de piedra oscura o minerales para que los colonos los exploten de forma sostenible."
-			},
-			"page4_2": {
-				"description": "¡Defiende tu colonia de los monstruos de la noche!",
-				"header": "Defensa de la colonia",
-				"text1": "Al desbloquear algunas ciencias se añadirá 'amenaza'. Esto se muestra en la parte superior derecha de la interfaz de usuario. Reclutar colonos extra añadirá amenaza a un ritmo lento después de los primeros 25. A medida que el nivel de amenaza aumente, aparecerán más monstruos y más fuertes.",
-				"text2": "Construye muros y cava fosos en la zona libre de monstruos para proteger el centro de tu colonia. Siéntete libre de colocar trabajos como granjas en la 'zona libre de monstruos' fuera de esta: los colonos abandonarán esta zona y se irán a sus camas cuando empiece la noche.",
-				"text3": "Tu artesano producirá el objeto 'Guardia hondero nocturno'. Colócalo en tu colonia para reclutar a un hondero que trabaje de noche.",
-				"text4": "Avanza en el árbol tecnológico para desbloquear nuevos guardias, trampas y la Seguridad Sagrada."
-			},
-			"page5_2": {
-				"description": "Comercia y expande para acceder a recursos únicos",
-				"header": "Puntos de Colonia y Colonización",
-				"text1_2": "_MISSING_Unlock and place the Merchant’s Hub. Use <style=Player/FireSecondary> to open its interface. Sell items to earn Colony Points. Among others, points can be spent on upgrades like the colonist limit in the Colony Points page.",
-				"text2": "Este mundo contiene múltiples regiones con recursos únicos. Hay cimas de montañas cubiertas de nieve, brezales cubiertos de púrpura, pantanos y árboles gigantes. Desbloquea y equipa el astrolabio para encontrarlos fácilmente.",
-				"text3": "Desbloquea puestos avanzados, compra un estandarte de puesto avanzado y llévalo contigo mientras exploras. Colócalo para crear un puesto avanzado. Sus reservas y su progreso científico se comparten con la colonia principal y los demás puestos avanzados. Construye puestos avanzados en las regiones mencionadas para acceder a sus recursos."
-			},
-			"page6_2": {
-				"description": "Crear sistemas de trabajo más complejos",
-				"header": "Bloques 'Cosechadora' y 'Fuente'",
-				"text1": "Para algunos trabajos, hay que colocar tanto el bloque 'cosechador' como el bloque 'fuente'. La mayoría de las veces, cada bloque cosechador necesita unos 10 bloques fuente.",
-				"text2": "Un bloque recolector como el Escritorio del Escriba recluta a un colono para que trabaje allí. Ese colono intentará visitar un bloque fuente cercano, en este caso una estantería de pergaminos llena, antes de trabajar.",
-				"text3": "Los recolectores vacían sus bloques fuente, pero éstos se regeneran automáticamente con el tiempo. La proporción de 1 a 10 garantiza un equilibrio sostenible a largo plazo."
-			}
-		},
-		"settingsmenu": {
-			"audio": "Sonido",
-			"audiomenu": {
-				"ambientvolume": "Ambiente",
-				"effectsvolume": "Efectos",
-				"full": "Volumen",
-				"mastervolume": "Volumen principal",
-				"menuvolume": "Menú",
-				"torchvolume": "Antorchas"
-			},
-			"gameplay": "Mouse y teclado",
-			"gameplaymenu": {
-				"full": "Sensibilidad y Teclas rápidas",
-				"gameplaytab": {
-					"adaptivecrosshair": "Punto de mira adaptable",
-					"crosshairratio": "Escala del punto de mira",
-					"devbuttons": "Habilitar los botones de desarrollador",
-					"permanenthighlight": "Destacar los bloques permanentes",
-					"ratio0": "Deshabilitado",
-					"ratio100": "100%",
-					"ratio125": "125%",
-					"ratio150": "150%",
-					"ratio175": "175%",
-					"ratio200": "200%",
-					"ratio25": "25%",
-					"ratio250": "250%",
-					"ratio300": "300%",
-					"ratio400": "400%",
-					"ratio50": "50%",
-					"ratio62": "62%",
-					"ratio75": "75%",
-					"ratio87": "87%",
-					"showsensitivedatamode": "Mostrar datos confidenciales",
-					"tab": "Configuración General",
-					"uiscalingratio": "Escala de la IU"
-				},
-				"mousemenu": {
-					"inverty": "Invertir eje Y",
-					"sensitivity": "Sensibilidad del ratón",
-					"smooth": "Suavizado de ratón",
-					"swapprimsec": "Invertir click izquierdo y derecho"
-				},
-				"mousesettings2": "Ratón & Teclado",
-				"padmenu": {
-					"mainbutton": "Mando",
-					"sensitivity": "Sensibilidad de apuntando"
-				}
-			},
-			"language": "Idioma",
-			"languagemenu": {
-				"coverage": "Esta traducción esta un {0:F1}% completada. Para ayudar a traducirla, ve los repositorios de Github en nuestros foros.",
-				"full": "Idiomas",
-				"language": "Idioma",
-				"wiptext": "Trabajo en progreso. Esta traducción no cubre todo el contenido del juego, algunas traducciones pueden cubrir más contenido que otras."
-			},
-			"qualitycustom": "Personalizada",
-			"qualityhigh": "Alta",
-			"qualitylow": "Baja",
-			"qualitymaximum": "Máxima",
-			"qualitymedium": "Media",
-			"qualityminimum": "Mínimo",
-			"qualityoff": "Desactivar",
-			"qualityon": "Activar",
-			"qualityveryhigh": "Muy alta",
-			"qualityverylow": "Muy baja",
-			"video": "Gráficos",
-			"videomenu": {
-				"ambientocclusion": "Oclusión ambiental",
-				"anisotropic": "Filtrado anisotrópico x16",
-				"antialiasing": "Anti aliasing",
-				"bloom": "Bloom",
-				"depthoffield": "Profundidad de campo",
-				"drawdistance": "Distancia de dibujado (*)",
-				"fieldofview": "Campo de visión",
-				"fog": "_MISSING_Fog",
-				"full": "Calidad de gráficos",
-				"fullscreen": "Pantalla completa",
-				"particleeffects": "Efectos de partículas",
-				"preset": "Preset",
-				"ragdoll": "Cantidad de cadáveres",
-				"resolution": "Resolución",
-				"restarttoapply": "(*) Requiere reiniciar el juego",
-				"shaderquality": "Calidad de sombreadores",
-				"sunshadowcascades": "Calidad de caida de sombras",
-				"sunshadowdistance": "Distancia de la sombras",
-				"sunshadowquality": "Calidad de sombras",
-				"texturequality": "Calidad de las texturas (*)",
-				"torchquality": "Calidad de la antorcha",
-				"vsync": "VSync",
-				"vsyncdouble": "Doble"
-			}
-		},
-		"singleplayermenu": {
-			"alreadyexists": "¡Este mundo ya existe!",
-			"cancel": "Cancelar",
-			"cloudsync": "_MISSING_Use Steam Cloud Sync",
-			"confirmdelete": "Confirmar Eliminación",
-			"confirmdeletedescription": "Estas a punto de ELIMINAR la carpeta que contiene este mundo.\n¿Estás seguro de que quieres hacerlo",
-			"confirmload": "Confirmar Cargar",
-			"delete": "Borrar",
-			"hostingoptions": "Ajustes de Hosting",
-			"legacyworldhint": "Has seleccionado un mundo antiguo. Para cargarlo necesitarás ejecutar una versión antigua de Colony Survival. Puedes configurar Steam para que descargue versiones antiguas entrando en las propiedades del juego y seleccionando una versión antigua en la pestaña de beta.",
-			"load": "Cargar",
-			"loadworld": "Cargar mundo",
-			"missingname": "No se ha establecido el nombre del mundo",
-			"modconfiguration": "Configuración de mods",
-			"modoutdated": "[Obsoleto]",
-			"modschanged": {
-				"added": "'{0}' se ha añadido",
-				"disabled": "'{0}' falta o está deshabilitado desde el uso anterior.",
-				"header": "Confirmar cargar el mundo",
-				"main": "Cargando mundo '{0}' pero han cambiado algunos mods.\nEsto puede causar problemas.",
-				"updated": "'{0}' se ha actualizado de la versión {1} a {2}."
-			},
-			"modselectall": "Habilitar todos",
-			"modselectnone": "Deshabilitar todos",
-			"modslist": {
-				"disableddependency": "[Deshabilitado]",
-				"missingdependency": "[Falta]",
-				"outdateddependency": "[Desactualizado]",
-				"requireddependency": "[Requiere]"
-			},
-			"newworld": "Nuevo mundo",
-			"nosubscribeditems": "No se encuentran mundos subscritos en el workshop",
-			"outdated": "Mundo obsoleto",
-			"password": "Contraseña",
-			"play_coop": "Jugar en cooperativo",
-			"play_solo": "Jugar en solitario",
-			"selectedfolder": "Mundo seleccionado: {0}",
-			"servername": "Nombre del servidor",
-			"serverport": "Puerto del servidor",
-			"typegenerateworld": "Generar mundo",
-			"typeworkshop": "Mundo de Workshop",
-			"world_folder": "Carpeta",
-			"world_outdated": "Requiere una versión más antigua",
-			"worlddate": "Fecha",
-			"worldname": "Nombre",
-			"worldname_long": "Nombre del mundo",
-			"worldseed": "Semilla del mundo"
-		},
-		"tooltip": {
-			"craftingblock": "Ordena a un colono que trabaje aquí como {0}",
-			"crate": "Los colonos se desplazarán a uno de estos bloques para conseguir o depositar objetos cada cierto tiempo",
-			"failsafe-points": "Añade {0} capacidad de punto sagrado (no apilable)",
-			"failsafe-threat": "Causa {0} Amenaza",
-			"guard-ammo": "Usos {0}",
-			"guard-aoe": "{0} bloquea el área de efecto",
-			"guard-cooldown": "Cada {0} segundos",
-			"guard-damage": "Causa {0} de daño",
-			"guard-damage-ticks": "Inflige {0} de daño durante {1} segundos",
-			"guard-general": "Ordena a un colono que vigile esta posición",
-			"guard-range": "A una distancia de hasta {0} bloques",
-			"guard-sleeptype-day": "Duerme durante el día",
-			"guard-sleeptype-night": "Duerme por la noche",
-			"is-edible": "Comida, los colonos comerán una comida cada día",
-			"is-sanctified": "Recibe {0} puntos sagrados cuando los colonos coman esta comida",
-			"lockbox-points": "Añade {0} de capacidad de puntos de colonia",
-			"lockbox-threat": "Causa {0} de amenazas",
-			"miner": "Ordena a un colono que extraiga repetidamente el bloque de mineral de piedra oscura que hay debajo",
-			"npcshop": "Los colonos visitarán este o el estandarte para conseguir su comida diaria",
-			"paintable": "El objeto puede ser modificado utilizando: ",
-			"pointtrader": "Aquí puedes comprar y vender cosas por puntos",
-			"provides-fertile": "Cuenta como tierra fértil",
-			"provides-fertile-fen": "Cuenta como suelo fértil de pantano",
-			"provides-fertile-heath": "Se considera tierra fértil",
-			"requires-fen": "Requiere pantano fértil debajo",
-			"requires-fertile": "Requiere tierra fértil debajo",
-			"requires-heath": "Requiere brezo fértil debajo",
-			"requires-water": "Debe colocarse junto al agua para que funcione",
-			"sanctifiedlockbox-points": "Añade {0} de capacidad de puntos sagrados",
-			"sanctifiedlockbox-threat": "Causa {0} de amenazas",
-			"statisticsboard": "Interactúa con este bloque para ver las estadísticas de tu colonia",
-			"threatstatue-general": "Atrae la amenaza de otros puestos de avanzada hacia el puesto de avanzada en el que está colocado, al tiempo que provoca cierta amenaza por sí mismo.",
-			"threatstatue-threatcaused": "Causa {0} de amenaza extra",
-			"threatstatue-threatweight": "Añade {0} puntos de amenaza",
-			"tool-always-usable": "Siempre disponible, no requiere artículos",
-			"tool-durability": "{0} segundos de uso",
-			"tool-general": "Muchos trabajos utilizan herramientas para acelerar la artesanía",
-			"tool-multiplier": "{0}x velocidad de fabricación",
-			"tool-percentage-left": "Durabilidad % Restante:",
-			"tool-seconds-left": "Durabilidad Restantes:",
-			"toolshop": "Los colonos visitarán éste o el estandarte para conseguir nuevas herramientas cuando las necesiten",
-			"trap-ammo": "Almacena hasta {0} de {1}",
-			"trap-cooldown": "Cada {0} segundos",
-			"trap-damage": "Causa {0} de daño",
-			"trap-explosive-range": "Afecta a un área con un radio de {0} al golpear",
-			"trap-filter-1000hp": "Sólo se activa en monstruos con al menos 1000 de vida.",
-			"trap-filter-unslowed": "Sólo se activa en monstruos que aún no han sido ralentizados",
-			"trapfixer": "Puesto trampero que repone las trampas cercanas durante el día",
-			"trap-freezes": "Congela a los golpeados durante {0} segundos",
-			"trap-friendly-fire": "Puede afectar a los amigos cuando se activa",
-			"trap-general": "Elemento trampa, espera a que los monstruos pasen y se activa. Serán recargados durante el día por los colonos Tramperos",
-			"trap-range": "A una distancia de hasta {0} bloques",
-			"trap-slows": "Ralentiza a los monstruos a {0} veces su velocidad",
-			"trap-style-down": "Activadores de los monstruos de la parte de abajo",
-			"trap-style-front": "Activadores de monstruos al frente",
-			"trap-style-up": "Activadores de los monstruos de arriba"
-		},
-		"upgrades": {
-			"builder": {
-				"level": "{0} Bloques",
-				"main": "Área de trabajo del constructor"
-			},
-			"colonistcapacity": {
-				"level": "{0} colonos",
-				"main": "Capacidad de colonos"
-			},
-			"digger": {
-				"level": "{0} Bloques",
-				"main": "Área de trabajo del excavador"
-			},
-			"health": {
-				"level": "Nivel {0} de Vida",
-				"main": "Vida del Jugador"
-			},
-			"safezone": {
-				"level": "{0} Bloques",
-				"main": "Zona segura del Estandarte"
-			}
-		}
-	},
-	"types": {
-		"alarmbell": "Campana de alarma",
-		"alchemisttable": "Mesa del alquimista",
-		"alkanet": "Alkanet",
-		"animalcarcass": "Cadáveres de animales",
-		"architrave": "_MISSING_Architrave",
-		"artisttable": "Mesa de trabajo del artista",
-		"astrolabe": "Astrolabio",
-		"banner": "Estandarte",
-		"bannertool": "Herramienta del estandarte",
-		"barley": "Cebada",
-		"bed": "Cama",
-		"berry": "Baya",
-		"berrybush": "Semilla de baya",
-		"berrymeal": "Comida de bayas",
-		"blastfurnace": "Alto horno",
-		"bloomery": "Fragua",
-		"bookcase": "Librería (Vacía)",
-		"bookcase1": "Librería (casi vacía)",
-		"bookcase2": "Librería (parcialmente vacía)",
-		"bookcasefilled": "Librería",
-		"bookofknowledge": "Libro del Conocimiento",
-		"bow": "Arco",
-		"brassingot": "Lingote de latón",
-		"brassparts": "Piezas de precisión de latón",
-		"bread": "Pan",
-		"breadmeal": "Comida de pan",
-		"bricks": "Ladrillos",
-		"bricksblack": "Ladrillos negro",
-		"bricksdarkred": "Ladrillos rojo oscuro",
-		"bricksdarkyellow": "Ladrillos amarillo oscuro",
-		"brickslight": "Ladrillos ligeros",
-		"bricksred": "Ladrillos rojos",
-		"bronzeingot": "Lingote de bronce",
-		"bronzelockbox": "Cofre de Bronce",
-		"bronzetools": "Herramientas de bronce",
-		"cabbage": "Coles",
-		"caltrops": "Abrojo",
-		"caltroptrap": "Trampa Abrojo",
-		"candle": "Vela",
-		"carddata": "Tarjeta perforada",
-		"cardempty": "Tarjeta perforada vacía",
-		"charcoal": "Carbón",
-		"cherryblossom": "Flor de cerezo",
-		"chest": "Cofre",
-		"chestluxury": "Cofre de Lujo",
-		"chestmaker": "Taller de fabricación de cofres",
-		"chestprestige": "Cofre de Prestigio",
-		"chestresource": "Cofre de la Ciencia",
-		"chickenmeal": "Comida de pollo",
-		"chickenpoop": "Excrementos de pollo",
-		"chickenraw": "Pollo (crudo)",
-		"clay": "Arcilla",
-		"coalore": "Mena de carbón",
-		"cokes": "Coque",
-		"colonykit": "Kit de colonia",
-		"commandtool": "Tabla de Trabajos",
-		"compass": "Compás",
-		"compostingbin": "Contenedor de compostaje",
-		"constructionjob": "Trabajo de construcción",
-		"cookedfish": "Pescado cocinado",
-		"cookedmeat": "Carne cocinada",
-		"copper": "Cobre",
-		"copperanvil": "Yunque de cobre",
-		"copperarrow": "Flecha de cobre",
-		"copperingot": "Lingote de cobre",
-		"copperlockbox": "Cofre de cobre",
-		"coppertools": "Herramientas de cobre",
-		"corbel": "_MISSING_Corbel",
-		"cotton": "Algodón",
-		"cottonengine": "Maquina de algodón",
-		"cottonfibre": "Fibra de algodón",
-		"crate": "Caja",
-		"crossbow": "Ballesta",
-		"crossbowbolt": "Virote",
-		"darkstone": "Bloque de piedra oscura",
-		"dirt": "Barro",
-		"dirtfen": "Suciedad del pantano",
-		"dirtheath": "Suciedad del brezo",
-		"doorclosed": "Puerta",
-		"droppertrap": "Trampa de caída",
-		"droppertrapammo": "Munición para trampas de caída",
-		"dyertable": "Mesa de Tintorería",
-		"earthenware": "Cerámica",
-		"elevator": "Cabina del ascensor",
-		"elevatorhorizontal": "Estación de tren",
-		"elevatorshaft": "Hueco del ascensor",
-		"elevatorshafthorizontal": "Vía",
-		"engineerbench": "Banco de ingenieros",
-		"eyeglasses": "Gafas",
-		"failsafe": "Seguridad Sagrada",
-		"fence": "Valla",
-		"firepit": "Hoguera",
-		"firewood": "Leña",
-		"fisherman": "Punto de pesca",
-		"flax": "Planta de lino",
-		"flaxstage1": "Semillas de lino",
-		"fletcherbench": "Banco de Flechas",
-		"flowerboxitem": "Maceta con flores",
-		"furnace": "Fundición",
-		"glassblower": "Taller de soplado de vidrio",
-		"glasspiece": "Trozo de cristal",
-		"glider": "Planeador",
-		"glidersteel": "Planeador de acero de lanzador",
-		"goldenshield": "Escudo de Oro",
-		"goldenstatue": "Estandarte de Amenaza",
-		"goldingot": "Lingote de oro",
-		"goldjewellery": "Joyas de oro",
-		"goldore": "Mena de oro",
-		"grassdry": "Hierba",
-		"grassfen": "Hierba de los pantanos",
-		"grassheath": "Hierba del brezo",
-		"grassheathpurple": "Plantas del brezo",
-		"grassmax": "Hierba",
-		"grassmid": "Hierba",
-		"grasswet": "Hierba",
-		"grenadelauncher": "Lanzagranadas",
-		"grenadelauncherammo": "Munición de lanzagranadas",
-		"grindstone": "Piedra de Moler",
-		"guardbowdayjob": "Arquero Diurno",
-		"guardbownightjob": "Arquero Nocturno",
-		"guardcrossbowdayjob": "Ballestero Diurno",
-		"guardcrossbownightjob": "Ballestero Nocturno",
-		"guardgrenadedayjob": "Guardia Lanzagranadas Diurno",
-		"guardgrenadenightjob": "Guardia del Lanzagranadas Nocturno",
-		"guardhandcannondayjob": "Guardia de cañón de mano Diurno",
-		"guardhandcannonnightjob": "Guardia del cañón de mano Nocturno",
-		"guardmusketdayjob": "Guardia de mosquete Diurno",
-		"guardmusketnightjob": "Guardia de Mosquete Nocturno",
-		"guardpoison": "Guardia Veneno",
-		"guardslingerdayjob": "Hondero Diurno",
-		"guardslingernightjob": "Hondero Nocturno",
-		"gunpowder": "Pólvora",
-		"gunpowdertrap": "Trampa de pólvora",
-		"gunpowdertrapammo": "Munición para trampas de pólvora",
-		"gunsmith": "Banco de armero",
-		"guntrap": "Cañón trampa",
-		"guntrapammo": "Munición para cañones trampa",
-		"handcannon": "Cañón de mano",
-		"handcannonammo": "Munición de cañón de mano",
-		"hemp": "Cáñamo",
-		"hempfibre": "Fibra de cáñamo",
-		"hollyhock": "Alcea",
-		"ironbloom": "Flor de hierro",
-		"ironore": "Mena de hierro",
-		"irontools": "Herramientas de hierro",
-		"ironwrought": "Hierro forjado",
-		"jewellerbench": "Banco del Joyero",
-		"jobblockcrafter": "Banco de Artesano",
-		"jobblockcrafteradvanced": "Banco Avanzado para Artesanos",
-		"kiln": "Horno",
-		"lanternblue": "Farol Azul",
-		"lanterncyan": "Farol Cian",
-		"lanterngreen": "Farol Verde",
-		"lanternitem": "Farola",
-		"lanternorange": "Farol Naranja",
-		"lanternpink": "Farol Rosa",
-		"lanternred": "Farol Roja",
-		"lanternwhite": "Farol Blanca",
-		"lanternyellow": "Farol",
-		"leadingot": "Lingote de plomo",
-		"leadore": "Mineral de plomo",
-		"leather": "Cuero",
-		"leavesfallorange": "Hojas naranjas",
-		"leavesfallred": "Hojas rojas",
-		"leavesfallyellow": "Hojas amarillas",
-		"leavesgreendark": "Hojas oscuras",
-		"leavesgreenlight": "Hojas claras",
-		"leavestaiga": "Hojas de taiga",
-		"leavestemperate": "Hojas templadas",
-		"linen": "Lino",
-		"logtaiga": "Tronco de taiga",
-		"logtemperate": "Tronco templado",
-		"logwall": "Pared de troncos",
-		"luxurygarments": "Ropa de lujo",
-		"machinetools": "Máquinas herramienta",
-		"manuscript": "Manuscrito",
-		"merchanthub": "Centro de Comercio",
-		"metalgear": "Engranaje metálico",
-		"metallathe": "Torno de metal",
-		"minerjob": "Minero",
-		"monocular": "Monocular",
-		"mouldingitem": "_MISSING_Crown Moulding",
-		"movabletype": "Tipo movible",
-		"mudbricks": "Ladrillos de adobe",
-		"musket": "Mosquete",
-		"musketammo": "Munición de mosquete",
-		"nitro": "Nitrocelulosa",
-		"notools": "Sin Herramientas",
-		"npcshop": "Tienda de comestibles",
-		"outpostbanner": "Estandarte del Puesto Avanzado",
-		"paintblue": "Pintura azul",
-		"paintgreen": "Pintura verde",
-		"paintred": "Pintura roja",
-		"paintstripped": "Eliminador de pintura",
-		"paintwhite": "Pintura blanca",
-		"paper": "Papel",
-		"papermakersmould": "Molde de papel",
-		"parchment": "Pergamino",
-		"pillar": "Pilar",
-		"planks": "Tablas",
-		"planksblue": "Tablones azules",
-		"planksgreen": "Tablones verdes",
-		"planksred": "Tablones rojos",
-		"points": "Puntos",
-		"poisondart": "Dardo venenoso",
-		"potash": "Potasa",
-		"potempty": "Tarro (vacío)",
-		"potflour": "Tarro (Harina)",
-		"potterystation": "Estación de Alfarería",
-		"potwater": "Tarro (Agua)",
-		"printingpress": "Imprenta",
-		"projectiletrap": "Trampa de proyectiles",
-		"projectiletrapammo": "Munición para trampas de proyectiles",
-		"quarterblockbrowndark": "Escalón marrón oscuro",
-		"quarterblockbrownlight": "Escalón marrón claro",
-		"quarterblockgrey": "Escalón gris",
-		"railgate": "Puerta de vía",
-		"railitem": "Vía",
-		"rawfish": "Pez crudo",
-		"rawmeat": "Carne cruda",
-		"researcherdesk": "Escritorio del investigador",
-		"rooftool": "Tejado rojo",
-		"rooftoolblue": "Tejado azul",
-		"rope": "Cuerda",
-		"ropebench": "Banco de Cuerda",
-		"ropetrap": "Trampa de cuerda",
-		"ropetrapammo": "Munición para trampas de cuerda",
-		"saltpeter": "Nitrato",
-		"sanctifiedbreadmeal": "Comida Sagrada de Pan",
-		"sanctifiedchickenmeal": "Comida de Pollo Sagrado",
-		"sanctifiedhouse": "Almacén Sagrado",
-		"sanctifiedporridge": "Papilla de trigo sagradas",
-		"sanctifiertable": "Altar sagrado",
-		"sand": "Arena",
-		"sapling": "Brote",
-		"saplingcherry": "Brote de cerezo",
-		"saplingdark": "Brote verde oscuro",
-		"saplingfallorange": "Brote de otoño",
-		"saplingfallred": "Brote rojo",
-		"saplingfallyellow": "Brote amarillo",
-		"saplinglight": "Brote verde claro",
-		"saplingtaiga": "Brote de Taiga",
-		"saplingtemperate": "Brote Verde",
-		"scientificnote": "Nota científica",
-		"scribedesk": "Escritorio del escriba",
-		"scrollofknowledge": "Pergamino del conocimiento",
-		"scrollshelf": "Estante de pergaminos (vacío)",
-		"scrollshelf1": "Estantería de pergaminos (casi vacío))",
-		"scrollshelf2": "Estante de pergaminos (parcialmente vacío)",
-		"scrollshelffilled": "Estantería Pergaminos",
-		"signitem": "Cartel",
-		"silicasand": "Arena de sílice",
-		"skin": "Piel",
-		"sling": "Honda",
-		"slingbullet": "Balas de honda",
-		"snow": "Nieve",
-		"splittingstump": "Tronco para leña",
-		"statisticsboard": "Tablón de Estadísticas",
-		"steelingot": "Lingote de acero",
-		"steellockbox": "Cofre de acero",
-		"steelparts": "Piezas de acero",
-		"steeltools": "Herramientas de acero",
-		"stoneblock": "Bloque de piedra",
-		"stonebricks": "Adoquines",
-		"stonebricksblack": "Adoquín negro",
-		"stonebricksbrown": "Adoquín marrón",
-		"stonebricksnew": "Ladrillos de piedra",
-		"stonebrickswhite": "Adoquín blanco",
-		"stonemasonworkbench": "Banco de trabajo del Cantero",
-		"stonerubble": "Restos de piedra",
-		"stonestair": "Escalera de piedra",
-		"stonetools": "Herramientas de piedra",
-		"stove": "Cocina",
-		"straw": "Paja",
-		"sulfur": "Azufre",
-		"tabletclay": "Tableta de arcilla",
-		"tabletwisdom": "Tabla de la sabiduría antigua",
-		"tabulator": "Máquina tabuladora",
-		"tailorshop": "Tienda de sastre",
-		"tannertable": "Mesa de Curtido",
-		"tin": "Estaño",
-		"tinkerertable": "Mesa de Artesano",
-		"toolshop": "Taller de Herramientas",
-		"torch": "Antorcha",
-		"trader": "Mercader",
-		"trapfixer": "Trampero",
-		"vialempty": "Frasco (vacío)",
-		"vialmineraloil": "Frasco de aceite mineral",
-		"vialnitricacid": "Frasco de ácido nítrico",
-		"vialsulphuricacid": "Frasco de ácido sulfúrico",
-		"water": "Agua",
-		"watergatherer": "Recolector de agua",
-		"waterpump": "Bomba de agua",
-		"watersponge": "Tornillo de Arquímedes",
-		"wheat": "Trigo",
-		"wheatmeal": "Gachas de trigo",
-		"wheatporridge": "Papilla de trigo",
-		"wheatstage1": "Semillas de trigo",
-		"window": "Ventana",
-		"wisteriaflower": "Flor de glicina",
-		"wisteriajob": "Cosechador de glicinas",
-		"wisteriaplant": "Planta de glicinas",
-		"wisteriaplantempty": "Planta de glicinas",
-		"wolfsbane": "Aconitum",
-		"woodfloor": "Suelos de madera",
-		"woodstair": "Escalera de madera",
-		"writerdesk": "Escritorio",
-		"zinc": "Zinc"
-	},
-	"typeuses": {
-		"alarmbell": "Suena una alarma cuando detecta monstruos caminando sobre ella",
-		"alkanet": "En la vida real, una fuente de tinte rojo.",
-		"astrolabe": "Equípate en la barra de acceso rápido para ver el camino a biomas especiales",
-		"berry": "Una sola baya. ¡Ni siquiera vale el esfuerzo de comerla!",
-		"berrybush": "Los colonos lo plantaran para obtener comida fácil.",
-		"berrymeal": "Un racimo de bayas preparado para formar una deliciosa comida",
-		"bookcase": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
-		"bookcase1": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
-		"bookcase2": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
-		"bookcasefilled": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
-		"bow": "¡Los guardias necesitan una!",
-		"bread": "Un trozo de pan seco sin untar ni relleno. Bah",
-		"breadmeal": "Pan untado con mermelada de bayas, ¡Delicioso!",
-		"bricks": "Después de todo, es un juego holandés.",
-		"bronzeingot": "Bronce muy fuerte... sí, claro...",
-		"charcoal": "Absorve cianuro",
-		"cherryblossom": "La cosa más rosada del juego.",
-		"clay": "Ojala pudieras tocarlo.",
-		"coalore": "Advertencia: Puede causar problemas climáticos.",
-		"compass": "Equipar en la barra de acceso directo para ver el camino a las colonias y puestos avanzados.",
-		"cookedfish": "Capacidades de natación reducidas",
-		"copper": "Metal algo blando, pero bastante útil",
-		"coppertools": "Ni siquiera puedes cortar pan sin herramientas.",
-		"crate": "¡Para todas las necesidades de almacenamiento!",
-		"crossbow": "Hermano menor del arcoballesta.",
-		"crossbowbolt": "Mejor y más duro, rápido y fuerte.",
-		"dirt": "Sucio",
-		"failsafe": "Mecanismo de defensa de emergencia mediante puntos sagrados",
-		"firewood": "Combustible básico.",
-		"flax": "El color imperial.",
-		"flaxstage1": "Ponla en el suelo.",
-		"furnace": "Utiliza leña como combustible para fabricar lingotes de bronce y ladrillos.",
-		"glider": "_MISSING_Places a glider launcher; Enter one using <style=Player/FireSecondary> and navigate by aiming while holding forward",
-		"glidersteel": "Como el lanzador de planeadores normal, pero este te lanza mucho más alto en el aire",
-		"goldingot": "Fue utilizado para garantizar el valor del papel moneda.",
-		"goldore": "También puede encontrarse en minerales bajo montañas nevadas",
-		"grindstone": "Se utiliza para moler el trigo y convertirlo en harina.",
-		"gunpowder": "¡Manipular con cuidado!",
-		"hollyhock": "Un laxante en la vida real. No dentro del juego. Aún.",
-		"ironore": "Minado con un pico de hierro creada con un lingote de hierro.",
-		"ironwrought": "Forjado simplemente significa 'trabajado'.",
-		"kiln": "_MISSING_Turns firewood into charcoal",
-		"lanterncyan": "El futuro es ahora.",
-		"lanterngreen": "Hace tu colonia eco-amigable.",
-		"lanternorange": "Extra acogedor.",
-		"lanternred": "Estos son populares en Ámsterdam también.",
-		"lanternyellow": "Antorcha cara.",
-		"leadore": "Se encuentra en pantanos.",
-		"leavestaiga": "Tengo una sensación navideña ahora.",
-		"leavestemperate": "Intenta saltarlos en una pila desde una torre alta.",
-		"linen": "Lencería significa ropa interior hecha de lino.",
-		"logtaiga": "Ligeramente frio.",
-		"logtemperate": "Como un registro de salida, pero diferente.",
-		"monocular": "Equiparse en la barra de acceso directo para ver más de cerca el mundo",
-		"npcshop": "Los colonos la visitan una vez al día para recoger el almuerzo y sus items de lujo",
-		"planks": "¡Ahora con 4 veces el volumen de un tronco!",
-		"printingpress": "Respeta su libertad",
-		"railgate": "Permite pasar el tren pero bloquea el paso a pie",
-		"rawfish": "#Ecológico #Sin Hormonas #Alimentado con Pasto",
-		"researcherdesk": "Los investigadores necesitan tener cerca estanterías con libros para encontrar datos para sus investigaciones.",
-		"sand": "No se mezcla bien con las serpientes.",
-		"saplingfallorange": "Un naranjo en el futuro",
-		"saplingtaiga": "Un árbol ligeramente diferente",
-		"scribedesk": "Los escribas necesitan 10 estantes de pergaminos cerca para encontrar datos para su investigación.",
-		"scrollshelf": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
-		"scrollshelf1": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
-		"scrollshelf2": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
-		"scrollshelffilled": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
-		"silicasand": "Se encuentra bajo la arena en el bioma del Brezo",
-		"sling": "Ten cuidado, Goliat.",
-		"slingbullet": "Una pequeña roca, de verdad.",
-		"snow": "No sabe a nada.",
-		"splittingstump": "Una método rápido para dividir la madera en leña.",
-		"stonemasonworkbench": "Crea cincuenta tonos de ladrillos.",
-		"stove": "Para perfumar con comida deliciosa sus alrededores",
-		"sulfur": "Se encuentra en el subsuelo del bioma Brezo",
-		"tailorshop": "¡Ropa a medida para todos!",
-		"tin": "También puede encontrarse en minerales bajo las montañas nevadas",
-		"torch": "¡Y se hizo la luz!",
-		"trader": "Nadie lo sabe, pero es para los negocios",
-		"water": "Provocará una inundación se lo dejan caer",
-		"waterpump": "Permite obtener agua sin estar cerca del agua",
-		"watersponge": "_MISSING_Removes water in its local area in a deeply realistic way",
-		"wheat": "Un colono usara una moledora para convertirla en harina.",
-		"wheatstage1": "El pan del mañana.",
-		"wisteriajob": "Un recolector necesita 10 plantas de glicinia cerca. Estas plantas solo se pueden cultivar en brezales.",
-		"wisteriaplant": "Colocar 10 de éstos por cada recolector de glicinas garantiza un equilibrio a largo plazo.",
-		"wisteriaplantempty": "Colocar 10 de éstos por cada recolector de glicinas garantiza un equilibrio a largo plazo.",
-		"wolfsbane": "Impide que los lobos ataquen tu colonia.",
-		"writerdesk": "Ergonomía total",
-		"zinc": "Se puede encontrar directamente debajo de los árboles gigantes."
-	}
+    "coverage": 93,
+    "hints": {
+        "0": "Para la mayoría de las granjas, mayor tamaño significa más producción. Los recolectores de bayas son la excepción a esta regla.",
+        "1": "Más y diferentes monstruos aparecerán si reclutas más colonos.",
+        "2": "Ciertas capas del mundo contienen diferentes minerales. Excava más hondo para encontrar diferentes minerales.",
+        "4": "Has clic en los 'bancos o mesas de trabajo' para ver como están siendo usados y priorizar ciertas recetas.",
+        "7": "Diferencias en rango, tiempos de recarga y daño dan a cada tipo de guardia beneficios únicos y desventajas.",
+        "10": "3x33 es el tamaño óptimo para un forestal.",
+        "16": "Usa el compás para encontrar dónde se encuentran tus distintas colonias y puestos de avanzada.",
+        "17": "Usa el Astrolabio para encontrad distintos biomas que tienen recursos únicos.",
+        "18": "Costruye la Seguridad Sagrada y usa Puntos Sagrados para salvar la colonia cuando es atacada por monstruos.",
+        "19": "Construye el Almacén Sagrado para almacenar más Puntos Sagrados",
+        "20": "Usa pintura blanca, roja, verde y azul para darle color a objetos como puertas y ventanas.",
+        "21": "Utiliza el Eliminador de pintura para quitar la pintura a los objetos que has pintado.",
+        "22": "Los ascensores no pueden ser usados por los colonos pero son una forma rápida para moverse entre pisos.",
+        "23": "Construye estaciones de tren y vías para moverte rápidamente de A a B (no puede ser usado por colonos).",
+        "24": "Las Puertas de vía impiden el paso de colonos y muestros pero permite el paso de trenes.",
+        "25": "Construye el Tablón de estadísticas para obtener información detallada sobre las estadísticas de tu colonia.",
+        "26": "Construye un Tornillo de Arquímedes para eliminar agua alrededor. (Elimina un area de 8x8x8)",
+        "27": "Casi todos los viernes escribiemos noticias en Steam sobre el desarrollo de Colony Survival.",
+        "28": "Hay mods y mundos muy interesantes en el Workshop de Colony Survival. (Recomiendo el mod de Chisel).",
+        "29": "Agacharse evita caerse por los bordes.",
+        "30": "Pulsa <style=Player/ToggleTorch> para activar tu antorcha."
+    },
+    "sentences": {
+        "astrolabe": {
+            "bigtree": "Árboles gigantes",
+            "heath": "Brezo",
+            "marsh": "Pantano",
+            "mountain": "Montaña"
+        },
+        "bannerclickedpopup": {
+            "deletebanner": "Borrar Estandarte",
+            "deletecolony": "Borrar Colonia",
+            "deletecolonydescription": "Borrar el último Estandarte de la Colonia eliminará todos los npcs y hará inusable la Colonia. Si deseas continuar, escribe 'delete' abajo.",
+            "header": "Opciones del Estandarte",
+            "noconfirmationdelete": "Ignorando el comando de eliminación, ya que no hubo confirmación.",
+            "placementfail": "No se pudo colocar el Estandarte en esta ubicación"
+        },
+        "bannerplacementpopup": {
+            "activecolony": "Colonia activa: {0}",
+            "addbanner": "Añadir Estandarte",
+            "header": "Colocación del Estandarte",
+            "missingcolonykit": "Requiere un kit de inicio de colonia",
+            "missingoutpostbanner": "Requiere un estandarte de avanzada",
+            "movebanner": "Mover Estandarte",
+            "mustbeleader": "Debe ser el líder de la colonia para ajustar los estandartes",
+            "opencolonytab": "Administrador {0}",
+            "startcolony": "Fundar una nueva Colonia",
+            "startoutpost": "Crear un nuevo puesto avanzado",
+            "startoutpostremote": "Crear un nuevo puesto avanzado"
+        },
+        "category": {
+            "consumables": "Consumibles",
+            "decorative": "Bloques de construcción",
+            "defense": "Defensa",
+            "essential": "Esenciales",
+            "food": "Comida",
+            "ingredient": "Ingredientes y Lujo",
+            "job": "Bancos de trabajos",
+            "misc": "Varios",
+            "texres": "Textiles e Investigación"
+        },
+        "chat": {
+            "colonydied": "Todos los colonos en {0} fueron asesinados.",
+            "playerdied": "Jugador {0} murió."
+        },
+        "colonymanagement": {
+            "colonysettings": {
+                "difficulty": "Dificultad",
+                "difficulty_peaceful": "Modo Pacífico",
+                "difficultylocked": "Bloquear Dificultad",
+                "header": "Ajustes de la Colonia"
+            },
+            "diplomacy": {
+                "mainbutton": "Diplomacia",
+                "mainheader": "Diplomacia",
+                "ruleaccept": "Aceptar",
+                "ruleactive": "Activar",
+                "ruleedit": "Editar",
+                "rulepending": "Pendiente",
+                "ruleremove": "Elmiminar"
+            },
+            "inventoryheader": "Colonia",
+            "manageheader": "Colonia",
+            "managejobs": {
+                "column_enabled": "Activo",
+                "column_jobtype": "Trabajo",
+                "column_total": "Total",
+                "column_unfilled": "Vacio",
+                "disable_all": "Deshabilitar todos",
+                "enable_all": "Habilitar todos",
+                "header_text": "Hay <b>{0}</b> trabajadores inactivos. Trabajos activos: <b>{1} / {2}</b>. Trabajos llenos: <b>{3} / {1}</b>",
+                "mainheader": "Gestionar trabajos",
+                "refresh": "Actualizar",
+                "set_balanced": "Balancear"
+            },
+            "manageowners": "Gestión de dueños",
+            "nameedit": "Editar :",
+            "outpost": {
+                "create": "Crear puesto avanzado",
+                "createdescription": "Iniciar un puesto avanzada consume un Estandarte de Puesto Avanzada de tu inventario (o reserva).",
+                "parentcolony": "Colonia Principal:",
+                "popupheader": "Creación de puestos avanzados",
+                "selectparent": "Seleccionar colonia principal"
+            },
+            "ownership": {
+                "action": "Acción",
+                "connectedplayers": "Jugadores conectados",
+                "currentowners": "Propietarios actuales",
+                "follower": "Seguidor",
+                "invite": "Añadir como propietario de la colonia",
+                "kick": "Expulsar",
+                "leader": "Líder",
+                "leave": "Abandonar colonia",
+                "name": "Nombre",
+                "role": "Rol",
+                "settoleader": "Promover a lider"
+            },
+            "recruit": "Reclutar",
+            "recruitauto": "Auto-reclutar en puesto de trabajo",
+            "recruitfailedbeds": "<color=#ff2323>No hay suficientes camas libres para reclutar un colono.</color>",
+            "recruitfailedcap": "<color=#ff2323>Debes incrementar la cantidad máxima de colonos para poder recrutar un nuevo colono.</color>",
+            "recruitfailednomeals": "<color=#ff2323>No hay suficiente comida para reclutar un colono.</color>",
+            "recruitmentamount": "Cantidad de colonos a reclutar:",
+            "recruitmentbutton": "Reclutar",
+            "recruitmentheader": "Reclutamiento",
+            "recruittext3": "Los Colonos requieren 2000 calorias por dia y una Cama.",
+            "recruittext4-2": "El reclutamiento del próximo colono cuesta {0} comidas.",
+            "recruittext5-2": "Hay {0} camas vacias y puedes reclutar {1}  más colonos antes de alcanzar la cantidad máxima de colonos.",
+            "recruittext6": "El reclutamiento de los siguientes {0} colonos es gratuito.",
+            "recruittofillbeds": "Rellenar las camas",
+            "recruittofilljobs": "Rellenar los trabajos",
+            "resetcolonypriority2": "Reiniciar la colonia activa",
+            "science": {
+                "incomingdescription2": "Te proveen ciencia",
+                "newagreement": "Proponer acuerdo de investigación",
+                "outgoingdescription2": "Les provees ciencia",
+                "selectcolony": "Selecciona una colonia para enviar ciencia"
+            },
+            "selectcolony": {
+                "currentcolony": "Colonia actual: {0}",
+                "headercolonists": "Colonos",
+                "headercolony": "Colonia",
+                "headerleader": "Lider",
+                "headerselect": "Seleccionar",
+                "nocolonies": "No hay colonos en la lista",
+                "nocoloniesowned": "No hay colonias que poseas en la lista",
+                "nocoloniesthird": "No hay colonias externas en la lista",
+                "othercolonies": "Otras colonias",
+                "select": "Seleccionar"
+            },
+            "start": {
+                "create": "Crear Colonia",
+                "defaultkit": "Primera vez que el Kit de inicio es usado",
+                "kits": "Equipos disponibles",
+                "missingkit": "Falta un Kit colonial de inicio",
+                "name": "Nombre de la Colonia",
+                "parentcolony": "Colonia progenitora",
+                "popupheader": "Creación de Colonia",
+                "usescienceagreement": "Transferir Ciencia"
+            },
+            "startsettings": "Ajustes de la Colonia",
+            "switchcolony2": "Cambiar colonia activa a:",
+            "trading": {
+                "completerule": "Crear norma",
+                "completeruleedit": "Completar edición de la regla",
+                "mainheader": "Nuevos ajustes para normas comerciales",
+                "newruleinfinite": "Nueva regla de comercio infinita",
+                "newrulelimited": "Nueva regla de comercio limitada",
+                "ruledescription": "Los comerciantes comerciarán {0} de {1} a {2} de acuerdo a:",
+                "ruledescriptionlimit": "Faltan {0} objetos por comerciar.",
+                "ruleincomingdescr2": "Obtener {0} si ellos tienen más de {1} y nosotros tenemos menos de {2}.",
+                "rulemaximumgoal": "{0} tiene menos de: ",
+                "rulemaximumtraded": "Este acuerdo enviará la siguiente cantidad de objetos en total: ",
+                "ruleminimumthis": "{0} tiene más de: ",
+                "ruleoutgoingdescr2": "Enviar {0} si tenemos más de {1} y ellos tienene menos de {2}.",
+                "selectcolony": "Selecciona una colonia para negociar"
+            }
+        },
+        "commands": {
+            "disableachievements": "Los logros se han desactivado para este mundo debido a la interacción con las opciones de trucos",
+            "disableachievementsfirst": "Para ello, primero debes desactivar los logros mediante el comando '/disableachievements'.",
+            "nopermission": "Usted no tiene el permiso '{0}' para hacer eso."
+        },
+        "connectingscreen": {
+            "loading": "Cargando",
+            "localhost_fail": "Fallo la búsqueda de servidor de Steam/Un solo jugador corriendo en este computador. Recargando el menú principal en 5 segundos.",
+            "refused": {
+                "blacklisted": "Estás en la lista negra",
+                "incompatible": "El servidor tuvo un problema inesperado",
+                "invalidpassword": "Contraseña invalida",
+                "invalidticket": "Ticket de Steam invalido",
+                "maxplayer": "Servidor lleno",
+                "misc": "Razón desconocida",
+                "notonwhitelist": "No estás en la lista blanca",
+                "versionwrongclient": "La versión no concuerda con el cliente",
+                "versionwrongserver": "La versión no concuerda con el servidor"
+            },
+            "refused_main": "Conexión denegada, {0}. Regresando al menú principal en 5 segundos.",
+            "sp_alreadyrunning2": "Un servidor ya está ejecutandose. Regresando al menú principal en 5 segundos.",
+            "stages": {
+                "1": "Tabla de archivos solicitados del servidor",
+                "connectionmade": "Conexión realizada",
+                "downloading": "(descargando {0} paquetes)",
+                "fail": "Carga fallida, regresando al menú principal en 5 segundos",
+                "final": "Finalizando",
+                "loading": "Cargando {0} archivos",
+                "local1": "Buscando servidor de un jugador en esta computadora",
+                "local2": "Buscando servidor en línea en esta computadora",
+                "password": "Se requiere contraseña",
+                "steamdirect": "Intentando establecer conexión directa",
+                "steamp2p": "Intentando establecer conexión p2p",
+                "timeout": "Conexión agotada. Regresando al menú principal en 5 segundos",
+                "waitingserver": "Iniciando servidor en segundo plano"
+            }
+        },
+        "contentmanager": {
+            "buttonbrowseworkshop": "Explorar Workshop",
+            "buttoncreateitem": "Crear contenido",
+            "buttoneditdetails": "Editar detalles",
+            "buttonlistsubscribed": "Contenidos subscritos",
+            "buttonsubmitcontent": "Enviar",
+            "buttonupdatecontent": "Actualizar contenido",
+            "changelogplaceholder": "Escribir el registro de cambios aquí...",
+            "contenteditheader": "Configurar/actualizar el contenido de {0}",
+            "contentpath": "Localización del contenido: {0}",
+            "contenttypelabel": "Tipo de contenido",
+            "contenttypes": {
+                "itempack": "Paquete de artículos",
+                "misc": "Varios",
+                "overhaul": "Revisión completa",
+                "texturepack": "Paquete de texturas",
+                "unknown": "Desconocido",
+                "utilities": "Utilidades",
+                "world": "Mundo"
+            },
+            "nocontentpath": "No se ha seleccionado la localización del contenido",
+            "scenariolabel": "Nombre del escenario",
+            "statecommittingchanges": "Confirmando cambios: {0} / {1}",
+            "statepreparingconfig": "Preparando configuraciones: {0} / {1}",
+            "statepreparingcontent": "Preparando contenido: {0} / {1}",
+            "stateuploadingcontent": "Subiendo contenido: {0} / {1}",
+            "stateuploadingpreview": "Subiendo vista previa: {0} / {1}",
+            "thumbnailpath": "Localización de la imagen del contenido:",
+            "yourcontent": "Has creado un contenido en el workshop"
+        },
+        "controls": {
+            "decreasefieldofview": "Disminuir la distancia de visión(cheat)",
+            "fireprimary": "Acción principal",
+            "firesecondary": "Acción secundaria",
+            "flydown": "Volar hacia abajo (cheat)",
+            "holdcrouch": "Agacharse (Mantener)",
+            "hotbardown": "Siguiente espacio de la barra rápida",
+            "hotbarup": "Espacio anterior de la barra rápida",
+            "increasefieldofview": "Aumentar campo de visión (cheat)",
+            "inventory0": "Barra rápida 10",
+            "inventory1": "Barra rápida 1",
+            "inventory2": "Barra rápida 2",
+            "inventory3": "Barra rápida 3",
+            "inventory4": "Barra rápida 4",
+            "inventory5": "Barra rápida 5",
+            "inventory6": "Barra rápida 6",
+            "inventory7": "Barra rápida 7",
+            "inventory8": "Barra rápida 8",
+            "inventory9": "Barra rápida 9",
+            "jump": "Saltar",
+            "jumpgamepadtap": "Saltar",
+            "look": "Mirar",
+            "movekeyboard": {
+                "down": "Mover abajo",
+                "left": "Mover izquierda",
+                "right": "Mover derecha",
+                "up": "Mover hacia delante"
+            },
+            "movepad": "Movimiento",
+            "opencolonytab": "Abrir pestaña de Colonia",
+            "openquickstart": "Abrir menú de ayuda",
+            "placemultipleareas": "Colocar áreas de construcción en cadena",
+            "resetfieldofview": "Restablecer campo de visión (cheat)",
+            "rotateobjectleft": "Rotar a la izquierda",
+            "rotateobjectright": "Rotar a la derecha",
+            "sprint": "Correr",
+            "sprintgamepadheld": "Correr",
+            "takescreenshot": "Tomar foto",
+            "toggleautofocus": "Auto apuntar(cheat)",
+            "togglechat": "Alternar chat",
+            "togglecrouch": "Agacharse (Alternar)",
+            "toggledevconsole": "Alternar registro de desarrollo (cheat)",
+            "toggledevmenu": "Alternar menú de desarrollo (cheat)",
+            "toggleextrasmooth": "Alternar mira suavizada (cheat)",
+            "togglefly": "Alternar vuelo (cheat)",
+            "togglefocuspoint": "Alternar mira bloqueada (cheat)",
+            "toggleinterface": "Alternar interfaz",
+            "toggleinventory": "Alternar inventario",
+            "togglestats": "Alternar vista de estadísticas",
+            "toggletorch": "Alternar linterna"
+        },
+        "escapemenu": {
+            "back": "Volver al Juego",
+            "info": "Información",
+            "quitdesktop": "Salir al escritorio",
+            "quitmain": "Menú Principal",
+            "settings": "Ajustes"
+        },
+        "failsafe": {
+            "current": "Almacenamiento actual de Puntos Sagrados: {0} de {1}",
+            "damage": "Activar el Seguro Sagrado causará {0} de daño.",
+            "futurewave": "El Seguro reducirá el total de puntos de vida de los monstruos entrantes en {0:P0} durante la noche.",
+            "header": "Seguro",
+            "nextavailable": "El seguro contra fallos volverá a estar disponible la próxima noche",
+            "statusactive": "Estado: Seguridad Sagrada ha sido activada",
+            "statusavailable": "Estado: Seguridad Sagrada está disponible",
+            "trigger": "Desencadenar",
+            "wave": "El nivel de amenaza actual es {0} y engendrará monstruos con un total de HP (Puntos de vida) de {1}",
+            "wavereduced": "El total de HP (Puntos de vida) de los monstruos entrantes se reducirá en {0:P0} la siguiente noche"
+        },
+        "firstpersonstats": {
+            "ammocount": "Munición:",
+            "bedcount": "Camas :",
+            "colonistcount": "Colonos :",
+            "colonypoints": "Puntos :",
+            "laborercount": "Desempleados :",
+            "mealstorage": "Comida total :",
+            "threatlevel": "Nivel de amenaza :",
+            "time_day": "Día"
+        },
+        "general": {
+            "apply": "Aplicar",
+            "back": "Atrás",
+            "close": "Cerrar",
+            "delete": "Eliminar",
+            "description": "Descripción",
+            "edit": "Editar",
+            "enabled": "Habilitado",
+            "gamepadtextinputalphanumeric": "Solo se permiten letras alfanuméricas y números.",
+            "high": "Alto",
+            "inputplaceholder": "Escribir nombre...",
+            "inputplaceholder_search": "Escribir texto para buscar...",
+            "low": "Bajo",
+            "next": "Siguiente",
+            "no": "No",
+            "none": "Nada",
+            "normal": "Normal",
+            "previous": "Anterior",
+            "randomize": "Aleatorio",
+            "reset": "Restablecer",
+            "select": "Seleccionar",
+            "selected": "Seleccionado",
+            "veryhigh": "Muy alto",
+            "yes": "Sí"
+        },
+        "happiness": {
+            "availablefood": "{0}% disponible para {1}",
+            "availableluxury": "{0}% disponible para {1}",
+            "baseamount": "Felicidad existente",
+            "calories": "Calorias racionadas",
+            "calorieshappy": "Bien alimentado",
+            "calorieshunger": "Hambriento",
+            "caloriesstarvation": "Inanición",
+            "colonistcount": "Población",
+            "disabledeffect": "Felicidad desactivada",
+            "recruitmentcost": "Coste de reclutaje: {0:P0} de lo normal",
+            "sciencespeed": "Vel. de investigación: {0:P0} de lo normal",
+            "totalhappiness": "Felicidad total: {0}"
+        },
+        "infomenu": {
+            "changelog": "Lista de cambios",
+            "credits": "Créditos",
+            "quickstart": "Inicio rápido"
+        },
+        "mainmenu": {
+            "back": "Atras",
+            "contentmanager": "Gestor de mods",
+            "continue": "Continuar",
+            "coop": "Cooperativo",
+            "info": "Información",
+            "multiplayer": "Multijugador",
+            "quit": "Salir",
+            "settings": "Ajustes",
+            "singleplayer": "Un jugador"
+        },
+        "multiplayermenu": {
+            "colonistcount": "Cantidad de colonos",
+            "connectlocal": "Conectar al servidor local",
+            "header_friends": "Amigos",
+            "header_history": "Historial",
+            "header_internet": "Internet",
+            "header_lan": "LAN",
+            "ipaddress": "Dirección",
+            "join": "Unirse",
+            "mods": "Mods",
+            "passworded": "Con contraseña",
+            "refresh2": "Refrescar",
+            "refreshing": "Actualizando...",
+            "refreshquick": "Refresco rápido",
+            "selectedserver": "Seleccionar servidor",
+            "serverping": "Ping",
+            "serverplayers": "Jugadores",
+            "servers": "Servidores",
+            "showempty": "Mostrar vacíos",
+            "showfull": "Mostrar completos",
+            "showincompatible": "Mostrar incompatibles",
+            "version": "Versión"
+        },
+        "notifications": {
+            "delete": "Eliminar Notificación",
+            "header": "Notificaciones",
+            "missingplayerammo": "<color=#ff2323>¡Usar {0} requiere que tengas {1} en el inventario!</color>",
+            "npc_died": {
+                "banner": "Un monstruo en el estandarte",
+                "command": "Uso de comandos",
+                "excess": "Y {0} más murieron desde entonces, anónimamente.",
+                "individual": "{0}: Un colono con trabajo {1} murió de: {2}",
+                "main": "{0} colonos murieron en el puesto {1}!",
+                "misc": "Por motivos desconocidos",
+                "monster": "Un monstruo",
+                "npc": "Un colono",
+                "player": "Un jugador",
+                "starving": "Hambre",
+                "trap": "Una trampa"
+            },
+            "science": {
+                "entry": "{0}: Completado {1}",
+                "main": "¡Ciencia completada!"
+            },
+            "siegemode": {
+                "disabled": "{0}: Salió del modo de asedio",
+                "enabled": "{0}: Entró en modo de asedio",
+                "main": "¡Modo de asedio activado en el puesto {0}!"
+            }
+        },
+        "npcs": {
+            "pipliz": {
+                "alchemist": "Alquimista",
+                "alkanetfarmer": "Agricultor de Alkanet",
+                "artist": "Artista",
+                "barleyfarmer": "Agricultor de cebada",
+                "beekeeper": "Apicultor",
+                "berryfarmer": "Agricultor de bayas",
+                "blastfurnace": "Operario de alto horno",
+                "bloomeryjob": "Herrero",
+                "builder": "Constructor",
+                "builderreplacer": "Sustituir constructor",
+                "cabbagefarmer": "Agricultor de coles",
+                "chestmaker": "Fabricante de Cofres",
+                "chickenfarmer": "Granjero de pollos",
+                "composter": "Compostador",
+                "constructor": "Constructor",
+                "cook": "Cocinero",
+                "coppersmith": "Herrero del cobre",
+                "cottonengine": "Operador de máquinas de algodón",
+                "cottonfarmer": "Agricultor de algodón",
+                "digger": "Excavador",
+                "diggerspecial": "Excavador específico",
+                "dyer": "Tintorero",
+                "engineer": "Ingeniero",
+                "firepit": "Cocinero Básico",
+                "fisherman": "Pescador",
+                "flaxfarmer": "Agricultor de lino",
+                "fletcher": "Banco de Flechas",
+                "forester": "Forestal",
+                "glassblower": "Soplador de vidrio",
+                "grinder": "Molinero",
+                "guardbowday": "Arquero Diurno",
+                "guardbownight": "Arquero Nocturno",
+                "guardcrossbowday": "Ballestero Diurno",
+                "guardcrossbownight": "Ballestero Nocturno",
+                "guardgrenadeday": "Guardia Lanzagranadas Diurno",
+                "guardgrenadenight": "Guardia Lanzagranadas Nocturno",
+                "guardhandcannonday": "Guardia de cañón de mano Diurno",
+                "guardhandcannonnight": "Guardia de cañón de mano Nocturno",
+                "guardmusketday": "Guardia de mosquete Diurno",
+                "guardmusketnight": "Guardia de mosquete dNocturno",
+                "guardpoison": "Guardia del veneno",
+                "guardslingerday": "Hondero Diurno",
+                "guardslingernight": "Hondero Nocturno",
+                "gunsmith": "Armero",
+                "hempfarmer": "Agricultor de cáñamo",
+                "hollyhockfarmer": "Agricultor de malvarrosa",
+                "jeweller": "Joyero",
+                "jobblockcrafter": "Artesano de Banco de Trabajo",
+                "jobblockcrafteradvanced": "Artesano Avanzado de Banco Trabajo",
+                "kilnjob": "Quemador",
+                "laborer": "Obrero",
+                "metallathe": "Torno de metales",
+                "minerjob": "Minero",
+                "networkplayer": "Jugador",
+                "papermaker": "Fabricante de papel",
+                "potter": "Alfarero",
+                "printingpress": "Operador de imprenta",
+                "researcher": "Investigador",
+                "roper": "Fabricante de cuerdas",
+                "sanctifier": "Santificador",
+                "scribe": "Escribano",
+                "smelter": "Fundición",
+                "stonemason": "Cantero",
+                "tabulator": "Operador de máquinas tabuladoras",
+                "tailor": "Sastre",
+                "tanner": "Curtidor",
+                "tinkerer": "Artesano",
+                "trader": "Comerciante",
+                "trapfixer": "Fijador de Trampas",
+                "watergatherer": "Recolector de agua",
+                "waterpump": "Trabajador de bombas de agua",
+                "wheatfarmer": "Agriculto de trigo",
+                "wisteriafarmer": "Agricultor de Glicinas",
+                "wolfsbanefarmer": "Agricultor Aconitum",
+                "woodcutter": "Leñador",
+                "writer": "Escritor"
+            }
+        },
+        "pipliz": {
+            "alarmbell": {
+                "description": "Desbloquea la Campana de alarma, que hará sonar una campana al ser pisada por un monstruo.",
+                "name": "Campana de alarma"
+            },
+            "animalcarcass": {
+                "description": "Proporciona una fuente de cadáveres de animales",
+                "name": "Cadáveres de animales de la zona"
+            },
+            "anvil": {
+                "description": "Desbloquea el Yunque, una fuente importante de productos más avanzados como las Herramientas de Cobre.",
+                "name": "Yunque"
+            },
+            "archery": {
+                "description": "Desbloquea arqueros y fabricador de flechas, una protección más eficaz contra los monstruos.",
+                "name": "Arquería"
+            },
+            "artist": {
+                "description": "Desbloquea un nuevo trabajo enfocado principalmente a la decoración",
+                "name": "Atista"
+            },
+            "astrolabe": {
+                "description": "Desbloquea el astrolabio; una herramienta de navegación que ayuda a encontrar biomas.",
+                "name": "Astrolabio"
+            },
+            "blastfurnace": {
+                "description": "Desbloquea una forma rápida de fundir metales avanzados",
+                "name": "Alto horno"
+            },
+            "brass": {
+                "description": "Desbloquea el latón, una aleación relativamente blanda. No es adecuada para armas o herramientas, pero su maleabilidad la hace perfecta para pequeñas piezas detalladas. Requiere zinc, que puede comprarse o extraerse bajo los árboles de gigantes.",
+                "name": "Bronce"
+            },
+            "bread": {
+                "description": "Desbloquea la fabricación de pan. Utiliza piedras de moler para hacer harina, que luego el cocinero podrá usar para hacer pan.",
+                "name": "Pan"
+            },
+            "bricks": {
+                "description": "Permite hornear la arcilla en nuevos tipos de bloques",
+                "name": "Ladrillos"
+            },
+            "bronze": {
+                "description": "Desbloquea una forma de hacer más fuerte el cobre, mezclándolo con el raro y valioso estaño.",
+                "name": "Edad de Bronce"
+            },
+            "bronzelockbox": {
+                "description": "Desbloquea el Cofre de Bronce. Versión mejorada del Cofre de Cobre. Más almacenamiento, más eficiencia, menos amenazadora.",
+                "name": "Cofre de Bronce"
+            },
+            "caltrop": {
+                "description": "Desbloquea una trampa que, una vez cargada, ralentizará a los monstruos que se encuentren bajo ella.",
+                "name": "Abrojos"
+            },
+            "chestluxury": {
+                "description": "Desbloquea los cofres de lujo, necesarios para desbloquear tecnología avanzada.",
+                "name": "Cofre de lujo"
+            },
+            "chestprestige": {
+                "description": "¡Abandonad toda esperanza de recompensa y provecho, los que entráis aquí! Los Cofres de Prestigio son necesarios para la Ciencia de Prestigio. Es un objetivo para las colonias entusiastas.",
+                "name": "Cofre Prestige"
+            },
+            "chestresource": {
+                "description": "Desbloquea los cofres científicos, necesarios para desbloquear tecnología avanzada.",
+                "name": "Cofre de la Ciencia"
+            },
+            "chickenmeal": {
+                "description": "Desbloquea una comida más compleja que proporciona más puntos sagrados cuando la consumen los colonos.",
+                "name": "Comidas de Pollo"
+            },
+            "classical": {
+                "description": "Revive las decoraciones usadas por nuestros antecesores.",
+                "name": "Arquitectura clásica"
+            },
+            "compass": {
+                "description": "Desbloquea la brújula, una herramienta de navegación para volver a casa",
+                "name": "Brújula"
+            },
+            "constructionbuilder": {
+                "description": "Desbloquear áreas de construcción para el trabajador de la construcción",
+                "name": "Constructor"
+            },
+            "constructiondigger": {
+                "description": "Desbloquear zonas de excavadoras para el trabajador de la construcción",
+                "name": "Excavadora"
+            },
+            "constructiondiggerspecial": {
+                "description": "Desbloquear áreas de construcción avanzadas",
+                "name": "Construcción avanzada"
+            },
+            "cook": {
+                "description": "Desbloquea al cocinero y al pescador, nuevas fuentes de comida para tus colonos.",
+                "name": "Cocina"
+            },
+            "copperlockbox": {
+                "description": "Desbloquea el Cofre de Cobre. Mientras está colocada aumenta la capacidad de puntos de la colonia. Advertencia: ¡cada cofre de seguridad que coloques atraerá más monstruos a tu colonia!",
+                "name": "Cofre de cobre"
+            },
+            "cotton": {
+                "description": "Desbloquea una fuente de textiles de alta calidad. El algodón sólo crece en los brezales.",
+                "name": "Algodón"
+            },
+            "crossbow": {
+                "description": "Arco más potente",
+                "name": "Ballestas"
+            },
+            "dyeing": {
+                "description": "Aprende a cultivar flores en los pantanos, lo que te permitirá añadir color a tu mundo.",
+                "name": "Tinte"
+            },
+            "elevator": {
+                "description": "Desbloquea la producción de ascensores, útil para recorrer distancias verticales.",
+                "name": "Ascensor"
+            },
+            "elevatorhorizontal": {
+                "description": "Desbloquea la producción de vías muy útil para viajar rápidamente de un lugar a otro (no puede ser usado por colonos)",
+                "name": "Trenes"
+            },
+            "engineer": {
+                "description": "Desbloquea al ingeniero y al trampero. El ingeniero fabrica trampas y su munición, que pueden usarse para luchar contra monstruos. El trampero carga y recarga las trampas cercanas.",
+                "name": "Ingeniero"
+            },
+            "failsafe": {
+                "description": "Desbloquea la seguridad Sagrada, una herramienta de emergencia que utiliza Puntos Sagrados para eliminar monstruos.",
+                "name": "Seguridad Sagrada"
+            },
+            "farming": {
+                "description": "Desbloquea al agricultor de trigo. El trigo ganará importancia como alimento con el tiempo.",
+                "name": "Agricultura del trigo"
+            },
+            "fence": {
+                "description": "Puede ser muy práctico, pero es principalmente decoración.",
+                "name": "Valla"
+            },
+            "flowerbox": {
+                "description": "Podrás flores en macetas para adornar tus edificios.",
+                "name": "Maceta con flores"
+            },
+            "furnace": {
+                "description": "Desbloquea el trabajador Fundidor, que procesa minerales.",
+                "name": "Fundición"
+            },
+            "glassblower": {
+                "description": "Desbloquea una forma de fabricar vidrio",
+                "name": "Soplador de vidrio"
+            },
+            "glider": {
+                "description": "Desbloquea la producción de planeadores, permitiendo el vuelo sin motor desde puntos más altos.",
+                "name": "Planeador"
+            },
+            "glidersteel": {
+                "description": "Desbloquea un lanzador que dispara rápidamente planeadores a enormes alturas.",
+                "name": "Planeador de acero lanzador"
+            },
+            "goldenstatue": {
+                "description": "Desbloquea el Estandarte de la Amenaza, que atraerá monstruos de otros puestos avanzados al que esté colocada.",
+                "name": "Estandarte de la Amenaza"
+            },
+            "grassdirt": {
+                "description": "Proporciona una fuente de hierba y tierra",
+                "name": "Producción de Hierba y Tierra"
+            },
+            "grenadelauncher": {
+                "description": "Desbloquea un arma poderosa que puede eliminar grupos de enemigos a distancia.",
+                "name": "Lanzagranadas"
+            },
+            "gunpowder": {
+                "description": "Desbloquea un nuevo y poderoso ingrediente",
+                "name": "Pólvora"
+            },
+            "guntrap": {
+                "description": "Desbloquea una poderosa trampa que inflige enormes cantidades de daño.",
+                "name": "Cañón trampa"
+            },
+            "handcannon": {
+                "description": "Desbloquea una poderosa arma de corto alcance",
+                "name": "Cañón de mano"
+            },
+            "hemp": {
+                "description": "Desbloquea el cultivo de plantas de cáñamo en pantanos, así como su compra. Permite transformarlo en cuerdas y en papel.",
+                "name": "Cáñamo"
+            },
+            "iron": {
+                "description": "Un gran paso adelante para su colonia, desbloqueando un nuevo material que se requiere en muchos artículos.",
+                "name": "Edad del Hierro"
+            },
+            "jewellery": {
+                "description": "Desbloquea al Joyero, que crea cosas delicadas",
+                "name": "Joyería"
+            },
+            "jewelry": {
+                "description": "Desbloquea joyas, un buen producto para el comercio",
+                "name": "Joyería"
+            },
+            "lanterns": {
+                "description": "Desbloquea los faroles, útiles para iluminar lugares",
+                "name": "Farol"
+            },
+            "lathe": {
+                "description": "Desbloquea una máquina compleja que permite a los colonos fabricar rápidamente piezas metálicas de gran precisión.",
+                "name": "Torno de metal"
+            },
+            "miner": {
+                "description": "Desbloquea al minero. Cuando se coloca sobre un bloque de piedra oscura, un colono vendrá a extraer ese material continuamente.",
+                "name": "Minero"
+            },
+            "monocular": {
+                "description": "Desbloquea una ingeniosa herramienta que puede utilizarse para observar cosas en la distancia.",
+                "name": "Monocular"
+            },
+            "mudbricks": {
+                "description": "Desbloquea los adobes, un material de construcción barato y sencillo.",
+                "name": "Ladrillos de adobe"
+            },
+            "musket": {
+                "description": "Desbloquea una nueva arma de pólvora. Hace menos daño que un cañón de mano, pero la munición es más barata, tiene mayor alcance y se recarga más rápido.",
+                "name": "Mosquete"
+            },
+            "nitro": {
+                "description": "Desbloquea un compuesto altamente explosivo esencial para la pólvora sin humo. Es mucho menos sucio que la pólvora tradicional, lo que permite desarrollar armas de fuego más sofisticadas con muchas piezas móviles.",
+                "name": "Nitrocelulosa"
+            },
+            "npcshop": {
+                "description": "Desbloquea la Tienda de Comestibles, un lugar donde los colonos pueden recibir sus comidas diarias. Si no se encuentra ninguno, visitarán el estandarte.",
+                "name": "Tienda de comestibles"
+            },
+            "outposts": {
+                "description": "Desbloquea los estandartes de los puestos avanzados. Se pueden colocar para expandir la colonia, tanto cerca como lejos.",
+                "name": "Puestos Avanzados"
+            },
+            "paint": {
+                "description": "Con esto podrás cambiar el color de tu mundo",
+                "name": "Pintura"
+            },
+            "papermaking": {
+                "description": "La fabricación de papel a partir del cáñamo, clave para el progreso científico",
+                "name": "Producción de papel"
+            },
+            "poison": {
+                "description": "Desbloquea la elaboración de veneno, útil para infligir daño a los monstruos a lo largo del tiempo. Las plantas de glicinia sólo se pueden cultivar en brezales. Cada cosechador de glicinas necesita 10 plantas de glicinas cerca para funcionar bien.",
+                "name": "Envenenamiento"
+            },
+            "porridge": {
+                "description": "Desbloquea la combinación de agua y trigo en un nuevo tipo de comida",
+                "name": "Gachas"
+            },
+            "pottery": {
+                "description": "Desbloquea la cerámica, utilizada para transportar cosas, y la vajilla de barro que se puede vender",
+                "name": "Alfarería"
+            },
+            "prestige1": {
+                "description": "¡Un objetivo para organizar y medir lo mejor de nuestras energías y habilidades!",
+                "name": "Prestigio I"
+            },
+            "prestige2": {
+                "description": "Lo importante no es el viaje, sino el destino.",
+                "name": "Prestigio II"
+            },
+            "prestige3": {
+                "description": "Este lugar es un lugar de honor. Aquí se conmemora un acto de gran prestigio.",
+                "name": "Prestigio III"
+            },
+            "prestige4": {
+                "description": "¡El último kilómetro es el más largo!",
+                "name": "Prestigio IV"
+            },
+            "prestige5": {
+                "description": "Enhorabuena. Has completado con éxito todos los objetivos.",
+                "name": "Prestigio V"
+            },
+            "printingpress": {
+                "description": "Desbloquea la imprenta, una máquina compleja que te permite aumentar la producción de Libros del Conocimiento. También desbloquea piezas de precisión de latón, necesarias para muchas otras máquinas.",
+                "name": "Imprenta"
+            },
+            "projectiletrap": {
+                "description": "Desbloquea una trampa que una vez cargada disparará de forma lateral a los monstruos fuertes",
+                "name": "Trampa de proyectiles"
+            },
+            "recursiveknowledge": {
+                "description": "Ayuda a hacer libros utilizando libros para que puedas hacer más libros",
+                "name": "Superación personal recursiva"
+            },
+            "researcher": {
+                "description": "Desbloquea al investigador, que investigará utilizando las estanterías cercanas para avanzar en la ciencia",
+                "name": "Investigador"
+            },
+            "roofs": {
+                "description": "Una forma atractiva de cubrir los edificios, además, evita mojarse cuando llueve",
+                "name": "Tejas"
+            },
+            "ropes": {
+                "description": "Desbloquea un ingrediente con muchos usos",
+                "name": "Cuerdas"
+            },
+            "ropetrap": {
+                "description": "Desbloquea una trampa que congela a los monstruos cercanos durante 10 segundos, cuando un monstruo pasa sobre ella.",
+                "name": "Trampa de cuerda"
+            },
+            "sacredhouse": {
+                "description": "Desbloquea el Almacenamiento de Puntos Sagrados, para ampliar la cantidad de Puntos Sagrados que puede utilizar la Seguridad Sagrada.",
+                "name": "Almacén de Puntos Sagrados"
+            },
+            "scribe": {
+                "description": "Desbloquea al escriba, que estudia los pergaminos para obtener nuevos conocimientos. Un escriba necesita 10 estantes de pergaminos cerca. El escriba los vacía, pero se vuelven a llenar automáticamente con el tiempo.",
+                "name": "Escriba"
+            },
+            "signs": {
+                "description": "Ya es hora de ponerle nombres a las cosas",
+                "name": "Carteles"
+            },
+            "statistics": {
+                "description": "Desbloquea el tablón de estadísticas. Cuando se coloca y se utiliza, ofrece información sobre la actividad de tu colonia.",
+                "name": "Tablón de estadísticas"
+            },
+            "steel": {
+                "description": "Desbloquea acero, plomo y aceite mineral. Estos recursos son necesarios para la construcción de maquinaria más moderna. El mineral de plomo se encuentra en los pantanos, y el carbón bajo los árboles de gigantes.",
+                "name": "Acero, plomo y aceite mineral"
+            },
+            "steellockbox": {
+                "description": "Desbloquea un cofre de seguridad con más capacidad.",
+                "name": "Cofre de Acero"
+            },
+            "steeltools": {
+                "description": "Desbloquea una herramienta más duradera que permite a los colonos realizar su trabajo con mayor eficacia.",
+                "name": "Herramientas de acero"
+            },
+            "stonemason": {
+                "description": "Desbloquea el cantero, útil para añadir variedad a los edificios.",
+                "name": "Cantero"
+            },
+            "streetlight": {
+                "description": "Más chulo que usar antorchas",
+                "name": "Farola"
+            },
+            "tabulator": {
+                "description": "Desbloquea una compleja máquina que procesa datos y los almacena en tarjetas perforadas.",
+                "name": "Máquina tabuladora"
+            },
+            "tailoring": {
+                "description": "Desbloquea al sastre, un trabajador que puede convertir el lino en ropa y otros artículos. El lino es una buena fuente de puntos de colonia.",
+                "name": "Sastre"
+            },
+            "tanner": {
+                "description": "Desbloquea al curtidor, trabajador vital en la producción del cuero y, más tarde, del pergamino.",
+                "name": "Curtidor"
+            },
+            "toolshop": {
+                "description": "Desbloquea la Mesa de Distribución de Herramientas, un lugar donde los colonos irán a coger herramientas cuando las usen. Si no encuentran ninguna, irán al estandarte.",
+                "name": "Distribución de Herramientas"
+            },
+            "trader": {
+                "description": "Acelera el comercio entre colonias. No se utiliza para el intercambio con puestos avanzados, es para multijugador.",
+                "name": "Mercader"
+            },
+            "trading": {
+                "description": "Desbloquea el Centro de Mercaderes, un lugar donde puedes comprar y vender objetos.",
+                "name": "Centro de Comercio"
+            },
+            "waterpump": {
+                "description": "Permite recoger agua lejos de las fuentes.",
+                "name": "Bombeo de agua"
+            },
+            "watersponge": {
+                "description": "Permite eliminar agua de una forma realística.",
+                "name": "Tornillo de Arquímedes"
+            },
+            "writer": {
+                "description": "Desbloquea el escritor, el pergamino y los pergaminos del conocimiento. Son importantes para completar la ciencia más avanzada.",
+                "name": "Escritor"
+            }
+        },
+        "popup": {
+            "areaselection": {
+                "close": "Cerrar",
+                "descriptionshort": "¿Eliminar esta zona?",
+                "header": "Menú del área",
+                "remove": "Elmiminar área",
+                "size": "Área de superficie: <b>{0}</b>",
+                "workertype": "Trabajador de tipo: <b>{0}</b>"
+            },
+            "death": {
+                "description": "Has muerto.",
+                "respawn": "Revivir"
+            },
+            "inventory": {
+                "availableamount2": "En reserva",
+                "craftingstockpile": "Artesanía y Reserva",
+                "happinessvalue2": "Valor de la felicidad",
+                "happy": {
+                    "header": "Felicidad"
+                },
+                "madeintooltip": "Hecho en:",
+                "madeintooltippurchasable": "Se adquiere en el Centro de Mercaderes por {0} puntos.",
+                "noactivecolony": "¡Colonias inactivas!",
+                "science": {
+                    "available": "Disponible",
+                    "completed": "Finalizado",
+                    "completeunlock": "Completar",
+                    "conditioncolonistcount": "Colonos",
+                    "conditioncolonistcountdescription": "Colonos requeridos",
+                    "conditionpointreq": "Puntos de la colonia",
+                    "conditionpointreqdescription1": "Puntos de colonia requeridos",
+                    "conditionpointreqdescription2": "Requiere: {0}",
+                    "conditionpointreqdescription3": "Disponible: {0}",
+                    "conditionscientistrequires": "Requiere {0}",
+                    "dependencies": "Requiere Investigar:",
+                    "followups": "Tecnologías de seguimiento:",
+                    "header": "Ciencia",
+                    "recipeunlocknpcgroup": "Desbloquea {0}",
+                    "recipeunlockoriginjob": "Hecho en {0}",
+                    "recipeunlockoriginplayer": "Hecho por el jugador",
+                    "recipeunlocks": "Recetas Desbloqueadas:",
+                    "startscience": "Investigar",
+                    "threat": "Incrementa la amenaza de los monstruos en {0}",
+                    "unavailable": "No disponible"
+                },
+                "searchfieldplaceholder": "Escribe el filtro de búsqueda...",
+                "stats": {
+                    "auto-scale": "Auto escalar",
+                    "entry-beds": "Camas",
+                    "entry-meals": "Comida total",
+                    "entry-npccount": "Colonos",
+                    "entry-points": "Puntos de la colonia",
+                    "entry-sanctified": "Puntos Sagrados",
+                    "entry-unemployed": "Desempleados",
+                    "hide-all": "Ocultar todo",
+                    "only-changed": "Solo mostrar cambios",
+                    "scale": "Escala :",
+                    "scale-linear": "Lineal",
+                    "scale-log": "Registro",
+                    "show-all": "Mostrar todo",
+                    "time1day": "1 día",
+                    "time24day": "24 días",
+                    "time4day": "4 días",
+                    "type-colony": "Colonia",
+                    "type-consumption": "Consumo",
+                    "type-consumption-col": "Consumo (Colonia)",
+                    "type-consumption-out": "Consumo (Puesto Avanzado)",
+                    "type-idle-jobs": "Trabajos Inactivos",
+                    "type-idle-jobs-col": "T. Inactividad (Colonia)",
+                    "type-idle-jobs-out": "Trabajo Inactivo (Puesto Avanz.)",
+                    "type-itempoints": "Puntos de Objecto",
+                    "type-outpost": "Puesto Avanzado",
+                    "type-production": "Producción",
+                    "type-production-col": "Producción (Colonia)",
+                    "type-production-out": "Producción (Puesto Avanz.)",
+                    "type-stockpile": "Reserva",
+                    "type-tooluse": "Uso Herram.",
+                    "type-tooluse-col": "Uso de Herram. (Colonia)",
+                    "type-tooluse-out": "Uso Herram. (Puesto Avanz.)",
+                    "type-trade-in": "Comercio Entrada",
+                    "type-trade-out": "Comercio Salida"
+                },
+                "tooltip": {
+                    "and": "y",
+                    "craftingtime": "Tiempo de elaboración: {0} segundos",
+                    "craftingtimetooled": "Tiempo de elaboración con {0}: {1} segundos",
+                    "instockpile": "En la reserva",
+                    "needs": "Necesitas: ",
+                    "nothing": "Nada"
+                },
+                "trashicon": "Suelta objetos aquí para tirarlos a la basura",
+                "upgrades": {
+                    "header": "Puntos Colonia",
+                    "preamble2": "<i>Puntos actuales / Capacidad</i>",
+                    "table": {
+                        "cost": "Coste",
+                        "current": "Actual",
+                        "levels": "Niveles",
+                        "name": "Nombre de la mejora",
+                        "next": "Siguiente"
+                    },
+                    "upgradebutton": "Mejorar"
+                }
+            },
+            "itemselector": {
+                "description": "Selecciona un tipo de item para usar",
+                "header": "Selección de item"
+            },
+            "limits": {
+                "allreset": "Reiniciar todo",
+                "allzero": "Poner todo a cero",
+                "description": "Los colonos trabajarán hasta alcanzar el limite de la reserva.",
+                "group1": "Seleccionar un grupo de límites",
+                "group2": "Seleccione uno de los múltiples grupos para este trabajador específico. El ajuste de los límites los ajustará para todos los trabajadores de este tipo con el mismo grupo.",
+                "hoverpriority": {
+                    "a": "Prioridad de elaboración",
+                    "b": "Recipientes con un +++ de prioridad son creados primero.\n Recipientes con un + de prioridad son creados los últimos."
+                },
+                "waitingdata": "Esperando datos...",
+                "wrongcolony": "El trabajo seleccionado pertenece a otra colonia"
+            },
+            "merchantui": {
+                "buy": "Comprar",
+                "buy1": "Comprar 1",
+                "buy25": "Comprar 25",
+                "buy5": "Comprar 5",
+                "buytext": "Compra {0} por {1} puntos",
+                "buytext2": "Los fondos actuales permiten comprar {0}",
+                "currentpoints": "Puntos actuales: {0} / {1}",
+                "description": "Comprar/vender objetos por puntos",
+                "header": "Comercio",
+                "sell": "Vender",
+                "sell1": "Vender 1",
+                "sell25": "Vender 25",
+                "sell5": "Vender 5",
+                "selltext": "Vende {0} por {1} puntos",
+                "selltext2": "El almacenamiento actual permite {0} venta(s)"
+            },
+            "npccontext": {
+                "colony": "Colonia:",
+                "fire": "Expulsar",
+                "header": "Información de colonos",
+                "job": "Trabajos:",
+                "name": "Nombre:",
+                "showgoal": "Marcar objetivos"
+            },
+            "quickstart": {
+                "closetoggle": "No mostrar más",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+            "signs": {
+                "apply": "Aplicar",
+                "edit": "Editar",
+                "header": "Cartel"
+            },
+            "specialblockremoval": {
+                "button": "Elmiminar",
+                "description": "Elmiminar este bloque tipo {0} puede causar problemas para la colonia.¿Qué quieres hacer?",
+                "header": "Removedor de bloques especiales"
+            },
+            "toolconstruction": {
+                "currentshape": "<i>Forma actual</i>: <b>{0}</b>",
+                "description": "Selecciona el tipo de área que deseas crear.",
+                "header": "Herramienta de construcción",
+                "shapemenudescription": "Seleccione la forma que desea utilizar para las zonas siguientes",
+                "shapes": {
+                    "FullBox": "Cubo Sólido",
+                    "HollowBox": "Cubo Hueco",
+                    "SolidCylinder": "Cilindro Sólido",
+                    "Walls": "Paredes",
+                    "WallsCylinder": "Paredes Cilíndricas"
+                }
+            },
+            "tooljob": {
+                "barleya": "Piensos para pollos",
+                "barleyfarmer": "Agricultor de cebada",
+                "beekeeper": "Apicultor",
+                "beekeepera": "Cría de abejas para la producción de velas",
+                "berrya": "Comida rápida y fácil, ¡inicia con ella!",
+                "berryfarmer": "Agricultor de bayas",
+                "berryfarmertool": "Herramienta para Agricultores de bayas",
+                "buildera": "Rellena un área del mundo",
+                "builderarea": "Construir todo",
+                "builderb": "Abre el menú para seleccionar el tipo, después selecciona el área a rellenar",
+                "builderreplacer": "Sustitución específica",
+                "builderreplacera": "Sustituir un tipo por otro",
+                "builderreplacerb": "Seleccione un área en la que sustituir un tipo de bloque por otro",
+                "cabbagea": "Coles",
+                "cabbagefarmer": "Agricultor de coles",
+                "chickenfarmer": "Granjero de pollos",
+                "chickenfarmera": "Utiliza cebada para criar pollos",
+                "construction": "Construcción",
+                "construction1": "Déjalos hacer el trabajo",
+                "construction2": "Esto abrirá otro menú, donde tú puedes seleccionar el tipo de construcción",
+                "constructionjob": "Punto de Trabajo",
+                "constructionjoba": "Contrata un obrero",
+                "constructionjobb": "Colocar después un área de construcción",
+                "coversarea": "Cubrir el área existente",
+                "description": "Selecciona el tipo de área que deseas crear.",
+                "diggera": "Excava un área del mundo",
+                "diggerarea": "Eliminar todo",
+                "diggerb": "Selecciona el área a excavar",
+                "diggerspecial": "Eliminar Específico",
+                "diggerspeciala": "Elimina un tipo especifico en un área",
+                "diggerspecialb": "Selecciona desde el área a eliminar",
+                "dyer1": "Añade colores para hacer la vida un poco menos monótona",
+                "dyer2": "Se abrirá otro menú con varios trabajos agrícolas",
+                "dyers": "Tintorería",
+                "flaxfarmer": "Agricultor de lino",
+                "flaxfarmertool": "Herramienta para Agricultores de lino",
+                "forester": "Forestal",
+                "forestera": "Plantas y árboles",
+                "foresterb": "Necesitas: semillas y una hacha\nColócala sobre el césped o barro",
+                "forestertool": "Herramienta para Forestales",
+                "header": "Trabajos",
+                "hempfarmer": "Agricultor de cáñamo",
+                "missingscience": "<color=#ff2323>'{0}' no ha sido investigada.</color>",
+                "noconstructionareanearby": "No hay área de construcción cerca",
+                "notarablefen": "Requiere tierras pantanosas cultivables por debajo",
+                "notarableheath": "Requiere brezales cultivables debajo",
+                "notarablenormal": "Requiere suelo cultivable por debajo",
+                "notflat": "No es plano",
+                "nowaternearby": "No hay agua cerca",
+                "occupiedblocks": "Ocupado por bloques",
+                "requiresarable": "Requiere tierra arable",
+                "toolarge": "Muy grande",
+                "toonarrow": "Muy estrecho para los árboles",
+                "toosmall": "Muy pequeño",
+                "wateradjacent": "Requiere agua adyacente en su lugar de trabajo",
+                "wheatfarmer": "Agricultor de trigo",
+                "wheatfarmertool": "Herramienta de Agricultor de trigo"
+            },
+            "toolshop": {
+                "description": "Ajusta los niveles mínimos de existencias requeridos antes de que los colonos utilicen herramientas específicas. Permite utilizarlas para la artesanía o la ciencia.",
+                "header": "Taller de herramientas"
+            }
+        },
+        "quickstart": {
+            "page1_2": {
+                "description": "!Bienvenido a Colony Survival!",
+                "header": "Conceptos Básicos",
+                "text1_2": "Comienza encontrando un buen lugar para tu primera colonia. Se recomienda tener agua y campos planos para cultivar cerca. Una Bandera será el centro de tu colonia.",
+                "text2_2gamepad": "Selecciona la Herramienta de Bandera en el inventario a continuación usando <style=Player/HotBarUp> y <style=Player/HotBarDown>. Colócala con <style=Player/FireSecondary> mientras apuntas al suelo con la Herramienta de Bandera seleccionada. Una vez en una Colonia, la Herramienta de Bandera muestra una sombra profunda donde los monstruos pueden aparecer más tarde.",
+                "text2_2keyboard": "Selecciona la Herramienta de Bandera en el inventario a continuación usando <style=Player/Inventory1>. Colócala con <style=Player/FireSecondary> mientras apuntas al suelo con la Herramienta de Bandera seleccionada. Una vez en una Colonia, la Herramienta de Bandera muestra una sombra profunda donde los monstruos pueden aparecer más tarde.",
+                "text3_2": "Coloca camas para poder reclutar colonos. Presiona <style=Player/ToggleInventory> para abrir la interfaz. Mueve las camas del almacén a la barra rápida a continuación. Con la cama seleccionada, usa <style=Player/FireSecondary> mientras apuntas al suelo para colocar una cama.",
+                "text4": "Abre la interfaz y ve a la página 'Colonia'. Pulsa 'Reclutar' para reclutar a un colono."
+            },
+            "page2_2": {
+                "description": "Son esenciales para el crecimiento y la supervivencia",
+                "header": "Comida y Camas",
+                "text1": "Los colonos necesitan 1 comida al día. Las toman en el estandarte o en una tienda de comestibles cercana. Sin comida, los colonos se mueren de hambre. Reclutar nuevos colonos cuesta varias comidas.",
+                "text2_2gamepad": "El agricultor de bayas es la primera fuente de alimento. Selecciona la Herramienta de Comando (la primera ranura del inventario). <style=Player/FirePrimary> para abrirla y seleccionar el granjero de bayas. <style=Player/FireSecondary> para empezar a definir la granja de bayas, y luego <style=Player/FireSecondary> de nuevo en otro lugar para terminar. ¡Necesitarás bastantes de estos!",
+                "text2_2keyboard": "El agricultor de bayas es la primera fuente de alimento. Selecciona la herramienta de mando (<style=Player/Inventory0>). <style=Player/FirePrimary> para abrirla y seleccionar el granjero de bayas. <style=Player/FireSecondary> para empezar a definir la granja de bayas, y luego <style=Player/FireSecondary> de nuevo en otro lugar para terminar. ¡Necesitarás bastantes de estos!",
+                "text3_2": "Para empezar a producir camas, tendrás que fabricar una mesa del artesano. Si mantienes pulsado <style=Player/FirePrimary> mientras apuntas a los bloques, podrás excavar hacia abajo para recoger los escombros de piedra necesarios.",
+                "text4": "Haz clic en el icono de la mesa del artesano a la izquierda de la pila para fabricarla. Colócala igual que colocaste la cama. Al igual que con la granja de bayas, los colonos desempleados se encargarán automáticamente de este trabajo."
+            },
+            "page3_2": {
+                "description": "El lado tecnológico de la supervivencia",
+                "header": "Artesanía, ciencia y minería",
+                "text1": "Los trabajadores irán a las cajas tanto para recoger ingredientes de la reserva como para entregar productos artesanales a la reserva. Si aún no hay cajas, el estandarte funcionará como una.",
+                "text2": "Muchos trabajos pueden o deben utilizar herramientas. Las diferentes herramientas tienen diferentes costes, durabilidades y bonificaciones a la velocidad de producción. El artesano produce automáticamente herramientas de piedra.",
+                "text3": "Utiliza la ciencia para desbloquear nuevos trabajos, objetos y características. Abre la página de ciencia en la interfaz para comprobar los requisitos y desbloquear nuevas tecnologías cuando estén disponibles.",
+                "text4": "Cuando hayas desbloqueado la ciencia Minero, el minero producirá 'trabajos de minería'. Excava y colócalas en bloques de piedra oscura o minerales para que los colonos los exploten de forma sostenible."
+            },
+            "page4_2": {
+                "description": "¡Defiende tu colonia de los monstruos de la noche!",
+                "header": "Defensa de la colonia",
+                "text1": "Al desbloquear algunas ciencias se añadirá 'amenaza'. Esto se muestra en la parte superior derecha de la interfaz de usuario. Reclutar colonos extra añadirá amenaza a un ritmo lento después de los primeros 25. A medida que el nivel de amenaza aumente, aparecerán más monstruos y más fuertes.",
+                "text2": "Construye muros y cava fosos en la zona libre de monstruos para proteger el centro de tu colonia. Siéntete libre de colocar trabajos como granjas en la 'zona libre de monstruos' fuera de esta: los colonos abandonarán esta zona y se irán a sus camas cuando empiece la noche.",
+                "text3": "Tu artesano producirá el objeto 'Guardia hondero nocturno'. Colócalo en tu colonia para reclutar a un hondero que trabaje de noche.",
+                "text4": "Avanza en el árbol tecnológico para desbloquear nuevos guardias, trampas y la Seguridad Sagrada."
+            },
+            "page5_2": {
+                "description": "Comercia y expande para acceder a recursos únicos",
+                "header": "Puntos de Colonia y Colonización",
+                "text1_2": "Desbloquea y coloca el Centro del Comerciante. Usa <style=Player/FireSecondary> para abrir su interfaz. Vende objetos para ganar Puntos de Colonia. Entre otras cosas, los puntos se pueden gastar en mejoras como el límite de colonos en la página de Puntos de Colonia.",
+                "text2": "Este mundo contiene múltiples regiones con recursos únicos. Hay cimas de montañas cubiertas de nieve, brezales cubiertos de púrpura, pantanos y árboles gigantes. Desbloquea y equipa el astrolabio para encontrarlos fácilmente.",
+                "text3": "Desbloquea puestos avanzados, compra un estandarte de puesto avanzado y llévalo contigo mientras exploras. Colócalo para crear un puesto avanzado. Sus reservas y su progreso científico se comparten con la colonia principal y los demás puestos avanzados. Construye puestos avanzados en las regiones mencionadas para acceder a sus recursos."
+            },
+            "page6_2": {
+                "description": "Crear sistemas de trabajo más complejos",
+                "header": "Bloques 'Cosechadora' y 'Fuente'",
+                "text1": "Para algunos trabajos, hay que colocar tanto el bloque 'cosechador' como el bloque 'fuente'. La mayoría de las veces, cada bloque cosechador necesita unos 10 bloques fuente.",
+                "text2": "Un bloque recolector como el Escritorio del Escriba recluta a un colono para que trabaje allí. Ese colono intentará visitar un bloque fuente cercano, en este caso una estantería de pergaminos llena, antes de trabajar.",
+                "text3": "Los recolectores vacían sus bloques fuente, pero éstos se regeneran automáticamente con el tiempo. La proporción de 1 a 10 garantiza un equilibrio sostenible a largo plazo."
+            }
+        },
+        "settingsmenu": {
+            "audio": "Sonido",
+            "audiomenu": {
+                "ambientvolume": "Ambiente",
+                "effectsvolume": "Efectos",
+                "full": "Volumen",
+                "mastervolume": "Volumen principal",
+                "menuvolume": "Menú",
+                "torchvolume": "Antorchas"
+            },
+            "gameplay": "Mouse y teclado",
+            "gameplaymenu": {
+                "full": "Sensibilidad y Teclas rápidas",
+                "gameplaytab": {
+                    "adaptivecrosshair": "Punto de mira adaptable",
+                    "crosshairratio": "Escala del punto de mira",
+                    "devbuttons": "Habilitar los botones de desarrollador",
+                    "permanenthighlight": "Destacar los bloques permanentes",
+                    "ratio0": "Deshabilitado",
+                    "ratio100": "100%",
+                    "ratio125": "125%",
+                    "ratio150": "150%",
+                    "ratio175": "175%",
+                    "ratio200": "200%",
+                    "ratio25": "25%",
+                    "ratio250": "250%",
+                    "ratio300": "300%",
+                    "ratio400": "400%",
+                    "ratio50": "50%",
+                    "ratio62": "62%",
+                    "ratio75": "75%",
+                    "ratio87": "87%",
+                    "showsensitivedatamode": "Mostrar datos confidenciales",
+                    "tab": "Configuración General",
+                    "uiscalingratio": "Escala de la IU"
+                },
+                "mousemenu": {
+                    "inverty": "Invertir eje Y",
+                    "sensitivity": "Sensibilidad del ratón",
+                    "smooth": "Suavizado de ratón",
+                    "swapprimsec": "Invertir click izquierdo y derecho"
+                },
+                "mousesettings2": "Ratón & Teclado",
+                "padmenu": {
+                    "mainbutton": "Mando",
+                    "sensitivity": "Sensibilidad de apuntando"
+                }
+            },
+            "language": "Idioma",
+            "languagemenu": {
+                "coverage": "Esta traducción esta un {0:F1}% completada. Para ayudar a traducirla, ve los repositorios de Github en nuestros foros.",
+                "full": "Idiomas",
+                "language": "Idioma",
+                "wiptext": "Trabajo en progreso. Esta traducción no cubre todo el contenido del juego, algunas traducciones pueden cubrir más contenido que otras."
+            },
+            "qualitycustom": "Personalizada",
+            "qualityhigh": "Alta",
+            "qualitylow": "Baja",
+            "qualitymaximum": "Máxima",
+            "qualitymedium": "Media",
+            "qualityminimum": "Mínimo",
+            "qualityoff": "Desactivar",
+            "qualityon": "Activar",
+            "qualityveryhigh": "Muy alta",
+            "qualityverylow": "Muy baja",
+            "video": "Gráficos",
+            "videomenu": {
+                "ambientocclusion": "Oclusión ambiental",
+                "anisotropic": "Filtrado anisotrópico x16",
+                "antialiasing": "Anti aliasing",
+                "bloom": "Bloom",
+                "depthoffield": "Profundidad de campo",
+                "drawdistance": "Distancia de dibujado (*)",
+                "fieldofview": "Campo de visión",
+                "fog": "Niebla",
+                "full": "Calidad de gráficos",
+                "fullscreen": "Pantalla completa",
+                "particleeffects": "Efectos de partículas",
+                "preset": "Preset",
+                "ragdoll": "Cantidad de cadáveres",
+                "resolution": "Resolución",
+                "restarttoapply": "(*) Requiere reiniciar el juego",
+                "shaderquality": "Calidad de sombreadores",
+                "sunshadowcascades": "Calidad de caida de sombras",
+                "sunshadowdistance": "Distancia de la sombras",
+                "sunshadowquality": "Calidad de sombras",
+                "texturequality": "Calidad de las texturas (*)",
+                "torchquality": "Calidad de la antorcha",
+                "vsync": "VSync",
+                "vsyncdouble": "Doble"
+            }
+        },
+        "singleplayermenu": {
+            "alreadyexists": "¡Este mundo ya existe!",
+            "cancel": "Cancelar",
+            "cloudsync": "Usar la nube de Steam",
+            "confirmdelete": "Confirmar Eliminación",
+            "confirmdeletedescription": "Estas a punto de ELIMINAR la carpeta que contiene este mundo.\n¿Estás seguro de que quieres hacerlo",
+            "confirmload": "Confirmar Cargar",
+            "delete": "Borrar",
+            "hostingoptions": "Ajustes de Hosting",
+            "legacyworldhint": "Has seleccionado un mundo antiguo. Para cargarlo necesitarás ejecutar una versión antigua de Colony Survival. Puedes configurar Steam para que descargue versiones antiguas entrando en las propiedades del juego y seleccionando una versión antigua en la pestaña de beta.",
+            "load": "Cargar",
+            "loadworld": "Cargar mundo",
+            "missingname": "No se ha establecido el nombre del mundo",
+            "modconfiguration": "Configuración de mods",
+            "modoutdated": "[Obsoleto]",
+            "modschanged": {
+                "added": "'{0}' se ha añadido",
+                "disabled": "'{0}' falta o está deshabilitado desde el uso anterior.",
+                "header": "Confirmar cargar el mundo",
+                "main": "Cargando mundo '{0}' pero han cambiado algunos mods.\nEsto puede causar problemas.",
+                "updated": "'{0}' se ha actualizado de la versión {1} a {2}."
+            },
+            "modselectall": "Habilitar todos",
+            "modselectnone": "Deshabilitar todos",
+            "modslist": {
+                "disableddependency": "[Deshabilitado]",
+                "missingdependency": "[Falta]",
+                "outdateddependency": "[Desactualizado]",
+                "requireddependency": "[Requiere]"
+            },
+            "newworld": "Nuevo mundo",
+            "nosubscribeditems": "No se encuentran mundos subscritos en el workshop",
+            "outdated": "Mundo obsoleto",
+            "password": "Contraseña",
+            "play_coop": "Jugar en cooperativo",
+            "play_solo": "Jugar en solitario",
+            "selectedfolder": "Mundo seleccionado: {0}",
+            "servername": "Nombre del servidor",
+            "serverport": "Puerto del servidor",
+            "typegenerateworld": "Generar mundo",
+            "typeworkshop": "Mundo de Workshop",
+            "world_folder": "Carpeta",
+            "world_outdated": "Requiere una versión más antigua",
+            "worlddate": "Fecha",
+            "worldname": "Nombre",
+            "worldname_long": "Nombre del mundo",
+            "worldseed": "Semilla del mundo"
+        },
+        "tooltip": {
+            "craftingblock": "Ordena a un colono que trabaje aquí como {0}",
+            "crate": "Los colonos se desplazarán a uno de estos bloques para conseguir o depositar objetos cada cierto tiempo",
+            "failsafe-points": "Añade {0} capacidad de punto sagrado (no apilable)",
+            "failsafe-threat": "Causa {0} Amenaza",
+            "guard-ammo": "Usos {0}",
+            "guard-aoe": "{0} bloquea el área de efecto",
+            "guard-cooldown": "Cada {0} segundos",
+            "guard-damage": "Causa {0} de daño",
+            "guard-damage-ticks": "Inflige {0} de daño durante {1} segundos",
+            "guard-general": "Ordena a un colono que vigile esta posición",
+            "guard-range": "A una distancia de hasta {0} bloques",
+            "guard-sleeptype-day": "Duerme durante el día",
+            "guard-sleeptype-night": "Duerme por la noche",
+            "is-edible": "Comida, los colonos comerán una comida cada día",
+            "is-sanctified": "Recibe {0} puntos sagrados cuando los colonos coman esta comida",
+            "lockbox-points": "Añade {0} de capacidad de puntos de colonia",
+            "lockbox-threat": "Causa {0} de amenazas",
+            "miner": "Ordena a un colono que extraiga repetidamente el bloque de mineral de piedra oscura que hay debajo",
+            "npcshop": "Los colonos visitarán este o el estandarte para conseguir su comida diaria",
+            "paintable": "El objeto puede ser modificado utilizando: ",
+            "pointtrader": "Aquí puedes comprar y vender cosas por puntos",
+            "provides-fertile": "Cuenta como tierra fértil",
+            "provides-fertile-fen": "Cuenta como suelo fértil de pantano",
+            "provides-fertile-heath": "Se considera tierra fértil",
+            "requires-fen": "Requiere pantano fértil debajo",
+            "requires-fertile": "Requiere tierra fértil debajo",
+            "requires-heath": "Requiere brezo fértil debajo",
+            "requires-water": "Debe colocarse junto al agua para que funcione",
+            "sanctifiedlockbox-points": "Añade {0} de capacidad de puntos sagrados",
+            "sanctifiedlockbox-threat": "Causa {0} de amenazas",
+            "statisticsboard": "Interactúa con este bloque para ver las estadísticas de tu colonia",
+            "threatstatue-general": "Atrae la amenaza de otros puestos de avanzada hacia el puesto de avanzada en el que está colocado, al tiempo que provoca cierta amenaza por sí mismo.",
+            "threatstatue-threatcaused": "Causa {0} de amenaza extra",
+            "threatstatue-threatweight": "Añade {0} puntos de amenaza",
+            "tool-always-usable": "Siempre disponible, no requiere artículos",
+            "tool-durability": "{0} segundos de uso",
+            "tool-general": "Muchos trabajos utilizan herramientas para acelerar la artesanía",
+            "tool-multiplier": "{0}x velocidad de fabricación",
+            "tool-percentage-left": "Durabilidad % Restante:",
+            "tool-seconds-left": "Durabilidad Restantes:",
+            "toolshop": "Los colonos visitarán éste o el estandarte para conseguir nuevas herramientas cuando las necesiten",
+            "trap-ammo": "Almacena hasta {0} de {1}",
+            "trap-cooldown": "Cada {0} segundos",
+            "trap-damage": "Causa {0} de daño",
+            "trap-explosive-range": "Afecta a un área con un radio de {0} al golpear",
+            "trap-filter-1000hp": "Sólo se activa en monstruos con al menos 1000 de vida.",
+            "trap-filter-unslowed": "Sólo se activa en monstruos que aún no han sido ralentizados",
+            "trapfixer": "Puesto trampero que repone las trampas cercanas durante el día",
+            "trap-freezes": "Congela a los golpeados durante {0} segundos",
+            "trap-friendly-fire": "Puede afectar a los amigos cuando se activa",
+            "trap-general": "Elemento trampa, espera a que los monstruos pasen y se activa. Serán recargados durante el día por los colonos Tramperos",
+            "trap-range": "A una distancia de hasta {0} bloques",
+            "trap-slows": "Ralentiza a los monstruos a {0} veces su velocidad",
+            "trap-style-down": "Activadores de los monstruos de la parte de abajo",
+            "trap-style-front": "Activadores de monstruos al frente",
+            "trap-style-up": "Activadores de los monstruos de arriba"
+        },
+        "upgrades": {
+            "builder": {
+                "level": "{0} Bloques",
+                "main": "Área de trabajo del constructor"
+            },
+            "colonistcapacity": {
+                "level": "{0} colonos",
+                "main": "Capacidad de colonos"
+            },
+            "digger": {
+                "level": "{0} Bloques",
+                "main": "Área de trabajo del excavador"
+            },
+            "health": {
+                "level": "Nivel {0} de Vida",
+                "main": "Vida del Jugador"
+            },
+            "safezone": {
+                "level": "{0} Bloques",
+                "main": "Zona segura del Estandarte"
+            }
+        }
+    },
+    "types": {
+        "alarmbell": "Campana de alarma",
+        "alchemisttable": "Mesa del alquimista",
+        "alkanet": "Alkanet",
+        "animalcarcass": "Cadáveres de animales",
+        "architrave": "Arquitecto",
+        "artisttable": "Mesa de trabajo del artista",
+        "astrolabe": "Astrolabio",
+        "banner": "Estandarte",
+        "bannertool": "Herramienta del estandarte",
+        "barley": "Cebada",
+        "bed": "Cama",
+        "berry": "Baya",
+        "berrybush": "Semilla de baya",
+        "berrymeal": "Comida de bayas",
+        "blastfurnace": "Alto horno",
+        "bloomery": "Fragua",
+        "bookcase": "Librería (Vacía)",
+        "bookcase1": "Librería (casi vacía)",
+        "bookcase2": "Librería (parcialmente vacía)",
+        "bookcasefilled": "Librería",
+        "bookofknowledge": "Libro del Conocimiento",
+        "bow": "Arco",
+        "brassingot": "Lingote de latón",
+        "brassparts": "Piezas de precisión de latón",
+        "bread": "Pan",
+        "breadmeal": "Comida de pan",
+        "bricks": "Ladrillos",
+        "bricksblack": "Ladrillos negro",
+        "bricksdarkred": "Ladrillos rojo oscuro",
+        "bricksdarkyellow": "Ladrillos amarillo oscuro",
+        "brickslight": "Ladrillos ligeros",
+        "bricksred": "Ladrillos rojos",
+        "bronzeingot": "Lingote de bronce",
+        "bronzelockbox": "Cofre de Bronce",
+        "bronzetools": "Herramientas de bronce",
+        "cabbage": "Coles",
+        "caltrops": "Abrojo",
+        "caltroptrap": "Trampa Abrojo",
+        "candle": "Vela",
+        "carddata": "Tarjeta perforada",
+        "cardempty": "Tarjeta perforada vacía",
+        "charcoal": "Carbón",
+        "cherryblossom": "Flor de cerezo",
+        "chest": "Cofre",
+        "chestluxury": "Cofre de Lujo",
+        "chestmaker": "Taller de fabricación de cofres",
+        "chestprestige": "Cofre de Prestigio",
+        "chestresource": "Cofre de la Ciencia",
+        "chickenmeal": "Comida de pollo",
+        "chickenpoop": "Excrementos de pollo",
+        "chickenraw": "Pollo (crudo)",
+        "clay": "Arcilla",
+        "coalore": "Mena de carbón",
+        "cokes": "Coque",
+        "colonykit": "Kit de colonia",
+        "commandtool": "Tabla de Trabajos",
+        "compass": "Compás",
+        "compostingbin": "Contenedor de compostaje",
+        "constructionjob": "Trabajo de construcción",
+        "cookedfish": "Pescado cocinado",
+        "cookedmeat": "Carne cocinada",
+        "copper": "Cobre",
+        "copperanvil": "Yunque de cobre",
+        "copperarrow": "Flecha de cobre",
+        "copperingot": "Lingote de cobre",
+        "copperlockbox": "Cofre de cobre",
+        "coppertools": "Herramientas de cobre",
+        "corbel": "Cornisa",
+        "cotton": "Algodón",
+        "cottonengine": "Maquina de algodón",
+        "cottonfibre": "Fibra de algodón",
+        "crate": "Caja",
+        "crossbow": "Ballesta",
+        "crossbowbolt": "Virote",
+        "darkstone": "Bloque de piedra oscura",
+        "dirt": "Barro",
+        "dirtfen": "Suciedad del pantano",
+        "dirtheath": "Suciedad del brezo",
+        "doorclosed": "Puerta",
+        "droppertrap": "Trampa de caída",
+        "droppertrapammo": "Munición para trampas de caída",
+        "dyertable": "Mesa de Tintorería",
+        "earthenware": "Cerámica",
+        "elevator": "Cabina del ascensor",
+        "elevatorhorizontal": "Estación de tren",
+        "elevatorshaft": "Hueco del ascensor",
+        "elevatorshafthorizontal": "Vía",
+        "engineerbench": "Banco de ingenieros",
+        "eyeglasses": "Gafas",
+        "failsafe": "Seguridad Sagrada",
+        "fence": "Valla",
+        "firepit": "Hoguera",
+        "firewood": "Leña",
+        "fisherman": "Punto de pesca",
+        "flax": "Planta de lino",
+        "flaxstage1": "Semillas de lino",
+        "fletcherbench": "Banco de Flechas",
+        "flowerboxitem": "Maceta con flores",
+        "furnace": "Fundición",
+        "glassblower": "Taller de soplado de vidrio",
+        "glasspiece": "Trozo de cristal",
+        "glider": "Planeador",
+        "glidersteel": "Planeador de acero de lanzador",
+        "goldenshield": "Escudo de Oro",
+        "goldenstatue": "Estandarte de Amenaza",
+        "goldingot": "Lingote de oro",
+        "goldjewellery": "Joyas de oro",
+        "goldore": "Mena de oro",
+        "grassdry": "Hierba",
+        "grassfen": "Hierba de los pantanos",
+        "grassheath": "Hierba del brezo",
+        "grassheathpurple": "Plantas del brezo",
+        "grassmax": "Hierba",
+        "grassmid": "Hierba",
+        "grasswet": "Hierba",
+        "grenadelauncher": "Lanzagranadas",
+        "grenadelauncherammo": "Munición de lanzagranadas",
+        "grindstone": "Piedra de Moler",
+        "guardbowdayjob": "Arquero Diurno",
+        "guardbownightjob": "Arquero Nocturno",
+        "guardcrossbowdayjob": "Ballestero Diurno",
+        "guardcrossbownightjob": "Ballestero Nocturno",
+        "guardgrenadedayjob": "Guardia Lanzagranadas Diurno",
+        "guardgrenadenightjob": "Guardia del Lanzagranadas Nocturno",
+        "guardhandcannondayjob": "Guardia de cañón de mano Diurno",
+        "guardhandcannonnightjob": "Guardia del cañón de mano Nocturno",
+        "guardmusketdayjob": "Guardia de mosquete Diurno",
+        "guardmusketnightjob": "Guardia de Mosquete Nocturno",
+        "guardpoison": "Guardia Veneno",
+        "guardslingerdayjob": "Hondero Diurno",
+        "guardslingernightjob": "Hondero Nocturno",
+        "gunpowder": "Pólvora",
+        "gunpowdertrap": "Trampa de pólvora",
+        "gunpowdertrapammo": "Munición para trampas de pólvora",
+        "gunsmith": "Banco de armero",
+        "guntrap": "Cañón trampa",
+        "guntrapammo": "Munición para cañones trampa",
+        "handcannon": "Cañón de mano",
+        "handcannonammo": "Munición de cañón de mano",
+        "hemp": "Cáñamo",
+        "hempfibre": "Fibra de cáñamo",
+        "hollyhock": "Alcea",
+        "ironbloom": "Flor de hierro",
+        "ironore": "Mena de hierro",
+        "irontools": "Herramientas de hierro",
+        "ironwrought": "Hierro forjado",
+        "jewellerbench": "Banco del Joyero",
+        "jobblockcrafter": "Banco de Artesano",
+        "jobblockcrafteradvanced": "Banco Avanzado para Artesanos",
+        "kiln": "Horno",
+        "lanternblue": "Farol Azul",
+        "lanterncyan": "Farol Cian",
+        "lanterngreen": "Farol Verde",
+        "lanternitem": "Farola",
+        "lanternorange": "Farol Naranja",
+        "lanternpink": "Farol Rosa",
+        "lanternred": "Farol Roja",
+        "lanternwhite": "Farol Blanca",
+        "lanternyellow": "Farol",
+        "leadingot": "Lingote de plomo",
+        "leadore": "Mineral de plomo",
+        "leather": "Cuero",
+        "leavesfallorange": "Hojas naranjas",
+        "leavesfallred": "Hojas rojas",
+        "leavesfallyellow": "Hojas amarillas",
+        "leavesgreendark": "Hojas oscuras",
+        "leavesgreenlight": "Hojas claras",
+        "leavestaiga": "Hojas de taiga",
+        "leavestemperate": "Hojas templadas",
+        "linen": "Lino",
+        "logtaiga": "Tronco de taiga",
+        "logtemperate": "Tronco templado",
+        "logwall": "Pared de troncos",
+        "luxurygarments": "Ropa de lujo",
+        "machinetools": "Máquinas herramienta",
+        "manuscript": "Manuscrito",
+        "merchanthub": "Centro de Comercio",
+        "metalgear": "Engranaje metálico",
+        "metallathe": "Torno de metal",
+        "minerjob": "Minero",
+        "monocular": "Monocular",
+        "mouldingitem": "Molduras de corona",
+        "movabletype": "Tipo movible",
+        "mudbricks": "Ladrillos de adobe",
+        "musket": "Mosquete",
+        "musketammo": "Munición de mosquete",
+        "nitro": "Nitrocelulosa",
+        "notools": "Sin Herramientas",
+        "npcshop": "Tienda de comestibles",
+        "outpostbanner": "Estandarte del Puesto Avanzado",
+        "paintblue": "Pintura azul",
+        "paintgreen": "Pintura verde",
+        "paintred": "Pintura roja",
+        "paintstripped": "Eliminador de pintura",
+        "paintwhite": "Pintura blanca",
+        "paper": "Papel",
+        "papermakersmould": "Molde de papel",
+        "parchment": "Pergamino",
+        "pillar": "Pilar",
+        "planks": "Tablas",
+        "planksblue": "Tablones azules",
+        "planksgreen": "Tablones verdes",
+        "planksred": "Tablones rojos",
+        "points": "Puntos",
+        "poisondart": "Dardo venenoso",
+        "potash": "Potasa",
+        "potempty": "Tarro (vacío)",
+        "potflour": "Tarro (Harina)",
+        "potterystation": "Estación de Alfarería",
+        "potwater": "Tarro (Agua)",
+        "printingpress": "Imprenta",
+        "projectiletrap": "Trampa de proyectiles",
+        "projectiletrapammo": "Munición para trampas de proyectiles",
+        "quarterblockbrowndark": "Escalón marrón oscuro",
+        "quarterblockbrownlight": "Escalón marrón claro",
+        "quarterblockgrey": "Escalón gris",
+        "railgate": "Puerta de vía",
+        "railitem": "Vía",
+        "rawfish": "Pez crudo",
+        "rawmeat": "Carne cruda",
+        "researcherdesk": "Escritorio del investigador",
+        "rooftool": "Tejado rojo",
+        "rooftoolblue": "Tejado azul",
+        "rope": "Cuerda",
+        "ropebench": "Banco de Cuerda",
+        "ropetrap": "Trampa de cuerda",
+        "ropetrapammo": "Munición para trampas de cuerda",
+        "saltpeter": "Nitrato",
+        "sanctifiedbreadmeal": "Comida Sagrada de Pan",
+        "sanctifiedchickenmeal": "Comida de Pollo Sagrado",
+        "sanctifiedhouse": "Almacén Sagrado",
+        "sanctifiedporridge": "Papilla de trigo sagradas",
+        "sanctifiertable": "Altar sagrado",
+        "sand": "Arena",
+        "sapling": "Brote",
+        "saplingcherry": "Brote de cerezo",
+        "saplingdark": "Brote verde oscuro",
+        "saplingfallorange": "Brote de otoño",
+        "saplingfallred": "Brote rojo",
+        "saplingfallyellow": "Brote amarillo",
+        "saplinglight": "Brote verde claro",
+        "saplingtaiga": "Brote de Taiga",
+        "saplingtemperate": "Brote Verde",
+        "scientificnote": "Nota científica",
+        "scribedesk": "Escritorio del escriba",
+        "scrollofknowledge": "Pergamino del conocimiento",
+        "scrollshelf": "Estante de pergaminos (vacío)",
+        "scrollshelf1": "Estantería de pergaminos (casi vacío))",
+        "scrollshelf2": "Estante de pergaminos (parcialmente vacío)",
+        "scrollshelffilled": "Estantería Pergaminos",
+        "signitem": "Cartel",
+        "silicasand": "Arena de sílice",
+        "skin": "Piel",
+        "sling": "Honda",
+        "slingbullet": "Balas de honda",
+        "snow": "Nieve",
+        "splittingstump": "Tronco para leña",
+        "statisticsboard": "Tablón de Estadísticas",
+        "steelingot": "Lingote de acero",
+        "steellockbox": "Cofre de acero",
+        "steelparts": "Piezas de acero",
+        "steeltools": "Herramientas de acero",
+        "stoneblock": "Bloque de piedra",
+        "stonebricks": "Adoquines",
+        "stonebricksblack": "Adoquín negro",
+        "stonebricksbrown": "Adoquín marrón",
+        "stonebricksnew": "Ladrillos de piedra",
+        "stonebrickswhite": "Adoquín blanco",
+        "stonemasonworkbench": "Banco de trabajo del Cantero",
+        "stonerubble": "Restos de piedra",
+        "stonestair": "Escalera de piedra",
+        "stonetools": "Herramientas de piedra",
+        "stove": "Cocina",
+        "straw": "Paja",
+        "sulfur": "Azufre",
+        "tabletclay": "Tableta de arcilla",
+        "tabletwisdom": "Tabla de la sabiduría antigua",
+        "tabulator": "Máquina tabuladora",
+        "tailorshop": "Tienda de sastre",
+        "tannertable": "Mesa de Curtido",
+        "tin": "Estaño",
+        "tinkerertable": "Mesa de Artesano",
+        "toolshop": "Taller de Herramientas",
+        "torch": "Antorcha",
+        "trader": "Mercader",
+        "trapfixer": "Trampero",
+        "vialempty": "Frasco (vacío)",
+        "vialmineraloil": "Frasco de aceite mineral",
+        "vialnitricacid": "Frasco de ácido nítrico",
+        "vialsulphuricacid": "Frasco de ácido sulfúrico",
+        "water": "Agua",
+        "watergatherer": "Recolector de agua",
+        "waterpump": "Bomba de agua",
+        "watersponge": "Tornillo de Arquímedes",
+        "wheat": "Trigo",
+        "wheatmeal": "Gachas de trigo",
+        "wheatporridge": "Papilla de trigo",
+        "wheatstage1": "Semillas de trigo",
+        "window": "Ventana",
+        "wisteriaflower": "Flor de glicina",
+        "wisteriajob": "Cosechador de glicinas",
+        "wisteriaplant": "Planta de glicinas",
+        "wisteriaplantempty": "Planta de glicinas",
+        "wolfsbane": "Aconitum",
+        "woodfloor": "Suelos de madera",
+        "woodstair": "Escalera de madera",
+        "writerdesk": "Escritorio",
+        "zinc": "Zinc"
+    },
+    "typeuses": {
+        "alarmbell": "Suena una alarma cuando detecta monstruos caminando sobre ella",
+        "alkanet": "En la vida real, una fuente de tinte rojo.",
+        "astrolabe": "Equípate en la barra de acceso rápido para ver el camino a biomas especiales",
+        "berry": "Una sola baya. ¡Ni siquiera vale el esfuerzo de comerla!",
+        "berrybush": "Los colonos lo plantaran para obtener comida fácil.",
+        "berrymeal": "Un racimo de bayas preparado para formar una deliciosa comida",
+        "bookcase": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
+        "bookcase1": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
+        "bookcase2": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
+        "bookcasefilled": "Estos son 'recolectados' por los investigadores y regeneran automáticamente su contenido. Colocar 10 de ellos por cada investigador garantiza un equilibrio a largo plazo.",
+        "bow": "¡Los guardias necesitan una!",
+        "bread": "Un trozo de pan seco sin untar ni relleno. Bah",
+        "breadmeal": "Pan untado con mermelada de bayas, ¡Delicioso!",
+        "bricks": "Después de todo, es un juego holandés.",
+        "bronzeingot": "Bronce muy fuerte... sí, claro...",
+        "charcoal": "Absorve cianuro",
+        "cherryblossom": "La cosa más rosada del juego.",
+        "clay": "Ojala pudieras tocarlo.",
+        "coalore": "Advertencia: Puede causar problemas climáticos.",
+        "compass": "Equipar en la barra de acceso directo para ver el camino a las colonias y puestos avanzados.",
+        "cookedfish": "Capacidades de natación reducidas",
+        "copper": "Metal algo blando, pero bastante útil",
+        "coppertools": "Ni siquiera puedes cortar pan sin herramientas.",
+        "crate": "¡Para todas las necesidades de almacenamiento!",
+        "crossbow": "Hermano menor del arcoballesta.",
+        "crossbowbolt": "Mejor y más duro, rápido y fuerte.",
+        "dirt": "Sucio",
+        "failsafe": "Mecanismo de defensa de emergencia mediante puntos sagrados",
+        "firewood": "Combustible básico.",
+        "flax": "El color imperial.",
+        "flaxstage1": "Ponla en el suelo.",
+        "furnace": "Utiliza leña como combustible para fabricar lingotes de bronce y ladrillos.",
+        "glider": "Coloca un lanzador de planeadores; Entra en uno usando <style=Player/FireSecondary> y navega apuntando mientras mantienes pulsado hacia delante.",
+        "glidersteel": "Como el lanzador de planeadores normal, pero este te lanza mucho más alto en el aire",
+        "goldingot": "Fue utilizado para garantizar el valor del papel moneda.",
+        "goldore": "También puede encontrarse en minerales bajo montañas nevadas",
+        "grindstone": "Se utiliza para moler el trigo y convertirlo en harina.",
+        "gunpowder": "¡Manipular con cuidado!",
+        "hollyhock": "Un laxante en la vida real. No dentro del juego. Aún.",
+        "ironore": "Minado con un pico de hierro creada con un lingote de hierro.",
+        "ironwrought": "Forjado simplemente significa 'trabajado'.",
+        "kiln": "Convierte la leña en carbón vegetal",
+        "lanterncyan": "El futuro es ahora.",
+        "lanterngreen": "Hace tu colonia eco-amigable.",
+        "lanternorange": "Extra acogedor.",
+        "lanternred": "Estos son populares en Ámsterdam también.",
+        "lanternyellow": "Antorcha cara.",
+        "leadore": "Se encuentra en pantanos.",
+        "leavestaiga": "Tengo una sensación navideña ahora.",
+        "leavestemperate": "Intenta saltarlos en una pila desde una torre alta.",
+        "linen": "Lencería significa ropa interior hecha de lino.",
+        "logtaiga": "Ligeramente frio.",
+        "logtemperate": "Como un registro de salida, pero diferente.",
+        "monocular": "Equiparse en la barra de acceso directo para ver más de cerca el mundo",
+        "npcshop": "Los colonos la visitan una vez al día para recoger el almuerzo y sus items de lujo",
+        "planks": "¡Ahora con 4 veces el volumen de un tronco!",
+        "printingpress": "Respeta su libertad",
+        "railgate": "Permite pasar el tren pero bloquea el paso a pie",
+        "rawfish": "#Ecológico #Sin Hormonas #Alimentado con Pasto",
+        "researcherdesk": "Los investigadores necesitan tener cerca estanterías con libros para encontrar datos para sus investigaciones.",
+        "sand": "No se mezcla bien con las serpientes.",
+        "saplingfallorange": "Un naranjo en el futuro",
+        "saplingtaiga": "Un árbol ligeramente diferente",
+        "scribedesk": "Los escribas necesitan 10 estantes de pergaminos cerca para encontrar datos para su investigación.",
+        "scrollshelf": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
+        "scrollshelf1": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
+        "scrollshelf2": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
+        "scrollshelffilled": "Los escribas las 'cosechan' y regeneran automáticamente su contenido. Colocar 10 de ellos por cada escriba garantiza un equilibrio a largo plazo.",
+        "silicasand": "Se encuentra bajo la arena en el bioma del Brezo",
+        "sling": "Ten cuidado, Goliat.",
+        "slingbullet": "Una pequeña roca, de verdad.",
+        "snow": "No sabe a nada.",
+        "splittingstump": "Una método rápido para dividir la madera en leña.",
+        "stonemasonworkbench": "Crea cincuenta tonos de ladrillos.",
+        "stove": "Para perfumar con comida deliciosa sus alrededores",
+        "sulfur": "Se encuentra en el subsuelo del bioma Brezo",
+        "tailorshop": "¡Ropa a medida para todos!",
+        "tin": "También puede encontrarse en minerales bajo las montañas nevadas",
+        "torch": "¡Y se hizo la luz!",
+        "trader": "Nadie lo sabe, pero es para los negocios",
+        "water": "Provocará una inundación se lo dejan caer",
+        "waterpump": "Permite obtener agua sin estar cerca del agua",
+        "watersponge": "Elimina el agua en su área local de forma realista",
+        "wheat": "Un colono usara una moledora para convertirla en harina.",
+        "wheatstage1": "El pan del mañana.",
+        "wisteriajob": "Un recolector necesita 10 plantas de glicinia cerca. Estas plantas solo se pueden cultivar en brezales.",
+        "wisteriaplant": "Colocar 10 de éstos por cada recolector de glicinas garantiza un equilibrio a largo plazo.",
+        "wisteriaplantempty": "Colocar 10 de éstos por cada recolector de glicinas garantiza un equilibrio a largo plazo.",
+        "wolfsbane": "Impide que los lobos ataquen tu colonia.",
+        "writerdesk": "Ergonomía total",
+        "zinc": "Se puede encontrar directamente debajo de los árboles gigantes."
+    }
 }
