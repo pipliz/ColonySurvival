@@ -14,6 +14,48 @@
 		"icon": "../textures/icons/crownmoulding.png",
 		"isPlaceable": false
 	},
+	"quarterblockdynamicitem": {
+		"attachBehaviour": [
+		{
+			"id": "smart_quarterblock",
+			"y+": {
+				"side": "quarterblockdynamicy+",
+				"outside": "quarterblockdynamicoutsidey+",
+				"inside": "quarterblockdynamicinsidey+"
+			},
+			"y-": {
+				"side": "quarterblockdynamicy-",
+				"outside": "quarterblockdynamicoutsidey-",
+				"inside": "quarterblockdynamicinsidey-"
+			},
+			"x+": {
+				"side": "quarterblockdynamicx+",
+				"outside": "quarterblockdynamicoutsidex+",
+				"inside": "quarterblockdynamicinsidex+"
+			},
+			"x-": {
+				"side": "quarterblockdynamicx-",
+				"outside": "quarterblockdynamicoutsidex-",
+				"inside": "quarterblockdynamicinsidex-"
+			},
+			"z+": {
+				"side": "quarterblockdynamicz+",
+				"outside": "quarterblockdynamicoutsidez+",
+				"inside": "quarterblockdynamicinsidez+"
+			},
+			"z-": {
+				"side": "quarterblockdynamicz-",
+				"outside": "quarterblockdynamicoutsidez-",
+				"inside": "quarterblockdynamicinsidez-"
+			}
+		}],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/quarterblockdynamic.png",
+		"isPlaceable": false
+	},
 	"railitem": {
 		"attachBehaviour": [
 		{
@@ -292,6 +334,90 @@
 		"rotatablex-": "rooftiledbluex-",
 		"rotatablez+": "rooftiledbluez+",
 		"rotatablez-": "rooftiledbluez-",
+	},
+	"rooftoolstraw": {
+		"attachBehaviour": [
+			{
+				"id": "roof_smart",
+				"group": "default",
+				"typediagonalmiddle": "roofstrawdiagonalmid",
+				"typediagonalfront": "roofstrawdiagonal",
+				"typediagonalback": "roofstrawdiagonalflip",
+				"typediagonalcombined": "roofstrawdiagonalboth",
+				
+				"typetopmiddle": "roofstrawvmid",
+				"typetopfront": "roofstrawvfront",
+				"typetopcombined": "roofstrawvboth",
+				"typetopback": "roofstrawvback",
+				
+				"typetopsolo": "roofstrawvsolo",
+				"typetop360": "roofstrawv360",
+				"typetop270": "roofstrawv270",
+				
+				"typetop90a": "roofstrawv90a",
+				"typetop90b": "roofstrawv90b",
+				
+				"typecornerinsidea": "roofstrawinsidecornera",
+				"typecornerinsideb": "roofstrawinsidecornerb",
+				
+				"typecorneroutsidea": "roofstrawoutsidecornera",
+				"typecorneroutsideb": "roofstrawoutsidecornerb",
+			}
+		],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"maxStackSize": 200,
+		"needsBase": true,
+		"icon": "../textures/icons/roofstraw.png",
+		"isRotatable": true,
+		"rotatablex+": "roofstrawx+",
+		"rotatablex-": "roofstrawx-",
+		"rotatablez+": "roofstrawz+",
+		"rotatablez-": "roofstrawz-",
+	},
+	"rooftoolplanks": {
+		"attachBehaviour": [
+			{
+				"id": "roof_smart",
+				"group": "default",
+				"typediagonalmiddle": "roofplanksdiagonalmid",
+				"typediagonalfront": "roofplanksdiagonal",
+				"typediagonalback": "roofplanksdiagonalflip",
+				"typediagonalcombined": "roofplanksdiagonalboth",
+				
+				"typetopmiddle": "roofplanksvmid",
+				"typetopfront": "roofplanksvfront",
+				"typetopcombined": "roofplanksvboth",
+				"typetopback": "roofplanksvback",
+				
+				"typetopsolo": "roofplanksvsolo",
+				"typetop360": "roofplanksv360",
+				"typetop270": "roofplanksv270",
+				
+				"typetop90a": "roofplanksv90a",
+				"typetop90b": "roofplanksv90b",
+				
+				"typecornerinsidea": "roofplanksinsidecornera",
+				"typecornerinsideb": "roofplanksinsidecornerb",
+				
+				"typecorneroutsidea": "roofplanksoutsidecornera",
+				"typecorneroutsideb": "roofplanksoutsidecornerb",
+			}
+		],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"maxStackSize": 200,
+		"needsBase": true,
+		"icon": "../textures/icons/roofplanks.png",
+		"isRotatable": true,
+		"rotatablex+": "roofplanksx+",
+		"rotatablex-": "roofplanksx-",
+		"rotatablez+": "roofplanksz+",
+		"rotatablez-": "roofplanksz-",
 	},
 	"pillar": {
 		"categories": [

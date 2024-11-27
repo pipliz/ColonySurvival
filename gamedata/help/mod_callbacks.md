@@ -79,119 +79,122 @@ CallbackType: `AfterItemTypesDefined`
 =======  
 Method type: System.Action  
 First callback after all item types should be defined, so you can resolve types etc here  
-Registered callbacks: 45  
+Registered callbacks: 46  
 0.	'initialize_upgrademanager' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksA.AfterItemTypesDefined' index: -1001  
 1.	'create_servermanager_trackers' -> 'ServerManager.CreateBlockEntityCallbacks' index: -1000  
 2.	'process_smart_moulding' -> 'BlockEntities.Implementations.MouldingPlacement.AfterItemTypesDefined'   
-		 Child @ 4 : 'blockentitycallback.autoloaders'  
-3.	'register_smart_placement' -> 'BlockEntities.SmartPlacement.AfterItemTypesDefined'   
-		 Child @ 4 : 'blockentitycallback.autoloaders'  
-4.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
+		 Child @ 5 : 'blockentitycallback.autoloaders'  
+3.	'process_smart_quarter' -> 'BlockEntities.Implementations.QuarterBlockPlacement.AfterItemTypesDefined'   
+		 Child @ 5 : 'blockentitycallback.autoloaders'  
+4.	'register_smart_placement' -> 'BlockEntities.SmartPlacement.AfterItemTypesDefined'   
+		 Child @ 5 : 'blockentitycallback.autoloaders'  
+5.	'blockentitycallback.autoloaders' -> 'ServerManager.AutoLoadBlockEntities'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-5.	'chunk_dedupe_initializer' -> 'Chunk+ChunkDataDeduplicator.Initialize'   
-6.	'NPC.NPCNames.AfterItemTypesDefined' -> 'NPC.NPCNames.AfterItemTypesDefined'   
-		 Child @ 21 : 'pipliz.server.endloadcolonies'  
-7.	'pipliz.server.loadnpctypes' -> 'NPC.NPCType.LoadNPCTypes'   
-8.	'areajobs.insertattributed' -> 'AreaJobTracker.RegisterAutoDefs'   
-		 Parent @ 7 : 'pipliz.server.loadnpctypes'  
-9.	'parse_starterpack_patches_afteritemtype' -> 'StarterPacks.Loader.ParsePacks'   
-		 Child @ 10 : 'pipliz.server.recipeload'  
-10.	'pipliz.server.recipeload' -> 'Recipes.RecipeStorage+Callbacks.AfterItemTypesDefined'   
+6.	'chunk_dedupe_initializer' -> 'Chunk+ChunkDataDeduplicator.Initialize'   
+7.	'NPC.NPCNames.AfterItemTypesDefined' -> 'NPC.NPCNames.AfterItemTypesDefined'   
+		 Child @ 22 : 'pipliz.server.endloadcolonies'  
+8.	'pipliz.server.loadnpctypes' -> 'NPC.NPCType.LoadNPCTypes'   
+9.	'areajobs.insertattributed' -> 'AreaJobTracker.RegisterAutoDefs'   
+		 Parent @ 8 : 'pipliz.server.loadnpctypes'  
+10.	'parse_starterpack_patches_afteritemtype' -> 'StarterPacks.Loader.ParsePacks'   
+		 Child @ 11 : 'pipliz.server.recipeload'  
+11.	'pipliz.server.recipeload' -> 'Recipes.RecipeStorage+Callbacks.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-11.	'pipliz.server.loadresearchables' -> 'ServerManager.LoadResearchables'   
-		 Parent @ 7 : 'pipliz.server.loadnpctypes'  
+12.	'pipliz.server.loadresearchables' -> 'ServerManager.LoadResearchables'   
+		 Parent @ 8 : 'pipliz.server.loadnpctypes'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 10 : 'pipliz.server.recipeload'  
-12.	'pipliz.server.endloadplayers' -> 'Players.EndInitializePlayerData'   
-13.	'createareajobdefinitions' -> 'AreaJobTracker+AreaJobPatches.CreateAreaJobDefinitions'   
-		 Parent @ 7 : 'pipliz.server.loadnpctypes'  
-14.	'bookcase_registers' -> 'BlockEntities.Implementations.Bookcases+Callbacks.AfterItemTypesDefined'   
+		 Parent @ 11 : 'pipliz.server.recipeload'  
+13.	'pipliz.server.endloadplayers' -> 'Players.EndInitializePlayerData'   
+14.	'createareajobdefinitions' -> 'AreaJobTracker+AreaJobPatches.CreateAreaJobDefinitions'   
+		 Parent @ 8 : 'pipliz.server.loadnpctypes'  
+15.	'bookcase_registers' -> 'BlockEntities.Implementations.Bookcases+Callbacks.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Child @ 16 : 'pipliz.blocknpcs.registerjobs'  
-15.	'wisteriatree_register' -> 'BlockEntities.Implementations.WisteriaTreeRegistration.AfterItemTypesDefined'   
+		 Child @ 17 : 'pipliz.blocknpcs.registerjobs'  
+16.	'wisteriatree_register' -> 'BlockEntities.Implementations.WisteriaTreeRegistration.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Child @ 16 : 'pipliz.blocknpcs.registerjobs'  
-16.	'pipliz.blocknpcs.registerjobs' -> 'Jobs.BlockJobLoader.AfterDefiningNPCTypes'   
+		 Child @ 17 : 'pipliz.blocknpcs.registerjobs'  
+17.	'pipliz.blocknpcs.registerjobs' -> 'Jobs.BlockJobLoader.AfterDefiningNPCTypes'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 7 : 'pipliz.server.loadnpctypes'  
-		 Parent @ 4 : 'blockentitycallback.autoloaders'  
-17.	'creategrowabledefinitions' -> 'GrowableBlocks.GrowablePatchHandler.CreateGrowableDefinitions'   
+		 Parent @ 8 : 'pipliz.server.loadnpctypes'  
+		 Parent @ 5 : 'blockentitycallback.autoloaders'  
+18.	'creategrowabledefinitions' -> 'GrowableBlocks.GrowablePatchHandler.CreateGrowableDefinitions'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-18.	'parse_elevatortypes' -> 'Transport.Elevator.ElevatorManager.AfterItemTypesDefined'   
-		 Child @ 23 : 'pipliz.server.completeloadmiscworld'  
-19.	'parse_railtypes' -> 'Transport.Rail.RailManager.AfterItemTypesDefined'   
-		 Child @ 23 : 'pipliz.server.completeloadmiscworld'  
-20.	'register_upgrades' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksB.AfterItemTypesDefined' index: 10  
+19.	'parse_elevatortypes' -> 'Transport.Elevator.ElevatorManager.AfterItemTypesDefined'   
+		 Child @ 24 : 'pipliz.server.completeloadmiscworld'  
+20.	'parse_railtypes' -> 'Transport.Rail.RailManager.AfterItemTypesDefined'   
+		 Child @ 24 : 'pipliz.server.completeloadmiscworld'  
+21.	'register_upgrades' -> 'Assets.ColonyPointUpgrades.UpgradesManager+CallbacksB.AfterItemTypesDefined' index: 10  
 		 Parent @ 0 : 'initialize_upgrademanager'  
-		 Parent @ 11 : 'pipliz.server.loadresearchables'  
-		 Child @ 21 : 'pipliz.server.endloadcolonies'  
-21.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
-		 Parent @ 7 : 'pipliz.server.loadnpctypes'  
-		 Parent @ 8 : 'areajobs.insertattributed'  
+		 Parent @ 12 : 'pipliz.server.loadresearchables'  
+		 Child @ 22 : 'pipliz.server.endloadcolonies'  
+22.	'pipliz.server.endloadcolonies' -> 'ServerManager.LoadColonies'   
+		 Parent @ 8 : 'pipliz.server.loadnpctypes'  
+		 Parent @ 9 : 'areajobs.insertattributed'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 10 : 'pipliz.server.recipeload'  
-		 Parent @ 11 : 'pipliz.server.loadresearchables'  
-		 Parent @ 12 : 'pipliz.server.endloadplayers'  
-		 Parent @ 13 : 'createareajobdefinitions'  
-22.	'load_notifications' -> 'Notifications.NotificationCallbacks.AfterItemTypesDefined'   
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
-		 Child @ 23 : 'pipliz.server.completeloadmiscworld'  
-23.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
-		 Child @ 24 : 'start_load_startup_chunks'  
-24.	'start_load_startup_chunks' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
-		 Parent @ 4 : 'blockentitycallback.autoloaders'  
-		 Parent @ 5 : 'chunk_dedupe_initializer'  
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
-		 Parent @ 16 : 'pipliz.blocknpcs.registerjobs'  
-		 Parent @ 17 : 'creategrowabledefinitions'  
-25.	'BlockEntities.Implementations.Grass+Callbacks.AfterItemTypesDefined' -> 'BlockEntities.Implementations.Grass+Callbacks.AfterItemTypesDefined'   
-26.	'BlockEntities.Implementations.PlayerSaplings+Callbacks.AfterItemTypesDefined' -> 'BlockEntities.Implementations.PlayerSaplings+Callbacks.AfterItemTypesDefined'   
-27.	'monstertracker.load' -> 'Monsters.MonsterTracker+Callbacks.AfterItemTypesDefined'   
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
-28.	'effectstracker_load' -> 'EffectsTracker.AfterItemTypesDefined'   
+		 Parent @ 11 : 'pipliz.server.recipeload'  
+		 Parent @ 12 : 'pipliz.server.loadresearchables'  
+		 Parent @ 13 : 'pipliz.server.endloadplayers'  
+		 Parent @ 14 : 'createareajobdefinitions'  
+23.	'load_notifications' -> 'Notifications.NotificationCallbacks.AfterItemTypesDefined'   
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
+		 Child @ 24 : 'pipliz.server.completeloadmiscworld'  
+24.	'pipliz.server.completeloadmiscworld' -> 'ServerManager.CompleteLoadMiscWorld'   
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
+		 Child @ 25 : 'start_load_startup_chunks'  
+25.	'start_load_startup_chunks' -> 'ServerManager.CreateBlockEntityTracker' index: -1000  
+		 Parent @ 5 : 'blockentitycallback.autoloaders'  
+		 Parent @ 6 : 'chunk_dedupe_initializer'  
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
+		 Parent @ 17 : 'pipliz.blocknpcs.registerjobs'  
+		 Parent @ 18 : 'creategrowabledefinitions'  
+26.	'BlockEntities.Implementations.Grass+Callbacks.AfterItemTypesDefined' -> 'BlockEntities.Implementations.Grass+Callbacks.AfterItemTypesDefined'   
+27.	'BlockEntities.Implementations.PlayerSaplings+Callbacks.AfterItemTypesDefined' -> 'BlockEntities.Implementations.PlayerSaplings+Callbacks.AfterItemTypesDefined'   
+28.	'monstertracker.load' -> 'Monsters.MonsterTracker+Callbacks.AfterItemTypesDefined'   
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
+29.	'effectstracker_load' -> 'EffectsTracker.AfterItemTypesDefined'   
 		 Parent @ 1 : 'create_servermanager_trackers'  
-		 Parent @ 27 : 'monstertracker.load'  
-29.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
-30.	'GrowableBlocks.SaplingHandler.AfterItemTypesDefined' -> 'GrowableBlocks.SaplingHandler.AfterItemTypesDefined'   
-31.	'Jobs.ToolSetManager.AfterItemTypesDefined' -> 'Jobs.ToolSetManager.AfterItemTypesDefined'   
-32.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
-33.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
-34.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
-35.	'pipliz.server.loadnpcmeshes' -> 'NPC.NPCType.LoadNPCMeshes'   
-36.	'process_paintables' -> 'BlockEntities.Implementations.Paint.Paintables.AfterItemTypesDefined'   
-37.	'process_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.AfterItemTypesDefined'   
-38.	'process_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.AfterItemTypesDefined'   
-39.	'process_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.AfterItemTypesDefined'   
-40.	'process_smart_signs' -> 'BlockEntities.Implementations.SignPlacement.AfterItemTypesDefined'   
-41.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
-42.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
-		 Parent @ 24 : 'start_load_startup_chunks'  
-43.	'set_colony_sciencemask' -> 'Science.ScienceManager+Callbacks.AfterItemTypesDefined' index: 1  
-		 Parent @ 42 : 'wait_complete_startup_chunks'  
-		 Parent @ 21 : 'pipliz.server.endloadcolonies'  
+		 Parent @ 28 : 'monstertracker.load'  
+30.	'find_auto_chatcommands' -> 'Chatting.CommandManager.Initialize'   
+31.	'GrowableBlocks.SaplingHandler.AfterItemTypesDefined' -> 'GrowableBlocks.SaplingHandler.AfterItemTypesDefined'   
+32.	'Jobs.ToolSetManager.AfterItemTypesDefined' -> 'Jobs.ToolSetManager.AfterItemTypesDefined'   
+33.	'pipliz.server.asyncloadpermissions' -> 'PermissionsManager.Reload'   
+34.	'pipliz.server.endblackandwhitelisting' -> 'BlackAndWhitelisting.EndReload'   
+35.	'pipliz.server.endloadwater' -> 'BlockEntities.Implementations.Water.Load'   
+36.	'pipliz.server.loadnpcmeshes' -> 'NPC.NPCType.LoadNPCMeshes'   
+37.	'process_paintables' -> 'BlockEntities.Implementations.Paint.Paintables.AfterItemTypesDefined'   
+38.	'process_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.AfterItemTypesDefined'   
+39.	'process_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.AfterItemTypesDefined'   
+40.	'process_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.AfterItemTypesDefined'   
+41.	'process_smart_signs' -> 'BlockEntities.Implementations.SignPlacement.AfterItemTypesDefined'   
+42.	'trading.doublelinkrules' -> 'ColonyTrading.LoadColonies'   
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
+43.	'wait_complete_startup_chunks' -> 'ServerManager.WaitForCompletedStartupChunks' index: 1000  
+		 Parent @ 25 : 'start_load_startup_chunks'  
+44.	'set_colony_sciencemask' -> 'Science.ScienceManager+Callbacks.AfterItemTypesDefined' index: 1  
+		 Parent @ 43 : 'wait_complete_startup_chunks'  
+		 Parent @ 22 : 'pipliz.server.endloadcolonies'  
 		 Parent @ 1 : 'create_servermanager_trackers'  
-44.	'prepare_network_packets' -> 'ItemTypesServer+Callbacks.AfterItemTypesDefined' index: 10000  
+45.	'prepare_network_packets' -> 'ItemTypesServer+Callbacks.AfterItemTypesDefined' index: 10000  
 
 
 CallbackType: `OnQuit`  
 =======  
 Method type: System.Action  
 Called in the quit method queue  
-Registered callbacks: 12  
+Registered callbacks: 13  
 0.	'pipliz.shared.waitforasyncquitsearly' -> 'Pipliz.Application.WaitForQuits' index: -1000  
-1.	'BlockEntities.BlockEntityCallbacks+Callbacks.OnQuit' -> 'BlockEntities.BlockEntityCallbacks+Callbacks.OnQuit'   
-2.	'close_filetable' -> 'FileTable+Callbacks.OnQuit'   
-3.	'EffectsTracker.OnQuit' -> 'EffectsTracker.OnQuit'   
-4.	'Monsters.MonsterSpawner+Callbacks.OnQuit' -> 'Monsters.MonsterSpawner+Callbacks.OnQuit'   
-5.	'TerrainGeneration2.TerrainGenerator2ModManager.OnQuit' -> 'TerrainGeneration2.TerrainGenerator2ModManager.OnQuit'   
-6.	'trigger_autosave' -> 'Saving.SaveManager+Callbacks2.OnQuit'   
-7.	'steamnetworking.close' -> 'Pipliz.Networking.SteamNetworking+ModRegistering.OnQuit' index: 1  
-8.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
-9.	'close_savemanager' -> 'Saving.SaveManager+Callbacks.OnQuit' index: 750  
-10.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
-11.	'LZ4DecoderFreeing' -> 'Pipliz.LZ4.LZ4Codec+Callbacks.OnQuit' index: 10000  
+1.	'AreaJobTracker+Callbacks.OnQuit' -> 'AreaJobTracker+Callbacks.OnQuit'   
+2.	'BlockEntities.BlockEntityCallbacks+Callbacks.OnQuit' -> 'BlockEntities.BlockEntityCallbacks+Callbacks.OnQuit'   
+3.	'close_filetable' -> 'FileTable+Callbacks.OnQuit'   
+4.	'EffectsTracker.OnQuit' -> 'EffectsTracker.OnQuit'   
+5.	'Monsters.MonsterSpawner+Callbacks.OnQuit' -> 'Monsters.MonsterSpawner+Callbacks.OnQuit'   
+6.	'TerrainGeneration2.TerrainGenerator2ModManager.OnQuit' -> 'TerrainGeneration2.TerrainGenerator2ModManager.OnQuit'   
+7.	'trigger_autosave' -> 'Saving.SaveManager+Callbacks2.OnQuit'   
+8.	'steamnetworking.close' -> 'Pipliz.Networking.SteamNetworking+ModRegistering.OnQuit' index: 1  
+9.	'pipliz.jointhreads' -> 'Pipliz.Threading.ThreadSafeQuitWrapper.JoinThread' index: 500  
+10.	'close_savemanager' -> 'Saving.SaveManager+Callbacks.OnQuit' index: 750  
+11.	'pipliz.shared.waitforasyncquitslate' -> 'Pipliz.Application.WaitForQuits' index: 1000  
+12.	'LZ4DecoderFreeing' -> 'Pipliz.LZ4.LZ4Codec+Callbacks.OnQuit' index: 10000  
 
 
 CallbackType: `AfterSelectedWorld`  
@@ -337,9 +340,10 @@ Method type: System.Action<ModLoader.OnTryChangeBlockData>
 Callback triggered upon a call to ServerManager.TryChangeBlock - used by various code and the client to edit blocks  
 Nothing changed yet when this callback happens and the change can be blocked.  
 You can block is by setting CallbackState to Cancelled  
-Registered callbacks: 2  
-0.	'GrowableBlocks.SaplingHandler.OnTryChangeBlock' -> 'GrowableBlocks.SaplingHandler.OnTryChangeBlock'   
-1.	'preventaccidentalbannerremoval' -> 'ServerManager.TempBannerFix'   
+Registered callbacks: 3  
+0.	'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnTryChangeBlock' -> 'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnTryChangeBlock'   
+1.	'GrowableBlocks.SaplingHandler.OnTryChangeBlock' -> 'GrowableBlocks.SaplingHandler.OnTryChangeBlock'   
+2.	'preventaccidentalbannerremoval' -> 'ServerManager.TempBannerFix'   
 
 
 CallbackType: `OnPlayerConnectedLate`  
@@ -448,7 +452,7 @@ Registered callbacks: 1
 CallbackType: `OnPlayerClicked`  
 =======  
 Method type: System.Action<Players.Player, Shared.PlayerClickedData>  
-Registered callbacks: 17  
+Registered callbacks: 18  
 0.	'BlockEntities.Implementations.AlarmbellTracker+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.AlarmbellTracker+Callbacks.OnPlayerClicked'   
 1.	'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.Door.DoorTracker+Callbacks.OnPlayerClicked'   
 2.	'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerClicked' -> 'BlockEntities.Implementations.Failsafes+Callbacks.OnPlayerClicked'   
@@ -465,8 +469,9 @@ Registered callbacks: 17
 12.	'use_smart_flowerbox' -> 'BlockEntities.Implementations.FlowerboxPlacement.OnPlayerClicked'   
 13.	'use_smart_lantern' -> 'BlockEntities.Implementations.LanternPlacement.OnPlayerClicked'   
 14.	'use_smart_moulding' -> 'BlockEntities.Implementations.MouldingPlacement.OnPlayerClicked'   
-15.	'use_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.OnPlayerClicked'   
-16.	'use_smart_sign' -> 'BlockEntities.Implementations.SignPlacement.OnPlayerClicked'   
+15.	'use_smart_quarterblock' -> 'BlockEntities.Implementations.QuarterBlockPlacement.OnPlayerClicked'   
+16.	'use_smart_rail_placement' -> 'BlockEntities.Implementations.SmartRailPlacement.OnPlayerClicked'   
+17.	'use_smart_sign' -> 'BlockEntities.Implementations.SignPlacement.OnPlayerClicked'   
 
 
 CallbackType: `OnPlayerHit`  
@@ -889,6 +894,13 @@ CallbackType: `OnGenerateNPCName`
 Method type: System.Action<NPC.NPCNames.NamingContext>  
 Registered callbacks: 1  
 0.	'NPC.NPCNames.OnGenerateNPCName' -> 'NPC.NPCNames.OnGenerateNPCName'   
+
+
+CallbackType: `OnCreatedAreaJob`  
+=======  
+Method type: System.Action<Players.Player, Jobs.IAreaJob>  
+Registered callbacks: 1  
+0.	'Jobs.Implementations.Construction.DevInstantConstruction.OnCreatedAreaJob' -> 'Jobs.Implementations.Construction.DevInstantConstruction.OnCreatedAreaJob'   
 
 
 CallbackType: `OnEndReadOnly`  

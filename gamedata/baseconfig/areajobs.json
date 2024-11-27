@@ -17,11 +17,17 @@
 	*/
 	{
 		"allowGoalOffset": true,
-		"blockPlaced": "berrybush",
+		"blockPlaced": "berrybushnpc",
 		"identifier": "pipliz.berryfarm",
 		"maxGatheredBeforeCrate": 6,
 		"npcType": "pipliz.berryfarmer",
-		"patchType": "blockFarm"
+		"patchType": "blockFarm",
+		"replaceBlocks": [
+		{
+			"source": "berrybush",
+			"target": "berrybushnpc",
+			"comment": "this entry only exists to upgrade pre-0.12 farms to the other bush type, which doesn't drop berry bush items (to prevent spawning free bushes via the job, for the meal recipe)"
+		}]
 	},
 	{
 		"allowGoalOffset": true,

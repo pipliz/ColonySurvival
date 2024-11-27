@@ -290,6 +290,16 @@
 	},
 	{
 		"baseType": {
+			"attachmentRequirements": [
+			{
+				"offset": [ 1, 0, 0 ],
+				"min": [ 0.49, 0.2, -0.49 ],
+				"max": [ 0.51, 0.5, 0.49 ]
+			},{
+				"offset": [ 0, 0, 1 ],
+				"min": [ -0.49, 0.2, 0.49 ],
+				"max": [ 0.49, 0.5, 0.51 ]
+			}],
 			"colliders": [
 				{
 					"max": [
@@ -305,7 +315,7 @@
 				}
 			],
 			"icon": "gamedata/textures/icons/error.png",
-			"lightingTransparency": 200,
+			"lightingTransparency": 235,
 			"mesh": "../meshes/crownmouldingoutside.ply",
 			"isSolid": false,
 			"onPlaceAudio": "stonePlace",
@@ -356,7 +366,7 @@
 				}
 			],
 			"icon": "gamedata/textures/icons/error.png",
-			"lightingTransparency": 200,
+			"lightingTransparency": 235,
 			"mesh": "../meshes/crownmouldinginside.ply",
 			"isSolid": false,
 			"onPlaceAudio": "stonePlace",
@@ -392,7 +402,7 @@
 				}
 			],
 			"icon": "gamedata/textures/icons/error.png",
-			"lightingTransparency": 200,
+			"lightingTransparency": 235,
 			"mesh": "../meshes/crownmoulding.ply",
 			"isSolid": false,
 			"onPlaceAudio": "stonePlace",

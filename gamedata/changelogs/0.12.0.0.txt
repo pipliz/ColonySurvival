@@ -1,0 +1,27 @@
+0.12.0.0 (2024-11-27)
+
+Changes
+- Added the Mill block; an early game 'manual' job where you can craft a variety of things to help you get started
+- Added a visual preview for placement of many non-blocky items (jobs and such)
+- Change roof blocks to adjust side textures to the block below (instead of static stone bricks / planks respectively)
+- Added a dynamic quarter block type that takes the texture of the block it's placed on (can be placed in many orientations as well)
+- Added a straw roof option
+- Added a planks roof option
+- Increased max allowed height for farms like the wheat farm from 3 to 15
+- Moved straw production as a side-effect of creating pots of flour to a wheat harvest chance result
+- Added an option to invert the Y axis for gamepads
+- Alkanet/hollyhock/flax/wolfsbane can now be placed by hand
+- Tweaked farmer behaviour a bit to be more likely to complete a max sized field by the end of the day
+- Added a detail count video setting; this setting at "very high" is what it previously was; it sets a limit to non-terrain block rendering such as crops when there's a lot of them.
+
+Fixes
+- The solid cylinder shape construction area now matches the hollow cylinder shape
+- Fix depth/height effect on non-terrain blocks being sort of inversed (only really visible on the textured roof sides in the base game)
+- Fix replacement construction jobs getting stuck if their source and target type are the same
+- Reduced ambient occlusion intensity on roof blocks (it's quite intense on them, and it helps match the front side in brightness to the walls adjacent to it)
+- Fix glider & railcart not sampling lighting correctly, causing them to be too dark in ambiently lit situations
+- Reduced cooldown timer on updating steam stats substantially, so achievements trigger more reliable on doing the thing (instead of minutes later)
+- Fix consumption/production stats requiring you to open the statistics menu on the appropriate data pages
+- Fixed a small issue where some of the larger blocks' colliders would not appear properly until close enough (banner, wisteria plant)
+- Fix bed placement tool not telling you when the other end of the bed can't be placed (it just silently blocked you from placing)
+- Rotate copper lockbox mesh 180 degrees (it was backwards, sorry)

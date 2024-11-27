@@ -193,6 +193,68 @@
 		"sortWeight": 0
 	},
 	{
+		"cooldown": 40.0,
+		"defaultLimit": 5,
+		"defaultPriority": 0,
+		"name": "pipliz.tinkerer.rooftoolplanks",
+		"requires": [
+			{
+				"type": "planks",
+				"amount": 4
+			}
+		],
+		"results": [
+			{
+				"type": "rooftoolplanks",
+				"amount": 4
+			}
+		],
+		"sortWeight": 0
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 5,
+		"defaultPriority": 0,
+		"name": "pipliz.tinkerer.rooftoolstraw",
+		"requires": [
+			{
+				"type": "planks",
+				"amount": 2
+			},
+			{
+				"type": "straw",
+				"amount": 2
+			}
+		],
+		"requiresScience": "pipliz.farming",
+		"results": [
+			{
+				"type": "rooftoolstraw",
+				"amount": 4
+			}
+		],
+		"sortWeight": 493
+	},
+	{
+		"cooldown": 40.0,
+		"defaultLimit": 5,
+		"defaultPriority": 0,
+		"name": "pipliz.tinkerer.plankscoated",
+		"requires": [
+			{
+				"type": "planks",
+				"amount": 4
+			}
+		],
+		"results": [
+			{
+				"type": "plankscoated",
+				"amount": 4
+			}
+		],
+		"sortWeight": 0
+	},
+	{
 		"cooldown": 50.0,
 		"defaultLimit": 3,
 		"name": "pipliz.tinkerer.furnace",
@@ -346,5 +408,27 @@
 			}
 		],
 		"sortWeight": 173
+	},
+	{
+		"cooldown": 20.0,
+		"defaultLimit": 10,
+		"defaultPriority": -100,
+		"name": "pipliz.tinkerer.rooftoolstraw",
+		"requires": [
+			{
+				"type": "planks"
+			},
+			{
+				"type": "straw"
+			}
+		],
+		"requiresScience": "pipliz.farming",
+		"results": [
+			{
+				"amount": 2,
+				"type": "rooftoolstraw"
+			}
+		],
+		"sortWeight": 493
 	}
 ]

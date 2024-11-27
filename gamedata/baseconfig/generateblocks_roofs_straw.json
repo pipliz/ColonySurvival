@@ -1,0 +1,516 @@
+[
+	{
+		"baseType": {
+			"canBuildUpon": true,
+			"lightingTransparency": 200,
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstraw"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftileddiagonal.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawdiagonal"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				},
+				{
+					"max": [ 0.5, 0.5, 0.5],
+					"min": [-0.5, 0  , 0]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledinsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawinsidecornera"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0],
+					"min": [-0.5,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledinsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"onRemoveAudio": "stoneDelete",
+			"needsBase": true,
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawinsidecornerb"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,0]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledoutsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawoutsidecornera"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [0.5,0,0.5],
+					"min": [-0.5,-0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0],
+					"min": [0,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledoutsidecorner.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawoutsidecornerb"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftileddiagonalflip.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawdiagonalflip"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftileddiagonalmid.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawdiagonalmid"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				},
+				{
+					"max": [0.5,0.5,0.5],
+					"min": [0,0,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftileddiagonalboth.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawdiagonalboth"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledvsolo.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawvsolo"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawvfront"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawvback"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledvmid.ply",
+			"meshRotationEuler": { "x": 0, "y": 180, "z": 0},
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawvmid"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{ "id": "ambientOcclusionFactor", "strength":0.4},
+				{
+					"id": "dynamic_material",
+					"offset": [0, -1, 0]
+				}
+			],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"customData": {
+				"useNormalMap": true,
+				"useHeightMap": true
+			},
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledvboth.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "stonebricks"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawvboth"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv270.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawv270"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv90.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawv90a"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv90.ply",
+			"meshRotationEuler": { "x": 0, "y": 90, "z": 0 },
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawv90b"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength":0.4} ],
+			"canBuildUpon": true,
+			"colliders": [
+				{
+					"max": [ 0.5,    0, 0.5],
+					"min": [-0.5, -0.5,-0.5]
+				}
+			],
+			"lightingTransparency": 200,
+			"mesh": "../meshes/meshes_roofstraw/rooftiledv360.ply",
+			"isSolid": false,
+			"onPlaceAudio": "stonePlace",
+			"needsBase": true,
+			"onRemoveAudio": "stoneDelete",
+			"onRemoveType": "rooftoolstraw",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "roofstrawv360"
+	}
+]

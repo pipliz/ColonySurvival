@@ -38,3 +38,41 @@ Construction jobs:
 - Renamed difficulty "None" to "Peaceful"
 - Improved stability of ingame player character movement
 - Player characters now tilt their head with up/down aim in multiplayer
+
+0.11.0.1 (2024-05-31)
+- Fix an issue the caused NPC models to be swapped randomly after reloading the game multiple times without restarting it
+- Fix missing text in the merchant table UI
+
+0.11.0.2 (2024-05-31)
+- Apply the proper (longer) list of builder-usable types
+
+0.11.0.3 (2024-05-31)
+- Fix an issue with the savegame converter/upgrader from 0.10 to 0.11 that caused loading problems
+
+0.11.0.4 (2024-05-31)
+- Added a variety of internal mechanics to recover some buggy situations in code / save state
+
+0.11.0.5 (2024-05-31)
+- Fix regression with monster spawning...
+
+0.11.0.6 (2024-06-04)
+- Fix a problem with specific-remove/replacer construction areas where the item selection would not work after the first time - it would re-use the same selection again.
+- Fix walls construction area shape
+- Some localisation updates submitted through discord
+- Updated tanner mesh a bit to be taller
+
+0.11.0.7 (2024-06-04)
+- Fix a an error thrown when adjusting settings in the main menu; does not seem to impact anything though.
+- Fix a problem around rendering other players when it requires using the old model (likely because of a mod overriding the npc type with old data)
+- Disable shortening of names when displayed above colonists
+- Remove newlines from names when set
+- Introduce a limit on name length of 200 characters
+- Added a gameplay setting toggle to show the colonist job in the name tag
+- Added back the developer button numpad keys for simulation pause/speed options
+
+0.11.0.8 (2024-06-10)
+- Add grass turning into dirt when covered by blocks
+- Marsh grass now spreads over walls
+- Upgraded the engineer & jobblock crafter tables, to be of a more appropriate height
+- Fix an error loading worlds with existing pre-0.11 builder/filter-digger jobs (they would just not load)
+- Fix an error loading worlds with a certain registered order of npc types, where the client would fail to connect

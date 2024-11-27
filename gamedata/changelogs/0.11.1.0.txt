@@ -1,0 +1,16 @@
+0.11.1.0 (2024-08-30)
+
+Visual update; added an approximation of sky visibility which leads to areas outside of direct sunlight yet still close to the "outside" having a smooth gradient from light to dark
+
+- Merged sun shadow quality & sun shadow distance settings into one, and improved the sun=off setting (relying on the newly added lighting)
+- Fix off-by-one error in area size text when removing an area
+- Updated some localisations (mostly from dm's on discord)
+- Updated engineer bench icon
+- Capitalised Chicken Excrement
+- Fix monster spawns lagging behind a difficulty change if it's applied between 18:00 and 20:00 ingame
+- Added more item selection options to the replacer/specific-remover construction jobs
+- Fix rivers turning into ridges underwater where they flow into the ocean
+
+0.11.1.1 (2024-09-01)
+
+- Hotfix to allow loading mods that only mark 0.11.0 as compatible (should load anything since 0.9.0)

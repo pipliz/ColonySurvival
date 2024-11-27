@@ -20,7 +20,7 @@
 		"28": "Il existe des mods pour Colony Survival. Retrouvez-les sur les forums Steam ou Discord !",
 		"29": "S'accroupir empêche de tomber des bords des blocs.",
 		"30": "Appuyez sur <style=Player/ToggleTorch> pour activer votre torche.",
-		"4": "Cliquer sur les « blocs de travail » pour voir comment ils sont utilisés et pour prioriser certaines recettes.",
+		"4": "Cliquez sur les « blocs de travail » pour voir comment ils sont utilisés et pour prioriser certaines recettes.",
 		"7": "Les différences de portée, de vitesse de rechargement et de dégâts infligés procurent à chaque type de garde des avantages et des inconvénients."
 	},
 	"sentences": {
@@ -29,6 +29,24 @@
 			"heath": "Lande",
 			"marsh": "Marais",
 			"mountain": "Montagne"
+		},
+		"autocrafter": {
+			"addqueue": "_MISSING_Add to queue",
+			"cancelqueue": "_MISSING_Cancel queue",
+			"description": "_MISSING_Start crafting items without waiting on colonists",
+			"header": "_MISSING_Mill Workshop",
+			"progress": "_MISSING_Progress",
+			"recipecounts": "_MISSING_Items present for up to <b>{0}</b> crafts",
+			"recipes": "_MISSING_Recipes",
+			"results": "_MISSING_Results",
+			"resultstohotbar": "_MISSING_To Hotbar",
+			"resultstostockpile": "_MISSING_To Stockpile",
+			"selected": "_MISSING_Selected",
+			"timepercraft": "_MISSING_Time per craft: {0} seconds",
+			"timetocompletion": "_MISSING_Estimated time to completion: <b>{0}</b>",
+			"uniqueconstraintwarning": "_MISSING_Can only place one autocrafter per banner",
+			"waitingdata": "_MISSING_Waiting on data...",
+			"wrongcolony": "_MISSING_Selected workshop is part of another colony"
 		},
 		"bannerclickedpopup": {
 			"deletebanner": "Supprimer la bannière",
@@ -42,14 +60,14 @@
 			"activecolony": "Colonie active : {0}",
 			"addbanner": "Ajouter une bannière",
 			"header": "Placement de bannière",
-			"missingcolonykit": "Kit de démarage de colonie nessesaire",
-			"missingoutpostbanner": "Banière d'avant-poste requis",
+			"missingcolonykit": "Kit de démarage de colonie nécessaire",
+			"missingoutpostbanner": "Banière d'avant-poste requise",
 			"movebanner": "Déplacer la bannière",
-			"mustbeleader": "Seul le chef de la colony peut ajouter des banières",
+			"mustbeleader": "Seul le chef de la colonie peut ajouter des banières",
 			"opencolonytab": "Gérer {0}",
-			"startcolony": "Fonder une nouvelle colonie ici",
-			"startoutpost": "Démarrer un nouvelle avant-poste",
-			"startoutpostremote": "Démarrer un nouvelle avant-poste"
+			"startcolony": "Fonder une nouvel colonie ici",
+			"startoutpost": "Démarrer un nouvel avant-poste",
+			"startoutpostremote": "Démarrer un nouvel avant-poste"
 		},
 		"category": {
 			"consumables": "Consommable",
@@ -69,7 +87,7 @@
 		"colonymanagement": {
 			"colonysettings": {
 				"difficulty": "Difficulté",
-				"difficulty_peaceful": "_MISSING_Peaceful",
+				"difficulty_peaceful": "Paisible",
 				"difficultylocked": "Difficulté verrouillé ",
 				"header": "Paramètres du monde"
 			},
@@ -162,7 +180,7 @@
 				"usescienceagreement": "Transférer la science"
 			},
 			"startsettings": "Paramètres de la colonie",
-			"switchcolony2": "Passez à la colonie active :",
+			"switchcolony2": "Passer à la colonie active :",
 			"trading": {
 				"completerule": "Créer une règle",
 				"completeruleedit": "Modifier complètement la règle",
@@ -210,8 +228,8 @@
 				"local1": "Recherche d'un serveur solo sur cet ordinateur",
 				"local2": "Recherche d'un serveur en ligne sur cet ordinateur",
 				"password": "Mot de passe requis",
-				"steamdirect": "Essayer de configurer une connexion directe",
-				"steamp2p": "Essayer de configurer une connexion p2p",
+				"steamdirect": "Essayez de configurer une connexion directe",
+				"steamp2p": "Essayez de configurer une connexion p2p",
 				"timeout": "La connexion a expiré. Retour au menu principal dans 5 secondes",
 				"waitingserver": "Démarrage du serveur en arrière-plan"
 			}
@@ -269,9 +287,9 @@
 			"jumpgamepadtap": "Saut",
 			"look": "Viser",
 			"movekeyboard": {
-				"down": "Bouger Derrière",
-				"left": "Bouger à Gauche",
-				"right": "Bouger à Droite",
+				"down": "Reculer",
+				"left": "Gauche",
+				"right": "Droite",
 				"up": "Avancer"
 			},
 			"movepad": "Mouvement",
@@ -281,6 +299,10 @@
 			"resetfieldofview": "Réinitialiser le champ de vision (triche)",
 			"rotateobjectleft": "Tourner à Gauche",
 			"rotateobjectright": "Tourner à Droite",
+			"simspeed10x": "Vitesse de simulation x10 (triche)",
+			"simspeed3x": "Vitesse de simulation x3 (triche)",
+			"simspeednormal": "Réinitialiser la vitesse de simulation (triche)",
+			"simspeedpause": "Mettre en pause la vitesse de simulation (triche)",
 			"sprint": "Courir",
 			"sprintgamepadheld": "Courir",
 			"takescreenshot": "Prendre une capture d'écran",
@@ -305,13 +327,13 @@
 			"settings": "Paramètres"
 		},
 		"failsafe": {
-			"current": "Stockage actuel de points sacrés : {0} sur {1}",
-			"damage": "Le déclenchement de la sécurité sacrés causera {0} dégâts",
-			"futurewave": "La sécurité sacrés réduira le total de HP des monstres entrants de {0:P0} pour la nuit suivante",
-			"header": "Sécurité sacrés",
-			"nextavailable": "La sécurité sacrés ne sera disponnible que après la prochaine nuit",
-			"statusactive": "Statut: La sécurité sacrés a été activée",
-			"statusavailable": "Statut: La sécurité sacrés est disponible",
+			"current": "Stockage actuel de points sacrée : {0} sur {1}",
+			"damage": "Le déclenchement de la sécurité sacrées causera {0} dégâts",
+			"futurewave": "La sécurité sacrée réduira le total de HP des monstres entrants de {0:P0} pour la nuit suivante",
+			"header": "Sécurité sacrée",
+			"nextavailable": "La sécurité sacrée ne sera disponnible que après la prochaine nuit",
+			"statusactive": "Statut: La sécurité sacrée a été activée",
+			"statusavailable": "Statut: La sécurité sacrée est disponible",
 			"trigger": "Déclencher",
 			"wave": "Le niveau de menace actuel est de {0} et fera apparaître des monstres avec un HP total de {1}",
 			"wavereduced": "Le total d'HP des monstres qui arrive sera réduite de {0:P0} la nuit prochaine"
@@ -344,7 +366,7 @@
 			"none": "Aucun",
 			"normal": "Normal",
 			"previous": "Précédent",
-			"randomize": "_MISSING_Randomize",
+			"randomize": "Randomiser",
 			"reset": "Réinitialiser",
 			"select": "Sélectionner",
 			"selected": "Sélectionné",
@@ -413,7 +435,7 @@
 				"command": "Usage de commande",
 				"excess": "Et {0} colon sont mort depuis, de manière anonyme. ",
 				"individual": "{0}: Un colon avec le métier de {1} est mort de: {2}",
-				"main": "{0} colon mort à un avant-poste: {1}!",
+				"main": "{0} colon(s) mort à l'avant-poste : {1}!",
 				"misc": "Raison inconnue",
 				"monster": "Un monstre",
 				"npc": "Un colon",
@@ -423,12 +445,12 @@
 			},
 			"science": {
 				"entry": "{0}: Completer {1}",
-				"main": "Science Completé"
+				"main": "Science Completée"
 			},
 			"siegemode": {
 				"disabled": "{0}: Quitte le mode siège",
 				"enabled": "{0}: Entre en mode siège",
-				"main": "Le mod siège a été déclancher dans l'avant-poste {0}!"
+				"main": "Le mod siège a été déclanché dans l'avant-poste {0}!"
 			}
 		},
 		"npcs": {
@@ -439,10 +461,10 @@
 				"barleyfarmer": "Cultivateur d'orge",
 				"beekeeper": "Apiculteur",
 				"berryfarmer": "Cultivateur de baies",
-				"blastfurnace": "Opérateur de haut fournaux",
+				"blastfurnace": "Opérateur de hauts fournaux",
 				"bloomeryjob": "Fondeur de fer",
 				"builder": "Constructeur",
-				"builderreplacer": "_MISSING_Replace Builder",
+				"builderreplacer": "Remplaceur de bloc spécifique",
 				"cabbagefarmer": "Cultivateur de choux",
 				"chestmaker": "Coffreur",
 				"chickenfarmer": "Éleveur de poulets",
@@ -453,7 +475,7 @@
 				"cottonengine": "Opérateur de machine à coton",
 				"cottonfarmer": "Cultivateur de coton",
 				"digger": "Excavateur",
-				"diggerspecial": "_MISSING_Specific Digger",
+				"diggerspecial": "Excavateur spécifique",
 				"dyer": "Teinturier",
 				"engineer": "Ingénieur",
 				"firepit": "Cuisinier primitif",
@@ -481,7 +503,7 @@
 				"hollyhockfarmer": "Cultivateur de roses trémières",
 				"jeweller": "Bijoutier",
 				"jobblockcrafter": "Fabricateur de bloc métier",
-				"jobblockcrafteradvanced": "Fabricateur de bloc métier avancée",
+				"jobblockcrafteradvanced": "Fabricateur de bloc métier avancé",
 				"kilnjob": "Brûleur de charbon de bois",
 				"laborer": "Travailleur",
 				"metallathe": "Opérateur de tour à métaux",
@@ -501,7 +523,7 @@
 				"tanner": "Tanneur",
 				"tinkerer": "Bricoleur",
 				"trader": "Commerçant",
-				"trapfixer": "Fixateur de pièges",
+				"trapfixer": "Fixeur de pièges",
 				"watergatherer": "Collecteur d'eau",
 				"waterpump": "Pompeur d'eau",
 				"wheatfarmer": "Cultivateur de blé",
@@ -513,7 +535,7 @@
 		},
 		"pipliz": {
 			"alarmbell": {
-				"description": "Débloquer la Sonnette d'alarme, qui sonnera quand un monstre marchera deçu",
+				"description": "Débloquer la Sonnette d'alarme, qui sonnera quand un monstre marchera dessus",
 				"name": "Sonnette d'alarme"
 			},
 			"animalcarcass": {
@@ -521,7 +543,7 @@
 				"name": "Carcasses local d'animaux"
 			},
 			"anvil": {
-				"description": "Débloquer l'enclume, un source importante pour plus de production avancé comme les cutils en cuivre",
+				"description": "Débloquer l'enclume, un source importante pour plus de productions avancées comme les cutils en cuivre",
 				"name": "Enclume"
 			},
 			"archery": {
@@ -533,7 +555,7 @@
 				"name": "Artiste"
 			},
 			"astrolabe": {
-				"description": "Débloquer l'astrolabe; un outils de navigation qui vous aide à trouver des biomes",
+				"description": "Débloquer l'astrolabe; un outil de navigation qui vous aide à trouver des biomes",
 				"name": "Astrolabe"
 			},
 			"blastfurnace": {
@@ -545,7 +567,7 @@
 				"name": "Laiton"
 			},
 			"bread": {
-				"description": "Débloquer la fabrication de pain. Utiliser la meule pour faire de la farine, qui peut être utiliser dans la cuisine pour faire du pain",
+				"description": "Débloquer la fabrication de pain. Utiliser la meule pour faire de la farine, qui peut être utilisé dans la cuisine pour faire du pain",
 				"name": "Pain"
 			},
 			"bricks": {
@@ -589,19 +611,19 @@
 				"name": "Boussole"
 			},
 			"constructionbuilder": {
-				"description": "Débloquer la zone de construction pour les ouvriers du batiment",
+				"description": "Débloquer la zone de construction pour les ouvriers du bâtiment",
 				"name": "Zone de construction"
 			},
 			"constructiondigger": {
-				"description": "Débloquer la zone d'excavation pour les ouvriers du batiment",
+				"description": "Débloquer la zone d'excavation pour les ouvriers du bâtiment",
 				"name": "Zone de terrassement"
 			},
 			"constructiondiggerspecial": {
-				"description": "_MISSING_Unlock advanced construction areas",
-				"name": "_MISSING_Advanced Construction"
+				"description": "Débloquer des zones de construction avancées",
+				"name": "Construction Avancée"
 			},
 			"cook": {
-				"description": "Débloquer le cuisinier et le pêcheur, de nouvelles sources de repas pour vos colons",
+				"description": "Débloquer le cuisinier et le pêcheur, de nouvelles sources de nourriture pour vos colons",
 				"name": "Cuisine"
 			},
 			"copperlockbox": {
@@ -629,7 +651,7 @@
 				"name": "Rails"
 			},
 			"engineer": {
-				"description": "Débloquer l'ingénieur et le fixateur de pièges. L'ingénieur fabrique des pièges et leurs munitions, qui peuvent être utilisés pour combattre des monstres. Le fixateur de pièges chargera et rechargera les pièges à proximité.",
+				"description": "Débloquer l'ingénieur et le fixeur de pièges. L'ingénieur fabrique des pièges et leurs munitions, qui peuvent être utilisés pour combattre des monstres. Le fixeur de pièges chargera et rechargera les pièges à proximité.",
 				"name": "Ingénierie"
 			},
 			"failsafe": {
@@ -637,7 +659,7 @@
 				"name": "Sécurité sacrée"
 			},
 			"farming": {
-				"description": "Débloquer le cultivateur de blé. Le blé prendra de l'importance en tant qu'aliment au fil du temp.",
+				"description": "Débloquer le cultivateur de blé. Le blé prendra de l'importance en tant qu'aliment au fil du temps.",
 				"name": "Cultivateur de blé"
 			},
 			"fence": {
@@ -713,7 +735,7 @@
 				"name": "Tour à métaux"
 			},
 			"miner": {
-				"description": "Débloquer le mineur. Lorsqu'il est placé sur un bloc de roche sombre, un colon viendra extraire ce matériau en continue",
+				"description": "_MISSING_Unlock the miner job recipe at the tinkerer. When placed on a dark stone block, a colonist will come to mine that material continuously.",
 				"name": "Mineur"
 			},
 			"monocular": {
@@ -749,7 +771,7 @@
 				"name": "Production de Papier"
 			},
 			"poison": {
-				"description": "Débloquer le traitement du poison, utile pour infliger des dégâts aux monstres au fil du temps. Les plantes de glycine ne peuvent être cultivées que dans les landes. Chaque récolteuse de glycines a besoin de 10 plants de glycines à proximité pour bien fonctionner",
+				"description": "Débloquer le traitement du poison, utile pour infliger des dégâts aux monstres au fil du temps. Les plantes de glycine ne peuvent être cultivées que dans les landes. Chaque récolteur de glycines a besoin de 10 plants de glycines à proximité pour bien fonctionner",
 				"name": "Poison"
 			},
 			"porridge": {
@@ -853,7 +875,7 @@
 				"name": "Tailleur"
 			},
 			"tanner": {
-				"description": "Débloquer le tanneur, un ouvrier indispensable à la production de cuir et, plus tard, de parchemin",
+				"description": "Débloquer le tanneur, un ouvrier indispensable à la production de cuir et, plus tard, de parchemins",
 				"name": "Tanneur"
 			},
 			"toolshop": {
@@ -861,7 +883,7 @@
 				"name": "Distribution d'outils"
 			},
 			"trader": {
-				"description": "Utiliser pour accélérer les accords commerciaux entre les colonies. Non utilisé pour le commerce avec les avant-postes ; destiné au multijoueur.",
+				"description": "Utilisé pour accélérer les accords commerciaux entre les colonies. Non utilisé pour le commerce avec les avant-postes ; destiné au multijoueur.",
 				"name": "Marchand"
 			},
 			"trading": {
@@ -883,12 +905,12 @@
 		},
 		"popup": {
 			"areaselection": {
-				"close": "Fermer",
-				"descriptionshort": "_MISSING_Remove this area?",
+				"close": "Quitter",
+				"descriptionshort": "Supprimer cette zone ?",
 				"header": "Menu de zone",
 				"remove": "Supprimer la zone",
-				"size": "_MISSING_Area size: <b>{0}</b>",
-				"workertype": "_MISSING_Worker type: <b>{0}</b>"
+				"size": "Taille de la zone: <b>{0}</b>",
+				"workertype": "Type d'ouvrier: <b>{0}</b>"
 			},
 			"death": {
 				"description": "Vous êtes mort(e).",
@@ -906,10 +928,10 @@
 				"noactivecolony": "Aucune colonie active !",
 				"science": {
 					"available": "Disponible",
-					"completed": "Terminer",
-					"completeunlock": "Terminer",
+					"completed": "Terminé",
+					"completeunlock": "Terminé",
 					"conditioncolonistcount": "Colons",
-					"conditioncolonistcountdescription": "Nombre de colons nécessaire",
+					"conditioncolonistcountdescription": "Nombre de colons nécessaires",
 					"conditionpointreq": "Points de colonie",
 					"conditionpointreqdescription1": "Points de colonie requis",
 					"conditionpointreqdescription2": "Requis : {0}",
@@ -933,7 +955,7 @@
 					"entry-meals": "Total des repas",
 					"entry-npccount": "Colons",
 					"entry-points": "Points de colonie",
-					"entry-sanctified": "Point sacrés",
+					"entry-sanctified": "Points sacrés",
 					"entry-unemployed": "Sans emploi",
 					"hide-all": "Tout cacher",
 					"only-changed": "Afficher uniquement les changements",
@@ -957,9 +979,9 @@
 					"type-production-col": "Production (Colonie)",
 					"type-production-out": "Production (Avant-poste)",
 					"type-stockpile": "Stock",
-					"type-tooluse": "Outils Utilisé",
-					"type-tooluse-col": "Outils Utilisé (Colonie)",
-					"type-tooluse-out": "Outils Utilisé (Avant-poste)",
+					"type-tooluse": "Outils Utilisés",
+					"type-tooluse-col": "Outils Utilisés (Colonie)",
+					"type-tooluse-out": "Outils Utilisés (Avant-poste)",
 					"type-trade-in": "Commerce entrant",
 					"type-trade-out": "Commerce extérieur"
 				},
@@ -1020,12 +1042,12 @@
 				"selltext2": "L'espace de stockage actuel permet {0} vente(s)"
 			},
 			"npccontext": {
-				"colony": "_MISSING_Colony:",
-				"fire": "_MISSING_Expel",
-				"header": "_MISSING_Colonist Info",
-				"job": "_MISSING_Job:",
-				"name": "_MISSING_Name:",
-				"showgoal": "_MISSING_Mark goals"
+				"colony": "Colonie:",
+				"fire": "Virer",
+				"header": "Info de la colonie",
+				"job": "Métier:",
+				"name": "Nom:",
+				"showgoal": "Marquer les objectifs"
 			},
 			"quickstart": {
 				"closetoggle": "Ne plus afficher",
@@ -1043,48 +1065,49 @@
 				"header": "Supression d'un bloc spécial"
 			},
 			"toolconstruction": {
-				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
+				"currentshape": "<i>Forme actuelle</i>: <b>{0}</b>",
 				"description": "Sélectionnez le type de zone que vous souhaitez créer",
 				"header": "Outil de construction",
-				"shapemenudescription": "_MISSING_Select the shape to use for the next areas",
+				"shapemenudescription": "Sélectionnez la forme à utiliser pour les zones suivantes",
 				"shapes": {
-					"FullBox": "_MISSING_Solid Box",
-					"HollowBox": "_MISSING_Hollow Box",
-					"SolidCylinder": "_MISSING_Solid Cylinder",
-					"Walls": "_MISSING_Walls",
-					"WallsCylinder": "_MISSING_Cylindrical Walls"
+					"FullBox": "Boîte solide",
+					"HollowBox": "Boîte creuse",
+					"SolidCylinder": "Cylindre solide",
+					"Walls": "Murs",
+					"WallsCylinder": "Murs cylindriques"
 				}
 			},
 			"tooljob": {
 				"barleya": "Nourriture pour poulets",
 				"barleyfarmer": "Cultivateur d'orge",
 				"beekeeper": "Apiculteur",
-				"beekeepera": "Garde des abeilles pour la production de bougies",
+				"beekeepera": "Elève des abeilles pour la production de bougies",
 				"berrya": "De la nourriture rapide et facile, commencez par cela !",
 				"berryfarmer": "Cultivateur de baies",
 				"berryfarmertool": "Outil de cultivateur de baies",
 				"buildera": "Construit dans une zone du monde",
-				"builderarea": "_MISSING_Build All",
+				"builderarea": "Construire",
 				"builderb": "Choisissez le bloc à placer, puis sélectionnez la zone à construire",
-				"builderreplacer": "_MISSING_Replace Specific",
-				"builderreplacera": "_MISSING_Replace one type with another",
-				"builderreplacerb": "_MISSING_Select an area in which to replace one type of block with another",
+				"builderreplacer": "Remplacement spécifique",
+				"builderreplacera": "Remplacer un type par un autre",
+				"builderreplacerb": "Sélectionnez une zone dans laquelle remplacer un type de bloc par un autre",
 				"cabbagea": "Choux",
 				"cabbagefarmer": "Cultivateur de choux",
 				"chickenfarmer": "Éleveur de volailles",
 				"chickenfarmera": "Utilise l'orge pour élever des poulets",
 				"construction": "Chantier",
-				"construction1": "Laissez-les construires à votre place",
+				"construction1": "Laissez-les construire à votre place",
 				"construction2": "Cela ouvre un menu dans lequel vous pourrez choisir le type de chantier",
-				"constructionjob": "_MISSING_Job Spot",
+				"constructionjob": "Lieu de travail",
 				"constructionjoba": "Recrute un ouvrier de chantier",
 				"constructionjobb": "Doit être adjacent à une zone de chantier",
 				"coversarea": "Recouvre une zone déjà existante",
+				"coversblocks": "_MISSING_Overlaps existing blocks",
 				"description": "Sélectionnez le type de zone que vous souhaitez créer",
 				"diggera": "Terrasse une zone du monde",
-				"diggerarea": "_MISSING_Remove All",
+				"diggerarea": "Excaver",
 				"diggerb": "Sélectionnez la zone à creuser",
-				"diggerspecial": "_MISSING_Remove Specific",
+				"diggerspecial": "Excavation spécifique",
 				"diggerspeciala": "Déblaie les blocs spécifiés dans une zone",
 				"diggerspecialb": "Sélectionnez la zone à déblayer",
 				"dyer1": "Ajoutez des couleurs pour rendre la vie un peu moins terne",
@@ -1100,13 +1123,14 @@
 				"hempfarmer": "Cultivateur de Chanvre",
 				"missingscience": "<color=#ff2323>La technologie « {0} » doit d'abord avoir été débloquée.</color>",
 				"noconstructionareanearby": "Aucun chantier à proximité",
-				"notarablefen": "_MISSING_Requires arable marshland below",
-				"notarableheath": "_MISSING_Requires arable heath below",
-				"notarablenormal": "_MISSING_Requires arable ground below",
+				"notarablefen": "Nécessite des terres de marais arables dessous",
+				"notarableheath": "Nécessite de la terre de bruyère arable dessous",
+				"notarablenormal": "Nécessite un sol arable dessous",
 				"notflat": "Le terrain n'est pas plat",
 				"nowaternearby": "Pas d'eau aux alentours",
 				"occupiedblocks": "Occupé par des blocs",
 				"requiresarable": "Nécessite des terres arables",
+				"requiressolidbelow": "_MISSING_Requires solid ground below",
 				"toolarge": "Trop grand",
 				"toonarrow": "Trop étroit",
 				"toosmall": "Trop petit",
@@ -1158,7 +1182,7 @@
 				"description": "Échangez et développez pour accéder à des ressources uniques",
 				"header": "Points de colonie et colonisation",
 				"text1_2": "Déverrouillez et placez le hub des marchands. Utilisez <style=Player/FireSecondary> pour ouvrir son interface. Vendez des objets pour gagner des points de colonie. Entre autres, les points peuvent être dépensés pour des améliorations comme la limite de colons sur la page Colony Points.",
-				"text2": "Ce monde contient plusieurs régions avec des ressources uniques. Il y a des sommets couverts de neige, des landes couvertes de pourpre, des marais et des arbres mammouths. Déverrouillez et équipez l'astrolabe pour les retrouver facilement.",
+				"text2": "Ce monde contient plusieurs biome avec des ressources uniques. Il y a des sommets couverts de neige, des landes couvertes de pourpre, des marais et des arbres mammouths. Déverrouillez et équipez l'astrolabe pour les retrouver facilement.",
 				"text3": "Débloquez des avant-postes, achetez une bannière d'avant-poste et emportez-la avec vous pendant que vous explorez. Placez-le pour démarrer un avant-poste. Son stock et ses progrès scientifiques sont partagés avec la colonie principale et d'autres avant-postes. Construisez des avant-postes dans les régions mentionnées ci-dessus pour accéder à leurs ressources."
 			},
 			"page6_2": {
@@ -1201,6 +1225,7 @@
 					"ratio62": "62%",
 					"ratio75": "75%",
 					"ratio87": "87%",
+					"showcolonistjobinname": "Afficher le travail dans le nom",
 					"showsensitivedatamode": "Afficher des données sensibles",
 					"tab": "Paramètres généraux",
 					"uiscalingratio": "Échelle de l'interface utilisateur"
@@ -1209,7 +1234,7 @@
 					"inverty": "Inverser l'axe Y",
 					"sensitivity": "Sensibilité de la souris",
 					"smooth": "Lissage de la souris",
-					"swapprimsec": "Inverser clic gauche/droite"
+					"swapprimsec": "Inverser clic gauche/droit"
 				},
 				"mousesettings2": "Souris et clavier",
 				"padmenu": {
@@ -1219,7 +1244,7 @@
 			},
 			"language": "Langue",
 			"languagemenu": {
-				"coverage": "Cette traduction est terminée à {0:F1} %. Pour aider à traduire le jeu, consultez les forums ou notre page sur Github. N'hésiter à MP SixTienn (sixtienn) sur discord si vous relevez des problèmes de traduction ou autre dans le jeu. Merci!",
+				"coverage": "Cette traduction est terminée à {0:F1} %. Pour aider à traduire le jeu, consultez les forums ou notre page sur Github. N'hésitez pas à MP SixTienn (sixtienn) sur discord si vous relevez des problèmes de traduction ou autre dans le jeu. Merci!",
 				"full": "Paramètres de langue",
 				"language": "Langue",
 				"wiptext": "Travaux en cours. Cela ne couvre pas tout le texte dans le jeu, et certaines traductions peuvent être moins complètes que d'autres."
@@ -1241,6 +1266,7 @@
 				"antialiasing": "Anti-crénelage",
 				"bloom": "Flou lumineux",
 				"depthoffield": "Profondeur de champ",
+				"detailcount": "_MISSING_Detail count",
 				"drawdistance": "Distance d'affichage (*)",
 				"fieldofview": "Champ de vision",
 				"fog": "Brouillard",
@@ -1355,14 +1381,14 @@
 			"trap-cooldown": "Toutes les {0} secondes",
 			"trap-damage": "Inflige {0} dégâts",
 			"trap-explosive-range": "Affecte une zone avec un rayon {0} lors d'un coup",
-			"trap-filter-1000hp": "Ne se déclenche que sur les monstres avec au moins 1000 HP",
+			"trap-filter-1000hp": "Ne se déclenche que sur les monstres avec au moins 1000 PV",
 			"trap-filter-unslowed": "Ne se déclenche que sur les monstres pas encore ralentis",
 			"trapfixer": "Ordonne à un colon de réapprovisionner les pièges à proximité pendant la journée",
 			"trap-freezes": "Gèle ceux touchés pendant {0} secondes",
-			"trap-friendly-fire": "Peut affecter les allier lorsqu'il est déclencher",
+			"trap-friendly-fire": "Peut affecter les alliers lorsqu'il est déclencher",
 			"trap-general": "Objet piège, attend que les monstres passent et se déclenche. Ils seront remplis dans la journée par les colons fixeur de pièges",
 			"trap-range": "Jusqu'à {0} blocs de distance",
-			"trap-slows": "Ralentit les monstres à {0} fois leur vitesse",
+			"trap-slows": "Ralentis les monstres à {0} fois leur vitesse",
 			"trap-style-down": "Déclenché par les monstres dessous",
 			"trap-style-front": "Déclenché par les monstres devant",
 			"trap-style-up": "Déclenché par les monstres dessus"
@@ -1398,6 +1424,7 @@
 		"architrave": "Architrave",
 		"artisttable": "Établi d'artiste",
 		"astrolabe": "Astrolabe",
+		"autocrafter": "_MISSING_Mill",
 		"banner": "Bannière",
 		"bannertool": "Outil de bannière",
 		"barley": "Orge",
@@ -1418,9 +1445,9 @@
 		"bread": "Pain",
 		"breadmeal": "Repas de pain",
 		"bricks": "Briques",
-		"bricksblack": "Briques noire",
-		"bricksdarkred": "Briques rouge foncé",
-		"bricksdarkyellow": "Briques jaune foncé",
+		"bricksblack": "Briques noires",
+		"bricksdarkred": "Briques rouges foncée",
+		"bricksdarkyellow": "Briques jaunes foncée",
 		"brickslight": "Briques légères",
 		"bricksred": "Briques rouges",
 		"bronzeingot": "Lingot de bronze",
@@ -1592,6 +1619,7 @@
 		"pillar": "Pilier",
 		"planks": "Planches",
 		"planksblue": "Planches bleue",
+		"plankscoated": "_MISSING_Coated Planks",
 		"planksgreen": "Planches verte",
 		"planksred": "Planches rouge",
 		"points": "Points",
@@ -1606,6 +1634,7 @@
 		"projectiletrapammo": "Munition de piège à projectiles",
 		"quarterblockbrowndark": "Quart de bloc brun",
 		"quarterblockbrownlight": "Quart de bloc beige",
+		"quarterblockdynamicitem": "_MISSING_Dynamic Quarter Block",
 		"quarterblockgrey": "Quart de bloc gris",
 		"railgate": "Porte ferroviaire",
 		"railitem": "Rails",
@@ -1614,6 +1643,8 @@
 		"researcherdesk": "Bureau de chercheur",
 		"rooftool": "Toit en tuiles",
 		"rooftoolblue": "Toit en tuiles bleu",
+		"rooftoolplanks": "_MISSING_Wooden Roof",
+		"rooftoolstraw": "_MISSING_Straw Roof",
 		"rope": "Corde",
 		"ropebench": "Banc de cordelier",
 		"ropetrap": "Piège à corde",
@@ -1704,6 +1735,7 @@
 		"alarmbell": "Sonne une alarme lorsqu'il détecte des monstres marchant dessus.",
 		"alkanet": "Dans la vraie vie, c'est une source de teinture rouge",
 		"astrolabe": "Équipez-vous dans la barre de raccourcis pour voir le chemin vers des biomes spéciaux.",
+		"autocrafter": "_MISSING_A machine that allows items to be crafted without colonists, during both day and night",
 		"berry": "Une seule baie. Ça ne vaut pas la peine de la manger !",
 		"berrybush": "Les colons peuvent les planter pour de la nourriture rapide et facile.",
 		"berrymeal": "Une grappe de baies préparée pour former un délicieux repas.",
@@ -1742,7 +1774,7 @@
 		"hollyhock": "Dans la vraie vie, possède des propriétés laxatives. Pas dans le jeu. Pour l'instant.",
 		"ironore": "Miné avec une pioche en fer.",
 		"ironwrought": "Version améliorée du fer.",
-		"kiln": "_MISSING_Turns firewood into charcoal",
+		"kiln": "Transforme le bois de chauffage en charbon de bois",
 		"lanterncyan": "Futuriste.",
 		"lanterngreen": "Rend la colonie écolo.",
 		"lanternorange": "Ambiance douce.",
@@ -1758,9 +1790,11 @@
 		"npcshop": "Les colons s'y rendent une fois par jour pour s'approvisionner en nourriture et en objets de bonheur.",
 		"planks": "Maintenant avec 4 fois le volume de bûches !",
 		"printingpress": "Respectons sa liberté.",
+		"quarterblockdynamicitem": "_MISSING_The chameleon of quarter blocks",
 		"railgate": "Permet les déplacements en train tout en bloquant les déplacements à pied.",
 		"rawfish": "#Bio #ProduitLocal #ÉlevéEnPleinAir",
 		"researcherdesk": "Les recherches nécessitent des bibliothèques à proximité afin de trouver des données pour leurs recherches!",
+		"rooftoolstraw": "_MISSING_Is full of insects and might catch on fire, but keeps you dry",
 		"sand": "Ne se mélange pas bien avec les serpents.",
 		"saplingfallorange": "Deviendra un arbre orange.",
 		"saplingtaiga": "Un arbre un légèrement différent.",

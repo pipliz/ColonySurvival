@@ -3,12 +3,49 @@
 		"isPlaceable": false,
 		"isSolid": false
 	},
+	"npcblockerair": {
+		"isSolid": false,
+		"pathingImpact": "AsUntouchableSolid",
+		"colliders": [
+		{
+			"min": [0,0,0],
+			"max": [0,0,0],
+			"impactsPhysics": false
+		}],
+		"onRemoveAmount": 0
+	},
 	"alkanet": {
 		"categories": [
 			"texres"
 		],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					0.1,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"customData": {
+			"colors": [
+				"#ff0000->#8fc847",
+				"#00ff00->#446bc8"
+			]
+		},
 		"icon": "../textures/icons/alkanet.png",
-		"isPlaceable": false
+		"isSolid": false,
+		"mesh": "../meshes/flaxstage2.ply",
+		"needsBase": true,
+		"onPlaceAudio": "grassDelete",
+		"onRemoveAudio": "grassDelete",
+		"sideall": "neutral"
 	},
 	"alkanetstage1": {
 		"colliders": [
@@ -266,6 +303,22 @@
 		"pathingImpact": "AsUntouchableSolid",
 		"requiredFertilityBelow": 1,
 		"sideall": "SELF"
+	},
+	"berrybushnpc": {
+		"attachBehaviour": [
+			{
+				"id": "client_arealimitspopup",
+				"jobtype": "pipliz.berryfarmer"
+			}
+		],
+		"icon": "../textures/icons/berrybush.png",
+		"maxStackSize": 200,
+		"onPlaceAudio": "dirtPlace",
+		"onRemoveAudio": "grassDelete",
+		"onRemoveAmount": 0,
+		"pathingImpact": "AsUntouchableSolid",
+		"requiredFertilityBelow": 1,
+		"sideall": "berrybush"
 	},
 	"berrymeal": {
 		"categories": [
@@ -1000,8 +1053,34 @@
 		"categories": [
 			"texres"
 		],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					0.1,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"customData": {
+			"colors": [
+				"#ff0000->#8fc847",
+				"#00ff00->#7e48ed"
+			]
+		},
 		"icon": "../textures/icons/flax.png",
-		"isPlaceable": false
+		"isSolid": false,
+		"mesh": "../meshes/flaxstage2.ply",
+		"needsBase": true,
+		"onPlaceAudio": "grassDelete",
+		"onRemoveAudio": "grassDelete",
+		"sideall": "neutral"
 	},
 	"flaxstage1": {
 		"categories": [
@@ -1118,7 +1197,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1145,7 +1225,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "grass", "dirtfen", "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1172,7 +1253,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1199,7 +1281,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1226,7 +1309,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1253,7 +1337,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1280,7 +1365,8 @@
 				"spreadDown": true,
 				"spreadStraight": true,
 				"requireAirAbove" : true,
-				"spreadInDirtFarm": false
+				"spreadInDirtFarm": false,
+				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1483,8 +1569,34 @@
 		"categories": [
 			"texres"
 		],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					0.1,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"customData": {
+			"colors": [
+				"#ff0000->#8fc847",
+				"#00ff00->#850f18"
+			]
+		},
 		"icon": "../textures/icons/hollyhock.png",
-		"isPlaceable": false
+		"isSolid": false,
+		"mesh": "../meshes/flaxstage2.ply",
+		"needsBase": true,
+		"onPlaceAudio": "grassDelete",
+		"onRemoveAudio": "grassDelete",
+		"sideall": "neutral"
 	},
 	"hollyhockstage1": {
 		"colliders": [
@@ -2348,6 +2460,17 @@
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "planksgeneric"
+	},
+	"plankscoated" : {
+		"categories" : [
+			"decorative",
+			"planks"
+		],
+		"icon" : "../textures/icons/plankscoated.png",
+		"maxStackSize" : 200,
+		"onPlaceAudio" : "woodPlace",
+		"onRemoveAudio" : "woodDeleteLight",
+		"sideall" : "SELF"
 	},
 	"planksgreen": {
 		"categories": [
@@ -3255,6 +3378,10 @@
 			{
 				"chance": 0.3,
 				"type": "wheat"
+			},
+			{
+				"chance": 0.1,
+				"type": "straw"
 			}
 		],
 		"parentType": "wheatstage",
@@ -3284,8 +3411,11 @@
 		"mesh": "../meshes/wheatstage3.ply",
 		"onRemove": [
 			{
-				"chance": 1,
 				"type": "wheat"
+			},
+			{
+				"chance": 0.25,
+				"type": "straw"
 			}
 		],
 		"parentType": "wheatstage",
@@ -3358,8 +3488,34 @@
 		"categories": [
 			"texres"
 		],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					0.1,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"customData": {
+			"colors": [
+				"#ff0000->#8fc847",
+				"#00ff00->#ecdc02"
+			]
+		},
+		"isSolid": false,
 		"icon": "../textures/icons/wolfsbane.png",
-		"isPlaceable": false
+		"mesh": "../meshes/flaxstage2.ply",
+		"needsBase": true,
+		"onPlaceAudio": "grassDelete",
+		"onRemoveAudio": "grassDelete",
+		"sideall": "neutral"
 	},
 	"wolfsbanestage1": {
 		"colliders": [
@@ -3436,6 +3592,14 @@
 			"consumables"
 		],
 		"icon": "../textures/icons/zinc.png",
+		"isPlaceable": false
+	},
+	"dev_instant_construction": {
+		"categories": [
+			"essential"
+		],
+		"icon": "../textures/icons/error.png",
+		"attachBehaviour": [ "dev_instant_construction" ],
 		"isPlaceable": false
 	}
 }

@@ -8,7 +8,7 @@ practically the sun/moon does not reach directly overhead
 Every time 2 rows together form first the alpha value and then the color value (for easier editing)
 Not every value type may use the alpha row
 
-0:  Night Ambient Color -> Ambient light color, alpha multiplies strength. Unused (the main ambient is based on sampling the skybox)
+0:  Night Ambient Color -> Ambient light color, alpha is used for sky-baked-ambient
 2:  Night Fog Color -> Color of fog, alpha multiplies strength. Unused as fog is set to 0
 4:  Night Cloud Color -> Color of the clouds, alpha multiplies strength
 6:  Night Sky Color -> Color of the light that hits the atmosphere. RGB applies to moon halo color, alpha multiplies strength
