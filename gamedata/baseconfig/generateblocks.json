@@ -17,6 +17,7 @@
 			"categories": [
 				"essential"
 			],
+			"colliders": [{"min":[-0.175,-0.5,-0.445],"max":[0.028,1.885,0.423],"impactsBlockPlacement":true}],
 			"icon": "../textures/icons/goldenstatue.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -139,6 +140,7 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
 			"categories": [
 				"decorative",
 				"decorative_mesh"
@@ -182,6 +184,7 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
 			"categories": [
 				"decorative",
 				"decorative_mesh"
@@ -225,6 +228,7 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
 			"categories": [
 				"decorative",
 				"decorative_mesh"
@@ -453,18 +457,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.106,0.5]},
+				{"min":[-0.036,0.107,-0.5],"max":[0.055,1.532,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/tailorshop.png",
 			"isSolid": false,
@@ -675,18 +669,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.6,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.419,-0.5,-0.5],"max":[0.455,0.343,0.5]},
+				{"min":[-0.416,0.336,-0.5],"max":[-0.007,1.128,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/engineerbench.png",
 			"isSolid": false,
@@ -729,18 +713,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.9,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.436,0.5]},
+				{"min":[-0.127,0.431,-0.123],"max":[0.142,0.881,0.149],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/potterystation.png",
 			"isSolid": false,
@@ -913,18 +887,7 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.1,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.354,-0.5,-0.5],"max":[0.361,1.158,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/papermakersmould.png",
 			"isSolid": false,
@@ -975,18 +938,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.1,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.409,0.5]},
+				{"min":[-0.5,0.41,-0.5],"max":[0.14,1.08,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/alchemisttable.png",
 			"isSolid": false,
@@ -1807,30 +1760,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.4,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				},
-				{
-					"max": [
-						0.2,
-						1.5,
-						0.2
-					],
-					"min": [
-						-0.2,
-						0.4,
-						-0.2
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.4,0.5]},
+				{"min":[-0.2,0.4,-0.2],"max":[0.2,1.5,0.2],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/glassblower.png",
 			"isSolid": false,
@@ -1864,18 +1795,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.3,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.211,0.5]},
+				{"min":[-0.469,0.209,-0.5],"max":[-0.4,1.08,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/jobblockcrafter.png",
 			"isSolid": false,
@@ -1958,18 +1879,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.3,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.351,-0.5,-0.5],"max":[-0.024,1.23,0.5],"impactsBlockPlacement":true},
+				{"min":[-0.457,-0.5,-0.31],"max":[0.467,0.077,0.303]}
 			],
 			"icon": "../textures/icons/printingpress.png",
 			"isSolid": false,
@@ -2113,20 +2024,7 @@
 			"categories": [
 				"job"
 			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
+			"colliders": [{"min":[-0.302,-0.5,-0.5],"max":[0.288,0.43,0.5]}],
 			"icon": "../textures/icons/metallathe.png",
 			"isSolid": false,
 			"lightingTransparency": 150,
@@ -2160,18 +2058,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.3,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.003,0.365,-0.478],"max":[0.481,0.475,0.478]},
+				{"min":[-0.5,-0.5,-0.5],"max":[0.0,1.281,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/tabulator.png",
 			"isSolid": false,
@@ -2200,20 +2088,7 @@
 			"categories": [
 				"job"
 			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
+			"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,1.5,0.5],"impactsBlockPlacement":true}],
 			"icon": "../textures/icons/blastfurnace.png",
 			"isSolid": false,
 			"lightingTransparency": 110,
@@ -2377,18 +2252,8 @@
 				"essential"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,-0.425,0.5]},
+				{"min":[-0.31,-0.5,-0.455],"max":[0.271,0.5,0.454]}
 			],
 			"icon": "../textures/icons/sanctifiedhouse.png",
 			"isSolid": false,
@@ -2411,6 +2276,7 @@
 			"categories": [
 				"job"
 			],
+			"colliders": [{"min":[-0.5,-0.5,-0.04],"max":[-0.038,-0.219,0.5]}],
 			"icon": "../textures/icons/wisteriajob.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -2523,30 +2389,8 @@
 				"essential"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.05,
-						1.4,
-						0.48
-					],
-					"min": [
-						-0.05,
-						-0.5,
-						-0.48
-					]
-				},
-				{
-					"max": [
-						0.35,
-						1.41,
-						0.5
-					],
-					"min": [
-						-0.35,
-						1.215,
-						-0.5
-					]
-				}
+				{"min":[-0.05,-0.5,-0.48],"max":[0.05,1.4,0.48],"impactsBlockPlacement":true},
+				{"min":[-0.35,1.215,-0.5],"max":[0.35,1.41,0.5],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/statisticsboard.png",
 			"isSolid": false,
@@ -2662,20 +2506,7 @@
 			"categories": [
 				"job"
 			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						-0.25,
-						-0.3
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
+			"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[1.248,-0.102,-0.3],"impactsBlockPlacement":true}],
 			"icon": "../textures/icons/fisherman.png",
 			"isSolid": false,
 			"lightingTransparency": 210,
@@ -2751,18 +2582,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.38,-0.5,-0.445],"max":[0.445,0.329,0.415]},
+				{"min":[-0.444,0.338,-0.016],"max":[0.058,1.09,0.415],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/tannertable.png",
 			"isSolid": false,
@@ -2791,18 +2612,8 @@
 				"job"
 			],
 			"colliders": [
-				{
-					"max": [
-						0.5,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.398,-0.5,-0.412],"max":[0.423,0.236,0.412]},
+				{"min":[-0.246,0.238,-0.236],"max":[0.016,0.929,0.191],"impactsBlockPlacement":true}
 			],
 			"icon": "../textures/icons/fletcherbench.png",
 			"isSolid": false,
@@ -2966,20 +2777,7 @@
 			"categories": [
 				"job"
 			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						1.0,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
+			"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,1.0,0.5],"impactsBlockPlacement":true}],
 			"destructionTime": 800,
 			"icon": "../textures/icons/furnace.png",
 			"isSolid": false,
@@ -3104,7 +2902,10 @@
 	},
 	{
 		"baseType": {
-			"attachBehaviour": [ "builder_usable" ],
+			"attachBehaviour": [
+				"builder_usable",
+				{ "id": "ambientOcclusionFactor", "strength": 0.4 } 
+			],
 			"attachmentProviders": [
 			{
 				"min": [ -0.5, -0.4, -0.5 ],
@@ -3171,6 +2972,7 @@
 	},
 	{
 		"baseType": {
+			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
 			"attachmentProviders": [
 			{
 				"min": [ -0.5, -0.4, -0.5 ],

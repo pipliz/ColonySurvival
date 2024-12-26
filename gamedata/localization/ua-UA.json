@@ -1,5 +1,5 @@
 {
-	"coverage": 95.0,
+	"coverage": 94.0,
 	"hints": {
 		"0": "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1": "Зі збільшенням кількості колоністів - збільшується кількість монстрів.",
@@ -254,6 +254,7 @@
 				"utilities": "Утиліти",
 				"world": "Світ"
 			},
+			"description": "_MISSING_Use this menu to upload your mods or created worlds to the Steam Workshop",
 			"nocontentpath": "Шлях ще не вибрано",
 			"scenariolabel": "Назва сценарію",
 			"statecommittingchanges": "Внесення змін: {0} / {1}",
@@ -261,8 +262,7 @@
 			"statepreparingcontent": "Підготовка контенту: {0} / {1}",
 			"stateuploadingcontent": "Завантаження контенту: {0} / {1}",
 			"stateuploadingpreview": "Заваантаження попереднього перегляду: {0} / {1}",
-			"thumbnailpath": "Шлях до зображення попереднього перегляду:",
-			"yourcontent": "Створений вами контент для Майстерні Steam"
+			"thumbnailpath": "Шлях до зображення попереднього перегляду:"
 		},
 		"controls": {
 			"decreasefieldofview": "Зменшити поле зору (чіт)",
@@ -346,7 +346,7 @@
 			"laborercount": "Безробітних:",
 			"mealstorage": "Загалом їжі:",
 			"threatlevel": "Рівень загрози:",
-			"time_day": "День"
+			"time_day_v2": "_MISSING_Day {0}, {1}:00"
 		},
 		"general": {
 			"apply": "Застосувати",
@@ -373,20 +373,6 @@
 			"veryhigh": "Дуже високий",
 			"yes": "Так"
 		},
-		"happiness": {
-			"availablefood": "{0}% доступно для {1}",
-			"availableluxury": "{0}% доступно для {1}",
-			"baseamount": "Екзистенційне щастя",
-			"calories": "Нормовані калорії",
-			"calorieshappy": "Ситі",
-			"calorieshunger": "Голод",
-			"caloriesstarvation": "Голодування",
-			"colonistcount": "Населення",
-			"disabledeffect": "Щастя відключено",
-			"recruitmentcost": "Вартість набору: {0: P0} від норми",
-			"sciencespeed": "Наукова швидкість: {0: P0} від норми",
-			"totalhappiness": "Загальне щастя: {0}"
-		},
 		"infomenu": {
 			"changelog": "Що нового?",
 			"credits": "Автори",
@@ -396,12 +382,10 @@
 			"back": "Назад",
 			"contentmanager": "Моди",
 			"continue": "Продовжити",
-			"coop": "Створити сервер",
 			"info": "Інформація",
 			"multiplayer": "Мережева гра",
 			"quit": "Вийти",
-			"settings": "Налаштування",
-			"singleplayer": "Одиночна гра"
+			"settings": "Налаштування"
 		},
 		"multiplayermenu": {
 			"colonistcount": "Кіл-сть колоністів",
@@ -919,10 +903,6 @@
 			"inventory": {
 				"availableamount2": "У наявності",
 				"craftingstockpile": "Крафт і запаси",
-				"happinessvalue2": "Кількість щастя",
-				"happy": {
-					"header": "Щастя"
-				},
 				"madeintooltip": "Робиться в:",
 				"madeintooltippurchasable": "Можна придбати у торгівельному центрі за {0} балів",
 				"noactivecolony": "Немає активної колонії!",
@@ -944,7 +924,6 @@
 					"recipeunlockoriginjob": "Зроблено в {0}",
 					"recipeunlockoriginplayer": "Зроблено гравцем",
 					"recipeunlocks": "Рецепт розблокується:",
-					"startscience": "Почніть дослідження",
 					"threat": "Збільшує загрозу монстрів на {0}",
 					"unavailable": "Недоступно"
 				},
@@ -989,7 +968,6 @@
 					"and": "і",
 					"craftingtime": "Час створення: {0} секунд",
 					"craftingtimetooled": "Час створення з {0}: {1} секунд",
-					"instockpile": "на складі",
 					"needs": "Необхідно: ",
 					"nothing": "Нічого"
 				},
@@ -1058,11 +1036,6 @@
 				"apply": "Застосувати",
 				"edit": "Редагувати",
 				"header": "Табличка"
-			},
-			"specialblockremoval": {
-				"button": "Видалити",
-				"description": "Видалення блоку типу {0} може викликати проблеми для вашої колонії. Все ще хочете видалити?",
-				"header": "Видалення спец. блоку"
 			},
 			"toolconstruction": {
 				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
@@ -1244,10 +1217,11 @@
 			},
 			"language": "Мова",
 			"languagemenu": {
-				"coverage": "Локалізацію завершено на {0:F1}%. Щоб допомогти з локалізацією, зверніться до форумів або нашого репозиторію на github!",
+				"automatic": "_MISSING_Use Steam Setting",
 				"full": "Налаштування мови",
-				"language": "Мова:",
-				"wiptext": "Переклад може містити помилки та неточності.\nПереклали: Gh0ssst"
+				"official": "_MISSING_Official Localizations",
+				"select": "_MISSING_Select",
+				"unofficial": "_MISSING_Fan-made (Partial) Localizations"
 			},
 			"qualitycustom": "Своє",
 			"qualityhigh": "Високо",

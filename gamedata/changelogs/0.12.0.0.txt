@@ -26,6 +26,32 @@ Fixes
 - Fix bed placement tool not telling you when the other end of the bed can't be placed (it just silently blocked you from placing)
 - Rotate copper lockbox mesh 180 degrees (it was backwards, sorry)
 
-0.12.0.1
+0.12.0.1 (2024-12-02)
 
 - Fix a minor memory leak
+- Attempt to fix a crash issue by adding a couple extra checks
+- Various localisation updates
+
+0.12.0.2 (2024-12-02)
+
+- Actually fix the crash issue (thanks Mr.Mug on discord)
+
+0.12.0.3 (2024-12-05)
+
+- Update Norwegian and French locales
+- Cleaned up & optimised the mill mesh
+- Fix an issue with outside crown moulding corners disappearing when placing inside corners next to it
+- Adjusted ambient occlusion strength on beds, non-dynamic quarter blocks, crown moulding
+- Fix the Mill berry meal recipe to be 1 bush -> 3 meals, instead of 3 bushes -> 1 meal
+- Dynamic quarter blocks can now read the texture from the block they're on when it is not a solid block (only used for mods)
+- Fix threat banner being rotated by a few degrees
+- Add & tweak colliders for many blocks, and use the new anti-overlap-feature for these
+- Fix colored wall-attached flower boxes not actually relying on being wall attached
+
+0.12.0.4 (2024-12-05)
+
+- Set server process priority to Above Normal when running on OSX, hopefully helps with apple's "game mode" not giving the server processing time, resulting in slow moving NPCs and such
+
+0.12.0.5 (2024-12-06)
+
+- Move the workaround from 0.12.0.4 to the server, since it's causing errors. Thanks macOS. Maybe it works now.

@@ -1,5 +1,5 @@
 {
-	"coverage": 29.0,
+	"coverage": 28.0,
 	"hints": {
 		"0": "Per la maggior parte delle fattorie, maggior grandezza significa più produzione. I raccoglitori di bacche sono un'eccezione alla regola.",
 		"1": "Con l'aumentare del numero di coloni, aumenteranno il numero e la tipologia di mostri.",
@@ -254,6 +254,7 @@
 				"utilities": "_MISSING_Utilities",
 				"world": "_MISSING_World"
 			},
+			"description": "_MISSING_Use this menu to upload your mods or created worlds to the Steam Workshop",
 			"nocontentpath": "_MISSING_No path selected yet",
 			"scenariolabel": "_MISSING_Scenario name",
 			"statecommittingchanges": "_MISSING_Committing changes: {0} / {1}",
@@ -261,8 +262,7 @@
 			"statepreparingcontent": "_MISSING_Preparing content: {0} / {1}",
 			"stateuploadingcontent": "_MISSING_Uploading content: {0} / {1}",
 			"stateuploadingpreview": "_MISSING_Uploading preview: {0} / {1}",
-			"thumbnailpath": "_MISSING_Thumbnail path:",
-			"yourcontent": "_MISSING_Your created workshop content"
+			"thumbnailpath": "_MISSING_Thumbnail path:"
 		},
 		"controls": {
 			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
@@ -346,7 +346,7 @@
 			"laborercount": "Disoccupati:",
 			"mealstorage": "_MISSING_Total Meals:",
 			"threatlevel": "_MISSING_Threat Level:",
-			"time_day": "_MISSING_Day"
+			"time_day_v2": "_MISSING_Day {0}, {1}:00"
 		},
 		"general": {
 			"apply": "Applica",
@@ -373,20 +373,6 @@
 			"veryhigh": "Molto alto",
 			"yes": "Sì"
 		},
-		"happiness": {
-			"availablefood": "{0}% disponibilità per {1}",
-			"availableluxury": "{0}% disponibilità per {1}",
-			"baseamount": "Felicità esistenziale",
-			"calories": "Calorie razionate",
-			"calorieshappy": "Ben nutriti",
-			"calorieshunger": "Fame",
-			"caloriesstarvation": "Morendo di fame",
-			"colonistcount": "Popolazione",
-			"disabledeffect": "Felicità disabilitata",
-			"recruitmentcost": "Costo reclutamento: {0:P0} del normale",
-			"sciencespeed": "Velocità Scienza: {0:P0} del normale",
-			"totalhappiness": "Felicità totale: {0}"
-		},
 		"infomenu": {
 			"changelog": "Registro cambiamenti",
 			"credits": "Crediti",
@@ -396,12 +382,10 @@
 			"back": "Indietro",
 			"contentmanager": "_MISSING_Mod Manager",
 			"continue": "_MISSING_Continue",
-			"coop": "Ospita Co-op",
 			"info": "Info",
 			"multiplayer": "Multigiocatore",
 			"quit": "Esci",
-			"settings": "Impostazioni",
-			"singleplayer": "Giocatore Singolo"
+			"settings": "Impostazioni"
 		},
 		"multiplayermenu": {
 			"colonistcount": "Numero coloni",
@@ -919,10 +903,6 @@
 			"inventory": {
 				"availableamount2": "_MISSING_In stockpile",
 				"craftingstockpile": "Produz. e Inventario",
-				"happinessvalue2": "_MISSING_Happiness value",
-				"happy": {
-					"header": "Felicità"
-				},
 				"madeintooltip": "Prodotto da:",
 				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
 				"noactivecolony": "Nessuna colonia attiva!",
@@ -944,7 +924,6 @@
 					"recipeunlockoriginjob": "Prodotto da {0}",
 					"recipeunlockoriginplayer": "Prodotto dal giocatore",
 					"recipeunlocks": "La formula produce:",
-					"startscience": "Avvia Scienza",
 					"threat": "_MISSING_Increases Monster Threat by {0}",
 					"unavailable": "Non Disponibile"
 				},
@@ -989,7 +968,6 @@
 					"and": "e",
 					"craftingtime": "_MISSING_Crafting time: {0} seconds",
 					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
-					"instockpile": "In magazzino",
 					"needs": "Necessita di: ",
 					"nothing": "Niente"
 				},
@@ -1058,11 +1036,6 @@
 				"apply": "_MISSING_Apply",
 				"edit": "_MISSING_Edit",
 				"header": "_MISSING_Sign"
-			},
-			"specialblockremoval": {
-				"button": "Rimuovi",
-				"description": "Rimuovere questo blocco di tipo {0} potrebbe causare problematiche per la colonia. Cosa vuoi fare?",
-				"header": "Rimozione Blocco Speciale"
 			},
 			"toolconstruction": {
 				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
@@ -1244,10 +1217,11 @@
 			},
 			"language": "Lingua",
 			"languagemenu": {
-				"coverage": "Questa lingua è per il {0:F1}% completa. Per aiutare a completarla, consulta il forum o il repository su GitHub",
+				"automatic": "_MISSING_Use Steam Setting",
 				"full": "Impostazioni Lingua",
-				"language": "Lingua",
-				"wiptext": "Lavori in corso. Questa traduzione potrebbe non essere totalmente tradotta e alcune traduzioni possono risultare meno complete o più complete di questa."
+				"official": "_MISSING_Official Localizations",
+				"select": "_MISSING_Select",
+				"unofficial": "_MISSING_Fan-made (Partial) Localizations"
 			},
 			"qualitycustom": "Personalizzata",
 			"qualityhigh": "Alta",
@@ -1296,7 +1270,7 @@
 			"confirmload": "_MISSING_Confirm loading",
 			"delete": "Cancella",
 			"hostingoptions": "Impostazioni di Hosting",
-			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta tab there.",
 			"load": "Carica",
 			"loadworld": "Carica Mondo",
 			"missingname": "_MISSING_No world name set",
@@ -1315,7 +1289,7 @@
 				"disableddependency": "_MISSING_[Disabled]",
 				"missingdependency": "_MISSING_[Missing]",
 				"outdateddependency": "_MISSING_[Outdated]",
-				"requireddependency": "_MISSING_[Requires]"
+				"requireddependency": "_MISSING_[Required]"
 			},
 			"newworld": "Nuovo Mondo",
 			"nosubscribeditems": "_MISSING_No subscribed workshop worlds found",
@@ -1739,10 +1713,10 @@
 		"berry": "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush": "I coloni li possono piantare per avere cibo facilmente",
 		"berrymeal": "_MISSING_A bunch of berries prepared to form a delicious meal",
-		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
 		"bow": "Gli arcieri ne hanno bisogno di uno!",
 		"bread": "_MISSING_A dry piece of bread without any spread or filling. Bleh",
 		"breadmeal": "_MISSING_Bread made tasty with a perfect berry jam",
@@ -1799,10 +1773,10 @@
 		"saplingfallorange": "Un futuro Arancio",
 		"saplingtaiga": "Un albero un po' diverso",
 		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
 		"silicasand": "_MISSING_Found below sand in the Heath biome",
 		"sling": "Stai attento, Golia",
 		"slingbullet": "Soltanto un picollo sasso, effettivamente",

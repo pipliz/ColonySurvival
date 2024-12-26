@@ -254,6 +254,7 @@
 				"utilities": "Utilities",
 				"world": "World"
 			},
+			"description": "Use this menu to upload your mods or created worlds to the Steam Workshop",
 			"nocontentpath": "No path selected yet",
 			"scenariolabel": "Scenario name",
 			"statecommittingchanges": "Committing changes: {0} / {1}",
@@ -261,8 +262,7 @@
 			"statepreparingcontent": "Preparing content: {0} / {1}",
 			"stateuploadingcontent": "Uploading content: {0} / {1}",
 			"stateuploadingpreview": "Uploading preview: {0} / {1}",
-			"thumbnailpath": "Thumbnail path:",
-			"yourcontent": "Your created workshop content"
+			"thumbnailpath": "Thumbnail path:"
 		},
 		"controls": {
 			"decreasefieldofview": "Decrease field of view (cheat)",
@@ -346,7 +346,7 @@
 			"laborercount": "Unemployed:",
 			"mealstorage": "Total Meals:",
 			"threatlevel": "Threat Level:",
-			"time_day": "Day"
+			"time_day_v2": "Day {0}, {1}:00"
 		},
 		"general": {
 			"apply": "Apply",
@@ -373,20 +373,6 @@
 			"veryhigh": "Very High",
 			"yes": "Yes"
 		},
-		"happiness": {
-			"availablefood": "{0}% availability for {1}",
-			"availableluxury": "{0}% availability for {1}",
-			"baseamount": "Existential happiness",
-			"calories": "Rationed calories",
-			"calorieshappy": "Well fed",
-			"calorieshunger": "Hunger",
-			"caloriesstarvation": "Starvation",
-			"colonistcount": "Population",
-			"disabledeffect": "Happiness disabled",
-			"recruitmentcost": "Recruitment cost: {0:P0} of normal",
-			"sciencespeed": "Science speed: {0:P0} of normal",
-			"totalhappiness": "Total happiness: {0}"
-		},
 		"infomenu": {
 			"changelog": "Changelog",
 			"credits": "Credits",
@@ -396,12 +382,10 @@
 			"back": "Back",
 			"contentmanager": "Mod Manager",
 			"continue": "Continue",
-			"coop": "Host Co-op",
 			"info": "Info",
 			"multiplayer": "Multiplayer",
 			"quit": "Quit",
-			"settings": "Settings",
-			"singleplayer": "Singleplayer"
+			"settings": "Settings"
 		},
 		"multiplayermenu": {
 			"colonistcount": "Colonist Count",
@@ -919,10 +903,6 @@
 			"inventory": {
 				"availableamount2": "In stockpile",
 				"craftingstockpile": "Stockpile",
-				"happinessvalue2": "Happiness value",
-				"happy": {
-					"header": "Happiness"
-				},
 				"madeintooltip": "Made in:",
 				"madeintooltippurchasable": "Purchasable at the Merchant Hub for {0} points",
 				"noactivecolony": "No active colony!",
@@ -944,7 +924,6 @@
 					"recipeunlockoriginjob": "Made at {0}",
 					"recipeunlockoriginplayer": "Made by player",
 					"recipeunlocks": "Recipe unlocks:",
-					"startscience": "Start Science",
 					"threat": "Increases Monster Threat by {0}",
 					"unavailable": "Unavailable"
 				},
@@ -989,7 +968,6 @@
 					"and": "and",
 					"craftingtime": "Crafting time: {0} seconds",
 					"craftingtimetooled": "Crafting time with {0}: {1} seconds",
-					"instockpile": "in stockpile",
 					"needs": "Needs: ",
 					"nothing": "Nothing"
 				},
@@ -1058,11 +1036,6 @@
 				"apply": "Apply",
 				"edit": "Edit",
 				"header": "Sign"
-			},
-			"specialblockremoval": {
-				"button": "Remove",
-				"description": "Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"header": "Special Block removal"
 			},
 			"toolconstruction": {
 				"currentshape": "<i>Current Shape</i>: <b>{0}</b>",
@@ -1244,10 +1217,11 @@
 			},
 			"language": "Language",
 			"languagemenu": {
-				"coverage": "This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"automatic": "Use Steam Setting",
 				"full": "Language Settings",
-				"language": "Language",
-				"wiptext": "Work in progress. This does not cover all text in the game, and some translations may cover less than others."
+				"official": "Official Localizations",
+				"select": "Select",
+				"unofficial": "Fan-made (Partial) Localizations"
 			},
 			"qualitycustom": "Custom",
 			"qualityhigh": "High",
@@ -1296,7 +1270,7 @@
 			"confirmload": "Confirm loading",
 			"delete": "Delete",
 			"hostingoptions": "Hosting Settings",
-			"legacyworldhint": "You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta tab there.",
 			"load": "Load",
 			"loadworld": "Load World",
 			"missingname": "No world name set",
@@ -1315,7 +1289,7 @@
 				"disableddependency": "[Disabled]",
 				"missingdependency": "[Missing]",
 				"outdateddependency": "[Outdated]",
-				"requireddependency": "[Requires]"
+				"requireddependency": "[Required]"
 			},
 			"newworld": "New World",
 			"nosubscribeditems": "No subscribed workshop worlds found",
@@ -1739,10 +1713,10 @@
 		"berry": "A single berry. Not worth the effort of eating it!",
 		"berrybush": "Colonists can plant these for easy food",
 		"berrymeal": "A bunch of berries prepared to form a delicious meal",
-		"bookcase": "These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase": "These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase1": "These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase2": "These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcasefilled": "These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
 		"bow": "Guards need one!",
 		"bread": "A dry piece of bread without any spread or filling. Bleh",
 		"breadmeal": "Bread made tasty with a perfect berry jam",
@@ -1799,10 +1773,10 @@
 		"saplingfallorange": "Orange future tree",
 		"saplingtaiga": "Slightly different tree",
 		"scribedesk": "Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf": "These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf1": "These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf2": "These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelffilled": "These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
 		"silicasand": "Found below sand in the Heath biome",
 		"sling": "Be careful, Goliath",
 		"slingbullet": "Just a small stone, actually",

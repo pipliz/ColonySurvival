@@ -1,5 +1,5 @@
 {
-	"coverage": 43.0,
+	"coverage": 42.0,
 	"hints": {
 		"0": "สำหรับฟาร์มส่วนใหญ่ ขนาดที่ใหญ่ขึ้นหมายถึงการผลิตที่มากขึ้น ผู้รวบรวมผลเบอร์รี่เป็นข้อยกเว้นสำหรับกฎนี้",
 		"1": "สัตว์ประหลาดจำนวนมากขึ้นเรื่อยๆ จะเกิดเมื่อคุณรับสมัครชาวอาณานิคมมากขึ้น",
@@ -254,6 +254,7 @@
 				"utilities": "สาธารณูปโภค",
 				"world": "โลก"
 			},
+			"description": "_MISSING_Use this menu to upload your mods or created worlds to the Steam Workshop",
 			"nocontentpath": "ยังไม่ได้เลือกเส้นทาง",
 			"scenariolabel": "ชื่อสถานการณ์",
 			"statecommittingchanges": "การเปลี่ยนแปลงที่กระทำ: {0} / {1}",
@@ -261,8 +262,7 @@
 			"statepreparingcontent": "กำลังเตรียมเนื้อหา: {0} / {1}",
 			"stateuploadingcontent": "กำลังอัปโหลดเนื้อหา: {0} / {1}",
 			"stateuploadingpreview": "กำลังอัปโหลดตัวอย่าง: {0} / {1}",
-			"thumbnailpath": "เส้นทางรูปย่อ:",
-			"yourcontent": "เนื้อหาเวิร์กชอปที่คุณสร้างขึ้น"
+			"thumbnailpath": "เส้นทางรูปย่อ:"
 		},
 		"controls": {
 			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
@@ -346,7 +346,7 @@
 			"laborercount": "ว่างงาน:",
 			"mealstorage": "อาหารทั้งหมด:",
 			"threatlevel": "_MISSING_Threat Level:",
-			"time_day": "_MISSING_Day"
+			"time_day_v2": "_MISSING_Day {0}, {1}:00"
 		},
 		"general": {
 			"apply": "นำมาใช้",
@@ -373,20 +373,6 @@
 			"veryhigh": "สูงมาก",
 			"yes": "ใช่"
 		},
-		"happiness": {
-			"availablefood": "ความพร้อมใช้งาน {0}% สำหรับ {1}",
-			"availableluxury": "ความพร้อมใช้งาน {0}% สำหรับ {1}",
-			"baseamount": "ความสุขที่มีอยู่",
-			"calories": "แคลอรี่ที่ปันส่วน",
-			"calorieshappy": "อิ่มอร่อย",
-			"calorieshunger": "ความหิว",
-			"caloriesstarvation": "ความอดอยาก",
-			"colonistcount": "ประชากร",
-			"disabledeffect": "ความสุขปิดการใช้งาน",
-			"recruitmentcost": "ค่าใช้จ่ายในการรับสมัคร: {0:P0} ของปกติ",
-			"sciencespeed": "ความเร็ววิทยาศาสตร์: {0:P0} ของปกติ",
-			"totalhappiness": "ความสุขทั้งหมด: {0}"
-		},
 		"infomenu": {
 			"changelog": "บันทึกการเปลี่ยนแปลง",
 			"credits": "เครดิต",
@@ -396,12 +382,10 @@
 			"back": "กลับ",
 			"contentmanager": "จัดการมอด",
 			"continue": "_MISSING_Continue",
-			"coop": "โฮสต์ Co-op",
 			"info": "ข้อมูล",
 			"multiplayer": "ผู้เล่นหลายคน",
 			"quit": "ออก",
-			"settings": "ตั้งค่า",
-			"singleplayer": "ผู้เล่นเดียว"
+			"settings": "ตั้งค่า"
 		},
 		"multiplayermenu": {
 			"colonistcount": "นับอาณานิคม",
@@ -919,10 +903,6 @@
 			"inventory": {
 				"availableamount2": "ในคลังสินค้า",
 				"craftingstockpile": "คลังสินค้า",
-				"happinessvalue2": "ค่าความสุข",
-				"happy": {
-					"header": "ความสุข"
-				},
 				"madeintooltip": "ผลิตใน:",
 				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
 				"noactivecolony": "ไม่มีอาณานิคมที่ใช้งานอยู่!",
@@ -944,7 +924,6 @@
 					"recipeunlockoriginjob": "ผลิตที่ {0}",
 					"recipeunlockoriginplayer": "ทำโดยผู้เล่น",
 					"recipeunlocks": "ปลดล็อคสูตร:",
-					"startscience": "เริ่มวิทยาศาสตร์",
 					"threat": "_MISSING_Increases Monster Threat by {0}",
 					"unavailable": "ไม่พร้อมใช้งาน"
 				},
@@ -989,7 +968,6 @@
 					"and": "และ",
 					"craftingtime": "_MISSING_Crafting time: {0} seconds",
 					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
-					"instockpile": "ในคลังสินค้า",
 					"needs": "ความต้องการ: ",
 					"nothing": "ไม่มีอะไร"
 				},
@@ -1058,11 +1036,6 @@
 				"apply": "_MISSING_Apply",
 				"edit": "_MISSING_Edit",
 				"header": "_MISSING_Sign"
-			},
-			"specialblockremoval": {
-				"button": "นำออก",
-				"description": "การลบบล็อกประเภท {0} นี้อาจทำให้เกิดปัญหากับอาณานิคม มั่นใจว่าจะทำ?",
-				"header": "การลบบล็อกพิเศษ"
 			},
 			"toolconstruction": {
 				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
@@ -1244,10 +1217,11 @@
 			},
 			"language": "ภาษา",
 			"languagemenu": {
-				"coverage": "สถานที่นี้เสร็จสมบูรณ์ {0:F1}% เพื่อช่วยแปลสิ่งนี้ โปรดดูฟอรัมหรือที่เก็บของเราบน github",
+				"automatic": "_MISSING_Use Steam Setting",
 				"full": "ตั้งค่าภาษา",
-				"language": "ภาษา",
-				"wiptext": "อยู่ในระหว่างดำเนินการ เนื้อหานี้ไม่ครอบคลุมข้อความทั้งหมดในเกม และการแปลบางส่วนอาจครอบคลุมน้อยกว่าคำแปลอื่นๆ"
+				"official": "_MISSING_Official Localizations",
+				"select": "_MISSING_Select",
+				"unofficial": "_MISSING_Fan-made (Partial) Localizations"
 			},
 			"qualitycustom": "กำหนดเอง",
 			"qualityhigh": "สูง",
@@ -1296,7 +1270,7 @@
 			"confirmload": "ยืนยันการโหลด",
 			"delete": "ลบ",
 			"hostingoptions": "การตั้งค่าโฮสติ้ง",
-			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta tab there.",
 			"load": "โหลด",
 			"loadworld": "โหลดโลก",
 			"missingname": "ไม่ได้ตั้งชื่อโลก",
@@ -1739,10 +1713,10 @@
 		"berry": "เบอร์รี่ลูกเดียว ไม่คุ้มกับความพยายามในการกินมัน!",
 		"berrybush": "ชาวอาณานิคมสามารถปลูกสิ่งเหล่านี้เป็นอาหารได้ง่าย",
 		"berrymeal": "พวงของผลเบอร์รี่ที่เตรียมไว้สำหรับทำอาหารอร่อยๆ",
-		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
 		"bow": "ยามต้องการหนึ่ง!",
 		"bread": "ขนมปังชิ้นแห้งที่ไม่มีการแพร่กระจายหรือเติมไม่ดี",
 		"breadmeal": "ขนมปังอร่อยกับแยมเบอรี่",
@@ -1799,10 +1773,10 @@
 		"saplingfallorange": "ต้นส้มในอนาคต",
 		"saplingtaiga": "ต้นไม้ที่แตกต่างกันเล็กน้อย",
 		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
 		"silicasand": "_MISSING_Found below sand in the Heath biome",
 		"sling": "ระวังโกลิอัท",
 		"slingbullet": "แค่หินก้อนเล็กๆ จริงๆ",

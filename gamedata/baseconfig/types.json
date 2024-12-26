@@ -175,8 +175,7 @@
 				"#00ff00->#ceac0d",
 				"#0000ff->#960909"
 			],
-			"farShadows": true,
-			"warnRemoval": true
+			"farShadows": true
 		},
 		"icon": "../textures/icons/banner.png",
 		"isSolid": false,
@@ -1020,18 +1019,8 @@
 			"essential"
 		],
 		"colliders": [
-			{
-				"max": [
-					0.5,
-					0.7,
-					0.5
-				],
-				"min": [
-					-0.5,
-					-0.5,
-					-0.5
-				]
-			}
+			{"min":[-0.182,0.0,-0.166],"max":[0.15,0.908,0.163],"impactsBlockPlacement": true},
+			{"min":[-0.384,-0.5,-0.396],"max":[0.39,0.159,0.389]}
 		],
 		"icon": "../textures/icons/failsafe.png",
 		"lightingTransparency": 180,
@@ -2413,8 +2402,7 @@
 			}
 		],
 		"customData": {
-			"farShadows": true,
-			"warnRemoval": true
+			"farShadows": true
 		},
 		"icon": "../textures/icons/outpostbanner.png",
 		"isPlaceable": false,
@@ -3445,20 +3433,7 @@
 		"categories": [
 			"job"
 		],
-		"colliders": [
-			{
-				"max": [
-					0.5,
-					2.5,
-					0.5
-				],
-				"min": [
-					-0.5,
-					-0.5,
-					-0.5
-				]
-			}
-		],
+		"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,2.5,0.5],"impactsBlockPlacement":true}],
 		"icon": "../textures/icons/wisteriatree.png",
 		"isSolid": false,
 		"lightingTransparency": 80,
@@ -3475,6 +3450,7 @@
 		"categories": [
 			"job"
 		],
+		"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,2.594,0.5],"impactsBlockPlacement":true}],
 		"icon": "../textures/icons/wisteriatree.png",
 		"lightingTransparency": 20,
 		"mesh": "../meshes/wisteriaplantempty.ply",

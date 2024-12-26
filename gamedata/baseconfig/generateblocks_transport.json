@@ -5,6 +5,11 @@
 				"essential",
 				"transport"
 			],
+			"colliders": [
+				{"min":[-0.758,-0.5,-0.5],"max":[0.739,0.239,0.5], "impactsPhysics": false},
+				{"min":[-3.741,1.721,-0.5],"max":[-0.475,2.155,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
+				{"min":[-0.383,2.212,-4.472],"max":[1.114,2.617,4.322],"impactsBlockPlacement":true, "impactsPhysics": false}
+			],
 			"icon": "../textures/icons/glider.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -126,6 +131,14 @@
 				"essential",
 				"transport"
 			],
+			"colliders": [
+				{"min":[-0.5,-0.5,-0.544],"max":[0.655,0.313,0.532], "impactsPhysics": false},
+				{"min":[-4.219,-0.5,-0.5],"max":[-3.356,0.273,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
+				{"min":[-3.385,0.33,-0.5],"max":[-2.509,0.844,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
+				{"min":[-1.622,1.543,-4.558],"max":[-0.63,2.547,4.59],"impactsBlockPlacement":true, "impactsPhysics": false},
+				{"min":[-2.542,0.91,-0.5],"max":[-1.66,1.623,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
+				{"min":[-0.673,2.649,-3.484],"max":[-0.143,2.947,3.482],"impactsBlockPlacement":true, "impactsPhysics": false}
+			],
 			"icon": "../textures/icons/glidersteel.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -244,96 +257,13 @@
 				"transport"
 			],
 			"colliders": [
-				/* collider indices matter and are duplicated in the vehicles.json settings (related to the triggers set in the attachBehaviour) */
-				/* floor collider*/
-				{
-					"max": [
-						0.45,
-						-0.48,
-						0.45
-					],
-					"min": [
-						-0.25,
-						-0.5,
-						-0.45
-					]
-				}
-				/* roof collider*/,
-				{
-					"max": [
-						0.45,
-						1.5,
-						0.45
-					],
-					"min": [
-						-0.25,
-						1.48,
-						-0.45
-					]
-				}
-				/* top selection*/,
-				{
-					"max": [
-						-0.2,
-						1.45,
-						0.2
-					],
-					"min": [
-						-0.35,
-						1.05,
-						-0.2
-					]
-				}
-				/* bottom selection*/,
-				{
-					"max": [
-						-0.2,
-						1.05,
-						0.2
-					],
-					"min": [
-						-0.35,
-						-0.45,
-						-0.2
-					]
-				}
-				/* next 3 are the shaft around it*/,
-				{
-					"max": [
-						-0.4,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				},
-				{
-					"max": [
-						0.5,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						0.4
-					]
-				},
-				{
-					"max": [
-						0.5,
-						0.5,
-						-0.4
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
+				{"min":[-0.305,-0.5,-0.401],"max":[0.494,-0.48,0.401]},
+				{"min":[-0.303,1.449,-0.405],"max":[0.501,1.487,0.403],"impactsBlockPlacement":true},
+				{"min":[-0.312,1.05,-0.2],"max":[-0.2,1.45,0.2],"impactsBlockPlacement":true},
+				{"min":[-0.312,-0.45,-0.2],"max":[-0.2,1.05,0.2],"impactsBlockPlacement":true},
+				{"min":[-0.5,-0.5,-0.5],"max":[-0.444,0.5,0.5]},
+				{"min":[-0.5,-0.5,0.433],"max":[0.5,0.5,0.5]},
+				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.5,-0.433]}
 			],
 			"icon": "../textures/icons/elevatorgateway.png",
 			"isSolid": false,

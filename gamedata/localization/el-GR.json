@@ -254,6 +254,7 @@
 				"utilities": "_MISSING_Utilities",
 				"world": "_MISSING_World"
 			},
+			"description": "_MISSING_Use this menu to upload your mods or created worlds to the Steam Workshop",
 			"nocontentpath": "_MISSING_No path selected yet",
 			"scenariolabel": "_MISSING_Scenario name",
 			"statecommittingchanges": "_MISSING_Committing changes: {0} / {1}",
@@ -261,8 +262,7 @@
 			"statepreparingcontent": "_MISSING_Preparing content: {0} / {1}",
 			"stateuploadingcontent": "_MISSING_Uploading content: {0} / {1}",
 			"stateuploadingpreview": "_MISSING_Uploading preview: {0} / {1}",
-			"thumbnailpath": "_MISSING_Thumbnail path:",
-			"yourcontent": "_MISSING_Your created workshop content"
+			"thumbnailpath": "_MISSING_Thumbnail path:"
 		},
 		"controls": {
 			"decreasefieldofview": "_MISSING_Decrease field of view (cheat)",
@@ -346,7 +346,7 @@
 			"laborercount": "Άνεργοι:",
 			"mealstorage": "_MISSING_Total Meals:",
 			"threatlevel": "_MISSING_Threat Level:",
-			"time_day": "_MISSING_Day"
+			"time_day_v2": "_MISSING_Day {0}, {1}:00"
 		},
 		"general": {
 			"apply": "Εφάρμοσε",
@@ -373,20 +373,6 @@
 			"veryhigh": "_MISSING_Very High",
 			"yes": "_MISSING_Yes"
 		},
-		"happiness": {
-			"availablefood": "_MISSING_{0}% availability for {1}",
-			"availableluxury": "_MISSING_{0}% availability for {1}",
-			"baseamount": "_MISSING_Existential happiness",
-			"calories": "_MISSING_Rationed calories",
-			"calorieshappy": "_MISSING_Well fed",
-			"calorieshunger": "_MISSING_Hunger",
-			"caloriesstarvation": "_MISSING_Starvation",
-			"colonistcount": "_MISSING_Population",
-			"disabledeffect": "_MISSING_Happiness disabled",
-			"recruitmentcost": "_MISSING_Recruitment cost: {0:P0} of normal",
-			"sciencespeed": "_MISSING_Science speed: {0:P0} of normal",
-			"totalhappiness": "_MISSING_Total happiness: {0}"
-		},
 		"infomenu": {
 			"changelog": "_MISSING_Changelog",
 			"credits": "Πιστώσεις",
@@ -396,12 +382,10 @@
 			"back": "Πίσω",
 			"contentmanager": "_MISSING_Mod Manager",
 			"continue": "_MISSING_Continue",
-			"coop": "_MISSING_Host Co-op",
 			"info": "Πληροφορίες",
 			"multiplayer": "Παιχνίδι Πολλών Παικτών",
 			"quit": "Εγκατέλειψε",
-			"settings": "Ρυθμίσεις",
-			"singleplayer": "Παιχνίδι Ενός Παίκτη"
+			"settings": "Ρυθμίσεις"
 		},
 		"multiplayermenu": {
 			"colonistcount": "_MISSING_Colonist Count",
@@ -919,10 +903,6 @@
 			"inventory": {
 				"availableamount2": "_MISSING_In stockpile",
 				"craftingstockpile": "_MISSING_Stockpile",
-				"happinessvalue2": "_MISSING_Happiness value",
-				"happy": {
-					"header": "_MISSING_Happiness"
-				},
 				"madeintooltip": "_MISSING_Made in:",
 				"madeintooltippurchasable": "_MISSING_Purchasable at the Merchant Hub for {0} points",
 				"noactivecolony": "_MISSING_No active colony!",
@@ -944,7 +924,6 @@
 					"recipeunlockoriginjob": "_MISSING_Made at {0}",
 					"recipeunlockoriginplayer": "_MISSING_Made by player",
 					"recipeunlocks": "_MISSING_Recipe unlocks:",
-					"startscience": "_MISSING_Start Science",
 					"threat": "_MISSING_Increases Monster Threat by {0}",
 					"unavailable": "_MISSING_Unavailable"
 				},
@@ -989,7 +968,6 @@
 					"and": "και",
 					"craftingtime": "_MISSING_Crafting time: {0} seconds",
 					"craftingtimetooled": "_MISSING_Crafting time with {0}: {1} seconds",
-					"instockpile": "_MISSING_in stockpile",
 					"needs": "Ανάγκες: ",
 					"nothing": "_MISSING_Nothing"
 				},
@@ -1058,11 +1036,6 @@
 				"apply": "_MISSING_Apply",
 				"edit": "_MISSING_Edit",
 				"header": "_MISSING_Sign"
-			},
-			"specialblockremoval": {
-				"button": "_MISSING_Remove",
-				"description": "_MISSING_Removing this block of type {0} may cause problems for a colony. What do you want to do?",
-				"header": "_MISSING_Special Block removal"
 			},
 			"toolconstruction": {
 				"currentshape": "_MISSING_<i>Current Shape</i>: <b>{0}</b>",
@@ -1244,10 +1217,11 @@
 			},
 			"language": "Γλώσσα",
 			"languagemenu": {
-				"coverage": "_MISSING_This locale is {0:F1}% complete. To help localize this, see the forums or our repository on github",
+				"automatic": "_MISSING_Use Steam Setting",
 				"full": "Μενού Γλώσσας",
-				"language": "Γλώσσα",
-				"wiptext": "Εργασία σε εξέλιξη. Αυτό δεν καλύπτει όλο το κείμενο στο παιχνίδι, και μερικές μεταφράσεις μπορούν να καλύπτουν λιγότερο από τις άλλες."
+				"official": "_MISSING_Official Localizations",
+				"select": "_MISSING_Select",
+				"unofficial": "_MISSING_Fan-made (Partial) Localizations"
 			},
 			"qualitycustom": "_MISSING_Custom",
 			"qualityhigh": "Υψηλά",
@@ -1296,7 +1270,7 @@
 			"confirmload": "_MISSING_Confirm loading",
 			"delete": "Διέγραψε",
 			"hostingoptions": "_MISSING_Hosting Settings",
-			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta's tab there.",
+			"legacyworldhint": "_MISSING_You've selected a legacy world. To load this you'll need to run an older version of Colony Survival. You can set Steam to download old versions by going into the games' properties and selecting an older version in the beta tab there.",
 			"load": "Φόρτιση",
 			"loadworld": "Φόρτωση υφιστάμενου κόσμου",
 			"missingname": "_MISSING_No world name set",
@@ -1315,7 +1289,7 @@
 				"disableddependency": "_MISSING_[Disabled]",
 				"missingdependency": "_MISSING_[Missing]",
 				"outdateddependency": "_MISSING_[Outdated]",
-				"requireddependency": "_MISSING_[Requires]"
+				"requireddependency": "_MISSING_[Required]"
 			},
 			"newworld": "Νέος Κόσμος",
 			"nosubscribeditems": "_MISSING_No subscribed workshop worlds found",
@@ -1739,10 +1713,10 @@
 		"berry": "_MISSING_A single berry. Not worth the effort of eating it!",
 		"berrybush": "Οι αποικιστές μπορούν να τα φυτέψουν για εύκολο φαγητό",
 		"berrymeal": "_MISSING_A bunch of berries prepared to form a delicious meal",
-		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
-		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing 10 of them for every researcher ensures a long term balance.",
+		"bookcase": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase1": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcase2": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
+		"bookcasefilled": "_MISSING_These are 'harvested' by researchers and automatically regenerate their content. Placing at least 10 of them for every researcher ensures a long term balance.",
 		"bow": "Οι φρουροί χρειάζονται ένα!",
 		"bread": "_MISSING_A dry piece of bread without any spread or filling. Bleh",
 		"breadmeal": "_MISSING_Bread made tasty with a perfect berry jam",
@@ -1799,10 +1773,10 @@
 		"saplingfallorange": "_MISSING_Orange future tree",
 		"saplingtaiga": "_MISSING_Slightly different tree",
 		"scribedesk": "_MISSING_Scribes requires 10 scroll shelves nearby in order to find data for their research!",
-		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
-		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf1": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelf2": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
+		"scrollshelffilled": "_MISSING_These are 'harvested' by scribes and automatically regenerate their content. Placing at least 10 of them for every scribe ensures a long term balance.",
 		"silicasand": "_MISSING_Found below sand in the Heath biome",
 		"sling": "_MISSING_Be careful, Goliath",
 		"slingbullet": "_MISSING_Just a small stone, actually",
