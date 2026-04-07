@@ -1,140 +1,234 @@
-types in types.json allow the following properties:
+Item type JSON options (modder-focused guide)
+
+This file explains what each currently-used option does in gameplay terms.
+The examples are based on options actively used in `gamedata/baseconfig/types*.json` and `generateblocks*.json`.
+
+How type inheritance works
+- `parentType` makes a type inherit most values from another type.
+- Child values override parent values.
+- Some keys are local-only (not inherited): `isRotatable`, `categories`, `parentType`, `rotatablex+`, `rotatablex-`, `rotatablez+`, `rotatablez-`.
+
+Common top-level options
+
+"attachBehaviour"
+- Adds behavior hooks to a block/item (job logic, custom interaction, special placement rules, etc).
+- Can be a string (`"fuse"`) or object (`{ "id": "bomb", ... }`).
+- Use this when a block should do more than just exist visually.
+
+"attachmentProviders"
+- Defines attachment-support volumes this block provides.
+- Think of these as "mount points" other blocks can attach to.
+
+"attachmentRequirements"
+- Defines support that must exist for this type to be placeable.
+- Good for wall-mounted / hanging / directional-support content.
+
+"blockFertility"
+- Marks a block as fertile soil type.
+- Used by farming/crop systems when deciding what can grow on it.
+
+"blueprints"
+- Controls how this type behaves in blueprint planning/building.
+- `type: "default"` = normal behavior.
+- `type: "skip"` = blueprint system skips this type.
+- `type: "parseAs"` + `value` = treat this type as another type in blueprint costs.
+- `itemCountCost` can override item cost amount used by blueprint placement.
+
+"canBuildUpon"
+- Controls whether players can place blocks onto this block face.
+- If omitted, default behavior is generally solid non-mesh blocks allow it.
+
+"categories"
+- Inventory/stockpile grouping tags.
+- Affects sorting, filtering, and some UI/tool behavior.
+
+"colliders"
+- Defines actual collision/selection/placement shape.
+- Use this to make thin/tall/custom-shape blocks behave correctly.
+
+"color"
+- Tint color multiplied into block/mesh visuals.
+- Useful for color variants without new textures.
+
+"colonyPointsMeal"
+- Marks edible value for colony food systems.
+
+"customData"
+- Free-form mod data used by built-in and custom systems.
+- Major currently-used keys are documented in the customData section below.
+
+"destructionTime"
+- How long (ms) block breaking takes.
+
+"icon"
+- Inventory/stockpile UI icon path.
 
 "isDestructible"
-|	Defaults to true. Reads from parent if not set
-|	If set to false, the block won't be destroyed by the client but just drop the results.
-"isRotatable"
-|	Defaults to false. Doesn't read from parent
-|	If set to true, the client will show the rotation tool
-|	Will read rotated types from "rotatablex+", "rotatablex-", "rotatablez+", "rotatablez-"
-"isSolid"
-|	Defaults to true. Reads from parent if not set.
-|	"blocksPathing" defaults to this value.
-|	Required to be true in order to render as part of terrain
-|	Setting it to true also makes it have a default full-block collider
-|	False makes it fully transparent to lighting effects, true makes it fully opaque (unless overriden)
-"lightingTransparency"
-|	Default to 255 with isSolid false, 0 with isSolid true
-|	Indicates how much light can pass through this block for torchlighting
-"isFertile"
-|	Defaults to false. Reads from parent if not set
-|	If true, the game will allow placement of crops and farmers on top of this block
+- If false, the standard destroy interaction will not destroy it normally.
+- Useful for protected/special-purpose blocks.
+
 "isPlaceable"
-|	Defaults to true. Reads from parent if not set
-|	If false, nothing will happen by rightclicking when this item is selected
-"needsBase"
-|	Defaults to false. Reads from parent if not set
-|	If true, the type will require a solid block below it to be placed, and if that block is removed the type will be removed.
-|	At the time of writing, this auto-removal does not refund the block to the owner / digger
+- If false, item cannot be placed as a block.
+- Use for resources/tools/intermediates that should stay inventory-only.
+
+"isRotatable"
+- Enables directional variants for a base type.
+- Combine with `rotatablex+`, `rotatablex-`, `rotatablez+`, `rotatablez-`.
+
+"isSolid"
+- Core solidity flag.
+- Affects collision/pathing/lighting/placement expectations.
+
+"lightingTransparency"
+- How much light passes through the block (0 = opaque, 255 = fully transparent).
+- Key for windows, foliage, decorative meshes, etc.
+
 "maxStackSize"
-|	Default to 50. Reads from parent if not set. Range is [0, 2^16)
-|	Sets the stack size for the inventory hotbar and dragging.
-|	Influences how much a npc can gather before his inventory is full
-"nutritionalValue"
-|	Defaults to 0. Reads from parent if not set.
-|	Determines how edible this type is. Used for feeding colonists and healing yourself
+- Inventory stack cap for this item type.
+
 "mesh"
-|	No default. Reads from parent if not set.
-|	The mesh used to render this type.
-|	Formats supported are .obj and .ply. Both have to be triangulated
-|	.obj supports only vertices, triangles and uv
-|	.ply supports vertices, triangles, uv and a color channel.
-|	Normals and tangents are discarded
-"icon"
-|	Defaults to "gamedata/textures/icons/error.png". Reads from parent if not set.
-|	Size preferably 64x64, format preferably .png. .jpg may work as well (untested).
-|	The icon used for display in the stockpile / inventory. 
-"onRemoveAudio"
-|	No default. Reads from parent if not set.
-|	The audio clip to play upon block removal
+- Custom mesh for rendering this type.
+- Can be a string path, or object with `path` plus extra mesh data.
+
+"meshFlipX"
+- Mesh handedness flip toggle used by mesh import/render pipeline.
+
+"meshRotationEuler"
+- Mesh local rotation (`x`,`y`,`z` in degrees).
+
+"movementCost"
+- Adjusts pathing cost/speed feel over this type.
+- Use to make surfaces feel slower/faster to path over.
+
+"needsBase"
+- Requires support below when placing (if no explicit attachment requirements are set).
+
+"onHitParticleEffect"
+- Controls hit/break particle style.
+- Can be a single string type or weighted list of entries.
+
+"onHitParticleEffectCount"
+- Number of particles spawned on hit/break.
+
 "onPlaceAudio"
-|	No default. Reads from parent if not set.
-|	The audio clip to play upon block placement
-"destructionTime"
-|	Defaults to 400. Reads from parent if not set. -1 means use the default. Other negatives are undefined.
-|	Time in milliseconds for the player to hold the mouse to remove this type
-"customData"
-|	Custom data in JSON, intended for rare usecases and mod use. Available through code.
-|	No default, doesn't read from a parent.
-|	Builtin uses:
--	|	"colors"
-	-	|	Only usable in combination with a .ply "mesh" containing vertex colors
-		|	Value is an array of strings in the format "#RRGGBB->#RRGGBB".
-		|	The first color in the string is the "source" vertex color, the second is the "goal" vertex color
-		|	It'll replace the colors of the mesh for this type
-	|	"attachBehaviour"
-	-	|	Array of objects, each having an "id" string. Used by the game to attach behaviours to blocksPathing
-		|	ID options builtin: "crate", "leaves", "log"
-	|	"farShadows"
-	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
-		|	If set to true, this type will cast shadows further in the distance and when off-screen.
-	|	"warnRemoval"
-	-	|	Boolean value, defaults to false.
-		|	If set to true, removal of this type will trigger a popup to confirm the action
-	|	"minerIsMineable"
-	-	|	Boolean value, defaults to false.
-		|	If set to true, a miner job can be placed on top of this job.
-	|	"minerMiningtime"
-	-	|	Floating point value.
-		|	Used when "minerIsMineable" : true.
-		|	The cooldown in seconds for the miner upon digging this.
-	|	"torches"
-	-	|	Config to add torches to a block.
-		|	Allows for adding 2 torches via using "a" and "b" keys
-		|	Range must be [1, 16]
-	|	"useNormalMap"
-	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
-		|	If true, the shader will enable normal maps for this type
-	|	"useHeightMap"
-	-	|	Boolean value, defaults to false. Only used in combination with a "mesh" key.
-		|	If true, the shader will enable height maps for this type
-	|	"renderOnlyIfSelected"
-	-	|	String value, must be a registered type. Only used in combination with a "mesh" key.
-		|	If set, meshes of this type will only be rendered when the set type is selected in the inventory.
-"parentType"
-|	No default, won't read from parents. Set the parent type, to use as a fallback for reading various keys.
-"rotatablex+"
-"rotatablex-"
-"rotatablez+"
-"rotatablez-"
-|	No default, won't read from parents. See "isRotatable"
-"sideall"
-|	Defaults to "missingerror", reads from parents if not set.
-|	Only used if not a "mesh" but a block type
-|	If set, this will be the base texturemapping used. Set to "SELF" and it'll use the type itself (going up the parent chain if available)
-"sidex+"
-"sidex-"
-"sidey+"
-"sidey-"
-"sidez+"
-"sidez-"
-|	Defaults to "sideall" if that is set. Otherwise, "missingerror"
-|	Only used if not a "mesh" but a block type.
-|	Specific sides of the block. When both these and "sideall" are set, these will take priority.
-"color"
-|	Defaults to #FFFFFF. Reads from parents if not set.
-|	Color which will be multiplied with the albedo texture in the shader.
-|	Used to make multiple color variants of the same textures.
-"onRemoveType"
-"onRemoveAmount"
-"onRemoveChance"
+- Sound played when placed.
+
 "onRemove"
-|	Defaults to dropping 1 of the type itself.
-|	Searches for the first instance of any of these keys going up the hierarchy
-|	When found, it checks for onRemove. If onRemove exists, those are the items/chances dropped upon removal
-|	If onRemove doesn't exist, it'll drop according to onRemoveType, onRemoveAmount and onRemoveChance (which default to this type, 1 amount, 1.0 chance)
-"colliders"
-|	No default. Reads from parents if not set.
-|	Defines a list of colliders and what type of colliders they are
-|	Available keys within the colliders object node:
--	|	"collidePlayer" - defaults to true; whether or not these boxes collide with the player
-	|	"collideSelection" - defaults to true; whether or not these boxes collide with selection rays
-	|	"boxes" - no default; array of format [{"min":[-0.5, -0.5, -0.5],"max":[0.5, 0.5, 0.5]}, ....].
-	-	|	min is the minimum corner of the box, max the maximum corner. max - min = size of box. Center (0, 0, 0) is the middle of the voxel.
-"blocksPathing"
-|	Reads from parents if not set. If not found, defaults to what "isSolid" finds
-|	Allows to make a type block pathing while having a mesh
-"categories"
-|	Defaults to none, Does not read from parents.
-|	Array node of strings that indicate which categories this type belongs to, from most important to least important.
-|	The client will sort the stockpile according to these categories.
+- Full drop table for block removal.
+- Entries use `{ "type", "amount", "chance" }`.
+
+"onRemoveAmount"
+- Simple drop amount override (used with `onRemoveType` when no `onRemove` array exists).
+
+"onRemoveAudio"
+- Sound played when removed.
+
+"onRemoveType"
+- Simple drop type override (used when no `onRemove` array exists).
+
+"parentType"
+- Parent type for inheritance/fallback.
+
+"pathingImpact"
+- Pathing mode override:
+  - `AsAir`
+  - `AsSolid`
+  - `AsUntouchableSolid`
+  - `AsDoor`
+- Use this when pathing behavior should differ from visual shape/solidity.
+
+"requiredFertilityBelow"
+- Required fertility flags on the block below for placement.
+- Used by crop/farm-related blocks.
+
+"rotatablex+" / "rotatablex-" / "rotatablez+" / "rotatablez-"
+- Directional subtype names for rotatable blocks.
+
+"sanctifiedPointsMeal"
+- Sanctified meal points contribution for food systems.
+
+"sideall"
+- Base texture mapping for cube-style block rendering.
+- `"SELF"` means use this type's own mapping name.
+
+Nested keys currently used
+
+"blueprints"
+- "type": `default`, `skip`, `parseAs`
+- "itemCountCost": explicit blueprint cost amount (`-1` = auto)
+- "value": target type name when `parseAs`
+
+"meshRotationEuler"
+- "x", "y", "z"
+
+"mesh" object
+- "path": mesh file path
+- "animation": optional mesh animation metadata
+  - keys seen: `boundsMin`, `boundsMax`, `startAnimated`, `startLooping`, `startRandom`, `clip`, `events`
+  - event keys seen: `time`, `type`, `layer`
+
+"onRemove" entries
+- "type", "amount", "chance"
+
+"colliders" entries
+- "min", "max"
+- "impactsPhysics"
+- "impactsPlayerSelection"
+- "impactsBlockPlacement"
+
+"attachmentProviders" entries
+- "min", "max"
+
+"attachmentRequirements" entries
+- "axis", "min", "max", "offset"
+
+customData keys currently used
+
+"color"
+- Used in torch/light config as HTML color.
+
+"colors"
+- Mesh color replacement mapping list (`"#RRGGBB->#RRGGBB"`).
+
+"culledShadows"
+- Enables shadow behavior optimized for culled mesh renderers.
+
+"farShadows"
+- Enables longer-distance shadow casting for relevant meshes.
+
+"intensity"
+- Torch/light intensity.
+
+"merged"
+- Torch/light merged config object (single merged light source setup).
+
+"minerIsMineable"
+- Marks type as minable by miner-related systems.
+
+"minerMiningTime"
+- Miner cooldown/time value for this type.
+
+"offsetx", "offsety", "offsetz"
+- Torch/light source offset.
+
+"range"
+- Torch/light radius.
+
+"torches"
+- Root torch/light config node.
+
+"useHeightMap"
+- Enables height-map shading features for mesh rendering.
+
+"useNormalMap"
+- Enables normal-map shading features for mesh rendering.
+
+"volume"
+- Torch/light audio volume.
+
+Practical modding tips
+- Start simple: define `icon`, `sideall` or `mesh`, `isPlaceable`, `isSolid`, `onPlaceAudio`, `onRemoveAudio`.
+- If placement should require support, use `needsBase` first; move to `attachmentRequirements` for complex shapes.
+- Use `onRemove` when you need weighted/multi-drop behavior; use `onRemoveType`/`onRemoveAmount` for simple cases.
+- Keep `categories` consistent with existing items to get useful stockpile/UI behavior.
+- Prefer `parentType` + small overrides to avoid duplicating large JSON blocks.

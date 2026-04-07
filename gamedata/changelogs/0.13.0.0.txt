@@ -1,0 +1,42 @@
+0.13.0.0 (2025-04-04)
+
+- Added multiple explosive blocks and related fuses
+- Added destruction particle effects to block removal
+- Bloomery & kiln blocks now have a 3d mesh
+- Added placement previews for fences, pillars, non-rotated meshed blocks
+
+- Add the option for scribe-type colonists to pick the contents of shelves above them, supporting up to 5 high shelves
+- Removing farm areas that turn grass to dirt now restarts grass spread automatically in their former area
+- Saplings are now placeable with builder areas
+- Added a low server tick rate warning; mostly targeted at macOS users running into game mode problems.
+- The removing progress is now stored for multiple blocks, so it doesn't reset instantly when moving the aim between blocks
+
+- Manual use of the grenade launcher now also has the proper area of effect
+- Fix the mill not always placing the 'anti-npc air' inside itself, leading to NPCs possible walking through the mill
+- Fix an issue with placing blocks requiring a support below not being placable on non-solid blocks providing such a base (like the pillar top)
+- Likely fix the UI/stockpile doing a funny after changing the game language
+- Fix the flax farmer button being a bit larger than the others in the command tool
+- Fix world markers like used by the astrolabe not scaling with UI scale properly
+- Fix builders being able to build into large objects (like the mill, glider launcher etc) in a way the player can't
+- Change the area job crafting limits popup to only trigger on the initial click; helps prevent it popping up every time you place a berry bush in a berry farme
+- The "type 'delete' to confirm deletion of colony" menu now accepts capital letters
+- Fix torches disappearing from the top of fences when the fence below adjusts
+- Fix scribe-type colonists not looking at the shelve when they consume the content
+- Fix a minor frame spiking issue when receiving stockpile updates for large stockpile (like, after /lootall, containing all items in the game)
+
+0.13.0.1 (2025-04-04)
+
+- Fix an edge case with placing shaped charges
+
+0.13.0.2 (2025-04-05)
+
+- Reduce particle count max for minimum/very low setting
+- Forgot to set version number for 0.13.0.1, oops
+
+0.13.0.3 (2025-04-05)
+
+- Fix an issue related to removal of clipping blocks
+
+0.13.0.4 (2025-04-13)
+
+- Fix elevator stations not placing their 1-up-rail piece, and manual placement complaining about the overlap

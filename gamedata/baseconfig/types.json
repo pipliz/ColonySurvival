@@ -4,8 +4,14 @@
 		"isSolid": false
 	},
 	"npcblockerair": {
+		"attachBehaviour": [ { "id": "maybeDependent", "ignoreLargeBoundsAwareness": true } ],
+		"blueprints": {
+			"type": "skip"
+		},
 		"isSolid": false,
+		"isDestructible": false,
 		"pathingImpact": "AsUntouchableSolid",
+		"onHitParticleEffectCount": 0,
 		"colliders": [
 		{
 			"min": [0,0,0],
@@ -14,7 +20,45 @@
 		}],
 		"onRemoveAmount": 0
 	},
-	"alkanet": {
+	"toolshop2hidden": {
+		"attachBehaviour": [ { "id": "maybeDependent", "ignoreLargeBoundsAwareness": true }, "toolshop" ],
+		"blueprints": {
+			"type": "skip"
+		},
+		"isSolid": false,
+		"isDestructible": false,
+		"pathingImpact": "AsUntouchableSolid",
+		"onHitParticleEffectCount": 0,
+		"colliders": [
+		{
+			"min": [0,0,0],
+			"max": [0,0,0],
+			"impactsPhysics": false
+		}],
+		"onRemoveAmount": 0
+	},
+	"npcshop2hidden": {
+		"attachBehaviour": [ { "id": "maybeDependent", "ignoreLargeBoundsAwareness": true }, "npcshop" ],
+		"blueprints": {
+			"type": "skip"
+		},
+		"isSolid": false,
+		"isDestructible": false,
+		"pathingImpact": "AsUntouchableSolid",
+		"onHitParticleEffectCount": 0,
+		"colliders": [
+		{
+			"min": [0,0,0],
+			"max": [0,0,0],
+			"impactsPhysics": false
+		}],
+		"onRemoveAmount": 0
+	},
+	"alkanet": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
 		"categories": [
 			"texres"
 		],
@@ -42,12 +86,20 @@
 		"icon": "../textures/icons/alkanet.png",
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "neutral"
 	},
-	"alkanetstage1": {
+	"alkanetstage1": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -70,6 +122,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -77,7 +130,14 @@
 		"requiredFertilityBelow": 2,
 		"sideall": "neutral"
 	},
-	"alkanetstage2": {
+	"alkanetstage2": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -101,6 +161,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -128,6 +189,7 @@
 		"attachBehaviour": [
 			"banner"
 		],
+		"blueprints": { "type": "skip" },
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -175,7 +237,8 @@
 				"#00ff00->#ceac0d",
 				"#0000ff->#960909"
 			],
-			"farShadows": true
+			"farShadows": true,
+			"culledShadows": true
 		},
 		"icon": "../textures/icons/banner.png",
 		"isSolid": false,
@@ -197,6 +260,11 @@
 		"isPlaceable": false
 	},
 	"barleystage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": { "type": "skip" },
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -214,7 +282,8 @@
 		],
 		"icon": "../textures/icons/barleystage1.png",
 		"isSolid": false,
-		"mesh": "../meshes/barleystage1.ply",
+		"mesh": "../meshes/barleystage1.glb",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -223,6 +292,11 @@
 		"sideall": "neutral"
 	},
 	"barleystage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": { "type": "skip" },
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -239,7 +313,8 @@
 			}
 		],
 		"isSolid": false,
-		"mesh": "../meshes/barleystage2.ply",
+		"mesh": "../meshes/barleystage2.glb",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -253,6 +328,9 @@
 				"jobtype": "pipliz.beekeeper"
 			}
 		],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"max": [
@@ -290,34 +368,83 @@
 			{
 				"id": "client_arealimitspopup",
 				"jobtype": "pipliz.berryfarmer"
-			}
+			},
+			{
+				"id": "randomRotations",
+				"type": "mainrotations"
+			},
+			"builder_usable"
 		],
+		"blueprints": { "type": "skip" },
 		"categories": [
 			"decorative"
 		],
+		"colliders": [
+			{
+				"max": [
+					0.5,
+					0.84,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
 		"icon": "../textures/icons/berrybush.png",
+		"isSolid": false,
+		"lightingTransparency": 160,
 		"maxStackSize": 200,
+		"mesh": "../meshes/berrybush.glb",
+		"needsBase": true,
+		"onHitParticleEffect": "leaves",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"pathingImpact": "AsUntouchableSolid",
 		"requiredFertilityBelow": 1,
-		"sideall": "SELF"
+		"sideall": "neutral"
 	},
 	"berrybushnpc": {
 		"attachBehaviour": [
 			{
 				"id": "client_arealimitspopup",
 				"jobtype": "pipliz.berryfarmer"
+			},
+			{
+				"id": "randomRotations",
+				"type": "mainrotations"
+			}
+		],
+		"blueprints": { "type": "skip" },
+		"colliders": [
+			{
+				"max": [
+					0.5,
+					0.84,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
 			}
 		],
 		"icon": "../textures/icons/berrybush.png",
+		"isSolid": false,
+		"lightingTransparency": 160,
 		"maxStackSize": 200,
+		"mesh": "../meshes/berrybush.glb",
+		"needsBase": true,
+		"onHitParticleEffect": "leaves",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"onRemoveAmount": 0,
 		"pathingImpact": "AsUntouchableSolid",
 		"requiredFertilityBelow": 1,
-		"sideall": "berrybush"
+		"sideall": "neutral"
 	},
 	"berrymeal": {
 		"categories": [
@@ -411,6 +538,8 @@
 		],
 		"icon": "../textures/icons/bricks.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "SELF"
@@ -423,6 +552,8 @@
 		"color": "#434343",
 		"icon": "../textures/icons/bricksblack.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "bricksgeneric"
@@ -435,6 +566,8 @@
 		"color": "#69413c",
 		"icon": "../textures/icons/bricksdarkred.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "bricksgeneric"
@@ -447,6 +580,8 @@
 		"color": "#8d5f38",
 		"icon": "../textures/icons/bricksdarkyellow.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "bricksgeneric"
@@ -458,6 +593,8 @@
 		],
 		"icon": "../textures/icons/brickslight.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "SELF"
@@ -470,6 +607,8 @@
 		"color": "#7c312e",
 		"icon": "../textures/icons/bricksred.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "bricksgeneric"
@@ -505,6 +644,13 @@
 		"isPlaceable": false
 	},
 	"cabbagestage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -523,6 +669,7 @@
 		"icon": "../textures/icons/cabbagestage1.png",
 		"isSolid": false,
 		"mesh": "../meshes/cabbagestage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -531,6 +678,13 @@
 		"sideall": "neutral"
 	},
 	"cabbagestage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -548,6 +702,7 @@
 		],
 		"isSolid": false,
 		"mesh": "../meshes/cabbagestage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -601,6 +756,7 @@
 		"destructionTime": 200,
 		"icon": "../textures/icons/cherryblossom.png",
 		"maxStackSize": 200,
+		"onHitParticleEffect": "leaves",
 		"onPlaceAudio": "dirtPlace",
 		"onRemove": [
 			{
@@ -650,6 +806,9 @@
 				"jobtype": "pipliz.chickenfarmer"
 			}
 		],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"max": [
@@ -802,6 +961,13 @@
 		"isPlaceable": false
 	},
 	"cottonstage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -819,6 +985,7 @@
 		],
 		"isSolid": false,
 		"mesh": "../meshes/cottonstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -827,6 +994,13 @@
 		"sideall": "neutral"
 	},
 	"cottonstage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -844,6 +1018,7 @@
 		],
 		"isSolid": false,
 		"mesh": "../meshes/cottonstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -859,6 +1034,8 @@
 			"essential"
 		],
 		"icon": "../textures/icons/crate.png",
+		"movementCost": 2,
+		"onHitParticleEffectCount": 0,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "SELF"
@@ -922,6 +1099,7 @@
 		"destructionTime": 750,
 		"icon": "../textures/icons/darkstone.png",
 		"maxStackSize": 200,
+		"movementCost": 2,
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "stonerubble",
@@ -935,6 +1113,8 @@
 		],
 		"icon": "../textures/icons/dirt.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
+		"onHitParticleEffect": "dirt",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
@@ -947,6 +1127,8 @@
 		],
 		"icon": "../textures/icons/dirt.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
+		"onHitParticleEffect": "dirt",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "dirt"
@@ -959,6 +1141,8 @@
 		],
 		"icon": "../textures/icons/dirt.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
+		"onHitParticleEffect": "dirt",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "dirt"
@@ -1015,6 +1199,7 @@
 			},
 			"client_reservesecondaryhiton"
 		],
+		"blueprints": { "type": "skip" },
 		"categories": [
 			"essential"
 		],
@@ -1028,6 +1213,7 @@
 		"needsBase": true,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "failsafe3",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
 	},
@@ -1039,6 +1225,10 @@
 		"isPlaceable": false
 	},
 	"flax": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
 		"categories": [
 			"texres"
 		],
@@ -1066,12 +1256,20 @@
 		"icon": "../textures/icons/flax.png",
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "neutral"
 	},
 	"flaxstage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"categories": [
 			"texres"
 		],
@@ -1098,6 +1296,7 @@
 		"icon": "../textures/icons/flaxstage1.png",
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -1106,6 +1305,13 @@
 		"sideall": "neutral"
 	},
 	"flaxstage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -1129,6 +1335,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -1172,6 +1379,17 @@
 	},
 	"grass": {
 		"maxStackSize": 200,
+		"movementCost": 1,
+		"onHitParticleEffect": [
+		{
+			"chance": 8,
+			"type": "dirt",
+			"color": [ 72, 49, 39 ]
+		},
+		{
+			"chance": 2,
+			"type": "dirt"
+		}],
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "grassgeneric"
@@ -1187,7 +1405,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1215,7 +1433,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "grass", "dirtfen", "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "grass", "dirtfen", "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1243,7 +1461,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1271,7 +1489,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1299,7 +1517,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1327,7 +1545,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1355,7 +1573,7 @@
 				"spreadStraight": true,
 				"requireAirAbove" : true,
 				"spreadInDirtFarm": false,
-				"allowedAbove": [ "berrybush", "logtemperate", "logtaiga" ]
+				"allowedAbove": [ "berrybush", "berrybushnpc", "logtemperate", "logtaiga" ]
 			},
 			{
 				"id": "dirtconversion",
@@ -1391,7 +1609,9 @@
 					0.06
 				],
 				"cooldown": 3.5,
-				"damage": 1500,
+				"damage": 250,
+				"damageRadius": 2,
+				"showExplosion": true,
 				"force": 90.0,
 				"hitForce": 25,
 				"id": "client_weapon",
@@ -1506,6 +1726,13 @@
 		"isPlaceable": false
 	},
 	"hempstage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -1523,6 +1750,7 @@
 		],
 		"isSolid": false,
 		"mesh": "../meshes/hempstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -1531,6 +1759,13 @@
 		"sideall": "neutral"
 	},
 	"hempstage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -1548,6 +1783,7 @@
 		],
 		"isSolid": false,
 		"mesh": "../meshes/hempstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -1555,6 +1791,10 @@
 		"sideall": "neutral"
 	},
 	"hollyhock": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
 		"categories": [
 			"texres"
 		],
@@ -1582,12 +1822,20 @@
 		"icon": "../textures/icons/hollyhock.png",
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "neutral"
 	},
 	"hollyhockstage1": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -1610,6 +1858,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -1618,6 +1867,13 @@
 		"sideall": "neutral"
 	},
 	"hollyhockstage2": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -1641,6 +1897,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -1648,112 +1905,134 @@
 		"sideall": "neutral"
 	},
 	"infiniteclay": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 20
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "clay",
 		"sideall": "SELF"
 	},
 	"infinitecoal": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "coalore",
 		"sideall": "SELF"
 	},
 	"infinitecopper": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 20
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "copper",
 		"sideall": "SELF"
 	},
 	"infinitegold": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 5000,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "goldore",
 		"sideall": "SELF"
 	},
 	"infiniteiron": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 60
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "ironore",
 		"sideall": "SELF"
 	},
 	"infinitelead": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "leadore",
 		"sideall": "infinitegalena"
 	},
 	"infinitesilicasand": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 360
 		},
 		"destructionTime": 2000,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "silicasand",
 		"sideall": "SELF"
 	},
 	"infinitestone": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 20
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"isDestructible": false,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "stonerubble",
 		"sideall": "SELF"
 	},
 	"infinitesulfur": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "sulfur",
 		"sideall": "SELF"
 	},
 	"infinitetin": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "tin",
 		"sideall": "SELF"
 	},
 	"infinitezinc": {
+		"blueprints": { "type": "parseAs", "value": "darkstone" },
 		"customData": {
 			"minerIsMineable": true,
 			"minerMiningTime": 300
 		},
 		"destructionTime": 1250,
+		"movementCost": 1,
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "zinc",
 		"sideall": "zinc"
@@ -1813,6 +2092,7 @@
 		},
 		"icon": "../textures/icons/lanternblue.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1835,6 +2115,7 @@
 		},
 		"icon": "../textures/icons/lanterncyan.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1857,6 +2138,7 @@
 		},
 		"icon": "../textures/icons/lanterngreen.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1879,6 +2161,7 @@
 		},
 		"icon": "../textures/icons/lanternorange.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1901,6 +2184,7 @@
 		},
 		"icon": "../textures/icons/lanternpink.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1923,6 +2207,7 @@
 		},
 		"icon": "../textures/icons/lanternred.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1945,6 +2230,7 @@
 		},
 		"icon": "../textures/icons/lanternwhite.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1968,6 +2254,7 @@
 		},
 		"icon": "../textures/icons/lanternyellow.png",
 		"maxStackSize": 25,
+		"movementCost": 1,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "lantern"
@@ -1995,8 +2282,10 @@
 	},
 	"leaves": {
 		"destructionTime": 200,
+		"onHitParticleEffect": "leaves",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
+		"movementCost": 2,
 		"maxStackSize": 200,
 		"sideall": "leavesgeneric"
 	},
@@ -2184,6 +2473,16 @@
 		],
 		"icon": "../textures/icons/logtaiga.png",
 		"maxStackSize": 200,
+		"onHitParticleEffect": [
+		{
+			"chance": 8,
+			"type": "wood",
+			"color": [ 140, 111, 73 ]
+		},
+		{
+			"chance": 2,
+			"type": "wood"
+		}],
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
@@ -2197,6 +2496,16 @@
 		],
 		"icon": "../textures/icons/logtemperate.png",
 		"maxStackSize": 200,
+		"onHitParticleEffect": [
+		{
+			"chance": 8,
+			"type": "wood",
+			"color": [ 140, 111, 73 ]
+		},
+		{
+			"chance": 2,
+			"type": "wood"
+		}],
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
@@ -2207,6 +2516,8 @@
 		],
 		"icon": "../textures/icons/logwall.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"
@@ -2278,6 +2589,8 @@
 		],
 		"icon": "../textures/icons/mudbricks.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "mudbricks"
@@ -2357,6 +2670,7 @@
 		"attachBehaviour": [
 			"banner"
 		],
+		"blueprints": { "type": "skip" },
 		"categories": [
 			"essential"
 		],
@@ -2402,7 +2716,8 @@
 			}
 		],
 		"customData": {
-			"farShadows": true
+			"farShadows": true,
+			"culledShadows": true
 		},
 		"icon": "../textures/icons/outpostbanner.png",
 		"isPlaceable": false,
@@ -2433,21 +2748,21 @@
 		],
 		"icon": "../textures/icons/planks.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "SELF"
 	},
 	"planksblue": {
-		"categories": [
-			"decorative",
-			"planks"
-		],
-		"color": "#36487c",
 		"icon": "../textures/icons/planksblue.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
-		"sideall": "planksgeneric"
+		"onRemoveType": "planks",
+		"sideall": "planksblue"
 	},
 	"plankscoated" : {
 		"categories" : [
@@ -2456,33 +2771,53 @@
 		],
 		"icon" : "../textures/icons/plankscoated.png",
 		"maxStackSize" : 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio" : "woodPlace",
 		"onRemoveAudio" : "woodDeleteLight",
 		"sideall" : "SELF"
 	},
 	"planksgreen": {
-		"categories": [
-			"decorative",
-			"planks"
-		],
-		"color": "#4e9a42",
 		"icon": "../textures/icons/planksgreen.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
-		"sideall": "planksgeneric"
+		"onRemoveType": "planks",
+		"sideall": "planksgreen"
 	},
 	"planksred": {
-		"categories": [
-			"decorative",
-			"planks"
-		],
-		"color": "#8b3426",
 		"icon": "../textures/icons/planksred.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
-		"sideall": "planksgeneric"
+		"onRemoveType": "planks",
+		"sideall": "planksred"
+	},
+	"plankswhite": {
+		"icon": "../textures/icons/planksred.png",
+		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "planks",
+		"sideall": "plankswhite"
+	},
+	"plaster": {
+		"categories": [
+			"decorative"
+		],
+		"icon": "../textures/icons/plaster.png",
+		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"sideall": "SELF"
 	},
 	"points": {
 		"icon": "../textures/icons/points.png",
@@ -2624,6 +2959,8 @@
 		],
 		"icon": "../textures/icons/sand.png",
 		"maxStackSize": 200,
+		"onHitParticleEffect": "dirt",
+		"movementCost": 2,
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
@@ -2652,7 +2989,7 @@
 				"leavestemperate": "psaplingtemperate",
 				"cherryblossom": "psaplingcherry"
 			}
-		}],
+		}, "builder_usable" ],
 		"categories": [
 			"decorative",
 			"sapling"
@@ -2770,6 +3107,8 @@
 		],
 		"icon": "../textures/icons/snow.png",
 		"maxStackSize": 200,
+		"movementCost": 2,
+		"onHitParticleEffect": "dirt",
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
@@ -2811,6 +3150,7 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stoneblock.png",
 		"maxStackSize": 200,
+		"movementCost": 1,
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"onRemoveType": "stonerubble",
@@ -2824,6 +3164,8 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stonebricks.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "SELF"
@@ -2837,6 +3179,8 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stonebricksblack.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "stonebricksgeneric"
@@ -2850,6 +3194,8 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stonebricksbrown.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "stonebricksgeneric"
@@ -2862,6 +3208,8 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stonebricksnew.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "SELF"
@@ -2875,6 +3223,8 @@
 		"destructionTime": 600,
 		"icon": "../textures/icons/stonebrickswhite.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "bricks",
 		"onPlaceAudio": "stonePlace",
 		"onRemoveAudio": "stoneDelete",
 		"sideall": "stonebricksgeneric"
@@ -2907,6 +3257,7 @@
 		],
 		"icon": "../textures/icons/straw.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
 		"onPlaceAudio": "dirtPlace",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "SELF"
@@ -2957,6 +3308,7 @@
 		"attachBehaviour": [
 			"toolshop"
 		],
+		"blueprints": { "type": "skip" },
 		"categories": [
 			"essential"
 		],
@@ -2981,15 +3333,28 @@
 		"needsBase": true,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "toolshop2",
 		"pathingImpact": "AsUntouchableSolid",
 		"sideall": "neutral"
 	},
 	"torch": {
+		"attachBehaviour": [
+			{
+				"id": "onclientclicklua",
+				"script": "torchplacement"
+			}
+		],
 		"categories": [
 			"essential"
 		],
 		"icon": "../textures/icons/torch.png",
 		"isSolid": false,
+		"isRotatable": true,
+		"rotatablex+" : "torchx+",
+		"rotatablex-" : "torchx-",
+		"rotatablez+" : "torchz+",
+		"rotatablez-" : "torchz-",
+		"movementCost": 2,
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteLight",
 		"sideall": "SELF"
@@ -2997,7 +3362,7 @@
 	"torchx-": {
 		"attachmentRequirements": [
 		{
-			"offset": [ -1, 0, 0 ],
+			"axis": [ "X" ],
 			"min": [ -0.65, -0.04, -0.04 ],
 			"max": [ -0.49, 0.04, 0.04 ]
 		}],
@@ -3044,7 +3409,7 @@
 	"torchx+": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 1, 0, 0 ],
+			"axis": [ "X" ],
 			"min": [ 0.49, -0.04, -0.04 ],
 			"max": [ 0.65, 0.04, 0.04 ]
 		}],
@@ -3086,7 +3451,7 @@
 	"torchy+": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 0, -1, 0 ],
+			"axis": [ "Y" ],
 			"min": [ -0.04, -0.65, -0.04 ],
 			"max": [ 0.04, -0.2, 0.04 ]
 		}],
@@ -3122,13 +3487,17 @@
 			}
 		},
 		"mesh": "../meshes/torchy+.ply",
-		"needsBase": true,
-		"parentType": "torch"
+		"isSolid": false,
+		"movementCost": 2,
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "torch",
+		"sideall": "torch"
 	},
 	"torchz-": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 0, 0, -1 ],
+			"axis": [ "Z" ],
 			"min": [ -0.04, -0.04, -0.65],
 			"max": [ 0.04,  0.04, -0.49]
 		}],
@@ -3175,7 +3544,7 @@
 	"torchz+": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 0, 0, 1 ],
+			"axis": [ "Z" ],
 			"min": [ -0.04, -0.04, 0.49],
 			"max": [ 0.04,  0.04, 0.65]
 		}],
@@ -3275,10 +3644,14 @@
 		"isPlaceable": false
 	},
 	"water": {
+		"blueprints": { "type": "skip" },
 		"icon": "../textures/icons/water.png",
 		"isDestructible": false,
 		"isSolid": false,
-		"lightingTransparency": 200
+		"onRemoveAmount": 0,
+		"onHitParticleEffectCount": 0,
+		"lightingTransparency": 200,
+		"movementCost": 4
 	},
 	"wheat": {
 		"categories": [
@@ -3304,12 +3677,22 @@
 		"isPlaceable": false
 	},
 	"wheatstage": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"isSolid": false,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete"
 	},
 	"wheatstage1": {
+		"blueprints": {
+			"type": "skip"
+		},
 		"categories": [
 			"food"
 		],
@@ -3334,13 +3717,17 @@
 			]
 		},
 		"icon": "../textures/icons/wheatstage1.png",
-		"mesh": "../meshes/wheatstage1.ply",
+		"mesh": "../meshes/wheatstage1.glb",
+		"movementCost": 2,
 		"onRemoveAmount": 0,
 		"parentType": "wheatstage",
 		"requiredFertilityBelow": 1,
 		"sideall": "neutral"
 	},
 	"wheatstage2": {
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -3361,7 +3748,8 @@
 				"#ff0000->#8fc847"
 			]
 		},
-		"mesh": "../meshes/wheatstage2.ply",
+		"mesh": "../meshes/wheatstage2.glb",
+		"movementCost": 2,
 		"onRemove": [
 			{
 				"chance": 0.3,
@@ -3376,6 +3764,9 @@
 		"sideall": "neutral"
 	},
 	"wheatstage3": {
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -3396,7 +3787,8 @@
 				"#ff0000->#ceac0d"
 			]
 		},
-		"mesh": "../meshes/wheatstage3.ply",
+		"mesh": "../meshes/wheatstage3.glb",
+		"movementCost": 2,
 		"onRemove": [
 			{
 				"type": "wheat"
@@ -3428,8 +3820,16 @@
 				"harvestTimeMin": 13.0,
 				"id": "wisteriatree",
 				"replacementType": "wisteriaplantempty"
+			},
+			{
+				"id": "randomRotations",
+				"type": "mainrotations"
 			}
 		],
+		"blueprints": {
+			"type": "parseAs",
+			"value": "wisteriaplantempty"
+		},
 		"categories": [
 			"job"
 		],
@@ -3447,6 +3847,10 @@
 		"sideall": "neutral"
 	},
 	"wisteriaplantempty": {
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
 		"categories": [
 			"job"
 		],
@@ -3460,7 +3864,11 @@
 		"requiredFertilityBelow": 4,
 		"sideall": "neutral"
 	},
-	"wolfsbane": {
+	"wolfsbane": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
 		"categories": [
 			"texres"
 		],
@@ -3488,12 +3896,20 @@
 		"isSolid": false,
 		"icon": "../textures/icons/wolfsbane.png",
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
 		"sideall": "neutral"
 	},
-	"wolfsbanestage1": {
+	"wolfsbanestage1": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -3516,6 +3932,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage1.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAmount": 0,
@@ -3523,7 +3940,14 @@
 		"requiredFertilityBelow": 2,
 		"sideall": "neutral"
 	},
-	"wolfsbanestage2": {
+	"wolfsbanestage2": {	
+		"attachBehaviour": [{
+			"id": "randomRotations",
+			"type": "mainrotations"
+		}],
+		"blueprints": {
+			"type": "skip"
+		},
 		"colliders": [
 			{
 				"impactsPhysics": false,
@@ -3547,6 +3971,7 @@
 		},
 		"isSolid": false,
 		"mesh": "../meshes/flaxstage2.ply",
+		"movementCost": 2,
 		"needsBase": true,
 		"onPlaceAudio": "grassDelete",
 		"onRemoveAudio": "grassDelete",
@@ -3559,6 +3984,8 @@
 		],
 		"icon": "../textures/icons/woodfloor.png",
 		"maxStackSize": 200,
+		"movementCost": -1,
+		"onHitParticleEffect": "wood",
 		"onPlaceAudio": "woodPlace",
 		"onRemoveAudio": "woodDeleteHeavy",
 		"sideall": "SELF"

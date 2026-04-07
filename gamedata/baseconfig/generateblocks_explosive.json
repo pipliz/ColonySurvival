@@ -1,0 +1,422 @@
+[
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/fusetwosides.ply",
+			"movementCost": 2,
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "bombfuseblock",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bombfusetwosides",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			}
+		]
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/fusethreesides.ply",
+			"movementCost": 2,
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "bombfuseblock",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bombfusethreesides",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			}
+		]
+	},
+	{
+		"baseType": {
+			"colliders": [
+				{
+					"impactsPhysics": false,
+					"max": [
+						0.5,
+						-0.3,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/fusestraight.ply",
+			"movementCost": 2,
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "bombfuseblock",
+			"pathingImpact": "AsAir",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bombfusestraight",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			},
+			{
+				"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ]
+			}
+		]
+	},
+	{
+		"baseType": {
+			"attachmentRequirements": [
+			{
+				"axis": [ "X" ],
+				"min": [ 0.46, -0.49, -0.49],
+				"max": [ 0.51, 0.49, 0.49]
+			}],
+			"colliders": [
+				{
+					"max": [ 0.5, 0.5, 0.5 ],
+					"min": [ -0.5, -0.5, -0.5 ]
+				}
+			],
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/shapedcharge.ply",
+			"meshRotationEuler": {
+				"x": 90,
+				"y": 0,
+				"z": 90
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "bombshapedchargedown",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bombshapedchargeside",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "ShapedBox",
+					
+					"fuseOffset": [ -0.4, 0, 0 ],
+					
+					"width": 3,
+					"height": 3,
+					"depthStart": 1,
+					"depthEnd": 10,
+					"direction": "xPlus",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh" ]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "ShapedBox",
+					
+					"fuseOffset": [ 0.4, 0, 0 ],
+					
+					"width": 3,
+					"height": 3,
+					"depthStart": 1,
+					"depthEnd": 10,
+					"direction": "xMin",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh" ]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "ShapedBox",
+					
+					"fuseOffset": [ 0, 0, -0.4 ],
+					
+					"width": 3,
+					"height": 3,
+					"depthStart": 1,
+					"depthEnd": 10,
+					"direction": "zPlus",
+
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh" ]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "ShapedBox",
+					
+					"fuseOffset": [ 0, 0, 0.4 ],
+					
+					"width": 3,
+					"height": 3,
+					"depthStart": 1,
+					"depthEnd": 10,
+					"direction": "zMin",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh" ]
+			}
+		]
+	},
+	{
+		"baseType": {
+			"categories": [ "explosives" ],
+			"colliders": [
+				{
+					"max": [ 0.5, 0.5, 0.5 ],
+					"min": [ -0.5, -0.5, -0.5 ]
+				}
+			],
+			"icon": "../textures/icons/bombstair.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/shapedchargestair.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bombshapedchargestair",
+		"rotatedTypeJSON": [
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "Stair",
+					
+					"fuseOffset": [ 0.35, 0.4, 0 ],
+					
+					"width": 1,
+					"height": 4,
+					"depthEnd": 10,
+					"direction": "xMin",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh",
+				{
+					"id": "arrow_preview_offset",
+					"offset": [-2, 0, 0]
+				}]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "Stair",
+					
+					"fuseOffset": [ -0.35, 0.4, 0 ],
+					
+					"width": 1,
+					"height": 4,
+					"depthEnd": 10,
+					"direction": "xPlus",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh",
+				{
+					"id": "arrow_preview_offset",
+					"offset": [2, 0, 0]
+				}]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "Stair",
+					
+					"fuseOffset": [ 0, 0.4, 0.35 ],
+					
+					"width": 1,
+					"height": 4,
+					"depthEnd": 10,
+					"direction": "zMin",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh",
+				{
+					"id": "arrow_preview_offset",
+					"offset": [0, 0, -2]
+				}]
+			},
+			{
+				"attachBehaviour": [{
+					"id": "bomb",
+					"shape": "Stair",
+					
+					"fuseOffset": [ 0, 0.4, -0.35 ],
+					
+					"width": 1,
+					"height": 4,
+					"depthEnd": 10,
+					"direction": "zPlus",
+					
+					"npcDamage": 125,
+					"playerDamage": 70,
+					"npcForce": 35,
+					
+					"timer": 3,
+					"strength": 72,
+					"allowChainExplosion": true,
+					"chainDelay": 0.3,
+					"allowUpDownSpread": true,
+			
+					"audioClipFuse": "fuse_lit_long",
+					"audioClipBomb": "bomb"
+				}, "fuse", "fusehigh",
+				{
+					"id": "arrow_preview_offset",
+					"offset": [0, 0, 2]
+				}]
+			}
+		]
+	}
+]

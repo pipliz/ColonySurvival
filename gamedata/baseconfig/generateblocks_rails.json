@@ -24,6 +24,7 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalgateway.ply",
+			"needsBase": true,
 			"pathingImpact": "AsUntouchableSolid",
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -33,9 +34,6 @@
 		"rotatedTypeJSON": [
 			{
 				"attachBehaviour": [
-					/* gatewayFilter is the group of other gateway types that it'll connect to*/
-					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
-					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
 					{
 						"gatewayFilter": "horizontalGateways",
 						"id": "rail",
@@ -121,6 +119,7 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaftgateopen.ply",
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveType": "railgate",
 			"onRemoveAudio": "woodDeleteLight",
@@ -209,6 +208,7 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaftgate.ply",
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"pathingImpact": "AsUntouchableSolid",
@@ -280,6 +280,8 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaft.ply",
+			"movementCost": 2,
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
@@ -352,6 +354,8 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaft90.ply",
+			"movementCost": 2,
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
@@ -424,6 +428,8 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaft3way.ply",
+			"movementCost": 2,
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
@@ -496,6 +502,8 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontalshaft4way.ply",
+			"movementCost": 2,
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",
@@ -579,6 +587,8 @@
 			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/elevatorhorizontaldiagonal.ply",
+			"movementCost": 2,
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "railitem",

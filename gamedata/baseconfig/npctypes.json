@@ -1,11 +1,6 @@
 [
-	/*
-		for worker npcTypes:
-		- keyName -> unique ID used when referencing this in jobs and such
-		- movementSpeed -> speed of the npc while holding this job
-		- maskColor0, maskColor1 -> npc mask color, currently only maskColor1 is used (?)
-	*/
 	{
+		"animation": "../animations/colonist.glb",
 		"keyName": "pipliz.tinkerer",
 		"mesh": "../meshes/jobs/tinkerer.glb",
 		"npcType": "worker"
@@ -347,13 +342,16 @@
 		"npcType": "worker"
 	},
 	{
+		"animation": "../animations/monster.glb",
 		"initialHealth": 25,
 		"keyName": "pipliz.monster25",
 		"mesh": "../meshes/skeleton.glb",
 		"movementSpeed": 2.0,
 		"npcType": "monster",
 		"punchCooldownMS": 2000,
-		"punchDamage": 30
+		"punchDamage": 30,
+		"doorHitCooldown": 2.2,
+		"doorHitDamage": 30
 	},
 	{
 		"initialHealth": 100,
@@ -362,7 +360,9 @@
 		"movementSpeed": 1.95,
 		"npcType": "monster",
 		"punchCooldownMS": 2000,
-		"punchDamage": 40
+		"punchDamage": 40,
+		"doorHitCooldown": 2.1,
+		"doorHitDamage": 35
 	},
 	{
 		"initialHealth": 250,
@@ -371,7 +371,9 @@
 		"movementSpeed": 1.9,
 		"npcType": "monster",
 		"punchCooldownMS": 3000,
-		"punchDamage": 60
+		"punchDamage": 60,
+		"doorHitCooldown": 2.0,
+		"doorHitDamage": 40
 	},
 	{
 		"initialHealth": 1500,
@@ -380,7 +382,9 @@
 		"movementSpeed": 1.85,
 		"npcType": "monster",
 		"punchCooldownMS": 4000,
-		"punchDamage": 75
+		"punchDamage": 75,
+		"doorHitCooldown": 1.9,
+		"doorHitDamage": 45
 	},
 	{
 		"initialHealth": 5000,
@@ -390,7 +394,9 @@
 		"npcType": "monster",
 		"punchCooldownMS": 4000,
 		"punchDamage": 75,
-		"rootOffsetY": 0.52
+		"rootOffsetY": 0.52,
+		"doorHitCooldown": 1.8,
+		"doorHitDamage": 60
 	},
 	{
 		"initialHealth": 25000,
@@ -400,7 +406,9 @@
 		"npcType": "monster",
 		"punchCooldownMS": 4000,
 		"punchDamage": 75,
-		"rootOffsetY": 0.52
+		"rootOffsetY": 0.52,
+		"doorHitCooldown": 1.7,
+		"doorHitDamage": 75
 	},
 	{
 		"keyName": "pipliz.watergatherer",
@@ -422,25 +430,28 @@
 		"mesh": "../meshes/jobs/writer.glb",
 		"npcType": "worker"
 	},
-	// the following aren't actually used for NPCs, they're just entries to show them in the science as unlocks
 	{
 		"keyName": "pipliz.builder",
-		"maskColor1": "#FF00FF",
-		"npcType": "worker"
+		"npcType": "logical"
 	},
 	{
 		"keyName": "pipliz.digger",
-		"maskColor1": "#FF00FF",
-		"npcType": "worker"
+		"npcType": "logical"
 	},
 	{
 		"keyName": "pipliz.builderreplacer",
-		"maskColor1": "#FF00FF",
-		"npcType": "worker"
+		"npcType": "logical"
 	},
 	{
 		"keyName": "pipliz.diggerspecial",
-		"maskColor1": "#FF00FF",
-		"npcType": "worker"
+		"npcType": "logical"
+	},
+	{
+		"keyName": "pipliz.autocrafter",
+		"npcType": "logical"
+	},
+	{
+		"keyName": "pipliz.odditypress",
+		"npcType": "logical"
 	}
 ]

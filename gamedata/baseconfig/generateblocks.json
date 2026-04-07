@@ -3,7 +3,7 @@
 		"baseType": {
 			"attachmentRequirements": [
 			{
-				"offset": [ 0, -1, 0 ],
+				"axis": [ "Y" ],
 				"min": [ -0.2, -0.65, -0.05 ],
 				"max": [ -0.1, -0.2, 0.05 ]
 			}],
@@ -18,6 +18,10 @@
 				"essential"
 			],
 			"colliders": [{"min":[-0.175,-0.5,-0.445],"max":[0.028,1.885,0.423],"impactsBlockPlacement":true}],
+			"customData": {
+				"farShadows": true,
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/goldenstatue.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -27,6 +31,7 @@
 				"y": 180,
 				"z": 0
 			},
+			"movementCost": 2,
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -41,19 +46,23 @@
 				{
 					"id": "autocrafter",
 					"allowMultiple": false,
+					"recipeNPCType": "pipliz.autocrafter",
 					"interactableColliderIndices": [ 0, 1 ],
-					"activeAudioLoop": "millLoop"
+					"activeAudioLoop": "millLoop",
+					"crafterGroup": "mill",
+					"header": "autocrafter.header"
 				},
 				"client_reservesecondaryhiton",
 				{
-					"id": "npcblockerair",
-					"positions": [
-						[ -1, 0, 0 ],
-						[ -1, 0, -1 ],
-						[ 0, 0, -1 ]
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ -1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, -1 ], "type": "npcblockerair" }
 					]
 				}
 			],
+			"blueprints": { "type": "skip" },
 			"categories": [
 				"essential"
 			],
@@ -131,6 +140,7 @@
 				"z": 0
 			},
 			"needsBase": true,
+			"onHitParticleEffect": "wood",
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"sideall": "neutral"
@@ -140,143 +150,11 @@
 	},
 	{
 		"baseType": {
-			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
-			"categories": [
-				"decorative",
-				"decorative_mesh"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						0,
-						0.5
-					],
-					"min": [
-						0,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"customData": {
-				"colors": [
-					"#ff0000->#636363"
-				]
-			},
-			"icon": "../textures/icons/quarterblockgrey.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"maxStackSize": 60,
-			"mesh": "../meshes/quarterblockx+.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "quarterblockgrey"
-	},
-	{
-		"baseType": {
-			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
-			"categories": [
-				"decorative",
-				"decorative_mesh"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						0,
-						0.5
-					],
-					"min": [
-						0,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"customData": {
-				"colors": [
-					"#ff0000->#332106"
-				]
-			},
-			"icon": "../textures/icons/quarterblockbrowndark.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"maxStackSize": 60,
-			"mesh": "../meshes/quarterblockx+.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "quarterblockbrowndark"
-	},
-	{
-		"baseType": {
-			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
-			"categories": [
-				"decorative",
-				"decorative_mesh"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.5,
-						0,
-						0.5
-					],
-					"min": [
-						0,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"customData": {
-				"colors": [
-					"#ff0000->#917451"
-				]
-			},
-			"icon": "../textures/icons/quarterblockbrownlight.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"maxStackSize": 60,
-			"mesh": "../meshes/quarterblockx+.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "quarterblockbrownlight"
-	},
-	{
-		"baseType": {
 			"attachBehaviour": [
 				{
 					"id": "minerjob",
 					"onMineAudio": "stoneDelete",
-					"toolSet": "default"
+					"toolset": "default"
 				},
 				"client_requireminable"
 			],
@@ -306,6 +184,7 @@
 				"y": 270,
 				"z": 0
 			},
+			"movementCost": 2,
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -411,7 +290,7 @@
 			],
 			"attachmentRequirements": [
 			{
-				"offset": [ 0, -1, 0 ],
+				"axis": [ "Y" ],
 				"min": [ -0.4, -0.51, -0.4],
 				"max": [ 0.4,  -0.49, 0.4]
 			}],
@@ -930,7 +809,7 @@
 			}],
 			"attachmentRequirements": [
 			{
-				"offset": [ 0, -1, 0 ],
+				"axis": [ "Y" ],
 				"min": [ -0.49, -0.51, -0.45],
 				"max": [ 0.49,  -0.49, 0.49]
 			}],
@@ -1013,320 +892,6 @@
 		"baseType": {
 			"attachmentProviders": [
 			{
-				"min": [ -0.5, 0.45, -0.5 ],
-				"max": [ 0.1, 0.5 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.1, -0.45 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.5, 0.5 , -0.4 ]
-			},{
-				"min": [ -0.5, -0.5, 0.4 ],
-				"max": [ 0.5, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.1,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/scrollshelf.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/scrollshelf0.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 270,
-				"z": 0
-			},
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"rotatedTypeJSON": [
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "scrollshelf",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "scrollshelfx+"
-							},
-							{
-								"growthhours": 120,
-								"type": "scrollshelf1x+"
-							},
-							{
-								"growthhours": 162,
-								"type": "scrollshelf2x+"
-							},
-							{
-								"growthhours": -1,
-								"type": "scrollshelffilledx+"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "scrollshelf",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "scrollshelfx-"
-							},
-							{
-								"growthhours": 120,
-								"type": "scrollshelf1x-"
-							},
-							{
-								"growthhours": 162,
-								"type": "scrollshelf2x-"
-							},
-							{
-								"growthhours": -1,
-								"type": "scrollshelffilledx-"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "scrollshelf",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "scrollshelfz+"
-							},
-							{
-								"growthhours": 120,
-								"type": "scrollshelf1z+"
-							},
-							{
-								"growthhours": 162,
-								"type": "scrollshelf2z+"
-							},
-							{
-								"growthhours": -1,
-								"type": "scrollshelffilledz+"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "scrollshelf",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "scrollshelfz-"
-							},
-							{
-								"growthhours": 120,
-								"type": "scrollshelf1z-"
-							},
-							{
-								"growthhours": 162,
-								"type": "scrollshelf2z-"
-							},
-							{
-								"growthhours": -1,
-								"type": "scrollshelffilledz-"
-							}
-						]
-					}
-				]
-			}
-		],
-		"typeName": "scrollshelf"
-	},
-	{
-		"baseType": {
-			"attachBehaviour": [{
-				"id": "builder_usable",
-				"mirrorResult": true,
-			}],
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, 0.45, -0.5 ],
-				"max": [ 0.1, 0.5 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.1, -0.45 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.5, 0.5 , -0.4 ]
-			},{
-				"min": [ -0.5, -0.5, 0.4 ],
-				"max": [ 0.5, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.1,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/scrollshelf.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/scrollshelf3.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 270,
-				"z": 0
-			},
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "scrollshelffilled"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, 0.45, -0.5 ],
-				"max": [ 0.1, 0.5 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.1, -0.45 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.5, 0.5 , -0.4 ]
-			},{
-				"min": [ -0.5, -0.5, 0.4 ],
-				"max": [ 0.5, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.1,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/scrollshelf.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/scrollshelf1.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 270,
-				"z": 0
-			},
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "scrollshelf1"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, 0.45, -0.5 ],
-				"max": [ 0.1, 0.5 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.1, -0.45 , 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0.5, 0.5 , -0.4 ]
-			},{
-				"min": [ -0.5, -0.5, 0.4 ],
-				"max": [ 0.5, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.1,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/scrollshelf.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/scrollshelf2.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 270,
-				"z": 0
-			},
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "scrollshelf2"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
 				"min": [ -0.5, -0.5, -0.5 ],
 				"max": [ 0.5 , 0.5 , -0.46 ]
 			},{
@@ -1375,265 +940,6 @@
 		},
 		"generateType": "rotateBlock",
 		"typeName": "researcherdesk"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.0,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/bookcase.png",
-			"isSolid": false,
-			"lightingTransparency": 130,
-			"mesh": "../meshes/bookcase0.ply",
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"rotatedTypeJSON": [
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "paperbookcases",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "bookcasex+"
-							},
-							{
-								"growthhours": 120,
-								"type": "bookcase1x+"
-							},
-							{
-								"growthhours": 162,
-								"type": "bookcase2x+"
-							},
-							{
-								"growthhours": -1,
-								"type": "bookcasefilledx+"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "paperbookcases",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "bookcasex-"
-							},
-							{
-								"growthhours": 120,
-								"type": "bookcase1x-"
-							},
-							{
-								"growthhours": 162,
-								"type": "bookcase2x-"
-							},
-							{
-								"growthhours": -1,
-								"type": "bookcasefilledx-"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "paperbookcases",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "bookcasez+"
-							},
-							{
-								"growthhours": 120,
-								"type": "bookcase1z+"
-							},
-							{
-								"growthhours": 162,
-								"type": "bookcase2z+"
-							},
-							{
-								"growthhours": -1,
-								"type": "bookcasefilledz+"
-							}
-						]
-					}
-				]
-			},
-			{
-				"attachBehaviour": [
-					{
-						"id": "bookcase",
-						"landmarktype": "paperbookcases",
-						"stages": [
-							{
-								"growthhours": 66,
-								"type": "bookcasez-"
-							},
-							{
-								"growthhours": 120,
-								"type": "bookcase1z-"
-							},
-							{
-								"growthhours": 162,
-								"type": "bookcase2z-"
-							},
-							{
-								"growthhours": -1,
-								"type": "bookcasefilledz-"
-							}
-						]
-					}
-				]
-			}
-		],
-		"typeName": "bookcase"
-	},
-	{
-		"baseType": {
-			"attachBehaviour": [ 
-			{
-				"id": "builder_usable",
-				"mirrorResult": true,
-			}],
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.0,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/bookcase.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/bookcase3.ply",
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "bookcasefilled"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.0,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/bookcase.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/bookcase1.ply",
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "bookcase1"
-	},
-	{
-		"baseType": {
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ 0, 0.5 , 0.5 ]
-			}],
-			"canBuildUpon": true,
-			"categories": [
-				"job"
-			],
-			"colliders": [
-				{
-					"max": [
-						0.0,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"icon": "../textures/icons/bookcase.png",
-			"isSolid": false,
-			"lightingTransparency": 200,
-			"mesh": "../meshes/bookcase2.ply",
-			"onPlaceAudio": "woodPlace",
-			"onRemoveAudio": "woodDeleteLight",
-			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "neutral"
-		},
-		"generateType": "rotateBlock",
-		"typeName": "bookcase2"
 	},
 	{
 		"baseType": {
@@ -2189,10 +1495,11 @@
 	},
 	{
 		"baseType": {
-			"attachmentProviders": [
+			"attachmentRequirements": [
 			{
-				"min": [ -0.48, -0.5, -0.48 ],
-				"max": [ 0.48, 0.2 , 0.48 ]
+				"axis": [ "Y" ],
+				"min": [ -0.25, -0.51, -0.25],
+				"max": [ 0.25,  -0.49, 0.25]
 			}],
 			"attachBehaviour": [
 				"builder_usable",
@@ -2210,27 +1517,21 @@
 			"colliders": [
 				{
 					"max": [
-						0.5,
-						0.2,
-						0.5
+						0.365,
+						0.75,
+						0.365
 					],
 					"min": [
+						-0.365,
 						-0.5,
-						-0.5,
-						-0.5
+						-0.365
 					]
 				}
 			],
 			"icon": "../textures/icons/copperlockbox.png",
 			"isSolid": false,
-			"lightingTransparency": 100,
-			"mesh": "../meshes/copperlockbox.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/copperlockbox.glb",
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"pathingImpact": "AsUntouchableSolid",
@@ -2258,7 +1559,7 @@
 			"icon": "../textures/icons/sanctifiedhouse.png",
 			"isSolid": false,
 			"lightingTransparency": 180,
-			"mesh": "../meshes/sanctifiedhouse.ply",
+			"mesh": "../meshes/sanctifiedhouse.glb",
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -2309,6 +1610,9 @@
 				"essential",
 				"pointstorage"
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/bronzelockbox.png",
 			"lightingTransparency": 30,
 			"mesh": "../meshes/bronzelockbox.ply",
@@ -2358,6 +1662,9 @@
 				"essential",
 				"pointstorage"
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/steellockbox.png",
 			"isSolid": true,
 			"lightingTransparency": 30,
@@ -2374,11 +1681,11 @@
 		"baseType": {
 			"attachmentRequirements": [
 			{
-				"offset": [ 0, -1, 0 ],
+				"axis": [ "Y" ],
 				"min": [ -0.04, -0.51, -0.46],
 				"max": [ 0.04,  -0.49, 0.40]
 			},{
-				"offset": [ 0, -1, 0 ],
+				"axis": [ "Y" ],
 				"min": [ -0.04, -0.51, 0.4],
 				"max": [ 0.04,  -0.49, 0.46]
 			}],
@@ -2392,6 +1699,9 @@
 				{"min":[-0.05,-0.5,-0.48],"max":[0.05,1.4,0.48],"impactsBlockPlacement":true},
 				{"min":[-0.35,1.215,-0.5],"max":[0.35,1.41,0.5],"impactsBlockPlacement":true}
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/statisticsboard.png",
 			"isSolid": false,
 			"lightingTransparency": 180,
@@ -2410,6 +1720,7 @@
 			"attachBehaviour": [
 				"pointtrader"
 			],
+			"blueprints": { "type": "skip" },
 			"categories": [
 				"essential"
 			],
@@ -2431,13 +1742,74 @@
 			"isSolid": false,
 			"lightingTransparency": 150,
 			"mesh": "../meshes/merchanthub.ply",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "merchanthub2",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "merchanthub"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"pointtrader",
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ -1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, 1 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"colliders": [
+				{
+					"min": [ -1, -0.5, -1.2 ],
+					"max": [ 0, 0.5, 1.2 ],
+					"impactsBlockPlacement": true
+				},
+				{
+					"min": [ -0.575, -0.5, -1.426 ],
+					"max": [ -0.425, 1.65, -1.276 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -0.575, -0.5, 1.284 ],
+					"max": [ -0.425, 1.65, 1.434 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -1.253, 1.5, -1.493 ],
+					"max": [ 0.25, 1.80, 1.495 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				}
+			],
+			"icon": "../textures/icons/merchanthub2.png",
+			"isSolid": false,
+			"lightingTransparency": 150,
+			"mesh": "../meshes/merchanthub2.glb",
+			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
-		"typeName": "merchanthub"
+		"typeName": "merchanthub2"
 	},
 	{
 		"baseType": {
@@ -2637,8 +2009,268 @@
 	{
 		"baseType": {
 			"attachBehaviour": [
+				"topdowntrigger",
+				"client_reservesecondaryhiton",
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ 1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ 1, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, 1 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"min": [ -0.48, -0.49, -0.48 ],
+					"max": [ 0.366, 0.267, 1.48 ],
+					"impactsBlockPlacement": true
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/topdownviewtrigger.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/topdowntrigger.glb",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "topdownviewtrigger"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"toolshop",
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ -1, 0, 0 ], "type": "toolshop2hidden" },
+						{ "pos": [ -1, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, 1 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"min": [ -1, -0.5, -1.2 ],
+					"max": [ 0, 0.5, 1.2 ],
+					"impactsBlockPlacement": true
+				},
+				{
+					"min": [ -0.575, -0.5, -1.426 ],
+					"max": [ -0.425, 1.65, -1.276 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -0.575, -0.5, 1.284 ],
+					"max": [ -0.425, 1.65, 1.434 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -1.31, 1.67, -1.43 ],
+					"max": [ 0.31, 2.05, 1.43 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [-0.88, 2.08, -1.43 ],
+					"max": [ -0.1, 2.46, 1.43 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/toolshop2.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/toolshop2.glb",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "toolshop2"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"npcshop",
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ -1, 0, 0 ], "type": "npcshop2hidden" },
+						{ "pos": [ -1, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, 1 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{
+					"max": [ 0, 0.5, 1.2 ],
+					"min": [ -1, -0.5, -1.2 ],
+					"impactsBlockPlacement": true
+				},
+				{
+					"min": [ -1.31, -0.5, -1.44 ],
+					"max": [ -1.16, 1.66, -1.29 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ 0.166, -0.5, -1.443 ],
+					"max": [ 0.316, 2.03, -1.29 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -1.31, -0.5, 1.284 ],
+					"max": [ -1.16, 1.66, 1.43 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ 0.166, -0.5, 1.28 ],
+					"max": [ 0.316, 2.03, 1.43 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				},
+				{
+					"min": [ -1.49, 1.696, -1.49 ],
+					"max": [ 0.466, 2.03, 1.46 ],
+					"impactsBlockPlacement": true,
+					"impactsPlayerSelection": false
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/npcshop2.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/npcshop2.glb",
+			"needsBase": true,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "npcshop2"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "failsafe",
+					"points": 500,
+					"threat": 10
+				},
+				"client_reservesecondaryhiton",
+				{ "id": "ambientOcclusionFactor", "strength": 0.4 },
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ 0, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, 0 ], "type": "npcblockerair" }
+					]
+				},
+				{
+					"id": "buildableMultiblock",
+					"positions": [
+						[ 0, 0, 0],
+						[ 0, 0, -1],
+						[ -1, 0, -1],
+						[ -1, 0, 0],
+						
+						[ 0, 1, 0],
+						[ 0, 1, -1],
+						[ -1, 1, -1],
+						[ -1, 1, 0],
+						
+						[ 0, 2, 0],
+						[ 0, 2, -1],
+						[ -1, 2, -1],
+						[ -1, 2, 0]
+					]
+				}
+			],
+			"attachmentRequirements": [
+			{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, -0.48],
+				"max": [ 0.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.48, -0.51, -0.48],
+				"max": [ -0.52,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.48, -0.51, -1.48],
+				"max": [ -0.52,  -0.49, -0.52]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, -1.48],
+				"max": [ 0.48,  -0.49, -0.52]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{"min":[-1.432,-0.5,-1.433],"max":[0.427,2.127,0.425],"impactsBlockPlacement":true},
+				{"min":[-0.836,2.505,-0.862],"max":[-0.094,5.229,-0.055],"impactsBlockPlacement":true},
+				{"min":[-1.111,2.143,-1.108],"max":[0.109,2.475,0.104],"impactsBlockPlacement":true},
+				{"min":[-0.593,4.418,-1.287],"max":[-0.307,5.198,-0.697],"impactsBlockPlacement":true},
+				{"min":[-0.377,3.7,-0.263],"max":[0.085,4.156,0.249],"impactsBlockPlacement":true}
+			],
+			"customData": {
+				"farShadows": true,
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/failsafe.png",
+			"isSolid": false,
+			"lightingTransparency": 255,
+			"mesh": "../meshes/failsafe3.glb",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "failsafe3"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
 				"npcshop"
 			],
+			"blueprints": { "type": "skip" },
 			"categories": [
 				"essential"
 			],
@@ -2663,6 +2295,7 @@
 			"needsBase": true,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
+			"onRemoveType": "npcshop2",
 			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "neutral"
 		},
@@ -2709,13 +2342,17 @@
 			"categories": [
 				"job"
 			],
+			"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.7,0.5],"impactsBlockPlacement":true}],
 			"destructionTime": 800,
 			"icon": "../textures/icons/bloomery.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "../meshes/bloomery.ply",
 			"needsBase": true,
 			"onPlaceAudio": "stonePlace",
 			"onRemoveAudio": "stoneDelete",
 			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "bricks"
+			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
 		"litTypeCustomData": {
@@ -2734,10 +2371,6 @@
 				}
 			}
 		},
-		"sideFrontLit": "bloomerylit",
-		"sideFrontUnlit": "bloomery",
-		"sideTopLit": "bricks",
-		"sideTopUnlit": "bricks",
 		"typeName": "bloomery"
 	},
 	{
@@ -2752,16 +2385,19 @@
 			"categories": [
 				"job"
 			],
+			"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.7,0.5],"impactsBlockPlacement":true}],
 			"destructionTime": 800,
 			"icon": "../textures/icons/kiln.png",
+			"isSolid": false,
+			"lightingTransparency": 100,
+			"mesh": "../meshes/kiln.ply",
 			"needsBase": true,
 			"onPlaceAudio": "dirtPlace",
 			"onRemoveAudio": "grassDelete",
 			"pathingImpact": "AsUntouchableSolid",
-			"sideall": "dirt"
+			"sideall": "neutral"
 		},
 		"generateType": "rotateBlock",
-		"sideFrontUnlit": "kiln",
 		"typeName": "kiln"
 	},
 	{
@@ -2837,7 +2473,9 @@
 			"categories": [
 				"job"
 			],
+			"colliders": [ { "min": [ -0.5, -0.5, -0.5 ], "max" : [ 0.5, 0.5, 0.5 ] } ],
 			"icon": "../textures/icons/writerdesk.png",
+			"isSolid": false,
 			"lightingTransparency": 200,
 			"mesh": "../meshes/writerdesk.ply",
 			"meshRotationEuler": {
@@ -2904,15 +2542,47 @@
 		"baseType": {
 			"attachBehaviour": [
 				"builder_usable",
-				{ "id": "ambientOcclusionFactor", "strength": 0.4 } 
+				{
+					"id": "ambientOcclusionFactor",
+					"strength": 0.4
+				},
+				{
+					"id": "buildableMultiblock",
+					"positions": [ [ 0, 0, 0], [ 1, 0, 0] ]
+				},
+				{
+					"id": "bed",
+					"sleepForward": [ 0, 1, 0],
+					"sleepUp": [-1, 0, 0],
+					"sleepOffset": [ 0.55, -0.4, 0]
+				},
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ 1, 0, 0 ], "type": "bedendx-", "typeCondition": "bedx+" },
+						{ "pos": [ 1, 0, 0 ], "type": "bedendx+", "typeCondition": "bedx-" },
+						{ "pos": [ 1, 0, 0 ], "type": "bedendz-", "typeCondition": "bedz+" },
+						{ "pos": [ 1, 0, 0 ], "type": "bedendz+", "typeCondition": "bedz-" }
+					]
+				}
 			],
 			"attachmentProviders": [
 			{
-				"min": [ -0.5, -0.4, -0.5 ],
-				"max": [ 0.5, -0.05, 0.5 ]
+				"min": [ 1.4, -0.5, -0.5 ],
+				"max": [ 1.5, 0.1, 0.5 ]
 			},{
 				"min": [ -0.5, -0.5, -0.5 ],
 				"max": [ -0.4, 0.5, 0.5 ]
+			}],
+			"attachmentRequirements": [
+			{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, -0.48],
+				"max": [ 0.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ 0.52, -0.51, -0.48],
+				"max": [ 1.48,  -0.49, 0.48]
 			}],
 			"categories": [
 				"essential"
@@ -2920,49 +2590,27 @@
 			"colliders": [
 				{
 					"impactsPhysics": false,
-					"max": [
-						0.5,
-						0.1,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
+					"impactsBlockPlacement": true,
+					"max": [ 1.4, 0.1, 0.5 ],
+					"min": [ -0.4, -0.5, -0.5 ]
 				},
 				{
 					"impactsPhysics": false,
-					"max": [
-						-0.4,
-						0.5,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
+					"max": [ -0.4, 0.5, 0.5 ],
+					"min": [ -0.5, -0.5, -0.5 ]
+				},
+				{
+					"impactsPhysics": false,
+					"impactsBlockPlacement": true,
+					"max": [ 1.5, 0.1, 0.5 ],
+					"min": [ 1.4, -0.5, -0.5 ]
 				}
 			],
-			"customData": {
-				"bedpart": "head",
-				"colors": [
-					"#ff0000->#542909",
-					"#00ff00->#e5e5e6",
-					"#0000ff->#9b7a3f"
-				]
-			},
 			"icon": "../textures/icons/bed.png",
 			"isSolid": false,
 			"lightingTransparency": 160,
-			"mesh": "../meshes/bedx+.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
+			"mesh": "../meshes/bed.glb",
+			"movementCost": 4,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"sideall": "neutral"
@@ -2972,51 +2620,295 @@
 	},
 	{
 		"baseType": {
-			"attachBehaviour": [ { "id": "ambientOcclusionFactor", "strength": 0.4 } ],
-			"attachmentProviders": [
-			{
-				"min": [ -0.5, -0.4, -0.5 ],
-				"max": [ 0.5, -0.05, 0.5 ]
-			},{
-				"min": [ -0.5, -0.5, -0.5 ],
-				"max": [ -0.4, 0.1, 0.5 ]
-			}],
+			"attachBehaviour": [ { "id": "maybeDependent", "ignoreLargeBoundsAwareness": true } ],
+			"attachmentRequirements" : [],
+			"attachmentProviders": [],
+			"blueprints": { "type": "skip" },
 			"colliders": [
-				{
-					"impactsPhysics": false,
-					"max": [
-						0.5,
-						0.1,
-						0.5
-					],
-					"min": [
-						-0.5,
-						-0.5,
-						-0.5
-					]
-				}
-			],
-			"customData": {
-				"bedpart": "foot",
-				"colors": [
-					"#ff0000->#542909",
-					"#00ff00->#e5e5e6",
-					"#0000ff->#9b7a3f"
-				]
-			},
+			{
+				"min": [0,0,0],
+				"max": [0,0,0],
+				"impactsPhysics": false
+			}],
 			"isSolid": false,
-			"lightingTransparency": 160,
-			"mesh": "../meshes/bedendx+.ply",
-			"meshRotationEuler": {
-				"x": 0,
-				"y": 180,
-				"z": 0
-			},
-			"needsBase": true,
-			"parentType": "bed"
+			"mesh": null,
+			"movementCost": 4,
+			"onHitParticleEffectCount": 0,
+			"onRemoveAmount": 0
 		},
 		"generateType": "rotateBlock",
 		"typeName": "bedend"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"builder_usable",
+				{
+					"id": "ambientOcclusionFactor",
+					"strength": 0.4
+				},
+				{
+					"id": "buildableMultiblock",
+					"positions": [ [ 0, 0, 0], [ -1, 0, 0] ]
+				},
+				{
+					"id": "bed",
+					"sleepForward": [ 0, 1, 0],
+					"sleepUp": [ -1, 0, 0],
+					"sleepOffset": [ -0.35, -0.20, 0],
+					"sleepAnimationState": "bed"
+				},
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ 1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, 0 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"attachmentProviders": [
+			{
+				"min": [ -1.5, -0.5, -0.5 ],
+				"max": [ -1.35, 0.74, 0.5 ]
+			}],
+			"attachmentRequirements": [
+			{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, -0.48],
+				"max": [ 0.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ 0.52, -0.51, -0.48],
+				"max": [ 1.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.48, -0.51, -0.48],
+				"max": [ -0.52,  -0.49, 0.48]
+			}],
+			"categories": [
+				"decorative"
+			],
+			"colliders": [
+				{"min":[-1.343,-0.5,-0.5],"max":[0.733,0.1,0.5],"impactsPhysics":false,"impactsBlockPlacement":true},
+				{"min":[-1.499,-0.5,-0.5],"max":[-1.335,0.739,0.5],"impactsBlockPlacement":true},
+				{"min":[0.733,-0.5,-0.5],"max":[0.884,0.47,0.5],"impactsBlockPlacement":true},
+				{"min":[0.944,-0.5,-0.372],"max":[1.471,0.051,0.372],"impactsBlockPlacement":true}
+			],
+			"icon": "../textures/icons/bed3.png",
+			"isSolid": false,
+			"lightingTransparency": 160,
+			"mesh": "../meshes/bed3.glb",
+			"movementCost": 4,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bed3"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				"builder_usable",
+				{
+					"id": "ambientOcclusionFactor",
+					"strength": 0.4
+				},
+				{
+					"id": "bed",
+					"sleepForward": [ 0, 1, 0],
+					"sleepUp": [ -1, 0, 0],
+					"sleepOffset": [ -0.35, -0.17, 1],
+					"sleepAnimationState": "bed"
+				},
+				{
+					"id": "npcOffsetOverride",
+					"value": 0
+				},
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ -1, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ 0, 0, 1 ], "type": "npcblockerair" },
+						{ "pos": [ 1, 0, 1 ], "type": "npcblockerair" },
+						
+						{ "pos": [ 1, 0, 0 ], "type": "bunkbedtopx+", "typeCondition": "bunkbedx+" },
+						{ "pos": [ 1, 0, 0 ], "type": "bunkbedtopx-", "typeCondition": "bunkbedx-" },
+						{ "pos": [ 1, 0, 0 ], "type": "bunkbedtopz+", "typeCondition": "bunkbedz+" },
+						{ "pos": [ 1, 0, 0 ], "type": "bunkbedtopz-", "typeCondition": "bunkbedz-" }
+					]
+				}
+			],
+			"attachmentRequirements": [
+			{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, -0.48],
+				"max": [ 0.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ 0.52, -0.51, -0.48],
+				"max": [ 1.48,  -0.49, 0.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.48, -0.51, 0.52],
+				"max": [ -0.52,  -0.49, 1.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -0.48, -0.51, 0.52],
+				"max": [ 0.48,  -0.49, 1.48]
+			},{
+				"axis": [ "Y" ],
+				"min": [ 0.52, -0.51, 0.52],
+				"max": [ 1.48,  -0.49, 1.48]
+			}],
+			"categories": [
+				"decorative"
+			],
+			"colliders": [
+				{"min":[-1.446,-0.5,0.547],"max":[0.823,0.144,1.453],"impactsPhysics":false,"impactsBlockPlacement":true},
+				{"min":[-1.499,1.239,0.513],"max":[0.844,1.598,1.489],"impactsBlockPlacement":true},
+				{"min":[0.917,-0.5,0.025],"max":[1.427,0.189,1.435],"impactsBlockPlacement":true},
+				{"min":[0.077,-0.5,0.08],"max":[0.833,0.251,0.386],"impactsBlockPlacement":true},
+				{"min":[-1.455,-0.5,0.546],"max":[-1.371,2.033,0.651],"impactsBlockPlacement":true},
+				{"min":[-1.473,-0.5,1.363],"max":[-1.363,2.032,1.466],"impactsBlockPlacement":true},
+				{"min":[0.716,-0.5,1.357],"max":[0.82,2.034,1.463],"impactsBlockPlacement":true},
+				{"min":[0.049,0.285,0.242],"max":[0.812,1.251,0.5],"impactsBlockPlacement":true}
+			],
+			"icon": "../textures/icons/bunkbed.png",
+			"isSolid": false,
+			"lightingTransparency": 160,
+			"mesh": "../meshes/bunkbed.glb",
+			"movementCost": 4,
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bunkbed"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "bed",
+					"sleepForward": [ 0, 1, 0],
+					"sleepUp": [ -1, 0, 0],
+					"sleepOffset": [ -1.35, 1.26, 1],
+					"sleepAnimationState": "bed"
+				},
+				{
+					"id": "npcOffsetOverride",
+					"value": 0
+				},
+				{
+					"id": "maybeDependent",
+					"ignoreLargeBoundsAwareness": true
+				}
+			],
+			"blueprints": {
+				"type": "skip"
+			},
+			"colliders": [
+			{
+				"min": [0,0,0],
+				"max": [0,0,0],
+				"impactsPhysics": false
+			}],
+			"isDestructible": false,
+			"isSolid": false,
+			"movementCost": 4,
+			"onHitParticleEffectCount": 0,
+			"onRemoveAmount": 0
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bunkbedtop"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [
+				{
+					"id": "autocrafter",
+					"allowMultiple": true,
+					"header": "autocrafter.odditypressheader",
+					"recipeNPCType": "pipliz.odditypress",
+					"interactableColliderIndices": [ 0, 1 ],
+					"activeAudioLoop": "millLoop",
+					"crafterGroup": "odditypress"
+				},
+				"client_reservesecondaryhiton",
+				{
+					"id": "dependentBlocks",
+					"instances": [
+						{ "pos": [ 1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, 0 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, -1 ], "type": "npcblockerair" },
+						{ "pos": [ -1, 0, 1 ], "type": "npcblockerair" }
+					]
+				}
+			],
+			"attachmentRequirements": [
+			{
+				"axis": [ "Y" ],
+				"min": [ 0.99, -0.51, -0.25],
+				"max": [ 1.29,  -0.4, 0.25]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -0.33, -0.51, -0.49],
+				"max": [ 0.37, -0.4, 0.49]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.03, -0.51, -0.49],
+				"max": [ -0.51, -0.4, 0.49]
+			},{
+				"axis": [ "Y" ],
+				"min": [ -1.49, -0.51, -0.23],
+				"max": [ -1.33, -0.4, 0.23]
+			}
+			],
+			"categories": [
+				"essential"
+			],
+			"colliders": [
+				{"min":[-0.365,-0.494,-0.289],"max":[1.383,0.042,0.293],"impactsBlockPlacement":true},
+				{"min":[-0.123,-0.5,-0.494],"max":[0.358,1.747,0.484],"impactsBlockPlacement":true},
+				{"min":[-1.495,-0.5,-0.232],"max":[-1.013,0.944,0.233],"impactsPlayerSelection":false,"impactsBlockPlacement":true},
+				{"min":[-0.994,-0.5,-1.183],"max":[-0.534,1.818,1.157],"impactsPlayerSelection":false,"impactsBlockPlacement":true}
+			],
+			"icon": "../textures/icons/odditypress.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": {
+				"path": "../meshes/odditypress.glb",
+				"animation": {
+					"boundsMin": [ -2, -2, -2 ],
+					"boundsMax": [ 2, 4, 2 ],
+					"startAnimated": false,
+					"startLooping": false,
+					"startRandom": false,
+					"events": [
+					{
+						"layer": 0,
+						"time": 0.585,
+						"type": "playClip",
+						"offset": [ 0.0, 0.0, 0.0 ],
+						"clip": "press"
+					},{
+						"layer": 0,
+						"time": 3.231,
+						"type": "playClip",
+						"offset": [ 0.0, 0.0, 0.0 ],
+						"clip": "press"
+					}]
+				}
+			},
+			"onHitParticleEffect": "wood",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "odditypress"
 	},
 	{
 		"color": "ba762c",

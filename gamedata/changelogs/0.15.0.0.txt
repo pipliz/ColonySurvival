@@ -1,0 +1,121 @@
+0.15.0.11 (2025-11-28) (beta 0.15.0.0 started 2025-10-24)
+
+- Top down view using the Overseer's Desk
+- Blueprint builder/scanner in that top down view
+- Import/export blueprints to/from copy-pastable text
+
+- Paintable red, green, blue, white pillars, fences, architrave
+- Reworked red, blue, green, white planks, made them paintable
+- Reworked Sacred Failsafe mesh
+- Reworked Grocery Store mesh
+- Reworked Tool Shop mesh
+- Reworked Merchant Hub mesh
+- Reworked Berry Bush mesh
+- Reworked Barley & Wheat meshes
+- Reworked Copper Lockbox mesh
+- Most plant-based blocks now have random rotations for more variety
+
+Misc
+- Added logic to resolve the player clipping into the world (mostly happens from block changes like door open/close)
+- Fix colonist names further away from the player turning glitchy when there's many of them around the player
+- Fix "world markers" having UI scale applied twice to their text (compass, astrolabe overlay)
+- Fix a case where traps would be skipped when their reloading-position is in a chunk without any entities.
+-- Same for bookcases/scrollshelves (but less likely in practice), and to a much lesser degree shops/crates/toolshops
+- Fix client physics colliders staying around in some cases, potentially resulting in lower performance over time
+- Fix a bug that would reset the creation time of a colony to day 0 of the world on reload, away from the actual colony creation time
+- Fix a probable bug with construction areas not keeping their area loaded properly (for when they are outside of a colony range)
+- Fixed some inventory related bugs;
+-- Fix sometimes not receiving all item results when removing dependent types indirectly (like torches on top of the block removed)
+-- Fix placement of some types consuming items from the incorrect inventory slot on placement when you have multiple slots of them (moulding, paint, quarterblocks)
+-- Fix paints being consumed when the item is already painted in the desired way
+- Fix water not showing up in the F11 "render without UI" screenshots
+- Fix water not being fully dark in full shadow
+
+0.15.0.1 (2025-10-24)
+
+- Blueprints ignore water, banners, outpostbanner on scanning & placement
+
+0.15.0.2 (2025-10-24)
+
+I love friday evenings
+- Building blueprints actually costs items now (yeaaah)
+- Enhanced the system to deal with some hidden/internal blocks (caused issues with copying larger blocks)
+- Skip crop types (don't have required items)
+- Replace any ore blocks in blueprints with darkstone
+
+0.15.0.3 (2025-10-28)
+
+- Increase max distance of topdown tool use (so zooming out doesn't stop it from working)
+- Fix F4 "toggle interface" glitchyness by making it a more proper feature
+- Skip windmill in blueprints
+- Old failsafe drops new failsafe on removal
+- Fix incorrect format on heartbeat packets sent to the client before a connection is set up properly
+- Fix UI interaction not working during the password prompt menu
+- Fixed key rebinding not working (by updating the unity UI package which magically fixed it, after magically breaking it with a unity update...)
+
+0.15.0.4 (2025-10-29)
+
+- Fix half the bed orientations not working with blueprint placement (potentially also fixes some adjacent issues with other blocks that are larger than 1 unit)
+- Fix straight quarterblocks placed on top of blocks not being placeable as they required the wrong stockpile item to be placed
+- Blueprint builders now also give item results for what they remove
+
+0.15.0.5 (2025-10-31)
+
+- Improve blueprint placement block outlines to include outlines at the edge of the blueprint (especially useful for small blueprints)
+- Update the missing shop access indicator icon for colonists to use the new tool shop/grocery shop icons
+
+0.15.0.6 (2025-11-12)
+
+- Mostly get gamepad working for topdown view
+- Fix water not showing up in the F11 "render without UI" screenshots
+- Fix stats overlay breaking when using the hide-UI toggle
+- Fix water not being fully dark in full shadow
+- Fix HDR clipping in the F11 screenshots
+
+0.15.0.7 (2025-11-12)
+
+- Don't render area outlines in topdown view when the UI is hidden
+
+0.15.0.8 (2025-11-14)
+
+- Blueprint outline edges now only render if they're at the 'front' side, this improves 3d perception of the outline
+- Replaced the area-adjustment-gizmo part of blueprint scanning/placement, and added a line to hint at dragging them
+- Gamepad support for dragging the area-adjustment-gizmos
+- Stop blueprints overwriting water giving water item results
+- Fix blueprint placement of 'lit' variants of blastfurnace/bloomery/furnace
+- Fix bookcase & scrollshelves desiring (semi-)filled variants for blueprint placement
+- Fix wisteriaplants desiring a grown variant for blueprint placement
+- Fix top layer of non-blocky voxels not being interactible when x-ray is on
+- Fix colonists not being interactible when x-ray is on and they're standing on top of the x-ray'd world
+- Fix the in-progress area selection in topdown view being hidden when it's about x-ray height
+- Fix being able to click on x-ray'd 'large blocks' (like the failsafe)
+- Fix non-blocky voxels not rendering properly every 16 blocks when they're at the exact x-ray height
+- Fix sign text not respecting x-ray setting
+
+0.15.0.9 (2025-11-20)
+
+- Reworked control rebinding UI, added topdown controls
+- Don't use the swap left/right-click setting for topdown view use (it's more "UI interaction" than block interaction)
+- Double-fix bookcases/scrollshelves in blueprints to now be considered the _full_ variants, which are the ones you can craft
+- Fix the sequential-construction-area-placement modifier control to work in topdown view
+- Fix some tables not automatically scrolling with gamepad navigation
+
+0.15.0.10 (2025-11-20)
+
+- Added various item descriptions
+- on/off icon state for topdown safezone visualisation
+- Remove outdated/duplicate item description for the grocery shop item
+- Add the "orders a colonists to work" description to the scribe, researcher and wisteria farmer
+
+0.15.0.11 (2025-11-26)
+
+- Fix area job state being incorrect after exiting the topdown view (meaning you couldn't interact with them until swapping out of and back in to the command tool)
+- Water doesn't create rubble particles anymore when removed by the archimedean screw
+- Fix closed doors not being placed underground using a blueprint (as it wouldnt remove the terrain)
+- Fix "reverse zoom direction" toggle for topdown mouse & kb controls not working, and it overwriting the state of the "inverse left/right click" setting
+- Fix scrollshelves/bookcases yet more... now they finally work with freshly scanned blueprints? :)
+- Skip old toolshop/npcshop/merchanthub blocks in blueprints
+- Update "purchasable at merchant hub" icon to use the new hub type
+- Remove duplicate straw roof recipe
+- Fix typo in control rebinding entry name
+- Fix blueprint placement ignoring the indestructible flag

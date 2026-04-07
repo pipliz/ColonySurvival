@@ -17,6 +17,10 @@
 	"quarterblockdynamicitem": {
 		"attachBehaviour": [
 		{
+			"id": "onclientclicklua",
+			"script": "quarterblockpreview"
+		},
+		{
 			"id": "smart_quarterblock",
 			"y+": {
 				"side": "quarterblockdynamicy+",
@@ -56,6 +60,144 @@
 		"icon": "../textures/icons/quarterblockdynamic.png",
 		"isPlaceable": false
 	},
+	"quarterblockgreyitem": {
+		"attachBehaviour": [
+		{
+			"id": "onclientclicklua",
+			"script": "quarterblockpreview"
+		},
+		{
+			"id": "smart_quarterblock",
+			"y+": {
+				"side": "quarterblockgrey",
+				"outside": "quarterblockgreyoutsidey+",
+				"inside": "quarterblockgreyinsidey+"
+			},
+			"y-": {
+				"side": "quarterblockgreyy-",
+				"outside": "quarterblockgreyoutsidey-",
+				"inside": "quarterblockgreyinsidey-"
+			},
+			"x+": {
+				"side": "quarterblockgreysidex+",
+				"outside": "quarterblockgreyoutsidex+",
+				"inside": "quarterblockgreyinsidex+"
+			},
+			"x-": {
+				"side": "quarterblockgreysidex-",
+				"outside": "quarterblockgreyoutsidex-",
+				"inside": "quarterblockgreyinsidex-"
+			},
+			"z+": {
+				"side": "quarterblockgreysidez+",
+				"outside": "quarterblockgreyoutsidez+",
+				"inside": "quarterblockgreyinsidez+"
+			},
+			"z-": {
+				"side": "quarterblockgreysidez-",
+				"outside": "quarterblockgreyoutsidez-",
+				"inside": "quarterblockgreyinsidez-"
+			}
+		}],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/quarterblockgrey.png",
+		"isPlaceable": false
+	},
+	"quarterblockbrowndarkitem": {
+		"attachBehaviour": [
+		{
+			"id": "onclientclicklua",
+			"script": "quarterblockpreview"
+		},
+		{
+			"id": "smart_quarterblock",
+			"y+": {
+				"side": "quarterblockbrowndark",
+				"outside": "quarterblockbrowndarkoutsidey+",
+				"inside": "quarterblockbrowndarkinsidey+"
+			},
+			"y-": {
+				"side": "quarterblockbrowndarky-",
+				"outside": "quarterblockbrowndarkoutsidey-",
+				"inside": "quarterblockbrowndarkinsidey-"
+			},
+			"x+": {
+				"side": "quarterblockbrowndarksidex+",
+				"outside": "quarterblockbrowndarkoutsidex+",
+				"inside": "quarterblockbrowndarkinsidex+"
+			},
+			"x-": {
+				"side": "quarterblockbrowndarksidex-",
+				"outside": "quarterblockbrowndarkoutsidex-",
+				"inside": "quarterblockbrowndarkinsidex-"
+			},
+			"z+": {
+				"side": "quarterblockbrowndarksidez+",
+				"outside": "quarterblockbrowndarkoutsidez+",
+				"inside": "quarterblockbrowndarkinsidez+"
+			},
+			"z-": {
+				"side": "quarterblockbrowndarksidez-",
+				"outside": "quarterblockbrowndarkoutsidez-",
+				"inside": "quarterblockbrowndarkinsidez-"
+			}
+		}],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/quarterblockbrowndark.png",
+		"isPlaceable": false
+	},
+	"quarterblockbrownlightitem": {
+		"attachBehaviour": [
+		{
+			"id": "onclientclicklua",
+			"script": "quarterblockpreview"
+		},
+		{
+			"id": "smart_quarterblock",
+			"y+": {
+				"side": "quarterblockbrownlight",
+				"outside": "quarterblockbrownlightoutsidey+",
+				"inside": "quarterblockbrownlightinsidey+"
+			},
+			"y-": {
+				"side": "quarterblockbrownlighty-",
+				"outside": "quarterblockbrownlightoutsidey-",
+				"inside": "quarterblockbrownlightinsidey-"
+			},
+			"x+": {
+				"side": "quarterblockbrownlightsidex+",
+				"outside": "quarterblockbrownlightoutsidex+",
+				"inside": "quarterblockbrownlightinsidex+"
+			},
+			"x-": {
+				"side": "quarterblockbrownlightsidex-",
+				"outside": "quarterblockbrownlightoutsidex-",
+				"inside": "quarterblockbrownlightinsidex-"
+			},
+			"z+": {
+				"side": "quarterblockbrownlightsidez+",
+				"outside": "quarterblockbrownlightoutsidez+",
+				"inside": "quarterblockbrownlightinsidez+"
+			},
+			"z-": {
+				"side": "quarterblockbrownlightsidez-",
+				"outside": "quarterblockbrownlightoutsidez-",
+				"inside": "quarterblockbrownlightinsidez-"
+			}
+		}],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/quarterblockbrownlight.png",
+		"isPlaceable": false
+	},
 	"railitem": {
 		"attachBehaviour": [
 		{
@@ -64,12 +206,11 @@
 			"surfaceOnly": true
 		},
 		{
+			"id": "onclientclicklua",
+			"script": "railstool"
+		},
+		{
 			"id": "smart_rail_placement",
-			"shaft_straight": "elevatorshafthorizontal",
-			"shaft_ramp": "elevatorshaftdiagonal",
-			"shaft_corner": "elevatorshafthorizontal90",
-			"shaft_cross3": "elevatorshafthorizontal3way",
-			"shaft_cross4": "elevatorshafthorizontal4way",
 			"filter": "horizontalShaft",
 			"filterGateway": "horizontalGateways"
 		}],
@@ -86,10 +227,9 @@
 	"flowerboxitem": {
 		"attachBehaviour": [
 			{
-				"id": "smart_flowerbox",
-				"side_type": "wallflowerbox",
-				"bottom_type": "groundflowerbox"
-			},		
+				"id": "onclientclicklua",
+				"script": "flowerboxplacement"
+			},
 			{
 				"id": "hint_paintable",
 				"types": [ "paintstripped", "paintwhite", "paintred", "paintgreen", "paintblue" ]
@@ -106,12 +246,11 @@
 	},
 	"signitem": {
 		"attachBehaviour": [
-		{
-			"id": "smart_sign",
-			"side_type": "signwall",
-			"bottom_type": "signground",
-			"top_type": "signroof"
-		}],
+			{
+				"id": "onclientclicklua",
+				"script": "signplacement"
+			}
+		],
 		"categories": [
 			"essential"
 		],
@@ -119,14 +258,31 @@
 		"isRotatable": true,
 		"isPlaceable": false
 	},
+	"wallpaintingitem": {
+		"attachBehaviour": [
+			{
+				"id": "paintingplacer",
+				"type": "defaultpainting"
+			},
+			{
+				"id": "onclientclicklua",
+				"script": "paintingplacement"
+			}
+		],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/wallpainting.png",
+		"isPlaceable": false
+	},
 	"lanternitem": {
 		"attachBehaviour": [
-		{
-			"id": "smart_lantern",
-			"top_type": "lanternroof",
-			"side_type": "lanternside",
-			"bottom_type": "lanternfloor"
-		}],
+			{
+				"id": "onclientclicklua",
+				"script": "lanternplacement"
+			}
+		],
 		"categories": [
 			"decorative",
 			"decorative_mesh"
@@ -137,7 +293,7 @@
 	"lanternfloor": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 0, -1, 0 ],
+			"axis": [ "Y" ],
 			"min": [ -0.07, -0.6, -0.07 ],
 			"max": [ 0.07, -0.485, 0.07 ]
 		}],
@@ -180,7 +336,7 @@
 	"lanternroof": {
 		"attachmentRequirements": [
 		{
-			"offset": [ 0, 1, 0 ],
+			"axis": [ "Y" ],
 			"min": [ -0.04, 0.47, -0.04 ],
 			"max": [ 0.04, 0.6, 0.04 ]
 		}],
@@ -426,33 +582,12 @@
 		],
 		"attachBehaviour": [
 			{
-				"id": "smart_placement",
-				"apply_client": true,
-				"apply_server": true,
-				"options": [
-					{
-						"conditions": [
-							"HasBehaviour(0, 1, 0, 'pillar')",
-							"HasBehaviour(0, -1, 0, 'pillar')"
-						],
-						"resultType": "pillarmiddle"
-					},
-					{
-						"conditions": [
-							"HasBehaviour(0, 1, 0, 'pillar')"
-						],
-						"resultType": "pillarbottom"
-					},
-					{
-						"conditions": [
-							"HasBehaviour(0, -1, 0, 'pillar')"
-						],
-						"resultType": "pillartop"
-					},
-					{
-						"resultType": "pillartopbottom"
-					}
-				]
+				"id": "smart_placement_lua",
+				"script": "pillarplacement"
+			},
+			{
+				"id": "hint_paintable",
+				"types": [ "paintstripped", "paintwhite", "paintred", "paintblue", "paintgreen" ]
 			}
 		],
 		"colliders": [
@@ -475,166 +610,28 @@
 		"pathingImpact": "AsSolid",
 		"sideall": "neutral"
 	},
-	"pillartopbottom": {
-		"attachmentProviders": [
-		{
-			"min": [ -0.5, 0.4, -0.5 ],
-			"max": [ 0.5, 0.5 , 0.5 ]
-		}],
-		"colliders": [
-			{
-				"max": [
-					0.55,
-					0.50,
-					0.55
-				],
-				"min": [
-					-0.55,
-					-0.5,
-					-0.55
-				]
-			}
-		],
-		"attachBehaviour": [ "pillar" ],
-		"canBuildUpon": true,
-		"isSolid": false,
-		"lightingTransparency": 100,
-		"mesh": "../meshes/pillartopbottom.ply",
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
-		"onRemoveType": "pillar",
-		"pathingImpact": "AsSolid",
-		"sideall": "neutral"
-	},
-	"pillartop": {
-		"attachmentProviders": [
-		{
-			"min": [ -0.5, 0.4, -0.5 ],
-			"max": [ 0.5, 0.5 , 0.5 ]
-		}],
-		"colliders": [
-			{
-				"max": [
-					0.3,
-					0.40,
-					0.3
-				],
-				"min": [
-					-0.3,
-					-0.5,
-					-0.3
-				]
-			},
-			{
-				"max": [
-					0.5,
-					0.5,
-					0.5
-				],
-				"min": [
-					-0.5,
-					0.3,
-					-0.5
-				]
-			}
-		],
-		"attachBehaviour": [ "pillar" ],
-		"canBuildUpon": true,
-		"lightingTransparency": 130,
-		"mesh": "../meshes/pillartop.ply",
-		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
-		"onRemoveType": "pillar",
-		"pathingImpact": "AsSolid",
-		"sideall": "neutral"
-	},
-	"pillarbottom": {
-		"colliders": [
-			{
-				"max": [
-					0.3,
-					0.50,
-					0.3
-				],
-				"min": [
-					-0.3,
-					-0.4,
-					-0.3
-				]
-			},
-			{
-				"max": [
-					0.5,
-					-0.3,
-					0.5
-				],
-				"min": [
-					-0.5,
-					-0.5,
-					-0.5
-				]
-			}
-		],
-		"attachBehaviour": [ "pillar" ],
-		"canBuildUpon": true,
-		"lightingTransparency": 130,
-		"mesh": "../meshes/pillarbottom.ply",
-		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
-		"onRemoveType": "pillar",
-		"pathingImpact": "AsUntouchableSolid",
-		"sideall": "neutral"
-	},
-	"pillarmiddle": {
-		"colliders": [
-			{
-				"max": [
-					0.3,
-					0.50,
-					0.3
-				],
-				"min": [
-					-0.3,
-					-0.5,
-					-0.3
-				]
-			}
-		],
-		"attachBehaviour": [ "pillar" ],
-		"canBuildUpon": true,
-		"lightingTransparency": 160,
-		"mesh": "../meshes/pillarmiddle.ply",
-		"isSolid": false,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
-		"onRemoveType": "pillar",
-		"pathingImpact": "AsUntouchableSolid",
-		"sideall": "neutral"
-	},
-	"architrave": {
-		"colliders": [
-			{
-				"max": [ 0.5, 0.464, 0.5],
-				"min": [ -0.5, -0.5, -0.5 ]
-			},
-			{
-				"max": [ 0.65, 0.50, 0.65 ],
-				"min": [ -0.65, 0.464, -0.65]
-			}
-		],
+	"fence": {
 		"categories": [
-			"decorative",
-			"decorative_mesh"
+			"essential"
 		],
-		"canBuildUpon": true,
-		"icon": "../textures/icons/architrave.png",
-		"lightingTransparency": 110,
-		"mesh": "../meshes/architrave.ply",
-		"isSolid": true,
-		"onPlaceAudio": "stonePlace",
-		"onRemoveAudio": "stoneDelete",
+		"attachBehaviour": [
+			{
+				"id": "builder_usable",
+				"placedType": "fencemiddlei"
+			},
+			{
+				"id": "smart_placement_lua",
+				"script": "fenceplacement"
+			},
+			{
+				"id": "hint_paintable",
+				"types": [ "paintstripped", "paintwhite", "paintred", "paintblue", "paintgreen" ]
+			}
+		],
+		"icon": "../textures/icons/fence.png",
+		"onPlaceAudio": "woodPlace",
+		"maxStackSize": 200,
+		"onRemoveAudio": "woodDeleteLight",
 		"pathingImpact": "AsSolid",
 		"sideall": "neutral"
 	}

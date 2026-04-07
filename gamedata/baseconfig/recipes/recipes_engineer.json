@@ -71,6 +71,32 @@
 	},
 	{
 		"cooldown": 360.0,
+		"defaultLimit": 1,
+		"name": "pipliz.engineer.odditypress",
+		"requires": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			},
+			{
+				"amount": 20,
+				"type": "planks"
+			},
+			{
+				"amount": 10,
+				"type": "copperingot"
+			}
+		],
+		"requiresScience": "pipliz.odditypress",
+		"results": [
+			{
+				"type": "odditypress"
+			}
+		],
+		"sortWeight": 11433
+	},
+	{
+		"cooldown": 360.0,
 		"defaultLimit": 5,
 		"defaultPriority": -100,
 		"name": "pipliz.engineer.lantern",
@@ -594,5 +620,137 @@
 			}
 		],
 		"sortWeight": 7716
+	},
+	{
+		"cooldown": 60,
+		"defaultPriority": -100,
+		"defaultLimit": 10,
+		"name": "pipliz.engineer.bombearly",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "ironwrought",
+				"amount": 3
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombearly"
+			}
+		],
+		"sortWeight": 247423
+	},
+	{
+		"cooldown": 20,
+		"defaultPriority": -100,
+		"defaultLimit": 2,
+		"name": "pipliz.engineer.bombfuse",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "hemp"
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombfuse"
+			}
+		],
+		"sortWeight": 247423
+	},
+	{
+		"cooldown": 50,
+		"defaultPriority": -100,
+		"defaultLimit": 50,
+		"name": "pipliz.engineer.bombfuseblock",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "copperingot",
+				"amount": 3
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombfuseblock",
+				"amount": 5
+			}
+		],
+		"sortWeight": 247423
+	},
+	{
+		"cooldown": 50,
+		"defaultPriority": -100,
+		"defaultLimit": 5,
+		"name": "pipliz.engineer.bombfusedelay",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "copperingot",
+				"amount": 3
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombfusedelay"
+			}
+		],
+		"sortWeight": 247423
+	},
+	{
+		"cooldown": 60,
+		"defaultPriority": -100,
+		"defaultLimit": 10,
+		"name": "pipliz.engineer.bombshaped",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "ironwrought",
+				"amount": 5
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombshapedchargedown"
+			}
+		],
+		"sortWeight": 247423
+	},
+	{
+		"cooldown": 60,
+		"defaultPriority": -100,
+		"defaultLimit": 10,
+		"name": "pipliz.engineer.bombshapedstair",
+		"requires": [
+			{
+				"type": "gunpowder"
+			},
+			{
+				"type": "ironwrought",
+				"amount": 5
+			}
+		],
+		"requiresScience": "pipliz.explosivescrafting",
+		"results": [
+			{
+				"type": "bombshapedchargestair"
+			}
+		],
+		"sortWeight": 247423
 	}
 ]

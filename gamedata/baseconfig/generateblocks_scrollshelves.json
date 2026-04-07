@@ -1,0 +1,379 @@
+[
+
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/scrollshelf0.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx+"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfx+"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1x+"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2x+"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledx+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx-"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfx-"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1x-"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2x-"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledx-"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz+"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfz+"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1z+"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2z+"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledz+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz-"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "scrollshelf",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "scrollshelfz-"
+							},
+							{
+								"growthhours": 120,
+								"type": "scrollshelf1z-"
+							},
+							{
+								"growthhours": 162,
+								"type": "scrollshelf2z-"
+							},
+							{
+								"growthhours": -1,
+								"type": "scrollshelffilledz-"
+							}
+						]
+					}
+				]
+			}
+		],
+		"typeName": "scrollshelf"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [{
+				"id": "builder_usable",
+				"mirrorResult": true,
+			}],
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/scrollshelf3.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelffilled"
+	},
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/scrollshelf1.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelf1",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx-"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz-"
+				}
+			}
+		]
+	},
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, 0.45, -0.5 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			},{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0.1, 0.5 , -0.4 ]
+			},{
+				"min": [ -0.5, -0.5, 0.4 ],
+				"max": [ 0.1, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.1,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/scrollshelf.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/scrollshelf2.ply",
+			"meshRotationEuler": {
+				"x": 0,
+				"y": 270,
+				"z": 0
+			},
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "scrollshelf2",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledx-"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "scrollshelffilledz-"
+				}
+			}
+		]
+	}
+]

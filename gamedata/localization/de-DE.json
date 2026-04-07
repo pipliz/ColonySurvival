@@ -1,5 +1,5 @@
 {
-	"coverage": 100.0,
+	"coverage": 97.0,
 	"hints": {
 		"0": "Je größer das Feld, desto mehr wird produziert. Ausgenommen sind Beerensammler.",
 		"1": "Je mehr Siedler du rekrutierst, desto mehr und unterschiedliche Monster werden erscheinen.",
@@ -35,6 +35,7 @@
 			"cancelqueue": "Warteschlange abbrechen",
 			"description": "Beginne damit, Gegenstände herzustellen, ohne auf Siedler zu warten.",
 			"header": "Mühlenwerkstatt",
+			"odditypressheader": "_MISSING_Oddity Press Workshop",
 			"progress": "Fortschritt",
 			"recipecounts": "Vorhandene Gegenstände für bis zu <b>{0}</b><NBSP>Herstellungen",
 			"recipes": "Rezepte",
@@ -74,6 +75,7 @@
 			"decorative": "Baublöcke",
 			"defense": "Verteidigung",
 			"essential": "Unerlässliches",
+			"explosives": "Sprengstoff",
 			"food": "Nahrung",
 			"ingredient": "Zutaten und Luxusgegenstände",
 			"job": "Aufgabenblöcke",
@@ -235,7 +237,7 @@
 			}
 		},
 		"contentmanager": {
-			"buttonbrowseworkshop": "Werkstatt durchsuchen",
+			"buttonbrowseworkshop": "Workshop durchsuchen",
 			"buttoncreateitem": "Gegenstand herstellen",
 			"buttoneditdetails": "Details bearbeiten",
 			"buttonlistsubscribed": "Abonnierte Gegenstände",
@@ -265,7 +267,16 @@
 			"thumbnailpath": "Thumbnail-Pfad:"
 		},
 		"controls": {
+			"category-debug": "Debug-Steuerung",
+			"category-firstperson": "First-Person-Steuerung",
+			"category-general": "Allgemeine Steuerung",
+			"category-topdown": "Luftansicht-Steuerung",
+			"cycle-tool-down": "Unteres Werkzeug auswählen",
+			"cycle-tool-left": "Linkes Werkzeug auswählen",
+			"cycle-tool-right": "Rechtes Werkzeug auswählen",
+			"cycle-tool-up": "Oberes Werkzeug auswählen",
 			"decreasefieldofview": "Sichtfeld verringern (Cheat)",
+			"duplicate-found": "Taste wird bereits verwendet.",
 			"fireprimary": "Hauptaktion",
 			"firesecondary": "Nebenaktion",
 			"flydown": "Herunterfliegen (Cheat)",
@@ -283,8 +294,10 @@
 			"inventory7": "Schnellauswahlleiste 7",
 			"inventory8": "Schnellauswahlleiste 8",
 			"inventory9": "Schnellauswahlleiste 9",
+			"inventorystockpileselectionjump": "Auswahl zwischen Vorrat und Schnellauswahlleiste wechseln",
 			"jump": "Springen",
 			"jumpgamepadtap": "Springen",
+			"listening-for-input": "Warte auf Eingabe ...",
 			"look": "Anvisieren",
 			"movekeyboard": {
 				"down": "Zurückbewegen",
@@ -305,6 +318,7 @@
 			"simspeedpause": "Simulationsgeschwindigkeit pausieren (Cheat)",
 			"sprint": "Sprinten",
 			"sprintgamepadheld": "Sprinten",
+			"stockpilesecondaryaction": "Sekundäraktion für Vorratseinträge",
 			"takescreenshot": "Screenshot machen",
 			"toggleautofocus": "Autofokus an-/ausschalten (Cheat)",
 			"togglechat": "Chat an-/ausschalten",
@@ -317,7 +331,12 @@
 			"toggleinterface": "Benutzeroberfläche an-/ausschalten",
 			"toggleinventory": "Inventar an-/ausschalten",
 			"togglestats": "Statistikansicht an-/ausschalten",
-			"toggletorch": "Fackel an-/ausschalten"
+			"toggletorch": "Fackel an-/ausschalten",
+			"topdown-reverse-zoom-toggle": "Zoomrichtung umkehren",
+			"topdown-rotate-camera-left": "Kamera nach links drehen",
+			"topdown-rotate-camera-right": "Kamera nach rechts drehen",
+			"topdown-zoom-in": "Heranzoomen",
+			"topdown-zoom-out": "Herauszoomen"
 		},
 		"escapemenu": {
 			"back": "Zurück",
@@ -366,6 +385,8 @@
 			"none": "Keine",
 			"normal": "Normal",
 			"previous": "Vorherige",
+			"quote_close": "“",
+			"quote_open": "„",
 			"randomize": "Zufällig",
 			"reset": "Zurücksetzen",
 			"select": "Auswählen",
@@ -563,7 +584,7 @@
 				"name": "Bronzezeit"
 			},
 			"bronzelockbox": {
-				"description": "Schaltet das Bronzetresor frei. Verbesserte Version des Kupfertresor. Mehr Speicherplatz, mehr Effizienz, weniger bedrohlich.",
+				"description": "Schaltet den Bronzetresor frei. Verbesserte Version des Kupfertresors. Mehr Lagerplatz, mehr Effizienz, weniger bedrohlich.",
 				"name": "Bronzetresor"
 			},
 			"caltrop": {
@@ -595,7 +616,7 @@
 				"name": "Kompass"
 			},
 			"constructionbuilder": {
-				"description": "Schalte Baumeistergebiete für den Bauarbeiter frei.",
+				"description": "Schaltet Baumeistergebiete für den Bauarbeiter frei.",
 				"name": "Baumeister"
 			},
 			"constructiondigger": {
@@ -611,7 +632,7 @@
 				"name": "Koch"
 			},
 			"copperlockbox": {
-				"description": "Schaltet den Kupfertresor frei. Wenn es platziert wird, erhöht es die Kapazität der Koloniepunkte. Warnung: Jeder platzierte Tresor lockt mehr Monster zu deiner Kolonie!",
+				"description": "Schaltet den Kupfertresor frei. Erhöht die Koloniepunktkapazität, während er platziert ist. Warnung: Jeder platzierte Tresor lockt mehr Monster zu deiner Kolonie! ",
 				"name": "Kupfertresor"
 			},
 			"cotton": {
@@ -623,7 +644,7 @@
 				"name": "Armbrüste"
 			},
 			"dyeing": {
-				"description": "Lerne, Blumen in Sumpfgebieten zu züchten und bring so Farbe in deine Welt.",
+				"description": "Lerne, Blumen in Sumpfgebieten zu züchten, und bring so Farbe in deine Welt.",
 				"name": "Färben"
 			},
 			"elevator": {
@@ -638,12 +659,24 @@
 				"description": "Schaltet den Ingenieur und den Fallensteller frei. Der Ingenieur stellt Fallen und deren Munition her, die zur Bekämpfung von Monstern verwendet werden können. Der Fallensteller lädt Fallen in der Nähe wieder auf.",
 				"name": "Ingenieur"
 			},
+			"explosives": {
+				"description": "Ermöglicht den Kauf von Bomben im Handelszentrum",
+				"name": "Sprengstoff-Importe"
+			},
+			"explosivesadvanced": {
+				"description": "Ermöglicht den Kauf von Hohlladungen und Zündern im Handelszentrum",
+				"name": "Erweiterter Sprengstoff"
+			},
+			"explosivescrafting": {
+				"description": "Ermöglicht die Produktion von Sprengstoff beim Ingenieur",
+				"name": "Sprengstoff-Herstellung"
+			},
 			"failsafe": {
 				"description": "Schaltet das Heiligkeit-Notfallsystem frei, ein Notfallwerkzeug, das Heiligkeitspunkte verwendet, um Monster zu töten.",
 				"name": "Heiligkeit-Notfallsystem"
 			},
 			"farming": {
-				"description": "Schaltet den Weizenbauern frei. Weizen wird im Laufe der Zeit als Nahrungsmittel an Bedeutung gewinnen.",
+				"description": "Schaltet den Weizenbauer frei. Weizen wird im Laufe der Zeit als Nahrungsmittel an Bedeutung gewinnen.",
 				"name": "Weizenanbau"
 			},
 			"fence": {
@@ -719,7 +752,7 @@
 				"name": "Metalldreher"
 			},
 			"miner": {
-				"description": "Schalte das Bergbauaufgaben-Rezept beim Tüftler frei. Wenn du ein Material auf einen dunklen Steinblock legst, kommt ein Siedler und baut das Material unaufhörlich ab.",
+				"description": "Schaltet das Bergbauaufgaben-Rezept beim Tüftler frei. Wenn du ein Material auf einen dunklen Steinblock legst, kommt ein Siedler und baut das Material unaufhörlich ab.",
 				"name": "Bergmann"
 			},
 			"monocular": {
@@ -742,12 +775,16 @@
 				"description": "Schaltet den Lebensmitteltisch frei, einen Ort, an dem die Siedler ihre täglichen Mahlzeiten erhalten können. Wenn keiner gefunden wird, besuchen sie das Banner.",
 				"name": "Lebensmitteltisch"
 			},
+			"odditypress": {
+				"description": "_MISSING_The Oddity Press is a fully automated device that operates without a worker. It produes miscellaneous, mostly decorative items.",
+				"name": "_MISSING_Oddity Press"
+			},
 			"outposts": {
 				"description": "Schaltet Außenpostenbanner frei. Sie können platziert werden, um die Kolonie zu erweitern, sowohl in der Nähe als auch in der Ferne.",
 				"name": "Außenposten"
 			},
 			"paint": {
-				"description": "Erfreue dich an all den tollen Farben",
+				"description": "Erfreue dich an all den tollen Farben.",
 				"name": "Farbe"
 			},
 			"papermaking": {
@@ -763,7 +800,7 @@
 				"name": "Haferbrei"
 			},
 			"pottery": {
-				"description": "Schaltet Töpferware frei, die zum Tragen von Gegenständen verwendet werden, und Geschirr, das verkauft werden kann.",
+				"description": "Schaltet Töpferware zum Tragen von Gegenständen und Geschirr zum Verkaufen frei.",
 				"name": "Töpferei"
 			},
 			"prestige1": {
@@ -771,7 +808,7 @@
 				"name": "Prestige I"
 			},
 			"prestige2": {
-				"description": "Nicht das Ziel ist wichtig, sondern der Weg dorthin.",
+				"description": "Der Weg ist das Ziel.",
 				"name": "Prestige II"
 			},
 			"prestige3": {
@@ -866,6 +903,10 @@
 				"description": "Schaltet den Werkzeugtisch frei, einen Ort, an den Siedler gehen, um Werkzeuge mitzunehmen, wenn sie gebraucht werden. Wenn keiner gefunden wird, gehen sie zum Banner.",
 				"name": "Werkzeugverteilung"
 			},
+			"topdownviewtrigger": {
+				"description": "Schaltet das Pult des Aufsehers frei. Damit kannst du deine Kolonie aus der Vogelperspektive betrachten, verwalten und erhältst Zugriff auf Blaupausen.",
+				"name": "Pult des Aufsehers"
+			},
 			"trader": {
 				"description": "Wird verwendet, um Handelsgeschäfte zwischen Kolonien zu erleichtern. Wird nicht für den Handel mit Außenposten verwendet; für Mehrspieler gedacht.",
 				"name": "Händler"
@@ -876,7 +917,7 @@
 			},
 			"waterpump": {
 				"description": "Ermöglicht das Sammeln von Wasser abseits von Wasserquellen.",
-				"name": "Wasser pumpen"
+				"name": "Wasserpumpe"
 			},
 			"watersponge": {
 				"description": "Entfernt Wasser aus seinem örtlichen Gebiet in einer sehr realistischen Art.",
@@ -986,8 +1027,11 @@
 				}
 			},
 			"itemselector": {
+				"buttoncomplete": "_MISSING_Complete Selection",
 				"description": "Wähle den zu verwendenden Gegenstandstyp aus",
-				"header": "Gegenstandsauswahl"
+				"header": "Gegenstandsauswahl",
+				"headerchosen": "_MISSING_Chosen",
+				"headerselectables": "_MISSING_Selectables"
 			},
 			"limits": {
 				"allreset": "Alles zurücksetzen",
@@ -1004,13 +1048,13 @@
 			},
 			"merchantui": {
 				"buy": "Einkaufen",
-				"buy1": "Kaufe<NBSP>1",
-				"buy25": "Kaufe<NBSP>25",
-				"buy5": "Kaufe<NBSP>5",
-				"buytext": "Kaufe „{0}“ für {1} Punkte",
+				"buy1": "1 kaufen",
+				"buy25": "25 kaufen",
+				"buy5": "5 kaufen",
+				"buytext": "„{0}“ für {1} Punkte kaufen",
 				"buytext2": "Die aktuellen Mittel ermöglichen {0} Kauf/Käufe",
 				"currentpoints": "Aktuelle Punkte: {0}/{1}",
-				"description": "Kaufe/Verkaufe Gegenstände für Punkte",
+				"description": "Gegenstände für Punkte kaufen/verkaufen",
 				"header": "Warenhandel",
 				"sell": "Verkaufen",
 				"sell1": "Verkaufe 1",
@@ -1054,7 +1098,7 @@
 				"barleya": "Hühnerfutter",
 				"barleyfarmer": "Gerstenbauer",
 				"beekeeper": "Imker",
-				"beekeepera": "Hält Bienen für die Kerzenproduktion.",
+				"beekeepera": "Züchtet Bienen für die Kerzenproduktion",
 				"berrya": "Schnelles und einfaches Essen – perfekt für den Anfang!",
 				"berryfarmer": "Beerenbauer",
 				"berryfarmertool": "Beerenbauer-Werkzeug",
@@ -1094,7 +1138,7 @@
 				"forestertool": "Försterwerkzeug",
 				"header": "Befehlswerkzeug",
 				"hempfarmer": "Hanfbauer",
-				"missingscience": "<color=#ff2323>Benötigt „{0}“, um zuerst freigeschaltet zu werden.</color>",
+				"missingscience": "<color=#ff2323>Zum Freischalten „{0}“ erforderlich.</color>",
 				"noconstructionareanearby": "Kein Baugebiet in der Nähe",
 				"notarablefen": "Benötigt fruchtbares Sumpfgebiet darunter",
 				"notarableheath": "Benötigt fruchtbare Heide darunter",
@@ -1155,7 +1199,7 @@
 				"description": "Handle und expandiere, um Zugang zu einzigartigen Ressourcen zu erhalten",
 				"header": "Koloniepunkte & Kolonisierung",
 				"text1_2": "Schalte das Handelszentrum frei und platziere es. Verwende <style=Player/FireSecondary>, um dessen Benutzeroberfläche zu öffnen. Verkaufe Gegenstände, um Koloniepunkte zu erhalten. Punkte können unter anderem auf der Seite „Koloniepunkte“ für Verbesserungen ausgegeben werden, wie z.<nbsp>B.<nbsp>ein höheres Siedlerlimit.",
-				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heiden, Sumpfgebieten und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
+				"text2": "Diese Welt enthält mehrere Regionen mit einzigartigen Ressourcen. Es gibt schneebedeckte Berggipfel, violett gefärbte Heiden, Sumpfgebiete und Mammutbäume. Schalte das Astrolabium frei und rüste es aus, um sie leicht zu finden.",
 				"text3": "Schalte Außenposten frei, kaufe ein Außenpostenbanner und trage es bei deiner Erkundung mit dir. Platziere es, um einen Außenposten zu bauen. Die Vorräte und wissenschaftlichen Fortschritte werden mit der Hauptkolonie und anderen Außenposten geteilt. Errichte Außenposten in den oben genannten Regionen, um Zugang zu deren Ressourcen zu erhalten."
 			},
 			"page6_2": {
@@ -1182,7 +1226,7 @@
 				"gameplaytab": {
 					"adaptivecrosshair": "Adaptives Fadenkreuz",
 					"crosshairratio": "Fadenkreuz-Skalierung",
-					"devbuttons": "Aktiviere Entwicklermodus",
+					"devbuttons": "Entwicklermodus aktivieren",
 					"permanenthighlight": "Blöcke permanent hervorheben",
 					"ratio0": "Deaktiviert",
 					"ratio100": "100<NBSP>%",
@@ -1199,8 +1243,9 @@
 					"ratio75": "75<NBSP>%",
 					"ratio87": "87<NBSP>%",
 					"showcolonistjobinname": "Aufgabe im Namen anzeigen",
-					"showsensitivedatamode": "Zeige sensible Daten",
+					"showsensitivedatamode": "Sensible Daten anzeigen",
 					"tab": "Allgemeine Einstellungen",
+					"uiscaletooltip": "_MISSING_Grows/shrinks UI to adjust to various screen sizes, independent of resolution. If you have a 4K display, you probably want this set to 200%",
 					"uiscalingratio": "Benutzeroberflächenskalierung"
 				},
 				"mousemenu": {
@@ -1236,29 +1281,46 @@
 			"video": "Video",
 			"videomenu": {
 				"ambientocclusion": "Umgebungsunschärfe",
+				"ambientocclusiontooltip": "_MISSING_Darkens small gaps, cracks and where objects touch. Little performance impact",
 				"anisotropic": "Anisotropische Filterung x16",
+				"anisotropictooltip": "_MISSING_Helps to keep blocks looking nice when looking at them from funny angles. Little performance impact for anything but the most entry level cards",
 				"antialiasing": "Anti-Aliasing",
+				"antialiasingtooltip": "_MISSING_Reduces some jagginess and noisy results. The given options don't do a lot and have only a light GPU performance impact",
 				"bloom": "Bloom",
+				"bloomtooltip": "_MISSING_Smears out bright light a bit, little performance impact but can help set a nice scene",
 				"depthoffield": "Tiefenschärfe",
 				"detailcount": "Detailzahl",
-				"drawdistance": "Entfernung (*)",
+				"detailcounttooltip": "_MISSING_Sets a limit on how many non-blocky things can be drawn in one frame. Only starts mattering with very large bases, can strongly impact CPU and GPU use at that point. Very situational",
+				"drawdistance": "Entfernung",
+				"drawdistancetooltip": "_MISSING_Main setting determining how much of the world you can see. Strongly impacts both CPU and GPU load. 'Low' is 128 blocks, 'Very high' 1024 blocks",
 				"fieldofview": "Sichtfeld",
 				"fog": "Nebel",
+				"fogtooltip": "_MISSING_Adds some overall fog effect, little performance impact but can help set a nice scene",
 				"full": "Videoeinstellungen",
 				"fullscreen": "Vollbild",
 				"particleeffects": "Partikeleffekte",
+				"particleeffectstooltip": "_MISSING_Sets the amount of particles created from various events like destroying blocks, and how long those particles remain visible. Light to medium CPU performance impact",
 				"preset": "Voreinstellung",
+				"presettooltip": "_MISSING_Combined setting that adjusts many of the more detailed settings below in one go for ease of use",
 				"ragdoll": "Ragdoll-Menge",
+				"ragdolltooltip": "_MISSING_Sets how many character bodies can remain on the ground at the same time. Minor CPU impact in late game when set to higher values",
+				"renderscaletooltip": "_MISSING_Reduces or increases the resolution used for rendering, while keeping the interface at the main resolution. 100 means 100% scale (no change). Impacts GPU performance heavily.",
+				"renderscalingratio": "_MISSING_Render scale",
 				"resolution": "Auflösung",
-				"restarttoapply": "(*) Benötigt einen Neustart des Spiels",
+				"resolutiontooltip": "_MISSING_Preferably set this to the native resolution of the display used. If performance is needed, prefer to use the 'Render scale' setting",
 				"shaderquality": "Shader-Qualität",
+				"shaderqualitytooltip": "_MISSING_High enables a 3d effect on blocks, and medium enables a more detailed lighting effect on blocks. Medium GPU performance impact",
 				"sunshadowcascades": "Sonnenschattenkaskaden",
 				"sunshadowdistance": "Schattenentfernung",
 				"sunshadowquality": "Sonnenschattenqualität",
-				"texturequality": "Texturqualität (*)",
+				"sunshadowqualitytooltip": "_MISSING_Lower setting reduces shadow resolution. Medium impact on both CPU and GPU performance, though turning it off fully can help a lot",
+				"texturequality": "Texturqualität",
+				"texturequalitytooltip": "_MISSING_Lower setting reduces texture resolution. Doesn't impact performance a lot for most systems",
 				"torchquality": "Fackelqualität",
+				"torchqualitytooltip": "_MISSING_Medium renders torch lighting at half resolution, low at quarter resolution. Can impact GPU performance a lot, depending on how many lights are placed. High is full resolution. Very high is currently the same as high",
 				"vsync": "VSync",
-				"vsyncdouble": "Doppel"
+				"vsyncdouble": "Doppel",
+				"vsynctooltip": "_MISSING_Recommended to keep on. When set to 'on' it limits framerate to the display framerate, preventing artifacts and reducing system load. When set to 'double' it limits framerate to half the display rate, consider it a power saving mode"
 			}
 		},
 		"singleplayermenu": {
@@ -1292,16 +1354,16 @@
 				"requireddependency": "[Benötigt]"
 			},
 			"newworld": "Neue Welt",
-			"nosubscribeditems": "Keine abonnierte Werkstattwelt gefunden.",
+			"nosubscribeditems": "Keine abonnierte Workshop-Welt gefunden.",
 			"outdated": "Welt veraltet",
 			"password": "Passwort",
-			"play_coop": "Spiele Koop",
-			"play_solo": "Spiele Solo",
+			"play_coop": "Koop spielen",
+			"play_solo": "Solo spielen",
 			"selectedfolder": "Welt ausgewählt: {0}",
 			"servername": "Servername",
 			"serverport": "Serveranschluss",
 			"typegenerateworld": "Welt generieren",
-			"typeworkshop": "Werkstattwelt",
+			"typeworkshop": "Workshop-Welt",
 			"world_folder": "Ordner",
 			"world_outdated": "Erfordert ältere Version",
 			"worlddate": "Datum",
@@ -1341,7 +1403,7 @@
 			"sanctifiedlockbox-points": "Fügt {0} Heiligkeitspunkt-Kapazität hinzu",
 			"sanctifiedlockbox-threat": "Verursacht {0} Bedrohung",
 			"statisticsboard": "Interagiere mit diesem Block, um Statistiken über deine Kolonie anzuzeigen",
-			"threatstatue-general": "Zieht die Bedrohung von anderen Außenposten auf den Außenposten, auf dem er platziert wird und verursacht gleichzeitig selbst eine gewisse Bedrohung.",
+			"threatstatue-general": "Zieht die Bedrohung von anderen Außenposten auf den Außenposten, auf dem er platziert wird, und verursacht gleichzeitig selbst eine gewisse Bedrohung.",
 			"threatstatue-threatcaused": "Verursacht {0} zusätzliche Bedrohung",
 			"threatstatue-threatweight": "Fügt {0} Bedrohungsgewicht hinzu",
 			"tool-always-usable": "Immer verfügbar, benötigt keine Gegenstände",
@@ -1366,6 +1428,71 @@
 			"trap-style-down": "Wird von Monstern darunter ausgelöst",
 			"trap-style-front": "Wird von Monstern davor ausgelöst",
 			"trap-style-up": "Wird von Monstern darüber ausgelöst"
+		},
+		"topdownview": {
+			"blueprint_naming": {
+				"button_cancel": "Abbrechen",
+				"button_confirm": "Bestätigen",
+				"inputfield_name": "Name der Blaupause"
+			},
+			"blueprint_selection": {
+				"button_entry_delete": "Entfernen",
+				"button_entry_place": "Platzieren",
+				"button_entry_share": "Teilen",
+				"button_import_blueprint": "Blaupause importieren",
+				"button_import_blueprint_full": "Wenn die Zwischenablage einen gültigen Blaupausen-Code enthält, wird er mit dieser Schaltfläche importiert.",
+				"column_header_name": "Name",
+				"column_header_size": "Größe"
+			},
+			"blueprint_share": {
+				"button_copy_blueprint_code": "In die Zwischenablage kopieren",
+				"button_copy_blueprint_code_full": "Kopiere die Blaupausen-Daten in die Zwischenablage, um sie an anderer Stelle einzufügen und die Blaupause mit anderen zu teilen.",
+				"label_selected_blueprint_name": "Ausgewählte Blaupause"
+			},
+			"clickables": {
+				"adjustlayer+1": "Ebene +1",
+				"adjustlayer+1_full": "Eine zusätzliche Ebene der Welt anzeigen",
+				"adjustlayer+5": "Ebene +5",
+				"adjustlayer+5_full": "Fünf zusätzliche Ebenen der Welt anzeigen",
+				"adjustlayer-1": "Ebene -1",
+				"adjustlayer-1_full": "Eine Ebene weniger anzeigen",
+				"adjustlayer-5": "Ebene -5",
+				"adjustlayer-5_full": "Fünf Ebenen weniger anzeigen",
+				"exit": "Verlassen",
+				"exit_full": "Verwendung des Pults des Aufsehers beenden",
+				"light_turn_off": "Lampe ausschalten",
+				"light_turn_off_full": "Rette den Planeten, spare etwas Energie",
+				"light_turn_on": "Lampe einschalten",
+				"light_turn_on_full": "Fügt deinem Cursor ein Licht hinzu",
+				"placement_flip_x": "Horizontal spiegeln",
+				"placement_flip_x_full": "Spiegelt die Platzierung der aktuellen Blaupause horizontal",
+				"placement_flip_z": "Vertikal spiegeln",
+				"placement_flip_z_full": "Spiegelt die Platzierung der aktuellen Blaupause vertikal",
+				"placement_rotate_90": "Drehen",
+				"placement_rotate_90_full": "Blaupause um 90 Grad drehen",
+				"placement_stop": "Abbrechen",
+				"placement_stop_full": "Die aktuelle Verwendung des Blaupausen-Platzierers abbrechen",
+				"resetlayer": "Ebene zurücksetzen",
+				"resetlayer_full": "Sichtbare Ebenen auf die Stufe des benutzten Pults des Aufsehers zurücksetzen",
+				"safezone_turn_off": "Sicherheitszone nicht anzeigen",
+				"safezone_turn_off_full": "Unwissenheit ist ein Segen",
+				"safezone_turn_on": "Sicherheitszone anzeigen",
+				"safezone_turn_on_full": "Monster erscheinen im schattigen Gebiet",
+				"slicing_turn_off": "Röntgensicht deaktivieren",
+				"slicing_turn_off_full": "Dächer wieder anzeigen",
+				"slicing_turn_on": "Röntgensicht aktivieren",
+				"slicing_turn_on_full": "Blicke in deine Welt hinein",
+				"tool_blueprint_placer": "Blaupausen-Platzierer",
+				"tool_blueprint_placer_full": "Platziere Blaupausen in der Welt",
+				"tool_blueprint_scanner": "Blaupausen-Scanner",
+				"tool_blueprint_scanner_full": "Wähle damit ein Gebiet in der Welt aus, um es für die spätere Verwendung im Blaupausen-Platzierer zu speichern.",
+				"tool_colony": "Koloniewerkzeug",
+				"tool_colony_full": "Öffnet das Kolonieverwaltungsmenü",
+				"tool_command": "Befehlswerkzeug",
+				"tool_command_full": "Gebietsaufgaben erstellen"
+			},
+			"tool_blueprint_placer": "Blaupausen-Platzierer",
+			"tool_blueprint_scanner": "Blaupausen-Scanner"
 		},
 		"upgrades": {
 			"builder": {
@@ -1403,11 +1530,18 @@
 		"bannertool": "Bannerwerkzeug",
 		"barley": "Gerste",
 		"bed": "Bett",
+		"bed3": "_MISSING_Luxury Bed",
 		"berry": "Beere",
 		"berrybush": "Beerensamen",
 		"berrymeal": "Beerenmahlzeit",
 		"blastfurnace": "Hochofen",
 		"bloomery": "Rennofen",
+		"bombearly": "Bombe",
+		"bombfuse": "Lunte",
+		"bombfuseblock": "Zündschnur",
+		"bombfusedelay": "Zeitzünder",
+		"bombshapedchargedown": "Hohlladung",
+		"bombshapedchargestair": "Diagonale Hohlladung",
 		"bookcase": "Bücherregal (leer)",
 		"bookcase1": "Bücherregal (fast leer)",
 		"bookcase2": "Bücherregal (teilweise leer)",
@@ -1417,7 +1551,7 @@
 		"brassingot": "Messingbarren",
 		"brassparts": "Präzisionsteile aus Messing",
 		"bread": "Brot",
-		"breadmeal": "Brotmahlzeit",
+		"breadmeal": "Marmeladebrot",
 		"bricks": "Ziegel",
 		"bricksblack": "Schwarze Ziegel",
 		"bricksdarkred": "Dunkelrote Ziegel",
@@ -1427,6 +1561,7 @@
 		"bronzeingot": "Bronzebarren",
 		"bronzelockbox": "Bronzetresor",
 		"bronzetools": "Bronzewerkzeuge",
+		"bunkbed": "_MISSING_Bunkbed",
 		"cabbage": "Weißkohl",
 		"caltrops": "Krähenfüße",
 		"caltroptrap": "Krähenfußfalle",
@@ -1461,12 +1596,17 @@
 		"coppertools": "Kupferwerkzeuge",
 		"corbel": "Konsole",
 		"cotton": "Baumwolle",
-		"cottonengine": "Baumwollmotor",
+		"cottonengine": "Egreniermaschine",
 		"cottonfibre": "Baumwollfaser",
 		"crate": "Kiste",
 		"crossbow": "Armbrust",
 		"crossbowbolt": "Bolzenpfeile",
 		"darkstone": "Dunkler Steinblock",
+		"decofoods": "_MISSING_Food Pile",
+		"decogoods": "_MISSING_Trade Items Pile",
+		"decoitems": "_MISSING_Desk Items Pile",
+		"decotools": "_MISSING_Tool Pile",
+		"deskfull": "_MISSING_Desk",
 		"dirt": "Erde",
 		"dirtfen": "Sumpferde",
 		"dirtheath": "Heideerde",
@@ -1482,6 +1622,7 @@
 		"engineerbench": "Ingenieurtisch",
 		"eyeglasses": "Brillen",
 		"failsafe": "Heiligkeit-Notfallsystem",
+		"failsafe3": "Heiligkeit-Notfallsystem",
 		"fence": "Zaun",
 		"firepit": "Feuerstelle",
 		"firewood": "Feuerholz",
@@ -1534,6 +1675,7 @@
 		"hemp": "Hanf",
 		"hempfibre": "Hanffaser",
 		"hollyhock": "Malve",
+		"huntingtrophy": "_MISSING_Hunting Trophy",
 		"ironbloom": "Renneisen",
 		"ironore": "Eisenerz",
 		"irontools": "Eisenwerkzeuge",
@@ -1569,18 +1711,21 @@
 		"machinetools": "Maschinenwerkzeuge",
 		"manuscript": "Manuskript",
 		"merchanthub": "Handelszentrum",
+		"merchanthub2": "Handelszentrum",
 		"metalgear": "Metallgetriebe",
 		"metallathe": "Metalldreher",
 		"minerjob": "Bergbauaufgabe",
 		"monocular": "Fernglas",
 		"mouldingitem": "Kronenstuck",
-		"movabletype": "Beweglicher Typ",
+		"movabletype": "Bewegliche Lettern",
 		"mudbricks": "Lehmziegel",
 		"musket": "Muskete",
 		"musketammo": "Musketenmunition",
 		"nitro": "Nitrozellulose",
 		"notools": "Keine Werkzeuge",
 		"npcshop": "Lebensmitteltisch",
+		"npcshop2": "Lebensmitteltisch",
+		"odditypress": "_MISSING_Oddity Press",
 		"outpostbanner": "Außenpostenbanner",
 		"paintblue": "Blaue Farbe",
 		"paintgreen": "Grüne Farbe",
@@ -1596,6 +1741,7 @@
 		"plankscoated": "Lackierte Bretter",
 		"planksgreen": "Grüne Bretter",
 		"planksred": "Rote Bretter",
+		"plaster": "Putz",
 		"points": "Punkte",
 		"poisondart": "Giftpfeil",
 		"potash": "Pottasche",
@@ -1607,9 +1753,12 @@
 		"projectiletrap": "Geschossfalle",
 		"projectiletrapammo": "Geschossfallenmunition",
 		"quarterblockbrowndark": "Dunkelbrauner Viertelblock",
+		"quarterblockbrowndarkitem": "Dunkelbrauner Viertelblock",
 		"quarterblockbrownlight": "Hellbrauner Viertelblock",
+		"quarterblockbrownlightitem": "Hellbrauner Viertelblock",
 		"quarterblockdynamicitem": "Dynamischer Viertelblock",
 		"quarterblockgrey": "Grauer Viertelblock",
+		"quarterblockgreyitem": "Grauer Viertelblock",
 		"railgate": "Schienentor",
 		"railitem": "Schienen",
 		"rawfish": "Roher Fisch",
@@ -1624,7 +1773,7 @@
 		"ropetrap": "Seilfalle",
 		"ropetrapammo": "Seilfallenmunition",
 		"saltpeter": "Salpeter",
-		"sanctifiedbreadmeal": "Heilige Brotmahlzeit",
+		"sanctifiedbreadmeal": "Heiliges Marmeladebrot",
 		"sanctifiedchickenmeal": "Heilige Hühnchenmahlzeit",
 		"sanctifiedhouse": "Heiligkeitsvorrat",
 		"sanctifiedporridge": "Heiliger Weizenbrei",
@@ -1654,6 +1803,8 @@
 		"snow": "Schnee",
 		"splittingstump": "Spaltstumpf",
 		"statisticsboard": "Statistiktafel",
+		"statuefarmer": "_MISSING_Statue of the Hopeful Farmer",
+		"statuemonster": "_MISSING_Statue of Military Triumph",
 		"steelingot": "Stahlbarren",
 		"steellockbox": "Stahltresor",
 		"steelparts": "Stahlteile",
@@ -1671,6 +1822,8 @@
 		"stove": "Herd",
 		"straw": "Stroh",
 		"sulfur": "Schwefel",
+		"table": "_MISSING_Small Table",
+		"table32": "_MISSING_Large Table",
 		"tabletclay": "Tontafel",
 		"tabletwisdom": "Tafel der alten Weisheit",
 		"tabulator": "Tabelliermaschine",
@@ -1679,6 +1832,8 @@
 		"tin": "Zinn",
 		"tinkerertable": "Tüftlertisch",
 		"toolshop": "Werkzeugtisch",
+		"toolshop2": "Werkzeugtisch",
+		"topdownviewtrigger": "Pult des Aufsehers",
 		"torch": "Fackel",
 		"trader": "Händler",
 		"trapfixer": "Fallensteller",
@@ -1686,6 +1841,7 @@
 		"vialmineraloil": "Fläschchen mit Erdöl",
 		"vialnitricacid": "Fläschchen mit Salpetersäure",
 		"vialsulphuricacid": "Fläschchen mit Schwefelsäure",
+		"wallpaintingitem": "_MISSING_Painting",
 		"water": "Wasser",
 		"watergatherer": "Wasserträger",
 		"waterpump": "Wasserpumpe",
@@ -1710,9 +1866,17 @@
 		"alkanet": "Im wirklichen Leben eine Quelle für rote Farbe",
 		"astrolabe": "In der Schnellauswahlleiste ausrüsten, um den Weg zu speziellen Regionen zu sehen",
 		"autocrafter": "Eine Maschine, durch die Gegenstände ohne Siedler hergestellt werden können – am Tag und in der Nacht.",
+		"bed": "Notwendig für Siedler, die jede Nacht hierherreisen",
+		"bed3": "_MISSING_More comfort at night",
 		"berry": "Eine einzige Beere. Die Mühe, sie zu essen, lohnt sich nicht!",
 		"berrybush": "Siedler können diese Pflanzen für einfache Nahrung anbauen.",
 		"berrymeal": "Ein paar Beeren, zubereitet zu einer köstlichen Mahlzeit.",
+		"bombearly": "Warnung: Sprengstoff! Verwende die „Lunte“, um die Bombe zu zünden",
+		"bombfuse": "In der Schnellauswahlleiste ausrüsten, um Sprengstoff und Zünder zu zünden",
+		"bombfuseblock": "Verbindet sich, um Sprengstoff aus der Entfernung heraus zu zünden. Kann gestapelt werden, um einen Block höher zu verbinden. Verwende die „Lunte“, um den Zünder zu zünden",
+		"bombfusedelay": "Zündschnur, aber brennt langsam über vier Sekunden ab",
+		"bombshapedchargedown": "Warnung: Sprengstoff! Lenkt ihre Kraft in eine bestimmte Richtung. Verwende die „Lunte“, um die Bombe zu zünden",
+		"bombshapedchargestair": "Warnung: Sprengstoff! Lenkt ihre Kraft diagonal nach unten. Verwende die „Lunte“, um die Bombe zu zünden",
 		"bookcase": "Werden von Forschern „geerntet“ und regenerieren automatisch ihren Inhalt. Werden für jeden Forscher 10 davon platziert, entsteht ein langfristiges Gleichgewicht.",
 		"bookcase1": "Werden von Forschern „geerntet“ und regenerieren automatisch ihren Inhalt. Werden für jeden Forscher 10 davon platziert, entsteht ein langfristiges Gleichgewicht.",
 		"bookcase2": "Werden von Forschern „geerntet“ und regenerieren automatisch ihren Inhalt. Werden für jeden Forscher 10 davon platziert, entsteht ein langfristiges Gleichgewicht.",
@@ -1722,10 +1886,12 @@
 		"breadmeal": "Leckeres Brot mit perfekter Beerenmarmelade.",
 		"bricks": "Letztendlich ist es immer noch ein niederländisches Spiel.",
 		"bronzeingot": "Solide Bronze",
+		"bunkbed": "_MISSING_Less comfort at night",
 		"charcoal": "Absorbiert Blausäure",
 		"cherryblossom": "Das pinkeste Ding in diesem Spiel!",
 		"clay": "Ich wünschte, du könntest ihn anfassen!",
 		"coalore": "Warnung: kann zu Klimaproblemen führen! Kann direkt unter Mammutbäumen gefunden werden.",
+		"colonykit": "Wird verwendet, um mit dem Bannerwerkzeug eine neue, separate Kolonie zu gründen.",
 		"compass": "In der Schnellauswahlleiste ausrüsten, um den Weg zu Kolonien und Außenposten zu sehen.",
 		"cookedfish": "Schwimmfähigkeiten sind dramatisch reduziert.",
 		"copper": "Etwas weiches Metall, aber ziemlich nützlich.",
@@ -1733,8 +1899,18 @@
 		"crate": "Alles, was dein Vorrat braucht!",
 		"crossbow": "Großer Bruder des Bogens",
 		"crossbowbolt": "Härter, besser, schneller, stärker",
+		"decofoods": "_MISSING_Decorative pile of food items",
+		"decogoods": "_MISSING_Decorative pile of trade items",
+		"decoitems": "_MISSING_Decorative pile of desk items",
+		"decotools": "_MISSING_Decorative pile of tools",
+		"desk": "_MISSING_An empty desk",
 		"dirt": "Dreckig",
+		"elevator": "Ermöglicht es dir, Aufzugsschächte zu durchqueren. Kann nicht von Siedlern benutzt werden.",
+		"elevatorhorizontal": "Ermöglicht es dir, Schienen zu befahren. Kann nicht von Siedlern benutzt werden.",
+		"elevatorshaft": "Verbindet zwei Aufzugstationen",
+		"elevatorshafthorizontal": "Verbindet Bahnhöfe",
 		"failsafe": "Notfall-Verteidigungssystem, das Heiligkeitspunkte verwendet",
+		"failsafe3": "Notfall-Verteidigungssystem, das Heiligkeitspunkte verwendet",
 		"firewood": "Grundlegender Brennstoff",
 		"flax": "Die kaiserliche Farbe",
 		"flaxstage1": "Jetzt mach bloß keine Flachsen ... ähm, Faxen!",
@@ -1746,6 +1922,7 @@
 		"grindstone": "Mahlt Weizen zu Mehl.",
 		"gunpowder": "Gib acht!",
 		"hollyhock": "Ein Abführmittel im wirklichen Leben. Im Spiel allerdings nicht. Noch nicht ...",
+		"huntingtrophy": "_MISSING_Memento mori",
 		"ironore": "Abgebaut mit einer Eisenspitzhacke aus Eisenerz.",
 		"ironwrought": "Geschmiedet bedeutet einfach „bearbeitet“.",
 		"kiln": "Verarbeitet Feuerholz zu Kohle.",
@@ -1761,8 +1938,15 @@
 		"logtaiga": "Etwas kälter",
 		"logtemperate": "Wie ein Stammbaum, nur anders.",
 		"monocular": "In der Schnellauswahlleiste ausrüsten, um sich die Welt genauer anzusehen.",
-		"npcshop": "Siedler holen hier einmal am Tag Nahrung und Zufriedenheitsgegenstände.",
+		"odditypress": "_MISSING_Fully automated production of odds and ends",
+		"outpostbanner": "Wird verwendet, um an einem neuen Ort einen Außenposten zu gründen",
+		"paintblue": "Wird auf streichbaren Objekten wie Türen, Zäunen und Säulen verwendet",
+		"paintgreen": "Wird auf streichbaren Objekten wie Türen, Zäunen und Säulen verwendet",
+		"paintred": "Wird auf streichbaren Objekten wie Türen, Zäunen und Säulen verwendet",
+		"paintstripped": "Wird auf streichbaren Objekten wie Türen, Zäunen und Säulen verwendet",
+		"paintwhite": "Wird auf streichbaren Objekten wie Türen, Zäunen und Säulen verwendet",
 		"planks": "Aus eins mach vier!",
+		"plaster": "Eine würdevolle Art, deine Mauern mit Erde zu beschmieren.",
 		"printingpress": "Respektiere die Freiheit.",
 		"quarterblockdynamicitem": "Das Chamäleon der Viertelblöcke.",
 		"railgate": "Ermöglicht das Reisen mit dem Zug und blockiert gleichzeitig das Reisen zu Fuß.",
@@ -1777,18 +1961,25 @@
 		"scrollshelf1": "Werden von Schriftgelehrten „geerntet“ und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Schriftgelehrten sorgt für ein langfristiges Gleichgewicht.",
 		"scrollshelf2": "Werden von Schriftgelehrten „geerntet“ und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Schriftgelehrten sorgt für ein langfristiges Gleichgewicht.",
 		"scrollshelffilled": "Werden von Schriftgelehrten „geerntet“ und regenerieren automatisch ihren Inhalt. Die Platzierung von 10 von ihnen für jeden Schriftgelehrten sorgt für ein langfristiges Gleichgewicht.",
+		"signitem": "Platziere deine eigenen Nachrichten in der Welt!",
 		"silicasand": "Unter Sand in der Heide zu finden",
 		"sling": "Sei bloß vorsichtig damit",
 		"slingbullet": "Eigentlich nur ein kleiner Stein",
 		"snow": "Weiß nichts ...",
 		"splittingstump": "Eine schnellere Art, Holz in Brennholz zu verwandeln.",
+		"statuefarmer": "_MISSING_Gratitude for human labour",
+		"statuemonster": "_MISSING_Remembering victory over our enemies",
 		"stonemasonworkbench": "Eine ganze Menge Steine",
 		"stove": "Wird verwendet, um die Umgebung mit köstlichen Gerüchen zu erfüllen.",
 		"sulfur": "Tief unter der Erde in der Heide zu finden.",
+		"table": "_MISSING_Fits exactly one voxel",
+		"table32": "_MISSING_Six voxels of empty space on this table!",
 		"tailorshop": "Maßgeschneiderte Kleidung für alle!",
 		"tin": "Kann auch in Erzen unter verschneiten Bergen gefunden werden.",
-		"torch": "Bringt Licht ins Dunkle!",
+		"topdownviewtrigger": "Gewährt Zugriff auf die Vogelperspektive und Blaupausen",
+		"torch": "Bringt Licht ins Dunkel!",
 		"trader": "Unerwarteter Nutzen für den Handel.",
+		"wallpaintingitem": "_MISSING_Art for your walls",
 		"water": "Wird alles überfluten",
 		"waterpump": "Ermöglicht die Wasserentnahme, ohne in der Nähe von Wasser zu sein.",
 		"watersponge": "Entfernt Wasser aus seinem örtlichen Gebiet in einer sehr realistischen Art.",

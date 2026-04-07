@@ -1,40 +1,88 @@
-fileType options for jsonFiles entries of modInfo.json;
+fileType options for jsonFiles entries in modInfo.json
 
-addOrReplaceNPCTypes
-addOrReplaceAudio
-addOrReplaceAudioAmbient
-addOrOverrideLocalization
-addOrOverrideAreaJobs
-addOrOverrideGrowableTypes
-addOrOverrideTextureMappingEntries
-addOrReplaceStarterPack
-
-addScience
-addOrOverrideScience
-addScienceUnlocks
-
-addOrReplacePlayerRecipes
-addOrReplaceNPCRecipes
-addOrReplacePointRecipes
-addOrReplaceAutoCrafterRecipes
+General notes:
+- index controls load order (lower index loads first).
+- relativePath is relative to your mod folder.
 
 addBlockJobs
-overrideTypeProperties
+	Legacy block job patches (still works, but code warns this may be removed later; prefer attachBehaviour on types).
+
+addNames
+	Append firstNames/surnames to the NPC name pools.
+
 addNewTypes
+	Add new item/block/tool definitions.
+
+addOrOverrideAreaJobs
+	Add or replace area jobs (for example area farming style jobs).
+
+addOrOverrideGrowableTypes
+	Add or replace growable definitions (crop/sapling growth behavior and stages).
+
+addOrOverrideLocalization
+	Add or override localized text keys for a locale.
+
+addOrOverrideScience
+	Add science entries, or replace existing ones with the same key.
+
+addOrOverrideTextureMappingEntries
+	Add or replace texture mapping entries used by item types (albedo/normal/emissive/height files).
+
+addOrReplaceAudio
+	Add or replace named sound collections used by gameplay/events.
+
+addOrReplaceAudioAmbient
+	Add or replace ambient biome/world sounds.
+
+addOrReplaceAutoCrafterRecipes
+	Add or replace recipes for the Auto Crafter NPC.
+
+addOrReplaceNPCRecipes
+	Add or replace recipes for one npcType (set npcType in the jsonFiles entry). Can also set limitsUIMapping.
+
+addOrReplaceNPCTypes
+	Add new NPC types or replace existing NPC type settings/jobs/meshes.
+
+addOrReplacePlayerRecipes
+	Add or replace recipes craftable by the player.
+
+addOrReplacePointRecipes
+	Add or replace colony point exchange recipes.
+
+addOrReplaceStarterPack
+	Define colony/player starter packs (primary and secondary packs), including optional unlock recipe for secondary packs.
+
+addScience
+	Add new science entries. Fails if a key already exists.
+
+addScienceUnlocks
+	Add extra recipe/recipe-group unlocks to an already existing science key.
+
 generateBlocks
+	Generate extra related block types from patterns (lit, rotated, guard outlines, etc.).
+
+generateBlocksLua
+	Run a Lua script that returns generateBlocks-style entries.
+
+overrideNames
+	Replace previously loaded firstNames/surnames lists.
+
+overrideTypeProperties
+	Change fields on existing item types (or ones added earlier), like durability, categories, icon, mesh, etc.
 
 setColonistTextures
-	legacy, doesn't do anything with default npcs as they use vertex paint based models now
+	Set global default colonist texture files (albedo/normal/special).
+
+setPaintables
+	Define paint color mappings between block variants so paint items can swap one variant to another.
 
 setToolsets
-	sets the toolsets table entries that jobs reference by name
-addNames
-	add firstnames/surnames lists 
-overrideNames
-	same as addNames, but clears the names registered before this
-setPaintables
-	table of item types, one column per paint type, for mapping between them using the paints
+	Define named toolsets that jobs use (which tools are usable/shown and their speed multiplier).
+
+typesLua
+	Run a Lua script that returns item type definitions (table array), then load those as types.
+
 vehiclesettings
-	loads vehicle settings, referenced by the vehicle defining itemtypes
-	
-Check their respective enties in the gamedata/modInfo.json file for examples of what details are expected per type.
+	Load transport/vehicle settings entries (glider/elevator/rail), referenced by vehicle-related content.
+
+See gamedata/baseconfig/modInfo.json and gamedata/localization/modInfo.json for practical examples.

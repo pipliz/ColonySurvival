@@ -10,6 +10,9 @@
 				{"min":[-3.741,1.721,-0.5],"max":[-0.475,2.155,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
 				{"min":[-0.383,2.212,-4.472],"max":[1.114,2.617,4.322],"impactsBlockPlacement":true, "impactsPhysics": false}
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/glider.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -139,6 +142,9 @@
 				{"min":[-2.542,0.91,-0.5],"max":[-1.66,1.623,0.5],"impactsBlockPlacement":true, "impactsPhysics": false},
 				{"min":[-0.673,2.649,-3.484],"max":[-0.143,2.947,3.482],"impactsBlockPlacement":true, "impactsPhysics": false}
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/glidersteel.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -265,6 +271,9 @@
 				{"min":[-0.5,-0.5,0.433],"max":[0.5,0.5,0.5]},
 				{"min":[-0.5,-0.5,-0.5],"max":[0.5,0.5,-0.433]}
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/elevatorgateway.png",
 			"isSolid": false,
 			"lightingTransparency": 200,
@@ -283,9 +292,6 @@
 		"rotatedTypeJSON": [
 			{
 				"attachBehaviour": [
-					/* gatewayFilter is the group of other gateway types that it'll connect to*/
-					/* shaftFilter is the group of shaft types that it'll connect via to the gateways*/
-					/* client_reservesecondaryhiton prevents the client from placing blocks on it by right-clicking it, so we can cleanly intercept it on the server in OnPlayerClicked as "reserved"*/
 					{
 						"gatewayFilter": "mainGatewaysX+",
 						"id": "elevator",
@@ -410,6 +416,7 @@
 			],
 			"colliders": [
 				{
+					"impactsBlockPlacement":true,
 					"max": [
 						-0.4,
 						0.5,
@@ -422,6 +429,7 @@
 					]
 				},
 				{
+					"impactsBlockPlacement":true,
 					"max": [
 						0.5,
 						0.5,
@@ -434,6 +442,7 @@
 					]
 				},
 				{
+					"impactsBlockPlacement":true,
 					"max": [
 						0.5,
 						0.5,
@@ -446,6 +455,9 @@
 					]
 				}
 			],
+			"customData": {
+				"culledShadows": true
+			},
 			"icon": "../textures/icons/elevatorshaft.png",
 			"isSolid": false,
 			"lightingTransparency": 200,

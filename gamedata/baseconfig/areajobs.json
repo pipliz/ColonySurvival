@@ -1,20 +1,4 @@
 [
-	/*
-		options for simpleFarm patchType;
-		- identifier -> unique ID of job type
-		- npcType -> npc takes on this type when working here
-		- shouldTurnArableIntoDirt -> does the ground turn to dirt on creation
-		- maxGathersPerRun -> how many times can they harvest between crate visits
-		- stages -> array of types, the first stage is planted (and spawned from nothing), the last stage is harvested (and results from removal are dumped in stockpile)
-
-		options for blockFarm patchType;
-		- identifier -> unique ID of job type
-		- npcType -> npc takes on this type when working here
-		- blockPlaced -> the block placed on every position (i.e, berry bushes)
-		- maxGatheredBeforeCrate -> how many times can they harvest between crate visits
-		- blockPlaceRequirement -> item required to be able to place the blockPlaced
-		- allowGoalOffset -> allow a NPC to stand off by one block, say next to the berry-bush instead of inside it, to consider it the job location
-	*/
 	{
 		"allowGoalOffset": true,
 		"blockPlaced": "berrybushnpc",

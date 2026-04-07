@@ -1,5 +1,5 @@
 {
-	"coverage": 100.0,
+	"coverage": 97.0,
 	"hints": {
 		"0": "W przypadku większości gospodarstw większy rozmiar oznacza większą produkcję. Plantatorzy (jagody) są wyjątkiem od tej reguły.",
 		"1": "W miarę rekrutacji większej liczby kolonistów pojawi się więcej różnych potworów.",
@@ -13,7 +13,7 @@
 		"21": "Użyj skrobaczki farby, aby usunąć kolor nadany przedmiotowi.",
 		"22": "Windy nie mogą być używane przez kolonistów, ale są szybkim sposobem przemieszczania się w górę i w dół dla graczy.",
 		"23": "Zbuduj szyny i stacje kolejowe, aby szybko przemieszczać się z punktu A do B.",
-		"24": "Użyj bramek kolejowych, aby stworzyć barierę nie do przebycia dla potworów, bez zatrzymywania wagonów.",
+		"24": "Użyj bramek kolejowych, aby stworzyć barierę nie do przebycia dla potworów, nie zatrzymując przy tym wagonów.",
 		"25": "Umieść tablicę statystyczną, aby otrzymać szczegółowe informacje o kolonii.",
 		"26": "Postaw Śrubę Archimedesa, aby usunąć całą okoliczną wodę.",
 		"27": "Piszemy cykliczny piątkowy blog. Znajdź go na Steamie, aby dowiedzieć się więcej o rozwoju Colony Survival!",
@@ -35,8 +35,9 @@
 			"cancelqueue": "Usuń kolejkę",
 			"description": "Rozpocznij wytwarzanie przedmiotów bez czekania na kolonistów.",
 			"header": "Warsztat z wiatrakiem",
+			"odditypressheader": "_MISSING_Oddity Press Workshop",
 			"progress": "Postęp",
-			"recipecounts": "Obecne przedmioty wystarczą do <b>{0}</b> wytworzeń",
+			"recipecounts": "Obecne przedmioty wystarczą do <b>{0}</b> wytworzeń.",
 			"recipes": "Receptury",
 			"results": "Wyniki",
 			"resultstohotbar": "Do paska szybkiego wyboru",
@@ -44,9 +45,9 @@
 			"selected": "Wybrane",
 			"timepercraft": "Czas trwania wytworzenia: {0} sek.",
 			"timetocompletion": "Szacowany czas ukończenia: <b>{0}</b>",
-			"uniqueconstraintwarning": "Można umieścić tylko jednego autocraftera na sztandar",
+			"uniqueconstraintwarning": "Można umieścić tylko jednego autocraftera na sztandar.",
 			"waitingdata": "Czekanie na dane...",
-			"wrongcolony": "Wybrany warsztat jest częścią innej kolonii"
+			"wrongcolony": "Wybrany warsztat jest częścią innej kolonii."
 		},
 		"bannerclickedpopup": {
 			"deletebanner": "Usuń sztandar",
@@ -74,8 +75,9 @@
 			"decorative": "Bloki budowlane",
 			"defense": "Obrona",
 			"essential": "Niezbędne elementy",
+			"explosives": "Ładunki wybuchowe",
 			"food": "Pożywienie",
-			"ingredient": "Półprodukty i towary luksusowe",
+			"ingredient": "Półprodukty i towary luks.",
 			"job": "Stanowiska pracy",
 			"misc": "Różne",
 			"texres": "Tekstylia i badania"
@@ -109,7 +111,7 @@
 				"column_unfilled": "Nieobsadzone",
 				"disable_all": "Wyłącz wszystko",
 				"enable_all": "Włącz wszystko",
-				"header_text": "<b>{0}</b> bezrobotnych. Aktywne miejsca pracy: <b>{1} / {2}</b>. Obsadzone miejsca pracy: <b>{3} / {1}</b>",
+				"header_text": "Bezrobotni: <b>{0}</b>. Aktywne miejsca pracy: <b>{1} / {2}</b>. Obsadzone miejsca pracy: <b>{3} / {1}</b>",
 				"mainheader": "Zarządzaj pracami",
 				"refresh": "Odśwież",
 				"set_balanced": "Zrównoważone"
@@ -265,7 +267,16 @@
 			"thumbnailpath": "Ścieżka miniatury:"
 		},
 		"controls": {
+			"category-debug": "Sterowanie w trybie debugowania",
+			"category-firstperson": "Sterowanie pierwszoosobowe",
+			"category-general": "Sterowanie ogólne",
+			"category-topdown": "Sterowanie z góry",
+			"cycle-tool-down": "Wybierz narzędzie poniżej",
+			"cycle-tool-left": "Wybierz narzędzie po lewej",
+			"cycle-tool-right": "Wybierz narzędzie po prawej",
+			"cycle-tool-up": "Wybierz narzędzie powyżej",
 			"decreasefieldofview": "Zmniejsz pole widzenia (cheat)",
+			"duplicate-found": "Klawisz jest już w użyciu.",
 			"fireprimary": "Działanie podstawowe",
 			"firesecondary": "Działanie dodatkowe",
 			"flydown": "Lot w dół (cheat)",
@@ -283,8 +294,10 @@
 			"inventory7": "Pasek szybkiego wyboru 7",
 			"inventory8": "Pasek szybkiego wyboru 8",
 			"inventory9": "Pasek szybkiego wyboru 9",
+			"inventorystockpileselectionjump": "Przełącz wybór między magazynem a paskiem szybkiego wyboru",
 			"jump": "Skok",
 			"jumpgamepadtap": "Skok",
+			"listening-for-input": "Oczekiwanie na naciśnięcie…",
 			"look": "Celowanie",
 			"movekeyboard": {
 				"down": "Idź do tyłu",
@@ -295,16 +308,17 @@
 			"movepad": "Ruch",
 			"opencolonytab": "Otwórz kartę kolonii",
 			"openquickstart": "Otwórz menu pomocy",
-			"placemultipleareas": "Seryjne umieszczanie obszarów budowy.",
+			"placemultipleareas": "Seryjne umieszczanie obszarów budowy",
 			"resetfieldofview": "Reset pola widzenia (cheat)",
 			"rotateobjectleft": "Obrót w lewo",
 			"rotateobjectright": "Obrót w prawo",
 			"simspeed10x": "Prędkość symulacji x10 (cheat)",
 			"simspeed3x": "Prędkość symulacji x3 (cheat)",
 			"simspeednormal": "Reset prędkości symulacji (cheat)",
-			"simspeedpause": "Pauza prędkość symulacji (cheat)",
+			"simspeedpause": "Pauza prędkości symulacji (cheat)",
 			"sprint": "Bieg",
 			"sprintgamepadheld": "Bieg",
+			"stockpilesecondaryaction": "Dodatkowe działanie dla pozycji w magazynie",
 			"takescreenshot": "Wykonaj zrzut ekranu",
 			"toggleautofocus": "Wł./Wył. autofocus (cheat)",
 			"togglechat": "Wł./Wył. czat",
@@ -317,7 +331,12 @@
 			"toggleinterface": "Wł./Wył. interfejs",
 			"toggleinventory": "Wł./Wył. ekwipunek",
 			"togglestats": "Wł./Wył. widoczność statystyk",
-			"toggletorch": "Wł./Wył pochodnię"
+			"toggletorch": "Wł./Wył pochodnię",
+			"topdown-reverse-zoom-toggle": "Odwróć kierunek przybliżania",
+			"topdown-rotate-camera-left": "Obróć kamerę w lewo",
+			"topdown-rotate-camera-right": "Obróć kamerę w prawo",
+			"topdown-zoom-in": "Przybliż",
+			"topdown-zoom-out": "Oddal"
 		},
 		"escapemenu": {
 			"back": "Powrót",
@@ -350,7 +369,7 @@
 		},
 		"general": {
 			"apply": "Zastosuj",
-			"back": "Cofnij",
+			"back": "Powrót",
 			"close": "Zamknij",
 			"delete": "Usuń",
 			"description": "Opis",
@@ -361,11 +380,13 @@
 			"inputplaceholder": "Wprowadź tekst...",
 			"inputplaceholder_search": "Wprowadź tekst, aby wyszukać...",
 			"low": "Niskie",
-			"next": "Następne",
+			"next": "Następna",
 			"no": "Nie",
 			"none": "Brak",
 			"normal": "Normalne",
-			"previous": "Poprzednie",
+			"previous": "Poprzednia",
+			"quote_close": "”",
+			"quote_open": "„",
 			"randomize": "Losowe",
 			"reset": "Reset",
 			"select": "Wybierz",
@@ -411,7 +432,7 @@
 			"version": "Wersja"
 		},
 		"notifications": {
-			"delete": "Usuń powiadomienie",
+			"delete": "Usuń powiadomienia",
 			"header": "Powiadomienia",
 			"missingplayerammo": "<color=#ff2323>{0} wymaga do użycia przedmiotu {1} w ekwipunku!</color>",
 			"npc_died": {
@@ -523,7 +544,7 @@
 				"name": "Dzwonek alarmowy"
 			},
 			"animalcarcass": {
-				"description": "Źródło tusz zwierzęcych",
+				"description": "Źródło tusz zwierzęcych.",
 				"name": "Tusza lokalnego zwierzęcia"
 			},
 			"anvil": {
@@ -623,7 +644,7 @@
 				"name": "Kusze"
 			},
 			"dyeing": {
-				"description": "Naucz się uprawiać kwiaty na bagnach, co doda Twojemu światu kolorów.",
+				"description": "Naucz się uprawiać kwiaty na bagnach, co doda twojemu światu kolorów.",
 				"name": "Farbowanie"
 			},
 			"elevator": {
@@ -638,6 +659,18 @@
 				"description": "Odblokowuje sapera i serwisanta pułapek. Saper tworzy pułapki na potwory i amunicję do nich. Serwisant uzupełnia i naprawia pobliskie pułapki.",
 				"name": "Saper"
 			},
+			"explosives": {
+				"description": "Umożliwia kupowanie bomb w centrum handlowym",
+				"name": "Import ładunków wybuchowych"
+			},
+			"explosivesadvanced": {
+				"description": "Umożliwia kupowanie ładunków formowanych i zapalników w centrum handlowym",
+				"name": "Zaawansowane ładunki wybuchowe"
+			},
+			"explosivescrafting": {
+				"description": "Umożliwia produkcję ładunków wybuchowych u sapera",
+				"name": "Wytwarzanie ładunków wybuchowych"
+			},
 			"failsafe": {
 				"description": "Odblokowuje święte zabezpieczenie, narzędzie awaryjne, które wykorzystuje święte punkty do eliminacji potworów.",
 				"name": "Święte zabezpieczenie"
@@ -651,7 +684,7 @@
 				"name": "Płot"
 			},
 			"flowerbox": {
-				"description": "Zasiej nieco wszechobecnej radości",
+				"description": "Zasiej nieco wszechobecnej radości.",
 				"name": "Kwietnik"
 			},
 			"furnace": {
@@ -742,12 +775,16 @@
 				"description": "Odblokowuje stanowisko spożywcze – miejsce, w którym koloniści mogą otrzymać codzienne posiłki. Jeśli koloniści nie znajdą żadnego z tych stanowisk, udadzą się do sztandaru.",
 				"name": "Stanowisko spożywcze"
 			},
+			"odditypress": {
+				"description": "_MISSING_The Oddity Press is a fully automated device that operates without a worker. It produes miscellaneous, mostly decorative items.",
+				"name": "_MISSING_Oddity Press"
+			},
 			"outposts": {
 				"description": "Odblokowuje sztandary posterunków. Można je umieszczać, aby rozbudować kolonię – bliżej lub dalej.",
 				"name": "Posterunki"
 			},
 			"paint": {
-				"description": "Zmień kolorystykę niektórych rzeczy",
+				"description": "Zmień kolorystykę niektórych rzeczy.",
 				"name": "Farba"
 			},
 			"papermaking": {
@@ -783,7 +820,7 @@
 				"name": "Prestiż IV"
 			},
 			"prestige5": {
-				"description": "Gratulacje! Udało Ci się zrealizować wszystkie ambitne cele.",
+				"description": "Gratulacje! Udało ci się zrealizować wszystkie ambitne cele.",
 				"name": "Prestiż V"
 			},
 			"printingpress": {
@@ -847,7 +884,7 @@
 				"name": "Kamieniarz"
 			},
 			"streetlight": {
-				"description": "O wiele ładniejsze od pochodni",
+				"description": "O wiele ładniejsze od pochodni.",
 				"name": "Lampy uliczne"
 			},
 			"tabulator": {
@@ -865,6 +902,10 @@
 			"toolshop": {
 				"description": "Odblokowuje skrytkę narzędziową – miejsce, z którego koloniści pobierają narzędzia. Jeśli koloniści nie znajdą żadnej skrytki, udają się do sztandaru.",
 				"name": "Skrytka narzędziowa"
+			},
+			"topdownviewtrigger": {
+				"description": "Odblokowuje biurko nadzorcy. Dzięki niemu możesz przeglądać swoją kolonię i zarządzać nią z góry, a także uzyskać dostęp do schematów",
+				"name": "Biurko nadzorcy"
 			},
 			"trader": {
 				"description": "Pomocny w przyspieszaniu transakcji handlowych między koloniami. Nie handluje z posterunkami; przeznaczony do gry wieloosobowej.",
@@ -980,14 +1021,17 @@
 						"current": "Teraz",
 						"levels": "Poziomy",
 						"name": "Nazwa ulepszenia",
-						"next": "Następne"
+						"next": "Następna"
 					},
 					"upgradebutton": "Ulepsz"
 				}
 			},
 			"itemselector": {
+				"buttoncomplete": "_MISSING_Complete Selection",
 				"description": "Wybierz typ przedmiotu do użycia",
-				"header": "Wybór przedmiotu"
+				"header": "Wybór przedmiotu",
+				"headerchosen": "_MISSING_Chosen",
+				"headerselectables": "_MISSING_Selectables"
 			},
 			"limits": {
 				"allreset": "Zresetuj wszystko",
@@ -1029,8 +1073,8 @@
 			},
 			"quickstart": {
 				"closetoggle": "Nie pokazuj więcej",
-				"next": "Następny",
-				"previous": "Poprzedni"
+				"next": "Następna",
+				"previous": "Poprzednia"
 			},
 			"signs": {
 				"apply": "Zastosuj",
@@ -1085,7 +1129,7 @@
 				"diggerspecialb": "Zaznacz obszar, z którego ma zostać usunięty dany typ",
 				"dyer1": "Dodaj kolory, aby życie stało się odrobinę mniej ponure",
 				"dyer2": "Otwiera kolejne menu z wieloma stanowiskami pracy w rolnictwie",
-				"dyers": "Farbiarz",
+				"dyers": "Farbowanie",
 				"flaxfarmer": "Plantator (len)",
 				"flaxfarmertool": "Narzędzie plantatora (len)",
 				"forester": "Leśniczy",
@@ -1201,6 +1245,7 @@
 					"showcolonistjobinname": "Wyświetl stanowisko pracy przy imieniu",
 					"showsensitivedatamode": "Pokaż wrażliwe dane",
 					"tab": "Ustawienia ogólne",
+					"uiscaletooltip": "_MISSING_Grows/shrinks UI to adjust to various screen sizes, independent of resolution. If you have a 4K display, you probably want this set to 200%",
 					"uiscalingratio": "Wielkość interfejsu użytkownika"
 				},
 				"mousemenu": {
@@ -1236,29 +1281,46 @@
 			"video": "Obraz",
 			"videomenu": {
 				"ambientocclusion": "Okluzja otoczenia",
+				"ambientocclusiontooltip": "_MISSING_Darkens small gaps, cracks and where objects touch. Little performance impact",
 				"anisotropic": "Filtrowanie anizotropowe x16",
+				"anisotropictooltip": "_MISSING_Helps to keep blocks looking nice when looking at them from funny angles. Little performance impact for anything but the most entry level cards",
 				"antialiasing": "Antyaliasing",
+				"antialiasingtooltip": "_MISSING_Reduces some jagginess and noisy results. The given options don't do a lot and have only a light GPU performance impact",
 				"bloom": "Poświata",
+				"bloomtooltip": "_MISSING_Smears out bright light a bit, little performance impact but can help set a nice scene",
 				"depthoffield": "Głębia ostrości",
 				"detailcount": "Ilość szczegółów",
-				"drawdistance": "Odległość rysowania (*)",
+				"detailcounttooltip": "_MISSING_Sets a limit on how many non-blocky things can be drawn in one frame. Only starts mattering with very large bases, can strongly impact CPU and GPU use at that point. Very situational",
+				"drawdistance": "Odległość rysowania",
+				"drawdistancetooltip": "_MISSING_Main setting determining how much of the world you can see. Strongly impacts both CPU and GPU load. 'Low' is 128 blocks, 'Very high' 1024 blocks",
 				"fieldofview": "Pole widzenia",
 				"fog": "Mgła",
+				"fogtooltip": "_MISSING_Adds some overall fog effect, little performance impact but can help set a nice scene",
 				"full": "Ustawienia obrazu",
 				"fullscreen": "Pełny ekran",
 				"particleeffects": "Efekty cząsteczkowe",
+				"particleeffectstooltip": "_MISSING_Sets the amount of particles created from various events like destroying blocks, and how long those particles remain visible. Light to medium CPU performance impact",
 				"preset": "Preset",
+				"presettooltip": "_MISSING_Combined setting that adjusts many of the more detailed settings below in one go for ease of use",
 				"ragdoll": "Ilość ragdolli",
+				"ragdolltooltip": "_MISSING_Sets how many character bodies can remain on the ground at the same time. Minor CPU impact in late game when set to higher values",
+				"renderscaletooltip": "_MISSING_Reduces or increases the resolution used for rendering, while keeping the interface at the main resolution. 100 means 100% scale (no change). Impacts GPU performance heavily.",
+				"renderscalingratio": "_MISSING_Render scale",
 				"resolution": "Rozdzielczość",
-				"restarttoapply": "(*) Pełne wprowadzenie zmian wymaga ponownego uruchomienia gry",
+				"resolutiontooltip": "_MISSING_Preferably set this to the native resolution of the display used. If performance is needed, prefer to use the 'Render scale' setting",
 				"shaderquality": "Jakość shaderów",
+				"shaderqualitytooltip": "_MISSING_High enables a 3d effect on blocks, and medium enables a more detailed lighting effect on blocks. Medium GPU performance impact",
 				"sunshadowcascades": "Kaskady cieni słonecznych",
 				"sunshadowdistance": "Odległość rysowania cieni",
 				"sunshadowquality": "Jakość cieni",
-				"texturequality": "Jakość tekstur (*)",
+				"sunshadowqualitytooltip": "_MISSING_Lower setting reduces shadow resolution. Medium impact on both CPU and GPU performance, though turning it off fully can help a lot",
+				"texturequality": "Jakość tekstur",
+				"texturequalitytooltip": "_MISSING_Lower setting reduces texture resolution. Doesn't impact performance a lot for most systems",
 				"torchquality": "Jakość pochodni",
+				"torchqualitytooltip": "_MISSING_Medium renders torch lighting at half resolution, low at quarter resolution. Can impact GPU performance a lot, depending on how many lights are placed. High is full resolution. Very high is currently the same as high",
 				"vsync": "VSync",
-				"vsyncdouble": "Podwójny"
+				"vsyncdouble": "Podwójny",
+				"vsynctooltip": "_MISSING_Recommended to keep on. When set to 'on' it limits framerate to the display framerate, preventing artifacts and reducing system load. When set to 'double' it limits framerate to half the display rate, consider it a power saving mode"
 			}
 		},
 		"singleplayermenu": {
@@ -1289,7 +1351,7 @@
 				"disableddependency": "[Wyłączony]",
 				"missingdependency": "[Brak]",
 				"outdateddependency": "[Nieaktualny]",
-				"requireddependency": "[Wymagany]"
+				"requireddependency": "[Wymagane]"
 			},
 			"newworld": "Nowy świat",
 			"nosubscribeditems": "Nie subskrybujesz żadnych światów z warsztatu",
@@ -1367,6 +1429,71 @@
 			"trap-style-front": "Atakuje potwory przed sobą",
 			"trap-style-up": "Atakuje potwory powyżej"
 		},
+		"topdownview": {
+			"blueprint_naming": {
+				"button_cancel": "Anuluj",
+				"button_confirm": "Zatwierdź",
+				"inputfield_name": "Nazwa schematu"
+			},
+			"blueprint_selection": {
+				"button_entry_delete": "Usuń",
+				"button_entry_place": "Umieść",
+				"button_entry_share": "Udostępnij",
+				"button_import_blueprint": "Importuj schemat",
+				"button_import_blueprint_full": "Jeśli masz w schowku systemowym poprawny kod schematu, to ten przycisk go zaimportuje",
+				"column_header_name": "Nazwa",
+				"column_header_size": "Rozmiar"
+			},
+			"blueprint_share": {
+				"button_copy_blueprint_code": "Skopiuj do schowka",
+				"button_copy_blueprint_code_full": "Skopiuj dane schematu do schowka systemowego, a następnie wklej je gdzie chcesz, żeby podzielić się schematem z innymi",
+				"label_selected_blueprint_name": "Wybrany schemat"
+			},
+			"clickables": {
+				"adjustlayer+1": "Warstwa +1",
+				"adjustlayer+1_full": "Pokaż jedną dodatkową warstwę świata",
+				"adjustlayer+5": "Warstwa +5",
+				"adjustlayer+5_full": "Pokaż pięć dodatkowych warstw świata",
+				"adjustlayer-1": "Warstwa -1",
+				"adjustlayer-1_full": "Pokaż jedną warstwę świata mniej",
+				"adjustlayer-5": "Warstwa -5",
+				"adjustlayer-5_full": "Pokaż pięć warstw świata mniej",
+				"exit": "Wyjdź",
+				"exit_full": "Przestań korzystać z biurka nadzorcy",
+				"light_turn_off": "Wyłącz lampę",
+				"light_turn_off_full": "Dbaj o planetę, oszczędzaj energię",
+				"light_turn_on": "Włącz lampę",
+				"light_turn_on_full": "Dodaj światło do kursora",
+				"placement_flip_x": "Odbicie lustrzane w poziomie",
+				"placement_flip_x_full": "Stwórz odbicie lustrzane położenia aktualnego schematu w poziomie",
+				"placement_flip_z": "Odbicie lustrzane w pionie",
+				"placement_flip_z_full": "Stwórz odbicie lustrzane położenia aktualnego schematu w pionie",
+				"placement_rotate_90": "Obróć",
+				"placement_rotate_90_full": "Obróć schemat o 90 stopni",
+				"placement_stop": "Anuluj",
+				"placement_stop_full": "Anuluj bieżące użycie umieszczacza schematów",
+				"resetlayer": "Zresetuj warstwy",
+				"resetlayer_full": "Zresetuj widoczne warstwy do poziomu używanego biurka nadzorcy",
+				"safezone_turn_off": "Nie pokazuj bezpiecznej strefy",
+				"safezone_turn_off_full": "Niewiedza jest błogosławieństwem",
+				"safezone_turn_on": "Pokaż bezpieczną strefę",
+				"safezone_turn_on_full": "Potwory pojawiają się w zacienionym obszarze",
+				"slicing_turn_off": "Wyłącz rentgen",
+				"slicing_turn_off_full": "Pokaż dachy ponownie",
+				"slicing_turn_on": "Włącz rentgen",
+				"slicing_turn_on_full": "Zajrzyj do wnętrza swojego świata",
+				"tool_blueprint_placer": "Umieszczacz schematów",
+				"tool_blueprint_placer_full": "Umieszczaj schematy w świecie",
+				"tool_blueprint_scanner": "Skaner schematów",
+				"tool_blueprint_scanner_full": "Służy do zaznaczenia obszaru na mapie świata, który zostanie zapisany do późniejszego wykorzystania w umieszczaczu schematów",
+				"tool_colony": "Narzędzie kolonii",
+				"tool_colony_full": "Otwórz menu zarządzania kolonią",
+				"tool_command": "Narzędzie dowodzenia",
+				"tool_command_full": "Twórz prace w obszarze"
+			},
+			"tool_blueprint_placer": "Umieszczacz schematów",
+			"tool_blueprint_scanner": "Skaner schematów"
+		},
 		"upgrades": {
 			"builder": {
 				"level": "{0} bloki(-ów)",
@@ -1403,11 +1530,18 @@
 		"bannertool": "Narzędzie sztandaru",
 		"barley": "Jęczmień",
 		"bed": "Łóżko",
+		"bed3": "_MISSING_Luxury Bed",
 		"berry": "Jagoda",
 		"berrybush": "Nasiono krzaka z jagodami",
 		"berrymeal": "Posiłek z jagód",
 		"blastfurnace": "Piec hutniczy",
 		"bloomery": "Dymarka",
+		"bombearly": "Bomba",
+		"bombfuse": "Zapalony lont",
+		"bombfuseblock": "Lont",
+		"bombfusedelay": "Zapalnik czasowy",
+		"bombshapedchargedown": "Ładunek formowany",
+		"bombshapedchargestair": "Ukośny ładunek formowany",
 		"bookcase": "Regał na książki (pusty)",
 		"bookcase1": "Regał na książki (prawie pusty)",
 		"bookcase2": "Regał na książki (częściowo pusty)",
@@ -1427,6 +1561,7 @@
 		"bronzeingot": "Sztabka brązu",
 		"bronzelockbox": "Skrytka z brązu",
 		"bronzetools": "Narzędzia z brązu",
+		"bunkbed": "_MISSING_Bunkbed",
 		"cabbage": "Kapusta",
 		"caltrops": "Kolczatki",
 		"caltroptrap": "Pułapka z kolczatkami",
@@ -1467,6 +1602,11 @@
 		"crossbow": "Kusza",
 		"crossbowbolt": "Bełt do kuszy",
 		"darkstone": "Blok ciemnego kamienia",
+		"decofoods": "_MISSING_Food Pile",
+		"decogoods": "_MISSING_Trade Items Pile",
+		"decoitems": "_MISSING_Desk Items Pile",
+		"decotools": "_MISSING_Tool Pile",
+		"deskfull": "_MISSING_Desk",
 		"dirt": "Ziemia",
 		"dirtfen": "Ziemia bagienna",
 		"dirtheath": "Ziemia torfowa",
@@ -1482,6 +1622,7 @@
 		"engineerbench": "Stanowisko sapera",
 		"eyeglasses": "Okulary",
 		"failsafe": "Święte zabezpieczenie",
+		"failsafe3": "Święte zabezpieczenie",
 		"fence": "Płot",
 		"firepit": "Palenisko",
 		"firewood": "Drewno opałowe",
@@ -1534,6 +1675,7 @@
 		"hemp": "Konopie",
 		"hempfibre": "Włókno konopne",
 		"hollyhock": "Malwa",
+		"huntingtrophy": "_MISSING_Hunting Trophy",
 		"ironbloom": "Bryłka żelaza",
 		"ironore": "Ruda żelaza",
 		"irontools": "Żelazne narzędzia",
@@ -1569,6 +1711,7 @@
 		"machinetools": "Zestaw narzędzi",
 		"manuscript": "Manuskrypt",
 		"merchanthub": "Centrum handlowe",
+		"merchanthub2": "Centrum handlowe",
 		"metalgear": "Elementy metalowe",
 		"metallathe": "Tokarka do metalu",
 		"minerjob": "Stanowisko górnicze",
@@ -1581,6 +1724,8 @@
 		"nitro": "Nitroceluloza",
 		"notools": "Brak narzędzi",
 		"npcshop": "Stanowisko spożywcze",
+		"npcshop2": "Stanowisko spożywcze",
+		"odditypress": "_MISSING_Oddity Press",
 		"outpostbanner": "Sztandar posterunku",
 		"paintblue": "Niebieska farba",
 		"paintgreen": "Zielona farba",
@@ -1596,6 +1741,7 @@
 		"plankscoated": "Woskowane deski",
 		"planksgreen": "Zielone deski",
 		"planksred": "Czerwone deski",
+		"plaster": "Tynk",
 		"points": "Punkty",
 		"poisondart": "Zatruta strzała",
 		"potash": "Potaż",
@@ -1607,9 +1753,12 @@
 		"projectiletrap": "Pułapka z pociskami",
 		"projectiletrapammo": "Amunicja do pułapki z pociskami",
 		"quarterblockbrowndark": "Ciemnobrązowa ćwiartka bloku",
+		"quarterblockbrowndarkitem": "Ciemnobrązowa ćwiartka bloku",
 		"quarterblockbrownlight": "Jasnobrązowa ćwiartka bloku",
+		"quarterblockbrownlightitem": "Jasnobrązowa ćwiartka bloku",
 		"quarterblockdynamicitem": "Dynamiczna ćwiartka bloku",
 		"quarterblockgrey": "Szara ćwiartka bloku",
+		"quarterblockgreyitem": "Szara ćwiartka bloku",
 		"railgate": "Bramka kolejowa",
 		"railitem": "Szyny",
 		"rawfish": "Surowa ryba",
@@ -1654,6 +1803,8 @@
 		"snow": "Śnieg",
 		"splittingstump": "Pień do rąbania",
 		"statisticsboard": "Tablica statystyczna",
+		"statuefarmer": "_MISSING_Statue of the Hopeful Farmer",
+		"statuemonster": "_MISSING_Statue of Military Triumph",
 		"steelingot": "Stalowa sztabka",
 		"steellockbox": "Skrytka ze stali",
 		"steelparts": "Stalowe części",
@@ -1671,6 +1822,8 @@
 		"stove": "Kuchenka",
 		"straw": "Słoma",
 		"sulfur": "Siarka",
+		"table": "_MISSING_Small Table",
+		"table32": "_MISSING_Large Table",
 		"tabletclay": "Gliniana tabliczka",
 		"tabletwisdom": "Tablica ze starożytną wiedzą",
 		"tabulator": "Zaawansowane liczydło",
@@ -1679,6 +1832,8 @@
 		"tin": "Cyna",
 		"tinkerertable": "Stół majsterkowicza",
 		"toolshop": "Tablica narzędziowa",
+		"toolshop2": "Tablica narzędziowa",
+		"topdownviewtrigger": "Biurko nadzorcy",
 		"torch": "Pochodnia",
 		"trader": "Kupiec",
 		"trapfixer": "Stanowisko serwisanta pułapek",
@@ -1686,6 +1841,7 @@
 		"vialmineraloil": "Fiolka (olej mineralny)",
 		"vialnitricacid": "Fiolka (kwas azotowy)",
 		"vialsulphuricacid": "Fiolka (kwas siarkowy)",
+		"wallpaintingitem": "_MISSING_Painting",
 		"water": "Woda",
 		"watergatherer": "Nosiwoda",
 		"waterpump": "Pompa wodna",
@@ -1697,7 +1853,7 @@
 		"window": "Okno",
 		"wisteriaflower": "Kwiat glicynii",
 		"wisteriajob": "Zbieracz glicynii",
-		"wisteriaplant": "Sadzonka glicynii",
+		"wisteriaplant": "Pusta sadzonka glicynii",
 		"wisteriaplantempty": "Pusta sadzonka glicynii",
 		"wolfsbane": "Tojad",
 		"woodfloor": "Drewniana podłoga",
@@ -1710,9 +1866,17 @@
 		"alkanet": "Źródło czerwonego barwnika.",
 		"astrolabe": "Użyj na pasku szybkiego wyboru, aby znaleźć inne biomy.",
 		"autocrafter": "Maszyna umożliwiająca wytwarzanie przedmiotów bez udziału kolonistów, zarówno w dzień, jak i w nocy.",
+		"bed": "Niezbędne dla kolonistów, którzy będą tu przychodzić każdej nocy",
+		"bed3": "_MISSING_More comfort at night",
 		"berry": "Pojedyncza jagoda. Szkoda na nią zachodu!",
 		"berrybush": "Koloniści mogą je sadzić jako łatwo dostępne pożywienie.",
 		"berrymeal": "Pyszny posiłek przygotowany z garści jagód.",
+		"bombearly": "Ostrzeżenie: Ładunek wybuchowy! Użyj opcji „Zapalony lont”, aby zdetonować bombę.",
+		"bombfuse": "Użyj na pasku szybkiego wyboru, aby detonować ładunki wybuchowe i zapalniki.",
+		"bombfuseblock": "Połącz z sobą, aby umożliwić zdalne detonowanie ładunków wybuchowych. Można ustawiać w stos, aby połączyć z wyższym blokiem. Użyj opcji „Zapalony lont”, żeby odpalić lont.",
+		"bombfusedelay": "Lont palący się wolno w ciągu czterech sekund",
+		"bombshapedchargedown": "Ostrzeżenie: Ładunek wybuchowy! Kieruje siłę wybuchu w określoną stronę. Użyj opcji „Zapalony lont”, aby zdetonować bombę.",
+		"bombshapedchargestair": "Ostrzeżenie: Ładunek wybuchowy! Kieruje siłę wybuchu ukośnie w dół. Użyj opcji „Zapalony lont”, aby zdetonować bombę.",
 		"bookcase": "Są one „zbierane” przez naukowców i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego naukowca zapewnia trwałe i długoterminowe zyski.",
 		"bookcase1": "Są one „zbierane” przez naukowców i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego naukowca zapewnia trwałe i długoterminowe zyski.",
 		"bookcase2": "Są one „zbierane” przez naukowców i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego naukowca zapewnia trwałe i długoterminowe zyski.",
@@ -1722,10 +1886,12 @@
 		"breadmeal": "Chleb posmarowany doskonałym jagodowym dżemem.",
 		"bricks": "Cegły, cegły, w końcu to gra z Holandii...",
 		"bronzeingot": "Brąz na wagę złota.",
+		"bunkbed": "_MISSING_Less comfort at night",
 		"charcoal": "Absorbuje cyjanek.",
 		"cherryblossom": "Najbardziej różowa rzecz w tej grze.",
 		"clay": "Szkoda, że nie możesz dotknąć, co?",
 		"coalore": "Uwaga: może powodować problemy z klimatem. Można go znaleźć bezpośrednio pod mamucimi drzewami.",
+		"colonykit": "Służy do założenia nowej, oddzielnej kolonii za pomocą narzędzia sztandaru",
 		"compass": "Użyj na pasku szybkiego wyboru, aby zobaczyć drogę do swoich kolonii lub posterunków.",
 		"cookedfish": "Nie dysponuje już zdolnością pływania.",
 		"copper": "Dość miękki, ale całkiem użyteczny metal.",
@@ -1733,8 +1899,18 @@
 		"crate": "Wszystko tu schowasz!",
 		"crossbow": "Mniejsza siostra balisty.",
 		"crossbowbolt": "Harder, better, faster, stronger.",
+		"decofoods": "_MISSING_Decorative pile of food items",
+		"decogoods": "_MISSING_Decorative pile of trade items",
+		"decoitems": "_MISSING_Decorative pile of desk items",
+		"decotools": "_MISSING_Decorative pile of tools",
+		"desk": "_MISSING_An empty desk",
 		"dirt": "Brudzi ręce.",
+		"elevator": "Pozwala na poruszanie się szybami windowymi. Koloniści nie mogą z tego korzystać",
+		"elevatorhorizontal": "Pozwala na poruszanie się po szynach. Koloniści nie mogą z tego korzystać",
+		"elevatorshaft": "Łączy dwie stacje windy",
+		"elevatorshafthorizontal": "Łączy stacje kolejowe",
 		"failsafe": "Awaryjny system obronny wykorzystujący święte punkty.",
+		"failsafe3": "Awaryjny system obronny wykorzystujący święte punkty.",
 		"firewood": "Podstawowe paliwo.",
 		"flax": "Cesarski kolor.",
 		"flaxstage1": "Zasiej to :)",
@@ -1742,10 +1918,11 @@
 		"glider": "Umieszcza wyrzutnię szybowców. Wejdź do niej za pomocą <style=Player/FireSecondary> i nawiguj, celując, przytrzymując do przodu.",
 		"glidersteel": "Przypomina zwykły szybowiec, ale wznosi się znacznie wyżej.",
 		"goldingot": "Kiedyś takie sztabki służyły jako gwarancja wartości pieniądza papierowego.",
-		"goldore": "Można je znaleźć w rudach pod ośnieżonymi górami.",
+		"goldore": "Można ją znaleźć w rudach pod ośnieżonymi górami.",
 		"grindstone": "Używany do wyrobu mąki z pszenicy.",
 		"gunpowder": "Ostrożnie!",
 		"hollyhock": "Środek przeczyszczający w realnym świecie. Nie w grze. Jak dotąd.",
+		"huntingtrophy": "_MISSING_Memento mori",
 		"ironore": "Wydobywana żelaznym kilofem wykonanym z rudy żelaza.",
 		"ironwrought": "Poddane procesowi kucia.",
 		"kiln": "Zamienia drewno opałowe w węgiel drzewny.",
@@ -1761,8 +1938,15 @@
 		"logtaiga": "Nieco chłodniejsza wersja.",
 		"logtemperate": "Nie rzucać pod nogi!",
 		"monocular": "Użyj na pasku szybkiego wyboru, aby przyjrzeć się bliżej światu.",
-		"npcshop": "Koloniści odwiedzają to miejsce raz dziennie, aby otrzymać pożywienie i przedmioty dające szczęście.",
-		"planks": "Teraz z czterokrotną zawartością kłód!",
+		"odditypress": "_MISSING_Fully automated production of odds and ends",
+		"outpostbanner": "Służy do założenia posterunku w nowym miejscu",
+		"paintblue": "Służy do malowania obiektów takich jak drzwi, płoty i filary",
+		"paintgreen": "Służy do malowania obiektów takich jak drzwi, płoty i filary",
+		"paintred": "Służy do malowania obiektów takich jak drzwi, płoty i filary",
+		"paintstripped": "Służy do malowania obiektów takich jak drzwi, płoty i filary",
+		"paintwhite": "Służy do malowania obiektów takich jak drzwi, płoty i filary",
+		"planks": "Teraz z czterokrotnością objętości kłód!",
+		"plaster": "Godny sposób na rozmazywanie brudu po ścianach.",
 		"printingpress": "Szanuj związaną z nią wolność.",
 		"quarterblockdynamicitem": "Kameleon wśród ćwiartek bloków.",
 		"railgate": "Umożliwia podróż koleją, blokując podróż na piechotę.",
@@ -1777,18 +1961,25 @@
 		"scrollshelf1": "Są one „zbierane” przez skrybów i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego skrybę zapewnia trwałe i długoterminowe zyski.",
 		"scrollshelf2": "Są one „zbierane” przez skrybów i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego skrybę zapewnia trwałe i długoterminowe zyski.",
 		"scrollshelffilled": "Są one „zbierane” przez skrybów i automatycznie regenerują swoją zawartość. Umieszczenie 10 z nich na każdego skrybę zapewnia trwałe i długoterminowe zyski.",
+		"signitem": "Umieszczaj własne wiadomości w świecie!",
 		"silicasand": "Szukaj jej pod piaskiem na wrzosowiskach.",
 		"sling": "Uważaj, Goliacie!",
 		"slingbullet": "Po prostu mały kamyk.",
 		"snow": "Synonim bieli.",
 		"splittingstump": "Szybszy sposób na rozłupanie drewna na opał.",
+		"statuefarmer": "_MISSING_Gratitude for human labour",
+		"statuemonster": "_MISSING_Remembering victory over our enemies",
 		"stonemasonworkbench": "Wytwarza cegły dowolnych kolorów i kształtów.",
 		"stove": "Używana do emitowania smakowitych zapachów.",
 		"sulfur": "Znajdziesz ją głęboko pod ziemią na wrzosowiskach.",
+		"table": "_MISSING_Fits exactly one voxel",
+		"table32": "_MISSING_Six voxels of empty space on this table!",
 		"tailorshop": "Ubrania na miarę dla wszystkich!",
 		"tin": "Można ją znaleźć w rudach pod ośnieżonymi górami.",
+		"topdownviewtrigger": "Zapewnia dostęp do widoku z góry i schematów",
 		"torch": "Niech nastanie światłość!",
 		"trader": "Para się handlem.",
+		"wallpaintingitem": "_MISSING_Art for your walls",
 		"water": "Niekontrolowana zatopi wszystko.",
 		"waterpump": "Pozwala na uzyskanie wody bez przebywania w pobliżu wody.",
 		"watersponge": "Usuwa wodę z pobliskiego obszaru w bardzo realistyczny sposób.",

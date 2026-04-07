@@ -4,6 +4,112 @@
 			"0.9.0"
 		],
 		"isoptional": false,
+		"luaFiles": [
+		{
+			"id": "fuseplacement",
+			"index": -1000000,
+			"relativePath": "lua/fuseplacement.lua"
+		},
+		{
+			"id": "paintingplacement",
+			"index": -1000000,
+			"relativePath": "lua/paintingplacement.lua"
+		},
+		{
+			"id": "blueprintmappingcrownmouldingcorner",
+			"index": -1000000,
+			"relativePath": "lua/blueprintmapping/crownmouldingcorner.lua"
+		},
+		{
+			"id": "blueprintmappingquarterblockstraight",
+			"index": -1000000,
+			"relativePath": "lua/blueprintmapping/quarterblockstraight.lua"
+		},
+		{
+			"id": "blueprintmappingquarterblockinside",
+			"index": -1000000,
+			"relativePath": "lua/blueprintmapping/quarterblockinside.lua"
+		},
+		{
+			"id": "blueprintmappingquarterblockoutside",
+			"index": -1000000,
+			"relativePath": "lua/blueprintmapping/quarterblockoutside.lua"
+		},
+		{
+			"id": "bombfuseblocktool",
+			"index": -1000000,
+			"relativePath": "lua/bombfuseblocktool.lua"
+		},
+		{
+			"id": "flowerboxplacement",
+			"index": -1000000,
+			"relativePath": "lua/flowerboxplacement.lua"
+		},
+		{
+			"id": "lanternplacement",
+			"index": -1000000,
+			"relativePath": "lua/lanternplacement.lua"
+		},
+		{
+			"id": "signplacement",
+			"index": -1000000,
+			"relativePath": "lua/signplacement.lua"
+		},
+		{
+			"id": "fenceplacement",
+			"index": -1000000,
+			"relativePath": "lua/fenceplacement.lua"
+		},
+		{
+			"id": "pillarplacement",
+			"index": -1000000,
+			"relativePath": "lua/pillarplacement.lua"
+		},
+		{
+			"id": "bombshapedplacer",
+			"index": -1000000,
+			"relativePath": "lua/bombshapedplacer.lua"
+		},
+		{
+			"id": "railstool",
+			"index": -1000000,
+			"relativePath": "lua/railplacement.lua"
+		},
+		{
+			"id": "doorgenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/doors.lua"
+		},
+		{
+			"id": "quarterblockgenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/quarterblocks.lua"
+		},
+		{
+			"id": "quarterblockpreview",
+			"index": -1000000,
+			"relativePath": "lua/quarterblockpreview.lua"
+		},
+		{
+			"id": "pillargenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/pillars.lua"
+		},
+		{
+			"id": "architravegenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/architrave.lua"
+		},
+		{
+			"id": "fencegenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/fences.lua"
+		},
+		{
+			"id": "torchplacement",
+			"index": -1000000,
+			"relativePath": "lua/torchplacement.lua"
+		}],
 		"jsonFiles": [
 			{
 				"fileType": "addOrReplacePointRecipes",
@@ -263,14 +369,6 @@
 				"relativePath": "recipes/recipes_tailorshop.json"
 			},
 			{
-				"albedo": "base_npc_albedo.png",
-				"fileType": "setColonistTextures",
-				"index": -1000000,
-				"normal": "base_npc_normal.png",
-				"relativePath": "../textures/materials/npc/",
-				"special": "base_npc_specu_emiss_smooth_mask.png"
-			},
-			{
 				"fileType": "setToolsets",
 				"index": -1000000,
 				"relativePath": "toolsets.json"
@@ -296,9 +394,16 @@
 				"relativePath": "recipes/crafting.json"
 			},
 			{
-				"fileType": "addOrReplaceAutoCrafterRecipes",
+				"fileType": "addOrReplaceNPCRecipes",
 				"index": -1000000,
+				"npcType": "pipliz.autocrafter",
 				"relativePath": "recipes/autocrafter.json"
+			},
+			{
+				"fileType": "addOrReplaceNPCRecipes",
+				"index": -1000000,
+				"npcType": "pipliz.odditypress",
+				"relativePath": "recipes/odditypress.json"
 			},
 			{
 				"fileType": "addOrReplaceNPCTypes",
@@ -313,7 +418,7 @@
 			{
 				"fileType": "addNewTypes",
 				"index": -1000000,
-				"relativePath": "types_fence.json"
+				"relativePath": "types_explosive.json"
 			},
 			{
 				"fileType": "addNames",
@@ -328,7 +433,27 @@
 			{
 				"fileType": "setPaintables",
 				"index": -100000,
+				"relativePath": "paintables_planks.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
+				"relativePath": "paintables_fences.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
+				"relativePath": "paintables_architrave.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
 				"relativePath": "paintables_windows.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
+				"relativePath": "paintables_pillars.json"
 			},
 			{
 				"fileType": "setPaintables",
@@ -355,6 +480,18 @@
 				"index": -100000,
 				"relativePath": "painttype.json"
 			},
+            {
+                "fileType": "typesLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "pillargenerator"
+            },
+            {
+                "fileType": "typesLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "architravegenerator"
+            },
 			{
 				"fileType": "addOrReplaceAudio",
 				"index": -1000000,
@@ -378,7 +515,22 @@
 			{
 				"fileType": "generateBlocks",
 				"index": -1000000,
+				"relativePath": "generateblocks_bookcases.json"
+			},
+			{
+				"fileType": "generateBlocks",
+				"index": -1000000,
+				"relativePath": "generateblocks_scrollshelves.json"
+			},
+			{
+				"fileType": "generateBlocks",
+				"index": -1000000,
 				"relativePath": "generateblocks_traps.json"
+			},
+			{
+				"fileType": "generateBlocks",
+				"index": -1000000,
+				"relativePath": "generateblocks_painting.json"
 			},
 			{
 				"fileType": "generateBlocks",
@@ -408,12 +560,12 @@
 			{
 				"fileType": "generateBlocks",
 				"index": -100000,
-				"relativePath": "generateblocks_windows.json"
+				"relativePath": "generateblocks_explosive.json"
 			},
 			{
 				"fileType": "generateBlocks",
 				"index": -100000,
-				"relativePath": "generateblocks_singledoors.json"
+				"relativePath": "generateblocks_windows.json"
 			},
 			{
 				"fileType": "generateBlocks",
@@ -435,11 +587,24 @@
 				"index": -100000,
 				"relativePath": "generateblocks_windows_blue.json"
 			},
-			{
-				"fileType": "generateBlocks",
-				"index": -100000,
-				"relativePath": "generateblocks_doubledoors.json"
-			},
+            {
+                "fileType": "generateBlocksLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "doorgenerator"
+            },
+            {
+                "fileType": "generateBlocksLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "fencegenerator"
+            },
+            {
+                "fileType": "generateBlocksLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "quarterblockgenerator"
+            },
 			{
 				"fileType": "generateBlocks",
 				"index": -100000,

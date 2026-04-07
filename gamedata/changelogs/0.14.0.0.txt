@@ -1,0 +1,61 @@
+0.14.0.0 (2025-05-23)
+
+- Added diagonal movement to colonists and monsters
+- Added variable movement speed & cost to colonists and monsters; they'll prefer to walk over some blocks over others
+-- Briefly; natural terrain blocks are a bit slower, walking through beds, water and such is quite slow, and walking on most player made blocks is a bit faster.
+- Doors now block monsters for a bit and discourage them from passing through them
+- Added placement previews for torches, rails, flowerboxes, street lanterns, signs, dynamic quarterblocks
+- The 'old' flat colored quarterblocks (grey, light & dark brown) are now placable using the same system as the dynamic ones
+-- This is a new item; old quarterblocks in the stockpile will be automatically converted on load, and the crafting recipe is also adjusted to make the new one.
+
+- Rails, merchanthub are now removed if the supporting block below them is removed
+- Grass can now spread under the berry bushes placed by colonists
+- Add colliders to the shaped charge and regular bomb
+- Updated kiln/bloomery icons to match new meshes
+- Quarterblocks placed on non-ground surfaces now block NPCs
+- Prevent placing shaped charges and such inside the player
+- Removed on-hit particles from crates
+- Smoothed out the "ticks" of block destruction a bit
+
+- Use locale-specific open/close quote tags for item descriptions
+- Put the closing quote tag before the period if there is one
+- Use locale-specific number separators in the top left/right data
+- Fix input icon size in japanese quickstart text
+
+- Somewhat improved moving-target-following logic of monsters
+- Fix a sort of memory leak where some pathfinding data was hanging around for previously loaded chunks
+- Fix a thread contention issue slowing down autosaving of chunks
+- Fix some inconsistencies with lighting objects not directly next to ground (like gliders)
+- Mill now correctly has wood particles on destructing
+- Fix a bug causing ragdoll instability & clipping into the ground
+- Fix banner safe area rendering issue when the player has more than 16 outposts
+- Fix a server crash when removing very large stacks of items that are bulk removed when the bottom is removed
+- Make it harder to accidentally clip into the ground by placing various blocks (but others are still as bad as they were)
+- Fix destruction particles appearing besides the mill on removal
+- Fix some text alignment in the outpost creation menu
+- Fix label for the "dont show this again" button in the quickstart being too short for some languages
+
+0.14.0.1 (2025-05-23)
+
+- Improve spawn logic when there's only a relatively small area for monsters to spawn in (partially a regression fix for 0.14.0)
+- Improved siege mode toggling issues while editing blocks
+
+0.14.0.2 (2025-05-23)
+
+- Adjust trapfixer/researcher/wisteria-farmer max movement range up to compensate for increased movement cost with the update
+
+0.14.0.3 (2025-05-23)
+
+- Fix two separate issues with "landmark searching" which is used for finding nearby crates, beds, traps etc. Honestly I've got no idea how it worked at all with these bugs.
+
+0.14.0.4 (2025-05-27)
+
+- Fix blue single doors being green
+- Fix white single doors being blue
+- Fix green single doors being white
+- Fix roofs, dynamic quarterblocks not properly using the normal & height maps for textures using them
+
+0.14.0.5 (2025-05-30)
+
+- Fix an edge case with pathfinding, resulting in an inability to find certain (mostly) short paths that are otherwise easily reachable
+- Adjust movement cost of walking over crates for 0 to +2 (same as grass), it got accidentally skipped

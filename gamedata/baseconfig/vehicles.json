@@ -227,8 +227,6 @@
 		"acceleration": 1.5,
 		"allowPlayerEditingBlocks": true,
 		"colliders": [
-			/* collider indices here matter as they're checked against the triggers defined in the elevator attachBehaviour of the itemtypes spawning elevators */
-			/* floor collider*/
 			{
 				"max": [
 					0.45,
@@ -240,8 +238,7 @@
 					-0.5,
 					-0.45
 				]
-			}
-			/* roof collider*/,
+			},
 			{
 				"max": [
 					0.45,
@@ -253,8 +250,7 @@
 					1.48,
 					-0.45
 				]
-			}
-			/* top selection*/,
+			},
 			{
 				"max": [
 					-0.2,
@@ -266,8 +262,7 @@
 					1.05,
 					-0.2
 				]
-			}
-			/* bottom selection*/,
+			},
 			{
 				"max": [
 					-0.2,
@@ -312,8 +307,7 @@
 					-0.45,
 					-0.4
 				]
-			}
-			/* side colliders (front/back) */,
+			},
 			{
 				"max": [
 					0.5,

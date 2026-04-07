@@ -1,16 +1,4 @@
 [
-	/*
-		keys;
-		name -> some unique string per recipe, re-use it to override previously registered recipes
-		requires -> array of amount+type items
-		results -> array of amount+type items, each item can add "isOptional" or "chance" keys
-		requiresScience -> array of strings or a string, adds this recipe to the unlocksRecipes from the listed sciences
-		
-		rest only applies for NPC recipes
-		defaultLimit -> some number, default amount of times the recipe should be made by npcs
-		defaultPriority -> priority for NPCs, -100, 0, 100 are typical values
-		cooldown -> time in secs to make this recipe with a 100% tool (or in a job without tool use)
-	*/
 	{
 		"name": "pipliz.player.tinkerertable",
 		"requires": [

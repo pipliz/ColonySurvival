@@ -3,7 +3,7 @@
 		"baseType": {
 			"attachmentRequirements": [
 			{
-				"offset": [ 1, 0, 0 ],
+				"axis": [ "X" ],
 				"min": [ 0.49, 0, -0.08 ],
 				"max": [ 0.60, 0.25, 0.08 ]
 			}],
@@ -21,7 +21,8 @@
 						"range": 16,
 						"volume": 0.25
 					}
-				}
+				},
+				"culledShadows": true
 			},
 			"colliders": [
 				{

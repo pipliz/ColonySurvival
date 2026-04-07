@@ -1,0 +1,358 @@
+[
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 130,
+			"mesh": "../meshes/bookcase0.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx+"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasex+"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1x+"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2x+"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledx+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx-"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasex-"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1x-"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2x-"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledx-"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz+"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasez+"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1z+"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2z+"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledz+"
+							}
+						]
+					}
+				]
+			},
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz-"
+				},
+				"attachBehaviour": [
+					{
+						"id": "bookcase",
+						"landmarktype": "paperbookcases",
+						"stages": [
+							{
+								"growthhours": 66,
+								"type": "bookcasez-"
+							},
+							{
+								"growthhours": 120,
+								"type": "bookcase1z-"
+							},
+							{
+								"growthhours": 162,
+								"type": "bookcase2z-"
+							},
+							{
+								"growthhours": -1,
+								"type": "bookcasefilledz-"
+							}
+						]
+					}
+				]
+			}
+		],
+		"typeName": "bookcase"
+	},
+	{
+		"baseType": {
+			"attachBehaviour": [ 
+			{
+				"id": "builder_usable",
+				"mirrorResult": true,
+			}],
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/bookcase3.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcasefilled",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx-"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz-"
+				}
+			}
+		]
+	},
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/bookcase1.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcase1",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx-"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz-"
+				}
+			}
+		]
+	},
+	{
+		"baseType": {
+			"attachmentProviders": [
+			{
+				"min": [ -0.5, -0.5, -0.5 ],
+				"max": [ 0, 0.5 , 0.5 ]
+			}],
+			"canBuildUpon": true,
+			"categories": [
+				"job"
+			],
+			"colliders": [
+				{
+					"max": [
+						0.0,
+						0.5,
+						0.5
+					],
+					"min": [
+						-0.5,
+						-0.5,
+						-0.5
+					]
+				}
+			],
+			"customData": {
+				"culledShadows": true
+			},
+			"icon": "../textures/icons/bookcase.png",
+			"isSolid": false,
+			"lightingTransparency": 200,
+			"mesh": "../meshes/bookcase2.ply",
+			"onPlaceAudio": "woodPlace",
+			"onRemoveAudio": "woodDeleteLight",
+			"pathingImpact": "AsUntouchableSolid",
+			"sideall": "neutral"
+		},
+		"generateType": "rotateBlock",
+		"typeName": "bookcase2",
+		"rotatedTypeJSON": [
+			{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledx-"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz+"
+				}
+			},{
+				"blueprints": {
+					"type": "parseAs",
+					"value": "bookcasefilledz-"
+				}
+			}
+		]
+	}
+]

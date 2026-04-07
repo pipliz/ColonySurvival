@@ -1,60 +1,281 @@
-possible entries for attachBehaviour on types
-search them in files for example uses, this is just a reference thing to know what to search for
-the client_ ones mostly dont have a server-side effect, but indicate something to the client that it doesn't know about
+Item type attachBehaviour reference (modder-focused)
+
+How attachBehaviour works
+- Use a string entry for marker-style behaviour, or object form when settings are needed:
+  - `"attachBehaviour": ["crate"]`
+  - `"attachBehaviour": [{ "id": "guard", ...settings... }]`
+- Most behaviour checks are recursive (`HasBehaviourRecursive`), so child types usually inherit parent behaviours.
+- `client_...` behaviours mostly drive client UX/build checks and do not add server simulation by themselves.
+
+Behaviour entries
 
 alarmbell
+- Makes this block an alarm bell that players can ring.
+- Keys used: `clip` (audio collection id), `cooldown` (seconds before it can be rung again).
+
 astrolabe
-autosapling // forester type trees
+- While held, shows biome direction/marker hints (marsh, heath, mountain, big tree).
+
+ambientOcclusionFactor
+- Mesh-rendering override for ambient-occlusion strength on this type.
+- Keys used: `strength`.
+
+autocrafter
+- Marks blocks as autocrafters that automatically process configured recipes for their colony.
+
+autosapling
+- Lets saplings auto-convert to biome-appropriate variants when placed.
+- Keys used: `mappingnpc`, `mappingplayer` (leaf type -> sapling type maps).
+
 banner
-bookcase // usable by bookcase job
+- Marks colony banner blocks (safe-zone / colony identity systems use this).
+
+bed
+- Registers beds/sleep points and sleeping transform.
+- Keys used: `sleepForward`, `sleepUp`, `sleepOffset`, `sleepAnimationState` (`idle` by default, `bed` for bed animation pose).
+
+blueprintLua
+- Lets blueprint placement/copy/flip call Lua to choose the resulting rotated type.
+- Keys used: `script`.
+
+bomb
+- Registers explosive blocks and explosion shape/damage/timer behavior.
+- Common keys: `timer`, `strength`, `shape`, `radius`/`width`/`height`/`depthStart`/`depthEnd`, `direction`, `npcDamage`, `playerDamage`, `fuseOffset`, `audioClipFuse`, `audioClipBomb`, `allowChainExplosion`, `chainDelay`.
+
+bombfuse
+- Marks an ignition item/tool that can manually light bombs and fuse blocks.
+- Keys used: `onLitAudioClip`.
+
+bookcase
+- Registers staged knowledge/bookcase blocks used by researcher-style jobs.
+- Keys used: `landmarktype`, `stages` (`growthhours`, `type` per stage).
+
+buildableMultiblock
+- Defines sub-block offsets for multi-block structures so click/placement resolves to the intended segment.
+- Keys used: `positions` (`[x,y,z]` entries).
+
 builder_usable
-client_arealimitspopup // needs to be checked for block-areas like berry farms to popup crafting limits
-client_fieldofview_selected // adjust FoV when holding this
-client_requiremineable
+- Marks blocks that builder/construction tools should treat as usable targets.
+
+client_arealimitspopup
+- On placement over matching work areas, opens the crafting-limits popup.
+- Keys used: `jobtype`.
+
+client_fieldofview_selected
+- Changes camera FOV while this item is selected.
+- Keys used: `value` (FOV angle).
+
+client_requireminable
+- Client-side placement check: only allows placement where miner jobs are valid.
+- Note: actual id is `client_requireminable` (not `client_requiremineable`).
+
 client_requirenearwater
-client_requirenearwater
+- Client-side placement check: only allows placement near water.
+- Keys used: `waterDistanceBelow` (optional, default 1).
+
 client_reserveprimaryclickwith
+- Reserves primary click handling for tool logic while this item is selected.
+
 client_reservesecondaryhiton
+- Reserves right-click when targeting this block type (used for special interaction flow).
+
 client_weapon
+- Treats selected item as a player weapon/tool-shot item.
+- Typical keys include cooldown, damage, ammo requirements, projectile setup, audio.
+
 craftingblock
-craftingblockresearcher // bookcase style job
+- Registers this type as a production/job block with an NPC worker.
+- Keys used: `npcType`, `toolset`, `timeBetweenHauls`, `onCraftedAudio`, optional `nearwater`, `waterDistanceBelow`, `islit`.
+
+craftingblockresearcher
+- Research variant of crafting block linked to bookcase landmarks.
+- Keys used: `bookCaseLandmarkType`, `npcType`, `toolset`, `onCraftedAudio`, `missingBookCaseIndicatorType`.
+
 crate
-dirtconversion // use to change to dirt on area placement
-door // the actual door item
-door_smart // the door inventory item with placement logic
+- Marks storage crate landmark blocks used by hauling/storage systems.
+
+dependentBlocks
+- Automatically places/removes extra dependent blocks around a parent block.
+- Keys used: `instances` (`type`, `pos`, optional `typeCondition`), optional `ignoreParentRotation`.
+
+dev_instant_construction
+- Dev/testing helper marker: if held, new construction areas complete instantly.
+
+dirtconversion
+- Used by farm/area logic to convert arable ground into a specified dirt type.
+- Keys used: `type`.
+
+door
+- Makes a block participate in door open/close simulation and health/use rules.
+- Keys used: `closedType`, `health`, `healthRegen`, `npcUsable`, `playerUsable`, `autoclose`, `onOpenClip`, `onCloseClip`.
+
+door_smart
+- Smart door placement behavior (single door auto-pairs into double door variants).
+- Keys used: `group`, `typesingleopen`, `typesingleclosed`, `typedoubleleftopen`, `typedoubleleftclosed`, `typedoublerightopen`, `typedoublerightclosed`.
+
+dynamic_material
+- Mesh rendering samples material/UV from a nearby block offset instead of its own location.
+- Keys used: `offset`.
+
 elevator
+- Registers elevator transport pieces.
+- Keys used: `type` (`shaft`/`gateway`), `shaftFilter`, `gatewayFilter`, `vehicleSettingsID`, and on gateways `triggers`, optional `meshRotation`.
+
 failsafe
+- Registers failsafe blocks that store points/threat and can trigger defensive effects.
+- Keys used: `points`, `threat`.
+
+fuse
+- Registers fuse blocks that propagate ignition and can be lit.
+- Keys used: `timer`, `vertical`, `onLitAudioClip`, `onLitAudioClipLong`.
+
+fusehigh
+- Marker modifier for fuse logic to include high/diagonal update propagation behavior.
+
 gliderlauncher
-grassspread // grass spread logic (types configurable)
+- Makes block launch gliders when interacted with.
+- Keys used: `vehicleType`, `direction`, `velocity`, `offset`.
+
+grassspread
+- Enables grass/floor spread behavior to configured target blocks.
+- Keys used: `targetTypes`, `delayGameHours`, `spreadUp`, `spreadDown`, `spreadStraight`, `requireAirAbove`, `spreadInDirtFarm`, optional `allowedAbove`.
+
 guard
-hint_paintable // tooltip says it's paintable
-leaves // leaves-removal related
-log // leaves-removal related
+- Registers a guard job block and combat behavior tuning.
+- Keys used include: `npcType`, `sleepType`, `damage`, `damageRadius`, `damageTicks`, `range`, `cooldownShot`, `shootRequirements`, `onShootAudio`, `onHitAudio`, `hitForce`, `filterType`.
+
+hint_paintable
+- Adds paintability tooltip/help metadata for players.
+- Keys used: `types` (paint item types that can recolor it).
+
+leaves
+- Marks leaf blocks for tree/forester/log-destruction logic.
+
+log
+- Marks trunk/log blocks for tree/forester/log-destruction logic.
+
+maybeDependent
+- Hint for placement-overlap checks: can bypass large-bounds blocking when this is a dependent-style helper block.
+- Keys used: `ignoreLargeBoundsAwareness`.
+
 minerjob
+- Registers a miner job block.
+- Common keys: `toolset`/`toolSet`, `onMineAudio`.
+
+npcblockerair
+- Places/removes invisible npcblockerair helper blocks at configured offsets to reserve NPC movement space.
+- Keys used: `positions` (`[x,y,z]` entries).
+
+npcOffsetOverride
+- 'value' overrides the automatically calculated npc offset for standing at this position, which by default is based on colliders that impact physics
+
 npcshop
-paintitem // applies painting logic when used
-playersapling // spawns terraingen type trees
+- Marks NPC shop landmark blocks.
+
+onclientclicklua
+- Runs a Lua script on client click while this item is selected (mostly UI/placement flow tools).
+- Keys used: `script`.
+
+onserverclicklua
+- Runs a Lua script on server click while this item is selected (authoritative gameplay/server actions).
+- Keys used: `script`.
+
+paintitem
+- Makes an item usable as paint; applies color-set conversion to paintable blocks.
+- Keys used: `color`.
+
+playersapling
+- Grows player-placed saplings into procedural/terrain-style trees over time.
+- Keys used: `growthTimeMin`, `growthTimeMax`, `heightMin`, `heightMax`.
+
 pointstorage
+- Lockbox-like point storage block for colonies.
+- Keys used: `points`, `threat`.
+
 pointtrader
+- Marks point trader interaction blocks (trade UI and related interactions).
+
 rail
-roof_smart // roof placement logic
+- Registers rail transport pieces.
+- Keys used: `type` (`shaft`/`gateway`), `shaftFilter`, `gatewayFilter`, `vehicleSettingsID`, `direction`, plus shaft `exits`/`exitsUp`.
+
+randomRotations
+- Applies randomized mesh orientation variants when rendering placed blocks.
+- Keys used: `type` (currently `mainrotations`).
+
+roof_smart
+- Smart roof auto-shaping system (changes placed roof piece by nearby context).
+- Uses grouped roof variant ids (diagonal/top/corner variants) under one config group.
+
 sanctifiedpointstorage
-showNPCNames // show names when holding this
+- Sanctified lockbox variant for sanctified points/threat.
+- Keys used: `points`, `threat`.
+
+showNPCNames
+- While selected, shows NPC names in-world.
+
 sign
-smart_flowerbox // flowerbox placement logic
-smart_lantern // latnern placement logic
-smart_moulding // moulding placement logic
+- Marks sign blocks that can store/display user text.
+
+smart_flowerbox
+smart_lantern
+smart_sign
+- Legacy names kept as reference in older docs; current content commonly uses `onclientclicklua` scripts (`flowerboxplacement`, `lanternplacement`, `signplacement`) for these tools.
+
+smart_moulding
+- Auto-corner/side logic for moulding placement.
+- Keys used: `top_side`, `top_outside`, `top_inside`.
+
 smart_placement
-smart_placement // generic placement logic, used for pillars, fences?
-smart_rail_placement // rail placement logic
-smart_sign // sign placement logic
+- Generic data-driven smart placement rules (swap placed result type based on neighbors/conditions).
+- Main keys: `apply_client`, `apply_server`, `options`.
+
+smart_placement_lua
+- Lua-driven smart placement that can remap build result types based on world context.
+- Keys used: `script`, optional `scriptregister`.
+
+smart_quarterblock
+- Quarter-block auto-shaping behaviour for side/inside/outside variants per face direction.
+- Keys used: `y+`, `y-`, `x+`, `x-`, `z+`, `z-`, each with `side`, `outside`, `inside`.
+
+smart_rail_placement
+- Client helper for rail tool preview/adjacency checks.
+- Keys used: `filter`, `filterGateway`.
+
 statisticsboard
+- Marks colony statistics board interaction blocks.
+
 threatstatue
+- Threat statue behavior and tooltip stats.
+- Keys used: `threatweight`, `threatcaused`.
+
 tool
+- Marks item as a tool with durability/speed behavior for jobs/crafting.
+- Keys used: `durability`, `craftingspeed`, `requiresItem`, optional `scienceHint`.
+
 toolshop
+- Marks toolshop landmark blocks.
+
+topdowntrigger
+- Marks trigger blocks that switch players into top-down colony control mode when used.
+
 trap
+- Registers trap blocks and variants (`empty`, `partial`, `loaded`) plus trap config.
+- Important keys: `trapName`, `trapPart`, `trapConfig` (damage/range/ammo/filter/style/etc).
+
 trapfixer
+- Registers trap-fixer job blocks.
+
 watersponge
-window_smart // window placement logic
+- Marks water sponge blocks used by sponge/water-removal systems.
+
+window_smart
+- Smart multi-block window shaping (full/1-gap/2-gap/3-gap/4-gap variants).
+- Uses grouped keys like `typefull`, `typewindowonegap...`, `typewindowtwogap...`, etc.
+
 wisteriafarmer
-wisteriatree // blocks usable by wisteriafarmer
+- Registers wisteria farmer job blocks.
+
+wisteriatree
+- Registers harvestable wisteria tree blocks for wisteria farmer logic.
+- Keys used: `harvestTimeMin`, `harvestTimeMax`, `replacementType`, `dropType` (`type`, `amount`, `chance`).

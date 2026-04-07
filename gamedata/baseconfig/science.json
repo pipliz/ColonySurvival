@@ -1,22 +1,4 @@
 [
-	/* supported fields for AddScience / AddOrOverrideScience entries
-		requireScienceBiome -> if set, this will autocomplete the science if the colony has a banner in said sciencebiome, bypassing other requirements
-		icon -> icon path relative to this json file
-		colonistCount -> threshold required to be able to complete
-		colonyPointRequirement -> quantity required that'll be consumed on complete
-		itemRequirements -> array of amount/type pairs of items that'll be consumed when completing the science
-		dependencies -> array of other science keys which are required to be completed before this one can be completed
-		unlocksRecipes -> array of recipe keys which will be unlocked when this research is completed. Recipes may require multiple researches to show up.
-		unlocksRecipeGroups -> same as unlocksRecipes, but counts *all* recipes associated with the NPCTypes put in this array
-		unlocksClientHints -> array of "hints", which will be visualized on the client but otherwise do nothing. Presumably some code is added to run on completion that does do something.
-			Example hint format on next lines
-			{
-				"data": "pipliz.diggerspecial",
-				"type": "NPCType"
-			}
-		threatIncrease -> how much the monster threat level increases upon completing this science
-		for AddScienceUnlocks entries, it only supports unlocksRecipes and unlocksRecipeGroups
-		*/
 	{
 		"icon": "../textures/icons/wheat.png",
 		"itemRequirements": [
@@ -73,6 +55,21 @@
 		],
 		"key": "pipliz.jewelry",
 		"sortWeight": 4679
+	},
+	{
+		"colonyPointRequirement": 25,
+		"dependencies": [
+			"pipliz.writer"
+		],
+		"icon": "../textures/icons/topdownviewtrigger.png",
+		"itemRequirements": [
+			{
+				"amount": 3,
+				"type": "scrollofknowledge"
+			}
+		],
+		"key": "pipliz.topdownviewtrigger",
+		"sortWeight": 2203
 	},
 	{
 		"colonyPointRequirement": 1000,
@@ -234,6 +231,25 @@
 		]
 	},
 	{
+		"colonyPointRequirement": 250,
+		"dependencies": [
+			"pipliz.engineer"
+		],
+		"icon": "../textures/icons/odditypress.png",
+		"itemRequirements": [
+			{
+				"type": "engineerbench",
+				"amount": 3
+			},
+			{
+				"type": "scrollofknowledge",
+				"amount": 5
+			}
+		],
+		"key": "pipliz.odditypress",
+		"sortWeight": 11433
+	},
+	{
 		"colonyPointRequirement": 1000,
 		"dependencies": [
 			"pipliz.chickenmeal",
@@ -316,7 +332,7 @@
 		"dependencies": [
 			"pipliz.furnace"
 		],
-		"icon": "../textures/icons/merchanthub.png",
+		"icon": "../textures/icons/merchanthub2.png",
 		"itemRequirements": [
 			{
 				"amount": 5,
@@ -333,7 +349,7 @@
 			"pipliz.trading",
 			"pipliz.porridge"
 		],
-		"icon": "../textures/icons/npcshop.png",
+		"icon": "../textures/icons/npcshop2.png",
 		"key": "pipliz.npcshop",
 		"sortWeight": 1438
 	},
@@ -375,7 +391,7 @@
 		"dependencies": [
 			"pipliz.anvil"
 		],
-		"icon": "../textures/icons/toolshop.png",
+		"icon": "../textures/icons/toolshop2.png",
 		"itemRequirements": [
 			{
 				"type": "coppertools"
@@ -716,7 +732,7 @@
 			"pipliz.archery",
 			"pipliz.writer"
 		],
-		"icon": "../textures/icons/trap.png",
+		"icon": "../textures/icons/engineerbench.png",
 		"itemRequirements": [
 			{
 				"amount": 25,
@@ -1888,5 +1904,62 @@
 		],
 		"key": "pipliz.paint",
 		"sortWeight": 78968
+	},
+	{
+		"colonyPointRequirement": 100,
+		"dependencies": [
+			"pipliz.engineer"
+		],
+		"icon": "../textures/icons/bombearly.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge",
+				"amount": 5
+			},
+			{
+				"type": "goldingot",
+				"amount": 10
+			}
+		],
+		"key": "pipliz.explosives",
+		"sortWeight": 8274
+	},
+	{
+		"colonyPointRequirement": 500,
+		"dependencies": [
+			"pipliz.explosives",
+			"pipliz.astrolabe"
+		],
+		"icon": "../textures/icons/fuseblock.png",
+		"itemRequirements": [
+			{
+				"type": "scrollofknowledge",
+				"amount": 5
+			},
+			{
+				"type": "astrolabe"
+			}
+		],
+		"key": "pipliz.explosivesadvanced",
+		"sortWeight": 22644
+	},
+	{
+		"colonyPointRequirement": 1000,
+		"dependencies": [
+			"pipliz.explosivesadvanced",
+			"pipliz.gunpowder"
+		],
+		"icon": "../textures/icons/bombshaped.png",
+		"itemRequirements": [
+			{
+				"type": "bookofknowledge",
+				"amount": 3
+			},
+			{
+				"type": "gunpowdertrap"
+			}
+		],
+		"key": "pipliz.explosivescrafting",
+		"sortWeight": 247423
 	}
 ]

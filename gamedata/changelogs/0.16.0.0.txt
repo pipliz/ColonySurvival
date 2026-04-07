@@ -1,0 +1,66 @@
+0.16.0.1 (2025-04-07, combined changes since latest 0.15.1)
+
+- Add Oddity Press block, which can be used to craft various decorative items
+-- Deco goods/foods/tools/items, 2x1 table, 1x1 table, 3x2 table
+-- 3-long bed
+-- bunk bed (2 beds in one, 3x2x2)
+-- 1x1 wall mounted painting (8 variants)
+-- Statue of a monster & one of a farmer
+-- Wall-mounted hunting trophy
+
+- Render distance setting can now be changed without reloading
+- Texture resolution setting can now be changed without reloading
+- Added a "render scale" video setting (rendering at 30% to 100% resolution and a 200% option)
+- Video settings tooltips
+
+Fixes
+- Fixed a case of client packet loss due to exceptions related to receiving chat messages before having opened the chatbox once
+-- Downstream effects could be an inability to edit further blocks
+- Fixed scrollshelves block attachment provider inaccuracy
+- Fixed writer's desk block attachment provider defaulting to that of a full block
+- Fix a possible issue with blueprinting berry bushes related to a typo in types.json
+- Skip old failsafe in blueprints
+- Fix blueprint creation failure when the scanned area is uniformly one block
+- Change blueprint handling of berry bushes; they're skipped now
+- Fix double item cost when placing blueprint positions with non-solid blocks inside pre-existing solid blocks (it would also take an item in the 'clearing' first phase)
+- Improve handling of "complex" types in the specific digger & replacement construction areas. Items such as roofs and windows are now merged into one in terms of filter selection.
+- Fix blueprints not dealing well with being placed underwater
+- Fix bed placement outside colonies being a bit weird
+- Fix barley crops being included in blueprints
+- Fixed the failsafe statue colliders and attachment requirements (using new multiblock system)
+- Fix an issue with world savegames not saving correctly at times when coupled with cloud sync between multiple computers
+- Sacred point storage block is now properly aligned (was offset by ~2 cm)
+- Fixed settings mismatch when adjusting render distance in-game without restart
+- Pause animation & audio loops for animated meshed blocks when the sim is paused
+- Fix a duplicate particle effect config entry on temperate logs
+- Fix a case where construction jobs can 'break' a world's NPCs when somehow the job spots end up being the base non-rotated type
+- Fix recipe unlock tooltip showing the old merchant hub icon
+
+Internal stuff
+- Added support for per autocrafter recipe lists
+- Added support for attachment providers/requirements at other offsets than directly adjacent (2x1 desk ground requirement)
+- Added support for placing blocks against 'multiblock structures', like the 2x1 desk, such that you can place items on both blocks of it
+- Adjusted attachment system to not use a block offset per attachment anymore
+- Adjusted attachment system to allow requiring a match on a designated axis
+- Added support for block animation events playing audio clips at certain points in an animation
+- Updated the ancient "bed is 2 blocks" system to use the new approaches (no special code for a "bedend" block, one mesh/type)
+-- Merged the meshes and baked in the vertex colors, set up attachments properly, attachBehaviour-based logic, configurable sleeping positions, removed hardcoded bed-item logic
+- Removed old docs-in-json, so all the json files are valid 'old' json instead of json5
+- Updated some of the reference docs in gamedata/help/ (just summarising/listing what's in the code, ai generated but inspected)
+- Updated from Unity 2023 LTS to Unity 6.3 LTS
+- Updated rendering to use Unity's URP system
+- Removed support for textured colonists (not used since the job model updates)
+- Moved NPC animations to .glb files in gamedata/animations/. Can be configured per job type. Added a 'bed' animation type for sleeping (in the new beds).
+-- Changed animation system to do transition blending at runtime instead of baking it
+- Changed file import animation fps from 16 to 24 (so its consistent with blender default)
+
+0.16.0.0 (2025-04-03) original
+
+0.16.0.1 (2025-04-07)
+- Fix wall paintings not dropping the correct item on removal
+- Fix a duplicate particle effect config entry on temperate logs
+- Fix a case where construction jobs can 'break' a world's NPCs when somehow the job spots end up being the base non-rotated type
+- Fix oddity press not checking research requirements for its recipes
+- Fix oddity press recipe list using the mill recipe list for the first time a world is launched with 0.16 (fixes after reload)
+- Fix recipe unlock tooltip showing the old merchant hub icon
+- Add 'made in: oddity press' entries for recipe unlock tooltips

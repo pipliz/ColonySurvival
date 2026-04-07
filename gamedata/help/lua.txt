@@ -1,0 +1,97 @@
+global
+	functions
+		many of the lua stdlib things, besides i/o and unsafe stuff
+		world_tryhasbehaviour(int x, int y, int z,string behaviour) -> (bool success, bool result)
+			success is true if it's loaded properly, result is true if the type at the position has the string behaviour
+		world_tryissolid(int x, int y, int z) -> (bool success, bool result)
+			success is true is it's loaded properly, result is true if the type at the position is marked isSolid (mostly full-cube blocks without a mesh)
+		world_hassupportsfor(int x, int y, int z, string type) -> bool result
+			result is true if the type can be placed at the desired location in regards to having existing support blocks (like a solid block below, or to the side, or a smaller pillar support for something like a fence, etc)
+		world_canplaceat(int x, int y, int z, string type) -> string result
+			result options:
+			- "Yes" if it can be placed entirely
+			- "NoAttachment" if it can't satisfy one of the attachment requirements
+			- "NoPlayerOverlap" if it clips into the players current position
+			- "NoBoundsOverlap" if it overlaps with bounds of existing blocks
+		world_trysettypeat(int x, int y, int z, string type) -> bool success
+			result is true if the change happened. Change a block type in the world
+		world_trygettypeat(int x, int y, int z) -> bool success, string type
+			success is true if the read happened, then type is the type name
+		types_getparent(string type) -> string parent
+			result is string or nil, of the parent item type of the passed type
+		types_hasbehaviour(string type, string behaviour) -> bool result
+		types_getbehaviour(string type, string behaviour) -> luatable result
+			returns the json object node that matches the behaviour, as a lua table. If the behaviour is not found, it returns nil. The luatable is reused/cached.
+		types_getbehaviourrecursive(string type, string behaviour) -> luatable result
+			same as types_getbehaviour, but also checks 
+		types_getallwithbehaviour(string behaviour) -> luatable results
+			returns an array of type names for types with the indicated behaviour
+		types_getallwithbehaviourrecursive(string behaviour) -> luatable results
+			same as types_getallwithbehaviour, but also returns types with the indicated behaviour in a parent type
+		types_pathingimpact(string type) -> string result
+			return "AsAir", "AsSolid", "AsUntouchableSolid"
+		types_applyrotation(string type, string rotation) -> string rotatedtype
+		math_reverse_rotation(string rotation) -> string rotation
+			reverses rotation, like Y+ turns to Y-, X- to X+ etc
+		showpreview (float x, float y, float z, string typename, string colorname) -> ()
+			no result, client only - shows the preview mesh for the current frame, at the specified location, in the specified color. Color is "green" or "red". Intended for use in onclientclicklua of type "Hover" for per-frame-use.
+		print / printwarning / printerror - string arg, prints to log/console
+	client only functions
+		rail_israil(string type, int x, int y, int z, string direction) -> bool doesConnect
+			returns whether the block at {x} {y} {z} provides a rail connection of type {direction} matching the rail item {type}
+		
+
+smart_placement_lua
+	main script, args:
+		int x, int y, int z
+			block position
+		string type
+			current type / type trying to be placed
+	return value: string indicating type name that is desired for the given args xyz position
+	scriptregister:
+		no args, result is multi value return of the strings of the types for which the script should be called
+		when scriptregister is not provided, the game will look for a register_placement_for function in the main script that does the same. These functions should return an array of type names
+
+onclientclicklua / onserverclicklua
+	runs the script on click with some data
+	args:
+		string clicktype
+			"Left", "Right", "Hover"
+			hover is client-only
+		string hittype
+			"Missed", "Block", "NPC", "ControlledMesh"
+			type of thing the player aim ray has hit
+		string clicksource
+			"FirstPerson" or "TopDown"
+		string selectedtype
+			itemtype name in the selected hotbar
+		int selectedindex
+			inventory index selected
+		string buildtype
+			itemtype name to be built currently, already affected by the R rotation tool and smart_placement type behaviours
+		string rotation
+			"X+", "X-", "Z+" or "Z-", value of the 'press R to rotate' tool
+	*if* hittype == "Block", the following extra args are available
+		string blockHitType
+			name of the type that was the block that was hit by the player aim ray.
+		int blockHitX, int blockHitY, int blockHitZ
+			position of the block that was hit by the player aim ray.
+		float blockHitExactX, float blockHitExactY, float blockHitExactZ
+			exact hit position where the player ray hit the block
+		string blockHitSide
+			"X+", "X-", "Y+", "Y-", "Z+", "Z-", the side of the block hit with the player aim ray
+		int blockBuildPositionX, int blockBuildPositionY, int blockBuildPositionZ
+			position of where a block would be placed given the current aim/hit and right-clicking (mostly 1 block offset from blockHitXYZ)
+		string blockBuildCurrentType
+			current type at blockBuildPositionXYZ, where we're trying to build
+	return value:
+		nil if the game should continue dealing with the click as usual
+		or return "used" if it should cancel dealing with the click (assuming the script did the actions required)
+	onserverclicklua is more WIP (currently unused by the game, ended up being a client script)
+	
+generateBlocksLua
+typesLua
+	a jsonfile entry of a modInfo.json file
+	has a "script" entry that references a lua file entry
+	this script is executed and the returned LuaTable is converted to json and parsed as if it was a file
+	at the time of writing, this has no arguments passed to it

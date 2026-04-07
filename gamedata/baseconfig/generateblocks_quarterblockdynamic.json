@@ -17,11 +17,7 @@
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						-1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						0.05,
 						-0.51,
@@ -56,6 +52,7 @@
 			"lightingTransparency": 200,
 			"maxStackSize": 60,
 			"mesh": "../meshes/quarterblockdynamicx+.ply",
+			"movementCost": -1,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "quarterblockdynamicitem",
@@ -78,15 +75,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						-1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						0.05,
 						-0.51,
@@ -148,11 +145,13 @@
 			},
 			"lightingTransparency": 200,
 			"mesh": "../meshes/quarterblockdynamicinsidecorner.ply",
+			"movementCost": -1,
 			"isSolid": false,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "quarterblockdynamicitem",
 			"onRemoveAmount": 2,
+			"pathingImpact": "AsAir",
 			"sideall": "planks"
 		},
 		"generateType": "rotateBlock",
@@ -172,15 +171,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						-1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						0.05,
 						-0.51,
@@ -213,6 +212,7 @@
 			},
 			"lightingTransparency": 230,
 			"mesh": "../meshes/quarterblockdynamicoutsidecorner.ply",
+			"movementCost": -1,
 			"isSolid": false,
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
@@ -240,11 +240,7 @@
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						0.05,
 						0.490000039,
@@ -282,6 +278,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "quarterblockdynamicitem",
+			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": -5.008956E-06,
@@ -306,15 +303,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						-0.45,
 						0.48999998,
@@ -381,6 +378,7 @@
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveType": "quarterblockdynamicitem",
 			"onRemoveAmount": 2,
+			"pathingImpact": "AsUntouchableSolid",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": -5.008957E-06,
@@ -405,15 +403,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						1,
-						0
-					],
+					"axis": [ "Y" ],
 					"min": [
 						0.049999956,
 						0.48999998,
@@ -450,6 +448,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveAmount": 0,
+			"pathingImpact": "AsAir",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": -5.008957E-06,
@@ -474,15 +473,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockstraight"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						-1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						-0.509999931,
 						-0.45,
@@ -528,7 +527,13 @@
 			}
 		},
 		"generateType": "rotateBlockX",
-		"typeName": "quarterblockdynamicx+"
+		"typeName": "quarterblockdynamicx+",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsAir" },
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -544,15 +549,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						-1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						-0.509999931,
 						-0.45,
@@ -627,7 +632,13 @@
 			}
 		},
 		"generateType": "rotateBlockX",
-		"typeName": "quarterblockdynamicinsidex+"
+		"typeName": "quarterblockdynamicinsidex+",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -643,15 +654,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						-1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						-0.509999931,
 						-0.45,
@@ -688,6 +699,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveAmount": 0,
+			"pathingImpact": "AsAir",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": 90.0,
@@ -712,15 +724,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockstraight"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						0.48999998,
 						-0.45,
@@ -766,7 +778,13 @@
 			}
 		},
 		"generateType": "rotateBlockX",
-		"typeName": "quarterblockdynamicx-"
+		"typeName": "quarterblockdynamicx-",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsAir" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -782,15 +800,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						0.49,
 						0.0499999672,
@@ -865,7 +883,13 @@
 			}
 		},
 		"generateType": "rotateBlockX",
-		"typeName": "quarterblockdynamicinsidex-"
+		"typeName": "quarterblockdynamicinsidex-",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -881,15 +905,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						1,
-						0,
-						0
-					],
+					"axis": [ "X" ],
 					"min": [
 						0.49,
 						-0.449999958,
@@ -926,6 +950,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveAmount": 0,
+			"pathingImpact": "AsAir",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": -5.008957E-06,
@@ -950,15 +975,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockstraight"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						-1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						-0.45,
@@ -1004,7 +1029,13 @@
 			}
 		},
 		"generateType": "rotateBlockZ",
-		"typeName": "quarterblockdynamicz+"
+		"typeName": "quarterblockdynamicz+",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsAir" },
+			{ "pathingImpact": "AsSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -1020,15 +1051,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						-1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						-0.45,
@@ -1103,7 +1134,13 @@
 			}
 		},
 		"generateType": "rotateBlockZ",
-		"typeName": "quarterblockdynamicinsidez+"
+		"typeName": "quarterblockdynamicinsidez+",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -1119,15 +1156,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						-1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						0.0499999337,
@@ -1164,6 +1201,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveAmount": 0,
+			"pathingImpact": "AsAir",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": 0.0,
@@ -1188,15 +1226,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockstraight"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						-0.45,
@@ -1242,7 +1280,13 @@
 			}
 		},
 		"generateType": "rotateBlockZ",
-		"typeName": "quarterblockdynamicz-"
+		"typeName": "quarterblockdynamicz-",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsAir" },
+			{ "pathingImpact": "AsSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -1258,15 +1302,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockinside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						-0.45,
@@ -1341,7 +1385,13 @@
 			}
 		},
 		"generateType": "rotateBlockZ",
-		"typeName": "quarterblockdynamicinsidez-"
+		"typeName": "quarterblockdynamicinsidez-",
+		"rotatedTypeJSON": [
+			{ "pathingImpact": "AsSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsUntouchableSolid" },
+			{ "pathingImpact": "AsSolid" }
+		]
 	},
 	{
 		"baseType": {
@@ -1357,15 +1407,15 @@
 				{
 					"id": "ambientOcclusionFactor",
 					"strength": 0.4
+				},
+				{
+					"id": "blueprintLua",
+					"script": "blueprintmappingquarterblockoutside"
 				}
 			],
 			"attachmentRequirements": [
 				{
-					"offset": [
-						0,
-						0,
-						1
-					],
+					"axis": [ "Z" ],
 					"min": [
 						0.05,
 						0.0499999672,
@@ -1402,6 +1452,7 @@
 			"onPlaceAudio": "woodPlace",
 			"onRemoveAudio": "woodDeleteLight",
 			"onRemoveAmount": 0,
+			"pathingImpact": "AsAir",
 			"sideall": "planks",
 			"meshRotationEuler": {
 				"x": 270.0,

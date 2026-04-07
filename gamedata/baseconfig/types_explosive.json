@@ -1,0 +1,263 @@
+{
+	"bombearly": {
+		"attachBehaviour": [{
+			"id": "bomb",
+			"shape": "Sphere",
+			"radius": 4,
+			"timer": 3,
+			"strength": 50,
+			"allowChainExplosion": true,
+			"chainDelay": 0.3,
+			
+			"npcDamage": 125,
+			"playerDamage": 70,
+			"npcForce": 35,
+			
+			"audioClipFuse": "fuse_lit_long",
+			"audioClipBomb": "bomb"
+		}, "builder_usable", "fuse"],
+		"categories": [
+			"explosives"
+		],
+		"icon": "../textures/icons/bombearly.png",
+		"isSolid": true,
+		"lightingTransparency": 30,
+		"mesh": "../meshes/bombearly.ply",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"bombshapedchargedown": {
+		"attachBehaviour": [{
+			"id": "bomb",
+			"shape": "ShapedBox",
+			
+			"width": 3,
+			"height": 3,
+			"depthStart": 1,
+			"depthEnd": 10,
+			"direction": "yMin",
+			
+			"npcDamage": 125,
+			"playerDamage": 70,
+			"npcForce": 35,
+			
+			"timer": 3,
+			"strength": 72,
+			"allowChainExplosion": true,
+			"chainDelay": 0.3,
+			
+			"audioClipFuse": "fuse_lit_long",
+			"audioClipBomb": "bomb"
+		},
+		{
+			"id": "builder_usable",
+			"surfaceOnly": true
+		},
+		"fuse",
+		{
+			"id": "onclientclicklua",
+			"script": "bombshapedplacer"
+		}
+		],
+		"categories": [
+			"explosives"
+		],
+		"colliders": [
+			{
+				"max": [ 0.5, 0.5, 0.5 ],
+				"min": [ -0.5, -0.5, -0.5 ]
+			}
+		],
+		"icon": "../textures/icons/bombshaped.png",
+		"isSolid": false,
+		"needsBase": true,
+		"lightingTransparency": 150,
+		"mesh": "../meshes/shapedcharge.ply",
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"bombshapedchargeup": {
+		"attachBehaviour": [{
+			"id": "bomb",
+			"shape": "ShapedBox",
+			
+			"fuseOffset": [ 0, -0.4, 0 ],
+			
+			"width": 3,
+			"height": 3,
+			"depthStart": 1,
+			"depthEnd": 10,
+			"direction": "yPlus",
+			
+			"npcDamage": 125,
+			"playerDamage": 70,
+			"npcForce": 35,
+			
+			"timer": 3,
+			"strength": 72,
+			"allowChainExplosion": true,
+			"chainDelay": 0.3,
+			
+			"audioClipFuse": "fuse_lit_long",
+			"audioClipBomb": "bomb"
+			},
+			{
+				"id": "builder_usable",
+				"surfaceOnly": true
+			},
+			"fuse"
+		],
+		"attachmentRequirements": [
+		{
+			"axis": [ "Y" ],
+			"min": [ -0.49, 0.49, -0.49],
+			"max": [ 0.49, 0.51, 0.49]
+		}],
+		"colliders": [
+			{
+				"max": [ 0.5, 0.5, 0.5 ],
+				"min": [ -0.5, -0.5, -0.5 ]
+			}
+		],
+		"icon": "../textures/icons/error.png",
+		"isSolid": false,
+		"lightingTransparency": 150,
+		"mesh": "../meshes/shapedcharge.ply",
+		"meshRotationEuler": {
+			"x": 180,
+			"y": 0,
+			"z": 0
+		},
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "bombshapedchargedown",
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	},
+	"bombfuse": {
+		"attachBehaviour": [
+		{
+			"id": "bombfuse",
+			"onLitAudioClip": "fuse_lit"
+		}],
+		"categories": [
+			"explosives"
+		],
+		"icon": "../textures/icons/fuseitem.png",
+		"isPlaceable": false
+	},
+	"bombfuseblock": {
+		"attachBehaviour": [
+		{
+			"id": "onclientclicklua",
+			"script": "bombfuseblocktool"
+		},
+		{
+			"id": "smart_placement_lua",
+			"script": "fuseplacement"
+		}],
+		"categories": [
+			"explosives"
+		],
+		"icon": "../textures/icons/fuseblock.png",
+		"maxStackSize": 200
+	},
+	"bombfusequad": {
+		"attachBehaviour": [ { "id": "fuse", "timer": 0.2, "onLitAudioClip": "fuse_lit_short" } ],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					-0.3,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"isSolid": false,
+		"lightingTransparency": 200,
+		"mesh": "../meshes/fusequad.ply",
+		"movementCost": 2,
+		"needsBase": true,
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "bombfuseblock",
+		"pathingImpact": "AsAir",
+		"sideall": "neutral"
+	},
+	"bombfusedelay": {
+		"attachBehaviour": [ { "id": "fuse", "timer": 4.0, "onLitAudioClipLong": "fuse_lit_long" } ],
+		"categories": [
+			"explosives"
+		],
+		"colliders": [
+			{
+				"impactsPhysics": false,
+				"max": [
+					0.5,
+					-0.3,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"icon": "../textures/icons/bombfusedelay.png",
+		"isSolid": false,
+		"lightingTransparency": 200,
+		"mesh": "../meshes/bombfusedelay.ply",
+		"movementCost": 2,
+		"needsBase": true,
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"pathingImpact": "AsAir",
+		"sideall": "neutral"
+	},
+	"bombfusehigh": {
+		"attachBehaviour": [
+		{
+			"id": "fuse",
+			"timer": 0.2,
+			"vertical": true,
+			"onLitAudioClip": "fuse_lit"
+		}, {
+			"id": "fusehigh"
+		} ],
+		"isSolid": false,
+		"colliders": [
+			{
+				"max": [
+					0.5,
+					0.6,
+					0.5
+				],
+				"min": [
+					-0.5,
+					-0.5,
+					-0.5
+				]
+			}
+		],
+		"lightingTransparency": 200,
+		"mesh": "../meshes/fusehigh.ply",
+		"needsBase": true,
+		"onPlaceAudio": "woodPlace",
+		"onRemoveAudio": "woodDeleteLight",
+		"onRemoveType": "bombfuseblock",
+		"onRemoveAmount": 2,
+		"pathingImpact": "AsUntouchableSolid",
+		"sideall": "neutral"
+	}
+}

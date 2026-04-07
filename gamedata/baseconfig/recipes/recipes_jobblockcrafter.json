@@ -80,7 +80,7 @@
 		"requiresScience": "pipliz.trading",
 		"results": [
 			{
-				"type": "merchanthub"
+				"type": "merchanthub2"
 			}
 		],
 		"sortWeight": 173
@@ -183,7 +183,7 @@
 		"requiresScience": "pipliz.toolshop",
 		"results": [
 			{
-				"type": "toolshop"
+				"type": "toolshop2"
 			}
 		],
 		"sortWeight": 810
@@ -250,7 +250,7 @@
 		"requiresScience": "pipliz.npcshop",
 		"results": [
 			{
-				"type": "npcshop"
+				"type": "npcshop2"
 			}
 		],
 		"sortWeight": 1438
@@ -451,6 +451,33 @@
 			}
 		],
 		"sortWeight": 2164
+	},
+	{
+		"cooldown": 120.0,
+		"defaultLimit": 1,
+		"name": "pipliz.jobblockcrafter.topdownviewtrigger",
+		"requires": [
+			{
+				"type": "planks",
+				"amount": 3
+			},
+			{
+				"type": "leather"
+			},
+			{
+				"type": "parchment"
+			},
+			{
+				"type": "scrollofknowledge"
+			}
+		],
+		"requiresScience": "pipliz.topdownviewtrigger",
+		"results": [
+			{
+				"type": "topdownviewtrigger"
+			}
+		],
+		"sortWeight": 2203
 	},
 	{
 		"cooldown": 480.0,
