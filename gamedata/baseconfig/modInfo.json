@@ -81,6 +81,16 @@
 			"relativePath": "lua/types/doors.lua"
 		},
 		{
+			"id": "bunkbedgenerator",
+			"index": -1000000,
+			"relativePath": "lua/types/bunkbeds.lua"
+		},
+		{
+			"id": "bed3generator",
+			"index": -1000000,
+			"relativePath": "lua/types/bed3.lua"
+		},
+		{
 			"id": "quarterblockgenerator",
 			"index": -1000000,
 			"relativePath": "lua/types/quarterblocks.lua"
@@ -468,6 +478,16 @@
 			{
 				"fileType": "setPaintables",
 				"index": -100000,
+				"relativePath": "paintables_bunkbeds.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
+				"relativePath": "paintables_bed3.json"
+			},
+			{
+				"fileType": "setPaintables",
+				"index": -100000,
 				"relativePath": "paintables_doubledoors.json"
 			},
 			{
@@ -592,6 +612,18 @@
                 "index": -100000,
 				"relativePath": "./",
                 "script": "doorgenerator"
+            },
+            {
+                "fileType": "generateBlocksLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "bunkbedgenerator"
+            },
+            {
+                "fileType": "generateBlocksLua",
+                "index": -100000,
+				"relativePath": "./",
+                "script": "bed3generator"
             },
             {
                 "fileType": "generateBlocksLua",

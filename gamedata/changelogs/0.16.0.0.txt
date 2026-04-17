@@ -1,4 +1,4 @@
-0.16.0.1 (2025-04-07, combined changes since latest 0.15.1)
+0.16.0.6 (2026-04-17, combined changes since latest 0.15.1)
 
 - Add Oddity Press block, which can be used to craft various decorative items
 -- Deco goods/foods/tools/items, 2x1 table, 1x1 table, 3x2 table
@@ -7,11 +7,19 @@
 -- 1x1 wall mounted painting (8 variants)
 -- Statue of a monster & one of a farmer
 -- Wall-mounted hunting trophy
+-- Basic & fancy chair
 
 - Render distance setting can now be changed without reloading
 - Texture resolution setting can now be changed without reloading
 - Added a "render scale" video setting (rendering at 30% to 100% resolution and a 200% option)
 - Video settings tooltips
+- Improved blueprint list menu a bit;
+-- Added name/created-at sorting options
+-- Sort newest to the top instead of oldest
+-- Show created-day per entry
+-- Move delete button inside the share menu
+-- Rename 'share' button to 'view'
+-- Add option to rename blueprint in this 'view' menu
 
 Fixes
 - Fixed a case of client packet loss due to exceptions related to receiving chat messages before having opened the chatbox once
@@ -35,6 +43,10 @@ Fixes
 - Fix a duplicate particle effect config entry on temperate logs
 - Fix a case where construction jobs can 'break' a world's NPCs when somehow the job spots end up being the base non-rotated type
 - Fix recipe unlock tooltip showing the old merchant hub icon
+- Updated NPC icon used in research unlocks to one of the new models
+- Stop wisteria farmers from levitating while on the job
+- Minor improvement to chunk loading/sending state management; potentially fixing random air chunks you'd get stuck in
+- Fix chatbox causing topdown tool use to pause for as long as it is showing a message
 
 Internal stuff
 - Added support for per autocrafter recipe lists
@@ -54,9 +66,9 @@ Internal stuff
 -- Changed animation system to do transition blending at runtime instead of baking it
 - Changed file import animation fps from 16 to 24 (so its consistent with blender default)
 
-0.16.0.0 (2025-04-03) original
+0.16.0.0 (2026-04-03) original
 
-0.16.0.1 (2025-04-07)
+0.16.0.1 (2026-04-07)
 - Fix wall paintings not dropping the correct item on removal
 - Fix a duplicate particle effect config entry on temperate logs
 - Fix a case where construction jobs can 'break' a world's NPCs when somehow the job spots end up being the base non-rotated type
@@ -64,3 +76,32 @@ Internal stuff
 - Fix oddity press recipe list using the mill recipe list for the first time a world is launched with 0.16 (fixes after reload)
 - Fix recipe unlock tooltip showing the old merchant hub icon
 - Add 'made in: oddity press' entries for recipe unlock tooltips
+
+0.16.0.2 (2026-04-08)
+- Increase configured light transparency of the 3x2 table, the 2x1 desk and the 1x1 table, so they also allow grass to exist below them
+- Added a "created" column to the blueprint list showing the day on which the blueprint was created
+- Added ascending/descending sort options to the blueprint list for name & created-at columns
+- Default sort by created-at from new to old
+- Move the blueprint delete button into the 'share' menu
+- Rename blueprint 'share' button to 'view'
+- Add option to rename blueprints inside this 'view' menu (requires server to also be 0.16.0.2)
+
+0.16.0.3 (2026-04-09)
+- Tooltip for the 2x1 desk
+- Implement recipe/requirements for the trade items pile
+- Fix tooltips breaking ingame for stockpiles etc after opening and closing the settings menu
+- Added 'basic chair' and 'fancy chair' deco items to the oddity press
+- Updated NPC icon used in research unlocks to one of the new models
+
+0.16.0.4 (2026-04-09)
+- Paintable versions of bunkbed & luxury bed
+- Stop wisteria farmers from levitating while on the job
+
+0.16.0.5 (2026-04-15)
+- Did an optimisation pass on the meshes to reduce build size / server asset download needs (should be no rendering difference)
+- Fix white icon / broken unlocks in science menu for construction related job entries
+- Minor improvement to chunk loading/sending state management; potentially fixing random air chunks you'd get stuck in
+
+0.16.0.6 (2026-04-17)
+- Fix 0.16.0.5 regression that broke paintings
+- Fix chatbox causing topdown tool use to pause for as long as it is showing a message

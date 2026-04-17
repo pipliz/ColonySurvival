@@ -115,11 +115,21 @@
 		"sortWeight": 39468
 	},
 	{
-		"cooldown": 15,
+		"cooldown": 3,
 		"name": "pipliz.autocrafter.decogoods",
+		"requiresScience": "pipliz.monocular",
 		"requires": [
 			{
-				"type": "planks"
+				"type": "goldore"
+			},
+			{
+				"type": "animalcarcass"
+			},
+			{
+				"type": "monocular"
+			},
+			{
+				"type": "copperingot"
 			}
 		],
 		"results": [
@@ -127,7 +137,44 @@
 				"type": "decogoods"
 			}
 		],
-		"sortWeight": 0
+		"sortWeight": 152336
+	},
+	{
+		"cooldown": 10,
+		"name": "pipliz.autocrafter.basicchair",
+		"requiresScience": "pipliz.odditypress",
+		"requires": [
+			{
+				"type": "planks",
+				"amount": 2
+			}
+		],
+		"results": [
+			{
+				"type": "basicchair"
+			}
+		],
+		"sortWeight": 11433
+	},
+	{
+		"cooldown": 25,
+		"name": "pipliz.autocrafter.fancychair",
+		"requiresScience": "pipliz.odditypress",
+		"requires": [
+			{
+				"type": "plankscoated",
+				"amount": 2
+			},
+			{
+				"type": "leather"
+			}
+		],
+		"results": [
+			{
+				"type": "fancychair"
+			}
+		],
+		"sortWeight": 11433
 	},
 	{
 		"cooldown": 40,
