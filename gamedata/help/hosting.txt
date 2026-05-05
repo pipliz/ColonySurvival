@@ -1,150 +1,23 @@
 If you just want to play with friends while you're active yourself - use the co-op menu in the client.
-If you want to leave a server on while your pc is active, use the colonyserver executable of your install manually and follow the menu's.
+If you want to leave a server on while your pc is active, use the colonyserver executable of your install manually and follow the menus.
 Both of these options require you to either leave the client or server active, and require steam to be started and logged in
 
-The rest of this guide is intended for setting up headless dedicated servers.
+If you're looking to host a headless server on a VPS or NAS or such, the easiest is probably to use the included docker(-compose) files in gamedata/help/hosting_docker/
+There's tutorials out there for how-to with docker
+The easiest path is to copy docker-compose.yml and server.config.json from gamedata/help/hosting_docker/ into their own folder and then run docker compose up -d there.
+The compose file uses the published image pipliz/colony-survival-dedicated-server:latest from Docker Hub, so you do not need to build the image locally unless you want to customize it.
+Rough outline: it uses SteamCMD to install appid 748090 (the dedicated server) into the persistent /server volume on first start.
+Both steamCMD and the game install are persisted outside of the image.
+entrypoint.sh deals with this.
+The container is just a wrapper that starts the server using the server.config.json file.
+The included compose file mounts ./server.config.json to /server/server.config.json read-only, which is the intended way to customize server settings.
+If the mounted config file exists, it is used as-is. If it does not exist, the container falls back to its built-in default config.
 
-## Summary to install SteamCMD and download the game for ubuntu:
+To do it manually, you can lookup general steamCMD guides, use appid 748090.
 
-Install/download SteamCMD according to the instructions here: https://developer.valvesoftware.com/wiki/SteamCMD
-Or use the below summary:
+Some notes on the config file (the preferable way to pass configs to the server)
 
-# as root
-# install a dependency of steamcmd if it's not there yet
-apt-get install lib32gcc1
-
-# create steam user to manage everything (musn't do those things as root)
-useradd -m steam
-
-# swap to this new user
-su steam
-
-# move to the home directory, set up a directory for steamcmd
-cd /home/steam/
-mkdir Steam
-cd Steam
-
-# download the steamcmd archive from steam and unpack it
-curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
-
-# start steamcmd
-./steamcmd.sh
-
-# it'll download a bunch of files (the rest of steam), few dozen MB
-# afterwards you'll be in steamcmd in interactive mode
-# we'll need to login to download anything - you can use the "anonymous" account to download the dedicated server (it's free)
-login anonymous
-
-# set the install directory to use
-# this has to be done every time you restart steamcmd or it'll use a generic install location
-# or just leave this out and use said generic location
-force_install_dir /home/steam/colonydedicated/
-
-# download the colony survival dedicated server
-# validate is optional (basically check integrity of local files from the steam client)
-# to use a beta branch, do it like this: app_update 748090 -beta 0.6.3
-app_update 748090 validate
-
-# should say "Success! App '748080' fully installed."
-exit
-
-# now we're back to /home/steam/Steam/ as the steam user
-# move to the folder we just made, it has the server in it now
-cd ../colonydedicated/
-
-# launch the game (see 'Launching the game' for more)
-# this will launch the game (once)
-./colonyserver.x86_64 -batchmode -nographics +server.world "Test World" +server.networktype SteamOnline +server.name "My Test Server" +server.password test_pw +server.rconpassword rcon_test_pw
-
-Optionally you can save the above command to a sh file and launch that instead of the full string, or do that and use the json based config as described further below.
-Launching said sh file as a service is left as an exercise to the reader
-
-## Launching the game
-
-# command line arguments
-
-All optional values will default to the settings used in the UI previously - they are stored in gamedata/savegames/hosting_settings.json
-
-Usable networktype values: "SteamOnline", "SteamNonPublic"
-"SteamOnline" is the same as "SteamNonPublic" but will also:
-- List itself in the public server browser
-- Port forward the gameport via UPnP
-- Authenticate steam users that connect
-
-## command line args
-# required to disable the UI
--batchmode
--nographics
-# require either these:
-+server.world "world name"
-+server.networktype SteamOnline
-+server.name "Server Name Here"
-# or this one
-+server.config "./relative/path.json"
-
-# optional
-+server.password "pass here"
-+server.maxplayers 10
-+server.gameport 27004
-+server.steamport 27005
-+server.usevac true
-# optional, helps choose the network interface the game will attach to (otherwise just omit it and it'll auto select)
-+server.ip 1.2.3.4
-# optional, enables RCON access using colonyserverrcon.exe (comes with the game client) - handy for remote management to do `/stopserver` or `/setgroup god "player here"`
-+server.rconpassword rcon_pass_here
-
-# misc
-+parentprocess 315		# indicates a parent process, if the parent process is stopped the game will also stop
-
-# if the world folder did not exist yet (i.e, new world)
-+server.daydifficulty 0		# zombie difficulty, 0 = none, 4 = max
-+server.nightdifficulty 2	# same
-+server.seed 12341533		# world seed, between 0 and 2147483648
-
-## example json config contents 
-# used when +server.config is passed to the game
-# load world example:
-{
-	"LaunchArguments" : {
-		"LoadWorld" : {
-			"WorldName" : "world name here"
-		}
-	},
-	"ServerSettings" : {
-		"ServerName" : "Server name",
-		"ServerPassword" : "Server password",
-		"ServerIP" : "0.0.0.0",
-		"ServerGamePort" : 27004,
-		"ServerSteamPort" : 27005,
-		"UseVAC" : true,
-		"MaxPlayerCount" : 10,
-		"MaxDrawDistance" : 1024,
-		"NetworkType" : "SteamOnline",
-		"RCONPassword" : "rcon password"
-	}
-}
-# new world example
-{
-	"LaunchArguments" : {
-		"NewWorld" : {
-			"WorldName" : "world name here",
-			"Seed" : 34243242,
-			"DayMonstersLevel" : 0,
-			"NightMonstersLevel" : 2,
-			"EnableHappiness" : true
-		}
-	},
-	"ServerSettings" : {
-		"ServerName" : "Server name",
-		"ServerPassword" : "Server password",
-		"ServerIP" : "0.0.0.0",
-		"ServerGamePort" : 27004,
-		"ServerSteamPort" : 27005,
-		"UseVAC" : true,
-		"MaxPlayerCount" : 10,
-		"MaxDrawDistance" : 1024,
-		"NetworkType" : "SteamOnline",
-		"RCONPassword" : "rcon password"
-	}
-}
-
+Default config file only has NewOptions - if the used WorldName already exists it transforms into a loadworld. If NewOptions is not used, you can use LoadOptions with the same WorldName key.
+"DifficultyKey" indexes the difficulty presets in gamedata/settings/server.json
+Seed can be either text or integer (text is hashed to an integer by the server)
+"ServerIP" can generally be left at 0.0.0.0, but can be relevant if there are multiple network interfaces - the IP configured should be the one attached to the network interface desired.

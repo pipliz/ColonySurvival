@@ -1,0 +1,27 @@
+services:
+  colony-survival-dedicated-server:
+    image: pipliz/colony-survival-dedicated-server:latest
+    container_name: colony-survival-dedicated-server
+    restart: unless-stopped
+    stop_grace_period: 2m
+    environment:
+      SERVER_BRANCH: "0.16.1"
+      SERVER_CONFIG_PATH: /server/server.config.json
+      SERVER_SKIP_UPDATE: "false"
+      SERVER_EXTRA_ARGS: ""
+      SERVER_VALIDATE: "false"
+      STEAMCMD_LOGIN: anonymous
+      STEAMCMD_PASSWORD: ""
+      STEAMCMD_AUTH_CODE: ""
+    ports:
+      - "27004:27004/udp"
+      - "27005:27005/tcp"
+      - "27005:27005/udp"
+    volumes:
+      - steamcmd:/steamcmd
+      - server-install:/server
+      - ./server.config.json:/server/server.config.json:ro
+
+volumes:
+  steamcmd:
+  server-install:

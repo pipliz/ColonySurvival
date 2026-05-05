@@ -8,6 +8,9 @@ Localization pull requests are welcome for the non-official languages supported.
 For incomplete localization, the respective json file will have entries starting with "\_MISSING\_" followed by the english text that needs to be translated.
 Localecoverage file does not need to be manually updated, but will be updated after merging.
 
+For headless dedicated server hosting with Docker, see [gamedata/help/hosting_docker/](gamedata/help/hosting_docker/) for the example `docker-compose.yml`, `server.config.json`, `Dockerfile`, and `entrypoint.sh`.
+The published Docker image is available at [pipliz/colony-survival-dedicated-server on Docker Hub](https://hub.docker.com/r/pipliz/colony-survival-dedicated-server).
+
 Store page: http://store.steampowered.com/app/366090/Colony_Survival/
 
 Discord channel: https://discord.gg/colonysurvival
