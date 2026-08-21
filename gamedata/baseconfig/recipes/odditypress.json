@@ -214,6 +214,48 @@
 		"sortWeight": 11433
 	},
 	{
+		"cooldown": 90,
+		"name": "pipliz.autocrafter.wallpaintingitemlizzy",
+		"requiresScience": "pipliz.odditypress",
+		"requires": [
+			{
+				"type": "goldingot",
+				"amount": 1
+			},
+			{
+				"type": "hempfibre",
+				"amount": 5
+			}
+		],
+		"results": [
+			{
+				"type": "wallpaintingitemlizzy"
+			}
+		],
+		"sortWeight": 11433
+	},
+	{
+		"cooldown": 90,
+		"name": "pipliz.autocrafter.wallpaintingitempip",
+		"requiresScience": "pipliz.odditypress",
+		"requires": [
+			{
+				"type": "goldingot",
+				"amount": 1
+			},
+			{
+				"type": "hempfibre",
+				"amount": 5
+			}
+		],
+		"results": [
+			{
+				"type": "wallpaintingitempip"
+			}
+		],
+		"sortWeight": 11433
+	},
+	{
 		"cooldown": 20,
 		"name": "pipliz.autocrafter.bed3",
 		"requiresScience": "pipliz.odditypress",
@@ -293,6 +335,27 @@
 		"results": [
 			{
 				"type": "statuefarmer"
+			}
+		],
+		"sortWeight": 11433
+	},
+	{
+		"cooldown": 60,
+		"name": "pipliz.autocrafter.statuevictory",
+		"requiresScience": "pipliz.odditypress",
+		"requires": [
+			{
+				"amount": 5,
+				"type": "darkstone"
+			},
+			{
+				"amount": 20,
+				"type": "bronzeingot"
+			}
+		],
+		"results": [
+			{
+				"type": "statuevictory"
 			}
 		],
 		"sortWeight": 11433

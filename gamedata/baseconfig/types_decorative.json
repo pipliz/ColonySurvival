@@ -262,7 +262,8 @@
 		"attachBehaviour": [
 			{
 				"id": "paintingplacer",
-				"type": "defaultpainting"
+				"type": "defaultpainting",
+				"previewtype": "wallpainting1"
 			},
 			{
 				"id": "onclientclicklua",
@@ -274,6 +275,44 @@
 			"decorative_mesh"
 		],
 		"icon": "../textures/icons/wallpainting.png",
+		"isPlaceable": false
+	},
+	"wallpaintingitemlizzy": {
+		"attachBehaviour": [
+			{
+				"id": "paintingplacer",
+				"type": "lizzypainting",
+				"previewtype": "wallpaintinglizzy"
+			},
+			{
+				"id": "onclientclicklua",
+				"script": "paintingplacement"
+			}
+		],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/paintinglizzy.png",
+		"isPlaceable": false
+	},
+	"wallpaintingitempip": {
+		"attachBehaviour": [
+			{
+				"id": "paintingplacer",
+				"type": "pippainting",
+				"previewtype": "wallpaintingpip"
+			},
+			{
+				"id": "onclientclicklua",
+				"script": "paintingplacement"
+			}
+		],
+		"categories": [
+			"decorative",
+			"decorative_mesh"
+		],
+		"icon": "../textures/icons/paintingpip.png",
 		"isPlaceable": false
 	},
 	"lanternitem": {

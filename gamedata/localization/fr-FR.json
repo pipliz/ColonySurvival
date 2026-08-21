@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Supprimer la dernière bannière d'une colonie supprimera tous les PNJ et rendra la colonie inutilisable. Pour confirmer votre choix, saisissez «<NBSP>delete<NBSP>» ci-dessous.",
 			"header": "Options de bannière",
 			"noconfirmationdelete": "La commande de suppression a été ignorée, car elle n'a pas été confirmée.",
-			"placementfail": "Impossible de placer une bannière ici."
+			"placementfail": "Impossible de placer une bannière ici.",
+			"requestjoin": "Demander à rejoindre",
+			"requestpending": "Votre demande pour rejoindre {0} est en attente.",
+			"requestsent": "Votre demande pour rejoindre {0} a été envoyée."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Colonie active<NBSP>: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Création d'avant-postes",
 				"selectparent": "Sélectionner la colonie principale"
 			},
+			"overlaycounters": {
+				"open": "Configurer les traqueurs d'objets"
+			},
 			"ownership": {
 				"action": "Action",
 				"connectedplayers": "Joueurs connectés",
 				"currentowners": "Propriétaires actuels",
 				"follower": "Citoyen",
 				"invite": "Ajouter comme propriétaire de la colonie",
+				"invitepending": "{0} a déjà une invitation en attente pour rejoindre {1}.",
 				"kick": "Expulser",
+				"kickfromcolony": "Expulser de la colonie",
 				"leader": "Chef",
 				"leave": "Quitter la colonie",
 				"name": "Nom",
@@ -230,7 +238,6 @@
 				"local1": "Recherche d'un serveur solo sur cet ordinateur",
 				"local2": "Recherche d'un serveur en ligne sur cet ordinateur",
 				"password": "Mot de passe requis",
-				"steamdirect": "Tentative de configuration de connexion directe",
 				"steamp2p": "Tentative de configuration de connexion P2P",
 				"timeout": "La connexion a expiré. Retour au menu principal dans 5<NBSP>secondes.",
 				"waitingserver": "Démarrage du serveur en arrière-plan"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Mouvement",
 			"opencolonytab": "Ouvrir l'onglet Colonie",
+			"openplayerslist": "Ouvrir la liste des joueurs",
 			"openquickstart": "Ouvrir le menu d'aide",
 			"placemultipleareas": "Placer les zones de construction à la chaîne",
 			"resetfieldofview": "Réinitialiser le champ de vision (cheat)",
@@ -343,7 +351,8 @@
 			"info": "Informations",
 			"quitdesktop": "Retour au bureau",
 			"quitmain": "Retour au menu principal",
-			"settings": "Paramètres"
+			"settings": "Paramètres",
+			"splitscreensetup": "Écran partagé"
 		},
 		"failsafe": {
 			"current": "Réserve actuelle de points sacrés<NBSP>: {0} sur {1}",
@@ -371,6 +380,7 @@
 			"apply": "Appliquer",
 			"back": "Retour",
 			"close": "Fermer",
+			"colonydate": "Jour {0}, {1:00}:{2:00}",
 			"delete": "Supprimer",
 			"description": "Description",
 			"edit": "Modifier",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Nombre de colons",
 			"connectlocal": "Se connecter au serveur local",
-			"header_friends": "Amis",
-			"header_history": "Historique",
 			"header_internet": "Internet",
 			"header_lan": "Réseau local",
 			"ipaddress": "Adresse",
 			"join": "Rejoindre",
 			"mods": "Mods",
+			"offline": "Hors ligne",
 			"passworded": "Mot de passe nécessaire",
 			"refresh2": "Actualiser",
 			"refreshing": "Actualisation...",
 			"refreshquick": "Actualisation rapide",
 			"selectedserver": "Serveur sélectionné",
+			"serverfavorite": "Favori",
+			"serverid": "ID du serveur",
 			"serverping": "Latence",
 			"serverplayers": "Joueurs",
 			"servers": "Serveurs",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Effacer les notifications",
+			"details": {
+				"back": "Retour",
+				"delete": "Supprimer",
+				"empty": "Aucune notification.",
+				"header": "{0} — {1}",
+				"next": "Suivant",
+				"page": "Page {0}/{1} — {2} entrées au total",
+				"previous": "Précédent"
+			},
+			"generic": {
+				"accept": "Accepter",
+				"decline": "Refuser",
+				"kicked": {
+					"message": "Vous avez été expulsé de {0}.",
+					"title": "Expulsé de la colonie"
+				},
+				"management": {
+					"summarytype": "Gestion",
+					"title": "Gestion"
+				},
+				"ownerinvite": {
+					"accepted": "{0} a accepté votre invitation à rejoindre {1}.",
+					"declined": "{0} a refusé votre invitation à rejoindre {1}.",
+					"invalid": "Cette invitation n'est plus valide.",
+					"message": "Vous avez reçu une invitation pour rejoindre {0}.",
+					"preview": "Vous avez reçu une invitation pour rejoindre {0}.",
+					"summarytype": "Invitation",
+					"title": "Invitation"
+				},
+				"ownerjoinrequest": {
+					"accepted": "Votre demande pour rejoindre {0} a été acceptée.",
+					"declined": "Votre demande pour rejoindre {0} a été refusée.",
+					"message": "{0} a demandé à rejoindre {1}.",
+					"preview": "{0} souhaite rejoindre {1}.",
+					"summarytype": "Demande",
+					"title": "Demande pour rejoindre la colonie"
+				}
+			},
 			"header": "Notifications",
 			"missingplayerammo": "<color=#ff2323>Pour utiliser «<NBSP>{0}<NBSP>», l'objet suivant doit être dans votre inventaire<NBSP>: {1}<NBSP>!</color>",
 			"npc_died": {
-				"banner": "un monstre à la bannière",
-				"command": "Utilisation des commandes",
-				"excess": "Et {0}<NBSP>mort(s) à déplorer depuis, dans l'anonymat le plus complet.",
-				"individual": "{0}<NBSP>: un colon affecté au métier «<NBSP>{1}<NBSP>» est mort. Voici ce qui a provoqué sa mort<NBSP>: {2}.",
+				"individual2_banner": "{0} {1} a été victime d'un monstre à la bannière.",
+				"individual2_command": "{0} {1} a été victime d'une commande.",
+				"individual2_monster": "{0} {1} a été victime d'un monstre.",
+				"individual2_npc": "{0} {1} a été victime d'un colon.",
+				"individual2_player": "{0} {1} a été victime d'un joueur.",
+				"individual2_starving": "{0} {1} est mort de faim.",
+				"individual2_trap": "{0} {1} a été victime d'un piège.",
+				"individual2_unknown": "{0} {1} a péri de causes inconnues.",
 				"main": "{0}<NBSP>colons sont morts à l'avant-poste {1}<NBSP>!",
-				"misc": "raisons inconnues",
-				"monster": "un monstre",
-				"npc": "un colon",
-				"player": "un joueur",
-				"starving": "famine",
-				"trap": "un piège"
+				"summarymultiple": "{0} décès dans {1}",
+				"summarysingle": "1 décès dans {0}",
+				"summarytype": "Colons décédés"
+			},
+			"overview": {
+				"empty": "Aucune notification.",
+				"open": "Ouvrir"
+			},
+			"personal": {
+				"header": "Personnel"
 			},
 			"science": {
-				"entry": "{0}<NBSP>: cette tâche est terminée<NBSP>: {1}.",
-				"main": "Technologie achevée<NBSP>!"
+				"entry2": "Vous avez terminé {0}",
+				"main": "Technologie achevée<NBSP>!",
+				"summarycount": "Terminé<NBSP>: {0}",
+				"summarylatest": "Terminé<NBSP>: {0}",
+				"summarytype": "Technologie"
 			},
+			"showmarkersonpage": "Marquer les emplacements du monde",
 			"siegemode": {
-				"disabled": "{0}<NBSP>: sortie du mode siège",
-				"enabled": "{0}<NBSP>: entrée en mode siège",
-				"main": "Le mode siège a été déclenché dans l'avant-poste {0}<NBSP>!"
+				"disabled2": "Fin du mode siège",
+				"disabledsummary": "Fin du mode siège dans {0}",
+				"enabled2": "Le mode siège a été activé<NBSP>! Il n'y a plus aucun chemin pour les colons entre la bannière et le monde extérieur. Pour chaque palier de cinq au niveau de menace dans {0}, le mode siège consomme un repas par heure.\nRétablissez la connexion avec le monde extérieur le plus rapidement possible<NBSP>!",
+				"enabledsummary": "Le mode siège a commencé dans {0}",
+				"main": "Le mode siège a été déclenché dans l'avant-poste {0}<NBSP>!",
+				"summarytype": "Mode siège"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Écrivain"
 			}
 		},
+		"playerlist": {
+			"action": "Action",
+			"activecolony": "Colonie active",
+			"header": "Joueurs en ligne",
+			"id": "ID",
+			"noonlineplayers": "Aucun joueur en ligne",
+			"ping": "Latence",
+			"pingvalue": "{0}<NBSP>ms",
+			"player": "Joueur",
+			"totalcolonists": "Total des colons"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Fermer",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Fabriqué(e) dans<NBSP>:",
 				"madeintooltippurchasable": "S'achète au forum des marchands contre {0}<NBSP>points.",
 				"noactivecolony": "Aucune colonie active<NBSP>!",
+				"quests": {
+					"claimreward": "Récupérer la récompense",
+					"conditiontitles": {
+						"beds": "Placement de lits",
+						"crafted": "Fabrication de {0}",
+						"crates": "Placement de caisses",
+						"gathered": "Extraction de {0}",
+						"npctype": "Recrutement de {0}",
+						"placed": "Placement de {0}",
+						"purchased": "Achat de {0}",
+						"sciencecompleted": "Technologie {0} terminée",
+						"totalcolonists": "Colons"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "La technologie moderne permet de créer des armes redoutables.",
+							"instructions": {
+								"0": "Débloquez la technologie correspondante."
+							},
+							"title": "Armes avancées"
+						},
+						"automatedcrafting": {
+							"description": "Laissez vos colons s'occuper de l'exploitation minière et de la fabrication<NBSP>!",
+							"instructions": {
+								"0": "Maintenez <style=Player/FirePrimary> tout en visant l'herbe ou la terre pour retirer le bloc. Creusez vers le bas à travers la roche jusqu'à trouver des blocs de pierre sombre. Sélectionnez l'objet de la tâche de mineur et placez-le sur la pierre sombre.",
+								"1": "Sous terre, il fera sombre. Sélectionnez des torches et placez-les pour vous éclairer. Les tenir en main produira de la lumière autour de vous. Appuyez sur <style=Player/ToggleTorch> pour activer votre torche personnelle tout en tenant d'autres objets.",
+								"2": "Creuser à travers la pierre vous permet d'obtenir des moellons de pierre. Le mineur sur la pierre sombre vous en fournira également. Vous pouvez maintenant l'utiliser pour fabriquer une table de bricoleur dans l'onglet Réserve en utilisant les icônes de la barre de gauche. Cela peut aussi être fait dans le moulin.",
+								"3": "Placez la table de bricoleur dans votre colonie. Utilisez <style=Player/FireSecondary> sur la table pour voir quels objets le bricoleur peut fabriquer.",
+								"4": "Recrutez suffisamment de colons pour pourvoir vos nouveaux postes. Ils auront besoin d'un endroit pour dormir et de nourriture, alors continuez à recruter des cueilleurs de baies pour subvenir aux besoins de vos nouveaux colons<NBSP>!"
+							},
+							"title": "Fabrication d'objets automatisée"
+						},
+						"betterfoodsource": {
+							"description": "Les cueilleurs de baies sont une source de nourriture facile mais relativement lente. Le blé permet de préparer des repas plus nourrissants, bien que sa mise en place soit plus complexe.",
+							"instructions": {
+								"0": "Commencez par terminer la technologie Culture du blé. Cela vous permettra de déployer des cultivateurs de blé avec l'outil de commande. Contrairement aux cueilleurs de baies, ici, la taille compte. Plus le champ est vaste, plus ils récolteront de blé, avec un maximum de 100<NBSP>blocs couverts. Le blé met deux nuits à pousser et peut être transformé immédiatement en gruau de blé.",
+								"1": "Terminez ensuite les technologies Forum des marchands et Poterie. La poterie vous permet de produire des pots aux postes de poterie et débloque les récolteurs d'eau. Placez ce métier directement à côté de l'eau pour que les colons puissent remplir des pots vides. Utilisez <style=Player/HoldCrouch> pour vous accroupir et éviter de tomber à l'eau<NBSP>!",
+								"1_gamepad": "Terminez ensuite les technologies Forum des marchands et Poterie. La poterie vous permet de produire des pots aux postes de poterie et débloque les récolteurs d'eau. Placez ce métier directement à côté de l'eau pour que les colons puissent remplir des pots vides. Utilisez <style=Player/ToggleCrouch> pour vous accroupir et éviter de tomber à l'eau<NBSP>!",
+								"2": "Si aucun point d'eau n'est à proximité, vous pouvez débloquer la technologie Pompe à eau. C'est une méthode de collecte d'eau plus lente, mais qui peut être placée n'importe où.",
+								"3": "Débloquez la technologie Porridge et placez un foyer pour transformer le blé et les pots d'eau en porridge de blé, le repas le plus efficace en début de partie<NBSP>!"
+							},
+							"title": "Une meilleure source de nourriture"
+						},
+						"booksofknowledge": {
+							"description": "Les parchemins et les tablettes sont remplacés par des livres<NBSP>!",
+							"instructions": {
+								"0": "Débloquez la technologie Chercheur. Cela permettra à vos écrivains de produire des bibliothèques en combinant des tablettes de sagesse antique et du papier. Placez 10<NBSP>bibliothèques près d'un bureau de chercheur pour assurer une étude continue. Le chercheur produira des notes scientifiques qui pourront être utilisées par l'écrivain pour créer des livres de technologies."
+							},
+							"title": "Livres de technologies"
+						},
+						"defenseofcivilization": {
+							"description": "À mesure que votre colonie s'agrandit, la horde de monstres qui vous attaque croît également. Continuez à améliorer vos défenses<NBSP>!",
+							"instructions": {
+								"0": "Débloquez la technologie Archerie et recrutez un fabricant de flèches pour produire l'objet du métier de garde archer de nuit.",
+								"1": "Terminez également la technologie Écrivain, placez un bureau d'écrivain et laissez un colon transformer les parchemins en parchemins de connaissance.",
+								"2": "Les pièges sont fabriqués sur l'établi d'ingénieur. Pour terminer la technologie Ingénieur, il vous faudra des lingots d'or. Le minerai d'or peut être acheté au forum des marchands.",
+								"3": "Les pièges peuvent être rechargés en plaçant un objet de piégeur à proximité. Le piégeur entretiendra vos pièges pendant la journée. Bien sûr, il vous faudra également fabriquer des munitions."
+							},
+							"title": "La défense de la civilisation"
+						},
+						"endlessgrowth": {
+							"description": "Atteignez l'objectif du millier de colons<NBSP>!",
+							"title": "Croissance sans fin"
+						},
+						"finalcountdown": {
+							"description": "La colonie devient un véritable empire.",
+							"title": "Le compte à rebours final"
+						},
+						"finalstage": {
+							"description": "Débloquez la technologie la plus avancée du jeu.",
+							"title": "L'étape finale"
+						},
+						"foodsource": {
+							"description": "Votre colonie a besoin de nourriture. Votre première source proviendra de la récolte de baies.",
+							"instructions": {
+								"0": "Ouvrez la réserve (<style=Always/ToggleInventory>) et déplacez les lits vers la barre d'action en bas de l'écran. Fermez la réserve (<style=Always/ToggleInventory> ou <style=UI/Cancel>) et sélectionnez vos lits avec <style=Player/HotBarUp> et <style=Player/HotBarDown>. Placez six lits en visant le sol avec <style=Player/FireSecondary>.",
+								"1": "Sélectionnez l'outil de commande (<style=Player/Inventory1>) et utilisez <style=Player/FirePrimary> sur le sol à l'endroit où vous souhaitez placer une ferme de baies. Déplacez-vous à l'autre extrémité de la zone prévue et utilisez <style=Player/FireSecondary> pour terminer le tracé de la ferme. Créez six fermes.",
+								"1_gamepad": "Sélectionnez l'outil de commande et utilisez <style=Player/FirePrimary> sur le sol à l'endroit où vous souhaitez placer une ferme de baies. Déplacez-vous à l'autre extrémité de la zone prévue et utilisez <style=Player/FireSecondary> pour terminer le tracé de la ferme. Créez six fermes.",
+								"2": "Prenez une caisse dans la réserve et placez-la à proximité. Vos fermiers y déposeront leurs récoltes.",
+								"3": "Appuyez sur <style=Always/OpenColonyTab> et recrutez six colons pour commencer à cueillir les baies.",
+								"3_gamepad": "Appuyez sur <style=Always/ToggleInventory> et accédez à l'onglet Colonie à l'aide de <style=UI/MenuTabLeft> et <style=UI/MenuTabRight>. Recrutez six colons pour commencer à cueillir les baies."
+							},
+							"title": "Obtenir une source de nourriture"
+						},
+						"goldandbronzeautarky": {
+							"description": "Pourquoi dépendre des marchands quand on peut miner son propre or et étain<NBSP>?",
+							"instructions": {
+								"0": "Achetez une bannière d'avant-poste et assurez-vous de la placer dans votre barre de raccourcis. Trouvez une montagne dont le sommet est enneigé. Vous pouvez vous aider de l'astrolabe pour y parvenir. Utilisez la bannière d'avant-poste pour créer un avant-poste près du sommet de la montagne. Placez des lits et construisez des défenses.",
+								"1": "Creusez sous la neige. Vous tomberez d'abord sur le niveau contenant du cuivre et de l'argile. Continuez de creuser pour atteindre une couche avec du minerai de fer et de l'étain. Creusez encore plus profondément, et vous trouverez de l'or<NBSP>!",
+								"2": "Assurez-vous de bien creuser sous la neige. Le fer se trouve partout, mais l'étain et l'or ne se trouvent que sous la neige<NBSP>!"
+							},
+							"title": "Autarcie d'or et de bronze"
+						},
+						"goldenpoisonousflight": {
+							"description": "Vous accédez à de la technologie de pointe<NBSP>!",
+							"instructions": {
+								"0": "Les planeurs accéléreront vos déplacements, tandis que les pièges à chausse-trapes ralentiront les monstres en approche. Les boucliers en or sont une excellente source de revenus, et le poison blesse les monstres sur la durée. Les empoisonner le plus tôt possible est la meilleure des stratégies<NBSP>! Terminez la technologie correspondante et produisez les objets nécessaires."
+							},
+							"title": "Vol empoisonné doré"
+						},
+						"growextra": {
+							"description": "Pour développer correctement votre colonie, il vous faudra plus que le strict minimum de colons. Vous aurez besoin de mineurs, de fermiers, de gardes et de fabricants supplémentaires.",
+							"instructions": {
+								"0": "La capacité de base est de 100<NBSP>colons. Allez dans le menu Points de colonie et dépensez 100<NBSP>points pour l'augmenter."
+							},
+							"title": "Développez-vous<NBSP>!"
+						},
+						"growmore": {
+							"description": "Plus on est de fous, plus on rit<NBSP>!",
+							"instructions": {
+								"0": "Placez des coffrets en bronze et utilisez le menu Points de colonie pour augmenter votre capacité à 200<NBSP>colons. Terminez la technologie Cuisinier et recrutez un cuisinier ainsi qu'un pêcheur."
+							},
+							"title": "Agrandissez-vous davantage<NBSP>!"
+						},
+						"growthforgrowthssake": {
+							"description": "Plus vous avez, mieux c'est.",
+							"instructions": {
+								"0": "Gardez un œil attentif sur tout<NBSP>! Renforcez vos défenses, rassemblez davantage de ressources, recrutez plus de fabricants et repérez les blocages dans vos chaînes de production."
+							},
+							"title": "La croissance à tout prix"
+						},
+						"growthwoodscience": {
+							"description": "Votre colonie en pleine croissance aura besoin d'une source de bois, de nouvelles technologies, de plus de colons et de davantage de nourriture.",
+							"instructions": {
+								"0": "Les zones forestières sont définies à l'aide de l'outil de commande, tout comme les fermes de baies.",
+								"1": "Allez dans l'onglet du menu Technologie, trouvez la technologie Mineur, rassemblez 5<NBSP>moellons de pierre et terminez-la pour débloquer la recette de la tâche de mineur chez le bricoleur."
+							},
+							"title": "Croissance, bois et technologie"
+						},
+						"gunpowder": {
+							"description": "La poudre à canon est une amélioration évidente pour votre industrie de défense<NBSP>!",
+							"instructions": {
+								"0": "Débloquez les technologies Coffre de technologie, Souffleur de verre, Poudre à canon et Canon à main. Pour produire de la poudre à canon, vous aurez besoin de soufre, qui peut être extrait dans les landes ou acheté chez le marchand."
+							},
+							"title": "Poudre à canon"
+						},
+						"gutenbergrevolution": {
+							"description": "La presse à imprimer va grandement accélérer votre production de livres.",
+							"instructions": {
+								"0": "Débloquez la technologie Acier, plomb et huile minérale. Cela vous donnera accès à la technologie Presse à imprimer. Vous aurez besoin de minerai de charbon, que vous trouverez près des arbres titanesques, et de minerai de plomb, présent dans les marais."
+							},
+							"title": "Révolution de Gutenberg"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "Des machines peuvent vous transporter automatiquement d'un endroit à un autre.",
+							"instructions": {
+								"0": "Débloquez les technologies Rails et Ascenseur."
+							},
+							"title": "Transports horizontaux et verticaux"
+						},
+						"infrastructureofcivilization": {
+							"description": "Vous devrez distribuer des repas et des outils, stocker des points de colonie et éliminer des monstres en cas d'urgence.",
+							"instructions": {
+								"0": "Les colons peuvent récupérer des repas et des outils à votre bannière, mais vous pouvez raccourcir leurs trajets en plaçant des épiceries et des tables de distribution d'outils à travers votre colonie. Celles-ci sont débloquées en terminant la technologie correspondante.",
+								"1": "Si vous souhaitez stocker plus de 100<NBSP>points de colonie, vous devrez placer des coffrets en bronze. Les placer augmentera votre niveau de menace<NBSP>!",
+								"2": "Si les monstres percent vos défenses, la sécurité sacrée est une mesure d'urgence très utile.",
+								"3": "Le coffret et la sécurité doivent être débloqués grâce à la technologie et fabriqués à l'enclume."
+							},
+							"title": "L'infrastructure de la civilisation"
+						},
+						"intomodernity": {
+							"description": "Recrutez des ouvriers modernes pour produire des objets sophistiqués.",
+							"instructions": {
+								"0": "Il vous faudra d'abord la technologie Coffre de luxe, qui donne accès à la fois à la technologie Tabulatrice et à la technologie Tour à métaux."
+							},
+							"title": "Entrée dans la modernité"
+						},
+						"intothebronzeage": {
+							"description": "L'âge de bronze vous donne accès à de nouveaux matériaux et à de toutes nouvelles technologies. Fabriquez les plus cruciales<NBSP>!",
+							"instructions": {
+								"0": "Commencez par terminer la technologie Âge de bronze. Débloquez les avant-postes et achetez une bannière au forum des marchands. Terminez la technologie Laiton et achetez du zinc au forum. Terminez la technologie Piège à projectiles et la technologie Arbalètes. Achetez de l'étain au forum pour produire des lingots de bronze."
+							},
+							"title": "Vers l'âge de bronze"
+						},
+						"ironage": {
+							"description": "Débloquez le fer, un autre matériau indispensable.",
+							"instructions": {
+								"0": "La technologie de l'âge de fer est très importante et requiert un grand nombre d'ingrédients. Le minerai de fer peut être trouvé partout si vous creusez suffisamment profond.",
+								"1": "Le minerai de fer doit être fondu avec un nouveau type de combustible<NBSP>: le charbon de bois. Il est fabriqué dans un four. La fonte du fer nécessite également des bas fourneaux. Ces deux éléments sont produits à l'établi de fabrication de blocs de métier avancé."
+							},
+							"title": "L'âge de fer"
+						},
+						"makeitbeautiful": {
+							"description": "L'apparence est importante pour l'âme<NBSP>!",
+							"instructions": {
+								"0": "La technologie Artiste est verrouillée derrière la technologie Toits en tuiles, accessible une fois la technologie Tailleur de pierre terminée. Les trophées de chasse sont fabriqués avec la presse à curiosités. Celle-ci fonctionne comme le moulin et est verrouillée par sa propre technologie."
+							},
+							"title": "L'appel de la beauté"
+						},
+						"paperpower": {
+							"description": "Le papier est vital pour toute civilisation. Vous en avez sûrement sur votre bureau en ce moment même<NBSP>!",
+							"instructions": {
+								"0": "Vous aurez besoin de chanvre, qui s'achète à prix élevé chez le marchand. Une alternative plus économique consiste à établir un avant-poste dans un marais et à le cultiver vous-même. Débloquez les technologies Chanvre et Cordes pour accéder à la technologie Production de papier."
+							},
+							"title": "Le pouvoir du papier"
+						},
+						"powerofmetal": {
+							"description": "Le métal est crucial pour la civilisation. Mettez en place une chaîne de production de métal fonctionnelle.",
+							"instructions": {
+								"0": "Retournez sous terre auprès de vos mineurs de pierre. Dans la couche supérieure des blocs de pierre sombre, vous trouverez des blocs de minerai de cuivre. Le minerai de cuivre est de couleur rouge. Placez des tâches de mineur dessus pour que les colons en extraient le cuivre.",
+								"1": "Terminez la technologie Fondeur. Vous manquez d'outils en pierre<NBSP>? Recrutez plus de bricoleurs pour accélérer leur production<NBSP>!",
+								"2": "Vos bricoleurs peuvent désormais produire les prochains blocs de métier<NBSP>: un fourneau pour les fondeurs et un billot pour les bûcherons. Le bûcheron transformera les planches en bois de chauffage, indispensable au fondeur pour convertir le minerai de cuivre en lingots de cuivre."
+							},
+							"title": "La puissance du métal"
+						},
+						"powerofpower": {
+							"description": "Recruter plus de 25<NBSP>colons et terminer des technologies génère de la menace. Votre niveau de menace est affiché en haut à droite. Plus votre niveau de menace est élevé, plus les monstres qui attaqueront votre colonie la nuit seront nombreux et puissants. Empêchez-les d'atteindre votre bannière et vos colons endormis<NBSP>!",
+							"instructions": {
+								"0": "L'objet du métier de garde frondeur de nuit est fabriqué par les bricoleurs ou dans le moulin. Placez l'objet sur le sol pour créer un poste de garde. Les frondeurs lanceront des projectiles de fronde sur les monstres.",
+								"1": "Les monstres attaqueront votre colonie de toutes parts<NBSP>; il est donc judicieux de les canaliser vers des ouvertures spécifiques. Construisez des murs d'au moins deux blocs de haut, ou creusez des douves, pour empêcher les monstres de franchir une zone.",
+								"2": "Assurez-vous de ne pas bloquer complètement tous les accès à votre bannière<NBSP>! Cela déclencherait le mode siège.",
+								"3": "En tenant l'outil Bannière, une ombre couvrira la zone la plus éloignée de votre bannière. C'est dans cette zone que les monstres apparaîtront. Les colons peuvent sans problème travailler à l'extérieur de vos murs ou dans cette zone ombragée, à condition qu'ils se replient dans un espace sûr pour la nuit."
+							},
+							"title": "Le pouvoir de la puissance"
+						},
+						"remotecontrol": {
+							"description": "Apprenez à contrôler votre colonie en vue du dessus et laissez les colons se charger des travaux de construction à votre place.",
+							"instructions": {
+								"0": "Débloquez les technologies Bureau du superviseur et Creuseur. Placez le bureau du superviseur et utilisez-le pour passer en vue de dessus. Avec l'outil de commande en vue du dessus ou à la première personne, accédez à la section Construction. Utilisez «<NBSP>Tout supprimer<NBSP>» pour définir une zone qui sera intégralement supprimée. Placez des emplacements de métier autour de la zone<NBSP>: ils recruteront automatiquement des constructeurs qui se chargeront de cette tâche."
+							},
+							"title": "Contrôle à distance"
+						},
+						"setupcolony": {
+							"description": "Placez la bannière pour recevoir votre première quête<NBSP>!",
+							"instructions": {
+								"0": "Placez la bannière pour recevoir votre première quête<NBSP>! Sélectionnez l'outil Bannière (<style=Player/Inventory2>) et utilisez <style=Player/FireSecondary> au sol. Un endroit avec des zones planes pour l'agriculture et un point d'eau à proximité est idéal.",
+								"0_gamepad": "Placez la bannière pour recevoir votre première quête<NBSP>! Sélectionnez l'outil Bannière dans l'inventaire ci-dessous avec <style=Player/HotBarUp> et <style=Player/HotBarDown>. Placez-la avec <style=Player/FireSecondary> tout en visant le sol. Un endroit avec des zones planes pour l'agriculture et un point d'eau à proximité est idéal.",
+								"1": "Utilisez <style=Player/MoveKeyboard> et <style=Player/Look> pour vous déplacer dans le monde.",
+								"1_gamepad": "Utilisez <style=Player/MovePad> et <style=Player/Look> pour vous déplacer dans le monde."
+							},
+							"title": "Fonder une colonie"
+						},
+						"startofprestige": {
+							"description": "Débloquez le coffre de prestige et fabriquez-en un<NBSP>!",
+							"title": "Le début du prestige"
+						},
+						"stretchieststretchgoal": {
+							"description": "Terminez Prestige V.",
+							"title": "L'objectif le plus ambitieux"
+						},
+						"wealthofnations": {
+							"description": "Il vous faudra des forgerons, des textiles, du cuir et du commerce.",
+							"instructions": {
+								"0": "Assurez-vous d'avoir débloqué la culture du blé et le forum des marchands. Laissez un colon fabriquer un forum des marchands sur le tout nouvel établi de fabrication de blocs de métier. Placez le forum des marchands, vendez des lingots de cuivre et achetez des carcasses d'animaux, nécessaires pour débloquer la technologie Tanneur. Vous aurez besoin de lin pour fabriquer la table de tanneur, qui peut être créée ou achetée au forum des marchands. Recrutez un tanneur pour transformer les carcasses d'animaux en viande crue, en peau, puis en cuir.",
+								"1": "Débloquez la technologie Tailleur, recrutez des cultivateurs de lin, et placez un atelier de tailleur pour recruter un artisan qui transformera le lin en tissu.",
+								"2": "Vous devriez maintenant avoir tout ce qu'il faut pour terminer la technologie Enclume, recruter un chaudronnier et fabriquer les nouveaux outils<NBSP>!"
+							},
+							"title": "La richesse des nations"
+						},
+						"yourethemiller": {
+							"description": "Le moulin vous fournit des objets de base. Placez-le et utilisez-le<NBSP>!",
+							"instructions": {
+								"0": "Le moulin est apparu dans votre barre de raccourcis après la fondation de votre colonie. Placez-le dans votre colonie.",
+								"1": "Montez les escaliers du moulin et utilisez <style=Player/FireSecondary> sur le mécanisme interne pour ouvrir son menu. Ajoutez des caisses, des tâches de mineur et des lits à sa file d'attente de fabrication. Attendez que le moulin ait terminé, puis consultez les résultats en appuyant sur les boutons en bas à droite."
+							},
+							"title": "Vous êtes le meunier"
+						},
+						"yourfirstlibrary": {
+							"description": "Une civilisation ne peut développer de nouvelles connaissances sans archiver correctement les anciennes.",
+							"instructions": {
+								"0": "Les parchemins de connaissance peuvent être transformés en étagères à parchemins après avoir terminé la technologie Scribe. Un scribe aura besoin d'au moins 10<NBSP>étagères à parchemins pour pouvoir travailler en continu. Les parchemins sur les étagères sont retirés après utilisation, mais après un certain temps, ils seront automatiquement réapprovisionnés et réutilisables. Le scribe transformera les tablettes d'argile en tablettes de sagesse antique."
+							},
+							"title": "Votre première bibliothèque"
+						}
+					},
+					"empty": "Aucune quête n'est actuellement disponible.",
+					"header": "Quêtes",
+					"instructionsheader": "Instructions",
+					"notifications": {
+						"message": "Vous avez terminé la quête «<NBSP>{0}<NBSP>». Ouvrez l'onglet Quêtes pour la consulter et récupérer la récompense, si une récompense est disponible.",
+						"openbutton": "Ouvrir la quête",
+						"preview": "{0}",
+						"summarytype": "Quête terminée"
+					},
+					"progress": "Progression",
+					"rewardheader": "Récompense",
+					"statusavailable": "Disponible",
+					"statuscompleted": "Terminé",
+					"statusinprogress": "En cours",
+					"statusunclaimed": "Non récupérée",
+					"table": {
+						"action": "Action",
+						"quest": "Quête",
+						"select": "Sélectionner",
+						"status": "Statut"
+					}
+				},
 				"science": {
 					"available": "Disponible",
 					"completed": "Terminé",
@@ -1031,7 +1393,8 @@
 				"description": "Choisir un objet à utiliser",
 				"header": "Sélection d'objets",
 				"headerchosen": "Sélectionné(s)",
-				"headerselectables": "Sélectionnables"
+				"headerselectables": "Sélectionnables",
+				"toggleshowonlyknown": "N'afficher que les objets connus"
 			},
 			"limits": {
 				"allreset": "Tout réinitialiser",
@@ -1072,7 +1435,6 @@
 				"showgoal": "Marquer les objectifs"
 			},
 			"quickstart": {
-				"closetoggle": "Ne plus afficher",
 				"next": "Suivant",
 				"previous": "Précédent"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Bases",
 				"text1_2": "Commencez par trouver l'emplacement idéal pour votre première colonie. Nous vous recommandons un endroit proche de l'eau et de champs cultivables. Une bannière constituera le centre de votre colonie.",
 				"text2_2gamepad": "Sélectionnez l'outil Bannière dans l'inventaire ci-dessous à l'aide des touches <style=Player/HotBarUp> et <style=Player/HotBarDown>. Placez la bannière avec <style=Player/FireSecondary> tout en visant le sol après avoir sélectionné l'outil Bannière. Une fois dans une colonie, l'outil Bannière affiche une ombre prononcée là où les monstres risqueront d'apparaître plus tard.",
-				"text2_2keyboard": "Sélectionnez l'outil Bannière dans l'inventaire ci-dessous à l'aide de <style=Player/Inventory1>. Placez la bannière avec <style=Player/FireSecondary> tout en visant le sol après avoir sélectionné l'outil Bannière. Une fois dans une colonie, l'outil Bannière affiche une ombre prononcée là où les monstres risqueront d'apparaître plus tard.",
-				"text3_2": "Placez des lits pour pouvoir recruter des colons. Appuyez sur <style=Player/ToggleInventory> pour ouvrir l'interface. Déplacez les lits de la réserve vers la barre de raccourcis ci-dessous. Une fois le lit sélectionné, utilisez <style=Player/FireSecondary> tout en visant le sol pour le placer.",
+				"text2_2keyboard": "Sélectionnez l'outil Bannière dans l'inventaire ci-dessous à l'aide de <style=Player/Inventory2>. Placez la bannière avec <style=Player/FireSecondary> tout en visant le sol après avoir sélectionné l'outil Bannière. Une fois dans une colonie, l'outil Bannière affiche une ombre prononcée là où les monstres risqueront d'apparaître plus tard.",
+				"text3_2": "Placez des lits pour pouvoir recruter des colons. Appuyez sur <style=Always/ToggleInventory> pour ouvrir l'interface. Déplacez les lits de la réserve vers la barre de raccourcis ci-dessous. Une fois le lit sélectionné, utilisez <style=Player/FireSecondary> tout en visant le sol pour le placer.",
 				"text4": "Ouvrez l'interface et rendez-vous sur la page «<NBSP>Colonie<NBSP>». Appuyez sur «<NBSP>recruter<NBSP>» pour recruter un colon."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Nourriture et lits",
 				"text1": "Les colons consomment un repas par jour. Ils les récupèrent à la bannière ou à l'épicerie voisine. Sans nourriture, les colons mourront de faim. Le recrutement de nouveaux colons coûte plusieurs repas.",
 				"text2_2gamepad": "Le cueilleur de baies constitue votre première source de nourriture. Sélectionnez l'outil Ordonner (premier emplacement de l'inventaire). Utilisez <style=Player/FirePrimary> pour l'ouvrir et sélectionner le cueilleur de baies. Utilisez <style=Player/FireSecondary> pour délimiter l'emplacement de la ferme de baies, puis <style=Player/FireSecondary> à nouveau pour valider votre sélection. Il vous en faudra beaucoup<NBSP>!",
-				"text2_2keyboard": "Le cueilleur de baies constitue votre première source de nourriture. Sélectionnez l'outil Ordonner (<style=Player/Inventory0>). Utilisez <style=Player/FirePrimary> pour l'ouvrir et sélectionner le cueilleur de baies. Utilisez <style=Player/FireSecondary> pour délimiter l'emplacement de la ferme de baies, puis <style=Player/FireSecondary> à nouveau pour valider votre sélection. Il vous en faudra beaucoup<NBSP>!",
+				"text2_2keyboard": "Le cueilleur de baies constitue votre première source de nourriture. Sélectionnez l'outil Ordonner (<style=Player/Inventory1>). Utilisez <style=Player/FirePrimary> pour l'ouvrir et sélectionner le cueilleur de baies. Utilisez <style=Player/FireSecondary> pour délimiter l'emplacement de la ferme de baies, puis <style=Player/FireSecondary> à nouveau pour valider votre sélection. Il vous en faudra beaucoup<NBSP>!",
 				"text3_2": "Pour commencer à produire des lits, vous devrez fabriquer une table de bricoleur. Maintenez <style=Player/FirePrimary> tout en visant des blocs pour creuser et rassembler les moellons de pierre requis.",
 				"text4": "Cliquez sur l'icône de l'établi du bricoleur à gauche de la réserve pour la fabriquer. Placez-la comme vous avez placé le lit. Tout comme avec la ferme de baies, les colons sans emploi assumeront automatiquement ce métier."
 			},
@@ -1245,7 +1607,7 @@
 					"showcolonistjobinname": "Afficher le métier dans le nom",
 					"showsensitivedatamode": "Afficher les données sensibles",
 					"tab": "Paramètres généraux",
-					"uiscaletooltip": "Agrandit ou réduit l'interface utilisateur pour l'adapter à différentes tailles d'écran, indépendamment de la résolution. Si vous avez un écran 4K, nous vous conseillons de régler ce paramètre sur 200 %.",
+					"uiscaletooltip": "Agrandit ou réduit l'interface utilisateur pour l'adapter à différentes tailles d'écran, indépendamment de la résolution. Si vous avez un écran<NBSP>4K, nous vous conseillons de régler ce paramètre sur 200<NBSP>%.",
 					"uiscalingratio": "Échelle de l'interface utilisateur"
 				},
 				"mousemenu": {
@@ -1292,7 +1654,7 @@
 				"detailcount": "Nombre de détails",
 				"detailcounttooltip": "Définit une limite au nombre d'éléments non cubiques pouvant être affichés par image. Ce paramètre n'a de l'importance que dans le cas de très grandes bases, et peut alors fortement impacter l'utilisation du CPU et du GPU. Très situationnel.",
 				"drawdistance": "Distance d'affichage",
-				"drawdistancetooltip": "Paramètre principal déterminant la portion du monde visible. Impacte fortement la charge du CPU et du GPU. L'option « Bas » correspond à 128 blocs, et l'option « Très élevé » à 1024 blocs.",
+				"drawdistancetooltip": "Paramètre principal déterminant la portion du monde visible. Impacte fortement la charge du CPU et du GPU. L'option «<NBSP>Bas<NBSP>» correspond à 128<NBSP>blocs, et l'option «<NBSP>Très élevé<NBSP>» à 1024<NBSP>blocs.",
 				"fieldofview": "Champ de vision",
 				"fog": "Brouillard",
 				"fogtooltip": "Ajoute un effet de brouillard. Faible impact sur les performances, mais contribue à créer une belle ambiance.",
@@ -1304,12 +1666,12 @@
 				"presettooltip": "Paramètre global qui ajuste d'un seul coup plusieurs des paramètres détaillés ci-dessous pour plus de simplicité.",
 				"ragdoll": "Quantité de «<NBSP>ragdolls<NBSP>»",
 				"ragdolltooltip": "Définit le nombre de corps de personnages pouvant rester au sol en même temps. Faible impact sur le CPU en fin de partie pour les valeurs les plus élevées.",
-				"renderscaletooltip": "Réduit ou augmente la résolution utilisée pour le rendu, tout en maintenant l'interface à la résolution principale. 100 correspond à une échelle de 100 % (aucun changement). Impacte lourdement les performances du GPU.",
+				"renderscaletooltip": "Réduit ou augmente la résolution utilisée pour le rendu, tout en maintenant l'interface à la résolution principale. 100<NBSP>correspond à une échelle de 100<NBSP>% (aucun changement). Impacte lourdement les performances du GPU.",
 				"renderscalingratio": "Échelle de rendu",
 				"resolution": "Résolution",
-				"resolutiontooltip": "Nous vous conseillons de régler ce paramètre sur la résolution native de votre écran. Si vous avez besoin d'améliorer les performances, privilégiez le paramètre « Échelle de rendu ».",
+				"resolutiontooltip": "Nous vous conseillons de régler ce paramètre sur la résolution native de votre écran. Si vous avez besoin d'améliorer les performances, privilégiez le paramètre «<NBSP>Échelle de rendu<NBSP>».",
 				"shaderquality": "Qualité des shaders",
-				"shaderqualitytooltip": "L'option « Élevé » active un effet 3D sur les blocs, et l'option « Moyen » offre un effet d'éclairage plus détaillé sur les blocs. Impact moyen sur les performances du GPU.",
+				"shaderqualitytooltip": "L'option «<NBSP>Élevé<NBSP>» active un effet<NBSP>3D sur les blocs, et l'option «<NBSP>Moyen<NBSP>» offre un effet d'éclairage plus détaillé sur les blocs. Impact moyen sur les performances du GPU.",
 				"sunshadowcascades": "Cascades des ombres solaires",
 				"sunshadowdistance": "Distance des ombres",
 				"sunshadowquality": "Qualité des ombres solaires",
@@ -1317,10 +1679,10 @@
 				"texturequality": "Qualité des textures",
 				"texturequalitytooltip": "Un réglage plus bas réduit la résolution des textures. N'impacte pas beaucoup les performances sur la plupart des systèmes.",
 				"torchquality": "Qualité des torches",
-				"torchqualitytooltip": "L'option « Moyen » baisse l'éclairage de la torche à la moitié de la résolution, et l'option « Bas » au quart de la résolution. Peut fortement impacter les performances du GPU en fonction du nombre de lumières placées. L'option « Élevé » correspond à la pleine résolution. Les paramètres de l'option « Très élevé » sont actuellement identiques à ceux de l'option « Élevé ».",
+				"torchqualitytooltip": "L'option «<NBSP>Moyen<NBSP>» baisse l'éclairage de la torche à la moitié de la résolution, et l'option «<NBSP>Bas<NBSP>» au quart de la résolution. Peut fortement impacter les performances du GPU en fonction du nombre de lumières placées. L'option «<NBSP>Élevé<NBSP>» correspond à la pleine résolution. Les paramètres de l'option «<NBSP>Très élevé<NBSP>» sont actuellement identiques à ceux de l'option «<NBSP>Élevé<NBSP>».",
 				"vsync": "VSync",
 				"vsyncdouble": "Double",
-				"vsynctooltip": "Nous vous recommandons de laisser ce paramètre activé. L'option « Activé » limite la fréquence d'images à celle de l'écran, ce qui empêche les artefacts et réduit la charge du système. L'option « Double » limite la fréquence d'images à la moitié de celle de l'écran ; s'apparente à un mode d'économie d'énergie."
+				"vsynctooltip": "Nous vous recommandons de laisser ce paramètre activé. L'option «<NBSP>Activé<NBSP>» limite la fréquence d'images à celle de l'écran, ce qui empêche les artefacts et réduit la charge du système. L'option «<NBSP>Double<NBSP>» limite la fréquence d'images à la moitié de celle de l'écran<NBSP>; s'apparente à un mode d'économie d'énergie."
 			}
 		},
 		"singleplayermenu": {
@@ -1360,8 +1722,13 @@
 			"play_coop": "Jouer en coop",
 			"play_solo": "Jouer en solo",
 			"selectedfolder": "Monde sélectionné<NBSP>: {0}",
+			"serverlistfriends": "Amis bienvenus",
+			"serverlistfriendstooltip": "Permet à vos amis de trouver et rejoindre votre partie via leur menu d'amis.",
+			"serverlistlan": "Découverte sur réseau local",
+			"serverlistlantooltip": "Si cette option est activée, les personnes connectées au même réseau local (comme un même réseau Wi-Fi) pourront voir votre serveur automatiquement et s'y connecter directement sans passer par Internet. Cela peut rendre la connexion plus rapide et plus stable, à condition que tout le monde se trouve sur le même réseau.",
+			"serverlistpublicly": "Serveur listé publiquement",
+			"serverlistpubliclytooltip": "Votre serveur apparaîtra dans la liste des serveurs publics, permettant à n'importe qui de le trouver et de le rejoindre. Utilisez un mot de passe si vous souhaitez en limiter l'accès.",
 			"servername": "Nom du serveur",
-			"serverport": "Port du serveur",
 			"typegenerateworld": "Générer le monde",
 			"typeworkshop": "Monde du Workshop",
 			"world_folder": "Dossier",
@@ -1370,6 +1737,50 @@
 			"worldname": "Nom",
 			"worldname_long": "Nom du monde",
 			"worldseed": "Graine du monde"
+		},
+		"splashscreen": {
+			"header": "Merci d'avoir acheté et de jouer à Colony Survival<NBSP>!",
+			"indexingfiles": "Indexation de {0} / {1} fichiers",
+			"scanningcandidates": "Analyse des fichiers locaux… {0} candidats trouvés",
+			"text0": "Le jeu est toujours en plein développement. Les problèmes seront corrigés, les recettes équilibrées et les bugs éliminés. Certaines «<NBSP>lacunes<NBSP>» du gameplay ne sont que des préparatifs pour de futures mises à jour.",
+			"text1": "D'anciennes versions du jeu sont toujours jouables. Pour y accéder, faites un clic droit sur Colony Survival dans la bibliothèque Steam, allez dans «<NBSP>Propriétés<NBSP>» puis dans l'onglet «<NBSP>Bêtas<NBSP>».",
+			"text2": "Nous publions régulièrement des Blogs du vendredi. Ils sont disponibles sur la page du magasin Steam de Colony Survival. Chaque article contient une invitation pour rejoindre notre serveur Discord. C'est le meilleur moyen de nous contacter<NBSP>!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "Saisie de l'écran gauche",
+				"capture_right": "Saisie de l'écran droit",
+				"play_alone": "Jouer en solo",
+				"swap_inputs": "Échanger les commandes",
+				"swap_screens": "Échanger les écrans"
+			},
+			"devices": {
+				"dualsense": "Manette DualSense",
+				"gamepad": "Manette ({0})",
+				"keyboard_mouse": "Clavier et souris",
+				"playstation": "Manette PlayStation",
+				"switch": "Manette Nintendo Switch",
+				"xbox": "Manette Xbox"
+			},
+			"header": "Configuration de l'écran partagé",
+			"header_recovery": "Réassigner les périphériques de l'écran partagé",
+			"screens": {
+				"left": "Écran gauche",
+				"right": "Écran droit"
+			},
+			"status": {
+				"apply_failed": "Échec de l'application de la configuration de l'écran partagé.",
+				"assign_input": "Assignez un périphérique pour {0}.",
+				"capture_input": "Saisissez un périphérique pour {0}.",
+				"one_player_ready": "Un joueur est prêt. Ajoutez une manette pour l'écran partagé, ou appliquez le mode solo.",
+				"press_input": "Appuyez sur un bouton du périphérique à utiliser pour {0}.",
+				"ready": "Configuration de l'écran partagé prête à être appliquée."
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\nJoueur {2}",
+				"assigned_primary": "{0}\n{1}\nJoueur {2} (profil principal)",
+				"unassigned": "{0}\nNon assigné"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Ordonne à un colon de travailler ici en tant que<NBSP>: {0}.",
@@ -1444,7 +1855,7 @@
 				"column_header_createddate": "Création",
 				"column_header_name": "Nom",
 				"column_header_size": "Taille",
-				"date_format": "Jour {0}"
+				"date_format": "Jour<NBSP>{0}"
 			},
 			"blueprint_share": {
 				"button_copy_blueprint_code": "Copier dans le presse-papiers",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Tableau de statistiques",
 		"statuefarmer": "Statue du Fermier optimiste",
 		"statuemonster": "Statue de triomphe militaire",
+		"statuevictory": "Statue de la victoire",
 		"steelingot": "Lingot d'acier",
 		"steellockbox": "Coffret en acier",
 		"steelparts": "Pièces en acier",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Flacon d'acide nitrique",
 		"vialsulphuricacid": "Flacon d'acide sulfurique",
 		"wallpaintingitem": "Tableau",
+		"wallpaintingitemlizzy": "Tableau de Lizzy",
+		"wallpaintingitempip": "Tableau de Pip",
 		"water": "Eau",
 		"watergatherer": "Récolteur d'eau",
 		"waterpump": "Pompe à eau",
@@ -1870,7 +2284,7 @@
 		"alkanet": "Dans la vraie vie, c'est une source de teinture rouge.",
 		"astrolabe": "À équiper dans la barre de raccourcis pour trouver son chemin jusqu'à des biomes spéciaux.",
 		"autocrafter": "Une machine qui permet de fabriquer des objets sans colons, de jour comme de nuit.",
-		"basicchair": "Attention aux échardes !",
+		"basicchair": "Attention aux échardes<NBSP>!",
 		"bed": "Indispensable pour les colons, qui s'y rendront chaque nuit.",
 		"bed3": "Plus de confort pendant la nuit",
 		"berry": "Une baie unique. Ça ne vaut pas la peine de la manger<NBSP>!",
@@ -1976,17 +2390,20 @@
 		"splittingstump": "Un moyen plus rapide d'obtenir du bois de chauffage.",
 		"statuefarmer": "Un témoignage de gratitude pour le labeur humain",
 		"statuemonster": "En mémoire de la victoire sur nos ennemis",
+		"statuevictory": "En votre honneur<NBSP>! Toutes nos sincères félicitations pour avoir franchi cette étape impressionnante, et merci pour vos nombreuses heures passées sur Colony Survival.",
 		"stonemasonworkbench": "Crée 50<NBSP>nuances de briques.",
 		"stove": "Permet d'imprégner l'air d'odeurs délicieuses.",
 		"sulfur": "Se trouve dans les profondeurs du biome des landes.",
 		"table": "Occupe exactement un voxel",
-		"table32": "Cette table offre six voxels d'espace vide !",
+		"table32": "Cette table offre six<NBSP>voxels d'espace vide<NBSP>!",
 		"tailorshop": "Des vêtements sur mesure pour tous les goûts<NBSP>!",
 		"tin": "Se trouve également sous forme de minerai sous les montagnes enneigées.",
 		"topdownviewtrigger": "Donne accès à la vue du dessus et aux plans.",
 		"torch": "Et la lumière fut<NBSP>!",
 		"trader": "Fait marcher le commerce.",
 		"wallpaintingitem": "De l'art pour décorer vos murs",
+		"wallpaintingitemlizzy": "En mémoire de Lizzy, 2006-2022. Le nom Pipliz lui rend hommage",
+		"wallpaintingitempip": "En mémoire de Pip, 2014-2026. Le nom Pipliz lui rend hommage",
 		"water": "Sans surveillance, elle risque de tout inonder.",
 		"waterpump": "Permet d'obtenir de l'eau sans pour autant se trouver à proximité.",
 		"watersponge": "Retire l'eau dans sa zone proche d'une manière très réaliste.",

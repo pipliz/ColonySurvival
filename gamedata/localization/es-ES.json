@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Eliminar el último estandarte de la colonia dará como resultado la eliminación de todos los PNJ y volverá la colonia inutilizable. Para continuar, escribe «delete» a continuación.",
 			"header": "Opciones del estandarte",
 			"noconfirmationdelete": "Ignorando comando de eliminación, no se confirmó",
-			"placementfail": "No se ha podido colocar el estandarte en esta ubicación"
+			"placementfail": "No se ha podido colocar el estandarte en esta ubicación",
+			"requestjoin": "Solicitud de unión",
+			"requestpending": "Tu solicitud de unión a {0} está pendiente.",
+			"requestsent": "Tu solicitud de unión a {0} se ha enviado."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Colonia activa: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Creación de puestos de avanzada",
 				"selectparent": "Seleccionar colonia principal"
 			},
+			"overlaycounters": {
+				"open": "Configurar rastreadores de objetos"
+			},
 			"ownership": {
 				"action": "Acción",
 				"connectedplayers": "Jugadores conectados",
 				"currentowners": "Propietarios actuales",
 				"follower": "Seguidor",
 				"invite": "Añadir como propietario de la colonia",
+				"invitepending": "{0} ya tiene una invitación pendiente para unirse a {1}.",
 				"kick": "Expulsar",
+				"kickfromcolony": "Expulsar de la colonia",
 				"leader": "Líder",
 				"leave": "Abandonar colonia",
 				"name": "Nombre",
@@ -230,7 +238,6 @@
 				"local1": "Buscando servidor de un jugador en el ordenador",
 				"local2": "Buscando servidor en línea en el ordenador",
 				"password": "Requiere contraseña",
-				"steamdirect": "Intentando establecer conexión directa",
 				"steamp2p": "Intentando establecer conexión P2P",
 				"timeout": "Se agotó el tiempo de conexión. Volverás al menú principal en 5 segundos",
 				"waitingserver": "Inicializando servidor"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Movimiento",
 			"opencolonytab": "Abrir pestaña de colonia",
+			"openplayerslist": "Abrir lista de jugadores",
 			"openquickstart": "Abrir menú de ayuda",
 			"placemultipleareas": "Áreas de construcción en cadena",
 			"resetfieldofview": "Campo de visión predeterminado (truco)",
@@ -343,7 +351,8 @@
 			"info": "Información",
 			"quitdesktop": "Salir al escritorio",
 			"quitmain": "Menú principal",
-			"settings": "Opciones"
+			"settings": "Opciones",
+			"splitscreensetup": "Pantalla dividida"
 		},
 		"failsafe": {
 			"current": "Almacenamiento actual de puntos sagrados: {0} de {1}",
@@ -371,6 +380,7 @@
 			"apply": "Aplicar",
 			"back": "Volver al juego",
 			"close": "Cerrar",
+			"colonydate": "Día {0}, {1:00}:{2:00}",
 			"delete": "Eliminar",
 			"description": "Descripción",
 			"edit": "Editar",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Cantidad de colonos",
 			"connectlocal": "Conectar al servidor local",
-			"header_friends": "Amigos",
-			"header_history": "Historial",
 			"header_internet": "Internet",
 			"header_lan": "LAN",
 			"ipaddress": "Dirección",
 			"join": "Unirse",
 			"mods": "Mods",
+			"offline": "Sin conexión",
 			"passworded": "Con contraseña",
 			"refresh2": "Actualizar",
 			"refreshing": "Actualizando...",
 			"refreshquick": "Actualización rápida",
 			"selectedserver": "Selección de servidor",
+			"serverfavorite": "Favoritos",
+			"serverid": "ID del servidor",
 			"serverping": "Latencia",
 			"serverplayers": "Jugadores",
 			"servers": "Servidores",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Eliminar notificaciones",
+			"details": {
+				"back": "Atrás",
+				"delete": "Eliminar",
+				"empty": "No hay notificaciones.",
+				"header": "{0} - {1}",
+				"next": "Siguiente",
+				"page": "Página {0}/{1} - {2} entradas en total",
+				"previous": "Anterior"
+			},
+			"generic": {
+				"accept": "Aceptar",
+				"decline": "Rechazar",
+				"kicked": {
+					"message": "Te han expulsado de {0}.",
+					"title": "Expulsión de la colonia"
+				},
+				"management": {
+					"summarytype": "Gestión",
+					"title": "Gestión"
+				},
+				"ownerinvite": {
+					"accepted": "{0} ha aceptado tu invitación para unirse a {1}.",
+					"declined": "{0} ha rechazado tu invitación para unirse a {1}.",
+					"invalid": "Esta invitación ya no es válida.",
+					"message": "Te han invitado a unirte a {0}.",
+					"preview": "Te han invitado a unirte a {0}.",
+					"summarytype": "Invitar",
+					"title": "Invitación"
+				},
+				"ownerjoinrequest": {
+					"accepted": "Tu solicitud de unión a {0} se ha aceptado.",
+					"declined": "Tu solicitud de unión a {0} se ha rechazado.",
+					"message": "{0} ha solicitado unirse a {1}.",
+					"preview": "{0} quiere unirse a {1}.",
+					"summarytype": "Solicitud de unión",
+					"title": "Solicitud de unión a la colonia"
+				}
+			},
 			"header": "Notificaciones",
 			"missingplayerammo": "<color=#ff2323>¡Para usar {0}, tienes que tener {1} el inventario!</color>",
 			"npc_died": {
-				"banner": "Un monstruo en el estandarte",
-				"command": "Uso de comandos",
-				"excess": "Y {0} más murieron anónimamente desde entonces.",
-				"individual": "{0}: Un colono con el trabajo {1} murió a causa de {2}",
+				"individual2_banner": "{0} {1} ha muerto a manos de un monstruo en el estandarte.",
+				"individual2_command": "{0} {1} ha muerto debido a una orden.",
+				"individual2_monster": "{0} {1} ha muerto a manos de un monstruo.",
+				"individual2_npc": "{0} {1} ha muerto a manos de un colono.",
+				"individual2_player": "{0} {1} ha muerto a manos de un jugador.",
+				"individual2_starving": "{0} {1} ha muerto de inanición.",
+				"individual2_trap": "{0} {1} ha muerto debido a una trampa.",
+				"individual2_unknown": "{0} {1} ha muerto por causas desconocidas.",
 				"main": "¡{0} colonos murieron en el puesto de avanzada {1}!",
-				"misc": "motivos desconocidos",
-				"monster": "un monstruo",
-				"npc": "un colono",
-				"player": "un jugador",
-				"starving": "hambre",
-				"trap": "una trampa"
+				"summarymultiple": "{0} muertes en {1}",
+				"summarysingle": "1 muerte en {0}",
+				"summarytype": "Colonos fallecidos"
+			},
+			"overview": {
+				"empty": "No hay notificaciones.",
+				"open": "Abrir"
+			},
+			"personal": {
+				"header": "Personal"
 			},
 			"science": {
-				"entry": "{0}: Se ha completado {1}",
-				"main": "¡Tecnología completada!"
+				"entry2": "{0} completada",
+				"main": "¡Tecnología completada!",
+				"summarycount": "{0} completada",
+				"summarylatest": "{0} completada",
+				"summarytype": "Tecnología"
 			},
+			"showmarkersonpage": "Marcar ubicaciones del mundo",
 			"siegemode": {
-				"disabled": "{0}: Modo de asedio desactivado",
-				"enabled": "{0}: Modo de asedio activado",
-				"main": "¡Modo de asedio activado en el puesto de avanzada {0}!"
+				"disabled2": "Modo de asedio detenido",
+				"disabledsummary": "Modo de asedio detenido en {0}",
+				"enabled2": "¡Se ha activado el modo de asedio! Los colonos no tienen ningún camino entre el estandarte y el mundo exterior. Por cada cinco puntos de amenaza en {0}, el modo de asedio consumirá una comida por hora.\n¡Restablece la conexión con el mundo exterior lo antes posible!",
+				"enabledsummary": "Modo de asedio iniciado en {0}",
+				"main": "¡Modo de asedio activado en el puesto de avanzada {0}!",
+				"summarytype": "Modo de asedio"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Escritor"
 			}
 		},
+		"playerlist": {
+			"action": "Acción",
+			"activecolony": "Colonia activa",
+			"header": "Jugadores conectados",
+			"id": "ID",
+			"noonlineplayers": "No hay jugadores conectados",
+			"ping": "Latencia",
+			"pingvalue": "{0} ms",
+			"player": "Jugador",
+			"totalcolonists": "Total de colonos"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Cerrar",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Hecho en:",
 				"madeintooltippurchasable": "Se adquiere en el centro de comercio por {0} puntos",
 				"noactivecolony": "¡Colonias inactivas!",
+				"quests": {
+					"claimreward": "Reclamar recompensa",
+					"conditiontitles": {
+						"beds": "Camas colocadas",
+						"crafted": "{0} fabricados",
+						"crates": "Cajas colocadas",
+						"gathered": "{0} extraídos",
+						"npctype": "{0} reclutados",
+						"placed": "{0} colocados",
+						"purchased": "{0} comprados",
+						"sciencecompleted": "Tecnología de {0} completada",
+						"totalcolonists": "Colonos"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "La tecnología moderna puede usarse para crear armas poderosas.",
+							"instructions": {
+								"0": "Desbloquea la ciencia correspondiente."
+							},
+							"title": "Armas avanzadas"
+						},
+						"automatedcrafting": {
+							"description": "¡Deja que tus colonos se encarguen de la minería y la fabricación!",
+							"instructions": {
+								"0": "Mantén pulsado <style=Player/FirePrimary> mientras apuntas a la hierba o la tierra para quitar el bloque. Cava hacia abajo a través de la piedra hasta que encuentres bloques de piedras oscuras. Selecciona el objeto de trabajo de minero y colócalo sobre la piedra oscura.",
+								"1": "Bajo tierra estará todo oscuro. Selecciona antorchas y colócalas para tener luz. Sostenerlas te dará luz cerca. Pulsa <style=Player/ToggleTorch> para activar tu antorcha personal mientras sostienes otros objetos.",
+								"2": "Cavar a través de las rocas te habrá proporcionado piedra. El minero en la piedra oscura también te la puede proporcionar. Ahora puedes usarla para fabricar una mesa de manitas en la pestaña de existencias mediante los iconos de la barra de la izquierda. Esta acción también se puede hacer en el molino.",
+								"3": "Coloca la mesa de manitas en tu colonia. Puedes usar <style=Player/FireSecondary> en la mesa para ver qué objetos se pueden fabricar como manitas.",
+								"4": "Recluta suficientes colonos para cubrir tus nuevos trabajos. Necesitarán un lugar para dormir y comida, ¡así que sigue reclutando agricultores de bayas para sustentar a tus nuevos colonos!"
+							},
+							"title": "Fabricación de objetos automatizada"
+						},
+						"betterfoodsource": {
+							"description": "Los agricultores de bayas son una fuente de comida fácil, pero relativamente lenta. El trigo se puede usar para obtener comidas más eficientes, pero es más complicado de preparar.",
+							"instructions": {
+								"0": "Empieza por completar la ciencia del cultivo de trigo. De esta manera, podrás establecer agricultores de trigo con la herramienta de órdenes. A diferencia de los agricultores de bayas, aquí el tamaño importa. Cuanto más grande sea el campo, más trigo se cosechará, con un máximo de 100 bloques cubiertos. El cultivo de trigo tarda dos noches en crecer y el trigo se puede convertir en gachas de inmediato.",
+								"1": "A continuación, completa la ciencia del centro de comercio y la ciencia de alfarería. La alfarería te permite producir vasijas en las estaciones de alfarería y desbloquea los recolectores de agua. Coloca este trabajo directamente junto al agua para que los colonos llenen las vasijas vacías con agua. ¡Utiliza <style=Player/HoldCrouch> para agacharte y evitar caer al agua!",
+								"1_gamepad": "A continuación, completa la ciencia del centro de comercio y la ciencia de alfarería. La alfarería te permite producir vasijas en las estaciones de alfarería y desbloquea los recolectores de agua. Coloca este trabajo directamente junto al agua para que los colonos llenen las vasijas vacías con agua. ¡Utiliza <style=Player/ToggleCrouch> para agacharte y evitar caer al agua!",
+								"2": "Si no hay agua cerca, puedes desbloquear la ciencia de extracción de agua para obtener una forma de obtener agua más lenta pero que no depende de una ubicación.",
+								"3": "Desbloquea la ciencia de gachas y coloca una fogata para convertir el trigo y las vasijas de agua en gachas de trigo, ¡la comida más eficiente al comienzo del juego!"
+							},
+							"title": "Una mejor fuente de comida"
+						},
+						"booksofknowledge": {
+							"description": "¡Los pergaminos y las tabletas se reemplazan por libros!",
+							"instructions": {
+								"0": "Desbloquea la ciencia de investigación. Esto permitirá a tus escritor producir librerías combinando tabletas de saber antiguo y papel. Coloca 10 librerías cerca de un escritorio de investigador para mantener un estudio sostenible. El investigador producirá notas científicas que el escritor podrá usar para producir libros de conocimientos."
+							},
+							"title": "Libros de conocimientos"
+						},
+						"defenseofcivilization": {
+							"description": "A medida que tu colonia crece, también lo hace la horda de monstruos que te ataca. ¡Sigue mejorando tus defensas!",
+							"instructions": {
+								"0": "Desbloquea la ciencia de tiro con arco y recluta a un flechero para producir el objeto de trabajo de guardia arquero nocturno.",
+								"1": "Completa también la ciencia de escritura, coloca un escritorio de escritor y deja que un colono convierta las pieles de pergamino en pergaminos de conocimientos.",
+								"2": "Las trampas se fabrican en el banco de ingeniero. Para completar la ciencia de ingeniería, necesitarás lingotes de oro. El mineral de oro se puede comprar en el centro de comercio.",
+								"3": "Las trampas se pueden recargar si colocas un reparador de trampas cerca. El reparador de trampas las mantendrá activas durante el día. Por supuesto, también tendrás que fabricar munición."
+							},
+							"title": "La defensa de la civilización"
+						},
+						"endlessgrowth": {
+							"description": "¡Alcanza la famosa meta de mil colonos!",
+							"title": "Crecimiento sin fin"
+						},
+						"finalcountdown": {
+							"description": "La colonia se está convirtiendo en un imperio.",
+							"title": "La cuenta atrás final"
+						},
+						"finalstage": {
+							"description": "Desbloquea la tecnología más avanzada del juego.",
+							"title": "La etapa final"
+						},
+						"foodsource": {
+							"description": "Tu colonia necesita comida. La primera fuente es la recolección de bayas.",
+							"instructions": {
+								"0": "Abre la reserva (<style=Always/ToggleInventory>) y mueve las camas a la barra de acceso rápido en la parte inferior de la pantalla. Cierra la reserva (<style=Always/ToggleInventory> o <style=UI/Cancel>) y selecciona tus camas con <style=Player/HotBarUp> y <style=Player/HotBarDown>. Apunta al suelo y coloca seis camas con <style=Player/FireSecondary>.",
+								"1": "Selecciona la herramienta de órdenes (<style=Player/Inventory1>) y usa <style=Player/FirePrimary> en el suelo donde quieras colocar una zona de agricultura de bayas. Muévete al otro extremo del área prevista y usa <style=Player/FireSecondary> para determinar el área de la granja. Crea seis granjas.",
+								"1_gamepad": "Selecciona la herramienta de órdenes y usa <style=Player/FirePrimary> en el suelo donde quieras colocar una zona de agricultura de bayas. Muévete al otro extremo del área prevista y usa <style=Player/FireSecondary> para determinar el área de la granja. Crea seis granjas.",
+								"2": "Coge una caja de la reserva y colócala cerca. Tus agricultores llevarán allí sus cosechas.",
+								"3": "Pulsa <style=Always/OpenColonyTab> y recluta a seis colonos para empezar a cultivar las bayas.",
+								"3_gamepad": "Pulsa <style=Always/ToggleInventory> y ve a la pestaña de la colonia usando <style=UI/MenuTabLeft> y <style=UI/MenuTabRight>. Recluta a seis colonos para empezar a cultivar las bayas."
+							},
+							"title": "Conseguir una fuente de comida"
+						},
+						"goldandbronzeautarky": {
+							"description": "¿Por qué depender de los mercaderes cuando puedes extraer tu propio oro y estaño?",
+							"instructions": {
+								"0": "Compra un estandarte de puesto de avanzada y asegúrate de moverlo a tu barra de acceso rápido. Busca una montaña con nieve en la cima. Usa el astrolabio para encontrarla con más facilidad. Usa el estandarte de puesto de avanzada para colocar un puesto de avanzada cerca de la cima de la montaña. Coloca camas y construye defensas.",
+								"1": "Cava bajo la nieve. Primero te encontrarás con el nivel de cobre y arcilla. Sigue cavando y llegarás a una capa con mineral de hierro y estaño. ¡Cava aún más profundo y encontrarás oro!",
+								"2": "Asegúrate de ponerte a cavar bajo la nieve. El hierro se puede encontrar en cualquier lugar, ¡pero el estaño y el oro solo aparecen debajo de la nieve!"
+							},
+							"title": "Autarquía de oro y bronce"
+						},
+						"goldenpoisonousflight": {
+							"description": "¡Estás desbloqueando tecnología bastante avanzada!",
+							"instructions": {
+								"0": "Los planeadores acelerarán tus viajes, mientras que las trampas de abrojos ralentizarán a los monstruos que se acercan. Los escudos dorados son una gran fuente de ingresos y el veneno daña a los monstruos en el tiempo. ¡Envenenarlos lo antes posible es la mejor estrategia! Completa la ciencia correspondiente y produce los objetos necesarios."
+							},
+							"title": "Vuelo dorado venenoso"
+						},
+						"growextra": {
+							"description": "Para desarrollar tu colonia en condiciones, vas a necesitar más que el mínimo indispensable de colonos. Necesitarás más mineros, agricultores, guardias y artesanos.",
+							"instructions": {
+								"0": "La capacidad de colonos por defecto es de 100. Ve al menú de puntos de colonia y gasta 100 puntos para ampliarla."
+							},
+							"title": "¡Crece!"
+						},
+						"growmore": {
+							"description": "¡Cuantos más, mejor!",
+							"instructions": {
+								"0": "Coloca cajas fuertes de cobre y usa el menú de puntos de colonia para ampliar tu capacidad de colonos a 200. Completa la ciencia de cocinero y recluta a un cocinero y un pescador."
+							},
+							"title": "¡Crece más!"
+						},
+						"growthforgrowthssake": {
+							"description": "Hemos dejado claro que más es mejor.",
+							"instructions": {
+								"0": "¡Vigila todo de cerca! Amplía tus defensas, reúne más recursos, recluta más artesanos y controla los cuellos de botella en tus cadenas de producción."
+							},
+							"title": "Crecer y prosperar, todo es empezar"
+						},
+						"growthwoodscience": {
+							"description": "Tu colonia en ciernes requerirá una fuente de madera, tecnología innovadora, más colonos y más comida.",
+							"instructions": {
+								"0": "Las zonas de silvicultura se crean usando la herramienta de órdenes, al igual que las de agricultura de bayas.",
+								"1": "Ve a la pestaña del menú de ciencia, busca la ciencia de minero, reúne 5 de piedra y complétala para desbloquear la receta del trabajo de minero en el manitas."
+							},
+							"title": "Crecimiento, madera y ciencia"
+						},
+						"gunpowder": {
+							"description": "¡La pólvora es una mejora evidente para tu industria de defensa!",
+							"instructions": {
+								"0": "Desbloquea las ciencias del cofre de ciencia, soplador de vidrio, pólvora y cañón de mano. Para producir pólvora, necesitarás azufre, que se puede extraer en los brezales o comprarse al mercader."
+							},
+							"title": "Pólvora"
+						},
+						"gutenbergrevolution": {
+							"description": "La imprenta aumentará tu producción de libros.",
+							"instructions": {
+								"0": "Desbloquea la ciencia de acero, plomo y aceite mineral para obtener acceso a la ciencia de la imprenta. Necesitarás mineral de carbón, que se puede encontrar cerca de los árboles gigantes, y mineral de plomo, que se encuentra en los pantanos."
+							},
+							"title": "La revolución de Gutenberg"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "Las máquinas pueden llevarte automáticamente a diferentes lugares.",
+							"instructions": {
+								"0": "Desbloquea las ciencias de vías y ascensores."
+							},
+							"title": "Transporte horizontal y vertical"
+						},
+						"infrastructureofcivilization": {
+							"description": "Necesitarás distribuir comida y herramientas, acumular puntos de colonia y aplastar monstruos en caso de emergencia.",
+							"instructions": {
+								"0": "Los colonos pueden recoger comida y herramientas en tu estandarte, pero puedes reducir los viajes que realizan si colocas tiendas de comestibles y mesas de distribución de herramientas por toda la colonia. Para desbloquearlas, completa la ciencia relacionada con ellas.",
+								"1": "Si quieres almacenar más de 100 puntos de colonia, tendrás que colocar cajas fuertes de cobre. ¡Colocarlas aumentará tu nivel de amenaza!",
+								"2": "Si los monstruos atraviesan tus defensas, puedes utilizar la protección sagrada como medida de emergencia útil.",
+								"3": "Tanto la caja fuerte como la protección deben desbloquearse mediante la ciencia y fabricarse en el yunque."
+							},
+							"title": "La infraestructura de la civilización"
+						},
+						"intomodernity": {
+							"description": "Recluta a algunos trabajadores modernos para producir objetos de alta tecnología.",
+							"instructions": {
+								"0": "Primero necesitarás la ciencia de cofre de lujo, que da acceso tanto a la ciencia de la máquina tabuladora como a la ciencia del torno de metal."
+							},
+							"title": "Hacia la modernidad"
+						},
+						"intothebronzeage": {
+							"description": "La Edad de Bronce te da acceso a nuevos materiales y a un montón de tecnología nueva. ¡Construye algunas de las más importantes!",
+							"instructions": {
+								"0": "Empieza por completar la ciencia de la Edad de Bronce. Desbloquea puestos de avanzada y compra un estandarte en el centro de comercio. Completa la ciencia de latón y compra zinc en el centro. Completa la ciencia de trampas de proyectiles y la ciencia de ballestas. Compra estaño en el centro para producir lingotes de bronce."
+							},
+							"title": "Hacia la Edad de Bronce"
+						},
+						"ironage": {
+							"description": "Desbloquea el hierro, otro material vital.",
+							"instructions": {
+								"0": "La ciencia de la Edad de Hierro es muy importante y requiere un montón de ingredientes. El mineral de hierro se puede encontrar en cualquier lugar, si cavas lo suficiente hacia abajo.",
+								"1": "El mineral de hierro debe fundirse con una nueva fuente de combustible: el carbón vegetal. Este se fabrica en un horno. Para fundir hierro también son necesarios hornos de fundición. Ambos se producen en la mesa de artesano de bancos de trabajo avanzada."
+							},
+							"title": "La Edad de Hierro"
+						},
+						"makeitbeautiful": {
+							"description": "¡La estética es importante para el alma!",
+							"instructions": {
+								"0": "La ciencia de artista está bloqueada tras la ciencia de tejados de tejas, a la que puedes acceder tras completar la ciencia de cantero. Los trofeos de caza se hacen con la prensa de rarezas. Funciona como el molino y está bloqueada tras su propia ciencia."
+							},
+							"title": "Un toque de belleza"
+						},
+						"paperpower": {
+							"description": "El papel es vital para la civilización. ¡Seguro que hasta tienes algo de papel en tu escritorio ahora mismo!",
+							"instructions": {
+								"0": "Necesitarás cáñamo, que se puede comprar al mercader por un precio bastante alto. Una alternativa más barata es iniciar un puesto de avanzada en un pantano y cultivarlo por tu cuenta. Desbloquea las ciencias de cáñamo y de cuerdas para obtener acceso a la ciencia de producción de papel."
+							},
+							"title": "El poder del papel"
+						},
+						"powerofmetal": {
+							"description": "El metal es crucial para la civilización. Establece una cadena de producción de metal que funcione.",
+							"instructions": {
+								"0": "Vuelve bajo tierra con tus mineros. En la capa superior de los bloques de piedras oscuras puedes encontrar bloques de mineral de cobre. El mineral de cobre es rojo. Coloca trabajos de minero sobre estos para que los colonos extraigan cobre de ellos.",
+								"1": "Completa la ciencia de fundidor. ¿Te faltan herramientas de piedra? ¡Recluta a más manitas para acelerar su producción!",
+								"2": "Tus manitas ahora pueden producir los siguientes bancos de trabajo: un horno para fundidores y un tocón de corte para leñadores. El leñador convertirá las tablas de madera en leña, que tu fundidor necesitará para convertir el mineral de cobre en lingotes de cobre."
+							},
+							"title": "El poder del metal"
+						},
+						"powerofpower": {
+							"description": "Reclutar a más de 25 colonos y completar ciencia genera la «amenaza». Tu nivel de amenaza se muestra en la parte superior derecha. Cuanto más alto sea el nivel de amenaza, más monstruos fuertes intentarán atacar tu colonia durante la noche. ¡Evita que lleguen a tu estandarte y a tus colonos dormidos!",
+							"instructions": {
+								"0": "El objeto de guardia hondero nocturno se puede fabricar por los manitas o en el molino. Coloca el objeto en el suelo y se creará un trabajo de guardia. Los honderos lanzarán balas de honda a los monstruos.",
+								"1": "Los monstruos atacarán tu colonia por todos lados, por lo que es conveniente redirigirlos hacia aberturas concretas. Construye muros de al menos dos bloques de altura o cava fosos para evitar que los monstruos crucen un área.",
+								"2": "¡Asegúrate de no bloquear por completo todo el acceso a tu estandarte! Esto activará el modo de asedio.",
+								"3": "Mientras sostienes la herramienta de estandarte, una sombra profunda cubrirá el área que está más lejos de tu estandarte. Se trata del área donde aparecerán los monstruos. No pasa nada si los colonos trabajan fuera de los muros o en el área sombreada, siempre y cuando se refugien a un espacio seguro durante la noche."
+							},
+							"title": "El poder del poder"
+						},
+						"remotecontrol": {
+							"description": "Aprende a controlar tu colonia desde una perspectiva cenital y deja que los colonos hagan los trabajos de construcción.",
+							"instructions": {
+								"0": "Desbloquea la ciencia del escritorio de capataz y la ciencia de excavador. Coloca el escritorio de capataz y úsalo para cambiar a vista cenital. Usa la herramienta de órdenes desde la vista cenital o desde la vista en primera persona y ve a construcción. Usa «Eliminar todo» para definir una zona que se eliminará por completo. Coloca puntos de trabajo alrededor del área y automáticamente reclutarán a obreros que ejecutarán esta tarea de construcción."
+							},
+							"title": "Control remoto"
+						},
+						"setupcolony": {
+							"description": "¡Coloca el estandarte para recibir tu primera misión!",
+							"instructions": {
+								"0": "¡Coloca el estandarte para recibir tu primera misión! Selecciona la herramienta de estandarte (<style=Player/Inventory2>) y usa <style=Player/FireSecondary> en el suelo. Encontrar un lugar con áreas llanas para cultivar y agua cerca es ideal.",
+								"0_gamepad": "¡Coloca el estandarte para recibir tu primera misión! Selecciona la herramienta de estandarte en el inventario de abajo con <style=Player/HotBarUp> y <style=Player/HotBarDown>. Colócalo con <style=Player/FireSecondary> mientras apuntas al suelo. Encontrar un lugar con áreas llanas para cultivar y agua cerca es ideal.",
+								"1": "Usa <style=Player/MoveKeyboard> y <style=Player/Look> para moverte por el mundo.",
+								"1_gamepad": "Usa <style=Player/MovePad> y <style=Player/Look> para moverte por el mundo."
+							},
+							"title": "Establecer una colonia"
+						},
+						"startofprestige": {
+							"description": "¡Desbloquea el cofre de prestigio y fabrica uno!",
+							"title": "El inicio del prestigio"
+						},
+						"stretchieststretchgoal": {
+							"description": "Termina el Prestigio V.",
+							"title": "El objetivo más ambicioso"
+						},
+						"wealthofnations": {
+							"description": "Necesitarás herreros, textiles, cuero y comercio.",
+							"instructions": {
+								"0": "Asegúrate de tener desbloqueado el cultivo de trigo y el centro de mercaderes. Deja que un colono fabrique un centro de comercio en la nueva mesa de artesano de bancos de trabajo. Coloca el centro de comercio, vende algunos lingotes de cobre y compra cadáveres de animales, que te harán falta para desbloquear la ciencia de curtidor. Necesitarás tela de lino para fabricar la mesa de curtidor, que se puede hacer o comprar en el centro de comercio. Recluta a un curtidor para convertir los cadáveres de animales en carne cruda, piel y, por último, cuero.",
+								"1": "Desbloquea la ciencia de sastre, recluta agricultores de lino y coloca una sastrería para reclutar a un sastre que convierta el lino en tela de lino.",
+								"2": "¡Ahora deberías tener todo lo necesario para completar la ciencia de yunque, reclutar a un herrero de cobre y fabricar las nuevas herramientas!"
+							},
+							"title": "La riqueza de las naciones"
+						},
+						"yourethemiller": {
+							"description": "El molino te proporciona objetos básicos. ¡Colócalo y úsalo!",
+							"instructions": {
+								"0": "Ha aparecido el molino en tu barra de acceso rápido tras iniciar tu colonia. Colócalo en tu colonia.",
+								"1": "Sube las escaleras del molino y usa <style=Player/FireSecondary> en el mecanismo interno para abrir su menú. Añade cajas, trabajos de minero y camas a su cola de fabricación. Espera hasta que el molino haya terminado y recoge los resultados pulsando los botones de la parte inferior derecha."
+							},
+							"title": "Tú mandas en el molino"
+						},
+						"yourfirstlibrary": {
+							"description": "Una civilización no puede desarrollar nuevos conocimientos si no almacena adecuadamente los antiguos.",
+							"instructions": {
+								"0": "Los pergaminos de conocimientos se pueden convertir en estanterías de pergaminos tras completar la ciencia de escriba. Un escribaa necesitará al menos 10 estanterías de pergaminos para poder trabajar constantemente. Los pergaminos de las estanterías se consumen al usarse, pero, al cabo de un tiempo, se reabastecerán automáticamente y se podrán volver a usar. El escriba convertirá las tabletas de arcilla en tabletas de saber antiguo."
+							},
+							"title": "Tu primera biblioteca"
+						}
+					},
+					"empty": "No hay misiones disponibles en este momento.",
+					"header": "Misiones",
+					"instructionsheader": "Instrucciones",
+					"notifications": {
+						"message": "Has completado la misión «{0}». Abre la pestaña de Misiones para revisarla y reclamar su recompensa si hay alguna disponible.",
+						"openbutton": "Abrir misión",
+						"preview": "{0}",
+						"summarytype": "Misión completada"
+					},
+					"progress": "Progreso",
+					"rewardheader": "Recompensa",
+					"statusavailable": "Disponible",
+					"statuscompleted": "Completada",
+					"statusinprogress": "En progreso",
+					"statusunclaimed": "Sin reclamar",
+					"table": {
+						"action": "Acción",
+						"quest": "Misión",
+						"select": "Seleccionar",
+						"status": "Estado"
+					}
+				},
 				"science": {
 					"available": "Disponible",
 					"completed": "Completada",
@@ -1031,7 +1393,8 @@
 				"description": "Selecciona un tipo de objeto que usar.",
 				"header": "Selección de objeto",
 				"headerchosen": "Seleccionados",
-				"headerselectables": "Seleccionables"
+				"headerselectables": "Seleccionables",
+				"toggleshowonlyknown": "Mostrar solo objetos conocidos"
 			},
 			"limits": {
 				"allreset": "Reiniciar todo",
@@ -1072,7 +1435,6 @@
 				"showgoal": "Objetivos"
 			},
 			"quickstart": {
-				"closetoggle": "No mostrar más",
 				"next": "Siguiente",
 				"previous": "Anterior"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Conceptos básicos",
 				"text1_2": "Empieza por buscar un buen sitio para fundar tu colonia. Es recomendable que disponga de agua y planicie cerca para facilitar la agricultura. El estandarte será el centro de tu colonia.",
 				"text2_2gamepad": "Selecciona la herramienta de estandarte en tu inventario usando <style=Player/HotBarUp> y <style=Player/HotBarDown>. Colócalo con <style=Player/FireSecondary> mientras apuntas al suelo con la herramienta de estandarte seleccionada. En la colonia, la herramienta de estandarte mostrará oscurecidos los lugares en los que podrán aparecer monstruos más tarde.",
-				"text2_2keyboard": "Selecciona la herramienta de estandarte en tu inventario usando <style=Player/Inventory1>. Colócalo con <style=Player/FireSecondary> mientras apuntas al suelo con la herramienta de estandarte seleccionada. En la colonia, la herramienta de estandarte mostrará oscurecidos los lugares en los que podrán aparecer monstruos más tarde.",
-				"text3_2": "Coloca camas para poder reclutar colonos. Pulsa <style=Player/ToggleInventory> para abrir la interfaz. Mueve las camas desde la reserva hasta la barra de acceso rápido. Con la cama seleccionada, usa <style=Player/FireSecondary> mientras apuntas al suelo para colocarla.",
+				"text2_2keyboard": "Selecciona la herramienta de estandarte en tu inventario usando <style=Player/Inventory2>. Colócalo con <style=Player/FireSecondary> mientras apuntas al suelo con la herramienta de estandarte seleccionada. En la colonia, la herramienta de estandarte mostrará oscurecidos los lugares en los que podrán aparecer monstruos más tarde.",
+				"text3_2": "Coloca camas para poder reclutar colonos. Pulsa <style=Always/ToggleInventory> para abrir la interfaz. Mueve las camas desde la reserva hasta la barra de acceso rápido. Con la cama seleccionada, usa <style=Player/FireSecondary> mientras apuntas al suelo para colocarla.",
 				"text4": "Abre la interfaz y ve a la página «Colonia». Pulsa «Reclutar» para reclutar a un colono."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Alimento y camas",
 				"text1": "Los colonos necesitan 1 comida al día. Las obtienen en el estandarte o en una tienda de comestibles cercana. Sin comida, los colonos se morirán de hambre. Reclutar nuevos colonos cuesta varias comidas.",
 				"text2_2gamepad": "El agricultor de bayas es la primera fuente de comida. Selecciona la herramienta de órdenes (el primer espacio del inventario). <style=Player/FirePrimary> para abrirlo y seleccionar «Agricultor de bayas». <style=Player/FireSecondary> para definir el área de cultivo, luego <style=Player/FireSecondary> otra vez para finalizar. ¡Te van a hacer falta muchos!",
-				"text2_2keyboard": "El agricultor de bayas es el primer medio para obtener comida. Selecciona la herramienta de órdenes. (<style=Player/Inventory0>). <style=Player/FirePrimary> para abrirlo y seleccionar «Agricultor de bayas». <style=Player/FireSecondary> para definir el área de cultivo, luego <style=Player/FireSecondary> otra vez para finalizar. ¡Necesitarás a muchos de estos!",
+				"text2_2keyboard": "El agricultor de bayas es el primer medio para obtener comida. Selecciona la herramienta de órdenes. (<style=Player/Inventory1>). <style=Player/FirePrimary> para abrirlo y seleccionar «Agricultor de bayas». <style=Player/FireSecondary> para definir el área de cultivo, luego <style=Player/FireSecondary> otra vez para finalizar. ¡Necesitarás a muchos de estos!",
 				"text3_2": "Para producir camas, tendrás que fabricar una mesa de manitas. Si mantienes <style=Player/FirePrimary> mientras apuntas a los bloques, podrás excavar para conseguir la piedra que necesitas.",
 				"text4": "Haz clic en el icono de la mesa de manitas, a la izquierda de la reserva, para fabricarla. Colócala como hiciste con la cama. Los colonos desempleados se encargarán automáticamente del trabajo, igual que con la agricultura de bayas."
 			},
@@ -1245,7 +1607,7 @@
 					"showcolonistjobinname": "Mostrar el trabajo junto al nombre",
 					"showsensitivedatamode": "Mostrar datos confidenciales",
 					"tab": "Opciones generales",
-					"uiscaletooltip": "Aumenta o reduce el tamaño de la interfaz para que se ajuste a distintos tamaños de pantalla sin afectar a la resolución. Si tienes una pantalla 4K, probablemente quieras ajustar esta opción al 200 %.",
+					"uiscaletooltip": "Aumenta o reduce el tamaño de la interfaz para que se ajuste a distintos tamaños de pantalla sin afectar a la resolución. Si tienes una pantalla 4K, probablemente quieras ajustar esta opción al 200<NBSP>%.",
 					"uiscalingratio": "Escala de la IU"
 				},
 				"mousemenu": {
@@ -1304,7 +1666,7 @@
 				"presettooltip": "Una opción combinada que modifica muchas de las opciones más detalladas a la vez para que sea más fácil de usar.",
 				"ragdoll": "Cantidad de cadáveres",
 				"ragdolltooltip": "Establece cuántos cuerpos de personajes pueden permanecer en el suelo al mismo tiempo. Tiene un impacto menor en la CPU en los últimos tramos del juego si se ajusta a valores altos.",
-				"renderscaletooltip": "Reduce o aumenta la resolución de renderizado mientras mantiene la interfaz en la resolución principal. 100 equivale al 100 % del escalado (sin cambios). Tiene un gran impacto en el rendimiento de la GPU.",
+				"renderscaletooltip": "Reduce o aumenta la resolución de renderizado mientras mantiene la interfaz en la resolución principal. 100 equivale al 100<NBSP>% del escalado (sin cambios). Tiene un gran impacto en el rendimiento de la GPU.",
 				"renderscalingratio": "Escala de renderizado",
 				"resolution": "Resolución",
 				"resolutiontooltip": "Es preferible ajustarla a la resolución nativa de la pantalla que estés utilizando. Si necesitas más rendimiento, es mejor que utilices la opción «Escala de renderizado».",
@@ -1360,8 +1722,13 @@
 			"play_coop": "Jugar cooperativo",
 			"play_solo": "Jugar en solitario",
 			"selectedfolder": "Mundo seleccionado: {0}",
+			"serverlistfriends": "Los amigos pueden unirse",
+			"serverlistfriendstooltip": "Permite a tus amigos encontrar y unirse a tu partida a través del menú de amigos.",
+			"serverlistlan": "Descubrimiento en red local",
+			"serverlistlantooltip": "Si esta opción está activada, las personas conectadas a la misma red local (como el mismo Wi-Fi) podrán ver tu servidor de forma automática y conectarse a él directamente en lugar de hacerlo a través de internet. De esta manera, puede que la conexión sea más rápida y fluida, pero todo el mundo debe estar en la misma red.",
+			"serverlistpublicly": "Lista de servidores públicos",
+			"serverlistpubliclytooltip": "Tu servidor aparecerá en la lista de servidores públicos para que cualquiera pueda encontrarlo y unirse. Usa una contraseña si quieres limitar el acceso.",
 			"servername": "Nombre del servidor",
-			"serverport": "Puerto del servidor",
 			"typegenerateworld": "Generar mundo",
 			"typeworkshop": "Mundo de Workshop",
 			"world_folder": "Carpeta",
@@ -1370,6 +1737,50 @@
 			"worldname": "Nombre",
 			"worldname_long": "Nombre del mundo",
 			"worldseed": "Semilla del mundo"
+		},
+		"splashscreen": {
+			"header": "¡Gracias por comprar y jugar a Colony Survival!",
+			"indexingfiles": "Indexando {0} / {1} archivos",
+			"scanningcandidates": "Escaneando archivos locales... Se han encontrado {0} candidatos",
+			"text0": "El juego sigue en desarrollo activo. Arreglaremos los problemas, equilibraremos las recetas y corregiremos los errores. Algunos de los «huecos en la jugabilidad» son preparativos para futuras actualizaciones.",
+			"text1": "Es posible jugar a versiones más antiguas del juego. Para ello, haz clic derecho en Colony Survival en la biblioteca de Steam, ve a «propiedades» y visita la pestaña de «betas».",
+			"text2": "Publicamos blogs los viernes con regularidad. Pueden encontrarse en la página de la tienda de Steam de Colony Survival. Cada blog incluye una invitación para unirse a nuestro servidor de Discord. ¡Es la mejor manera de ponerse en contacto con nosotros!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "Capturar pantalla de la izquierda",
+				"capture_right": "Capturar pantalla de la derecha",
+				"play_alone": "Jugar en solitario",
+				"swap_inputs": "Intercambiar métodos de entrada",
+				"swap_screens": "Intercambiar pantallas"
+			},
+			"devices": {
+				"dualsense": "Mando DualSense",
+				"gamepad": "Mando ({0})",
+				"keyboard_mouse": "Teclado y ratón",
+				"playstation": "Mando de PlayStation",
+				"switch": "Mando de Nintendo Switch",
+				"xbox": "Mando de XBOX"
+			},
+			"header": "Configuración de pantalla dividida",
+			"header_recovery": "Reasignar dispositivos de pantalla dividida",
+			"screens": {
+				"left": "Pantalla izquierda",
+				"right": "Pantalla derecha"
+			},
+			"status": {
+				"apply_failed": "No se ha podido aplicar la configuración de pantalla dividida.",
+				"assign_input": "Asignar método de entrada a {0}.",
+				"capture_input": "Capturar método de entrada para {0}.",
+				"one_player_ready": "Modo Un jugador ya está listo. Añade un mando para jugar en pantalla dividida o juega en el modo Un jugador.",
+				"press_input": "Pulsa un botón en el método de entrada que usarás para {0}.",
+				"ready": "Listo para aplicar la configuración de pantalla dividida."
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\nJugador {2}",
+				"assigned_primary": "{0}\n{1}\nJugador {2} (Perfil principal)",
+				"unassigned": "{0}\nNo asignado"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Ordena a un colono que trabaje aquí como {0}",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Tablón de estadísticas",
 		"statuefarmer": "Estatua del agricultor esperanzado",
 		"statuemonster": "Estatua de triunfo militar",
+		"statuevictory": "Estatua de la victoria",
 		"steelingot": "Lingote de acero",
 		"steellockbox": "Caja fuerte de acero",
 		"steelparts": "Piezas de acero",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Frasco de ácido nítrico",
 		"vialsulphuricacid": "Frasco de ácido sulfúrico",
 		"wallpaintingitem": "Cuadro",
+		"wallpaintingitemlizzy": "Cuadro de Lizzy",
+		"wallpaintingitempip": "Cuadro de Pip",
 		"water": "Agua",
 		"watergatherer": "Recolector de agua",
 		"waterpump": "Bomba de agua",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "Un método rápido para dividir la madera en leña",
 		"statuefarmer": "En honor al trabajo del ser humano",
 		"statuemonster": "En recuerdo de la victoria sobre nuestros enemigos",
+		"statuevictory": "¡Esto va por ti, jugador! Te damos nuestra más sincera enhorabuena por alcanzar este impresionante hito y gracias por haber jugado tanto a Colony Survival.",
 		"stonemasonworkbench": "Crea cincuenta tonos de ladrillos",
 		"stove": "Perfuma de deliciosos olores sus alrededores",
 		"sulfur": "Se encuentra en el subsuelo del bioma de brezo",
@@ -1987,6 +2402,8 @@
 		"torch": "¡Y se hizo la luz!",
 		"trader": "Te sorprenderá, pero es para comerciar",
 		"wallpaintingitem": "Una obra de arte para tus muros",
+		"wallpaintingitemlizzy": "En honor a Lizzy, 2006-2022. Pipliz tiene ese nombre por ella.",
+		"wallpaintingitempip": "En honor a Pip, 2014-2026. Pipliz tiene ese nombre por ella.",
 		"water": "Provocará una inundación si hay demasiada",
 		"waterpump": "Permite obtener agua sin estar cerca del agua",
 		"watersponge": "Permite quitar el agua del área cercana de manera realista.",

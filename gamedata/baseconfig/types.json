@@ -1197,6 +1197,7 @@
 				"points": 500,
 				"threat": 10
 			},
+			"obsolete",
 			"client_reservesecondaryhiton"
 		],
 		"blueprints": { "type": "skip" },
@@ -3306,7 +3307,8 @@
 			"max": [ 0.5,  0.37 , 0.5 ]
 		}],
 		"attachBehaviour": [
-			"toolshop"
+			"toolshop",
+			"obsolete"
 		],
 		"blueprints": { "type": "skip" },
 		"categories": [
@@ -3830,9 +3832,6 @@
 			"type": "parseAs",
 			"value": "wisteriaplantempty"
 		},
-		"categories": [
-			"job"
-		],
 		"colliders": [{"min":[-0.5,-0.5,-0.5],"max":[0.5,2.5,0.5],"impactsBlockPlacement":true}],
 		"icon": "../textures/icons/wisteriatree.png",
 		"isSolid": false,
@@ -3998,9 +3997,6 @@
 		"isPlaceable": false
 	},
 	"dev_instant_construction": {
-		"categories": [
-			"essential"
-		],
 		"icon": "../textures/icons/error.png",
 		"attachBehaviour": [ "dev_instant_construction" ],
 		"isPlaceable": false

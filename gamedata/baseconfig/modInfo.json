@@ -7,11 +7,13 @@
 		"luaFiles": [
 		{
 			"id": "fuseplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/fuseplacement.lua"
 		},
 		{
 			"id": "paintingplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/paintingplacement.lua"
 		},
@@ -37,86 +39,103 @@
 		},
 		{
 			"id": "bombfuseblocktool",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/bombfuseblocktool.lua"
 		},
 		{
 			"id": "flowerboxplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/flowerboxplacement.lua"
 		},
 		{
 			"id": "lanternplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/lanternplacement.lua"
 		},
 		{
 			"id": "signplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/signplacement.lua"
 		},
 		{
 			"id": "fenceplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/fenceplacement.lua"
 		},
 		{
 			"id": "pillarplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/pillarplacement.lua"
 		},
 		{
 			"id": "bombshapedplacer",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/bombshapedplacer.lua"
 		},
 		{
 			"id": "railstool",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/railplacement.lua"
 		},
 		{
 			"id": "doorgenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/doors.lua"
 		},
 		{
 			"id": "bunkbedgenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/bunkbeds.lua"
 		},
 		{
 			"id": "bed3generator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/bed3.lua"
 		},
 		{
 			"id": "quarterblockgenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/quarterblocks.lua"
 		},
 		{
 			"id": "quarterblockpreview",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/quarterblockpreview.lua"
 		},
 		{
 			"id": "pillargenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/pillars.lua"
 		},
 		{
 			"id": "architravegenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/architrave.lua"
 		},
 		{
 			"id": "fencegenerator",
+			"bootstrapPhase": "early",
 			"index": -1000000,
 			"relativePath": "lua/types/fences.lua"
 		},
 		{
 			"id": "torchplacement",
+			"bootstrapPhase": "after_item_types_defined",
 			"index": -1000000,
 			"relativePath": "lua/torchplacement.lua"
 		}],
@@ -399,6 +418,11 @@
 				"relativePath": "science.json"
 			},
 			{
+				"fileType": "addOrReplaceQuests",
+				"index": -1000000,
+				"relativePath": "quests.json"
+			},
+			{
 				"fileType": "addOrReplacePlayerRecipes",
 				"index": -1000000,
 				"relativePath": "recipes/crafting.json"
@@ -500,18 +524,6 @@
 				"index": -100000,
 				"relativePath": "painttype.json"
 			},
-            {
-                "fileType": "typesLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "pillargenerator"
-            },
-            {
-                "fileType": "typesLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "architravegenerator"
-            },
 			{
 				"fileType": "addOrReplaceAudio",
 				"index": -1000000,
@@ -607,36 +619,6 @@
 				"index": -100000,
 				"relativePath": "generateblocks_windows_blue.json"
 			},
-            {
-                "fileType": "generateBlocksLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "doorgenerator"
-            },
-            {
-                "fileType": "generateBlocksLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "bunkbedgenerator"
-            },
-            {
-                "fileType": "generateBlocksLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "bed3generator"
-            },
-            {
-                "fileType": "generateBlocksLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "fencegenerator"
-            },
-            {
-                "fileType": "generateBlocksLua",
-                "index": -100000,
-				"relativePath": "./",
-                "script": "quarterblockgenerator"
-            },
 			{
 				"fileType": "generateBlocks",
 				"index": -100000,
@@ -666,6 +648,11 @@
 				"fileType": "vehiclesettings",
 				"index": -1000000,
 				"relativePath": "vehicles.json"
+			},
+			{
+				"fileType": "upgradeSettings",
+				"index": -1000000,
+				"relativePath": "upgradesettings.json"
 			},
 			{
 				"contents": [
@@ -729,6 +716,28 @@
 				"relativePath": ""
 			}
 		],
+		"files": [
+		{
+			"id": "alert_npc_died",
+			"index": -1000000,
+			"relativePath": "../textures/icons/alert_npcdied.png",
+			"fileType": "Image"
+		},{
+			"id": "alert_siegemode",
+			"index": -1000000,
+			"relativePath": "../textures/icons/alert_siegemode.png",
+			"fileType": "Image"
+		},{
+			"id": "alert_generic",
+			"index": -1000000,
+			"relativePath": "../textures/icons/alert_generic.png",
+			"fileType": "Image"
+		},{
+			"id": "alert_science",
+			"index": -1000000,
+			"relativePath": "../textures/icons/alert_science.png",
+			"fileType": "Image"
+		}],
 		"marksgamemodded": false,
 		"name": "Colony Survival",
 		"version": "0.9.0"

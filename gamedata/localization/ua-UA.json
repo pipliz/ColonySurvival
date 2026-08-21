@@ -1,5 +1,5 @@
 {
-	"coverage": 84.0,
+	"coverage": 72.0,
 	"hints": {
 		"0": "У більшості випадків великий розмір ферми означає більше виробництва. Ягідне поле виключення з цього правила.",
 		"1": "Зі збільшенням кількості колоністів - збільшується кількість монстрів.",
@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Видалення останнього банера колонії видалить усіх NPCs і зробить колонію непридатною. Щоб підтвердити, що ви хочете це зробити, введіть 'delete' нижче.",
 			"header": "Параметри банера",
 			"noconfirmationdelete": "Ігнорування команди видалення, не отримано підтвердження",
-			"placementfail": "Не вдалося розмістити банер у цьому місці"
+			"placementfail": "Не вдалося розмістити банер у цьому місці",
+			"requestjoin": "_MISSING_Request to join",
+			"requestpending": "_MISSING_Your request to join {0} is pending.",
+			"requestsent": "_MISSING_Your request to join {0} was sent."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Активна колонія: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Створення аванпосту",
 				"selectparent": "Оберіть головну колонію"
 			},
+			"overlaycounters": {
+				"open": "_MISSING_Configure Item Trackers"
+			},
 			"ownership": {
 				"action": "Дія",
 				"connectedplayers": "Підключені гравці",
 				"currentowners": "Поточні власники",
 				"follower": "Підписник",
 				"invite": "Додати як власника колонії",
+				"invitepending": "_MISSING_{0} already has a pending invite to join {1}.",
 				"kick": "Виключити",
+				"kickfromcolony": "_MISSING_Kick from colony",
 				"leader": "Лідер",
 				"leave": "Покинути колонію",
 				"name": "Ім'я",
@@ -230,7 +238,6 @@
 				"local1": "Пошук однокористувацького сервера на цьому комп'ютері",
 				"local2": "Пошук онлайн-сервера на цьому комп’ютері",
 				"password": "Потрібен пароль",
-				"steamdirect": "Спроба встановити пряме з'єднання",
 				"steamp2p": "Спроба встановити p2p-з'єднання",
 				"timeout": "Час підключення закінчився. Повернення до головного меню через 5 секунд",
 				"waitingserver": "Запуск сервера у фоновому режимі"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Рух",
 			"opencolonytab": "Відкрийте вкладку 'Колонія'",
+			"openplayerslist": "_MISSING_Open players list",
 			"openquickstart": "Відкрити меню допомоги",
 			"placemultipleareas": "Ланцюгові будівельні області",
 			"resetfieldofview": "Скинути поле зору (чіт)",
@@ -343,7 +351,8 @@
 			"info": "Інформація",
 			"quitdesktop": "Вийти на робочий стіл",
 			"quitmain": "Вийти в головне меню",
-			"settings": "Налаштування"
+			"settings": "Налаштування",
+			"splitscreensetup": "_MISSING_Split Screen Setup"
 		},
 		"failsafe": {
 			"current": "Поточне сховище святості: {0} out of {1}",
@@ -371,6 +380,7 @@
 			"apply": "Застосувати",
 			"back": "Назад",
 			"close": "Закрити",
+			"colonydate": "_MISSING_Day {0}, {1:00}:{2:00}",
 			"delete": "Видалити",
 			"description": "Опис",
 			"edit": "Редагувати",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Кіл-сть колоністів",
 			"connectlocal": "Підключитися до локального сервера",
-			"header_friends": "Друзі",
-			"header_history": "Історія",
 			"header_internet": "Інтернет",
 			"header_lan": "Локальні",
 			"ipaddress": "Адреса",
 			"join": "Підключитися",
 			"mods": "Моди",
+			"offline": "_MISSING_Offline",
 			"passworded": "Під паролем",
 			"refresh2": "Оновити",
 			"refreshing": "Оновлення...",
 			"refreshquick": "Швидке оновлення",
 			"selectedserver": "Обраний сервер",
+			"serverfavorite": "_MISSING_Favorite",
+			"serverid": "_MISSING_Server ID",
 			"serverping": "Пінг",
 			"serverplayers": "Гравці",
 			"servers": "Сервера",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Видалити звіт",
+			"details": {
+				"back": "_MISSING_Back",
+				"delete": "_MISSING_Delete",
+				"empty": "_MISSING_No notification entries.",
+				"header": "_MISSING_{0} - {1}",
+				"next": "_MISSING_Next",
+				"page": "_MISSING_Page {0}/{1} - {2} total entries",
+				"previous": "_MISSING_Previous"
+			},
+			"generic": {
+				"accept": "_MISSING_Accept",
+				"decline": "_MISSING_Decline",
+				"kicked": {
+					"message": "_MISSING_You've been removed from {0}.",
+					"title": "_MISSING_Removed from colony"
+				},
+				"management": {
+					"summarytype": "_MISSING_Management",
+					"title": "_MISSING_Management"
+				},
+				"ownerinvite": {
+					"accepted": "_MISSING_{0} accepted your invite to join {1}.",
+					"declined": "_MISSING_{0} declined your invite to join {1}.",
+					"invalid": "_MISSING_This invite is no longer valid.",
+					"message": "_MISSING_You've been invited to join {0}.",
+					"preview": "_MISSING_You've been invited to join {0}.",
+					"summarytype": "_MISSING_Invite",
+					"title": "_MISSING_Invitation"
+				},
+				"ownerjoinrequest": {
+					"accepted": "_MISSING_Your request to join {0} was accepted.",
+					"declined": "_MISSING_Your request to join {0} was declined.",
+					"message": "_MISSING_{0} has requested to join {1}.",
+					"preview": "_MISSING_{0} wants to join {1}.",
+					"summarytype": "_MISSING_Join request",
+					"title": "_MISSING_Colony join request"
+				}
+			},
 			"header": "Звіти",
 			"missingplayerammo": "<color=#ff2323>Використання {0} вимагає наявності певної кількості {1} в інвентарі!</color>",
 			"npc_died": {
-				"banner": "Монстр біля банера",
-				"command": "Використання команди",
-				"excess": "{0} померли з невідомих причин.",
-				"individual": "{0}: Колоніст з роботою {1} помер від: {2}.",
+				"individual2_banner": "_MISSING_{0} {1} was killed by a monster at the banner.",
+				"individual2_command": "_MISSING_{0} {1} was killed by a command.",
+				"individual2_monster": "_MISSING_{0} {1} was killed by a monster.",
+				"individual2_npc": "_MISSING_{0} {1} was killed by a colonist.",
+				"individual2_player": "_MISSING_{0} {1} was killed by a player.",
+				"individual2_starving": "_MISSING_{0} {1} died of starvation.",
+				"individual2_trap": "_MISSING_{0} {1} was killed by a trap.",
+				"individual2_unknown": "_MISSING_{0} {1} died of unknown causes.",
 				"main": "{0} колоністів загинули в аванпості {1}!",
-				"misc": "невідомих причин",
-				"monster": "монстра",
-				"npc": "колоніста",
-				"player": "гравця",
-				"starving": "голоду",
-				"trap": "Пастки"
+				"summarymultiple": "_MISSING_{0} deaths in {1}",
+				"summarysingle": "_MISSING_1 death in {0}",
+				"summarytype": "_MISSING_Colonists died"
+			},
+			"overview": {
+				"empty": "_MISSING_No notifications.",
+				"open": "_MISSING_Open"
+			},
+			"personal": {
+				"header": "_MISSING_Personal"
 			},
 			"science": {
-				"entry": "{0}: Вивчено {1}",
-				"main": "Науку завершено!"
+				"entry2": "_MISSING_Completed {0}",
+				"main": "Науку завершено!",
+				"summarycount": "_MISSING_{0} completed",
+				"summarylatest": "_MISSING_{0} completed",
+				"summarytype": "_MISSING_Science"
 			},
+			"showmarkersonpage": "_MISSING_Mark world locations",
 			"siegemode": {
-				"disabled": "{0}: Вийшли з режиму облоги",
-				"enabled": "{0}: Увійшли в режим облоги",
-				"main": "На аванпості введено режим облоги  {0}!"
+				"disabled2": "_MISSING_Siege mode stopped",
+				"disabledsummary": "_MISSING_Siege mode stopped in {0}",
+				"enabled2": "_MISSING_Siege mode has been activated! There is no path for colonists between the banner and the outside world. For every five threat in {0}, Siege mode consumes one meal per hour.\nReestablish the connection with the outside world as quickly as possible!",
+				"enabledsummary": "_MISSING_Siege mode started in {0}",
+				"main": "На аванпості введено режим облоги  {0}!",
+				"summarytype": "_MISSING_Siege mode"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Письменник"
 			}
 		},
+		"playerlist": {
+			"action": "_MISSING_Action",
+			"activecolony": "_MISSING_Active Colony",
+			"header": "_MISSING_Online Players",
+			"id": "_MISSING_ID",
+			"noonlineplayers": "_MISSING_No online players",
+			"ping": "_MISSING_Ping",
+			"pingvalue": "_MISSING_{0} ms",
+			"player": "_MISSING_Player",
+			"totalcolonists": "_MISSING_Total Colonists"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Закрити",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Робиться в:",
 				"madeintooltippurchasable": "Можна придбати у торгівельному центрі за {0} балів",
 				"noactivecolony": "Немає активної колонії!",
+				"quests": {
+					"claimreward": "_MISSING_Claim Reward",
+					"conditiontitles": {
+						"beds": "_MISSING_Beds placed",
+						"crafted": "_MISSING_{0} crafted",
+						"crates": "_MISSING_Crates placed",
+						"gathered": "_MISSING_{0} mined",
+						"npctype": "_MISSING_{0} recruited",
+						"placed": "_MISSING_{0} placed",
+						"purchased": "_MISSING_{0} purchased",
+						"sciencecompleted": "_MISSING_{0} science completed",
+						"totalcolonists": "_MISSING_Colonists"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "_MISSING_Modern technology can be used to create powerful weapons.",
+							"instructions": {
+								"0": "_MISSING_Unlock the related science."
+							},
+							"title": "_MISSING_Advanced Weapons"
+						},
+						"automatedcrafting": {
+							"description": "_MISSING_Let your colonists do the mining and crafting!",
+							"instructions": {
+								"0": "_MISSING_Hold <style=Player/FirePrimary> while aiming at grass or dirt to remove the block. Dig downwards through stone until you find dark stone blocks. Select the Miner Job item and place it on the dark stone.",
+								"1": "_MISSING_Underground, it will be dark. Select torches and place them for light. Holding them will provide you with local light. Press <style=Player/ToggleTorch> to activate your personal torch while holding other items.",
+								"2": "_MISSING_Digging through the stone will have provided you with stone rubble. The miner on dark stone will also provide you with it. You can now use it to craft a Tinkerer's Table in the stockpile tab by using the icons in the bar on the left. This can also be done in the mill.",
+								"3": "_MISSING_Place the Tinkerer's Table in your colony. You can <style=Player/FireSecondary> the Table to see which items the tinkerer can make.",
+								"4": "_MISSING_Recruit enough colonists to fill your new jobs. They will need a place to sleep and food, so keep recruiting berry farmers to sustain your new colonists!"
+							},
+							"title": "_MISSING_Automated Item Crafting"
+						},
+						"betterfoodsource": {
+							"description": "_MISSING_Berry farmers are an easy but relatively slow source of food. Wheat can be used for more efficient meals, but it's more complicated to set up.",
+							"instructions": {
+								"0": "_MISSING_Start by completing the Wheat Farming science. This allows you to set up wheat farmers with the command tool. Unlike with berry farmers, size matters here. The larger the field, the more wheat they will harvest, with a maximum of 100 covered blocks. It takes two nights for the wheat to grow. Wheat can be turned into wheat gruel immediately.",
+								"1": "_MISSING_Then complete the Merchant's Hub science and the Pottery science. Pottery allows you to produce pots at Pottery Stations and it unlocks Water Gatherers. Place this job directly next to water to let colonists fill empty pots with water. Use <style=Player/HoldCrouch> to crawl and prevent yourself from falling into the water!",
+								"1_gamepad": "_MISSING_Then complete the Merchant's Hub science and the Pottery science. Pottery allows you to produce pots at Pottery Stations and it unlocks Water Gatherers. Place this job directly next to water to let colonists fill empty pots with water. Use <style=Player/ToggleCrouch> to crawl and prevent yourself from falling into the water!",
+								"2": "_MISSING_If no water is nearby, you can unlock the Water Pumping science for a slower but location-independent way of gathering water.",
+								"3": "_MISSING_Unlock the Porridge science and place a Firepit to turn wheat and pots of water into wheat porridge, the most efficient meal at the start of the game!"
+							},
+							"title": "_MISSING_A Better Food Source"
+						},
+						"booksofknowledge": {
+							"description": "_MISSING_Scrolls and tablets are superseded by books!",
+							"instructions": {
+								"0": "_MISSING_Unlock the Researcher science. This will allow your writers to produce bookcases by combining Tablets of Ancient Wisdom and paper. Place 10 bookcases near a Researcher's Desk to support sustainable studying. The researcher will produce scientific notes which can be used by the writer to produce Books of Knowledge."
+							},
+							"title": "_MISSING_Books of Knowledge"
+						},
+						"defenseofcivilization": {
+							"description": "_MISSING_As your colony grows, so does the monster horde that attacks you. Keep enhancing your defenses!",
+							"instructions": {
+								"0": "_MISSING_Unlock the Archery science and recruit a Fletcher to produce the Night Bow Guard job item.",
+								"1": "_MISSING_Complete the Writer science too, place a Writer's Desk and let a colonist turn parchment into Scrolls of Knowledge.",
+								"2": "_MISSING_Traps are made at the Engineer's Bench. To complete the Engineer science, you'll need gold ingots. Gold ore can be purchased at the Merchant's Hub.",
+								"3": "_MISSING_Traps can be reloaded by placing a Trap Fixer item nearby. The Trap Fixer will maintain your traps during the day. Of course, you'll need to craft ammo as well."
+							},
+							"title": "_MISSING_The Defense of Civilization"
+						},
+						"endlessgrowth": {
+							"description": "_MISSING_Hit the famous goal of one thousand colonists!",
+							"title": "_MISSING_Endless Growth"
+						},
+						"finalcountdown": {
+							"description": "_MISSING_The colony is becoming an empire.",
+							"title": "_MISSING_The Final Countdown"
+						},
+						"finalstage": {
+							"description": "_MISSING_Unlock the most advanced technology in the game.",
+							"title": "_MISSING_The Final Stage"
+						},
+						"foodsource": {
+							"description": "_MISSING_Your colony needs food. The first source will be harvesting berries.",
+							"instructions": {
+								"0": "_MISSING_Open the Stockpile (<style=Always/ToggleInventory>) and move beds to the Hot Bar in the bottom of the screen. Close the Stockpile (<style=Always/ToggleInventory> or <style=UI/Cancel>) and select your beds with <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place six beds by aiming at the ground with <style=Player/FireSecondary>.",
+								"1": "_MISSING_Select the Command Tool (<style=Player/Inventory1>) and use <style=Player/FirePrimary> on the ground where you want to place a berry farm. Move to the other end of the intended area and use <style=Player/FireSecondary> to finish the farm area. Create six farms.",
+								"1_gamepad": "_MISSING_Select the Command Tool and use <style=Player/FirePrimary> on the ground where you want to place a berry farm. Move to the other end of the intended area and use <style=Player/FireSecondary> to finish the farm area. Create six farms.",
+								"2": "_MISSING_Grab a crate from the stockpile and place it nearby. Your farmers will bring their harvests here.",
+								"3": "_MISSING_Press <style=Always/OpenColonyTab> and recruit six colonists to start farming the berries.",
+								"3_gamepad": "_MISSING_Press <style=Always/ToggleInventory> and navigate to the Colony tab using <style=UI/MenuTabLeft> and <style=UI/MenuTabRight>. Recruit six colonists to start farming the berries."
+							},
+							"title": "_MISSING_Gaining a Food Source"
+						},
+						"goldandbronzeautarky": {
+							"description": "_MISSING_Why rely on merchants when you can mine your own gold and tin?",
+							"instructions": {
+								"0": "_MISSING_Purchase an Outpost Banner and make sure to move it to your hotbar. Find a mountain with snow on its top. You can use the astrolabe to help you find it. Use the Outpost Banner to start an outpost near the top of the mountain. Place beds and build defenses.",
+								"1": "_MISSING_Dig down below the snow. First you'll encounter the level with copper and clay. Keep digging, and you'll get to a layer with iron ore and tin. Dig down even further, and you'll strike gold!",
+								"2": "_MISSING_Make sure you're actually digging below the snow. Iron can be found anywhere, but tin and gold can only be found right below snow!"
+							},
+							"title": "_MISSING_Gold and Bronze Autarky"
+						},
+						"goldenpoisonousflight": {
+							"description": "_MISSING_You're getting access to some advanced technology!",
+							"instructions": {
+								"0": "_MISSING_Gliders will speed up your travel, while Caltrops Traps slow down incoming monsters. Golden Shields are a great source of income, and poison hurts monsters over time. Poisoning them as early as possible is the best strategy! Complete the related science and produce the necessary items."
+							},
+							"title": "_MISSING_Golden Poisonous Flight"
+						},
+						"growextra": {
+							"description": "_MISSING_To properly develop your colony, you're going to need more than the bare minimum of colonists. You will need extra miners, extra farmers, extra guards and extra crafters.",
+							"instructions": {
+								"0": "_MISSING_The default colonist capacity is 100. Go to the Colony Points menu and spend 100 colony points to extend it."
+							},
+							"title": "_MISSING_Grow!"
+						},
+						"growmore": {
+							"description": "_MISSING_The more the merrier!",
+							"instructions": {
+								"0": "_MISSING_Place Copper Lockboxes and use the Colony Points menu to extend your colonist capacity to 200. Complete the Cook science and recruit a cook and a fisherman."
+							},
+							"title": "_MISSING_Grow More!"
+						},
+						"growthforgrowthssake": {
+							"description": "_MISSING_We've clearly established that more is better.",
+							"instructions": {
+								"0": "_MISSING_Keep a close eye on everything! Scale up your defenses, gather more resources, recruit more crafters and look for the bottlenecks in your production chains."
+							},
+							"title": "_MISSING_Growth for Growth's Sake"
+						},
+						"growthwoodscience": {
+							"description": "_MISSING_Your growing colony will require a source of wood, new technology, more colonists and more food.",
+							"instructions": {
+								"0": "_MISSING_Forester areas are made using the Command Tool, like berry farms.",
+								"1": "_MISSING_Navigate to the Science menu tab, find the Miner science, gather 5 stone rubble and complete it to unlock the miner job recipe at the tinkerer."
+							},
+							"title": "_MISSING_Growth, wood and science"
+						},
+						"gunpowder": {
+							"description": "_MISSING_Gunpowder is an obvious improvement to your defense industry!",
+							"instructions": {
+								"0": "_MISSING_Unlock the Science Chest, Glassblower, Gunpowder, and Handcannon sciences. To produce gunpowder, you will need sulfur, which can be mined in heaths or bought at the merchant."
+							},
+							"title": "_MISSING_Gunpowder"
+						},
+						"gutenbergrevolution": {
+							"description": "_MISSING_The printing press will increase your book production.",
+							"instructions": {
+								"0": "_MISSING_Unlock the Steel, Lead and Mineral Oil science. It will grant you access to the Printing Press science. You will need coal ore which can be found near mammoth trees and lead ore which is found in marshes."
+							},
+							"title": "_MISSING_Gutenberg Revolution"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "_MISSING_Machines can automatically carry you to different places.",
+							"instructions": {
+								"0": "_MISSING_Unlock the Rails and Elevator sciences."
+							},
+							"title": "_MISSING_Horizontal and Vertical Transportation"
+						},
+						"infrastructureofcivilization": {
+							"description": "_MISSING_You will need to distribute meals and tools, store Colony Points and crush monsters in emergencies.",
+							"instructions": {
+								"0": "_MISSING_Colonists can pick up meals and tools at your banner, but you can reduce their journeys by placing Grocery Shops and Tool Distribution Tables throughout your colony. These are unlocked by completing the science related to them.",
+								"1": "_MISSING_If you want to store more than 100 Colony Points, you'll need to place Copper Lockboxes. Placing them will increase your Threat Level!",
+								"2": "_MISSING_If monsters break through your defenses, the Sacred Failsafe is a helpful emergency measure.",
+								"3": "_MISSING_Both the Lockbox and the Failsafe need to be unlocked through science and crafted at the anvil."
+							},
+							"title": "_MISSING_The Infrastructure of Civilization"
+						},
+						"intomodernity": {
+							"description": "_MISSING_Recruit some modern workers to produce high-tech items.",
+							"instructions": {
+								"0": "_MISSING_You will need the Luxury Chest science first, which gives access to both the Tabulating Machine science and the Metal Lathe science."
+							},
+							"title": "_MISSING_Into Modernity"
+						},
+						"intothebronzeage": {
+							"description": "_MISSING_The Bronze Age gives you access to new materials and a bunch of new technology. Build some of the most important ones!",
+							"instructions": {
+								"0": "_MISSING_Start out by completing the Bronze Age science. Unlock Outposts and purchase a Banner at the Merchant's Hub. Complete the Brass science and purchase zinc at the Hub. Complete the Projectile Trap science and the Crossbows science. Purchase tin at the Hub to produce bronze ingots."
+							},
+							"title": "_MISSING_Into the Bronze Age"
+						},
+						"ironage": {
+							"description": "_MISSING_Unlock iron, another vital material.",
+							"instructions": {
+								"0": "_MISSING_The Iron Age science is a major one and requires a lot of ingredients. Iron ore can be found anywhere if you keep digging down.",
+								"1": "_MISSING_Iron ore needs to be smelted with a new fuel source: charcoal. This is made in a kiln. Iron smelting also requires bloomeries. Both of these are produced at the Advanced Job-block Crafter's Workbench."
+							},
+							"title": "_MISSING_The Iron Age"
+						},
+						"makeitbeautiful": {
+							"description": "_MISSING_Aesthetics are important for the soul!",
+							"instructions": {
+								"0": "_MISSING_The Artist science is locked behind the Tiled Roofs science, which you can access after the Stonemason science is completed. Hunting Trophies are made with the Oddity Press. It works like the mill and is locked behind its own science."
+							},
+							"title": "_MISSING_Make It Beautiful"
+						},
+						"paperpower": {
+							"description": "_MISSING_Paper is vital to civilization. There's probably some on your desk right now!",
+							"instructions": {
+								"0": "_MISSING_You'll need hemp, which can be bought at the merchant for a high price. A cheaper alternative is starting an outpost in a marsh and growing it yourself. Unlock both the Hemp and the Ropes science to get access to the Paper Production science."
+							},
+							"title": "_MISSING_Paper Power"
+						},
+						"powerofmetal": {
+							"description": "_MISSING_Metal is crucial to civilization. Set up a functioning metal production chain.",
+							"instructions": {
+								"0": "_MISSING_Return underground to your stone miners. In the top layer of dark stone blocks, you can find blocks of copper ore. Copper ore is red. Place miner jobs on top of these to let colonists mine copper from them.",
+								"1": "_MISSING_Complete the Smelter science. Do you lack stone tools? Recruit more tinkerers to speed up their production!",
+								"2": "_MISSING_Your tinkerers can now produce the next job blocks: a Furnace for smelters, and a Splitting Stump for woodcutters. The woodcutter will turn planks into firewood, which your smelter needs to convert copper ore into copper ingots."
+							},
+							"title": "_MISSING_The Power of Metal"
+						},
+						"powerofpower": {
+							"description": "_MISSING_Recruiting over 25 colonists and completing science generates \"Threat\". Your Threat level is shown in the top right. A higher Threat level means more, stronger monsters will try to attack your colony in the night. Stop them from reaching your banner and your sleeping colonists!",
+							"instructions": {
+								"0": "_MISSING_The Night Slinger Guard item is made by tinkerers or in the mill. Place the item on the ground and it will create a guard job. Slingers will throw sling bullets at monsters.",
+								"1": "_MISSING_Monsters will attack your colony from all sides, and it's helpful to funnel them towards distinct openings. Build walls that are at least two blocks tall, or dig moats, to prevent monsters from crossing an area.",
+								"2": "_MISSING_Make sure you don't fully block all access to your banner! This will trigger Siege Mode.",
+								"3": "_MISSING_While holding the Banner Tool, a deep shadow will cover the area that's further away from your banner. This is the area where monsters will spawn. It's okay for colonists to work outside of your walls or in this shadowed area, as long as they retreat to a safe space during the night."
+							},
+							"title": "_MISSING_The Power of Power"
+						},
+						"remotecontrol": {
+							"description": "_MISSING_Learn to control your colony from a top-down perspective and let colonists do your construction work.",
+							"instructions": {
+								"0": "_MISSING_Unlock the Overseer's Desk science and the Digger science. Place the Overseer's Desk and use it to switch to a top-down view. Use the command tool from either the top-down view or the first-person view and go to Construction. Use 'Remove All' to define an area that will be completely removed. Place Job Spots around the area and they will automatically recruit construction workers that will execute this construction assignment."
+							},
+							"title": "_MISSING_Remote Control"
+						},
+						"setupcolony": {
+							"description": "_MISSING_Place the Banner to receive your first Quest!",
+							"instructions": {
+								"0": "_MISSING_Place the Banner to receive your first Quest! Select the Banner Tool (<style=Player/Inventory2>) and use <style=Player/FireSecondary> on the ground. Finding a place with flat areas for farming and nearby water is ideal.",
+								"0_gamepad": "_MISSING_Place the Banner to receive your first Quest! Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground. Finding a place with flat areas for farming and nearby water is ideal.",
+								"1": "_MISSING_Use <style=Player/MoveKeyboard> and <style=Player/Look> to navigate the world.",
+								"1_gamepad": "_MISSING_Use <style=Player/MovePad> and <style=Player/Look> to navigate the world."
+							},
+							"title": "_MISSING_Set up a colony"
+						},
+						"startofprestige": {
+							"description": "_MISSING_Unlock the Prestige Chest and produce one!",
+							"title": "_MISSING_The Start of Prestige"
+						},
+						"stretchieststretchgoal": {
+							"description": "_MISSING_Finish Prestige V.",
+							"title": "_MISSING_The Stretchiest Stretch Goal"
+						},
+						"wealthofnations": {
+							"description": "_MISSING_You'll need smiths, textiles, leather and trade.",
+							"instructions": {
+								"0": "_MISSING_Make sure you have wheat farming and the Merchant's Hub unlocked. Let a colonist craft a Merchant's Hub at the new Job-block Crafter's Workbench. Place the Merchant's Hub, sell some copper ingots and buy animal carcasses, which are required to unlock the Tanner science. You'll need linen to craft the Tanner's Table, which can be made or purchased at the Merchant's Hub. Recruit a tanner to convert animal carcasses into raw meat, skin and eventually leather.",
+								"1": "_MISSING_Unlock the Tailor science, recruit flax farmers, and place a Tailor Shop to recruit a tailor who converts flax into linen.",
+								"2": "_MISSING_Now you should have everything you need to complete the Anvil science, recruit a copper smith and craft the new tools!"
+							},
+							"title": "_MISSING_The Wealth of Nations"
+						},
+						"yourethemiller": {
+							"description": "_MISSING_The mill provides you with basic items. Place it and use it!",
+							"instructions": {
+								"0": "_MISSING_The mill appeared in your hotbar after starting your colony. Place it in your colony.",
+								"1": "_MISSING_Walk up the stairs of the mill and <style=Player/FireSecondary> on the internal mechanism to open its menu. Add crates, miner jobs and beds to its crafting queue. Wait until the mill is finished and collect the results by pressing the buttons in the bottom right."
+							},
+							"title": "_MISSING_You're the Miller"
+						},
+						"yourfirstlibrary": {
+							"description": "_MISSING_A civilization can't develop new knowledge without properly storing old knowledge.",
+							"instructions": {
+								"0": "_MISSING_Scrolls of Knowledge can be turned into Scroll Shelves after completing the Scribe science. A scribe will need at least 10 Scroll Shelves to be able to work constantly. The scrolls on the shelves are removed on use, but after a while they will be automatically restocked and usable again. The scribe will turn clay tablets into Tablets of Ancient Wisdom."
+							},
+							"title": "_MISSING_Your First Library"
+						}
+					},
+					"empty": "_MISSING_No quests are currently available.",
+					"header": "_MISSING_Quests",
+					"instructionsheader": "_MISSING_Instructions",
+					"notifications": {
+						"message": "_MISSING_You completed the quest '{0}'. Open the Quests tab to review it and claim the reward if one is available.",
+						"openbutton": "_MISSING_Open Quest",
+						"preview": "_MISSING_{0}",
+						"summarytype": "_MISSING_Quest Complete"
+					},
+					"progress": "_MISSING_Progress",
+					"rewardheader": "_MISSING_Reward",
+					"statusavailable": "_MISSING_Available",
+					"statuscompleted": "_MISSING_Completed",
+					"statusinprogress": "_MISSING_In Progress",
+					"statusunclaimed": "_MISSING_Unclaimed",
+					"table": {
+						"action": "_MISSING_Action",
+						"quest": "_MISSING_Quest",
+						"select": "_MISSING_Select",
+						"status": "_MISSING_Status"
+					}
+				},
 				"science": {
 					"available": "Доступно",
 					"completed": "Вивчено",
@@ -1031,7 +1393,8 @@
 				"description": "Виберіть тип елемента для використання",
 				"header": "Вибір предмета",
 				"headerchosen": "_MISSING_Chosen",
-				"headerselectables": "_MISSING_Selectables"
+				"headerselectables": "_MISSING_Selectables",
+				"toggleshowonlyknown": "_MISSING_Show only known items"
 			},
 			"limits": {
 				"allreset": "Скинути все",
@@ -1072,7 +1435,6 @@
 				"showgoal": "_MISSING_Mark goals"
 			},
 			"quickstart": {
-				"closetoggle": "Не показувати знову",
 				"next": "Наст. стр.",
 				"previous": "Попр. стр."
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Основи",
 				"text1_2": "_MISSING_Start by finding a good spot for your first colony. Having water and flat fields for farming nearby is recommended. A Banner will be the center of your colony.",
 				"text2_2gamepad": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/HotBarUp> and <style=Player/HotBarDown>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
-				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory1>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
-				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Player/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
+				"text2_2keyboard": "_MISSING_Select the Banner Tool in the inventory below using <style=Player/Inventory2>. Place it with <style=Player/FireSecondary> while aiming at the ground with the Banner Tool selected. Once in a Colony, the Banner Tool displays a deep shadow wherever monsters may spawn later.",
+				"text3_2": "_MISSING_Place beds to be able to recruit colonists. Press <style=Always/ToggleInventory> to open the interface. Move beds from the stockpile to the hotbar below. With the bed selected, use <style=Player/FireSecondary> while aiming at ground to place a bed.",
 				"text4": "Відкрийте інтерфейс і перейдіть на сторінку 'Колонія'. Натисніть 'найняти', щоб найняти колоніста. Колоністи автоматично наймаються на вільну роботу якщо така є."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Їжа та ліжка",
 				"text1": "Колоністам потрібен 1 прийом їжі на день. Вони беруть їжу біля банера або в найближчому продуктовому магазині. Без їжі колоністи голодують. Вербування нових колоністів коштує кілька разів поїсти.",
 				"text2_2gamepad": "_MISSING_The berry farmer is the first food source. Select the Command Tool (the first inventory slot). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
-				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory0>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
+				"text2_2keyboard": "_MISSING_The berry farmer is the first food source. Select the Command Tool (<style=Player/Inventory1>). <style=Player/FirePrimary> to open it and select the berry farmer. <style=Player/FireSecondary> to start defining the berry farm, then <style=Player/FireSecondary> again elsewhere to finish. You’ll need quite a lot of these!",
 				"text3_2": "_MISSING_To start producing beds, you’ll have to craft a tinkerer’s table. Holding <style=Player/FirePrimary> while aiming at blocks will allow you to dig down to gather the required stone rubble.",
 				"text4": "Клацніть на іконку столу ремісника зліва від складу, щоб створити його. Розмістіть його так само, як ви розмістили ліжко. Як і у випадку з ягідною фермою, безробітні колоністи автоматично візьмуться за цю роботу."
 			},
@@ -1360,8 +1722,13 @@
 			"play_coop": "Грати в кооператив",
 			"play_solo": "Грати самостійно",
 			"selectedfolder": "Обраний світ: {0}",
+			"serverlistfriends": "_MISSING_Friends Can Join",
+			"serverlistfriendstooltip": "_MISSING_Allows your friends to find and join your game through their friends menu.",
+			"serverlistlan": "_MISSING_Local Network Discovery",
+			"serverlistlantooltip": "_MISSING_If this is turned on, people connected to the same local network (like the same Wi-Fi) can see your server automatically and connect directly to it instead of going through the internet. This can make the connection faster and smoother, but everyone needs to be on the same network.",
+			"serverlistpublicly": "_MISSING_Public Server Listing",
+			"serverlistpubliclytooltip": "_MISSING_Your server will appear in the public server list so anyone can find and join it. Use a password if you want to limit access.",
 			"servername": "Ім'я сервера",
-			"serverport": "Порт сервера",
 			"typegenerateworld": "Сгенерувати світ",
 			"typeworkshop": "Світ із Майстерні Steam",
 			"world_folder": "Папка",
@@ -1370,6 +1737,50 @@
 			"worldname": "Ім'я",
 			"worldname_long": "Ім'я світу",
 			"worldseed": "Зерно світу"
+		},
+		"splashscreen": {
+			"header": "_MISSING_Thanks for purchasing and playing Colony Survival!",
+			"indexingfiles": "_MISSING_Indexing {0} / {1} files",
+			"scanningcandidates": "_MISSING_Scanning local files... found {0} candidates",
+			"text0": "_MISSING_The game is still in active development. Problems will be fixed, recipes will be balanced and glitches will be eliminated. Some “gaps in gameplay” are preparations for future updates.",
+			"text1": "_MISSING_Older versions of the game are available to play. To do this, right-click Colony Survival in the Steam Library, go to “properties” and visit the “betas” page.",
+			"text2": "_MISSING_We regularly publish Friday Blogs. They can be found on the Colony Survival Steam Store Page. Each blog contains an invite to join our Discord Server. It’s the best way to get in contact with us!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "_MISSING_Capture Left Screen",
+				"capture_right": "_MISSING_Capture Right Screen",
+				"play_alone": "_MISSING_Play Alone",
+				"swap_inputs": "_MISSING_Swap inputs",
+				"swap_screens": "_MISSING_Swap screens"
+			},
+			"devices": {
+				"dualsense": "_MISSING_DualSense controller",
+				"gamepad": "_MISSING_Gamepad ({0})",
+				"keyboard_mouse": "_MISSING_Keyboard and mouse",
+				"playstation": "_MISSING_PlayStation controller",
+				"switch": "_MISSING_Nintendo Switch controller",
+				"xbox": "_MISSING_Xbox controller"
+			},
+			"header": "_MISSING_Split Screen Setup",
+			"header_recovery": "_MISSING_Reassign split-screen devices",
+			"screens": {
+				"left": "_MISSING_Left Screen",
+				"right": "_MISSING_Right Screen"
+			},
+			"status": {
+				"apply_failed": "_MISSING_Failed to apply the split-screen setup.",
+				"assign_input": "_MISSING_Assign input to {0}.",
+				"capture_input": "_MISSING_Capture input for {0}.",
+				"one_player_ready": "_MISSING_One player ready. Add a gamepad for split-screen, or apply one-player mode.",
+				"press_input": "_MISSING_Press a button on the input to use for {0}.",
+				"ready": "_MISSING_Ready to apply the split-screen setup."
+			},
+			"summary": {
+				"assigned": "_MISSING_{0}\n{1}\nPlayer {2}",
+				"assigned_primary": "_MISSING_{0}\n{1}\nPlayer {2} (Primary profile)",
+				"unassigned": "_MISSING_{0}\nNot assigned"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Колоніст працюватиме тут як {0}",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Дошка статистики",
 		"statuefarmer": "_MISSING_Statue of the Hopeful Farmer",
 		"statuemonster": "_MISSING_Statue of Military Triumph",
+		"statuevictory": "_MISSING_Statue of Victory",
 		"steelingot": "Сталевий злиток",
 		"steellockbox": "Сталева скриня",
 		"steelparts": "Сталеві деталі",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Флакон з азотною кислотою",
 		"vialsulphuricacid": "Флакон з сірчаною кислотою",
 		"wallpaintingitem": "_MISSING_Painting",
+		"wallpaintingitemlizzy": "_MISSING_Painting of Lizzy",
+		"wallpaintingitempip": "_MISSING_Painting of Pip",
 		"water": "Вода",
 		"watergatherer": "Збирач води",
 		"waterpump": "Водяна помпа",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "Швидкий спосіб розколоти деревину на дрова",
 		"statuefarmer": "_MISSING_Gratitude for human labour",
 		"statuemonster": "_MISSING_Remembering victory over our enemies",
+		"statuevictory": "_MISSING_In honour of you, the player! Our sincere congratulations on reaching this impressive milestone, and thanks for extensively playing Colony Survival",
 		"stonemasonworkbench": "Створює п'ятдесят відтінків цегли",
 		"stove": "Використовується для наповнення навколишнього простору смачними запахами",
 		"sulfur": "Знайдено глибоко під землею у вересовому біомі",
@@ -1987,6 +2402,8 @@
 		"torch": "І хай буде світло!",
 		"trader": "Несподівано використовується для торгівлі",
 		"wallpaintingitem": "_MISSING_Art for your walls",
+		"wallpaintingitemlizzy": "_MISSING_In honour of Lizzy, 2006-2022. Pipliz is named after her",
+		"wallpaintingitempip": "_MISSING_In honour of Pip, 2014-2026. Pipliz is named after her",
 		"water": "Затопить все, якщо випустити на волю",
 		"waterpump": "Дозволяє набирати воду, не перебуваючи біля води",
 		"watersponge": "Видаляє воду у своїй локальній області глибоко реалістичним способом",

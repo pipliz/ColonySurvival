@@ -1,0 +1,32 @@
+0.18.0.0 (2026-08-20)
+
+Features
+- Splitscreen mode. Start in singleplayer or co-op, and then use the splitscreen menu in the escape menu options
+-- Supports two players, splitting the screen in left/right
+- With the above, Remote Player Together support has been added
+- Clicking on the banner of a non-owned colony in multiplayer now gives you the option to request joining it
+- Crouching now reduces player height
+
+Fixes
+- Fixed gamepad controls missing manual stockpile <-> hotbar switch button (now the north button)
+- Fixed gamepad controls missing the 'secondary' stockpile action (now the west button)
+- Use the proper text rendering method for character player names
+- Underwater effect now renders properly when partially underwater
+- Fix area outlines disappearing at the edge of the screen too eagerly
+- Remove unread science completion notification for the player completing the science
+- Fix potential client notification state reset upon a variety of colony-related actions like renaming one
+- Fix wooden stairs and roofs using the stone place/removal audio effects
+- Fix swapped left/right input breaking topdown UI clicks
+- Swap left/right input now also applies to gamepad
+- Fix blueprint flipping with rail corners giving wrong corners
+- Fix a water rendering issue triggered when water was hidden due to world slicing in topdown view
+- Fix a "chunks stop rendering" issue mostly appearing at the top of the screen when zoomed out to the max in topdown view
+- Fix the blueprint scanner not updating the size text during the later gizmo-based adjustment phase
+- Fix "Made in: " tooltip icon not scaling with UI Scale settings
+- Fix issue walking up stairs into door-shaped gaps and getting stuck
+- Fix 'floating' along wall edges when crouching and removing supporting blocks
+- Fix cases of some bits of UI/text being cut off on the right side of the colony tab
+
+More internal things
+- Added filetable update/remove methods to the server
+- Optimised localisation storage a bit to reduce RAM use

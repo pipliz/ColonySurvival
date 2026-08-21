@@ -55,7 +55,10 @@
 			"deletecolonydescription": "删除殖民地的最后一面旗帜会移除所有NPC，且殖民地将无法使用。若确定要删除，请在下方输入“delete”。",
 			"header": "旗帜选项",
 			"noconfirmationdelete": "未确认，无视删除命令",
-			"placementfail": "无法在此地点放置旗帜"
+			"placementfail": "无法在此地点放置旗帜",
+			"requestjoin": "申请加入",
+			"requestpending": "你加入{0}的申请尚待处理。",
+			"requestsent": "你加入{0}的申请已发送。"
 		},
 		"bannerplacementpopup": {
 			"activecolony": "活跃殖民地：{0}",
@@ -125,13 +128,18 @@
 				"popupheader": "创建哨站",
 				"selectparent": "选择主殖民地"
 			},
+			"overlaycounters": {
+				"open": "配置物品追踪器"
+			},
 			"ownership": {
 				"action": "操作",
 				"connectedplayers": "已连接玩家",
 				"currentowners": "当前所有者",
 				"follower": "追随者",
 				"invite": "添加为殖民地所有者",
+				"invitepending": "{0}有一个待处理的{1}加入邀请。",
 				"kick": "踢出",
+				"kickfromcolony": "踢出殖民地",
 				"leader": "领袖",
 				"leave": "退出殖民地",
 				"name": "名称",
@@ -230,7 +238,6 @@
 				"local1": "正在这台电脑上搜索单人服务器",
 				"local2": "正在这台电脑上搜索在线服务器",
 				"password": "需要密码",
-				"steamdirect": "正在尝试建立直接连接",
 				"steamp2p": "正在尝试建立点对点连接",
 				"timeout": "连接超时，5秒后将返回主菜单。",
 				"waitingserver": "正在后台启动服务器"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "移动",
 			"opencolonytab": "打开殖民地选项卡",
+			"openplayerslist": "打开玩家列表",
 			"openquickstart": "打开帮助菜单",
 			"placemultipleareas": "连锁放置施工区域",
 			"resetfieldofview": "重置视场（作弊码）",
@@ -343,7 +351,8 @@
 			"info": "信息",
 			"quitdesktop": "桌面",
 			"quitmain": "主菜单",
-			"settings": "设置"
+			"settings": "设置",
+			"splitscreensetup": "分屏"
 		},
 		"failsafe": {
 			"current": "当前神圣点数储备：{0} / {1}",
@@ -371,6 +380,7 @@
 			"apply": "应用",
 			"back": "返回",
 			"close": "关闭",
+			"colonydate": "第{0}天，{1:00}:{2:00}",
 			"delete": "删除",
 			"description": "描述",
 			"edit": "编辑",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "殖民者数量",
 			"connectlocal": "连接到本地服务器",
-			"header_friends": "好友",
-			"header_history": "历史记录",
 			"header_internet": "互联网",
 			"header_lan": "局域网",
 			"ipaddress": "地址",
 			"join": "加入",
 			"mods": "模组",
+			"offline": "离线",
 			"passworded": "设有密码",
 			"refresh2": "刷新",
 			"refreshing": "正在刷新……",
 			"refreshquick": "快速刷新",
 			"selectedserver": "已选服务器",
+			"serverfavorite": "收藏",
+			"serverid": "服务器ID",
 			"serverping": "延迟",
 			"serverplayers": "玩家",
 			"servers": "服务器",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "删除通知",
+			"details": {
+				"back": "返回",
+				"delete": "删除",
+				"empty": "暂无通知记录。",
+				"header": "{0}——{1}",
+				"next": "下一页",
+				"page": "第{0}/{1}页——共{2}条",
+				"previous": "上一页"
+			},
+			"generic": {
+				"accept": "接受",
+				"decline": "拒绝",
+				"kicked": {
+					"message": "你已被移出{0}。",
+					"title": "已被移出殖民地"
+				},
+				"management": {
+					"summarytype": "管理",
+					"title": "管理"
+				},
+				"ownerinvite": {
+					"accepted": "{0}接受了加入{1}的邀请。",
+					"declined": "{0}拒绝了加入{1}的邀请。",
+					"invalid": "此邀请已失效。",
+					"message": "你受邀加入{0}。",
+					"preview": "你受邀加入{0}。",
+					"summarytype": "邀请",
+					"title": "邀请"
+				},
+				"ownerjoinrequest": {
+					"accepted": "你加入{0}的申请已通过。",
+					"declined": "你加入{0}的申请未通过。",
+					"message": "{0}申请加入{1}。",
+					"preview": "{0}想要加入{1}。",
+					"summarytype": "加入申请",
+					"title": "殖民地加入申请"
+				}
+			},
 			"header": "通知",
 			"missingplayerammo": "<color=#ff2323>使用{0}需要物品栏中存在{1}！</color>",
 			"npc_died": {
-				"banner": "旗帜下有怪物",
-				"command": "命令用法",
-				"excess": "此后又有{0}人死亡（匿名）。",
-				"individual": "{0}：一名职业为{1}的殖民者死亡，死因：{2}",
+				"individual2_banner": "{0}{1}在旗帜旁因怪物遇害。",
+				"individual2_command": "{0}{1}因命令遇害。",
+				"individual2_monster": "{0}{1}因怪物遇害。",
+				"individual2_npc": "{0}{1}因殖民者遇害。",
+				"individual2_player": "{0}{1}因玩家遇害。",
+				"individual2_starving": "{0}{1}饿死了。",
+				"individual2_trap": "{0}{1}因误入陷阱身亡。",
+				"individual2_unknown": "{0}{1}死因不明。",
 				"main": "{1}哨站已有{0}名殖民者死亡！",
-				"misc": "未知原因",
-				"monster": "怪物",
-				"npc": "殖民者",
-				"player": "玩家",
-				"starving": "饥饿",
-				"trap": "陷阱"
+				"summarymultiple": "{1}中有{0}人死亡",
+				"summarysingle": "{0}中有1人死亡",
+				"summarytype": "殖民者死亡"
+			},
+			"overview": {
+				"empty": "暂无通知。",
+				"open": "打开"
+			},
+			"personal": {
+				"header": "个人消息"
 			},
 			"science": {
-				"entry": "{0}：已完成{1}",
-				"main": "科技已完成！"
+				"entry2": "已完成{0}",
+				"main": "科技已完成！",
+				"summarycount": "{0}已完成",
+				"summarylatest": "{0}已完成",
+				"summarytype": "科技"
 			},
+			"showmarkersonpage": "标记世界地点",
 			"siegemode": {
-				"disabled": "{0}：已退出围攻模式",
-				"enabled": "{0}：已进入围攻模式",
-				"main": "{0}哨站已触发围攻模式！"
+				"disabled2": "围攻模式已终止",
+				"disabledsummary": "{0}的围攻模式已终止",
+				"enabled2": "围攻模式已启用！旗帜与外界之间没有供殖民者使用的通行路径。{0}内每产生5点威胁，围攻模式每小时将消耗一份食物。\n尽快重新建立对外通路！",
+				"enabledsummary": "{0}的围攻模式已开始",
+				"main": "{0}哨站已触发围攻模式！",
+				"summarytype": "围攻模式"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "作家"
 			}
 		},
+		"playerlist": {
+			"action": "操作",
+			"activecolony": "活跃殖民地",
+			"header": "在线玩家",
+			"id": "ID",
+			"noonlineplayers": "暂无在线玩家",
+			"ping": "延迟",
+			"pingvalue": "{0}毫秒",
+			"player": "玩家",
+			"totalcolonists": "殖民者总人数"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "关闭",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "制作：",
 				"madeintooltippurchasable": "可花费{0}点数在商人中心购买",
 				"noactivecolony": "无活跃殖民地！",
+				"quests": {
+					"claimreward": "领取奖励",
+					"conditiontitles": {
+						"beds": "已放置床铺",
+						"crafted": "已制作{0}",
+						"crates": "已放置木箱",
+						"gathered": "已开采{0}",
+						"npctype": "已招募{0}",
+						"placed": "已放置{0}",
+						"purchased": "已购买{0}",
+						"sciencecompleted": "已完成{0}科技",
+						"totalcolonists": "殖民者"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "现代技术可用于制造威力强劲的武器。",
+							"instructions": {
+								"0": "解锁相关科技。"
+							},
+							"title": "高级武器"
+						},
+						"automatedcrafting": {
+							"description": "让你的殖民者去开采和制作吧！",
+							"instructions": {
+								"0": "瞄准草或土的同时按住<style=Player/FirePrimary>可移除此方块。往下挖掘石头，直到发现深色石块。选择矿工工作物品后，将其放置在深色石上。",
+								"1": "地下环境昏暗。选择并放置火把，用于照明。手握火把能照亮周边。手持其他物品时，按<style=Player/ToggleTorch>可启用随身火把。",
+								"2": "挖掘石头可获得碎石。在深色石处工作的矿工也会为你提供碎石。现在，你可以通过左侧栏中的图标进入仓库标签页，使用碎石制作工匠工作台。你也可以在风车里完成此操作。",
+								"3": "在殖民地中放置工匠工作台。你可以按<style=Player/FireSecondary>与工作台互动，查看工匠可制作的物品。",
+								"4": "招募足够多的殖民者来承担新工作。他们需要住宿和食物，所以你需要不断招募浆果农民，保障新殖民者的生活供给！"
+							},
+							"title": "自动化物品制作"
+						},
+						"betterfoodsource": {
+							"description": "浆果农民是获取食物的简便来源，但生产速度较慢。小麦可用于制作更能充饥的食物，不过配套建设流程比较繁琐。",
+							"instructions": {
+								"0": "首先，你需要研究小麦耕作科技，解锁后就能使用命令工具分配小麦农民。与浆果农民不同，农田规模至关重要。农田越大，小麦农民收割的小麦就越多，最多可以覆盖100个地块。小麦的生长周期为两晚，收获后可以立即加工成小麦稀饭。",
+								"1": "接下来，你需要研究商人中心科技和陶器科技。完成陶器科技研究后，可以在陶艺站生产罐子。这项科技还会为你解锁采水工。直接将该工作放置在水源附近，殖民者就会用空罐子打水。使用<style=Player/HoldCrouch>匍匐前进，以免自己意外落水！",
+								"1_gamepad": "接下来，你需要研究商人中心科技和陶器科技。完成陶器科技研究后，可以在陶艺站生产罐子。这项科技还会为你解锁采水工。直接将该工作放置在水源附近，殖民者就会用空罐子打水。使用<style=Player/ToggleCrouch>匍匐前进，以免自己意外落水！",
+								"2": "如果附近没有水源，你可以解锁抽水科技。这种收集用水的方法虽效率偏低，却不受地点限制。",
+								"3": "解锁粥科技后，放置一个火坑，再使用小麦和储水罐子熬制小麦粥，这可是游戏前期最能充饥的食物！"
+							},
+							"title": "更优质的食物来源"
+						},
+						"booksofknowledge": {
+							"description": "淘汰卷轴和书板，改用书籍！",
+							"instructions": {
+								"0": "解锁研究员科技。之后，作家可以使用古代智慧书板和纸生产书柜。在研究台附近放置10个书柜，支持长期研究。研究员会生产科研笔记，供作家制作知识之书。"
+							},
+							"title": "知识之书"
+						},
+						"defenseofcivilization": {
+							"description": "随着殖民地不断发展，来袭的怪物群也会逐渐变强。务必持续完善防御工事！",
+							"instructions": {
+								"0": "解锁箭术科技后，招募弓箭匠，生产夜间弓守卫工作物品。",
+								"1": "同步研究作家科技。完成后，放置一张作家写字台，指派殖民者将羊皮纸加工成知识卷轴。",
+								"2": "你可以在工程师工作台上制作陷阱。研发工程师科技需要消耗金锭。金矿石可以在商人中心购得。",
+								"3": "在附近放置陷阱工物品可以重新布设陷阱。陷阱工会在日间维护陷阱。当然，你还需要制作弹药。"
+							},
+							"title": "文明防御工事"
+						},
+						"endlessgrowth": {
+							"description": "达成一千名殖民者的辉煌目标！",
+							"title": "生生不息"
+						},
+						"finalcountdown": {
+							"description": "殖民地正逐步发展成为强盛帝国。",
+							"title": "终末倒计时"
+						},
+						"finalstage": {
+							"description": "解锁游戏中最先进的技术。",
+							"title": "巅峰阶段"
+						},
+						"foodsource": {
+							"description": "殖民地离不开食物。第一种食物来源是采摘浆果。",
+							"instructions": {
+								"0": "打开仓库（<style=Always/ToggleInventory>），将床铺移入底部的快捷栏。关闭仓库（<style=Always/ToggleInventory>或<style=UI/Cancel>），使用<style=Player/HotBarUp>和<style=Player/HotBarDown>选择床铺。瞄准地面并使用<style=Player/FireSecondary>放置六张床铺。",
+								"1": "选择命令工具（<style=Player/Inventory1>），在想要放置浆果农场的地面上使用<style=Player/FirePrimary>划定起点，再移动到目标区域的另一端，使用<style=Player/FireSecondary>确认农场区域。建设六个农场。",
+								"1_gamepad": "选择命令工具，在想要放置浆果农场的地面上使用<style=Player/FirePrimary>划定起点，再移动到目标区域的另一端，使用<style=Player/FireSecondary>确认农场区域。建设六个农场。",
+								"2": "从仓库取出木箱后，将其放置在农场附近。农民会把采收的浆果存入箱内。",
+								"3": "按<style=Always/OpenColonyTab>并招募六名殖民者，着手开展浆果耕作。",
+								"3_gamepad": "按<style=Always/ToggleInventory>，并使用<style=UI/MenuTabLeft>和<style=UI/MenuTabRight>导航到殖民地标签页。招募六名殖民者，着手开展浆果耕作。"
+							},
+							"title": "获取食物来源"
+						},
+						"goldandbronzeautarky": {
+							"description": "既然能自主开采黄金和锡，何须仰仗商人？",
+							"instructions": {
+								"0": "购买一面哨站旗帜，并确保将其移入快捷栏。寻找积雪封顶的高山。你可以使用星盘辅助定位，在山顶附近使用哨站旗帜建立哨站。安放床铺，修筑防御工事。",
+								"1": "凿穿积雪向下掘进。你会先遇到铜和黏土层，再往下挖则会出现铁矿石和锡矿石层。如果继续下探，就能挖到黄金！",
+								"2": "必须在雪地的正下方进行挖掘。铁矿随处可得，但锡和黄金只有雪底下才有！"
+							},
+							"title": "黄金青铜自给自足"
+						},
+						"goldenpoisonousflight": {
+							"description": "你正在接触一些先进技术！",
+							"instructions": {
+								"0": "滑翔机会加快你的移动速度，而铁蒺藜陷阱能拖慢来袭怪物的步伐。金盾是不错的收入来源，同时毒药会对怪物造成持续伤害。尽早使怪物中毒才是上上策！研究对应科技，生产必要物品。"
+							},
+							"title": "金色剧毒飞行"
+						},
+						"growextra": {
+							"description": "若想殖民地稳步发展，仅靠维持最低殖民者人口远远不够。你需要扩充矿工、农民、守卫和制作者。",
+							"instructions": {
+								"0": "默认殖民者人口上限是100人。前往殖民地点数菜单，花费100点殖民地点数提升人口上限。"
+							},
+							"title": "全力扩张！"
+						},
+						"growmore": {
+							"description": "多多益善！",
+							"instructions": {
+								"0": "放置铜锁箱，使用殖民地点数菜单将殖民者人口上限提升到200人。研究厨师科技，招募厨师和渔民。"
+							},
+							"title": "持续扩张！"
+						},
+						"growthforgrowthssake": {
+							"description": "道理显而易见：多即是好。",
+							"instructions": {
+								"0": "密切管控每个环节！扩大防御工事规模，收集更多资源，招募更多制作者，排查生产链中的阻碍。"
+							},
+							"title": "纯粹的发展主义"
+						},
+						"growthwoodscience": {
+							"description": "日益发展的殖民地需要木材资源、新技术，以及更多殖民者和食物。",
+							"instructions": {
+								"0": "林务员区域与浆果农场一样，需要使用命令工具来划定。",
+								"1": "导航到科技菜单标签页，找到矿工科技，再收集5块碎石。完成研究后，可在工匠处解锁矿工工作配方。"
+							},
+							"title": "发展、木材与科技"
+						},
+						"gunpowder": {
+							"description": "火药显然是防御工业的一次重大飞跃！",
+							"instructions": {
+								"0": "解锁科技箱子、玻璃工、火药和手铳科技。生产火药需要硫磺。你可以在荒野中开采或向商人购买。"
+							},
+							"title": "火药"
+						},
+						"gutenbergrevolution": {
+							"description": "印刷机将提高书籍产量。",
+							"instructions": {
+								"0": "解锁钢、铅和矿物油科技后，就能研究印刷机科技。你需要煤矿石（可在巨树附近找到）和铅矿石（可在沼泽中找到）。"
+							},
+							"title": "古腾堡革命"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "机器可以自动把你送往不同的地点。",
+							"instructions": {
+								"0": "解锁轨道和电梯科技。"
+							},
+							"title": "纵横运输系统"
+						},
+						"infrastructureofcivilization": {
+							"description": "你需要分配食物和工具，储存殖民地点数，还要在危急时刻消灭怪物。",
+							"instructions": {
+								"0": "殖民者可以在旗帜处领取食物和工具，而且你可以在殖民地各处放置杂货店和工具分发台，以此缩短殖民者的往返路程。研究对应科技后即可解锁。",
+								"1": "若想储存100点以上的殖民地点数，需要放置铜锁箱。放置这些箱子会提升你的威胁度！",
+								"2": "如果怪物突破了防御工事，神圣机关能发挥应急防护作用。",
+								"3": "锁箱和机关需通过科技解锁，并可在铁砧上制作。"
+							},
+							"title": "文明基础设施"
+						},
+						"intomodernity": {
+							"description": "招募一些现代工人，生产高科技物品。",
+							"instructions": {
+								"0": "解锁制表机科技和金属车床科技需要先研究奢侈箱子科技。"
+							},
+							"title": "迈入现代纪元"
+						},
+						"intothebronzeage": {
+							"description": "青铜时代为你带来了新材料和众多新技术。赶紧建设核心设施吧！",
+							"instructions": {
+								"0": "先研究青铜时代科技。解锁哨站，在商人中心购买旗帜。完成黄铜科技研究后，前往中心购买锌。研究射弹陷阱科技和弩科技。在中心购买锡，用于生产青铜锭。"
+							},
+							"title": "迈入青铜时代"
+						},
+						"ironage": {
+							"description": "解锁铁，这是另一种重要材料。",
+							"instructions": {
+								"0": "铁器时代科技是一项主要科技，研发原料需求量大。只要一直往下挖，到处都能找到铁矿石。",
+								"1": "冶炼铁矿石需要使用新型燃料资源：木炭。炭窑产出木炭。熔炼铁还需要锻铁炉。可在高级工作块制作者工作台上生产炭窑和锻铁炉。"
+							},
+							"title": "铁器时代"
+						},
+						"makeitbeautiful": {
+							"description": "美感滋养心灵！",
+							"instructions": {
+								"0": "使用艺术家科技需要先解锁铺砖屋顶科技。研究石匠科技后即可激活铺砖屋顶科技。需使用奇物压制机制作狩猎战利品，该设备原理与风车一样，需先单独解锁对应的前置科技。"
+							},
+							"title": "创造美好"
+						},
+						"paperpower": {
+							"description": "纸张是文明发展的根基。搞不好现在你的桌子上就有些纸哦！",
+							"instructions": {
+								"0": "你需要大麻。这种资源可以在商人那里以高价采购。更经济的做法是在沼泽中建设哨站，自行种植。解锁大麻和绳索科技后，就能研究造纸科技。"
+							},
+							"title": "纸张的力量"
+						},
+						"powerofmetal": {
+							"description": "金属对文明至关重要。搭建一条运作良好的金属生产链。",
+							"instructions": {
+								"0": "回到地下矿工身边。你可以在深色石块上层找到呈红色的铜矿石块。在这些矿石上放置矿工工作，让殖民者从中开采铜。",
+								"1": "研究熔炼工科技。石制工具短缺？招募更多工匠，加快生产速度！",
+								"2": "工匠现在可以生产下一级工作块：供熔炼工使用的熔炼炉，以及供伐木工使用的劈柴树桩。伐木工会将木板加工成木柴，供冶炼工把铜矿石炼成铜锭。"
+							},
+							"title": "金属的力量"
+						},
+						"powerofpower": {
+							"description": "招募25名以上殖民者，以及研究科技，都会产生“威胁”。你的威胁度显示在右上角。威胁度越高，夜间侵袭殖民地的怪物就会越多、越强。别让它们靠近你的旗帜和熟睡的殖民者！",
+							"instructions": {
+								"0": "夜间投石器守卫物品可由工匠制作，也能在风车中制作。将该物品放置在地面上，生成守卫工作。投石者会向怪物投掷投石器弹药。",
+								"1": "怪物会从四面八方围攻殖民地，把它们引到特定缺口处这一招十分管用。筑起至少两个方块高的城墙，或是挖掘壕沟，阻止怪物穿越区域。",
+								"2": "千万别把通往旗帜的通路全部堵死！这将触发围攻模式。",
+								"3": "手持旗帜工具时，远离旗帜的区域会出现深色阴影，那里是怪物的生成地。只要能在夜间撤回安全地带，殖民者在墙外或这片阴影区域内工作是没问题的。"
+							},
+							"title": "权力的力量"
+						},
+						"remotecontrol": {
+							"description": "学习以俯瞰视角管控殖民地，安排殖民者完成施工工作。",
+							"instructions": {
+								"0": "解锁督察桌科技和挖掘工科技。放置并使用督察桌切换到俯瞰视角。以俯瞰或第一人称视角使用命令工具，转到“施工”。使用“全部移除”定义待彻底移除的区域。在该区域周围放置工作位置，自动招募执行这项施工任务的施工人员。"
+							},
+							"title": "远程控制"
+						},
+						"setupcolony": {
+							"description": "插下旗帜以获取第一个任务！",
+							"instructions": {
+								"0": "插下旗帜以获取第一个任务！选择旗帜工具（<style=Player/Inventory2>），并在地面上使用<style=Player/FireSecondary>。建议寻找有适宜耕作的平坦区域且临近水源的地方。",
+								"0_gamepad": "插下旗帜以获取第一个任务！使用<style=Player/HotBarUp>和<style=Player/HotBarDown>在下方的物品栏中选择旗帜工具。瞄准地面并使用<style=Player/FireSecondary>即可插下旗帜。建议寻找有适宜耕作的平坦区域且临近水源的地方。",
+								"1": "使用<style=Player/MoveKeyboard>和<style=Player/Look>在世界中导航。",
+								"1_gamepad": "使用<style=Player/MovePad>和<style=Player/Look>在世界中导航。"
+							},
+							"title": "建立殖民地"
+						},
+						"startofprestige": {
+							"description": "解锁并生产一个威望箱子！",
+							"title": "威望伊始"
+						},
+						"stretchieststretchgoal": {
+							"description": "达到威望V。",
+							"title": "极限长线目标"
+						},
+						"wealthofnations": {
+							"description": "你需要铁匠、纺织品、皮革和交易。",
+							"instructions": {
+								"0": "请确保已经解锁小麦耕作和商人中心。指派殖民者在新工作块制作者工作台上制作商人中心。放置商人中心后，出售一些铜锭，并购买动物尸体，这是解锁皮匠科技的必要步骤。制作皮匠工作台需要亚麻布，这种资源可以在商人中心制作或购买。招募皮匠，将动物尸体加工成生肉、兽皮，最终产出皮革。",
+								"1": "解锁裁缝科技，招募亚麻农民，然后放置裁缝店，招募裁缝，将亚麻加工成亚麻布。",
+								"2": "现在你应该已经具备了研究铁砧科技、招募铜匠和制作新工具的所有条件！"
+							},
+							"title": "国富论"
+						},
+						"yourethemiller": {
+							"description": "风车会供应基础物品。赶紧放置风车，投入使用吧！",
+							"instructions": {
+								"0": "建立殖民地后，快捷栏内会出现风车。将风车放置在殖民地区域中。",
+								"1": "走上风车阶梯，对着内部机件按<style=Player/FireSecondary>以打开菜单。将木箱、矿工工作和床铺加入风车的制作队列。待风车完成生产后，按右下角的按钮收集成品。"
+							},
+							"title": "你是磨坊主"
+						},
+						"yourfirstlibrary": {
+							"description": "倘若文明无法妥善储备过往知识，便难以开拓新知。",
+							"instructions": {
+								"0": "研究抄写员科技后，可将知识卷轴加工成卷轴架。一名抄写员至少需要10个卷轴架才能持续不断地工作。架子上的卷轴在取用后会被移除，但过一段时间后会自动补足，且可再次取用。抄写员会把泥板加工成古代智慧书板。"
+							},
+							"title": "首座图书馆"
+						}
+					},
+					"empty": "目前暂无可接取任务。",
+					"header": "任务",
+					"instructionsheader": "说明",
+					"notifications": {
+						"message": "你已完成任务“{0}”。打开任务标签页查看详情，如有奖励请及时领取。",
+						"openbutton": "打开任务",
+						"preview": "{0}",
+						"summarytype": "任务完成"
+					},
+					"progress": "进度",
+					"rewardheader": "奖励",
+					"statusavailable": "可用",
+					"statuscompleted": "已完成",
+					"statusinprogress": "进行中",
+					"statusunclaimed": "未领取",
+					"table": {
+						"action": "操作",
+						"quest": "任务",
+						"select": "选择",
+						"status": "状态"
+					}
+				},
 				"science": {
 					"available": "可用",
 					"completed": "已完成",
@@ -1031,7 +1393,8 @@
 				"description": "选择要使用的物品类型。",
 				"header": "选择物品",
 				"headerchosen": "已选",
-				"headerselectables": "可选"
+				"headerselectables": "可选",
+				"toggleshowonlyknown": "仅显示已知物品"
 			},
 			"limits": {
 				"allreset": "重置全部",
@@ -1072,7 +1435,6 @@
 				"showgoal": "标记目标"
 			},
 			"quickstart": {
-				"closetoggle": "不再显示",
 				"next": "下一个",
 				"previous": "上一个"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "基本介绍",
 				"text1_2": "首先，寻找一处好位置来建设你的第一个殖民地。建议挑选附近有水源和平地的位置，以便耕作。旗帜所在地代表殖民地的中心。",
 				"text2_2gamepad": "使用<style=Player/HotBarUp>和<style=Player/HotBarDown>在下方的物品栏中选择旗帜工具。选中旗帜工具的情况下，瞄准地面并使用<style=Player/FireSecondary>即可插下旗帜。在殖民地中时，凡是之后可能生成怪物的地方，旗帜工具都会显示深色阴影。",
-				"text2_2keyboard": "使用<style=Player/Inventory1>在下方的物品栏中选择旗帜工具。选中旗帜工具的情况下，瞄准地面并使用<style=Player/FireSecondary>即可插下旗帜。在殖民地中时，凡是之后可能生成怪物的地方，旗帜工具都会显示深色阴影。",
-				"text3_2": "放置床铺即可招募殖民者。按下<style=Player/ToggleInventory>来打开操作界面。将床铺从仓库移动到下方的快捷栏中。选中床铺的情况下，瞄准地面并使用<style=Player/FireSecondary>即可放置床铺。",
+				"text2_2keyboard": "使用<style=Player/Inventory2>在下方的物品栏中选择旗帜工具。选中旗帜工具的情况下，瞄准地面并使用<style=Player/FireSecondary>即可插下旗帜。在殖民地中时，凡是之后可能生成怪物的地方，旗帜工具都会显示深色阴影。",
+				"text3_2": "放置床铺即可招募殖民者。按下<style=Always/ToggleInventory>来打开操作界面。将床铺从仓库移动到下方的快捷栏中。选中床铺的情况下，瞄准地面并使用<style=Player/FireSecondary>即可放置床铺。",
 				"text4": "打开操作界面并前往“殖民地”页面。按下“招募”即可招募一名殖民者。"
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "食物和床铺",
 				"text1": "殖民者每天需要吃1餐。他们会在旗帜处或附近的杂货店中取餐。没有食物，殖民者就会饿死。招募新的殖民者需要消耗多份餐食。",
 				"text2_2gamepad": "浆果农民是第一种食物来源。选择命令工具（物品栏第一个栏位）。按下<style=Player/FirePrimary>打开界面并选择浆果农民。按下<style=Player/FireSecondary>开始划定浆果农场，然后在别处再次按下<style=Player/FireSecondary>以完成划定。殖民地会用到大量浆果！",
-				"text2_2keyboard": "浆果农民是第一种食物来源。选择命令工具（<style=Player/Inventory0>）。按下<style=Player/FirePrimary>打开界面并选择浆果农民。按下<style=Player/FireSecondary>开始划定浆果农场，然后在别处再次按下<style=Player/FireSecondary>以完成划定。殖民地会用到大量浆果！",
+				"text2_2keyboard": "浆果农民是第一种食物来源。选择命令工具（<style=Player/Inventory1>）。按下<style=Player/FirePrimary>打开界面并选择浆果农民。按下<style=Player/FireSecondary>开始划定浆果农场，然后在别处再次按下<style=Player/FireSecondary>以完成划定。殖民地会用到大量浆果！",
 				"text3_2": "若要开始生产床铺，需要先制作工匠台。瞄准方块并按住<style=Player/FirePrimary>可以向下挖掘，收集所需的碎石。",
 				"text4": "点击仓库左边的工匠台图标即可制作工匠台，然后同之前放置床铺一样放置工匠台。与浆果农场一样，待业的殖民者会自动接下此工作。"
 			},
@@ -1360,8 +1722,13 @@
 			"play_coop": "合作模式",
 			"play_solo": "单人模式",
 			"selectedfolder": "已选世界：{0}",
+			"serverlistfriends": "好友可加入",
+			"serverlistfriendstooltip": "允许好友通过好友菜单查找并加入你的游戏。",
+			"serverlistlan": "局域网检索",
+			"serverlistlantooltip": "如果开启此选项，连接同一局域网（如同一个Wi-Fi网络）的玩家可以自动发现并直接连接你的服务器，无需通过互联网中转。这能使连接更加流畅快速，但所有玩家需接入同一局域网。",
+			"serverlistpublicly": "公开服务器列表",
+			"serverlistpubliclytooltip": "你的服务器将出现在公开服务器列表中，任何人都能查找和加入。如需限制访问，请使用密码。",
 			"servername": "服务器名称",
-			"serverport": "服务器端口",
 			"typegenerateworld": "生成世界",
 			"typeworkshop": "创意工坊世界",
 			"world_folder": "文件夹",
@@ -1370,6 +1737,50 @@
 			"worldname": "名称",
 			"worldname_long": "世界名称",
 			"worldseed": "世界种子"
+		},
+		"splashscreen": {
+			"header": "感谢你购买和游玩《殖民地生存》！",
+			"indexingfiles": "正在索引{0}/{1}个文件",
+			"scanningcandidates": "正在扫描本地文件……已找到{0}个候选文件",
+			"text0": "本游戏仍处于积极开发阶段。我们会修复各类问题、调整配方平衡性、排除故障。部分“游戏玩法留白”是为后续更新做铺垫。",
+			"text1": "游戏的旧版本可供游玩。如有需要，请在Steam库中右键点击《殖民地生存》，进入“属性”，然后访问“测试版”页面。",
+			"text2": "我们将定期发布星期五博客，相关内容可在《殖民地生存》Steam商店页面查阅。每篇博客都附有加入游戏官方Discord服务器的邀请。这是与我们沟通的最佳渠道！"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "捕获左侧屏幕",
+				"capture_right": "捕获右侧屏幕",
+				"play_alone": "单人游戏",
+				"swap_inputs": "切换输入设备",
+				"swap_screens": "切换屏幕"
+			},
+			"devices": {
+				"dualsense": "DualSense控制器",
+				"gamepad": "游戏手柄（{0}）",
+				"keyboard_mouse": "键盘与鼠标",
+				"playstation": "PlayStation控制器",
+				"switch": "Nintendo Switch控制器",
+				"xbox": "Xbox控制器"
+			},
+			"header": "分屏设置",
+			"header_recovery": "重新分配分屏设备",
+			"screens": {
+				"left": "左侧屏幕",
+				"right": "右侧屏幕"
+			},
+			"status": {
+				"apply_failed": "应用分屏设置失败。",
+				"assign_input": "为{0}分配输入设备。",
+				"capture_input": "为{0}捕获输入设备。",
+				"one_player_ready": "一名玩家已就绪。请添加游戏手柄以进行分屏游戏，或应用单人模式。",
+				"press_input": "在用于{0}的输入设备上按下按钮。",
+				"ready": "准备应用分屏设置。"
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\n玩家{2}",
+				"assigned_primary": "{0}\n{1}\n玩家{2}（主配置）",
+				"unassigned": "{0}\n未分配"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "命令一名殖民者作为{0}在此工作",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "数据板",
 		"statuefarmer": "乐观农民雕像",
 		"statuemonster": "大捷雕像",
+		"statuevictory": "胜利雕像",
 		"steelingot": "钢锭",
 		"steellockbox": "钢锁箱",
 		"steelparts": "钢制零件",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "小瓶（硝酸）",
 		"vialsulphuricacid": "小瓶（硫酸）",
 		"wallpaintingitem": "画作",
+		"wallpaintingitemlizzy": "Lizzy的画作",
+		"wallpaintingitempip": "Pip的画作",
 		"water": "水",
 		"watergatherer": "采水工",
 		"waterpump": "水泵",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "可以更快地将木头劈成木柴",
 		"statuefarmer": "感恩劳动者的辛勤付出。",
 		"statuemonster": "缅怀战胜敌人的荣耀。",
+		"statuevictory": "谨以此致敬身为玩家的你！衷心祝贺你达成这一辉煌里程碑，感谢你长期游玩《殖民地生存》。",
 		"stonemasonworkbench": "石头+专心=实心砖头",
 		"stove": "让周边区域弥漫着美食的香气",
 		"sulfur": "可在荒野地带的地下深处找到",
@@ -1987,6 +2402,8 @@
 		"torch": "要有光！",
 		"trader": "用来做交易，真是‘出乎意料’",
 		"wallpaintingitem": "让墙面充满艺术气息。",
+		"wallpaintingitemlizzy": "谨以此致敬Lizzy（2006-2022）。Pipliz正是以她的名字命名。",
+		"wallpaintingitempip": "谨以此致敬Pip（2014-2026）。Pipliz正是以她的名字命名。",
 		"water": "要是没控制住，会把一切都淹没",
 		"waterpump": "就算不靠近水源也能取到水",
 		"watersponge": "用一种非常接近现实的方式移除附近区域的水",

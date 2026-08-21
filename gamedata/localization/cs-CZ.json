@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Odstraněním posledního praporu kolonie dojde k odebrání všech NPC a kolonii už nebude možné používat. Abyste potvrdili, že to opravdu chcete, napište do pole níže slovo „delete“.",
 			"header": "Možnosti praporu",
 			"noconfirmationdelete": "Příkaz ke smazání bude ignorován, protože nebyl potvrzen",
-			"placementfail": "Na toto místo nelze prapor umístit"
+			"placementfail": "Na toto místo nelze prapor umístit",
+			"requestjoin": "Žádost o připojení",
+			"requestpending": "Vaše žádost o připojení k hráči/kolonii {0} čeká na vyřízení.",
+			"requestsent": "Vaše žádost o připojení k hráči/kolonii {0} byla odeslána."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Aktivní kolonie: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Vytvoření základny",
 				"selectparent": "Vybrat hlavní kolonii"
 			},
+			"overlaycounters": {
+				"open": "Nakonfigurovat sledovače předmětů"
+			},
 			"ownership": {
 				"action": "Akce",
 				"connectedplayers": "Připojení hráči",
 				"currentowners": "Aktuální vlastníci",
 				"follower": "Následovník",
 				"invite": "Přidat jako vlastníka kolonie",
+				"invitepending": "{0} již má nevyřízenou pozvánku na připojení do hry {1}.",
 				"kick": "Vyhodit",
+				"kickfromcolony": "Vyhodit z kolonie",
 				"leader": "Vůdce",
 				"leave": "Opustit kolonii",
 				"name": "Název",
@@ -230,7 +238,6 @@
 				"local1": "Hledají se servery hry pro jednoho hráče na tomto počítači",
 				"local2": "Hledá se online server na tomto počítači",
 				"password": "Vyžadováno heslo",
-				"steamdirect": "Probíhá pokus o nastavení přímého připojení",
 				"steamp2p": "Probíhá pokus o nastavení p2p připojení",
 				"timeout": "Připojení vypršel časový limit. Za 5 sekund se vrátíte do hlavní nabídky.",
 				"waitingserver": "Server se spouští na pozadí"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Pohyb",
 			"opencolonytab": "Otevření karty Kolonie",
+			"openplayerslist": "Otevřít seznam hráčů",
 			"openquickstart": "Otevření nápovědy",
 			"placemultipleareas": "Sériové umisťování stavebních míst",
 			"resetfieldofview": "Obnovit zorné pole (cheat)",
@@ -343,7 +351,8 @@
 			"info": "Informace",
 			"quitdesktop": "Plocha",
 			"quitmain": "Hlavní nabídka",
-			"settings": "Nastavení"
+			"settings": "Nastavení",
+			"splitscreensetup": "Rozdělená obrazovka"
 		},
 		"failsafe": {
 			"current": "Aktuální zásoba posvátných bodů: {0} z {1}",
@@ -371,6 +380,7 @@
 			"apply": "Použít",
 			"back": "Zpět",
 			"close": "Zavřít",
+			"colonydate": "Den {0}, {1:00}:{2:00}",
 			"delete": "Odstranit",
 			"description": "Popis",
 			"edit": "Upravit",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Počet osadníků",
 			"connectlocal": "Připojit k místnímu serveru",
-			"header_friends": "Přátelé",
-			"header_history": "Historie",
 			"header_internet": "Internet",
 			"header_lan": "LAN",
 			"ipaddress": "Adresa",
 			"join": "Připojit se",
 			"mods": "Mody",
+			"offline": "Offline",
 			"passworded": "S heslem",
 			"refresh2": "Obnovit",
 			"refreshing": "Obnovování...",
 			"refreshquick": "Rychlé obnovení",
 			"selectedserver": "Vybraný server",
+			"serverfavorite": "Oblíbený",
+			"serverid": "ID serveru",
 			"serverping": "Ping",
 			"serverplayers": "Hráči",
 			"servers": "Servery",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Smazat oznámení",
+			"details": {
+				"back": "Zpět",
+				"delete": "Odstranit",
+				"empty": "Žádné položky oznámení.",
+				"header": "{0} – {1}",
+				"next": "Další",
+				"page": "Strana {0}/{1} – {2} položek celkem",
+				"previous": "Předchozí"
+			},
+			"generic": {
+				"accept": "Přijmout",
+				"decline": "Odmítnout",
+				"kicked": {
+					"message": "Byli jste vyhozeni z kolonie {0}.",
+					"title": "Vyhození z kolonie"
+				},
+				"management": {
+					"summarytype": "Správa",
+					"title": "Správa"
+				},
+				"ownerinvite": {
+					"accepted": "{0} přijímá vaši pozvánku do hry {1}.",
+					"declined": "{0} odmítá vaši pozvánku do hry {1}.",
+					"invalid": "Tato pozvánka už není platná.",
+					"message": "Máte pozvánku do hry {0}.",
+					"preview": "Máte pozvánku do hry {0}.",
+					"summarytype": "Pozvat",
+					"title": "Pozvánka"
+				},
+				"ownerjoinrequest": {
+					"accepted": "Vaše žádost o připojení k hráči/kolonii {0} byla přijata.",
+					"declined": "Vaše žádost o připojení k hráči/kolonii {0} byla zamítnuta.",
+					"message": "Hráč {0} žádá o připojení ke kolonii {1}.",
+					"preview": "Hráč {0} se chce připojit ke kolonii {1}.",
+					"summarytype": "Žádost o připojení",
+					"title": "Žádost o připojení ke kolonii"
+				}
+			},
 			"header": "Oznámení",
 			"missingplayerammo": "<color=#ff2323>K využití zbraně {0} musí být v inventáři {1}!</color>",
 			"npc_died": {
-				"banner": "Monstrum u praporu",
-				"command": "Použití příkazu",
-				"excess": "Od té doby ještě anonymně zemřelo tolik osadníků:<NBSP>{0}.",
-				"individual": "{0}: Osadník s prací {1} zemřel. Příčina: {2}",
+				"individual2_banner": "{0} {1} – zabit monstrem u praporu.",
+				"individual2_command": "{0} {1} – zabit příkazem.",
+				"individual2_monster": "{0} {1} – zabit monstrem.",
+				"individual2_npc": "{0} {1} – zabit osadníkem.",
+				"individual2_player": "{0} {1} – zabit hráčem.",
+				"individual2_starving": "{0} {1} – zemřel hlady.",
+				"individual2_trap": "{0} {1} – zabit pastí.",
+				"individual2_unknown": "{0} {1} – smrt z neznámých příčin.",
 				"main": "Počet zemřelých osadníků na základně<NBSP>{1}<NBSP>je:<NBSP>{0}!",
-				"misc": "Neznámé důvody",
-				"monster": "Monstrum",
-				"npc": "Osadník",
-				"player": "Hráč",
-				"starving": "Hlad",
-				"trap": "Past"
+				"summarymultiple": "{0} smrtí v kolonii {1}",
+				"summarysingle": "1 smrt v kolonii {0}",
+				"summarytype": "Zemřelí osadníci"
+			},
+			"overview": {
+				"empty": "Žádná oznámení",
+				"open": "Otevřít"
+			},
+			"personal": {
+				"header": "Osobní"
 			},
 			"science": {
-				"entry": "{0}: Dokončeno: {1}",
-				"main": "Technologie dokončena!"
+				"entry2": "Dokončeno: {0}",
+				"main": "Technologie dokončena!",
+				"summarycount": "Technologie {0} dokončena",
+				"summarylatest": "Technologie {0} dokončena",
+				"summarytype": "Technologie"
 			},
+			"showmarkersonpage": "Označit lokace ve světě",
 			"siegemode": {
-				"disabled": "{0}: Režim obléhání ukončen",
-				"enabled": "{0}: Režim obléhání zahájen",
-				"main": "Režim obléhání zahájen u základny {0}!"
+				"disabled2": "Režim obléhání zastaven",
+				"disabledsummary": "Režim obléhání zastaven: {0}",
+				"enabled2": "Režim obléhání byl aktivován! Osadníci nemají žádnou cestu mezi praporem a vnějším světem. Režim obléhání spotřebuje jednu potravinu za hodinu za každých pět hrozeb v kolonii {0}.\nCo možná nejrychleji znovu navažte spojení s vnějším světem!",
+				"enabledsummary": "Zahájen režim obléhání v kolonii {0}",
+				"main": "Režim obléhání zahájen u základny {0}!",
+				"summarytype": "Režim obléhání"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Spisovatel"
 			}
 		},
+		"playerlist": {
+			"action": "Akce",
+			"activecolony": "Aktivní kolonie",
+			"header": "Hráči online",
+			"id": "ID",
+			"noonlineplayers": "Žádní hráči online",
+			"ping": "Ping",
+			"pingvalue": "{0} ms",
+			"player": "Hráč",
+			"totalcolonists": "Celkem osadníků"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Zavřít",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Vyrábí se zde:",
 				"madeintooltippurchasable": "Lze zakoupit v kupeckém centru za {0} bodů",
 				"noactivecolony": "Žádná aktivní kolonie!",
+				"quests": {
+					"claimreward": "Vyzvednout odměnu",
+					"conditiontitles": {
+						"beds": "Umístěné postele",
+						"crafted": "Vyrobené předměty {0}",
+						"crates": "Umístěné bedny",
+						"gathered": "Těžba {0}",
+						"npctype": "Verbování {0}",
+						"placed": "Umístění {0}",
+						"purchased": "Zakoupení {0}",
+						"sciencecompleted": "Dokončení technologie {0}",
+						"totalcolonists": "Osadníci"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "Moderní technologie slouží k výrobě silných zbraní.",
+							"instructions": {
+								"0": "Odemkněte související technologie."
+							},
+							"title": "Pokročilé zbraně"
+						},
+						"automatedcrafting": {
+							"description": "Nechte své osadníky těžit a vyrábět!",
+							"instructions": {
+								"0": "Blok odstraníte tím, že namíříte na trávu nebo hlínu a podržíte <style=Player/FirePrimary>. Prokopejte se přes kamení směrem dolů, dokud nenarazíte na bloky tmavého kamene. Vyberte položku těžební pracovní pozice a umístěte ji na tmavý kámen.",
+								"1": "V podzemí bývá tma. Vyberte pochodně, umístěte je a posviťte si. Když je budete držet v ruce, posvítíte si kolem sebe. Stiskem <style=Player/ToggleTorch> aktivujete svou osobní pochodeň při držení jiných předmětů.",
+								"2": "Když se budete prokopávat kamenem, získáte kamennou suť. Horník pracující na tmavém kameni vám bude tuto surovinu dodávat také. Kamennou suť můžete na kartě zásoby pomocí ikon v liště nalevo využít k výrobě kutilova stolu. To samé můžete udělat i ve mlýně.",
+								"3": "Umístěte do své kolonie kutilův stůl. Když stůl použijete (<style=Player/FireSecondary>), uvidíte, které předměty kutil dokáže vyrobit.",
+								"4": "Naverbujte dostatek osadníků, kteří budou zastávat nové práce. Budou potřebovat místo k přespání a jídlo. Pokračujte proto ve verbování pěstitelů bobulí, kteří vaše nové osadníky budou živit!"
+							},
+							"title": "Automatizovaná výroba předmětů"
+						},
+						"betterfoodsource": {
+							"description": "Pěstitelé bobulí jsou jednoduchým zdrojem jídla, které ale vyrábějí relativně pomalu. Z pšenice se dají vytvořit efektivnější jídla, ale příprava tohoto řetězce je složitější.",
+							"instructions": {
+								"0": "Začněte dokončením technologie Pěstování pšenice. Pomocí příkazového nástroje pak budete moct připravit pěstitele pšenice. Na rozdíl od pěstitelů bobulí u nich záleží na velikosti. Čím větší políčko, tím víc pšenice sklidí. Maximem je ale 100 pokrytých bloků. Pšenice roste dvě noci. Pšenici lze okamžitě proměnit na řídkou pšeničnou kaši.",
+								"1": "Poté dokončete technologie Kupecké centrum a Keramika. Keramika vám umožňuje na hrnčířských stanicích vyrábět hrnce a navíc zpřístupní nosiče vody. Tuto pracovní pozici umístěte hned vedle vody a nechte osadníky, aby plnili prázdné hrnce vodou. Pomocí <style=Player/HoldCrouch> se můžete plazit, abyste nespadli do vody!",
+								"1_gamepad": "Poté dokončete technologie Kupecké centrum a Keramika. Keramika vám umožňuje na hrnčířských stanicích vyrábět hrnce a navíc zpřístupní nosiče vody. Tuto pracovní pozici umístěte hned vedle vody a nechte osadníky, aby plnili prázdné hrnce vodou. Pomocí <style=Player/ToggleCrouch> se můžete plazit, abyste nespadli do vody!",
+								"2": "Pokud v blízkosti žádná voda není, můžete odemknout technologii Čerpání vody. Tento způsob získávání vody je sice pomalejší, ale zato nezávisí na umístění.",
+								"3": "Abyste se dostali k pšeničné kaši, která je nejefektivnějším jídlem na začátku hry, odemkněte technologii Kaše a umístěte ohniště. Na něm můžete pšeničnou kaši vařit z pšenice a hrnců s vodou."
+							},
+							"title": "Lepší zdroj jídla"
+						},
+						"booksofknowledge": {
+							"description": "Svitky a destičky jsou nahrazeny knihami!",
+							"instructions": {
+								"0": "Odemkněte technologii Výzkumník. Vaši spisovatelé díky tomu získají schopnost vyrábět knihovny kombinováním destiček se starobylou moudrostí a papíru. Abyste podpořili udržitelné bádání, umístěte 10 knihoven do blízkosti výzkumníkova stolu. Výzkumník pak bude produkovat vědecké poznámky, z nichž pak spisovatel vyprodukuje naučné knihy."
+							},
+							"title": "Naučné knihy"
+						},
+						"defenseofcivilization": {
+							"description": "Spolu s růstem vaší kolonie se bude zvětšovat i horda monster, která na vás bude útočit. Nezapomínejte ani na posilování své obrany!",
+							"instructions": {
+								"0": "Odemkněte technologii Lukostřelba a naverbujte šípaře, který vyprodukuje položku pracovní pozice nočního strážce s lukem.",
+								"1": "Dokončete také technologii Spisovatel, umístěte spisovatelův stůl a nechte osadníka proměňovat pergamen na naučné svitky.",
+								"2": "Pasti se vyrábí u technikova stolu. Na dokončení výzkumu technologie Technik budete potřebovat zlaté ingoty. Zlatou rudu zakoupíte v kupeckém centru.",
+								"3": "Pasti nabijete tím, že do jejich blízkosti umístíte předmět trapera. Traper se bude přes den starat o údržbu vašich pastí. Samozřejmě budete muset vyrábět i náboje."
+							},
+							"title": "Obrana civilizace"
+						},
+						"endlessgrowth": {
+							"description": "Dosáhněte velkolepého jednoho tisíce osadníků!",
+							"title": "Nekonečný růst"
+						},
+						"finalcountdown": {
+							"description": "Z kolonie se stává říše.",
+							"title": "Poslední odpočet"
+						},
+						"finalstage": {
+							"description": "Odemkněte nejpokročilejší technologii ve hře.",
+							"title": "Poslední fáze"
+						},
+						"foodsource": {
+							"description": "Vaše kolonie potřebuje jídlo. Jeho prvním zdrojem je sběr bobulí.",
+							"instructions": {
+								"0": "Otevřete zásobu (<style=Always/ToggleInventory>) a přesuňte postele do rychlé lišty ve spodní části obrazovky. Zavřete zásobu (<style=Always/ToggleInventory> nebo <style=UI/Cancel>) a vyberte postele pomocí <style=Player/HotBarUp> a <style=Player/HotBarDown>. Umístěte šest postelí tím, že namíříte na zem a použijete <style=Player/FireSecondary>.",
+								"1": "Vyberte příkazový nástroj (<style=Player/Inventory1>) a použijte <style=Player/FirePrimary> na zemi, kam chcete umístit bobulovou farmu. Přesuňte se na druhý konec zamýšlené oblasti a pomocí <style=Player/FireSecondary> dokončete oblast farmy. Vytvořte šest farem.",
+								"1_gamepad": "Vyberte příkazový nástroj a použijte <style=Player/FirePrimary> na zemi, kam chcete umístit bobulovou farmu. Přesuňte se na druhý konec zamýšlené oblasti a pomocí <style=Player/FireSecondary> dokončete oblast farmy. Vytvořte šest farem.",
+								"2": "Vezměte bednu ze zásoby a umístěte ji poblíž. Vaši farmáři do ní začnou odnášet svou sklizeň.",
+								"3": "Stiskněte <style=Always/OpenColonyTab> a naverbujte šest osadníků, kteří začnou sbírat bobule.",
+								"3_gamepad": "Stiskněte <style=Always/ToggleInventory> a pomocí <style=UI/MenuTabLeft> a <style=UI/MenuTabRight> přejděte na kartu kolonie. Naverbujte šest osadníků, kteří začnou sbírat bobule."
+							},
+							"title": "Získání zdroje jídla"
+						},
+						"goldandbronzeautarky": {
+							"description": "Proč se spoléhat na kupce, když si své zlato a cín můžete těžit sami?",
+							"instructions": {
+								"0": "Zakupte prapor základny a nezapomeňte jej přesunout do rychlé lišty. Najděte horu se sněhem na vrcholu. S hledáním vám pomůže astroláb. Pomocí praporu základny založte základnu v blízkosti vrcholu hory. Rozmístěte postele a vybudujte obranu.",
+								"1": "Prokopejte se pod sníh. Nejdříve narazíte na vrstvu s mědí a jílem. Pokračujte v kopání, dokud nenarazíte na vrstvu s železnou rudou a cínem. Když budete kopat ještě dál, nakonec narazíte na zlato!",
+								"2": "Ujistěte se, že opravdu kopete přímo pod sněhem. Železo najdete kdekoli, ale cín a zlato najdete jedině přímo pod sněhem!"
+							},
+							"title": "Soběstačnost ve zlatu a bronzu"
+						},
+						"goldenpoisonousflight": {
+							"description": "Získáváte přístup k pokročilé technologii!",
+							"instructions": {
+								"0": "Rogala urychlí vaše cestování, kovové ježky zase zpomalí přicházející monstra. Zlaté štíty jsou výborným zdrojem příjmu a jed zase postupně ubližuje monstrům. Nejlepší strategie spočívá v co nejrychlejší otravě monster! Dokončete související technologie a vyrobte potřebné předměty."
+							},
+							"title": "Zlatý jedovatý let"
+						},
+						"growextra": {
+							"description": "Aby se vaše kolonie vyvíjela opravdu pořádně, budete potřebovat víc osadníků, než je nezbytné minimum. Budete potřebovat dodatečné horníky, farmáře, strážce i výrobce.",
+							"instructions": {
+								"0": "Výchozí kapacita kolonie je 100 osadníků. Přejděte do nabídky osadnických bodů a za 100 osadnických bodů tuto kapacitu rozšiřte."
+							},
+							"title": "Dosáhněte růstu!"
+						},
+						"growmore": {
+							"description": "Čím víc, tím líp!",
+							"instructions": {
+								"0": "Rozmístěte měděné schránky a pomocí nabídky osadnických bodů zvyšte kapacitu osadníků na 200. Dokončete technologii Kuchař a naverbujte kuchaře a rybáře."
+							},
+							"title": "Nepřestávejte růst!"
+						},
+						"growthforgrowthssake": {
+							"description": "Už jsme si říkali, že čím víc, tím líp.",
+							"instructions": {
+								"0": "Mějte všechno pod drobnohledem! Posilujte svou obranu, sbírejte více zdrojů, verbujte další výrobce a hledejte slabá místa ve svých produkčních řetězcích."
+							},
+							"title": "Růst pro růst"
+						},
+						"growthwoodscience": {
+							"description": "Vaše rostoucí kolonie bude potřebovat zdroj dřeva, novou technologii, více osadníků a více jídla.",
+							"instructions": {
+								"0": "Oblasti lesníka se vytvářejí pomocí příkazového nástroje, podobně jako bobulové farmy.",
+								"1": "Přejděte na kartu nabídky technologií a vyhledejte technologii Horník. Nasbírejte 5 kusů kamenné suti a tím technologii dokončete. U kutila se vám poté odemkne recept na pracovní pozici horníka."
+							},
+							"title": "Růst, dřevo a technologie"
+						},
+						"gunpowder": {
+							"description": "Střelný prach je samozřejmým vylepšením vašeho obranného průmyslu!",
+							"instructions": {
+								"0": "Odemkněte technologie Vědecká truhla, Sklář, Střelný prach a Píšťala. Na výrobu střelného prachu budete potřebovat síru, kterou můžete vytěžit z vřesoviště nebo koupit u kupce."
+							},
+							"title": "Střelný prach"
+						},
+						"gutenbergrevolution": {
+							"description": "Tiskařský lis zvýší vaši produkci knih.",
+							"instructions": {
+								"0": "Odemkněte technologie Ocel, Olovo a Minerální olej. Díky tomu získáte přístup k technologii Tiskařský lis. Budete potřebovat uhlí, které najdete poblíž mamutích stromů, a olovo, které najdete v bažinách."
+							},
+							"title": "Gutenbergova revoluce"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "Stroje vás automaticky přenesou na různá místa.",
+							"instructions": {
+								"0": "Odemkněte technologie Koleje a Výtah."
+							},
+							"title": "Svislá a vodorovná doprava"
+						},
+						"infrastructureofcivilization": {
+							"description": "Budete muset rozdělovat jídlo a nástroje, ukládat osadnické body a v nouzi drtit monstra.",
+							"instructions": {
+								"0": "Osadníci si mohou jídla a nástroje vyzvedávat u vašeho praporu. Jejich cestu ale můžete zkrátit umístěním obchodů s potravinami a stolů pro rozdělování nástrojů na různá místa kolonie. Tyto možnosti si zpřístupníte dokončením souvisejících technologií.",
+								"1": "Pokud budete chtít uskladnit více než 100 osadnických bodů, budete muset rozmístit měděné schránky. Jakmile je rozmístíte, zvýší se vaše úroveň hrozby!",
+								"2": "Když monstra prorazí vaši obranu, posvátná pečeť je užitečnou záchrannou brzdou.",
+								"3": "Schránku i pečeť musíte nejprve odemknout díky technologiím a následně vyrobit na kovadlině."
+							},
+							"title": "Civilizační infrastruktura"
+						},
+						"intomodernity": {
+							"description": "Naverbujte moderní dělníky, kteří dokáží vyrobit technologicky pokročilé předměty.",
+							"instructions": {
+								"0": "Nejprve budete potřebovat technologii Luxusní truhla, která vám poskytne přístup k technologiím Děrnoštítkový stroj a Soustruh."
+							},
+							"title": "Vzhůru do moderní doby"
+						},
+						"intothebronzeage": {
+							"description": "Doba bronzová vám poskytuje přístup k novým materiálům a řadě nových technologií. Dokončete ty nejdůležitější z nich!",
+							"instructions": {
+								"0": "Začněte dokončením technologie Doba bronzová. Odemkněte základny a v kupeckém centru si pořiďte prapor. Dokončete technologii Mosaz a kupte si v centru zinek. Dokončete technologie Vystřelovací past a Kuše. Kupte v centru cín na výrobu bronzových ingotů."
+							},
+							"title": "Vzhůru do doby bronzové"
+						},
+						"ironage": {
+							"description": "Zpřístupněte si další důležitý materiál, kterým je železo.",
+							"instructions": {
+								"0": "Technologie Doba železná je zásadní a vyžaduje spoustu přísad. Když budete kopat dost dlouho, železnou rudu najdete kdekoli.",
+								"1": "Železnou rudu musíte roztavit pomocí nového paliva, kterým je dřevěné uhlí. To se vyrábí ve vypalovací peci. Ke slévání železa pak potřebujete zkujňovací výheň. Obojí se pak vyrábí u stolu výrobce pokročilých pracovních bloků."
+							},
+							"title": "Doba železná"
+						},
+						"makeitbeautiful": {
+							"description": "Duše se bez estetiky neobejde!",
+							"instructions": {
+								"0": "Technologie Umělec je uzamčena za technologií Tašková střecha, k níž se dostanete po dokončení technologie Kameník. Lovecké trofeje se vyrábí v lisu na kuriozity. Ten funguje jako mlýn a je zamčen za vlastní technologií."
+							},
+							"title": "Ať je to krásné"
+						},
+						"paperpower": {
+							"description": "Papír je pro civilizaci nezbytný. Nějaký máte na svém stole nejspíš i vy!",
+							"instructions": {
+								"0": "Budete potřebovat konopí, které vám za vysokou cenu prodá kupec. Levnější alternativou je založení základny v bažině, která pro vás konopí bude pěstovat. Abyste získali přístup k technologii Výroba papíru, musíte odemknout technologie Konopí a Provazy."
+							},
+							"title": "Papírová mocnost"
+						},
+						"powerofmetal": {
+							"description": "Bez kovu se žádná civilizace neobejde. Vytvořte funkční produkční řetězec kovu.",
+							"instructions": {
+								"0": "Vraťte se do podzemí za svými těžaři kamene. V horní vrstvě bloků tmavého kamene najdete bloky měděné rudy. Měděná ruda je červená. Umístěte těžební pracovní pozice na tyto bloky, aby z nich osadníci mohli začít těžit měď.",
+								"1": "Dokončete technologii Tavič. Chybí vám kamenné nástroje? Naverbujte více kutilů a jejich výrobu tím urychlete!",
+								"2": "Vaši kutilové nyní mohou vyrábět nové pracovní bloky: výhně pro taviče a špalky na sekání pro dřevorubce. Dřevorubec dělá z prken palivové dříví, které váš tavič potřebuje k výrobě měděných ingotů z měděné rudy."
+							},
+							"title": "Síla kovu"
+						},
+						"powerofpower": {
+							"description": "Naverbování více než 25 osadníků a dokončení technologie generuje „hrozbu“. Svou úroveň hrozby můžete sledovat vpravo nahoře. Vyšší úroveň hrozby znamená, že na vaši kolonii bude v noci útočit větší počet silnějších nepřátel. Nedovolte jim, aby se dostali k vašemu praporu a spícím osadníkům!",
+							"instructions": {
+								"0": "Předmět nočního strážce s prakem vyrobíte pomocí kutilů nebo v mlýně. Po umístění tohoto předmětu na zem se vytvoří pracovní pozice strážce. Střelci s prakem vrhají po monstrech projektily.",
+								"1": "Monstra na vaši kolonii zaútočí ze všech stran. Je vhodné je směrovat k určeným koridorům. Postavte hradby vysoké alespoň dva bloky, nebo kopejte příkopy tak, aby monstra danou oblast nemohla překonat.",
+								"2": "V žádném případě si ale nesmíte zablokovat přístup k praporu! Tím byste spustili režim obléhání.",
+								"3": "Když budete držet nástroj praporu, bude oblast ve větší vzdálenosti od praporu zahalena černočernou tmou. Právě tam se budou objevovat monstra. Vaši osadníci mohou pracovat i za hradbami a ve stínech, jen se musí v noci stáhnout do bezpečného prostoru."
+							},
+							"title": "Síla moci"
+						},
+						"remotecontrol": {
+							"description": "Naučte se kontrolovat svou kolonii z ptačí perspektivy a stavění nechte na svých osadnících.",
+							"instructions": {
+								"0": "Odemkněte technologie Stůl dozorce a Kopáč. Umístěte stůl dozorce a využijte jej k přepnutí do pohledu shora. V pohledu shora či z vlastních očí použijte příkazový nástroj a přejděte do nabídky stavby. Pomocí příkazu „Odebrat vše“ vytyčte plochu, která bude zcela odstraněna. Na této ploše rozmístěte pracovní pozice. Následně budou automaticky naverbováni stavitelé, kteří toto stavební zadání vykonají."
+							},
+							"title": "Dálkové ovládání"
+						},
+						"setupcolony": {
+							"description": "Umístěte prapor a vyzvedněte si svůj první úkol!",
+							"instructions": {
+								"0": "Umístěte prapor a vyzvedněte si svůj první úkol! Vyberte nástroj praporu (<style=Player/Inventory2>) a použijte <style=Player/FireSecondary> na zemi. Nejlepší bude, když si vyberete místo s rovnými plochami na farmaření v blízkosti vody.",
+								"0_gamepad": "Umístěte prapor a vyzvedněte si svůj první úkol! Vyberte v inventáři níže nástroj praporu pomocí <style=Player/HotBarUp> a <style=Player/HotBarDown>. Umístění provedete namířením na zem a použitím <style=Player/FireSecondary>. Nejlepší bude, když si vyberete místo s rovnými plochami na farmaření v blízkosti vody.",
+								"1": "Ve světě se můžete pohybovat pomocí <style=Player/MoveKeyboard> a <style=Player/Look>.",
+								"1_gamepad": "Ve světě se můžete pohybovat pomocí <style=Player/MovePad> a <style=Player/Look>."
+							},
+							"title": "Příprava kolonie"
+						},
+						"startofprestige": {
+							"description": "Odemkněte prestižní truhlu a vyrobte ji!",
+							"title": "Začátek prestiže"
+						},
+						"stretchieststretchgoal": {
+							"description": "Dokončete Prestiž V.",
+							"title": "Nejtěžší z těžkých úkolů"
+						},
+						"wealthofnations": {
+							"description": "Budete potřebovat slévače, textil, kůži a obchod.",
+							"instructions": {
+								"0": "Ujistěte se, že máte odemčeno pěstování pšenice a kupecké centrum. U nového stolu výrobce pracovních bloků nechte osadníka vyrobit kupecké centrum. Umístěte kupecké centrum, prodejte pár měděných ingotů a nakupte zvířecí mršiny, které potřebujete k odemčení technologie Koželuh. K výrobě koželuhova stolu pak budete potřebovat plátno. To si můžete vyrobit, nebo zakoupit v kupeckém centru. Naverbujte koželuha, který promění zvířecí mršiny na syrové maso, neopracovanou kůži a nakonec na opracovanou kůži.",
+								"1": "Odemkněte technologii Krejčí, naverbujte pěstitele lnu a umístěte krejčovskou dílnu, kde pak můžete naverbovat krejčího, který ze lnu vyrobí plátno.",
+								"2": "Nyní byste měli mít k dispozici vše k dokončení technologie Kovadlina, naverbování slévače mědi a výrobě nových nástrojů!"
+							},
+							"title": "Bohatství národů"
+						},
+						"yourethemiller": {
+							"description": "Mlýn vám poskytne základní předměty. Umístěte jej a používejte!",
+							"instructions": {
+								"0": "Mlýn se objevil v rychlé liště po založení kolonie. Umístěte jej do své kolonie.",
+								"1": "Vyjděte po schodech mlýna a použijte <style=Player/FireSecondary> na vnitřním mechanismu, čímž otevřete příslušnou nabídku. Přidejte do výrobní fronty bedny, těžební pracovní pozice a postele. Počkejte, dokud nebude mlýn dokončen, a vyzvedávejte si produkty mačkáním tlačítek vpravo dole."
+							},
+							"title": "Je z vás mlynář"
+						},
+						"yourfirstlibrary": {
+							"description": "Civilizace se k novým vědomostem nikdy nedostane, pokud neumí řádně uchovat ty staré.",
+							"instructions": {
+								"0": "Naučné svitky proměníte po dokončení technologie Písař na knihovny na svitky. Aby mohl písař pracovat bez přestání, bude potřebovat nejméně 10 knihoven na svitky. Svitky z knihoven po použití zmizí, ale po nějaké době se automaticky doplní a dají se použít znovu. Písař také proměňuje hliněné destičky v destičky se starobylou moudrostí."
+							},
+							"title": "Vaše první knihovna"
+						}
+					},
+					"empty": "Momentálně nejsou k dispozici žádné úkoly.",
+					"header": "Úkoly",
+					"instructionsheader": "Pokyny",
+					"notifications": {
+						"message": "Dokončili jste úkol „{0}“. Otevřete kartu Úkoly, prohlédněte si jej a vyzvedněte si případnou odměnu.",
+						"openbutton": "Otevřít úkol",
+						"preview": "{0}",
+						"summarytype": "Úkol dokončen"
+					},
+					"progress": "Postup",
+					"rewardheader": "Odměna",
+					"statusavailable": "K dispozici",
+					"statuscompleted": "Dokončeno",
+					"statusinprogress": "Probíhající",
+					"statusunclaimed": "Nevyzvednuto",
+					"table": {
+						"action": "Akce",
+						"quest": "Úkol",
+						"select": "Vybrat",
+						"status": "Stav"
+					}
+				},
 				"science": {
 					"available": "K dispozici",
 					"completed": "Dokončeno",
@@ -1031,7 +1393,8 @@
 				"description": "Vyberte typ předmětu k použití",
 				"header": "Výběr předmětu",
 				"headerchosen": "Zvoleno",
-				"headerselectables": "Možnosti výběru"
+				"headerselectables": "Možnosti výběru",
+				"toggleshowonlyknown": "Zobrazit pouze známé předměty"
 			},
 			"limits": {
 				"allreset": "Obnovit vše",
@@ -1072,7 +1435,6 @@
 				"showgoal": "Označit cíle"
 			},
 			"quickstart": {
-				"closetoggle": "Toto již nezobrazovat",
 				"next": "Další",
 				"previous": "Předchozí"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Základy",
 				"text1_2": "Začněte tím, že si pro svou kolonii vyberete dobré místo. Doporučujeme vybírat tak, aby byla v blízkosti voda a měli jste k dispozici rovná pole vhodná k zemědělství. Centrem vaší kolonie se stane prapor.",
 				"text2_2gamepad": "V inventáři vyberte pomocí <style=Player/HotBarUp> a <style=Player/HotBarDown> nástroj praporu. Po výběru nástroje praporu namiřte na zem a umístěte prapor stiskem <style=Player/FireSecondary>. Jakmile bude prapor v kolonii umístěn, začne vrhat temný stín na místa, kde se mohou později objevovat monstra.",
-				"text2_2keyboard": "V inventáři vyberte pomocí <style=Player/Inventory1> nástroj praporu. Po výběru nástroje praporu namiřte na zem a umístěte prapor stiskem <style=Player/FireSecondary>. Jakmile bude prapor v kolonii umístěn, začne vrhat temný stín na místa, kde se mohou později objevovat monstra.",
-				"text3_2": "Abyste mohli verbovat osadníky, musíte rozmístit postele. Otevřete rozhraní stiskem <style=Player/ToggleInventory>. Přesuňte postele ze zásoby do rychlé lišty dole. Až budete mít postel vybranou, namiřte na zem a umístěte postel stiskem <style=Player/FireSecondary>.",
+				"text2_2keyboard": "V inventáři vyberte pomocí <style=Player/Inventory2> nástroj praporu. Po výběru nástroje praporu namiřte na zem a umístěte prapor stiskem <style=Player/FireSecondary>. Jakmile bude prapor v kolonii umístěn, začne vrhat temný stín na místa, kde se mohou později objevovat monstra.",
+				"text3_2": "Abyste mohli verbovat osadníky, musíte rozmístit postele. Otevřete rozhraní stiskem <style=Always/ToggleInventory>. Přesuňte postele ze zásoby do rychlé lišty dole. Až budete mít postel vybranou, namiřte na zem a umístěte postel stiskem <style=Player/FireSecondary>.",
 				"text4": "Otevřete rozhraní a přejděte na stránku „Kolonie“. Stiskem tlačítka „Naverbovat“ naverbujte osadníka."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Jídlo a postele",
 				"text1": "Osadníci spotřebují 1 jídlo denně. Berou si jej u praporu, nebo z nedalekého koloniálu. Bez jídla začnou osadníci hladovět. Naverbování nových osadníků stojí několik jednotek jídla.",
 				"text2_2gamepad": "Prvním zdrojem jídla je pěstitel bobulí. Vyberte příkazový nástroj (první pozice v inventáři). Stiskem <style=Player/FirePrimary> jej otevřete a vyberte pěstitele bobulí. Stiskem <style=Player/FireSecondary> začnete ohraničovat bobulovou farmu a pak ohraničení dokončete kliknutím <style=Player/FireSecondary> někam jinam. Bobulí budete potřebovat docela dost!",
-				"text2_2keyboard": "Prvním zdrojem jídla je pěstitel bobulí. Vyberte příkazový nástroj (<style=Player/Inventory0>). Stiskem <style=Player/FirePrimary> jej otevřete a vyberte pěstitele bobulí. Stiskem <style=Player/FireSecondary> začnete ohraničovat bobulovou farmu a pak ohraničení dokončete kliknutím <style=Player/FireSecondary> někam jinam. Bobulí budete potřebovat docela dost!",
+				"text2_2keyboard": "Prvním zdrojem jídla je pěstitel bobulí. Vyberte příkazový nástroj (<style=Player/Inventory1>). Stiskem <style=Player/FirePrimary> jej otevřete a vyberte pěstitele bobulí. Stiskem <style=Player/FireSecondary> začnete ohraničovat bobulovou farmu a pak ohraničení dokončete kliknutím <style=Player/FireSecondary> někam jinam. Bobulí budete potřebovat docela dost!",
 				"text3_2": "Abyste mohli začít s výrobou postelí, budete muset vyrobit kutilský stůl. Když podržíte <style=Player/FirePrimary> při míření na bloky, začnete kopat a nasbíráte potřebnou kamennou suť.",
 				"text4": "Abyste vyrobili kutilský stůl, klikněte na ikonu kutilského stolu v levé části zásoby. Umístíte jej stejně jako postel. Podobně jako u bobulové farmy platí, že tuto pracovní pozici zaplní nezaměstnaní osadníci."
 			},
@@ -1360,8 +1722,13 @@
 			"play_coop": "Hrát kooperativně",
 			"play_solo": "Hrát sólo",
 			"selectedfolder": "Vybraný svět: {0}",
+			"serverlistfriends": "Mohou se připojit přátelé",
+			"serverlistfriendstooltip": "Umožňuje vašim přátelům v nabídce přátel vyhledat vaši hru a připojit se do ní.",
+			"serverlistlan": "Objevování na místní síti",
+			"serverlistlantooltip": "V případě zapnutí této funkce váš server automaticky uvidí lidé připojení ke stejné místní síti (například stejné WiFi) a budou se k němu moct připojit přímo i bez procházení internetu. Takové připojení je rychlejší a plynulejší, ale všichni hráči musí být na stejné síti.",
+			"serverlistpublicly": "Veřejný seznam serverů",
+			"serverlistpubliclytooltip": "Váš server se objeví v seznamu veřejných serverů, kde jej může kdokoli vyhledat a připojit se. Pokud chcete přístup omezit, použijte heslo.",
 			"servername": "Název serveru",
-			"serverport": "Port serveru",
 			"typegenerateworld": "Generovat svět",
 			"typeworkshop": "Svět z Workshopu",
 			"world_folder": "Složka",
@@ -1370,6 +1737,50 @@
 			"worldname": "Název",
 			"worldname_long": "Název světa",
 			"worldseed": "Seed světa"
+		},
+		"splashscreen": {
+			"header": "Děkujeme za koupi a hraní Colony Survival!",
+			"indexingfiles": "Indexují se soubory: {0} / {1}",
+			"scanningcandidates": "Skenování místních souborů... nalezeno {0} možností",
+			"text0": "Stále probíhá aktivní vývoj hry. Pracujeme na opravách problémů, vyvažování receptů a odstraňování chyb. Některé „mezery v hratelnosti“ jsou přípravou na budoucí aktualizace.",
+			"text1": "K dispozici jsou i starší verze hry. K nim se dostanete tak, že v knihovně na Steamu kliknete pravým tlačítkem na hru Colony Survival, přejdete do nabídky „Vlastnosti“ a následně na stránku „betaverze“.",
+			"text2": "Pravidelně píšeme páteční blogy. Ty najdete na stránce hry Colony Survival na Steamu. V každém příspěvku najdete pozvánku na náš server na Discordu. Je to nejlepší způsob, jak se s námi spojit!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "Přiřadit k levé obrazovce",
+				"capture_right": "Přiřadit k pravé obrazovce",
+				"play_alone": "Hrát samostatně",
+				"swap_inputs": "Prohodit vstupy",
+				"swap_screens": "Prohodit obrazovky"
+			},
+			"devices": {
+				"dualsense": "Ovladač DualSense",
+				"gamepad": "Gamepad ({0})",
+				"keyboard_mouse": "Klávesnice a myš",
+				"playstation": "Ovladač PlayStation",
+				"switch": "Ovladač Nintendo Switch",
+				"xbox": "Ovladač Xbox"
+			},
+			"header": "Nastavení rozdělené obrazovky",
+			"header_recovery": "Znovu přiřadit zařízení pro rozdělenou obrazovku",
+			"screens": {
+				"left": "Levá obrazovka",
+				"right": "Pravá obrazovka"
+			},
+			"status": {
+				"apply_failed": "Nepodařilo se použít nastavení rozdělené obrazovky.",
+				"assign_input": "Přiřaďte vstup pro {0}.",
+				"capture_input": "Čekání na vstup pro {0}.",
+				"one_player_ready": "Jeden hráč je připraven. Přidejte gamepad pro rozdělenou obrazovku, nebo zapněte režim pro jednoho hráče.",
+				"press_input": "Stiskněte tlačítko na vstupním zařízení pro {0}.",
+				"ready": "Nastavení rozdělené obrazovky je připraveno."
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\nHráč {2}",
+				"assigned_primary": "{0}\n{1}\nHráč {2} (hlavní profil)",
+				"unassigned": "{0}\nNepřiřazeno"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Dá osadníkovi příkaz pracovat zde jako {0}",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Statistická nástěnka",
 		"statuefarmer": "Socha nadějného farmáře",
 		"statuemonster": "Socha vojenského triumfu",
+		"statuevictory": "Socha vítězství",
 		"steelingot": "Ocelový ingot",
 		"steellockbox": "Ocelová schránka",
 		"steelparts": "Ocelové součástky",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Lahvička kyseliny dusičné",
 		"vialsulphuricacid": "Lahvička kyseliny sírové",
 		"wallpaintingitem": "Obraz",
+		"wallpaintingitemlizzy": "Obraz Lizzy",
+		"wallpaintingitempip": "Obraz Pip",
 		"water": "Voda",
 		"watergatherer": "Nosič vody",
 		"waterpump": "Vodní pumpa",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "Rychlejší způsob štípání dřeva na palivové dříví",
 		"statuefarmer": "Vděčnost za lidskou práci",
 		"statuemonster": "Připomínka vítězství nad našimi nepřáteli",
+		"statuevictory": "Toto je na vaši počest! Z celého srdce blahopřejeme k dosažení tohoto ohromného milníku a děkujeme, že jste hře Colony Survival věnovali tolik času",
 		"stonemasonworkbench": "Vytváří padesát odstínů cihel",
 		"stove": "Provoní okolní vzduch lahodnou vůní",
 		"sulfur": "Nachází se hluboko v biomu vřesoviště",
@@ -1987,6 +2402,8 @@
 		"torch": "Budiž světlo!",
 		"trader": "Nečekaně slouží k obchodování",
 		"wallpaintingitem": "Umění pro vaše hradby",
+		"wallpaintingitemlizzy": "Na památku Lizzy, 2006–2022. Pipliz nese její jméno",
+		"wallpaintingitempip": "Na památku Pip, 2014–2026. Pipliz nese její jméno",
 		"water": "Když ji necháte svému osudu, všechno zaplaví",
 		"waterpump": "Umožňuje získávat vodu bez blízkosti vody",
 		"watersponge": "Odstraní ze svého okolí vodu hluboce realistickým způsobem",

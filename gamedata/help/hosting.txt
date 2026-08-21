@@ -21,3 +21,6 @@ Default config file only has NewOptions - if the used WorldName already exists i
 "DifficultyKey" indexes the difficulty presets in gamedata/settings/server.json
 Seed can be either text or integer (text is hashed to an integer by the server)
 "ServerIP" can generally be left at 0.0.0.0, but can be relevant if there are multiple network interfaces - the IP configured should be the one attached to the network interface desired.
+"ServerListPublicly" controls whether the server registers in the in-game server browser / master server.
+"ServerListLAN" controls whether the server answers LAN discovery.
+"ServerListFriends" controls Steam friends discovery via rich presence; when false the server will not publish the Steam rich-presence join target.

@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Das Entfernen des letzten Banners einer Kolonie entfernt alle NSCs und macht die Kolonie unbrauchbar. Gib „delete“, ein um das letzte Banner zu entfernen.",
 			"header": "Banneroptionen",
 			"noconfirmationdelete": "Entfernungsbefehl abgebrochen – Bestätigung fehlt.",
-			"placementfail": "Banner kann hier nicht platziert werden"
+			"placementfail": "Banner kann hier nicht platziert werden",
+			"requestjoin": "Beitritt anfragen",
+			"requestpending": "Deine Beitrittsanfrage für {0} steht aus.",
+			"requestsent": "Deine Beitrittsanfrage für {0} wurde gesendet."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Aktive Kolonie: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Erstellung eines Außenpostens",
 				"selectparent": "Hauptkolonie auswählen"
 			},
+			"overlaycounters": {
+				"open": "Gegenstands-Tracker konfigurieren"
+			},
 			"ownership": {
 				"action": "Aktion",
 				"connectedplayers": "Verbundene Spieler",
 				"currentowners": "Aktuelle Besitzer",
 				"follower": "Anhänger",
 				"invite": "Als Koloniebesitzer hinzufügen",
+				"invitepending": "{0} hat bereits eine ausstehende Einladung für {1}.",
 				"kick": "Rauswerfen",
+				"kickfromcolony": "Aus Kolonie rauswerfen",
 				"leader": "Anführer",
 				"leave": "Kolonie verlassen",
 				"name": "Name",
@@ -230,7 +238,6 @@
 				"local1": "Suche nach Einzelspieler-Server auf diesem Computer.",
 				"local2": "Suche nach Online-Server auf diesem Computer.",
 				"password": "Passwort benötigt",
-				"steamdirect": "Versuche, direkte Verbindung herzustellen",
 				"steamp2p": "Versuche, P2P-Verbindung herzustellen",
 				"timeout": "Verbindungsversuch abgelaufen. Kehre in 5<NBSP>Sekunden zum Hauptmenü zurück.",
 				"waitingserver": "Starte Server im Hintergrund"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Bewegung",
 			"opencolonytab": "Koloniereiter öffnen",
+			"openplayerslist": "Spielerliste öffnen",
 			"openquickstart": "Hilfemenü öffnen",
 			"placemultipleareas": "Mehrere Baugebiete platzieren",
 			"resetfieldofview": "Sichtfeld zurücksetzen (Cheat)",
@@ -343,7 +351,8 @@
 			"info": "Info",
 			"quitdesktop": "Desktop",
 			"quitmain": "Hauptmenü",
-			"settings": "Einstellungen"
+			"settings": "Einstellungen",
+			"splitscreensetup": "Splitscreen"
 		},
 		"failsafe": {
 			"current": "Aktuelles Vorrat für Heiligkeitspunkte: {0} von {1}",
@@ -371,6 +380,7 @@
 			"apply": "Anwenden",
 			"back": "Zurück",
 			"close": "Schließen",
+			"colonydate": "Tag<NBSP>{0}, {1:00}:{2:00}",
 			"delete": "Entfernen",
 			"description": "Beschreibung",
 			"edit": "Bearbeiten",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Siedlerzahl",
 			"connectlocal": "Mit lokalem Server verbinden",
-			"header_friends": "Freunde",
-			"header_history": "Verlauf",
 			"header_internet": "Internet",
 			"header_lan": "LAN",
 			"ipaddress": "Adresse",
 			"join": "Beitreten",
 			"mods": "Mods",
+			"offline": "Offline",
 			"passworded": "Passwortgeschützt",
 			"refresh2": "Aktualisieren",
 			"refreshing": "Aktualisiere<NBSP>...",
 			"refreshquick": "Schnell aktualisieren",
 			"selectedserver": "Gewählter Server",
+			"serverfavorite": "Favorit",
+			"serverid": "Server-ID",
 			"serverping": "Ping",
 			"serverplayers": "Spieler",
 			"servers": "Server",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Benachrichtigung löschen",
+			"details": {
+				"back": "Zurück",
+				"delete": "Entfernen",
+				"empty": "Keine Benachrichtigungen.",
+				"header": "{0} – {1}",
+				"next": "Nächste",
+				"page": "Seite {0}/{1} – {2} Einträge insgesamt",
+				"previous": "Vorherige"
+			},
+			"generic": {
+				"accept": "Akzeptieren",
+				"decline": "Ablehnen",
+				"kicked": {
+					"message": "Du wurdest aus {0} entfernt.",
+					"title": "Aus Kolonie entfernt"
+				},
+				"management": {
+					"summarytype": "Verwaltung",
+					"title": "Verwaltung"
+				},
+				"ownerinvite": {
+					"accepted": "{0} hat deine Einladung für {1} akzeptiert.",
+					"declined": "{0} hat deine Einladung für {1} abgelehnt.",
+					"invalid": "Diese Einladung ist nicht mehr gültig.",
+					"message": "Du wurdest in {0} eingeladen.",
+					"preview": "Du wurdest in {0} eingeladen.",
+					"summarytype": "Einladen",
+					"title": "Einladung"
+				},
+				"ownerjoinrequest": {
+					"accepted": "Deine Beitrittsanfrage für {0} wurde angenommen.",
+					"declined": "Deine Beitrittsanfrage für {0} wurde abgelehnt.",
+					"message": "{0} hat angefragt, {1} beizutreten.",
+					"preview": "{0} möchte {1} beitreten.",
+					"summarytype": "Beitrittsanfrage",
+					"title": "Kolonie-Beitrittsanfrage"
+				}
+			},
 			"header": "Benachrichtigungen",
 			"missingplayerammo": "<color=#ff2323>Die Verwendung von {0} setzt voraus, dass sich {1} im Inventar befindet!</color>",
 			"npc_died": {
-				"banner": "Ein Monster ist am Banner",
-				"command": "Verwendung von Befehlen",
-				"excess": "Und {0} weitere starben seitdem, anonym.",
-				"individual": "{0}: Ein Siedler mit der Aufgabe „{1}“ ist gestorben. Todesursache: {2}.",
+				"individual2_banner": "{0} {1} wurde am Banner von einem Monster getötet.",
+				"individual2_command": "{0} {1} wurde durch einen Befehl getötet.",
+				"individual2_monster": "{0} {1} wurde von einem Monster getötet.",
+				"individual2_npc": "{0} {1} wurde von einem Siedler getötet.",
+				"individual2_player": "{0} {1} wurde von einem Spieler getötet.",
+				"individual2_starving": "{0} {1} ist verhungert.",
+				"individual2_trap": "{0} {1} wurde durch eine Falle getötet.",
+				"individual2_unknown": "{0} {1} ist an unbekannten Ursachen gestorben.",
 				"main": "{0} Siedler sind im Außenposten {1} gestorben!",
-				"misc": "Unbekannte Gründe",
-				"monster": "Ein Monster",
-				"npc": "Ein Siedler",
-				"player": "Ein Spieler",
-				"starving": "Verhungern",
-				"trap": "Eine Falle"
+				"summarymultiple": "{0} Todesfälle in {1}",
+				"summarysingle": "1 Todesfall in {0}",
+				"summarytype": "Siedler gestorben"
+			},
+			"overview": {
+				"empty": "Keine Benachrichtigungen.",
+				"open": "Öffnen"
+			},
+			"personal": {
+				"header": "Persönlich"
 			},
 			"science": {
-				"entry": "{0}: {1} abgeschlossen",
-				"main": "Wissenschaft abgeschlossen!"
+				"entry2": "{0} abgeschlossen",
+				"main": "Wissenschaft abgeschlossen!",
+				"summarycount": "{0} abgeschlossen",
+				"summarylatest": "{0} abgeschlossen",
+				"summarytype": "Wissenschaft"
 			},
+			"showmarkersonpage": "Orte in der Welt markieren",
 			"siegemode": {
-				"disabled": "{0}: Belagerungsmodus beendet",
-				"enabled": "{0}: Belagerungsmodus begonnen",
-				"main": "Belagerungsmodus im Außenposten {0} ausgelöst!"
+				"disabled2": "Belagerungsmodus gestoppt",
+				"disabledsummary": "Belagerungsmodus in {0} gestoppt",
+				"enabled2": "Der Belagerungsmodus wurde aktiviert! Es gibt keinen Weg für Siedler zwischen dem Banner und der Außenwelt. Für jede fünfte Bedrohung in {0} verbraucht der Belagerungsmodus eine Mahlzeit pro Stunde.\nStelle die Verbindung zur Außenwelt so schnell wie möglich wieder her!",
+				"enabledsummary": "Belagerungsmodus in {0} gestartet",
+				"main": "Belagerungsmodus im Außenposten {0} ausgelöst!",
+				"summarytype": "Belagerungsmodus"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Schriftsteller"
 			}
 		},
+		"playerlist": {
+			"action": "Aktion",
+			"activecolony": "Aktive Kolonie",
+			"header": "Online-Spieler",
+			"id": "ID",
+			"noonlineplayers": "Keine Online-Spieler",
+			"ping": "Ping",
+			"pingvalue": "{0} ms",
+			"player": "Spieler",
+			"totalcolonists": "Siedler insgesamt"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Schließen",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Hergestellt mit:",
 				"madeintooltippurchasable": "Kann im Handelszentrum für {0}<NBSP>Punkte erworben werden.",
 				"noactivecolony": "Keine aktive Kolonie!",
+				"quests": {
+					"claimreward": "Belohnung einfordern",
+					"conditiontitles": {
+						"beds": "Platzierte Betten",
+						"crafted": "{0} hergestellt",
+						"crates": "Platzierte Kisten",
+						"gathered": "{0} abgebaut",
+						"npctype": "{0} rekrutiert",
+						"placed": "{0} platziert",
+						"purchased": "{0} gekauft",
+						"sciencecompleted": "Wissenschaft {0} abgeschlossen",
+						"totalcolonists": "Siedler"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "Moderne Technologie kann verwendet werden, um mächtige Waffen herzustellen.",
+							"instructions": {
+								"0": "Schalte die entsprechende Wissenschaft frei."
+							},
+							"title": "Erweiterte Waffen"
+						},
+						"automatedcrafting": {
+							"description": "Lass deine Siedler das Abbauen und Herstellen übernehmen!",
+							"instructions": {
+								"0": "Halte <style=Player/FirePrimary> gedrückt, während du Gras oder Erde anvisierst, um den Block zu entfernen. Grabe dich nach unten durch den Stein, bis du auf dunkle Steinblöcke triffst. Wähle den Gegenstand für die Bergbauaufgabe aus und platziere ihn auf dem dunklen Stein.",
+								"1": "Unter der Erde wird es dunkel sein. Wähle Fackeln aus und platziere sie für Licht. Wenn du sie hältst, erhältst du lokales Licht. Drücke <style=Player/ToggleTorch>, um deine persönliche Fackel zu aktivieren, während du andere Gegenstände hältst.",
+								"2": "Das Graben durch den Stein hat dir Steinbrocken eingebracht. Der Bergmann auf dunklem Stein wird dir diese ebenfalls liefern. Du kannst sie nun verwenden, um einen Tüftlertisch im Vorrats-Reiter herzustellen, indem du die Symbole in der linken Leiste benutzt. Dies kann auch in der Mühle gemacht werden.",
+								"3": "Platziere den Tüftlertisch in deiner Kolonie. Du kannst über <style=Player/FireSecondary> mit dem Tisch interagieren, um zu sehen, welche Gegenstände der Tüftler herstellen kann.",
+								"4": "Rekrutiere genug Siedler, um deine neuen Aufgaben zu füllen. Sie brauchen einen Schlafplatz und Nahrung, also rekrutiere weiterhin Beerenbauern, um deine neuen Siedler zu versorgen!"
+							},
+							"title": "Automatisierte Gegenstandsherstellung"
+						},
+						"betterfoodsource": {
+							"description": "Beerenbauern sind eine einfache, aber relativ langsame Nahrungsquelle. Weizen kann für effizientere Mahlzeiten verwendet werden, ist aber komplizierter einzurichten.",
+							"instructions": {
+								"0": "Beginne damit, die Wissenschaft für den Weizenanbau abzuschließen. Dies ermöglicht es dir, Weizenbauern mit dem Befehlswerkzeug einzuteilen. Anders als bei Beerenbauern ist hier die Größe wichtig. Je größer das Feld, desto mehr Weizen werden sie ernten, bis zu einem Maximum von 100 abgedeckten Blöcken. Es dauert zwei Nächte, bis der Weizen wächst. Weizen kann sofort zu Weizengrütze verarbeitet werden.",
+								"1": "Schließe dann die Wissenschaft für das Handelszentrum und das Töpfern ab. Töpfern ermöglicht es dir, Töpfe an Töpferstationen herzustellen, und schaltet Wasserträger frei. Platziere diese Aufgabe direkt neben Wasser, damit Siedler leere Töpfe mit Wasser füllen können. Verwende <style=Player/HoldCrouch>, um zu kriechen und zu verhindern, dass du ins Wasser fällst!",
+								"1_gamepad": "Schließe dann die Wissenschaft für das Handelszentrum und das Töpfern ab. Töpfern ermöglicht es dir, Töpfe an Töpferstationen herzustellen, und schaltet Wasserträger frei. Platziere diese Aufgabe direkt neben Wasser, damit Siedler leere Töpfe mit Wasser füllen können. Verwende <style=Player/ToggleCrouch>, um zu kriechen und zu verhindern, dass du ins Wasser fällst!",
+								"2": "Wenn kein Wasser in der Nähe ist, kannst du die Wissenschaft zum Wasserpumpen freischalten, für eine langsamere, aber ortsunabhängige Methode, um Wasser zu sammeln.",
+								"3": "Schalte die Haferbrei-Wissenschaft frei und platziere eine Feuerstelle, um Weizen und Töpfe mit Wasser in Weizenbrei zu verwandeln – die effizienteste Mahlzeit zu Beginn des Spiels!"
+							},
+							"title": "Eine bessere Nahrungsquelle"
+						},
+						"booksofknowledge": {
+							"description": "Schriftrollen und Tafeln werden durch Bücher ersetzt!",
+							"instructions": {
+								"0": "Schalte die Forscher-Wissenschaft frei. Dies ermöglicht es deinen Schriftstellern, Bücherregale herzustellen, indem sie Tafeln der alten Weisheit und Papier kombinieren. Platziere 10 Bücherregale in der Nähe eines Forschertischs, um nachhaltiges Studieren zu unterstützen. Der Forscher wird wissenschaftliche Notizen erstellen, die vom Schriftsteller verwendet werden können, um Bücher des Wissens herzustellen."
+							},
+							"title": "Bücher des Wissens"
+						},
+						"defenseofcivilization": {
+							"description": "Je mehr deine Kolonie wächst, desto größer wird auch die Monsterhorde, die dich angreift. Verbessere weiterhin deine Verteidigung!",
+							"instructions": {
+								"0": "Schalte die Bogenschieß-Wissenschaft frei und rekrutiere einen Pfeilmacher, um den Gegenstand für die Aufgabe des Bogenschützen (Nachtwache) herzustellen.",
+								"1": "Schließe auch die Schriftsteller-Wissenschaft ab, platziere einen Schreibtisch und lass einen Siedler Pergament in Schriftrollen des Wissens verwandeln.",
+								"2": "Fallen werden am Ingenieurtisch hergestellt. Um die Ingenieur-Wissenschaft abzuschließen, benötigst du Goldbarren. Golderz kann im Handelszentrum gekauft werden.",
+								"3": "Fallen können nachgeladen werden, indem du einen Fallensteller in der Nähe platzierst. Der Fallensteller wird deine Fallen tagsüber instand halten. Natürlich musst du auch Munition herstellen."
+							},
+							"title": "Die Verteidigung der Zivilisation"
+						},
+						"endlessgrowth": {
+							"description": "Erreiche das berühmte Ziel von eintausend Siedlern!",
+							"title": "Endloses Wachstum"
+						},
+						"finalcountdown": {
+							"description": "Die Kolonie wird zu einem Imperium.",
+							"title": "Der finale Countdown"
+						},
+						"finalstage": {
+							"description": "Schalte die fortschrittlichste Technologie im Spiel frei.",
+							"title": "Die letzte Phase"
+						},
+						"foodsource": {
+							"description": "Deine Kolonie braucht Nahrung. Die erste Quelle wird das Ernten von Beeren sein.",
+							"instructions": {
+								"0": "Öffne den Vorrat (<style=Always/ToggleInventory>) und bewege Betten in die Schnellauswahlleiste am unteren Bildschirmrand. Schließe den Vorrat (<style=Always/ToggleInventory> oder <style=UI/Cancel>) und wähle deine Betten mit <style=Player/HotBarUp> und <style=Player/HotBarDown> aus. Platziere sechs Betten, indem du mit <style=Player/FireSecondary> den Boden anvisierst.",
+								"1": "Wähle das Befehlswerkzeug (<style=Player/Inventory1>) und wende <style=Player/FirePrimary> auf den Boden an, wo du ein Beerenfeld platzieren möchtest. Gehe zum anderen Ende des vorgesehenen Bereichs und benutze <style=Player/FireSecondary>, um den Feldbereich abzuschließen. Erstelle sechs Felder.",
+								"1_gamepad": "Wähle das Befehlswerkzeug und wende <style=Player/FirePrimary> auf den Boden an, wo du ein Beerenfeld platzieren möchtest. Gehe zum anderen Ende des vorgesehenen Bereichs und benutze <style=Player/FireSecondary>, um den Feldbereich abzuschließen. Erstelle sechs Felder.",
+								"2": "Nimm eine Kiste aus dem Vorrat und platziere sie in der Nähe. Deine Bauern werden ihre Ernten hierher bringen.",
+								"3": "Drücke <style=Always/OpenColonyTab> und rekrutiere sechs Siedler, um mit dem Anbau der Beeren zu beginnen.",
+								"3_gamepad": "Drücke <style=Always/ToggleInventory> und navigiere mit <style=UI/MenuTabLeft> und <style=UI/MenuTabRight> zum Koloniereiter. Rekrutiere sechs Siedler, um mit dem Anbau der Beeren zu beginnen."
+							},
+							"title": "Eine Nahrungsquelle erschließen"
+						},
+						"goldandbronzeautarky": {
+							"description": "Warum sich auf Händler verlassen, wenn du dein eigenes Gold und Zinn abbauen kannst?",
+							"instructions": {
+								"0": "Kaufe ein Außenposten-Banner und stelle sicher, dass du es in deine Schnellauswahlleiste verschiebst. Finde einen Berg mit Schnee auf dem Gipfel. Du kannst das Astrolabium verwenden, um ihn zu finden. Nutze das Außenposten-Banner, um einen Außenposten nahe dem Berggipfel zu gründen. Platziere Betten und baue Verteidigungsanlagen.",
+								"1": "Grabe dich unter den Schnee. Zuerst triffst du auf die Stufe mit Kupfer und Ton. Grabe weiter, und du erreichst eine Schicht mit Eisenerz und Zinn. Grabe noch weiter nach unten, und du wirst auf Gold stoßen!",
+								"2": "Stelle sicher, dass du wirklich unter dem Schnee gräbst. Eisen kann überall gefunden werden, aber Zinn und Gold gibt es nur direkt unter Schnee!"
+							},
+							"title": "Gold- und Bronze-Autarkie"
+						},
+						"goldenpoisonousflight": {
+							"description": "Du erhältst Zugang zu einigen fortschrittlichen Technologien!",
+							"instructions": {
+								"0": "Gleiter werden deine Reisen beschleunigen, während Krähenfüße-Fallen ankommende Monster verlangsamen. Goldene Schilde sind eine großartige Einnahmequelle, und Gift fügt Monstern über Zeit Schaden zu. Sie so früh wie möglich zu vergiften, ist die beste Strategie! Schließe die entsprechende Wissenschaft ab und produziere die notwendigen Gegenstände."
+							},
+							"title": "Goldener giftiger Flug"
+						},
+						"growextra": {
+							"description": "Um deine Kolonie richtig zu entwickeln, wirst du mehr als nur das absolute Minimum an Siedlern brauchen. Du benötigst zusätzliche Bergmänner, Bauern, Wachen und Handwerker.",
+							"instructions": {
+								"0": "Die standardmäßige Siedlerkapazität beträgt 100. Gehe zum Menü für Koloniepunkte und gib 100 Koloniepunkte aus, um sie zu erweitern."
+							},
+							"title": "Wachstum!"
+						},
+						"growmore": {
+							"description": "Je mehr, desto besser!",
+							"instructions": {
+								"0": "Platziere Kupfertresore und nutze das Menü für Koloniepunkte, um deine Siedlerkapazität auf 200 zu erweitern. Schließe die Koch-Wissenschaft ab und rekrutiere einen Koch und einen Fischer."
+							},
+							"title": "Wachse weiter!"
+						},
+						"growthforgrowthssake": {
+							"description": "Wir haben eindeutig festgestellt, dass mehr besser ist.",
+							"instructions": {
+								"0": "Behalte alles genau im Auge! Baue deine Verteidigung aus, sammle mehr Ressourcen, rekrutiere mehr Handwerker und suche nach den Engpässen in deinen Produktionsketten."
+							},
+							"title": "Wachstum um des Wachstums willen"
+						},
+						"growthwoodscience": {
+							"description": "Deine wachsende Kolonie benötigt eine Holzquelle, neue Technologie, mehr Siedler und mehr Nahrung.",
+							"instructions": {
+								"0": "Försterbereiche werden wie Beerenfelder mit dem Befehlswerkzeug erstellt.",
+								"1": "Navigiere zum Wissenschafts-Reiter, finde die Bergbau-Wissenschaft, sammle 5 Steinbrocken und schließe sie ab, um das Rezept für die Bergbauaufgabe beim Tüftler freizuschalten."
+							},
+							"title": "Wachstum, Holz und Wissenschaft"
+						},
+						"gunpowder": {
+							"description": "Schießpulver ist eine offensichtliche Verbesserung für deine Rüstungsindustrie!",
+							"instructions": {
+								"0": "Schalte die Wissenschaften für die Wissenschaftstruhe, den Glasbläser, das Schießpulver und die Handkanone frei. Um Schießpulver herzustellen, benötigst du Schwefel, der in Heidelandschaften abgebaut oder beim Händler gekauft werden kann."
+							},
+							"title": "Schießpulver"
+						},
+						"gutenbergrevolution": {
+							"description": "Die Druckpresse wird deine Buchproduktion steigern.",
+							"instructions": {
+								"0": "Schalte die Wissenschaften für Stahl, Blei und Erdöl frei. Dies gewährt dir Zugang zur Druckpresse-Wissenschaft. Du benötigst Kohleerz, das in der Nähe von Mammutbäumen gefunden werden kann, und Bleierz, das in Sumpfgebieten zu finden ist."
+							},
+							"title": "Gutenberg-Revolution"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "Maschinen können dich automatisch an verschiedene Orte bringen.",
+							"instructions": {
+								"0": "Schalte die Schienen- und Aufzug-Wissenschaften frei."
+							},
+							"title": "Horizontaler und vertikaler Transport"
+						},
+						"infrastructureofcivilization": {
+							"description": "Du musst Mahlzeiten und Werkzeuge verteilen, Koloniepunkte lagern und in Notfällen Monster zerschmettern.",
+							"instructions": {
+								"0": "Siedler können Mahlzeiten und Werkzeuge an deinem Banner abholen, aber du kannst ihre Wege verkürzen, indem du Lebensmitteltische und Werkzeugtische in deiner Kolonie platzierst. Diese werden durch den Abschluss der entsprechenden Wissenschaft freigeschaltet.",
+								"1": "Wenn du mehr als 100 Koloniepunkte lagern willst, musst du Kupfertresore platzieren. Das Platzieren erhöht deine Bedrohungsstufe!",
+								"2": "Wenn Monster deine Verteidigung durchbrechen, ist das Heiligkeit-Notfallsystem eine hilfreiche Notfallmaßnahme.",
+								"3": "Sowohl der Tresor als auch das Notfallsystem müssen durch Wissenschaft freigeschaltet und am Amboss hergestellt werden."
+							},
+							"title": "Die Infrastruktur der Zivilisation"
+						},
+						"intomodernity": {
+							"description": "Rekrutiere einige moderne Arbeiter, um Hightech-Gegenstände zu produzieren.",
+							"instructions": {
+								"0": "Du benötigst zuerst die Luxustruhe-Wissenschaft, die dir Zugang zur Tabelliermaschinen-Wissenschaft und zur Metalldreher-Wissenschaft verschafft."
+							},
+							"title": "In die Moderne"
+						},
+						"intothebronzeage": {
+							"description": "Die Bronzezeit gibt dir Zugang zu neuen Materialien und einer Menge neuer Technologie. Baue einige der wichtigsten!",
+							"instructions": {
+								"0": "Beginne damit, die Wissenschaft der Bronzezeit abzuschließen. Schalte Außenposten frei und kaufe ein Banner im Handelszentrum. Schließe die Messing-Wissenschaft ab und kaufe Zink im Zentrum. Schließe die Geschossfallen- und die Armbrust-Wissenschaft ab. Kaufe Zinn im Zentrum, um Bronzebarren herzustellen."
+							},
+							"title": "In die Bronzezeit"
+						},
+						"ironage": {
+							"description": "Schalte Eisen frei, ein weiteres lebenswichtiges Material.",
+							"instructions": {
+								"0": "Die Eisenzeit-Wissenschaft ist eine der wichtigsten und erfordert viele Zutaten. Eisenerz kann überall gefunden werden, wenn du immer weiter nach unten gräbst.",
+								"1": "Eisenerz muss mit einer neuen Brennstoffquelle geschmolzen werden: Kohle. Diese wird in einem Meiler hergestellt. Für die Eisenschmelze werden auch Rennöfen benötigt. Beides wird an der Werkbank für erweiterte Aufgabenblöcke produziert."
+							},
+							"title": "Die Eisenzeit"
+						},
+						"makeitbeautiful": {
+							"description": "Ästhetik ist wichtig für die Seele!",
+							"instructions": {
+								"0": "Die Künstler-Wissenschaft ist hinter der Ziegeldach-Wissenschaft gesperrt, auf die du zugreifen kannst, nachdem die Steinmetz-Wissenschaft abgeschlossen ist. Jagdtrophäen werden mit der Kuriositätenpresse hergestellt. Sie funktioniert wie die Mühle und ist hinter ihrer eigenen Wissenschaft gesperrt."
+							},
+							"title": "Mach es schön"
+						},
+						"paperpower": {
+							"description": "Papier ist entscheidend für die Zivilisation. Wahrscheinlich liegt gerade welches auf deinem Schreibtisch!",
+							"instructions": {
+								"0": "Du wirst Hanf benötigen, der beim Händler zu einem hohen Preis gekauft werden kann. Eine billigere Alternative ist, einen Außenposten in einem Sumpfgebiet zu gründen und ihn selbst anzubauen. Schalte sowohl die Hanf- als auch die Seil-Wissenschaft frei, um Zugang zur Papierproduktion-Wissenschaft zu erhalten."
+							},
+							"title": "Papierkraft"
+						},
+						"powerofmetal": {
+							"description": "Metall ist entscheidend für die Zivilisation. Baue eine funktionierende Metall-Produktionskette auf.",
+							"instructions": {
+								"0": "Kehre unter Tage zu deinen Stein-Bergmännern zurück. In der obersten Schicht der dunklen Steinblöcke findest du Kupfererz-Blöcke. Kupfererz ist rot. Platziere Bergbauaufgaben darauf, damit Siedler daraus Kupfer abbauen können.",
+								"1": "Schließe die Schmelzer-Wissenschaft ab. Fehlt es dir an Steinwerkzeugen? Rekrutiere mehr Tüftler, um deren Produktion zu beschleunigen!",
+								"2": "Deine Tüftler können nun die nächsten Aufgabenblöcke herstellen: einen Ofen für Schmelzer und einen Hauklotz für Holzfäller. Der Holzfäller wird Holzbretter in Brennholz verwandeln, das dein Schmelzer benötigt, um Kupfererz in Kupferbarren umzuwandeln."
+							},
+							"title": "Die Kraft des Metalls"
+						},
+						"powerofpower": {
+							"description": "Das Rekrutieren von über 25 Siedlern und das Abschließen von Wissenschaften erzeugt „Bedrohung“. Deine Bedrohungsstufe wird oben rechts angezeigt. Eine höhere Bedrohungsstufe bedeutet, dass mehr und stärkere Monster versuchen werden, deine Kolonie in der Nacht anzugreifen. Halte sie davon ab, dein Banner und deine schlafenden Siedler zu erreichen!",
+							"instructions": {
+								"0": "Der Gegenstand „Schleuderer (Nachtwache)“ wird von Tüftlern oder in der Mühle hergestellt. Platziere den Gegenstand auf dem Boden und er erstellt eine Wachenaufgabe. Schleuderer werfen Schleudergeschosse auf Monster.",
+								"1": "Monster werden deine Kolonie von allen Seiten angreifen, und es ist hilfreich, sie zu bestimmten Öffnungen zu leiten. Baue Mauern, die mindestens zwei Blöcke hoch sind, oder grabe Gräben, um Monster daran zu hindern, ein Gebiet zu durchqueren.",
+								"2": "Achte darauf, nicht den gesamten Zugang zu deinem Banner zu blockieren! Dies löst den Belagerungsmodus aus.",
+								"3": "Während du das Bannerwerkzeug hältst, wird ein tiefer Schatten das Gebiet bedecken, der weiter von deinem Banner entfernt ist. In diesem Gebiet werden Monster erscheinen. Es ist in Ordnung, wenn Siedler außerhalb deiner Mauern oder in diesem schattigen Gebiet arbeiten, solange sie sich in der Nacht an einen sicheren Ort zurückziehen."
+							},
+							"title": "Die Macht der Macht"
+						},
+						"remotecontrol": {
+							"description": "Lerne, deine Kolonie aus der Vogelperspektive zu steuern, und lass Siedler deine Bauarbeiten erledigen.",
+							"instructions": {
+								"0": "Schalte die Wissenschaft für das Pult des Aufsehers und die Bergarbeiter-Wissenschaft frei. Platziere das Pult des Aufsehers und verwende es, um in die Vogelperspektive zu wechseln. Benutze das Befehlswerkzeug aus der Vogel- oder der Ego-Perspektive und öffne „Bau“. Wähle „Alles entfernen“, um einen Bereich zu definieren, der komplett entfernt wird. Platziere Aufgabenplätze um den Bereich und sie werden automatisch Bauarbeiter rekrutieren, die diesen Bauauftrag ausführen."
+							},
+							"title": "Fernsteuerung"
+						},
+						"setupcolony": {
+							"description": "Platziere das Banner, um deine erste Quest zu erhalten!",
+							"instructions": {
+								"0": "Platziere das Banner, um deine erste Quest zu erhalten! Wähle das Bannerwerkzeug (<style=Player/Inventory2>) und wende <style=Player/FireSecondary> auf dem Boden an. Ein Ort mit flachen Flächen für den Anbau und Wasser in der Nähe ist ideal.",
+								"0_gamepad": "Platziere das Banner, um deine erste Quest zu erhalten! Wähle das Bannerwerkzeug im Inventar unten mithilfe von <style=Player/HotBarUp> und <style=Player/HotBarDown> aus. Platziere es mit <style=Player/FireSecondary>, während du den Boden anvisierst. Ein Ort mit flachen Flächen für den Anbau und Wasser in der Nähe ist ideal.",
+								"1": "Benutze <style=Player/MoveKeyboard> und <style=Player/Look>, um durch die Welt zu navigieren.",
+								"1_gamepad": "Benutze <style=Player/MovePad> und <style=Player/Look>, um durch die Welt zu navigieren."
+							},
+							"title": "Eine Kolonie aufbauen"
+						},
+						"startofprestige": {
+							"description": "Schalte die Prestigetruhe frei und produziere eine!",
+							"title": "Der Beginn des Prestiges"
+						},
+						"stretchieststretchgoal": {
+							"description": "Schließe Prestige V ab.",
+							"title": "Das ultimative Zusatzziel"
+						},
+						"wealthofnations": {
+							"description": "Du benötigst Schmiede, Textilien, Leder und Handel.",
+							"instructions": {
+								"0": "Stelle sicher, dass du den Weizenanbau und das Handelszentrum freigeschaltet hast. Lass einen Siedler ein Handelszentrum an der neuen Werkbank für Aufgabenblöcke herstellen. Platziere das Handelszentrum, verkaufe einige Kupferbarren und kaufe Tierkadaver, die erforderlich sind, um die Gerber-Wissenschaft freizuschalten. Du benötigst Leinen, um den Gerbertisch herzustellen, der im Handelszentrum gemacht oder gekauft werden kann. Rekrutiere einen Gerber, um Tierkadaver in rohes Fleisch, Haut und letztendlich Leder umzuwandeln.",
+								"1": "Schalte die Schneider-Wissenschaft frei, rekrutiere Flachsbauern und platziere eine Schneiderei, um einen Schneider zu rekrutieren, der Flachs in Leinen verwandelt.",
+								"2": "Jetzt solltest du alles haben, was du brauchst, um die Amboss-Wissenschaft abzuschließen, einen Kupferschmied zu rekrutieren und die neuen Werkzeuge herzustellen!"
+							},
+							"title": "Der Wohlstand der Nationen"
+						},
+						"yourethemiller": {
+							"description": "Die Mühle versorgt dich mit grundlegenden Gegenständen. Platziere und benutze sie!",
+							"instructions": {
+								"0": "Die Mühle ist nach dem Start deiner Kolonie in deiner Schnellauswahlleiste erschienen. Platziere sie in deiner Kolonie.",
+								"1": "Geh die Treppe der Mühle hinauf und wende <style=Player/FireSecondary> auf den internen Mechanismus an, um ihr Menü zu öffnen. Füge Kisten, Bergbauaufgaben und Betten zu ihrer Herstellungs-Warteschlange hinzu. Warte, bis die Mühle fertig ist, und sammle die Ergebnisse ein, indem du die Schaltflächen unten rechts drückst."
+							},
+							"title": "Du bist der Müller"
+						},
+						"yourfirstlibrary": {
+							"description": "Eine Zivilisation kann kein neues Wissen entwickeln, ohne altes Wissen richtig zu speichern.",
+							"instructions": {
+								"0": "Schriftrollen des Wissens können nach Abschluss der Schriftgelehrten-Wissenschaft in Schriftrollenregale verwandelt werden. Ein Schriftgelehrter benötigt mindestens 10 Schriftrollenregale, um ständig arbeiten zu können. Die Schriftrollen in den Regalen werden bei Benutzung entfernt, aber nach einer Weile werden sie automatisch aufgefüllt und sind wieder nutzbar. Der Schriftgelehrte wird Tontafeln in Tafeln der alten Weisheit verwandeln."
+							},
+							"title": "Deine erste Bibliothek"
+						}
+					},
+					"empty": "Derzeit sind keine Quests verfügbar.",
+					"header": "Quests",
+					"instructionsheader": "Anweisungen",
+					"notifications": {
+						"message": "Du hast die Quest „{0}“ abgeschlossen. Öffne den Questreiter, um sie anzusehen und die Belohnung einzufordern, falls eine verfügbar ist.",
+						"openbutton": "Quest öffnen",
+						"preview": "{0}",
+						"summarytype": "Quest abgeschlossen"
+					},
+					"progress": "Fortschritt",
+					"rewardheader": "Belohnung",
+					"statusavailable": "Verfügbar",
+					"statuscompleted": "Abgeschlossen",
+					"statusinprogress": "In Bearbeitung",
+					"statusunclaimed": "Nicht eingefordert",
+					"table": {
+						"action": "Aktion",
+						"quest": "Quest",
+						"select": "Auswählen",
+						"status": "Status"
+					}
+				},
 				"science": {
 					"available": "Verfügbar",
 					"completed": "Abgeschlossen",
@@ -1031,7 +1393,8 @@
 				"description": "Wähle den zu verwendenden Gegenstandstyp aus",
 				"header": "Gegenstandsauswahl",
 				"headerchosen": "Ausgewählt",
-				"headerselectables": "Auswählbar"
+				"headerselectables": "Auswählbar",
+				"toggleshowonlyknown": "Nur bekannte Gegenstände anzeigen"
 			},
 			"limits": {
 				"allreset": "Alles zurücksetzen",
@@ -1072,7 +1435,6 @@
 				"showgoal": "Ziele markieren"
 			},
 			"quickstart": {
-				"closetoggle": "Nicht mehr anzeigen",
 				"next": "Nächste",
 				"previous": "Vorherige"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Grundlagen",
 				"text1_2": "Beginne, indem du einen guten Startort für deine erste Kolonie findest. Wir empfehlen dir, in der Nähe von Wasser und flachen Feldern zu bauen. Ein Banner wird das Zentrum deiner Kolonie.",
 				"text2_2gamepad": "Wähle das Banner-Werkzeug im Inventar unten, indem du <style=Player/HotBarUp> und <style=Player/HotBarDown> verwendest. Platziere es mit <style=Player/FireSecondary>, während du mit dem ausgewählten Banner-Werkzeug den Boden anvisierst. Sobald es in einer Kolonie steht, zeigt das Banner-Werkzeug einen tiefen Schatten dort an, wo später Monster erscheinen können.",
-				"text2_2keyboard": "Wähle das Banner-Werkzeug im Inventar unten, indem du <style=Player/Inventory1> verwendest. Platziere es mit <style=Player/FireSecondary>, während du mit dem ausgewählten Banner-Werkzeug den Boden anvisierst. Sobald es in einer Kolonie steht, zeigt das Banner-Werkzeug einen tiefen Schatten dort an, wo später Monster erscheinen können.",
-				"text3_2": "Platziere Betten, um Siedler zu rekrutieren. Drücke <style=Player/ToggleInventory>, um die Benutzeroberfläche auszuwählen. Bewege Betten aus dem Vorrat in die Schnellauswahlleiste unten. Wenn das Bett ausgewählt ist, nutze <style=Player/FireSecondary>, während du den Boden anvisierst, um das Bett zu platzieren.",
+				"text2_2keyboard": "Wähle das Banner-Werkzeug im Inventar unten, indem du <style=Player/Inventory2> verwendest. Platziere es mit <style=Player/FireSecondary>, während du mit dem ausgewählten Banner-Werkzeug den Boden anvisierst. Sobald es in einer Kolonie steht, zeigt das Banner-Werkzeug einen tiefen Schatten dort an, wo später Monster erscheinen können.",
+				"text3_2": "Platziere Betten, um Siedler zu rekrutieren. Drücke <style=Always/ToggleInventory>, um die Benutzeroberfläche auszuwählen. Bewege Betten aus dem Vorrat in die Schnellauswahlleiste unten. Wenn das Bett ausgewählt ist, nutze <style=Player/FireSecondary>, während du den Boden anvisierst, um das Bett zu platzieren.",
 				"text4": "Öffne die Benutzeroberfläche und gehe auf die Seite „Kolonie“. Drücke „Rekrutieren“, um einen Siedler zu rekrutieren."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Nahrung und Betten",
 				"text1": "Siedler benötigen 1<NBSP>Mahlzeit pro Tag. Diese holen sie sich am Banner oder von einem nahe gelegenen Lebensmitteltisch. Ohne Nahrung verhungern die Siedler. Die Rekrutierung neuer Siedler kostet mehrere Mahlzeiten.",
 				"text2_2gamepad": "Die erste Nahrungsquelle ist der Beerenbauer. Wähle das Befehlswerkzeug (auf dem ersten Inventarplatz). Verwende <style=Player/FirePrimary>, um es zu öffnen und den Beerenbauer auszuwählen. Verwende <style=Player/FireSecondary>, um den Anfang des Beerenfelds auszuwählen, dann <style=Player/FireSecondary> an einem anderen Ort, um das Ende abzugrenzen. Du wirst eine Menge davon brauchen!",
-				"text2_2keyboard": "Die erste Nahrungsquelle ist der Beerenbauer. Wähle das Befehlswerkzeug (<style=Player/Inventory0>). Verwende <style=Player/FirePrimary>, um es zu öffnen und den Beerenbauer auszuwählen. Verwende <style=Player/FireSecondary>, um den Anfang des Beerenfelds auszuwählen, dann <style=Player/FireSecondary> an einem anderen Ort, um das Ende abzugrenzen. Du wirst eine Menge davon brauchen!",
+				"text2_2keyboard": "Die erste Nahrungsquelle ist der Beerenbauer. Wähle das Befehlswerkzeug (<style=Player/Inventory1>). Verwende <style=Player/FirePrimary>, um es zu öffnen und den Beerenbauer auszuwählen. Verwende <style=Player/FireSecondary>, um den Anfang des Beerenfelds auszuwählen, dann <style=Player/FireSecondary> an einem anderen Ort, um das Ende abzugrenzen. Du wirst eine Menge davon brauchen!",
 				"text3_2": "Um Betten zu produzieren, musst du den Tisch des Tüftlers herstellen. Drückst du <style=Player/FirePrimary>, während du Blöcke anvisierst, kannst du graben, um die benötigten Steinbrocken zu sammeln.",
 				"text4": "Klicke auf das Tüftlertisch-Symbol links neben dem Vorrat, um ihn herzustellen. Platziere ihn so, wie du das Bett platziert hast. Wie bei dem Beerenfeld nehmen beschäftigungslose Siedler diese Aufgabe automatisch an."
 			},
@@ -1245,7 +1607,7 @@
 					"showcolonistjobinname": "Aufgabe im Namen anzeigen",
 					"showsensitivedatamode": "Sensible Daten anzeigen",
 					"tab": "Allgemeine Einstellungen",
-					"uiscaletooltip": "Vergrößert/Verkleinert die Benutzeroberfläche zur Anpassung an verschiedene Bildschirmgrößen, unabhängig von der Auflösung. Wenn du einen 4K-Bildschirm hast, solltest du dies wahrscheinlich auf 200 % einstellen.",
+					"uiscaletooltip": "Vergrößert/Verkleinert die Benutzeroberfläche zur Anpassung an verschiedene Bildschirmgrößen, unabhängig von der Auflösung. Wenn du einen 4K-Bildschirm hast, solltest du dies wahrscheinlich auf 200<NBSP>% einstellen.",
 					"uiscalingratio": "Benutzeroberflächenskalierung"
 				},
 				"mousemenu": {
@@ -1304,7 +1666,7 @@
 				"presettooltip": "Kombinierte Einstellung, die der Einfachheit halber viele der detaillierteren Einstellungen unten auf einmal anpasst.",
 				"ragdoll": "Ragdoll-Menge",
 				"ragdolltooltip": "Legt fest, wie viele Charakterkörper gleichzeitig auf dem Boden liegen bleiben können. Bei höheren Werten im späten Spiel geringe Auswirkungen auf die CPU.",
-				"renderscaletooltip": "Verringert oder erhöht die Renderauflösung, während die Benutzeroberfläche in der Hauptauflösung bleibt. 100 bedeutet 100 % Skalierung (keine Änderung). Hat starke Auswirkungen auf die GPU-Leistung.",
+				"renderscaletooltip": "Verringert oder erhöht die Renderauflösung, während die Benutzeroberfläche in der Hauptauflösung bleibt. 100 bedeutet 100<NBSP>% Skalierung (keine Änderung). Hat starke Auswirkungen auf die GPU-Leistung.",
 				"renderscalingratio": "Renderskalierung",
 				"resolution": "Auflösung",
 				"resolutiontooltip": "Stelle dies am besten auf die native Auflösung deines Bildschirms ein. Wenn du mehr Leistung benötigst, verwende lieber die Einstellung „Renderskalierung“.",
@@ -1360,8 +1722,13 @@
 			"play_coop": "Koop spielen",
 			"play_solo": "Solo spielen",
 			"selectedfolder": "Welt ausgewählt: {0}",
+			"serverlistfriends": "Freunde können beitreten",
+			"serverlistfriendstooltip": "Ermöglicht es deinen Freunden, dein Spiel über ihr Freunde-Menü zu finden und ihm beizutreten.",
+			"serverlistlan": "Lokale Netzwerkerkennung",
+			"serverlistlantooltip": "Wenn dies aktiviert ist, können Personen, die mit demselben lokalen Netzwerk (z. B. demselben WLAN) verbunden sind, deinen Server automatisch sehen und sich direkt mit ihm verbinden, anstatt über das Internet. Dies kann die Verbindung schneller und reibungsloser machen, aber alle müssen im selben Netzwerk sein.",
+			"serverlistpublicly": "Öffentliche Serverliste",
+			"serverlistpubliclytooltip": "Dein Server wird in der öffentlichen Serverliste angezeigt, sodass ihn jeder finden und beitreten kann. Verwende ein Passwort, wenn du den Zugang einschränken möchtest.",
 			"servername": "Servername",
-			"serverport": "Serveranschluss",
 			"typegenerateworld": "Welt generieren",
 			"typeworkshop": "Workshop-Welt",
 			"world_folder": "Ordner",
@@ -1370,6 +1737,50 @@
 			"worldname": "Name",
 			"worldname_long": "Weltname",
 			"worldseed": "Weltsamen"
+		},
+		"splashscreen": {
+			"header": "Danke für den Kauf und das Spielen von Colony Survival!",
+			"indexingfiles": "Indiziere {0}/{1} Dateien",
+			"scanningcandidates": "Lokale Dateien werden gescannt<NBSP>... {0}<NBSP>Kandidaten gefunden",
+			"text0": "Das Spiel befindet sich noch in der aktiven Entwicklung. Probleme werden behoben, Rezepte werden ausbalanciert und Fehler werden eliminiert. Einige „Lücken im Gameplay“ sind Vorbereitungen auf zukünftige Updates.",
+			"text1": "Ältere Versionen des Spiels sind spielbar. Klicke dazu mit der rechten Maustaste auf Colony Survival in der Steam-Bibliothek, gehe zu „Eigenschaften“ und besuche die „Betas“-Seite.",
+			"text2": "Wir veröffentlichen regelmäßig Freitagsblogs. Diese sind auf der Steam-Shop-Seite von Colony Survival zu finden. Jeder Blog enthält eine Einladung, unserem Discord-Server beizutreten. Das ist der beste Weg, um mit uns in Kontakt zu treten!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "Linken Bildschirm erfassen",
+				"capture_right": "Rechten Bildschirm erfassen",
+				"play_alone": "Alleine spielen",
+				"swap_inputs": "Eingaben tauschen",
+				"swap_screens": "Bildschirme tauschen"
+			},
+			"devices": {
+				"dualsense": "DualSense-Controller",
+				"gamepad": "Gamepad ({0})",
+				"keyboard_mouse": "Tastatur und Maus",
+				"playstation": "PlayStation-Controller",
+				"switch": "Nintendo Switch-Controller",
+				"xbox": "Xbox-Controller"
+			},
+			"header": "Splitscreen-Einrichtung",
+			"header_recovery": "Splitscreen-Geräte neu zuweisen",
+			"screens": {
+				"left": "Linker Bildschirm",
+				"right": "Rechter Bildschirm"
+			},
+			"status": {
+				"apply_failed": "Splitscreen-Einrichtung konnte nicht angewendet werden.",
+				"assign_input": "Eingabe zuweisen: {0}.",
+				"capture_input": "Eingabe erfassen: {0}.",
+				"one_player_ready": "Ein Spieler bereit. Füge ein Gamepad für Splitscreen hinzu oder spiele im Einzelspieler-Modus.",
+				"press_input": "Drücke eine Taste auf dem Eingabegerät für: {0}.",
+				"ready": "Bereit, die Splitscreen-Einrichtung anzuwenden."
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\nSpieler {2}",
+				"assigned_primary": "{0}\n{1}\nSpieler {2} (Primäres Profil)",
+				"unassigned": "{0}\nNicht zugewiesen"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Beauftragt einen Siedler, hier als {0} zu arbeiten",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Statistiktafel",
 		"statuefarmer": "Statue des hoffnungsvollen Bauern",
 		"statuemonster": "Statue des militärischen Triumphs",
+		"statuevictory": "Siegesstatue",
 		"steelingot": "Stahlbarren",
 		"steellockbox": "Stahltresor",
 		"steelparts": "Stahlteile",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Fläschchen mit Salpetersäure",
 		"vialsulphuricacid": "Fläschchen mit Schwefelsäure",
 		"wallpaintingitem": "Gemälde",
+		"wallpaintingitemlizzy": "Gemälde von Lizzy",
+		"wallpaintingitempip": "Gemälde von Pip",
 		"water": "Wasser",
 		"watergatherer": "Wasserträger",
 		"waterpump": "Wasserpumpe",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "Eine schnellere Art, Holz in Brennholz zu verwandeln.",
 		"statuefarmer": "Dankbarkeit für menschliche Arbeit",
 		"statuemonster": "Zur Erinnerung an den Sieg über unsere Feinde",
+		"statuevictory": "Zu deinen Ehren, dem Spieler! Unsere aufrichtigen Glückwünsche zum Erreichen dieses beeindruckenden Meilensteins und danke, dass du Colony Survival so ausgiebig gespielt hast.",
 		"stonemasonworkbench": "Eine ganze Menge Steine",
 		"stove": "Wird verwendet, um die Umgebung mit köstlichen Gerüchen zu erfüllen.",
 		"sulfur": "Tief unter der Erde in der Heide zu finden.",
@@ -1987,6 +2402,8 @@
 		"torch": "Bringt Licht ins Dunkel!",
 		"trader": "Unerwarteter Nutzen für den Handel.",
 		"wallpaintingitem": "Kunst für deine Mauern",
+		"wallpaintingitemlizzy": "Zu Ehren von Lizzy, 2006–2022. Pipliz wurde nach ihr benannt.",
+		"wallpaintingitempip": "Zu Ehren von Pip, 2014–2026. Pipliz ist nach ihr benannt.",
 		"water": "Wird alles überfluten",
 		"waterpump": "Ermöglicht die Wasserentnahme, ohne in der Nähe von Wasser zu sein.",
 		"watersponge": "Entfernt Wasser aus seinem örtlichen Gebiet in einer sehr realistischen Art.",

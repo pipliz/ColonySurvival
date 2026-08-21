@@ -1718,7 +1718,8 @@
 	{
 		"baseType": {
 			"attachBehaviour": [
-				"pointtrader"
+				"pointtrader",
+				"obsolete"
 			],
 			"blueprints": { "type": "skip" },
 			"categories": [
@@ -2268,7 +2269,8 @@
 	{
 		"baseType": {
 			"attachBehaviour": [
-				"npcshop"
+				"npcshop",
+				"obsolete"
 			],
 			"blueprints": { "type": "skip" },
 			"categories": [
@@ -2554,7 +2556,8 @@
 					"id": "bed",
 					"sleepForward": [ 0, 1, 0],
 					"sleepUp": [-1, 0, 0],
-					"sleepOffset": [ 0.55, -0.4, 0]
+					"sleepOffset": [ 0.55, -0.34, 0],
+					"sleepAnimationState" : "bed"
 				},
 				{
 					"id": "dependentBlocks",

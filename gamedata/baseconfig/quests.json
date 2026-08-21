@@ -1,0 +1,1569 @@
+[
+	{
+		"key": "pipliz.quest.setupcolony",
+		"title": "popup.inventory.quests.content.setupcolony.title",
+		"description": "popup.inventory.quests.content.setupcolony.description",
+		"icon": "../textures/icons/banner2.png",
+		"sortOrder": 0,
+		"noColony": true,
+		"conditions": [],
+		"instructions": [
+			"popup.inventory.quests.content.setupcolony.instructions.0",
+			"popup.inventory.quests.content.setupcolony.instructions.1"
+		]
+	},
+	{
+		"key": "pipliz.quest.foodsource",
+		"title": "popup.inventory.quests.content.foodsource.title",
+		"description": "popup.inventory.quests.content.foodsource.description",
+		"icon": "../textures/icons/berrymeal.png",
+		"sortOrder": 10,
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.berryfarmer",
+				"amount": 6
+			},
+			{
+				"type": "cratesPlaced",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "berrymeal",
+					"amount": 30
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.foodsource.instructions.0",
+			"popup.inventory.quests.content.foodsource.instructions.1",
+			"popup.inventory.quests.content.foodsource.instructions.2",
+			"popup.inventory.quests.content.foodsource.instructions.3"
+		]
+	},
+	{
+		"key": "pipliz.quest.yourethemiller",
+		"title": "popup.inventory.quests.content.yourethemiller.title",
+		"description": "popup.inventory.quests.content.yourethemiller.description",
+		"icon": "../textures/icons/millcrafter.png",
+		"sortOrder": 20,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.foodsource"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "crate",
+				"amount": 5
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "minerjob",
+				"amount": 4
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "bed",
+				"amount": 5
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "planks",
+					"amount": 100
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.yourethemiller.instructions.0",
+			"popup.inventory.quests.content.yourethemiller.instructions.1"
+		]
+	},
+	{
+		"key": "pipliz.quest.automatedcrafting",
+		"title": "popup.inventory.quests.content.automatedcrafting.title",
+		"description": "popup.inventory.quests.content.automatedcrafting.description",
+		"icon": "../textures/icons/workbench.png",
+		"sortOrder": 30,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.foodsource"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.minerjob",
+				"amount": 1
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.tinkerer",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "berrymeal",
+					"amount": 30
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.automatedcrafting.instructions.0",
+			"popup.inventory.quests.content.automatedcrafting.instructions.1",
+			"popup.inventory.quests.content.automatedcrafting.instructions.2",
+			"popup.inventory.quests.content.automatedcrafting.instructions.3",
+			"popup.inventory.quests.content.automatedcrafting.instructions.4"
+		]
+	},
+	{
+		"key": "pipliz.quest.growthwoodscience",
+		"title": "popup.inventory.quests.content.growthwoodscience.title",
+		"description": "popup.inventory.quests.content.growthwoodscience.description",
+		"icon": "../textures/icons/bed.png",
+		"sortOrder": 40,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.yourethemiller"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.automatedcrafting"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.forester",
+				"amount": 1
+			},
+			{
+				"type": "scienceCompleted",
+				"science": "pipliz.miner"
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.berryfarmer",
+				"amount": 12
+			},
+			{
+				"type": "bedsPlaced",
+				"amount": 20
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "stonetools",
+					"amount": 5
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.growthwoodscience.instructions.0",
+			"popup.inventory.quests.content.growthwoodscience.instructions.1"
+		]
+	},
+	{
+		"key": "pipliz.quest.powerofmetal",
+		"title": "popup.inventory.quests.content.powerofmetal.title",
+		"description": "popup.inventory.quests.content.powerofmetal.description",
+		"icon": "../textures/icons/copperingot.png",
+		"sortOrder": 50,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.yourethemiller"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.automatedcrafting"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "copperingot",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "firewood",
+					"amount": 100
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.powerofmetal.instructions.0",
+			"popup.inventory.quests.content.powerofmetal.instructions.1",
+			"popup.inventory.quests.content.powerofmetal.instructions.2"
+		]
+	},
+	{
+		"key": "pipliz.quest.powerofpower",
+		"title": "popup.inventory.quests.content.powerofpower.title",
+		"description": "popup.inventory.quests.content.powerofpower.description",
+		"icon": "../textures/icons/slingnight.png",
+		"sortOrder": 60,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.yourethemiller"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.automatedcrafting"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardslingernight",
+				"amount": 2
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "berrymeal",
+					"amount": 30
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.powerofpower.instructions.0",
+			"popup.inventory.quests.content.powerofpower.instructions.1",
+			"popup.inventory.quests.content.powerofpower.instructions.2",
+			"popup.inventory.quests.content.powerofpower.instructions.3"
+		]
+	},
+	{
+		"key": "pipliz.quest.betterfoodsource",
+		"title": "popup.inventory.quests.content.betterfoodsource.title",
+		"description": "popup.inventory.quests.content.betterfoodsource.description",
+		"icon": "../textures/icons/wheat.png",
+		"sortOrder": 70,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.growthwoodscience"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofmetal"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofpower"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "wheatporridge",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "wheat",
+					"amount": 400
+				},
+				{
+					"type": "potwater",
+					"amount": 20
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.betterfoodsource.instructions.0",
+			"popup.inventory.quests.content.betterfoodsource.instructions.1",
+			"popup.inventory.quests.content.betterfoodsource.instructions.2",
+			"popup.inventory.quests.content.betterfoodsource.instructions.3"
+		]
+	},
+	{
+		"key": "pipliz.quest.wealthofnations",
+		"title": "popup.inventory.quests.content.wealthofnations.title",
+		"description": "popup.inventory.quests.content.wealthofnations.description",
+		"icon": "../textures/icons/coppertools.png",
+		"sortOrder": 80,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.growthwoodscience"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofmetal"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofpower"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "coppertools",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "rawmeat",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "linen",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "wheatporridge",
+					"amount": 50
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.wealthofnations.instructions.0",
+			"popup.inventory.quests.content.wealthofnations.instructions.1",
+			"popup.inventory.quests.content.wealthofnations.instructions.2"
+		]
+	},
+	{
+		"key": "pipliz.quest.growextra",
+		"title": "popup.inventory.quests.content.growextra.title",
+		"description": "popup.inventory.quests.content.growextra.description",
+		"icon": "../textures/icons/npc.png",
+		"sortOrder": 90,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.growthwoodscience"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofmetal"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.powerofpower"
+			}
+		],
+		"conditions": [
+			{
+				"type": "totalColonists",
+				"amount": 101
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "copperarrow",
+					"amount": 200
+				},
+				{
+					"type": "wheatporridge",
+					"amount": 50
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.growextra.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.infrastructureofcivilization",
+		"title": "popup.inventory.quests.content.infrastructureofcivilization.title",
+		"description": "popup.inventory.quests.content.infrastructureofcivilization.description",
+		"icon": "../textures/icons/toolshop.png",
+		"sortOrder": 100,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.betterfoodsource"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.wealthofnations"
+			}
+		],
+		"conditions": [
+			{
+				"type": "placedItemCount",
+				"item": "npcshop2",
+				"amount": 1
+			},
+			{
+				"type": "placedItemCount",
+				"item": "toolshop2",
+				"amount": 1
+			},
+			{
+				"type": "placedItemCount",
+				"item": "copperlockbox",
+				"amount": 1
+			},
+			{
+				"type": "placedItemCount",
+				"item": "failsafe3",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "composite",
+			"rewards": [
+				{
+					"type": "sanctifiedPoints",
+					"amount": 50
+				},
+				{
+					"type": "stockpileItems",
+					"items": [
+						{
+							"type": "wheatporridge",
+							"amount": 25
+						},
+						{
+							"type": "copperingot",
+							"amount": 50
+						}
+					]
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.infrastructureofcivilization.instructions.0",
+			"popup.inventory.quests.content.infrastructureofcivilization.instructions.1",
+			"popup.inventory.quests.content.infrastructureofcivilization.instructions.2",
+			"popup.inventory.quests.content.infrastructureofcivilization.instructions.3"
+		]
+	},
+	{
+		"key": "pipliz.quest.defenseofcivilization",
+		"title": "popup.inventory.quests.content.defenseofcivilization.title",
+		"description": "popup.inventory.quests.content.defenseofcivilization.description",
+		"icon": "../textures/icons/trap.png",
+		"sortOrder": 110,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.betterfoodsource"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.wealthofnations"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardbownight",
+				"amount": 4
+			},
+			{
+				"type": "placedItemCount",
+				"item": "droppertrap",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "wheatporridge",
+					"amount": 50
+				},
+				{
+					"type": "goldingot",
+					"amount": 10
+				},
+				{
+					"type": "droppertrap",
+					"amount": 3
+				},
+				{
+					"type": "droppertrapammo",
+					"amount": 36
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.defenseofcivilization.instructions.0",
+			"popup.inventory.quests.content.defenseofcivilization.instructions.1",
+			"popup.inventory.quests.content.defenseofcivilization.instructions.2",
+			"popup.inventory.quests.content.defenseofcivilization.instructions.3"
+		]
+	},
+	{
+		"key": "pipliz.quest.growmore",
+		"title": "popup.inventory.quests.content.growmore.title",
+		"description": "popup.inventory.quests.content.growmore.description",
+		"icon": "../textures/icons/fishcooked.png",
+		"sortOrder": 120,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.betterfoodsource"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.wealthofnations"
+			}
+		],
+		"conditions": [
+			{
+				"type": "totalColonists",
+				"amount": 151
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "cookedfish",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "earthenware",
+					"amount": 10
+				},
+				{
+					"type": "copperingot",
+					"amount": 25
+				},
+				{
+					"type": "goldingot",
+					"amount": 5
+				},
+				{
+					"type": "linen",
+					"amount": 25
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.growmore.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.remotecontrol",
+		"title": "popup.inventory.quests.content.remotecontrol.title",
+		"description": "popup.inventory.quests.content.remotecontrol.description",
+		"icon": "../textures/icons/topdownviewtrigger.png",
+		"sortOrder": 130,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.infrastructureofcivilization"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.defenseofcivilization"
+			}
+		],
+		"conditions": [
+			{
+				"type": "placedItemCount",
+				"item": "topdownviewtrigger",
+				"amount": 1
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.constructor",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "cookedfish",
+					"amount": 50
+				},
+				{
+					"type": "earthenware",
+					"amount": 10
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.remotecontrol.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.yourfirstlibrary",
+		"title": "popup.inventory.quests.content.yourfirstlibrary.title",
+		"description": "popup.inventory.quests.content.yourfirstlibrary.description",
+		"icon": "../textures/icons/scrollshelf.png",
+		"sortOrder": 140,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.infrastructureofcivilization"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.defenseofcivilization"
+			}
+		],
+		"conditions": [
+			{
+				"type": "placedItemCount",
+				"items": [
+					"scrollshelf"
+				],
+				"displayItem": "scrollshelffilled",
+				"amount": 10
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "tabletwisdom",
+				"amount": 10
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "scrollofknowledge",
+					"amount": 25
+				},
+				{
+					"type": "tabletwisdom",
+					"amount": 10
+				},
+				{
+					"type": "scrollshelffilled",
+					"amount": 5
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.yourfirstlibrary.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.makeitbeautiful",
+		"title": "popup.inventory.quests.content.makeitbeautiful.title",
+		"description": "popup.inventory.quests.content.makeitbeautiful.description",
+		"icon": "../textures/icons/window.png",
+		"sortOrder": 150,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.remotecontrol"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.yourfirstlibrary"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.artist",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "doorclosed",
+				"amount": 4
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "window",
+				"amount": 8
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "quarterblockdynamicitem",
+				"amount": 4
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "mouldingitem",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "huntingtrophy",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "tabletwisdom",
+					"amount": 10
+				},
+				{
+					"type": "droppertrap",
+					"amount": 3
+				},
+				{
+					"type": "goldore",
+					"amount": 25
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.makeitbeautiful.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.intothebronzeage",
+		"title": "popup.inventory.quests.content.intothebronzeage.title",
+		"description": "popup.inventory.quests.content.intothebronzeage.description",
+		"icon": "../textures/icons/brassingot.png",
+		"sortOrder": 160,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.remotecontrol"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.yourfirstlibrary"
+			}
+		],
+		"conditions": [
+			{
+				"type": "purchasedItemCount",
+				"item": "outpostbanner",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "brassingot",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "projectiletrap",
+				"amount": 1
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardcrossbownight",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "zinc",
+					"amount": 5
+				},
+				{
+					"type": "tin",
+					"amount": 20
+				},
+				{
+					"type": "goldore",
+					"amount": 10
+				},
+				{
+					"type": "goldjewellery",
+					"amount": 5
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.intothebronzeage.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.growthforgrowthssake",
+		"title": "popup.inventory.quests.content.growthforgrowthssake.title",
+		"description": "popup.inventory.quests.content.growthforgrowthssake.description",
+		"icon": "../textures/icons/astrolabe.png",
+		"sortOrder": 170,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intothebronzeage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "totalColonists",
+				"amount": 301
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "astrolabe",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "compass",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "copperingot",
+					"amount": 250
+				},
+				{
+					"type": "brassingot",
+					"amount": 25
+				},
+				{
+					"type": "goldingot",
+					"amount": 25
+				},
+				{
+					"type": "crossbowbolt",
+					"amount": 100
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.growthforgrowthssake.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.goldandbronzeautarky",
+		"title": "popup.inventory.quests.content.goldandbronzeautarky.title",
+		"description": "popup.inventory.quests.content.goldandbronzeautarky.description",
+		"icon": "../textures/icons/glider.png",
+		"sortOrder": 180,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intothebronzeage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "gatheredItemCount",
+				"item": "goldore",
+				"amount": 10
+			},
+			{
+				"type": "gatheredItemCount",
+				"item": "tin",
+				"amount": 10
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "glider",
+					"amount": 2
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.goldandbronzeautarky.instructions.0",
+			"popup.inventory.quests.content.goldandbronzeautarky.instructions.1",
+			"popup.inventory.quests.content.goldandbronzeautarky.instructions.2"
+		]
+	},
+	{
+		"key": "pipliz.quest.paperpower",
+		"title": "popup.inventory.quests.content.paperpower.title",
+		"description": "popup.inventory.quests.content.paperpower.description",
+		"icon": "../textures/icons/paper.png",
+		"sortOrder": 190,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intothebronzeage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.papermaker",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "paper",
+				"amount": 8
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "paintblue",
+					"amount": 100
+				},
+				{
+					"type": "paintgreen",
+					"amount": 100
+				},
+				{
+					"type": "paintred",
+					"amount": 100
+				},
+				{
+					"type": "paintwhite",
+					"amount": 100
+				},
+				{
+					"type": "paintstripped",
+					"amount": 10
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.paperpower.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.ironage",
+		"title": "popup.inventory.quests.content.ironage.title",
+		"description": "popup.inventory.quests.content.ironage.description",
+		"icon": "../textures/icons/railstation.png",
+		"sortOrder": 200,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intothebronzeage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "charcoal",
+				"amount": 10
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "ironwrought",
+				"amount": 10
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "elevatorhorizontal",
+					"amount": 6
+				},
+				{
+					"type": "railitem",
+					"amount": 1000
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.ironage.instructions.0",
+			"popup.inventory.quests.content.ironage.instructions.1"
+		]
+	},
+	{
+		"key": "pipliz.quest.booksofknowledge",
+		"title": "popup.inventory.quests.content.booksofknowledge.title",
+		"description": "popup.inventory.quests.content.booksofknowledge.description",
+		"icon": "../textures/icons/bookofknowledge.png",
+		"sortOrder": 210,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.goldandbronzeautarky"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.paperpower"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.ironage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "bookofknowledge",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "guardcrossbownightjob",
+					"amount": 10
+				},
+				{
+					"type": "crossbowbolt",
+					"amount": 1000
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.booksofknowledge.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.goldenpoisonousflight",
+		"title": "popup.inventory.quests.content.goldenpoisonousflight.title",
+		"description": "popup.inventory.quests.content.goldenpoisonousflight.description",
+		"icon": "../textures/icons/goldenshield.png",
+		"sortOrder": 220,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.goldandbronzeautarky"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.paperpower"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.ironage"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "glider",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "goldenshield",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "caltroptrap",
+				"amount": 1
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardpoison",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "guardhandcannonnightjob",
+					"amount": 1
+				},
+				{
+					"type": "handcannonammo",
+					"amount": 250
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.goldenpoisonousflight.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.gunpowder",
+		"title": "popup.inventory.quests.content.gunpowder.title",
+		"description": "popup.inventory.quests.content.gunpowder.description",
+		"icon": "../textures/icons/gunpowder.png",
+		"sortOrder": 230,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.booksofknowledge"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.goldenpoisonousflight"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "handcannonammo",
+				"amount": 11
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "gunpowder",
+					"amount": 50
+				},
+				{
+					"type": "glidersteel",
+					"amount": 1
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.gunpowder.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.horizontalandverticaltransportation",
+		"title": "popup.inventory.quests.content.horizontalandverticaltransportation.title",
+		"description": "popup.inventory.quests.content.horizontalandverticaltransportation.description",
+		"icon": "../textures/icons/rails.png",
+		"sortOrder": 240,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.booksofknowledge"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.goldenpoisonousflight"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "railitem",
+				"amount": 50
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "elevatorshaft",
+				"amount": 25
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "bookofknowledge",
+					"amount": 10
+				},
+				{
+					"type": "goldenshield",
+					"amount": 10
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.horizontalandverticaltransportation.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.gutenbergrevolution",
+		"title": "popup.inventory.quests.content.gutenbergrevolution.title",
+		"description": "popup.inventory.quests.content.gutenbergrevolution.description",
+		"icon": "../textures/icons/printingpress.png",
+		"sortOrder": 250,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.booksofknowledge"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.goldenpoisonousflight"
+			}
+		],
+		"conditions": [
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.printingpress",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "steelingot",
+					"amount": 25
+				},
+				{
+					"type": "leadingot",
+					"amount": 25
+				},
+				{
+					"type": "vialempty",
+					"amount": 10
+				},
+				{
+					"type": "vialmineraloil",
+					"amount": 10
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.gutenbergrevolution.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.intomodernity",
+		"title": "popup.inventory.quests.content.intomodernity.title",
+		"description": "popup.inventory.quests.content.intomodernity.description",
+		"icon": "../textures/icons/carddata.png",
+		"sortOrder": 260,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.gunpowder"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.horizontalandverticaltransportation"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.gutenbergrevolution"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "carddata",
+				"amount": 10
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.metallathe",
+				"amount": 3
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "luxurygarments",
+					"amount": 20
+				},
+				{
+					"type": "railitem",
+					"amount": 1000
+				},
+				{
+					"type": "guntrap",
+					"amount": 1
+				},
+				{
+					"type": "guntrapammo",
+					"amount": 50
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.intomodernity.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.advancedweapons",
+		"title": "popup.inventory.quests.content.advancedweapons.title",
+		"description": "popup.inventory.quests.content.advancedweapons.description",
+		"icon": "../textures/icons/musket.png",
+		"sortOrder": 270,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.gunpowder"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.horizontalandverticaltransportation"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.gutenbergrevolution"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "ropetrap",
+				"amount": 1
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardmusketnight",
+				"amount": 3
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "metalgear",
+					"amount": 100
+				},
+				{
+					"type": "steelparts",
+					"amount": 50
+				},
+				{
+					"type": "brassparts",
+					"amount": 50
+				},
+				{
+					"type": "steellockbox",
+					"amount": 5
+				}
+			]
+		},
+		"instructions": [
+			"popup.inventory.quests.content.advancedweapons.instructions.0"
+		]
+	},
+	{
+		"key": "pipliz.quest.endlessgrowth",
+		"title": "popup.inventory.quests.content.endlessgrowth.title",
+		"description": "popup.inventory.quests.content.endlessgrowth.description",
+		"icon": "../textures/icons/failsafe.png",
+		"sortOrder": 280,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intomodernity"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.advancedweapons"
+			}
+		],
+		"conditions": [
+			{
+				"type": "totalColonists",
+				"amount": 1000
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "steeltools",
+					"amount": 100
+				},
+				{
+					"type": "railitem",
+					"amount": 1000
+				},
+				{
+					"type": "carddata",
+					"amount": 100
+				}
+			]
+		}
+	},
+	{
+		"key": "pipliz.quest.finalstage",
+		"title": "popup.inventory.quests.content.finalstage.title",
+		"description": "popup.inventory.quests.content.finalstage.description",
+		"icon": "../textures/icons/guntrapammo.png",
+		"sortOrder": 290,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intomodernity"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.advancedweapons"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "guntrap",
+				"amount": 1
+			},
+			{
+				"type": "craftedItemCount",
+				"item": "guntrapammo",
+				"amount": 5
+			},
+			{
+				"type": "npcTypeCount",
+				"npcType": "pipliz.guardgrenadenight",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "goldenshield",
+					"amount": 10
+				},
+				{
+					"type": "bed3",
+					"amount": 10
+				},
+				{
+					"type": "statuemonster",
+					"amount": 1
+				},
+				{
+					"type": "wallpaintingitem",
+					"amount": 5
+				}
+			]
+		}
+	},
+	{
+		"key": "pipliz.quest.startofprestige",
+		"title": "popup.inventory.quests.content.startofprestige.title",
+		"description": "popup.inventory.quests.content.startofprestige.description",
+		"icon": "../textures/icons/chestprestige.png",
+		"sortOrder": 300,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intomodernity"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.advancedweapons"
+			}
+		],
+		"conditions": [
+			{
+				"type": "craftedItemCount",
+				"item": "chestprestige",
+				"amount": 1
+			}
+		],
+		"reward": {
+			"type": "stockpileItems",
+			"items": [
+				{
+					"type": "coalore",
+					"amount": 100
+				},
+				{
+					"type": "steelingot",
+					"amount": 100
+				},
+				{
+					"type": "nitro",
+					"amount": 500
+				}
+			]
+		}
+	},
+	{
+		"key": "pipliz.quest.finalcountdown",
+		"title": "popup.inventory.quests.content.finalcountdown.title",
+		"description": "popup.inventory.quests.content.finalcountdown.description",
+		"icon": "../textures/icons/paintinglizzy.png",
+		"sortOrder": 310,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intomodernity"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.advancedweapons"
+			}
+		],
+		"conditions": [
+			{
+				"type": "totalColonists",
+				"amount": 5000
+			}
+		],
+		"reward": {
+			"type": "composite",
+			"rewards": [
+				{
+					"type": "stockpileItems",
+					"items": [
+						{
+							"type": "wallpaintingitemlizzy",
+							"amount": 1
+						},
+						{
+							"type": "wallpaintingitempip",
+							"amount": 1
+						}
+					]
+				},
+				{
+					"type": "recipeUnlocks",
+					"unlocksRecipes": [
+						"pipliz.autocrafter.wallpaintingitemlizzy",
+						"pipliz.autocrafter.wallpaintingitempip"
+					]
+				}
+			]
+		}
+	},
+	{
+		"key": "pipliz.quest.stretchieststretchgoal",
+		"title": "popup.inventory.quests.content.stretchieststretchgoal.title",
+		"description": "popup.inventory.quests.content.stretchieststretchgoal.description",
+		"icon": "../textures/icons/statuevictory.png",
+		"sortOrder": 320,
+		"preconditions": [
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.intomodernity"
+			},
+			{
+				"type": "completedQuest",
+				"quest": "pipliz.quest.advancedweapons"
+			}
+		],
+		"conditions": [
+			{
+				"type": "scienceCompleted",
+				"science": "pipliz.prestige5"
+			}
+		],
+		"reward": {
+			"type": "composite",
+			"rewards": [
+				{
+					"type": "stockpileItems",
+					"items": [
+						{
+							"type": "statuevictory",
+							"amount": 1
+						}
+					]
+				},
+				{
+					"type": "recipeUnlocks",
+					"unlocksRecipes": [
+						"pipliz.autocrafter.statuevictory"
+					]
+				}
+			]
+		}
+	}
+]

@@ -1,0 +1,72 @@
+0.17.0.1 (2026-06-25)
+
+Quests, Notifications, Multiplayer improvements
+
+Main:
+- Added an in game players list opened using [TAB] by default
+- Significantly upgraded the notifications tab, now also works outside of any active colony, overlay icons per notification
+- Added a Quests system, mostly as a replacement to the quickstart, to help people getting started and oriented
+- Enhanced the top-right item stats overlay, and made it configurable via a button in the colony tab
+- Server browser/connecting rework;
+-- Co-op servers can now be listed publicly in the server browser, and can be seen without being steam friends (if configured as such)
+-- Hosting should now work without port forwarding issues
+
+Gamepad action mapping changes:
+- 'select' now opens the player list (was the inventory)
+- "Toggle Inventory" was moved from 'start' to 'north button'
+- 'start' now opens escape menu
+Current gamepad rebinds are reset on first launch with this version and up
+
+Misc
+- Added location markers to colonist deaths & a button to show old locations for colonist death notifications
+- World names are now much less restricted in character choice
+- Autogenerate a better co-op server name
+- Fix controller navigation in hosting settings menu when loading a world co-op
+- Fixed moon/stars not rendering (...oops)
+- Fix quickstart saying to select the banner tool by pressing '1', and to select the command tool by pressing '0' (actually is 2 and 1 respectively)
+- Fix quickstart "Press 'I' to open interface" to use correct input reference
+- Fix item count text rendering issue in the merchant hub UI
+- Fix the line and container UI elements not scaling properly with UI scale settings (no one reported it so it's okay)
+- Fix a rendering edge case with block meshes sticking out of their block sometimes not rendering in the corner of your vision.
+- Similar to the previous fix, fix meshes hiding in your vision corners when they're extending more than one block out (so above 3x3 sizes)
+- Fix world markers (like compass/astrolabe) sometimes not using the proper UI scale
+- Basic bed now also uses the new sleep pose from luxury beds / bunk beds
+- Clients now index their own files instead of taking everything from the server on initial load (which can take a while if your first game is multiplayer)
+- Localised the splash screen text
+- Inventory tabs that can't be used in the current state are greyed out
+- Fix inventory tab header button colors not staying the "current/selected" dark brown color when using gamepad controls
+
+Mostly internal changes
+- Removed automatic server UPnP-based NAT discovery / portforwarding (steam p2p and LAN don't care)
+- Each server now creates a stable ID for itself (for favouriting and identification)
+- Removed fallback non-p2p steam-based connection (remaining is p2p and direct tcp mostly for LAN)
+- Removed "ServerQueryPort" (was only used by the server browser for server metadata)
+- Servers do not disclose their IP to clients anymore, so when using steam p2p relay networking you get some privacy from players
+- Reworked lua scripting setup a bit for future scalability
+- Fix unused ColonistCountCondition for science not taking into account outpost npcs (mod request)
+- upgradesettings.json is now loaded through modInfo system instead of the hardcoded way it was
+- Safety checks on file load paths
+- Added callbacks:
+-- OnAutoCrafterCraftedRecipe
+-- OnNPCDied2 (includes reason enum)
+-- OnPlayerSelectedTypePopupMulti
+-- OnConstructPlayerList
+-- OnPointRecipeMade
+-- AfterInitialChunkLoad
+-- OnQuestCompleted
+-- OnQuestLoaded
+
+0.17.0.1 (2026-06-25)
+
+- Adjust defaults so that servers started using limited/legacy launch configs will be public when started as SteamOnline
+
+0.17.0.2 (2026-06-25)
+
+- Fix regression to fence/pillar/fuseblock placement (was making white error blocks)
+- Added a pathway for code mods to add custom quest condition texts
+
+0.17.0.3 (2026-07-01)
+
+- Re-enabled stockpile tab usage outside of a colony (for access to the trash can and the player crafting menu)
+- Fix key rebinding for "Open players list" not working
+- Fix escape menu & notification menu overlap when opening the notification menu through the overlay icon while in the escape menu

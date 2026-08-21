@@ -55,7 +55,10 @@
 			"deletecolonydescription": "Usunięcie ostatniego sztandaru kolonii spowoduje usunięcie wszystkich kolonistów i nie będzie można z niej korzystać. Aby potwierdzić, że tego właśnie chcesz, wpisz „delete” poniżej.",
 			"header": "Opcje sztandaru",
 			"noconfirmationdelete": "Polecenie usunięcia sztandaru zostało zignorowane, nie uzyskano potwierdzenia",
-			"placementfail": "Nie można umieścić sztandaru w tym miejscu"
+			"placementfail": "Nie można umieścić sztandaru w tym miejscu",
+			"requestjoin": "Poproś o dołączenie",
+			"requestpending": "Twoja prośba o dołączenie do kolonii {0} oczekuje na rozpatrzenie.",
+			"requestsent": "Twoja prośba o dołączenie do kolonii {0} została wysłana."
 		},
 		"bannerplacementpopup": {
 			"activecolony": "Aktywna kolonia: {0}",
@@ -125,13 +128,18 @@
 				"popupheader": "Tworzenie posterunku",
 				"selectparent": "Wybierz kolonię główną"
 			},
+			"overlaycounters": {
+				"open": "Skonfiguruj śledzenie przedmiotów"
+			},
 			"ownership": {
 				"action": "Działanie",
 				"connectedplayers": "Połączeni gracze",
 				"currentowners": "Obecni właściciele",
 				"follower": "Obserwator",
 				"invite": "Dodaj jako właściciela kolonii",
+				"invitepending": "Gracz {0} ma już oczekujące zaproszenie do dołączenia do kolonii {1}.",
 				"kick": "Wyrzuć",
+				"kickfromcolony": "Wyrzuć z kolonii",
 				"leader": "Lider",
 				"leave": "Opuść kolonię",
 				"name": "Nazwa",
@@ -230,7 +238,6 @@
 				"local1": "Wyszukiwanie serwera jednoosobowego na tym komputerze",
 				"local2": "Wyszukiwanie aktywnego serwera na tym komputerze",
 				"password": "Wymagane hasło",
-				"steamdirect": "Próba ustanowienia bezpośredniego połączenia",
 				"steamp2p": "Próba ustanowienia połączenia p2p",
 				"timeout": "Upłynął limit czasu łączenia. Powrót do menu głównego za 5 sekund",
 				"waitingserver": "Uruchamianie serwera w tle"
@@ -307,6 +314,7 @@
 			},
 			"movepad": "Ruch",
 			"opencolonytab": "Otwórz kartę kolonii",
+			"openplayerslist": "Otwórz listę graczy",
 			"openquickstart": "Otwórz menu pomocy",
 			"placemultipleareas": "Seryjne umieszczanie obszarów budowy",
 			"resetfieldofview": "Reset pola widzenia (cheat)",
@@ -343,7 +351,8 @@
 			"info": "Informacje",
 			"quitdesktop": "Pulpit",
 			"quitmain": "Menu główne",
-			"settings": "Ustawienia"
+			"settings": "Ustawienia",
+			"splitscreensetup": "Podzielony ekran"
 		},
 		"failsafe": {
 			"current": "Aktualna liczba świętych punktów: {0} z {1}",
@@ -371,6 +380,7 @@
 			"apply": "Zastosuj",
 			"back": "Powrót",
 			"close": "Zamknij",
+			"colonydate": "Dzień {0}, {1:00}:{2:00}",
 			"delete": "Usuń",
 			"description": "Opis",
 			"edit": "Edytuj",
@@ -411,18 +421,19 @@
 		"multiplayermenu": {
 			"colonistcount": "Liczba kolonistów",
 			"connectlocal": "Dołącz do lokalnego serwera",
-			"header_friends": "Znajomi",
-			"header_history": "Historia",
 			"header_internet": "Internet",
 			"header_lan": "LAN",
 			"ipaddress": "Adres",
 			"join": "Dołącz",
 			"mods": "Mody",
+			"offline": "Offline",
 			"passworded": "Zabezpieczone hasłem",
 			"refresh2": "Odśwież",
 			"refreshing": "Odświeżanie...",
 			"refreshquick": "Szybkie odświeżenie",
 			"selectedserver": "Wybrany serwer",
+			"serverfavorite": "Ulubione",
+			"serverid": "ID serwera",
 			"serverping": "Ping",
 			"serverplayers": "Gracze",
 			"servers": "Serwery",
@@ -433,29 +444,82 @@
 		},
 		"notifications": {
 			"delete": "Usuń powiadomienia",
+			"details": {
+				"back": "Powrót",
+				"delete": "Usuń",
+				"empty": "Brak powiadomień.",
+				"header": "{0} – {1}",
+				"next": "Następna",
+				"page": "Strona {0}/{1} – łącznie wpisów: {2}",
+				"previous": "Poprzednia"
+			},
+			"generic": {
+				"accept": "Akceptuj",
+				"decline": "Odrzuć",
+				"kicked": {
+					"message": "Usunięto cię z kolonii {0}.",
+					"title": "Usunięto z kolonii"
+				},
+				"management": {
+					"summarytype": "Zarządzanie",
+					"title": "Zarządzanie"
+				},
+				"ownerinvite": {
+					"accepted": "Gracz {0} zaakceptował twoje zaproszenie do kolonii {1}.",
+					"declined": "Gracz {0} odrzucił twoje zaproszenie do kolonii {1}.",
+					"invalid": "To zaproszenie nie jest już ważne.",
+					"message": "Otrzymano zaproszenie do kolonii {0}.",
+					"preview": "Otrzymano zaproszenie do kolonii {0}.",
+					"summarytype": "Zaproś",
+					"title": "Zaproszenie"
+				},
+				"ownerjoinrequest": {
+					"accepted": "Twoja prośba o dołączenie do kolonii {0} została zaakceptowana.",
+					"declined": "Twoja prośba o dołączenie do kolonii {0} została odrzucona.",
+					"message": "Gracz {0} prosi o dołączenie do kolonii {1}.",
+					"preview": "Gracz {0} chce dołączyć do kolonii {1}.",
+					"summarytype": "Prośba o dołączenie",
+					"title": "Prośba o dołączenie do kolonii"
+				}
+			},
 			"header": "Powiadomienia",
 			"missingplayerammo": "<color=#ff2323>{0} wymaga do użycia przedmiotu {1} w ekwipunku!</color>",
 			"npc_died": {
-				"banner": "Potwór pod sztandarem",
-				"command": "Korzystanie z poleceń",
-				"excess": "Od tego czasu zmarło jeszcze {0}, anonimowo.",
-				"individual": "{0}: Kolonista pracujący jako {1} zginął od: {2}",
+				"individual2_banner": "{0} {1} ginie z rąk potwora pod sztandarem.",
+				"individual2_command": "{0} {1} ginie w wyniku użycia polecenia.",
+				"individual2_monster": "{0} {1} ginie z rąk potwora.",
+				"individual2_npc": "{0} {1} ginie z rąk kolonisty.",
+				"individual2_player": "{0} {1} ginie z rąk gracza.",
+				"individual2_starving": "{0} {1} ginie z głodu.",
+				"individual2_trap": "{0} {1} ginie od pułapki.",
+				"individual2_unknown": "{0} {1} ginie z nieznanych przyczyn.",
 				"main": "{0} kolonistów zginęło na posterunku {1}!",
-				"misc": "Nieznany powód",
-				"monster": "Potwór",
-				"npc": "Kolonista",
-				"player": "Gracz",
-				"starving": "Głód",
-				"trap": "Pułapka"
+				"summarymultiple": "Liczba zgonów w kolonii {1}: {0}",
+				"summarysingle": "1 zgon w kolonii {0}",
+				"summarytype": "Zmarli koloniści"
+			},
+			"overview": {
+				"empty": "Brak powiadomień.",
+				"open": "Otwórz"
+			},
+			"personal": {
+				"header": "Osobiste"
 			},
 			"science": {
-				"entry": "{0}: Ukończono {1}",
-				"main": "Badania zakończone!"
+				"entry2": "Ukończono: {0}",
+				"main": "Badania zakończone!",
+				"summarycount": "Ukończono: {0}",
+				"summarylatest": "Ukończono: {0}",
+				"summarytype": "Nauka"
 			},
+			"showmarkersonpage": "Oznacz miejsca w świecie",
 			"siegemode": {
-				"disabled": "{0}: Zakończono tryb oblężenia",
-				"enabled": "{0}: Rozpoczęto tryb oblężenia",
-				"main": "Tryb oblężenia został aktywowany na posterunku {0}!"
+				"disabled2": "Dezaktywowano tryb oblężenia",
+				"disabledsummary": "Dezaktywowano tryb oblężenia w kolonii {0}",
+				"enabled2": "Tryb oblężenia został aktywowany! Brakuje ścieżki dla kolonistów między sztandarem a światem zewnętrznym. Za każde pięć pkt. zagrożenia w kolonii {0} tryb oblężenia pochłania jedno pożywienie na godzinę.\nJak najszybciej przywróć połączenie ze światem zewnętrznym!",
+				"enabledsummary": "Aktywowano tryb oblężenia w kolonii {0}",
+				"main": "Tryb oblężenia został aktywowany na posterunku {0}!",
+				"summarytype": "Tryb oblężenia"
 			}
 		},
 		"npcs": {
@@ -928,6 +992,17 @@
 				"name": "Pisarz"
 			}
 		},
+		"playerlist": {
+			"action": "Akcja",
+			"activecolony": "Aktywna kolonia",
+			"header": "Gracze online",
+			"id": "ID",
+			"noonlineplayers": "Brak graczy online",
+			"ping": "Ping",
+			"pingvalue": "{0} ms",
+			"player": "Gracz",
+			"totalcolonists": "Łączna liczba kolonistów"
+		},
 		"popup": {
 			"areaselection": {
 				"close": "Zamknij",
@@ -947,6 +1022,293 @@
 				"madeintooltip": "Wytworzono w:",
 				"madeintooltippurchasable": "Do kupienia w centrum handlowym za {0} pkt.",
 				"noactivecolony": "Brak aktywnej kolonii!",
+				"quests": {
+					"claimreward": "Odbierz nagrodę",
+					"conditiontitles": {
+						"beds": "Postawione łóżka",
+						"crafted": "{0} – wytworzono",
+						"crates": "Postawione skrzynie",
+						"gathered": "{0} – wydobyto",
+						"npctype": "{0} – zrekrutowano",
+						"placed": "{0} – postawiono",
+						"purchased": "{0} – kupiono",
+						"sciencecompleted": "{0} – ukończono naukę",
+						"totalcolonists": "Koloniści"
+					},
+					"content": {
+						"advancedweapons": {
+							"description": "Nowoczesna technologia może zostać użyta do stworzenia potężnych broni.",
+							"instructions": {
+								"0": "Odblokuj powiązaną naukę."
+							},
+							"title": "Zaawansowane bronie"
+						},
+						"automatedcrafting": {
+							"description": "Niech twoi koloniści zajmą się wydobyciem i wytwarzaniem!",
+							"instructions": {
+								"0": "Przytrzymaj <style=Player/FirePrimary>, celując w trawę lub ziemię, aby usunąć blok. Kop w dół przez kamienny teren, aż znajdziesz bloki ciemnego kamienia. Wybierz przedmiot stanowiska górniczego i umieść go na ciemnym kamieniu.",
+								"1": "Pod ziemią będzie ciemno. Wybierz pochodnie i rozmieść je, aby oświetlić teren. Trzymanie ich w dłoni zapewni ci miejscowe światło. Naciśnij <style=Player/ToggleTorch>, aby aktywować osobistą pochodnię podczas trzymania innych przedmiotów.",
+								"2": "Kopanie w kamieniu dostarczy ci tłuczeń kamienny. Górnik pracujący na ciemnym kamieniu również będzie go pozyskiwał. Możesz teraz go użyć, aby wytworzyć stół majsterkowicza w zakładce magazynu, korzystając z ikon na pasku po lewej stronie. Można to również zrobić w wiatraku.",
+								"3": "Umieść stół majsterkowicza w swojej kolonii. Możesz użyć <style=Player/FireSecondary> na stole, aby zobaczyć, jakie przedmioty majsterkowicz może wytworzyć.",
+								"4": "Zrekrutuj wystarczającą liczbę kolonistów, aby obsadzić nowe stanowiska pracy. Będą potrzebować miejsca do spania i jedzenia, więc rekrutuj plantatorów jagód, aby utrzymać nowych kolonistów!"
+							},
+							"title": "Automatyczne wytwarzanie przedmiotów"
+						},
+						"betterfoodsource": {
+							"description": "Plantatorzy jagód to łatwe, ale stosunkowo powolne źródło pożywienia. Pszenica może posłużyć do przygotowania wydajniejszych posiłków, ale jej uprawa jest bardziej skomplikowana.",
+							"instructions": {
+								"0": "Zacznij od ukończenia nauki uprawy pszenicy. Pozwala to na wyznaczanie rolników uprawiających pszenicę za pomocą narzędzia poleceń. W przeciwieństwie do plantacji jagód, tutaj liczy się rozmiar. Im większe pole, tym więcej pszenicy zbiorą, z limitem 100 objętych bloków. Pszenica rośnie przez dwie noce i może zostać natychmiast przerobiona na kleik pszenny.",
+								"1": "Następnie ukończ nauki centrum handlowego oraz garncarstwa. Garncarstwo pozwala na produkcję garnków na stacjach garncarskich i odblokowuje zbieraczy wody. Umieść to stanowisko pracy tuż nad wodą, aby koloniści mogli napełniać puste garnki wodą. Użyj <style=Player/HoldCrouch>, aby się czołgać i nie wpaść do wody!",
+								"1_gamepad": "Następnie ukończ nauki centrum handlowego oraz garncarstwa. Garncarstwo pozwala na produkcję garnków na stacjach garncarskich i odblokowuje zbieraczy wody. Umieść to stanowisko pracy tuż nad wodą, aby koloniści mogli napełniać puste garnki wodą. Użyj <style=Player/ToggleCrouch>, aby się czołgać i nie wpaść do wody!",
+								"2": "Jeśli w pobliżu nie ma wody, możesz odblokować naukę pompowania wody, by zyskać wolniejszy, ale niezależny od miejsca sposób zbierania wody.",
+								"3": "Odblokuj naukę owsianki i umieść ognisko, aby przekształcić pszenicę i garnki z wodą w owsiankę pszenną – najbardziej wydajne jedzenie na początku gry!"
+							},
+							"title": "Lepsze źródło jedzenia"
+						},
+						"booksofknowledge": {
+							"description": "Zwoje i tabliczki zostają wyparte przez książki!",
+							"instructions": {
+								"0": "Odblokuj naukę badacza. Pozwoli to twoim pisarzom produkować regał na książki z połączenia tabliczek ze starożytną wiedzą i papieru. Umieść 10 regałów na książki w pobliżu biurka badacza, by zapewnić mu ciągłość pracy. Badacz stworzy notatki naukowe, których pisarz użyje do wytworzenia ksiąg wiedzy."
+							},
+							"title": "Księga wiedzy"
+						},
+						"defenseofcivilization": {
+							"description": "Wraz z rozwojem kolonii rośnie też horda potworów, która cię atakuje. Stale ulepszaj swoje umocnienia!",
+							"instructions": {
+								"0": "Odblokuj naukę łucznictwa i zrekrutuj łuczarza, aby wytworzyć przedmiot stanowiska pracy nocnego strażnika z łukiem.",
+								"1": "Ukończ również naukę pisarza, umieść biurko pisarza i pozwól koloniście przetwarzać pergamin w zwoje wiedzy.",
+								"2": "Pułapki tworzy się na stole sapera. Aby ukończyć naukę sapera, będziesz potrzebować sztabek złota. Rudę złota można kupić w centrum handlowym.",
+								"3": "Pułapki można przeładować, umieszczając w ich pobliżu serwisanta pułapek. Serwisant utrzyma twoje pułapki w stanie gotowości w ciągu dnia. Oczywiście, będziesz też musieć wytworzyć amunicję."
+							},
+							"title": "Obrona cywilizacji"
+						},
+						"endlessgrowth": {
+							"description": "Osiągnij słynny cel tysiąca kolonistów!",
+							"title": "Nieskończony rozwój"
+						},
+						"finalcountdown": {
+							"description": "Kolonia staje się imperium.",
+							"title": "Ostateczne odliczanie"
+						},
+						"finalstage": {
+							"description": "Odblokuj najbardziej zaawansowaną technologię w grze.",
+							"title": "Ostatni etap"
+						},
+						"foodsource": {
+							"description": "Twoja kolonia potrzebuje jedzenia. Pierwszym źródłem będzie zbiór jagód.",
+							"instructions": {
+								"0": "Otwórz magazyn (<style=Always/ToggleInventory>) i przenieś łóżka na pasek szybkiego wyboru na dole ekranu. Zamknij magazyn (<style=Always/ToggleInventory> lub <style=UI/Cancel>) i wybierz łóżka za pomocą <style=Player/HotBarUp> oraz <style=Player/HotBarDown>. Postaw sześć łóżek, celując w ziemię przy użyciu <style=Player/FireSecondary>.",
+								"1": "Wybierz narzędzie poleceń (<style=Player/Inventory1>) i użyj <style=Player/FirePrimary> na ziemi, gdzie chcesz umieścić plantację jagód. Przejdź na drugi koniec zamierzonego obszaru i użyj <style=Player/FireSecondary>, aby ukończyć tworzenie obszaru gospodarstwa. Utwórz sześć takich upraw.",
+								"1_gamepad": "Wybierz narzędzie poleceń i użyj <style=Player/FirePrimary> na ziemi, gdzie chcesz umieścić plantację jagód. Przejdź na drugi koniec zamierzonego obszaru i użyj <style=Player/FireSecondary>, aby ukończyć tworzenie obszaru gospodarstwa. Utwórz sześć takich upraw.",
+								"2": "Zabierz skrzynię z magazynu i postaw ją w pobliżu. Twoi rolnicy będą tu przynosić swoje plony.",
+								"3": "Naciśnij <style=Always/OpenColonyTab> i zrekrutuj sześciu kolonistów, aby zaczęli uprawiać jagody.",
+								"3_gamepad": "Naciśnij <style=Always/ToggleInventory> i przejdź do zakładki kolonii przy użyciu <style=UI/MenuTabLeft> oraz <style=UI/MenuTabRight>. Zrekrutuj sześciu kolonistów, aby zaczęli uprawiać jagody."
+							},
+							"title": "Pozyskiwanie źródła jedzenia"
+						},
+						"goldandbronzeautarky": {
+							"description": "Po co polegać na kupcach, skoro możesz wydobywać własne złoto i cynę?",
+							"instructions": {
+								"0": "Kup sztandar posterunku i upewnij się, że przeniosłeś go na pasek szybkiego wyboru. Znajdź górę ze śniegiem na szczycie. W poszukiwaniach możesz pomóc sobie astrolabium. Użyj sztandaru posterunku, aby założyć posterunek w pobliżu szczytu góry. Rozmieść łóżka i zbuduj umocnienia.",
+								"1": "Kop w dół poniżej śniegu. Najpierw trafisz na poziom z miedzią i gliną. Kop dalej, a dotrzesz do warstwy z rudą żelaza i cyną. Kop jeszcze głębiej, a natrafisz na złoto!",
+								"2": "Upewnij się, że faktycznie kopiesz pod śniegiem. Żelazo można znaleźć wszędzie, ale cyna i złoto występują tylko pod śniegiem!"
+							},
+							"title": "Autarkia złota i brązu"
+						},
+						"goldenpoisonousflight": {
+							"description": "Uzyskujesz dostęp do zaawansowanej technologii!",
+							"instructions": {
+								"0": "Szybowce przyspieszą twoje podróże, a pułapki z kolczatkami spowolnią nadciągające potwory. Złote tarcze to świetne źródło dochodu, a trucizna rani potwory wraz z upływem czasu. Zatrucie ich tak wcześnie, jak to możliwe, jest najlepszą strategią! Ukończ odpowiednią naukę i wytwórz potrzebne przedmioty."
+							},
+							"title": "Złoty lot trucizny"
+						},
+						"growextra": {
+							"description": "Aby odpowiednio rozwinąć kolonię, będziesz potrzebować więcej niż absolutnego minimum kolonistów. Będą ci potrzebni dodatkowi górnicy, rolnicy, strażnicy i rzemieślnicy.",
+							"instructions": {
+								"0": "Domyślny limit kolonistów to 100. Przejdź do menu punktów kolonii i wydaj 100 pkt. kolonii, aby go zwiększyć."
+							},
+							"title": "Rozwijaj się!"
+						},
+						"growmore": {
+							"description": "Im więcej, tym weselej!",
+							"instructions": {
+								"0": "Umieść miedziane skrytki i użyj menu punktów kolonii, aby zwiększyć limit kolonistów do 200. Ukończ naukę kucharza i zrekrutuj kucharza oraz rybaka."
+							},
+							"title": "Rozwijaj się bardziej!"
+						},
+						"growthforgrowthssake": {
+							"description": "Jasno ustaliliśmy, że więcej znaczy lepiej.",
+							"instructions": {
+								"0": "Miej wszystko na oku! Rozbuduj umocnienia, zbierz więcej zasobów, zrekrutuj dodatkowych rzemieślników i szukaj wąskich gardeł w swoich łańcuchach produkcyjnych."
+							},
+							"title": "Rozwój dla samego rozwoju"
+						},
+						"growthwoodscience": {
+							"description": "Twoja rosnąca kolonia będzie wymagać źródła drewna, nowej technologii, większej liczby kolonistów oraz jedzenia.",
+							"instructions": {
+								"0": "Obszary leśników tworzy się za pomocą narzędzia poleceń, podobnie jak plantacje jagód.",
+								"1": "Przejdź do zakładki menu nauki, znajdź naukę górnika, zbierz 5 szt. tłucznia kamiennego i ukończ ją, aby odblokować recepturę stanowiska górniczego u majsterkowicza."
+							},
+							"title": "Rozwój, drewno i nauka"
+						},
+						"gunpowder": {
+							"description": "Proch to oczywiste ulepszenie dla twojego przemysłu obronnego!",
+							"instructions": {
+								"0": "Odblokuj nauki: skrzynia naukowa, dmuchacz szkła, proch oraz rusznica ręczna. Do produkcji prochu będziesz potrzebować siarki, którą można wydobywać na wrzosowiskach lub kupić u kupca."
+							},
+							"title": "Proch"
+						},
+						"gutenbergrevolution": {
+							"description": "Prasa drukarska zwiększy twoją produkcję książek.",
+							"instructions": {
+								"0": "Odblokuj nauki: stal, ołów i olej mineralny. Zapewni ci to dostęp do nauki prasy drukarskiej. Będziesz potrzebować rudy węgla, którą można znaleźć w pobliżu mamucich drzew, oraz rudy ołowiu, która występuje na bagnach."
+							},
+							"title": "Rewolucja Gutenberga"
+						},
+						"horizontalandverticaltransportation": {
+							"description": "Maszyny mogą cię automatycznie przenosić w różne miejsca.",
+							"instructions": {
+								"0": "Odblokuj nauki szyn i windy."
+							},
+							"title": "Transport poziomy i pionowy"
+						},
+						"infrastructureofcivilization": {
+							"description": "Będziesz musieć dystrybuować jedzenie i narzędzia, gromadzić punkty kolonii oraz radzić sobie z potworami w nagłych wypadkach.",
+							"instructions": {
+								"0": "Koloniści mogą odbierać jedzenie i narzędzia pod sztandarem, ale możesz skrócić ich wędrówki, rozmieszczając w kolonii stanowiska spożywcze i stoły dystrybucji narzędzi. Odblokowuje się je po ukończeniu związanych z nimi nauk.",
+								"1": "Jeśli chcesz przechowywać ponad 100 pkt. kolonii, musisz umieścić miedziane skrytki. Ich postawienie zwiększy jednak twój poziom zagrożenia!",
+								"2": "Jeśli potwory przełamią twoje umocnienia, święte zabezpieczenie to przydatny środek awaryjny.",
+								"3": "Zarówno skrytkę, jak i zabezpieczenie trzeba odblokować poprzez naukę, a następnie wytworzyć na kowadle."
+							},
+							"title": "Infrastruktura cywilizacji"
+						},
+						"intomodernity": {
+							"description": "Zrekrutuj nowoczesnych pracowników, aby produkowali zaawansowane przedmioty.",
+							"instructions": {
+								"0": "Najpierw będziesz potrzebować nauki luksusowej skrzyni, która daje dostęp zarówno do nauki maszyny tabulacyjnej, jak i tokarki do metalu."
+							},
+							"title": "Ku nowoczesności"
+						},
+						"intothebronzeage": {
+							"description": "Epoka brązu zapewnia dostęp do nowych materiałów i wielu nowych technologii. Zbuduj kilka z najważniejszych!",
+							"instructions": {
+								"0": "Rozpocznij od ukończenia nauki epoki brązu. Odblokuj posterunki i kup sztandar w centrum handlowym. Ukończ naukę mosiądzu i kup cynk w centrum. Ukończ nauki pułapki strzeleckiej i kuszy. Kup cynę w centrum handlowym, aby móc produkować sztabki brązu."
+							},
+							"title": "W epoce brązu"
+						},
+						"ironage": {
+							"description": "Odblokuj żelazo, kolejny kluczowy materiał.",
+							"instructions": {
+								"0": "Nauka epoki żelaza jest niezwykle ważna i wymaga wielu składników. Rudę żelaza znajdziesz wszędzie, jeśli będziesz kopać odpowiednio głęboko.",
+								"1": "Rudę żelaza trzeba przetapiać przy użyciu nowego źródła paliwa: węgla drzewnego. Tworzy się go w piecu. Wytop żelaza wymaga również dymarek. Oba te stanowiska powstają na warsztacie zaawansowanego rzemieślnika bloków roboczych."
+							},
+							"title": "Epoka żelaza"
+						},
+						"makeitbeautiful": {
+							"description": "Estetyka jest ważna dla duszy!",
+							"instructions": {
+								"0": "Nauka artysty wymaga wcześniejszego ukończenia nauki dachówki, do której zyskasz dostęp po ukończeniu nauki kamieniarza. Trofea myśliwskie są tworzone przy użyciu prasy osobliwości. Działa ona jak wiatrak i jest zablokowana za swoją własną nauką."
+							},
+							"title": "Niech będzie pięknie"
+						},
+						"paperpower": {
+							"description": "Papier jest kluczowy dla cywilizacji. Prawdopodobnie masz go teraz trochę na swoim biurku!",
+							"instructions": {
+								"0": "Będziesz potrzebować konopi, które można kupić u kupca za wysoką cenę. Tańszą alternatywą jest założenie posterunku na bagnach i samodzielna ich uprawa. Odblokuj nauki konopi oraz liny, aby zyskać dostęp do nauki produkcji papieru."
+							},
+							"title": "Potęga papieru"
+						},
+						"powerofmetal": {
+							"description": "Metal ma kluczowe znaczenie dla cywilizacji. Skonfiguruj działający łańcuch produkcji metalu.",
+							"instructions": {
+								"0": "Wróć pod ziemię do swoich kamiennych górników. W górnej warstwie bloków ciemnego kamienia można znaleźć bloki rudy miedzi. Ruda miedzi jest czerwona. Umieść na nich stanowiska górnicze, aby koloniści mogli z nich wydobywać miedź.",
+								"1": "Ukończ naukę hutnika. Brakuje ci kamiennych narzędzi? Zrekrutuj więcej majsterkowiczów, aby przyspieszyć ich produkcję!",
+								"2": "Twoi majsterkowicze mogą teraz wytwarzać kolejne bloki robocze: piec dla hutników oraz pień do rąbania dla drwali. Drwal zamieni deski w drewno opałowe, którego twój hutnik potrzebuje, by przetapiać rudę miedzi w sztabki miedzi."
+							},
+							"title": "Potęga metalu"
+						},
+						"powerofpower": {
+							"description": "Zrekrutowanie ponad 25 kolonistów i ukończenie nauki generuje „zagrożenie”. Twój poziom zagrożenia jest widoczny w prawym górnym rogu. Wyższy poziom zagrożenia oznacza, że więcej silniejszych potworów będzie próbowało zaatakować twoją kolonię nocą. Powstrzymaj je, zanim dotrą do sztandaru i twoich śpiących kolonistów!",
+							"instructions": {
+								"0": "Przedmiot nocnego strażnika z procą jest wytwarzany przez majsterkowiczów lub w wiatraku. Umieść ten przedmiot na ziemi, by stworzyć stanowisko pracy strażnika. Procarze będą rzucać w potwory pociskami z procy.",
+								"1": "Potwory będą atakować twoją kolonię ze wszystkich stron, więc warto skierować je w stronę konkretnych przejść. Zbuduj mury o wysokości co najmniej dwóch bloków lub wykop fosy, aby uniemożliwić potworom przejście przez dany obszar.",
+								"2": "Upewnij się, że dostęp do twojego sztandaru nie jest całkowicie zablokowany! To uruchomi tryb oblężenia.",
+								"3": "Kiedy trzymasz narzędzie sztandaru, obszar leżący dalej od sztandaru pokryje się głębokim cieniem. To w tym miejscu będą pojawiać się potwory. Koloniści mogą pracować poza twoimi murami lub w tym zacienionym obszarze, o ile na czas nocy wycofają się w bezpieczne miejsce."
+							},
+							"title": "Potęga siły"
+						},
+						"remotecontrol": {
+							"description": "Naucz się kontrolować swoją kolonię z perspektywy lotu ptaka i pozwól kolonistom zająć się pracami budowlanymi.",
+							"instructions": {
+								"0": "Odblokuj nauki biurka nadzorcy i kopacza. Umieść biurko nadzorcy i użyj go, by przełączyć się na widok z góry. Użyj narzędzia poleceń w widoku z góry lub z perspektywy pierwszej osoby, a następnie przejdź do konstrukcji. Użyj opcji „Usuń wszystko”, aby wyznaczyć obszar, który zostanie całkowicie zrównany z ziemią. Rozmieść miejsca pracy wokół tego obszaru, a automatycznie zrekrutują one pracowników budowlanych, którzy wykonają to zadanie."
+							},
+							"title": "Zdalne sterowanie"
+						},
+						"setupcolony": {
+							"description": "Postaw sztandar, aby otrzymać swoje pierwsze zadanie!",
+							"instructions": {
+								"0": "Postaw sztandar, aby otrzymać swoje pierwsze zadanie! Wybierz narzędzie sztandaru (<style=Player/Inventory2>) i użyj <style=Player/FireSecondary> na ziemi. Idealne będzie znalezienie miejsca z płaskim terenem pod uprawy oraz dostępem do wody.",
+								"0_gamepad": "Postaw sztandar, aby otrzymać swoje pierwsze zadanie! Wybierz narzędzie sztandaru z ekwipunku poniżej za pomocą <style=Player/HotBarUp> i <style=Player/HotBarDown>. Postaw go, używając <style=Player/FireSecondary>, celując w ziemię. Idealne będzie znalezienie miejsca z płaskim terenem pod uprawy oraz dostępem do wody.",
+								"1": "Użyj <style=Player/MoveKeyboard> i <style=Player/Look>, aby poruszać się po świecie.",
+								"1_gamepad": "Użyj <style=Player/MovePad> i <style=Player/Look>, aby poruszać się po świecie."
+							},
+							"title": "Załóż kolonię"
+						},
+						"startofprestige": {
+							"description": "Odblokuj skrzynię prestiżu i ją wytwórz!",
+							"title": "Początek prestiżu"
+						},
+						"stretchieststretchgoal": {
+							"description": "Ukończ prestiż V.",
+							"title": "Najbardziej wyśrubowany cel"
+						},
+						"wealthofnations": {
+							"description": "Będziesz potrzebować kowali, tekstyliów, skóry oraz handlu.",
+							"instructions": {
+								"0": "Upewnij się, że masz odblokowaną uprawę pszenicy i centrum handlowe. Niech kolonista wytworzy centrum handlowe na nowym stanowisku rzemieślnika bloków roboczych. Umieść centrum handlowe, sprzedaj kilka sztabek miedzi i kup zwierzęce tusze, które są potrzebne, by odblokować naukę garbarza. Będziesz potrzebować płótna, aby stworzyć stół garbarza, który można wyprodukować lub kupić w centrum handlowym. Zrekrutuj garbarza, aby przetwarzał tusze zwierzęce w surowe mięso, skóry, a ostatecznie w wyprawioną skórę.",
+								"1": "Odblokuj naukę krawca, zrekrutuj rolników uprawiających len i postaw zakład krawiecki, by zrekrutować krawca, który przetworzy len w płótno.",
+								"2": "Teraz powinieneś mieć wszystko, czego potrzebujesz, aby ukończyć naukę kowadła, zrekrutować kowala miedzi i wytworzyć nowe narzędzia!"
+							},
+							"title": "Bogactwo narodów"
+						},
+						"yourethemiller": {
+							"description": "Wiatrak zapewnia ci podstawowe przedmioty. Umieść go i zacznij go używać!",
+							"instructions": {
+								"0": "Po założeniu kolonii wiatrak pojawił się na twoim pasku szybkiego wyboru. Postaw go w swojej kolonii.",
+								"1": "Wejdź po schodach wiatraka i użyj <style=Player/FireSecondary> na wewnętrznym mechanizmie, aby otworzyć jego menu. Dodaj skrzynie, stanowiska górnicze i łóżka do kolejki wytwarzania. Poczekaj, aż wiatrak skończy pracę, a następnie zbierz rezultaty, naciskając przyciski w prawym dolnym rogu."
+							},
+							"title": "Jesteś młynarzem"
+						},
+						"yourfirstlibrary": {
+							"description": "Cywilizacja nie może rozwijać nowej wiedzy bez odpowiedniego przechowywania tej starej.",
+							"instructions": {
+								"0": "Zwoje wiedzy można zmienić w półki na zwoje po ukończeniu nauki skryby. Skryba będzie potrzebował co najmniej 10 półek na zwoje, aby móc pracować bez przerw. Zwoje na półkach znikają po ich użyciu, ale po pewnym czasie zostaną automatycznie uzupełnione i ponownie gotowe do użytku. Skryba będzie przetwarzał gliniane tabliczki w tabliczki ze starożytną wiedzą."
+							},
+							"title": "Twoja pierwsza biblioteka"
+						}
+					},
+					"empty": "Obecnie nie ma dostępnych żadnych zadań.",
+					"header": "Zadania",
+					"instructionsheader": "Instrukcje",
+					"notifications": {
+						"message": "Ukończono zadanie „{0}”. Otwórz zakładkę zadań, aby je przejrzeć i odebrać nagrodę, jeśli jest dostępna.",
+						"openbutton": "Otwórz zadanie",
+						"preview": "{0}",
+						"summarytype": "Zadanie ukończone"
+					},
+					"progress": "Postęp",
+					"rewardheader": "Nagroda",
+					"statusavailable": "Dostępne",
+					"statuscompleted": "Ukończone",
+					"statusinprogress": "W trakcie",
+					"statusunclaimed": "Nieodebrane",
+					"table": {
+						"action": "Akcja",
+						"quest": "Zadanie",
+						"select": "Wybierz",
+						"status": "Stan"
+					}
+				},
 				"science": {
 					"available": "Dostępne",
 					"completed": "Ukończone",
@@ -1031,7 +1393,8 @@
 				"description": "Wybierz typ przedmiotu do użycia",
 				"header": "Wybór przedmiotu",
 				"headerchosen": "Wybrane",
-				"headerselectables": "Do wyboru"
+				"headerselectables": "Do wyboru",
+				"toggleshowonlyknown": "Pokaż tylko znane przedmioty"
 			},
 			"limits": {
 				"allreset": "Zresetuj wszystko",
@@ -1072,7 +1435,6 @@
 				"showgoal": "Oznacz cele"
 			},
 			"quickstart": {
-				"closetoggle": "Nie pokazuj więcej",
 				"next": "Następna",
 				"previous": "Poprzednia"
 			},
@@ -1166,8 +1528,8 @@
 				"header": "Podstawy",
 				"text1_2": "Zacznij od znalezienia dobrego miejsca na pierwszą kolonię. Warto zadbać o to, aby w pobliżu była woda i pola nadające się pod uprawę. Centrum kolonii zostanie oznaczone sztandarem.",
 				"text2_2gamepad": "Używając przycisków <style=Player/HotBarUp> i <style=Player/HotBarDown>, wybierz narzędzie sztandaru dostępne poniżej w ekwipunku. Po wybraniu narzędzia sztandaru wyceluj w ziemię przy użyciu <style=Player/FireSecondary> i umieść sztandar. Po przejściu do kolonii narzędzie sztandaru wyświetla głębokie cienie w miejscach, w których mogą się później pojawić potwory.",
-				"text2_2keyboard": "Używając klawisza <style=Player/Inventory1>, wybierz narzędzie sztandaru dostępne poniżej w ekwipunku. Po wybraniu narzędzia sztandaru wyceluj w ziemię przy użyciu <style=Player/FireSecondary> i umieść sztandar. Po przejściu do kolonii narzędzie sztandaru wyświetla głębokie cienie w miejscach, w których mogą się później pojawić potwory.",
-				"text3_2": "Umieść łóżka, aby móc rekrutować kolonistów. Naciśnij <style=Player/ToggleInventory>, aby otworzyć interfejs. Przenieś łóżka z magazynu na pasek szybkiego wyboru poniżej. Po wybraniu łóżka użyj <style=Player/FireSecondary>, wskazując na ziemi miejsce, gdzie chcesz umieścić łóżko.",
+				"text2_2keyboard": "Używając klawisza <style=Player/Inventory2>, wybierz narzędzie sztandaru dostępne poniżej w ekwipunku. Po wybraniu narzędzia sztandaru wyceluj w ziemię przy użyciu <style=Player/FireSecondary> i umieść sztandar. Po przejściu do kolonii narzędzie sztandaru wyświetla głębokie cienie w miejscach, w których mogą się później pojawić potwory.",
+				"text3_2": "Umieść łóżka, aby móc rekrutować kolonistów. Naciśnij <style=Always/ToggleInventory>, aby otworzyć interfejs. Przenieś łóżka z magazynu na pasek szybkiego wyboru poniżej. Po wybraniu łóżka użyj <style=Player/FireSecondary>, wskazując na ziemi miejsce, gdzie chcesz umieścić łóżko.",
 				"text4": "Otwórz interfejs i przejdź na stronę „Kolonia”. Naciśnij „Zrekrutuj”, aby zrekrutować kolonistę."
 			},
 			"page2_2": {
@@ -1175,7 +1537,7 @@
 				"header": "Pożywienie i łóżka",
 				"text1": "Koloniści potrzebują 1 posiłku dziennie. Pobierają je przy sztandarze lub z pobliskiego stanowiska spożywczego. Bez pożywienia koloniści zaczną głodować. Do rekrutacji nowych kolonistów potrzebna jest większa liczba posiłków.",
 				"text2_2gamepad": "Pierwszym źródłem pożywienia jest plantator jagód. Wybierz narzędzie dowodzenia (pierwsze miejsce w ekwipunku). Użyj <style=Player/FirePrimary>, aby je otworzyć i wybrać plantatora jagód. Użyj <style=Player/FireSecondary>, aby przejść do tworzenia plantacji jagód, po czym ponownie użyj <style=Player/FireSecondary> w innym miejscu, aby zakończyć. Będziesz potrzebować wielu takich plantacji!",
-				"text2_2keyboard": "Pierwszym źródłem pożywienia jest plantator jagód. Wybierz narzędzie dowodzenia (<style=Player/Inventory0>). Użyj <style=Player/FirePrimary>, aby je otworzyć i wybrać plantatora jagód. Użyj <style=Player/FireSecondary>, aby przejść do tworzenia plantacji jagód, po czym ponownie użyj <style=Player/FireSecondary> w innym miejscu, aby zakończyć. Będziesz potrzebować wielu takich plantacji!",
+				"text2_2keyboard": "Pierwszym źródłem pożywienia jest plantator jagód. Wybierz narzędzie dowodzenia (<style=Player/Inventory1>). Użyj <style=Player/FirePrimary>, aby je otworzyć i wybrać plantatora jagód. Użyj <style=Player/FireSecondary>, aby przejść do tworzenia plantacji jagód, po czym ponownie użyj <style=Player/FireSecondary> w innym miejscu, aby zakończyć. Będziesz potrzebować wielu takich plantacji!",
 				"text3_2": "Aby zacząć produkować łóżka, musisz wytworzyć stół majsterkowicza. Przytrzymując <style=Player/FirePrimary> i równocześnie wskazując bloki, możesz je rozkopać, aby zebrać potrzebny tłuczeń kamienny.",
 				"text4": "Kliknij ikonę stołu majsterkowicza na lewo od magazynu, aby go wytworzyć. Umieść go w taki sam sposób jak łóżko. Podobnie jak w przypadku plantacji jagód, bezrobotni koloniści automatycznie podejmą się tej pracy."
 			},
@@ -1360,8 +1722,13 @@
 			"play_coop": "Graj w trybie współpracy",
 			"play_solo": "Graj w trybie solo",
 			"selectedfolder": "Wybrany świat: {0}",
+			"serverlistfriends": "Znajomi mogą dołączyć",
+			"serverlistfriendstooltip": "Pozwala twoim znajomym znaleźć i dołączyć do twojej gry poprzez menu znajomych.",
+			"serverlistlan": "Wykrywanie w sieci lokalnej",
+			"serverlistlantooltip": "Jeśli ta opcja jest włączona, osoby połączone z tą samą siecią lokalną (np. z tym samym Wi-Fi) będą automatycznie widzieć twój serwer i łączyć się z nim bezpośrednio – z pominięciem internetu. Może to sprawić, że połączenie będzie szybsze i stabilniejsze, jednak wszyscy gracze muszą znajdować się w tej samej sieci.",
+			"serverlistpublicly": "Publiczna lista serwerów",
+			"serverlistpubliclytooltip": "Twój serwer pojawi się na publicznej liście serwerów, więc każdy będzie mógł go znaleźć i dołączyć. Użyj hasła, jeśli chcesz ograniczyć do niego dostęp.",
 			"servername": "Nazwa serwera",
-			"serverport": "Port serwera",
 			"typegenerateworld": "Generuj świat",
 			"typeworkshop": "Świat z warsztatu",
 			"world_folder": "Folder",
@@ -1370,6 +1737,50 @@
 			"worldname": "Nazwa",
 			"worldname_long": "Nazwa świata",
 			"worldseed": "Ziarno świata"
+		},
+		"splashscreen": {
+			"header": "Dziękujemy za zakup i granie w Colony Survival!",
+			"indexingfiles": "Indeksowanie plików: {0}/{1}",
+			"scanningcandidates": "Skanowanie plików lokalnych… Liczba odnalezionych kandydatów: {0}",
+			"text0": "Gra wciąż znajduje się w fazie aktywnego rozwoju. Problemy zostaną rozwiązane, receptury wyważone, a błędy wyeliminowane. Niektóre „luki w rozgrywce” to przygotowania pod kątem przyszłych aktualizacji.",
+			"text1": "Starsze wersje gry są wciąż dostępne. Aby w nie zagrać, kliknij prawym przyciskiem myszy Colony Survival w bibliotece Steam, przejdź do „właściwości” i otwórz zakładkę „bety”.",
+			"text2": "Regularnie publikujemy wpisy z cyklu piątkowych blogów. Można je znaleźć na stronie gry Colony Survival w sklepie Steam. Każdy wpis zawiera zaproszenie na nasz serwer Discord. To najlepszy sposób, aby się z nami skontaktować!"
+		},
+		"splitscreensetup": {
+			"buttons": {
+				"capture_left": "Przypisz do lewego ekranu",
+				"capture_right": "Przypisz do prawego ekranu",
+				"play_alone": "Graj w pojedynkę",
+				"swap_inputs": "Zamień sterowanie",
+				"swap_screens": "Zamień ekrany"
+			},
+			"devices": {
+				"dualsense": "Kontroler DualSense",
+				"gamepad": "Gamepad ({0})",
+				"keyboard_mouse": "Klawiatura i mysz",
+				"playstation": "Kontroler PlayStation",
+				"switch": "Kontroler Nintendo Switch",
+				"xbox": "Kontroler Xbox"
+			},
+			"header": "Konfiguracja podzielonego ekranu",
+			"header_recovery": "Zmień przypisanie urządzeń dla podzielonego ekranu",
+			"screens": {
+				"left": "Lewy ekran",
+				"right": "Prawy ekran"
+			},
+			"status": {
+				"apply_failed": "Nie udało się zastosować konfiguracji podzielonego ekranu.",
+				"assign_input": "Przypisz sterowanie do: {0}.",
+				"capture_input": "Oczekiwanie na sygnał dla: {0}.",
+				"one_player_ready": "Jeden gracz jest gotowy. Dodaj gamepad, aby grać na podzielonym ekranie, lub zatwierdź tryb dla jednego gracza.",
+				"press_input": "Naciśnij przycisk na urządzeniu, które ma obsługiwać: {0}.",
+				"ready": "Gotowość do zastosowania konfiguracji podzielonego ekranu."
+			},
+			"summary": {
+				"assigned": "{0}\n{1}\nGracz {2}",
+				"assigned_primary": "{0}\n{1}\nGracz {2} (główny profil)",
+				"unassigned": "{0}\nNieprzypisane"
+			}
 		},
 		"tooltip": {
 			"craftingblock": "Wysyła kolonistę do pracy jako {0} w tym miejscu",
@@ -1809,6 +2220,7 @@
 		"statisticsboard": "Tablica statystyczna",
 		"statuefarmer": "Pomnik pełnego nadziei rolnika",
 		"statuemonster": "Pomnik triumfu wojskowego",
+		"statuevictory": "Pomnik zwycięstwa",
 		"steelingot": "Stalowa sztabka",
 		"steellockbox": "Skrytka ze stali",
 		"steelparts": "Stalowe części",
@@ -1846,6 +2258,8 @@
 		"vialnitricacid": "Fiolka (kwas azotowy)",
 		"vialsulphuricacid": "Fiolka (kwas siarkowy)",
 		"wallpaintingitem": "Obraz",
+		"wallpaintingitemlizzy": "Obraz przedstawiający Lizzy",
+		"wallpaintingitempip": "Obraz przedstawiający Pip",
 		"water": "Woda",
 		"watergatherer": "Nosiwoda",
 		"waterpump": "Pompa wodna",
@@ -1976,6 +2390,7 @@
 		"splittingstump": "Szybszy sposób na rozłupanie drewna na opał.",
 		"statuefarmer": "Wdzięczność za ludzką pracę",
 		"statuemonster": "Upamiętnienie zwycięstwa nad naszymi wrogami",
+		"statuevictory": "Na twoją cześć, graczu! Składamy szczere gratulacje z okazji osiągnięcia tego imponującego kamienia milowego i dziękujemy za mnóstwo czasu spędzonego w Colony Survival.",
 		"stonemasonworkbench": "Wytwarza cegły dowolnych kolorów i kształtów.",
 		"stove": "Używana do emitowania smakowitych zapachów.",
 		"sulfur": "Znajdziesz ją głęboko pod ziemią na wrzosowiskach.",
@@ -1987,6 +2402,8 @@
 		"torch": "Niech nastanie światłość!",
 		"trader": "Para się handlem.",
 		"wallpaintingitem": "Sztuka na twoje ściany",
+		"wallpaintingitemlizzy": "Pamięci Lizzy, 2006–2022. Nazwa Pipliz wzięła się od jej imienia.",
+		"wallpaintingitempip": "Pamięci Pip, 2014–2026. Nazwa Pipliz wzięła się od jej imienia.",
 		"water": "Niekontrolowana zatopi wszystko.",
 		"waterpump": "Pozwala na uzyskanie wody bez przebywania w pobliżu wody.",
 		"watersponge": "Usuwa wodę z pobliskiego obszaru w bardzo realistyczny sposób.",

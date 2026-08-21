@@ -146,16 +146,12 @@
 			"MaxBranchInterval": 8.0
 		}
 	},
-	"EnableUPnPForwarding": true,
 	"LeakDetectionMode": "Disabled",
 	"Leaves": {
 		"MaxDistanceToLog": 4,
 		"MaxDistanceToLogCheck": 9
 	},
 	"ListenDirectConnectionsTCP": true,
-	"ListenDirectConnectionsUDP": true,
-	"ListenLANDiscoveryRequests": true,
-	"ListenLANDiscoveryRequestsLoopbackOnly": false,
 	"ListenSteamRelayedConnections": true,
 	"LogHistoryUICapacity": 512,
 	"MaxWorkerThreads": -1,
@@ -240,6 +236,7 @@
 		"SecondsBetweenMiscAutoSaving": 300
 	},
 	"SteamNetworkingLogLevel": 0,
+	"MasterServerEndpoint": "https://browser.colonysurvival.nl/",
 	"Time": {
 		"DayTimeEnd": 19.5,
 		"DayTimeStart": 4.5,
@@ -256,7 +253,6 @@
 		"StartTicks": 288000000000,
 		"UseServerPausing": true
 	},
-	"UPnPEntryTimeout": 7200,
 	"Water": {
 		"MaxUpdatesPerTick": 1000,
 		"TickTimeMilliSeconds": 1000
